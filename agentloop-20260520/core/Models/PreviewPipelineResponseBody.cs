@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class PreviewPipelineResponseBody : TeaModel {
         /// <summary>
-        /// <para>The collection of sample rows for the preview result. Each row is a key-value structure. The array contains only the first N rows, up to 5 rows by default, and does not reflect the complete write plan.</para>
+        /// <para>The collection of sample rows. This array of maps includes only the first N rows (up to 5 rows by default) and does not reflect the complete write plan.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;status&quot;:&quot;200&quot;,&quot;method&quot;:&quot;POST&quot;}]</para>
+        /// <para>[{\&quot;type\&quot;: \&quot;saturation\&quot;, \&quot;value\&quot;: 0}, {\&quot;type\&quot;: \&quot;load\&quot;, \&quot;value\&quot;: 0}, {\&quot;type\&quot;: \&quot;latency\&quot;, \&quot;value\&quot;: 1}, {\&quot;type\&quot;: \&quot;error\&quot;, \&quot;value\&quot;: 0}]</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string AggQuery { get; set; }
 
             /// <summary>
-            /// <para>The list of data types for each column. This field provides a mapping from column names to data types, such as string, long, double, and json.</para>
+            /// <para>The mapping from column names to data types, such as string, long, double, or json.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;long&quot;,&quot;string&quot;]</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public long? ElapsedMillisecond { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether an SQL query is used.</para>
+            /// <para>Indicates whether an SQL query is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public bool? HasSQL { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether nanosecond-level ordering is enabled.</para>
+            /// <para>Indicates whether nanosecond-level ordering is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public List<string> Keys { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of rows returned in the result.</para>
+            /// <para>The maximum number of returned rows.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public int? Limited { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the query mode.</para>
+            /// <para>The query mode identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public int? Mode { get; set; }
 
             /// <summary>
-            /// <para>The number of bytes of processed data.</para>
+            /// <para>The number of processed data bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>524288</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public long? ProcessedRows { get; set; }
 
             /// <summary>
-            /// <para>The Simple Log Service (SLS) query progress. A value of Complete indicates that the query is completed.</para>
+            /// <para>The Simple Log Service (SLS) query progress. A value of Complete indicates that the query is finished.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Complete</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string Progress { get; set; }
 
             /// <summary>
-            /// <para>The number of bytes of scanned raw data.</para>
+            /// <para>The number of scanned raw data bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1048576</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public long? ScanBytes { get; set; }
 
             /// <summary>
-            /// <para>The dataset schema of the final pipeline output. The keys are field names, and the type in the values supports text, long, double, and json. The field order is determined by the keys.</para>
+            /// <para>The dataset schema for the final output of the pipeline. The keys are field names, and the type in the values supports text, long, double, and json. The field order is determined by the keys field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;status&quot;:{&quot;type&quot;:&quot;long&quot;}}</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
-        /// <para>The request ID. You can use this ID to locate the request when you troubleshoot issues.</para>
+        /// <para>The request ID used to locate the request during troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</para>

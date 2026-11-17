@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class UpdateEvaluatorSkillRequest : TeaModel {
         /// <summary>
-        /// <para>The AgentSpace name.</para>
+        /// <para>The name of the AgentSpace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>The description of the skill.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>读取链路上下文辅助评估</para>
+        /// <para>Read trace context to assist evaluation</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>The display name of the skill.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Trace 上下文读取</para>
+        /// <para>Read Trace Context</para>
         /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the skill.</para>
+        /// <para>Specifies whether the skill is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -51,17 +51,17 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>The list of skill files. When provided, the skill file content is updated.</para>
+        /// <para>The list of skill files. If specified, the content of the skill files is updated.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;# Trace Context Loader&quot;,&quot;remark&quot;:&quot;主技能说明&quot;}]</para>
+        /// <para>[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;# Trace Context Loader&quot;,&quot;remark&quot;:&quot;Primary skill description&quot;}]</para>
         /// </summary>
         [NameInMap("files")]
         [Validation(Required=false)]
         public List<UpdateEvaluatorSkillRequestFiles> Files { get; set; }
         public class UpdateEvaluatorSkillRequestFiles : TeaModel {
             /// <summary>
-            /// <para>The skill file content.</para>
+            /// <para>The content of the skill file.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The skill file name.</para>
+            /// <para>The name of the skill file.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -83,10 +83,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The file remark.</para>
+            /// <para>The remark for the file.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>主技能说明</para>
+            /// <para>Primary skill description</para>
             /// </summary>
             [NameInMap("remark")]
             [Validation(Required=false)]
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
-        /// <para>The idempotency token. CloudSpec declares this query parameter, but the backend does not currently perform idempotency comparison.</para>
+        /// <para>The idempotency token. CloudSpec declares this query parameter, but the backend does not currently perform idempotency checks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a1b2c3d4-1234-5678-90ab-cdef12345678</para>

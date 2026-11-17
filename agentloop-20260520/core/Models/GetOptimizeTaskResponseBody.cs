@@ -10,14 +10,23 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class GetOptimizeTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The scheduling checkpoint, which stores states such as the general scheduling watermark.</para>
+        /// <para>The scheduling checkpoint that stores states such as the general scheduling watermark.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        ///     &quot;lastWindowEndTime&quot;: 1787133600000,
+        ///     &quot;lastScheduleStatus&quot;: &quot;Succeeded&quot;,
+        ///     &quot;nextWindowStartTime&quot;: 1787133600000,
+        ///     &quot;lastScheduleAttemptTime&quot;: 1787137386912,
+        ///     &quot;lastScheduleSuccessTime&quot;: 1787137386912
+        /// }</para>
         /// </summary>
         [NameInMap("checkpoint")]
         [Validation(Required=false)]
         public Dictionary<string, object> Checkpoint { get; set; }
 
         /// <summary>
-        /// <para>The type-specific configuration. Optional prompts for ExperienceMining or SkillOptimize support only inline Markdown. The body is saved to inputs.prompt.content, which must be a non-empty UTF-8 string of up to 16 KiB.</para>
+        /// <para>The type-specific configuration. Optional prompts for ExperienceMining or SkillOptimize support only inline Markdown. The main text is stored in inputs.prompt.content, which must be non-empty UTF-8 and up to 16 KiB in size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;ioVersion&quot;:2,&quot;inputs&quot;:{&quot;experienceLibrary&quot;:{&quot;type&quot;:&quot;dataset&quot;,&quot;dataset&quot;:&quot;experiences&quot;},&quot;trajectory&quot;:{&quot;type&quot;:&quot;sls&quot;,&quot;project&quot;:&quot;my-project&quot;,&quot;logstore&quot;:&quot;agent-trajectory&quot;,&quot;format&quot;:&quot;atif&quot;},&quot;prompt&quot;:{&quot;type&quot;:&quot;inline&quot;,&quot;format&quot;:&quot;markdown&quot;,&quot;content&quot;:&quot;# Guidance\\nExtract evidence-backed tool contracts.&quot;}},&quot;outputs&quot;:{&quot;changePlan&quot;:{&quot;type&quot;:&quot;dataset&quot;,&quot;dataset&quot;:&quot;experience-plans&quot;}},&quot;operators&quot;:[&quot;tool_contract&quot;],&quot;application&quot;:{&quot;mode&quot;:&quot;manual&quot;}}</para>
@@ -47,7 +56,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string NextTriggerTime { get; set; }
 
         /// <summary>
-        /// <para>The optimization task name.</para>
+        /// <para>The name of the optimization task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>efficiency-analysis</para>
@@ -77,7 +86,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task status. Valid values: Enabled, Disabled.</para>
+        /// <para>The task status. Valid values: Enabled and Disabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Enabled</para>
@@ -87,7 +96,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The optimization task type.</para>
+        /// <para>The type of the optimization task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EfficiencyAnalysis</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class ListOptimizeRunsRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries to return. Default value: 20. Maximum value: 100.</para>
+        /// <para>The maximum number of results to return. Default value: 20. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The status used to filter results.</para>
+        /// <para>The status used to filter the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Succeeded</para>
@@ -40,20 +40,20 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The lower bound of the window start time in UNIX seconds.</para>
+        /// <para>The lower bound of the window start time, in UNIX seconds.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1786432688000</para>
+        /// <para>1786432688</para>
         /// </summary>
         [NameInMap("windowStartTimeBegin")]
         [Validation(Required=false)]
         public long? WindowStartTimeBegin { get; set; }
 
         /// <summary>
-        /// <para>The upper bound of the window start time in UNIX seconds.</para>
+        /// <para>The upper bound of the window start time, in UNIX seconds.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1786432690000</para>
+        /// <para>1786432690</para>
         /// </summary>
         [NameInMap("windowStartTimeEnd")]
         [Validation(Required=false)]

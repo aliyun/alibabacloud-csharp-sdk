@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class ListPipelineRunsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries per page specified in the request, echoed in the response.</para>
+        /// <para>The maximum number of entries per page specified in the request. This value is echoed in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate the request during troubleshooting.</para>
+        /// <para>The request ID. You can use this ID to locate the request when troubleshooting issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string AgentSpaceName { get; set; }
 
             /// <summary>
-            /// <para>The current number of retries.</para>
+            /// <para>The current attempt number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -68,6 +68,9 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 
             /// <summary>
             /// <para>The semantic error code.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ExpressionEvaluationError</para>
             /// </summary>
             [NameInMap("errorCode")]
             [Validation(Required=false)]
@@ -75,6 +78,9 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 
             /// <summary>
             /// <para>The error message.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Failed to evaluate filter expression in node \&quot;node-1\&quot;: column \&quot;score\&quot; does not exist.</para>
             /// </summary>
             [NameInMap("errorMessage")]
             [Validation(Required=false)]
@@ -92,7 +98,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string FinishTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the data window, in UNIX seconds.</para>
+            /// <para>The start time of the data window. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1735660800</para>
@@ -102,7 +108,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public long? FromTime { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of retries.</para>
+            /// <para>The maximum number of attempts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -143,7 +149,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string RunId { get; set; }
 
             /// <summary>
-            /// <para>The execution start time in ISO 8601 UTC format.</para>
+            /// <para>The start time of the execution in ISO 8601 UTC format.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
             /// 
             /// <b>Example:</b>
@@ -154,7 +160,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The run statistics, including processedRows (number of processed rows), processedBytes (number of processed bytes), outputRows (number of output rows), outputBytes (number of output bytes), elapsedMs (elapsed time in milliseconds), cpuSec (CPU seconds), cpuCores (number of CPU cores), and tokenCount (number of consumed tokens).</para>
+            /// <para>The run statistics metrics, including processedRows (number of processed rows), processedBytes (number of processed bytes), outputRows (number of output rows), outputBytes (number of output bytes), elapsedMs (elapsed time in milliseconds), cpuSec (CPU seconds), cpuCores (number of CPU cores), and tokenCount (number of consumed tokens).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;processedRows&quot;:1000,&quot;elapsedMs&quot;:2500}</para>
             /// </summary>
             [NameInMap("stats")]
             [Validation(Required=false)]
@@ -171,7 +180,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The end time of the data window, in UNIX seconds.</para>
+            /// <para>The end time of the data window. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1735747200</para>
@@ -192,7 +201,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string TriggerTime { get; set; }
 
             /// <summary>
-            /// <para>The trigger type. Valid values: Scheduled, Manual, RunOnce, and Continuous (continuous micro-batch execution).</para>
+            /// <para>The trigger type. Valid values: Scheduled, Manual, and RunOnce.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Scheduled</para>

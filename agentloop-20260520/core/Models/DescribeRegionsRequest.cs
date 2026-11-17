@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return in a single request.</para>
+        /// <para>The maximum number of results to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

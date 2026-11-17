@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Filters only active AgentSpaces in the current region. Multiple conditions use the AND operator, and keys must be unique. Omitting the value matches the existence of the key, and an empty character string is an exact match for an empty value. An empty array is equivalent to not using label filtering and retains the original cross-region resources.</para>
+        /// <para>Filters only active AgentSpaces in the current region. Multiple conditions are combined with AND, and keys must be unique. Omitting the value matches the existence of the key, and an empty character string is an exact match for an empty value. An empty array is equivalent to not using label filtering and retains the original cross-region resources.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{\&quot;key\&quot;: \&quot;env\&quot;, \&quot;value\&quot;: \&quot;test\&quot;}]</para>
+        /// <para>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;test&quot;}]</para>
         /// </summary>
         [NameInMap("tag")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class ListOptimizeTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of results per page.</para>
+        /// <para>The maximum number of results returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page.</para>
+        /// <para>The token for the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTIzNDU2Nzg5MA==</para>
@@ -37,7 +37,16 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public List<ListOptimizeTasksResponseBodyOptimizeTasks> OptimizeTasks { get; set; }
         public class ListOptimizeTasksResponseBodyOptimizeTasks : TeaModel {
             /// <summary>
-            /// <para>The scheduling checkpoint that stores states such as the general scheduling watermark.</para>
+            /// <para>The scheduling checkpoint, which stores states such as the general scheduling watermark.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{
+            ///     &quot;lastWindowEndTime&quot;: 1787133600000,
+            ///     &quot;lastScheduleStatus&quot;: &quot;Succeeded&quot;,
+            ///     &quot;nextWindowStartTime&quot;: 1787133600000,
+            ///     &quot;lastScheduleAttemptTime&quot;: 1787137386912,
+            ///     &quot;lastScheduleSuccessTime&quot;: 1787137386912
+            /// }</para>
             /// </summary>
             [NameInMap("checkpoint")]
             [Validation(Required=false)]
@@ -54,7 +63,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public Dictionary<string, object> Config { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the task was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T10:00:00Z</para>
@@ -64,7 +73,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The next scheduling trigger time.</para>
+            /// <para>The next scheduled trigger time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-13T16:00:00Z</para>
@@ -94,7 +103,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The task status.</para>
+            /// <para>The status of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Enabled</para>
@@ -114,7 +123,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The time when the task was updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T10:00:00Z</para>
@@ -136,7 +145,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total count.</para>
+        /// <para>The total number of tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

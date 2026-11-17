@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public List<ListEvaluatorsResponseBodyEvaluators> Evaluators { get; set; }
         public class ListEvaluatorsResponseBodyEvaluators : TeaModel {
             /// <summary>
-            /// <para>The list of annotations.</para>
+            /// <para>The list of annotation tags.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;__en&quot;]</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public List<string> Annotations { get; set; }
 
             /// <summary>
-            /// <para>The creation time, in seconds-level UNIX timestamp.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1782816000</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             /// <para>The evaluator description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>判断 Agent 是否完成用户任务</para>
+            /// <para>Determines whether the agent has completed the user task</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             /// <para>The display name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>链路任务完成度</para>
+            /// <para>Pipeline task completion rate</para>
             /// </summary>
             [NameInMap("displayName")]
             [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The update time, in seconds-level UNIX timestamp.</para>
+            /// <para>The update time. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1782816600</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page used in this request.</para>
+        /// <para>The number of entries per page used for this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of evaluators that match the filter conditions.</para>
+        /// <para>The total number of evaluators that meet the conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>

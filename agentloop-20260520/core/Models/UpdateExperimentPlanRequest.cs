@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The list of evaluators. If omitted, the list is not modified. If an empty array is passed, the list is cleared. When configured, evaluation is automatically triggered upon experiment completion.</para>
+        /// <para>The list of evaluators. If omitted, the list is not modified. If an empty array is passed, the list is cleared.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;evaluatorRef&quot;: &quot;Builtin.agent_task_completion&quot;}]</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public List<Evaluator> Evaluators { get; set; }
 
         /// <summary>
-        /// <para>The type of the experiment. Valid values: OFFLINE (offline experiment) and ONLINE (online experiment).</para>
+        /// <para>The type of the experiment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OFFLINE</para>
@@ -80,7 +80,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public Dictionary<string, object> Input { get; set; }
 
         /// <summary>
-        /// <para>The name of the associated data processing pipeline. This parameter is optional. If you do not specify this parameter, the association is not updated. If you specify an empty string, the association is removed. After the association is established, when an experiment under this plan completes and writes experiment results to a Logstore, the system filters the data by the traceId of the current experiment trace and calls PreviewPipeline to write the pipeline-processed trace results together with the experiment results.</para>
+        /// <para>The name of the associated data processing pipeline. This parameter is optional. If this parameter is not specified, the pipeline is not updated. If an empty character string is specified, the association is dissociated. After the association, when an experiment under this plan executes and completes writing experiment results to the Logstore, the system filters by the traceId of the current experiment trace and invokes PreviewPipeline to write the results processed by the pipeline.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>my-pipeline</para>
         /// </summary>
         [NameInMap("pipelineName")]
         [Validation(Required=false)]
@@ -107,7 +110,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string QuerySql { get; set; }
 
         /// <summary>
-        /// <para>The list of selected data item IDs in partial dataset mode. Passing an empty array clears the list.</para>
+        /// <para>The list of selected data item IDs in partial dataset mode. If an empty array is passed, the list is cleared.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>

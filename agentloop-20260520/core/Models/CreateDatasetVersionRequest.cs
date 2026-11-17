@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class CreateDatasetVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the version. This parameter is optional. If this parameter is not specified, an empty string is used.</para>
+        /// <para>The description of the version. This parameter is optional. If you do not specify this parameter, an empty string is used.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Dataset version used for the first evaluation</para>
+        /// <para>Dataset version used for the initial evaluation</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the version to be created, which is used to identify the version within the current dataset. The name cannot be empty after leading and trailing whitespaces are removed. The length of the UTF-8 encoded name cannot exceed 128 bytes, and the name cannot contain forward slashes (/).</para>
+        /// <para>The name of the version to be created, which is used to identify the version within the current dataset. The name cannot be empty after leading and trailing whitespaces are removed. The length cannot exceed 128 bytes in UTF-8 encoding, and the name cannot contain forward slashes (/).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

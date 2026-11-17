@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class GetEvaluationTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The AgentSpace name.</para>
+        /// <para>The name of the AgentSpace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>prod-agentspace</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Channel { get; set; }
 
         /// <summary>
-        /// <para>The data source and execution configuration. Tasks with <c>dataType=trace</c> typically contain backend-populated <c>project</c>, <c>storeName</c>, and <c>dataScope</c> fields.</para>
+        /// <para>The data source and execution configurations. Tasks with <c>dataType=trace</c> typically include the <c>project</c>, <c>storeName</c>, and <c>dataScope</c> fields populated by the backend.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;project&quot;:&quot;agentspace-project&quot;,&quot;storeName&quot;:&quot;logstore-tracing&quot;,&quot;dataScope&quot;:&quot;trace&quot;}</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public Dictionary<string, string> Config { get; set; }
 
         /// <summary>
-        /// <para>The creation time, in seconds as a UNIX timestamp.</para>
+        /// <para>The creation time, represented as a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1782816000</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public long? CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The evaluation data filter conditions, returned by the backend as a JSON string.</para>
+        /// <para>The filter conditions for evaluation data. The backend returns this value as a JSON string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;query&quot;:&quot;serviceName=\&quot;checkout-service\&quot;&quot;,&quot;maxRecords&quot;:10,&quot;samplingRate&quot;:100}</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>The description of the evaluation task.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Evaluate the task completion of the online Agent pipeline</para>
+        /// <para>Evaluate the task completion rate of online agent workflows</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -90,6 +90,16 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public List<Evaluator> Evaluators { get; set; }
 
         /// <summary>
+        /// <para>The quality score and coverage snapshot of the most recent evaluator run. This field is empty when the feature is not enabled.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
+        [NameInMap("qualityMetrics")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> QualityMetrics { get; set; }
+
+        /// <summary>
         /// <para>The region to which the task belongs.</para>
         /// 
         /// <b>Example:</b>
@@ -100,7 +110,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3FE4CD1E-FF41-56BE-B590-7A021D9C1524</para>
@@ -110,7 +120,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The structured run strategy configuration, including the parsed backfill strategy and continuous evaluation strategy.</para>
+        /// <para>The structured configuration of the run strategy, including the parsed backfill strategy and continuous evaluation strategy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;backfill&quot;:{&quot;enabled&quot;:true,&quot;startTime&quot;:1782816000000,&quot;endTime&quot;:1782902400000},&quot;continuous&quot;:{&quot;enabled&quot;:true,&quot;intervalUnit&quot;:&quot;HOUR&quot;,&quot;intervalValue&quot;:1,&quot;dataDelayMinutes&quot;:5}}</para>
@@ -120,7 +130,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public RunStrategies RunStrategyConfig { get; set; }
 
         /// <summary>
-        /// <para>The evaluation task status.</para>
+        /// <para>The status of the evaluation task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -130,7 +140,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The key-value pairs of task tags. Empty if not set.</para>
+        /// <para>The key-value pairs of task tags. This field is empty when no tags are set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;serviceId&quot;:&quot;checkout-service&quot;,&quot;env&quot;:&quot;prod&quot;}</para>
@@ -140,7 +150,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public Dictionary<string, string> Tags { get; set; }
 
         /// <summary>
-        /// <para>The evaluation task ID.</para>
+        /// <para>The ID of the evaluation task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eval-task-8b36f2e2b1f94f9c91ce7a4b0f6d9c25</para>
@@ -150,7 +160,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The evaluation task mode.</para>
+        /// <para>The mode of the evaluation task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>batch</para>
@@ -160,7 +170,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string TaskMode { get; set; }
 
         /// <summary>
-        /// <para>The task name.</para>
+        /// <para>The name of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>trace_task_completion_eval</para>
@@ -170,7 +180,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string TaskName { get; set; }
 
         /// <summary>
-        /// <para>The last update time, in seconds as a UNIX timestamp.</para>
+        /// <para>The last update time, represented as a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1782816600</para>

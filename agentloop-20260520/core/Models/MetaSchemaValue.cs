@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class MetaSchemaValue : TeaModel {
         /// <summary>
-        /// <para>The dataset field types. Valid values: text, long, double, and json.</para>
+        /// <para>The dataset field type. Valid values: text, long, double, and json.</para>
         /// 
         /// <b>Example:</b>
         /// <para>text</para>

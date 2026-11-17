@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class UpdateContextStoreResponseBody : TeaModel {
         /// <summary>
-        /// <para>The configuration properties after updating the runtime recall switch. This block is not returned for other library update operations.</para>
+        /// <para>The attributes returned after the runtime recall switch is updated. This block is not returned for other library update operations.</para>
         /// </summary>
         [NameInMap("config")]
         [Validation(Required=false)]
         public UpdateContextStoreResponseBodyConfig Config { get; set; }
         public class UpdateContextStoreResponseBodyConfig : TeaModel {
             /// <summary>
-            /// <para>Indicates whether runtime recall is allowed after the experience library is updated.</para>
+            /// <para>Specifies whether runtime recall is allowed after the experience library is updated.</para>
             /// </summary>
             [NameInMap("runtimeRecallEnabled")]
             [Validation(Required=false)]
             public bool? RuntimeRecallEnabled { get; set; }
 
             /// <summary>
-            /// <para>The runtime recall property version that takes effect after this update.</para>
+            /// <para>The version of the runtime recall attributes that takes effect after the current update.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
-        /// <para>The request ID. You can use this ID to locate the request when troubleshooting issues.</para>
+        /// <para>The request ID. It is used to locate the request when you troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The strategy version number that takes effect after the update for the memory type. If the strategy remains unchanged, the version number is the same as before the update.</para>
+        /// <para>The strategy version number that takes effect after the update for the memory type. If the strategy remains unchanged, the version is the same as the one before the update.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

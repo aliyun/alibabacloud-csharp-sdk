@@ -51,6 +51,9 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 
                 /// <summary>
                 /// <para>The parameters of the node. The parameters are in key-value format and vary based on the node type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;ID&quot;:&quot;ID&quot;}</para>
                 /// </summary>
                 [NameInMap("parameters")]
                 [Validation(Required=false)]
@@ -101,7 +104,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public string Dataset { get; set; }
 
                 /// <summary>
-                /// <para>The filter condition for the dataset data.</para>
+                /// <para>The data filter condition for the dataset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>status = \&quot;pending\&quot;</para>
@@ -133,7 +136,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The type of the field. Valid values: text, long, double, and json.</para>
+                /// <para>The data type of the field. Valid values: text, long, double, and json.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>text</para>
@@ -145,7 +148,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             }
 
             /// <summary>
-            /// <para>The Simple Log Service Logstore datasource config.</para>
+            /// <para>The Simple Log Service (SLS) Logstore datasource config.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;project&quot;:&quot;my-sls-project&quot;,&quot;logstore&quot;:&quot;agent-logs&quot;}</para>
@@ -155,7 +158,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public PreviewPipelineRequestSourceLogstore Logstore { get; set; }
             public class PreviewPipelineRequestSourceLogstore : TeaModel {
                 /// <summary>
-                /// <para>The name of the Simple Log Service Logstore.</para>
+                /// <para>The name of the SLS Logstore.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my-sls-logstore</para>
@@ -165,7 +168,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public string Logstore { get; set; }
 
                 /// <summary>
-                /// <para>The name of the Simple Log Service project.</para>
+                /// <para>The name of the SLS project.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my-sls-project</para>
@@ -175,7 +178,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public string Project { get; set; }
 
                 /// <summary>
-                /// <para>The filtered query statement (Simple Log Service query and analysis syntax).</para>
+                /// <para>The filtered query statement (SLS query and analysis syntax).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <list type="bullet">
@@ -189,7 +192,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             }
 
             /// <summary>
-            /// <para>The configuration of trajectory data. This parameter is optional and takes effect only when the type is set to trace. It retrieves ATIF standard trajectory data from the trajectory cleaning service and extends the data based on features.</para>
+            /// <para>The trajectory data configuration. This parameter is optional and takes effect only when the type is trace. It obtains ATIF standard trajectory data from the trajectory cleaning service and extends it based on features.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;enrich&quot;:{&quot;enabled&quot;:true,&quot;columns&quot;:[&quot;input&quot;,&quot;output&quot;]}}</para>
@@ -199,7 +202,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public PreviewPipelineRequestSourceTrajectory Trajectory { get; set; }
             public class PreviewPipelineRequestSourceTrajectory : TeaModel {
                 /// <summary>
-                /// <para>Trajectory enrichment: mounts trajectory data into the cleaning results based on the trace_id. When writing data to a dataset, the data is stored in the fixed agent_trajectory column, and the column value is the JSON content of the trajectory.</para>
+                /// <para>The trajectory enrichment configuration. Trajectory data is mounted into the cleaning results based on trace_id. When data is written to the dataset, it is stored in the fixed column agent_trajectory, where the column value is the trajectory JSON content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;enabled&quot;:true,&quot;columns&quot;:[&quot;input&quot;,&quot;output&quot;]}</para>
@@ -209,7 +212,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public PreviewPipelineRequestSourceTrajectoryEnrich Enrich { get; set; }
                 public class PreviewPipelineRequestSourceTrajectoryEnrich : TeaModel {
                     /// <summary>
-                    /// <para>The list of enrichment columns. This parameter is retained for compatibility. The current implementation outputs only the fixed agent_trajectory column, and this parameter no longer affects the output.</para>
+                    /// <para>The list of enrichment columns. This parameter is retained for compatibility. The current implementation outputs only the fixed column agent_trajectory, and this parameter no longer affects the output.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>[&quot;input&quot;,&quot;output&quot;,&quot;session_id&quot;]</para>
@@ -233,7 +236,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             }
 
             /// <summary>
-            /// <para>The type of the data source. Simple Log Service is currently supported.</para>
+            /// <para>The type of the data source. Currently, SLS is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SLS</para>

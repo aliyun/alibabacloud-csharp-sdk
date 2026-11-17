@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class ListExperimentPlansRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries to return. Default value: 20.</para>
+        /// <para>The maximum number of entries to return. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>Optional. Use <c>offset</c> and <c>limit</c> for pagination instead.</para>
+        /// <para>Optional. For pagination, use <c>offset</c> and <c>limit</c> instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Optional. Use <c>offset</c> and <c>limit</c> for pagination instead.</para>
+        /// <para>Optional. For pagination, use <c>offset</c> and <c>limit</c> instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJsYXN0SWQiOjEyM30=</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? Offset { get; set; }
 
         /// <summary>
-        /// <para>Fuzzy matches experiment plans by plan name.</para>
+        /// <para>The plan name used for fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>arms_agent</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string PlanName { get; set; }
 
         /// <summary>
-        /// <para>Filters experiment plans by exact status.</para>
+        /// <para>The exact status used for filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pending</para>

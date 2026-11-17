@@ -950,7 +950,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a named historical version for a dataset in a specified agent workspace to preserve the historical state of the dataset. You can call ListDatasetVersions to query version information. If a version is no longer needed, you can call DeleteDatasetVersion to delete the version.</para>
+        /// <para>Creates a named historical version for a dataset in a specified agent workspace to preserve the historical state of the dataset. You can call ListDatasetVersions to query version information. When a version is no longer needed, you can call DeleteDatasetVersion to delete it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1006,7 +1006,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a named historical version for a dataset in a specified agent workspace to preserve the historical state of the dataset. You can call ListDatasetVersions to query version information. If a version is no longer needed, you can call DeleteDatasetVersion to delete the version.</para>
+        /// <para>Creates a named historical version for a dataset in a specified agent workspace to preserve the historical state of the dataset. You can call ListDatasetVersions to query version information. When a version is no longer needed, you can call DeleteDatasetVersion to delete it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1062,7 +1062,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a named historical version for a dataset in a specified agent workspace to preserve the historical state of the dataset. You can call ListDatasetVersions to query version information. If a version is no longer needed, you can call DeleteDatasetVersion to delete the version.</para>
+        /// <para>Creates a named historical version for a dataset in a specified agent workspace to preserve the historical state of the dataset. You can call ListDatasetVersions to query version information. When a version is no longer needed, you can call DeleteDatasetVersion to delete it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1081,7 +1081,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a named historical version for a dataset in a specified agent workspace to preserve the historical state of the dataset. You can call ListDatasetVersions to query version information. If a version is no longer needed, you can call DeleteDatasetVersion to delete the version.</para>
+        /// <para>Creates a named historical version for a dataset in a specified agent workspace to preserve the historical state of the dataset. You can call ListDatasetVersions to query version information. When a version is no longer needed, you can call DeleteDatasetVersion to delete it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1739,7 +1739,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an experiment plan in a specified AgentSpace. You can use this operation to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to initiate the execution.</para>
+        /// <para>Calls CreateExperimentPlan to create an experiment plan in a specified AgentSpace. This operation is used to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to initiate the execution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1826,7 +1826,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an experiment plan in a specified AgentSpace. You can use this operation to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to initiate the execution.</para>
+        /// <para>Calls CreateExperimentPlan to create an experiment plan in a specified AgentSpace. This operation is used to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to initiate the execution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1913,7 +1913,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an experiment plan in a specified AgentSpace. You can use this operation to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to initiate the execution.</para>
+        /// <para>Calls CreateExperimentPlan to create an experiment plan in a specified AgentSpace. This operation is used to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to initiate the execution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1937,7 +1937,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an experiment plan in a specified AgentSpace. You can use this operation to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to initiate the execution.</para>
+        /// <para>Calls CreateExperimentPlan to create an experiment plan in a specified AgentSpace. This operation is used to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to initiate the execution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3192,7 +3192,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a historical version of a dataset in a specified agent workspace. After deletion, the version no longer appears in the list returned by ListDatasetVersions. This operation does not delete the dataset itself, the current data, or other historical versions.</para>
+        /// <para>Deletes a historical version of a dataset in a specified agent space. After the deletion, the version no longer appears in the list returned by ListDatasetVersions. This operation does not delete the dataset itself, current data, or other historical versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3232,7 +3232,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a historical version of a dataset in a specified agent workspace. After deletion, the version no longer appears in the list returned by ListDatasetVersions. This operation does not delete the dataset itself, the current data, or other historical versions.</para>
+        /// <para>Deletes a historical version of a dataset in a specified agent space. After the deletion, the version no longer appears in the list returned by ListDatasetVersions. This operation does not delete the dataset itself, current data, or other historical versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3272,7 +3272,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a historical version of a dataset in a specified agent workspace. After deletion, the version no longer appears in the list returned by ListDatasetVersions. This operation does not delete the dataset itself, the current data, or other historical versions.</para>
+        /// <para>Deletes a historical version of a dataset in a specified agent space. After the deletion, the version no longer appears in the list returned by ListDatasetVersions. This operation does not delete the dataset itself, current data, or other historical versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3291,7 +3291,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a historical version of a dataset in a specified agent workspace. After deletion, the version no longer appears in the list returned by ListDatasetVersions. This operation does not delete the dataset itself, the current data, or other historical versions.</para>
+        /// <para>Deletes a historical version of a dataset in a specified agent space. After the deletion, the version no longer appears in the list returned by ListDatasetVersions. This operation does not delete the dataset itself, current data, or other historical versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6312,8 +6312,13 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a single pipeline run.</para>
+        /// <para>Queries the details of a single run, including the data window, execute status, retry information, run statistics, and fault message.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Invokes GetPipelineRun to retrieve the details of a single pipeline run, including the data window, execute status, retry information, run statistics, and fault message.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPipelineRunRequest
@@ -6352,8 +6357,13 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a single pipeline run.</para>
+        /// <para>Queries the details of a single run, including the data window, execute status, retry information, run statistics, and fault message.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Invokes GetPipelineRun to retrieve the details of a single pipeline run, including the data window, execute status, retry information, run statistics, and fault message.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPipelineRunRequest
@@ -6392,8 +6402,13 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a single pipeline run.</para>
+        /// <para>Queries the details of a single run, including the data window, execute status, retry information, run statistics, and fault message.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Invokes GetPipelineRun to retrieve the details of a single pipeline run, including the data window, execute status, retry information, run statistics, and fault message.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPipelineRunRequest
@@ -6411,8 +6426,13 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a single pipeline run.</para>
+        /// <para>Queries the details of a single run, including the data window, execute status, retry information, run statistics, and fault message.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Invokes GetPipelineRun to retrieve the details of a single pipeline run, including the data window, execute status, retry information, run statistics, and fault message.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPipelineRunRequest
@@ -7070,7 +7090,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve the historical versions of a dataset in a specified agent workspace and returns the version names, descriptions, and creation time. Deleted versions are not included in the list. Do not specify nextToken in the first request. For subsequent requests, use the nextToken value from the previous response for paging to retrieve the next page.</para>
+        /// <para>Performs a paged query to retrieve the historical versions of a dataset in a specified agent space and returns the version names, descriptions, and creation time. Deleted versions are not returned in the list. Do not specify nextToken in the first request. For subsequent requests, use the nextToken from the previous response to continue paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7120,7 +7140,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve the historical versions of a dataset in a specified agent workspace and returns the version names, descriptions, and creation time. Deleted versions are not included in the list. Do not specify nextToken in the first request. For subsequent requests, use the nextToken value from the previous response for paging to retrieve the next page.</para>
+        /// <para>Performs a paged query to retrieve the historical versions of a dataset in a specified agent space and returns the version names, descriptions, and creation time. Deleted versions are not returned in the list. Do not specify nextToken in the first request. For subsequent requests, use the nextToken from the previous response to continue paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7170,7 +7190,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve the historical versions of a dataset in a specified agent workspace and returns the version names, descriptions, and creation time. Deleted versions are not included in the list. Do not specify nextToken in the first request. For subsequent requests, use the nextToken value from the previous response for paging to retrieve the next page.</para>
+        /// <para>Performs a paged query to retrieve the historical versions of a dataset in a specified agent space and returns the version names, descriptions, and creation time. Deleted versions are not returned in the list. Do not specify nextToken in the first request. For subsequent requests, use the nextToken from the previous response to continue paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7189,7 +7209,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve the historical versions of a dataset in a specified agent workspace and returns the version names, descriptions, and creation time. Deleted versions are not included in the list. Do not specify nextToken in the first request. For subsequent requests, use the nextToken value from the previous response for paging to retrieve the next page.</para>
+        /// <para>Performs a paged query to retrieve the historical versions of a dataset in a specified agent space and returns the version names, descriptions, and creation time. Deleted versions are not returned in the list. Do not specify nextToken in the first request. For subsequent requests, use the nextToken from the previous response to continue paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7860,7 +7880,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of evaluators.</para>
+        /// <para>Queries the list of evaluators.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7926,7 +7946,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of evaluators.</para>
+        /// <para>Queries the list of evaluators.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7992,7 +8012,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of evaluators.</para>
+        /// <para>Queries the list of evaluators.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8011,7 +8031,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of evaluators.</para>
+        /// <para>Queries the list of evaluators.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8035,7 +8055,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. Supports fuzzy match by plan name, filtering by status, and pagination by using <c>offset</c>/<c>limit</c>.</para>
+        /// <para>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. This operation supports fuzzy match by plan name, filtering by status, and pagination by using <c>offset</c> and <c>limit</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8106,7 +8126,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. Supports fuzzy match by plan name, filtering by status, and pagination by using <c>offset</c>/<c>limit</c>.</para>
+        /// <para>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. This operation supports fuzzy match by plan name, filtering by status, and pagination by using <c>offset</c> and <c>limit</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8177,7 +8197,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. Supports fuzzy match by plan name, filtering by status, and pagination by using <c>offset</c>/<c>limit</c>.</para>
+        /// <para>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. This operation supports fuzzy match by plan name, filtering by status, and pagination by using <c>offset</c> and <c>limit</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8201,7 +8221,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. Supports fuzzy match by plan name, filtering by status, and pagination by using <c>offset</c>/<c>limit</c>.</para>
+        /// <para>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. This operation supports fuzzy match by plan name, filtering by status, and pagination by using <c>offset</c> and <c>limit</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8426,7 +8446,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query on the run records of a specified optimization task. To obtain complete result references and frozen outputs, call GetOptimizeRun.</para>
+        /// <para>Queries the run records of a specified optimization task by using paging. Complete result references and frozen outputs are queried by calling GetOptimizeRun.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8488,7 +8508,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query on the run records of a specified optimization task. To obtain complete result references and frozen outputs, call GetOptimizeRun.</para>
+        /// <para>Queries the run records of a specified optimization task by using paging. Complete result references and frozen outputs are queried by calling GetOptimizeRun.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8550,7 +8570,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query on the run records of a specified optimization task. To obtain complete result references and frozen outputs, call GetOptimizeRun.</para>
+        /// <para>Queries the run records of a specified optimization task by using paging. Complete result references and frozen outputs are queried by calling GetOptimizeRun.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8569,7 +8589,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query on the run records of a specified optimization task. To obtain complete result references and frozen outputs, call GetOptimizeRun.</para>
+        /// <para>Queries the run records of a specified optimization task by using paging. Complete result references and frozen outputs are queried by calling GetOptimizeRun.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8588,7 +8608,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries optimization tasks in a specified AgentSpace by using paging and returns the task status, configurations, and scheduling checkpoints.</para>
+        /// <para>Performs a paging query on the optimization tasks in a specified AgentSpace and returns the task status, configurations, and scheduling checkpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8646,7 +8666,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries optimization tasks in a specified AgentSpace by using paging and returns the task status, configurations, and scheduling checkpoints.</para>
+        /// <para>Performs a paging query on the optimization tasks in a specified AgentSpace and returns the task status, configurations, and scheduling checkpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8704,7 +8724,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries optimization tasks in a specified AgentSpace by using paging and returns the task status, configurations, and scheduling checkpoints.</para>
+        /// <para>Performs a paging query on the optimization tasks in a specified AgentSpace and returns the task status, configurations, and scheduling checkpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8723,7 +8743,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries optimization tasks in a specified AgentSpace by using paging and returns the task status, configurations, and scheduling checkpoints.</para>
+        /// <para>Performs a paging query on the optimization tasks in a specified AgentSpace and returns the task status, configurations, and scheduling checkpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8742,8 +8762,13 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the run history. Supports filtering by status, trigger type, and time range, and cursor-based pagination.</para>
+        /// <para>Queries the run history. Supports filtering by status, trigger type, and time range, and uses cursor-based pagination.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls the ListPipelineRuns operation to query the pipeline run history. You can filter the results by status, trigger type, and time range, and use cursor-based pagination.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPipelineRunsRequest
@@ -8808,8 +8833,13 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the run history. Supports filtering by status, trigger type, and time range, and cursor-based pagination.</para>
+        /// <para>Queries the run history. Supports filtering by status, trigger type, and time range, and uses cursor-based pagination.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls the ListPipelineRuns operation to query the pipeline run history. You can filter the results by status, trigger type, and time range, and use cursor-based pagination.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPipelineRunsRequest
@@ -8874,8 +8904,13 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the run history. Supports filtering by status, trigger type, and time range, and cursor-based pagination.</para>
+        /// <para>Queries the run history. Supports filtering by status, trigger type, and time range, and uses cursor-based pagination.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls the ListPipelineRuns operation to query the pipeline run history. You can filter the results by status, trigger type, and time range, and use cursor-based pagination.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPipelineRunsRequest
@@ -8893,8 +8928,13 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the run history. Supports filtering by status, trigger type, and time range, and cursor-based pagination.</para>
+        /// <para>Queries the run history. Supports filtering by status, trigger type, and time range, and uses cursor-based pagination.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls the ListPipelineRuns operation to query the pipeline run history. You can filter the results by status, trigger type, and time range, and use cursor-based pagination.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPipelineRunsRequest
@@ -9219,8 +9259,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>agentSpace</b> must be an AgentSpace instance created under the current account.</description></item>
-        /// <item><description><b>source.type</b> currently supports only the <c>logstore</c> type, and <c>logstore.project</c> and <c>logstore.logstore</c> must be authorized within the AgentSpace and reside in the same region.</description></item>
+        /// <item><description><b>agentSpace</b> must be an existing AgentSpace instance under the current account.</description></item>
+        /// <item><description><b>source.type</b> currently supports only the <c>logstore</c> type. The <c>logstore.project</c> and <c>logstore.logstore</c> must be authorized within the AgentSpace and reside in the same region.</description></item>
         /// <item><description><b>pipeline.nodes</b> must contain at least one <c>Source</c> node and cannot be empty.</description></item>
         /// <item><description><b>fromTime</b> and <b>toTime</b> are UNIX timestamps in seconds. <b>fromTime</b> must be earlier than <b>toTime</b>.</description></item>
         /// <item><description>A maximum of 5 records are returned, and internal fields of the data source system are automatically filtered out.</description></item>
@@ -9289,8 +9329,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>agentSpace</b> must be an AgentSpace instance created under the current account.</description></item>
-        /// <item><description><b>source.type</b> currently supports only the <c>logstore</c> type, and <c>logstore.project</c> and <c>logstore.logstore</c> must be authorized within the AgentSpace and reside in the same region.</description></item>
+        /// <item><description><b>agentSpace</b> must be an existing AgentSpace instance under the current account.</description></item>
+        /// <item><description><b>source.type</b> currently supports only the <c>logstore</c> type. The <c>logstore.project</c> and <c>logstore.logstore</c> must be authorized within the AgentSpace and reside in the same region.</description></item>
         /// <item><description><b>pipeline.nodes</b> must contain at least one <c>Source</c> node and cannot be empty.</description></item>
         /// <item><description><b>fromTime</b> and <b>toTime</b> are UNIX timestamps in seconds. <b>fromTime</b> must be earlier than <b>toTime</b>.</description></item>
         /// <item><description>A maximum of 5 records are returned, and internal fields of the data source system are automatically filtered out.</description></item>
@@ -9359,8 +9399,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>agentSpace</b> must be an AgentSpace instance created under the current account.</description></item>
-        /// <item><description><b>source.type</b> currently supports only the <c>logstore</c> type, and <c>logstore.project</c> and <c>logstore.logstore</c> must be authorized within the AgentSpace and reside in the same region.</description></item>
+        /// <item><description><b>agentSpace</b> must be an existing AgentSpace instance under the current account.</description></item>
+        /// <item><description><b>source.type</b> currently supports only the <c>logstore</c> type. The <c>logstore.project</c> and <c>logstore.logstore</c> must be authorized within the AgentSpace and reside in the same region.</description></item>
         /// <item><description><b>pipeline.nodes</b> must contain at least one <c>Source</c> node and cannot be empty.</description></item>
         /// <item><description><b>fromTime</b> and <b>toTime</b> are UNIX timestamps in seconds. <b>fromTime</b> must be earlier than <b>toTime</b>.</description></item>
         /// <item><description>A maximum of 5 records are returned, and internal fields of the data source system are automatically filtered out.</description></item>
@@ -9390,8 +9430,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>agentSpace</b> must be an AgentSpace instance created under the current account.</description></item>
-        /// <item><description><b>source.type</b> currently supports only the <c>logstore</c> type, and <c>logstore.project</c> and <c>logstore.logstore</c> must be authorized within the AgentSpace and reside in the same region.</description></item>
+        /// <item><description><b>agentSpace</b> must be an existing AgentSpace instance under the current account.</description></item>
+        /// <item><description><b>source.type</b> currently supports only the <c>logstore</c> type. The <c>logstore.project</c> and <c>logstore.logstore</c> must be authorized within the AgentSpace and reside in the same region.</description></item>
         /// <item><description><b>pipeline.nodes</b> must contain at least one <c>Source</c> node and cannot be empty.</description></item>
         /// <item><description><b>fromTime</b> and <b>toTime</b> are UNIX timestamps in seconds. <b>fromTime</b> must be earlier than <b>toTime</b>.</description></item>
         /// <item><description>A maximum of 5 records are returned, and internal fields of the data source system are automatically filtered out.</description></item>

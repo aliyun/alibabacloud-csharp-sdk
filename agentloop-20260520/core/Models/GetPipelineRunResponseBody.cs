@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class GetPipelineRunResponseBody : TeaModel {
         /// <summary>
-        /// <para>The name of the AgentSpace to which the pipeline belongs.</para>
+        /// <para>The name of the AgentSpace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-agent-space</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string AgentSpaceName { get; set; }
 
         /// <summary>
-        /// <para>The current retry count.</para>
+        /// <para>The current number of retries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -31,6 +31,9 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 
         /// <summary>
         /// <para>The semantic error code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ExpressionEvaluationError</para>
         /// </summary>
         [NameInMap("errorCode")]
         [Validation(Required=false)]
@@ -38,13 +41,16 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 
         /// <summary>
         /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Failed to evaluate filter expression in node \&quot;node-1\&quot;: column \&quot;score\&quot; does not exist.</para>
         /// </summary>
         [NameInMap("errorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The finish time, in ISO 8601 UTC format.</para>
+        /// <para>The finish time in ISO 8601 UTC format.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +61,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string FinishTime { get; set; }
 
         /// <summary>
-        /// <para>The start of the data window, in UNIX seconds.</para>
+        /// <para>The start time of the data window, in UNIX seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1735660800</para>
@@ -75,7 +81,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? MaxAttempts { get; set; }
 
         /// <summary>
-        /// <para>The next retry time, in ISO 8601 UTC format.</para>
+        /// <para>The next retry time in ISO 8601 UTC format.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
         /// 
         /// <b>Example:</b>
@@ -96,7 +102,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string PipelineName { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request, which is used to locate the request during troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</para>
@@ -106,7 +112,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The inline run results. This field is returned only when output.inline is set to true at trigger time.</para>
+        /// <para>The inline run results, which are returned only when output.inline is set to true during triggering.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;outputRows&quot;: 100, &quot;summary&quot;: &quot;processed 100 rows, 92 matched&quot;, &quot;passed&quot;: true}</para>
         /// </summary>
         [NameInMap("results")]
         [Validation(Required=false)]
@@ -123,7 +132,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RunId { get; set; }
 
         /// <summary>
-        /// <para>The execution start time, in ISO 8601 UTC format.</para>
+        /// <para>The execution start time in ISO 8601 UTC format.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
         /// 
         /// <b>Example:</b>
@@ -134,21 +143,17 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The run statistics, including processedRows (number of processed rows), processedBytes (number of processed bytes), outputRows (number of output rows), outputBytes (number of output bytes), elapsedMs (elapsed time in milliseconds), cpuSec (CPU seconds), cpuCores (number of CPU cores), and tokenCount (number of tokens consumed).</para>
+        /// <para>The run statistics, including processedRows (number of processed rows), processedBytes (number of processed bytes), outputRows (number of output rows), outputBytes (number of output bytes), elapsedMs (elapsed time in milliseconds), cpuSec (CPU seconds), cpuCores (number of CPU cores), and tokenCount (number of consumed tokens).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;processedRows&quot;:1000,&quot;elapsedMs&quot;:2500}</para>
         /// </summary>
         [NameInMap("stats")]
         [Validation(Required=false)]
         public Dictionary<string, object> Stats { get; set; }
 
         /// <summary>
-        /// <para>The run status. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Pending</description></item>
-        /// <item><description>Running</description></item>
-        /// <item><description>Succeeded</description></item>
-        /// <item><description>Failed</description></item>
-        /// <item><description>Cancelled</description></item>
-        /// </list>
+        /// <para>The status of the run. Valid values: Pending, Running, Succeeded, Failed, and Cancelled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Succeeded</para>
@@ -158,7 +163,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The end of the data window, in UNIX seconds.</para>
+        /// <para>The end time of the data window, in UNIX seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1735747200</para>
@@ -168,7 +173,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public long? ToTime { get; set; }
 
         /// <summary>
-        /// <para>The trigger time, in ISO 8601 UTC format.</para>
+        /// <para>The trigger time in ISO 8601 UTC format.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
         /// 
         /// <b>Example:</b>
@@ -179,12 +184,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string TriggerTime { get; set; }
 
         /// <summary>
-        /// <para>The trigger type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Scheduled</description></item>
-        /// <item><description>Manual</description></item>
-        /// <item><description>RunOnce</description></item>
-        /// </list>
+        /// <para>The trigger type. Valid values: Scheduled, Manual, and RunOnce.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Scheduled</para>

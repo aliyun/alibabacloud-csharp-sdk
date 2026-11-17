@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries returned per request.</para>
+        /// <para>The maximum number of records returned in a single request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. If no more pages are available, this parameter is empty.</para>
+        /// <para>The pagination token. This value is empty if no more pages are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ydx438PDAW1lYRJZbBn9</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             /// <para>The region name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>华东1（杭州）</para>
+            /// <para>China (Hangzhou)</para>
             /// </summary>
             [NameInMap("localName")]
             [Validation(Required=false)]

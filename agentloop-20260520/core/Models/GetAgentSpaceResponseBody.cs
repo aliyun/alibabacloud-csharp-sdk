@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public GetAgentSpaceResponseBodyMseNamespace MseNamespace { get; set; }
         public class GetAgentSpaceResponseBodyMseNamespace : TeaModel {
             /// <summary>
-            /// <para>The attach type of the MSE namespace. AutoCreated indicates automatic creation by AgentLoop. UserSelected indicates that an existing namespace is selected and attached when the AgentSpace is created.</para>
+            /// <para>The attach type of the MSE namespace. AutoCreated indicates automatic creation by AgentLoop. UserSelected indicates that you select and attach an existing namespace when creating the AgentSpace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AutoCreated</para>
@@ -130,14 +130,18 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string SlsProject { get; set; }
 
         /// <summary>
+        /// <para>The complete standard tags of the active AgentSpace in the current region. An empty array is returned if it is confirmed that no tags exist. This field is omitted if the AgentSpace is not active or the tags cannot be determined. The omission of this field does not indicate that no tags exist.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>[{\&quot;key\&quot;: \&quot;env\&quot;, \&quot;value\&quot;: \&quot;test\&quot;}]</para>
+        /// <para>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;test&quot;}]</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public List<GetAgentSpaceResponseBodyTags> Tags { get; set; }
         public class GetAgentSpaceResponseBodyTags : TeaModel {
             /// <summary>
+            /// <para>The tag key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>env</para>
             /// </summary>
@@ -146,6 +150,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The tag value, which can be an empty string.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>

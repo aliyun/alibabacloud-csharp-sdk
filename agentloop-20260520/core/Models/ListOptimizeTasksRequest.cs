@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The task status.</para>
+        /// <para>Filters the results by status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Enabled</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The task type.</para>
+        /// <para>Filters the results by task type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EfficiencyAnalysis</para>

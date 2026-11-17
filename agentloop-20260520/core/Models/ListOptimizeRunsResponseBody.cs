@@ -87,7 +87,16 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The execution summary and finite-state information. To obtain complete result references, frozen outputs, and publish receipts, call GetOptimizeRun.</para>
+            /// <para>The execution summary and finite-state information. Complete result references, frozen outputs, and publish receipts can be obtained by calling GetOptimizeRun.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{
+            ///     &quot;inputSelection&quot;: &quot;trigger-re&quot;,
+            ///     &quot;inputSelectorHash&quot;: &quot;sha256:43cfdbfc0260d11d3491c4987478a1a0e9966dda88*************&quot;,
+            ///     &quot;sourceTrajectoryScanSkipped&quot;: true,
+            ///     &quot;featureTriggerTrajectoryCount&quot;: 1011,
+            ///     &quot;incompleteTriggerTrajectoryCount&quot;: 0
+            /// }</para>
             /// </summary>
             [NameInMap("extra")]
             [Validation(Required=false)]
@@ -135,13 +144,21 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 
             /// <summary>
             /// <para>The current execution progress. The fields are defined by the task type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{
+            ///     &quot;total&quot;: 1469,
+            ///     &quot;skipped&quot;: 2,
+            ///     &quot;processed&quot;: 370,
+            ///     &quot;succeeded&quot;: 368
+            /// }</para>
             /// </summary>
             [NameInMap("progress")]
             [Validation(Required=false)]
             public Dictionary<string, object> Progress { get; set; }
 
             /// <summary>
-            /// <para>The initial start time.</para>
+            /// <para>The first start time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T10:00:01Z</para>
@@ -181,7 +198,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string TriggerType { get; set; }
 
             /// <summary>
-            /// <para>The snapshot of the task type.</para>
+            /// <para>The task type snapshot.</para>
             /// 
             /// <b>Example:</b>
             /// <para>EfficiencyAnalysis</para>
@@ -191,20 +208,20 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The end time of the analysis window in UNIX seconds.</para>
+            /// <para>The end time of the analysis window, in UNIX seconds.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1786432690000</para>
+            /// <para>1786432690</para>
             /// </summary>
             [NameInMap("windowEndTime")]
             [Validation(Required=false)]
             public long? WindowEndTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the analysis window in UNIX seconds.</para>
+            /// <para>The start time of the analysis window, in UNIX seconds.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1786432688000</para>
+            /// <para>1786432688</para>
             /// </summary>
             [NameInMap("windowStartTime")]
             [Validation(Required=false)]
@@ -223,7 +240,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
