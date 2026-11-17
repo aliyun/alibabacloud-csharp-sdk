@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string VersionHashCode { get; set; }
 
         /// <summary>
-        /// <para>The workflow definition version number.</para>
+        /// <para>The version number of the workflow definition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

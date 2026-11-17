@@ -10,19 +10,17 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class RefreshLivyComputeTokenRequest : TeaModel {
         /// <summary>
-        /// <para>The information about token expiration.</para>
+        /// <para>The token expiration information struct.</para>
         /// </summary>
         [NameInMap("autoExpireConfiguration")]
         [Validation(Required=false)]
         public RefreshLivyComputeTokenRequestAutoExpireConfiguration AutoExpireConfiguration { get; set; }
         public class RefreshLivyComputeTokenRequestAutoExpireConfiguration : TeaModel {
             /// <summary>
-            /// <para>Specifies whether the token automatically expires.</para>
+            /// <para>Specifies whether the token automatically expires. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: The token automatically expires.</para>
-            /// </description></item>
-            /// <item><description><para>false: The token does not automatically expire.</para>
-            /// </description></item>
+            /// <item><description>true: Yes.</description></item>
+            /// <item><description>false: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,7 +31,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>The expiration period in days.</para>
+            /// <para>The expiration time in days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -55,7 +53,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The token must be 16 or more characters in length.</para>
+        /// <para>The token content. The length must be at least 16.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fe86812667f04v343</para>

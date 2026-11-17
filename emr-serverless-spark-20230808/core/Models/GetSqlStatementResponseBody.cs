@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public GetSqlStatementResponseBodyData Data { get; set; }
         public class GetSqlStatementResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>A list of execution times for the SQL query.</para>
+            /// <para>The list of SQL query execution durations.</para>
             /// </summary>
             [NameInMap("executionTime")]
             [Validation(Required=false)]
             public List<long?> ExecutionTime { get; set; }
 
             /// <summary>
-            /// <para>The error code for the SQL query.</para>
+            /// <para>The SQL query error code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ERROR-102</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string SqlErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The error message for the SQL query.</para>
+            /// <para>The SQL query error message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>error message</para>
@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string SqlErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>A list of SQL query results.</para>
+            /// <para>The list of SQL query results.</para>
             /// </summary>
             [NameInMap("sqlOutputs")]
             [Validation(Required=false)]
             public List<GetSqlStatementResponseBodyDataSqlOutputs> SqlOutputs { get; set; }
             public class GetSqlStatementResponseBodyDataSqlOutputs : TeaModel {
                 /// <summary>
-                /// <para>The query data. The data is a JSON-serialized string.</para>
+                /// <para>The query data, formatted as a string serialized in JSON.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[{\&quot;values\&quot;:[\&quot;test_db\&quot;,\&quot;test_table\&quot;,false]}</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string RowsFilePath { get; set; }
 
                 /// <summary>
-                /// <para>The details of the schema. The details are a JSON-serialized string.</para>
+                /// <para>The detailed schema information, formatted as a string serialized in JSON.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;type\&quot;:\&quot;struct\&quot;,\&quot;fields\&quot;:[{\&quot;name\&quot;:\&quot;namespace\&quot;,\&quot;type\&quot;:\&quot;string\&quot;,\&quot;nullable\&quot;:false,\&quot;metadata\&quot;:{}},{\&quot;name\&quot;:\&quot;tableName\&quot;,\&quot;type\&quot;:\&quot;string\&quot;,\&quot;nullable\&quot;:false,\&quot;metadata\&quot;:{}},{\&quot;name\&quot;:\&quot;isTemporary\&quot;,\&quot;type\&quot;:\&quot;boolean\&quot;,\&quot;nullable\&quot;:false,\&quot;metadata\&quot;:{}}]}</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// <para>The state of the query.</para>
+            /// <para>The query status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>running</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The statement ID.</para>
+            /// <para>The query ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>st-1231311abadfaa</para>

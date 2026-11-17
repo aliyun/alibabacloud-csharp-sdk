@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class GrantRoleToUsersRequest : TeaModel {
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the RAM role.</para>
+        /// <para>The ARN of the role.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:emr::w-975bcfda9625****:role/Owner</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RoleArn { get; set; }
 
         /// <summary>
-        /// <para>The user ARNs.</para>
+        /// <para>The list of user ARNs.</para>
         /// </summary>
         [NameInMap("userArns")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListLogContentsRequest : TeaModel {
         /// <summary>
-        /// <para>Full path of the file.</para>
+        /// <para>The full path of the file.</para>
         /// </summary>
         [NameInMap("fileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>Length of the log.</para>
+        /// <para>The length of the log.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9999</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? Length { get; set; }
 
         /// <summary>
-        /// <para>Start line for query.</para>
+        /// <para>The starting line of the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? Offset { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

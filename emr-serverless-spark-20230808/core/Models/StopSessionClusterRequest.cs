@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class StopSessionClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The queue name.</para>
+        /// <para>The name of the queue.</para>
         /// 
         /// <b>Example:</b>
         /// <para>root_queue</para>

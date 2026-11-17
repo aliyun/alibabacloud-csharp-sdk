@@ -1267,6 +1267,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 body["fusion"] = request.Fusion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LivyReleaseVersion))
+            {
+                body["livyReleaseVersion"] = request.LivyReleaseVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LivyServerConf))
             {
                 body["livyServerConf"] = request.LivyServerConf;
@@ -1374,6 +1378,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fusion))
             {
                 body["fusion"] = request.Fusion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LivyReleaseVersion))
+            {
+                body["livyReleaseVersion"] = request.LivyReleaseVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LivyServerConf))
             {
@@ -2134,6 +2142,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 body["displayReleaseVersion"] = request.DisplayReleaseVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableMetricsUpload))
+            {
+                body["enableMetricsUpload"] = request.EnableMetricsUpload;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraParam))
             {
                 body["extraParam"] = request.ExtraParam;
@@ -2149,6 +2161,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkServiceName))
             {
                 body["networkServiceName"] = request.NetworkServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsLogStore))
+            {
+                body["slsLogStore"] = request.SlsLogStore;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsProject))
+            {
+                body["slsProject"] = request.SlsProject;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VolumeIds))
             {
@@ -2208,6 +2228,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 body["displayReleaseVersion"] = request.DisplayReleaseVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableMetricsUpload))
+            {
+                body["enableMetricsUpload"] = request.EnableMetricsUpload;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraParam))
             {
                 body["extraParam"] = request.ExtraParam;
@@ -2223,6 +2247,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkServiceName))
             {
                 body["networkServiceName"] = request.NetworkServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsLogStore))
+            {
+                body["slsLogStore"] = request.SlsLogStore;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsProject))
+            {
+                body["slsProject"] = request.SlsProject;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VolumeIds))
             {
@@ -2777,6 +2809,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 body["paymentType"] = request.PaymentType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionOptionNo))
+            {
+                body["promotionOptionNo"] = request.PromotionOptionNo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamRoleName))
             {
                 body["ramRoleName"] = request.RamRoleName;
@@ -2896,6 +2932,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentType))
             {
                 body["paymentType"] = request.PaymentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionOptionNo))
+            {
+                body["promotionOptionNo"] = request.PromotionOptionNo;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamRoleName))
             {
@@ -3290,7 +3330,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Kyuubi Gateway authentication token.</para>
+        /// <para>Deletes the Kyuubi Gateway authentication token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3336,7 +3376,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Kyuubi Gateway authentication token.</para>
+        /// <para>Deletes the Kyuubi Gateway authentication token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3382,7 +3422,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Kyuubi Gateway authentication token.</para>
+        /// <para>Deletes the Kyuubi Gateway authentication token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3401,7 +3441,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Kyuubi Gateway authentication token.</para>
+        /// <para>Deletes the Kyuubi Gateway authentication token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3550,7 +3590,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the token of a Livy gateway.</para>
+        /// <para>Deletes a Livy Gateway token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3596,7 +3636,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the token of a Livy gateway.</para>
+        /// <para>Deletes a Livy Gateway token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3642,7 +3682,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the token of a Livy gateway.</para>
+        /// <para>Deletes a Livy Gateway token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3661,7 +3701,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the token of a Livy gateway.</para>
+        /// <para>Deletes a Livy Gateway token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3912,7 +3952,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a workspace queue.</para>
+        /// <para>Modifies a workspace queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3988,7 +4028,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a workspace queue.</para>
+        /// <para>Modifies a workspace queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4064,7 +4104,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a workspace queue.</para>
+        /// <para>Modifies a workspace queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4083,7 +4123,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a workspace queue.</para>
+        /// <para>Modifies a workspace queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4102,7 +4142,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a workflow and its scheduling.</para>
+        /// <para>Publishes a workflow and its schedule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4156,7 +4196,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a workflow and its scheduling.</para>
+        /// <para>Publishes a workflow and its schedule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4210,7 +4250,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a workflow and its scheduling.</para>
+        /// <para>Publishes a workflow and its schedule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4229,7 +4269,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a workflow and its scheduling.</para>
+        /// <para>Publishes a workflow and its schedule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4366,7 +4406,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Cache cluster.</para>
+        /// <para>Retrieves the details of a cache cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4412,7 +4452,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Cache cluster.</para>
+        /// <para>Retrieves the details of a cache cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4458,7 +4498,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Cache cluster.</para>
+        /// <para>Retrieves the details of a cache cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4477,7 +4517,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Cache cluster.</para>
+        /// <para>Retrieves the details of a cache cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4496,7 +4536,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of CU-hours consumed by a queue during a specified cycle.</para>
+        /// <para>Retrieves the CU hours of a workspace queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4546,7 +4586,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of CU-hours consumed by a queue during a specified cycle.</para>
+        /// <para>Retrieves the CU hours of a workspace queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4596,7 +4636,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of CU-hours consumed by a queue during a specified cycle.</para>
+        /// <para>Retrieves the CU hours of a workspace queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4615,7 +4655,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of CU-hours consumed by a queue during a specified cycle.</para>
+        /// <para>Retrieves the CU hours of a workspace queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4780,7 +4820,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Spark job run by calling GetJobRun.</para>
+        /// <para>Retrieves the details of a job run.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4826,7 +4866,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Spark job run by calling GetJobRun.</para>
+        /// <para>Retrieves the details of a job run.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4872,7 +4912,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Spark job run by calling GetJobRun.</para>
+        /// <para>Retrieves the details of a job run.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4891,7 +4931,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Spark job run by calling GetJobRun.</para>
+        /// <para>Retrieves the details of a job run.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4910,7 +4950,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a Kyuubi Gateway.</para>
+        /// <para>Retrieves the Kyuubi Gateway.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4946,7 +4986,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a Kyuubi Gateway.</para>
+        /// <para>Retrieves the Kyuubi Gateway.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4982,7 +5022,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a Kyuubi Gateway.</para>
+        /// <para>Retrieves the Kyuubi Gateway.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4997,7 +5037,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a Kyuubi Gateway.</para>
+        /// <para>Retrieves the Kyuubi Gateway.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5142,7 +5182,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the Livy Gateway information.</para>
+        /// <para>Retrieves the details of a Livy gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5188,7 +5228,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the Livy Gateway information.</para>
+        /// <para>Retrieves the details of a Livy gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5234,7 +5274,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the Livy Gateway information.</para>
+        /// <para>Retrieves the details of a Livy gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5253,7 +5293,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the Livy Gateway information.</para>
+        /// <para>Retrieves the details of a Livy gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5272,7 +5312,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the token for a Livy Gateway.</para>
+        /// <para>Retrieves the token for the Livy Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5318,7 +5358,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the token for a Livy Gateway.</para>
+        /// <para>Retrieves the token for the Livy Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5364,7 +5404,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the token for a Livy Gateway.</para>
+        /// <para>Retrieves the token for the Livy Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5383,7 +5423,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the token for a Livy Gateway.</para>
+        /// <para>Retrieves the token for the Livy Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6426,7 +6466,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns a specified role to users.</para>
+        /// <para>Grants the specified role permissions to users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6482,7 +6522,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns a specified role to users.</para>
+        /// <para>Grants the specified role permissions to users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6538,7 +6578,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns a specified role to users.</para>
+        /// <para>Grants the specified role permissions to users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6557,7 +6597,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns a specified role to users.</para>
+        /// <para>Grants the specified role permissions to users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7454,7 +7494,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Spark applications submitted by Kyuubi.</para>
+        /// <para>Retrieves a list of Spark applications submitted by Kyuubi.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7536,6 +7576,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 query["states"] = request.States;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["userName"] = request.UserName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -7558,7 +7602,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Spark applications submitted by Kyuubi.</para>
+        /// <para>Retrieves a list of Spark applications submitted by Kyuubi.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7640,6 +7684,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 query["states"] = request.States;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["userName"] = request.UserName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -7662,7 +7710,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Spark applications submitted by Kyuubi.</para>
+        /// <para>Retrieves a list of Spark applications submitted by Kyuubi.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7681,7 +7729,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Spark applications submitted by Kyuubi.</para>
+        /// <para>Retrieves a list of Spark applications submitted by Kyuubi.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7968,7 +8016,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the historical sessions of a Livy Gateway.</para>
+        /// <para>Retrieves the historical sessions of a Livy gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8022,7 +8070,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the historical sessions of a Livy Gateway.</para>
+        /// <para>Retrieves the historical sessions of a Livy gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8076,7 +8124,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the historical sessions of a Livy Gateway.</para>
+        /// <para>Retrieves the historical sessions of a Livy gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8095,7 +8143,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the historical sessions of a Livy Gateway.</para>
+        /// <para>Retrieves the historical sessions of a Livy gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8114,7 +8162,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the tokens of a Livy gateway.</para>
+        /// <para>Lists the tokens of Livy Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8160,7 +8208,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the tokens of a Livy gateway.</para>
+        /// <para>Lists the tokens of Livy Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8206,7 +8254,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the tokens of a Livy gateway.</para>
+        /// <para>Lists the tokens of Livy Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8225,7 +8273,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the tokens of a Livy gateway.</para>
+        /// <para>Lists the tokens of Livy Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8244,7 +8292,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Log Content</para>
+        /// <para>Retrieves the log content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8302,7 +8350,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Log Content</para>
+        /// <para>Retrieves the log content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8360,7 +8408,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Log Content</para>
+        /// <para>Retrieves the log content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8379,7 +8427,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Log Content</para>
+        /// <para>Retrieves the log content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8398,7 +8446,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of members in a workspace.</para>
+        /// <para>Queries the members of a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8452,7 +8500,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of members in a workspace.</para>
+        /// <para>Queries the members of a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8506,7 +8554,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of members in a workspace.</para>
+        /// <para>Queries the members of a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8525,7 +8573,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of members in a workspace.</para>
+        /// <para>Queries the members of a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8544,7 +8592,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists network connections.</para>
+        /// <para>Retrieves a list of network connectivity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8590,7 +8638,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists network connections.</para>
+        /// <para>Retrieves a list of network connectivity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8636,7 +8684,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists network connections.</para>
+        /// <para>Retrieves a list of network connectivity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8655,7 +8703,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists network connections.</para>
+        /// <para>Retrieves a list of network connectivity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9294,6 +9342,136 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves the list of available regions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRegionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRegionsResponse
+        /// </returns>
+        public ListRegionsResponse ListRegionsWithOptions(ListRegionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRegions",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/action/listRegions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRegionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of available regions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRegionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRegionsResponse
+        /// </returns>
+        public async Task<ListRegionsResponse> ListRegionsWithOptionsAsync(ListRegionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRegions",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/action/listRegions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRegionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of available regions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRegionsResponse
+        /// </returns>
+        public ListRegionsResponse ListRegions(ListRegionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListRegionsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of available regions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRegionsResponse
+        /// </returns>
+        public async Task<ListRegionsResponse> ListRegionsAsync(ListRegionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListRegionsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves a list of release versions.</para>
         /// </summary>
         /// 
@@ -9634,7 +9812,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the execution results of an SQL statement.</para>
+        /// <para>Retrieves the content of SQL statements.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9688,7 +9866,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the execution results of an SQL statement.</para>
+        /// <para>Retrieves the content of SQL statements.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9742,7 +9920,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the execution results of an SQL statement.</para>
+        /// <para>Retrieves the content of SQL statements.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9761,7 +9939,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the execution results of an SQL statement.</para>
+        /// <para>Retrieves the content of SQL statements.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9780,7 +9958,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists job templates.</para>
+        /// <para>Retrieves a list of task templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9826,7 +10004,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists job templates.</para>
+        /// <para>Retrieves a list of task templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9872,7 +10050,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists job templates.</para>
+        /// <para>Retrieves a list of task templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9891,7 +10069,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists job templates.</para>
+        /// <para>Retrieves a list of task templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10048,7 +10226,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of workspaces.</para>
+        /// <para>Retrieves a list of workspaces.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10124,7 +10302,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of workspaces.</para>
+        /// <para>Retrieves a list of workspaces.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10200,7 +10378,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of workspaces.</para>
+        /// <para>Retrieves a list of workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10219,7 +10397,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of workspaces.</para>
+        /// <para>Retrieves a list of workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10476,7 +10654,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refreshes the token for a Livy Gateway.</para>
+        /// <para>Updates the token of a Livy gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10536,7 +10714,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refreshes the token for a Livy Gateway.</para>
+        /// <para>Updates the token of a Livy gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10596,7 +10774,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refreshes the token for a Livy Gateway.</para>
+        /// <para>Updates the token of a Livy gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10615,7 +10793,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refreshes the token for a Livy Gateway.</para>
+        /// <para>Updates the token of a Livy gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10634,7 +10812,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start CacheCluster</para>
+        /// <para>Starts a cache cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10680,7 +10858,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start CacheCluster</para>
+        /// <para>Starts a cache cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10726,7 +10904,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start CacheCluster</para>
+        /// <para>Starts a cache cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10745,7 +10923,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start CacheCluster</para>
+        /// <para>Starts a cache cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10764,7 +10942,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a Spark Job.</para>
+        /// <para>Starts a Spark job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10860,7 +11038,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a Spark Job.</para>
+        /// <para>Starts a Spark job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10956,7 +11134,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a Spark Job.</para>
+        /// <para>Starts a Spark job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10975,7 +11153,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a Spark Job.</para>
+        /// <para>Starts a Spark job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10994,7 +11172,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts the Kyuubi Gateway.</para>
+        /// <para>Starts Kyuubi Gateway.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -11030,7 +11208,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts the Kyuubi Gateway.</para>
+        /// <para>Starts Kyuubi Gateway.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -11066,7 +11244,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts the Kyuubi Gateway.</para>
+        /// <para>Starts Kyuubi Gateway.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -11081,7 +11259,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts the Kyuubi Gateway.</para>
+        /// <para>Starts Kyuubi Gateway.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -11096,7 +11274,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a Livy gateway.</para>
+        /// <para>Starts Livy Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11142,7 +11320,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a Livy gateway.</para>
+        /// <para>Starts Livy Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11188,7 +11366,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a Livy gateway.</para>
+        /// <para>Starts Livy Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11207,7 +11385,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a Livy gateway.</para>
+        /// <para>Starts Livy Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11732,7 +11910,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a CacheCluster.</para>
+        /// <para>Stops a cache cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11778,7 +11956,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a CacheCluster.</para>
+        /// <para>Stops a cache cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11824,7 +12002,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a CacheCluster.</para>
+        /// <para>Stops a cache cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11843,7 +12021,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a CacheCluster.</para>
+        /// <para>Stops a cache cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11862,7 +12040,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a Kyuubi Gateway.</para>
+        /// <para>Stops Kyuubi Gateway.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -11898,7 +12076,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a Kyuubi Gateway.</para>
+        /// <para>Stops Kyuubi Gateway.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -11934,7 +12112,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a Kyuubi Gateway.</para>
+        /// <para>Stops Kyuubi Gateway.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -11949,7 +12127,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a Kyuubi Gateway.</para>
+        /// <para>Stops Kyuubi Gateway.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -11964,7 +12142,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a Livy Gateway.</para>
+        /// <para>Stops the Livy Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12010,7 +12188,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a Livy Gateway.</para>
+        /// <para>Stops the Livy Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12056,7 +12234,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a Livy Gateway.</para>
+        /// <para>Stops the Livy Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12075,7 +12253,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a Livy Gateway.</para>
+        /// <para>Stops the Livy Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12224,7 +12402,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a session.</para>
+        /// <para>Stops a session cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12280,7 +12458,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a session.</para>
+        /// <para>Stops a session cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12336,7 +12514,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a session.</para>
+        /// <para>Stops a session cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12355,7 +12533,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a session.</para>
+        /// <para>Stops a session cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12794,7 +12972,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a Kyuubi Gateway.</para>
+        /// <para>Updates Kyuubi Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12818,6 +12996,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 body["computeInstance"] = request.ComputeInstance;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectedReplica))
+            {
+                body["expectedReplica"] = request.ExpectedReplica;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KyuubiConfigs))
             {
                 body["kyuubiConfigs"] = request.KyuubiConfigs;
@@ -12838,6 +13020,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 body["queue"] = request.Queue;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Refresh))
+            {
+                body["refresh"] = request.Refresh;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReleaseVersion))
             {
                 body["releaseVersion"] = request.ReleaseVersion;
@@ -12849,6 +13035,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Restart))
             {
                 body["restart"] = request.Restart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scale))
+            {
+                body["scale"] = request.Scale;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SparkConfigs))
             {
@@ -12876,7 +13066,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a Kyuubi Gateway.</para>
+        /// <para>Updates Kyuubi Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12900,6 +13090,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 body["computeInstance"] = request.ComputeInstance;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectedReplica))
+            {
+                body["expectedReplica"] = request.ExpectedReplica;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KyuubiConfigs))
             {
                 body["kyuubiConfigs"] = request.KyuubiConfigs;
@@ -12920,6 +13114,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 body["queue"] = request.Queue;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Refresh))
+            {
+                body["refresh"] = request.Refresh;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReleaseVersion))
             {
                 body["releaseVersion"] = request.ReleaseVersion;
@@ -12931,6 +13129,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Restart))
             {
                 body["restart"] = request.Restart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scale))
+            {
+                body["scale"] = request.Scale;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SparkConfigs))
             {
@@ -12958,7 +13160,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a Kyuubi Gateway.</para>
+        /// <para>Updates Kyuubi Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12977,7 +13179,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a Kyuubi Gateway.</para>
+        /// <para>Updates Kyuubi Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13227,6 +13429,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 body["fusion"] = request.Fusion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LivyReleaseVersion))
+            {
+                body["livyReleaseVersion"] = request.LivyReleaseVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LivyServerConf))
             {
                 body["livyServerConf"] = request.LivyServerConf;
@@ -13334,6 +13540,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fusion))
             {
                 body["fusion"] = request.Fusion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LivyReleaseVersion))
+            {
+                body["livyReleaseVersion"] = request.LivyReleaseVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LivyServerConf))
             {
@@ -13762,6 +13972,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 body["displayReleaseVersion"] = request.DisplayReleaseVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableMetricsUpload))
+            {
+                body["enableMetricsUpload"] = request.EnableMetricsUpload;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraParam))
             {
                 body["extraParam"] = request.ExtraParam;
@@ -13777,6 +13991,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkServiceName))
             {
                 body["networkServiceName"] = request.NetworkServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsLogStore))
+            {
+                body["slsLogStore"] = request.SlsLogStore;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsProject))
+            {
+                body["slsProject"] = request.SlsProject;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VolumeIds))
             {
@@ -13836,6 +14058,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 body["displayReleaseVersion"] = request.DisplayReleaseVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableMetricsUpload))
+            {
+                body["enableMetricsUpload"] = request.EnableMetricsUpload;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraParam))
             {
                 body["extraParam"] = request.ExtraParam;
@@ -13851,6 +14077,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkServiceName))
             {
                 body["networkServiceName"] = request.NetworkServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsLogStore))
+            {
+                body["slsLogStore"] = request.SlsLogStore;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsProject))
+            {
+                body["slsProject"] = request.SlsProject;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VolumeIds))
             {

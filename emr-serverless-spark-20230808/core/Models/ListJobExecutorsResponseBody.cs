@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public List<ListJobExecutorsResponseBodyExexutors> Exexutors { get; set; }
         public class ListJobExecutorsResponseBodyExexutors : TeaModel {
             /// <summary>
-            /// <para>The total number of active tasks that the executor is running.</para>
+            /// <para>The total number of active tasks running on the executor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? ActiveTasks { get; set; }
 
             /// <summary>
-            /// <para>The time when the executor was created.</para>
+            /// <para>The creation time of the executor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1760601***</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? AddTime { get; set; }
 
             /// <summary>
-            /// <para>The total number of completed tasks that the executor has run.</para>
+            /// <para>The total number of tasks completed by the executor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ExecutorType { get; set; }
 
             /// <summary>
-            /// <para>The total number of failed tasks that the executor has run.</para>
+            /// <para>The total number of failed tasks executed by the executor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? FailedTasks { get; set; }
 
             /// <summary>
-            /// <para>The address of the executor.</para>
+            /// <para>The address information of the executor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>21.10.x.x:1201x</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? MemoryUsed { get; set; }
 
             /// <summary>
-            /// <para>The number of Resilient Distributed Dataset (RDD) blocks managed by the executor.</para>
+            /// <para>The number of RDD blocks managed by the executor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The total number of cores for the executor.</para>
+            /// <para>The total number of cores of the executor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? TotalCores { get; set; }
 
             /// <summary>
-            /// <para>The total runtime of the executor.</para>
+            /// <para>The total running duration of the executor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? TotalDuration { get; set; }
 
             /// <summary>
-            /// <para>The total garbage collection (GC) time of the executor.</para>
+            /// <para>The total GC time of the executor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? TotalGCTime { get; set; }
 
             /// <summary>
-            /// <para>The number of bytes of input data for the executor.</para>
+            /// <para>The total number of input bytes for the executor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? TotalInputBytes { get; set; }
 
             /// <summary>
-            /// <para>The number of bytes read during the shuffle phase by the executor.</para>
+            /// <para>The total number of shuffle read bytes for the executor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2048</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? TotalShuffleRead { get; set; }
 
             /// <summary>
-            /// <para>The number of bytes written during the shuffle phase by the executor.</para>
+            /// <para>The total number of shuffle write bytes for the executor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2048</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? TotalShuffleWrite { get; set; }
 
             /// <summary>
-            /// <para>The total number of tasks that the executor has run.</para>
+            /// <para>The total number of tasks executed by the executor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records returned.</para>
+        /// <para>The maximum number of records to return in a single request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page of results.</para>
+        /// <para>The next token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -249,7 +249,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>

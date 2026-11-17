@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records to return for a single request.</para>
+        /// <para>The maximum number of records to retrieve at a time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that specifies the position from which to start reading the results.</para>
+        /// <para>The token that indicates the starting position for reading.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

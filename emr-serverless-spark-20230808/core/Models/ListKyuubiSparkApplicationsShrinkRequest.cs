@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string EndTimeShrink { get; set; }
 
         /// <summary>
-        /// <para>The list of statuses of the latest SQL statement used for filtering.</para>
+        /// <para>The list of statuses of the most recent SQL statement used for filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;SUCCESS&quot;]</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string LatestSqlStatementStatuses { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records to retrieve at a time.</para>
+        /// <para>The maximum number of records to return in a single request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string ResourceQueueId { get; set; }
 
         /// <summary>
-        /// <para>The sort order. A value of asc indicates ascending order, and desc indicates descending order.</para>
+        /// <para>The sort order. asc indicates ascending order, and desc indicates descending order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>asc</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string StartTimeShrink { get; set; }
 
         /// <summary>
-        /// <para>The list of Spark application states used for filtering.</para>
+        /// <para>The list of Spark application statuses used for filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;ERROR&quot;]</para>
@@ -119,6 +119,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [NameInMap("states")]
         [Validation(Required=false)]
         public string States { get; set; }
+
+        /// <summary>
+        /// <para>The username.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>user-a</para>
+        /// </summary>
+        [NameInMap("userName")]
+        [Validation(Required=false)]
+        public string UserName { get; set; }
 
     }
 

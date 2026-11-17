@@ -20,7 +20,17 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string ComputeInstance { get; set; }
 
         /// <summary>
-        /// <para>The Kyuubi service configuration.</para>
+        /// <para>The expected number of instances.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
+        /// </summary>
+        [NameInMap("expectedReplica")]
+        [Validation(Required=false)]
+        public int? ExpectedReplica { get; set; }
+
+        /// <summary>
+        /// <para>The Kyuubi service configurations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>
@@ -30,7 +40,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string KyuubiConfigs { get; set; }
 
         /// <summary>
-        /// <para>The Kyuubi service engine version.</para>
+        /// <para>The Kyuubi service DPI engine version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.9.2-0.0.2</para>
@@ -60,7 +70,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public bool? PublicEndpointEnabled { get; set; }
 
         /// <summary>
-        /// <para>The queue in which the Kyuubi service runs.</para>
+        /// <para>The running queue for the Kyuubi service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dev_queue</para>
@@ -70,7 +80,17 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Queue { get; set; }
 
         /// <summary>
-        /// <para>The version of the Spark engine.</para>
+        /// <para>Specifies whether to update the configurations.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("refresh")]
+        [Validation(Required=false)]
+        public bool? Refresh { get; set; }
+
+        /// <summary>
+        /// <para>The Spark DPI engine version number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>esr-4.6.0 (Spark 3.5.2, Scala 2.12)</para>
@@ -80,7 +100,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string ReleaseVersion { get; set; }
 
         /// <summary>
-        /// <para>The number of replicas for high availability (HA).</para>
+        /// <para>The number of replicas enabled for high availability.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -90,7 +110,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? Replica { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to restart the service.</para>
+        /// <para>Specifies whether to restart.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -100,7 +120,17 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public bool? Restart { get; set; }
 
         /// <summary>
-        /// <para>The Spark configuration.</para>
+        /// <para>Specifies whether to update the number of replicas.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("scale")]
+        [Validation(Required=false)]
+        public bool? Scale { get; set; }
+
+        /// <summary>
+        /// <para>The Spark configurations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>

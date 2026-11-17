@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class RefreshLivyComputeTokenResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. A value of 1000000 indicates that the request was successful. For other values, the request failed. For more information, see the message parameter.</para>
+        /// <para>The response code. A value of 1000000 indicates a successful request. Other values indicate a failed request. For details about the cause of the error, see the message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000000</para>

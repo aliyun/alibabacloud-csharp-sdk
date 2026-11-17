@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class GetCacheClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of Cache clusters.</para>
+        /// <para>The list of cache clusters.</para>
         /// </summary>
         [NameInMap("cacheClusters")]
         [Validation(Required=false)]

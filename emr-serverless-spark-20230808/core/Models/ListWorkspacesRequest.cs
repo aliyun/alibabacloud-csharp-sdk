@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that specifies the starting position for the current read operation.</para>
+        /// <para>The pagination token that specifies the starting position for the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -62,11 +62,11 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         /// <summary>
         /// <para>The state of the workspace. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Starting: The workspace is starting.</description></item>
-        /// <item><description>Running: The workspace is running.</description></item>
-        /// <item><description>Stopping: The workspace is stopping.</description></item>
-        /// <item><description>Stopped: The workspace is stopped.</description></item>
-        /// <item><description>Error: The workspace has failed.</description></item>
+        /// <item><description>Starting: Starting.</description></item>
+        /// <item><description>Running: Running.</description></item>
+        /// <item><description>Stopping: Stopping.</description></item>
+        /// <item><description>Stopped: Stopped.</description></item>
+        /// <item><description>Error: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>iPhone disk space remaining rate</para>
+            /// <para>iPhone disk space remaining percentage</para>
             /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]

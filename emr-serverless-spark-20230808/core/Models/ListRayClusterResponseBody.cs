@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListRayClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of Ray clusters.</para>
+        /// <para>The Ray clusters.</para>
         /// </summary>
         [NameInMap("rayClusters")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The Ray DPI engine version.</para>
+            /// <para>The Ray engine version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ray-1.0.0 (Ray 2.47.1, Python 3.12)</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string DisplayReleaseVersion { get; set; }
 
             /// <summary>
-            /// <para>The internal gRPC endpoint. You can also use the domain name to submit Ray jobs.</para>
+            /// <para>The gRPC endpoint on the internal network. The domain name can also be used to submit Ray jobs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ray://emr-spark-ray-gateway-cn-hanghzou-internal.emr.aliyuncs.com:80</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string Cpu { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether auto scaling is enabled for worker nodes.</para>
+                /// <para>Specifies whether auto-scaling is enabled for worker nodes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string GpuSpec { get; set; }
 
                 /// <summary>
-                /// <para>The idle timeout for worker nodes, in seconds.</para>
+                /// <para>The idle timeout for worker nodes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>60</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public int? IdleTimeoutSeconds { get; set; }
 
                 /// <summary>
-                /// <para>The memory size, in GiB.</para>
+                /// <para>The memory size. Unit: Gi.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8Gi</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string Memory { get; set; }
 
                 /// <summary>
-                /// <para>The name of the queue.</para>
+                /// <para>The queue name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>root_queue</para>
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The network connectivity name.</para>
+            /// <para>The network connection name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc</para>
@@ -293,7 +293,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>The worker information of the Ray cluster.</para>
+            /// <para>The worker node information of the Ray cluster.</para>
             /// </summary>
             [NameInMap("workerSpec")]
             [Validation(Required=false)]
@@ -330,7 +330,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of workers when auto scaling is enabled.</para>
+                /// <para>The maximum number of worker nodes when auto-scaling is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -340,7 +340,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public int? MaxReplica { get; set; }
 
                 /// <summary>
-                /// <para>The memory size, in GiB.</para>
+                /// <para>The memory size. Unit: Gi.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8Gi</para>
@@ -350,7 +350,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string Memory { get; set; }
 
                 /// <summary>
-                /// <para>The minimum number of workers when auto scaling is enabled.</para>
+                /// <para>The minimum number of worker nodes when auto-scaling is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -360,7 +360,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public int? MinReplica { get; set; }
 
                 /// <summary>
-                /// <para>The name of the queue.</para>
+                /// <para>The queue name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>root_queue</para>
@@ -380,7 +380,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public int? Replica { get; set; }
 
                 /// <summary>
-                /// <para>The type of the worker.</para>
+                /// <para>The worker type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CPU</para>

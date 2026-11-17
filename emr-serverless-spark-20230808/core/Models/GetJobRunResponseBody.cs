@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public GetJobRunResponseBodyJobRun JobRun { get; set; }
         public class GetJobRunResponseBodyJobRun : TeaModel {
             /// <summary>
-            /// <para>The job code type. Valid values:</para>
+            /// <para>The code type of the job run. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>SQL</para>
             /// </description></item>
@@ -35,14 +35,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string CodeType { get; set; }
 
             /// <summary>
-            /// <para>The Spark job configuration.</para>
+            /// <para>The configuration overrides for the Spark job run.</para>
             /// </summary>
             [NameInMap("configurationOverrides")]
             [Validation(Required=false)]
             public GetJobRunResponseBodyJobRunConfigurationOverrides ConfigurationOverrides { get; set; }
             public class GetJobRunResponseBodyJobRunConfigurationOverrides : TeaModel {
                 /// <summary>
-                /// <para>The configuration list.</para>
+                /// <para>The list of configurations.</para>
                 /// </summary>
                 [NameInMap("configurations")]
                 [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string DisplayReleaseVersion { get; set; }
 
             /// <summary>
-            /// <para>The job end time. The value is a Unix timestamp in milliseconds.</para>
+            /// <para>The end time of the job run. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1684122914000</para>
@@ -91,6 +91,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public int? ExecutionTimeoutSeconds { get; set; }
 
             /// <summary>
+            /// <para>The timestamp in milliseconds when the resources become ready, indicating the first report time. The first report time takes precedence. If it is empty, the job report time is used as a fallback. If neither has a value, null is returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1684119314000</para>
+            /// </summary>
+            [NameInMap("firstReportTime")]
+            [Validation(Required=false)]
+            public long? FirstReportTime { get; set; }
+
+            /// <summary>
             /// <para>Specifies whether the Fusion engine acceleration is enabled.</para>
             /// 
             /// <b>Example:</b>
@@ -101,7 +111,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public bool? Fusion { get; set; }
 
             /// <summary>
-            /// <para>The Spark Driver information.</para>
+            /// <para>The information about the Spark driver.</para>
             /// </summary>
             [NameInMap("jobDriver")]
             [Validation(Required=false)]
@@ -118,14 +128,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string JobRunId { get; set; }
 
             /// <summary>
-            /// <para>The path of the run log.</para>
+            /// <para>The execution log path.</para>
             /// </summary>
             [NameInMap("log")]
             [Validation(Required=false)]
             public RunLog Log { get; set; }
 
             /// <summary>
-            /// <para>The job name.</para>
+            /// <para>The job run name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>jobName</para>
@@ -135,7 +145,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The download URL of the NOTEBOOK file. This parameter is returned only if the job type is NOTEBOOK.</para>
+            /// <para>The download URL of the notebook file. This parameter is returned only when the job type is NOTEBOOK.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://workflow-ide-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/spark-notebook-output/w-xxxxxxxxx/xxxxxxx">http://workflow-ide-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/spark-notebook-output/w-xxxxxxxxx/xxxxxxx</a></para>
@@ -145,7 +155,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string NotebookAccessUrl { get; set; }
 
             /// <summary>
-            /// <para>The job priority.</para>
+            /// <para>The priority of the job run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -155,7 +165,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Priority { get; set; }
 
             /// <summary>
-            /// <para>The Spark DPI engine version used to run the node.</para>
+            /// <para>The database engine version of the Spark DPI engine for the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>esr-3.3.1</para>
@@ -165,7 +175,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ReleaseVersion { get; set; }
 
             /// <summary>
-            /// <para>The UID of the user who created the job.</para>
+            /// <para>The UID of the user who created the job run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>150978934701****</para>
@@ -175,7 +185,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ResourceOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The name of the queue used to run the job.</para>
+            /// <para>The name of the resource queue for the job run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>root_queue</para>
@@ -185,7 +195,27 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ResourceQueueId { get; set; }
 
             /// <summary>
-            /// <para>The job status.</para>
+            /// <para>The resource startup duration in milliseconds, which is calculated by subtracting the first submission time from the resource ready time. If the first submission time or the resource ready time is missing, or if the calculation result is negative, null is returned instead of 0.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>60000</para>
+            /// </summary>
+            [NameInMap("resourceStartupDurationMs")]
+            [Validation(Required=false)]
+            public long? ResourceStartupDurationMs { get; set; }
+
+            /// <summary>
+            /// <para>The job run duration in milliseconds, which is calculated by subtracting the resource ready time from the job end time. If the job has not ended, the current time is used. If the resource ready time is missing or the calculation result is negative, null is returned instead of 0.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>120000</para>
+            /// </summary>
+            [NameInMap("runDurationMs")]
+            [Validation(Required=false)]
+            public long? RunDurationMs { get; set; }
+
+            /// <summary>
+            /// <para>The state of the job run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -195,7 +225,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The reason for the status change.</para>
+            /// <para>The reason for the state change.</para>
             /// </summary>
             [NameInMap("stateChangeReason")]
             [Validation(Required=false)]
@@ -224,7 +254,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// <para>The job submission time. The value is a Unix timestamp in milliseconds.</para>
+            /// <para>The submission time of the job run. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1684119314000</para>
@@ -234,14 +264,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? SubmitTime { get; set; }
 
             /// <summary>
-            /// <para>The tag list.</para>
+            /// <para>The list of tags.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<Tag> Tags { get; set; }
 
             /// <summary>
-            /// <para>The details of token consumption.</para>
+            /// <para>The details of the tokens consumed.</para>
             /// </summary>
             [NameInMap("tokenDetails")]
             [Validation(Required=false)]
@@ -290,7 +320,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string TokenRange { get; set; }
 
                 /// <summary>
-                /// <para>The token source. Valid values: input and output.</para>
+                /// <para>The source of the tokens, such as input or output.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>input</para>
@@ -322,7 +352,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? TotalTokens { get; set; }
 
             /// <summary>
-            /// <para>The web UI of the job.</para>
+            /// <para>The Web UI of the job run.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://spark-ui">http://spark-ui</a></para>

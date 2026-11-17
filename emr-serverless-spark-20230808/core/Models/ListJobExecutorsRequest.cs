@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page of results.</para>
+        /// <para>The next token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

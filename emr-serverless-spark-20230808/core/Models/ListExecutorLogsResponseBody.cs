@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListExecutorLogsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The retrieved logs, sorted in contextual order. This parameter is empty if no contextual logs are found in the log query based on the specified starting log.</para>
+        /// <para>The retrieved logs, sorted in contextual order. This parameter is empty if no contextual logs are found based on the specified starting log query.</para>
         /// </summary>
         [NameInMap("logs")]
         [Validation(Required=false)]
         public List<ListExecutorLogsResponseBodyLogs> Logs { get; set; }
         public class ListExecutorLogsResponseBodyLogs : TeaModel {
             /// <summary>
-            /// <para>The full file path.</para>
+            /// <para>The full path of the file.</para>
             /// </summary>
             [NameInMap("fileName")]
             [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records to return in a single request.</para>
+        /// <para>The maximum number of records to retrieve at a time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

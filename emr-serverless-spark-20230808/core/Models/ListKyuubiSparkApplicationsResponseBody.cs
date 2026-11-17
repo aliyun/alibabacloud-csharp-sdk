@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ApplicationName { get; set; }
 
             /// <summary>
-            /// <para>The number of compute units (CUs) consumed during the task execution. This value is an estimate. The actual value is subject to the bill.</para>
+            /// <para>The number of compute units (CUs) consumed during the task runtime. This value is an estimate. The final value is subject to the bill.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.238302</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public double? CuHours { get; set; }
 
             /// <summary>
-            /// <para>The end time of the task. The format is YYYY-MM-DD HH:mm:ss.</para>
+            /// <para>The end time of the task. Format: YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-02-12 20:02:02</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string KyuubiServiceId { get; set; }
 
             /// <summary>
-            /// <para>The execution status of the latest SQL statement in the application.</para>
+            /// <para>The execution status of the most recent SQL statement in the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string LatestSqlStatementStatus { get; set; }
 
             /// <summary>
-            /// <para>The total memory allocated to the task multiplied by the task execution duration in seconds.</para>
+            /// <para>The total memory allocated to the task multiplied by the number of seconds the task has run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3513900</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Priority { get; set; }
 
             /// <summary>
-            /// <para>The name of the resource queue in which the Spark task runs.</para>
+            /// <para>The name of the resource queue where the Spark task runs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev_queue</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public RunLog RunLog { get; set; }
 
             /// <summary>
-            /// <para>The start time of the task. The format is YYYY-MM-DD HH:mm:ss.</para>
+            /// <para>The start time of the task. Format: YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-02-12 19:59:16</para>
@@ -137,11 +137,11 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The state of the Spark application. Valid values:</para>
+            /// <para>The status of the Spark application. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>STARTING: The application is starting.</description></item>
-            /// <item><description>RUNNING: The application is running.</description></item>
-            /// <item><description>TERMINATED: The application is terminated.</description></item>
+            /// <item><description>STARTING: Starting.</description></item>
+            /// <item><description>RUNNING: Running.</description></item>
+            /// <item><description>TERMINATED: Terminated.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -159,7 +159,17 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public List<Tag> Tags { get; set; }
 
             /// <summary>
-            /// <para>The total number of vcores allocated to the task multiplied by the task execution duration in seconds.</para>
+            /// <para>The username.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>user-a</para>
+            /// </summary>
+            [NameInMap("userName")]
+            [Validation(Required=false)]
+            public string UserName { get; set; }
+
+            /// <summary>
+            /// <para>The total vcores allocated to the task multiplied by the number of seconds the task has run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>780</para>
@@ -178,7 +188,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records to retrieve at a time.</para>
+        /// <para>The maximum number of records to return in a single request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListLogContentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Log content.</para>
+        /// <para>The log content.</para>
         /// </summary>
         [NameInMap("listLogContent")]
         [Validation(Required=false)]
         public ListLogContentsResponseBodyListLogContent ListLogContent { get; set; }
         public class ListLogContentsResponseBodyListLogContent : TeaModel {
             /// <summary>
-            /// <para>List of log line contents.</para>
+            /// <para>The list of log lines.</para>
             /// </summary>
             [NameInMap("contents")]
             [Validation(Required=false)]
             public List<ListLogContentsResponseBodyListLogContentContents> Contents { get; set; }
             public class ListLogContentsResponseBodyListLogContentContents : TeaModel {
                 /// <summary>
-                /// <para>Log line content.</para>
+                /// <para>The content of the log line.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>spark pi is 3.14\n</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// <para>Total number of log lines.</para>
+            /// <para>The total number of log lines.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

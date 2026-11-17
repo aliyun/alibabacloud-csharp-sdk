@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The auto-renewal period. This parameter is required when the paymentType parameter is set to Pre.</para>
+        /// <para>The auto-renewal duration. This parameter is required when the paymentType parameter is set to Pre.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string AutoRenewPeriod { get; set; }
 
         /// <summary>
-        /// <para>The auto-renewal epoch. This parameter is required when the paymentType parameter is set to Pre.</para>
+        /// <para>The auto-renewal cycle. This parameter is required when the paymentType parameter is set to Pre.</para>
         /// 
         /// <b>Example:</b>
         /// <para>month</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public bool? AutoStartSessionCluster { get; set; }
 
         /// <summary>
-        /// <para>The client token for idempotence verification.</para>
+        /// <para>The client token used to ensure the idempotence of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8e6aae2810c8f67229ca70bb31cd****</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string OssBucket { get; set; }
 
         /// <summary>
-        /// <para>The subscription period unit.</para>
+        /// <para>The unit of the subscription period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -129,6 +129,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [NameInMap("paymentType")]
         [Validation(Required=false)]
         public string PaymentType { get; set; }
+
+        /// <summary>
+        /// <para>Supported only for subscription instances. Use the voucher option ID returned by the price inquiry API. To not use a voucher, pass youhuiquan_promotion_option_id_for_blank. If this parameter is omitted, the previous calling behavior is maintained.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>youhuiquan_promotion_option_id_for_blank</para>
+        /// </summary>
+        [NameInMap("promotionOptionNo")]
+        [Validation(Required=false)]
+        public string PromotionOptionNo { get; set; }
 
         /// <summary>
         /// <para>The name of the RAM role used to execute Spark jobs.</para>
@@ -168,7 +178,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public CreateWorkspaceRequestResourceSpec ResourceSpec { get; set; }
         public class CreateWorkspaceRequestResourceSpec : TeaModel {
             /// <summary>
-            /// <para>The resource limit of the workspace.</para>
+            /// <para>The maximum resource limit for the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>

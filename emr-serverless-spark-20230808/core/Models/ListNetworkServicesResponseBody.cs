@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListNetworkServicesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries to return on each page.</para>
+        /// <para>The maximum number of records returned per request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A list of network connections.</para>
+        /// <para>The list of network connectivity.</para>
         /// </summary>
         [NameInMap("networkServices")]
         [Validation(Required=false)]
         public List<ListNetworkServicesResponseBodyNetworkServices> NetworkServices { get; set; }
         public class ListNetworkServicesResponseBodyNetworkServices : TeaModel {
             /// <summary>
-            /// <para>The name of the network connection.</para>
+            /// <para>The name of the network connectivity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc_test</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the network connection.</para>
+            /// <para>The network connectivity ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ns-d7a1d02045fb****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string NetworkServiceId { get; set; }
 
             /// <summary>
-            /// <para>The state of the network connection.</para>
+            /// <para>The state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>running</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The message that provides details about the state change.</para>
+                /// <para>The response message.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>message</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// <para>The type of the network connection.</para>
+            /// <para>The type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NetworkService</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public List<string> VswitchIds { get; set; }
 
             /// <summary>
-            /// <para>The ID of the workspace.</para>
+            /// <para>The workspace ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>w-d2d82aa09155****</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If this parameter is empty, all results have been returned.</para>
+        /// <para>The next page token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -135,14 +135,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated.</para>
+        /// <para>The deprecated parameter.</para>
         /// </summary>
         [NameInMap("queues")]
         [Validation(Required=false)]
         public List<ListNetworkServicesResponseBodyQueues> Queues { get; set; }
         public class ListNetworkServicesResponseBodyQueues : TeaModel {
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
+            /// <para>The deprecated parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
+            /// <para>The deprecated parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ns-d7a1d02045fb****</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string NetworkServiceId { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
+            /// <para>The deprecated parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>running</para>
@@ -172,14 +172,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
+            /// <para>The deprecated parameter.</para>
             /// </summary>
             [NameInMap("stateChangeReason")]
             [Validation(Required=false)]
             public ListNetworkServicesResponseBodyQueuesStateChangeReason StateChangeReason { get; set; }
             public class ListNetworkServicesResponseBodyQueuesStateChangeReason : TeaModel {
                 /// <summary>
-                /// <para>This parameter is deprecated.</para>
+                /// <para>The deprecated parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>code</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is deprecated.</para>
+                /// <para>The deprecated parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>message</para>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
+            /// <para>The deprecated parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NetworkService</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
+            /// <para>The deprecated parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-uf6k2anfa9nzbm4cj****</para>
@@ -221,14 +221,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
+            /// <para>The deprecated parameter.</para>
             /// </summary>
             [NameInMap("vswitchIds")]
             [Validation(Required=false)]
             public List<string> VswitchIds { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
+            /// <para>The deprecated parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>w-d2d82aa09155****</para>
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

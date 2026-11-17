@@ -128,6 +128,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public bool? Fusion { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>0.9.0</para>
+        /// </summary>
+        [NameInMap("livyReleaseVersion")]
+        [Validation(Required=false)]
+        public string LivyReleaseVersion { get; set; }
+
+        /// <summary>
         /// <para>The Livy gateway configuration in JSON format. The following files are supported:</para>
         /// <list type="bullet">
         /// <item><description>sparkDefaultsConf</description></item>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public List<ListLivyComputeSessionsResponseBodySessions> Sessions { get; set; }
         public class ListLivyComputeSessionsResponseBodySessions : TeaModel {
             /// <summary>
-            /// <para>The ID of the Livy Gateway.</para>
+            /// <para>The ID of the Livy gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lc-xxxxxx</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Info { get; set; }
 
             /// <summary>
-            /// <para>The total amount of memory allocated to the job multiplied by the number of seconds the job has run.</para>
+            /// <para>The total amount of memory allocated to the job multiplied by the running time of the job in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1098888</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Queue { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Livy Gateway session.</para>
+            /// <para>The ID of the Livy gateway session.</para>
             /// 
             /// <b>Example:</b>
             /// <para>livy-xxxxxx</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             /// <item><description>running: Running.</description></item>
             /// <item><description>terminating: Terminating.</description></item>
             /// <item><description>terminated: Terminated.</description></item>
-            /// <item><description>error: Error.</description></item>
+            /// <item><description>error: Failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The total number of vcores allocated to the job multiplied by the number of seconds the job has run.</para>
+            /// <para>The total number of vcores allocated to the job multiplied by the running time of the job in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>343</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? VcoreSeconds { get; set; }
 
             /// <summary>
-            /// <para>The web UI address of the session.</para>
+            /// <para>The web UI URL of the session.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://emr-spark-ui-cn-hangzhou.data.aliyun.com">http://emr-spark-ui-cn-hangzhou.data.aliyun.com</a></para>

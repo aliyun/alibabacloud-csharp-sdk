@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListMembersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of records to return per request.</para>
+        /// <para>The maximum number of records to return in a single request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string ActionArn { get; set; }
 
                 /// <summary>
-                /// <para>The name of the action.</para>
+                /// <para>The name of the permission.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>add</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The ARN of the member.</para>
+            /// <para>The ARN of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:emr::w-1234*<em><b>abcd:member/202265</b></em>**276</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                     public string ActionArn { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the action.</para>
+                    /// <para>The name of the permission.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>add</para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string UserName { get; set; }
 
             /// <summary>
-            /// <para>The type of the user. Valid values:</para>
+            /// <para>The user type.</para>
             /// <list type="bullet">
             /// <item><description>ROLE</description></item>
             /// <item><description>MEMBER</description></item>
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>

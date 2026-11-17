@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string LogType { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records to return in a single request.</para>
+        /// <para>The maximum number of records to retrieve at a time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class StartProcessInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return code of the API request backend.</para>
+        /// <para>The backend return code for the API request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1400009</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public object Data { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the manual workflow run failed.</para>
+        /// <para>Specifies whether the manual workflow run failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The detailed description corresponding to the request code.</para>
+        /// <para>The detailed description corresponding to the return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>No permission for resource action</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

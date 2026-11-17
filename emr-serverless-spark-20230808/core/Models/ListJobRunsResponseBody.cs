@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListJobRunsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The statistical results aggregated by job status.</para>
+        /// <para>The statistical results aggregated by job state.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;Success&quot;:&quot;2&quot;}</para>
@@ -28,14 +28,9 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public class ListJobRunsResponseBodyJobRuns : TeaModel {
             /// <summary>
             /// <para>The code type of the job. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>SQL</para>
-            /// </description></item>
-            /// <item><description><para>JAR</para>
-            /// </description></item>
-            /// <item><description><para>PYTHON</para>
-            /// </description></item>
-            /// </list>
+            /// <para>SQL</para>
+            /// <para>JAR</para>
+            /// <para>PYTHON.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SQL</para>
@@ -61,7 +56,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// <para>The UID of the creator.</para>
+            /// <para>The UID of the user who created the job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>150978934701****</para>
@@ -71,7 +66,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>The number of compute units (CUs) consumed during the job run. This value is an estimate and the final value is subject to the bill.</para>
+            /// <para>The number of compute units (CUs) consumed during the job run. This value is an estimate. The actual value is subject to the bill.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.059</para>
@@ -109,6 +104,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [NameInMap("executionTimeoutSeconds")]
             [Validation(Required=false)]
             public int? ExecutionTimeoutSeconds { get; set; }
+
+            /// <summary>
+            /// <para>The timestamp in milliseconds when the resources are ready, which is the first report time. If the first report time is empty, the job report time is used. If both are empty, null is returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1684119314000</para>
+            /// </summary>
+            [NameInMap("firstReportTime")]
+            [Validation(Required=false)]
+            public long? FirstReportTime { get; set; }
 
             /// <summary>
             /// <para>Specifies whether Fusion engine acceleration is enabled.</para>
@@ -193,6 +198,26 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [NameInMap("resourceQueueId")]
             [Validation(Required=false)]
             public string ResourceQueueId { get; set; }
+
+            /// <summary>
+            /// <para>The resource startup duration in milliseconds. It is calculated by subtracting the first submission time from the resource ready time. If the first submission time or the resource ready time is missing, or if the calculation result is negative, null is returned instead of 0.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>60000</para>
+            /// </summary>
+            [NameInMap("resourceStartupDurationMs")]
+            [Validation(Required=false)]
+            public long? ResourceStartupDurationMs { get; set; }
+
+            /// <summary>
+            /// <para>The job run duration in milliseconds. It is calculated by subtracting the resource ready time from the job end time. If the job has not ended, the current time is used. If the resource ready time is missing, or if the calculation result is negative, null is returned instead of 0.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>120000</para>
+            /// </summary>
+            [NameInMap("runDurationMs")]
+            [Validation(Required=false)]
+            public long? RunDurationMs { get; set; }
 
             /// <summary>
             /// <para>The states of the job runs.</para>
@@ -293,7 +318,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that indicates the position of the next data record to be read.</para>
+        /// <para>The position of the data read.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

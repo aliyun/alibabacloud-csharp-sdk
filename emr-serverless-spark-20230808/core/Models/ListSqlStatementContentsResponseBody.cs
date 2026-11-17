@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The content of the SQL execution result.</para>
+        /// <para>The content of the SQL execution results.</para>
         /// </summary>
         [NameInMap("sqlStatementContents")]
         [Validation(Required=false)]
         public ListSqlStatementContentsResponseBodySqlStatementContents SqlStatementContents { get; set; }
         public class ListSqlStatementContentsResponseBodySqlStatementContents : TeaModel {
             /// <summary>
-            /// <para>A list of the SQL execution results.</para>
+            /// <para>The list of SQL execution result contents.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{\&quot;values\&quot;:[\&quot;wj*****\&quot;,\&quot;test\&quot;,\&quot;2025-04-15\&quot;]}]</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Contents { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of records returned for a single request.</para>
+            /// <para>The maximum number of records to retrieve at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The token that specifies the position from which to start reading the results.</para>
+            /// <para>The token that indicates the starting position for reading.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The total number of rows in the result.</para>
+            /// <para>The total number of rows in the results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>40000</para>

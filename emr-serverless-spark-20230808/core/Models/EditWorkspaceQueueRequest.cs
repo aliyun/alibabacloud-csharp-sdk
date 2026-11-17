@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The environment type of the queue.</para>
+        /// <para>The queue environment type.</para>
         /// </summary>
         [NameInMap("environments")]
         [Validation(Required=false)]
         public List<string> Environments { get; set; }
 
         /// <summary>
-        /// <para>The list of GPU models.</para>
+        /// <para>The list of GPU instance types.</para>
         /// </summary>
         [NameInMap("gpuSpec")]
         [Validation(Required=false)]
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The resource quota.</para>
+        /// <para>The resource specifications.</para>
         /// </summary>
         [NameInMap("resourceSpec")]
         [Validation(Required=false)]
         public EditWorkspaceQueueRequestResourceSpec ResourceSpec { get; set; }
         public class EditWorkspaceQueueRequestResourceSpec : TeaModel {
             /// <summary>
-            /// <para>The resource upper limit of the workspace queue.</para>
+            /// <para>The resource limit for the workspace queue.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? Cu { get; set; }
 
             /// <summary>
-            /// <para>The number of GPU cards.</para>
+            /// <para>The number of GPUs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

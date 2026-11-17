@@ -18,9 +18,9 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><para>If the value of success is false, an error code is returned.</para>
+        /// <item><description><para>If success is false, the business error code is returned.</para>
         /// </description></item>
-        /// <item><description><para>If the value of success is true, this parameter is empty.</para>
+        /// <item><description><para>If success is true, null is returned.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><para>If the value of success is false, an error message is returned.</para>
+        /// <item><description><para>If success is false, the business error message is returned.</para>
         /// </description></item>
-        /// <item><description><para>If the value of success is true, this parameter is empty.</para>
+        /// <item><description><para>If success is true, null is returned.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -67,11 +67,11 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The request was successful.</para>
+        /// <item><description><para>true: Successful.</para>
         /// </description></item>
-        /// <item><description><para>false: The request failed.</para>
+        /// <item><description><para>false: Failed.</para>
         /// </description></item>
         /// </list>
         /// 

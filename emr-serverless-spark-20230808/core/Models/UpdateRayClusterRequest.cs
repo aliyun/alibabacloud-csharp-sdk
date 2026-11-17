@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public string DisplayReleaseVersion { get; set; }
 
+        [NameInMap("enableMetricsUpload")]
+        [Validation(Required=false)]
+        public bool? EnableMetricsUpload { get; set; }
+
         /// <summary>
         /// <para>The extra parameters. The value must be in JSON format.</para>
         /// 
@@ -136,6 +140,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public bool? GftEnabled { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>550</para>
+            /// </summary>
+            [NameInMap("gpuDriverVersion")]
+            [Validation(Required=false)]
+            public string GpuDriverVersion { get; set; }
+
+            /// <summary>
             /// <para>The GPU instance type.</para>
             /// 
             /// <b>Example:</b>
@@ -208,6 +220,22 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string NetworkServiceName { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>myLogStore</para>
+        /// </summary>
+        [NameInMap("slsLogStore")]
+        [Validation(Required=false)]
+        public string SlsLogStore { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>myproject</para>
+        /// </summary>
+        [NameInMap("slsProject")]
+        [Validation(Required=false)]
+        public string SlsProject { get; set; }
+
+        /// <summary>
         /// <para>The list of managed directory IDs to mount.</para>
         /// </summary>
         [NameInMap("volumeIds")]
@@ -250,6 +278,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [NameInMap("env")]
             [Validation(Required=false)]
             public string Env { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>550</para>
+            /// </summary>
+            [NameInMap("gpuDriverVersion")]
+            [Validation(Required=false)]
+            public string GpuDriverVersion { get; set; }
 
             /// <summary>
             /// <para>The GPU instance type.</para>

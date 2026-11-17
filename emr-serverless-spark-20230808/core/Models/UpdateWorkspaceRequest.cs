@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public List<string> GpuSpec { get; set; }
 
         /// <summary>
-        /// <para>The GPU subscription.</para>
+        /// <para>The GPU subscription information.</para>
         /// </summary>
         [NameInMap("gpuSubscription")]
         [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string InstanceTypeId { get; set; }
 
             /// <summary>
-            /// <para>The operation type. Valid values: BUY and UPGRADE. BUY indicates a new purchase, and UPGRADE indicates an upgrade. If you set this parameter to UPGRADE, you must specify the orderId parameter. Default value: BUY.</para>
+            /// <para>The operation type. Valid values: BUY and UPGRADE. BUY indicates a new purchase. UPGRADE indicates an upgrade. If you set this parameter to UPGRADE, you must specify the orderId parameter. Default value: BUY.</para>
             /// 
             /// <b>Example:</b>
             /// <para>BUY</para>
@@ -109,6 +109,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [NameInMap("paymentDurationUnit")]
             [Validation(Required=false)]
             public string PaymentDurationUnit { get; set; }
+
+            /// <summary>
+            /// <para>Supported only for new GPU subscription purchases (BUY). Not supported for upgrades (UPGRADE). Use the voucher option ID returned by the price inquiry API. To not use a voucher, set this parameter to youhuiquan_promotion_option_id_for_blank. If you omit this parameter, the previous call behavior is retained.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>youhuiquan_promotion_option_id_for_blank</para>
+            /// </summary>
+            [NameInMap("promotionOptionNo")]
+            [Validation(Required=false)]
+            public string PromotionOptionNo { get; set; }
 
         }
 
@@ -167,7 +177,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string AutoRenewPeriodUnit { get; set; }
 
             /// <summary>
-            /// <para>The client token used to ensure the idempotence of the request.</para>
+            /// <para>The client token for idempotence verification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-token-asxkxxxxxxx</para>
@@ -197,7 +207,17 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string PaymentDurationUnit { get; set; }
 
             /// <summary>
-            /// <para>The list of running queues to be switched.</para>
+            /// <para>Supported only when you switch the billing method of CUs from pay-as-you-go to subscription. Use the voucher option ID returned by the price inquiry API. To not use a voucher, set this parameter to youhuiquan_promotion_option_id_for_blank. If you omit this parameter, the previous call behavior is retained.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>youhuiquan_promotion_option_id_for_blank</para>
+            /// </summary>
+            [NameInMap("promotionOptionNo")]
+            [Validation(Required=false)]
+            public string PromotionOptionNo { get; set; }
+
+            /// <summary>
+            /// <para>The list of running queues to be converted.</para>
             /// </summary>
             [NameInMap("queue")]
             [Validation(Required=false)]
