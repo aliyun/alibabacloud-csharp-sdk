@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The list of records returned in the current query.</para>
+        /// <para>The list of records returned in this query.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<ListDataAssetAccountsResponseBodyItems> Items { get; set; }
         public class ListDataAssetAccountsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The database account name. When creating a column encryption rule or modifying account permissions, use this field as is for UserList[].AccountId and combine it with the InstanceId of this record to select the target account.</para>
+            /// <para>The database account name. When creating a column encryption rule or modifying account permissions, use this field as-is for UserList[].AccountId and combine it with the InstanceId of this record to select the target account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app_reader</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string AccountName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the asset belongs.</para>
+            /// <para>The identifier of the Alibaba Cloud account to which the asset belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456789012****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? AliUid { get; set; }
 
             /// <summary>
-            /// <para>The authentication database of the MongoDB account. This parameter must be passed together with AccountName when modifying permissions.</para>
+            /// <para>The authentication database for MongoDB accounts. This field must be passed together with AccountName when modifying permissions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>admin</para>
@@ -59,9 +59,10 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             /// <summary>
             /// <para>The column encryption access permissions. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>fullAccess: Plaintext access.</description></item>
-            /// <item><description>restrictedAccess: Restricted access.</description></item>
-            /// <item><description>noneAccess: Decryption prohibited. The noneAccess value applies only to ApsaraDB RDS for MySQL instances whose current effective key pattern is client_key.</description></item>
+            /// <item><description>fullAccess: plaintext access.</description></item>
+            /// <item><description>restrictedAccess: restricted access.</description></item>
+            /// <item><description>noneAccess: decryption prohibited.
+            /// The noneAccess value applies only to ApsaraDB RDS for MySQL instances whose current effective key pattern is client_key.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,11 +73,21 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string AuthRole { get; set; }
 
             /// <summary>
+            /// <para>The instance description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>desc</para>
+            /// </summary>
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            /// <summary>
             /// <para>The current effective column encryption key mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>client_key: Local key.</description></item>
+            /// <item><description>client_key: local key.</description></item>
             /// <item><description>kms_key: KMS key.
-            /// If no effective configuration exists, this parameter may not be returned.</description></item>
+            /// This field is not returned if no effective configuration exists.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -97,7 +108,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string EngineType { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the plaintext access permissions. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. If the validity period Settings are not configured, this parameter may not be returned.</para>
+            /// <para>The expiration time of the plaintext access permissions. The value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC. This field is not returned if the validity period Settings are not configured.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2145953410000</para>
@@ -174,7 +185,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned per page in the current query.</para>
+        /// <para>The number of entries returned per page in this query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -184,7 +195,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can use this ID to locate the API call.</para>
+        /// <para>The request ID. You can use it to locate this API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7C6D8E9F-1234-5678-ABCD-0123456789AB</para>

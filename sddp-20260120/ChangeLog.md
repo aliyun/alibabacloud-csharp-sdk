@@ -1,3 +1,7 @@
+2026-11-17 Version: 1.0.8
+- Update API ListDataAssetAccounts: add response parameters Body.Items.$.Description.
+
+
 2026-11-13 Version: 1.0.7
 - Update API ListDataMaskingInstances: add response parameters Body.Items.$.Description.
 

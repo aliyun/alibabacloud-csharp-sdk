@@ -1447,9 +1447,9 @@ namespace AlibabaCloud.SDK.Sddp20260120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Uses paging to perform a paged query of database accounts and their column encryption access permissions. This operation is used to select plaintext accounts when creating rules, and to verify AuthRole, EncryptionKeyMode, and ExpireTime before and after modifying account permissions. AccountName filters accounts by exact database account name. When creating a column encryption rule or modifying account permissions, set UserList[].AccountId to Items[].AccountName. Items[].Id is only the ID of the Data Security Center (DSC) data asset account record and is not used for account permission configuration.
-        /// Parameter examples are for format illustration only. When you invoke the operation, replace them with the region, resource identity, and configuration values obtained from the current account.
-        /// Use the service registration endpoint of the region where the target asset is located and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match those of the target asset.</para>
+        /// <para>Performs a paged query. This paging operation retrieves database accounts and their column encryption access permissions. This operation is used to select plaintext accounts when creating rules, and to verify AuthRole, EncryptionKeyMode, and ExpireTime before and after modifying account access permissions. AccountName filters by the exact database account name. When creating a column encryption rule or modifying account access permissions, set UserList[].AccountId to Items[].AccountName. Items[].Id is only the ID of the Data Security Center (DSC) data asset account record and is not used for account access permissions configuration.
+        /// Parameter examples are for format illustration only. Replace them with the region, resource identity, and configuration values obtained from the current account when you invoke the API.
+        /// Use the service registration endpoint of the region where the target asset is located and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1532,9 +1532,9 @@ namespace AlibabaCloud.SDK.Sddp20260120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Uses paging to perform a paged query of database accounts and their column encryption access permissions. This operation is used to select plaintext accounts when creating rules, and to verify AuthRole, EncryptionKeyMode, and ExpireTime before and after modifying account permissions. AccountName filters accounts by exact database account name. When creating a column encryption rule or modifying account permissions, set UserList[].AccountId to Items[].AccountName. Items[].Id is only the ID of the Data Security Center (DSC) data asset account record and is not used for account permission configuration.
-        /// Parameter examples are for format illustration only. When you invoke the operation, replace them with the region, resource identity, and configuration values obtained from the current account.
-        /// Use the service registration endpoint of the region where the target asset is located and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match those of the target asset.</para>
+        /// <para>Performs a paged query. This paging operation retrieves database accounts and their column encryption access permissions. This operation is used to select plaintext accounts when creating rules, and to verify AuthRole, EncryptionKeyMode, and ExpireTime before and after modifying account access permissions. AccountName filters by the exact database account name. When creating a column encryption rule or modifying account access permissions, set UserList[].AccountId to Items[].AccountName. Items[].Id is only the ID of the Data Security Center (DSC) data asset account record and is not used for account access permissions configuration.
+        /// Parameter examples are for format illustration only. Replace them with the region, resource identity, and configuration values obtained from the current account when you invoke the API.
+        /// Use the service registration endpoint of the region where the target asset is located and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1617,9 +1617,9 @@ namespace AlibabaCloud.SDK.Sddp20260120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Uses paging to perform a paged query of database accounts and their column encryption access permissions. This operation is used to select plaintext accounts when creating rules, and to verify AuthRole, EncryptionKeyMode, and ExpireTime before and after modifying account permissions. AccountName filters accounts by exact database account name. When creating a column encryption rule or modifying account permissions, set UserList[].AccountId to Items[].AccountName. Items[].Id is only the ID of the Data Security Center (DSC) data asset account record and is not used for account permission configuration.
-        /// Parameter examples are for format illustration only. When you invoke the operation, replace them with the region, resource identity, and configuration values obtained from the current account.
-        /// Use the service registration endpoint of the region where the target asset is located and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match those of the target asset.</para>
+        /// <para>Performs a paged query. This paging operation retrieves database accounts and their column encryption access permissions. This operation is used to select plaintext accounts when creating rules, and to verify AuthRole, EncryptionKeyMode, and ExpireTime before and after modifying account access permissions. AccountName filters by the exact database account name. When creating a column encryption rule or modifying account access permissions, set UserList[].AccountId to Items[].AccountName. Items[].Id is only the ID of the Data Security Center (DSC) data asset account record and is not used for account access permissions configuration.
+        /// Parameter examples are for format illustration only. Replace them with the region, resource identity, and configuration values obtained from the current account when you invoke the API.
+        /// Use the service registration endpoint of the region where the target asset is located and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1642,9 +1642,9 @@ namespace AlibabaCloud.SDK.Sddp20260120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Uses paging to perform a paged query of database accounts and their column encryption access permissions. This operation is used to select plaintext accounts when creating rules, and to verify AuthRole, EncryptionKeyMode, and ExpireTime before and after modifying account permissions. AccountName filters accounts by exact database account name. When creating a column encryption rule or modifying account permissions, set UserList[].AccountId to Items[].AccountName. Items[].Id is only the ID of the Data Security Center (DSC) data asset account record and is not used for account permission configuration.
-        /// Parameter examples are for format illustration only. When you invoke the operation, replace them with the region, resource identity, and configuration values obtained from the current account.
-        /// Use the service registration endpoint of the region where the target asset is located and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match those of the target asset.</para>
+        /// <para>Performs a paged query. This paging operation retrieves database accounts and their column encryption access permissions. This operation is used to select plaintext accounts when creating rules, and to verify AuthRole, EncryptionKeyMode, and ExpireTime before and after modifying account access permissions. AccountName filters by the exact database account name. When creating a column encryption rule or modifying account access permissions, set UserList[].AccountId to Items[].AccountName. Items[].Id is only the ID of the Data Security Center (DSC) data asset account record and is not used for account access permissions configuration.
+        /// Parameter examples are for format illustration only. Replace them with the region, resource identity, and configuration values obtained from the current account when you invoke the API.
+        /// Use the service registration endpoint of the region where the target asset is located and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.</para>
         /// </description>
         /// 
         /// <param name="request">
