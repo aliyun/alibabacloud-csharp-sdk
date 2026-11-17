@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.MaasQIService20260831.Models
         public List<string> BadWords { get; set; }
 
         /// <summary>
-        /// <para>The vLLM or OpenAI-compatible template parameter object. The request values override the default values with the same names in the model and are passed as-is to the primary model of the Mobile-Use Agent.</para>
+        /// <para>The vLLM or OpenAI-compatible template parameter object. The request values override the default values of the model with the same names and are passed as-is to the primary Mobile-Use Agent model.</para>
         /// </summary>
         [NameInMap("chatTemplateKwargs")]
         [Validation(Required=false)]
         public GuiChatCompletionStreamRequestChatTemplateKwargs ChatTemplateKwargs { get; set; }
         public class GuiChatCompletionStreamRequestChatTemplateKwargs : TeaModel {
             /// <summary>
-            /// <para>chat_template_kwargs.enable_thinking: the request-level switch for model thinking, which overrides the default value with the same name. Enabling this switch does not cause the Mobile-Use Agent response to return reasoning_content.</para>
+            /// <para>chat_template_kwargs.enable_thinking: the request-level model thinking switch, which overrides the default value with the same name. Enabling this switch does not cause the Mobile-Use Agent response to return reasoning_content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.MaasQIService20260831.Models
             public bool? EnableThinking { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to preserve the existing thinking context in subsequent rounds. This parameter is passed as-is according to the vLLM or Qwen chat_template_kwargs.</para>
+            /// <para>Specifies whether to preserve the existing thinking context in subsequent rounds. This parameter is passed as-is according to vLLM or Qwen chat_template_kwargs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.MaasQIService20260831.Models
         }
 
         /// <summary>
-        /// <para>The frequency penalty parameter, which is passed through to the primary model of the Mobile-Use Agent.</para>
+        /// <para>The frequency penalty parameter, which is passed through to the primary Mobile-Use Agent model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.0</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.MaasQIService20260831.Models
         public bool? IgnoreEos { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to request the upstream to generate the reasoning field. The client-facing results of the Mobile-Use Agent do not directly expose internal thinking.</para>
+        /// <para>Specifies whether to request the upstream to generate the reasoning field. The client-facing results of Mobile-Use Agent do not directly expose internal thinking.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.MaasQIService20260831.Models
         public bool? IncludeReasoning { get; set; }
 
         /// <summary>
-        /// <para>The model compatibility parameter. The JSON field is logprobs. Whether this parameter is accepted and takes effect depends on the model used by the instance. The current Mobile-Use Agent response does not provide token log probability details.</para>
+        /// <para>The model compatibility parameter. The JSON field is logprobs. Whether it is accepted and takes effect depends on the model used by the instance. The current Mobile-Use Agent response does not provide token log probability details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -127,14 +127,14 @@ namespace AlibabaCloud.SDK.MaasQIService20260831.Models
         public List<GuiChatCompletionStreamRequestMessages> Messages { get; set; }
         public class GuiChatCompletionStreamRequestMessages : TeaModel {
             /// <summary>
-            /// <para>The message content. For a user message, use a content array that contains exactly one current screenshot and optionally attached task text. Screenshots support public HTTPS URLs or Base64 image data URLs. When role is set to tool, fill in the actual execution result of the previous action, which can be a non-empty string, object, or array.</para>
+            /// <para>The message content. For a user message, use a content array that contains exactly one current screenshot and can be appended with task text. Screenshots support public HTTPS URLs or Base64 image data URLs. When role is tool, fill in the actual execution result of the previous action, which can be a non-empty string, object, or array.</para>
             /// </summary>
             [NameInMap("content")]
             [Validation(Required=false)]
             public List<GuiChatCompletionStreamRequestMessagesContent> Content { get; set; }
             public class GuiChatCompletionStreamRequestMessagesContent : TeaModel {
                 /// <summary>
-                /// <para>The compatible inline image field for input_image. You can pass a Base64 data URL.</para>
+                /// <para>The compatible inline image field for input_image. A Base64 data URL can be passed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>data:image/png;base64,...</para>
@@ -144,14 +144,14 @@ namespace AlibabaCloud.SDK.MaasQIService20260831.Models
                 public string ImageData { get; set; }
 
                 /// <summary>
-                /// <para>The screenshot reference. Supports an image_url string or an object containing a url field. The object format is shown here.</para>
+                /// <para>The screenshot reference. Supports an image_url string or an object containing a url. The object format is shown here.</para>
                 /// </summary>
                 [NameInMap("imageUrl")]
                 [Validation(Required=false)]
                 public GuiChatCompletionStreamRequestMessagesContentImageUrl ImageUrl { get; set; }
                 public class GuiChatCompletionStreamRequestMessagesContentImageUrl : TeaModel {
                     /// <summary>
-                    /// <para>A publicly accessible HTTPS image URL or a Base64 image data URL. Each round of user messages must and can only contain one current screenshot. Expired or inaccessible image addresses are rejected.</para>
+                    /// <para>A publicly accessible HTTPS image URL or a Base64 image data URL. Each round of user messages must and can only contain one current screenshot. Expired or inaccessible image addresses will be rejected.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="https://example.com/screenshot.png">https://example.com/screenshot.png</a></para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.MaasQIService20260831.Models
                 public string Text { get; set; }
 
                 /// <summary>
-                /// <para>The type of the content item. Use text or input_text for text. Use image_url or input_image for screenshots.</para>
+                /// <para>The content item type. Use text or input_text for text. Use image_url or input_image for screenshots.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>text</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.MaasQIService20260831.Models
             }
 
             /// <summary>
-            /// <para>The message role. The current input must end with a user message. If an execution receipt from the previous round exists, the preceding message must be a tool message.</para>
+            /// <para>The message role. The current input must end with user. If there is an execution receipt from the previous round, the preceding message must be tool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.MaasQIService20260831.Models
             public string Role { get; set; }
 
             /// <summary>
-            /// <para>Required when role is set to tool. References the tool_call ID from the previous Mobile-Use Agent response.</para>
+            /// <para>Required when role is tool. References the tool_call ID from the previous Mobile-Use Agent response.</para>
             /// 
             /// <b>Example:</b>
             /// <para>call_gui_1</para>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.MaasQIService20260831.Models
             public List<string> AppList { get; set; }
 
             /// <summary>
-            /// <para>The supplementary list of application names for the Standard Edition of Mobile-Use Agent. The JSON field is available_apps. The newly passed list replaces the previous supplementary items, but the default applications are retained. An empty array does not clear the default applications. The Dedicated Edition of Mobile-Use Agent does not use this list.</para>
+            /// <para>The supplementary list of application names for Mobile-Use Agent Standard Edition. The JSON field is available_apps. The newly passed list replaces the previous supplementary items, but the default applications are retained. An empty array does not clear the default applications. Mobile-Use Agent Exclusive Edition does not use this list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;Chrome&quot;,&quot;Settings&quot;]</para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.MaasQIService20260831.Models
             public List<string> AvailableApps { get; set; }
 
             /// <summary>
-            /// <para>The Mobile-Use Agent Harness receipt text for legacy clients. This cannot be passed at the same time as the preceding tool message. New clients should prioritize using [tool,user] messages.</para>
+            /// <para>The Mobile-Use Agent Harness receipt text for legacy clients. It cannot be passed at the same time as the preceding tool message. New clients should prioritize using [tool,user] messages.</para>
             /// 
             /// <b>Example:</b>
             /// <para>previous action completed</para>
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.MaasQIService20260831.Models
             public string HarnessMessage { get; set; }
 
             /// <summary>
-            /// <para>The screen height as a positive integer. For Base64 images, the width and height are parsed from the image itself. For URL images, this value is used for the runtime screen size.</para>
+            /// <para>The positive integer for the screen height. For Base64 images, the width and height are parsed from the image itself. For URL images, this value is used for the runtime screen size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1080</para>
@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.MaasQIService20260831.Models
             public long? ScreenHeight { get; set; }
 
             /// <summary>
-            /// <para>The screen width as a positive integer. For Base64 images, the width and height are parsed from the image itself. For URL images, this value is used for the runtime screen size.</para>
+            /// <para>The positive integer for the screen width. For Base64 images, the width and height are parsed from the image itself. For URL images, this value is used for the runtime screen size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1920</para>
@@ -325,7 +325,7 @@ namespace AlibabaCloud.SDK.MaasQIService20260831.Models
         public long? N { get; set; }
 
         /// <summary>
-        /// <para>The model-compatible switch to invoke parallel tool calling. This parameter does not expand the set of Mobile-Use Agent actions active for this operation.</para>
+        /// <para>Specifies whether to allow parallel tool invocations. This parameter is compatible with the model and is passed through to the primary model. It does not expand the set of Mobile-Use Agent actions active for this operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -375,7 +375,7 @@ namespace AlibabaCloud.SDK.MaasQIService20260831.Models
         public double? RepetitionPenalty { get; set; }
 
         /// <summary>
-        /// <para>The model-compatible structured output options. This parameter does not change the final Mobile-Use Agent tool calling structure when you invoke this operation. Avoid output constraint Settings that conflict with the action protocol.</para>
+        /// <para>The model-compatible structured output options. This parameter does not change the final Mobile-Use Agent tool invocation structure of this operation. Avoid configuring settings that conflict with the action protocol.</para>
         /// </summary>
         [NameInMap("responseFormat")]
         [Validation(Required=false)]
@@ -414,7 +414,7 @@ namespace AlibabaCloud.SDK.MaasQIService20260831.Models
         public bool? SkipSpecialTokens { get; set; }
 
         /// <summary>
-        /// <para>The stop sequences. This parameter is compatible with a single string or an array of strings. The array format is shown here.</para>
+        /// <para>The stop sequences. This parameter accepts a single string or an array of strings. The array format is used here.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;DONE&quot;]</para>
@@ -483,7 +483,7 @@ namespace AlibabaCloud.SDK.MaasQIService20260831.Models
         }
 
         /// <summary>
-        /// <para>The sampling temperature, which overrides the default value of the Mobile-Use Agent primary model.</para>
+        /// <para>The sampling temperature, which overrides the default value of the Mobile-Use Agent primary model. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.2</para>

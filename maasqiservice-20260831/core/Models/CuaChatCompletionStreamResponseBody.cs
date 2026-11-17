@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.MaasQIService20260831.Models
 {
     public class CuaChatCompletionStreamResponseBody : TeaModel {
         /// <summary>
+        /// <para>The POP gateway request ID for gateway tracking. It is not the qi_request_id of the agent and cannot replace reading the SSE body.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>request-20260918-001</para>
         /// </summary>
