@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The billing cycle. Subscription instances support only yearly (Year) and monthly (Month) billing cycles. For pay-as-you-go instances, select hourly (Hour).</para>
+        /// <para>The billing cycle. Subscription instances support only yearly (Year) and monthly (Month) billing cycles. Pay-as-you-go instances support only hourly (Hour) billing cycles.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string VSwitchIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The VPC ID.</para>
+        /// <para>The ID of the VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-2ze9xoh8qyt1rnxfmfcdi</para>

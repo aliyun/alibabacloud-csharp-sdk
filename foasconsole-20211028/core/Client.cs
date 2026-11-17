@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the resource group.</para>
+        /// <para>Changes the resource group of a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the resource group.</para>
+        /// <para>Changes the resource group of a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the resource group.</para>
+        /// <para>Changes the resource group of a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the resource group.</para>
+        /// <para>Changes the resource group of a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4323,7 +4323,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the price for purchasing a workspace under the current account.</para>
+        /// <para>Retrieves the pricing for purchasing a workspace for the current account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4443,7 +4443,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the price for purchasing a workspace under the current account.</para>
+        /// <para>Retrieves the pricing for purchasing a workspace for the current account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4563,7 +4563,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the price for purchasing a workspace under the current account.</para>
+        /// <para>Retrieves the pricing for purchasing a workspace for the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4581,7 +4581,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the price for purchasing a workspace under the current account.</para>
+        /// <para>Retrieves the pricing for purchasing a workspace for the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">

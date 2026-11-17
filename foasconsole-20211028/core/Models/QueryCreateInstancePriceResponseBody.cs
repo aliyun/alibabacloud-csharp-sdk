@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public QueryCreateInstancePriceResponseBodyPriceInfoDepreciateInfo DepreciateInfo { get; set; }
             public class QueryCreateInstancePriceResponseBodyPriceInfoDepreciateInfo : TeaModel {
                 /// <summary>
-                /// <para>The price reduction ratio.</para>
+                /// <para>The price reduction rate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>34%</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public string CheapRate { get; set; }
 
                 /// <summary>
-                /// <para>The reduced total price on the official website.</para>
+                /// <para>The total price on the official website after the price reduction.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8000</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public string CheapStandAmount { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the price reduction margin is displayed.</para>
+                /// <para>Indicates whether to display the price reduction rate.</para>
                 /// </summary>
                 [NameInMap("IsShow")]
                 [Validation(Required=false)]
@@ -113,14 +113,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public float? DiscountAmount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the key account discount is applied.</para>
+            /// <para>Indicates whether the key account promotion is applied.</para>
             /// </summary>
             [NameInMap("IsContractActivity")]
             [Validation(Required=false)]
             public bool? IsContractActivity { get; set; }
 
             /// <summary>
-            /// <para>The Lingxiao request ID for the invocation.</para>
+            /// <para>The Lingxiao request ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>67F33190-946B-1105-B6A1-E2DF0426DD51</para>
@@ -140,6 +140,105 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public string Message { get; set; }
 
             /// <summary>
+            /// <para>The module prices.</para>
+            /// </summary>
+            [NameInMap("ModulePrices")]
+            [Validation(Required=false)]
+            public List<QueryCreateInstancePriceResponseBodyPriceInfoModulePrices> ModulePrices { get; set; }
+            public class QueryCreateInstancePriceResponseBodyPriceInfoModulePrices : TeaModel {
+                /// <summary>
+                /// <para>The discount amount.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>648.0</para>
+                /// </summary>
+                [NameInMap("DiscountAmount")]
+                [Validation(Required=false)]
+                public float? DiscountAmount { get; set; }
+
+                /// <summary>
+                /// <para>The unit price of the module.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>183600.0000</para>
+                /// </summary>
+                [NameInMap("FinalUnitFee")]
+                [Validation(Required=false)]
+                public string FinalUnitFee { get; set; }
+
+                /// <summary>
+                /// <para>The module code.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>overhead_cu</para>
+                /// </summary>
+                [NameInMap("ModuleCode")]
+                [Validation(Required=false)]
+                public string ModuleCode { get; set; }
+
+                /// <summary>
+                /// <para>The module name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Control and Management Services</para>
+                /// </summary>
+                [NameInMap("ModuleName")]
+                [Validation(Required=false)]
+                public string ModuleName { get; set; }
+
+                /// <summary>
+                /// <para>The original amount.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>4320.0</para>
+                /// </summary>
+                [NameInMap("OriginalAmount")]
+                [Validation(Required=false)]
+                public float? OriginalAmount { get; set; }
+
+                /// <summary>
+                /// <para>The payment amount.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3672.0</para>
+                /// </summary>
+                [NameInMap("PayAmount")]
+                [Validation(Required=false)]
+                public float? PayAmount { get; set; }
+
+                /// <summary>
+                /// <para>The billing method.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>yearPrice</para>
+                /// </summary>
+                [NameInMap("PriceType")]
+                [Validation(Required=false)]
+                public string PriceType { get; set; }
+
+                /// <summary>
+                /// <para>The pricing unit.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Yuan/CU</para>
+                /// </summary>
+                [NameInMap("PriceUnit")]
+                [Validation(Required=false)]
+                public string PriceUnit { get; set; }
+
+                /// <summary>
+                /// <para>The order quantity.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("Quantity")]
+                [Validation(Required=false)]
+                public string Quantity { get; set; }
+
+            }
+
+            /// <summary>
             /// <para>The coupon group information.</para>
             /// </summary>
             [NameInMap("OptionalPromotions")]
@@ -150,7 +249,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 /// <para>The description of the coupon.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>CNY 1,391.5 coupon (valid until 03/23/2022)</para>
+                /// <para>¥1,391.5 coupon (valid until 03/23/2022)</para>
                 /// </summary>
                 [NameInMap("PromotionDesc")]
                 [Validation(Required=false)]
@@ -160,7 +259,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 /// <para>The name of the coupon.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>CNY 1,391.5 coupon</para>
+                /// <para>¥1,391.5 coupon</para>
                 /// </summary>
                 [NameInMap("PromotionName")]
                 [Validation(Required=false)]
@@ -177,7 +276,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public string PromotionOptionNo { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the coupon is selected. Valid values:</para>
+                /// <para>Specifies whether the coupon is selected. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>true: Selected.</description></item>
                 /// <item><description>false: Not selected.</description></item>
@@ -193,7 +292,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             }
 
             /// <summary>
-            /// <para>The original price.</para>
+            /// <para>The original amount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4368</para>
@@ -220,7 +319,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the promotion.</para>
+                /// <para>The ID of the promotion rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>587</para>
@@ -242,7 +341,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public string StandDiscountPrice { get; set; }
 
             /// <summary>
-            /// <para>The official website discount price or direct sales contract discount price.</para>
+            /// <para>The discounted price on the official website or the discounted price in the direct sales contract.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32432</para>
@@ -252,7 +351,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public string StandPrice { get; set; }
 
             /// <summary>
-            /// <para>The final price, which is the original price minus the discount.</para>
+            /// <para>The final amount, which is the original amount minus the discount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3712.8</para>

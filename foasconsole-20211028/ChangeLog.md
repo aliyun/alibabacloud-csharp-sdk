@@ -1,3 +1,6 @@
+2026-11-17 Version: 2.4.1
+- Generated csharp 2021-10-28 for foasconsole.
+
 2026-11-13 Version: 2.4.0
 - Support API ChangeResourceGroup.
 
