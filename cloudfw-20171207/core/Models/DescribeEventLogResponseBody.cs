@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeEventLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of ISPs.</para>
+        /// <para>The data list.</para>
         /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
@@ -57,16 +57,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>The attack type of the intrusion prevention event. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>1</b>: Abnormal connection.</description></item>
-            /// <item><description><b>2</b>: Command execution.</description></item>
-            /// <item><description><b>3</b>: Brute-force attack.</description></item>
+            /// <item><description><b>2</b>: execute commands.</description></item>
+            /// <item><description><b>3</b>: brute-force attacks.</description></item>
             /// <item><description><b>4</b>: Scan.</description></item>
             /// <item><description><b>5</b>: Other.</description></item>
-            /// <item><description><b>6</b>: Information leakage.</description></item>
+            /// <item><description><b>6</b>: Information leak.</description></item>
             /// <item><description><b>7</b>: DoS attack.</description></item>
             /// <item><description><b>8</b>: Overflow attack.</description></item>
             /// <item><description><b>9</b>: Web attack.</description></item>
-            /// <item><description><b>10</b>: Trojan or backdoor.</description></item>
-            /// <item><description><b>11</b>: Virus or worm.</description></item>
+            /// <item><description><b>10</b>: Trojan backdoor.</description></item>
+            /// <item><description><b>11</b>: Virus and worm.</description></item>
             /// <item><description><b>12</b>: Mining behavior.</description></item>
             /// <item><description><b>13</b>: Reverse shell.</description></item>
             /// </list>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Direction { get; set; }
 
             /// <summary>
-            /// <para>The queried destination IP address. This indicates that the intrusion prevention event involves this destination IP address.</para>
+            /// <para>The destination IP address. This indicates that the intrusion prevention event involves this destination IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.2.2.2</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string IpProtocol { get; set; }
 
             /// <summary>
-            /// <para>The UID of the Cloud Firewall member account.</para>
+            /// <para>The UID of the Cloud Firewall member accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>14151892****7022</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RuleId { get; set; }
 
             /// <summary>
-            /// <para>The name of the rule.</para>
+            /// <para>The rule name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? RuleSource { get; set; }
 
             /// <summary>
-            /// <para>The SNI used when the TLS connection is established.</para>
+            /// <para>The Server Name Indication (SNI) used when the TLS connection is established.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.example.com">www.example.com</a></para>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Sni { get; set; }
 
             /// <summary>
-            /// <para>The queried source IP address. This indicates that the intrusion prevention event involves this source IP address.</para>
+            /// <para>The source IP address. This indicates that the intrusion prevention event involves this source IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.0.XX.XX</para>
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? SrcPort { get; set; }
 
             /// <summary>
-            /// <para>The cipher suite used for TLS handshake negotiation, such as TLS_AES_128_GCM_SHA256.</para>
+            /// <para>The cipher suite negotiated during the TLS handshake, such as TLS_AES_128_GCM_SHA256.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TLS_AES_128_GCM_SHA256</para>
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string SslErrorMsg { get; set; }
 
             /// <summary>
-            /// <para>The TLS handshake result. For example, success indicates that the handshake is successful.</para>
+            /// <para>The TLS handshake result. For example, success indicates a successful handshake.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string SslProtocol { get; set; }
 
             /// <summary>
-            /// <para>The start time of the data. The value is a timestamp in seconds.</para>
+            /// <para>The start time of the data. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1751423362</para>

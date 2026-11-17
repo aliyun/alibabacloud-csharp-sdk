@@ -1,3 +1,24 @@
+2026-11-17 Version: 9.5.1
+- Update API CreateSecurityProxy: add request parameters BasicDefenseEnabled.
+- Update API CreateSecurityProxy: add request parameters MasterVSwitchCidr.
+- Update API CreateSecurityProxy: add request parameters MasterZoneId.
+- Update API CreateSecurityProxy: add request parameters NatMode.
+- Update API CreateSecurityProxy: add request parameters RuleClass.
+- Update API CreateSecurityProxy: add request parameters RunMode.
+- Update API CreateSecurityProxy: add request parameters StandbyVSwitchCidr.
+- Update API CreateSecurityProxy: add request parameters StandbyZoneId.
+- Update API CreateSecurityProxy: add request parameters ThreatIntelEnabled.
+- Update API CreateSecurityProxy: add request parameters VirtualPatchEnabled.
+- Update API DescribeEventLog: add request parameters RuleId.
+- Update API DescribeEventLog: add request parameters SslHandshakeRes.
+- Update API DescribeFirewallTask: add request parameters TaskName.
+- Update API DescribeIPSRules: add request parameters ProxyId.
+- Update API DescribeSecurityProxyResources: add response parameters Body.ResourceList.$.VpcList.$.NatGateways.$.NatRouteEntryList.$.DivertStatus.
+- Update API ModifyIpsRulesToDefault: add request parameters ProxyId.
+- Update API SwitchSecurityProxy: add request parameters NatRouteEntryList.
+- Update API SwitchSecurityProxy: add request parameters RouteAction.
+
+
 2026-11-13 Version: 9.5.0
 - Support API CreateApplicationCustomRules.
 - Support API CreateApplicationTemplate.

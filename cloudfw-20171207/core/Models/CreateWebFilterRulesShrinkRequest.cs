@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreateWebFilterRulesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The list of web filtering rules. You can specify a maximum of 100 rules at a time, and the total number of rules in the template after creation cannot exceed 100.</para>
+        /// <para>The list of web filtering rules. You can specify a maximum of 100 rules at a time, and the total number of rules in the template after creation must not exceed 100.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Rules")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RulesShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the web filtering template to which the web filtering rules belong. The template must exist under the current Alibaba Cloud account.</para>
+        /// <para>The ID of the web filtering template to which the web filtering rules belong. The template must exist within the current Alibaba Cloud account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

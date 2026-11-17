@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? UnprotectedCount { get; set; }
 
         /// <summary>
-        /// <para>The number of used quotas.</para>
+        /// <para>The used count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

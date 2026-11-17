@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreateTrFirewallV2Request : TeaModel {
         /// <summary>
-        /// <para>The ID of the CEN instance. Create a CEN instance in the CEN console and make sure that an Enterprise Edition transit router is created.</para>
+        /// <para>The ID of the CEN instance. Create a CEN instance in the CEN console first and make sure that an Enterprise Edition transit router is created.</para>
         /// <remarks>
         /// <para>Note: Although the required field in the schema is set to false, this parameter is actually required. If this parameter is not specified, the API returns ErrorParameters(400).</para>
         /// </remarks>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <item><description><b>MultiPrimary</b>: active-active mode</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If this parameter is not specified, the system automatically selects the deployment mode based on the capabilities of the transit router. If the value is invalid, ErrorFwServiceMode (-360437) is returned. The MultiPrimary mode does not support specifying zones.</para>
+        /// <para>If this parameter is not specified, the system automatically selects a deployment mode based on the capabilities of the transit router. If the value is invalid, ErrorFwServiceMode (-360437) is returned. The MultiPrimary mode does not support specifying zones.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The primary CIDR block of the subnet used to connect to the transit router in the firewall VPC in automatic mode.</para>
+        /// <para>The primary CIDR block of the subnet used to connect to the TR in the firewall VPC in automatic mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.0.3.0/24</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The secondary CIDR block of the subnet used to connect to the transit router in the firewall VPC in automatic mode.</para>
+        /// <para>The secondary CIDR block of the subnet used to connect to the TR in the firewall VPC in automatic mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.0.0.16/28</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TrAttachmentSlaveZone { get; set; }
 
         /// <summary>
-        /// <para>The list of zone IDs used for the transit router connection.</para>
+        /// <para>The list of zone IDs used for the TR connection.</para>
         /// </summary>
         [NameInMap("TrAttachmentZones")]
         [Validation(Required=false)]

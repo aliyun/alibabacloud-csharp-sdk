@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAttackAppCategoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of attack application categories.</para>
+        /// <para>The attack application categories.</para>
         /// </summary>
         [NameInMap("AppCategories")]
         [Validation(Required=false)]
         public List<DescribeAttackAppCategoryResponseBodyAppCategories> AppCategories { get; set; }
         public class DescribeAttackAppCategoryResponseBodyAppCategories : TeaModel {
             /// <summary>
-            /// <para>The list of attack applications.</para>
+            /// <para>The attack applications.</para>
             /// </summary>
             [NameInMap("AttackApps")]
             [Validation(Required=false)]

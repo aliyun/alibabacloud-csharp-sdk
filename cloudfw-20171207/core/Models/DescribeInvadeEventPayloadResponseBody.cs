@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AssetsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the event.</para>
+        /// <para>The UUID of the event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fadd-dfdd-****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? HighlightStart { get; set; }
 
         /// <summary>
-        /// <para>The raw packet payload content of the intrusion event.</para>
+        /// <para>The original packet payload of the intrusion event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>302902010004067075626c6963a01c0204036a5f43020100020100300e300c06082b060102010101000500</para>

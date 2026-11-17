@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeConfiguredDestinationIPRequest : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The group name.</para>
+        /// <para>The name of the group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The language for receiving messages.</para>
+        /// <para>The language type for receiving messages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The tracing code.</para>
+        /// <para>The source code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

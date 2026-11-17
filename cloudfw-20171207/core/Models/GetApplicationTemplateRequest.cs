@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The return scope for built-in application actions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Custom</b>: Returns only applications for which users have customized actions. This is the default value.</description></item>
-        /// <item><description><b>All</b>: Returns all built-in applications.
-        /// The priority of action effectiveness is: user-customized &gt; template default &gt; application library default.</description></item>
+        /// <item><description><b>Custom</b>: returns only applications whose actions have been customized by the user. This is the default value.</description></item>
+        /// <item><description><b>All</b>: returns all built-in applications.
+        /// The priority of action effectiveness is: user customization &gt; template default &gt; application library default.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

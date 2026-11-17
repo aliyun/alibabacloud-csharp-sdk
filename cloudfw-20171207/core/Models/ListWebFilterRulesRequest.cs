@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: integers greater than or equal to 1. Default value: 10.</para>
+        /// <para>The number of entries per page. The value must be greater than or equal to 1. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The rule action for exact matching. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Allow</b>: allows the traffic.</description></item>
-        /// <item><description><b>Alert</b>: monitors the traffic.</description></item>
-        /// <item><description><b>Deny</b>: blocks the traffic.</description></item>
+        /// <item><description><b>Allow</b>: Allows the request.</description></item>
+        /// <item><description><b>Alert</b>: Monitors the request.</description></item>
+        /// <item><description><b>Deny</b>: Blocks the request.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

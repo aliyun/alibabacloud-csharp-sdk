@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ApplicationTemplateName { get; set; }
 
         /// <summary>
-        /// <para>The switch status of built-in application control. Only <b>Enable</b> is supported. If you specify Disable, an error is returned. If this parameter is not specified or is left empty, the original value is retained.</para>
+        /// <para>The switch status of built-in application control. Valid values: only <b>Enable</b> is supported. If you specify Disable, an error is returned. If this parameter is not specified or is left empty, the original value is retained.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Enable</para>
@@ -73,14 +73,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The list of built-in applications for which you want to remove custom actions. After removal, these applications revert to the default actions of the template. The same application ID cannot appear in AddBuiltInApplicationCustomActions at the same time.</para>
+        /// <para>The list of built-in applications from which to remove custom actions. After removal, these applications revert to the default actions of the template. The same application ID cannot appear in AddBuiltInApplicationCustomActions at the same time.</para>
         /// </summary>
         [NameInMap("RemoveBuiltInApplicationCustomActions")]
         [Validation(Required=false)]
         public string RemoveBuiltInApplicationCustomActionsShrink { get; set; }
 
         /// <summary>
-        /// <para>The overall switch status of the application template. Valid values:</para>
+        /// <para>The master switch status of the application template. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Enable</b>: Enabled.</description></item>
         /// <item><description><b>Disable</b>: Disabled.

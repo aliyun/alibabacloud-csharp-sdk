@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The UID of the member accounts.</para>
+        /// <para>The UID of member accounts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>136481150091****</para>

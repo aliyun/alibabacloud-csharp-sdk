@@ -49,9 +49,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>The type of the ACK cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ManagedKubernetes</b>: ACK managed clusters, including ACK managed clusters (Pro Edition and Basic Edition), ACK Serverless clusters (Pro Edition and Basic Edition), ACK Edge clusters (Pro Edition and Basic Edition), and ACK Lingjun clusters (Pro Edition).</description></item>
-            /// <item><description><b>ExternalKubernetes</b>: registered cluster</description></item>
-            /// <item><description><b>Kubernetes</b>: ACK dedicated cluster</description></item>
+            /// <item><description><b>ManagedKubernetes</b>: managed ACK clusters, including ACK managed clusters (Pro Edition and Basic Edition), ACK Serverless clusters (Pro Edition and Basic Edition), ACK Edge clusters (Pro Edition and Basic Edition), and ACK Lingjun clusters (Pro Edition)</description></item>
+            /// <item><description><b>ExternalKubernetes</b>: registered clusters</description></item>
+            /// <item><description><b>Kubernetes</b>: dedicated ACK clusters</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ClusterType { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud UID of the account to which the ACK cluster resources belong.</para>
+            /// <para>The Alibaba Cloud account ID to which the ACK cluster resources belong.</para>
             /// 
             /// <b>Example:</b>
             /// <para>135809047715****</para>
@@ -74,8 +74,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>The network plug-in of the ACK cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>terway-eniip</b>: terway-eniip network plug-in</description></item>
-            /// <item><description><b>Flannel</b>: flannel network plug-in</description></item>
+            /// <item><description><b>terway-eniip</b>: the Terway-eniip network plug-in</description></item>
+            /// <item><description><b>Flannel</b>: the Flannel network plug-in</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -86,12 +86,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Network { get; set; }
 
             /// <summary>
-            /// <para>The subtype of the cluster. This parameter is valid only when ClusterType is set to ManagedKubernetes (ACK managed clusters). Valid values:</para>
+            /// <para>When <c>ClusterType</c> is set to <c>ManagedKubernetes</c> (managed ACK clusters), this parameter indicates the subtype of the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Default</b>: ACK managed cluster, including ACK managed cluster Pro Edition and Basic Edition</description></item>
-            /// <item><description><b>Serverless</b>: ACK Serverless cluster, including ACK Serverless cluster Pro Edition and Basic Edition</description></item>
-            /// <item><description><b>Edge</b>: ACK Edge cluster, including ACK Edge cluster Pro Edition and Basic Edition</description></item>
-            /// <item><description><b>Lingjun</b>: ACK Lingjun cluster, which provides only the Pro Edition</description></item>
+            /// <item><description><b>Default</b>: ACK managed clusters, including ACK managed clusters Pro Edition and Basic Edition</description></item>
+            /// <item><description><b>Serverless</b>: ACK Serverless clusters, including ACK Serverless clusters Pro Edition and Basic Edition</description></item>
+            /// <item><description><b>Edge</b>: ACK Edge clusters, including ACK Edge clusters Pro Edition and Basic Edition</description></item>
+            /// <item><description><b>Lingjun</b>: ACK Lingjun clusters, available only in Pro Edition</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

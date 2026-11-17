@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeNatFirewallListRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default): Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MemberUid { get; set; }
 
         /// <summary>
-        /// <para>The NAT gateway ID.</para>
+        /// <para>The ID of the NAT gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ngw-bp123456g******</para>
@@ -54,8 +54,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of NAT firewalls to display on each page in a paged query.</para>
-        /// <para>Default value: <b>10</b>, which indicates that each page contains <b>10</b> results. Maximum value: <b>50</b>.</para>
+        /// <para>The number of NAT firewalls to return on each page in a paged query.</para>
+        /// <para>Default value: <b>10</b>, which indicates that <b>10</b> results are returned per page. Maximum value: <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The NAT firewall ID.</para>
+        /// <para>The ID of the NAT firewall.</para>
         /// 
         /// <b>Example:</b>
         /// <para>proxy-nat97a******</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ProxyId { get; set; }
 
         /// <summary>
-        /// <para>The NAT firewall name. The name can contain uppercase and lowercase letters, Chinese characters, digits, and underscores (_). The name must be 4 to 50 characters in length and cannot start with an underscore.</para>
+        /// <para>The name of the NAT firewall. The name can contain uppercase and lowercase letters, Chinese characters, digits, and underscores (_). It must be 4 to 50 characters in length and cannot start with an underscore.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nat-firewall</para>
@@ -98,15 +98,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionNo { get; set; }
 
         /// <summary>
-        /// <para>The Cloud Firewall status. Valid values:</para>
+        /// <para>The status of the NAT firewall. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>configuring: being created</description></item>
-        /// <item><description>deleting: being deleted</description></item>
-        /// <item><description>normal: normal</description></item>
-        /// <item><description>abnormal: abnormal</description></item>
-        /// <item><description>opening: being enabled</description></item>
-        /// <item><description>closing: being disabled</description></item>
-        /// <item><description>closed: disabled</description></item>
+        /// <item><description>configuring: Creating.</description></item>
+        /// <item><description>deleting: Deleting.</description></item>
+        /// <item><description>normal: Normal.</description></item>
+        /// <item><description>abnormal: Abnormal.</description></item>
+        /// <item><description>opening: Enabling.</description></item>
+        /// <item><description>closing: Disabling.</description></item>
+        /// <item><description>closed: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DeleteApplicationCustomRulesRequest : TeaModel {
         /// <summary>
+        /// <para>The list of IDs of the custom application rules to delete. You can specify up to 100 IDs in a single request. The IDs cannot be empty and must be unique.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ApplicationCustomRuleIds")]

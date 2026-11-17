@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the web filtering template. The name must be 1 to 64 characters in length, and can contain Chinese characters, letters, digits, hyphens (-), underscores (_), and periods (.). It cannot contain spaces. If this parameter is not specified or is left empty, the original value is retained.</para>
+        /// <para>The name of the web filtering template. The name must be 1 to 64 characters in length and can contain Chinese characters, English letters, digits, hyphens (-), underscores (_), and periods (.). It cannot contain spaces. If this parameter is not specified or is left empty, the original value is retained.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Web filtering template 02</para>

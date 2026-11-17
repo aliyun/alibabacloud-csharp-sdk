@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<DescribeFirewallVSwitchResponseBodyVswitchList> VswitchList { get; set; }
         public class DescribeFirewallVSwitchResponseBodyVswitchList : TeaModel {
             /// <summary>
-            /// <para>The number of available IP addresses.</para>
+            /// <para>The available IP address count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// <para>The UID of the member account.</para>
+            /// <para>The UID of the member accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>184480249330****</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vSwitch.</para>
+            /// <para>The vSwitch ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-bp10qla9mgi42eo****</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string VswitchId { get; set; }
 
             /// <summary>
-            /// <para>The name of the vSwitch.</para>
+            /// <para>The vSwitch name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-test</para>

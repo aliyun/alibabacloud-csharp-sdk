@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeConfiguredDestinationIPResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of destinations returned.</para>
+        /// <para>The returned list of destinations.</para>
         /// </summary>
         [NameInMap("Destinations")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DestinationRegion { get; set; }
 
             /// <summary>
-            /// <para>The operation time. The value is a UNIX timestamp accurate to seconds, such as 1672502400.</para>
+            /// <para>The operation time. The value is a UNIX timestamp in seconds, such as 1672502400.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1534408189</para>

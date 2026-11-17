@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the event.</para>
+        /// <para>The UUID of the event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>92498578-7c42-4845-8c73-7e824782****</para>
@@ -41,11 +41,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EventUuid { get; set; }
 
         /// <summary>
-        /// <para>The language of the request and response. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
-        /// </list>
+        /// <para>The language of the request and response. Valid values: - <b>zh</b>: Chinese. - <b>en</b>: English.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>

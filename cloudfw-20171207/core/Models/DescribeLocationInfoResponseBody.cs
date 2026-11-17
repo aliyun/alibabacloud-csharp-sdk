@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The number of regions outside the Chinese mainland.</para>
+        /// <para>The number of regions outside China.</para>
         /// 
         /// <b>Example:</b>
         /// <para>238</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? OverseasCount { get; set; }
 
         /// <summary>
-        /// <para>The list of regions outside the Chinese mainland.</para>
+        /// <para>The list of regions outside China.</para>
         /// </summary>
         [NameInMap("OverseasList")]
         [Validation(Required=false)]

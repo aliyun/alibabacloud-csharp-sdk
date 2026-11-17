@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class UpdateWebFilterRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The list of web filtering rules to be modified. You can specify up to 20 rules at a time, and the rule IDs in the list must be unique.</para>
+        /// <para>The list of web filtering rules to be updated. You can specify up to 20 rules at a time. The rule IDs in the list must be unique.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Rules")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<UpdateWebFilterRulesRequestRules> Rules { get; set; }
         public class UpdateWebFilterRulesRequestRules : TeaModel {
             /// <summary>
-            /// <para>The list of match conditions for the rule. The list must contain exactly one condition. After the modification, URLs within the same template must be unique.</para>
+            /// <para>The list of match conditions for the rule. The list must contain exactly one condition. After the update, URLs within the same template must be unique.</para>
             /// </summary>
             [NameInMap("Conditions")]
             [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The URL to match. It cannot be empty and must not exceed 240 bytes in length (each Chinese character counts as 3 bytes). It must contain at least one forward slash (/), and the first segment must contain letters, digits, or Chinese characters. It cannot contain a protocol header, query parameters, or fragment identifiers. A single asterisk (<em>) indicates matching all URLs. When a wildcard is used, a maximum of one wildcard is allowed and it must end with /</em>. URLs within the same template must be unique.</para>
+                /// <para>The URL to match. The value cannot be empty and must not exceed 240 bytes in length. Each Chinese character is counted as 3 bytes. The URL must contain at least one forward slash (/), and the first segment must contain letters, digits, or Chinese characters. The URL cannot contain a protocol header, query parameters, or fragment identifiers. A single asterisk (<em>) matches all URLs. If a wildcard is used, only one wildcard is allowed and it must end with /</em>. URLs within the same template must be unique.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://www.example.com/login">www.example.com/login</a></para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RuleAction { get; set; }
 
             /// <summary>
-            /// <para>The ID of the web filtering rule to be modified. The rule must exist within the current Alibaba Cloud account.</para>
+            /// <para>The ID of the web filtering rule to be updated. The rule must exist within the current Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>wfr-8c1d2e3f4a5b6c7d</para>

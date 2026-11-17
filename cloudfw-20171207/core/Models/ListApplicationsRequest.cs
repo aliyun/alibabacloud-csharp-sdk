@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para>The application category name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Office Collaboration</para>
+        /// <para>Office collaboration</para>
         /// </summary>
         [NameInMap("CategoryName")]
         [Validation(Required=false)]
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <item><description><b>Medium</b>: Medium.</description></item>
         /// <item><description><b>High</b>: High.</description></item>
         /// <item><description><b>Critical</b>: Critical.
-        /// If an invalid value is specified, this filter condition is ignored.</description></item>
+        /// If an invalid value is passed, this filter condition is ignored.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

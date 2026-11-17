@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ListApplicationTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the application templates for batch exact matching.</para>
+        /// <para>The list of application template IDs for batch exact matching.</para>
         /// </summary>
         [NameInMap("ApplicationTemplateIds")]
         [Validation(Required=false)]
         public List<string> ApplicationTemplateIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the application template for fuzzy matching.</para>
+        /// <para>The application template name for fuzzy matching.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Application template</para>
@@ -29,8 +29,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The switch status of built-in application control for exact matching. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enable</b>: Enabled.</description></item>
-        /// <item><description><b>Disable</b>: Disabled.</description></item>
+        /// <item><description><b>Enable</b>: enabled</description></item>
+        /// <item><description><b>Disable</b>: disabled</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,8 +43,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The switch status of custom application rules for exact matching. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enable</b>: Enabled.</description></item>
-        /// <item><description><b>Disable</b>: Disabled.</description></item>
+        /// <item><description><b>Enable</b>: enabled</description></item>
+        /// <item><description><b>Disable</b>: disabled</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,10 +85,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The overall switch status of the application template for exact matching. Valid values:</para>
+        /// <para>The master switch status of the application template for exact matching. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enable</b>: Enabled.</description></item>
-        /// <item><description><b>Disable</b>: Disabled.</description></item>
+        /// <item><description><b>Enable</b>: enabled</description></item>
+        /// <item><description><b>Disable</b>: disabled</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -99,11 +99,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TemplateStatus { get; set; }
 
         /// <summary>
-        /// <para>The action for unidentified applications for exact matching. Valid values:</para>
+        /// <para>The action for unrecognized applications for exact matching. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Allow</b>: Allow.</description></item>
-        /// <item><description><b>Alert</b>: Monitor.</description></item>
-        /// <item><description><b>Deny</b>: Block.</description></item>
+        /// <item><description><b>Allow</b>: allow</description></item>
+        /// <item><description><b>Alert</b>: monitor</description></item>
+        /// <item><description><b>Deny</b>: block</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

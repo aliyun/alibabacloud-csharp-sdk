@@ -10,17 +10,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeDnsFirewallPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The action that is performed on traffic that hits the DNS firewall policy. Valid values:</para>
+        /// <para>The action that Cloud Firewall performs on the traffic in the access control policy of the DNS border firewall. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>accept</b>: allows the traffic.</para>
-        /// </description></item>
-        /// <item><description><para><b>drop</b>: denies the traffic.</para>
-        /// </description></item>
-        /// <item><description><para><b>log</b>: monitors the traffic.</para>
-        /// </description></item>
+        /// <item><description><b>accept</b>: Allow</description></item>
+        /// <item><description><b>drop</b>: Deny</description></item>
+        /// <item><description><b>log</b>: Monitor</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you do not specify this parameter, policies of all action types are queried.</para>
+        /// <para>If you do not specify this parameter, all actions are queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -41,7 +38,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AclUuid { get; set; }
 
         /// <summary>
-        /// <para>The page number to return. Default value: 1.</para>
+        /// <para>The page number of the current page for a paging query. Default value: 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +49,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The description of the DNS firewall policy.</para>
+        /// <para>The description of the DNS border firewall policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -62,9 +59,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The destination address in the DNS firewall policy. Fuzzy match is supported.</para>
+        /// <para>The destination address in the access control policy of the DNS border firewall. Fuzzy match is supported.</para>
         /// <remarks>
-        /// <para>The value of Destination can be a CIDR block, a domain name, or an address book.</para>
+        /// <para>Destination can be a single CIDR block, a domain name, or an address book name.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -75,12 +72,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Destination { get; set; }
 
         /// <summary>
-        /// <para>The IP version that is supported. Valid values:</para>
+        /// <para>The IP address version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>4</b>: IPv4</para>
-        /// </description></item>
-        /// <item><description><para><b>6</b>: IPv6</para>
-        /// </description></item>
+        /// <item><description><b>4</b>: IPv4</description></item>
+        /// <item><description><b>6</b>: IPv6</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -91,7 +86,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IpVersion { get; set; }
 
         /// <summary>
-        /// <para>The language of the response messages. Valid values: <b>zh</b> (Chinese) and <b>en</b> (English).</para>
+        /// <para>The language of the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -101,7 +100,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries to return in the current query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -112,11 +111,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The status of the access control policy. The policy is enabled by default after it is created. Valid values:</para>
+        /// <para>The status of the access control policy. By default, the policy is enabled after it is created. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: enables the access control policy.</para>
+        /// <item><description><para><b>true</b>: Enabled</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: disables the access control policy.</para>
+        /// <item><description><para><b>false</b>: Disabled</para>
         /// </description></item>
         /// </list>
         /// 
@@ -128,9 +127,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Release { get; set; }
 
         /// <summary>
-        /// <para>The source address in the DNS firewall policy. Fuzzy match is supported.</para>
+        /// <para>The source address in the access control policy of the DNS border firewall. Fuzzy match is supported.</para>
         /// <remarks>
-        /// <para>The value of Source can be a CIDR block or an address book.</para>
+        /// <para>Source can be a single CIDR block or an address book name.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -141,7 +140,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The source IP address of the requester.</para>
         /// 
         /// <b>Example:</b>
         /// <para>140.205.118.XXX</para>

@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string CidrBlock { get; set; }
 
                 /// <summary>
-                /// <para>The UID of the member accounts.</para>
+                /// <para>The UID of member accounts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>157862808111****</para>
@@ -118,6 +118,23 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                         public string DestinationCidr { get; set; }
 
                         /// <summary>
+                        /// <para>The current traffic redirection status of the route entry. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>diverted: Traffic is redirected to the firewall.</description></item>
+                        /// <item><description>undiverted: Traffic is not redirected and still points to the NAT gateway.</description></item>
+                        /// <item><description>diverting: Traffic redirection is in progress.</description></item>
+                        /// <item><description>undiverting: Traffic redirection cancellation is in progress.</description></item>
+                        /// <item><description>abnormal: Traffic redirection is abnormal.</description></item>
+                        /// </list>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>diverted</para>
+                        /// </summary>
+                        [NameInMap("DivertStatus")]
+                        [Validation(Required=false)]
+                        public string DivertStatus { get; set; }
+
+                        /// <summary>
                         /// <para>The next hop instance ID.</para>
                         /// 
                         /// <b>Example:</b>
@@ -128,7 +145,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                         public string NextHopId { get; set; }
 
                         /// <summary>
-                        /// <para>The network type of the next hop.</para>
+                        /// <para>The next hop network type.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>NatGateway</para>
@@ -138,7 +155,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                         public string NextHopType { get; set; }
 
                         /// <summary>
-                        /// <para>The ID of the route table.</para>
+                        /// <para>The route table ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>vtb-2ze409pp09d994a****</para>
@@ -172,7 +189,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the VPC-connected instance.</para>
+                /// <para>The VPC-connected instance name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-wz94a4q37rgl7g****</para>

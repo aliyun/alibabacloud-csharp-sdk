@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AttackApp { get; set; }
 
         /// <summary>
-        /// <para>The type of the cloud firewall. Valid values:</para>
+        /// <para>The Cloud Firewall type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VpcFirewall</b>: virtual private cloud (VPC) firewalls.</description></item>
-        /// <item><description><b>InternetFirewall</b> (default): the Internet border firewall.</description></item>
+        /// <item><description><b>VpcFirewall</b>: virtual private cloud (VPC) firewall</description></item>
+        /// <item><description><b>InternetFirewall</b> (default): the Internet firewall</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallType { get; set; }
 
         /// <summary>
-        /// <para>The language of the content. Valid values:</para>
+        /// <para>The language type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>zh</b> (default): Chinese.</para>
         /// </description></item>
@@ -50,12 +50,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>Instance ID of the NAT firewall instance. This parameter is required only when FirewallType is set to <b>NatFirewall</b>. In this case, the scope is the rules under this instance. This parameter is ignored for Internet and VPC firewalls. You can call the <a href="https://help.aliyun.com/document_detail/2879296.html">ListNatFirewallIpsConfigs</a> operation to query instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>proxy-nat53f4bbc233234271a1d7</para>
+        /// </summary>
+        [NameInMap("ProxyId")]
+        [Validation(Required=false)]
+        public string ProxyId { get; set; }
+
+        /// <summary>
         /// <para>The rule type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>basicRule</b></description></item>
         /// <item><description><b>customize</b></description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>customize</para>
@@ -65,7 +74,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RuleType { get; set; }
 
         /// <summary>
-        /// <para>The rule list. Conditional requirement: when RuleType is set to customize, you must specify at least one of this parameter or AttackApp. If you specify only RuleType without Rules or AttackApp, the API returns ErrorParameters.</para>
+        /// <para>The list of rules. This parameter is conditionally required: when RuleType is set to customize, you must specify at least one of this parameter or AttackApp. If you specify only RuleType without Rules or AttackApp, the API returns an ErrorParameters error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[
@@ -78,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Rules { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The source IP address of the requester.</para>
         /// 
         /// <b>Example:</b>
         /// <para>140.205.118.XXX</para>

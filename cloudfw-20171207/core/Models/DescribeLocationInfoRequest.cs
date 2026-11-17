@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The tracing code.</para>
+        /// <para>The source code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

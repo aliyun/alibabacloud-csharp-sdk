@@ -10,10 +10,24 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreateSecurityProxyRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to enable the basic protection policies of the IPS. If this parameter is not specified, the system default (enabled) is used. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: disabled.</description></item>
+        /// <item><description><b>1</b>: enabled.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("BasicDefenseEnabled")]
+        [Validation(Required=false)]
+        public string BasicDefenseEnabled { get; set; }
+
+        /// <summary>
         /// <para>The deployment mode of the firewall service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PrimaryStandby: primary/secondary mode</description></item>
-        /// <item><description>MultiPrimary: active-active mode</description></item>
+        /// <item><description><b>PrimaryStandby</b>: primary/secondary mode.</description></item>
+        /// <item><description><b>MultiPrimary</b>: active-active mode.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -33,8 +47,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The security protection switch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>open</b>: enable</description></item>
-        /// <item><description><b>close</b>: disable</description></item>
+        /// <item><description><b>open</b>: enabled.</description></item>
+        /// <item><description><b>close</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -69,6 +83,26 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The vSwitch CIDR block of the GWLB endpoint (GWLBe) in the active zone. This parameter applies only to NAT firewalls that use the GWLB architecture. For the GWLB architecture, this parameter is required along with MasterZoneId, StandbyZoneId, and StandbyVSwitchCidr. If any of these parameters is missing, ErrorParameters is returned. The vSwitch is created by the firewall creation node based on this vSwitch CIDR block. This parameter is not read for the ENI architecture.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>192.168.0.0/24</para>
+        /// </summary>
+        [NameInMap("MasterVSwitchCidr")]
+        [Validation(Required=false)]
+        public string MasterVSwitchCidr { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the primary zone. This parameter applies only to NAT firewalls that use the GWLB architecture. For the GWLB architecture, this parameter is required along with MasterVSwitchCidr, StandbyZoneId, and StandbyVSwitchCidr. If any of these parameters is missing, ErrorParameters is returned. The value must be the same as the zone where the NAT gateway resides. This parameter is not read for the ENI architecture.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-h</para>
+        /// </summary>
+        [NameInMap("MasterZoneId")]
+        [Validation(Required=false)]
+        public string MasterZoneId { get; set; }
+
+        /// <summary>
         /// <para>The ID of the NAT gateway.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -80,8 +114,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string NatGatewayId { get; set; }
 
         /// <summary>
+        /// <para>The architecture type of the NAT firewall. Valid values: <b>eni</b> (traditional ENI architecture) and <b>gwlb</b> (new GWLB architecture). If this parameter is omitted or left empty, the firewall is created by using the ENI architecture, and no implicit selection is performed on the server side. You can obtain the recommended architecture from the response of the DescribeNatFirewallArchitecture operation and pass it back when you create the firewall.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gwlb</para>
+        /// </summary>
+        [NameInMap("NatMode")]
+        [Validation(Required=false)]
+        public string NatMode { get; set; }
+
+        /// <summary>
         /// <para>The list of routes to be switched for the NAT gateway.</para>
-        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NatRouteEntryList")]
         [Validation(Required=false)]
@@ -99,7 +142,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DestinationCidr { get; set; }
 
             /// <summary>
-            /// <para>The next hop address of the original NAT gateway.</para>
+            /// <para>The next hop ID of the original NAT gateway.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -121,7 +164,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string NextHopType { get; set; }
 
             /// <summary>
-            /// <para>The route table to which the default route of the NAT gateway belongs.</para>
+            /// <para>The ID of the route table to which the default route of the NAT gateway belongs.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -159,10 +202,60 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionNo { get; set; }
 
         /// <summary>
+        /// <para>The level of the IPS rule group. This parameter is valid only in block mode. If this parameter is not specified, the system default (medium) is used. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: none. The value is forced to 0 in monitor mode.</description></item>
+        /// <item><description><b>1</b>: loose.</description></item>
+        /// <item><description><b>2</b>: medium.</description></item>
+        /// <item><description><b>3</b>: strict.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
+        [NameInMap("RuleClass")]
+        [Validation(Required=false)]
+        public string RuleClass { get; set; }
+
+        /// <summary>
+        /// <para>The IPS defense mode. This parameter is supported only by NAT firewalls that use the GWLB architecture. If this parameter is not specified, the system default (Block Mode) is used. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: monitor mode. Only alerting is triggered, and traffic is not blocked.</description></item>
+        /// <item><description><b>1</b>: Block Mode.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("RunMode")]
+        [Validation(Required=false)]
+        public string RunMode { get; set; }
+
+        /// <summary>
+        /// <para>The vSwitch CIDR block of the GWLBe in the standby zone. This parameter applies only to NAT firewalls that use the GWLB architecture. For the GWLB architecture, this parameter is required along with MasterZoneId, MasterVSwitchCidr, and StandbyZoneId. If any of these parameters is missing, ErrorParameters is returned. The vSwitch is created by the firewall creation node based on this vSwitch CIDR block. This parameter is not read for the ENI architecture.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>192.168.1.0/24</para>
+        /// </summary>
+        [NameInMap("StandbyVSwitchCidr")]
+        [Validation(Required=false)]
+        public string StandbyVSwitchCidr { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the secondary zone. This parameter applies only to NAT firewalls that use the GWLB architecture. For the GWLB architecture, this parameter is required along with MasterZoneId, MasterVSwitchCidr, and StandbyVSwitchCidr. If any of these parameters is missing, ErrorParameters is returned. The value cannot be the same as MasterZoneId. If they are the same, ErrorZoneIdInvalid is returned. This parameter is not read for the ENI architecture.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-i</para>
+        /// </summary>
+        [NameInMap("StandbyZoneId")]
+        [Validation(Required=false)]
+        public string StandbyZoneId { get; set; }
+
+        /// <summary>
         /// <para>Specifies whether to enable strict mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: Enable strict mode.</description></item>
-        /// <item><description>0: Disable strict mode.</description></item>
+        /// <item><description><b>1</b>: enables strict mode.</description></item>
+        /// <item><description><b>0</b>: disables strict mode.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -173,7 +266,35 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? StrictMode { get; set; }
 
         /// <summary>
-        /// <para>The VPC-connected instance ID.</para>
+        /// <para>Specifies whether to enable the threat intelligence rules of the IPS. If this parameter is not specified, the system default (enabled) is used. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: disabled.</description></item>
+        /// <item><description><b>1</b>: enabled.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("ThreatIntelEnabled")]
+        [Validation(Required=false)]
+        public string ThreatIntelEnabled { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to enable the Virtual Patches of the IPS. If this parameter is not specified, the system default (enabled) is used. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: disabled.</description></item>
+        /// <item><description><b>1</b>: enabled.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("VirtualPatchEnabled")]
+        [Validation(Required=false)]
+        public string VirtualPatchEnabled { get; set; }
+
+        /// <summary>
+        /// <para>The instance ID of the VPC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -187,11 +308,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para>Specifies whether to use the automatic mode for the vSwitch. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: automatic mode.</description></item>
-        /// <item><description><b>false</b>: manual mode.<remarks>
-        /// <para>Default value: true. If VswitchAuto is set to true, VswitchCidr is required and must be a valid CIDR block. If VswitchAuto is set to false, VswitchId is required.</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description><b>false</b>: manual mode.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para>Default value: <b>true</b>. If VswitchAuto is set to true, VswitchCidr is required and must be a valid CIDR block. If VswitchAuto is set to false, VswitchId is required.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

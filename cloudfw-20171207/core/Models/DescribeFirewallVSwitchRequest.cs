@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeFirewallVSwitchRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the virtual private cloud (VPC) firewall.</para>
+        /// <para>The virtual private cloud (VPC) border firewalls instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vfw-tr-5b202e7f0be64611****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The UID of the member account.</para>
+        /// <para>The UID of the member accounts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>102910763545****</para>

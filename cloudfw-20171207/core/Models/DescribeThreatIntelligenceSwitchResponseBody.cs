@@ -18,8 +18,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public class DescribeThreatIntelligenceSwitchResponseBodyCategoryList : TeaModel {
             /// <summary>
             /// <para>The action of the rule. Valid values:</para>
-            /// <para> <b>alert</b>: monitor mode.</para>
-            /// <para> <b>drop</b>: Block Mode.</para>
+            /// <para> <b>alert</b>: Monitor.</para>
+            /// <para> <b>drop</b>: Block.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alert</para>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Action { get; set; }
 
             /// <summary>
-            /// <para>The category description.</para>
+            /// <para>The description of the category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Tor Export Malicious IP</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string CategoryId { get; set; }
 
             /// <summary>
-            /// <para>The category name.</para>
+            /// <para>The name of the category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Tor Export Malicious IP</para>
@@ -69,9 +69,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string CategoryParentId { get; set; }
 
             /// <summary>
-            /// <para>The enabling status. Valid values:</para>
-            /// <para> <b>1</b>: enabled.</para>
-            /// <para> <b>0</b>: disabled.</para>
+            /// <para>The enable status. Valid values:</para>
+            /// <para> <b>1</b>: Enabled.</para>
+            /// <para> <b>0</b>: Disabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24</para>

@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreateApplicationTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The list of custom actions to configure for built-in applications. Application IDs in the list must be unique.</para>
+        /// <para>The list of custom actions to configure for built-in applications. The application IDs in the list must be unique.</para>
         /// </summary>
         [NameInMap("AddBuiltInApplicationCustomActions")]
         [Validation(Required=false)]
         public List<CreateApplicationTemplateRequestAddBuiltInApplicationCustomActions> AddBuiltInApplicationCustomActions { get; set; }
         public class CreateApplicationTemplateRequestAddBuiltInApplicationCustomActions : TeaModel {
             /// <summary>
-            /// <para>The action to take on the application. Valid values:</para>
+            /// <para>The action to perform on the application. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Allow</b>: Allow.</description></item>
-            /// <item><description><b>Alert</b>: Monitor.</description></item>
-            /// <item><description><b>Deny</b>: Block.</description></item>
+            /// <item><description><b>Allow</b>: Allows the traffic.</description></item>
+            /// <item><description><b>Alert</b>: Monitors the traffic.</description></item>
+            /// <item><description><b>Deny</b>: Blocks the traffic.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ApplicationTemplateName { get; set; }
 
         /// <summary>
-        /// <para>The switch status of built-in application control. Valid values: <b>Enable</b>, which indicates that built-in application control is enabled. If you specify Disable, an error is returned.</para>
+        /// <para>The switch status of built-in application control. Only <b>Enable</b> is supported, which indicates that built-in application control is enabled. If you pass Disable, an error is returned.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,8 +68,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The switch status of custom application rules. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enable</b>: Enabled.</description></item>
-        /// <item><description><b>Disable</b>: Disabled.</description></item>
+        /// <item><description><b>Enable</b>: Enables the feature.</description></item>
+        /// <item><description><b>Disable</b>: Disables the feature.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -91,10 +91,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The master switch status of the application template. Valid values:</para>
+        /// <para>The overall switch status of the application template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enable</b>: Enabled.</description></item>
-        /// <item><description><b>Disable</b>: Disabled.</description></item>
+        /// <item><description><b>Enable</b>: Enables the template.</description></item>
+        /// <item><description><b>Disable</b>: Disables the template.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -108,9 +108,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The action to take on unidentified applications. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Allow</b>: Allow.</description></item>
-        /// <item><description><b>Alert</b>: Monitor.</description></item>
-        /// <item><description><b>Deny</b>: Block.</description></item>
+        /// <item><description><b>Allow</b>: Allows the traffic.</description></item>
+        /// <item><description><b>Alert</b>: Monitors the traffic.</description></item>
+        /// <item><description><b>Deny</b>: Blocks the traffic.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

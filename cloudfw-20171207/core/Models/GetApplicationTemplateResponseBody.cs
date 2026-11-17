@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// <para>The switch status of built-in application control. Valid values:</para>
+            /// <para>The switch status for built-in application control. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Enable</b>: Enabled.</description></item>
             /// <item><description><b>Disable</b>: Disabled.</description></item>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The switch status of custom application rules. Valid values:</para>
+            /// <para>The switch status for custom application rules. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Enable</b>: Enabled.</description></item>
             /// <item><description><b>Disable</b>: Disabled.</description></item>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The master switch status of the application template. Valid values:</para>
+            /// <para>The overall switch status of the application template. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Enable</b>: Enabled.</description></item>
             /// <item><description><b>Disable</b>: Disabled.</description></item>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string UnknownAction { get; set; }
 
             /// <summary>
-            /// <para>The last modification time of the application template. The value is a UNIX timestamp in seconds.</para>
+            /// <para>The last update time of the application template. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1731469200</para>

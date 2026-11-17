@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? InternetInAclCount { get; set; }
 
         /// <summary>
-        /// <para>The number of outbound access control policies that are created for the Internet firewall on the Internet Border.</para>
+        /// <para>The number of outbound access control policies that are created for the Internet firewall at the Internet Border.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The number of inbound access control policies on the NAT border.&gt;Notice: Deprecated field</para>
+        /// <para><b>[Deprecated]</b> The number of inbound access control policies on the NAT firewall.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? NatInAclCount { get; set; }
 
         /// <summary>
-        /// <para>The number of outbound access control policies on the NAT border.</para>
+        /// <para>The number of outbound access control policies on the NAT firewall.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? TotalAclCount { get; set; }
 
         /// <summary>
-        /// <para>The number of access control policies on the VPC border.</para>
+        /// <para>The number of access control policies on the VPC firewall.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

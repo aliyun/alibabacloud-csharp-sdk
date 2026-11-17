@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreateApplicationCustomRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of IDs for the newly created custom rules for the application. The order of the IDs corresponds to the order of the Rules request parameter.</para>
+        /// <para>The list of IDs for the newly created custom application rules. The order of the IDs corresponds to the order of the rules in the Rules request parameter.</para>
         /// </summary>
         [NameInMap("ApplicationCustomRuleIds")]
         [Validation(Required=false)]

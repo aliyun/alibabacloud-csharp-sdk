@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeIPSRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The attacked application.</para>
+        /// <para>The attack application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SMB</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AttackApp { get; set; }
 
         /// <summary>
-        /// <para>The list of categories of the attacked applications. Specify the value in the [&quot;AttackAppCategory1&quot;,&quot;AttackAppCategory2&quot;] format.</para>
+        /// <para>The list of categories of the attacked applications, in the format of [&quot;AttackAppCategory1&quot;,&quot;AttackAppCategory2&quot;].</para>
         /// </summary>
         [NameInMap("AttackAppCategory")]
         [Validation(Required=false)]
         public List<string> AttackAppCategory { get; set; }
 
         /// <summary>
-        /// <para>The list of attacked applications.</para>
+        /// <para>The list of attack applications.</para>
         /// </summary>
         [NameInMap("AttackApps")]
         [Validation(Required=false)]
@@ -116,6 +116,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The instance ID of the NAT firewall. This parameter is required only when FirewallType is set to <b>NatFirewall</b> and is mutually exclusive with VpcFirewallId. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2879296.html">ListNatFirewallIpsConfigs</a> operation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>proxy-nat53f4bbc233234271a1d7</para>
+        /// </summary>
+        [NameInMap("ProxyId")]
+        [Validation(Required=false)]
+        public string ProxyId { get; set; }
+
+        /// <summary>
         /// <para>Specifies whether the rule has been modified.</para>
         /// 
         /// <b>Example:</b>
@@ -197,7 +207,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Sort { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the requester.</para>
+        /// <para>The source IP address of the visitor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8.139.222.XXX</para>
@@ -207,7 +217,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the virtual private cloud (VPC) firewalls.</para>
+        /// <para>The instance ID of the virtual private cloud (VPC) border firewalls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cen-rnbkqx4a8er21a****</para>

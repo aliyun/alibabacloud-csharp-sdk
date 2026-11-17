@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of IDs of the newly created web filtering rules. The order of the IDs corresponds to the order of the input Rules parameter.</para>
+        /// <para>The list of IDs of the newly created web filtering rules. The order of the IDs corresponds one-to-one with the order of the input Rules parameter.</para>
         /// </summary>
         [NameInMap("WebFilterRuleIds")]
         [Validation(Required=false)]

@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Action { get; set; }
 
             /// <summary>
-            /// <para>The ID of the application for which you want to configure custom actions. The application must exist in the built-in application signature library and the ID cannot be 0. You can call the ListApplications operation to query the ID.</para>
+            /// <para>The ID of the application for which to set custom actions. The application must exist in the built-in application signature library and the ID cannot be 0. You can call the ListApplications operation to query the ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10012150000</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ApplicationTemplateName { get; set; }
 
         /// <summary>
-        /// <para>The switch status of built-in application control. Only <b>Enable</b> is supported. If you specify Disable, an error is returned. If this parameter is not specified or is left empty, the original value is retained.</para>
+        /// <para>The switch status of built-in application control. Valid values: only <b>Enable</b> is supported. If you specify Disable, an error is returned. If this parameter is not specified or is left empty, the original value is retained.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Enable</para>
@@ -100,14 +100,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The list of built-in applications for which you want to remove custom actions. After removal, these applications revert to the default actions of the template. The same application ID cannot appear in AddBuiltInApplicationCustomActions at the same time.</para>
+        /// <para>The list of built-in applications from which to remove custom actions. After removal, these applications revert to the default actions of the template. The same application ID cannot appear in AddBuiltInApplicationCustomActions at the same time.</para>
         /// </summary>
         [NameInMap("RemoveBuiltInApplicationCustomActions")]
         [Validation(Required=false)]
         public List<UpdateApplicationTemplateRequestRemoveBuiltInApplicationCustomActions> RemoveBuiltInApplicationCustomActions { get; set; }
         public class UpdateApplicationTemplateRequestRemoveBuiltInApplicationCustomActions : TeaModel {
             /// <summary>
-            /// <para>The ID of the application for which you want to remove custom actions. The application must exist in the built-in application signature library.</para>
+            /// <para>The ID of the application from which to remove custom actions. The application must exist in the built-in application signature library.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10012150000</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The overall switch status of the application template. Valid values:</para>
+        /// <para>The master switch status of the application template. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Enable</b>: Enabled.</description></item>
         /// <item><description><b>Disable</b>: Disabled.

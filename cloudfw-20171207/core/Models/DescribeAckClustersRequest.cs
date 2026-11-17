@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ClusterSpec { get; set; }
 
         /// <summary>
-        /// <para>The status of the connector instance for the ACK cluster.</para>
+        /// <para>The instance status of the connector in the ACK cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ready</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ConnectorStatus { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud UID of the account to which the ACK cluster resources belong.</para>
+        /// <para>The Alibaba Cloud account ID to which the ACK cluster resources belong.</para>
         /// 
         /// <b>Example:</b>
         /// <para>135809047715****</para>

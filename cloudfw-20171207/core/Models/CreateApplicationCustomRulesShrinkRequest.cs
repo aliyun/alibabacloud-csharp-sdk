@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ApplicationTemplateId { get; set; }
 
         /// <summary>
-        /// <para>The list of custom rules for the application. You can pass up to 100 rules at a time, and the total number of rules in the template after creation cannot exceed 100.</para>
+        /// <para>The list of custom rules for the application. You can specify up to 100 rules at a time, and the total number of rules in the template after creation must not exceed 100.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Rules")]

@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>The application category name. The name is returned in Chinese or English based on the Lang parameter.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Office Collaboration</para>
+            /// <para>Office collaboration</para>
             /// </summary>
             [NameInMap("CategoryName")]
             [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>The application description. The description is returned in Chinese or English based on the Lang parameter.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>An enterprise-grade intelligent mobile office and collaboration platform that provides features such as instant messaging, audio and video conferencing, organization management, online documents, approval and attendance, and AI office assistants</para>
+            /// <para>An enterprise-grade intelligent mobile office and collaboration platform that provides features such as instant messaging, audio and video conferencing, organizational management, online documents, approval and attendance, and AI office assistants</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The current page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

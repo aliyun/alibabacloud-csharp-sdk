@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string StepInfo { get; set; }
 
             /// <summary>
-            /// <para>Creating Cloud Firewall security.</para>
+            /// <para>Creates Cloud Firewall security.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Create Firewall</para>

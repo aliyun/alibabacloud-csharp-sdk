@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeIPSRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The total number of rules with the block action.</para>
+        /// <para>The total number of block rules.</para>
         /// 
         /// <b>Example:</b>
         /// <para>976</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<DescribeIPSRulesResponseBodyRules> Rules { get; set; }
         public class DescribeIPSRulesResponseBodyRules : TeaModel {
             /// <summary>
-            /// <para>The attacked application.</para>
+            /// <para>The attack application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SMB</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>The attack type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Exception connection</para>
+            /// <para>Abnormal connection</para>
             /// </summary>
             [NameInMap("AttackType")]
             [Validation(Required=false)]
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
             /// <summary>
             /// <para>The supported engine mode.</para>
-            /// <para>This value is valid only when DefaultMode is set to drop (Block). In other modes, this value is meaningless.</para>
+            /// <para>This value takes effect only when DefaultMode is set to drop (Block). It is not applicable in other modes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the rule.</para>
+            /// <para>The rule UUID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d401b0cb-dc64-4bbe-bba0-3e7c744****</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RuleUuid { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the rule was modified.</para>
+            /// <para>The timestamp when the rule was updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1775101028</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the rule is a custom rule.</para>
+            /// <para>Indicates whether the rule is a custom rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

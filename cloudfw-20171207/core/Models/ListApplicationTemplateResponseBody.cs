@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<ListApplicationTemplateResponseBodyApplicationTemplates> ApplicationTemplates { get; set; }
         public class ListApplicationTemplateResponseBodyApplicationTemplates : TeaModel {
             /// <summary>
-            /// <para>The ID of the application template.</para>
+            /// <para>The application template ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ati-4f0691c56b8d4f06</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ApplicationTemplateName { get; set; }
 
             /// <summary>
-            /// <para>The statistics on built-in applications in the template, categorized by the final effective action.</para>
+            /// <para>The statistics on the number of built-in applications in the template, categorized by the final effective action.</para>
             /// </summary>
             [NameInMap("BuiltInApplicationActionStatistics")]
             [Validation(Required=false)]
@@ -78,8 +78,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>The switch status of built-in application control. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Enable</b>: Enabled.</description></item>
-            /// <item><description><b>Disable</b>: Disabled.</description></item>
+            /// <item><description><b>Enable</b>: enabled</description></item>
+            /// <item><description><b>Disable</b>: disabled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -112,8 +112,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>The switch status of custom application rules. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Enable</b>: Enabled.</description></item>
-            /// <item><description><b>Disable</b>: Disabled.</description></item>
+            /// <item><description><b>Enable</b>: enabled</description></item>
+            /// <item><description><b>Disable</b>: disabled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -134,10 +134,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The overall switch status of the application template. Valid values:</para>
+            /// <para>The master switch status of the application template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Enable</b>: Enabled.</description></item>
-            /// <item><description><b>Disable</b>: Disabled.</description></item>
+            /// <item><description><b>Enable</b>: enabled</description></item>
+            /// <item><description><b>Disable</b>: disabled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -148,11 +148,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string TemplateStatus { get; set; }
 
             /// <summary>
-            /// <para>The action for unidentified applications. Valid values:</para>
+            /// <para>The action for unrecognized applications. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Allow</b>: Allow.</description></item>
-            /// <item><description><b>Alert</b>: Monitor.</description></item>
-            /// <item><description><b>Deny</b>: Block.</description></item>
+            /// <item><description><b>Allow</b>: allow</description></item>
+            /// <item><description><b>Alert</b>: monitor</description></item>
+            /// <item><description><b>Deny</b>: block</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ApplicationTemplateId { get; set; }
 
         /// <summary>
-        /// <para>The list of custom rules for the application. You can pass up to 100 rules at a time, and the total number of rules in the template after creation cannot exceed 100.</para>
+        /// <para>The list of custom rules for the application. You can specify up to 100 rules at a time, and the total number of rules in the template after creation must not exceed 100.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Rules")]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<CreateApplicationCustomRulesRequestRules> Rules { get; set; }
         public class CreateApplicationCustomRulesRequestRules : TeaModel {
             /// <summary>
-            /// <para>The name of the custom rule. It cannot be empty and can be up to 64 characters in length. It supports Chinese characters, English letters, digits, hyphens (-), underscores (_), and half-width periods (.).</para>
+            /// <para>The name of the custom rule. The name cannot be empty and can be up to 64 characters in length. It can contain Chinese characters, English letters, digits, hyphens (-), underscores (_), and periods (.).</para>
             /// 
             /// <b>Example:</b>
             /// <para>CustomRule01</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? Priority { get; set; }
 
             /// <summary>
-            /// <para>The action to perform when the rule is triggered. Valid values:</para>
+            /// <para>The action to perform when the rule is matched. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Allow</b>: allows the traffic.</description></item>
             /// <item><description><b>Alert</b>: monitors the traffic.</description></item>

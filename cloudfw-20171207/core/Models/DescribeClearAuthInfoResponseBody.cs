@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The number of remaining clearances.</para>
+        /// <para>The number of remaining clearance operations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeFirewallDropStatisticsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of blocks by ACL policies.</para>
+        /// <para>The number of ACL policy blocks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? AclDropCnt { get; set; }
 
         /// <summary>
-        /// <para>The number of IPS protections.</para>
+        /// <para>The number of IPS blocks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of protections.</para>
+        /// <para>The total number of blocks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? InstanceMemberCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of member accounts supported by Cloud Firewall.</para>
+        /// <para>The maximum quota for Cloud Firewall member accounts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>

@@ -44,6 +44,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TaskId { get; set; }
 
         /// <summary>
+        /// <para>The action of the task, which is used to filter tasks by action. Valid values: init, open, close, delete, and change_route. This parameter takes effect only when TaskType is set to NAT. If TaskId is specified, this parameter is ignored. If this parameter is not specified, the most recently started task of the instance is retrieved, regardless of the action.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>open</para>
+        /// </summary>
+        [NameInMap("TaskName")]
+        [Validation(Required=false)]
+        public string TaskName { get; set; }
+
+        /// <summary>
         /// <para>The type of the task. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>NAT</b>: NAT firewall task</para>

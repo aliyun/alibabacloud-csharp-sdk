@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the requester.</para>
+        /// <para>The source IP address of the visitor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>121.225.255.XXX</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SLB instance. Fuzzy match is supported.</para>
+        /// <para>The ID of the SLB instance. Fuzzy matching is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lb-2ze8v2x5kd9qyvp2****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the SLB instance. Fuzzy match is supported.</para>
+        /// <para>The name of the SLB instance. Fuzzy matching is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IpProtocol { get; set; }
 
         /// <summary>
-        /// <para>The language of the response message.</para>
+        /// <para>The language in which messages are received.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Port { get; set; }
 
         /// <summary>
-        /// <para>The public IP address. Fuzzy match is supported. If you do not specify this parameter, all public IP addresses are queried.</para>
+        /// <para>The public IP address. Fuzzy matching is supported. If not specified, all public IP addresses are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>47.108.60.XXX</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PublicIp { get; set; }
 
         /// <summary>
-        /// <para>The region. If you do not specify this parameter, all regions are queried.</para>
+        /// <para>The region. If not specified, all regions are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionNo { get; set; }
 
         /// <summary>
-        /// <para>The originating IP address of the requester.</para>
+        /// <para>The source IP address of the client.</para>
         /// 
         /// <b>Example:</b>
         /// <para>112.64.233.XXX</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The tag. If you do not specify this parameter, all tags are queried.</para>
+        /// <para>The tag. If not specified, all tags are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

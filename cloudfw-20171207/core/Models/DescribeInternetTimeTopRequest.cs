@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? Interval { get; set; }
 
         /// <summary>
-        /// <para>The language for receiving messages.</para>
+        /// <para>The language of the response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Limit { get; set; }
 
         /// <summary>
-        /// <para>The public IP address of the NAT gateway. If you do not specify this parameter, all asset IP addresses are queried.</para>
+        /// <para>The public IP address of the NAT gateway. If you leave this parameter empty, all asset IP addresses are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>47.97.66.XXX</para>

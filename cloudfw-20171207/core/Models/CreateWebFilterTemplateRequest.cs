@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the web filtering template. The name must be 1 to 64 characters in length and can contain Chinese characters, letters, digits, hyphens (-), underscores (_), and periods (.). The name cannot contain spaces or be empty.</para>
+        /// <para>The name of the web filtering template. The name must be 1 to 64 characters in length and can contain Chinese characters, letters, digits, hyphens (-), underscores (_), and periods (.). It cannot contain spaces or be empty.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Web filtering template 01</para>
+        /// <para>WebFilterTemplate01</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The status of the web filtering template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enable</b>: Enabled.</description></item>
-        /// <item><description><b>Disable</b>: Disabled.</description></item>
+        /// <item><description><b>Enable</b>: enabled.</description></item>
+        /// <item><description><b>Disable</b>: disabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

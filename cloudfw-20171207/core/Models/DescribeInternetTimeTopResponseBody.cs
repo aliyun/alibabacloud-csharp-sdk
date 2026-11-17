@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? DataCount { get; set; }
 
         /// <summary>
-        /// <para>The returned data list.</para>
+        /// <para>The list of returned data.</para>
         /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]

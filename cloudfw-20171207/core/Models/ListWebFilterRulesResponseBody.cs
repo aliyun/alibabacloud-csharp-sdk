@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The current number of entries per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<ListWebFilterRulesResponseBodyRules> Rules { get; set; }
         public class ListWebFilterRulesResponseBodyRules : TeaModel {
             /// <summary>
-            /// <para>The matching conditions of the rule. The list contains only one condition.</para>
+            /// <para>The list of match conditions for the rule. The list contains only one condition.</para>
             /// </summary>
             [NameInMap("Conditions")]
             [Validation(Required=false)]
             public List<ListWebFilterRulesResponseBodyRulesConditions> Conditions { get; set; }
             public class ListWebFilterRulesResponseBodyRulesConditions : TeaModel {
                 /// <summary>
-                /// <para>The type of the matching condition. Only <b>URL</b> is supported, which indicates matching by URL.</para>
+                /// <para>The type of the match condition. Valid values: <b>URL</b>, which indicates matching by URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>URL</para>
@@ -88,9 +88,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>The action performed after the rule is matched. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Allow</b>: allows the traffic.</description></item>
-            /// <item><description><b>Alert</b>: monitors the traffic.</description></item>
-            /// <item><description><b>Deny</b>: blocks the traffic.</description></item>
+            /// <item><description><b>Allow</b>: Allows the request.</description></item>
+            /// <item><description><b>Alert</b>: Monitors the request.</description></item>
+            /// <item><description><b>Deny</b>: Blocks the request.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

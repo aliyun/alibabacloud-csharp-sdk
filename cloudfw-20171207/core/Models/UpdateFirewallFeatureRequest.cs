@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The name of the feature to enable. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ApplicationControl</b>: application control.</description></item>
-        /// <item><description><b>WebFilter</b>: web filtering.</description></item>
+        /// <item><description><b>ApplicationControl</b>: application control</description></item>
+        /// <item><description><b>WebFilter</b>: web filtering</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FeatureName { get; set; }
 
         /// <summary>
-        /// <para>The feature status. The only valid value is <b>Enable</b>, which enables the feature. If you specify Disable or any other value, an error is returned. This operation is idempotent if the feature is already enabled.</para>
+        /// <para>The status of the feature. Only <b>Enable</b> is supported, which enables the feature. Specifying Disable or other values returns an error. This operation is idempotent if the feature is already enabled.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
