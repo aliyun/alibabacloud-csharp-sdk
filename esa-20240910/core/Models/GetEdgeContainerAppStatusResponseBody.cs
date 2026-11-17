@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <para>The expected publishing percentage of the application.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>50%</para>
+            /// <para>50</para>
             /// </summary>
             [NameInMap("ExpectPercentage")]
             [Validation(Required=false)]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <para>The publishing percentage of the application.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>50%</para>
+            /// <para>50</para>
             /// </summary>
             [NameInMap("PublishPercentage")]
             [Validation(Required=false)]

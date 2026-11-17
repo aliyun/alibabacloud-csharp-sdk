@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size. Default value: 20. Maximum value: 500. Valid values: any integer from 1 to 500.</para>
+        /// <para>The number of entries per page. Default value: 20. Maximum value: 500. Valid values: any integer from 1 to 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The pay-as-you-go plan details.</para>
+        /// <para>The details of the pay-as-you-go plan.</para>
         /// </summary>
         [NameInMap("PlanInfo")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The billable methods of the plan. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>dps_month95: monthly 95th percentile billing method.</description></item>
+            /// <item><description>dps_month95: Monthly 95th percentile billing.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -52,8 +52,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The payment type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PREPAY: subscription.</description></item>
-            /// <item><description>POSTPAY: pay-as-you-go.</description></item>
+            /// <item><description>PREPAY: Subscription.</description></item>
+            /// <item><description>POSTPAY: Pay-as-you-go.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,11 +64,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string BillingMode { get; set; }
 
             /// <summary>
-            /// <para>The acceleration regions to which sites can be added under the plan. Multiple values are separated by commas (,). Valid values:</para>
+            /// <para>The acceleration regions for sites that can be added to the plan. Separate multiple values with commas (,). Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>domestic: the Chinese mainland.</description></item>
-            /// <item><description>overseas: global (excluding the Chinese mainland).</description></item>
-            /// <item><description>global: global (including the Chinese mainland).</description></item>
+            /// <item><description>domestic: The Chinese mainland.</description></item>
+            /// <item><description>overseas: Global (excluding the Chinese mainland).</description></item>
+            /// <item><description>global: Global (including the Chinese mainland).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Coverages { get; set; }
 
             /// <summary>
-            /// <para>The name of the plan, which serves as a unique identifier in English.</para>
+            /// <para>The name of the plan, which is uniquely identified in English.</para>
             /// 
             /// <b>Example:</b>
             /// <para>basic</para>
@@ -89,10 +89,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string PlanName { get; set; }
 
             /// <summary>
-            /// <para>The plan description.</para>
+            /// <para>The description of the plan.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试版套餐</para>
+            /// <para>Beta plan</para>
             /// </summary>
             [NameInMap("PlanNameCn")]
             [Validation(Required=false)]
@@ -101,8 +101,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The plan type of the plan instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>normal: fixed edition plan.</description></item>
-            /// <item><description>enterprise: enterprise edition plan.</description></item>
+            /// <item><description>normal: Fixed plan.</description></item>
+            /// <item><description>enterprise: Enterprise plan.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -113,10 +113,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string PlanType { get; set; }
 
             /// <summary>
-            /// <para>The sale status of the plan. Valid values for enterprise edition plans:</para>
+            /// <para>The sales status of the plan. For Enterprise plans, valid values are:</para>
             /// <list type="bullet">
-            /// <item><description>saled: sold.</description></item>
-            /// <item><description>upgrading: specification change in progress.</description></item>
+            /// <item><description>saled: Sold.</description></item>
+            /// <item><description>upgrading: Upgrading or downgrading.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string SaleStatus { get; set; }
 
             /// <summary>
-            /// <para>The site quantity quota.</para>
+            /// <para>The quota for the number of sites.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

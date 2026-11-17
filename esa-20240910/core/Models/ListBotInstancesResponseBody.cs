@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListBotInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instances that meet the query conditions for the user.</para>
+        /// <para>The instances that meet the specified conditions.</para>
         /// </summary>
         [NameInMap("InstanceInfo")]
         [Validation(Required=false)]
         public List<ListBotInstancesResponseBodyInstanceInfo> InstanceInfo { get; set; }
         public class ListBotInstancesResponseBodyInstanceInfo : TeaModel {
             /// <summary>
-            /// <para>The bot protection edition. If this parameter is empty, no bot protection instance is purchased in the plan. If a value is returned, a bot protection instance is purchased in the plan. Valid values:</para>
+            /// <para>The Bot management instance level. If this parameter is empty, no Bot management instance is purchased in the plan. If a value is returned, a Bot management instance is purchased in the plan. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>enterprise_bot: Web edition.</para>
             /// </description></item>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string BotInstanceLevel { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the instance. The time is displayed in UTC and formatted in accordance with the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
+            /// <para>The creation time of the instance. The time is displayed in UTC and formatted as yyyy-MM-ddTHH:mm:ssZ in accordance with ISO 8601.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-04-12T05:41:51Z</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The scheduled release time. The time is displayed in UTC and formatted in accordance with the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
+            /// <para>The scheduled release time. The time is displayed in UTC and formatted as yyyy-MM-ddTHH:mm:ssZ in accordance with ISO 8601.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-03-25T16:00:00Z</para>

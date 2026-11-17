@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetWaitingRoomPreviewPageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The waiting room preview page URL.</para>
+        /// <para>The preview page URL of the waiting room.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://waitingroom.myalicdn.com/testxxxx">http://waitingroom.myalicdn.com/testxxxx</a></para>

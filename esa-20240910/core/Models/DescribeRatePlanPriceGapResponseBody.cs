@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DescribeRatePlanPriceGapResponseBody : TeaModel {
         /// <summary>
-        /// <para>The price information.</para>
+        /// <para>The pricing information.</para>
         /// </summary>
         [NameInMap("PriceModel")]
         [Validation(Required=false)]
@@ -19,9 +19,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The currency. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>JPY: Japanese Yen.</description></item>
-            /// <item><description>USD: US Dollar.</description></item>
-            /// <item><description>CNY: Chinese Yuan.</description></item>
+            /// <item><description>JPY: Japanese yen.</description></item>
+            /// <item><description>USD: US dollar.</description></item>
+            /// <item><description>CNY: Chinese yuan.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The final order price, which is the actual transaction price.</para>
+            /// <para>The final price of the order, which is the actual transaction price.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>The target plan code.</para>
+            /// <para>The code of the target plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>entranceplan</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string TargetPlanCode { get; set; }
 
             /// <summary>
-            /// <para>The original order price. Original order price = actual transaction price + discount amount.</para>
+            /// <para>The original price of the order, which is the sum of the actual transaction price and the discount amount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>

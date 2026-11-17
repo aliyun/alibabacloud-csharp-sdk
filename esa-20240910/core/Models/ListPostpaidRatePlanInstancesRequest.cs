@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>Specifies whether to check for remaining site quotas. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Queries instances with remaining site quotas.</para>
+        /// <item><description><para>true: Queries instances that have remaining site quotas.</para>
         /// </description></item>
         /// <item><description><para>false: Does not filter by this condition.</para>
         /// </description></item>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CheckRemainingSiteQuota { get; set; }
 
         /// <summary>
-        /// <para>The instance ID, which is used to precisely query a single instance.</para>
+        /// <para>The instance ID, which is used to query a specific instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sp-dps-xxxxxx</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number for paging. The value must be greater than or equal to 1.</para>
+        /// <para>The page number Settings for paging in a paged query. The value must be greater than or equal to 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size for paging. Valid values: 1 to 500.</para>
+        /// <para>The number of entries per page for paging in a paged query. Valid values: 1 to 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>
@@ -60,9 +60,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ResourceOwner { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the results. Valid values:</para>
+        /// <para>Specifies the field by which to sort the results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CreateTime: Sorts by creation time.</description></item>
+        /// <item><description>CreateTime: Sorts the results by creation time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values:</para>
+        /// <para>Specifies the sort order. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>asc: Ascending order.</para>
         /// </description></item>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SortOrder { get; set; }
 
         /// <summary>
-        /// <para>The instance status. Valid values:</para>
+        /// <para>Specifies the instance status. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>online: Normal.</para>
         /// </description></item>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the instance has the Bot Management or Anti-DDoS add-on.</para>
+        /// <para>Specifies whether the instance has the Bot or DDoS add-on.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bot</para>

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpgradeEnvironmentVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The environment name. The version of this environment is upgraded and deployed to the environment with the next priority level.</para>
+        /// <para>The environment name. The version of this environment is upgraded and deployed to the environment at the next priority level.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>默认环境</para>
+        /// <para>Default environment</para>
         /// </summary>
         [NameInMap("EnvironmentName")]
         [Validation(Required=false)]

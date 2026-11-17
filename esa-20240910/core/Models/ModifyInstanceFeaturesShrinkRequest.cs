@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ModifyInstanceFeaturesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The plan instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</para>
+        /// <para>Instance ID of the plan instance. You can obtain instance ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The list of site feature configurations.</para>
+        /// <para>The list of site feature information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SiteFeatures")]

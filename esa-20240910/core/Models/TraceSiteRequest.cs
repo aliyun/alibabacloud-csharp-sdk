@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public TraceSiteRequestBody Body { get; set; }
         public class TraceSiteRequestBody : TeaModel {
             /// <summary>
-            /// <para>The content in JSON format. If both JSON format content and plain text content are specified, the JSON format content takes precedence.</para>
+            /// <para>The JSON-formatted content. If both JSON-formatted content and plain text content are specified, the JSON-formatted content takes precedence.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;request_id&quot;,&quot;3f809c32&quot;}</para>
@@ -42,21 +42,21 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The environment context. This parameter is optional.</para>
+        /// <para>The context information. This parameter is optional.</para>
         /// </summary>
         [NameInMap("Context")]
         [Validation(Required=false)]
         public TraceSiteRequestContext Context { get; set; }
         public class TraceSiteRequestContext : TeaModel {
             /// <summary>
-            /// <para>The simulated geolocation information.</para>
+            /// <para>The simulated geographic location information.</para>
             /// </summary>
             [NameInMap("GeoLocation")]
             [Validation(Required=false)]
             public TraceSiteRequestContextGeoLocation GeoLocation { get; set; }
             public class TraceSiteRequestContextGeoLocation : TeaModel {
                 /// <summary>
-                /// <para>The country/region code.</para>
+                /// <para>The country or region code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CN</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string CountryCode { get; set; }
 
                 /// <summary>
-                /// <para>The Internet service provider (ISP) code. This parameter is valid only when the country or region is the Chinese mainland.</para>
+                /// <para>The ISP code. Valid only when the country or region is the Chinese mainland.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100025</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string IspCode { get; set; }
 
                 /// <summary>
-                /// <para>The region or province code. This parameter is valid only when the country or region is the Chinese mainland.</para>
+                /// <para>The region or province code. Valid only when the country or region is the Chinese mainland.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CN-BJ</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<TraceSiteRequestCookies> Cookies { get; set; }
         public class TraceSiteRequestCookies : TeaModel {
             /// <summary>
-            /// <para>The cookie name.</para>
+            /// <para>The name of the cookie.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sessionId</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The cookie value.</para>
+            /// <para>The value of the cookie.</para>
             /// 
             /// <b>Example:</b>
             /// <para>f9ca1f7d-15bb-4c60-ad99-71b8e3e4985b</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<TraceSiteRequestHeaders> Headers { get; set; }
         public class TraceSiteRequestHeaders : TeaModel {
             /// <summary>
-            /// <para>The HTTP request header name.</para>
+            /// <para>The name of the HTTP request header.</para>
             /// 
             /// <b>Example:</b>
             /// <para>User-Agent</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The HTTP request header value.</para>
+            /// <para>The value of the HTTP request header.</para>
             /// 
             /// <b>Example:</b>
             /// <para>trace-test</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>The URL of the request.</para>
+        /// <para>The request URL.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

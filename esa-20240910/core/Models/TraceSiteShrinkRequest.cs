@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string BodyShrink { get; set; }
 
         /// <summary>
-        /// <para>The environment context. This parameter is optional.</para>
+        /// <para>The context information. This parameter is optional.</para>
         /// </summary>
         [NameInMap("Context")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>The URL of the request.</para>
+        /// <para>The request URL.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

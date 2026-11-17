@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateConfigSequenceRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration ID. You can call the <a href="~~ListSiteFunctions~~">ListSiteFunctions</a> operation to obtain the configuration ID.</para>
+        /// <para>The ID of the configuration. You can call the <a href="~~ListSiteFunctions~~">ListSiteFunctions</a> operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
-        /// <para>The target priority of the configuration. The value must be greater than 0. If the value is greater than the highest priority among all rule configurations under this feature, the priority of the configuration to be modified is set to the current highest priority. For example, if the CacheRules feature has three rule configurations with priorities 1, 2, and 3, and you change the priority of the rule with priority 1 to 5, the priority of that rule is set to 3, and the rules that originally had priorities 2 and 3 are changed to 1 and 2.</para>
+        /// <para>The target priority of the configuration. The value must be greater than 0. If the specified value is greater than the maximum priority of the rule configurations under this feature, the priority of the configuration is changed to the current maximum priority. For example, if the CacheRules feature has three rule configurations with priorities 1, 2, and 3, and you change the priority of the rule configuration with priority 1 to 5, the priority of this rule configuration is changed to 3. The priorities of the other two rule configurations are changed to 1 and 2.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Sequence { get; set; }
 
         /// <summary>
-        /// <para>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</para>
+        /// <para>The ID of the site. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

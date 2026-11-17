@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<ListEnvironmentsResponseBodyEnvironmentList> EnvironmentList { get; set; }
         public class ListEnvironmentsResponseBodyEnvironmentList : TeaModel {
             /// <summary>
-            /// <para>The time when the environment was created. The time follows the ISO 8601 standard and is in UTC. Example: 2024-08-15T08:15:30Z.</para>
+            /// <para>The creation time. The time is displayed in UTC and follows the ISO 8601 standard. Example: 2024-08-15T08:15:30Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-08-15T08:15:30Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the environment.</para>
+            /// <para>The environment name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>yichao-test-yctest</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Rule { get; set; }
 
             /// <summary>
-            /// <para>The version number of the site.</para>
+            /// <para>The site version number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? SiteVersion { get; set; }
 
             /// <summary>
-            /// <para>The time when the environment was updated. The time follows the ISO 8601 standard and is in UTC. Example: 2023-09-15T08:16:04Z.</para>
+            /// <para>The update time. The time is displayed in UTC and follows the ISO 8601 standard. Example: 2023-09-15T08:16:04Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-09-15T08:16:04Z</para>

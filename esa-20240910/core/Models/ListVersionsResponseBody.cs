@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of versions for the site.</para>
+        /// <para>The list of site versions.</para>
         /// </summary>
         [NameInMap("SiteVersionList")]
         [Validation(Required=false)]
         public List<ListVersionsResponseBodySiteVersionList> SiteVersionList { get; set; }
         public class ListVersionsResponseBodySiteVersionList : TeaModel {
             /// <summary>
-            /// <para>The creation time. The time follows the ISO 8601 standard and includes a time zone offset. Example: 2024-06-15T17:41:27+08:00.</para>
+            /// <para>The creation time in ISO 8601 format, including the time zone offset. Example: 2024-06-15T17:41:27+08:00.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-06-15T17:41:27+08:00</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The list of environments for the site version. No environment is configured, or one or more environments are configured, such as the default environment and Environment 2.</para>
+            /// <para>The list of environments for the site version. The list can be empty or contain one or more environments, such as the default environment and Environment 2.</para>
             /// </summary>
             [NameInMap("EnvironmentNameList")]
             [Validation(Required=false)]
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The update time. The time follows the ISO 8601 standard and includes a time zone offset. Example: 2024-06-15T17:41:27+08:00.</para>
+            /// <para>The update time in ISO 8601 format, including the time zone offset. Example: 2024-06-15T17:41:27+08:00.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-06-15T17:41:27+08:00</para>

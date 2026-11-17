@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? CloneVersion { get; set; }
 
         /// <summary>
-        /// <para>The version number that was cloned.</para>
+        /// <para>The version number of the source version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

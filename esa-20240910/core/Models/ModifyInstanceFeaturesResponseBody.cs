@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ModifyInstanceFeaturesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The site feature configurations that failed to be modified.</para>
+        /// <para>The failed site feature information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>loadbalance</para>

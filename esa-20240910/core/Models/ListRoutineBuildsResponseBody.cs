@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<ListRoutineBuildsResponseBodyData> Data { get; set; }
         public class ListRoutineBuildsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The directory of static resources.</para>
+            /// <para>The static resource directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/root/usr</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string AssetsDirectory { get; set; }
 
             /// <summary>
-            /// <para>The branch used for the build.</para>
+            /// <para>The build branch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev</para>
@@ -78,13 +78,26 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
             /// <summary>
             /// <para>The environment variables.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;NODE_ENV&quot;:&quot;development&quot;}</para>
             /// </summary>
             [NameInMap("EnvironmentVariables")]
             [Validation(Required=false)]
             public Dictionary<string, string> EnvironmentVariables { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Git account.</para>
+            /// <para>The name of the file uploaded for the build task.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>index.html</para>
+            /// </summary>
+            [NameInMap("FileName")]
+            [Validation(Required=false)]
+            public string FileName { get; set; }
+
+            /// <summary>
+            /// <para>The Git account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>162124764031208</para>
@@ -94,7 +107,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? GitAccountId { get; set; }
 
             /// <summary>
-            /// <para>The name of the Git account.</para>
+            /// <para>The Git account name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rwa</para>
@@ -104,7 +117,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string GitAccountName { get; set; }
 
             /// <summary>
-            /// <para>The installation command.</para>
+            /// <para>The install command.</para>
             /// 
             /// <b>Example:</b>
             /// <para>npm install</para>
@@ -256,7 +269,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1427812834792318</para>

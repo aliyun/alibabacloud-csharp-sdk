@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Amount { get; set; }
 
         /// <summary>
-        /// <para>The purchase duration, in months.</para>
+        /// <para>The subscription period, in months.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The plan name.</para>
+        /// <para>The name of the plan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>basic</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The requested cache size. Unit: GB.</para>
+        /// <para>The requested cache size in GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>

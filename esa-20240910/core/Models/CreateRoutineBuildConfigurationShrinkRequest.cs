@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateRoutineBuildConfigurationShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The static resource directory.</para>
+        /// <para>The static asset directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/root/user</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AssetsDirectory { get; set; }
 
         /// <summary>
-        /// <para>The branches that trigger a build. Set this parameter to * for all branches. To specify multiple branches, separate branch names with commas.</para>
+        /// <para>The branches that trigger a build. Specify an asterisk (*) to include all branches, or separate multiple specific branch names with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>feature/test,hotfix/test</para>
@@ -41,13 +41,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The environment variables.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;NODE_ENV&quot;:&quot;development&quot;}</para>
         /// </summary>
         [NameInMap("EnvironmentVariables")]
         [Validation(Required=false)]
         public string EnvironmentVariablesShrink { get; set; }
 
         /// <summary>
-        /// <para>The Git account ID.</para>
+        /// <para>The ID of the Git account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3472021274759488</para>
@@ -67,7 +70,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string GitPlatform { get; set; }
 
         /// <summary>
-        /// <para>The install command.</para>
+        /// <para>The installation command.</para>
         /// 
         /// <b>Example:</b>
         /// <para>npm install</para>
@@ -79,8 +82,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>Specifies whether the repository is private. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The repository is private.</description></item>
-        /// <item><description>false: The repository is not private.</description></item>
+        /// <item><description>true: Yes.</description></item>
+        /// <item><description>false: No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -91,7 +94,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? IsPrivate { get; set; }
 
         /// <summary>
-        /// <para>The Node.js version. Valid values: <c>22.x</c>, <c>20.x</c>, <c>18.x</c>, <c>16.x</c>, <c>14.x</c>, <c>12.x</c>.</para>
+        /// <para>The Node.js version. Valid values: <c>22.x</c>, <c>20.x</c>, <c>18.x</c>, <c>16.x</c>, <c>14.x</c>, and <c>12.x</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -102,7 +105,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string NodeVersion { get; set; }
 
         /// <summary>
-        /// <para>The production branch name.</para>
+        /// <para>The name of the production branch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>main</para>
@@ -112,7 +115,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ProductionBranch { get; set; }
 
         /// <summary>
-        /// <para>The repository name.</para>
+        /// <para>The name of the repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>webdeck</para>
@@ -132,7 +135,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RootDirectory { get; set; }
 
         /// <summary>
-        /// <para>The ER entry file path.</para>
+        /// <para>The path to the Edge Routine entry file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/home</para>
@@ -142,7 +145,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RoutineEntry { get; set; }
 
         /// <summary>
-        /// <para>The ER name.</para>
+        /// <para>The name of the Edge Routine.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -153,7 +156,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RoutineName { get; set; }
 
         /// <summary>
-        /// <para>The build template name.</para>
+        /// <para>The name of the build template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>react-router</para>

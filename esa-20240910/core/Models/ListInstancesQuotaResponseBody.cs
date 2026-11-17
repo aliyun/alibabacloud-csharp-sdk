@@ -23,10 +23,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>The threshold type of the quota. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>value</b>: Enumeration type. The enumeration range of quota values.</description></item>
-        /// <item><description><b>bool</b>: Boolean type. Indicates whether the quota is available.</description></item>
+        /// <item><description><b>bool</b>: Boolean type. Whether the quota is available.</description></item>
         /// <item><description><b>num</b>: Numeric type. The upper limit of the quota usage.</description></item>
         /// <item><description><b>range</b>: Range type. The value range of the quota.</description></item>
-        /// <item><description><b>custom</b>: Custom type. Other types beyond the four threshold types above.</description></item>
+        /// <item><description><b>custom</b>: Custom type. Other types besides the preceding four quota threshold types.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

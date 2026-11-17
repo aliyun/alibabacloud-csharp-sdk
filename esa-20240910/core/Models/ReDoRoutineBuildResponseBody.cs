@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ReDoRoutineBuildResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the build task in Yunxiao.</para>
+        /// <para>The ID of the Yunxiao build task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>70</para>
@@ -38,6 +38,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [NameInMap("RoutineBuildId")]
         [Validation(Required=false)]
         public long? RoutineBuildId { get; set; }
+
+        /// <summary>
+        /// <para>The status of the build task. Valid values: building: The build is in progress. pending: The build is queued. A successful submission does not indicate that the pipeline has been created. The run ID is 0 when the task is queued.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pending</para>
+        /// </summary>
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 

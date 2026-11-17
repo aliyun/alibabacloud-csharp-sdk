@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public class DescribeSiteWafTimeSeriesDataResponseBodyDataDetailData : TeaModel {
                 /// <summary>
                 /// <para>The start time of the time slice.</para>
-                /// <para>The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC+0.</para>
+                /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-04-08T16:00:00Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>The query dimensions.</para>
+            /// <para>The query dimension.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALL</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DimensionName { get; set; }
 
             /// <summary>
-            /// <para>The dimension value.</para>
+            /// <para>The value of the query dimension.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALL</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DimensionValue { get; set; }
 
             /// <summary>
-            /// <para>The metric name.</para>
+            /// <para>The value of the query metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Requests</para>
@@ -79,8 +79,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The end of the time range for the returned data.</para>
-        /// <para>The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC+0.</para>
+        /// <para>The end time of the data to retrieve.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-04-09T16:00:00Z</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The data granularity. Unit: seconds.</para>
+        /// <para>The data granularity, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The sampling rate. Unit: %.</para>
+        /// <para>The sampling rate, in percentage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -120,8 +120,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public float? SamplingRate { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
-        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</para>
+        /// <para>The start time of the data to retrieve.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-04-08T16:00:00Z</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The summarized data.</para>
+        /// <para>The queried summary data.</para>
         /// </summary>
         [NameInMap("SummarizedData")]
         [Validation(Required=false)]
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string AggMethod { get; set; }
 
             /// <summary>
-            /// <para>The summarized dimension name.</para>
+            /// <para>The queried summary dimension.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALL</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DimensionName { get; set; }
 
             /// <summary>
-            /// <para>The summarized dimension value.</para>
+            /// <para>The value of the queried summary dimension.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALL</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DimensionValue { get; set; }
 
             /// <summary>
-            /// <para>The summarized metric name.</para>
+            /// <para>The value of the queried summary metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Requests</para>

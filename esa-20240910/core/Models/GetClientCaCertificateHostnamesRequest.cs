@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetClientCaCertificateHostnamesRequest : TeaModel {
         /// <summary>
-        /// <para>The client CA certificate ID.</para>
+        /// <para>The ID of the client CA certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>babaded901474b9693acf530e0fb****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
+        /// <para>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to query the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

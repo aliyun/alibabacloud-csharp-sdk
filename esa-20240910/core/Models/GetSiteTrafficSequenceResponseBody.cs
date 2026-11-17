@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<GetSiteTrafficSequenceResponseBodyTrafficSequences> TrafficSequences { get; set; }
         public class GetSiteTrafficSequenceResponseBodyTrafficSequences : TeaModel {
             /// <summary>
-            /// <para>The list of site features associated with the traffic sequence.</para>
+            /// <para>The list of site features corresponding to the traffic sequence.</para>
             /// </summary>
             [NameInMap("FunctionList")]
             [Validation(Required=false)]
             public List<GetSiteTrafficSequenceResponseBodyTrafficSequencesFunctionList> FunctionList { get; set; }
             public class GetSiteTrafficSequenceResponseBodyTrafficSequencesFunctionList : TeaModel {
                 /// <summary>
-                /// <para>The list of configurations for the site feature associated with the traffic sequence.</para>
+                /// <para>The list of configurations for the site feature corresponding to the traffic sequence.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>if can be null:</b>
@@ -57,8 +57,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     /// <summary>
                     /// <para>The configuration type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>global: global configuration.</description></item>
-                    /// <item><description>rule: rule configuration.</description></item>
+                    /// <item><description>global: global configuration</description></item>
+                    /// <item><description>rule: rule configuration</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 }
 
                 /// <summary>
-                /// <para>The feature name.</para>
+                /// <para>The name of the feature.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>redirect_rules</para>
@@ -81,10 +81,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string FunctionName { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the site has a corresponding configuration. Valid values:</para>
+                /// <para>Specifies whether the site has the corresponding configuration. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: The site has a corresponding configuration.</description></item>
-                /// <item><description>false: The site does not have a corresponding configuration.</description></item>
+                /// <item><description>true: The site has the corresponding configuration.</description></item>
+                /// <item><description>false: The site does not have the corresponding configuration.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>The order of the current sequence in the entire traffic sequence.</para>
+            /// <para>The order of the current sequence among all traffic sequences.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Order { get; set; }
 
             /// <summary>
-            /// <para>The traffic sequence routing.</para>
+            /// <para>The route of the traffic sequence.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/safe/ddos/basic</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string SequenceCode { get; set; }
 
             /// <summary>
-            /// <para>The sequence name.</para>
+            /// <para>The name of the sequence.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DDOS</para>

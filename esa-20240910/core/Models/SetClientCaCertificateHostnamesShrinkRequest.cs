@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class SetClientCaCertificateHostnamesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>A list of hostnames.</para>
+        /// <para>The domain names.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Hostnames")]

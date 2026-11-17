@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DescribeSiteWafTimeSeriesDataShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query.</para>
-        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</para>
+        /// <para>The end time of the data to retrieve.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// <remarks>
         /// <para>The end time must be later than the start time.</para>
         /// </remarks>
@@ -32,8 +32,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string FieldsShrink { get; set; }
 
         /// <summary>
-        /// <para>The time granularity of the queried data. Unit: seconds.</para>
-        /// <para>Based on the maximum time span of a single query, this parameter supports the values 60 (1 minute), 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see the <b>supported query time granularity</b> section above.</para>
+        /// <para>The time granularity of the queried data, in seconds.</para>
+        /// <para>Based on the maximum time span of a single query, this parameter supports the following values: 60 (1 minute), 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see <b>Supported time granularities</b> above.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -54,8 +54,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SiteId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
-        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</para>
+        /// <para>The start time of the data to retrieve.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-04-08T16:00:00Z</para>

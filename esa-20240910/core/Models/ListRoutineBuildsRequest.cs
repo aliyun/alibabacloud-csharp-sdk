@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListRoutineBuildsRequest : TeaModel {
         /// <summary>
-        /// <para>The page number Settings for paging in a paged query. The value must be greater than or equal to 1.</para>
+        /// <para>The page number Settings for paging. Minimum value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging in a paged query. Valid values: 1 to 500.</para>
+        /// <para>The number of entries to return on each page for paging. Valid values: 1 to 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the Edge Routine (ER).</para>
+        /// <para>The name of the ER.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-routine</para>

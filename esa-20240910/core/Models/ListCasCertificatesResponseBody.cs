@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListCasCertificatesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The certificate list.</para>
+        /// <para>The list of certificates.</para>
         /// </summary>
         [NameInMap("Certificates")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string NotAfter { get; set; }
 
             /// <summary>
-            /// <para>The region where the certificate resides. Supported values: <b>cn-hangzhou</b> and <b>ap-southeast-1</b>.</para>
+            /// <para>The region where the certificate is located. Valid values: <b>cn-hangzhou</b> and <b>ap-southeast-1</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ap-southeast-1</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

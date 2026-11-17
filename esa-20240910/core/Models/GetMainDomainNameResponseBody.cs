@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetMainDomainNameResponseBody : TeaModel {
         /// <summary>
-        /// <para>The level of the input domain name.</para>
+        /// <para>The level of the specified domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

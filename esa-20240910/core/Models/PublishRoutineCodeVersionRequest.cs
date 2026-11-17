@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CodeVersion { get; set; }
 
         /// <summary>
-        /// <para>The environment name.</para>
+        /// <para>The name of the environment.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

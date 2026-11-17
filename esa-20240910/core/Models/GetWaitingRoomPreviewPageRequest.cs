@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetWaitingRoomPreviewPageRequest : TeaModel {
         /// <summary>
-        /// <para>The custom waiting room page content. This parameter is required when the waiting room type is custom. The content must be URL-encoded.</para>
+        /// <para>The custom content of the waiting room page. This parameter is required when the waiting room type is set to custom. The content must be URL-encoded.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

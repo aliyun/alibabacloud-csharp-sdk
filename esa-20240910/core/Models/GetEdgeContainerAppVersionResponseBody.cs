@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The list of images to be deployed for this version.</para>
+            /// <para>The list of images to be deployed for the version.</para>
             /// </summary>
             [NameInMap("Containers")]
             [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public GetEdgeContainerAppVersionResponseBodyVersionContainersACRImageInfo ACRImageInfo { get; set; }
                 public class GetEdgeContainerAppVersionResponseBodyVersionContainersACRImageInfo : TeaModel {
                     /// <summary>
-                    /// <para>The ACR image domain name.</para>
+                    /// <para>The domain name of the ACR image.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>*.mooc.seewo.com</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     public string Domain { get; set; }
 
                     /// <summary>
-                    /// <para>The ACR site instance ID.</para>
+                    /// <para>The instance ID of the ACR site.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>xcdn-9ak2thl14z5s</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     public string InstanceId { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the image is an enterprise-level image.</para>
+                    /// <para>Specifies whether the image is an enterprise-level image.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     public string RegionId { get; set; }
 
                     /// <summary>
-                    /// <para>The image repository ID.</para>
+                    /// <para>The ID of the image repository.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>crr-zeu0xyk28alyxozh</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     public string Tag { get; set; }
 
                     /// <summary>
-                    /// <para>The ACR image tag URL.</para>
+                    /// <para>The URL of the ACR image tag.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>registry-vpc.cn-shenzhen.aliyuncs.com/lihetech/easywits_server_exam:3.40.2</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 }
 
                 /// <summary>
-                /// <para>The startup arguments.</para>
+                /// <para>The startup parameters.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>-c /path/config.toml</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Image { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the image is an ACR image.</para>
+                /// <para>Specifies whether the image is an ACR image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public GetEdgeContainerAppVersionResponseBodyVersionContainersProbeContent ProbeContent { get; set; }
                 public class GetEdgeContainerAppVersionResponseBodyVersionContainersProbeContent : TeaModel {
                     /// <summary>
-                    /// <para>The probe execution command.</para>
+                    /// <para>The command to run the probe.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>sh test.sh</para>
@@ -330,7 +330,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     public int? SuccessThreshold { get; set; }
 
                     /// <summary>
-                    /// <para>The timeout period for the container health check. Unit: seconds. For example, 5 indicates a timeout of 5 seconds.</para>
+                    /// <para>The timeout period for the container health check. Unit: seconds. For example, 5 indicates a timeout period of 5 seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5</para>
@@ -362,10 +362,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Spec { get; set; }
 
                 /// <summary>
-                /// <para>The container storage specifications.</para>
+                /// <para>The storage specifications of the container.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>0.5G, 标识存储空间，取值范围（0.5G | 10G | 20G | 30G）</para>
+                /// <para>0.5G, indicating the storage space. Valid values: 0.5G, 10G, 20G, and 30G</para>
                 /// </summary>
                 [NameInMap("Storage")]
                 [Validation(Required=false)]
@@ -374,7 +374,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>The creation time of the version. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The creation time of the version. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-07-01T09:32:33Z</para>
@@ -384,7 +384,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The last publish time of the version. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The last release time of the version. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-07-25T04:58:05Z</para>
@@ -404,7 +404,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The publish time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The release time. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-11-14T02:04:03Z</para>
@@ -426,9 +426,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The status of the current version. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>created</b>: Created.</description></item>
-            /// <item><description><b>failed</b>: Creation failed.</description></item>
-            /// <item><description><b>creating</b>: Being created.</description></item>
+            /// <item><description><b>created</b>: The version is created.</description></item>
+            /// <item><description><b>failed</b>: The version fails to be created.</description></item>
+            /// <item><description><b>creating</b>: The version is being created.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -439,7 +439,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The last modification time of the version. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The last modification time of the version. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-03T10:52:52Z</para>

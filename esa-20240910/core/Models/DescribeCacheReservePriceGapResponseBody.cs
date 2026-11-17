@@ -19,9 +19,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The currency. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>JPY: Japanese Yen.</description></item>
-            /// <item><description>USD: US Dollar.</description></item>
-            /// <item><description>CNY: Chinese Yuan.</description></item>
+            /// <item><description>JPY: Japanese yen.</description></item>
+            /// <item><description>USD: US dollar.</description></item>
+            /// <item><description>CNY: Chinese yuan.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Currency { get; set; }
 
             /// <summary>
-            /// <para>The discount amount of the order.</para>
+            /// <para>The order discount amount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>The original order price. Original order price = actual transaction price + discount amount.</para>
+            /// <para>The original order price, which equals the actual transaction price plus the discount amount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The environment name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>staging</c>: the staging environment.</description></item>
+        /// <item><description><c>staging</c>: the test environment.</description></item>
         /// <item><description><c>production</c>: the production environment.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Env { get; set; }
 
         /// <summary>
-        /// <para>The keys of the environment variables to delete.</para>
+        /// <para>The list of environment variable keys to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<string> EnvironmentVariableKeys { get; set; }
 
         /// <summary>
-        /// <para>The name of the routine.</para>
+        /// <para>The name of the routine function.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

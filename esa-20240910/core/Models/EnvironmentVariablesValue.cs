@@ -10,11 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class EnvironmentVariablesValue : TeaModel {
         /// <summary>
-        /// <para>The environment variable type.</para>
-        /// <para>Valid values:</para>
+        /// <para>The type of the environment variable. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>plain_text</c>: plain text</description></item>
-        /// <item><description><c>secret_text</c>: encrypted text</description></item>
+        /// <item><description><c>plain_text</c>: Plain text.</description></item>
+        /// <item><description><c>secret_text</c>: Encrypted text.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,7 +24,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The environment variable value.</para>
+        /// <para>The value of the environment variable.</para>
         /// 
         /// <b>Example:</b>
         /// <para>value</para>

@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Position { get; set; }
 
         /// <summary>
-        /// <para>Additional remarks.</para>
+        /// <para>The additional remarks.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Please contact us as soon as possible</para>
+        /// <para>Contact us as soon as possible</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class SubmitUploadTaskRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to purge resources in the corresponding directory when the back-to-origin content is inconsistent with the origin server resources. Default value: false. This parameter is valid only for purge tasks.</para>
+        /// <para>Specifies whether to refresh the resources in the corresponding directory when the back-to-origin content is inconsistent with the origin server resources. Default value: false. This parameter is valid only for refresh tasks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Purges all resources in the corresponding directory.</description></item>
-        /// <item><description><b>false</b>: Purges only the changed resources in the corresponding directory.</description></item>
+        /// <item><description><b>true</b>: Refreshes all resources in the corresponding directory.</description></item>
+        /// <item><description><b>false</b>: Refreshes only the changed resources in the corresponding directory.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("Force")]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The file upload task ID, which is generated when you call the <a href="~~UploadTask~~">UploadTask</a> operation.</para>
+        /// <para>The ID of the file upload task. The ID is generated when you call the <a href="~~UploadTask~~">UploadTask</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1593805857882113</para>

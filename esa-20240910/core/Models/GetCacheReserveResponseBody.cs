@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CacheReserveInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The switch status. Valid values:</para>
+        /// <para>Specifies whether the cache reserve feature is enabled. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>on</b>: Enabled.</description></item>
         /// <item><description><b>off</b>: Disabled.</description></item>

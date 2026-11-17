@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DescribeSiteWafTopDataShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query.</para>
-        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</para>
+        /// <para>The end time of the data to retrieve.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// <remarks>
         /// <para>The end time must be later than the start time.</para>
         /// </remarks>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string FieldsShrink { get; set; }
 
         /// <summary>
-        /// <para>The time granularity for querying data. Unit: seconds.</para>
+        /// <para>The time granularity of the queried data, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</para>
-        /// <para>If this parameter is left empty, user-level data is queried.</para>
+        /// <para>If this parameter is empty, user-level data is queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1150376036*****</para>
@@ -63,8 +63,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SiteId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
-        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</para>
+        /// <para>The start time of the data to retrieve.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-04-08T16:00:00Z</para>

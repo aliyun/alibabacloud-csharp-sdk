@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DescribeDDoSPriceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The price information.</para>
+        /// <para>The pricing information.</para>
         /// </summary>
         [NameInMap("PriceModel")]
         [Validation(Required=false)]
@@ -19,11 +19,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The currency. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>JPY: Japanese Yen.</para>
+            /// <item><description><para>JPY: Japanese yen.</para>
             /// </description></item>
-            /// <item><description><para>USD: US Dollar.</para>
+            /// <item><description><para>USD: US dollar.</para>
             /// </description></item>
-            /// <item><description><para>CNY: Chinese Yuan.</para>
+            /// <item><description><para>CNY: Chinese yuan.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>The original price of the order. Original price = actual transaction price + discount amount.</para>
+            /// <para>The original price of the order, which equals the actual transaction price plus the discount amount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

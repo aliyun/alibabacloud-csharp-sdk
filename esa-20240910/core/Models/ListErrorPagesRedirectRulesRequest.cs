@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
-        /// <para>The configuration type. You can use this parameter to query global or rule configurations. Valid values:</para>
+        /// <para>The configuration type. You can use this parameter to query global configurations or rule configurations. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>global: Global configurations.</description></item>
-        /// <item><description>rule: Rule configurations.</description></item>
+        /// <item><description>global: Queries global configurations.</description></item>
+        /// <item><description>rule: Queries rule configurations.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</para>
+        /// <para>The site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

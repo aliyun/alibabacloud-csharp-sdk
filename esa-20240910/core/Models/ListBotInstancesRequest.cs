@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListBotInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sp-xcdn-96wblslz****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The sort field. By default, instances are sorted by creation time. Valid values:</para>
+        /// <para>The field used for sorting. By default, instances are sorted by creation time. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>CreateTime</b>: creation time.</description></item>
         /// <item><description><b>ExpireTime</b>: expiration time.</description></item>

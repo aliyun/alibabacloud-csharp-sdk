@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ModifySiteFeaturesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The site feature information that failed to be cleared.</para>
+        /// <para>The information about the site features that failed to be cleared.</para>
         /// 
         /// <b>Example:</b>
         /// <para>loadbalance</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DescribeRatePlanPriceGapRequest : TeaModel {
         /// <summary>
-        /// <para>The target plan name. You can obtain this value from the <a href="~~DescribeRatePlanPrice~~">DescribeRatePlanPrice</a> operation.</para>
+        /// <para>The name of the target plan. You can obtain it by calling the <a href="~~DescribeRatePlanPrice~~">DescribeRatePlanPrice</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>entranceplan</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The specification change type. Valid values:</para>
+        /// <para>The type of the specification change. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DOWNGRADE: downgrade.</description></item>
-        /// <item><description>UPGRADE: upgrade.</description></item>
+        /// <item><description>DOWNGRADE: Downgrade.</description></item>
+        /// <item><description>UPGRADE: Upgrade.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

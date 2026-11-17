@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The current remaining capacity of the instance.</para>
             /// <list type="bullet">
-            /// <item><description><para>Unit for traffic plans: Byte.</para>
+            /// <item><description><para>Unit for data transfer plans: bytes.</para>
             /// </description></item>
-            /// <item><description><para>Unit for request plans: count.</para>
+            /// <item><description><para>Unit for request plans: requests.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CurrCapacity { get; set; }
 
             /// <summary>
-            /// <para>The base unit of the current remaining capacity of the instance.</para>
+            /// <para>The unit of the current remaining capacity of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Byte</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CurrCapacityBaseUnit { get; set; }
 
             /// <summary>
-            /// <para>The display unit of the current remaining capacity of the instance.</para>
+            /// <para>The unit of the current displayed remaining capacity of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GB</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CurrCapacityShowUnit { get; set; }
 
             /// <summary>
-            /// <para>The display value of the current remaining capacity of the instance.</para>
+            /// <para>The current displayed remaining capacity of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>49.975789</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The expiration time in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</para>
+            /// <para>The expiration time. The time is displayed in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-12-02T15:59:59Z</para>
@@ -125,9 +125,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The total capacity of the resource plan.</para>
             /// <list type="bullet">
-            /// <item><description><para>Unit for traffic plans: Byte.</para>
+            /// <item><description><para>Unit for data transfer plans: bytes.</para>
             /// </description></item>
-            /// <item><description><para>Unit for request plans: count.</para>
+            /// <item><description><para>Unit for request plans: requests.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string InitCapacity { get; set; }
 
             /// <summary>
-            /// <para>The base unit of the total capacity of the resource plan.</para>
+            /// <para>The unit of the total capacity of the resource plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Byte</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string InitCapacityBaseUnit { get; set; }
 
             /// <summary>
-            /// <para>The display unit of the total capacity of the resource plan.</para>
+            /// <para>The unit of the displayed total capacity of the resource plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GB</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string InitCapacityShowUnit { get; set; }
 
             /// <summary>
-            /// <para>The display value of the total capacity of the resource plan.</para>
+            /// <para>The displayed total capacity of the resource plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100.000000</para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The template name.</para>
+            /// <para>The name of the template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FPT_dcdnpaybag_deadlineAcc_****</para>

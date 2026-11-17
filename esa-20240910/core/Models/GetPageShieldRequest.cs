@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetPageShieldRequest : TeaModel {
         /// <summary>
-        /// <para>The site ID. You can obtain the ID by calling <a href="~~ListSites~~">ListSites</a>.</para>
+        /// <para>The ID of the site. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The version number of the site. For sites with version management enabled, you can use this parameter to specify the site version on which the configuration takes effect. The default value is 0.</para>
+        /// <para>The version number of the site. For a site with version management enabled, you can use this parameter to specify the site version to which the configuration applies. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public bool? ShowRequestId { get; set; }
 
                 /// <summary>
-                /// <para>The color of the slider.</para>
+                /// <para>The slider color.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public bool? ShowRequestId { get; set; }
 
                 /// <summary>
-                /// <para>The color of the slider.</para>
+                /// <para>The slider color.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The list of bound site IDs.</para>
+        /// <para>The IDs of the bound sites.</para>
         /// </summary>
         [NameInMap("SiteIds")]
         [Validation(Required=false)]

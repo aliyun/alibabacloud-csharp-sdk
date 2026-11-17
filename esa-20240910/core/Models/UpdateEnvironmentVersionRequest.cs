@@ -14,14 +14,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>默认环境</para>
+        /// <para>Default environment</para>
         /// </summary>
         [NameInMap("EnvironmentName")]
         [Validation(Required=false)]
         public string EnvironmentName { get; set; }
 
         /// <summary>
-        /// <para>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</para>
+        /// <para>The site ID. You can obtain the ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The new site version number.</para>
+        /// <para>The updated site version number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? StatusCode { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<TraceSiteResponseBodyTrace> Trace { get; set; }
         public class TraceSiteResponseBodyTrace : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the module is matched. Valid values: true and false.</para>
+            /// <para>Indicates whether the module is matched.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string StepModuleName { get; set; }
 
             /// <summary>
-            /// <para>The matching results of rules in the feature module.</para>
+            /// <para>The matching result of rules in the feature module.</para>
             /// </summary>
             [NameInMap("Trace")]
             [Validation(Required=false)]
             public List<TraceSiteResponseBodyTraceTrace> Trace { get; set; }
             public class TraceSiteResponseBodyTraceTrace : TeaModel {
                 /// <summary>
-                /// <para>The action to perform.</para>
+                /// <para>The action performed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>deny</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string ConfigType { get; set; }
 
                 /// <summary>
-                /// <para>The mitigation capability (China).</para>
+                /// <para>The mitigation capability in the Chinese mainland.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn300</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string DdosLevelDomestic { get; set; }
 
                 /// <summary>
-                /// <para>The mitigation capability (global, excluding China).</para>
+                /// <para>The mitigation capability outside the Chinese mainland.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>unlimit</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public int? SiteVersion { get; set; }
 
                 /// <summary>
-                /// <para>The security-related rule type.</para>
+                /// <para>The type of the security-related rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>l4_ddos</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The value specified in the IP access rule.</para>
+                /// <para>The value configured for the IP access rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.1.1.1</para>

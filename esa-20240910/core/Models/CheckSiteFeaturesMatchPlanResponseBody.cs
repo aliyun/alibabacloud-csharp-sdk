@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? IsPassed { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>65705631-908C-5D24-997C-17E0397721C8</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about site quotas that do not meet the requirements.</para>
+        /// <para>The site quota information for incompatible quotas.</para>
         /// </summary>
         [NameInMap("UnPassedSiteQuotas")]
         [Validation(Required=false)]

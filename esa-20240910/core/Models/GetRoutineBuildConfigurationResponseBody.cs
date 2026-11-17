@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AssetsDirectory { get; set; }
 
         /// <summary>
-        /// <para>The branches that trigger builds. A value of * indicates all branches. Multiple specific branches are separated by commas.</para>
+        /// <para>The branches that trigger the build. An asterisk (*) indicates all branches. Multiple specific branches are separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>int,abc</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string BuildCommand { get; set; }
 
         /// <summary>
-        /// <para>The creation time, in ISO 8601 format using UTC time. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-03-11T01:23:21Z</para>
@@ -51,6 +51,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The environment variables.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;NODE_ENV&quot;:&quot;development&quot;}</para>
         /// </summary>
         [NameInMap("EnvironmentVariables")]
         [Validation(Required=false)]
@@ -69,8 +72,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The Git account type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>User: individual account.</description></item>
-        /// <item><description>Organization: organization account.</description></item>
+        /// <item><description>User: Individual account.</description></item>
+        /// <item><description>Organization: Organization account.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -165,7 +168,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RootDirectory { get; set; }
 
         /// <summary>
-        /// <para>The ER build configuration ID.</para>
+        /// <para>The ID of the ER build configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3472165674357056</para>
@@ -175,7 +178,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? RoutineBuildConfigurationId { get; set; }
 
         /// <summary>
-        /// <para>The ER entry file path.</para>
+        /// <para>The path to the ER entry file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/home</para>
@@ -195,7 +198,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RoutineName { get; set; }
 
         /// <summary>
-        /// <para>The modification time, in ISO 8601 format using UTC time. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>The update time. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-04-19T11:15:20Z</para>

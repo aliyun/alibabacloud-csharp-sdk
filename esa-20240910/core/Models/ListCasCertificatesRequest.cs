@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size. Valid values: any integer from 1 to 1000.</para>
+        /// <para>The number of entries per page. Valid values: an integer from 1 to 1000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The certificate name for fuzzy match.</para>
+        /// <para>The keyword used to perform a fuzzy match on certificate names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliyun</para>

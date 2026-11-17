@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <item><description>global: Queries global configurations.</description></item>
         /// <item><description>rule: Queries rule configurations.</description></item>
         /// </list>
-        /// <para>This parameter is optional. If you do not specify this parameter, global and rule configurations are not distinguished. This parameter takes effect only when the functionName parameter is specified.</para>
+        /// <para>If this parameter is not specified, global and rule configurations are not distinguished. This parameter takes effect only when the functionName parameter is specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rule</para>
@@ -87,10 +87,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The rule content, which uses a conditional expression to match user requests. You do not need to set this parameter when adding a global configuration. Two scenarios are supported:</para>
+        /// <para>The rule content. A conditional expression is used to match user requests. You do not need to specify this parameter when adding a global configuration. Two scenarios are supported:</para>
         /// <list type="bullet">
         /// <item><description>Match all incoming requests: Set the value to true.</description></item>
-        /// <item><description>Match specified requests: Set the value to a custom expression, such as (http.host eq &quot;video.example.com&quot;).</description></item>
+        /// <item><description>Match specific requests: Set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>The rule switch. You do not need to set this parameter when adding a global configuration. Valid values:</para>
+        /// <para>The rule switch. You do not need to specify this parameter when adding a global configuration. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>on: Enabled.</description></item>
         /// <item><description>off: Disabled.</description></item>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
-        /// <para>The rule name. You do not need to set this parameter when adding a global configuration.</para>
+        /// <para>The rule name. You do not need to specify this parameter when adding a global configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rule_example</para>

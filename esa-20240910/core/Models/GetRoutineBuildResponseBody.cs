@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetRoutineBuildResponseBody : TeaModel {
         /// <summary>
-        /// <para>The static resource directory.</para>
+        /// <para>The static assets directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/root/user</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AssetsDirectory { get; set; }
 
         /// <summary>
-        /// <para>The branch used for the build.</para>
+        /// <para>The build branch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dev</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string BuildCommand { get; set; }
 
         /// <summary>
-        /// <para>The commit ID.</para>
+        /// <para>The ID of the commit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9bf55641a1a608b9e7297d3fe51e39baa4b68ba0</para>
@@ -53,14 +53,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>The commit message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Add configuration file.</para>
+        /// <para>Add a configuration file</para>
         /// </summary>
         [NameInMap("CommitMessage")]
         [Validation(Required=false)]
         public string CommitMessage { get; set; }
 
         /// <summary>
-        /// <para>The creation time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-02-28T09:03:42Z</para>
@@ -71,10 +71,23 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The environment variables.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;NODE_ENV&quot;:&quot;development&quot;}</para>
         /// </summary>
         [NameInMap("EnvironmentVariables")]
         [Validation(Required=false)]
         public Dictionary<string, string> EnvironmentVariables { get; set; }
+
+        /// <summary>
+        /// <para>The name of the file uploaded for the build task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>index.html</para>
+        /// </summary>
+        [NameInMap("FileName")]
+        [Validation(Required=false)]
+        public string FileName { get; set; }
 
         /// <summary>
         /// <para>The Git account ID.</para>
@@ -107,10 +120,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstallCommand { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the repository is private. Valid values:</para>
+        /// <para>Specifies whether the repository is private. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The repository is private.</description></item>
-        /// <item><description>false: The repository is not private.</description></item>
+        /// <item><description>true: Yes.</description></item>
+        /// <item><description>false: No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -121,7 +134,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? IsPrivate { get; set; }
 
         /// <summary>
-        /// <para>The Node.js version. Valid values: <c>22.x</c>, <c>20.x</c>, <c>18.x</c>, <c>16.x</c>, <c>14.x</c>, <c>12.x</c>.</para>
+        /// <para>The Node.js version. Valid values: <c>22.x</c>, <c>20.x</c>, <c>18.x</c>, <c>16.x</c>, <c>14.x</c>, and <c>12.x</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22.x</para>
@@ -131,7 +144,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string NodeVersion { get; set; }
 
         /// <summary>
-        /// <para>The pipeline ID in Yunxiao.</para>
+        /// <para>The ID of the Yunxiao pipeline.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4371588</para>
@@ -141,7 +154,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PipelineId { get; set; }
 
         /// <summary>
-        /// <para>The build task ID in Yunxiao.</para>
+        /// <para>The ID of the Yunxiao build task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>70</para>
@@ -151,7 +164,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PipelineRunId { get; set; }
 
         /// <summary>
-        /// <para>The production branch name.</para>
+        /// <para>The name of the production branch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>main</para>
@@ -191,7 +204,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RootDirectory { get; set; }
 
         /// <summary>
-        /// <para>The ER entry file path.</para>
+        /// <para>The path to the ER entry file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/home</para>
@@ -201,7 +214,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RoutineEntry { get; set; }
 
         /// <summary>
-        /// <para>The ER name.</para>
+        /// <para>The name of the ER.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-routine</para>
@@ -213,12 +226,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The status of the build task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>int: init</description></item>
-        /// <item><description>pending: preparing</description></item>
-        /// <item><description>building: building</description></item>
-        /// <item><description>succeed: build succeeded</description></item>
-        /// <item><description>failed: build failed</description></item>
-        /// <item><description>canceled: canceled</description></item>
+        /// <item><description>int: Initialized.</description></item>
+        /// <item><description>pending: Preparing.</description></item>
+        /// <item><description>building: Building.</description></item>
+        /// <item><description>succeed: Succeeded.</description></item>
+        /// <item><description>failed: Failed.</description></item>
+        /// <item><description>canceled: Canceled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -239,7 +252,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>The modification time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The update time. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-07-20T09:59:28+08:00</para>

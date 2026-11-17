@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateRoutineBuildRequest : TeaModel {
         /// <summary>
-        /// <para>The OSS object URL. This parameter is required in upload mode but is not required in git mode.</para>
+        /// <para>The URL of the OSS object. This parameter is required in upload mode but is not required in git mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://bucket.oss-.aliyuncs.com/key">https://bucket.oss-.aliyuncs.com/key</a></para>

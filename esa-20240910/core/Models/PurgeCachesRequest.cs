@@ -42,6 +42,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 /// <list type="bullet">
                 /// <item><description>Language codes follow the ISO 639-1 or BCP 47 standard. For example, set this to zh to refresh content in Chinese.</description></item>
                 /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;UserDeviceType&quot;:&quot;desktop&quot;,&quot;UserLanguage&quot;:&quot;zh-CN&quot;}</para>
                 /// </summary>
                 [NameInMap("Headers")]
                 [Validation(Required=false)]

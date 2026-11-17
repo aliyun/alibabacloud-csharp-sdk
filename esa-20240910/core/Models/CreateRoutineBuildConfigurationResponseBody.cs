@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ER build configuration ID.</para>
+        /// <para>The ID of the Edge Routine build configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3472165674357056</para>

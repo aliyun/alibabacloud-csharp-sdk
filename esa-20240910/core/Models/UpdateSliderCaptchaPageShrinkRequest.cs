@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The list of bound site IDs.</para>
+        /// <para>The IDs of the bound sites.</para>
         /// </summary>
         [NameInMap("SiteIds")]
         [Validation(Required=false)]

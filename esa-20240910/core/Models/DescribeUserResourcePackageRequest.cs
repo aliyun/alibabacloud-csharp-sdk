@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20.</para>
+        /// <para>The number of entries to return on each page. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -46,11 +46,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The sorting field. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>startTime: the effective period of the instance.</description></item>
-        /// <item><description>endTime: the expiration time of the instance.</description></item>
-        /// <item><description>StartTime: the effective period of the instance.</description></item>
-        /// <item><description>EndTime: the expiration time of the instance.</description></item>
-        /// <item><description>default: no sorting field.</description></item>
+        /// <item><description>startTime: the effective period of the instance</description></item>
+        /// <item><description>endTime: the expiration time of the instance</description></item>
+        /// <item><description>StartTime: the effective period of the instance</description></item>
+        /// <item><description>EndTime: the expiration time of the instance</description></item>
+        /// <item><description>default: no sorting field</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SortField { get; set; }
 
         /// <summary>
-        /// <para>The sorting rule. Default value: desc. Valid values:</para>
+        /// <para>The sorting collation. Default value: desc. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>asc</description></item>
         /// <item><description>desc</description></item>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The number of attacks that have been used.</para>
+        /// <para>The number of attacks used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

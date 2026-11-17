@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DescribeCacheReservePriceRequest : TeaModel {
         /// <summary>
-        /// <para>The cache reserve region.</para>
+        /// <para>The cache reservation region. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>HK: Hong Kong (China)</para>
         /// </description></item>
-        /// <item><description><para>CN: the Chinese mainland.</para>
+        /// <item><description><para>CN: the Chinese mainland</para>
         /// </description></item>
         /// </list>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CrRegion { get; set; }
 
         /// <summary>
-        /// <para>The purchase period. Unit: months.</para>
+        /// <para>The subscription period. Unit: months.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The cache reserve specification. Unit: GB.</para>
+        /// <para>The cache reservation capacity. Unit: GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>512000</para>

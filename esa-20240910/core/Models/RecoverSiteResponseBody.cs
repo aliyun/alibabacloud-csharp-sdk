@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The access type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>NS</b>: access through NS hosting.</para>
+        /// <item><description><para><b>NS</b>: NS hosting.</para>
         /// </description></item>
-        /// <item><description><para><b>CNAME</b>: access through CNAME.</para>
+        /// <item><description><para><b>CNAME</b>: CNAME access.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AccessType { get; set; }
 
         /// <summary>
-        /// <para>The CNAME suffix of the site. For sites that are accessed through CNAME, this field indicates the CNAME suffix that needs to be configured for records.</para>
+        /// <para>The CNAME suffix of the site. For sites accessed through CNAME, this field records the CNAME suffix that needs to be configured.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gf-test.hkrt.cn</para>
@@ -38,9 +38,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The acceleration region of the site. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>domestic</b>: the Chinese mainland only.</description></item>
-        /// <item><description><b>global</b>: global.</description></item>
-        /// <item><description><b>overseas</b>: global (excluding the Chinese mainland).</description></item>
+        /// <item><description><b>domestic</b>: The Chinese mainland only.</description></item>
+        /// <item><description><b>global</b>: Global.</description></item>
+        /// <item><description><b>overseas</b>: Global (excluding the Chinese mainland).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The list of name servers assigned to the site, separated by commas (,). When the site uses NS access, this field contains values. You need to change the DNS servers of the site to these name servers. Then you can verify the site ownership and activate the site.</para>
+        /// <para>The list of name servers assigned to the site, separated by commas (,). This field has a value when the site is accessed through NS. You must change the DNS servers of the site to these name servers. Then, you can verify the ownership of the site and activate it.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ns1.example.com,ns2.example.com</para>
@@ -81,13 +81,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string NameServerList { get; set; }
 
         /// <summary>
-        /// <para>The reason why the site was deactivated. Valid values:</para>
+        /// <para>The reason why the site is disabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>expiration_arrears</b>: The subscription plan expired or the account has an overdue payment.</description></item>
-        /// <item><description><b>internally_disabled</b>: The site was disabled by the system.</description></item>
-        /// <item><description><b>missing_icp</b>: The domain name does not have an ICP filing.</description></item>
+        /// <item><description><b>expiration_ arrears</b>: The subscription plan has expired or the account has an overdue payment.</description></item>
+        /// <item><description><b>internally_disabled</b>: Disabled internally by the system.</description></item>
+        /// <item><description><b>missing_icp</b>: The domain name lacks an ICP filing.</description></item>
         /// <item><description><b>content_violation</b>: Content violation.</description></item>
-        /// <item><description><b>proactively_disabled</b>: You proactively disabled the site or the site was disabled because the usage cap you configured was reached.</description></item>
+        /// <item><description><b>proactively_disabled</b>: Manually disabled by you or disabled due to a usage cap set by you.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <item><description><b>pending</b>: The site is pending configuration.</description></item>
         /// <item><description><b>active</b>: The site is activated.</description></item>
         /// <item><description><b>offline</b>: The site is offline.</description></item>
-        /// <item><description><b>moved</b>: The site has been replaced.</description></item>
+        /// <item><description><b>moved</b>: The site has been moved.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The modification time.</para>
+        /// <para>The update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-03-13T02:13:28Z</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>The site ownership verification code. When the site is accessed through CNAME, this is the TXT verification code that needs to be configured.</para>
+        /// <para>The verification code for site ownership. When a site is accessed through CNAME, this is the TXT verification code that needs to be configured.</para>
         /// 
         /// <b>Example:</b>
         /// <para>verify_d516cb3740f81f0cef77d162edd1****</para>

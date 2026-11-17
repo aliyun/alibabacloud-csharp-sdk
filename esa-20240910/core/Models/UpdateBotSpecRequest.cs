@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateBotSpecRequest : TeaModel {
         /// <summary>
-        /// <para>The bot instance specifications.</para>
+        /// <para>The specifications of the bot instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

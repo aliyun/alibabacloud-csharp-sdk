@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetFailFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The download link for the failed task file.</para>
+        /// <para>The download link for the files of the failed task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>https://<b><b>.oss-cn-shenzhen.aliyuncs.com/fail-1593805857882113?Expires=1708659191&amp;OSSAccessKeyId=</b></b><b><b><b>&amp;Signature=</b></b></b>****</para>

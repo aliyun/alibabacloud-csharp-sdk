@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListTraceTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of pages.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ClientIp { get; set; }
 
             /// <summary>
-            /// <para>The time when the report was created. Format: yyyy-MM-dd HH:mm:ss. Time zone: UTC+8.</para>
+            /// <para>The time when the report was created. Format: yyyy-MM-dd HH:mm:ss. Time zone: +08:00.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-12-10 15:11:47</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The diagnose ID.</para>
+            /// <para>The diagnostic ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>f2a18ad5</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DiagnoseId { get; set; }
 
             /// <summary>
-            /// <para>The diagnose URL.</para>
+            /// <para>The diagnostic URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://cdn.dns-detect.alicdn.com/diagnose/xxxxxx">http://cdn.dns-detect.alicdn.com/diagnose/xxxxxx</a></para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>The expiration time. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The expiration time. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1669285111</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The remaining number of available diagnostic attempts.</para>
+            /// <para>The remaining diagnostic quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <item><description>1: Failed.</description></item>
             /// <item><description>2: Timed out.</description></item>
             /// <item><description>3: Running.</description></item>
-            /// <item><description>4: Waiting.</description></item>
+            /// <item><description>4: Pending.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -134,10 +134,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The status of the diagnose URL. Valid values:</para>
+            /// <para>The status of the diagnostic URL. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>1: Active.</description></item>
-            /// <item><description>0: Expired.</description></item>
+            /// <item><description>0: Invalid.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The time consumed to generate the report.</para>
+            /// <para>The report generation duration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? TimeConsuming { get; set; }
 
             /// <summary>
-            /// <para>The trace ID of the diagnostic task.</para>
+            /// <para>The diagnostic trace ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>000000xxxxxxxxxxxxxxxxxxxxxx25941e</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: any integer from 1 to 1000.</para>
+        /// <para>The number of entries per page. Valid values: an integer from 1 to 1000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>

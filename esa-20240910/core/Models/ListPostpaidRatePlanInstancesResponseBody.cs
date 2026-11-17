@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<ListPostpaidRatePlanInstancesResponseBodyInstanceInfo> InstanceInfo { get; set; }
         public class ListPostpaidRatePlanInstancesResponseBodyInstanceInfo : TeaModel {
             /// <summary>
-            /// <para>The billing method. Valid values:</para>
+            /// <para>The Billable methods. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>dps_month95: Monthly 95th percentile billing.</description></item>
             /// </list>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string BillingMode { get; set; }
 
             /// <summary>
-            /// <para>The acceleration regions for sites that can be bound to the instance. Multiple values are separated by commas (,). Valid values:</para>
+            /// <para>The acceleration regions for sites that can be bound to the instance. Multiple regions are separated by commas (,). Valid values:</para>
             /// <list type="bullet">
             /// <item><description>domestic: The Chinese mainland.</description></item>
             /// <item><description>overseas: Global (excluding the Chinese mainland).</description></item>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The scheduled time for the specification change. The time is displayed in UTC and formatted as yyyy-MM-ddTHH:mm:ssZ in accordance with the ISO 8601 standard.</para>
+            /// <para>The scheduled time for specification change. The time is displayed in UTC and formatted as yyyy-MM-ddTHH:mm:ssZ in accordance with the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-19T11:15:20Z</para>
@@ -116,10 +116,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string PlanNameCn { get; set; }
 
             /// <summary>
-            /// <para>The plan type of the instance. Valid values:</para>
+            /// <para>The plan type of the plan instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>normal: Standard plan.</description></item>
-            /// <item><description>enterprise: Enterprise plan.</description></item>
+            /// <item><description>normal: Fixed edition plan.</description></item>
+            /// <item><description>enterprise: Enterprise edition plan.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 /// <item><description>pending: The site is pending configuration.</description></item>
                 /// <item><description>active: The site is activated.</description></item>
                 /// <item><description>offline: The site is offline.</description></item>
-                /// <item><description>moved: The site is replaced.</description></item>
+                /// <item><description>moved: The site has been replaced.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

@@ -1,3 +1,6 @@
+2026-11-17 Version: 3.15.2
+- Generated csharp 2024-09-10 for ESA.
+
 2026-11-11 Version: 3.15.1
 - Update API GetRealtimeDeliveryField: add request parameters SiteId.
 - Update API GetRealtimeDeliveryField: add response parameters Body.FieldContent.FieldList.$.IsSupported.

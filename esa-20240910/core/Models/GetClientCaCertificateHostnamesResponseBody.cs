@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<string> Hostnames { get; set; }
 
         /// <summary>
-        /// <para>The client CA certificate ID.</para>
+        /// <para>The ID of the client CA certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>babaded901474b9693acf530e0fb****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
+        /// <para>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to query the site ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890123</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The site name.</para>
+        /// <para>The name of the site.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>

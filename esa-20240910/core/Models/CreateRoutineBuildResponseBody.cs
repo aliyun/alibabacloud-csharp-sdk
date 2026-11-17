@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateRoutineBuildResponseBody : TeaModel {
         /// <summary>
-        /// <para>The build ID in Apsara Devops.</para>
+        /// <para>The build ID in Yunxiao.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ER build task ID.</para>
+        /// <para>The ID of the ER build task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>159782040838348</para>
@@ -38,6 +38,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [NameInMap("RoutineBuildId")]
         [Validation(Required=false)]
         public long? RoutineBuildId { get; set; }
+
+        /// <summary>
+        /// <para>The status of the build task. A value of building indicates that the task is being built. A value of pending indicates that the task is queued. When the task is queued, the run ID is 0.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pending</para>
+        /// </summary>
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 

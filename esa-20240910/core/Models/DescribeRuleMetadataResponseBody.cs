@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 /// <para>The human-readable content.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>北京市</para>
+                /// <para>Beijing</para>
                 /// </summary>
                 [NameInMap("Text")]
                 [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <para>The human-readable content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>中国</para>
+            /// <para>China</para>
             /// </summary>
             [NameInMap("Text")]
             [Validation(Required=false)]

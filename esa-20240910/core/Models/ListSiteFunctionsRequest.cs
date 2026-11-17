@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <item><description>global: Queries global configurations.</description></item>
         /// <item><description>rule: Queries rule configurations.</description></item>
         /// </list>
-        /// <para>This parameter is optional. If you do not specify this parameter, global and rule configurations are not distinguished. This parameter takes effect only when the FunctionName parameter is specified.</para>
+        /// <para>This parameter is optional. If you do not specify this parameter, the system does not distinguish between global and rule configurations. This parameter takes effect only when the FunctionName parameter is specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rule</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ConfigType { get; set; }
 
         /// <summary>
-        /// <para>The name of the feature function.</para>
+        /// <para>The name of the function.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CacheRules</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
+        /// <para>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

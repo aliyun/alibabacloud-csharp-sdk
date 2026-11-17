@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string NewInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The UID of the Alibaba Cloud account that owns the new plan instance.</para>
+        /// <para>The UID of the Alibaba Cloud account that owns the resources of the new plan instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1700594193617909</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ResourceOwner { get; set; }
 
         /// <summary>
-        /// <para>The ID of the site. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</para>
+        /// <para>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to query the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

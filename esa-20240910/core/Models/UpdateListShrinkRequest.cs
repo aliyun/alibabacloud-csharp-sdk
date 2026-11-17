@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The updated items in the list. The value is a JSON array string, such as <c>[&quot;1.1.1.1&quot;,&quot;2.2.2.2&quot;]</c>.</para>
-        /// <para><b>Full overwrite semantics</b>: The specified <c>Items</c> completely overwrites the original list content instead of appending to it.</para>
+        /// <para><b>Full overwrite semantics</b>: The specified Items completely overwrite the existing list items instead of being appended to them.</para>
         /// <remarks>
-        /// <para>⚠️ <b>If this parameter is not specified or is left empty, the original list content is cleared</b>. To retain the original items and append new ones, call <c>GetList</c> to retrieve the existing <c>Items</c>, concatenate them, and submit them at once.</para>
+        /// <para>⚠️ <b>If you do not specify this parameter or specify an empty value, the existing list items are cleared</b>. To retain the existing items and append new ones, call the GetList operation to retrieve the existing Items, concatenate the new items, and then submit them all at once.</para>
         /// </remarks>
-        /// <para><b>Element format</b>: The format depends on the <c>Kind</c> specified when the list was created. UpdateList does not support modifying the kind.</para>
+        /// <para><b>Item format</b>: The format depends on the Kind specified when the list was created. The UpdateList operation does not support modifying the Kind.</para>
         /// <list type="bullet">
-        /// <item><description>Kind = <c>ip</c>: Each element must be a valid IP address or CIDR block. If an element is invalid, <c>WrongValueMatched</c> is returned.</description></item>
-        /// <item><description>Other kinds: The element format is subject to conventions, and the number of elements is limited by the tenant quota <c>NumberItemsPerList</c>. Only the <c>ip</c> kind is not subject to this limit.</description></item>
+        /// <item><description>If Kind is set to ip: Each item must be a valid IP address or CIDR block. If an item is invalid, the WrongValueMatched error is returned.</description></item>
+        /// <item><description>For other Kind values: The item format follows the specified conventions. The number of items is limited by the tenant quota NumberItemsPerList. This limit does not apply to the ip kind.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -52,8 +52,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ItemsShrink { get; set; }
 
         /// <summary>
-        /// <para>The updated name of the custom list. If this parameter is not specified, the original name is retained.</para>
-        /// <para><b>Naming rules</b>: Only letters, digits, and underscores are supported. The regular expression is <c>^\\w{1,64}$</c>, and the length is 1 to 64 characters.</para>
+        /// <para>The updated name of the custom list. This parameter is required if you want to update the name. If you do not specify this parameter, the original name is retained.</para>
+        /// <para><b>Naming rules</b>: The name can contain only letters, digits, and underscores (<c>^\\w{1,64}$</c>) and must be 1 to 64 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

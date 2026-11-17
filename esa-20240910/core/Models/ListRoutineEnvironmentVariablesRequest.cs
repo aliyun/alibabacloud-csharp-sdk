@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListRoutineEnvironmentVariablesRequest : TeaModel {
         /// <summary>
-        /// <para>The environment name.</para>
-        /// <para>Valid values:</para>
+        /// <para>The name of the environment.
+        /// Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>production</c>: production environment</description></item>
-        /// <item><description><c>staging</c>: staging environment</description></item>
+        /// <item><description><c>production</c>: Production environment.</description></item>
+        /// <item><description><c>staging</c>: Staging environment.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Env { get; set; }
 
         /// <summary>
-        /// <para>The keyword used to perform a case-insensitive fuzzy search on environment variable keys.</para>
+        /// <para>The keyword used to perform a case-insensitive fuzzy search for environment variable keys and values.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LOG</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string KeyWord { get; set; }
 
         /// <summary>
-        /// <para>The function name.</para>
+        /// <para>The name of the function.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

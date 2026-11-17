@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetRoutineCodeVersionInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The build ID of the code.</para>
+        /// <para>The ID of the code build.</para>
         /// 
         /// <b>Example:</b>
         /// <para>26035169</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The time when the code version was created. The time follows the RFC 3339 standard in the UTC time zone.</para>
+        /// <para>The creation time of the code version. The time follows the RFC 3339 standard and is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-08-04T01:54:19Z</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The extra information of the code version. The value is in JSON string format.</para>
+        /// <para>The additional information about the code version. The value is a JSON string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ExtraInfo { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the code version contains Assets files.</para>
+        /// <para>Indicates whether the code version contains asset files.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? HasAssets { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</para>

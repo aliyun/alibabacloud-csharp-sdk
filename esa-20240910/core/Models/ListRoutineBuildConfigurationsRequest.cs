@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListRoutineBuildConfigurationsRequest : TeaModel {
         /// <summary>
-        /// <para>The list of ER routine names, separated by commas.</para>
+        /// <para>The list of ER names, separated by commas.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

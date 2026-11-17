@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Amount { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable automatic payment. Set this parameter to true when you directly call this operation.</para>
+        /// <para>Specifies whether to enable automatic payment. Set this parameter to true when you directly call the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -32,8 +32,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Auto-renewal is enabled.</description></item>
-        /// <item><description>false: Auto-renewal is disabled.</description></item>
+        /// <item><description>true: Enables auto-renewal.</description></item>
+        /// <item><description>false: Disables auto-renewal.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,10 +56,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PREPAY: subscription.</description></item>
-        /// <item><description>POSTPAY: pay-as-you-go.</description></item>
+        /// <item><description>PREPAY: Subscription.</description></item>
+        /// <item><description>POSTPAY: Pay-as-you-go.
+        /// Set this parameter to PREPAY when you directly call the operation.</description></item>
         /// </list>
-        /// <para>Set this parameter to PREPAY when you directly call this operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PREPAY</para>
@@ -71,9 +71,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The acceleration region. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>domestic: the Chinese mainland only.</description></item>
-        /// <item><description>global: global.</description></item>
-        /// <item><description>overseas: global (excluding the Chinese mainland).</description></item>
+        /// <item><description>domestic: The Chinese mainland only.</description></item>
+        /// <item><description>global: Global.</description></item>
+        /// <item><description>overseas: Global, excluding the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string OveragePolicy { get; set; }
 
         /// <summary>
-        /// <para>The purchase period, in months. This parameter is required when you directly call this operation.</para>
+        /// <para>The subscription period. Unit: months. This parameter is required when you directly call the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -104,13 +104,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The plan code.</para>
+        /// <para>The code of the plan.</para>
         /// <para>China site</para>
         /// <list type="bullet">
         /// <item><description>Free Edition: entranceplan</description></item>
-        /// <item><description>Basic: basicplan</description></item>
-        /// <item><description>Standard: standardplan</description></item>
-        /// <item><description>Advanced: advancedplan</description></item>
+        /// <item><description>Basic Edition: basicplan</description></item>
+        /// <item><description>Standard Edition: standardplan</description></item>
+        /// <item><description>Advanced Edition: advancedplan</description></item>
         /// </list>
         /// <para>International site</para>
         /// <list type="bullet">
@@ -127,13 +127,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string PlanCode { get; set; }
 
         /// <summary>
-        /// <para>The plan name.</para>
+        /// <para>The name of the plan.</para>
         /// <para>China site</para>
         /// <list type="bullet">
         /// <item><description>Free Edition: entranceplan</description></item>
-        /// <item><description>Basic: basic</description></item>
-        /// <item><description>Standard: medium</description></item>
-        /// <item><description>Advanced: high</description></item>
+        /// <item><description>Basic Edition: basic</description></item>
+        /// <item><description>Standard Edition: medium</description></item>
+        /// <item><description>Advanced Edition: high</description></item>
         /// </list>
         /// <para>International site</para>
         /// <list type="bullet">
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <item><description>Pro: basicplan_intl</description></item>
         /// <item><description>Premium: vipplan_intl</description></item>
         /// </list>
-        /// <para>Note: For Enterprise Edition plans, the plan name is provided after backend configuration.</para>
+        /// <para>Note: For Enterprise Edition plans, the plan name must be configured in the backend and then provided to the customer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>basic</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string PlanName { get; set; }
 
         /// <summary>
-        /// <para>The site name.</para>
+        /// <para>The name of the site.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test.com</para>

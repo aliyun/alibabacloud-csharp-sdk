@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The default header carried in a prefetch request is Accept-Encoding:gzip. If you want the prefetch request to carry other headers or implement multi-copy prefetching, use this parameter to customize the prefetch headers.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;Accept-Encoding&quot;:&quot;gzip&quot;}</para>
         /// </summary>
         [NameInMap("Headers")]
         [Validation(Required=false)]

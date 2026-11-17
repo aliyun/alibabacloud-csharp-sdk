@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ModifyInstanceFeaturesRequest : TeaModel {
         /// <summary>
-        /// <para>The plan instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</para>
+        /// <para>Instance ID of the plan instance. You can obtain instance ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The list of site feature configurations.</para>
+        /// <para>The list of site feature information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SiteFeatures")]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<ModifyInstanceFeaturesRequestSiteFeatures> SiteFeatures { get; set; }
         public class ModifyInstanceFeaturesRequestSiteFeatures : TeaModel {
             /// <summary>
-            /// <para>The site feature configurations to modify.</para>
+            /// <para>The site feature information to be modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>network_optimization|smart_routing,loadbalance</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Features { get; set; }
 
             /// <summary>
-            /// <para>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</para>
+            /// <para>The ID of the site. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>151097616427232</para>

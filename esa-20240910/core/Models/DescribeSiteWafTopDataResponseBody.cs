@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public List<DescribeSiteWafTopDataResponseBodyDataDetailData> DetailData { get; set; }
             public class DescribeSiteWafTopDataResponseBodyDataDetailData : TeaModel {
                 /// <summary>
-                /// <para>The query dimension value.</para>
+                /// <para>The value of the query dimension.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ALL</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DimensionName { get; set; }
 
             /// <summary>
-            /// <para>The query metric value.</para>
+            /// <para>The name of the query metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Requests</para>
@@ -68,8 +68,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The end of the time range for the returned data.</para>
-        /// <para>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC+0.</para>
+        /// <para>The end time of the retrieved data.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-04-09T16:00:00Z</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The sampling rate. Unit: %.</para>
+        /// <para>The sampling rate, in percentage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -99,8 +99,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public float? SamplingRate { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
-        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</para>
+        /// <para>The start time of the data to retrieve.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-04-08T16:00:00Z</para>

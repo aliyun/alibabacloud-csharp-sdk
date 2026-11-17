@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string BrowserInfo { get; set; }
 
             /// <summary>
-            /// <para>The operating system name.</para>
+            /// <para>The name of the operating system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Macintosh</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The client IP address.</para>
+        /// <para>The IP address of the client.</para>
         /// 
         /// <b>Example:</b>
         /// <para>33.7.98.136</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ClientIp { get; set; }
 
         /// <summary>
-        /// <para>The creation time. Format: yyyy-MM-dd HH:mm:ss. Time zone: UTC+8.</para>
+        /// <para>The creation time. Format: yyyy-MM-dd HH:mm:ss. Time zone: +08:00.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-03-11T01:23:21Z</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string DiagnoseId { get; set; }
 
         /// <summary>
-        /// <para>The diagnostic report link.</para>
+        /// <para>The link to the diagnostic report.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://cdnskyeye.alibaba-inc.com/#/databrain/detectionPlatformAction?module=trace&id=xxx&instance_id=xxxx&type=copy&edition_id=xxxxx">https://cdnskyeye.alibaba-inc.com/#/databrain/detectionPlatformAction?module=trace&amp;id=xxx&amp;instance_id=xxxx&amp;type=copy&amp;edition_id=xxxxx</a></para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The expiration time. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The expiration time. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1678701915</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ExpireTime { get; set; }
 
         /// <summary>
-        /// <para>The remaining number of available diagnostic attempts.</para>
+        /// <para>The number of remaining available diagnoses.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? RemainDiagnoseTimes { get; set; }
 
         /// <summary>
-        /// <para>The diagnostic report details.</para>
+        /// <para>The details of the diagnostic report.</para>
         /// </summary>
         [NameInMap("Report")]
         [Validation(Required=false)]
@@ -198,12 +198,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The report generation status.</para>
-        /// <para>0: succeeded.
-        /// 1: failed.
-        /// 2: timed out.
-        /// 3: running.
-        /// 4: waiting.</para>
+        /// <para>The report generation status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: Succeeded.</description></item>
+        /// <item><description>1: Failed.</description></item>
+        /// <item><description>2: Timed out.</description></item>
+        /// <item><description>3: Running.</description></item>
+        /// <item><description>4: Pending.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>
@@ -213,9 +215,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>The status of the diagnostic link.</para>
-        /// <para>1: active.
-        /// 0: expired.</para>
+        /// <para>The status of the diagnostic link. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: Active.</description></item>
+        /// <item><description>0: Expired.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -235,7 +239,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The time consumed to generate the report. Unit: seconds.</para>
+        /// <para>The time consumed to generate the report, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -255,7 +259,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string TraceDisplayLink { get; set; }
 
         /// <summary>
-        /// <para>The diagnostic trace ID.</para>
+        /// <para>The ID of the diagnostic trace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000006xxxxxxxxxxxx533427e</para>

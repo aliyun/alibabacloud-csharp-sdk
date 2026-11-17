@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<ListRoutineBuildConfigurationsResponseBodyRoutineBuildConfigurations> RoutineBuildConfigurations { get; set; }
         public class ListRoutineBuildConfigurationsResponseBodyRoutineBuildConfigurations : TeaModel {
             /// <summary>
-            /// <para>The latest ER build task information.</para>
+            /// <para>The ER build task information.</para>
             /// </summary>
             [NameInMap("LatestRoutineBuildTask")]
             [Validation(Required=false)]
             public ListRoutineBuildConfigurationsResponseBodyRoutineBuildConfigurationsLatestRoutineBuildTask LatestRoutineBuildTask { get; set; }
             public class ListRoutineBuildConfigurationsResponseBodyRoutineBuildConfigurationsLatestRoutineBuildTask : TeaModel {
                 /// <summary>
-                /// <para>The creation time, in ISO 8601 format (UTC), formatted as yyyy-MM-ddTHH:mm:ssZ.</para>
+                /// <para>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-03-10T02:18:55Z</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The ER routine name.</para>
+                /// <para>The ER name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rwa-test</para>
@@ -56,12 +56,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 /// <summary>
                 /// <para>The status of the build task. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>int: Init.</description></item>
-                /// <item><description>pending: Pending.</description></item>
-                /// <item><description>building: Building.</description></item>
-                /// <item><description>succeed: Succeeded.</description></item>
-                /// <item><description>failed: Failed.</description></item>
-                /// <item><description>canceled: Canceled.</description></item>
+                /// <item><description>int: initialized</description></item>
+                /// <item><description>pending: preparing</description></item>
+                /// <item><description>building: building</description></item>
+                /// <item><description>succeed: succeeded</description></item>
+                /// <item><description>failed: failed</description></item>
+                /// <item><description>canceled: canceled</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Repository { get; set; }
 
                 /// <summary>
-                /// <para>The ER routine name.</para>
+                /// <para>The ER name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rwa-test</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ClientIp { get; set; }
 
         /// <summary>
-        /// <para>The diagnose ID.</para>
+        /// <para>The diagnostic ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f2xxx5</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: any integer from 1 to 1000.</para>
+        /// <para>The number of entries per page. Valid values: an integer from 1 to 1000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The trace ID of the diagnostic task.</para>
+        /// <para>The diagnostic trace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>000000xxxxxxxxxxxxxxxxxxxxxx33427e</para>
