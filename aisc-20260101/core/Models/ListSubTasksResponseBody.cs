@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             public string Target { get; set; }
 
             /// <summary>
-            /// <para>The task result information.</para>
+            /// <para>The task result message.</para>
             /// </summary>
             [NameInMap("TaskResultMessage")]
             [Validation(Required=false)]
@@ -68,14 +68,14 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
                     public List<ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfo> RiskInfo { get; set; }
                     public class ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfo : TeaModel {
                         /// <summary>
-                        /// <para>The file detection risk list.</para>
+                        /// <para>The list of file detection risks.</para>
                         /// </summary>
                         [NameInMap("Ext")]
                         [Validation(Required=false)]
                         public ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExt Ext { get; set; }
                         public class ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExt : TeaModel {
                             /// <summary>
-                            /// <para>The configuration detection risks.</para>
+                            /// <para>The configuration detection risk.</para>
                             /// </summary>
                             [NameInMap("Config")]
                             [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
                                 public List<ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtConfigDetail> Detail { get; set; }
                                 public class ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtConfigDetail : TeaModel {
                                     /// <summary>
-                                    /// <para>The detected content.</para>
+                                    /// <para>The matched content.</para>
                                     /// 
                                     /// <b>Example:</b>
                                     /// <para>allowed-tools: Bash(agent-browser:*)</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
                                     public string Description { get; set; }
 
                                     /// <summary>
-                                    /// <para>The check item name.</para>
+                                    /// <para>The name of the check item.</para>
                                     /// 
                                     /// <b>Example:</b>
                                     /// <para>Dangerous Tools Without Confirmation</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
                                     public string ItemName { get; set; }
 
                                     /// <summary>
-                                    /// <para>The line number of the detected content.</para>
+                                    /// <para>The line number of the matched content.</para>
                                     /// 
                                     /// <b>Example:</b>
                                     /// <para>2555</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
                             }
 
                             /// <summary>
-                            /// <para>The safety guardrail detection risks.</para>
+                            /// <para>The security guardrail detection risk.</para>
                             /// </summary>
                             [NameInMap("Guardrail")]
                             [Validation(Required=false)]
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
                                     public List<ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtGuardrailDetailResult> Result { get; set; }
                                     public class ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtGuardrailDetailResult : TeaModel {
                                         /// <summary>
-                                        /// <para>The confidence score. Valid values: 0 to 100.</para>
+                                        /// <para>The confidence level. Valid values: 0 to 100.</para>
                                         /// 
                                         /// <b>Example:</b>
                                         /// <para>25</para>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
                                     }
 
                                     /// <summary>
-                                    /// <para>The processing suggestion.</para>
+                                    /// <para>The handling suggestion.</para>
                                     /// 
                                     /// <b>Example:</b>
                                     /// <para>block</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
                                 }
 
                                 /// <summary>
-                                /// <para>The processing suggestion.</para>
+                                /// <para>The handling suggestion.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>block</para>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
                             }
 
                             /// <summary>
-                            /// <para>The sensitive information risks.</para>
+                            /// <para>The sensitive information risk.</para>
                             /// </summary>
                             [NameInMap("Sensitive")]
                             [Validation(Required=false)]
@@ -287,14 +287,14 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
                             }
 
                             /// <summary>
-                            /// <para>The virus detection risks.</para>
+                            /// <para>The virus detection risk.</para>
                             /// </summary>
                             [NameInMap("Virus")]
                             [Validation(Required=false)]
                             public List<ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtVirus> Virus { get; set; }
                             public class ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExtVirus : TeaModel {
                                 /// <summary>
-                                /// <para>The extended information field. This is a reserved parameter.</para>
+                                /// <para>The extended information field, which is a reserved parameter.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>{}</para>
@@ -304,7 +304,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
                                 public string Ext { get; set; }
 
                                 /// <summary>
-                                /// <para>The risk score. Maximum value: 100.</para>
+                                /// <para>The risk score. The maximum score is 100.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>100</para>
@@ -338,10 +338,14 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
                         public string Path { get; set; }
 
                         /// <summary>
-                        /// <para>The result type.</para>
+                        /// <para>The detection result type. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>0</b>: No risk.</description></item>
+                        /// <item><description><b>1</b>: Risk detected.</description></item>
+                        /// </list>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>file</para>
+                        /// <para>1</para>
                         /// </summary>
                         [NameInMap("ResultType")]
                         [Validation(Required=false)]
@@ -373,7 +377,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         public ListSubTasksResponseBodyPageInfo PageInfo { get; set; }
         public class ListSubTasksResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of data entries displayed on the current page.</para>
+            /// <para>The number of entries displayed on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -393,7 +397,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The page size.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

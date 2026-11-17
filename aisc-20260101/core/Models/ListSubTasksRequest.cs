@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The main task ID returned upon task submission.</para>
+        /// <para>The ID of the parent task returned after the task is submitted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>110146ac282314fe4f7cd11afc7540eb</para>

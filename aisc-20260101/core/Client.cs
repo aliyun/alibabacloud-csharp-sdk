@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.AISC20260101
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "AISC";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -1653,7 +1656,7 @@ namespace AlibabaCloud.SDK.AISC20260101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of agent risk events.</para>
+        /// <para>Queries the event list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1767,7 +1770,7 @@ namespace AlibabaCloud.SDK.AISC20260101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of agent risk events.</para>
+        /// <para>Queries the event list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1881,7 +1884,7 @@ namespace AlibabaCloud.SDK.AISC20260101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of agent risk events.</para>
+        /// <para>Queries the event list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1899,7 +1902,7 @@ namespace AlibabaCloud.SDK.AISC20260101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of agent risk events.</para>
+        /// <para>Queries the event list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2133,21 +2136,21 @@ namespace AlibabaCloud.SDK.AISC20260101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query of scan tasks under a specified scan target for AI Red Teaming. Supports filtering by detection intensity, task status, and scan mode.</para>
+        /// <para>Queries the scan tasks of a specified scan target for AI Red Teaming with paging, and supports filtering by detection intensity, task status, and scan mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paged query of the scan task list under a specified scan target. Only tasks belonging to targets owned by the current tenant are returned.
+        /// <para>Queries the list of scan tasks under a specified scan target with paging. Only returns the tasks of targets that belong to the current tenant.
         /// Query scope and sorting:</para>
         /// <list type="bullet">
-        /// <item><description>Only tasks created within the last 366 days are returned.</description></item>
-        /// <item><description>Results are sorted by creation time in descending order.</description></item>
-        /// <item><description>TaskStatus filters by task status. ScanType filters by scan mode. The scan mode is stored in the task execute parameters. Historical tasks without a recorded scan mode are treated as attack.
-        /// Paged query rules:</description></item>
-        /// <item><description>PageNumber starts from 1. Values less than 1 are normalized to 1.</description></item>
-        /// <item><description>PageSize defaults to 10, with a maximum of 100 per page. Values greater than 100 are clamped to 100. Values less than 1 return HTTP status code 400.</description></item>
-        /// <item><description>The PageNumber and PageSize values in the response are the normalization values that actually take effect.</description></item>
+        /// <item><description>Only returns tasks created within the last 366 days.</description></item>
+        /// <item><description>Sorts tasks in descending order of creation time.</description></item>
+        /// <item><description>TaskStatus filters tasks by status. ScanType filters tasks by scan mode. The scan mode is stored in the task execution parameters. Tasks that do not have a recorded scan mode are processed as attack.
+        /// Paging rules:</description></item>
+        /// <item><description>PageNumber starts from 1. If the value is less than 1, it is normalized to 1.</description></item>
+        /// <item><description>PageSize defaults to 10, with a maximum of 100 per page. If the value is greater than 100, it is clamped to 100. If the value is less than 1, a 400 error is returned.</description></item>
+        /// <item><description>The PageNumber and PageSize in the response are the actual effective values after normalization.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2210,21 +2213,21 @@ namespace AlibabaCloud.SDK.AISC20260101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query of scan tasks under a specified scan target for AI Red Teaming. Supports filtering by detection intensity, task status, and scan mode.</para>
+        /// <para>Queries the scan tasks of a specified scan target for AI Red Teaming with paging, and supports filtering by detection intensity, task status, and scan mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paged query of the scan task list under a specified scan target. Only tasks belonging to targets owned by the current tenant are returned.
+        /// <para>Queries the list of scan tasks under a specified scan target with paging. Only returns the tasks of targets that belong to the current tenant.
         /// Query scope and sorting:</para>
         /// <list type="bullet">
-        /// <item><description>Only tasks created within the last 366 days are returned.</description></item>
-        /// <item><description>Results are sorted by creation time in descending order.</description></item>
-        /// <item><description>TaskStatus filters by task status. ScanType filters by scan mode. The scan mode is stored in the task execute parameters. Historical tasks without a recorded scan mode are treated as attack.
-        /// Paged query rules:</description></item>
-        /// <item><description>PageNumber starts from 1. Values less than 1 are normalized to 1.</description></item>
-        /// <item><description>PageSize defaults to 10, with a maximum of 100 per page. Values greater than 100 are clamped to 100. Values less than 1 return HTTP status code 400.</description></item>
-        /// <item><description>The PageNumber and PageSize values in the response are the normalization values that actually take effect.</description></item>
+        /// <item><description>Only returns tasks created within the last 366 days.</description></item>
+        /// <item><description>Sorts tasks in descending order of creation time.</description></item>
+        /// <item><description>TaskStatus filters tasks by status. ScanType filters tasks by scan mode. The scan mode is stored in the task execution parameters. Tasks that do not have a recorded scan mode are processed as attack.
+        /// Paging rules:</description></item>
+        /// <item><description>PageNumber starts from 1. If the value is less than 1, it is normalized to 1.</description></item>
+        /// <item><description>PageSize defaults to 10, with a maximum of 100 per page. If the value is greater than 100, it is clamped to 100. If the value is less than 1, a 400 error is returned.</description></item>
+        /// <item><description>The PageNumber and PageSize in the response are the actual effective values after normalization.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2287,21 +2290,21 @@ namespace AlibabaCloud.SDK.AISC20260101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query of scan tasks under a specified scan target for AI Red Teaming. Supports filtering by detection intensity, task status, and scan mode.</para>
+        /// <para>Queries the scan tasks of a specified scan target for AI Red Teaming with paging, and supports filtering by detection intensity, task status, and scan mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paged query of the scan task list under a specified scan target. Only tasks belonging to targets owned by the current tenant are returned.
+        /// <para>Queries the list of scan tasks under a specified scan target with paging. Only returns the tasks of targets that belong to the current tenant.
         /// Query scope and sorting:</para>
         /// <list type="bullet">
-        /// <item><description>Only tasks created within the last 366 days are returned.</description></item>
-        /// <item><description>Results are sorted by creation time in descending order.</description></item>
-        /// <item><description>TaskStatus filters by task status. ScanType filters by scan mode. The scan mode is stored in the task execute parameters. Historical tasks without a recorded scan mode are treated as attack.
-        /// Paged query rules:</description></item>
-        /// <item><description>PageNumber starts from 1. Values less than 1 are normalized to 1.</description></item>
-        /// <item><description>PageSize defaults to 10, with a maximum of 100 per page. Values greater than 100 are clamped to 100. Values less than 1 return HTTP status code 400.</description></item>
-        /// <item><description>The PageNumber and PageSize values in the response are the normalization values that actually take effect.</description></item>
+        /// <item><description>Only returns tasks created within the last 366 days.</description></item>
+        /// <item><description>Sorts tasks in descending order of creation time.</description></item>
+        /// <item><description>TaskStatus filters tasks by status. ScanType filters tasks by scan mode. The scan mode is stored in the task execution parameters. Tasks that do not have a recorded scan mode are processed as attack.
+        /// Paging rules:</description></item>
+        /// <item><description>PageNumber starts from 1. If the value is less than 1, it is normalized to 1.</description></item>
+        /// <item><description>PageSize defaults to 10, with a maximum of 100 per page. If the value is greater than 100, it is clamped to 100. If the value is less than 1, a 400 error is returned.</description></item>
+        /// <item><description>The PageNumber and PageSize in the response are the actual effective values after normalization.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2320,21 +2323,21 @@ namespace AlibabaCloud.SDK.AISC20260101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query of scan tasks under a specified scan target for AI Red Teaming. Supports filtering by detection intensity, task status, and scan mode.</para>
+        /// <para>Queries the scan tasks of a specified scan target for AI Red Teaming with paging, and supports filtering by detection intensity, task status, and scan mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paged query of the scan task list under a specified scan target. Only tasks belonging to targets owned by the current tenant are returned.
+        /// <para>Queries the list of scan tasks under a specified scan target with paging. Only returns the tasks of targets that belong to the current tenant.
         /// Query scope and sorting:</para>
         /// <list type="bullet">
-        /// <item><description>Only tasks created within the last 366 days are returned.</description></item>
-        /// <item><description>Results are sorted by creation time in descending order.</description></item>
-        /// <item><description>TaskStatus filters by task status. ScanType filters by scan mode. The scan mode is stored in the task execute parameters. Historical tasks without a recorded scan mode are treated as attack.
-        /// Paged query rules:</description></item>
-        /// <item><description>PageNumber starts from 1. Values less than 1 are normalized to 1.</description></item>
-        /// <item><description>PageSize defaults to 10, with a maximum of 100 per page. Values greater than 100 are clamped to 100. Values less than 1 return HTTP status code 400.</description></item>
-        /// <item><description>The PageNumber and PageSize values in the response are the normalization values that actually take effect.</description></item>
+        /// <item><description>Only returns tasks created within the last 366 days.</description></item>
+        /// <item><description>Sorts tasks in descending order of creation time.</description></item>
+        /// <item><description>TaskStatus filters tasks by status. ScanType filters tasks by scan mode. The scan mode is stored in the task execution parameters. Tasks that do not have a recorded scan mode are processed as attack.
+        /// Paging rules:</description></item>
+        /// <item><description>PageNumber starts from 1. If the value is less than 1, it is normalized to 1.</description></item>
+        /// <item><description>PageSize defaults to 10, with a maximum of 100 per page. If the value is greater than 100, it is clamped to 100. If the value is less than 1, a 400 error is returned.</description></item>
+        /// <item><description>The PageNumber and PageSize in the response are the actual effective values after normalization.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2353,7 +2356,7 @@ namespace AlibabaCloud.SDK.AISC20260101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get subtask information.</para>
+        /// <para>Retrieves subtask information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2407,7 +2410,7 @@ namespace AlibabaCloud.SDK.AISC20260101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get subtask information.</para>
+        /// <para>Retrieves subtask information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2461,7 +2464,7 @@ namespace AlibabaCloud.SDK.AISC20260101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get subtask information.</para>
+        /// <para>Retrieves subtask information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2479,7 +2482,7 @@ namespace AlibabaCloud.SDK.AISC20260101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get subtask information.</para>
+        /// <para>Retrieves subtask information.</para>
         /// </summary>
         /// 
         /// <param name="request">

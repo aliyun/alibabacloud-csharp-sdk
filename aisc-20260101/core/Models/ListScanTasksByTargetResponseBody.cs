@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         public List<ListScanTasksByTargetResponseBodyData> Data { get; set; }
         public class ListScanTasksByTargetResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The task creation time, in milliseconds (Unix epoch milliseconds).</para>
+            /// <para>The creation time of the task. The value is a millisecond timestamp (Unix epoch in milliseconds).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1735689600000</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The task end time, in milliseconds (Unix epoch milliseconds). This value is null if the task has not ended.</para>
+            /// <para>The end time of the task. The value is a millisecond timestamp (Unix epoch in milliseconds). If the task has not ended, the value is null.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1735689600000</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The number of samples that the task has executed.</para>
+            /// <para>The number of samples that have been executed for the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -47,7 +47,17 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             public long? ExecuteCaseCount { get; set; }
 
             /// <summary>
-            /// <para>The risk level of the task result. This value is null if the task is not completed or no risk assessment has been generated.</para>
+            /// <para>The report language.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>zh</para>
+            /// </summary>
+            [NameInMap("ReportLanguage")]
+            [Validation(Required=false)]
+            public string ReportLanguage { get; set; }
+
+            /// <summary>
+            /// <para>The risk level of the task result. If the task is not completed or no risk assessment is generated, the value is null.</para>
             /// 
             /// <b>Example:</b>
             /// <para>high</para>
@@ -55,6 +65,16 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             [NameInMap("RiskLevel")]
             [Validation(Required=false)]
             public string RiskLevel { get; set; }
+
+            /// <summary>
+            /// <para>The sample language.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>zh</para>
+            /// </summary>
+            [NameInMap("SampleLanguage")]
+            [Validation(Required=false)]
+            public string SampleLanguage { get; set; }
 
             /// <summary>
             /// <para>The detection intensity of the task.</para>
@@ -67,7 +87,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             public long? SampleLevel { get; set; }
 
             /// <summary>
-            /// <para>The scan type of the task. Historical tasks without a recorded scan type are normalized to attack.</para>
+            /// <para>The scan mode of the task. For historical tasks that do not have a recorded scan mode, the value is normalized to attack.</para>
             /// 
             /// <b>Example:</b>
             /// <para>attack</para>
@@ -77,7 +97,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             public string ScanType { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the scan task. You can use this ID for result download and status tracking.</para>
+            /// <para>The unique identifier of the scan task. It can be used to download results and track status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>task-abc123def4567</para>
@@ -87,7 +107,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             public string ScannerTaskId { get; set; }
 
             /// <summary>
-            /// <para>The task message. This value contains the failure reason if the task failed, or is empty if the task succeeded or no message is available.</para>
+            /// <para>The task message. If the task fails, this parameter indicates the cause of the failure. If the task succeeds or no message is available, this parameter is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Execution timed out</para>
@@ -107,7 +127,17 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             public string ScannerTaskStatus { get; set; }
 
             /// <summary>
-            /// <para>The task start time, in milliseconds (Unix epoch milliseconds). This value is null if the task has not started.</para>
+            /// <para>The actual execution mode used by the scan task, which is obtained from the scannerType field of the task. classic indicates the sample mode. agent indicates the autonomous multi-round attack mode of the agent. executor is a historical compatibility value, which is equivalent to classic.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>classic</para>
+            /// </summary>
+            [NameInMap("ScannerType")]
+            [Validation(Required=false)]
+            public string ScannerType { get; set; }
+
+            /// <summary>
+            /// <para>The start time of the task. The value is a millisecond timestamp (Unix epoch in milliseconds). If the task has not started, the value is null.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1735689600000</para>
@@ -117,17 +147,17 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The task name. If no name is specified during creation, the default value is &quot;Target Scan - target name&quot;.</para>
+            /// <para>The name of the task. If no name is specified during creation, the default value is Target Scan - target name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Target Scan - My Bailian Target</para>
+            /// <para>Target Scan - My Model Studio target</para>
             /// </summary>
             [NameInMap("TaskName")]
             [Validation(Required=false)]
             public string TaskName { get; set; }
 
             /// <summary>
-            /// <para>The total number of samples that the task plans to execute.</para>
+            /// <para>The total number of samples planned to be executed for the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120</para>
@@ -139,7 +169,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         }
 
         /// <summary>
-        /// <para>The normalized page number that actually takes effect. This value may differ from the input parameter.</para>
+        /// <para>The actual effective page number after normalization. This value may not be equal to the input parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -149,7 +179,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The normalized number of entries per page that actually takes effect. This value may differ from the input parameter.</para>
+        /// <para>The actual effective number of entries per page after normalization. This value may not be equal to the input parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -159,7 +189,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the request, used for troubleshooting and log tracing.</para>
+        /// <para>The unique identifier of the request. It is used for troubleshooting and log tracing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1EBD0C05-6C1F-4C95-9C63-B7AB7B5A9C8E</para>
@@ -169,7 +199,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of scan tasks that match the filter conditions within the last 366-day window.</para>
+        /// <para>The total number of scan tasks that meet the filter conditions within the last 366 days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>42</para>

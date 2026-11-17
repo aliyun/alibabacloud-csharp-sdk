@@ -1,3 +1,6 @@
+2026-11-17 Version: 1.3.1
+- Generated csharp 2026-01-01 for AISC.
+
 2026-09-18 Version: 1.3.0
 - Support API CreateAttackTarget.
 - Support API CreateTargetScanTask.

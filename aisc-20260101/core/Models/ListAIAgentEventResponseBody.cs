@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
 {
     public class ListAIAgentEventResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of event information returned.</para>
+        /// <para>The list of returned event information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             public string AssetType { get; set; }
 
             /// <summary>
-            /// <para>The check time, in UNIX timestamp format. Unit: seconds.</para>
+            /// <para>The check time. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1763949968</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             public string CheckTime { get; set; }
 
             /// <summary>
-            /// <para>The event handling time, in UNIX timestamp format. Unit: seconds.</para>
+            /// <para>The event processing time. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1763949968</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The infrastructure instance ID.</para>
+            /// <para>The ID of the infrastructure instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-test</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             public string InfraIntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The infrastructure name.</para>
+            /// <para>The name of the infrastructure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             public string InfraName { get; set; }
 
             /// <summary>
-            /// <para>The infrastructure region.</para>
+            /// <para>The region of the infrastructure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -160,18 +160,18 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             /// <para>The risk description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The workflow does not have AI security guardrails enabled, which may lead to compliance violations, prompt injection and bypass, sensitive data leaks, and other risks</para>
+            /// <para>The workflow does not have AI security guardrails enabled, which may lead to various risks such as compliance violations, prompt injection and bypass, and sensitive data leakage</para>
             /// </summary>
             [NameInMap("RiskDesc")]
             [Validation(Required=false)]
             public string RiskDesc { get; set; }
 
             /// <summary>
-            /// <para>The risk level of the detected alert. Valid values:</para>
+            /// <para>The risk level of the scanned alert. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>high</b>: High.</description></item>
-            /// <item><description><b>medium</b>: Medium.</description></item>
-            /// <item><description><b>low</b>: Low.</description></item>
+            /// <item><description><b>high</b>: High risk.</description></item>
+            /// <item><description><b>medium</b>: Medium risk.</description></item>
+            /// <item><description><b>low</b>: Low risk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             public string RiskName { get; set; }
 
             /// <summary>
-            /// <para>The associated skill ID.</para>
+            /// <para>The ID of the associated skill.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             /// <para>The status. Valid values:</para>
             /// <ol>
             /// <item><description>unhandled: Pending.</description></item>
-            /// <item><description>handling: Being processed.</description></item>
+            /// <item><description>handling: Processing.</description></item>
             /// <item><description>fixed: Fixed.</description></item>
             /// <item><description>ignored: Ignored.</description></item>
             /// <item><description>rescanned: Rescanned.</description></item>
@@ -238,12 +238,12 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             /// <summary>
             /// <para>The cloud asset vendor. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>** DIFY**: DIFY</description></item>
-            /// <item><description>** BAILIAN**: BAILIAN</description></item>
-            /// <item><description>** VOLCAI**: VOLCAI</description></item>
-            /// <item><description>** AGENTRUN**: AGENTRUN</description></item>
-            /// <item><description>** PAI**: PAI</description></item>
-            /// <item><description>** OpenClaw**: OpenClaw</description></item>
+            /// <item><description>** DIFY**: DIFY.</description></item>
+            /// <item><description>** BAILIAN**: BAILIAN.</description></item>
+            /// <item><description>** VOLCAI**: VOLCAI.</description></item>
+            /// <item><description>** AGENTRUN**: AGENTRUN.</description></item>
+            /// <item><description>** PAI**: PAI.</description></item>
+            /// <item><description>** OpenClaw**: OpenClaw.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The NextToken value returned when the NextToken-based pagination method is used.</para>
+            /// <para>The NextToken value returned when the NextToken pagination method is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d6yVpGGP9cH8f9AWtqEXqOawJdolFvFeqJJSIPnYLoGc7/XPd5nbDfZcn1mJCj66Ep3Gbr55tl4NuBtNwsc0A0qvqC2Onfm9h2QmtG8HhaulnPkGmBnhntKqJmpRptTU</para>
@@ -293,7 +293,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of records in the query result.</para>
+            /// <para>The total number of entries returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         public string InfraInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The infrastructure name.</para>
+        /// <para>The name of the infrastructure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         public string InfraName { get; set; }
 
         /// <summary>
-        /// <para>The infrastructure region.</para>
+        /// <para>The region of the infrastructure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         public string InfraRegionId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the notification message. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values: asc indicates ascending order. desc indicates descending order.</para>
+        /// <para>The sort order. Valid values: asc for ascending order; desc for descending order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>asc</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort results. Currently, only sorting by check time is supported.</para>
+        /// <para>The field used for sorting. Currently, only sorting by check time is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CheckTime</para>
@@ -143,6 +143,12 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the member account in the resource directory (Alibaba Cloud account). You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1460245082233792</para>
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
@@ -150,9 +156,9 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         /// <summary>
         /// <para>The risk level of the check item to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>high</b>: High.</description></item>
-        /// <item><description><b>medium</b>: Medium.</description></item>
-        /// <item><description><b>low</b>: Low.</description></item>
+        /// <item><description><b>high</b>: High risk.</description></item>
+        /// <item><description><b>medium</b>: Medium risk.</description></item>
+        /// <item><description><b>low</b>: Low risk.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -166,7 +172,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         /// <para>The risk name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>defense</para>
+        /// <para>Defense</para>
         /// </summary>
         [NameInMap("RiskName")]
         [Validation(Required=false)]
@@ -193,7 +199,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         /// <para>The event status. Valid values:</para>
         /// <ol>
         /// <item><description>unhandled: Pending.</description></item>
-        /// <item><description>handling: Being processed.</description></item>
+        /// <item><description>handling: Processing.</description></item>
         /// <item><description>fixed: Fixed.</description></item>
         /// <item><description>ignored: Ignored.</description></item>
         /// <item><description>rescanned: Rescanned.</description></item>
@@ -216,12 +222,12 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         /// <summary>
         /// <para>The cloud asset vendor. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>** DIFY**: DIFY</description></item>
-        /// <item><description>** BAILIAN**: BAILIAN</description></item>
-        /// <item><description>** VOLCAI**: VOLCAI</description></item>
-        /// <item><description>** AGENTRUN**: AGENTRUN</description></item>
-        /// <item><description>** PAI**: PAI</description></item>
-        /// <item><description>** OpenClaw**: OpenClaw</description></item>
+        /// <item><description>** DIFY**: DIFY.</description></item>
+        /// <item><description>** BAILIAN**: BAILIAN.</description></item>
+        /// <item><description>** VOLCAI**: VOLCAI.</description></item>
+        /// <item><description>** AGENTRUN**: AGENTRUN.</description></item>
+        /// <item><description>** PAI**: PAI.</description></item>
+        /// <item><description>** OpenClaw**: OpenClaw.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
