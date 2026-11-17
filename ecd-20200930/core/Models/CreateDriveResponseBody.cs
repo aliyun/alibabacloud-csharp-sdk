@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string AliUid { get; set; }
 
             /// <summary>
-            /// <para>The storage resource description.</para>
+            /// <para>The description of the storage resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DomainId { get; set; }
 
             /// <summary>
-            /// <para>The user-level storage resource ID.</para>
+            /// <para>The ID of the user-level storage resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dri-aaaa****</para>
@@ -67,9 +67,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DriveId { get; set; }
 
             /// <summary>
-            /// <para>The external user-level storage resource ID.</para>
+            /// <para>The ID of the external user-level storage resource.</para>
             /// <remarks>
-            /// <para>This parameter is returned only when the storage resource type is PDS.</para>
+            /// <para>This parameter is returned only when the storage resource is PDS.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>ID。</para>
+            /// <para>The ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The storage resource name.</para>
+            /// <para>The name of the storage resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test****</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is deprecated.</para>
+            /// <para><b>[Deprecated]</b></para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

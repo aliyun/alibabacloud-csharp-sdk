@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeCloudDriveGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of cloud drive team spaces.</para>
+        /// <para>The list of team workspaces in the cloud drive.</para>
         /// </summary>
         [NameInMap("CloudDriveGroups")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string AdminUserIds { get; set; }
 
             /// <summary>
-            /// <para>The team storage management administrator information.</para>
+            /// <para>The information about the administrators of the team storage management.</para>
             /// </summary>
             [NameInMap("AdminUserInfos")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string Email { get; set; }
 
                 /// <summary>
-                /// <para>The administrator username. This value may not be readable when imported from a third party.</para>
+                /// <para>The username of the administrator. The username may be unreadable if it is imported from a third-party system.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user01</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string EndUserId { get; set; }
 
                 /// <summary>
-                /// <para>The employee ID (DingTalk).</para>
+                /// <para>The employee ID in DingTalk.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12345</para>
@@ -64,10 +64,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string JobNumber { get; set; }
 
                 /// <summary>
-                /// <para>The administrator nickname.</para>
+                /// <para>The nickname of the administrator.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>John</para>
+                /// <para>John Doe</para>
                 /// </summary>
                 [NameInMap("NickName")]
                 [Validation(Required=false)]
@@ -84,10 +84,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string Phone { get; set; }
 
                 /// <summary>
-                /// <para>The administrator nickname.</para>
+                /// <para>The nickname of the administrator.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>John</para>
+                /// <para>John Doe</para>
                 /// </summary>
                 [NameInMap("RealNickName")]
                 [Validation(Required=false)]
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// <para>The remarks.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>John</para>
+                /// <para>John Doe</para>
                 /// </summary>
                 [NameInMap("Remark")]
                 [Validation(Required=false)]
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The creation time. The time is in the ISO 8601 standard in the UTC format: yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The creation time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-04-11T07:44:21Z</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The office network ID.</para>
+            /// <para>The ID of the office network.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou+dir-959593****</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DirectoryId { get; set; }
 
             /// <summary>
-            /// <para>The space ID.</para>
+            /// <para>The ID of the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sh1234</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DriveId { get; set; }
 
             /// <summary>
-            /// <para>The team space ID.</para>
+            /// <para>The ID of the team workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cg-e70ga4ixp30ur****</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string GroupId { get; set; }
 
             /// <summary>
-            /// <para>The team space name.</para>
+            /// <para>The name of the team workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestTeam1</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OrgId { get; set; }
 
             /// <summary>
-            /// <para>The size of the team space recycle bin. Unit: bytes.</para>
+            /// <para>The size of the recycle bin in the team workspace. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024000</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RecycleBinSize { get; set; }
 
             /// <summary>
-            /// <para>The team space status.</para>
+            /// <para>The status of the team workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The total capacity of the cloud drive team space.</para>
+            /// <para>The total capacity of the team workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5368709120</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? TotalSize { get; set; }
 
             /// <summary>
-            /// <para>The used space size. Unit: bytes.</para>
+            /// <para>The size of the used space. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024000000</para>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? Count { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. If <c>NextToken</c> is empty, no more results exist.</para>
+        /// <para>The token for the next query. If <c>NextToken</c> is empty, no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</para>

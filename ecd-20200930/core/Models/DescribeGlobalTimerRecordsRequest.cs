@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string BatchId { get; set; }
 
         /// <summary>
-        /// <para>The list of cloud computer IDs.</para>
+        /// <para>The list of cloud desktop IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCEED</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> DesktopIds { get; set; }
 
         /// <summary>
-        /// <para>The display result name.</para>
+        /// <para>The display name of the result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FAILED</para>
@@ -50,7 +50,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query.</para>
+        /// <para>The maximum number of entries per page in a paging query.</para>
+        /// <para>Maximum value: 100.</para>
+        /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -60,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query.</para>
+        /// <para>The token that is used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</para>
@@ -70,7 +72,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Wuying Workspace.</para>
+        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions supported by Elastic Desktop Service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -80,7 +82,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of resource types. If empty, all resource types are queried.</para>
+        /// <para>The list of resource types. If this parameter is left empty, all resource types are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -90,7 +92,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> ResourceTypes { get; set; }
 
         /// <summary>
-        /// <para>Filters results by execution result.</para>
+        /// <para>Filters the results by execution result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCEED</para>
@@ -110,7 +112,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? Retryable { get; set; }
 
         /// <summary>
-        /// <para>The region ID used to filter cloud computer information for a specified region.</para>
+        /// <para>The search region ID. This parameter is used to filter cloud desktop information in a specified region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -130,7 +132,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string TimerResult { get; set; }
 
         /// <summary>
-        /// <para>The list of scheduled tasks.</para>
+        /// <para>The list of scheduled task types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>

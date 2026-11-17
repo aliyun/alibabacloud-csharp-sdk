@@ -1,3 +1,6 @@
+2026-11-17 Version: 5.3.4
+- Generated csharp 2020-09-30 for ecd.
+
 2026-10-29 Version: 5.3.3
 - Update API CreateCenterPolicy: add request parameters AppScreenshotBuckets.
 - Update API CreateCenterPolicy: add request parameters AutoSaveAppScreenshot.

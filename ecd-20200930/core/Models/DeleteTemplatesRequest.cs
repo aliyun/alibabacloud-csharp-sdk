@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string BizType { get; set; }
 
         /// <summary>
-        /// <para>The list of template IDs to delete.</para>
+        /// <para>The IDs of the templates to delete.</para>
         /// </summary>
         [NameInMap("TemplateIds")]
         [Validation(Required=false)]

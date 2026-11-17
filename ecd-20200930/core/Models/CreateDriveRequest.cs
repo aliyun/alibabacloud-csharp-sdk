@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The storage resource ID.</para>
         /// <remarks>
-        /// <para>You can call the DescribeDrives operation to obtain this value.</para>
+        /// <para>You can obtain this ID by calling the DescribeDrives operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The external storage resource ID.</para>
         /// <remarks>
-        /// <para>You can call the DescribeDrives operation to obtain this value.</para>
+        /// <para>You can obtain this ID by calling the DescribeDrives operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is deprecated.</para>
+        /// <para><b>[Deprecated]</b></para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

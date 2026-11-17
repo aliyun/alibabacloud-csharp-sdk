@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreatePolicyGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The cloud desktop policy ID.</para>
+        /// <para>The ID of the cloud computer policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pg-gx2x1dhsmthe9****</para>

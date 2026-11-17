@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The list of cloud computers that can be upgraded to the image version corresponding to <c>TaskUid</c> but have not been upgraded.</para>
+        /// <para>The list of cloud desktops that can be upgraded to the image version corresponding to <c>TaskUid</c> but have not been upgraded.</para>
         /// </summary>
         [NameInMap("FotaPendingDesktops")]
         [Validation(Required=false)]
         public List<DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktops> FotaPendingDesktops { get; set; }
         public class DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktops : TeaModel {
             /// <summary>
-            /// <para>The current image version of the cloud computer.</para>
+            /// <para>The current image version of the cloud desktop.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0.1-D-20220513.143129</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CurrentAppVersion { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud computer.</para>
+            /// <para>The cloud desktop ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-bvdtu3jn97o1r****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para>The name of the cloud computer.</para>
+            /// <para>The name of the cloud desktop.</para>
             /// 
             /// <b>Example:</b>
             /// <para>demo-computer</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FotaProject { get; set; }
 
             /// <summary>
-            /// <para>The ID of the office network.</para>
+            /// <para>The office network ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai+dir-428216****</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The status of the cloud computer.</para>
+            /// <para>The status of the cloud desktop.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. If NextToken is empty, no more results are available.</para>
+        /// <para>The pagination token for the next query. An empty <c>NextToken</c> indicates that no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>

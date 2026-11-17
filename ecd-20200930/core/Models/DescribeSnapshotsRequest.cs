@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopScenario { get; set; }
 
         /// <summary>
-        /// <para>The end time of the snapshot creation. The time is displayed in UTC and follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-mm-ddthh:mm:ssz</c> format.</para>
+        /// <para>The end time of snapshot creation. Specify the time in the <c>yyyy-mm-ddthh:mm:ssz</c> format based on the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-31T06:32:31Z</para>
@@ -54,7 +54,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page in a paging query.</para>
+        /// <para>The number of entries per page for a paging query.    </para>
+        /// <list type="bullet">
+        /// <item><description>Maximum value: 100.    </description></item>
+        /// <item><description>Default value: 10.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -64,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The query token. Set the value to the NextToken parameter value returned by the previous API call.</para>
+        /// <para>The query token. Set the value to the NextToken value returned from the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8051af8d01b5479bec9f5ddf02e4a8fbd0ab6e7e43f8****</para>
@@ -84,7 +88,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OsType { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions supported by Elastic Desktop Service.</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -105,7 +109,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SnapshotId { get; set; }
 
         /// <summary>
-        /// <para>The display name of the snapshot. The name must be 2 to 127 characters in length. It must start with a letter or a Chinese character, and can contain digits, underscores (_), and hyphens (-). To prevent name conflicts with automatic snapshots, the name cannot start with <c>auto</c>.</para>
+        /// <para>The display name of the snapshot. The name must be 2 to 127 characters in length and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter or a Chinese character. To prevent name conflicts with automatic snapshots, the name cannot start with <c>auto</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test data disk</para>
@@ -125,9 +129,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SnapshotType { get; set; }
 
         /// <summary>
-        /// <para>The type of the disk for which you want to create a snapshot.</para>
+        /// <para>The disk for which the snapshot is created.</para>
         /// <remarks>
-        /// <para>The values are not case-sensitive.</para>
+        /// <para>The values are case-insensitive.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -138,7 +142,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SourceDiskType { get; set; }
 
         /// <summary>
-        /// <para>The start time of the snapshot creation. The time is displayed in UTC and follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-mm-ddthh:mm:ssz</c> format.</para>
+        /// <para>The start time of snapshot creation. Specify the time in the <c>yyyy-mm-ddthh:mm:ssz</c> format based on the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-30T06:32:31Z</para>

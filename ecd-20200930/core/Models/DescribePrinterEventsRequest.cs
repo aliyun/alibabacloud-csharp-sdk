@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribePrinterEventsRequest : TeaModel {
         /// <summary>
-        /// <para>The cloud computer ID. If you do not specify this parameter, all cloud computers in the region are queried.</para>
+        /// <para>The cloud desktop ID. If you do not specify this parameter, the system queries all cloud desktops in the specified region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-gx2x1dhsmucyy****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The cloud computer name.</para>
+        /// <para>The cloud desktop name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desktop-001</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopName { get; set; }
 
         /// <summary>
-        /// <para>The end time. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC+0. If you do not specify this parameter, the current time is used.</para>
+        /// <para>The end time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC. If you do not specify this parameter, the current time is used.<br><a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a></para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-31T06:32:31Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The logon user information, which is a RAM user ID or an Active Directory (AD) username. If you do not specify this parameter, events of all users in the region are queried.</para>
+        /// <para>The logon user information, which is the RAM user ID or the Active Directory (AD) username. If you do not specify this parameter, the system queries the events of all users in the specified region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user001</para>
@@ -57,7 +57,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> EndUserIds { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Default value: 100.</para>
+        /// <para>The number of entries to return on each page during paging.
+        /// Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -67,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the value of NextToken that was returned in the previous API call.</para>
+        /// <para>The query token. The value is the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</para>
@@ -107,7 +108,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PrinterRedirType { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call DescribeRegions to query the regions supported by Elastic Desktop Service.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query the list of regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -118,7 +119,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The start time. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC+0. If you do not specify this parameter, the query starts from the time that is calculated backward from the time specified by <c>EndTime</c>.</para>
+        /// <para>The start time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC. If you do not specify this parameter, the system queries events prior to the time specified by <c>EndTime</c>.<br><a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a></para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-03-23T04:10:21Z</para>

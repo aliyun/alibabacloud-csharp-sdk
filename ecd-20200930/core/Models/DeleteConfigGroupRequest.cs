@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DeleteConfigGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The list of configuration group IDs to delete.</para>
+        /// <para>The IDs of the configuration groups to delete.</para>
         /// </summary>
         [NameInMap("GroupIds")]
         [Validation(Required=false)]
         public List<string> GroupIds { get; set; }
 
         /// <summary>
-        /// <para>The region ID. This operation is not region-specific. Set this parameter to <c>cn-shanghai</c>.</para>
+        /// <para>The region ID. This feature is not region-specific. Set this parameter to <c>cn-shanghai</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>

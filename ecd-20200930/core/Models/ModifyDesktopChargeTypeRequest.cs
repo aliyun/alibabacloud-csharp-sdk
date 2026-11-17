@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyDesktopChargeTypeRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically pay for the order when you convert the billing method to subscription.</para>
+        /// <para>Specifies whether to automatically pay for the order when you change the billing method to subscription.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>The target billing method to which you want to convert.</para>
+        /// <para>The target billing method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PrePaid</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The cloud desktop IDs. You can specify 1 to 20 IDs.</para>
+        /// <para>The IDs of the cloud desktops. You can specify 1 to 20 IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,11 +41,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the cloud desktop when you convert the billing method to subscription. The unit is specified by PeriodUnit. This parameter takes effect and is required only when ChargeType is set to PrePaid.</para>
+        /// <para>The subscription duration of the cloud desktop when you change the billing method to subscription. The unit is specified by PeriodUnit. This parameter takes effect and is required only when ChargeType is set to PrePaid.</para>
         /// <list type="bullet">
-        /// <item><description>If PeriodUnit is set to Week, the valid value of this parameter is 1.</description></item>
-        /// <item><description>If PeriodUnit is set to Month, valid values of this parameter are 1, 2, 3, and 6.</description></item>
-        /// <item><description>If PeriodUnit is set to Year, valid values of this parameter are 1, 2, 3, 4, and 5.</description></item>
+        /// <item><description>If PeriodUnit is set to Week, the valid value is 1.</description></item>
+        /// <item><description>If PeriodUnit is set to Month, valid values for this parameter are 1, 2, 3, and 6.</description></item>
+        /// <item><description>If PeriodUnit is set to Year, valid values for this parameter are 1, 2, 3, 4, and 5.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration when you convert the billing method to subscription.</para>
+        /// <para>The unit of the subscription duration when you change the billing method to subscription.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The promotion ID.</para>
+        /// <para>The ID of the promotion.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50003836003****</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource ownership user in reseller pattern. You do not need to specify this parameter if you are not using reseller pattern.</para>
+        /// <para>The user ID for resource ownership in the reseller mode. You do not need to specify this parameter in the non-reseller mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1422724566551XXX</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is in invitational preview and is not publicly available.</para>
+        /// <para>This parameter is in closed beta and is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

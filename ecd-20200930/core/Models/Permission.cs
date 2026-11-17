@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>示例安全组规则</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The destination CIDR block.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>198.51.100.0/24</para>
         /// </summary>
         [NameInMap("DestCidrIp")]
         [Validation(Required=false)]
@@ -67,6 +73,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The source CIDR block.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>192.0.2.0/24</para>
         /// </summary>
         [NameInMap("SourceCidrIp")]
         [Validation(Required=false)]

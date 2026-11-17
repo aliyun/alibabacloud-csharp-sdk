@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<DescribePrinterEventsResponseBodyEvents> Events { get; set; }
         public class DescribePrinterEventsResponseBodyEvents : TeaModel {
             /// <summary>
-            /// <para>The cloud computer ID.</para>
+            /// <para>The cloud desktop ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-8fupvkhg0aayu****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para>The cloud computer name.</para>
+            /// <para>The cloud desktop name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>desktop-001</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PrinterDriver { get; set; }
 
             /// <summary>
-            /// <para>The number of copies to print.</para>
+            /// <para>The number of printed copies.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? PrinterJobPrintedPages { get; set; }
 
             /// <summary>
-            /// <para>The print job size, in bytes.</para>
+            /// <para>The print job size in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2632446</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? PrinterJobSize { get; set; }
 
             /// <summary>
-            /// <para>The print job time, in millisecond-precision UNIX timestamp.</para>
+            /// <para>The print job time in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1706140800000</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The pagination token for the next query. If NextToken is empty, no more results exist.</para>
+        /// <para>The token for the next query. If NextToken is empty, no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</para>

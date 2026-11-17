@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
     public class ListOfficeSiteUsersRequest : TeaModel {
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is not publicly available. You can only pass in <c>1</c> or leave it empty.</para>
+        /// <para>This field is not available for use. You can only set this parameter to <c>1</c> or leave it empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string AssignedInfo { get; set; }
 
         /// <summary>
-        /// <para>The fuzzy query character string.</para>
+        /// <para>The fuzzy query string.</para>
         /// 
         /// <b>Example:</b>
         /// <para><em>jin</em></para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return only users who are assigned cloud computers.</para>
+        /// <para>Specifies whether to return only the users to which cloud desktops are assigned.</para>
         /// </summary>
         [NameInMap("IncludeAssignedUser")]
         [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Leave this parameter empty for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</para>
+        /// <para>The pagination token for the next query. Leave this parameter empty for the first query or when no subsequent query is required. For subsequent queries, set this parameter to the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The specified AD domain organizational unit (OU).</para>
+        /// <para>The specified organizational unit (OU) of the AD domain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com/Domain Controllers</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
+        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

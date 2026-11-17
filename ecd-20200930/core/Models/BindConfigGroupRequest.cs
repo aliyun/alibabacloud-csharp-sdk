@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource information to associate.</para>
+        /// <para>The information about the resources to be associated.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceInfos")]

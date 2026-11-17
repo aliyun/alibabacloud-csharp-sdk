@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. If NextToken is empty, no more results exist.</para>
+        /// <para>The token used to start the next query. An empty NextToken indicates that no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6mnFXZiT7NdvGNgkInJ****</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result information.</para>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]
         public List<DescribeGlobalTimerRecordsResponseBodyResults> Results { get; set; }
         public class DescribeGlobalTimerRecordsResponseBodyResults : TeaModel {
             /// <summary>
-            /// <para>The type of action that was performed.</para>
+            /// <para>The type of action performed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>REBOOT</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string BatchId { get; set; }
 
             /// <summary>
-            /// <para>The record information during the execution of the scheduled task.</para>
+            /// <para>The record information generated during the execution of the scheduled task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The time when the record was created.
-            /// The time is in the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-08-03T08:27:29Z</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The cloud computer ID.</para>
+            /// <para>The cloud desktop ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-0c951fy9arnk9****</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para>The name of the cloud computer.</para>
+            /// <para>The name of the cloud desktop.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DesktopName</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopName { get; set; }
 
             /// <summary>
-            /// <para>The display result name.</para>
+            /// <para>The display name of the result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SKIPPED</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The time when the task ended.
-            /// The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-21T02:00:45Z</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource parent.</para>
+            /// <para>The ID of the parent resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>p-xxx</para>

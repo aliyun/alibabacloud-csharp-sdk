@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeFotaPendingDesktopsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud computer.</para>
+        /// <para>The cloud desktop ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-gx2x1dhsmucyy****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The name of the cloud computer.</para>
+        /// <para>The name of the cloud desktop.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo-computer</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopName { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paged query.</para>
+        /// <para>The maximum number of entries to return per page when paging in a paged query.</para>
         /// <list type="bullet">
         /// <item><description>Maximum value: 100</description></item>
         /// <item><description>Default value: 20</description></item>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set the value to the <c>NextToken</c> value returned from the previous call to this operation. You do not need to specify this parameter for the first call.</para>
+        /// <para>The pagination token. Set the value to the <c>NextToken</c> value returned from the last call to this operation. You do not need to specify this parameter for the first call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the office network. You can call the <a href="https://help.aliyun.com/document_detail/216071.html">DescribeOfficeSites</a> operation to obtain this parameter.</para>
+        /// <para>The office network ID. You can call the <a href="https://help.aliyun.com/document_detail/216071.html">DescribeOfficeSites</a> operation to obtain this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai+dir-428216****</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions supported by cloud computers.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The information about the image upgrade task. You can call the <a href="https://help.aliyun.com/document_detail/437001.html">DescribeFotaTasks</a> operation to obtain this parameter.</para>
+        /// <para>The UID of the image upgrade task. You can call the <a href="https://help.aliyun.com/document_detail/437001.html">DescribeFotaTasks</a> operation to obtain this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aot-c4khwrp9ocml4****</para>

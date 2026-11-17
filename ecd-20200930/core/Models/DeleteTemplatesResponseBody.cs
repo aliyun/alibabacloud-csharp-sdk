@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DeleteTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The operation result. A value of <c>success</c> indicates success. Otherwise, an error message is returned.</para>
+        /// <para>The operation result. A value of <c>success</c> indicates that the operation was successful. Otherwise, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message. This parameter is not returned if Code is <c>success</c>.</para>
+        /// <para>The error message. This parameter is not returned when Code is <c>success</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

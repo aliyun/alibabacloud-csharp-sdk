@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The business channel. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Enterprise: Enterprise Edition.</description></item>
-        /// <item><description>Business: Business Edition.</description></item>
+        /// <item><description>Enterprise: Enterprise Edition</description></item>
+        /// <item><description>Business: Business Edition</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string BusinessChannel { get; set; }
 
         /// <summary>
-        /// <para>The cloud desktop ID. You can specify 1 to 100 IDs.</para>
+        /// <para>The ID of the cloud computer. You can specify 1 to 100 IDs.</para>
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public List<string> DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The cloud desktop name.</para>
+        /// <para>The name of the cloud computer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DemoComputer</para>
@@ -41,14 +41,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopName { get; set; }
 
         /// <summary>
-        /// <para>The list of cloud desktop statuses to include.</para>
+        /// <para>The list of cloud computer statuses to include.</para>
         /// </summary>
         [NameInMap("DesktopStatusList")]
         [Validation(Required=false)]
         public List<string> DesktopStatusList { get; set; }
 
         /// <summary>
-        /// <para>The cloud desktop specifications. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the specification IDs supported by cloud desktops.</para>
+        /// <para>The specifications of the cloud computer. You can call the <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> operation to query the IDs of the specifications supported by cloud computers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eds.enterprise_office.2c4g</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopType { get; set; }
 
         /// <summary>
-        /// <para>The end time. The interval between the start time and end time cannot exceed 30 days. Supported format:</para>
+        /// <para>The end time. The maximum interval between the start time and the end time is 30 days. Supported format:</para>
         /// <list type="bullet">
         /// <item><description>Format: YYYY-MM-DDThh:mm:ssZ.</description></item>
         /// </list>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The end user ID.</para>
+        /// <para>The ID of the end user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TestUser</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The list of cloud desktop statuses to exclude.</para>
+        /// <para>The list of cloud computer statuses to exclude.</para>
         /// </summary>
         [NameInMap("ExcludeDesktopStatusList")]
         [Validation(Required=false)]
@@ -98,9 +98,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The sort field. If this parameter is not specified, results are sorted by creation time in descending order. Valid values:</para>
+        /// <para>The sorting field. If not specified, the results are sorted in descending order of creation time. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>uptime: sorts by cloud desktop uptime.</description></item>
+        /// <item><description>uptime: Sorts the results by the uptime of the cloud computer.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -111,7 +111,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page in a paged query.<br>Default value: 1.</para>
+        /// <para>The list of organization IDs.</para>
+        /// </summary>
+        [NameInMap("OrgIdList")]
+        [Validation(Required=false)]
+        public List<string> OrgIdList { get; set; }
+
+        /// <summary>
+        /// <para>The page number of the current page in a paging query.<br>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -131,7 +138,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Valid values:</para>
+        /// <para>The region ID.</para>
         /// <list type="bullet">
         /// <item><description>Shanghai</description></item>
         /// <item><description>Singapore</description></item>
@@ -146,7 +153,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-3mtuc28rx95lx****</para>
@@ -156,9 +163,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The query scope. This parameter is empty by default. Valid values:</para>
+        /// <para>The query scope. Default value: empty. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ADVANCED: queries statistical records such as connection duration.</description></item>
+        /// <item><description>ADVANCED: Queries statistical records such as connection duration.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -169,10 +176,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Default value: Asc. Valid values:</para>
+        /// <para>The sorting order. Default value: Asc. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Asc: ascending order.</description></item>
-        /// <item><description>Desc: descending order.</description></item>
+        /// <item><description>Asc: ascending order</description></item>
+        /// <item><description>Desc: descending order</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -196,11 +203,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the cloud desktop. Valid values:</para>
+        /// <para>The billing method of the cloud computer. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>prePaid: monthly subscription with unlimited usage duration.</description></item>
-        /// <item><description>postPaid: pay-as-you-go.</description></item>
-        /// <item><description>monthPackage: monthly duration package.</description></item>
+        /// <item><description>prePaid: monthly subscription with unlimited duration</description></item>
+        /// <item><description>postPaid: pay-as-you-go</description></item>
+        /// <item><description>monthPackage: monthly time package</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

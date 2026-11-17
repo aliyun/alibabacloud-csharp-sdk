@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopsInGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The end time of the custom time range.</para>
+        /// <para>The end time of the custom time period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>18</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? CustomEndTimePeriod { get; set; }
 
         /// <summary>
-        /// <para>The start time of the custom time range.</para>
+        /// <para>The start time of the custom time period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -51,7 +51,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? IgnoreDeleted { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query.</para>
+        /// <para>The number of entries to return per page for paging in a paged query.</para>
+        /// <list type="bullet">
+        /// <item><description>Default value: 10.</description></item>
+        /// <item><description>Maximum value: 100.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -61,7 +65,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. An empty value indicates that no more results exist.</para>
+        /// <para>The pagination token used to start the next query. An empty value indicates that no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -81,7 +85,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to obtain the list of regions supported by WUYING Workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

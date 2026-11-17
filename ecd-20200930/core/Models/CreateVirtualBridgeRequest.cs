@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PaidCallBackUrl { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the purchased resource. The unit is specified by <c>PeriodUnit</c>. This parameter is required and takes effect only when <c>ChargeType</c> is set to <c>PrePaid</c>.</para>
+        /// <para>The subscription duration of the purchased resource. The unit is specified by <c>PeriodUnit</c>. This parameter takes effect and is required only when the <c>ChargeType</c> parameter is set to <c>PrePaid</c>.</para>
         /// <list type="bullet">
         /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Month</c>, valid values:</para>
         /// <list type="bullet">
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The billing time unit of the subscription Billable methods.</para>
+        /// <para>The unit of the subscription billing duration for the subscription Billable methods.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Week</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The promotion ID.</para>
+        /// <para>The ID of the promotion.</para>
         /// 
         /// <b>Example:</b>
         /// <para>youhuiquan_promotion_option_id_for_blank</para>

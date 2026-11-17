@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The user IDs, which are the usernames.</para>
+        /// <para>The IDs of the users, which are the usernames.</para>
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? Preview { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call DescribeRegions to query the regions supported by Elastic Desktop Service.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,10 +66,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The policy used when proportional matching is not possible. Valid values:</para>
+        /// <para>The matching policy used when proportional matching is not possible. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AVERAGE: Prioritizes assigning cloud desktops to each user. When the number of selected cloud desktops and users cannot be matched proportionally, cloud desktops are assigned to each user first.</description></item>
-        /// <item><description>CENTRAL: Prioritizes assigning a specified number of cloud desktops to users. When the number of selected cloud desktops and users cannot be matched proportionally, the specified number of cloud desktops are assigned to users first.</description></item>
+        /// <item><description>AVERAGE: Assigns cloud desktops to each user first. When the number of selected cloud desktops and the number of users cannot be matched proportionally, cloud desktops are assigned to each user first.</description></item>
+        /// <item><description>CENTRAL: Assigns a specified number of cloud desktops to users first. When the number of selected cloud desktops and the number of users cannot be matched proportionally, the specified number of cloud desktops are assigned to users first.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

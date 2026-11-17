@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopMetadataRequest : TeaModel {
         /// <summary>
-        /// <para>The time when the cloud computer was created. The time is in UTC and follows the format:
+        /// <para>The time when the cloud desktop was created. Specify the time in the UTC format:
         /// <c>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</c>.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CreationTimeStart { get; set; }
 
         /// <summary>
-        /// <para>The list of cloud computer IDs.</para>
+        /// <para>The list of cloud desktop IDs.</para>
         /// </summary>
         [NameInMap("DesktopIds")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The shared cloud computer ID.</para>
+        /// <para>The ID of the shared cloud desktop group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dg-i1ruuudp92qpj****</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the response includes cloud computers in shared cloud computer groups.</para>
+        /// <para>Specifies whether the response includes cloud desktops in shared cloud desktop groups.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is not yet available for use.</para>
+        /// <para>This parameter is not available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query. Maximum value: 100. Default value: 10.</para>
+        /// <para>The number of entries to return per page in a paged query. This parameter is used for paging. Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NetworkInterfaceIp { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. An empty value indicates that there are no more results.</para>
+        /// <para>The pagination token for the next query. If NextToken is empty, no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The start time of operations performed on the cloud computer. The time is in UTC and follows the format:
+        /// <para>The start time of the operation on the cloud desktop. Time format:
         /// <c>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</c>.</para>
         /// 
         /// <b>Example:</b>

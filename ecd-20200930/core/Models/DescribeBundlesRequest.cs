@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeBundlesRequest : TeaModel {
         /// <summary>
-        /// <para>The list of cloud computer template IDs. You can specify 1 to 100 IDs.</para>
+        /// <para>The list of cloud desktop template IDs. You can specify 1 to 100 IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bundle_ecd_graphics.2xlarge_s15d15_win2019</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> BundleId { get; set; }
 
         /// <summary>
-        /// <para>The cloud computer templatetype.</para>
+        /// <para>The cloud desktop templatetype.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string BundleType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query the stock status of the cloud computer instance type.</para>
+        /// <para>Specifies whether to query the inventory status of the cloud desktop instance type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? CheckStock { get; set; }
 
         /// <summary>
-        /// <para>The number of vCPUs included in the cloud computer instance type.</para>
+        /// <para>The number of vCPUs in the cloud desktop instance type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? CpuCount { get; set; }
 
         /// <summary>
-        /// <para>The cloud computer instance family.</para>
+        /// <para>The cloud desktop instance family.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eds.general</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string FotaChannel { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the template belongs to a cloud computer pool.</para>
+        /// <para>Specifies whether the template belongs to a cloud desktop pool.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? FromDesktopGroup { get; set; }
 
         /// <summary>
-        /// <para>The number of GPUs included in the cloud computer instance type.</para>
+        /// <para>The number of GPUs in the cloud desktop instance type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -109,7 +109,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> ImageId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paged query.</para>
+        /// <para>The maximum number of entries to return per page when paging in a paged query.</para>
+        /// <list type="bullet">
+        /// <item><description>Maximum value: 100.</description></item>
+        /// <item><description>Default value: 10.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -119,7 +123,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The memory size included in the cloud computer instance type. Unit: GiB.</para>
+        /// <para>The memory size of the cloud desktop instance type. Unit: GiB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -129,7 +133,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MemorySize { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query.</para>
+        /// <para>The token that is used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -170,7 +174,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Scenarios.</para>
+        /// <para>The Scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FastBuy</para>
@@ -180,7 +184,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The selected template.</para>
+        /// <para>The featured template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -200,7 +204,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SessionType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return multi-session cloud computer templates when querying the cloud computer list. Multi-session templates are not returned by default.</para>
+        /// <para>Specifies whether to return multi-session cloud desktop templates when you query the cloud desktop list. By default, multi-session templates are not returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -210,7 +214,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? SupportMultiSession { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable disk encryption.</para>
+        /// <para>Specifies whether disk encryption is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

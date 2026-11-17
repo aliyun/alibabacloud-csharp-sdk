@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class BatchModifyEntitlementResponseBody : TeaModel {
         /// <summary>
-        /// <para>The entitlements collection.</para>
+        /// <para>The entitlement collection.</para>
         /// </summary>
         [NameInMap("Entitlements")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public List<string> EndUserIds { get; set; }
 
                 /// <summary>
-                /// <para>The assignment result for a single cloud desktop.</para>
+                /// <para>The assignment result of a single cloud desktop.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FINISHED</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The execution result. A value of <c>success</c> indicates success. Otherwise, an error message is returned.</para>
+        /// <para>The execution result. A value of <c>success</c> indicates that the operation is successful. Otherwise, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The template ID returned after the template is created.</para>
+        /// <para>The ID of the created template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b-0cc7rx533*****</para>

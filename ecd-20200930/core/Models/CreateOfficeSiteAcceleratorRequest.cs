@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateOfficeSiteAcceleratorRequest : TeaModel {
         /// <summary>
-        /// <para>The list of acceleration region information for the access points.</para>
+        /// <para>The list of acceleration regions.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AccelerateRegion")]
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? Bandwidth { get; set; }
 
             /// <summary>
-            /// <para>The IP address protocol used to connect to the GA service.</para>
+            /// <para>The IP address protocol used to access the Global Accelerator (GA) service.</para>
             /// <remarks>
-            /// <para>The <c>DUAL_STACK</c> type is supported only by standard pay-as-you-go GA instances.</para>
+            /// <para>The <c>DUAL_STACK</c> type is supported only by standard Alibaba Cloud Global Accelerator (GA) instances that use the pay-as-you-go billing method.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -53,11 +53,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string IpVersion { get; set; }
 
             /// <summary>
-            /// <para>The public network line type of the acceleration region.</para>
+            /// <para>The Internet line type of the acceleration region.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>Configure this parameter for GA instances that use the <b>pay-by-data-transfer</b> billing method.</description></item>
-            /// <item><description>The supported public network line types vary by acceleration region.</description></item>
+            /// <item><description>This parameter is required for Alibaba Cloud Global Accelerator (GA) instances that use the <b>pay-by-traffic</b> Billable methods.</description></item>
+            /// <item><description>The supported Internet line types vary based on the acceleration region.</description></item>
             /// </list>
             /// </remarks>
             /// <para>This parameter is required.</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The name of the GA instance.</para>
+        /// <para>The name of the Alibaba Cloud Global Accelerator (GA) instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testGA</para>
