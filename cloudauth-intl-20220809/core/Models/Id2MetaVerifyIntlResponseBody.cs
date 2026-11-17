@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The verification result.</para>
+        /// <para>The return result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <list type="bullet">
             /// <item><description>1: Consistent.</description></item>
             /// <item><description>2: Inconsistent.</description></item>
-            /// <item><description>3: No record found.</description></item>
+            /// <item><description>3: Not found.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

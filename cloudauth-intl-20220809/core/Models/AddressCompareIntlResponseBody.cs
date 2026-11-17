@@ -40,34 +40,34 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The return result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public AddressCompareIntlResponseBodyResult Result { get; set; }
         public class AddressCompareIntlResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The sameLevel parameter has the following valid values:</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>all: completely identical</description></item>
-            /// <item><description>prov: province level </description></item>
-            /// <item><description>city: city level</description></item>
-            /// <item><description>district: district level</description></item>
-            /// <item><description>town: street level</description></item>
-            /// <item><description>road: road level</description></item>
-            /// <item><description>roadno: road number level</description></item>
-            /// <item><description>poi: community/neighborhood level</description></item>
-            /// <item><description>roomno: room number level.</description></item>
+            /// <item><description>all: Exactly the same.</description></item>
+            /// <item><description>prov: Province. </description></item>
+            /// <item><description>city: City.</description></item>
+            /// <item><description>district: District.</description></item>
+            /// <item><description>town: Town.</description></item>
+            /// <item><description>road: Road.</description></item>
+            /// <item><description>roadno: Road number.</description></item>
+            /// <item><description>poi: Residential community.</description></item>
+            /// <item><description>roomno: Room number.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>{
             ///      sameLevel: &quot;city&quot;, 
-            ///      distance:  5997.34m, -- 地址相差距离
-            ///      same_info: {    -- 相同信息
-            ///               prov: &quot;浙江省&quot;,
-            ///               city: &quot;杭州市&quot;,
-            ///               district: &quot;西湖区&quot;
+            ///      distance:  5997.34m, -- Distance between addresses
+            ///      same_info: {    -- Identical information
+            ///               prov: &quot;Zhejiang Province&quot;,
+            ///               city: &quot;Hangzhou&quot;,
+            ///               district: &quot;Xihu District&quot;
             ///       } 
             /// }</para>
             /// </summary>

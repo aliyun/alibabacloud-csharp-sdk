@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class AddressVerifyIntlRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the address to verify. Valid values:</para>
+        /// <para>The type of the address to be verified. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>&quot;0&quot;: text address</description></item>
-        /// <item><description>&quot;1&quot;: coordinates (longitude and latitude).</description></item>
+        /// <item><description>0: text address</description></item>
+        /// <item><description>1: coordinates</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <para>The default city.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>杭州市</para>
+        /// <para>Hangzhou</para>
         /// </summary>
         [NameInMap("DefaultCity")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>中国</para>
+        /// <para>China</para>
         /// </summary>
         [NameInMap("DefaultCountry")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <para>The default district.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>余杭区</para>
+        /// <para>Yuhang District</para>
         /// </summary>
         [NameInMap("DefaultDistrict")]
         [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <para>The default province.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>浙江省</para>
+        /// <para>Zhejiang Province</para>
         /// </summary>
         [NameInMap("DefaultProvince")]
         [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Longitude { get; set; }
 
         /// <summary>
-        /// <para>Chinese mainland phone numbers are supported.</para>
+        /// <para>The mobile phone number. Only Chinese mobile phone numbers are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Mobile { get; set; }
 
         /// <summary>
-        /// <para>Fixed value: ADD_VERIFY_PRO.</para>
+        /// <para>The fixed value: ADD_VERIFY_PRO.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -108,10 +108,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The detailed address in text format.</para>
+        /// <para>The detailed text of the address.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>阿里巴巴西溪园区</para>
+        /// <para>Alibaba Xixi Campus</para>
         /// </summary>
         [NameInMap("Text")]
         [Validation(Required=false)]
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <para>The address verification method. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>HOME: home address verification</description></item>
-        /// <item><description>WORK: work address verification.</description></item>
+        /// <item><description>WORK: work address verification</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

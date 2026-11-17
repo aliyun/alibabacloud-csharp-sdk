@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class CredentialSubmitIntlRequest : TeaModel {
         /// <summary>
-        /// <para>The field validation rule configuration in JSON string format.</para>
+        /// <para>The field validation rule configuration, which is a JSON string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
-        ///     &quot;address_rule&quot;: &quot;Includes Address Hangzhou***&quot;,
-        ///     &quot;name_rule&quot;: &quot;Includes Name Zhang*&quot;,
+        ///     &quot;address_rule&quot;: &quot;Includes Adrress Hangzhou***&quot;,
+        ///     &quot;name_rule&quot;: &quot;Includes Name  Zhang*&quot;,
         ///     &quot;date_of_issue_rule&quot;: &quot;Whthin 2026.05.20&quot;
         /// }</para>
         /// </summary>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string CheckRuleConfig { get; set; }
 
         /// <summary>
-        /// <para>The Base64-encoded image. If you use this method to submit a photo, check the photo size and do not submit an excessively large photo.</para>
+        /// <para>The Base64-encoded image. If you choose this method to upload the image, check the image size and do not upload an excessively large image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>base64</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string CredentialOcrPictureBase64 { get; set; }
 
         /// <summary>
-        /// <para>The URL of the image. The URL must be a publicly accessible HTTP or HTTPS link.</para>
+        /// <para>The image URL, which must be a publicly accessible HTTP or HTTPS link.</para>
         /// 
         /// <b>Example:</b>
         /// <para>https://***</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>The credential type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>02: vehicle registration certificate.</description></item>
+        /// <item><description>02: Vehicle registration certificate.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -58,9 +58,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string DocType { get; set; }
 
         /// <summary>
-        /// <para>The input file type. Valid values:</para>
+        /// <para>The material input type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>IMAGE (default): image.</para>
+        /// <item><description><para>IMAGE: Image. This is the default value.</para>
         /// </description></item>
         /// <item><description><para>PDF: PDF format.</para>
         /// </description></item>
@@ -89,11 +89,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FraudCheck { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable quality detection. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Y: Enabled.</description></item>
-        /// <item><description>N: Disabled.</description></item>
-        /// </list>
+        /// <para>Specifies whether to enable quality detection. Valid values: Y: Enabled. N: Disabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Y</para>
@@ -103,7 +99,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string IdQuality { get; set; }
 
         /// <summary>
-        /// <para>The custom business unique identifier on the merchant side, used for subsequent troubleshooting. The value can be a combination of letters and digits with a maximum length of 32 characters. Ensure that the value is unique.</para>
+        /// <para>The custom unique business identifier on the merchant side, which is used for subsequent troubleshooting. The identifier can be up to 32 characters in length and can contain letters and digits. Make sure that the identifier is unique.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -128,11 +124,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string OcrArea { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable translation. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>0: Disabled.</description></item>
-        /// <item><description>1: Enabled.</description></item>
-        /// </list>
+        /// <para>Specifies whether to enable translation. Valid values: 0: Disabled. 1: Enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -142,11 +134,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string OcrTranslation { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable OCR result standardization. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>0: Disabled.</description></item>
-        /// <item><description>1: Enabled.</description></item>
-        /// </list>
+        /// <para>Specifies whether to enable OCR result standardization. Valid values: 0: Disabled. 1: Enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -156,7 +144,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string OcrValueStandard { get; set; }
 
         /// <summary>
-        /// <para>The product solution to use. Set this parameter to CREDENTIAL_RECOGNITION.</para>
+        /// <para>The product solution to be integrated. Valid value: CREDENTIAL_RECOGNITION.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -167,7 +155,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The custom authentication scenario ID. You can use this scenario ID to query related records in the console. The value can be a combination of letters, digits, or underscores with a maximum length of 10 characters.</para>
+        /// <para>The custom authentication scene ID, which is used to query related records in the console. The ID can be up to 10 characters in length and can contain letters, digits, and underscores (_).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

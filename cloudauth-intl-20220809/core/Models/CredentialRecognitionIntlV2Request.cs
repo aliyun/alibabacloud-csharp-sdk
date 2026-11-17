@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class CredentialRecognitionIntlV2Request : TeaModel {
         /// <summary>
-        /// <para>The field validation rule configuration, in JSON string format.</para>
+        /// <para>The field validation rule configuration. The value is a JSON string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string CheckRuleConfig { get; set; }
 
         /// <summary>
-        /// <para>The Base64-encoded image. If you choose to pass in the image by using IdOcrPictureBase64 (Base64-encoded photo), check the photo size and do not pass in an excessively large photo.</para>
+        /// <para>The Base64-encoded image. If you choose to pass the photo by using IdOcrPictureBase64, check the photo size and do not pass excessively large photos.</para>
         /// 
         /// <b>Example:</b>
         /// <para>base64</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string CredentialOcrPictureFile { get; set; }
 
         /// <summary>
-        /// <para>The URL of the image. The URL must be a publicly accessible HTTP or HTTPS link.</para>
+        /// <para>The image URL. The URL must be a publicly accessible HTTP or HTTPS link.</para>
         /// 
         /// <b>Example:</b>
         /// <para>https://***</para>
@@ -56,10 +56,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>The credential type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>01: transaction credential (including electronic bill images for water, electricity, gas, credit cards, and other types)</description></item>
+        /// <item><description>01: transaction receipt, including electronic bills for utilities and credit cards</description></item>
         /// <item><description>02: vehicle registration certificate</description></item>
         /// <item><description>03: transfer transaction record</description></item>
-        /// <item><description>04: POA address proof</description></item>
+        /// <item><description>04: proof of address (POA)</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -71,10 +71,11 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string DocType { get; set; }
 
         /// <summary>
-        /// <para>The input material type. Valid values:</para>
+        /// <para>The material input type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>IMAGE (default): image</description></item>
-        /// <item><description>PDF: PDF format</description></item>
+        /// <item><description>IMAGE: image</description></item>
+        /// <item><description>PDF: PDF format
+        /// Default value: IMAGE.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -87,8 +88,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>Specifies whether to enable tampering detection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Enabled.</description></item>
-        /// <item><description>false: Disabled.</description></item>
+        /// <item><description>true: enables tampering detection.</description></item>
+        /// <item><description>false: disables tampering detection.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -100,7 +101,11 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FraudCheck { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable quality detection. Valid values: Y (enabled) and N (disabled).</para>
+        /// <para>Specifies whether to enable quality detection. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Y: enables quality detection.</description></item>
+        /// <item><description>N: disables quality detection.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Y</para>
@@ -112,9 +117,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>The extraction type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0101: electronic bill address and name module (extracts address and name modules through intelligent analysis)</description></item>
+        /// <item><description>0101: electronic bill address and name module, which extracts the address and name module through intelligent analysis</description></item>
         /// <item><description>0201: Thailand vehicle registration certificate</description></item>
-        /// <item><description>0301: transfer transaction amount information</description></item>
+        /// <item><description>0301: transfer transaction record amount information</description></item>
         /// <item><description>0401: POA credential extraction information</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -127,7 +132,11 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string OcrArea { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable translation. Valid values: 0 (disabled) and 1 (enabled).</para>
+        /// <para>Specifies whether to enable translation. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: disables translation.</description></item>
+        /// <item><description>1: enables translation.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -137,7 +146,11 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string OcrTranslation { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable OCR result normalization. Valid values: 0 (disabled) and 1 (enabled).</para>
+        /// <para>Specifies whether to enable OCR result standardization. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: disables OCR result standardization.</description></item>
+        /// <item><description>1: enables OCR result standardization.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -147,7 +160,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string OcrValueStandard { get; set; }
 
         /// <summary>
-        /// <para>The product solution to use. Set the value to CREDENTIAL_RECOGNITION.</para>
+        /// <para>The product solution to be integrated. Valid value: CREDENTIAL_RECOGNITION.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

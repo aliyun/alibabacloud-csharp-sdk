@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -40,18 +40,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The response result.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public DeleteFaceRecordV2ResponseBodyResult Result { get; set; }
         public class DeleteFaceRecordV2ResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The deletion result. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Y: Succeeded.</description></item>
-            /// <item><description>N: Failed.</description></item>
-            /// </list>
+            /// <para>The deletion result. Valid values: Y: The deletion succeeded. N: The deletion failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Y</para>
@@ -61,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string Deleted { get; set; }
 
             /// <summary>
-            /// <para>The list of face group codes from which the face data was actually deleted (comma-separated). This parameter is returned with all deleted group codes when FaceGroupCode is not specified.</para>
+            /// <para>The list of codes of the face groups from which the face data was actually deleted, separated by commas. If FaceGroupCode is not specified, the codes of all face groups from which the data was deleted are returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>wqe***,dsa***</para>

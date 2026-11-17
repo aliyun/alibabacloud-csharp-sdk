@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class DeepfakeDetectIntlRequest : TeaModel {
         /// <summary>
-        /// <para>The Base64-encoded content of the facial image.</para>
+        /// <para>The Base64-encoded string of the face image.</para>
         /// <remarks>
-        /// <para>Specify either FaceUrl or FaceBase64.</para>
+        /// <para>You must specify either FaceUrl or FaceBase64.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FaceBase64 { get; set; }
 
         /// <summary>
-        /// <para>Set the value to <b>IMAGE</b> to specify a facial image.</para>
+        /// <para>The face input type. Valid value: <b>IMAGE</b>, which indicates a face image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IMAGE</para>
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FaceInputType { get; set; }
 
         /// <summary>
-        /// <para>The URL of the facial image.</para>
+        /// <para>The URL of the face image.</para>
         /// <remarks>
-        /// <para>Specify either FaceUrl or FaceBase64.</para>
+        /// <para>You must specify either FaceUrl or FaceBase64.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FaceUrl { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the merchant request. The value is a 32-character combination of letters and digits. The first few characters are a custom merchant abbreviation, the middle part can contain a timestamp, and the last part can be a random or incremental sequence.</para>
+        /// <para>The unique identifier of the merchant request. The value is a 32-character alphanumeric string. The first few characters consist of a custom merchant abbreviation, the middle part can contain a time period, and the latter part can be a random or incremental sequence.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string MerchantBizId { get; set; }
 
         /// <summary>
-        /// <para>The product solution to use. Set the value to <b>FACE_DEEPFAKE</b>.</para>
+        /// <para>The product solution to access. Valid value: <b>FACE_DEEPFAKE</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The custom scene ID for authentication. You can use this scene ID to query related records in the console. The value can be up to 10 characters long and can contain letters, digits, and underscores.</para>
+        /// <para>The custom authentication scene ID. You can use this ID to query related records in the console. The value can be up to 10 characters in length and can contain letters, digits, and underscores.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>

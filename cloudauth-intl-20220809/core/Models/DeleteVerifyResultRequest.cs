@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class DeleteVerifyResultRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether the deletion depends on the query operation.</para>
+        /// <para>Specifies whether to rely on the query API when deleting data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Y / N</para>

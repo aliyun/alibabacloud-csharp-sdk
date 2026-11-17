@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The return message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -49,9 +49,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <summary>
             /// <para>The verification result code. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: Consistent.</description></item>
-            /// <item><description>2: Inconsistent.</description></item>
-            /// <item><description>3: No record found.</description></item>
+            /// <item><description>1: consistent</description></item>
+            /// <item><description>2: inconsistent</description></item>
+            /// <item><description>3: not found</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <list type="bullet">
             /// <item><description>CMCC: China Mobile</description></item>
             /// <item><description>CUCC: China Unicom</description></item>
-            /// <item><description>CTCC: China Telecom.</description></item>
+            /// <item><description>CTCC: China Telecom</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

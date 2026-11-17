@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public CredentialRecognitionIntlResponseBodyResult Result { get; set; }
         public class CredentialRecognitionIntlResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The recognized key information, in JSON format.</para>
+            /// <para>The recognized key information in JSON format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -72,8 +72,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <summary>
             /// <para>The extraction result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>S: Succeeded.</description></item>
-            /// <item><description>F: Failed.</description></item>
+            /// <item><description>S: success.</description></item>
+            /// <item><description>F: failure.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

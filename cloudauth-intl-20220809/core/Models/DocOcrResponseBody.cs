@@ -40,24 +40,24 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The return result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public DocOcrResponseBodyResult Result { get; set; }
         public class DocOcrResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The card and certificate recognition result. This parameter is returned only when the API response is successful.</para>
+            /// <para>The recognition result of the ID card or certificate. This parameter is returned only when the API response is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
-            ///   &quot;idFaceQualityScore&quot;: 98.0
+            ///   &quot;idFaceQualityScore&quot;: 98.0,
             ///   &quot;ocrIdInfo&quot;: {
             ///     &quot;expiryDate&quot;: &quot;&quot;,
-            ///     &quot;originOfIssue&quot;: &quot;公安部出入境管理局&quot;,
+            ///     &quot;originOfIssue&quot;: &quot;Exit-Entry Administration of the Ministry of Public Security&quot;,
             ///     &quot;englishName&quot;: &quot;LI SI&quot;,
-            ///     &quot;sex&quot;: &quot;男&quot;,
-            ///     &quot;name&quot;: &quot;李四&quot;,
+            ///     &quot;sex&quot;: &quot;Male&quot;,
+            ///     &quot;name&quot;: &quot;Li Si&quot;,
             ///     &quot;idNumber&quot;: &quot;H11111112&quot;,
             ///     &quot;issueDate&quot;: &quot;2013-01-02&quot;,
             ///     &quot;birthDate&quot;: &quot;1990-02-21&quot;

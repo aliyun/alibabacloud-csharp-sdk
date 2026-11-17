@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The response result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public DocOcrMaxResponseBodyResult Result { get; set; }
         public class DocOcrMaxResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The card and certificate recognition result. This parameter is returned only when the API response is successful.</para>
+            /// <para>The identity document recognition result. This parameter is returned only when the API responds successfully.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -73,8 +73,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <summary>
             /// <para>Indicates whether the authentication is passed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Y: passed.</description></item>
-            /// <item><description>N: not passed.</description></item>
+            /// <item><description>Y: Passed.</description></item>
+            /// <item><description>N: Not passed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

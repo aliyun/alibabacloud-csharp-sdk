@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result information.</para>
+        /// <para>The returned result information.</para>
         /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public AddressVerifyIntlResponseBodyResultObject ResultObject { get; set; }
         public class AddressVerifyIntlResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>The address verification details.</para>
+            /// <para>The details of the address verification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0-3000</para>
@@ -57,11 +57,11 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string AddressInfo { get; set; }
 
             /// <summary>
-            /// <para>The telecommunications service provider name. Valid values:</para>
+            /// <para>The name of the carrier. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>CMCC: China Mobile</description></item>
             /// <item><description>CTCC: China Telecom</description></item>
-            /// <item><description>CUCC: China Unicom.</description></item>
+            /// <item><description>CUCC: China Unicom</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -74,8 +74,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <summary>
             /// <para>The verification result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Y: The verified address is within 10 km of the residential address.</description></item>
-            /// <item><description>N: The verified address is more than 10 km from the residential address.</description></item>
+            /// <item><description>Y: Yes. The distance to the verified address is less than or equal to 10 km.</description></item>
+            /// <item><description>N: No. The distance to the verified address is greater than 10 km.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string Passed { get; set; }
 
             /// <summary>
-            /// <para>The description of the verification result.</para>
+            /// <para>The description of the authentication result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string SubCode { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the verification request.</para>
+            /// <para>The unique identifier of the authentication request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hksb7ba1b28130d24e015d69********</para>

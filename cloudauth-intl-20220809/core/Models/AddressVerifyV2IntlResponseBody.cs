@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class AddressVerifyV2IntlResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The verification result.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -50,8 +50,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <para>The verification result. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>1: Passed.</description></item>
-            /// <item><description>2: Failed (the device is in a prohibited region). </description></item>
-            /// <item><description>3: Unable to determine.</description></item>
+            /// <item><description>2: Failed. The device is located in a prohibited area.</description></item>
+            /// <item><description>3: Undetermined.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -62,11 +62,11 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string BizCode { get; set; }
 
             /// <summary>
-            /// <para>The verification details, which include:</para>
+            /// <para>The verification details, including:</para>
             /// <list type="bullet">
             /// <item><description>distanceRange: the location range.   </description></item>
             /// <item><description>ispName: the ISP name.     </description></item>
-            /// <item><description>phoneStatus: the phone status. A value of 0 indicates abnormal. A value of 1 indicates Normal. Otherwise, the status is unknown.</description></item>
+            /// <item><description>phoneStatus: the mobile phone status. 0 indicates abnormal, 1 indicates normal, and other values indicate unknown.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

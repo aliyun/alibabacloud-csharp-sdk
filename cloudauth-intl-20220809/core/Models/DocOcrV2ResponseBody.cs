@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class DocOcrV2ResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return code.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The return message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -40,24 +40,24 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The response result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public DocOcrV2ResponseBodyResult Result { get; set; }
         public class DocOcrV2ResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The card and certificate recognition result. This parameter is returned only when the API response is successful.</para>
+            /// <para>The ID card recognition result. This parameter is returned only when the API response is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
-            ///   &quot;idFaceQualityScore&quot;: 98.0
+            ///   &quot;idFaceQualityScore&quot;: 98.0,
             ///   &quot;ocrIdInfo&quot;: {
             ///     &quot;expiryDate&quot;: &quot;&quot;,
-            ///     &quot;originOfIssue&quot;: &quot;公安部出入境管理局&quot;,
+            ///     &quot;originOfIssue&quot;: &quot;Exit-Entry Administration of the Ministry of Public Security&quot;,
             ///     &quot;englishName&quot;: &quot;LI SI&quot;,
-            ///     &quot;sex&quot;: &quot;男&quot;,
-            ///     &quot;name&quot;: &quot;李四&quot;,
+            ///     &quot;sex&quot;: &quot;Male&quot;,
+            ///     &quot;name&quot;: &quot;Li Si&quot;,
             ///     &quot;idNumber&quot;: &quot;H11111112&quot;,
             ///     &quot;issueDate&quot;: &quot;2013-01-02&quot;,
             ///     &quot;birthDate&quot;: &quot;1990-02-21&quot;
@@ -77,8 +77,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <summary>
             /// <para>Indicates whether the authentication is passed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Y: Passed.</description></item>
-            /// <item><description>N: Not passed.</description></item>
+            /// <item><description>Y: passed.</description></item>
+            /// <item><description>N: not passed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string SubCode { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the authentication request.</para>
+            /// <para>The unique identifier of the authentication request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>08573be80f944d95ac812e019e3655a8</para>

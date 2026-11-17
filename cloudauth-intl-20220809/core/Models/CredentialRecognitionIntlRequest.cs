@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class CredentialRecognitionIntlRequest : TeaModel {
         /// <summary>
-        /// <para>The field check rule configuration, in JSON string format.</para>
+        /// <para>The field validation rule configuration. The value is a JSON string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
-        ///     &quot;address_rule&quot;: &quot;Includes Address Hangzhou ***&quot;,
+        ///     &quot;address_rule&quot;: &quot;Includes Adrress Hangzhou***&quot;,
         ///     &quot;name_rule&quot;: &quot;Includes Name Zhang*&quot;,
-        ///     &quot;date_of_issue_rule&quot;: &quot;Within 2026.05.20&quot;
+        ///     &quot;date_of_issue_rule&quot;: &quot;Whthin 2026.05.20&quot;
         /// }</para>
         /// </summary>
         [NameInMap("CheckRuleConfig")]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string CheckRuleConfig { get; set; }
 
         /// <summary>
-        /// <para>The Base64-encoded image. If you choose to pass in the image by using IdOcrPictureBase64 (Base64-encoded photo), check the photo size and do not pass in an excessively large photo.</para>
+        /// <para>The Base64-encoded image. If you use the IdOcrPictureBase64 parameter to pass the Base64-encoded photo, check the photo size and do not pass oversized photos.</para>
         /// 
         /// <b>Example:</b>
         /// <para>base64</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>The credential type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>01: transaction credential (including electronic bill images for water, electricity, gas, credit card, and other types)</description></item>
+        /// <item><description>01: transaction credentials, including electronic bills for utilities such as water, electricity, and gas, as well as credit card statements.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -58,12 +58,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string DocType { get; set; }
 
         /// <summary>
-        /// <para>The input file type. Valid values:</para>
+        /// <para>The material input type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>IMAGE (default): image.</para>
-        /// </description></item>
-        /// <item><description><para>PDF: PDF format.</para>
-        /// </description></item>
+        /// <item><description>IMAGE: image. This is the default value.</description></item>
+        /// <item><description>PDF: PDF format.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,8 +74,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>Specifies whether to enable tampering detection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Enabled.</description></item>
-        /// <item><description>false: Disabled.</description></item>
+        /// <item><description>true: enabled.</description></item>
+        /// <item><description>false: disabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -89,10 +87,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FraudCheck { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable quality detection. Valid values:</para>
+        /// <para>Specifies whether to enable the quality check. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Y: Enabled.</description></item>
-        /// <item><description>N: Disabled.</description></item>
+        /// <item><description>Y: enabled.</description></item>
+        /// <item><description>N: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -105,7 +103,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>The extraction type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0101: electronic bill address and name module (extracts the address and name module through intelligent analysis)</description></item>
+        /// <item><description>0101: electronic bill address and name module. The address and name are extracted through intelligent analysis.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -119,8 +117,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>Specifies whether to enable translation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: Disabled.</description></item>
-        /// <item><description>1: Enabled.</description></item>
+        /// <item><description>0: disabled.</description></item>
+        /// <item><description>1: enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -131,10 +129,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string OcrTranslation { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable OCR result normalization. Valid values:</para>
+        /// <para>Specifies whether to enable OCR result standardization. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: Disabled.</description></item>
-        /// <item><description>1: Enabled.</description></item>
+        /// <item><description>0: disabled.</description></item>
+        /// <item><description>1: enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -145,7 +143,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string OcrValueStandard { get; set; }
 
         /// <summary>
-        /// <para>The product solution to use. Set the value to CREDENTIAL_RECOGNITION.</para>
+        /// <para>The product solution to be integrated. Valid value: CREDENTIAL_RECOGNITION.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

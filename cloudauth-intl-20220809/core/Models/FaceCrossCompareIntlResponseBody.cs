@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The return result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public FaceCrossCompareIntlResponseBodyResult Result { get; set; }
         public class FaceCrossCompareIntlResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The comparison score between A and B. Value range: 0 to 1.</para>
+            /// <para>The comparison score between A and B. Valid values: 0 to 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.9999999999999999</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public double? FaceComparisonScoreA2B { get; set; }
 
             /// <summary>
-            /// <para>The comparison score between B and C. Value range: 0 to 1.</para>
+            /// <para>The comparison score between B and C. Valid values: 0 to 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.9999999999999999</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public double? FaceComparisonScoreB2C { get; set; }
 
             /// <summary>
-            /// <para>The comparison score between C and A. Value range: 0 to 1.</para>
+            /// <para>The comparison score between C and A. Valid values: 0 to 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.9999999999999999</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <para>The final verification result. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Y: Passed.</description></item>
-            /// <item><description>N: Not passed.</description></item>
+            /// <item><description>N: Failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

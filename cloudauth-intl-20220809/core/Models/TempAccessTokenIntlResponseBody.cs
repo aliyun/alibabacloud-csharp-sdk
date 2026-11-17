@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public TempAccessTokenIntlResponseBodyData Data { get; set; }
         public class TempAccessTokenIntlResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The AccessKeyId of the temporary credential for file upload.</para>
+            /// <para>The AccessKey ID of the temporary credential for file upload.</para>
             /// 
             /// <b>Example:</b>
             /// <hr>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string AccessKeyId { get; set; }
 
             /// <summary>
-            /// <para>The temporary authorization secret.</para>
+            /// <para>The AccessKey Secret of the temporary credential.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3hxuRpEJ3Jv2Rtzyg4HooFCYqps762XcNtzhn19wQymk</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string AccessKeySecret { get; set; }
 
             /// <summary>
-            /// <para>The bucket name.</para>
+            /// <para>The name of the bucket.</para>
             /// 
             /// <b>Example:</b>
             /// <para>liyi</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string FileNamePrefix { get; set; }
 
             /// <summary>
-            /// <para>OssEndPoint。</para>
+            /// <para>The OSS endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ossEndPoint</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

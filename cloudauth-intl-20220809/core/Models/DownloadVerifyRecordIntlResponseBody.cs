@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public DownloadVerifyRecordIntlResponseBodyData Data { get; set; }
         public class DownloadVerifyRecordIntlResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The task ID. This parameter is returned in asynchronous mode. Use QueryDownloadTaskIntl to download the exported file.</para>
+            /// <para>The task ID. This parameter is returned in asynchronous mode. You can subsequently call QueryDownloadTaskIntl to download the exported file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>202511284106866</para>

@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class CredentialVerifyIntlAdvanceRequest : TeaModel {
         /// <summary>
-        /// <para>The credential name (specified as a numeric code). Valid values:</para>
+        /// <para>The credential name. Use the numeric code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Codes starting with 03: enterprise qualification<list type="bullet">
-        /// <item><description>0301: business license issued in the Chinese mainland</description></item>
+        /// <item><description>Values starting with 03: enterprise qualification<list type="bullet">
+        /// <item><description>0301: business license in the Chinese mainland</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Codes starting with 04: transaction voucher<list type="bullet">
+        /// <item><description>Values starting with 04: transaction credential<list type="bullet">
         /// <item><description>0401: bank statement</description></item>
         /// <item><description>0402: payslip</description></item>
         /// <item><description>0403: utility bill</description></item>
         /// <item><description>0405: credit card statement</description></item>
-        /// <item><description>0499: other.</description></item>
+        /// <item><description>0499: other</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <para>The credential type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>03: enterprise qualification</description></item>
-        /// <item><description>04: transaction voucher.</description></item>
+        /// <item><description>04: transaction credential</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -50,13 +50,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string CredType { get; set; }
 
         /// <summary>
-        /// <para>The image input stream.</para>
+        /// <para>The input stream of the image.</para>
         /// <remarks>
         /// <para>Specify either ImageUrl or ImageFile.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("ImageFile")]
         [Validation(Required=false)]
@@ -78,12 +78,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>The call mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ANTI_FAKE_CHECK: image quality and tampering detection.</description></item>
+        /// <item><description>ANTI_FAKE_CHECK: image quality and tampering detection</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>取值：ANTI_FAKE_CHECK</para>
+        /// <para>Value: ANTI_FAKE_CHECK</para>
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]

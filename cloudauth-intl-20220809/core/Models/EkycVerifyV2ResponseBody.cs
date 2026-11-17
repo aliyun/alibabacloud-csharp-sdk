@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public EkycVerifyV2ResponseBodyResult Result { get; set; }
         public class EkycVerifyV2ResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The face result information.</para>
+            /// <para>The facial result information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtFaceInfo { get; set; }
 
             /// <summary>
-            /// <para>The identity document recognition result. Returned only when the API response is successful.</para>
+            /// <para>The document recognition result. This parameter is returned only when the API response is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             ///  },
             ///  &quot;ocrIdPassed&quot;: &quot;N&quot;,
             ///  &quot;spoofInfo&quot;: {
-            ///  &quot;spoofResult&quot;: &quot;Y&quot;,
+            ///  &quot;spoofResult&quot;: &quot;Y&quot;
             ///  }
             /// }</para>
             /// </summary>
@@ -85,7 +85,11 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtIdInfo { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the verification passed. A value of Y indicates passed, and a value of N indicates not passed.</para>
+            /// <para>Indicates whether the verification is passed. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Y: Passed.</description></item>
+            /// <item><description>N: Not passed.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Y</para>
@@ -105,7 +109,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string SubCode { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the verification request.</para>
+            /// <para>The unique identifier of the authentication request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4ab0b***cbde97</para>

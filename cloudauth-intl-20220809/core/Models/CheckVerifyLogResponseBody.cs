@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -59,23 +59,23 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <summary>
             /// <para>The last page where the authentication was interrupted. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Page not started</description></item>
-            /// <item><description>OCR guide page</description></item>
-            /// <item><description>OCR camera authorization</description></item>
-            /// <item><description>OCR document capture page</description></item>
-            /// <item><description>OCR recognition loading</description></item>
-            /// <item><description>OCR recognition result editing page</description></item>
-            /// <item><description>OCR recognition result editing loading</description></item>
-            /// <item><description>Liveness detection guide page</description></item>
-            /// <item><description>Liveness detection camera authorization page</description></item>
-            /// <item><description>Liveness detection page</description></item>
-            /// <item><description>Liveness detection downgrade page</description></item>
-            /// <item><description>Liveness detection retry</description></item>
-            /// <item><description>Liveness detection loading.</description></item>
+            /// <item><description>The page is not started.</description></item>
+            /// <item><description>The OCR guide page.</description></item>
+            /// <item><description>The OCR camera authorization page.</description></item>
+            /// <item><description>The OCR document capture page.</description></item>
+            /// <item><description>The OCR recognition loading page.</description></item>
+            /// <item><description>The OCR recognition result editing page.</description></item>
+            /// <item><description>The OCR recognition result editing loading page.</description></item>
+            /// <item><description>The liveness detection guide page.</description></item>
+            /// <item><description>The liveness detection camera authorization page.</description></item>
+            /// <item><description>The liveness detection page.</description></item>
+            /// <item><description>The liveness detection fallback page.</description></item>
+            /// <item><description>The liveness detection retry page.</description></item>
+            /// <item><description>The liveness detection loading page.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>OCR拍摄证件页面</para>
+            /// <para>OCR document capture page</para>
             /// </summary>
             [NameInMap("InterruptPage")]
             [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// </description></item>
             /// <item><description><para>NFC_INPUT</para>
             /// </description></item>
-            /// <item><description><para>NFC_READ.</para>
+            /// <item><description><para>NFC_READ</para>
             /// </description></item>
             /// </list>
             /// 
@@ -108,21 +108,21 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string InterruptPageEn { get; set; }
 
             /// <summary>
-            /// <para>The SDK runtime log details.</para>
+            /// <para>The details of the SDK runtime logs.</para>
             /// </summary>
             [NameInMap("LogInfo")]
             [Validation(Required=false)]
             public List<string> LogInfo { get; set; }
 
             /// <summary>
-            /// <para>The SDK runtime trace log details in English. The format of this field is the same as <b>LogInfo</b>.</para>
+            /// <para>The details of the SDK runtime trace logs in English. The format of this field is the same as that of <b>LogInfo</b>.</para>
             /// </summary>
             [NameInMap("LogInfoEn")]
             [Validation(Required=false)]
             public List<string> LogInfoEn { get; set; }
 
             /// <summary>
-            /// <para>The SDK runtime log statistics details.</para>
+            /// <para>The statistical details of the SDK runtime logs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -175,21 +175,21 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <summary>
             /// <para>The error code for authentication interruption. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1000: The user completed the face verification process, and the authentication result is passed.</description></item>
-            /// <item><description>1001: The user completed the face verification process, and the authentication result is not passed.</description></item>
-            /// <item><description>1002: System error.</description></item>
+            /// <item><description>1000: The user completed the face scanning process, and the recommended authentication result is passed.</description></item>
+            /// <item><description>1001: The user completed the face scanning process, and the recommended authentication result is not passed.</description></item>
+            /// <item><description>1002: A system error occurred.</description></item>
             /// <item><description>1003: SDK initialization failed. Check whether the client time is correct.</description></item>
-            /// <item><description>1004: Camera permission error.</description></item>
-            /// <item><description>1005: Network error.</description></item>
+            /// <item><description>1004: A camera permission error occurred.</description></item>
+            /// <item><description>1005: A network error occurred.</description></item>
             /// <item><description>1006: The user exited.</description></item>
-            /// <item><description>1007: Invalid TransactionId.</description></item>
-            /// <item><description>1009: Client timestamp error.</description></item>
-            /// <item><description>1011: Incorrect document type submitted.</description></item>
-            /// <item><description>1012: Key information of the recognized document is missing or format validation failed.</description></item>
-            /// <item><description>1013: Poor image quality.</description></item>
+            /// <item><description>1007: The TransactionId is invalid.</description></item>
+            /// <item><description>1009: The client timestamp is incorrect.</description></item>
+            /// <item><description>1011: The submitted document type is incorrect.</description></item>
+            /// <item><description>1012: The recognized key information of the document is missing or the format verification failed.</description></item>
+            /// <item><description>1013: The image quality is poor.</description></item>
             /// <item><description>1014: The number of errors exceeded the upper limit.</description></item>
             /// <item><description>1015: The Android system version is too low.</description></item>
-            /// <item><description>1016: Camera permission not obtained.</description></item>
+            /// <item><description>1016: Camera permissions are not obtained.</description></item>
             /// <item><description>9999: The authentication process is suspected to be interrupted.</description></item>
             /// </list>
             /// 
@@ -203,9 +203,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <summary>
             /// <para>The authentication status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: finished. The authentication is complete.</description></item>
+            /// <item><description>0: finished. The authentication is completed.</description></item>
             /// <item><description>1: unfinished. The authentication is interrupted.</description></item>
-            /// <item><description>2: notstart. The authentication has not started.</description></item>
+            /// <item><description>2: notstart. The authentication is not started.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

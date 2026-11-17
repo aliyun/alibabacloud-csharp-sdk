@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <para>The business type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>INVOKE_STATISTICS</description></item>
-        /// <item><description>INVOKE_RECORD.</description></item>
+        /// <item><description>INVOKE_RECORD</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,8 +36,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>The download mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>async</b>: asynchronous</description></item>
-        /// <item><description><b>sync</b>: synchronous.</description></item>
+        /// <item><description><b>async</b>: Asynchronous.</description></item>
+        /// <item><description><b>sync</b>: Synchronous.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

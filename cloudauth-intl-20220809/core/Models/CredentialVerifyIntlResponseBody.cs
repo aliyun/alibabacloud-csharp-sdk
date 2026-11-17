@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class CredentialVerifyIntlResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return code. A value of 200 indicates success. Other values indicate failure.</para>
+        /// <para>The return code. A value of 200 indicates success, and other values indicate failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The return message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result information.</para>
+        /// <para>The returned result information.</para>
         /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
@@ -52,9 +52,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <b>Example:</b>
             /// <para>{
             ///  &quot;sameBackgroundDetail&quot;: {
-            ///  // 相似背景对于的原始图请求RequestId
+            ///  // The request ID of the original image request corresponding to the similar background
             ///  &quot;originalRequestId&quot;: &quot;130A2C10-B9EE-4D84-88E3-5384FF03****&quot;;
-            ///  // 相似背景对于的原始图请求商户ID 
+            ///  // The merchant ID of the original image request corresponding to the similar background 
             ///  &quot;originalMerchantId&quot;: &quot;xxxxxxxx&quot; 
             ///  }
             /// }</para>
@@ -66,9 +66,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <summary>
             /// <para>The risk result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Low risk.</description></item>
-            /// <item><description><b>1</b>: High risk.</description></item>
-            /// <item><description><b>2</b>: Suspicious.</description></item>
+            /// <item><description><b>0</b>: low risk</description></item>
+            /// <item><description><b>1</b>: high risk</description></item>
+            /// <item><description><b>2</b>: suspicious</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -79,19 +79,19 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string Result { get; set; }
 
             /// <summary>
-            /// <para>The risk score map.</para>
+            /// <para>The map of risk scores.</para>
             /// </summary>
             [NameInMap("RiskScore")]
             [Validation(Required=false)]
             public Dictionary<string, string> RiskScore { get; set; }
 
             /// <summary>
-            /// <para>The risk tags, separated by commas (,). Valid values:</para>
+            /// <para>The risk tags. Multiple tags are separated by commas (,). Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PS: Image has been edited with photo editing software.</description></item>
-            /// <item><description>SCREEN_PHOTO: Photo taken from a screen.</description></item>
-            /// <item><description>SCREENSHOT: Screenshot.</description></item>
-            /// <item><description>ORIGINAL_PHOTO: Non-original image.</description></item>
+            /// <item><description>PS: The image is edited by using Photoshop.</description></item>
+            /// <item><description>SCREEN_PHOTO: The image is a photo of a screen.</description></item>
+            /// <item><description>SCREENSHOT: The image is a screenshot.</description></item>
+            /// <item><description>ORIGINAL_PHOTO: The image is not an original image.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

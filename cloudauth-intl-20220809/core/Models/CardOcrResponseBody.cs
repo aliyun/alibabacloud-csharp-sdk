@@ -40,25 +40,25 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The response result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public CardOcrResponseBodyResult Result { get; set; }
         public class CardOcrResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The ID card and certificate recognition result.</para>
+            /// <para>The recognition result of the ID card or certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
             ///   &quot;idFaceQualityScore&quot;: 98.90,
             ///   &quot;ocrIdInfo&quot;: {
             ///     &quot;expiryDate&quot;: &quot;2024-04-20&quot;,
-            ///     &quot;placeOfIssue&quot;: &quot;广东&quot;,
+            ///     &quot;placeOfIssue&quot;: &quot;Guangdong&quot;,
             ///     &quot;englishName&quot;: &quot;ZHENGJIAN,YANGBEN&quot;,
-            ///     &quot;originOfIssue&quot;: &quot;公安部出入境管理局&quot;,
-            ///     &quot;sex&quot;: &quot;女&quot;,
-            ///     &quot;name&quot;: &quot;证件样本&quot;,
+            ///     &quot;originOfIssue&quot;: &quot;Exit-Entry Administration of the Ministry of Public Security&quot;,
+            ///     &quot;sex&quot;: &quot;Female&quot;,
+            ///     &quot;name&quot;: &quot;ID Sample&quot;,
             ///     &quot;idNumber&quot;: &quot;C00000000&quot;,
             ///     &quot;issueDate&quot;: &quot;2014-04-21&quot;,
             ///     &quot;birthDate&quot;: &quot;1981-08-03&quot;
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string SubCode { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the authentication request.</para>
+            /// <para>The unique identifier of the authentication request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>08573be80f944d95ac812e019e3655a8</para>

@@ -14,14 +14,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>张三</para>
+        /// <para>Zhang San</para>
         /// </summary>
         [NameInMap("DocName")]
         [Validation(Required=false)]
         public string DocName { get; set; }
 
         /// <summary>
-        /// <para>The document number of the user.</para>
+        /// <para>The identity document number of the user.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,8 +32,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string DocNo { get; set; }
 
         /// <summary>
-        /// <para>The document type, which is uniquely identified by an 8-digit number. For more information, see the document type list.</para>
-        /// <para>Currently, only the second-generation resident identity card of the Chinese mainland is supported. Set this parameter to 00000001.</para>
+        /// <para>The type of the identity document. The document type is uniquely identified by an 8-digit number. For more information, see the list of identity document types. Currently, only the second-generation resident identity card of the Chinese mainland is supported. Set this parameter to the fixed value: 00000001.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,7 +43,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string DocType { get; set; }
 
         /// <summary>
-        /// <para>The custom unique business identifier, which is used for subsequent troubleshooting. The value can be up to 32 characters in length and can contain letters and digits. Make sure the value is unique.</para>
+        /// <para>The custom unique business identifier. You can use this identifier to locate and troubleshoot issues. The identifier can be up to 32 characters in length and can contain letters and digits. Make sure that the identifier is unique.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string MerchantBizId { get; set; }
 
         /// <summary>
-        /// <para>The custom user ID or another identifier that can identify a specific user, such as a phone number or email address. We strongly recommend that you desensitize the value of this field in advance, for example, by hashing the value.</para>
+        /// <para>The custom user ID or another identifier that can identify a specific user, such as a mobile phone number or an email address. Desensitize the value of this field in advance, for example, by hashing the value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>
@@ -65,8 +64,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string MerchantUserId { get; set; }
 
         /// <summary>
-        /// <para>The product solution to use.</para>
-        /// <para>Set the value to eKYC_Date_MIN.</para>
+        /// <para>The product solution to be integrated. Valid value: eKYC_Date_MIN.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,7 +75,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The custom authentication scenario ID. You can use this scenario ID to query related records in the console. The value can be up to 10 characters in length and can contain letters, digits, and underscores.</para>
+        /// <para>The custom authentication scenario ID. You can use this ID to query related records in the console. The ID can be up to 10 characters in length and can contain letters, digits, and underscores.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>
@@ -87,7 +85,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string SceneCode { get; set; }
 
         /// <summary>
-        /// <para>The expiration date of the ID card validity period, in the format YYYYMMDD. Example: 20301001.</para>
+        /// <para>The expiration date of the ID card validity period. Format: YYYYMMDD. Example: 20301001.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -98,7 +96,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ValidityEndDate { get; set; }
 
         /// <summary>
-        /// <para>The start date of the validity period, in the format YYYYMMDD. Example: 20201001.</para>
+        /// <para>The start date of the validity period. Format: YYYYMMDD. Example: 20201001.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

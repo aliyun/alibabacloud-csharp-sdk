@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The list of returned entries.</para>
+        /// <para>The list of returned items.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query.</para>
+        /// <para>The number of entries per page during paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The return message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

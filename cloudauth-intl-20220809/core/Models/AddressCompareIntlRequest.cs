@@ -10,47 +10,47 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class AddressCompareIntlRequest : TeaModel {
         /// <summary>
-        /// <para>The country name. Valid values:</para>
+        /// <para>The country name.</para>
         /// <list type="bullet">
-        /// <item><description>China.</description></item>
+        /// <item><description>China</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>固定值：中国</para>
+        /// <para>Fixed value: China</para>
         /// </summary>
         [NameInMap("DefaultCountry")]
         [Validation(Required=false)]
         public string DefaultCountry { get; set; }
 
         /// <summary>
-        /// <para>ADD_VERIFY.</para>
+        /// <para>ADD_VERIFY</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>固定值：ADD_VERIFY</para>
+        /// <para>Fixed value: ADD_VERIFY</para>
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>Address 1.</para>
+        /// <para>The first address.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>杭州市阿里巴巴西溪园区</para>
+        /// <para>Alibaba Xixi Campus, Hangzhou</para>
         /// </summary>
         [NameInMap("Text1")]
         [Validation(Required=false)]
         public string Text1 { get; set; }
 
         /// <summary>
-        /// <para>Address 2.</para>
+        /// <para>The second address.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>杭州市文一西路969号1号楼</para>
+        /// <para>Building 1, No. 969 West Wenyi Road, Hangzhou</para>
         /// </summary>
         [NameInMap("Text2")]
         [Validation(Required=false)]

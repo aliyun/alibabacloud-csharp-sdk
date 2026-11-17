@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The return message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -58,6 +58,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 
             /// <summary>
             /// <para>The standard encryption protocol for authentication.</para>
+            /// <remarks>
+            /// <para>This field is required when integrating H5 web pages by using an embedded iframe.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>hksb7ba1b28130d24e015d*********</para>

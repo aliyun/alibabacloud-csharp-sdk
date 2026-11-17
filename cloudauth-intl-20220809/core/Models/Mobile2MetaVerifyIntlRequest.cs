@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class Mobile2MetaVerifyIntlRequest : TeaModel {
         /// <summary>
-        /// <para>The phone number.</para>
+        /// <para>The mobile phone number.</para>
         /// <list type="bullet">
-        /// <item><description>If ParamType is set to normal, pass in the phone number in plaintext.</description></item>
-        /// <item><description>If ParamType is set to md5, pass in the phone number in ciphertext as a 32-character lowercase MD5 string.</description></item>
+        /// <item><description>If paramType is set to normal, enter the plaintext mobile phone number.</description></item>
+        /// <item><description>If paramType is set to md5, enter the ciphertext mobile phone number, which is a 32-character lowercase MD5 string.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -27,8 +27,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>The parameter type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>normal: not encrypted</description></item>
-        /// <item><description>md5: MD5-encrypted.</description></item>
+        /// <item><description>normal: no encryption</description></item>
+        /// <item><description>md5: MD5 encryption</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ParamType { get; set; }
 
         /// <summary>
-        /// <para>The product code. Set this parameter to MOBILE_2META.</para>
+        /// <para>The product code. Set the value to MOBILE_2META.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,15 +51,15 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The name. Valid values:</para>
+        /// <para>The name.</para>
         /// <list type="bullet">
-        /// <item><description>If ParamType is set to normal, pass in the name in plaintext.</description></item>
-        /// <item><description>If ParamType is set to md5, pass in the name in ciphertext as a 32-character lowercase MD5 string.</description></item>
+        /// <item><description>If paramType is set to normal, enter the plaintext name.</description></item>
+        /// <item><description>If paramType is set to md5, enter the ciphertext name, which is a 32-character lowercase MD5 string.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>张*</para>
+        /// <para>Zhang*</para>
         /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]

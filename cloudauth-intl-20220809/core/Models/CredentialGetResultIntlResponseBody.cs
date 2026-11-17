@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The return result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public CredentialGetResultIntlResponseBodyResult Result { get; set; }
         public class CredentialGetResultIntlResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The key information identified, in JSON format.</para>
+            /// <para>The recognized key information in JSON format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -62,9 +62,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <summary>
             /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PROCESSING: Processing. Continue polling.</description></item>
-            /// <item><description>SUCCESS: Succeeded.</description></item>
-            /// <item><description>FAILED: Failed.</description></item>
+            /// <item><description>PROCESSING: The task is in progress. Continue polling.</description></item>
+            /// <item><description>SUCCESS: The task succeeded.</description></item>
+            /// <item><description>FAILED: The task failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The description of the authentication result. For more information, refer to the ResultObject.SubCode error code description.</para>
+            /// <para>The description of the authentication result. For more information, see the error code description for ResultObject.SubCode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>

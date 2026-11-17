@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class DeepfakeDetectIntlStreamRequest : TeaModel {
         /// <summary>
-        /// <para>The Base64-encoded face image. For videos, we recommend that you use the stream method for transmission.</para>
+        /// <para>The Base64-encoded string of the face image. For videos, pass the data as a stream.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/9j/4AAQSkZJRgABAQAASxxxxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FaceBase64 { get; set; }
 
         /// <summary>
-        /// <para>The image input stream.</para>
+        /// <para>The input stream of the image.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -32,13 +32,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FaceFile { get; set; }
 
         /// <summary>
-        /// <para>The type of facial material input:</para>
+        /// <para>The input type of the face material. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>IMAGE (default): Face image</description></item>
-        /// <item><description>VIDEO: Face video</description></item>
+        /// <item><description>IMAGE: face image. This is the default value.</description></item>
+        /// <item><description>VIDEO: face video.</description></item>
         /// </list>
-        /// <para>Note
-        /// Video processing takes a long time. We recommend that you set the timeout period to more than 3 seconds.</para>
+        /// <para>Note: Video processing takes a long time. Set the timeout period to a value greater than 3 seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IMAGE</para>
@@ -58,8 +57,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FaceUrl { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the merchant request. The value is an alphanumeric string with a length of 32 characters.</para>
-        /// <para>The first few characters consist of a custom abbreviation defined by the merchant, the middle part can contain a timestamp, and the last part can use a random or incremental sequence.</para>
+        /// <para>The unique identifier of the merchant request. The value is a 32-character alphanumeric string. The first few characters consist of a custom merchant abbreviation, the middle part can contain a time period, and the latter part can be a random or incremental sequence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e0c34a***353888</para>
@@ -69,8 +67,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string MerchantBizId { get; set; }
 
         /// <summary>
-        /// <para>The product solution to integrate.
-        /// Valid value: FACE_DEEPFAKE</para>
+        /// <para>The product solution to be integrated. Valid values: FACE_DEEPFAKE.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FACE_DEEPFAKE</para>
@@ -80,8 +77,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>A custom verification scenario ID that you define. This ID is used to query related records in the console.</para>
-        /// <para>The value is a combination of letters, digits, or underscores (_) with a maximum length of 10 characters.</para>
+        /// <para>The custom authentication scenario ID, which is used to query related records by entering this scenario ID in the console. The value must be 10 characters in length and can contain letters, digits, and underscores.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123****123</para>

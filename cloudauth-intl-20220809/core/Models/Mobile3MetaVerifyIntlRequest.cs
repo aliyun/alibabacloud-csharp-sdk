@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>The ID card number.</para>
         /// <list type="bullet">
-        /// <item><description>If ParamType is set to normal, enter the plaintext value.</description></item>
-        /// <item><description>If ParamType is set to md5, enter a 32-character lowercase MD5 string.</description></item>
+        /// <item><description>If paramType is set to normal, enter the plaintext.</description></item>
+        /// <item><description>If paramType is set to md5, enter a 32-character lowercase MD5 string.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string IdentifyNum { get; set; }
 
         /// <summary>
-        /// <para>The phone number.</para>
+        /// <para>The mobile phone number.</para>
         /// <list type="bullet">
-        /// <item><description>If ParamType is set to normal, enter the plaintext value.</description></item>
-        /// <item><description>If ParamType is set to md5, enter a 32-character lowercase MD5 string.</description></item>
+        /// <item><description>If paramType is set to normal, enter the plaintext.</description></item>
+        /// <item><description>If paramType is set to md5, enter a 32-character lowercase MD5 string.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>The parameter type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>normal: not encrypted</description></item>
+        /// <item><description>normal: Unencrypted.</description></item>
         /// <item><description>md5: MD5-encrypted.</description></item>
         /// </list>
         /// 
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ParamType { get; set; }
 
         /// <summary>
-        /// <para>The product solution code. Fixed value: MOBILE_3META.</para>
+        /// <para>The product solution to be accessed. Set the value to MOBILE_3META.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MOBILE_3META</para>
@@ -64,12 +64,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>The name.</para>
         /// <list type="bullet">
-        /// <item><description>If ParamType is set to normal, enter the plaintext value.</description></item>
-        /// <item><description>If ParamType is set to md5, enter a 32-character lowercase MD5 string.</description></item>
+        /// <item><description>If paramType is set to normal, enter the plaintext.</description></item>
+        /// <item><description>If paramType is set to md5, enter a 32-character lowercase MD5 string.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>张*</para>
+        /// <para>Zhang*</para>
         /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]

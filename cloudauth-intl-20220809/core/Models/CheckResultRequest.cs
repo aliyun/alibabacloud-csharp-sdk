@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>Specifies whether to return images. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Y: Return images.</description></item>
-        /// <item><description>N: Do not return images.</description></item>
+        /// <item><description>Y: Returns images.</description></item>
+        /// <item><description>N: Does not return images.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string IsReturnImage { get; set; }
 
         /// <summary>
-        /// <para>The merchant-defined unique business ID used for subsequent troubleshooting. The value can be a combination of letters and digits with a maximum length of 32 characters. Ensure that the value is unique.</para>
+        /// <para>The custom unique business identifier on the merchant side, which is used for subsequent troubleshooting. It supports a combination of letters and digits, with a maximum length of 32 characters. Make sure that the identifier is unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>djs20d***9-dsskc</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string MerchantBizId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the anti-spoofing detection result.</para>
+        /// <para>Specifies whether to return the anti-spoofing detection results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Y</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ReturnFiveCategorySpoofResult { get; set; }
 
         /// <summary>
-        /// <para>The verification ID.</para>
+        /// <para>The authentication ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4ab0b***cbde97</para>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string DeviceToken { get; set; }
 
         /// <summary>
-        /// <para>The custom unique business identifier on the merchant side, used for subsequent troubleshooting. It supports a combination of letters and digits, with a maximum length of 32 characters. Ensure that the value is unique.</para>
+        /// <para>The custom unique business identifier on the merchant side, used for subsequent troubleshooting. It supports a combination of letters and digits and can be up to 32 characters in length. Ensure that the value is unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0c83ce0101d34eff886b1f7d1cdef67f</para>
@@ -40,15 +40,21 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string MerchantBizId { get; set; }
 
         /// <summary>
-        /// <para>The product code. Set the value to FACE_GUARD.</para>
+        /// <para>The product code. Valid values: FACE_GUARD and FACE_GUARD_PRO.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>FACE_GUARD</para>
+        /// <para>FACE_GUARD_PRO</para>
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
+        /// <summary>
+        /// <para>The type of the risk scenario detected by Device Assistant.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Face</para>
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }

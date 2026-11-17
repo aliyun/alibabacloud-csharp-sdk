@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The return result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public CheckResultResponseBodyResult Result { get; set; }
         public class CheckResultResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The verification result.</para>
+            /// <para>The authentication result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>**</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <para>The face information.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>**</para>
+            /// <para>{&quot;facePassed&quot;:&quot;Y&quot;}</para>
             /// </summary>
             [NameInMap("ExtFaceInfo")]
             [Validation(Required=false)]
@@ -80,14 +80,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <para>The ID information.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>**</para>
+            /// <para>{&quot;ocrIdPassed&quot;:&quot;Y&quot;}</para>
             /// </summary>
             [NameInMap("ExtIdInfo")]
             [Validation(Required=false)]
             public string ExtIdInfo { get; set; }
 
             /// <summary>
-            /// <para>The extended information, in JSON string format.</para>
+            /// <para>The extended information, which is a JSON string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -107,10 +107,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtRiskInfo { get; set; }
 
             /// <summary>
-            /// <para>The data source verification details are described as follows (using the Indonesian data source as an example):</para>
+            /// <para>The detailed verification results of the data source. The following descriptions use the Indonesian data source as an example:</para>
             /// <list type="bullet">
-            /// <item><description><b>govId, fullName, dob</b>: A comparison score equal to 1.0 indicates a complete match with the official data source. A score lower than 1.0 indicates a mismatch. </description></item>
-            /// <item><description><b>selfiePhoto</b>: A comparison score greater than 0.8 indicates a match with the official data source. A score equal to or lower than 0.8 indicates a mismatch. </description></item>
+            /// <item><description><b>govId, fullName, dob</b>: A comparison score of 1.0 indicates an exact match with the official data source information. A score lower than 1.0 indicates a mismatch. </description></item>
+            /// <item><description><b>selfiePhoto</b>: A comparison score greater than 0.8 indicates a match with the official data source information. A score lower than or equal to 0.8 indicates a mismatch. </description></item>
             /// <item><description><b>liveness</b>: A score higher than 0.95 indicates a liveness detection risk. </description></item>
             /// <item><description><b>imgManipulationScore</b>: A score higher than 0.95 indicates an image tampering risk.</description></item>
             /// </list>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtSourceInfo { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the verification is passed. Valid values:</para>
+            /// <para>Specifies whether the authentication is passed. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Y: Passed.</description></item>
             /// <item><description>N: Not passed.</description></item>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <para>The sub-result code.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>200</para>
             /// </summary>
             [NameInMap("SubCode")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class DocOcrMaxV2ResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The return message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -40,24 +40,24 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The return result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public DocOcrMaxV2ResponseBodyResult Result { get; set; }
         public class DocOcrMaxV2ResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The card and certificate recognition result. This parameter is returned only when the API response is successful.</para>
+            /// <para>The ID document recognition result. This parameter is returned only when the API response is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
             ///   &quot;ocrIdInfo&quot;: {
             ///     &quot;id_number&quot;: &quot;<em><b><b>719</b></b></em><em>&quot;,
-            ///     &quot;address&quot;: &quot;xxxxxx,
-            ///     &quot;ethnicity&quot;: &quot;汉&quot;,
-            ///     &quot;date_of_birth&quot;: &quot;1990年06月02日&quot;,
-            ///     &quot;sex&quot;: &quot;女&quot;,
-            ///     &quot;name&quot;: &quot;何</em>*&quot;
+            ///     &quot;address&quot;: &quot;xxxxxx&quot;,
+            ///     &quot;ethnicity&quot;: &quot;Han&quot;,
+            ///     &quot;date_of_birth&quot;: &quot;June 02, 1990&quot;,
+            ///     &quot;sex&quot;: &quot;Female&quot;,
+            ///     &quot;name&quot;: &quot;He</em>*&quot;
             ///   },
             ///   &quot;ocrStandardData&quot;: {
             ///     &quot;given_name_s&quot;: &quot;**&quot;,
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtIdInfo { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the verification passed. Valid values:</para>
+            /// <para>Indicates whether the authentication is passed. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Y: passed.</description></item>
             /// <item><description>N: not passed.</description></item>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string SubCode { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the verification request.</para>
+            /// <para>The unique identifier of the authentication request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>08573be80f944d95ac812e019e3655a8</para>

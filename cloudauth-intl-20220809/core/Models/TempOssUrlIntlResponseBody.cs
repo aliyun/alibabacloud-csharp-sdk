@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The return message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

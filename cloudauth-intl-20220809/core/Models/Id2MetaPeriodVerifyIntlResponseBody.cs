@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class Id2MetaPeriodVerifyIntlResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. For more information about response codes, see the description of response codes and messages.</para>
+        /// <para>The return code. For more information about return codes, see Return codes and messages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <list type="bullet">
             /// <item><description><para>Y: Passed.</para>
             /// </description></item>
-            /// <item><description><para>N: Not passed.</para>
+            /// <item><description><para>N: Failed.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string Passed { get; set; }
 
             /// <summary>
-            /// <para>The description of the authentication result. For more information, see the ResultObject.SubCode error code description.</para>
+            /// <para>The description of the authentication result. For more information, see ResultObject.SubCode error codes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>

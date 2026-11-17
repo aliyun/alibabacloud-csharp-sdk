@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The face library code.</para>
+        /// <para>The face group code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FaceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paginated query.</para>
+        /// <para>The maximum number of entries per page for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

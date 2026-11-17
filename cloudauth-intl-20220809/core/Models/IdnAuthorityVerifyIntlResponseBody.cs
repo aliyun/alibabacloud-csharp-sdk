@@ -40,17 +40,17 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The response result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public IdnAuthorityVerifyIntlResponseBodyResult Result { get; set; }
         public class IdnAuthorityVerifyIntlResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The detailed verification results from the data source are described as follows (using the Indonesian data source as an example):</para>
+            /// <para>The detailed verification results of the data source. The following descriptions use the Indonesian data source as an example:</para>
             /// <list type="bullet">
-            /// <item><description><b>govId, fullName, dob</b>: A comparison score equal to 1.0 indicates a complete match with the official data source. A score lower than 1.0 indicates a mismatch. </description></item>
-            /// <item><description><b>selfiePhoto</b>: A comparison score greater than 0.8 indicates a match with the official data source. A score equal to or lower than 0.8 indicates a mismatch. </description></item>
+            /// <item><description><b>govId, fullName, dob</b>: A comparison score of 1.0 indicates that the information is completely consistent with the official data source. A score lower than 1.0 indicates inconsistency. </description></item>
+            /// <item><description><b>selfiePhoto</b>: A comparison score greater than 0.8 indicates that the information is consistent with the official data source. A score lower than or equal to 0.8 indicates inconsistency. </description></item>
             /// <item><description><b>liveness</b>: A score higher than 0.95 indicates a liveness detection risk. </description></item>
             /// <item><description><b>imgManipulationScore</b>: A score higher than 0.95 indicates an image tampering risk.</description></item>
             /// </list>
@@ -72,8 +72,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <summary>
             /// <para>Indicates whether the verification is passed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Y: passed.</description></item>
-            /// <item><description>N: not passed.</description></item>
+            /// <item><description>Y: Passed.</description></item>
+            /// <item><description>N: Not passed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

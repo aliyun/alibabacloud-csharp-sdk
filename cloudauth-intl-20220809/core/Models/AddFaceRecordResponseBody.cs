@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The return result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtFaceInfo { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the verification is passed. Valid values:</para>
+            /// <para>Indicates whether the authentication passed. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Y: Passed.</description></item>
             /// <item><description>N: Not passed.</description></item>

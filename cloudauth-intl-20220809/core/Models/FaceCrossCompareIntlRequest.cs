@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>The comparison mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: chain comparison (default). A:B and B:C.</description></item>
-        /// <item><description>1: circular comparison. A:B, B:C, and C:A.</description></item>
+        /// <item><description>0: chained comparison (default). A to B and B to C.</description></item>
+        /// <item><description>1: circular comparison. A to B, B to C, and C to A.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string CompareModel { get; set; }
 
         /// <summary>
-        /// <para>The face matching threshold. This parameter is reserved by the system and does not support custom values.</para>
+        /// <para>The face matching threshold. This parameter is reserved for the system and does not support custom values.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FaceVerifyThreshold { get; set; }
 
         /// <summary>
-        /// <para>The custom unique business identifier, used for subsequent troubleshooting. The value is a combination of letters and digits with a length of 32 characters. Ensure that the value is unique.</para>
+        /// <para>The custom unique business identifier used for subsequent troubleshooting. It supports a combination of up to 32 letters and digits. Make sure that the value is unique.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string MerchantBizId { get; set; }
 
         /// <summary>
-        /// <para>The product solution to use. Valid values:
+        /// <para>The product solution to integrate. Valid values:
         /// FACE_CROSS_COMPARE.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string SceneCode { get; set; }
 
         /// <summary>
-        /// <para>The Base64-encoded face photo.</para>
+        /// <para>The Base64-encoded facial photo.</para>
         /// 
         /// <b>Example:</b>
         /// <para>base64</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string SourceAFacePicture { get; set; }
 
         /// <summary>
-        /// <para>The URL of the face photo. The URL must be a publicly accessible HTTP or HTTPS link.</para>
+        /// <para>The URL of the facial image. The URL must be a publicly accessible HTTP or HTTPS link.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://www.xxx.com/1.jpg">https://www.xxx.com/1.jpg</a></para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string SourceAFacePictureUrl { get; set; }
 
         /// <summary>
-        /// <para>The Base64-encoded face photo.</para>
+        /// <para>The Base64-encoded facial photo.</para>
         /// 
         /// <b>Example:</b>
         /// <para>base64</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string SourceBFacePicture { get; set; }
 
         /// <summary>
-        /// <para>The URL of the face photo. The URL must be a publicly accessible HTTP or HTTPS link.</para>
+        /// <para>The URL of the facial image. The URL must be a publicly accessible HTTP or HTTPS link.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://www.xxx.com/1.jpg">https://www.xxx.com/1.jpg</a></para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string SourceBFacePictureUrl { get; set; }
 
         /// <summary>
-        /// <para>The Base64-encoded face photo.</para>
+        /// <para>The Base64-encoded facial photo.</para>
         /// 
         /// <b>Example:</b>
         /// <para>base64</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string SourceCFacePicture { get; set; }
 
         /// <summary>
-        /// <para>The URL of the face photo. The URL must be a publicly accessible HTTP or HTTPS link.</para>
+        /// <para>The URL of the facial image. The URL must be a publicly accessible HTTP or HTTPS link.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://www.xxx.com/1.jpg">https://www.xxx.com/1.jpg</a></para>

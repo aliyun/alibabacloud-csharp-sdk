@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The verification result.</para>
+        /// <para>The return result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -62,10 +62,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string BizCode { get; set; }
 
             /// <summary>
-            /// <para>The carrier name. Valid values:</para>
+            /// <para>The name of the Internet service provider (ISP). Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CMCC: China Mobile</description></item>
-            /// <item><description>CUCC: China Unicom</description></item>
+            /// <item><description>CMCC: China Mobile.</description></item>
+            /// <item><description>CUCC: China Unicom.</description></item>
             /// <item><description>CTCC: China Telecom.</description></item>
             /// </list>
             /// 
@@ -80,10 +80,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <para>The detailed verification result. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>101: Verification passed. </description></item>
-            /// <item><description>201: The phone number is inconsistent with the name, and the phone number is inconsistent with the ID card number. </description></item>
-            /// <item><description>202: The phone number is consistent with the name, but the phone number is inconsistent with the ID card number. </description></item>
-            /// <item><description>203: The phone number is consistent with the ID card number, but the phone number is inconsistent with the name. </description></item>
-            /// <item><description>204: Other inconsistency.</description></item>
+            /// <item><description>201: The mobile phone number does not match the name or the ID card number. </description></item>
+            /// <item><description>202: The mobile phone number matches the name but does not match the ID card number. </description></item>
+            /// <item><description>203: The mobile phone number matches the ID card number but does not match the name. </description></item>
+            /// <item><description>204: Other inconsistencies.</description></item>
             /// <item><description>301: No record found.</description></item>
             /// </list>
             /// 

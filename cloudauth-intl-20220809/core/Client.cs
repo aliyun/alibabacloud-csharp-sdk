@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "Cloudauth-intl";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("cloudauth-intl", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -246,7 +249,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a face image to a specified face library.</para>
+        /// <para>Adds a face image to a specified face group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -312,7 +315,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a face image to a specified face library.</para>
+        /// <para>Adds a face image to a specified face group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -378,7 +381,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a face image to a specified face library.</para>
+        /// <para>Adds a face image to a specified face group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -396,7 +399,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a face image to a specified face library.</para>
+        /// <para>Adds a face image to a specified face group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -606,12 +609,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Compares the similarity of two addresses.</para>
+        /// <para>Compares the similarity of addresses.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Compares two addresses for consistency by using address standardization.</para>
+        /// <para>Standardizes and compares two addresses to check for consistency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -665,12 +668,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Compares the similarity of two addresses.</para>
+        /// <para>Compares the similarity of addresses.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Compares two addresses for consistency by using address standardization.</para>
+        /// <para>Standardizes and compares two addresses to check for consistency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -724,12 +727,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Compares the similarity of two addresses.</para>
+        /// <para>Compares the similarity of addresses.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Compares two addresses for consistency by using address standardization.</para>
+        /// <para>Standardizes and compares two addresses to check for consistency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -747,12 +750,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Compares the similarity of two addresses.</para>
+        /// <para>Compares the similarity of addresses.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Compares two addresses for consistency by using address standardization.</para>
+        /// <para>Standardizes and compares two addresses to check for consistency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -774,12 +777,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies whether a specified address belongs to a user\&quot;s residential address based on telecommunications service provider capabilities, using a phone number and an address (or coordinates).</para>
+        /// <para>Verifies whether a provided address belongs to the regular residence of a user based on carrier capabilities by using a mobile phone number and an address or coordinates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Verifies whether a specified address belongs to a user\&quot;s residential address based on telecommunications service provider capabilities, using a phone number and an address (or coordinates).</para>
+        /// <para>Verifies whether a provided address belongs to the regular residence of a user based on carrier capabilities by using a mobile phone number and an address or coordinates.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -867,12 +870,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies whether a specified address belongs to a user\&quot;s residential address based on telecommunications service provider capabilities, using a phone number and an address (or coordinates).</para>
+        /// <para>Verifies whether a provided address belongs to the regular residence of a user based on carrier capabilities by using a mobile phone number and an address or coordinates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Verifies whether a specified address belongs to a user\&quot;s residential address based on telecommunications service provider capabilities, using a phone number and an address (or coordinates).</para>
+        /// <para>Verifies whether a provided address belongs to the regular residence of a user based on carrier capabilities by using a mobile phone number and an address or coordinates.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -960,12 +963,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies whether a specified address belongs to a user\&quot;s residential address based on telecommunications service provider capabilities, using a phone number and an address (or coordinates).</para>
+        /// <para>Verifies whether a provided address belongs to the regular residence of a user based on carrier capabilities by using a mobile phone number and an address or coordinates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Verifies whether a specified address belongs to a user\&quot;s residential address based on telecommunications service provider capabilities, using a phone number and an address (or coordinates).</para>
+        /// <para>Verifies whether a provided address belongs to the regular residence of a user based on carrier capabilities by using a mobile phone number and an address or coordinates.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -989,12 +992,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies whether a specified address belongs to a user\&quot;s residential address based on telecommunications service provider capabilities, using a phone number and an address (or coordinates).</para>
+        /// <para>Verifies whether a provided address belongs to the regular residence of a user based on carrier capabilities by using a mobile phone number and an address or coordinates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Verifies whether a specified address belongs to a user\&quot;s residential address based on telecommunications service provider capabilities, using a phone number and an address (or coordinates).</para>
+        /// <para>Verifies whether a provided address belongs to the regular residence of a user based on carrier capabilities by using a mobile phone number and an address or coordinates.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1174,12 +1177,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides bank card element verification (two-element, three-element, and four-element) API operations.</para>
+        /// <para>Provides the API operation for bank card elements, including two-element, three-element, and four-element bank card information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Verifies bank card elements, including two-element verification (name + bank card number), three-element verification (name + ID card number + bank card number), and four-element verification (name + ID card number + phone number + bank card number) for consistency.</para>
+        /// <para>Verifies bank card information, including two-element verification (name and bank card number), three-element verification (name, ID card number, and bank card number), and four-element verification (name, ID card number, mobile phone number, and bank card number).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1253,12 +1256,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides bank card element verification (two-element, three-element, and four-element) API operations.</para>
+        /// <para>Provides the API operation for bank card elements, including two-element, three-element, and four-element bank card information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Verifies bank card elements, including two-element verification (name + bank card number), three-element verification (name + ID card number + bank card number), and four-element verification (name + ID card number + phone number + bank card number) for consistency.</para>
+        /// <para>Verifies bank card information, including two-element verification (name and bank card number), three-element verification (name, ID card number, and bank card number), and four-element verification (name, ID card number, mobile phone number, and bank card number).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1332,12 +1335,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides bank card element verification (two-element, three-element, and four-element) API operations.</para>
+        /// <para>Provides the API operation for bank card elements, including two-element, three-element, and four-element bank card information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Verifies bank card elements, including two-element verification (name + bank card number), three-element verification (name + ID card number + bank card number), and four-element verification (name + ID card number + phone number + bank card number) for consistency.</para>
+        /// <para>Verifies bank card information, including two-element verification (name and bank card number), three-element verification (name, ID card number, and bank card number), and four-element verification (name, ID card number, mobile phone number, and bank card number).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1355,12 +1358,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides bank card element verification (two-element, three-element, and four-element) API operations.</para>
+        /// <para>Provides the API operation for bank card elements, including two-element, three-element, and four-element bank card information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Verifies bank card elements, including two-element verification (name + bank card number), three-element verification (name + ID card number + bank card number), and four-element verification (name + ID card number + phone number + bank card number) for consistency.</para>
+        /// <para>Verifies bank card information, including two-element verification (name and bank card number), three-element verification (name, ID card number, and bank card number), and four-element verification (name, ID card number, mobile phone number, and bank card number).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1382,7 +1385,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides server-side ID card and certificate OCR capabilities.</para>
+        /// <para>Performs OCR on ID cards and certificates through a server-side API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1464,7 +1467,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides server-side ID card and certificate OCR capabilities.</para>
+        /// <para>Performs OCR on ID cards and certificates through a server-side API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1546,7 +1549,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides server-side ID card and certificate OCR capabilities.</para>
+        /// <para>Performs OCR on ID cards and certificates through a server-side API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1570,7 +1573,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides server-side ID card and certificate OCR capabilities.</para>
+        /// <para>Performs OCR on ID cards and certificates through a server-side API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1590,7 +1593,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the verification result.</para>
+        /// <para>Queries the detailed results of an authentication transaction. This API operation is part of the SDK integration solution and must be used in conjunction with the client SDK. Calling this operation alone cannot complete identity verification. (Product solutions: eKYC_PRO, eKYC, eKYC_NDI, FACE_IDU, FACE_VERIFY, FACE_LIVENESS_PRO, and ID_OCR_PRO). After the client completes authentication, your server calls this operation by using the TransactionId to query Alibaba Cloud for the detailed results of the authentication. This operation only queries the results and does not trigger or perform verification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1648,7 +1651,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the verification result.</para>
+        /// <para>Queries the detailed results of an authentication transaction. This API operation is part of the SDK integration solution and must be used in conjunction with the client SDK. Calling this operation alone cannot complete identity verification. (Product solutions: eKYC_PRO, eKYC, eKYC_NDI, FACE_IDU, FACE_VERIFY, FACE_LIVENESS_PRO, and ID_OCR_PRO). After the client completes authentication, your server calls this operation by using the TransactionId to query Alibaba Cloud for the detailed results of the authentication. This operation only queries the results and does not trigger or perform verification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1706,7 +1709,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the verification result.</para>
+        /// <para>Queries the detailed results of an authentication transaction. This API operation is part of the SDK integration solution and must be used in conjunction with the client SDK. Calling this operation alone cannot complete identity verification. (Product solutions: eKYC_PRO, eKYC, eKYC_NDI, FACE_IDU, FACE_VERIFY, FACE_LIVENESS_PRO, and ID_OCR_PRO). After the client completes authentication, your server calls this operation by using the TransactionId to query Alibaba Cloud for the detailed results of the authentication. This operation only queries the results and does not trigger or perform verification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1724,7 +1727,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the verification result.</para>
+        /// <para>Queries the detailed results of an authentication transaction. This API operation is part of the SDK integration solution and must be used in conjunction with the client SDK. Calling this operation alone cannot complete identity verification. (Product solutions: eKYC_PRO, eKYC, eKYC_NDI, FACE_IDU, FACE_VERIFY, FACE_LIVENESS_PRO, and ID_OCR_PRO). After the client completes authentication, your server calls this operation by using the TransactionId to query Alibaba Cloud for the detailed results of the authentication. This operation only queries the results and does not trigger or perform verification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1742,7 +1745,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authentication log query.</para>
+        /// <para>Queries the authentication log query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1788,7 +1791,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authentication log query.</para>
+        /// <para>Queries the authentication log query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1834,7 +1837,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authentication log query.</para>
+        /// <para>Queries the authentication log query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1852,7 +1855,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authentication log query.</para>
+        /// <para>Queries the authentication log query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1870,12 +1873,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the credential recognition result.</para>
+        /// <para>Queries the credential recognition results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you obtain the TransactionId, you can call this operation on the server side to retrieve the corresponding authentication result.</para>
+        /// <para>After you obtain the TransactionId, you can call this operation on the server to retrieve the corresponding authentication results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1917,12 +1920,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the credential recognition result.</para>
+        /// <para>Queries the credential recognition results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you obtain the TransactionId, you can call this operation on the server side to retrieve the corresponding authentication result.</para>
+        /// <para>After you obtain the TransactionId, you can call this operation on the server to retrieve the corresponding authentication results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1964,12 +1967,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the credential recognition result.</para>
+        /// <para>Queries the credential recognition results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you obtain the TransactionId, you can call this operation on the server side to retrieve the corresponding authentication result.</para>
+        /// <para>After you obtain the TransactionId, you can call this operation on the server to retrieve the corresponding authentication results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1987,12 +1990,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the credential recognition result.</para>
+        /// <para>Queries the credential recognition results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you obtain the TransactionId, you can call this operation on the server side to retrieve the corresponding authentication result.</para>
+        /// <para>After you obtain the TransactionId, you can call this operation on the server to retrieve the corresponding authentication results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2010,12 +2013,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name.</para>
+        /// <para>Uploads credential images, including utility bills and credit card statements, and uses Qwen-VL to intelligently fetch billing addresses and names through this API operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) has been forged, and extracts key information from the credential.</para>
+        /// <para>Uses AI technology to detect whether credential documents, such as electronic utility bills and credit card statements, are forged, and extracts key information from the documents.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2099,12 +2102,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name.</para>
+        /// <para>Uploads credential images, including utility bills and credit card statements, and uses Qwen-VL to intelligently fetch billing addresses and names through this API operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) has been forged, and extracts key information from the credential.</para>
+        /// <para>Uses AI technology to detect whether credential documents, such as electronic utility bills and credit card statements, are forged, and extracts key information from the documents.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2188,12 +2191,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name.</para>
+        /// <para>Uploads credential images, including utility bills and credit card statements, and uses Qwen-VL to intelligently fetch billing addresses and names through this API operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) has been forged, and extracts key information from the credential.</para>
+        /// <para>Uses AI technology to detect whether credential documents, such as electronic utility bills and credit card statements, are forged, and extracts key information from the documents.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2211,12 +2214,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name.</para>
+        /// <para>Uploads credential images, including utility bills and credit card statements, and uses Qwen-VL to intelligently fetch billing addresses and names through this API operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) has been forged, and extracts key information from the credential.</para>
+        /// <para>Uses AI technology to detect whether credential documents, such as electronic utility bills and credit card statements, are forged, and extracts key information from the documents.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2234,12 +2237,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name.</para>
+        /// <para>Provides an API operation to upload credential images, such as utility bills and credit card statements, and uses Qwen-VL to intelligently fetch the billing address and name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) is forged, and extracts key information from the credential.</para>
+        /// <para>Uses AI technology to detect whether credentials, such as electronic utility bills and credit card statements, are forged, and extracts key information from the credentials.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2327,12 +2330,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name.</para>
+        /// <para>Provides an API operation to upload credential images, such as utility bills and credit card statements, and uses Qwen-VL to intelligently fetch the billing address and name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) is forged, and extracts key information from the credential.</para>
+        /// <para>Uses AI technology to detect whether credentials, such as electronic utility bills and credit card statements, are forged, and extracts key information from the credentials.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2420,12 +2423,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name.</para>
+        /// <para>Provides an API operation to upload credential images, such as utility bills and credit card statements, and uses Qwen-VL to intelligently fetch the billing address and name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) is forged, and extracts key information from the credential.</para>
+        /// <para>Uses AI technology to detect whether credentials, such as electronic utility bills and credit card statements, are forged, and extracts key information from the credentials.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2443,12 +2446,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name.</para>
+        /// <para>Provides an API operation to upload credential images, such as utility bills and credit card statements, and uses Qwen-VL to intelligently fetch the billing address and name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) is forged, and extracts key information from the credential.</para>
+        /// <para>Uses AI technology to detect whether credentials, such as electronic utility bills and credit card statements, are forged, and extracts key information from the credentials.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2663,7 +2666,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Initializes the credential recognition OCR operation and retrieves a transactionId through this operation.</para>
+        /// <para>Initializes the credential recognition OCR process and retrieves a transaction ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2760,7 +2763,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Initializes the credential recognition OCR operation and retrieves a transactionId through this operation.</para>
+        /// <para>Initializes the credential recognition OCR process and retrieves a transaction ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2857,7 +2860,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Initializes the credential recognition OCR operation and retrieves a transactionId through this operation.</para>
+        /// <para>Initializes the credential recognition OCR process and retrieves a transaction ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2880,7 +2883,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Initializes the credential recognition OCR operation and retrieves a transactionId through this operation.</para>
+        /// <para>Initializes the credential recognition OCR process and retrieves a transaction ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2898,12 +2901,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a credential recognition request.</para>
+        /// <para>Submits credential recognition information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Initializes the credential recognition OCR operation. Call this operation to obtain a transactionId.</para>
+        /// <para>Initializes the credential recognition OCR operation to obtain a transactionId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2999,12 +3002,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a credential recognition request.</para>
+        /// <para>Submits credential recognition information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Initializes the credential recognition OCR operation. Call this operation to obtain a transactionId.</para>
+        /// <para>Initializes the credential recognition OCR operation to obtain a transactionId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3100,12 +3103,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a credential recognition request.</para>
+        /// <para>Submits credential recognition information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Initializes the credential recognition OCR operation. Call this operation to obtain a transactionId.</para>
+        /// <para>Initializes the credential recognition OCR operation to obtain a transactionId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3123,12 +3126,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a credential recognition request.</para>
+        /// <para>Submits credential recognition information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Initializes the credential recognition OCR operation. Call this operation to obtain a transactionId.</para>
+        /// <para>Initializes the credential recognition OCR operation to obtain a transactionId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3338,12 +3341,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides the API operation for the credential verification service. This operation uses a large language model to detect image tampering, forgery, and image quality issues in submitted credential images.</para>
+        /// <para>Detects image tampering, forgery, and quality issues in credential images by using large models for the credential verification API operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Submits credential image information, performs image quality, tampering, and forgery detection, and returns the detection results.</para>
+        /// <para>Submits credential image information to detect image quality, tampering, and forgery, and returns the detection results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3403,12 +3406,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides the API operation for the credential verification service. This operation uses a large language model to detect image tampering, forgery, and image quality issues in submitted credential images.</para>
+        /// <para>Detects image tampering, forgery, and quality issues in credential images by using large models for the credential verification API operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Submits credential image information, performs image quality, tampering, and forgery detection, and returns the detection results.</para>
+        /// <para>Submits credential image information to detect image quality, tampering, and forgery, and returns the detection results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3468,12 +3471,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides the API operation for the credential verification service. This operation uses a large language model to detect image tampering, forgery, and image quality issues in submitted credential images.</para>
+        /// <para>Detects image tampering, forgery, and quality issues in credential images by using large models for the credential verification API operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Submits credential image information, performs image quality, tampering, and forgery detection, and returns the detection results.</para>
+        /// <para>Submits credential image information to detect image quality, tampering, and forgery, and returns the detection results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3491,12 +3494,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides the API operation for the credential verification service. This operation uses a large language model to detect image tampering, forgery, and image quality issues in submitted credential images.</para>
+        /// <para>Detects image tampering, forgery, and quality issues in credential images by using large models for the credential verification API operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Submits credential image information, performs image quality, tampering, and forgery detection, and returns the detection results.</para>
+        /// <para>Submits credential image information to detect image quality, tampering, and forgery, and returns the detection results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3706,12 +3709,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detects deepfake risks in facial images.</para>
+        /// <para>Provides the API for the face deepfake detection service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Submits a facial image and uses algorithms to detect potential deepfake risks. This operation covers risk scenarios such as AIGC-generated faces, deep forgery face swaps, template faces, and recaptured faces. It returns risk labels and confidence scores.</para>
+        /// <para>Accepts face images and uses algorithms to detect deepfake risks. Covers risk scenarios such as AIGC-generated faces, deepfake face swaps, template faces, and recaptured faces, and outputs risk tags and confidence scores.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3775,12 +3778,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detects deepfake risks in facial images.</para>
+        /// <para>Provides the API for the face deepfake detection service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Submits a facial image and uses algorithms to detect potential deepfake risks. This operation covers risk scenarios such as AIGC-generated faces, deep forgery face swaps, template faces, and recaptured faces. It returns risk labels and confidence scores.</para>
+        /// <para>Accepts face images and uses algorithms to detect deepfake risks. Covers risk scenarios such as AIGC-generated faces, deepfake face swaps, template faces, and recaptured faces, and outputs risk tags and confidence scores.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3844,12 +3847,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detects deepfake risks in facial images.</para>
+        /// <para>Provides the API for the face deepfake detection service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Submits a facial image and uses algorithms to detect potential deepfake risks. This operation covers risk scenarios such as AIGC-generated faces, deep forgery face swaps, template faces, and recaptured faces. It returns risk labels and confidence scores.</para>
+        /// <para>Accepts face images and uses algorithms to detect deepfake risks. Covers risk scenarios such as AIGC-generated faces, deepfake face swaps, template faces, and recaptured faces, and outputs risk tags and confidence scores.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3867,12 +3870,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detects deepfake risks in facial images.</para>
+        /// <para>Provides the API for the face deepfake detection service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Submits a facial image and uses algorithms to detect potential deepfake risks. This operation covers risk scenarios such as AIGC-generated faces, deep forgery face swaps, template faces, and recaptured faces. It returns risk labels and confidence scores.</para>
+        /// <para>Accepts face images and uses algorithms to detect deepfake risks. Covers risk scenarios such as AIGC-generated faces, deepfake face swaps, template faces, and recaptured faces, and outputs risk tags and confidence scores.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3890,12 +3893,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ID Verification provides face deepfake detection capabilities, which can be integrated independently through API calls.</para>
+        /// <para>Provides face deepfake detection capabilities for ID Verification, which can be integrated independently through API operations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Submit a face image to detect deepfake risks through algorithms. This covers risk scenarios such as AIGC-generated faces, deep forgery face swaps, template faces, and re-captured faces, and outputs risk labels and confidence scores.</para>
+        /// <para>Detects deepfake risks in face images by using algorithms. Covers risk scenarios such as AI-generated content (AIGC) faces, deepfake face swaps, template faces, and recaptured faces, and outputs risk tags and confidence levels.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3961,12 +3964,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ID Verification provides face deepfake detection capabilities, which can be integrated independently through API calls.</para>
+        /// <para>Provides face deepfake detection capabilities for ID Verification, which can be integrated independently through API operations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Submit a face image to detect deepfake risks through algorithms. This covers risk scenarios such as AIGC-generated faces, deep forgery face swaps, template faces, and re-captured faces, and outputs risk labels and confidence scores.</para>
+        /// <para>Detects deepfake risks in face images by using algorithms. Covers risk scenarios such as AI-generated content (AIGC) faces, deepfake face swaps, template faces, and recaptured faces, and outputs risk tags and confidence levels.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4032,12 +4035,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ID Verification provides face deepfake detection capabilities, which can be integrated independently through API calls.</para>
+        /// <para>Provides face deepfake detection capabilities for ID Verification, which can be integrated independently through API operations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Submit a face image to detect deepfake risks through algorithms. This covers risk scenarios such as AIGC-generated faces, deep forgery face swaps, template faces, and re-captured faces, and outputs risk labels and confidence scores.</para>
+        /// <para>Detects deepfake risks in face images by using algorithms. Covers risk scenarios such as AI-generated content (AIGC) faces, deepfake face swaps, template faces, and recaptured faces, and outputs risk tags and confidence levels.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4055,12 +4058,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ID Verification provides face deepfake detection capabilities, which can be integrated independently through API calls.</para>
+        /// <para>Provides face deepfake detection capabilities for ID Verification, which can be integrated independently through API operations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Submit a face image to detect deepfake risks through algorithms. This covers risk scenarios such as AIGC-generated faces, deep forgery face swaps, template faces, and re-captured faces, and outputs risk labels and confidence scores.</para>
+        /// <para>Detects deepfake risks in face images by using algorithms. Covers risk scenarios such as AI-generated content (AIGC) faces, deepfake face swaps, template faces, and recaptured faces, and outputs risk tags and confidence levels.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4390,7 +4393,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a face record.</para>
+        /// <para>Deletes face records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4432,7 +4435,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a face record.</para>
+        /// <para>Deletes face records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4474,7 +4477,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a face record.</para>
+        /// <para>Deletes face records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4492,7 +4495,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a face record.</para>
+        /// <para>Deletes face records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4638,7 +4641,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes data related to a user authentication record.</para>
+        /// <para>Deletes data related to user authentication records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4688,7 +4691,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes data related to a user authentication record.</para>
+        /// <para>Deletes data related to user authentication records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4738,7 +4741,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes data related to a user authentication record.</para>
+        /// <para>Deletes data related to user authentication records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4756,7 +4759,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes data related to a user authentication record.</para>
+        /// <para>Deletes data related to user authentication records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4774,7 +4777,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides server-side card and certificate OCR capabilities.</para>
+        /// <para>Performs server-side OCR for ID cards and certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4858,7 +4861,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides server-side card and certificate OCR capabilities.</para>
+        /// <para>Performs server-side OCR for ID cards and certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4942,7 +4945,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides server-side card and certificate OCR capabilities.</para>
+        /// <para>Performs server-side OCR for ID cards and certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4960,7 +4963,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides server-side card and certificate OCR capabilities.</para>
+        /// <para>Performs server-side OCR for ID cards and certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4978,7 +4981,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Recognizes global identity documents through OCR.</para>
+        /// <para>Recognizes global identity documents by using OCR.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5078,7 +5081,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Recognizes global identity documents through OCR.</para>
+        /// <para>Recognizes global identity documents by using OCR.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5178,7 +5181,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Recognizes global identity documents through OCR.</para>
+        /// <para>Recognizes global identity documents by using OCR.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5196,7 +5199,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Recognizes global identity documents through OCR.</para>
+        /// <para>Recognizes global identity documents by using OCR.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5214,7 +5217,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Recognizes identity documents worldwide through OCR.</para>
+        /// <para>Recognizes global ID documents by using OCR.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5310,7 +5313,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Recognizes identity documents worldwide through OCR.</para>
+        /// <para>Recognizes global ID documents by using OCR.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5406,7 +5409,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Recognizes identity documents worldwide through OCR.</para>
+        /// <para>Recognizes global ID documents by using OCR.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5424,7 +5427,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Recognizes identity documents worldwide through OCR.</para>
+        /// <para>Recognizes global ID documents by using OCR.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5634,7 +5637,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides server-side card and certificate OCR capabilities.</para>
+        /// <para>Performs server-side optical character recognition (OCR) on ID cards.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5722,7 +5725,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides server-side card and certificate OCR capabilities.</para>
+        /// <para>Performs server-side optical character recognition (OCR) on ID cards.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5810,7 +5813,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides server-side card and certificate OCR capabilities.</para>
+        /// <para>Performs server-side optical character recognition (OCR) on ID cards.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5828,7 +5831,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides server-side card and certificate OCR capabilities.</para>
+        /// <para>Performs server-side optical character recognition (OCR) on ID cards.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6038,7 +6041,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Downloads verification task records.</para>
+        /// <para>Downloads a verification task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6096,7 +6099,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Downloads verification task records.</para>
+        /// <para>Downloads a verification task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6154,7 +6157,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Downloads verification task records.</para>
+        /// <para>Downloads a verification task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6172,7 +6175,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Downloads verification task records.</para>
+        /// <para>Downloads a verification task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6426,7 +6429,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides a server-side-only API for the eKYC solution.</para>
+        /// <para>Provides a server-side API for the eKYC solution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6534,7 +6537,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides a server-side-only API for the eKYC solution.</para>
+        /// <para>Provides a server-side API for the eKYC solution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6642,7 +6645,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides a server-side-only API for the eKYC solution.</para>
+        /// <para>Provides a server-side API for the eKYC solution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6660,7 +6663,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides a server-side-only API for the eKYC solution.</para>
+        /// <para>Provides a server-side API for the eKYC solution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6922,7 +6925,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uses facial recognition technology to compare and verify two input face images, returning the face comparison result and similarity score.</para>
+        /// <para>Compares and verifies two input face images by using face recognition technology, and returns the face comparison result and similarity score.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6990,7 +6993,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uses facial recognition technology to compare and verify two input face images, returning the face comparison result and similarity score.</para>
+        /// <para>Compares and verifies two input face images by using face recognition technology, and returns the face comparison result and similarity score.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7058,7 +7061,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uses facial recognition technology to compare and verify two input face images, returning the face comparison result and similarity score.</para>
+        /// <para>Compares and verifies two input face images by using face recognition technology, and returns the face comparison result and similarity score.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7076,7 +7079,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uses facial recognition technology to compare and verify two input face images, returning the face comparison result and similarity score.</para>
+        /// <para>Compares and verifies two input face images by using face recognition technology, and returns the face comparison result and similarity score.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7094,7 +7097,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Compares two face images using face recognition technology and returns the comparison result and similarity score.</para>
+        /// <para>Compares and verifies two input face images by using face recognition technology, and returns the face comparison result and similarity score.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7170,7 +7173,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Compares two face images using face recognition technology and returns the comparison result and similarity score.</para>
+        /// <para>Compares and verifies two input face images by using face recognition technology, and returns the face comparison result and similarity score.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7246,7 +7249,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Compares two face images using face recognition technology and returns the comparison result and similarity score.</para>
+        /// <para>Compares and verifies two input face images by using face recognition technology, and returns the face comparison result and similarity score.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7264,7 +7267,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Compares two face images using face recognition technology and returns the comparison result and similarity score.</para>
+        /// <para>Compares and verifies two input face images by using face recognition technology, and returns the face comparison result and similarity score.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7730,7 +7733,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs server-side liveness detection and face duplication check (FaceDuplicationCheckIntl) for scenarios where SDK integration is not feasible. Submits face images through the API to verify whether the user is a real person, compare the face against a retained face image for identity verification, search face libraries to determine whether the face already exists, and automatically register the face to a specified face library after successful verification.</para>
+        /// <para>Detects duplicate faces in scenarios where SDK integration is unavailable. This operation uses the API to pass face images and provides the following capabilities: verifying whether the user is a real person, comparing the face with a retained face for identity verification, searching a face library to check for existence, and automatically registering the face to a specified face library after successful verification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7846,7 +7849,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs server-side liveness detection and face duplication check (FaceDuplicationCheckIntl) for scenarios where SDK integration is not feasible. Submits face images through the API to verify whether the user is a real person, compare the face against a retained face image for identity verification, search face libraries to determine whether the face already exists, and automatically register the face to a specified face library after successful verification.</para>
+        /// <para>Detects duplicate faces in scenarios where SDK integration is unavailable. This operation uses the API to pass face images and provides the following capabilities: verifying whether the user is a real person, comparing the face with a retained face for identity verification, searching a face library to check for existence, and automatically registering the face to a specified face library after successful verification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7962,7 +7965,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs server-side liveness detection and face duplication check (FaceDuplicationCheckIntl) for scenarios where SDK integration is not feasible. Submits face images through the API to verify whether the user is a real person, compare the face against a retained face image for identity verification, search face libraries to determine whether the face already exists, and automatically register the face to a specified face library after successful verification.</para>
+        /// <para>Detects duplicate faces in scenarios where SDK integration is unavailable. This operation uses the API to pass face images and provides the following capabilities: verifying whether the user is a real person, comparing the face with a retained face for identity verification, searching a face library to check for existence, and automatically registering the face to a specified face library after successful verification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7980,7 +7983,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs server-side liveness detection and face duplication check (FaceDuplicationCheckIntl) for scenarios where SDK integration is not feasible. Submits face images through the API to verify whether the user is a real person, compare the face against a retained face image for identity verification, search face libraries to determine whether the face already exists, and automatically register the face to a specified face library after successful verification.</para>
+        /// <para>Detects duplicate faces in scenarios where SDK integration is unavailable. This operation uses the API to pass face images and provides the following capabilities: verifying whether the user is a real person, comparing the face with a retained face for identity verification, searching a face library to check for existence, and automatically registering the face to a specified face library after successful verification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7998,7 +8001,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides the server-side API for international Face Guard.</para>
+        /// <para>Calls the server-side API of Face Guard International.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8056,7 +8059,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides the server-side API for international Face Guard.</para>
+        /// <para>Calls the server-side API of Face Guard International.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8114,7 +8117,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides the server-side API for international Face Guard.</para>
+        /// <para>Calls the server-side API of Face Guard International.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8132,7 +8135,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides the server-side API for international Face Guard.</para>
+        /// <para>Calls the server-side API of Face Guard International.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8150,7 +8153,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides the server-side API for passive liveness detection.</para>
+        /// <para>Performs server-side passive liveness detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8230,7 +8233,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides the server-side API for passive liveness detection.</para>
+        /// <para>Performs server-side passive liveness detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8310,7 +8313,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides the server-side API for passive liveness detection.</para>
+        /// <para>Performs server-side passive liveness detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8328,7 +8331,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides the server-side API for passive liveness detection.</para>
+        /// <para>Performs server-side passive liveness detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8346,7 +8349,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detects whether a face in an image is from a real person by using the API operation. This service combines the Qwen-VL large model for in-depth forgery risk detection to determine face liveness.</para>
+        /// <para>Performs liveness detection on a pre-captured face image passed through an API operation, and uses the Qwen-VL large model to detect forgery risks and determine whether the face belongs to a real person.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8423,7 +8426,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detects whether a face in an image is from a real person by using the API operation. This service combines the Qwen-VL large model for in-depth forgery risk detection to determine face liveness.</para>
+        /// <para>Performs liveness detection on a pre-captured face image passed through an API operation, and uses the Qwen-VL large model to detect forgery risks and determine whether the face belongs to a real person.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8500,7 +8503,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detects whether a face in an image is from a real person by using the API operation. This service combines the Qwen-VL large model for in-depth forgery risk detection to determine face liveness.</para>
+        /// <para>Performs liveness detection on a pre-captured face image passed through an API operation, and uses the Qwen-VL large model to detect forgery risks and determine whether the face belongs to a real person.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8523,7 +8526,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detects whether a face in an image is from a real person by using the API operation. This service combines the Qwen-VL large model for in-depth forgery risk detection to determine face liveness.</para>
+        /// <para>Performs liveness detection on a pre-captured face image passed through an API operation, and uses the Qwen-VL large model to detect forgery risks and determine whether the face belongs to a real person.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8738,12 +8741,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs real face detection by receiving pre-captured face images through the API operation. The algorithm primarily identifies whether a face is a screen replay or printed photo type of basic render liveness attack, and supports comparison with another face image to authenticate whether they belong to the same person.</para>
+        /// <para>Detects real faces by using pre-obtained face images passed through the API operation. The algorithm primarily identifies basic render liveness attacks such as screen recaptures and printed photos, and supports face comparison to authenticate whether two images belong to the same person.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls the FaceVerifyIntl operation to perform liveness detection on face images.</para>
+        /// <para>Calls the FaceVerifyIntl API operation to perform liveness detection on face images.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8851,12 +8854,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs real face detection by receiving pre-captured face images through the API operation. The algorithm primarily identifies whether a face is a screen replay or printed photo type of basic render liveness attack, and supports comparison with another face image to authenticate whether they belong to the same person.</para>
+        /// <para>Detects real faces by using pre-obtained face images passed through the API operation. The algorithm primarily identifies basic render liveness attacks such as screen recaptures and printed photos, and supports face comparison to authenticate whether two images belong to the same person.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls the FaceVerifyIntl operation to perform liveness detection on face images.</para>
+        /// <para>Calls the FaceVerifyIntl API operation to perform liveness detection on face images.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8964,12 +8967,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs real face detection by receiving pre-captured face images through the API operation. The algorithm primarily identifies whether a face is a screen replay or printed photo type of basic render liveness attack, and supports comparison with another face image to authenticate whether they belong to the same person.</para>
+        /// <para>Detects real faces by using pre-obtained face images passed through the API operation. The algorithm primarily identifies basic render liveness attacks such as screen recaptures and printed photos, and supports face comparison to authenticate whether two images belong to the same person.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls the FaceVerifyIntl operation to perform liveness detection on face images.</para>
+        /// <para>Calls the FaceVerifyIntl API operation to perform liveness detection on face images.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8987,12 +8990,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs real face detection by receiving pre-captured face images through the API operation. The algorithm primarily identifies whether a face is a screen replay or printed photo type of basic render liveness attack, and supports comparison with another face image to authenticate whether they belong to the same person.</para>
+        /// <para>Detects real faces by using pre-obtained face images passed through the API operation. The algorithm primarily identifies basic render liveness attacks such as screen recaptures and printed photos, and supports face comparison to authenticate whether two images belong to the same person.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls the FaceVerifyIntl operation to perform liveness detection on face images.</para>
+        /// <para>Calls the FaceVerifyIntl API operation to perform liveness detection on face images.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9422,7 +9425,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the validity period of an identity document as a two-factor authentication element.</para>
+        /// <para>Verifies the validity period of the two identity elements.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9496,7 +9499,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the validity period of an identity document as a two-factor authentication element.</para>
+        /// <para>Verifies the validity period of the two identity elements.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9570,7 +9573,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the validity period of an identity document as a two-factor authentication element.</para>
+        /// <para>Verifies the validity period of the two identity elements.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9588,7 +9591,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the validity period of an identity document as a two-factor authentication element.</para>
+        /// <para>Verifies the validity period of the two identity elements.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9606,7 +9609,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the authenticity and consistency of a name and ID card number against an authoritative data source.</para>
+        /// <para>Verifies the authenticity and consistency of a name and an ID card number through an authoritative data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9660,7 +9663,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the authenticity and consistency of a name and ID card number against an authoritative data source.</para>
+        /// <para>Verifies the authenticity and consistency of a name and an ID card number through an authoritative data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9714,7 +9717,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the authenticity and consistency of a name and ID card number against an authoritative data source.</para>
+        /// <para>Verifies the authenticity and consistency of a name and an ID card number through an authoritative data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9732,7 +9735,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the authenticity and consistency of a name and ID card number against an authoritative data source.</para>
+        /// <para>Verifies the authenticity and consistency of a name and an ID card number through an authoritative data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9750,7 +9753,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the identity of an Indonesian user by calling the authoritative source API in a standalone business scenario.</para>
+        /// <para>Verifies the identity of Indonesian users by directly calling the authoritative source API in independent business scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9842,7 +9845,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the identity of an Indonesian user by calling the authoritative source API in a standalone business scenario.</para>
+        /// <para>Verifies the identity of Indonesian users by directly calling the authoritative source API in independent business scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9934,7 +9937,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the identity of an Indonesian user by calling the authoritative source API in a standalone business scenario.</para>
+        /// <para>Verifies the identity of Indonesian users by directly calling the authoritative source API in independent business scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9952,7 +9955,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the identity of an Indonesian user by calling the authoritative source API in a standalone business scenario.</para>
+        /// <para>Verifies the identity of Indonesian users by directly calling the authoritative source API in independent business scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10162,7 +10165,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes an authentication process.</para>
+        /// <para>Initializes the authentication process.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10296,6 +10299,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdThreshold))
             {
                 query["IdThreshold"] = request.IdThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsForceFaceCentered))
+            {
+                query["IsForceFaceCentered"] = request.IsForceFaceCentered;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageConfig))
             {
@@ -10448,7 +10455,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes an authentication process.</para>
+        /// <para>Initializes the authentication process.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10582,6 +10589,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdThreshold))
             {
                 query["IdThreshold"] = request.IdThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsForceFaceCentered))
+            {
+                query["IsForceFaceCentered"] = request.IsForceFaceCentered;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageConfig))
             {
@@ -10734,7 +10745,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes an authentication process.</para>
+        /// <para>Initializes the authentication process.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10752,7 +10763,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes an authentication process.</para>
+        /// <para>Initializes the authentication process.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10770,7 +10781,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes an authentication session.</para>
+        /// <para>Creates an authentication session for SDK integration. This operation must be used in conjunction with a client SDK and cannot complete identity verification if called independently. Supported product editions include eKYC_PRO, eKYC, eKYC_NDI, FACE_IDU, FACE_VERIFY, FACE_LIVENESS_PRO, and ID_OCR_PRO. Before the client initiates authentication, your server calls this operation to create an authentication session and returns a TransactionId. You must deliver this TransactionId to the client to launch the SDK and complete the authentication. This operation only creates the session and does not perform verification.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10908,6 +10919,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdThreshold))
             {
                 query["IdThreshold"] = request.IdThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsForceFaceCentered))
+            {
+                query["IsForceFaceCentered"] = request.IsForceFaceCentered;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageConfig))
             {
@@ -11064,7 +11079,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes an authentication session.</para>
+        /// <para>Creates an authentication session for SDK integration. This operation must be used in conjunction with a client SDK and cannot complete identity verification if called independently. Supported product editions include eKYC_PRO, eKYC, eKYC_NDI, FACE_IDU, FACE_VERIFY, FACE_LIVENESS_PRO, and ID_OCR_PRO. Before the client initiates authentication, your server calls this operation to create an authentication session and returns a TransactionId. You must deliver this TransactionId to the client to launch the SDK and complete the authentication. This operation only creates the session and does not perform verification.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11202,6 +11217,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdThreshold))
             {
                 query["IdThreshold"] = request.IdThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsForceFaceCentered))
+            {
+                query["IsForceFaceCentered"] = request.IsForceFaceCentered;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageConfig))
             {
@@ -11358,7 +11377,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes an authentication session.</para>
+        /// <para>Creates an authentication session for SDK integration. This operation must be used in conjunction with a client SDK and cannot complete identity verification if called independently. Supported product editions include eKYC_PRO, eKYC, eKYC_NDI, FACE_IDU, FACE_VERIFY, FACE_LIVENESS_PRO, and ID_OCR_PRO. Before the client initiates authentication, your server calls this operation to create an authentication session and returns a TransactionId. You must deliver this TransactionId to the client to launch the SDK and complete the authentication. This operation only creates the session and does not perform verification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11376,7 +11395,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes an authentication session.</para>
+        /// <para>Creates an authentication session for SDK integration. This operation must be used in conjunction with a client SDK and cannot complete identity verification if called independently. Supported product editions include eKYC_PRO, eKYC, eKYC_NDI, FACE_IDU, FACE_VERIFY, FACE_LIVENESS_PRO, and ID_OCR_PRO. Before the client initiates authentication, your server calls this operation to create an authentication session and returns a TransactionId. You must deliver this TransactionId to the client to launch the SDK and complete the authentication. This operation only creates the session and does not perform verification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11638,12 +11657,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures client connection keep-alive settings.</para>
+        /// <para>Maintains client connections.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Configures client connection keep-alive settings.</para>
+        /// <para>Maintains client connections.</para>
         /// </description>
         /// 
         /// <param name="runtime">
@@ -11673,12 +11692,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures client connection keep-alive settings.</para>
+        /// <para>Maintains client connections.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Configures client connection keep-alive settings.</para>
+        /// <para>Maintains client connections.</para>
         /// </description>
         /// 
         /// <param name="runtime">
@@ -11708,12 +11727,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures client connection keep-alive settings.</para>
+        /// <para>Maintains client connections.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Configures client connection keep-alive settings.</para>
+        /// <para>Maintains client connections.</para>
         /// </description>
         /// 
         /// <returns>
@@ -11727,12 +11746,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures client connection keep-alive settings.</para>
+        /// <para>Maintains client connections.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Configures client connection keep-alive settings.</para>
+        /// <para>Maintains client connections.</para>
         /// </description>
         /// 
         /// <returns>
@@ -11746,12 +11765,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the identity of a phone number owner by using two-factor authentication.</para>
+        /// <para>Verifies the mobile phone number and name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Pass in a phone number and name to verify their authenticity and consistency through an authoritative data source. Before using this operation, make sure that you fully understand the billing method and pricing of the two-factor phone number verification service.</para>
+        /// <para>Verifies the authenticity and consistency of a mobile phone number and name against authoritative data sources. Before using this API operation, make sure that you fully understand the billing method and pricing of the mobile phone number and name verification service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11805,12 +11824,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the identity of a phone number owner by using two-factor authentication.</para>
+        /// <para>Verifies the mobile phone number and name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Pass in a phone number and name to verify their authenticity and consistency through an authoritative data source. Before using this operation, make sure that you fully understand the billing method and pricing of the two-factor phone number verification service.</para>
+        /// <para>Verifies the authenticity and consistency of a mobile phone number and name against authoritative data sources. Before using this API operation, make sure that you fully understand the billing method and pricing of the mobile phone number and name verification service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11864,12 +11883,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the identity of a phone number owner by using two-factor authentication.</para>
+        /// <para>Verifies the mobile phone number and name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Pass in a phone number and name to verify their authenticity and consistency through an authoritative data source. Before using this operation, make sure that you fully understand the billing method and pricing of the two-factor phone number verification service.</para>
+        /// <para>Verifies the authenticity and consistency of a mobile phone number and name against authoritative data sources. Before using this API operation, make sure that you fully understand the billing method and pricing of the mobile phone number and name verification service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11887,12 +11906,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the identity of a phone number owner by using two-factor authentication.</para>
+        /// <para>Verifies the mobile phone number and name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Pass in a phone number and name to verify their authenticity and consistency through an authoritative data source. Before using this operation, make sure that you fully understand the billing method and pricing of the two-factor phone number verification service.</para>
+        /// <para>Verifies the authenticity and consistency of a mobile phone number and name against authoritative data sources. Before using this API operation, make sure that you fully understand the billing method and pricing of the mobile phone number and name verification service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11910,7 +11929,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the authenticity and consistency of a phone number, name, and ID card number against an authoritative data source. If the information is inconsistent, returns the reason for the inconsistency.</para>
+        /// <para>Verifies the authenticity and consistency of a mobile phone number, name, and ID card number through authoritative data sources, and returns the cause of inconsistency if they do not match.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11968,7 +11987,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the authenticity and consistency of a phone number, name, and ID card number against an authoritative data source. If the information is inconsistent, returns the reason for the inconsistency.</para>
+        /// <para>Verifies the authenticity and consistency of a mobile phone number, name, and ID card number through authoritative data sources, and returns the cause of inconsistency if they do not match.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12026,7 +12045,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the authenticity and consistency of a phone number, name, and ID card number against an authoritative data source. If the information is inconsistent, returns the reason for the inconsistency.</para>
+        /// <para>Verifies the authenticity and consistency of a mobile phone number, name, and ID card number through authoritative data sources, and returns the cause of inconsistency if they do not match.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12044,7 +12063,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the authenticity and consistency of a phone number, name, and ID card number against an authoritative data source. If the information is inconsistent, returns the reason for the inconsistency.</para>
+        /// <para>Verifies the authenticity and consistency of a mobile phone number, name, and ID card number through authoritative data sources, and returns the cause of inconsistency if they do not match.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12062,7 +12081,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a face library.</para>
+        /// <para>Updates a face library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12112,7 +12131,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a face library.</para>
+        /// <para>Updates a face library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12162,7 +12181,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a face library.</para>
+        /// <para>Updates a face library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12180,7 +12199,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a face library.</para>
+        /// <para>Updates a face library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12198,7 +12217,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a face record.</para>
+        /// <para>Modifies a face record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12244,7 +12263,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a face record.</para>
+        /// <para>Modifies a face record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12290,7 +12309,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a face record.</para>
+        /// <para>Modifies a face record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12308,7 +12327,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a face record.</para>
+        /// <para>Modifies a face record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12782,7 +12801,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a temporary URL for a file.</para>
+        /// <para>Retrieves the temporary URL of a file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12824,7 +12843,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a temporary URL for a file.</para>
+        /// <para>Retrieves the temporary URL of a file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12866,7 +12885,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a temporary URL for a file.</para>
+        /// <para>Retrieves the temporary URL of a file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12884,7 +12903,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a temporary URL for a file.</para>
+        /// <para>Retrieves the temporary URL of a file.</para>
         /// </summary>
         /// 
         /// <param name="request">

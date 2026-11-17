@@ -10,9 +10,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class FaceCompareResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response code.</para>
-        /// <para>200: Success.
-        /// Other: Error code. For error code details, see Error Codes.</para>
+        /// <para>The return code.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>200: Success.</description></item>
+        /// <item><description>Other values: Error codes. For more information, see Error codes.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -22,7 +25,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -42,21 +45,21 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Response result.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public FaceCompareResponseBodyResult Result { get; set; }
         public class FaceCompareResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Related result information</para>
+            /// <para>The related result information.</para>
             /// </summary>
             [NameInMap("ExtFaceInfo")]
             [Validation(Required=false)]
             public FaceCompareResponseBodyResultExtFaceInfo ExtFaceInfo { get; set; }
             public class FaceCompareResponseBodyResultExtFaceInfo : TeaModel {
                 /// <summary>
-                /// <para>Overall quality score</para>
+                /// <para>The overall quality score.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>39.04</para>
@@ -66,7 +69,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
                 public double? FaceQualityScore { get; set; }
 
                 /// <summary>
-                /// <para>Illumination score</para>
+                /// <para>The illumination score.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.02</para>
@@ -76,7 +79,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
                 public double? IlluminationScore { get; set; }
 
                 /// <summary>
-                /// <para>Key area occlusion score</para>
+                /// <para>The key area occlusion score.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -86,7 +89,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
                 public double? KaOcclusionScore { get; set; }
 
                 /// <summary>
-                /// <para>Occlusion score</para>
+                /// <para>The occlusion score.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50.26</para>
@@ -96,7 +99,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
                 public double? OcclusionScore { get; set; }
 
                 /// <summary>
-                /// <para>Sharpness score</para>
+                /// <para>The sharpness score.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>86.47</para>
@@ -105,22 +108,52 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
                 [Validation(Required=false)]
                 public double? SharpnessScore { get; set; }
 
+                /// <summary>
+                /// <para>The overall quality score of the reference face photo.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>39.04</para>
+                /// </summary>
                 [NameInMap("TargetFaceQualityScore")]
                 [Validation(Required=false)]
                 public double? TargetFaceQualityScore { get; set; }
 
+                /// <summary>
+                /// <para>The illumination score of the reference face photo.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.02</para>
+                /// </summary>
                 [NameInMap("TargetIlluminationScore")]
                 [Validation(Required=false)]
                 public double? TargetIlluminationScore { get; set; }
 
+                /// <summary>
+                /// <para>The key area occlusion score of the reference face photo.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>20</para>
+                /// </summary>
                 [NameInMap("TargetKaOcclusionScore")]
                 [Validation(Required=false)]
                 public double? TargetKaOcclusionScore { get; set; }
 
+                /// <summary>
+                /// <para>The occlusion score of the reference face photo.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>50.26</para>
+                /// </summary>
                 [NameInMap("TargetOcclusionScore")]
                 [Validation(Required=false)]
                 public double? TargetOcclusionScore { get; set; }
 
+                /// <summary>
+                /// <para>The sharpness score of the reference face photo.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>86.47</para>
+                /// </summary>
                 [NameInMap("TargetSharpnessScore")]
                 [Validation(Required=false)]
                 public double? TargetSharpnessScore { get; set; }
@@ -128,7 +161,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             }
 
             /// <summary>
-            /// <para>The comparison score between the submitted face photo and the reference face image during the authentication process. Value range: <b>0</b> to <b>100</b>.</para>
+            /// <para>The comparison score between the submitted face photo and the reference face photo during the authentication process. Valid values: <b>0</b> to <b>100</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>98</para>
@@ -138,7 +171,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public double? FaceComparisonScore { get; set; }
 
             /// <summary>
-            /// <para>Whether the authentication passed.</para>
+            /// <para>Specifies whether the authentication is passed.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Y: Passed.</description></item>
             /// <item><description>N: Not passed.</description></item>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class FaceLivenessRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to allow cropping. Default value: F. Valid values:</para>
+        /// <para>Specifies whether to allow cropping. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>T: enabled.</description></item>
-        /// <item><description>F: disabled. (Default)</description></item>
+        /// <item><description>T: Cropping is allowed.</description></item>
+        /// <item><description>F: Cropping is not allowed. Default value: F.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -23,15 +23,21 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string Crop { get; set; }
 
+        /// <summary>
+        /// <para>The face attribute check.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Y</para>
+        /// </summary>
         [NameInMap("FaceAttributeCheck")]
         [Validation(Required=false)]
         public string FaceAttributeCheck { get; set; }
 
         /// <summary>
-        /// <para>The Base64-encoded face photo.</para>
+        /// <para>The Base64-encoded string of the photo.</para>
         /// <para>Note:</para>
         /// <list type="bullet">
-        /// <item><description>If you use FacePictureBase64 (Base64-encoded photo) to pass in the face photo, check the photo size and do not pass in an excessively large photo.</description></item>
+        /// <item><description>If you use the FacePictureBase64 parameter to pass the face photo, check the photo size and do not pass photos that are too large.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,10 +58,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FacePictureUrl { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to output the face quality score. Default value: F. Valid values:</para>
+        /// <para>Specifies whether to output the face quality score. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>T: enabled.</description></item>
-        /// <item><description>F: disabled. (Default)</description></item>
+        /// <item><description>T: The detection is required.</description></item>
+        /// <item><description>F: The detection is not required. Default value: F.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,7 +82,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FaceQualityCheck { get; set; }
 
         /// <summary>
-        /// <para>The merchant-defined unique business ID used for subsequent troubleshooting. The value can contain letters and digits with a maximum length of 32 characters. Ensure that the value is unique.</para>
+        /// <para>The custom unique business identifier on the merchant side, used for subsequent troubleshooting. It supports a combination of letters and digits, with a maximum length of 32 characters. Ensure that the value is unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e0c34a77f5ac40a5aa5e6ed20c353888</para>
@@ -86,7 +92,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string MerchantBizId { get; set; }
 
         /// <summary>
-        /// <para>The merchant user ID or another identifier that can be used to identify a specific user, such as a phone number or email address. We strongly recommend that you desensitize the value of the userId field before passing it in, for example, by hashing the value.</para>
+        /// <para>The merchant user ID or another identifier used to identify a specific user, such as a phone number or email address. Desensitize the value of the userId field in advance, such as by hashing the value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456789</para>
@@ -96,10 +102,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string MerchantUserId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform occlusion detection. Default value: F. Valid values:</para>
+        /// <para>Specifies whether to perform occlusion detection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>T: enabled.</description></item>
-        /// <item><description>F: disabled. (Default)</description></item>
+        /// <item><description>T: Occlusion detection is required.</description></item>
+        /// <item><description>F: Occlusion detection is not required. Default value: F.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

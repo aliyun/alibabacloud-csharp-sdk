@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The return message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4EB35****87EBA1</para>
@@ -47,11 +47,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public DeleteVerifyResultResponseBodyResult Result { get; set; }
         public class DeleteVerifyResultResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The deletion result. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Y: The deletion was successful.</description></item>
-            /// <item><description>N: The deletion failed.</description></item>
-            /// </list>
+            /// <para>The deletion result. Valid values: Y: The deletion succeeded. N: The deletion failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Y/N</para>

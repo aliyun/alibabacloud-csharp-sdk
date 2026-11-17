@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class AddFaceRecordRequest : TeaModel {
         /// <summary>
-        /// <para>The face library code.</para>
+        /// <para>The code of the face group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,8 +53,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>Specifies whether to check the quality of the face image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Y: enabled.</description></item>
-        /// <item><description>N: disabled (default).</description></item>
+        /// <item><description>Y: Enabled.</description></item>
+        /// <item><description>N: Disabled (default).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,10 +65,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FaceQualityCheck { get; set; }
 
         /// <summary>
-        /// <para>The custom unique user ID. The value cannot exceed 32 characters.</para>
+        /// <para>The custom unique user ID, which cannot exceed 32 characters.</para>
         /// <list type="bullet">
-        /// <item><description>If this parameter is specified, the system registers the user with the specified MerchantUserId.</description></item>
-        /// <item><description>If this parameter is not specified, the image name is used by default.</description></item>
+        /// <item><description>If specified, the system preferentially uses this MerchantUserId for registration.</description></item>
+        /// <item><description>If not specified, the image name is used by default.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

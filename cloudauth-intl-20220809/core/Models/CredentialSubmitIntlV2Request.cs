@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// 
         /// <b>Example:</b>
         /// <para>{
-        ///     &quot;address_rule&quot;: &quot;Includes Adrress Hangzhou ***&quot;,
+        ///     &quot;address_rule&quot;: &quot;Includes Adrress Hangzhou***&quot;,
         ///     &quot;name_rule&quot;: &quot;Includes Name  Zhang*&quot;,
         ///     &quot;date_of_issue_rule&quot;: &quot;Whthin 2026.05.20&quot;
         /// }</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string CheckRuleConfig { get; set; }
 
         /// <summary>
-        /// <para>The Base64-encoded image. If you choose this method to submit a photo, check the photo size and do not submit an excessively large photo.</para>
+        /// <para>The Base64-encoded image. If you choose this method to upload the photo, check the photo size and do not upload excessively large photos.</para>
         /// 
         /// <b>Example:</b>
         /// <para>base64</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string CredentialOcrPictureFile { get; set; }
 
         /// <summary>
-        /// <para>The URL of the image. The URL must be a publicly accessible HTTP or HTTPS link.</para>
+        /// <para>The image URL. The URL must be an HTTP or HTTPS link accessible over the Internet.</para>
         /// 
         /// <b>Example:</b>
         /// <para>https://***</para>
@@ -56,10 +56,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>The credential type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>01: Transaction voucher, which includes electronic bill images for utilities such as water, electricity, gas, and credit cards.</description></item>
-        /// <item><description>02: Vehicle registration certificate.</description></item>
-        /// <item><description>03: Transfer transaction record.</description></item>
-        /// <item><description>04: Proof of address (POA).</description></item>
+        /// <item><description>01: transaction credential, including electronic bill images for water, electricity, gas, and credit cards</description></item>
+        /// <item><description>02: vehicle registration certificate</description></item>
+        /// <item><description>03: transfer transaction record</description></item>
+        /// <item><description>04: proof of address (POA)</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -71,10 +71,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string DocType { get; set; }
 
         /// <summary>
-        /// <para>The type of the input material. Valid values:</para>
+        /// <para>The material input type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>IMAGE (default): image.</description></item>
-        /// <item><description>PDF: PDF format.</description></item>
+        /// <item><description>IMAGE: image (default)</description></item>
+        /// <item><description>PDF: PDF format</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -87,8 +87,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>Specifies whether to enable tampering detection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Enabled.</description></item>
-        /// <item><description>false: Disabled.</description></item>
+        /// <item><description>true: enabled</description></item>
+        /// <item><description>false: disabled</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FraudCheck { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable quality detection. Valid values: Y (enabled) and N (disabled).</para>
+        /// <para>Specifies whether to enable quality detection. Valid values: Y: enabled, N: disabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Y</para>
@@ -110,8 +110,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string IdQuality { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the merchant request. The value is a 32-character alphanumeric string.</para>
-        /// <para>The first few characters consist of a custom abbreviation defined by the merchant, the middle part can contain a time segment, and the last part can use a random or incremental sequence.</para>
+        /// <para>The unique identifier of the merchant request. The value is a 32-character alphanumeric string. The first few characters consist of a custom merchant abbreviation, the middle part can include a time period, and the latter part can be a random or incremental sequence.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -122,11 +121,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string MerchantBizId { get; set; }
 
         /// <summary>
-        /// <para>The extraction type. Valid values:
-        /// 0101: electronic bill address and name module (extracts address and name modules through intelligent analysis).
-        /// 0201: 
-        /// 0301: transfer transaction amount information.
-        /// 0401: POA credential extraction information.</para>
+        /// <para>The extraction type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0101: electronic bill address and name module, which extracts the address and name module through intelligent analysis</description></item>
+        /// <item><description>0201: </description></item>
+        /// <item><description>0301: transfer transaction record amount information</description></item>
+        /// <item><description>0401: POA credential extraction information</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -137,7 +138,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string OcrArea { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable translation. Valid values: 0 (disabled) and 1 (enabled).</para>
+        /// <para>Specifies whether to enable translation. Valid values: 0: disabled, 1: enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -147,10 +148,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string OcrTranslation { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable standardization of key fields recognized by OCR. Valid values:</para>
+        /// <para>Specifies whether to enable standardization of key fields in OCR recognition. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: Disabled (default). </description></item>
-        /// <item><description>1: Enabled.</description></item>
+        /// <item><description>0: no (default) </description></item>
+        /// <item><description>1: yes</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -161,7 +162,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string OcrValueStandard { get; set; }
 
         /// <summary>
-        /// <para>The product solution to use. Set the value to CREDENTIAL_RECOGNITION.</para>
+        /// <para>The product solution to be integrated. Valid values: CREDENTIAL_RECOGNITION.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -172,7 +173,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The custom verification scenario ID. You can use this scenario ID to query related records in the console. The value is a combination of up to 10 letters, digits, or underscores.</para>
+        /// <para>The custom authentication scenario ID. This ID is used to query related records in the console. The value can be up to 10 characters in length and can contain letters, digits, and underscores.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

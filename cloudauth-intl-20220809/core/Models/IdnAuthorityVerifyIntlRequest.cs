@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string IdNumber { get; set; }
 
         /// <summary>
-        /// <para>The merchant-side custom business unique identifier, which is used for subsequent troubleshooting. The value can be a combination of letters and digits with a maximum length of 32 characters. Ensure that the value is unique.</para>
+        /// <para>The custom unique business identifier on the merchant side, which is used for subsequent troubleshooting. The value can be up to 32 characters in length and can contain letters and digits. Make sure that the value is unique.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string MerchantBizId { get; set; }
 
         /// <summary>
-        /// <para>The custom user ID, or another identifier that can identify a specific user, such as a phone number or email address. We strongly recommend that you desensitize the value of this field in advance, for example, by hashing the value.</para>
+        /// <para>The custom user ID or other identifier that identifies a specific user, such as a mobile phone number or email address. Desensitize the value of this field in advance, such as by hashing the value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Mobile { get; set; }
 
         /// <summary>
-        /// <para>The product solution to use. Set the value to IDN_META.</para>
+        /// <para>The product solution to be integrated. Valid value: IDN_META.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The custom authentication scenario ID. You can use this scenario ID to query related records in the console. The value can be a combination of letters, digits, or underscores with a maximum length of 10 characters.</para>
+        /// <para>The custom authentication scenario ID, which is used to query related records by entering this scenario ID in the console later. The value can be up to 10 characters in length and can contain letters, digits, and underscores.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>
@@ -108,13 +108,11 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string SceneCode { get; set; }
 
         /// <summary>
-        /// <para>The Base64-encoded facial photo.</para>
-        /// <remarks>
-        /// <para><b>Note</b></para>
-        /// </remarks>
+        /// <para>The Base64-encoded portrait photo.</para>
+        /// <para>Note</para>
         /// <list type="bullet">
-        /// <item><description>If you use this method to pass the ID photo, check the photo size and do not pass an excessively large photo.</description></item>
-        /// <item><description>Specify one of the following parameters: SourceFacePicture, SourceFacePictureUrl, or SourceFacePictureFile.</description></item>
+        /// <item><description>If you choose this method to pass the ID photo, check the photo size and do not pass oversized photos.</description></item>
+        /// <item><description>Specify only one of the following parameters: SourceFacePicture, SourceFacePictureUrl, and SourceFacePictureFile.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -125,7 +123,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string SourceFacePicture { get; set; }
 
         /// <summary>
-        /// <para>The file stream of the facial photo.</para>
+        /// <para>The file stream of the portrait photo.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InputStream</para>
@@ -135,7 +133,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string SourceFacePictureFile { get; set; }
 
         /// <summary>
-        /// <para>The URL of the facial photo. The URL must be a publicly accessible HTTP or HTTPS link.</para>
+        /// <para>The URL of the portrait photo. The URL must be a publicly accessible HTTP or HTTPS link.</para>
         /// 
         /// <b>Example:</b>
         /// <para>https://***face1.jpeg</para>
