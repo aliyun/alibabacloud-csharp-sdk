@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
 {
     public class GetC2paSignResultRequest : TeaModel {
         /// <summary>
-        /// <para>The opaque task ID returned by CreateC2paSignTask, up to 64 characters in length.</para>
+        /// <para>The opaque task ID returned by CreateC2paSignTask. The ID can be up to 64 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

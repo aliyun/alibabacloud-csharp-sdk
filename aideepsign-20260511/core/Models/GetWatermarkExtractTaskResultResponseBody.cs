@@ -9,18 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
 {
     public class GetWatermarkExtractTaskResultResponseBody : TeaModel {
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>The average extraction confidence, ranging from 0 to 1. This parameter is returned only when Status is succeeded.</para>
+        /// <para>The average extraction confidence level, which ranges from 0 to 1. This field is returned only when Status is succeeded.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.99</para>
         /// </summary>
         [NameInMap("AvgAcc")]
         [Validation(Required=false)]
+        [Obsolete]
         public double? AvgAcc { get; set; }
 
         /// <summary>
-        /// <para>The business error code. OK is returned if the request is successful.</para>
+        /// <para>The business error code. <c>OK</c> is returned if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -50,7 +53,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The failure reason when the task fails. This parameter is returned only when Status is failed.</para>
+        /// <para>The cause of the task failure. This field is returned only when Status is failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The request has failed due to a temporary failure of the server.</para>
@@ -72,9 +75,9 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         /// <summary>
         /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>running: In progress.</description></item>
-        /// <item><description>succeeded: Completed.</description></item>
-        /// <item><description>failed: Failed.</description></item>
+        /// <item><description>running: The task is running.</description></item>
+        /// <item><description>succeeded: The task is completed.</description></item>
+        /// <item><description>failed: The task failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,7 +98,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The dark watermark extraction task ID.</para>
+        /// <para>The ID of the invisible watermark extraction task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f47ac10b-58cc-4372-a567-0e02b2c3d479</para>
@@ -105,7 +108,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The extracted watermark content. This parameter is returned only when <c>Status</c> is <c>succeeded</c> and <c>Detected=true</c>.</para>
+        /// <para>The extracted watermark content. This field is returned only when <c>Status</c> is <c>succeeded</c> and <c>Detected=true</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>wm-e2e-85970647</para>

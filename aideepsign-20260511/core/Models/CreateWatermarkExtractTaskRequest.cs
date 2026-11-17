@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
 {
     public class CreateWatermarkExtractTaskRequest : TeaModel {
         /// <summary>
-        /// <para>A reserved idempotency field. Idempotency is not supported. Passing in a value does not cause an error, but it does not produce an idempotency effect.</para>
+        /// <para>The reserved idempotency field. This field is not supported. Passing this field does not cause an error, but it does not take effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The file type. Valid values: <c>image</c> and <c>video</c>. The value must be the same as the <c>FileType</c> used when the watermark was embedded.</para>
+        /// <para>The file type. Valid values: <c>image</c>, <c>video</c>, and <c>audio</c>. The value must be the same as the FileType used when the watermark was embedded.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string FileType { get; set; }
 
         /// <summary>
-        /// <para>The URL of the file from which the watermark is to be extracted. Images and videos are supported. Only the <c>http/https</c> protocol is supported. Videos must be no longer than 10 minutes and no larger than 100 MB.</para>
+        /// <para>The URL of the file from which the watermark is to be extracted. Images and videos are supported. Only the HTTP and HTTPS protocols are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/demo.mp4">https://example.com/demo.mp4</a></para>
@@ -40,14 +40,17 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         [Validation(Required=false)]
         public string FileUrl { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>A reserved field. No valid values are available. Do not pass in this parameter.</para>
+        /// <para>The reserved field. No valid values are available. Do not pass this field when you call the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
         [NameInMap("Reserved")]
         [Validation(Required=false)]
+        [Obsolete]
         public string Reserved { get; set; }
 
     }

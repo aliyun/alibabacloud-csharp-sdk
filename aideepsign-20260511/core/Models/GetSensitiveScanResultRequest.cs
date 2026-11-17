@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
 {
     public class GetSensitiveScanResultRequest : TeaModel {
         /// <summary>
-        /// <para>The task ID returned by <c>CreateSensitiveScanTask</c>.</para>
+        /// <para>The task ID, which is returned by <c>CreateSensitiveScanTask</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
 {
     public class GetC2paSignResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business error code for the API call. OK is returned when the call succeeds.</para>
+        /// <para>The business error code for this API call. OK is returned when the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error code for task failure. This parameter is returned only when Status is FAILED.</para>
+        /// <para>The error code for a failed task. This parameter is returned only when Status is FAILED.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C2PA_FORMAT_UNSUPPORTED</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message for task failure. This parameter is returned only when Status is FAILED.</para>
+        /// <para>The error message for a failed task. This parameter is returned only when Status is FAILED.</para>
         /// 
         /// <b>Example:</b>
         /// <para>only valid JPEG and PNG source files are supported</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public long? FailedCount { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code. 200 is returned when the API call succeeds.</para>
+        /// <para>The HTTP status code. 200 is returned when the API call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The additional information. success is returned when the API call succeeds.</para>
+        /// <para>The additional information. success is returned when the API call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -70,7 +70,17 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The temporary download URL returned when a Bucket task enters the CANCELED state and the JSON report is successfully generated. The report covers only the objects discovered before termination.</para>
+        /// <para>The destination object key returned when the signing results are written to the user Bucket. This parameter is returned only when a single-file task succeeds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ai-deepsign-signed/example_signed.png</para>
+        /// </summary>
+        [NameInMap("ObjectKey")]
+        [Validation(Required=false)]
+        public string ObjectKey { get; set; }
+
+        /// <summary>
+        /// <para>The temporary download URL returned when a Bucket task enters the CANCELED state and the JSON report is generated successfully. The report covers only the objects discovered before termination.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example-bucket.oss-cn-hangzhou.aliyuncs.com/c2pa_report.json?Expires=1788000000&Signature=">https://example-bucket.oss-cn-hangzhou.aliyuncs.com/c2pa_report.json?Expires=1788000000&amp;Signature=</a>***</para>
@@ -90,7 +100,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string ReportObjectKey { get; set; }
 
         /// <summary>
-        /// <para>The request ID of the OpenAPI call.</para>
+        /// <para>The request ID of this OpenAPI invocation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A1B2C3D4-E5F6-7890-ABCD-EF1234567890</para>
@@ -100,7 +110,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The temporary download URL of the signature file. This parameter is returned only when Status is SUCCEEDED.</para>
+        /// <para>The temporary download URL of the signed file. This parameter is returned only when Status is SUCCEEDED.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.oss-cn-hangzhou.aliyuncs.com/">https://example.oss-cn-hangzhou.aliyuncs.com/</a>...</para>
@@ -110,7 +120,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string SignedFileUrl { get; set; }
 
         /// <summary>
-        /// <para>The task status. Valid values: PROCESSING, SUCCEEDED, and FAILED.</para>
+        /// <para>The status of the task. Valid values: PROCESSING, SUCCEEDED, and FAILED.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCEEDED</para>
@@ -140,7 +150,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The C2PA signing task ID.</para>
+        /// <para>The ID of the C2PA signing task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7093c29e-f472-4e1e-91c6-a43df7c7382e</para>
@@ -150,7 +160,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The task type. Valid values: FILE and BUCKET.</para>
+        /// <para>The type of the task. Valid values: FILE and BUCKET.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BUCKET</para>

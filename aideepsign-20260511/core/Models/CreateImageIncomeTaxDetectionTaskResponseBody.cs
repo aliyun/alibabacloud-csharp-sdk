@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
 {
     public class CreateImageIncomeTaxDetectionTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business error code. The value <c>OK</c> is returned if the request was successful.</para>
+        /// <para>The business error code. <c>OK</c> is returned when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code. The value <c>200</c> is returned if the request was successful.</para>
+        /// <para>The HTTP status code. <c>200</c> is returned when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The additional information. The value <c>success</c> is returned if the request was successful.</para>
+        /// <para>The additional information. <c>success</c> is returned when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The income tax screenshot detection task ID. Use this ID to query the result by calling GetImageIncomeTaxDetectionTaskResult.</para>
+        /// <para>The ID of the individual income tax screenshot detection task. This ID is used to query the task result by calling the GetImageIncomeTaxDetectionTaskResult operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f47ac10b-58cc-4372-a567-0e02b2c3d479</para>

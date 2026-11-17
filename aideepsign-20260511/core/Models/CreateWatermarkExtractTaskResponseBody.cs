@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
 {
     public class CreateWatermarkExtractTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business error code. OK is returned if the request is successful.</para>
+        /// <para>The business error code. If the request is successful, OK is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code. <c>200</c> is returned if the request is successful.</para>
+        /// <para>The <b>HTTP status code</b>. If the request is successful, <c>200</c> is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The additional information. &quot;success&quot; is returned if the request is successful.</para>
+        /// <para>The additional information. If the request is successful, &quot;success&quot; is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The dark watermark extraction task ID, which is used to call GetWatermarkExtractTaskResult to query the result.</para>
+        /// <para>The ID of the invisible watermark extraction task. You can use this ID to call the GetWatermarkExtractTaskResult operation to query the result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f47ac10b-58cc-4372-a567-0e02b2c3d479</para>

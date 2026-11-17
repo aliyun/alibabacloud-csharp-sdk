@@ -1,3 +1,6 @@
+2026-11-17 Version: 2.1.0
+- Generated csharp 2026-05-11 for AIDeepSign.
+
 2026-11-05 Version: 2.0.1
 - Update API CreateC2paBucketSignTask: add request parameters CustomAssertions.
 - Update API CreateC2paSignTask: add request parameters CustomAssertions.

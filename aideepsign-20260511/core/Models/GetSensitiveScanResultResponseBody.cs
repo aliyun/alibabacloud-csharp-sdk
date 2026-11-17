@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
 {
     public class GetSensitiveScanResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business error code. The value &quot;OK&quot; is returned when the request succeeds.</para>
+        /// <para>The business error code. If the request is successful, &quot;OK&quot; is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code. The value 200 is returned when the request succeeds.</para>
+        /// <para>The HTTP status code. If the request is successful, 200 is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The additional information. The value &quot;success&quot; is returned when the request succeeds.</para>
+        /// <para>The additional information. If the request is successful, &quot;success&quot; is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -50,21 +50,21 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The scan result. This parameter is returned only when the status is completed.</para>
+        /// <para>The scan results. This parameter is returned only when the task status is <c>completed</c>.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public GetSensitiveScanResultResponseBodyResult Result { get; set; }
         public class GetSensitiveScanResultResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The name of the scanned object.</para>
+            /// <para>The scan object name.</para>
             /// </summary>
             [NameInMap("OssObjectDetail")]
             [Validation(Required=false)]
             public GetSensitiveScanResultResponseBodyResultOssObjectDetail OssObjectDetail { get; set; }
             public class GetSensitiveScanResultResponseBodyResultOssObjectDetail : TeaModel {
                 /// <summary>
-                /// <para>The name of the bucket to which the object belongs.</para>
+                /// <para><b>The name of the bucket to which the object belongs.</b></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aideepsign-bucket</para>
@@ -74,17 +74,17 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
                 public string BucketName { get; set; }
 
                 /// <summary>
-                /// <para>The sensitive data category name.</para>
+                /// <para><b>The sensitive data category name.</b></para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>个人信息</para>
+                /// <para>Personal information</para>
                 /// </summary>
                 [NameInMap("CategoryName")]
                 [Validation(Required=false)]
                 public string CategoryName { get; set; }
 
                 /// <summary>
-                /// <para>The name of the scanned object.</para>
+                /// <para><b>The name of the scanned object.</b></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abc12345.jpg</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The overall risk level name.</para>
+                /// <para><b>The overall risk level name.</b></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>S2</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
                 public string RiskLevelName { get; set; }
 
                 /// <summary>
-                /// <para>The list of sensitive data rules that are hit.</para>
+                /// <para>The list of matched sensitive data rules.</para>
                 /// </summary>
                 [NameInMap("RuleList")]
                 [Validation(Required=false)]
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
                     /// <para>The category name of the rule.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>个人信息</para>
+                    /// <para>Personal information</para>
                     /// </summary>
                     [NameInMap("CategoryName")]
                     [Validation(Required=false)]
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
                     /// <para>The rule name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>身份证号</para>
+                    /// <para>ID card number</para>
                     /// </summary>
                     [NameInMap("RuleName")]
                     [Validation(Required=false)]
@@ -157,12 +157,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         }
 
         /// <summary>
-        /// <para>The task status. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>running: The task is running.</description></item>
-        /// <item><description>completed: The task is completed.</description></item>
-        /// <item><description>terminated: The task is terminated or failed.</description></item>
-        /// </list>
+        /// <para>The task status. Valid values: <c>running</c> (running), <c>completed</c> (completed), and <c>terminated</c> (terminated or failed).</para>
         /// 
         /// <b>Example:</b>
         /// <para>completed</para>
@@ -172,7 +167,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

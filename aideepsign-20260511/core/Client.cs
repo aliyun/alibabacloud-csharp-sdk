@@ -207,15 +207,11 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <list type="bullet">
-        /// <item><description><b>BucketRegionId</b> and <b>BucketName</b> must match the actual OSS bucket information.</description></item>
-        /// <item><description><b>SourcePrefix</b> must be located in <c>ai-deepsign/</c> or its subdirectories, and cannot overlap with the reserved output prefix <c>ai-deepsign-signed/</c>.</description></item>
-        /// <item><description>Supports processing JPEG/JPG, PNG, MP4, and audio files in FLAC, M4A, MP3, and WAV formats.</description></item>
-        /// <item><description>A single task includes up to 20,000 non-directory objects by default, and each file size cannot exceed 800 MiB.</description></item>
-        /// <item><description>Make sure that the service-linked role <c>AliyunServiceRoleForAIDeepSign</c> has been granted access permissions to the specified bucket and related paths.</description></item>
-        /// <item><description>The optional parameters <c>SourceType</c> and <c>SoftwareAgent</c> are used to declare the content source and software name. <c>CustomAssertions</c> is used to add custom assertions.</description></item>
-        /// </list>
+        /// <para>Creates a batch standard C2PA content credential signing task for an OSS bucket. The service recursively scans non-directory objects under <c>SourcePrefix</c> and supports JPEG/JPG, PNG, MP4, and audio formats including FLAC, M4A, MP3, and WAV. By default, a single task includes up to 20,000 non-directory objects, and the size of a single file cannot exceed 800 MiB.
+        /// Before you call this operation, make sure that the <c>AliyunServiceRoleForAIDeepSign</c> service-linked role has been granted the OSS List and Get permissions on the source prefix, and the Get and Put permissions on the output prefix. <c>SourceType</c>, <c>SoftwareAgent</c>, and <c>CustomAssertions</c> are optional parameters. The values specified during creation are applied to each file in the batch.
+        /// A successful creation only indicates that the task has been accepted. Save the returned <c>TaskId</c> and call <c>GetC2paSignResult</c> to query the status and statistics. You can use <c>PauseC2paBucketSignTask</c>, <c>ResumeC2paBucketSignTask</c>, and <c>CancelC2paBucketSignTask</c> to control the task.
+        /// The signature files are written to <c>ai-deepsign-signed/&lt;TaskId&gt;/&lt;folder of the object relative to SourcePrefix&gt;/&lt;original file name&gt;_signed.&lt;extension&gt;</c> in the same bucket, preserving the relative subdirectory and source file extensions. The final JSON report is saved as <c>ai-deepsign-signed/&lt;TaskId&gt;/c2pa_report.json</c>.
+        /// This operation is metered based on the number of successfully signed files. The same account can create multiple tasks for the same bucket and prefix, and each task uses an independent output directory. Duplicate creations may result in duplicate signing and metering.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -282,15 +278,11 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <list type="bullet">
-        /// <item><description><b>BucketRegionId</b> and <b>BucketName</b> must match the actual OSS bucket information.</description></item>
-        /// <item><description><b>SourcePrefix</b> must be located in <c>ai-deepsign/</c> or its subdirectories, and cannot overlap with the reserved output prefix <c>ai-deepsign-signed/</c>.</description></item>
-        /// <item><description>Supports processing JPEG/JPG, PNG, MP4, and audio files in FLAC, M4A, MP3, and WAV formats.</description></item>
-        /// <item><description>A single task includes up to 20,000 non-directory objects by default, and each file size cannot exceed 800 MiB.</description></item>
-        /// <item><description>Make sure that the service-linked role <c>AliyunServiceRoleForAIDeepSign</c> has been granted access permissions to the specified bucket and related paths.</description></item>
-        /// <item><description>The optional parameters <c>SourceType</c> and <c>SoftwareAgent</c> are used to declare the content source and software name. <c>CustomAssertions</c> is used to add custom assertions.</description></item>
-        /// </list>
+        /// <para>Creates a batch standard C2PA content credential signing task for an OSS bucket. The service recursively scans non-directory objects under <c>SourcePrefix</c> and supports JPEG/JPG, PNG, MP4, and audio formats including FLAC, M4A, MP3, and WAV. By default, a single task includes up to 20,000 non-directory objects, and the size of a single file cannot exceed 800 MiB.
+        /// Before you call this operation, make sure that the <c>AliyunServiceRoleForAIDeepSign</c> service-linked role has been granted the OSS List and Get permissions on the source prefix, and the Get and Put permissions on the output prefix. <c>SourceType</c>, <c>SoftwareAgent</c>, and <c>CustomAssertions</c> are optional parameters. The values specified during creation are applied to each file in the batch.
+        /// A successful creation only indicates that the task has been accepted. Save the returned <c>TaskId</c> and call <c>GetC2paSignResult</c> to query the status and statistics. You can use <c>PauseC2paBucketSignTask</c>, <c>ResumeC2paBucketSignTask</c>, and <c>CancelC2paBucketSignTask</c> to control the task.
+        /// The signature files are written to <c>ai-deepsign-signed/&lt;TaskId&gt;/&lt;folder of the object relative to SourcePrefix&gt;/&lt;original file name&gt;_signed.&lt;extension&gt;</c> in the same bucket, preserving the relative subdirectory and source file extensions. The final JSON report is saved as <c>ai-deepsign-signed/&lt;TaskId&gt;/c2pa_report.json</c>.
+        /// This operation is metered based on the number of successfully signed files. The same account can create multiple tasks for the same bucket and prefix, and each task uses an independent output directory. Duplicate creations may result in duplicate signing and metering.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -357,15 +349,11 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <list type="bullet">
-        /// <item><description><b>BucketRegionId</b> and <b>BucketName</b> must match the actual OSS bucket information.</description></item>
-        /// <item><description><b>SourcePrefix</b> must be located in <c>ai-deepsign/</c> or its subdirectories, and cannot overlap with the reserved output prefix <c>ai-deepsign-signed/</c>.</description></item>
-        /// <item><description>Supports processing JPEG/JPG, PNG, MP4, and audio files in FLAC, M4A, MP3, and WAV formats.</description></item>
-        /// <item><description>A single task includes up to 20,000 non-directory objects by default, and each file size cannot exceed 800 MiB.</description></item>
-        /// <item><description>Make sure that the service-linked role <c>AliyunServiceRoleForAIDeepSign</c> has been granted access permissions to the specified bucket and related paths.</description></item>
-        /// <item><description>The optional parameters <c>SourceType</c> and <c>SoftwareAgent</c> are used to declare the content source and software name. <c>CustomAssertions</c> is used to add custom assertions.</description></item>
-        /// </list>
+        /// <para>Creates a batch standard C2PA content credential signing task for an OSS bucket. The service recursively scans non-directory objects under <c>SourcePrefix</c> and supports JPEG/JPG, PNG, MP4, and audio formats including FLAC, M4A, MP3, and WAV. By default, a single task includes up to 20,000 non-directory objects, and the size of a single file cannot exceed 800 MiB.
+        /// Before you call this operation, make sure that the <c>AliyunServiceRoleForAIDeepSign</c> service-linked role has been granted the OSS List and Get permissions on the source prefix, and the Get and Put permissions on the output prefix. <c>SourceType</c>, <c>SoftwareAgent</c>, and <c>CustomAssertions</c> are optional parameters. The values specified during creation are applied to each file in the batch.
+        /// A successful creation only indicates that the task has been accepted. Save the returned <c>TaskId</c> and call <c>GetC2paSignResult</c> to query the status and statistics. You can use <c>PauseC2paBucketSignTask</c>, <c>ResumeC2paBucketSignTask</c>, and <c>CancelC2paBucketSignTask</c> to control the task.
+        /// The signature files are written to <c>ai-deepsign-signed/&lt;TaskId&gt;/&lt;folder of the object relative to SourcePrefix&gt;/&lt;original file name&gt;_signed.&lt;extension&gt;</c> in the same bucket, preserving the relative subdirectory and source file extensions. The final JSON report is saved as <c>ai-deepsign-signed/&lt;TaskId&gt;/c2pa_report.json</c>.
+        /// This operation is metered based on the number of successfully signed files. The same account can create multiple tasks for the same bucket and prefix, and each task uses an independent output directory. Duplicate creations may result in duplicate signing and metering.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -388,15 +376,11 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <list type="bullet">
-        /// <item><description><b>BucketRegionId</b> and <b>BucketName</b> must match the actual OSS bucket information.</description></item>
-        /// <item><description><b>SourcePrefix</b> must be located in <c>ai-deepsign/</c> or its subdirectories, and cannot overlap with the reserved output prefix <c>ai-deepsign-signed/</c>.</description></item>
-        /// <item><description>Supports processing JPEG/JPG, PNG, MP4, and audio files in FLAC, M4A, MP3, and WAV formats.</description></item>
-        /// <item><description>A single task includes up to 20,000 non-directory objects by default, and each file size cannot exceed 800 MiB.</description></item>
-        /// <item><description>Make sure that the service-linked role <c>AliyunServiceRoleForAIDeepSign</c> has been granted access permissions to the specified bucket and related paths.</description></item>
-        /// <item><description>The optional parameters <c>SourceType</c> and <c>SoftwareAgent</c> are used to declare the content source and software name. <c>CustomAssertions</c> is used to add custom assertions.</description></item>
-        /// </list>
+        /// <para>Creates a batch standard C2PA content credential signing task for an OSS bucket. The service recursively scans non-directory objects under <c>SourcePrefix</c> and supports JPEG/JPG, PNG, MP4, and audio formats including FLAC, M4A, MP3, and WAV. By default, a single task includes up to 20,000 non-directory objects, and the size of a single file cannot exceed 800 MiB.
+        /// Before you call this operation, make sure that the <c>AliyunServiceRoleForAIDeepSign</c> service-linked role has been granted the OSS List and Get permissions on the source prefix, and the Get and Put permissions on the output prefix. <c>SourceType</c>, <c>SoftwareAgent</c>, and <c>CustomAssertions</c> are optional parameters. The values specified during creation are applied to each file in the batch.
+        /// A successful creation only indicates that the task has been accepted. Save the returned <c>TaskId</c> and call <c>GetC2paSignResult</c> to query the status and statistics. You can use <c>PauseC2paBucketSignTask</c>, <c>ResumeC2paBucketSignTask</c>, and <c>CancelC2paBucketSignTask</c> to control the task.
+        /// The signature files are written to <c>ai-deepsign-signed/&lt;TaskId&gt;/&lt;folder of the object relative to SourcePrefix&gt;/&lt;original file name&gt;_signed.&lt;extension&gt;</c> in the same bucket, preserving the relative subdirectory and source file extensions. The final JSON report is saved as <c>ai-deepsign-signed/&lt;TaskId&gt;/c2pa_report.json</c>.
+        /// This operation is metered based on the number of successfully signed files. The same account can create multiple tasks for the same bucket and prefix, and each task uses an independent output directory. Duplicate creations may result in duplicate signing and metering.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -419,15 +403,10 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <list type="bullet">
-        /// <item><description>This operation adds standard C2PA content credentials to a single JPEG, JPG, PNG, MP4, FLAC, M4A, MP3, or WAV file.</description></item>
-        /// <item><description>The operation receives the HTTP or HTTPS URL of the file, asynchronously retrieves the file and signs the content credentials, and returns a TaskId for subsequent queries.</description></item>
-        /// <item><description>The FileUrl must be an accessible absolute URL and cannot contain a userinfo component.</description></item>
-        /// <item><description>You can provide additional content source, software information, and custom assertions by using the SourceType, SoftwareAgent, and CustomAssertions parameters.</description></item>
-        /// <item><description>The size of a single file cannot exceed 800 MiB, and only specific file formats are supported.</description></item>
-        /// <item><description>Do not repeatedly create tasks before confirming the task results to avoid duplicate signing and metering.</description></item>
-        /// </list>
+        /// <para>Adds standard C2PA content credentials to a single JPEG/JPG, PNG, MP4, FLAC, M4A, MP3, or WAV file. The operation receives an accessible absolute HTTP or HTTPS file URL, asynchronously retrieves and signs the file, and returns a TaskId for querying the result. The size of a single file cannot exceed 800 MiB.
+        /// You can declare the content source, software name, and custom business data by using the optional SourceType, SoftwareAgent, and CustomAssertions parameters. This information is written into the content credentials of the signed file.
+        /// A successful creation only indicates that the request has been accepted. Save the returned TaskId and call GetC2paSignResult to query the final status and signing result.
+        /// This operation is independent of the synchronous SignUserImage operation. It only supports creating tasks through file URLs and does not accept file content, buckets, object keys, caller-specified TaskIds, or idempotency keys. This operation is metered based on the number of successfully signed files. Repeated calls create different tasks. Do not create tasks repeatedly before confirming the task result to avoid duplicate signing and metering.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -444,6 +423,18 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowOverwrite))
+            {
+                query["AllowOverwrite"] = request.AllowOverwrite;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketName))
+            {
+                query["BucketName"] = request.BucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketRegionId))
+            {
+                query["BucketRegionId"] = request.BucketRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomAssertions))
             {
                 query["CustomAssertions"] = request.CustomAssertions;
@@ -452,6 +443,10 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
             {
                 query["FileUrl"] = request.FileUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectKey))
+            {
+                query["ObjectKey"] = request.ObjectKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareAgent))
             {
                 query["SoftwareAgent"] = request.SoftwareAgent;
@@ -459,6 +454,18 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
             {
                 query["SourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetBucketName))
+            {
+                query["TargetBucketName"] = request.TargetBucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetBucketRegion))
+            {
+                query["TargetBucketRegion"] = request.TargetBucketRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetObjectKey))
+            {
+                query["TargetObjectKey"] = request.TargetObjectKey;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -486,15 +493,10 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <list type="bullet">
-        /// <item><description>This operation adds standard C2PA content credentials to a single JPEG, JPG, PNG, MP4, FLAC, M4A, MP3, or WAV file.</description></item>
-        /// <item><description>The operation receives the HTTP or HTTPS URL of the file, asynchronously retrieves the file and signs the content credentials, and returns a TaskId for subsequent queries.</description></item>
-        /// <item><description>The FileUrl must be an accessible absolute URL and cannot contain a userinfo component.</description></item>
-        /// <item><description>You can provide additional content source, software information, and custom assertions by using the SourceType, SoftwareAgent, and CustomAssertions parameters.</description></item>
-        /// <item><description>The size of a single file cannot exceed 800 MiB, and only specific file formats are supported.</description></item>
-        /// <item><description>Do not repeatedly create tasks before confirming the task results to avoid duplicate signing and metering.</description></item>
-        /// </list>
+        /// <para>Adds standard C2PA content credentials to a single JPEG/JPG, PNG, MP4, FLAC, M4A, MP3, or WAV file. The operation receives an accessible absolute HTTP or HTTPS file URL, asynchronously retrieves and signs the file, and returns a TaskId for querying the result. The size of a single file cannot exceed 800 MiB.
+        /// You can declare the content source, software name, and custom business data by using the optional SourceType, SoftwareAgent, and CustomAssertions parameters. This information is written into the content credentials of the signed file.
+        /// A successful creation only indicates that the request has been accepted. Save the returned TaskId and call GetC2paSignResult to query the final status and signing result.
+        /// This operation is independent of the synchronous SignUserImage operation. It only supports creating tasks through file URLs and does not accept file content, buckets, object keys, caller-specified TaskIds, or idempotency keys. This operation is metered based on the number of successfully signed files. Repeated calls create different tasks. Do not create tasks repeatedly before confirming the task result to avoid duplicate signing and metering.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -511,6 +513,18 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowOverwrite))
+            {
+                query["AllowOverwrite"] = request.AllowOverwrite;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketName))
+            {
+                query["BucketName"] = request.BucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketRegionId))
+            {
+                query["BucketRegionId"] = request.BucketRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomAssertions))
             {
                 query["CustomAssertions"] = request.CustomAssertions;
@@ -519,6 +533,10 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
             {
                 query["FileUrl"] = request.FileUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectKey))
+            {
+                query["ObjectKey"] = request.ObjectKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareAgent))
             {
                 query["SoftwareAgent"] = request.SoftwareAgent;
@@ -526,6 +544,18 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
             {
                 query["SourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetBucketName))
+            {
+                query["TargetBucketName"] = request.TargetBucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetBucketRegion))
+            {
+                query["TargetBucketRegion"] = request.TargetBucketRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetObjectKey))
+            {
+                query["TargetObjectKey"] = request.TargetObjectKey;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -553,15 +583,10 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <list type="bullet">
-        /// <item><description>This operation adds standard C2PA content credentials to a single JPEG, JPG, PNG, MP4, FLAC, M4A, MP3, or WAV file.</description></item>
-        /// <item><description>The operation receives the HTTP or HTTPS URL of the file, asynchronously retrieves the file and signs the content credentials, and returns a TaskId for subsequent queries.</description></item>
-        /// <item><description>The FileUrl must be an accessible absolute URL and cannot contain a userinfo component.</description></item>
-        /// <item><description>You can provide additional content source, software information, and custom assertions by using the SourceType, SoftwareAgent, and CustomAssertions parameters.</description></item>
-        /// <item><description>The size of a single file cannot exceed 800 MiB, and only specific file formats are supported.</description></item>
-        /// <item><description>Do not repeatedly create tasks before confirming the task results to avoid duplicate signing and metering.</description></item>
-        /// </list>
+        /// <para>Adds standard C2PA content credentials to a single JPEG/JPG, PNG, MP4, FLAC, M4A, MP3, or WAV file. The operation receives an accessible absolute HTTP or HTTPS file URL, asynchronously retrieves and signs the file, and returns a TaskId for querying the result. The size of a single file cannot exceed 800 MiB.
+        /// You can declare the content source, software name, and custom business data by using the optional SourceType, SoftwareAgent, and CustomAssertions parameters. This information is written into the content credentials of the signed file.
+        /// A successful creation only indicates that the request has been accepted. Save the returned TaskId and call GetC2paSignResult to query the final status and signing result.
+        /// This operation is independent of the synchronous SignUserImage operation. It only supports creating tasks through file URLs and does not accept file content, buckets, object keys, caller-specified TaskIds, or idempotency keys. This operation is metered based on the number of successfully signed files. Repeated calls create different tasks. Do not create tasks repeatedly before confirming the task result to avoid duplicate signing and metering.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -584,15 +609,10 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <list type="bullet">
-        /// <item><description>This operation adds standard C2PA content credentials to a single JPEG, JPG, PNG, MP4, FLAC, M4A, MP3, or WAV file.</description></item>
-        /// <item><description>The operation receives the HTTP or HTTPS URL of the file, asynchronously retrieves the file and signs the content credentials, and returns a TaskId for subsequent queries.</description></item>
-        /// <item><description>The FileUrl must be an accessible absolute URL and cannot contain a userinfo component.</description></item>
-        /// <item><description>You can provide additional content source, software information, and custom assertions by using the SourceType, SoftwareAgent, and CustomAssertions parameters.</description></item>
-        /// <item><description>The size of a single file cannot exceed 800 MiB, and only specific file formats are supported.</description></item>
-        /// <item><description>Do not repeatedly create tasks before confirming the task results to avoid duplicate signing and metering.</description></item>
-        /// </list>
+        /// <para>Adds standard C2PA content credentials to a single JPEG/JPG, PNG, MP4, FLAC, M4A, MP3, or WAV file. The operation receives an accessible absolute HTTP or HTTPS file URL, asynchronously retrieves and signs the file, and returns a TaskId for querying the result. The size of a single file cannot exceed 800 MiB.
+        /// You can declare the content source, software name, and custom business data by using the optional SourceType, SoftwareAgent, and CustomAssertions parameters. This information is written into the content credentials of the signed file.
+        /// A successful creation only indicates that the request has been accepted. Save the returned TaskId and call GetC2paSignResult to query the final status and signing result.
+        /// This operation is independent of the synchronous SignUserImage operation. It only supports creating tasks through file URLs and does not accept file content, buckets, object keys, caller-specified TaskIds, or idempotency keys. This operation is metered based on the number of successfully signed files. Repeated calls create different tasks. Do not create tasks repeatedly before confirming the task result to avoid duplicate signing and metering.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -610,18 +630,18 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an image for defect detection and returns a task ID for querying results.</para>
+        /// <para>Submits an image for defect detection and returns a task ID for querying the result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation commits an image to the server for defect detection, including but not limited to blurriness, distortion, glare, and other anomalies in the image subject.</description></item>
-        /// <item><description><b>ImageUrl is required</b> and must be a publicly accessible HTTP/HTTPS URL. Currently, only image URLs accessible from the Chinese mainland public network are supported. Upload the image to an Alibaba Cloud OSS bucket in a Chinese mainland region first, and then use the presigned URL of the image as the input parameter for this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How to obtain the URL of a single object or the URLs of multiple objects</a></description></item>
-        /// <item><description>After successful commit, a node ID is returned immediately. Regardless of whether the node has been completed or is still being processed, call the GetImageDefectDetectionTaskResult operation to perform polling for the final detection result.</description></item>
-        /// <item><description>If a parameter fault or other issue occurs during the commit procedure, the corresponding error message is returned directly without creating a node record.</description></item>
-        /// <item><description>The image file size cannot exceed 10 MB. Detection is failed for images that exceed this limit.</description></item>
+        /// <item><description>This operation submits an image to the server for defect detection, including but not limited to abnormal issues such as a blurred main subject, distortion, and reflection.</description></item>
+        /// <item><description><b>ImageUrl is required</b> and must be a publicly accessible HTTP or HTTPS URL. Currently, images from outside the Chinese mainland are not supported. Only image URLs accessible over the public network in the Chinese mainland are supported. We recommend that you upload the image to an Alibaba Cloud OSS bucket in a region in the Chinese mainland, and then use the presigned URL of the image as the input parameter for this operation. Reference: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How to obtain the URL of a single file or the URLs of multiple files</a>.</description></item>
+        /// <item><description>After a successful submission, a task ID is immediately returned. Regardless of whether the task is completed immediately or is still being processed, you must poll the GetImageDefectDetectionTaskResult operation to obtain the final detection result.</description></item>
+        /// <item><description>If a parameter error or other issue occurs during the submission process, the corresponding error message is directly returned without creating a task record.</description></item>
+        /// <item><description>The image size cannot exceed 10 MB. Detection fails for images that exceed this limit.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -668,18 +688,18 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an image for defect detection and returns a task ID for querying results.</para>
+        /// <para>Submits an image for defect detection and returns a task ID for querying the result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation commits an image to the server for defect detection, including but not limited to blurriness, distortion, glare, and other anomalies in the image subject.</description></item>
-        /// <item><description><b>ImageUrl is required</b> and must be a publicly accessible HTTP/HTTPS URL. Currently, only image URLs accessible from the Chinese mainland public network are supported. Upload the image to an Alibaba Cloud OSS bucket in a Chinese mainland region first, and then use the presigned URL of the image as the input parameter for this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How to obtain the URL of a single object or the URLs of multiple objects</a></description></item>
-        /// <item><description>After successful commit, a node ID is returned immediately. Regardless of whether the node has been completed or is still being processed, call the GetImageDefectDetectionTaskResult operation to perform polling for the final detection result.</description></item>
-        /// <item><description>If a parameter fault or other issue occurs during the commit procedure, the corresponding error message is returned directly without creating a node record.</description></item>
-        /// <item><description>The image file size cannot exceed 10 MB. Detection is failed for images that exceed this limit.</description></item>
+        /// <item><description>This operation submits an image to the server for defect detection, including but not limited to abnormal issues such as a blurred main subject, distortion, and reflection.</description></item>
+        /// <item><description><b>ImageUrl is required</b> and must be a publicly accessible HTTP or HTTPS URL. Currently, images from outside the Chinese mainland are not supported. Only image URLs accessible over the public network in the Chinese mainland are supported. We recommend that you upload the image to an Alibaba Cloud OSS bucket in a region in the Chinese mainland, and then use the presigned URL of the image as the input parameter for this operation. Reference: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How to obtain the URL of a single file or the URLs of multiple files</a>.</description></item>
+        /// <item><description>After a successful submission, a task ID is immediately returned. Regardless of whether the task is completed immediately or is still being processed, you must poll the GetImageDefectDetectionTaskResult operation to obtain the final detection result.</description></item>
+        /// <item><description>If a parameter error or other issue occurs during the submission process, the corresponding error message is directly returned without creating a task record.</description></item>
+        /// <item><description>The image size cannot exceed 10 MB. Detection fails for images that exceed this limit.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -726,18 +746,18 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an image for defect detection and returns a task ID for querying results.</para>
+        /// <para>Submits an image for defect detection and returns a task ID for querying the result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation commits an image to the server for defect detection, including but not limited to blurriness, distortion, glare, and other anomalies in the image subject.</description></item>
-        /// <item><description><b>ImageUrl is required</b> and must be a publicly accessible HTTP/HTTPS URL. Currently, only image URLs accessible from the Chinese mainland public network are supported. Upload the image to an Alibaba Cloud OSS bucket in a Chinese mainland region first, and then use the presigned URL of the image as the input parameter for this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How to obtain the URL of a single object or the URLs of multiple objects</a></description></item>
-        /// <item><description>After successful commit, a node ID is returned immediately. Regardless of whether the node has been completed or is still being processed, call the GetImageDefectDetectionTaskResult operation to perform polling for the final detection result.</description></item>
-        /// <item><description>If a parameter fault or other issue occurs during the commit procedure, the corresponding error message is returned directly without creating a node record.</description></item>
-        /// <item><description>The image file size cannot exceed 10 MB. Detection is failed for images that exceed this limit.</description></item>
+        /// <item><description>This operation submits an image to the server for defect detection, including but not limited to abnormal issues such as a blurred main subject, distortion, and reflection.</description></item>
+        /// <item><description><b>ImageUrl is required</b> and must be a publicly accessible HTTP or HTTPS URL. Currently, images from outside the Chinese mainland are not supported. Only image URLs accessible over the public network in the Chinese mainland are supported. We recommend that you upload the image to an Alibaba Cloud OSS bucket in a region in the Chinese mainland, and then use the presigned URL of the image as the input parameter for this operation. Reference: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How to obtain the URL of a single file or the URLs of multiple files</a>.</description></item>
+        /// <item><description>After a successful submission, a task ID is immediately returned. Regardless of whether the task is completed immediately or is still being processed, you must poll the GetImageDefectDetectionTaskResult operation to obtain the final detection result.</description></item>
+        /// <item><description>If a parameter error or other issue occurs during the submission process, the corresponding error message is directly returned without creating a task record.</description></item>
+        /// <item><description>The image size cannot exceed 10 MB. Detection fails for images that exceed this limit.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -756,18 +776,18 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an image for defect detection and returns a task ID for querying results.</para>
+        /// <para>Submits an image for defect detection and returns a task ID for querying the result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation commits an image to the server for defect detection, including but not limited to blurriness, distortion, glare, and other anomalies in the image subject.</description></item>
-        /// <item><description><b>ImageUrl is required</b> and must be a publicly accessible HTTP/HTTPS URL. Currently, only image URLs accessible from the Chinese mainland public network are supported. Upload the image to an Alibaba Cloud OSS bucket in a Chinese mainland region first, and then use the presigned URL of the image as the input parameter for this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How to obtain the URL of a single object or the URLs of multiple objects</a></description></item>
-        /// <item><description>After successful commit, a node ID is returned immediately. Regardless of whether the node has been completed or is still being processed, call the GetImageDefectDetectionTaskResult operation to perform polling for the final detection result.</description></item>
-        /// <item><description>If a parameter fault or other issue occurs during the commit procedure, the corresponding error message is returned directly without creating a node record.</description></item>
-        /// <item><description>The image file size cannot exceed 10 MB. Detection is failed for images that exceed this limit.</description></item>
+        /// <item><description>This operation submits an image to the server for defect detection, including but not limited to abnormal issues such as a blurred main subject, distortion, and reflection.</description></item>
+        /// <item><description><b>ImageUrl is required</b> and must be a publicly accessible HTTP or HTTPS URL. Currently, images from outside the Chinese mainland are not supported. Only image URLs accessible over the public network in the Chinese mainland are supported. We recommend that you upload the image to an Alibaba Cloud OSS bucket in a region in the Chinese mainland, and then use the presigned URL of the image as the input parameter for this operation. Reference: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How to obtain the URL of a single file or the URLs of multiple files</a>.</description></item>
+        /// <item><description>After a successful submission, a task ID is immediately returned. Regardless of whether the task is completed immediately or is still being processed, you must poll the GetImageDefectDetectionTaskResult operation to obtain the final detection result.</description></item>
+        /// <item><description>If a parameter error or other issue occurs during the submission process, the corresponding error message is directly returned without creating a task record.</description></item>
+        /// <item><description>The image size cannot exceed 10 MB. Detection fails for images that exceed this limit.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -793,14 +813,10 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>ImageUrl</b> is required and must be a publicly accessible HTTP/HTTPS URL.</description></item>
-        /// <item><description>External images are not currently supported. Only image URLs accessible from the Chinese mainland public network are supported. Upload images to an Alibaba Cloud OSS bucket in a Chinese mainland region first, and then use the presigned URL as the input parameter for this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How to obtain the URL of a single object or the URLs of multiple objects</a>.</description></item>
-        /// <item><description>The <b>DetectType</b> parameter is deprecated. This parameter is still accepted (<c>tamper</c>/<c>aigc</c>) but does not affect the actual detection pattern. Regardless of the value passed, tampering detection is executed and <c>DetectMode=tamper</c> is returned. New callers should not pass this parameter.</description></item>
-        /// <item><description>The <b>UseTamperSmallModel</b> parameter specifies whether to use the small model. If set to <c>true</c>, the small model is used and no large model report is generated. If set to <c>false</c> or not passed, the large model is used by default and a comprehensive large model analysis report is returned.</description></item>
-        /// </list>
-        /// <h2>Settings</h2>
-        /// <list type="bullet">
-        /// <item><description>When <b>UseTamperSmallModel</b> is not specified, the large model is used by default.</description></item>
+        /// <item><description><b>ImageUrl</b> is required and must be a publicly accessible HTTP or HTTPS URL.</description></item>
+        /// <item><description>Images from outside the Chinese mainland are not supported. Only image URLs accessible over the public network in the Chinese mainland are supported. Upload the image to an Alibaba Cloud OSS bucket in a region in the Chinese mainland and then use the pre-signed URL of the image as the input parameter for this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How to obtain the URL of a single file or the URLs of multiple files</a>.</description></item>
+        /// <item><description>The <b>DetectType</b> parameter is deprecated. This parameter is still accepted (<c>tamper</c> or <c>aigc</c>) but does not affect the actual detection mode. Regardless of the value passed, tampering detection is executed and <c>DetectMode=tamper</c> is returned. Do not pass this parameter when you invoke the operation.</description></item>
+        /// <item><description>The <b>UseTamperSmallModel</b> parameter specifies whether to use a small model. If it is set to <c>true</c>, the small model is used and no large model report is generated. If it is set to <c>false</c> or left empty, the large model is used by default and a comprehensive analysis report from the large model is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -862,14 +878,10 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>ImageUrl</b> is required and must be a publicly accessible HTTP/HTTPS URL.</description></item>
-        /// <item><description>External images are not currently supported. Only image URLs accessible from the Chinese mainland public network are supported. Upload images to an Alibaba Cloud OSS bucket in a Chinese mainland region first, and then use the presigned URL as the input parameter for this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How to obtain the URL of a single object or the URLs of multiple objects</a>.</description></item>
-        /// <item><description>The <b>DetectType</b> parameter is deprecated. This parameter is still accepted (<c>tamper</c>/<c>aigc</c>) but does not affect the actual detection pattern. Regardless of the value passed, tampering detection is executed and <c>DetectMode=tamper</c> is returned. New callers should not pass this parameter.</description></item>
-        /// <item><description>The <b>UseTamperSmallModel</b> parameter specifies whether to use the small model. If set to <c>true</c>, the small model is used and no large model report is generated. If set to <c>false</c> or not passed, the large model is used by default and a comprehensive large model analysis report is returned.</description></item>
-        /// </list>
-        /// <h2>Settings</h2>
-        /// <list type="bullet">
-        /// <item><description>When <b>UseTamperSmallModel</b> is not specified, the large model is used by default.</description></item>
+        /// <item><description><b>ImageUrl</b> is required and must be a publicly accessible HTTP or HTTPS URL.</description></item>
+        /// <item><description>Images from outside the Chinese mainland are not supported. Only image URLs accessible over the public network in the Chinese mainland are supported. Upload the image to an Alibaba Cloud OSS bucket in a region in the Chinese mainland and then use the pre-signed URL of the image as the input parameter for this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How to obtain the URL of a single file or the URLs of multiple files</a>.</description></item>
+        /// <item><description>The <b>DetectType</b> parameter is deprecated. This parameter is still accepted (<c>tamper</c> or <c>aigc</c>) but does not affect the actual detection mode. Regardless of the value passed, tampering detection is executed and <c>DetectMode=tamper</c> is returned. Do not pass this parameter when you invoke the operation.</description></item>
+        /// <item><description>The <b>UseTamperSmallModel</b> parameter specifies whether to use a small model. If it is set to <c>true</c>, the small model is used and no large model report is generated. If it is set to <c>false</c> or left empty, the large model is used by default and a comprehensive analysis report from the large model is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -931,14 +943,10 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>ImageUrl</b> is required and must be a publicly accessible HTTP/HTTPS URL.</description></item>
-        /// <item><description>External images are not currently supported. Only image URLs accessible from the Chinese mainland public network are supported. Upload images to an Alibaba Cloud OSS bucket in a Chinese mainland region first, and then use the presigned URL as the input parameter for this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How to obtain the URL of a single object or the URLs of multiple objects</a>.</description></item>
-        /// <item><description>The <b>DetectType</b> parameter is deprecated. This parameter is still accepted (<c>tamper</c>/<c>aigc</c>) but does not affect the actual detection pattern. Regardless of the value passed, tampering detection is executed and <c>DetectMode=tamper</c> is returned. New callers should not pass this parameter.</description></item>
-        /// <item><description>The <b>UseTamperSmallModel</b> parameter specifies whether to use the small model. If set to <c>true</c>, the small model is used and no large model report is generated. If set to <c>false</c> or not passed, the large model is used by default and a comprehensive large model analysis report is returned.</description></item>
-        /// </list>
-        /// <h2>Settings</h2>
-        /// <list type="bullet">
-        /// <item><description>When <b>UseTamperSmallModel</b> is not specified, the large model is used by default.</description></item>
+        /// <item><description><b>ImageUrl</b> is required and must be a publicly accessible HTTP or HTTPS URL.</description></item>
+        /// <item><description>Images from outside the Chinese mainland are not supported. Only image URLs accessible over the public network in the Chinese mainland are supported. Upload the image to an Alibaba Cloud OSS bucket in a region in the Chinese mainland and then use the pre-signed URL of the image as the input parameter for this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How to obtain the URL of a single file or the URLs of multiple files</a>.</description></item>
+        /// <item><description>The <b>DetectType</b> parameter is deprecated. This parameter is still accepted (<c>tamper</c> or <c>aigc</c>) but does not affect the actual detection mode. Regardless of the value passed, tampering detection is executed and <c>DetectMode=tamper</c> is returned. Do not pass this parameter when you invoke the operation.</description></item>
+        /// <item><description>The <b>UseTamperSmallModel</b> parameter specifies whether to use a small model. If it is set to <c>true</c>, the small model is used and no large model report is generated. If it is set to <c>false</c> or left empty, the large model is used by default and a comprehensive analysis report from the large model is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -964,14 +972,10 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>ImageUrl</b> is required and must be a publicly accessible HTTP/HTTPS URL.</description></item>
-        /// <item><description>External images are not currently supported. Only image URLs accessible from the Chinese mainland public network are supported. Upload images to an Alibaba Cloud OSS bucket in a Chinese mainland region first, and then use the presigned URL as the input parameter for this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How to obtain the URL of a single object or the URLs of multiple objects</a>.</description></item>
-        /// <item><description>The <b>DetectType</b> parameter is deprecated. This parameter is still accepted (<c>tamper</c>/<c>aigc</c>) but does not affect the actual detection pattern. Regardless of the value passed, tampering detection is executed and <c>DetectMode=tamper</c> is returned. New callers should not pass this parameter.</description></item>
-        /// <item><description>The <b>UseTamperSmallModel</b> parameter specifies whether to use the small model. If set to <c>true</c>, the small model is used and no large model report is generated. If set to <c>false</c> or not passed, the large model is used by default and a comprehensive large model analysis report is returned.</description></item>
-        /// </list>
-        /// <h2>Settings</h2>
-        /// <list type="bullet">
-        /// <item><description>When <b>UseTamperSmallModel</b> is not specified, the large model is used by default.</description></item>
+        /// <item><description><b>ImageUrl</b> is required and must be a publicly accessible HTTP or HTTPS URL.</description></item>
+        /// <item><description>Images from outside the Chinese mainland are not supported. Only image URLs accessible over the public network in the Chinese mainland are supported. Upload the image to an Alibaba Cloud OSS bucket in a region in the Chinese mainland and then use the pre-signed URL of the image as the input parameter for this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How to obtain the URL of a single file or the URLs of multiple files</a>.</description></item>
+        /// <item><description>The <b>DetectType</b> parameter is deprecated. This parameter is still accepted (<c>tamper</c> or <c>aigc</c>) but does not affect the actual detection mode. Regardless of the value passed, tampering detection is executed and <c>DetectMode=tamper</c> is returned. Do not pass this parameter when you invoke the operation.</description></item>
+        /// <item><description>The <b>UseTamperSmallModel</b> parameter specifies whether to use a small model. If it is set to <c>true</c>, the small model is used and no large model report is generated. If it is set to <c>false</c> or left empty, the large model is used by default and a comprehensive analysis report from the large model is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -990,16 +994,16 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a personal income tax record screenshot for forgery detection and returns a task ID.</para>
+        /// <para>Submits a screenshot of an individual income tax record for forgery detection and returns a task ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Request instructions</h2>
         /// <list type="bullet">
-        /// <item><description><b>ImageUrl</b> is required and must be a publicly accessible HTTP/HTTPS URL (the server needs to download the image).</description></item>
-        /// <item><description>External images are not supported. Only image URLs accessible from the Chinese mainland public network are supported. Upload the image to an Alibaba Cloud OSS bucket in a Chinese mainland region first, and then use the presigned URL of the image as the input parameter of this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How do I obtain the URL of one or more files?</a></description></item>
-        /// <item><description>The image file size cannot exceed 10 MB. Detection of images that exceed this limit will be failed.</description></item>
+        /// <item><description><b>ImageUrl</b> is required and must be a publicly accessible HTTP or HTTPS URL. The server must be able to download the image from this URL.</description></item>
+        /// <item><description>Currently, images from outside the Chinese mainland are not supported. Only images accessible from the public network within the Chinese mainland are supported. We recommend that you first upload the image to an Alibaba Cloud OSS bucket in a region within the Chinese mainland, and then use the pre-signed URL of the image as the input parameter for this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How to obtain the URL of a single file or the URLs of multiple files</a></description></item>
+        /// <item><description>The image size cannot exceed 10 MB. Detection will be failed for images that exceed this limit.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1046,16 +1050,16 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a personal income tax record screenshot for forgery detection and returns a task ID.</para>
+        /// <para>Submits a screenshot of an individual income tax record for forgery detection and returns a task ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Request instructions</h2>
         /// <list type="bullet">
-        /// <item><description><b>ImageUrl</b> is required and must be a publicly accessible HTTP/HTTPS URL (the server needs to download the image).</description></item>
-        /// <item><description>External images are not supported. Only image URLs accessible from the Chinese mainland public network are supported. Upload the image to an Alibaba Cloud OSS bucket in a Chinese mainland region first, and then use the presigned URL of the image as the input parameter of this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How do I obtain the URL of one or more files?</a></description></item>
-        /// <item><description>The image file size cannot exceed 10 MB. Detection of images that exceed this limit will be failed.</description></item>
+        /// <item><description><b>ImageUrl</b> is required and must be a publicly accessible HTTP or HTTPS URL. The server must be able to download the image from this URL.</description></item>
+        /// <item><description>Currently, images from outside the Chinese mainland are not supported. Only images accessible from the public network within the Chinese mainland are supported. We recommend that you first upload the image to an Alibaba Cloud OSS bucket in a region within the Chinese mainland, and then use the pre-signed URL of the image as the input parameter for this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How to obtain the URL of a single file or the URLs of multiple files</a></description></item>
+        /// <item><description>The image size cannot exceed 10 MB. Detection will be failed for images that exceed this limit.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1102,16 +1106,16 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a personal income tax record screenshot for forgery detection and returns a task ID.</para>
+        /// <para>Submits a screenshot of an individual income tax record for forgery detection and returns a task ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Request instructions</h2>
         /// <list type="bullet">
-        /// <item><description><b>ImageUrl</b> is required and must be a publicly accessible HTTP/HTTPS URL (the server needs to download the image).</description></item>
-        /// <item><description>External images are not supported. Only image URLs accessible from the Chinese mainland public network are supported. Upload the image to an Alibaba Cloud OSS bucket in a Chinese mainland region first, and then use the presigned URL of the image as the input parameter of this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How do I obtain the URL of one or more files?</a></description></item>
-        /// <item><description>The image file size cannot exceed 10 MB. Detection of images that exceed this limit will be failed.</description></item>
+        /// <item><description><b>ImageUrl</b> is required and must be a publicly accessible HTTP or HTTPS URL. The server must be able to download the image from this URL.</description></item>
+        /// <item><description>Currently, images from outside the Chinese mainland are not supported. Only images accessible from the public network within the Chinese mainland are supported. We recommend that you first upload the image to an Alibaba Cloud OSS bucket in a region within the Chinese mainland, and then use the pre-signed URL of the image as the input parameter for this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How to obtain the URL of a single file or the URLs of multiple files</a></description></item>
+        /// <item><description>The image size cannot exceed 10 MB. Detection will be failed for images that exceed this limit.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1130,16 +1134,16 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a personal income tax record screenshot for forgery detection and returns a task ID.</para>
+        /// <para>Submits a screenshot of an individual income tax record for forgery detection and returns a task ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Request instructions</h2>
         /// <list type="bullet">
-        /// <item><description><b>ImageUrl</b> is required and must be a publicly accessible HTTP/HTTPS URL (the server needs to download the image).</description></item>
-        /// <item><description>External images are not supported. Only image URLs accessible from the Chinese mainland public network are supported. Upload the image to an Alibaba Cloud OSS bucket in a Chinese mainland region first, and then use the presigned URL of the image as the input parameter of this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How do I obtain the URL of one or more files?</a></description></item>
-        /// <item><description>The image file size cannot exceed 10 MB. Detection of images that exceed this limit will be failed.</description></item>
+        /// <item><description><b>ImageUrl</b> is required and must be a publicly accessible HTTP or HTTPS URL. The server must be able to download the image from this URL.</description></item>
+        /// <item><description>Currently, images from outside the Chinese mainland are not supported. Only images accessible from the public network within the Chinese mainland are supported. We recommend that you first upload the image to an Alibaba Cloud OSS bucket in a region within the Chinese mainland, and then use the pre-signed URL of the image as the input parameter for this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How to obtain the URL of a single file or the URLs of multiple files</a></description></item>
+        /// <item><description>The image size cannot exceed 10 MB. Detection will be failed for images that exceed this limit.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1158,18 +1162,18 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates images based on a provided text description and returns a task ID.</para>
+        /// <para>Generates an image based on the provided text description and returns the task ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation creates an AI image generation task. The system generates images based on the positive prompt provided by the user.</description></item>
-        /// <item><description>You can configure parameters such as negative prompt, model, and image size to optimize the generation results.</description></item>
-        /// <item><description>By default, generated images are automatically embedded with a C2PA digital signature. You can optionally add a watermark in the lower-right corner.</description></item>
-        /// <item><description>Set the ClientToken parameter to ensure the idempotence of the request and guarantee uniqueness across different requests.</description></item>
-        /// <item><description>After the task is created, call the GetImageTaskResult operation with the TaskId to query the generation results.</description></item>
+        /// <item><description>This operation creates an AI image generation task. The system generates the corresponding image based on the positive prompt provided by the user.</description></item>
+        /// <item><description>You can configure parameters such as the negative prompt, model, and image size to optimize the generation results.</description></item>
+        /// <item><description>By default, the generated image is automatically embedded with a C2PA digital signature. You can choose whether to add a watermark in the lower-right corner.</description></item>
+        /// <item><description>You can set the <c>ClientToken</c> parameter to ensure the idempotence of the request and guarantee uniqueness across different requests.</description></item>
+        /// <item><description>After the task is created, use the <c>TaskId</c> to call the <c>GetImageTaskResult</c> operation to query the generation result.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1240,18 +1244,18 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates images based on a provided text description and returns a task ID.</para>
+        /// <para>Generates an image based on the provided text description and returns the task ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation creates an AI image generation task. The system generates images based on the positive prompt provided by the user.</description></item>
-        /// <item><description>You can configure parameters such as negative prompt, model, and image size to optimize the generation results.</description></item>
-        /// <item><description>By default, generated images are automatically embedded with a C2PA digital signature. You can optionally add a watermark in the lower-right corner.</description></item>
-        /// <item><description>Set the ClientToken parameter to ensure the idempotence of the request and guarantee uniqueness across different requests.</description></item>
-        /// <item><description>After the task is created, call the GetImageTaskResult operation with the TaskId to query the generation results.</description></item>
+        /// <item><description>This operation creates an AI image generation task. The system generates the corresponding image based on the positive prompt provided by the user.</description></item>
+        /// <item><description>You can configure parameters such as the negative prompt, model, and image size to optimize the generation results.</description></item>
+        /// <item><description>By default, the generated image is automatically embedded with a C2PA digital signature. You can choose whether to add a watermark in the lower-right corner.</description></item>
+        /// <item><description>You can set the <c>ClientToken</c> parameter to ensure the idempotence of the request and guarantee uniqueness across different requests.</description></item>
+        /// <item><description>After the task is created, use the <c>TaskId</c> to call the <c>GetImageTaskResult</c> operation to query the generation result.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1322,18 +1326,18 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates images based on a provided text description and returns a task ID.</para>
+        /// <para>Generates an image based on the provided text description and returns the task ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation creates an AI image generation task. The system generates images based on the positive prompt provided by the user.</description></item>
-        /// <item><description>You can configure parameters such as negative prompt, model, and image size to optimize the generation results.</description></item>
-        /// <item><description>By default, generated images are automatically embedded with a C2PA digital signature. You can optionally add a watermark in the lower-right corner.</description></item>
-        /// <item><description>Set the ClientToken parameter to ensure the idempotence of the request and guarantee uniqueness across different requests.</description></item>
-        /// <item><description>After the task is created, call the GetImageTaskResult operation with the TaskId to query the generation results.</description></item>
+        /// <item><description>This operation creates an AI image generation task. The system generates the corresponding image based on the positive prompt provided by the user.</description></item>
+        /// <item><description>You can configure parameters such as the negative prompt, model, and image size to optimize the generation results.</description></item>
+        /// <item><description>By default, the generated image is automatically embedded with a C2PA digital signature. You can choose whether to add a watermark in the lower-right corner.</description></item>
+        /// <item><description>You can set the <c>ClientToken</c> parameter to ensure the idempotence of the request and guarantee uniqueness across different requests.</description></item>
+        /// <item><description>After the task is created, use the <c>TaskId</c> to call the <c>GetImageTaskResult</c> operation to query the generation result.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1352,18 +1356,18 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates images based on a provided text description and returns a task ID.</para>
+        /// <para>Generates an image based on the provided text description and returns the task ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation creates an AI image generation task. The system generates images based on the positive prompt provided by the user.</description></item>
-        /// <item><description>You can configure parameters such as negative prompt, model, and image size to optimize the generation results.</description></item>
-        /// <item><description>By default, generated images are automatically embedded with a C2PA digital signature. You can optionally add a watermark in the lower-right corner.</description></item>
-        /// <item><description>Set the ClientToken parameter to ensure the idempotence of the request and guarantee uniqueness across different requests.</description></item>
-        /// <item><description>After the task is created, call the GetImageTaskResult operation with the TaskId to query the generation results.</description></item>
+        /// <item><description>This operation creates an AI image generation task. The system generates the corresponding image based on the positive prompt provided by the user.</description></item>
+        /// <item><description>You can configure parameters such as the negative prompt, model, and image size to optimize the generation results.</description></item>
+        /// <item><description>By default, the generated image is automatically embedded with a C2PA digital signature. You can choose whether to add a watermark in the lower-right corner.</description></item>
+        /// <item><description>You can set the <c>ClientToken</c> parameter to ensure the idempotence of the request and guarantee uniqueness across different requests.</description></item>
+        /// <item><description>After the task is created, use the <c>TaskId</c> to call the <c>GetImageTaskResult</c> operation to query the generation result.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1799,13 +1803,13 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>FileUrl</b> must be a publicly accessible HTTP/HTTPS URL. External files are not supported. Only file URLs accessible over the Chinese mainland public network are supported. Upload the file to an Alibaba Cloud Object Storage Service (OSS) bucket in a Chinese mainland region first, and then use the presigned URL of the file as the input parameter for this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How do I obtain the URL of one or more objects?</a></description></item>
-        /// <item><description><b>FileType</b> must match the actual file type. The same value must be specified during both embedding and fetch.</description></item>
-        /// <item><description>Supported file specifications: Video files must be no longer than 10 minutes and no larger than 100 MB. Image files must be no larger than 100 MB.</description></item>
-        /// <item><description>The task completion time is approximately equal to the file duration. For example, embedding a 10-second video takes about 10 seconds.</description></item>
-        /// <item><description>If the submission fails, no task record is created and a synchronous error is returned.</description></item>
+        /// <item><description><b>FileUrl</b> must be a publicly accessible HTTP or HTTPS URL. Files from outside the Chinese mainland are not supported. Only file URLs accessible over the public network in the Chinese mainland are supported. Upload the file to an Object Storage Service (OSS) bucket in a region in the Chinese mainland and then use the presigned URL of the file as the input parameter for this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How to obtain the URL of a single object or the URLs of multiple objects</a>.</description></item>
+        /// <item><description><b>FileType</b> must match the actual file type and must be the same for both embedding and fetch.</description></item>
+        /// <item><description>The maximum supported file size is <b>512 MB</b>.</description></item>
+        /// <item><description>The node completion time is approximately equal to the duration of the file. For example, embedding a 10-second video takes about 10 seconds.</description></item>
+        /// <item><description>If the commit failed, no node record is created, and a synchronization fault is returned directly.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1873,13 +1877,13 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>FileUrl</b> must be a publicly accessible HTTP/HTTPS URL. External files are not supported. Only file URLs accessible over the Chinese mainland public network are supported. Upload the file to an Alibaba Cloud Object Storage Service (OSS) bucket in a Chinese mainland region first, and then use the presigned URL of the file as the input parameter for this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How do I obtain the URL of one or more objects?</a></description></item>
-        /// <item><description><b>FileType</b> must match the actual file type. The same value must be specified during both embedding and fetch.</description></item>
-        /// <item><description>Supported file specifications: Video files must be no longer than 10 minutes and no larger than 100 MB. Image files must be no larger than 100 MB.</description></item>
-        /// <item><description>The task completion time is approximately equal to the file duration. For example, embedding a 10-second video takes about 10 seconds.</description></item>
-        /// <item><description>If the submission fails, no task record is created and a synchronous error is returned.</description></item>
+        /// <item><description><b>FileUrl</b> must be a publicly accessible HTTP or HTTPS URL. Files from outside the Chinese mainland are not supported. Only file URLs accessible over the public network in the Chinese mainland are supported. Upload the file to an Object Storage Service (OSS) bucket in a region in the Chinese mainland and then use the presigned URL of the file as the input parameter for this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How to obtain the URL of a single object or the URLs of multiple objects</a>.</description></item>
+        /// <item><description><b>FileType</b> must match the actual file type and must be the same for both embedding and fetch.</description></item>
+        /// <item><description>The maximum supported file size is <b>512 MB</b>.</description></item>
+        /// <item><description>The node completion time is approximately equal to the duration of the file. For example, embedding a 10-second video takes about 10 seconds.</description></item>
+        /// <item><description>If the commit failed, no node record is created, and a synchronization fault is returned directly.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1947,13 +1951,13 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>FileUrl</b> must be a publicly accessible HTTP/HTTPS URL. External files are not supported. Only file URLs accessible over the Chinese mainland public network are supported. Upload the file to an Alibaba Cloud Object Storage Service (OSS) bucket in a Chinese mainland region first, and then use the presigned URL of the file as the input parameter for this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How do I obtain the URL of one or more objects?</a></description></item>
-        /// <item><description><b>FileType</b> must match the actual file type. The same value must be specified during both embedding and fetch.</description></item>
-        /// <item><description>Supported file specifications: Video files must be no longer than 10 minutes and no larger than 100 MB. Image files must be no larger than 100 MB.</description></item>
-        /// <item><description>The task completion time is approximately equal to the file duration. For example, embedding a 10-second video takes about 10 seconds.</description></item>
-        /// <item><description>If the submission fails, no task record is created and a synchronous error is returned.</description></item>
+        /// <item><description><b>FileUrl</b> must be a publicly accessible HTTP or HTTPS URL. Files from outside the Chinese mainland are not supported. Only file URLs accessible over the public network in the Chinese mainland are supported. Upload the file to an Object Storage Service (OSS) bucket in a region in the Chinese mainland and then use the presigned URL of the file as the input parameter for this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How to obtain the URL of a single object or the URLs of multiple objects</a>.</description></item>
+        /// <item><description><b>FileType</b> must match the actual file type and must be the same for both embedding and fetch.</description></item>
+        /// <item><description>The maximum supported file size is <b>512 MB</b>.</description></item>
+        /// <item><description>The node completion time is approximately equal to the duration of the file. For example, embedding a 10-second video takes about 10 seconds.</description></item>
+        /// <item><description>If the commit failed, no node record is created, and a synchronization fault is returned directly.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1977,13 +1981,13 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>FileUrl</b> must be a publicly accessible HTTP/HTTPS URL. External files are not supported. Only file URLs accessible over the Chinese mainland public network are supported. Upload the file to an Alibaba Cloud Object Storage Service (OSS) bucket in a Chinese mainland region first, and then use the presigned URL of the file as the input parameter for this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How do I obtain the URL of one or more objects?</a></description></item>
-        /// <item><description><b>FileType</b> must match the actual file type. The same value must be specified during both embedding and fetch.</description></item>
-        /// <item><description>Supported file specifications: Video files must be no longer than 10 minutes and no larger than 100 MB. Image files must be no larger than 100 MB.</description></item>
-        /// <item><description>The task completion time is approximately equal to the file duration. For example, embedding a 10-second video takes about 10 seconds.</description></item>
-        /// <item><description>If the submission fails, no task record is created and a synchronous error is returned.</description></item>
+        /// <item><description><b>FileUrl</b> must be a publicly accessible HTTP or HTTPS URL. Files from outside the Chinese mainland are not supported. Only file URLs accessible over the public network in the Chinese mainland are supported. Upload the file to an Object Storage Service (OSS) bucket in a region in the Chinese mainland and then use the presigned URL of the file as the input parameter for this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How to obtain the URL of a single object or the URLs of multiple objects</a>.</description></item>
+        /// <item><description><b>FileType</b> must match the actual file type and must be the same for both embedding and fetch.</description></item>
+        /// <item><description>The maximum supported file size is <b>512 MB</b>.</description></item>
+        /// <item><description>The node completion time is approximately equal to the duration of the file. For example, embedding a 10-second video takes about 10 seconds.</description></item>
+        /// <item><description>If the commit failed, no node record is created, and a synchronization fault is returned directly.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2002,17 +2006,17 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an image or video file to extract a dark watermark and returns a task ID.</para>
+        /// <para>Submits an image or video file to extract an invisible watermark and returns the task ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>FileUrl</b> must be a publicly accessible HTTP/HTTPS URL. External files are not supported. Only file URLs accessible from the Chinese mainland public network are supported. Upload the file to an Alibaba Cloud OSS bucket in a region within the Chinese mainland first, and then use the presigned URL of the file as the input parameter of this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How do I obtain the URL of one or more objects?</a></description></item>
-        /// <item><description><b>FileType must be the same as the one used during embedding</b>: Make sure that the file type (image or video) for extraction is the same as the file type used when the watermark was embedded.</description></item>
-        /// <item><description><b>File specification limits</b>: Video files must be no longer than 10 minutes and no larger than 100 MB. Image files must also be no larger than 100 MB.</description></item>
-        /// <item><description><b>Processing time</b>: Approximately equal to the actual playback duration of the file. For example, a 10-second video takes approximately 10 seconds to complete the watermark fetch procedure.</description></item>
+        /// <item><description><b>FileUrl</b> must be a publicly accessible HTTP or HTTPS URL. Files on external networks are not supported. Only files accessible over the public network in the Chinese mainland are supported. Upload the file to an OSS bucket in a region in the Chinese mainland and use the presigned URL of the file as the input parameter for this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How to obtain the URL of a single object or the URLs of multiple objects</a></description></item>
+        /// <item><description><b>FileType must be consistent with the embedding phase</b>: Ensure that the file type (image, video, or audio) for fetching matches the file type used when the watermark was embedded.</description></item>
+        /// <item><description><b>File size limit</b>: The maximum file size is 512 MB.</description></item>
+        /// <item><description><b>Processing time</b>: The processing time is approximately equal to the actual playback duration of the file. For example, it takes about 10 seconds to complete the watermark fetching procedure for a 10-second video.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2067,17 +2071,17 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an image or video file to extract a dark watermark and returns a task ID.</para>
+        /// <para>Submits an image or video file to extract an invisible watermark and returns the task ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>FileUrl</b> must be a publicly accessible HTTP/HTTPS URL. External files are not supported. Only file URLs accessible from the Chinese mainland public network are supported. Upload the file to an Alibaba Cloud OSS bucket in a region within the Chinese mainland first, and then use the presigned URL of the file as the input parameter of this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How do I obtain the URL of one or more objects?</a></description></item>
-        /// <item><description><b>FileType must be the same as the one used during embedding</b>: Make sure that the file type (image or video) for extraction is the same as the file type used when the watermark was embedded.</description></item>
-        /// <item><description><b>File specification limits</b>: Video files must be no longer than 10 minutes and no larger than 100 MB. Image files must also be no larger than 100 MB.</description></item>
-        /// <item><description><b>Processing time</b>: Approximately equal to the actual playback duration of the file. For example, a 10-second video takes approximately 10 seconds to complete the watermark fetch procedure.</description></item>
+        /// <item><description><b>FileUrl</b> must be a publicly accessible HTTP or HTTPS URL. Files on external networks are not supported. Only files accessible over the public network in the Chinese mainland are supported. Upload the file to an OSS bucket in a region in the Chinese mainland and use the presigned URL of the file as the input parameter for this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How to obtain the URL of a single object or the URLs of multiple objects</a></description></item>
+        /// <item><description><b>FileType must be consistent with the embedding phase</b>: Ensure that the file type (image, video, or audio) for fetching matches the file type used when the watermark was embedded.</description></item>
+        /// <item><description><b>File size limit</b>: The maximum file size is 512 MB.</description></item>
+        /// <item><description><b>Processing time</b>: The processing time is approximately equal to the actual playback duration of the file. For example, it takes about 10 seconds to complete the watermark fetching procedure for a 10-second video.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2132,17 +2136,17 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an image or video file to extract a dark watermark and returns a task ID.</para>
+        /// <para>Submits an image or video file to extract an invisible watermark and returns the task ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>FileUrl</b> must be a publicly accessible HTTP/HTTPS URL. External files are not supported. Only file URLs accessible from the Chinese mainland public network are supported. Upload the file to an Alibaba Cloud OSS bucket in a region within the Chinese mainland first, and then use the presigned URL of the file as the input parameter of this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How do I obtain the URL of one or more objects?</a></description></item>
-        /// <item><description><b>FileType must be the same as the one used during embedding</b>: Make sure that the file type (image or video) for extraction is the same as the file type used when the watermark was embedded.</description></item>
-        /// <item><description><b>File specification limits</b>: Video files must be no longer than 10 minutes and no larger than 100 MB. Image files must also be no larger than 100 MB.</description></item>
-        /// <item><description><b>Processing time</b>: Approximately equal to the actual playback duration of the file. For example, a 10-second video takes approximately 10 seconds to complete the watermark fetch procedure.</description></item>
+        /// <item><description><b>FileUrl</b> must be a publicly accessible HTTP or HTTPS URL. Files on external networks are not supported. Only files accessible over the public network in the Chinese mainland are supported. Upload the file to an OSS bucket in a region in the Chinese mainland and use the presigned URL of the file as the input parameter for this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How to obtain the URL of a single object or the URLs of multiple objects</a></description></item>
+        /// <item><description><b>FileType must be consistent with the embedding phase</b>: Ensure that the file type (image, video, or audio) for fetching matches the file type used when the watermark was embedded.</description></item>
+        /// <item><description><b>File size limit</b>: The maximum file size is 512 MB.</description></item>
+        /// <item><description><b>Processing time</b>: The processing time is approximately equal to the actual playback duration of the file. For example, it takes about 10 seconds to complete the watermark fetching procedure for a 10-second video.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2161,17 +2165,17 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an image or video file to extract a dark watermark and returns a task ID.</para>
+        /// <para>Submits an image or video file to extract an invisible watermark and returns the task ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>FileUrl</b> must be a publicly accessible HTTP/HTTPS URL. External files are not supported. Only file URLs accessible from the Chinese mainland public network are supported. Upload the file to an Alibaba Cloud OSS bucket in a region within the Chinese mainland first, and then use the presigned URL of the file as the input parameter of this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How do I obtain the URL of one or more objects?</a></description></item>
-        /// <item><description><b>FileType must be the same as the one used during embedding</b>: Make sure that the file type (image or video) for extraction is the same as the file type used when the watermark was embedded.</description></item>
-        /// <item><description><b>File specification limits</b>: Video files must be no longer than 10 minutes and no larger than 100 MB. Image files must also be no larger than 100 MB.</description></item>
-        /// <item><description><b>Processing time</b>: Approximately equal to the actual playback duration of the file. For example, a 10-second video takes approximately 10 seconds to complete the watermark fetch procedure.</description></item>
+        /// <item><description><b>FileUrl</b> must be a publicly accessible HTTP or HTTPS URL. Files on external networks are not supported. Only files accessible over the public network in the Chinese mainland are supported. Upload the file to an OSS bucket in a region in the Chinese mainland and use the presigned URL of the file as the input parameter for this operation. References: <a href="https://www.alibabacloud.com/help/en/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">How to obtain the URL of a single object or the URLs of multiple objects</a></description></item>
+        /// <item><description><b>FileType must be consistent with the embedding phase</b>: Ensure that the file type (image, video, or audio) for fetching matches the file type used when the watermark was embedded.</description></item>
+        /// <item><description><b>File size limit</b>: The maximum file size is 512 MB.</description></item>
+        /// <item><description><b>Processing time</b>: The processing time is approximately equal to the actual playback duration of the file. For example, it takes about 10 seconds to complete the watermark fetching procedure for a 10-second video.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2190,17 +2194,257 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Determines whether an image is AI-generated and returns detection labels with confidence scores.</para>
+        /// <para>Submits a combined task for invisible watermark embedding and C2PA signing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Completes invisible watermark embedding and official C2PA signing in a single call. It first embeds an invisible watermark into an image, video, or audio file, and then applies an official DigiCert C2PA signature to the result. You only need to upload and download the file once.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateWatermarkSignTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWatermarkSignTaskResponse
+        /// </returns>
+        public CreateWatermarkSignTaskResponse CreateWatermarkSignTaskWithOptions(CreateWatermarkSignTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowOverwrite))
+            {
+                query["AllowOverwrite"] = request.AllowOverwrite;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomAssertions))
+            {
+                query["CustomAssertions"] = request.CustomAssertions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileType))
+            {
+                query["FileType"] = request.FileType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
+            {
+                query["FileUrl"] = request.FileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
+            {
+                query["Level"] = request.Level;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reserved))
+            {
+                query["Reserved"] = request.Reserved;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareAgent))
+            {
+                query["SoftwareAgent"] = request.SoftwareAgent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetBucketName))
+            {
+                query["TargetBucketName"] = request.TargetBucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetBucketRegion))
+            {
+                query["TargetBucketRegion"] = request.TargetBucketRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetObjectKey))
+            {
+                query["TargetObjectKey"] = request.TargetObjectKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkContent))
+            {
+                query["WatermarkContent"] = request.WatermarkContent;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWatermarkSignTask",
+                Version = "2026-05-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWatermarkSignTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a combined task for invisible watermark embedding and C2PA signing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Completes invisible watermark embedding and official C2PA signing in a single call. It first embeds an invisible watermark into an image, video, or audio file, and then applies an official DigiCert C2PA signature to the result. You only need to upload and download the file once.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateWatermarkSignTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWatermarkSignTaskResponse
+        /// </returns>
+        public async Task<CreateWatermarkSignTaskResponse> CreateWatermarkSignTaskWithOptionsAsync(CreateWatermarkSignTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowOverwrite))
+            {
+                query["AllowOverwrite"] = request.AllowOverwrite;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomAssertions))
+            {
+                query["CustomAssertions"] = request.CustomAssertions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileType))
+            {
+                query["FileType"] = request.FileType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
+            {
+                query["FileUrl"] = request.FileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
+            {
+                query["Level"] = request.Level;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reserved))
+            {
+                query["Reserved"] = request.Reserved;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareAgent))
+            {
+                query["SoftwareAgent"] = request.SoftwareAgent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetBucketName))
+            {
+                query["TargetBucketName"] = request.TargetBucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetBucketRegion))
+            {
+                query["TargetBucketRegion"] = request.TargetBucketRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetObjectKey))
+            {
+                query["TargetObjectKey"] = request.TargetObjectKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkContent))
+            {
+                query["WatermarkContent"] = request.WatermarkContent;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWatermarkSignTask",
+                Version = "2026-05-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWatermarkSignTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a combined task for invisible watermark embedding and C2PA signing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Completes invisible watermark embedding and official C2PA signing in a single call. It first embeds an invisible watermark into an image, video, or audio file, and then applies an official DigiCert C2PA signature to the result. You only need to upload and download the file once.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateWatermarkSignTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWatermarkSignTaskResponse
+        /// </returns>
+        public CreateWatermarkSignTaskResponse CreateWatermarkSignTask(CreateWatermarkSignTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateWatermarkSignTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a combined task for invisible watermark embedding and C2PA signing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Completes invisible watermark embedding and official C2PA signing in a single call. It first embeds an invisible watermark into an image, video, or audio file, and then applies an official DigiCert C2PA signature to the result. You only need to upload and download the file once.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateWatermarkSignTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWatermarkSignTaskResponse
+        /// </returns>
+        public async Task<CreateWatermarkSignTaskResponse> CreateWatermarkSignTaskAsync(CreateWatermarkSignTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateWatermarkSignTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DetectAigcImage is deprecated, please use AIDeepSign::2026-05-11::CreateImageDetectionTask instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Determines whether an image is AI-generated and returns the detection label and confidence score.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation detects whether a specified image is AI-generated content (AIGC). You can specify the image to detect by using an image URL or an OSS ObjectKey.</description></item>
-        /// <item><description>You must provide at least one of ImageUrl and ObjectKey. If both are provided, ObjectKey takes precedence.</description></item>
-        /// <item><description>When using the ObjectKey method, the system verifies whether the ObjectKey belongs to the current caller. Cross-tenant access is not allowed.</description></item>
-        /// <item><description>This is a synchronous operation suitable for real-time detection of a single image. If you need asynchronous detection or credential detection at the same time, use the CreateImageDetectionTask operation.</description></item>
+        /// <item><description>This operation detects whether a specified image is AI-generated content (AIGC). You can specify the image to be detected by using an image URL or an OSS ObjectKey.</description></item>
+        /// <item><description>You must specify at least one of ImageUrl and ObjectKey. If both are specified, ObjectKey takes precedence.</description></item>
+        /// <item><description>When ObjectKey is used, the system verifies whether the ObjectKey belongs to the current caller. Cross-tenant access is not allowed.</description></item>
+        /// <item><description>This operation is synchronous and suitable for real-time detection of a single image. If you need asynchronous detection or simultaneous credential detection, use the CreateImageDetectionTask operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2214,6 +2458,8 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// <returns>
         /// DetectAigcImageResponse
         /// </returns>
+        [Obsolete("OpenAPI DetectAigcImage is deprecated, please use AIDeepSign::2026-05-11::CreateImageDetectionTask instead.")]
+        // Deprecated
         public DetectAigcImageResponse DetectAigcImageWithOptions(DetectAigcImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2241,19 +2487,23 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
             return TeaModel.ToObject<DetectAigcImageResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DetectAigcImage is deprecated, please use AIDeepSign::2026-05-11::CreateImageDetectionTask instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Determines whether an image is AI-generated and returns detection labels with confidence scores.</para>
+        /// <para>Determines whether an image is AI-generated and returns the detection label and confidence score.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation detects whether a specified image is AI-generated content (AIGC). You can specify the image to detect by using an image URL or an OSS ObjectKey.</description></item>
-        /// <item><description>You must provide at least one of ImageUrl and ObjectKey. If both are provided, ObjectKey takes precedence.</description></item>
-        /// <item><description>When using the ObjectKey method, the system verifies whether the ObjectKey belongs to the current caller. Cross-tenant access is not allowed.</description></item>
-        /// <item><description>This is a synchronous operation suitable for real-time detection of a single image. If you need asynchronous detection or credential detection at the same time, use the CreateImageDetectionTask operation.</description></item>
+        /// <item><description>This operation detects whether a specified image is AI-generated content (AIGC). You can specify the image to be detected by using an image URL or an OSS ObjectKey.</description></item>
+        /// <item><description>You must specify at least one of ImageUrl and ObjectKey. If both are specified, ObjectKey takes precedence.</description></item>
+        /// <item><description>When ObjectKey is used, the system verifies whether the ObjectKey belongs to the current caller. Cross-tenant access is not allowed.</description></item>
+        /// <item><description>This operation is synchronous and suitable for real-time detection of a single image. If you need asynchronous detection or simultaneous credential detection, use the CreateImageDetectionTask operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2267,6 +2517,8 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// <returns>
         /// DetectAigcImageResponse
         /// </returns>
+        [Obsolete("OpenAPI DetectAigcImage is deprecated, please use AIDeepSign::2026-05-11::CreateImageDetectionTask instead.")]
+        // Deprecated
         public async Task<DetectAigcImageResponse> DetectAigcImageWithOptionsAsync(DetectAigcImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2294,19 +2546,23 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
             return TeaModel.ToObject<DetectAigcImageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DetectAigcImage is deprecated, please use AIDeepSign::2026-05-11::CreateImageDetectionTask instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Determines whether an image is AI-generated and returns detection labels with confidence scores.</para>
+        /// <para>Determines whether an image is AI-generated and returns the detection label and confidence score.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation detects whether a specified image is AI-generated content (AIGC). You can specify the image to detect by using an image URL or an OSS ObjectKey.</description></item>
-        /// <item><description>You must provide at least one of ImageUrl and ObjectKey. If both are provided, ObjectKey takes precedence.</description></item>
-        /// <item><description>When using the ObjectKey method, the system verifies whether the ObjectKey belongs to the current caller. Cross-tenant access is not allowed.</description></item>
-        /// <item><description>This is a synchronous operation suitable for real-time detection of a single image. If you need asynchronous detection or credential detection at the same time, use the CreateImageDetectionTask operation.</description></item>
+        /// <item><description>This operation detects whether a specified image is AI-generated content (AIGC). You can specify the image to be detected by using an image URL or an OSS ObjectKey.</description></item>
+        /// <item><description>You must specify at least one of ImageUrl and ObjectKey. If both are specified, ObjectKey takes precedence.</description></item>
+        /// <item><description>When ObjectKey is used, the system verifies whether the ObjectKey belongs to the current caller. Cross-tenant access is not allowed.</description></item>
+        /// <item><description>This operation is synchronous and suitable for real-time detection of a single image. If you need asynchronous detection or simultaneous credential detection, use the CreateImageDetectionTask operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2317,25 +2573,31 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// <returns>
         /// DetectAigcImageResponse
         /// </returns>
+        [Obsolete("OpenAPI DetectAigcImage is deprecated, please use AIDeepSign::2026-05-11::CreateImageDetectionTask instead.")]
+        // Deprecated
         public DetectAigcImageResponse DetectAigcImage(DetectAigcImageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetectAigcImageWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DetectAigcImage is deprecated, please use AIDeepSign::2026-05-11::CreateImageDetectionTask instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Determines whether an image is AI-generated and returns detection labels with confidence scores.</para>
+        /// <para>Determines whether an image is AI-generated and returns the detection label and confidence score.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation detects whether a specified image is AI-generated content (AIGC). You can specify the image to detect by using an image URL or an OSS ObjectKey.</description></item>
-        /// <item><description>You must provide at least one of ImageUrl and ObjectKey. If both are provided, ObjectKey takes precedence.</description></item>
-        /// <item><description>When using the ObjectKey method, the system verifies whether the ObjectKey belongs to the current caller. Cross-tenant access is not allowed.</description></item>
-        /// <item><description>This is a synchronous operation suitable for real-time detection of a single image. If you need asynchronous detection or credential detection at the same time, use the CreateImageDetectionTask operation.</description></item>
+        /// <item><description>This operation detects whether a specified image is AI-generated content (AIGC). You can specify the image to be detected by using an image URL or an OSS ObjectKey.</description></item>
+        /// <item><description>You must specify at least one of ImageUrl and ObjectKey. If both are specified, ObjectKey takes precedence.</description></item>
+        /// <item><description>When ObjectKey is used, the system verifies whether the ObjectKey belongs to the current caller. Cross-tenant access is not allowed.</description></item>
+        /// <item><description>This operation is synchronous and suitable for real-time detection of a single image. If you need asynchronous detection or simultaneous credential detection, use the CreateImageDetectionTask operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2346,6 +2608,8 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// <returns>
         /// DetectAigcImageResponse
         /// </returns>
+        [Obsolete("OpenAPI DetectAigcImage is deprecated, please use AIDeepSign::2026-05-11::CreateImageDetectionTask instead.")]
+        // Deprecated
         public async Task<DetectAigcImageResponse> DetectAigcImageAsync(DetectAigcImageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2517,10 +2781,10 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation queries the status and final results of nodes created by using CreateC2paSignTask or CreateC2paBucketSignTask.</description></item>
-        /// <item><description>It supports signing node queries for images, videos, and various audio formats (FLAC, M4A, MP3, and WAV).</description></item>
-        /// <item><description>For BUCKET nodes, intermediate statistics information is not provided when the node is in the PROCESSING, PAUSING, PAUSED, or CANCELING state. Complete statistics information and the report location are returned only after the node enters the SUCCEEDED or CANCELED state.</description></item>
-        /// <item><description>A valid TaskId must be provided for the query. This ID must be the value returned when the node was created. It supports the standard UUID format and is compatible with legacy decimal node IDs.</description></item>
+        /// <item><description>This operation queries the status and final results of tasks created by invoking CreateC2paSignTask or CreateC2paBucketSignTask.</description></item>
+        /// <item><description>You can query signing tasks for images, videos, and various audio formats such as FLAC, M4A, MP3, and WAV.</description></item>
+        /// <item><description>For BUCKET tasks, intermediate statistics information is not provided when the task is in the PROCESSING, PAUSING, PAUSED, or CANCELING state. Complete statistics information and the report location are returned only after the task enters the SUCCEEDED or CANCELED state.</description></item>
+        /// <item><description>You must provide a valid TaskId when querying. The ID must be the value returned when the task was created. Standard UUID formats are supported and compatible with legacy decimal task IDs.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2570,10 +2834,10 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation queries the status and final results of nodes created by using CreateC2paSignTask or CreateC2paBucketSignTask.</description></item>
-        /// <item><description>It supports signing node queries for images, videos, and various audio formats (FLAC, M4A, MP3, and WAV).</description></item>
-        /// <item><description>For BUCKET nodes, intermediate statistics information is not provided when the node is in the PROCESSING, PAUSING, PAUSED, or CANCELING state. Complete statistics information and the report location are returned only after the node enters the SUCCEEDED or CANCELED state.</description></item>
-        /// <item><description>A valid TaskId must be provided for the query. This ID must be the value returned when the node was created. It supports the standard UUID format and is compatible with legacy decimal node IDs.</description></item>
+        /// <item><description>This operation queries the status and final results of tasks created by invoking CreateC2paSignTask or CreateC2paBucketSignTask.</description></item>
+        /// <item><description>You can query signing tasks for images, videos, and various audio formats such as FLAC, M4A, MP3, and WAV.</description></item>
+        /// <item><description>For BUCKET tasks, intermediate statistics information is not provided when the task is in the PROCESSING, PAUSING, PAUSED, or CANCELING state. Complete statistics information and the report location are returned only after the task enters the SUCCEEDED or CANCELED state.</description></item>
+        /// <item><description>You must provide a valid TaskId when querying. The ID must be the value returned when the task was created. Standard UUID formats are supported and compatible with legacy decimal task IDs.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2623,10 +2887,10 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation queries the status and final results of nodes created by using CreateC2paSignTask or CreateC2paBucketSignTask.</description></item>
-        /// <item><description>It supports signing node queries for images, videos, and various audio formats (FLAC, M4A, MP3, and WAV).</description></item>
-        /// <item><description>For BUCKET nodes, intermediate statistics information is not provided when the node is in the PROCESSING, PAUSING, PAUSED, or CANCELING state. Complete statistics information and the report location are returned only after the node enters the SUCCEEDED or CANCELED state.</description></item>
-        /// <item><description>A valid TaskId must be provided for the query. This ID must be the value returned when the node was created. It supports the standard UUID format and is compatible with legacy decimal node IDs.</description></item>
+        /// <item><description>This operation queries the status and final results of tasks created by invoking CreateC2paSignTask or CreateC2paBucketSignTask.</description></item>
+        /// <item><description>You can query signing tasks for images, videos, and various audio formats such as FLAC, M4A, MP3, and WAV.</description></item>
+        /// <item><description>For BUCKET tasks, intermediate statistics information is not provided when the task is in the PROCESSING, PAUSING, PAUSED, or CANCELING state. Complete statistics information and the report location are returned only after the task enters the SUCCEEDED or CANCELED state.</description></item>
+        /// <item><description>You must provide a valid TaskId when querying. The ID must be the value returned when the task was created. Standard UUID formats are supported and compatible with legacy decimal task IDs.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2652,10 +2916,10 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation queries the status and final results of nodes created by using CreateC2paSignTask or CreateC2paBucketSignTask.</description></item>
-        /// <item><description>It supports signing node queries for images, videos, and various audio formats (FLAC, M4A, MP3, and WAV).</description></item>
-        /// <item><description>For BUCKET nodes, intermediate statistics information is not provided when the node is in the PROCESSING, PAUSING, PAUSED, or CANCELING state. Complete statistics information and the report location are returned only after the node enters the SUCCEEDED or CANCELED state.</description></item>
-        /// <item><description>A valid TaskId must be provided for the query. This ID must be the value returned when the node was created. It supports the standard UUID format and is compatible with legacy decimal node IDs.</description></item>
+        /// <item><description>This operation queries the status and final results of tasks created by invoking CreateC2paSignTask or CreateC2paBucketSignTask.</description></item>
+        /// <item><description>You can query signing tasks for images, videos, and various audio formats such as FLAC, M4A, MP3, and WAV.</description></item>
+        /// <item><description>For BUCKET tasks, intermediate statistics information is not provided when the task is in the PROCESSING, PAUSING, PAUSED, or CANCELING state. Complete statistics information and the report location are returned only after the task enters the SUCCEEDED or CANCELED state.</description></item>
+        /// <item><description>You must provide a valid TaskId when querying. The ID must be the value returned when the task was created. Standard UUID formats are supported and compatible with legacy decimal task IDs.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2850,17 +3114,17 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status and result of an image detection task created by CreateImageDetectionTask.</para>
+        /// <para>Queries the status and results of an image detection task created by calling CreateImageDetectionTask.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>Call this operation to query the execution status and result of a specified image detection task, including AIGC detection labels and tamper detection results. Poll at intervals of 2 to 5 seconds until the task status changes to succeeded or failed.</para>
+        /// <h2>Request description</h2>
+        /// <para>Call this operation to query the execution status and results of a specified image detection task, including AIGC detection labels and tampering detection results. Poll the task at an interval of 2 to 5 seconds until the task status changes to succeeded or failed.</para>
         /// <h2>Precautions</h2>
         /// <list type="bullet">
-        /// <item><description>Ensure that you use a valid TaskId for the query.</description></item>
-        /// <item><description>If the task is not complete, increase the polling interval to avoid wasting resources due to frequent requests.</description></item>
+        /// <item><description>Use a valid TaskId for the query.</description></item>
+        /// <item><description>If the task is not completed, increase the polling interval to avoid resource waste caused by frequent requests.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2907,17 +3171,17 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status and result of an image detection task created by CreateImageDetectionTask.</para>
+        /// <para>Queries the status and results of an image detection task created by calling CreateImageDetectionTask.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>Call this operation to query the execution status and result of a specified image detection task, including AIGC detection labels and tamper detection results. Poll at intervals of 2 to 5 seconds until the task status changes to succeeded or failed.</para>
+        /// <h2>Request description</h2>
+        /// <para>Call this operation to query the execution status and results of a specified image detection task, including AIGC detection labels and tampering detection results. Poll the task at an interval of 2 to 5 seconds until the task status changes to succeeded or failed.</para>
         /// <h2>Precautions</h2>
         /// <list type="bullet">
-        /// <item><description>Ensure that you use a valid TaskId for the query.</description></item>
-        /// <item><description>If the task is not complete, increase the polling interval to avoid wasting resources due to frequent requests.</description></item>
+        /// <item><description>Use a valid TaskId for the query.</description></item>
+        /// <item><description>If the task is not completed, increase the polling interval to avoid resource waste caused by frequent requests.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2964,17 +3228,17 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status and result of an image detection task created by CreateImageDetectionTask.</para>
+        /// <para>Queries the status and results of an image detection task created by calling CreateImageDetectionTask.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>Call this operation to query the execution status and result of a specified image detection task, including AIGC detection labels and tamper detection results. Poll at intervals of 2 to 5 seconds until the task status changes to succeeded or failed.</para>
+        /// <h2>Request description</h2>
+        /// <para>Call this operation to query the execution status and results of a specified image detection task, including AIGC detection labels and tampering detection results. Poll the task at an interval of 2 to 5 seconds until the task status changes to succeeded or failed.</para>
         /// <h2>Precautions</h2>
         /// <list type="bullet">
-        /// <item><description>Ensure that you use a valid TaskId for the query.</description></item>
-        /// <item><description>If the task is not complete, increase the polling interval to avoid wasting resources due to frequent requests.</description></item>
+        /// <item><description>Use a valid TaskId for the query.</description></item>
+        /// <item><description>If the task is not completed, increase the polling interval to avoid resource waste caused by frequent requests.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2993,17 +3257,17 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status and result of an image detection task created by CreateImageDetectionTask.</para>
+        /// <para>Queries the status and results of an image detection task created by calling CreateImageDetectionTask.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>Call this operation to query the execution status and result of a specified image detection task, including AIGC detection labels and tamper detection results. Poll at intervals of 2 to 5 seconds until the task status changes to succeeded or failed.</para>
+        /// <h2>Request description</h2>
+        /// <para>Call this operation to query the execution status and results of a specified image detection task, including AIGC detection labels and tampering detection results. Poll the task at an interval of 2 to 5 seconds until the task status changes to succeeded or failed.</para>
         /// <h2>Precautions</h2>
         /// <list type="bullet">
-        /// <item><description>Ensure that you use a valid TaskId for the query.</description></item>
-        /// <item><description>If the task is not complete, increase the polling interval to avoid wasting resources due to frequent requests.</description></item>
+        /// <item><description>Use a valid TaskId for the query.</description></item>
+        /// <item><description>If the task is not completed, increase the polling interval to avoid resource waste caused by frequent requests.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3370,16 +3634,16 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status and result of a sensitive information scan task and returns the details of the sensitive data discovered during the scan.</para>
+        /// <para>Queries the status and results of a sensitive information scan task, and returns the details of the sensitive data discovered by the scan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Call this operation to query the execution status and result of a sensitive information scan task created by <c>CreateSensitiveScanTask</c>.</description></item>
-        /// <item><description>Poll at intervals of 3 to 5 seconds until the task status changes to <c>completed</c> or <c>terminated</c>.</description></item>
-        /// <item><description>The <c>ClientToken</c> parameter ensures the idempotence of the request. It is generated by the client, must be unique across different requests, supports ASCII characters, and cannot exceed 64 characters in length.</description></item>
+        /// <item><description>Call this operation to query the execution status and results of a sensitive information scan task created by calling <c>CreateSensitiveScanTask</c>.</description></item>
+        /// <item><description>Poll the task at an interval of 3 to 5 seconds until the task status changes to <c>completed</c> or <c>terminated</c>.</description></item>
+        /// <item><description>The <c>ClientToken</c> parameter is used to ensure the idempotence of the request. It is generated by the client and must be unique across different requests. It supports ASCII characters and can be up to 64 characters in length.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3422,16 +3686,16 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status and result of a sensitive information scan task and returns the details of the sensitive data discovered during the scan.</para>
+        /// <para>Queries the status and results of a sensitive information scan task, and returns the details of the sensitive data discovered by the scan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Call this operation to query the execution status and result of a sensitive information scan task created by <c>CreateSensitiveScanTask</c>.</description></item>
-        /// <item><description>Poll at intervals of 3 to 5 seconds until the task status changes to <c>completed</c> or <c>terminated</c>.</description></item>
-        /// <item><description>The <c>ClientToken</c> parameter ensures the idempotence of the request. It is generated by the client, must be unique across different requests, supports ASCII characters, and cannot exceed 64 characters in length.</description></item>
+        /// <item><description>Call this operation to query the execution status and results of a sensitive information scan task created by calling <c>CreateSensitiveScanTask</c>.</description></item>
+        /// <item><description>Poll the task at an interval of 3 to 5 seconds until the task status changes to <c>completed</c> or <c>terminated</c>.</description></item>
+        /// <item><description>The <c>ClientToken</c> parameter is used to ensure the idempotence of the request. It is generated by the client and must be unique across different requests. It supports ASCII characters and can be up to 64 characters in length.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3474,16 +3738,16 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status and result of a sensitive information scan task and returns the details of the sensitive data discovered during the scan.</para>
+        /// <para>Queries the status and results of a sensitive information scan task, and returns the details of the sensitive data discovered by the scan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Call this operation to query the execution status and result of a sensitive information scan task created by <c>CreateSensitiveScanTask</c>.</description></item>
-        /// <item><description>Poll at intervals of 3 to 5 seconds until the task status changes to <c>completed</c> or <c>terminated</c>.</description></item>
-        /// <item><description>The <c>ClientToken</c> parameter ensures the idempotence of the request. It is generated by the client, must be unique across different requests, supports ASCII characters, and cannot exceed 64 characters in length.</description></item>
+        /// <item><description>Call this operation to query the execution status and results of a sensitive information scan task created by calling <c>CreateSensitiveScanTask</c>.</description></item>
+        /// <item><description>Poll the task at an interval of 3 to 5 seconds until the task status changes to <c>completed</c> or <c>terminated</c>.</description></item>
+        /// <item><description>The <c>ClientToken</c> parameter is used to ensure the idempotence of the request. It is generated by the client and must be unique across different requests. It supports ASCII characters and can be up to 64 characters in length.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3502,16 +3766,16 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status and result of a sensitive information scan task and returns the details of the sensitive data discovered during the scan.</para>
+        /// <para>Queries the status and results of a sensitive information scan task, and returns the details of the sensitive data discovered by the scan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Call this operation to query the execution status and result of a sensitive information scan task created by <c>CreateSensitiveScanTask</c>.</description></item>
-        /// <item><description>Poll at intervals of 3 to 5 seconds until the task status changes to <c>completed</c> or <c>terminated</c>.</description></item>
-        /// <item><description>The <c>ClientToken</c> parameter ensures the idempotence of the request. It is generated by the client, must be unique across different requests, supports ASCII characters, and cannot exceed 64 characters in length.</description></item>
+        /// <item><description>Call this operation to query the execution status and results of a sensitive information scan task created by calling <c>CreateSensitiveScanTask</c>.</description></item>
+        /// <item><description>Poll the task at an interval of 3 to 5 seconds until the task status changes to <c>completed</c> or <c>terminated</c>.</description></item>
+        /// <item><description>The <c>ClientToken</c> parameter is used to ensure the idempotence of the request. It is generated by the client and must be unique across different requests. It supports ASCII characters and can be up to 64 characters in length.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3862,16 +4126,16 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status and extraction result of a dark watermark extraction task.</para>
+        /// <para>Queries the status and extraction results of an invisible watermark extraction task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Polling recommendation</b>: Set the polling interval to at least 5 seconds. The task completion time is approximately equal to the duration of the carrier media (approximately 1x speed).</description></item>
-        /// <item><description><b>Timeout handling</b>: The total timeout window for video tasks is 10 minutes, and for image tasks is 5 minutes. If a task is not completed within this time, the task status changes to <c>failed</c>.</description></item>
-        /// <item><description><b>Desired state confirmation</b>: <c>succeeded</c> or <c>failed</c> is the final status. The result does not change after the task reaches either status.</description></item>
+        /// <item><description><b>Polling recommendation</b>: Set the polling interval to at least 5 seconds. The task completion time is approximately equal to the duration of the media file (about 1x speed).</description></item>
+        /// <item><description><b>Timeout handling</b>: The total timeout window is 10 minutes for video tasks and 5 minutes for image tasks. If a task is not completed within this period, the task status changes to <c>failed</c>.</description></item>
+        /// <item><description><b>Final state confirmation</b>: <c>succeeded</c> and <c>failed</c> are final states. The results do not change after a task reaches a final state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3918,16 +4182,16 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status and extraction result of a dark watermark extraction task.</para>
+        /// <para>Queries the status and extraction results of an invisible watermark extraction task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Polling recommendation</b>: Set the polling interval to at least 5 seconds. The task completion time is approximately equal to the duration of the carrier media (approximately 1x speed).</description></item>
-        /// <item><description><b>Timeout handling</b>: The total timeout window for video tasks is 10 minutes, and for image tasks is 5 minutes. If a task is not completed within this time, the task status changes to <c>failed</c>.</description></item>
-        /// <item><description><b>Desired state confirmation</b>: <c>succeeded</c> or <c>failed</c> is the final status. The result does not change after the task reaches either status.</description></item>
+        /// <item><description><b>Polling recommendation</b>: Set the polling interval to at least 5 seconds. The task completion time is approximately equal to the duration of the media file (about 1x speed).</description></item>
+        /// <item><description><b>Timeout handling</b>: The total timeout window is 10 minutes for video tasks and 5 minutes for image tasks. If a task is not completed within this period, the task status changes to <c>failed</c>.</description></item>
+        /// <item><description><b>Final state confirmation</b>: <c>succeeded</c> and <c>failed</c> are final states. The results do not change after a task reaches a final state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3974,16 +4238,16 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status and extraction result of a dark watermark extraction task.</para>
+        /// <para>Queries the status and extraction results of an invisible watermark extraction task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Polling recommendation</b>: Set the polling interval to at least 5 seconds. The task completion time is approximately equal to the duration of the carrier media (approximately 1x speed).</description></item>
-        /// <item><description><b>Timeout handling</b>: The total timeout window for video tasks is 10 minutes, and for image tasks is 5 minutes. If a task is not completed within this time, the task status changes to <c>failed</c>.</description></item>
-        /// <item><description><b>Desired state confirmation</b>: <c>succeeded</c> or <c>failed</c> is the final status. The result does not change after the task reaches either status.</description></item>
+        /// <item><description><b>Polling recommendation</b>: Set the polling interval to at least 5 seconds. The task completion time is approximately equal to the duration of the media file (about 1x speed).</description></item>
+        /// <item><description><b>Timeout handling</b>: The total timeout window is 10 minutes for video tasks and 5 minutes for image tasks. If a task is not completed within this period, the task status changes to <c>failed</c>.</description></item>
+        /// <item><description><b>Final state confirmation</b>: <c>succeeded</c> and <c>failed</c> are final states. The results do not change after a task reaches a final state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4002,16 +4266,16 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status and extraction result of a dark watermark extraction task.</para>
+        /// <para>Queries the status and extraction results of an invisible watermark extraction task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Polling recommendation</b>: Set the polling interval to at least 5 seconds. The task completion time is approximately equal to the duration of the carrier media (approximately 1x speed).</description></item>
-        /// <item><description><b>Timeout handling</b>: The total timeout window for video tasks is 10 minutes, and for image tasks is 5 minutes. If a task is not completed within this time, the task status changes to <c>failed</c>.</description></item>
-        /// <item><description><b>Desired state confirmation</b>: <c>succeeded</c> or <c>failed</c> is the final status. The result does not change after the task reaches either status.</description></item>
+        /// <item><description><b>Polling recommendation</b>: Set the polling interval to at least 5 seconds. The task completion time is approximately equal to the duration of the media file (about 1x speed).</description></item>
+        /// <item><description><b>Timeout handling</b>: The total timeout window is 10 minutes for video tasks and 5 minutes for image tasks. If a task is not completed within this period, the task status changes to <c>failed</c>.</description></item>
+        /// <item><description><b>Final state confirmation</b>: <c>succeeded</c> and <c>failed</c> are final states. The results do not change after a task reaches a final state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4026,6 +4290,154 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetWatermarkExtractTaskResultWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the task result of the combined node for invisible watermark embedding and C2PA signing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the status and results of the combined task submitted by CreateWatermarkSignTask, and returns the current processing stage (invisible watermark embedding or C2PA signing) and the URL of the final output.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetWatermarkSignTaskResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWatermarkSignTaskResultResponse
+        /// </returns>
+        public GetWatermarkSignTaskResultResponse GetWatermarkSignTaskResultWithOptions(GetWatermarkSignTaskResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWatermarkSignTaskResult",
+                Version = "2026-05-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWatermarkSignTaskResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the task result of the combined node for invisible watermark embedding and C2PA signing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the status and results of the combined task submitted by CreateWatermarkSignTask, and returns the current processing stage (invisible watermark embedding or C2PA signing) and the URL of the final output.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetWatermarkSignTaskResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWatermarkSignTaskResultResponse
+        /// </returns>
+        public async Task<GetWatermarkSignTaskResultResponse> GetWatermarkSignTaskResultWithOptionsAsync(GetWatermarkSignTaskResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWatermarkSignTaskResult",
+                Version = "2026-05-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWatermarkSignTaskResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the task result of the combined node for invisible watermark embedding and C2PA signing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the status and results of the combined task submitted by CreateWatermarkSignTask, and returns the current processing stage (invisible watermark embedding or C2PA signing) and the URL of the final output.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetWatermarkSignTaskResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWatermarkSignTaskResultResponse
+        /// </returns>
+        public GetWatermarkSignTaskResultResponse GetWatermarkSignTaskResult(GetWatermarkSignTaskResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetWatermarkSignTaskResultWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the task result of the combined node for invisible watermark embedding and C2PA signing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the status and results of the combined task submitted by CreateWatermarkSignTask, and returns the current processing stage (invisible watermark embedding or C2PA signing) and the URL of the final output.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetWatermarkSignTaskResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWatermarkSignTaskResultResponse
+        /// </returns>
+        public async Task<GetWatermarkSignTaskResultResponse> GetWatermarkSignTaskResultAsync(GetWatermarkSignTaskResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetWatermarkSignTaskResultWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

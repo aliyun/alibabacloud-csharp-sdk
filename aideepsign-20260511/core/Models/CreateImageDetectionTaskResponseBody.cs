@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
 {
     public class CreateImageDetectionTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business error code. <c>OK</c> is returned if the request was successful.</para>
+        /// <para>The business error code. If the request is successful, <c>OK</c> is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code. <c>200</c> is returned if the request was successful.</para>
+        /// <para>The HTTP status code. If the request is successful, <c>200</c> is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The additional information. <c>success</c> is returned if the request was successful.</para>
+        /// <para>The additional information. If the request is successful, <c>success</c> is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The task ID, which is used to call <c>GetImageDetectionTaskResult</c> to query results.</para>
+        /// <para>The task ID, which can be used to call <c>GetImageDetectionTaskResult</c> to query the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f47ac10b-58cc-4372-a567-0e02b2c3d479</para>

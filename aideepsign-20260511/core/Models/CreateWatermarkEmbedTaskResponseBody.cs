@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
 {
     public class CreateWatermarkEmbedTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business error code. The value OK is returned if the request is successful.</para>
+        /// <para>The <b>business error code</b>. &quot;OK&quot; is returned if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code. The value 200 is returned if the request is successful.</para>
+        /// <para>The <b>HTTP status code</b>. 200 is returned if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The invisible watermark embedding task ID. Use this ID to call GetWatermarkEmbedTaskResult to query the result.</para>
+        /// <para>The ID of the invisible watermark embedding task. You can use this ID to call GetWatermarkEmbedTaskResult to query the result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f47ac10b-58cc-4372-a567-0e02b2c3d479</para>
