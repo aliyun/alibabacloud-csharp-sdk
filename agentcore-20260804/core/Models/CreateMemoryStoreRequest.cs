@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The description of the memory store. The description can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Used to store long-term user preferences</para>
+            /// <para>Used to store the long-term preferences of users</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The custom extraction instructions. The instructions can be up to 4,096 characters in length.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Extract only long-term preferences explicitly expressed by the user</para>
+            /// <para>Extract only long-term preferences explicitly expressed by users</para>
             /// </summary>
             [NameInMap("extractInstructions")]
             [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The client request token.</para>
+        /// <para>The client token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>memory-store-create-20260909-001</para>

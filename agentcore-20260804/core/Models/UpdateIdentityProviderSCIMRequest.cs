@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class UpdateIdentityProviderSCIMRequest : TeaModel {
         /// <summary>
-        /// <para>Submit business parameters as described in this operation. The body parameters of public APIs are mapped to backend wrappers by the gateway. Do not mix them with direct backend body wrappers.</para>
+        /// <para>Submit business parameters as described in this operation. For public API operations, body parameters are mapped to backend wrappers by the gateway. Do not mix them with direct backend body wrappers.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public UpdateIdentityProviderSCIMRequestBody Body { get; set; }
         public class UpdateIdentityProviderSCIMRequestBody : TeaModel {
             /// <summary>
-            /// <para>Do not set this parameter to true during CustomSSO initialization. You can only update this parameter later by calling UpdateIdentityProviderSCIM. Determine the result based on the operationStatus field.</para>
+            /// <para>Specifies whether to enable SCIM synchronization. Do not set this parameter to true during CustomSSO initialization. You can only update this parameter later by calling UpdateIdentityProviderSCIM. Determine the result based on the operationStatus field.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("syncEnabled")]

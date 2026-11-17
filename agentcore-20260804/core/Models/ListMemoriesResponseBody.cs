@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The memory list.</para>
+        /// <para>The list of memories.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
@@ -45,6 +45,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public class ListMemoriesResponseBodyItemsContent : TeaModel {
                 /// <summary>
                 /// <para>The memory text.</para>
+                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>The user likes hiking</para>
@@ -77,6 +78,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 
             /// <summary>
             /// <para>The memory metadata.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;topic&quot;:&quot;hiking&quot;}</para>
             /// </summary>
             [NameInMap("metadata")]
             [Validation(Required=false)]
@@ -90,7 +94,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public ListMemoriesResponseBodyItemsScope Scope { get; set; }
             public class ListMemoriesResponseBodyItemsScope : TeaModel {
                 /// <summary>
-                /// <para>The agent ID. The length is limited to 1 to 128 UTF-8 bytes, and the value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with an agent ID.</para>
+                /// <para>The agent ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with an agent ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>agent-001</para>
@@ -100,7 +104,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AgentId { get; set; }
 
                 /// <summary>
-                /// <para>The session ID. The length is limited to 1 to 128 UTF-8 bytes, and the value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with a session ID.</para>
+                /// <para>The session ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with a session ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>session-001</para>
@@ -110,7 +114,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string SessionId { get; set; }
 
                 /// <summary>
-                /// <para>The user ID. The length is limited to 1 to 128 UTF-8 bytes, and the value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with a user ID.</para>
+                /// <para>The business team ID defined by the caller. This field cannot be empty when provided and can be up to 128 UTF-8 bytes in length.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>team-001</para>
+                /// </summary>
+                [NameInMap("teamId")]
+                [Validation(Required=false)]
+                public string TeamId { get; set; }
+
+                /// <summary>
+                /// <para>The user ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with a user ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user-001</para>
@@ -122,6 +136,37 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
+            /// <para>The source of the memory. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>session_extraction: Extracted from session events.</description></item>
+            /// <item><description>content_extraction: Extracted from text or messages.</description></item>
+            /// <item><description>direct: Written directly.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>session_extraction</para>
+            /// </summary>
+            [NameInMap("source")]
+            [Validation(Required=false)]
+            public string Source { get; set; }
+
+            /// <summary>
+            /// <para>The memory content type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>semantic: Semantic memory.</description></item>
+            /// <item><description>skill: Skill.</description></item>
+            /// <item><description>user_profile: User preference.</description></item>
+            /// <item><description>session_summary: Session summary.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>semantic</para>
+            /// </summary>
+            [NameInMap("type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+            /// <summary>
             /// <para>The last update time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</para>
             /// 
             /// <b>Example:</b>
@@ -130,6 +175,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             [NameInMap("updatedAt")]
             [Validation(Required=false)]
             public string UpdatedAt { get; set; }
+
+            /// <summary>
+            /// <para>Indicates whether the memory is valid. A value of false indicates that the memory is revoked and is not included in valid memory retrieval.</para>
+            /// </summary>
+            [NameInMap("valid")]
+            [Validation(Required=false)]
+            public bool? Valid { get; set; }
 
         }
 
@@ -179,6 +231,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        /// <summary>
+        /// <para>The total number of records.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
+        [NameInMap("totalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

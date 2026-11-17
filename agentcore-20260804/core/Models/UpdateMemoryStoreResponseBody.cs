@@ -47,6 +47,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The number of events. You can query this value by calling the GetMemoryStore operation.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
+            /// </summary>
+            [NameInMap("eventCount")]
+            [Validation(Required=false)]
+            public long? EventCount { get; set; }
+
+            /// <summary>
             /// <para>The custom extraction instructions.</para>
             /// 
             /// <b>Example:</b>
@@ -55,6 +65,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             [NameInMap("extractInstructions")]
             [Validation(Required=false)]
             public string ExtractInstructions { get; set; }
+
+            /// <summary>
+            /// <para>The number of valid memories. You can query this value by calling the GetMemoryStore operation.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("memoryCount")]
+            [Validation(Required=false)]
+            public long? MemoryCount { get; set; }
 
             /// <summary>
             /// <para>The memory store ID.</para>

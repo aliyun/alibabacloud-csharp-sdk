@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The memory store details.</para>
+        /// <para>The details of the memory store.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -40,24 +40,44 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The description of the memory store.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Used to store long-term user preferences</para>
+            /// <para>Used to store the long-term preferences of users</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The number of events. You can query this value by calling GetMemoryStore.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
+            /// </summary>
+            [NameInMap("eventCount")]
+            [Validation(Required=false)]
+            public long? EventCount { get; set; }
+
+            /// <summary>
             /// <para>The custom extraction instructions.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Extract only long-term preferences explicitly expressed by the user</para>
+            /// <para>Extract only long-term preferences explicitly expressed by users</para>
             /// </summary>
             [NameInMap("extractInstructions")]
             [Validation(Required=false)]
             public string ExtractInstructions { get; set; }
 
             /// <summary>
-            /// <para>The memory store ID.</para>
+            /// <para>The number of valid memories. You can query this value by calling GetMemoryStore.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("memoryCount")]
+            [Validation(Required=false)]
+            public long? MemoryCount { get; set; }
+
+            /// <summary>
+            /// <para>The ID of the memory store.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ms-2f5f9c5a8d0e4c3b</para>
@@ -77,7 +97,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string MemoryStoreName { get; set; }
 
             /// <summary>
-            /// <para>The lifecycle state of the memory store.</para>
+            /// <para>The lifecycle status of the memory store.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Ready</para>
@@ -97,7 +117,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string UpdatedAt { get; set; }
 
             /// <summary>
-            /// <para>The AgentCore workspace ID.</para>
+            /// <para>The ID of the AgentCore workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ws-2f5f9c5a8d0e4c3b</para>

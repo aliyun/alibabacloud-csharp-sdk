@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class UpdateMemoryRequest : TeaModel {
         /// <summary>
-        /// <para>The update memory request.</para>
+        /// <para>The request to update a memory.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]
@@ -18,14 +18,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public UpdateMemoryRequestBody Body { get; set; }
         public class UpdateMemoryRequestBody : TeaModel {
             /// <summary>
-            /// <para>The updated string key-value metadata. You must provide at least one of the text or metadata. You can specify up to 16 keys. Each key can be up to 64 characters in length, and each value can be up to 1,024 characters in length.</para>
+            /// <para>The updated string key-value metadata. Provide at least one of Text or Metadata. A maximum of 16 keys are allowed. The maximum length is 64 characters for a key and 1,024 characters for a value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;topic&quot;:&quot;hiking&quot;}</para>
             /// </summary>
             [NameInMap("metadata")]
             [Validation(Required=false)]
             public Dictionary<string, string> Metadata { get; set; }
 
             /// <summary>
-            /// <para>The updated memory text. You must provide at least one of the text or metadata. The text cannot exceed 32,000 UTF-8 bytes.</para>
+            /// <para>The updated memory text. Provide at least one of Text or Metadata. The size cannot exceed 32,000 UTF-8 bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The user enjoys hiking on weekends</para>

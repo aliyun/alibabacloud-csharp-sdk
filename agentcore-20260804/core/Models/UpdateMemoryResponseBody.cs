@@ -35,6 +35,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public class UpdateMemoryResponseBodyDataContent : TeaModel {
                 /// <summary>
                 /// <para>The memory text.</para>
+                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>The user enjoys hiking</para>
@@ -56,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The long-term memory ID.</para>
+            /// <para>The ID of the long-term memory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mem-2f5f9c5a8d0e4c3b</para>
@@ -67,6 +68,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 
             /// <summary>
             /// <para>The memory metadata.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;topic&quot;:&quot;hiking&quot;}</para>
             /// </summary>
             [NameInMap("metadata")]
             [Validation(Required=false)]
@@ -100,6 +104,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string SessionId { get; set; }
 
                 /// <summary>
+                /// <para>The business team ID defined by the caller. It cannot be empty when provided and can be up to 128 UTF-8 bytes in length.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>team-001</para>
+                /// </summary>
+                [NameInMap("teamId")]
+                [Validation(Required=false)]
+                public string TeamId { get; set; }
+
+                /// <summary>
                 /// <para>The user ID. The length is limited to 1 to 128 UTF-8 bytes. The ID cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with a user ID.</para>
                 /// 
                 /// <b>Example:</b>
@@ -112,7 +126,27 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The last update time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</para>
+            /// <para>The memory source. Valid values: session_extraction: Extracted from session events. content_extraction: Extracted from text or messages. direct: Written directly.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>session_extraction</para>
+            /// </summary>
+            [NameInMap("source")]
+            [Validation(Required=false)]
+            public string Source { get; set; }
+
+            /// <summary>
+            /// <para>The memory content type. Valid values: semantic: Semantic memory. skill: Skill. user_profile: User preference. session_summary: Session summary.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>semantic</para>
+            /// </summary>
+            [NameInMap("type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+            /// <summary>
+            /// <para>The last updated time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-09-23T10:05:00Z</para>
@@ -120,6 +154,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             [NameInMap("updatedAt")]
             [Validation(Required=false)]
             public string UpdatedAt { get; set; }
+
+            /// <summary>
+            /// <para>Indicates whether the memory is valid. A value of false indicates that the memory is revoked and is not included in valid memory retrieval.</para>
+            /// </summary>
+            [NameInMap("valid")]
+            [Validation(Required=false)]
+            public bool? Valid { get; set; }
 
         }
 

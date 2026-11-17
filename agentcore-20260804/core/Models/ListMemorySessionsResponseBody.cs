@@ -47,6 +47,26 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AgentId { get; set; }
 
             /// <summary>
+            /// <para>The creation time in RFC 3339 format with time zone.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026-09-23T10:00:00Z</para>
+            /// </summary>
+            [NameInMap("createdAt")]
+            [Validation(Required=false)]
+            public string CreatedAt { get; set; }
+
+            /// <summary>
+            /// <para>The string key-value tags set by the caller. A maximum of 16 tags are supported. A key can be up to 64 Unicode characters in length, and a value can be up to 1,024 Unicode characters in length. Empty strings are allowed. Nested objects or arrays are not supported.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;topic&quot;:&quot;hiking&quot;}</para>
+            /// </summary>
+            [NameInMap("metadata")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> Metadata { get; set; }
+
+            /// <summary>
             /// <para>The session ID.</para>
             /// 
             /// <b>Example:</b>
@@ -55,6 +75,26 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             [NameInMap("sessionId")]
             [Validation(Required=false)]
             public string SessionId { get; set; }
+
+            /// <summary>
+            /// <para>The business team ID defined by the caller. If specified, the value cannot be empty and can be up to 128 UTF-8 bytes in length.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>team-001</para>
+            /// </summary>
+            [NameInMap("teamId")]
+            [Validation(Required=false)]
+            public string TeamId { get; set; }
+
+            /// <summary>
+            /// <para>The session title.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Travel plan</para>
+            /// </summary>
+            [NameInMap("title")]
+            [Validation(Required=false)]
+            public string Title { get; set; }
 
             /// <summary>
             /// <para>The user ID. This field is not returned if the session is not associated with a user ID.</para>
@@ -114,6 +154,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        /// <summary>
+        /// <para>The total number of records.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
+        [NameInMap("totalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

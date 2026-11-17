@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class UpdateIdentityProviderSCIMResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business result code. If the call fails, handle the error based on the HTTP status code and the message.</para>
+        /// <para>The business result code. If the request fails, use this code in combination with the HTTP status code and the result message for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The original fields and the meaning of the status field are retained. The new scimStatus field corresponds to the data.status field in the query operation. The operationStatus field retains the status of the most recent SCIM task.</para>
+        /// <para>The data object. Retains the original fields and the meaning of the status field. The new scimStatus field corresponds to the data.status field in the query API operation, and the operationStatus field retains the status of the most recent SCIM task.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public UpdateIdentityProviderSCIMResponseBodyData Data { get; set; }
         public class UpdateIdentityProviderSCIMResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The actual upstream configuration. The actual SAML configuration is read back on demand only by GetIdentityProvider. SCIM queries and preparations return the actual receiving status and URL.</para>
+            /// <para>The actual upstream configuration. The actual SAML configuration is read back on demand only by the GetIdentityProvider API operation. The SCIM query and preparation operations return the actual receiving status and URL.</para>
             /// </summary>
             [NameInMap("configuration")]
             [Validation(Required=false)]
             public UpdateIdentityProviderSCIMResponseBodyDataConfiguration Configuration { get; set; }
             public class UpdateIdentityProviderSCIMResponseBodyDataConfiguration : TeaModel {
                 /// <summary>
-                /// <para>The SAML binding type. Valid values: HTTP-Redirect and HTTP-POST. This parameter is required when you manually enter the configuration. The query returns the short name.</para>
+                /// <para>The SAML binding type. Valid values: HTTP-Redirect and HTTP-POST. This field is required when you manually enter the configuration. The query returns the short name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HTTP-Redirect</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string BindingType { get; set; }
 
                 /// <summary>
-                /// <para>The entity ID of the IdP. This parameter is required when you manually enter the configuration. It must be non-empty and cannot exceed 2,048 characters. You cannot change the entity ID of an existing configuration. This ID is different from the local entity ID returned by the SP query.</para>
+                /// <para>The IdP entity ID. This field is required when you manually enter the metadata. It must be a non-empty string of up to 2,048 characters. You cannot change the entity ID after it is configured. This ID is different from the local entity ID returned by the SP query.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string EntityId { get; set; }
 
                 /// <summary>
-                /// <para>The SSO logon URL of the IdP. This parameter is required when you manually enter the configuration. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</para>
+                /// <para>The IdP SSO logon URL. This field is required when you manually enter the metadata. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string LoginUrl { get; set; }
 
                 /// <summary>
-                /// <para>The actual SSO logon status of AgentIdentity. Valid values: Enabled and Disabled. This value is not equivalent to the expected value of loginEnabled saved in AC.</para>
+                /// <para>The actual SSO logon status of AgentIdentity. The actual switch value is Enabled or Disabled, which is not equivalent to the expected value of loginEnabled saved in the access configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Enabled</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The event subscription callback URL. CustomSSO returns an empty string. You must obtain the SCIM receiving URL by calling the SCIM query or preparation operation. The example shows a JSON empty string &quot;&quot;. The actual value does not contain double quotation marks.</para>
+            /// <para>The SAML vendor event callback URL. For CustomSSO, an empty string is returned. To obtain the SCIM receiving URL, call the SCIM query or preparation API operation. The example shows a JSON empty string &quot;&quot;, but the actual value does not include double quotation marks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;&quot;</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string EventSubscriptionCallbackUrl { get; set; }
 
             /// <summary>
-            /// <para>The type of the identity provider. General CRUD operations support DingTalk, Feishu, and CustomSSO. SP queries support only CustomSSO. The SCIM path uses the CustomSSO shared pool.</para>
+            /// <para>The identity provider type. General CRUD operations support DingTalk, Feishu, and CustomSSO. SP queries support only CustomSSO. The SCIM path uses the CustomSSO shared pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CustomSSO</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string IdentityProviderType { get; set; }
 
             /// <summary>
-            /// <para>The logon callback URL. CustomSSO returns an empty string. You must obtain the ACS URL for SAML by calling the SP query operation. The example shows a JSON empty string &quot;&quot;. The actual value does not contain double quotation marks.</para>
+            /// <para>The SAML vendor callback URL. For CustomSSO, an empty string is returned. To obtain the Assertion Consumer Service (ACS) URL for SAML, call the SP query API operation. The example shows a JSON empty string &quot;&quot;, but the actual value does not include double quotation marks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;&quot;</para>
@@ -116,21 +116,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string LoginCallbackUrl { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether logon is enabled. Do not set this parameter to true during CustomSSO initialization. A valid SAML configuration must be saved before enabling logon. Disabling logon does not delete the configuration. If an asynchronous task fails, this expected value does not indicate that the configuration has taken effect upstream.</para>
+            /// <para>Specifies whether logon is enabled. Do not set this parameter to true during CustomSSO initialization. You must save a valid SAML configuration before enabling logon. Disabling logon does not delete the configuration. If an asynchronous task fails, this expected value does not indicate that the change has taken effect on the upstream server.</para>
             /// </summary>
             [NameInMap("loginEnabled")]
             [Validation(Required=false)]
             public bool? LoginEnabled { get; set; }
 
             /// <summary>
-            /// <para>The standard IdP metadata. Vendor parameters are used for DingTalk and Feishu. CustomSSO updates use the protocol and saml fields and do not accept this field. The return value does not contain vendor keys.</para>
+            /// <para>The standard identity provider (IdP) metadata. Vendor parameters are used for DingTalk and Feishu. To update CustomSSO, use the protocol and saml fields. This field is not accepted for CustomSSO updates. The return value does not include vendor keys.</para>
             /// </summary>
             [NameInMap("metadata")]
             [Validation(Required=false)]
             public UpdateIdentityProviderSCIMResponseBodyDataMetadata Metadata { get; set; }
             public class UpdateIdentityProviderSCIMResponseBodyDataMetadata : TeaModel {
                 /// <summary>
-                /// <para>The SAML binding URI in the historical metadata snapshot. For CustomSSO updates, use saml.bindingType.</para>
+                /// <para>The SAML binding URI in the historical metadata snapshot. To update CustomSSO, use the saml.bindingType field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Binding { get; set; }
 
                 /// <summary>
-                /// <para>The certificate string in the historical metadata snapshot. To edit the configuration, use saml.x509Certificates and do not submit the old metadata.</para>
+                /// <para>The certificate string in the historical metadata snapshot. To edit the configuration, use the saml.x509Certificates field instead of submitting the old metadata.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MIICwDCCAaigAwIBAgIULlsHLfcADyBax5ZtFlj+YGzZVo0wDQYJKoZIhvcNAQELBQAwGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMB4XDTI2MDEwMTAwMDAwMFoXDTM2MDEwMTAwMDAwMFowGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAto0DN0W1CrPRzK9QZ9A1aApb4Lg8oGlp2c0PbN3LokXe/HzwxCMXx65IDnrenttxzTwp9BgUnUN/3LRzWaOL2UQ/vNYNW9LFLkI1T64UPyI7eyi28YlALhb41xkYhEp7rz+MjqifBzVZeTDUxBYtbK2hAhbYEL1+udwsXEx0KB7xuQ/rbI2OKeqAEAD1tfYg7T/SM2wrXNYhx+o1HtchM4/0I8Okkk27JQ4y3ofzC5sTySmFF1Y7XcpSd+5WSyazedhkAieo8AB01DkJV6nnKfH8sH0EBsnH3FP8FhqCLrIeEkjX9B9OcIRLGjiZqx4u/ryW1QhMldnv+pFfNjWy/wIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQC1hSQG8AwtGOoX2gKBK4Hi5XBrBreij8WlLTUWld0FINQ0Rg84f/27CjDthywj6wgxCesCuOVFhpxQa1UacsP/Gcai1aKABtLWImcaWECRYK5gDkwhTMFKM9mXA26hH1l4v/UR2iTpEK9H78egC4W7bs2LDTpPryuaNKTqP2O0tMbNkAHB8yecz5LxHXnxadL9Egow25g2RClvpifWqDnuS9TSbKkIWLcPLjocJj2K9ILpBwhXiXi/BiSgyYTLiYvVvih9vX4s+hKGZNJc0j92YLiOHDF0XH1oxgdVjfTmRiedeb2VZJZElptD92z0AqFR7z2d5B+OqpPA2gjuMLV5</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Certificates { get; set; }
 
                 /// <summary>
-                /// <para>The entity ID of the IdP. This parameter is required when you manually enter the configuration. It must be non-empty and cannot exceed 2,048 characters. You cannot change the entity ID of an existing configuration. This ID is different from the local entity ID returned by the SP query.</para>
+                /// <para>The IdP entity ID. This field is required when you manually enter the metadata. It must be a non-empty string of up to 2,048 characters. You cannot change the entity ID after it is configured. This ID is different from the local entity ID returned by the SP query.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string EntityId { get; set; }
 
                 /// <summary>
-                /// <para>The SSO logon URL of the IdP. This parameter is required when you manually enter the configuration. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</para>
+                /// <para>The IdP SSO logon URL. This field is required when you manually enter the metadata. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></para>
@@ -172,14 +172,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>期望配置的安全摘要；不包含凭据。原 SAML 字段与含义保留。</para>
+            /// <para>The security summary of the expected OIDC configuration. This summary does not include credentials. The original SAML fields and their meanings are retained.</para>
             /// </summary>
             [NameInMap("oidc")]
             [Validation(Required=false)]
             public UpdateIdentityProviderSCIMResponseBodyDataOidc Oidc { get; set; }
             public class UpdateIdentityProviderSCIMResponseBodyDataOidc : TeaModel {
                 /// <summary>
-                /// <para>手填模式必填的绝对 HTTPS URL；Discovery 模式不填写。</para>
+                /// <para>The authorization endpoint. This field is required in manual mode and must be an absolute HTTPS URL. Do not specify this field in discovery mode.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://idp.example.com/authorize">https://idp.example.com/authorize</a></para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AuthorizationEndpoint { get; set; }
 
                 /// <summary>
-                /// <para>默认 client_secret_post；none 必须开启 PKCE。</para>
+                /// <para>The client authentication method. Default value: client_secret_post. If the value is none, Proof Key for Code Exchange (PKCE) must be enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>client_secret_post</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string ClientAuthMethod { get; set; }
 
                 /// <summary>
-                /// <para>外部 IdP 中注册的客户端标识，区别于 Matrix 客户端；配置后不支持原地更换。</para>
+                /// <para>The client ID registered in the external IdP. This ID is different from the Matrix client ID. You cannot change the client ID in place after it is configured.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example-client</para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string ClientId { get; set; }
 
                 /// <summary>
-                /// <para>绝对 HTTPS Discovery 地址；与手填端点互斥。</para>
+                /// <para>The absolute HTTPS OIDC discovery endpoint. This field is mutually exclusive with manually entered endpoints.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://idp.example.com/.well-known/openid-configuration">https://idp.example.com/.well-known/openid-configuration</a></para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string DiscoveryEndpoint { get; set; }
 
                 /// <summary>
-                /// <para>外部 IdP 的绝对 HTTPS Issuer；配置后不支持原地更换。</para>
+                /// <para>The absolute HTTPS issuer of the external IdP. You cannot change the issuer in place after it is configured.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://idp.example.com">https://idp.example.com</a></para>
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Issuer { get; set; }
 
                 /// <summary>
-                /// <para>手填模式必填的绝对 HTTPS URL；Discovery 模式不填写。</para>
+                /// <para>The authorization endpoint. This field is required in manual mode and must be an absolute HTTPS URL. Do not specify this field in discovery mode.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://idp.example.com/jwks">https://idp.example.com/jwks</a></para>
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string JwksUri { get; set; }
 
                 /// <summary>
-                /// <para>默认 true；无客户端认证时必须为 true。</para>
+                /// <para>Specifies whether PKCE is enabled. Default value: true. This parameter must be set to true when no client authentication is used.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -249,7 +249,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? PkceRequired { get; set; }
 
                 /// <summary>
-                /// <para>字符串数组，必须包含 openid；默认 openid、profile、email。</para>
+                /// <para>The array of strings that must contain openid. Default values: openid, profile, and email.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;openid&quot;,&quot;profile&quot;,&quot;email&quot;]</para>
@@ -259,7 +259,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public List<string> Scopes { get; set; }
 
                 /// <summary>
-                /// <para>ID Token 中用于与 SCIM externalId 匹配的 Claim 名。首次省略默认 sub；更新省略保留已保存值。Azure 可填 oid。非空且不含空白字符。查询 oidc 为保存值，oidcConfiguration 为上游实际值，可能为空。</para>
+                /// <para>The name of the claim in the ID token that is used to match the SCIM externalId. If omitted during creation, the default value sub is used. If omitted during an update, the saved value is retained. For Azure, you can specify oid. The value must be non-empty and cannot contain whitespace characters. When querying oidc, the saved value is returned. When querying oidcConfiguration, the actual upstream value is returned, which may be empty.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>oid</para>
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string SsoMappingClaim { get; set; }
 
                 /// <summary>
-                /// <para>手填模式必填的绝对 HTTPS URL；Discovery 模式不填写。</para>
+                /// <para>The authorization endpoint. This field is required in manual mode and must be an absolute HTTPS URL. Do not specify this field in discovery mode.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://idp.example.com/token">https://idp.example.com/token</a></para>
@@ -279,7 +279,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string TokenEndpoint { get; set; }
 
                 /// <summary>
-                /// <para>手填模式可选的绝对 HTTPS URL；Discovery 模式不填写。</para>
+                /// <para>The optional absolute HTTPS URL for manual mode. Leave this field empty in discovery mode.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://idp.example.com/userinfo">https://idp.example.com/userinfo</a></para>
@@ -311,14 +311,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The SAML logon configuration. You can enter an XML file or manually enter the complete configuration. The query returns the standardized configuration and does not echo the original XML. This field can be omitted if it is not configured.</para>
+            /// <para>The SAML logon configuration. You can provide the input by using XML or by manually entering all fields. The query returns the standardized configuration and does not echo the original XML. This field can be omitted if it is not configured.</para>
             /// </summary>
             [NameInMap("saml")]
             [Validation(Required=false)]
             public UpdateIdentityProviderSCIMResponseBodyDataSaml Saml { get; set; }
             public class UpdateIdentityProviderSCIMResponseBodyDataSaml : TeaModel {
                 /// <summary>
-                /// <para>The SAML binding type. Valid values: HTTP-Redirect and HTTP-POST. This parameter is required when you manually enter the configuration. The query returns the short name.</para>
+                /// <para>The SAML binding type. Valid values: HTTP-Redirect and HTTP-POST. This field is required when you manually enter the configuration. The query returns the short name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HTTP-Redirect</para>
@@ -328,7 +328,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string BindingType { get; set; }
 
                 /// <summary>
-                /// <para>The entity ID of the IdP. This parameter is required when you manually enter the configuration. It must be non-empty and cannot exceed 2,048 characters. You cannot change the entity ID of an existing configuration. This ID is different from the local entity ID returned by the SP query.</para>
+                /// <para>The IdP entity ID. This field is required when you manually enter the metadata. It must be a non-empty string of up to 2,048 characters. You cannot change the entity ID after it is configured. This ID is different from the local entity ID returned by the SP query.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></para>
@@ -338,7 +338,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string EntityId { get; set; }
 
                 /// <summary>
-                /// <para>The SSO logon URL of the IdP. This parameter is required when you manually enter the configuration. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</para>
+                /// <para>The IdP SSO logon URL. This field is required when you manually enter the metadata. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></para>
@@ -348,7 +348,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string LoginUrl { get; set; }
 
                 /// <summary>
-                /// <para>The list of IdP signing certificates. When you manually enter the configuration, this parameter is required and must be a non-empty array. Use PEM X.509 certificate text. The system verifies the current validity period. A maximum of two certificates are allowed after deduplication.</para>
+                /// <para>The list of IdP signing certificates. When you manually enter the configuration, this field is required and must be a non-empty array of PEM X.509 certificate texts. The system verifies the current validity period. A maximum of two certificates are retained after deduplication.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;-----BEGIN CERTIFICATE-----\\nMIICwDCCAaigAwIBAgIULlsHLfcADyBax5ZtFlj+YGzZVo0wDQYJKoZIhvcNAQEL\\nBQAwGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMB4XDTI2MDEwMTAwMDAwMFoX\\nDTM2MDEwMTAwMDAwMFowGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMIIBIjAN\\nBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAto0DN0W1CrPRzK9QZ9A1aApb4Lg8\\noGlp2c0PbN3LokXe/HzwxCMXx65IDnrenttxzTwp9BgUnUN/3LRzWaOL2UQ/vNYN\\nW9LFLkI1T64UPyI7eyi28YlALhb41xkYhEp7rz+MjqifBzVZeTDUxBYtbK2hAhbY\\nEL1+udwsXEx0KB7xuQ/rbI2OKeqAEAD1tfYg7T/SM2wrXNYhx+o1HtchM4/0I8Ok\\nkk27JQ4y3ofzC5sTySmFF1Y7XcpSd+5WSyazedhkAieo8AB01DkJV6nnKfH8sH0E\\nBsnH3FP8FhqCLrIeEkjX9B9OcIRLGjiZqx4u/ryW1QhMldnv+pFfNjWy/wIDAQAB\\nMA0GCSqGSIb3DQEBCwUAA4IBAQC1hSQG8AwtGOoX2gKBK4Hi5XBrBreij8WlLTUW\\nld0FINQ0Rg84f/27CjDthywj6wgxCesCuOVFhpxQa1UacsP/Gcai1aKABtLWImca\\nWECRYK5gDkwhTMFKM9mXA26hH1l4v/UR2iTpEK9H78egC4W7bs2LDTpPryuaNKTq\\nP2O0tMbNkAHB8yecz5LxHXnxadL9Egow25g2RClvpifWqDnuS9TSbKkIWLcPLjoc\\nJj2K9ILpBwhXiXi/BiSgyYTLiYvVvih9vX4s+hKGZNJc0j92YLiOHDF0XH1oxgdV\\njfTmRiedeb2VZJZElptD92z0AqFR7z2d5B+OqpPA2gjuMLV5\\n-----END CERTIFICATE-----&quot;]</para>
@@ -360,7 +360,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The independent SCIM status. This field does not change the meaning of shared resources and logon configuration in the original status field. It corresponds to the data.status field in the query operation.</para>
+            /// <para>The independent SCIM status. This field does not change the meaning of the original status field for shared resources and logon configurations. It corresponds to the data.status field in the query API operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>UPDATING</para>
@@ -370,7 +370,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ScimStatus { get; set; }
 
             /// <summary>
-            /// <para>The lifecycle status of the CustomSSO user pool and the task status of the logon configuration. This field does not indicate the SCIM operation result. You can query the SCIM switch result by using GetIdentityProviderSCIM.operationStatus. You cannot use this field to determine whether all protocols are configured.</para>
+            /// <para>The operation status of the CustomSSO user pool lifecycle and logon configuration tasks. This status does not indicate the result of SCIM operations. To query the result of the SCIM switch, use the GetIdentityProviderSCIM.operationStatus field. You cannot use this field to determine whether all protocols are configured.</para>
             /// 
             /// <b>Example:</b>
             /// <para>READY</para>
@@ -380,7 +380,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Do not set this parameter to true during CustomSSO initialization. You can only update this parameter later by calling UpdateIdentityProviderSCIM. Determine the result based on the operationStatus field.</para>
+            /// <para>Specifies whether to enable SCIM synchronization. Do not set this parameter to true during CustomSSO initialization. You can only update this parameter later by calling UpdateIdentityProviderSCIM. Determine the result based on the operationStatus field.</para>
             /// </summary>
             [NameInMap("syncEnabled")]
             [Validation(Required=false)]
@@ -409,7 +409,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The processing status of the current request. This status is not equivalent to the final result of the background task.</para>
+        /// <para>The HTTP status code. Indicates the processing status of the current request, which does not necessarily reflect the final result of the background task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -419,7 +419,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message indicating that the request is accepted or an error message. For asynchronous tasks, verify the task result by calling the corresponding query operation.</para>
+        /// <para>The result message. Indicates whether the request is accepted or returns an error message. For an asynchronous task, check the task result by calling the corresponding query API operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -429,7 +429,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. You can use this ID to associate the current call with troubleshooting. Keep this ID if the call fails.</para>
+        /// <para>The request ID. Retain this ID to correlate the current call and troubleshoot failures.</para>
         /// 
         /// <b>Example:</b>
         /// <para>request-example</para>
@@ -439,7 +439,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the current request is successful. A value of true indicates that the request is processed successfully. For asynchronous writes, you must continue to query the task result.</para>
+        /// <para>Indicates whether the current request is successful. A value of true indicates that the request is processed successfully. For asynchronous write operations, you must continue to query the task result.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

@@ -1,3 +1,6 @@
+2026-11-17 Version: 3.5.0
+- Generated csharp 2026-08-04 for AgentCore.
+
 2026-11-13 Version: 3.4.2
 - Update API CreateExternalAgent: add request parameters body.environment.
 - Update API CreateExternalAgent: add response parameters Body.data.environment.

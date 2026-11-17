@@ -42,15 +42,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Writes messages or text to a memory store. By default, sync is set to true, which synchronously waits for extraction and returns only memories (an empty array is allowed). If sync is set to false, it returns only a taskId that can be queried by using GetMemoryTask.</para>
+        /// <para>Extracts memories from text or messages, or directly writes organized memories. When the extract parameter is omitted or set to true, either the text parameter or non-empty messages must be provided. When the extract parameter is set to false, the memories parameter is used. When the sync parameter is omitted or set to true, the operation waits for processing to complete and returns memory references. An empty array is returned if no new memories are generated. When the sync parameter is set to false, a task ID is returned, and you can use GetMemoryTask to query the result. Direct writes do not create extraction tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Writes messages or text to a memory store to extract long-term memory for subsequent retrieval and use.</para>
+        /// <para>Writes messages or text to a memory store to fetch long-term memory to retrieve and use later.</para>
         /// <list type="bullet">
-        /// <item><description>sync omitted or set to true: Waits for extraction to complete and returns memories. If no memory is extracted, an empty array is returned.</description></item>
-        /// <item><description>sync=false: Returns a taskId. You can query the extraction progress and results by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMemoryTask">GetMemoryTask</a>.</description></item>
+        /// <item><description>If <c>sync</c> is omitted or set to <c>true</c>: waits for the extraction to complete and returns <c>memories</c>. Returns an empty array if no memories are extracted.</description></item>
+        /// <item><description>If <c>sync</c> is set to <c>false</c>: returns a <c>taskId</c>. You can use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMemoryTask">GetMemoryTask</a> to query the extraction progress and results.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -103,15 +103,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Writes messages or text to a memory store. By default, sync is set to true, which synchronously waits for extraction and returns only memories (an empty array is allowed). If sync is set to false, it returns only a taskId that can be queried by using GetMemoryTask.</para>
+        /// <para>Extracts memories from text or messages, or directly writes organized memories. When the extract parameter is omitted or set to true, either the text parameter or non-empty messages must be provided. When the extract parameter is set to false, the memories parameter is used. When the sync parameter is omitted or set to true, the operation waits for processing to complete and returns memory references. An empty array is returned if no new memories are generated. When the sync parameter is set to false, a task ID is returned, and you can use GetMemoryTask to query the result. Direct writes do not create extraction tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Writes messages or text to a memory store to extract long-term memory for subsequent retrieval and use.</para>
+        /// <para>Writes messages or text to a memory store to fetch long-term memory to retrieve and use later.</para>
         /// <list type="bullet">
-        /// <item><description>sync omitted or set to true: Waits for extraction to complete and returns memories. If no memory is extracted, an empty array is returned.</description></item>
-        /// <item><description>sync=false: Returns a taskId. You can query the extraction progress and results by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMemoryTask">GetMemoryTask</a>.</description></item>
+        /// <item><description>If <c>sync</c> is omitted or set to <c>true</c>: waits for the extraction to complete and returns <c>memories</c>. Returns an empty array if no memories are extracted.</description></item>
+        /// <item><description>If <c>sync</c> is set to <c>false</c>: returns a <c>taskId</c>. You can use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMemoryTask">GetMemoryTask</a> to query the extraction progress and results.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -164,15 +164,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Writes messages or text to a memory store. By default, sync is set to true, which synchronously waits for extraction and returns only memories (an empty array is allowed). If sync is set to false, it returns only a taskId that can be queried by using GetMemoryTask.</para>
+        /// <para>Extracts memories from text or messages, or directly writes organized memories. When the extract parameter is omitted or set to true, either the text parameter or non-empty messages must be provided. When the extract parameter is set to false, the memories parameter is used. When the sync parameter is omitted or set to true, the operation waits for processing to complete and returns memory references. An empty array is returned if no new memories are generated. When the sync parameter is set to false, a task ID is returned, and you can use GetMemoryTask to query the result. Direct writes do not create extraction tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Writes messages or text to a memory store to extract long-term memory for subsequent retrieval and use.</para>
+        /// <para>Writes messages or text to a memory store to fetch long-term memory to retrieve and use later.</para>
         /// <list type="bullet">
-        /// <item><description>sync omitted or set to true: Waits for extraction to complete and returns memories. If no memory is extracted, an empty array is returned.</description></item>
-        /// <item><description>sync=false: Returns a taskId. You can query the extraction progress and results by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMemoryTask">GetMemoryTask</a>.</description></item>
+        /// <item><description>If <c>sync</c> is omitted or set to <c>true</c>: waits for the extraction to complete and returns <c>memories</c>. Returns an empty array if no memories are extracted.</description></item>
+        /// <item><description>If <c>sync</c> is set to <c>false</c>: returns a <c>taskId</c>. You can use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMemoryTask">GetMemoryTask</a> to query the extraction progress and results.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -192,15 +192,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Writes messages or text to a memory store. By default, sync is set to true, which synchronously waits for extraction and returns only memories (an empty array is allowed). If sync is set to false, it returns only a taskId that can be queried by using GetMemoryTask.</para>
+        /// <para>Extracts memories from text or messages, or directly writes organized memories. When the extract parameter is omitted or set to true, either the text parameter or non-empty messages must be provided. When the extract parameter is set to false, the memories parameter is used. When the sync parameter is omitted or set to true, the operation waits for processing to complete and returns memory references. An empty array is returned if no new memories are generated. When the sync parameter is set to false, a task ID is returned, and you can use GetMemoryTask to query the result. Direct writes do not create extraction tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Writes messages or text to a memory store to extract long-term memory for subsequent retrieval and use.</para>
+        /// <para>Writes messages or text to a memory store to fetch long-term memory to retrieve and use later.</para>
         /// <list type="bullet">
-        /// <item><description>sync omitted or set to true: Waits for extraction to complete and returns memories. If no memory is extracted, an empty array is returned.</description></item>
-        /// <item><description>sync=false: Returns a taskId. You can query the extraction progress and results by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMemoryTask">GetMemoryTask</a>.</description></item>
+        /// <item><description>If <c>sync</c> is omitted or set to <c>true</c>: waits for the extraction to complete and returns <c>memories</c>. Returns an empty array if no memories are extracted.</description></item>
+        /// <item><description>If <c>sync</c> is set to <c>false</c>: returns a <c>taskId</c>. You can use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMemoryTask">GetMemoryTask</a> to query the extraction progress and results.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2402,6 +2402,168 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Writes messages, summaries, or session fork events in batches. Each batch supports 1 to 100 events and returns the write results one by one in the same order as the request. A successful request does not indicate that every event is written successfully, nor does it indicate that memory extraction is complete. The session title and metadata are set only when the session is created for the first time. Subsequent writes do not update existing session information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Writes messages, summaries, or session fork events in batches. Each batch supports 1 to 100 events and returns the write results one by one in the same order as the request. A successful request does not indicate that every event is written successfully, nor does it indicate that memory extraction is complete. The session title and metadata are set only when the session is created for the first time. Subsequent writes do not update existing session information.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateEventsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEventsResponse
+        /// </returns>
+        public CreateEventsResponse CreateEventsWithOptions(string workspaceId, string memoryStoreName, CreateEventsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateEventsShrinkRequest request = new CreateEventsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateEvents",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/memorystores/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/events",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateEventsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Writes messages, summaries, or session fork events in batches. Each batch supports 1 to 100 events and returns the write results one by one in the same order as the request. A successful request does not indicate that every event is written successfully, nor does it indicate that memory extraction is complete. The session title and metadata are set only when the session is created for the first time. Subsequent writes do not update existing session information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Writes messages, summaries, or session fork events in batches. Each batch supports 1 to 100 events and returns the write results one by one in the same order as the request. A successful request does not indicate that every event is written successfully, nor does it indicate that memory extraction is complete. The session title and metadata are set only when the session is created for the first time. Subsequent writes do not update existing session information.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateEventsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEventsResponse
+        /// </returns>
+        public async Task<CreateEventsResponse> CreateEventsWithOptionsAsync(string workspaceId, string memoryStoreName, CreateEventsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateEventsShrinkRequest request = new CreateEventsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateEvents",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/memorystores/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/events",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateEventsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Writes messages, summaries, or session fork events in batches. Each batch supports 1 to 100 events and returns the write results one by one in the same order as the request. A successful request does not indicate that every event is written successfully, nor does it indicate that memory extraction is complete. The session title and metadata are set only when the session is created for the first time. Subsequent writes do not update existing session information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Writes messages, summaries, or session fork events in batches. Each batch supports 1 to 100 events and returns the write results one by one in the same order as the request. A successful request does not indicate that every event is written successfully, nor does it indicate that memory extraction is complete. The session title and metadata are set only when the session is created for the first time. Subsequent writes do not update existing session information.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEventsResponse
+        /// </returns>
+        public CreateEventsResponse CreateEvents(string workspaceId, string memoryStoreName, CreateEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateEventsWithOptions(workspaceId, memoryStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Writes messages, summaries, or session fork events in batches. Each batch supports 1 to 100 events and returns the write results one by one in the same order as the request. A successful request does not indicate that every event is written successfully, nor does it indicate that memory extraction is complete. The session title and metadata are set only when the session is created for the first time. Subsequent writes do not update existing session information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Writes messages, summaries, or session fork events in batches. Each batch supports 1 to 100 events and returns the write results one by one in the same order as the request. A successful request does not indicate that every event is written successfully, nor does it indicate that memory extraction is complete. The session title and metadata are set only when the session is created for the first time. Subsequent writes do not update existing session information.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEventsResponse
+        /// </returns>
+        public async Task<CreateEventsResponse> CreateEventsAsync(string workspaceId, string memoryStoreName, CreateEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateEventsWithOptionsAsync(workspaceId, memoryStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates an agent that runs in an external environment, saves the configurations for the platform model, instructions, tools, and skills, and asynchronously processes the onboarding configuration.</para>
         /// </summary>
         /// 
@@ -3801,7 +3963,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <description>
         /// <para>Creates an agent by using a platform-managed runtime framework. This corresponds to the &quot;Managed Harness&quot; creation method in the console, where you can configure the model, instructions, and skills.</para>
         /// <h3>Required configurations</h3>
-        /// <para>Submit <c>name</c>, <c>model</c>, and <c>runtime</c>. The <c>runtime</c> parameter must include both <c>compute</c> and <c>sessionPolicy</c>. The agent is deployed and run by the platform. You do not need to provide a code package or container image.</para>
+        /// <para>Submit <c>name</c>, <c>model</c>, and <c>runtime</c>. The <c>runtime</c> parameter must include both <c>compute</c> and <c>sessionPolicy</c>. The agent is deployed and run by the platform, so you do not need to provide a code package or container image.</para>
         /// <h3>Harness and model</h3>
         /// <table>
         /// <thead>
@@ -3812,14 +3974,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </thead>
         /// <tbody><tr>
         /// <td><c>qwenpaw</c></td>
-        /// <td>If you omit <c>harness</c> during creation, this type is used by default. Set <c>model.modelConnectionId</c> to the workspace model connection ID, and set <c>model.modelName</c> to the name of the model created under this connection.</td>
+        /// <td>If <c>harness</c> is omitted during creation, this type is used by default. Set <c>model.modelConnectionId</c> to the workspace model connection ID, and set <c>model.modelName</c> to the name of the model created under this connection.</td>
         /// </tr>
         /// <tr>
         /// <td><c>qodercli</c></td>
-        /// <td>The qodercli connector must be enabled in the workspace. Set <c>model.modelConnectionId</c> to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. You can omit <c>model.modelName</c>.</td>
+        /// <td>The qodercli connector must be enabled in the workspace. Set <c>model.modelConnectionId</c> to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. <c>model.modelName</c> can be omitted.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>harness</c> is an object, such as <c>{&quot;type&quot;:&quot;qwenpaw&quot;}</c>. For qodercli, set <c>harness.configuration.connectorServiceAccountKey</c> to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. You can omit this parameter if only one key record exists. You must specify it if multiple records exist. <c>connectorServiceAccountName</c> is the account name. Do not specify these two binding fields for qwenpaw.</td>
+        /// <td><c>harness</c> is an object, such as <c>{&quot;type&quot;:&quot;qwenpaw&quot;}</c>. For qodercli, set <c>harness.configuration.connectorServiceAccountKey</c> to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. This parameter can be omitted if there is only one key record, but must be specified if there are multiple records. <c>connectorServiceAccountName</c> is the account name. Do not specify these two binding fields for qwenpaw.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
@@ -3828,9 +3990,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </tbody></table>
         /// <h3>Instructions, templates, and skills</h3>
-        /// <para><c>skills</c> uses the skill names in the workspace AI registry. If <c>sourceType=REFERENCE</c>, the version is referenced by <c>versionSelector</c>: use <c>LABEL</c> with a label name, or <c>VERSION</c> with a specific version number. If the selector is omitted, <c>LABEL/latest</c> is used. If <c>sourceType=STATIC</c>, static files bundled with the package are used, and no version selector is provided.
+        /// <para><c>skills</c> uses the skill names in the workspace AI registry. If <c>sourceType=REFERENCE</c>, versions are referenced by <c>versionSelector</c>: use <c>LABEL</c> with a tag name, or <c>VERSION</c> with a specific version number. If the selector is omitted, <c>LABEL/latest</c> is used. If <c>sourceType=STATIC</c>, static files bundled with the package are used, and no version selector is provided.
         /// For <c>template.aiRegistry</c>, specify the agent template name and an optional version. If the version is omitted during creation, the published version is resolved and fixed. When a template is used, <c>instruction</c>, <c>promptVariables</c>, and <c>subAgents</c> are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions by using <c>configuredSkills</c> and <c>skills</c>.
-        /// If no template is used, you can set instructions by using <c>instruction</c>, declare variables by using <c>promptVariables</c>, and configure up to 20 sub-agents by using <c>subAgents</c>. The name and instruction of a sub-agent cannot be empty. Each sub-agent name must be unique. Tools currently use <c>tools[].type=MCP</c>.</para>
+        /// If no template is used, you can set instructions by using <c>instruction</c>, declare variables by using <c>promptVariables</c>, and configure up to 20 sub-agents by using <c>subAgents</c>. The name and instruction of a sub-agent cannot be empty, and the name of each sub-agent must be unique. Tools currently use <c>tools[].type=MCP</c>.</para>
         /// <h3>Runtime configurations and mounts</h3>
         /// <para>Omitted fields in <c>runtime.hpa</c> use the following default values:</para>
         /// <table>
@@ -3877,7 +4039,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>The total number of <c>ossMounts</c> and <c>agenticFsMounts</c> cannot exceed 10. The mount target <c>mountPath</c> uses an absolute path in the container, such as <c>/data/train</c>. It cannot conflict with platform-reserved directories, be duplicated, or form parent-child directory overwrites.</td>
+        /// <td>The total number of <c>ossMounts</c> and <c>agenticFsMounts</c> cannot exceed 10. The mount target <c>mountPath</c> uses an absolute path in the container, such as <c>/data/train</c>. It cannot conflict with platform-reserved directories, and cannot be duplicated or form parent-child directory overwrites.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
@@ -3963,7 +4125,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <description>
         /// <para>Creates an agent by using a platform-managed runtime framework. This corresponds to the &quot;Managed Harness&quot; creation method in the console, where you can configure the model, instructions, and skills.</para>
         /// <h3>Required configurations</h3>
-        /// <para>Submit <c>name</c>, <c>model</c>, and <c>runtime</c>. The <c>runtime</c> parameter must include both <c>compute</c> and <c>sessionPolicy</c>. The agent is deployed and run by the platform. You do not need to provide a code package or container image.</para>
+        /// <para>Submit <c>name</c>, <c>model</c>, and <c>runtime</c>. The <c>runtime</c> parameter must include both <c>compute</c> and <c>sessionPolicy</c>. The agent is deployed and run by the platform, so you do not need to provide a code package or container image.</para>
         /// <h3>Harness and model</h3>
         /// <table>
         /// <thead>
@@ -3974,14 +4136,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </thead>
         /// <tbody><tr>
         /// <td><c>qwenpaw</c></td>
-        /// <td>If you omit <c>harness</c> during creation, this type is used by default. Set <c>model.modelConnectionId</c> to the workspace model connection ID, and set <c>model.modelName</c> to the name of the model created under this connection.</td>
+        /// <td>If <c>harness</c> is omitted during creation, this type is used by default. Set <c>model.modelConnectionId</c> to the workspace model connection ID, and set <c>model.modelName</c> to the name of the model created under this connection.</td>
         /// </tr>
         /// <tr>
         /// <td><c>qodercli</c></td>
-        /// <td>The qodercli connector must be enabled in the workspace. Set <c>model.modelConnectionId</c> to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. You can omit <c>model.modelName</c>.</td>
+        /// <td>The qodercli connector must be enabled in the workspace. Set <c>model.modelConnectionId</c> to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. <c>model.modelName</c> can be omitted.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>harness</c> is an object, such as <c>{&quot;type&quot;:&quot;qwenpaw&quot;}</c>. For qodercli, set <c>harness.configuration.connectorServiceAccountKey</c> to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. You can omit this parameter if only one key record exists. You must specify it if multiple records exist. <c>connectorServiceAccountName</c> is the account name. Do not specify these two binding fields for qwenpaw.</td>
+        /// <td><c>harness</c> is an object, such as <c>{&quot;type&quot;:&quot;qwenpaw&quot;}</c>. For qodercli, set <c>harness.configuration.connectorServiceAccountKey</c> to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. This parameter can be omitted if there is only one key record, but must be specified if there are multiple records. <c>connectorServiceAccountName</c> is the account name. Do not specify these two binding fields for qwenpaw.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
@@ -3990,9 +4152,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </tbody></table>
         /// <h3>Instructions, templates, and skills</h3>
-        /// <para><c>skills</c> uses the skill names in the workspace AI registry. If <c>sourceType=REFERENCE</c>, the version is referenced by <c>versionSelector</c>: use <c>LABEL</c> with a label name, or <c>VERSION</c> with a specific version number. If the selector is omitted, <c>LABEL/latest</c> is used. If <c>sourceType=STATIC</c>, static files bundled with the package are used, and no version selector is provided.
+        /// <para><c>skills</c> uses the skill names in the workspace AI registry. If <c>sourceType=REFERENCE</c>, versions are referenced by <c>versionSelector</c>: use <c>LABEL</c> with a tag name, or <c>VERSION</c> with a specific version number. If the selector is omitted, <c>LABEL/latest</c> is used. If <c>sourceType=STATIC</c>, static files bundled with the package are used, and no version selector is provided.
         /// For <c>template.aiRegistry</c>, specify the agent template name and an optional version. If the version is omitted during creation, the published version is resolved and fixed. When a template is used, <c>instruction</c>, <c>promptVariables</c>, and <c>subAgents</c> are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions by using <c>configuredSkills</c> and <c>skills</c>.
-        /// If no template is used, you can set instructions by using <c>instruction</c>, declare variables by using <c>promptVariables</c>, and configure up to 20 sub-agents by using <c>subAgents</c>. The name and instruction of a sub-agent cannot be empty. Each sub-agent name must be unique. Tools currently use <c>tools[].type=MCP</c>.</para>
+        /// If no template is used, you can set instructions by using <c>instruction</c>, declare variables by using <c>promptVariables</c>, and configure up to 20 sub-agents by using <c>subAgents</c>. The name and instruction of a sub-agent cannot be empty, and the name of each sub-agent must be unique. Tools currently use <c>tools[].type=MCP</c>.</para>
         /// <h3>Runtime configurations and mounts</h3>
         /// <para>Omitted fields in <c>runtime.hpa</c> use the following default values:</para>
         /// <table>
@@ -4039,7 +4201,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>The total number of <c>ossMounts</c> and <c>agenticFsMounts</c> cannot exceed 10. The mount target <c>mountPath</c> uses an absolute path in the container, such as <c>/data/train</c>. It cannot conflict with platform-reserved directories, be duplicated, or form parent-child directory overwrites.</td>
+        /// <td>The total number of <c>ossMounts</c> and <c>agenticFsMounts</c> cannot exceed 10. The mount target <c>mountPath</c> uses an absolute path in the container, such as <c>/data/train</c>. It cannot conflict with platform-reserved directories, and cannot be duplicated or form parent-child directory overwrites.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
@@ -4125,7 +4287,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <description>
         /// <para>Creates an agent by using a platform-managed runtime framework. This corresponds to the &quot;Managed Harness&quot; creation method in the console, where you can configure the model, instructions, and skills.</para>
         /// <h3>Required configurations</h3>
-        /// <para>Submit <c>name</c>, <c>model</c>, and <c>runtime</c>. The <c>runtime</c> parameter must include both <c>compute</c> and <c>sessionPolicy</c>. The agent is deployed and run by the platform. You do not need to provide a code package or container image.</para>
+        /// <para>Submit <c>name</c>, <c>model</c>, and <c>runtime</c>. The <c>runtime</c> parameter must include both <c>compute</c> and <c>sessionPolicy</c>. The agent is deployed and run by the platform, so you do not need to provide a code package or container image.</para>
         /// <h3>Harness and model</h3>
         /// <table>
         /// <thead>
@@ -4136,14 +4298,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </thead>
         /// <tbody><tr>
         /// <td><c>qwenpaw</c></td>
-        /// <td>If you omit <c>harness</c> during creation, this type is used by default. Set <c>model.modelConnectionId</c> to the workspace model connection ID, and set <c>model.modelName</c> to the name of the model created under this connection.</td>
+        /// <td>If <c>harness</c> is omitted during creation, this type is used by default. Set <c>model.modelConnectionId</c> to the workspace model connection ID, and set <c>model.modelName</c> to the name of the model created under this connection.</td>
         /// </tr>
         /// <tr>
         /// <td><c>qodercli</c></td>
-        /// <td>The qodercli connector must be enabled in the workspace. Set <c>model.modelConnectionId</c> to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. You can omit <c>model.modelName</c>.</td>
+        /// <td>The qodercli connector must be enabled in the workspace. Set <c>model.modelConnectionId</c> to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. <c>model.modelName</c> can be omitted.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>harness</c> is an object, such as <c>{&quot;type&quot;:&quot;qwenpaw&quot;}</c>. For qodercli, set <c>harness.configuration.connectorServiceAccountKey</c> to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. You can omit this parameter if only one key record exists. You must specify it if multiple records exist. <c>connectorServiceAccountName</c> is the account name. Do not specify these two binding fields for qwenpaw.</td>
+        /// <td><c>harness</c> is an object, such as <c>{&quot;type&quot;:&quot;qwenpaw&quot;}</c>. For qodercli, set <c>harness.configuration.connectorServiceAccountKey</c> to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. This parameter can be omitted if there is only one key record, but must be specified if there are multiple records. <c>connectorServiceAccountName</c> is the account name. Do not specify these two binding fields for qwenpaw.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
@@ -4152,9 +4314,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </tbody></table>
         /// <h3>Instructions, templates, and skills</h3>
-        /// <para><c>skills</c> uses the skill names in the workspace AI registry. If <c>sourceType=REFERENCE</c>, the version is referenced by <c>versionSelector</c>: use <c>LABEL</c> with a label name, or <c>VERSION</c> with a specific version number. If the selector is omitted, <c>LABEL/latest</c> is used. If <c>sourceType=STATIC</c>, static files bundled with the package are used, and no version selector is provided.
+        /// <para><c>skills</c> uses the skill names in the workspace AI registry. If <c>sourceType=REFERENCE</c>, versions are referenced by <c>versionSelector</c>: use <c>LABEL</c> with a tag name, or <c>VERSION</c> with a specific version number. If the selector is omitted, <c>LABEL/latest</c> is used. If <c>sourceType=STATIC</c>, static files bundled with the package are used, and no version selector is provided.
         /// For <c>template.aiRegistry</c>, specify the agent template name and an optional version. If the version is omitted during creation, the published version is resolved and fixed. When a template is used, <c>instruction</c>, <c>promptVariables</c>, and <c>subAgents</c> are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions by using <c>configuredSkills</c> and <c>skills</c>.
-        /// If no template is used, you can set instructions by using <c>instruction</c>, declare variables by using <c>promptVariables</c>, and configure up to 20 sub-agents by using <c>subAgents</c>. The name and instruction of a sub-agent cannot be empty. Each sub-agent name must be unique. Tools currently use <c>tools[].type=MCP</c>.</para>
+        /// If no template is used, you can set instructions by using <c>instruction</c>, declare variables by using <c>promptVariables</c>, and configure up to 20 sub-agents by using <c>subAgents</c>. The name and instruction of a sub-agent cannot be empty, and the name of each sub-agent must be unique. Tools currently use <c>tools[].type=MCP</c>.</para>
         /// <h3>Runtime configurations and mounts</h3>
         /// <para>Omitted fields in <c>runtime.hpa</c> use the following default values:</para>
         /// <table>
@@ -4201,7 +4363,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>The total number of <c>ossMounts</c> and <c>agenticFsMounts</c> cannot exceed 10. The mount target <c>mountPath</c> uses an absolute path in the container, such as <c>/data/train</c>. It cannot conflict with platform-reserved directories, be duplicated, or form parent-child directory overwrites.</td>
+        /// <td>The total number of <c>ossMounts</c> and <c>agenticFsMounts</c> cannot exceed 10. The mount target <c>mountPath</c> uses an absolute path in the container, such as <c>/data/train</c>. It cannot conflict with platform-reserved directories, and cannot be duplicated or form parent-child directory overwrites.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
@@ -4248,7 +4410,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <description>
         /// <para>Creates an agent by using a platform-managed runtime framework. This corresponds to the &quot;Managed Harness&quot; creation method in the console, where you can configure the model, instructions, and skills.</para>
         /// <h3>Required configurations</h3>
-        /// <para>Submit <c>name</c>, <c>model</c>, and <c>runtime</c>. The <c>runtime</c> parameter must include both <c>compute</c> and <c>sessionPolicy</c>. The agent is deployed and run by the platform. You do not need to provide a code package or container image.</para>
+        /// <para>Submit <c>name</c>, <c>model</c>, and <c>runtime</c>. The <c>runtime</c> parameter must include both <c>compute</c> and <c>sessionPolicy</c>. The agent is deployed and run by the platform, so you do not need to provide a code package or container image.</para>
         /// <h3>Harness and model</h3>
         /// <table>
         /// <thead>
@@ -4259,14 +4421,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </thead>
         /// <tbody><tr>
         /// <td><c>qwenpaw</c></td>
-        /// <td>If you omit <c>harness</c> during creation, this type is used by default. Set <c>model.modelConnectionId</c> to the workspace model connection ID, and set <c>model.modelName</c> to the name of the model created under this connection.</td>
+        /// <td>If <c>harness</c> is omitted during creation, this type is used by default. Set <c>model.modelConnectionId</c> to the workspace model connection ID, and set <c>model.modelName</c> to the name of the model created under this connection.</td>
         /// </tr>
         /// <tr>
         /// <td><c>qodercli</c></td>
-        /// <td>The qodercli connector must be enabled in the workspace. Set <c>model.modelConnectionId</c> to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. You can omit <c>model.modelName</c>.</td>
+        /// <td>The qodercli connector must be enabled in the workspace. Set <c>model.modelConnectionId</c> to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. <c>model.modelName</c> can be omitted.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>harness</c> is an object, such as <c>{&quot;type&quot;:&quot;qwenpaw&quot;}</c>. For qodercli, set <c>harness.configuration.connectorServiceAccountKey</c> to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. You can omit this parameter if only one key record exists. You must specify it if multiple records exist. <c>connectorServiceAccountName</c> is the account name. Do not specify these two binding fields for qwenpaw.</td>
+        /// <td><c>harness</c> is an object, such as <c>{&quot;type&quot;:&quot;qwenpaw&quot;}</c>. For qodercli, set <c>harness.configuration.connectorServiceAccountKey</c> to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. This parameter can be omitted if there is only one key record, but must be specified if there are multiple records. <c>connectorServiceAccountName</c> is the account name. Do not specify these two binding fields for qwenpaw.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
@@ -4275,9 +4437,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </tbody></table>
         /// <h3>Instructions, templates, and skills</h3>
-        /// <para><c>skills</c> uses the skill names in the workspace AI registry. If <c>sourceType=REFERENCE</c>, the version is referenced by <c>versionSelector</c>: use <c>LABEL</c> with a label name, or <c>VERSION</c> with a specific version number. If the selector is omitted, <c>LABEL/latest</c> is used. If <c>sourceType=STATIC</c>, static files bundled with the package are used, and no version selector is provided.
+        /// <para><c>skills</c> uses the skill names in the workspace AI registry. If <c>sourceType=REFERENCE</c>, versions are referenced by <c>versionSelector</c>: use <c>LABEL</c> with a tag name, or <c>VERSION</c> with a specific version number. If the selector is omitted, <c>LABEL/latest</c> is used. If <c>sourceType=STATIC</c>, static files bundled with the package are used, and no version selector is provided.
         /// For <c>template.aiRegistry</c>, specify the agent template name and an optional version. If the version is omitted during creation, the published version is resolved and fixed. When a template is used, <c>instruction</c>, <c>promptVariables</c>, and <c>subAgents</c> are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions by using <c>configuredSkills</c> and <c>skills</c>.
-        /// If no template is used, you can set instructions by using <c>instruction</c>, declare variables by using <c>promptVariables</c>, and configure up to 20 sub-agents by using <c>subAgents</c>. The name and instruction of a sub-agent cannot be empty. Each sub-agent name must be unique. Tools currently use <c>tools[].type=MCP</c>.</para>
+        /// If no template is used, you can set instructions by using <c>instruction</c>, declare variables by using <c>promptVariables</c>, and configure up to 20 sub-agents by using <c>subAgents</c>. The name and instruction of a sub-agent cannot be empty, and the name of each sub-agent must be unique. Tools currently use <c>tools[].type=MCP</c>.</para>
         /// <h3>Runtime configurations and mounts</h3>
         /// <para>Omitted fields in <c>runtime.hpa</c> use the following default values:</para>
         /// <table>
@@ -4324,7 +4486,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>The total number of <c>ossMounts</c> and <c>agenticFsMounts</c> cannot exceed 10. The mount target <c>mountPath</c> uses an absolute path in the container, such as <c>/data/train</c>. It cannot conflict with platform-reserved directories, be duplicated, or form parent-child directory overwrites.</td>
+        /// <td>The total number of <c>ossMounts</c> and <c>agenticFsMounts</c> cannot exceed 10. The mount target <c>mountPath</c> uses an absolute path in the container, such as <c>/data/train</c>. It cannot conflict with platform-reserved directories, and cannot be duplicated or form parent-child directory overwrites.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
@@ -4546,6 +4708,168 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateMcpWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an extraction rule for a memory store, specifying the rule name, enabling status, and extraction strategy. After the rule is enabled, extraction is triggered when 8 pending extraction events accumulate in a session or when no new pending extraction events are added for 60 consecutive seconds.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an extraction rule for a memory store, specifying the rule name, enabling status, and extraction strategy. After the rule is enabled, extraction is triggered when 8 pending extraction events accumulate in a session or when no new pending extraction events are added for 60 consecutive seconds.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateMemoryRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMemoryRuleResponse
+        /// </returns>
+        public CreateMemoryRuleResponse CreateMemoryRuleWithOptions(string workspaceId, string memoryStoreName, CreateMemoryRuleRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateMemoryRuleShrinkRequest request = new CreateMemoryRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMemoryRule",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/memorystores/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory-rules",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMemoryRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an extraction rule for a memory store, specifying the rule name, enabling status, and extraction strategy. After the rule is enabled, extraction is triggered when 8 pending extraction events accumulate in a session or when no new pending extraction events are added for 60 consecutive seconds.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an extraction rule for a memory store, specifying the rule name, enabling status, and extraction strategy. After the rule is enabled, extraction is triggered when 8 pending extraction events accumulate in a session or when no new pending extraction events are added for 60 consecutive seconds.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateMemoryRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMemoryRuleResponse
+        /// </returns>
+        public async Task<CreateMemoryRuleResponse> CreateMemoryRuleWithOptionsAsync(string workspaceId, string memoryStoreName, CreateMemoryRuleRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateMemoryRuleShrinkRequest request = new CreateMemoryRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMemoryRule",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/memorystores/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory-rules",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMemoryRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an extraction rule for a memory store, specifying the rule name, enabling status, and extraction strategy. After the rule is enabled, extraction is triggered when 8 pending extraction events accumulate in a session or when no new pending extraction events are added for 60 consecutive seconds.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an extraction rule for a memory store, specifying the rule name, enabling status, and extraction strategy. After the rule is enabled, extraction is triggered when 8 pending extraction events accumulate in a session or when no new pending extraction events are added for 60 consecutive seconds.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMemoryRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMemoryRuleResponse
+        /// </returns>
+        public CreateMemoryRuleResponse CreateMemoryRule(string workspaceId, string memoryStoreName, CreateMemoryRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateMemoryRuleWithOptions(workspaceId, memoryStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an extraction rule for a memory store, specifying the rule name, enabling status, and extraction strategy. After the rule is enabled, extraction is triggered when 8 pending extraction events accumulate in a session or when no new pending extraction events are added for 60 consecutive seconds.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an extraction rule for a memory store, specifying the rule name, enabling status, and extraction strategy. After the rule is enabled, extraction is triggered when 8 pending extraction events accumulate in a session or when no new pending extraction events are added for 60 consecutive seconds.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMemoryRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMemoryRuleResponse
+        /// </returns>
+        public async Task<CreateMemoryRuleResponse> CreateMemoryRuleAsync(string workspaceId, string memoryStoreName, CreateMemoryRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateMemoryRuleWithOptionsAsync(workspaceId, memoryStoreName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5246,6 +5570,180 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreatePermissionRulesWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service endpoint.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a named service endpoint that routes to a specific agent version within a specified workspace. For the Router type that runs independently, specifying target.agentVersion registers the independent deployment of the service endpoint. A successful response does not indicate that the deployment is complete. You must check the status of the service endpoint to confirm the deployment status. Service endpoints for collaboration components are created internally by the platform.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateServiceEndpointRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceEndpointResponse
+        /// </returns>
+        public CreateServiceEndpointResponse CreateServiceEndpointWithOptions(string workspaceId, CreateServiceEndpointRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateServiceEndpointShrinkRequest request = new CreateServiceEndpointShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateServiceEndpoint",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/service-endpoints",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateServiceEndpointResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service endpoint.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a named service endpoint that routes to a specific agent version within a specified workspace. For the Router type that runs independently, specifying target.agentVersion registers the independent deployment of the service endpoint. A successful response does not indicate that the deployment is complete. You must check the status of the service endpoint to confirm the deployment status. Service endpoints for collaboration components are created internally by the platform.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateServiceEndpointRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceEndpointResponse
+        /// </returns>
+        public async Task<CreateServiceEndpointResponse> CreateServiceEndpointWithOptionsAsync(string workspaceId, CreateServiceEndpointRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateServiceEndpointShrinkRequest request = new CreateServiceEndpointShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateServiceEndpoint",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/service-endpoints",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateServiceEndpointResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service endpoint.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a named service endpoint that routes to a specific agent version within a specified workspace. For the Router type that runs independently, specifying target.agentVersion registers the independent deployment of the service endpoint. A successful response does not indicate that the deployment is complete. You must check the status of the service endpoint to confirm the deployment status. Service endpoints for collaboration components are created internally by the platform.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateServiceEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceEndpointResponse
+        /// </returns>
+        public CreateServiceEndpointResponse CreateServiceEndpoint(string workspaceId, CreateServiceEndpointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateServiceEndpointWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service endpoint.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a named service endpoint that routes to a specific agent version within a specified workspace. For the Router type that runs independently, specifying target.agentVersion registers the independent deployment of the service endpoint. A successful response does not indicate that the deployment is complete. You must check the status of the service endpoint to confirm the deployment status. Service endpoints for collaboration components are created internally by the platform.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateServiceEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceEndpointResponse
+        /// </returns>
+        public async Task<CreateServiceEndpointResponse> CreateServiceEndpointAsync(string workspaceId, CreateServiceEndpointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateServiceEndpointWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7130,6 +7628,168 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes events written by a specified session in batches, supporting 1 to 100 event IDs per batch. Returns the deletion results for each event. Events inherited from a parent session cannot be deleted in a child session. Deleting events does not delete extracted memories.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes events written by a specified session in batches, supporting 1 to 100 event IDs per batch. Returns the deletion results for each event. Events inherited from a parent session cannot be deleted in a child session. Deleting events does not delete extracted memories.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteEventsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEventsResponse
+        /// </returns>
+        public DeleteEventsResponse DeleteEventsWithOptions(string workspaceId, string memoryStoreName, DeleteEventsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteEventsShrinkRequest request = new DeleteEventsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEvents",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/memorystores/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/events",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteEventsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes events written by a specified session in batches, supporting 1 to 100 event IDs per batch. Returns the deletion results for each event. Events inherited from a parent session cannot be deleted in a child session. Deleting events does not delete extracted memories.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes events written by a specified session in batches, supporting 1 to 100 event IDs per batch. Returns the deletion results for each event. Events inherited from a parent session cannot be deleted in a child session. Deleting events does not delete extracted memories.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteEventsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEventsResponse
+        /// </returns>
+        public async Task<DeleteEventsResponse> DeleteEventsWithOptionsAsync(string workspaceId, string memoryStoreName, DeleteEventsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteEventsShrinkRequest request = new DeleteEventsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEvents",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/memorystores/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/events",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteEventsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes events written by a specified session in batches, supporting 1 to 100 event IDs per batch. Returns the deletion results for each event. Events inherited from a parent session cannot be deleted in a child session. Deleting events does not delete extracted memories.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes events written by a specified session in batches, supporting 1 to 100 event IDs per batch. Returns the deletion results for each event. Events inherited from a parent session cannot be deleted in a child session. Deleting events does not delete extracted memories.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEventsResponse
+        /// </returns>
+        public DeleteEventsResponse DeleteEvents(string workspaceId, string memoryStoreName, DeleteEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteEventsWithOptions(workspaceId, memoryStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes events written by a specified session in batches, supporting 1 to 100 event IDs per batch. Returns the deletion results for each event. Events inherited from a parent session cannot be deleted in a child session. Deleting events does not delete extracted memories.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes events written by a specified session in batches, supporting 1 to 100 event IDs per batch. Returns the deletion results for each event. Events inherited from a parent session cannot be deleted in a child session. Deleting events does not delete extracted memories.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEventsResponse
+        /// </returns>
+        public async Task<DeleteEventsResponse> DeleteEventsAsync(string workspaceId, string memoryStoreName, DeleteEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteEventsWithOptionsAsync(workspaceId, memoryStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a managed agent from a specified workspace and asynchronously cleans up its associated platform resources.</para>
         /// </summary>
         /// 
@@ -8122,12 +8782,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a long-term memory by memory ID.</para>
+        /// <para>Deletes a long-term memory based on the memory ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a long-term memory by memory ID.</para>
+        /// <para>Deletes a long-term memory based on the memory ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8167,12 +8827,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a long-term memory by memory ID.</para>
+        /// <para>Deletes a long-term memory based on the memory ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a long-term memory by memory ID.</para>
+        /// <para>Deletes a long-term memory based on the memory ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8212,12 +8872,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a long-term memory by memory ID.</para>
+        /// <para>Deletes a long-term memory based on the memory ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a long-term memory by memory ID.</para>
+        /// <para>Deletes a long-term memory based on the memory ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8236,12 +8896,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a long-term memory by memory ID.</para>
+        /// <para>Deletes a long-term memory based on the memory ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a long-term memory by memory ID.</para>
+        /// <para>Deletes a long-term memory based on the memory ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8260,7 +8920,311 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously deletes a MemoryStore and all its long-term memory.</para>
+        /// <para>Deletes a specified memory rule. The system no longer uses this rule to extract subsequent new content. Existing memories are retained. Deleting the same rule multiple times returns a success response.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified memory rule. The system no longer uses this rule to extract subsequent new content. Existing memories are retained. Deleting the same rule multiple times returns a success response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMemoryRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMemoryRuleResponse
+        /// </returns>
+        public DeleteMemoryRuleResponse DeleteMemoryRuleWithOptions(string workspaceId, string memoryStoreName, string ruleId, DeleteMemoryRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMemoryRule",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/memorystores/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory-rules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ruleId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMemoryRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified memory rule. The system no longer uses this rule to extract subsequent new content. Existing memories are retained. Deleting the same rule multiple times returns a success response.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified memory rule. The system no longer uses this rule to extract subsequent new content. Existing memories are retained. Deleting the same rule multiple times returns a success response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMemoryRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMemoryRuleResponse
+        /// </returns>
+        public async Task<DeleteMemoryRuleResponse> DeleteMemoryRuleWithOptionsAsync(string workspaceId, string memoryStoreName, string ruleId, DeleteMemoryRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMemoryRule",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/memorystores/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory-rules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ruleId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMemoryRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified memory rule. The system no longer uses this rule to extract subsequent new content. Existing memories are retained. Deleting the same rule multiple times returns a success response.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified memory rule. The system no longer uses this rule to extract subsequent new content. Existing memories are retained. Deleting the same rule multiple times returns a success response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMemoryRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMemoryRuleResponse
+        /// </returns>
+        public DeleteMemoryRuleResponse DeleteMemoryRule(string workspaceId, string memoryStoreName, string ruleId, DeleteMemoryRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteMemoryRuleWithOptions(workspaceId, memoryStoreName, ruleId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified memory rule. The system no longer uses this rule to extract subsequent new content. Existing memories are retained. Deleting the same rule multiple times returns a success response.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified memory rule. The system no longer uses this rule to extract subsequent new content. Existing memories are retained. Deleting the same rule multiple times returns a success response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMemoryRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMemoryRuleResponse
+        /// </returns>
+        public async Task<DeleteMemoryRuleResponse> DeleteMemoryRuleAsync(string workspaceId, string memoryStoreName, string ruleId, DeleteMemoryRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteMemoryRuleWithOptionsAsync(workspaceId, memoryStoreName, ruleId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a session and its queryable event history within a specified association scope. If you write to the same association scope and sessionId again, a new session is created, and the history of the deleted session cannot be queried. Extracted memories are retained after the session is deleted.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a session and its queryable event history within a specified association scope. If you write to the same association scope and sessionId again, a new session is created, and the history of the deleted session cannot be queried. Extracted memories are retained after the session is deleted.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMemorySessionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMemorySessionResponse
+        /// </returns>
+        public DeleteMemorySessionResponse DeleteMemorySessionWithOptions(string workspaceId, string memoryStoreName, string sessionId, DeleteMemorySessionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["agentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeamId))
+            {
+                query["teamId"] = request.TeamId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMemorySession",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/memorystores/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory-sessions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sessionId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMemorySessionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a session and its queryable event history within a specified association scope. If you write to the same association scope and sessionId again, a new session is created, and the history of the deleted session cannot be queried. Extracted memories are retained after the session is deleted.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a session and its queryable event history within a specified association scope. If you write to the same association scope and sessionId again, a new session is created, and the history of the deleted session cannot be queried. Extracted memories are retained after the session is deleted.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMemorySessionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMemorySessionResponse
+        /// </returns>
+        public async Task<DeleteMemorySessionResponse> DeleteMemorySessionWithOptionsAsync(string workspaceId, string memoryStoreName, string sessionId, DeleteMemorySessionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["agentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeamId))
+            {
+                query["teamId"] = request.TeamId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMemorySession",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/memorystores/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory-sessions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sessionId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMemorySessionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a session and its queryable event history within a specified association scope. If you write to the same association scope and sessionId again, a new session is created, and the history of the deleted session cannot be queried. Extracted memories are retained after the session is deleted.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a session and its queryable event history within a specified association scope. If you write to the same association scope and sessionId again, a new session is created, and the history of the deleted session cannot be queried. Extracted memories are retained after the session is deleted.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMemorySessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMemorySessionResponse
+        /// </returns>
+        public DeleteMemorySessionResponse DeleteMemorySession(string workspaceId, string memoryStoreName, string sessionId, DeleteMemorySessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteMemorySessionWithOptions(workspaceId, memoryStoreName, sessionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a session and its queryable event history within a specified association scope. If you write to the same association scope and sessionId again, a new session is created, and the history of the deleted session cannot be queried. Extracted memories are retained after the session is deleted.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a session and its queryable event history within a specified association scope. If you write to the same association scope and sessionId again, a new session is created, and the history of the deleted session cannot be queried. Extracted memories are retained after the session is deleted.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMemorySessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMemorySessionResponse
+        /// </returns>
+        public async Task<DeleteMemorySessionResponse> DeleteMemorySessionAsync(string workspaceId, string memoryStoreName, string sessionId, DeleteMemorySessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteMemorySessionWithOptionsAsync(workspaceId, memoryStoreName, sessionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Asynchronously deletes a MemoryStore and all long-term memory within it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8305,7 +9269,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously deletes a MemoryStore and all its long-term memory.</para>
+        /// <para>Asynchronously deletes a MemoryStore and all long-term memory within it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8350,7 +9314,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously deletes a MemoryStore and all its long-term memory.</para>
+        /// <para>Asynchronously deletes a MemoryStore and all long-term memory within it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8374,7 +9338,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously deletes a MemoryStore and all its long-term memory.</para>
+        /// <para>Asynchronously deletes a MemoryStore and all long-term memory within it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15213,7 +16177,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </tbody></table>
         /// <h3>Harness and skill versions</h3>
-        /// <para><c>harness.type</c> indicates the runtime framework determined at creation. The <c>connectorServiceAccountKey</c> of qodercli returns the ID of the bound account key record, not the original key.
+        /// <para><c>harness.type</c> indicates the runtime framework determined at creation. For qodercli, <c>connectorServiceAccountKey</c> returns the ID of the bound account key record, not the original key.
         /// <c>configuredSkills</c> are explicitly configured skills. <c>skills</c> contains the aggregated results of templates and explicit configurations. <c>resolvedVersion</c> is the current target version, and <c>appliedVersion</c> is the version that has taken effect at runtime. These two may differ during an update. <c>fromTemplate=true</c> indicates that the skill comes from a template.
         /// If the queried agent does not exist, has been deleted, or does not belong to the specified workspace, a resource not found error is returned.</para>
         /// </description>
@@ -15292,7 +16256,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </tbody></table>
         /// <h3>Harness and skill versions</h3>
-        /// <para><c>harness.type</c> indicates the runtime framework determined at creation. The <c>connectorServiceAccountKey</c> of qodercli returns the ID of the bound account key record, not the original key.
+        /// <para><c>harness.type</c> indicates the runtime framework determined at creation. For qodercli, <c>connectorServiceAccountKey</c> returns the ID of the bound account key record, not the original key.
         /// <c>configuredSkills</c> are explicitly configured skills. <c>skills</c> contains the aggregated results of templates and explicit configurations. <c>resolvedVersion</c> is the current target version, and <c>appliedVersion</c> is the version that has taken effect at runtime. These two may differ during an update. <c>fromTemplate=true</c> indicates that the skill comes from a template.
         /// If the queried agent does not exist, has been deleted, or does not belong to the specified workspace, a resource not found error is returned.</para>
         /// </description>
@@ -15371,7 +16335,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </tbody></table>
         /// <h3>Harness and skill versions</h3>
-        /// <para><c>harness.type</c> indicates the runtime framework determined at creation. The <c>connectorServiceAccountKey</c> of qodercli returns the ID of the bound account key record, not the original key.
+        /// <para><c>harness.type</c> indicates the runtime framework determined at creation. For qodercli, <c>connectorServiceAccountKey</c> returns the ID of the bound account key record, not the original key.
         /// <c>configuredSkills</c> are explicitly configured skills. <c>skills</c> contains the aggregated results of templates and explicit configurations. <c>resolvedVersion</c> is the current target version, and <c>appliedVersion</c> is the version that has taken effect at runtime. These two may differ during an update. <c>fromTemplate=true</c> indicates that the skill comes from a template.
         /// If the queried agent does not exist, has been deleted, or does not belong to the specified workspace, a resource not found error is returned.</para>
         /// </description>
@@ -15429,7 +16393,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </tbody></table>
         /// <h3>Harness and skill versions</h3>
-        /// <para><c>harness.type</c> indicates the runtime framework determined at creation. The <c>connectorServiceAccountKey</c> of qodercli returns the ID of the bound account key record, not the original key.
+        /// <para><c>harness.type</c> indicates the runtime framework determined at creation. For qodercli, <c>connectorServiceAccountKey</c> returns the ID of the bound account key record, not the original key.
         /// <c>configuredSkills</c> are explicitly configured skills. <c>skills</c> contains the aggregated results of templates and explicit configurations. <c>resolvedVersion</c> is the current target version, and <c>appliedVersion</c> is the version that has taken effect at runtime. These two may differ during an update. <c>fromTemplate=true</c> indicates that the skill comes from a template.
         /// If the queried agent does not exist, has been deleted, or does not belong to the specified workspace, a resource not found error is returned.</para>
         /// </description>
@@ -15920,12 +16884,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a long-term memory by memory ID.</para>
+        /// <para>Queries the content, associated scope, metadata, source, type, and validity status based on the memory ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a long-term memory by memory ID.</para>
+        /// <para>Queries a long-term memory based on the memory ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15965,12 +16929,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a long-term memory by memory ID.</para>
+        /// <para>Queries the content, associated scope, metadata, source, type, and validity status based on the memory ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a long-term memory by memory ID.</para>
+        /// <para>Queries a long-term memory based on the memory ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16010,12 +16974,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a long-term memory by memory ID.</para>
+        /// <para>Queries the content, associated scope, metadata, source, type, and validity status based on the memory ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a long-term memory by memory ID.</para>
+        /// <para>Queries a long-term memory based on the memory ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16034,12 +16998,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a long-term memory by memory ID.</para>
+        /// <para>Queries the content, associated scope, metadata, source, type, and validity status based on the memory ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a long-term memory by memory ID.</para>
+        /// <para>Queries a long-term memory based on the memory ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16058,12 +17022,150 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the configuration and task statistics of a specified memory rule, including the number of tasks and the latest execution status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the configuration and task statistics of a specified memory rule, including the number of tasks and the latest execution status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMemoryRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMemoryRuleResponse
+        /// </returns>
+        public GetMemoryRuleResponse GetMemoryRuleWithOptions(string workspaceId, string memoryStoreName, string ruleId, GetMemoryRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMemoryRule",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/memorystores/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory-rules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ruleId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMemoryRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration and task statistics of a specified memory rule, including the number of tasks and the latest execution status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the configuration and task statistics of a specified memory rule, including the number of tasks and the latest execution status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMemoryRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMemoryRuleResponse
+        /// </returns>
+        public async Task<GetMemoryRuleResponse> GetMemoryRuleWithOptionsAsync(string workspaceId, string memoryStoreName, string ruleId, GetMemoryRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMemoryRule",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/memorystores/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory-rules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ruleId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMemoryRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration and task statistics of a specified memory rule, including the number of tasks and the latest execution status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the configuration and task statistics of a specified memory rule, including the number of tasks and the latest execution status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMemoryRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMemoryRuleResponse
+        /// </returns>
+        public GetMemoryRuleResponse GetMemoryRule(string workspaceId, string memoryStoreName, string ruleId, GetMemoryRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetMemoryRuleWithOptions(workspaceId, memoryStoreName, ruleId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration and task statistics of a specified memory rule, including the number of tasks and the latest execution status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the configuration and task statistics of a specified memory rule, including the number of tasks and the latest execution status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMemoryRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMemoryRuleResponse
+        /// </returns>
+        public async Task<GetMemoryRuleResponse> GetMemoryRuleAsync(string workspaceId, string memoryStoreName, string ruleId, GetMemoryRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetMemoryRuleWithOptionsAsync(workspaceId, memoryStoreName, ruleId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the public information and current status of a MemoryStore in a specified workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the configuration and current status of a long-term memory store (MemoryStore) for viewing memory store information.</para>
+        /// <para>Queries the configuration and current status of a long-term memory store (MemoryStore) to view memory store information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16108,7 +17210,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the configuration and current status of a long-term memory store (MemoryStore) for viewing memory store information.</para>
+        /// <para>Queries the configuration and current status of a long-term memory store (MemoryStore) to view memory store information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16153,7 +17255,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the configuration and current status of a long-term memory store (MemoryStore) for viewing memory store information.</para>
+        /// <para>Queries the configuration and current status of a long-term memory store (MemoryStore) to view memory store information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16177,7 +17279,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the configuration and current status of a long-term memory store (MemoryStore) for viewing memory store information.</para>
+        /// <para>Queries the configuration and current status of a long-term memory store (MemoryStore) to view memory store information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16196,12 +17298,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the memory extraction task by using the taskId returned by the asynchronous AddMemories operation.</para>
+        /// <para>Queries the status, input, execute results, and error message of a memory extraction node. A successful node may not generate new memories. If a fault occurs, check the error field for the cause.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the progress and results of a memory extraction task by using the taskId returned when asynchronously writing data through <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/AddMemories">AddMemories</a>.</para>
+        /// <para>Uses the <c>taskId</c> returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/AddMemories">AddMemories</a> during asynchronous writes to query the progress and results of a memory extraction task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16241,12 +17343,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the memory extraction task by using the taskId returned by the asynchronous AddMemories operation.</para>
+        /// <para>Queries the status, input, execute results, and error message of a memory extraction node. A successful node may not generate new memories. If a fault occurs, check the error field for the cause.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the progress and results of a memory extraction task by using the taskId returned when asynchronously writing data through <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/AddMemories">AddMemories</a>.</para>
+        /// <para>Uses the <c>taskId</c> returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/AddMemories">AddMemories</a> during asynchronous writes to query the progress and results of a memory extraction task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16286,12 +17388,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the memory extraction task by using the taskId returned by the asynchronous AddMemories operation.</para>
+        /// <para>Queries the status, input, execute results, and error message of a memory extraction node. A successful node may not generate new memories. If a fault occurs, check the error field for the cause.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the progress and results of a memory extraction task by using the taskId returned when asynchronously writing data through <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/AddMemories">AddMemories</a>.</para>
+        /// <para>Uses the <c>taskId</c> returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/AddMemories">AddMemories</a> during asynchronous writes to query the progress and results of a memory extraction task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16310,12 +17412,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the memory extraction task by using the taskId returned by the asynchronous AddMemories operation.</para>
+        /// <para>Queries the status, input, execute results, and error message of a memory extraction node. A successful node may not generate new memories. If a fault occurs, check the error field for the cause.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the progress and results of a memory extraction task by using the taskId returned when asynchronously writing data through <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/AddMemories">AddMemories</a>.</para>
+        /// <para>Uses the <c>taskId</c> returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/AddMemories">AddMemories</a> during asynchronous writes to query the progress and results of a memory extraction task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20364,6 +21466,196 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Performs a paged query on the events of a specified session in chronological order from oldest to newest, including the parent session history referenced when a session branch is created. The sessionId parameter is required, and other scope dimensions must match those used when the events were written. If you write or delete events during paging, the results of subsequent pages may be affected.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Performs a paged query on the events of a specified session in chronological order from oldest to newest, including the parent session history referenced when a session branch is created. The sessionId parameter is required, and other scope dimensions must match those used when the events were written. If you write or delete events during paging, the results of subsequent pages may be affected.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListEventsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEventsResponse
+        /// </returns>
+        public ListEventsResponse ListEventsWithOptions(string workspaceId, string memoryStoreName, ListEventsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["agentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["sessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeamId))
+            {
+                query["teamId"] = request.TeamId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEvents",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/memorystores/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/events",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEventsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query on the events of a specified session in chronological order from oldest to newest, including the parent session history referenced when a session branch is created. The sessionId parameter is required, and other scope dimensions must match those used when the events were written. If you write or delete events during paging, the results of subsequent pages may be affected.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Performs a paged query on the events of a specified session in chronological order from oldest to newest, including the parent session history referenced when a session branch is created. The sessionId parameter is required, and other scope dimensions must match those used when the events were written. If you write or delete events during paging, the results of subsequent pages may be affected.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListEventsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEventsResponse
+        /// </returns>
+        public async Task<ListEventsResponse> ListEventsWithOptionsAsync(string workspaceId, string memoryStoreName, ListEventsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["agentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["sessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeamId))
+            {
+                query["teamId"] = request.TeamId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEvents",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/memorystores/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/events",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEventsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query on the events of a specified session in chronological order from oldest to newest, including the parent session history referenced when a session branch is created. The sessionId parameter is required, and other scope dimensions must match those used when the events were written. If you write or delete events during paging, the results of subsequent pages may be affected.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Performs a paged query on the events of a specified session in chronological order from oldest to newest, including the parent session history referenced when a session branch is created. The sessionId parameter is required, and other scope dimensions must match those used when the events were written. If you write or delete events during paging, the results of subsequent pages may be affected.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEventsResponse
+        /// </returns>
+        public ListEventsResponse ListEvents(string workspaceId, string memoryStoreName, ListEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListEventsWithOptions(workspaceId, memoryStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query on the events of a specified session in chronological order from oldest to newest, including the parent session history referenced when a session branch is created. The sessionId parameter is required, and other scope dimensions must match those used when the events were written. If you write or delete events during paging, the results of subsequent pages may be affected.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Performs a paged query on the events of a specified session in chronological order from oldest to newest, including the parent session history referenced when a session branch is created. The sessionId parameter is required, and other scope dimensions must match those used when the events were written. If you write or delete events during paging, the results of subsequent pages may be affected.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEventsResponse
+        /// </returns>
+        public async Task<ListEventsResponse> ListEventsAsync(string workspaceId, string memoryStoreName, ListEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListEventsWithOptionsAsync(workspaceId, memoryStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Performs a paging query for the identity, configuration version, and status summary of managed agents in a workspace.</para>
         /// </summary>
         /// 
@@ -22182,12 +23474,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query for long-term memory and supports independent paging and filtering by UserId, AgentId, and SessionId.</para>
+        /// <para>Performs a paged query on memories in a memory store. Supports paging and filtering by associate scope, content type, source, validity status, and update time. Unspecified scope dimensions are excluded from filtering. If valid is omitted, only valid memories are returned. If valid is set to false, revoked memories are returned.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paged query for long-term memory and supports paging and filtering by <c>UserId</c>, <c>AgentId</c>, and <c>SessionId</c>.</para>
+        /// <para>Performs a paged query on long-term memory. Supports paging and filtering by <c>UserId</c>, <c>AgentId</c>, and <c>SessionId</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22223,9 +23515,33 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             {
                 query["sessionId"] = request.SessionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeamId))
+            {
+                query["teamId"] = request.TeamId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Types))
+            {
+                query["types"] = request.Types;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdatedAtFrom))
+            {
+                query["updatedAtFrom"] = request.UpdatedAtFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdatedAtTo))
+            {
+                query["updatedAtTo"] = request.UpdatedAtTo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
                 query["userId"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Valid))
+            {
+                query["valid"] = request.Valid;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -22249,12 +23565,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query for long-term memory and supports independent paging and filtering by UserId, AgentId, and SessionId.</para>
+        /// <para>Performs a paged query on memories in a memory store. Supports paging and filtering by associate scope, content type, source, validity status, and update time. Unspecified scope dimensions are excluded from filtering. If valid is omitted, only valid memories are returned. If valid is set to false, revoked memories are returned.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paged query for long-term memory and supports paging and filtering by <c>UserId</c>, <c>AgentId</c>, and <c>SessionId</c>.</para>
+        /// <para>Performs a paged query on long-term memory. Supports paging and filtering by <c>UserId</c>, <c>AgentId</c>, and <c>SessionId</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22290,9 +23606,33 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             {
                 query["sessionId"] = request.SessionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeamId))
+            {
+                query["teamId"] = request.TeamId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Types))
+            {
+                query["types"] = request.Types;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdatedAtFrom))
+            {
+                query["updatedAtFrom"] = request.UpdatedAtFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdatedAtTo))
+            {
+                query["updatedAtTo"] = request.UpdatedAtTo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
                 query["userId"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Valid))
+            {
+                query["valid"] = request.Valid;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -22316,12 +23656,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query for long-term memory and supports independent paging and filtering by UserId, AgentId, and SessionId.</para>
+        /// <para>Performs a paged query on memories in a memory store. Supports paging and filtering by associate scope, content type, source, validity status, and update time. Unspecified scope dimensions are excluded from filtering. If valid is omitted, only valid memories are returned. If valid is set to false, revoked memories are returned.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paged query for long-term memory and supports paging and filtering by <c>UserId</c>, <c>AgentId</c>, and <c>SessionId</c>.</para>
+        /// <para>Performs a paged query on long-term memory. Supports paging and filtering by <c>UserId</c>, <c>AgentId</c>, and <c>SessionId</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22340,12 +23680,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query for long-term memory and supports independent paging and filtering by UserId, AgentId, and SessionId.</para>
+        /// <para>Performs a paged query on memories in a memory store. Supports paging and filtering by associate scope, content type, source, validity status, and update time. Unspecified scope dimensions are excluded from filtering. If valid is omitted, only valid memories are returned. If valid is set to false, revoked memories are returned.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paged query for long-term memory and supports paging and filtering by <c>UserId</c>, <c>AgentId</c>, and <c>SessionId</c>.</para>
+        /// <para>Performs a paged query on long-term memory. Supports paging and filtering by <c>UserId</c>, <c>AgentId</c>, and <c>SessionId</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22364,12 +23704,187 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query of raw messages by exact scope through paging. SessionId is required, and at least one of UserId or AgentId must be provided.</para>
+        /// <para>Queries extraction rules in a memory store by using paging. Supports filtering by name and enabled status, and returns rule configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paged query of the raw messages of a specific session in the memory store through paging, allowing you to view the session content used to generate long-term memory. SessionId is required, and at least one of UserId or AgentId must be provided to identify the target session.</para>
+        /// <para>Queries extraction rules in a memory store by using paging. Supports filtering by name and enabled status, and returns rule configurations.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMemoryRulesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMemoryRulesResponse
+        /// </returns>
+        public ListMemoryRulesResponse ListMemoryRulesWithOptions(string workspaceId, string memoryStoreName, ListMemoryRulesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                query["enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NameLike))
+            {
+                query["nameLike"] = request.NameLike;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMemoryRules",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/memorystores/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory-rules",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMemoryRulesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries extraction rules in a memory store by using paging. Supports filtering by name and enabled status, and returns rule configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries extraction rules in a memory store by using paging. Supports filtering by name and enabled status, and returns rule configurations.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMemoryRulesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMemoryRulesResponse
+        /// </returns>
+        public async Task<ListMemoryRulesResponse> ListMemoryRulesWithOptionsAsync(string workspaceId, string memoryStoreName, ListMemoryRulesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                query["enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NameLike))
+            {
+                query["nameLike"] = request.NameLike;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMemoryRules",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/memorystores/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory-rules",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMemoryRulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries extraction rules in a memory store by using paging. Supports filtering by name and enabled status, and returns rule configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries extraction rules in a memory store by using paging. Supports filtering by name and enabled status, and returns rule configurations.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMemoryRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMemoryRulesResponse
+        /// </returns>
+        public ListMemoryRulesResponse ListMemoryRules(string workspaceId, string memoryStoreName, ListMemoryRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListMemoryRulesWithOptions(workspaceId, memoryStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries extraction rules in a memory store by using paging. Supports filtering by name and enabled status, and returns rule configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries extraction rules in a memory store by using paging. Supports filtering by name and enabled status, and returns rule configurations.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMemoryRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMemoryRulesResponse
+        /// </returns>
+        public async Task<ListMemoryRulesResponse> ListMemoryRulesAsync(string workspaceId, string memoryStoreName, ListMemoryRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListMemoryRulesWithOptionsAsync(workspaceId, memoryStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query for raw messages by exact scope. SessionId is required, and at least one of UserId or AgentId must be provided.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Performs a paging query for raw messages of a specific session in a memory store to view the session content used to generate long-term memory.
+        /// <c>SessionId</c> is required, and at least one of <c>UserId</c> or <c>AgentId</c> must be provided to identify the target session.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22431,12 +23946,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query of raw messages by exact scope through paging. SessionId is required, and at least one of UserId or AgentId must be provided.</para>
+        /// <para>Performs a paging query for raw messages by exact scope. SessionId is required, and at least one of UserId or AgentId must be provided.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paged query of the raw messages of a specific session in the memory store through paging, allowing you to view the session content used to generate long-term memory. SessionId is required, and at least one of UserId or AgentId must be provided to identify the target session.</para>
+        /// <para>Performs a paging query for raw messages of a specific session in a memory store to view the session content used to generate long-term memory.
+        /// <c>SessionId</c> is required, and at least one of <c>UserId</c> or <c>AgentId</c> must be provided to identify the target session.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22498,12 +24014,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query of raw messages by exact scope through paging. SessionId is required, and at least one of UserId or AgentId must be provided.</para>
+        /// <para>Performs a paging query for raw messages by exact scope. SessionId is required, and at least one of UserId or AgentId must be provided.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paged query of the raw messages of a specific session in the memory store through paging, allowing you to view the session content used to generate long-term memory. SessionId is required, and at least one of UserId or AgentId must be provided to identify the target session.</para>
+        /// <para>Performs a paging query for raw messages of a specific session in a memory store to view the session content used to generate long-term memory.
+        /// <c>SessionId</c> is required, and at least one of <c>UserId</c> or <c>AgentId</c> must be provided to identify the target session.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22522,12 +24039,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query of raw messages by exact scope through paging. SessionId is required, and at least one of UserId or AgentId must be provided.</para>
+        /// <para>Performs a paging query for raw messages by exact scope. SessionId is required, and at least one of UserId or AgentId must be provided.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paged query of the raw messages of a specific session in the memory store through paging, allowing you to view the session content used to generate long-term memory. SessionId is required, and at least one of UserId or AgentId must be provided to identify the target session.</para>
+        /// <para>Performs a paging query for raw messages of a specific session in a memory store to view the session content used to generate long-term memory.
+        /// <c>SessionId</c> is required, and at least one of <c>UserId</c> or <c>AgentId</c> must be provided to identify the target session.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22546,12 +24064,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query for sessions in a MemoryStore. You can filter sessions independently by user ID and agent ID.</para>
+        /// <para>Performs a paging query of sessions in a memory store. You can filter the sessions by user, team, or agent. Unspecified dimensions are not used for filtering.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for source sessions in a long-term memory store (MemoryStore). Supports filtering by <c>UserId</c> and <c>AgentId</c> respectively.</para>
+        /// <para>Performs a paging query of source sessions in a long-term memory store (MemoryStore). You can filter the sessions by UserId and AgentId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22583,6 +24101,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             {
                 query["nextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeamId))
+            {
+                query["teamId"] = request.TeamId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
                 query["userId"] = request.UserId;
@@ -22609,12 +24131,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query for sessions in a MemoryStore. You can filter sessions independently by user ID and agent ID.</para>
+        /// <para>Performs a paging query of sessions in a memory store. You can filter the sessions by user, team, or agent. Unspecified dimensions are not used for filtering.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for source sessions in a long-term memory store (MemoryStore). Supports filtering by <c>UserId</c> and <c>AgentId</c> respectively.</para>
+        /// <para>Performs a paging query of source sessions in a long-term memory store (MemoryStore). You can filter the sessions by UserId and AgentId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22646,6 +24168,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             {
                 query["nextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeamId))
+            {
+                query["teamId"] = request.TeamId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
                 query["userId"] = request.UserId;
@@ -22672,12 +24198,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query for sessions in a MemoryStore. You can filter sessions independently by user ID and agent ID.</para>
+        /// <para>Performs a paging query of sessions in a memory store. You can filter the sessions by user, team, or agent. Unspecified dimensions are not used for filtering.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for source sessions in a long-term memory store (MemoryStore). Supports filtering by <c>UserId</c> and <c>AgentId</c> respectively.</para>
+        /// <para>Performs a paging query of source sessions in a long-term memory store (MemoryStore). You can filter the sessions by UserId and AgentId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22696,12 +24222,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query for sessions in a MemoryStore. You can filter sessions independently by user ID and agent ID.</para>
+        /// <para>Performs a paging query of sessions in a memory store. You can filter the sessions by user, team, or agent. Unspecified dimensions are not used for filtering.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for source sessions in a long-term memory store (MemoryStore). Supports filtering by <c>UserId</c> and <c>AgentId</c> respectively.</para>
+        /// <para>Performs a paging query of source sessions in a long-term memory store (MemoryStore). You can filter the sessions by UserId and AgentId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22874,6 +24400,180 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListMemoryStoresWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query on the memory extraction nodes for a specified rule. The ruleId parameter is required. You can further filter nodes by status. If the specified rule does not exist or is deleted, a success response with an empty list is returned.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Performs a paging query on the memory extraction nodes for a specified rule. The ruleId parameter is required. You can further filter nodes by status. If the specified rule does not exist or is deleted, a success response with an empty list is returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMemoryTasksRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMemoryTasksResponse
+        /// </returns>
+        public ListMemoryTasksResponse ListMemoryTasksWithOptions(string workspaceId, string memoryStoreName, ListMemoryTasksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
+            {
+                query["ruleId"] = request.RuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMemoryTasks",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/memorystores/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory-tasks",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMemoryTasksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query on the memory extraction nodes for a specified rule. The ruleId parameter is required. You can further filter nodes by status. If the specified rule does not exist or is deleted, a success response with an empty list is returned.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Performs a paging query on the memory extraction nodes for a specified rule. The ruleId parameter is required. You can further filter nodes by status. If the specified rule does not exist or is deleted, a success response with an empty list is returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMemoryTasksRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMemoryTasksResponse
+        /// </returns>
+        public async Task<ListMemoryTasksResponse> ListMemoryTasksWithOptionsAsync(string workspaceId, string memoryStoreName, ListMemoryTasksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
+            {
+                query["ruleId"] = request.RuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMemoryTasks",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/memorystores/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory-tasks",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMemoryTasksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query on the memory extraction nodes for a specified rule. The ruleId parameter is required. You can further filter nodes by status. If the specified rule does not exist or is deleted, a success response with an empty list is returned.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Performs a paging query on the memory extraction nodes for a specified rule. The ruleId parameter is required. You can further filter nodes by status. If the specified rule does not exist or is deleted, a success response with an empty list is returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMemoryTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMemoryTasksResponse
+        /// </returns>
+        public ListMemoryTasksResponse ListMemoryTasks(string workspaceId, string memoryStoreName, ListMemoryTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListMemoryTasksWithOptions(workspaceId, memoryStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query on the memory extraction nodes for a specified rule. The ruleId parameter is required. You can further filter nodes by status. If the specified rule does not exist or is deleted, a success response with an empty list is returned.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Performs a paging query on the memory extraction nodes for a specified rule. The ruleId parameter is required. You can further filter nodes by status. If the specified rule does not exist or is deleted, a success response with an empty list is returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMemoryTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMemoryTasksResponse
+        /// </returns>
+        public async Task<ListMemoryTasksResponse> ListMemoryTasksAsync(string workspaceId, string memoryStoreName, ListMemoryTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListMemoryTasksWithOptionsAsync(workspaceId, memoryStoreName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -26906,12 +28606,288 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves long-term memory from a MemoryStore based on semantics.</para>
+        /// <para>Retries a failed memory task by reusing the original task ID, input, and extraction configuration. Only tasks in the FAILED state can be retried. You can query the progress by calling GetMemoryTask after the retry.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves relevant memories from a long-term memory store (MemoryStore) based on semantic search, allowing agents to obtain information required for subsequent tasks.</para>
+        /// <para>Retries a failed memory task by reusing the original task ID, input, and extraction configuration. Only tasks in the FAILED state can be retried. You can query the progress by calling GetMemoryTask after the retry.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RetryMemoryTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryMemoryTaskResponse
+        /// </returns>
+        public RetryMemoryTaskResponse RetryMemoryTaskWithOptions(string workspaceId, string memoryStoreName, string taskId, RetryMemoryTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RetryMemoryTask",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/memorystores/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory-tasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId) + "/actions/retry",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RetryMemoryTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retries a failed memory task by reusing the original task ID, input, and extraction configuration. Only tasks in the FAILED state can be retried. You can query the progress by calling GetMemoryTask after the retry.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retries a failed memory task by reusing the original task ID, input, and extraction configuration. Only tasks in the FAILED state can be retried. You can query the progress by calling GetMemoryTask after the retry.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RetryMemoryTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryMemoryTaskResponse
+        /// </returns>
+        public async Task<RetryMemoryTaskResponse> RetryMemoryTaskWithOptionsAsync(string workspaceId, string memoryStoreName, string taskId, RetryMemoryTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RetryMemoryTask",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/memorystores/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory-tasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId) + "/actions/retry",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RetryMemoryTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retries a failed memory task by reusing the original task ID, input, and extraction configuration. Only tasks in the FAILED state can be retried. You can query the progress by calling GetMemoryTask after the retry.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retries a failed memory task by reusing the original task ID, input, and extraction configuration. Only tasks in the FAILED state can be retried. You can query the progress by calling GetMemoryTask after the retry.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RetryMemoryTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryMemoryTaskResponse
+        /// </returns>
+        public RetryMemoryTaskResponse RetryMemoryTask(string workspaceId, string memoryStoreName, string taskId, RetryMemoryTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RetryMemoryTaskWithOptions(workspaceId, memoryStoreName, taskId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retries a failed memory task by reusing the original task ID, input, and extraction configuration. Only tasks in the FAILED state can be retried. You can query the progress by calling GetMemoryTask after the retry.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retries a failed memory task by reusing the original task ID, input, and extraction configuration. Only tasks in the FAILED state can be retried. You can query the progress by calling GetMemoryTask after the retry.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RetryMemoryTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryMemoryTaskResponse
+        /// </returns>
+        public async Task<RetryMemoryTaskResponse> RetryMemoryTaskAsync(string workspaceId, string memoryStoreName, string taskId, RetryMemoryTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RetryMemoryTaskWithOptionsAsync(workspaceId, memoryStoreName, taskId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invalidates the specified memory while retaining its content. After revocation, the memory no longer participates in retrieval as a valid memory and can be queried by setting valid=false in ListMemories. Repeated revocations return a success response.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Invalidates the specified memory while retaining its content. After revocation, the memory no longer participates in retrieval as a valid memory and can be queried by setting valid=false in ListMemories. Repeated revocations return a success response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RevokeMemoryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeMemoryResponse
+        /// </returns>
+        public RevokeMemoryResponse RevokeMemoryWithOptions(string workspaceId, string memoryStoreName, string memoryId, RevokeMemoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RevokeMemory",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/memorystores/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memories/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryId) + "/actions/revoke",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RevokeMemoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invalidates the specified memory while retaining its content. After revocation, the memory no longer participates in retrieval as a valid memory and can be queried by setting valid=false in ListMemories. Repeated revocations return a success response.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Invalidates the specified memory while retaining its content. After revocation, the memory no longer participates in retrieval as a valid memory and can be queried by setting valid=false in ListMemories. Repeated revocations return a success response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RevokeMemoryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeMemoryResponse
+        /// </returns>
+        public async Task<RevokeMemoryResponse> RevokeMemoryWithOptionsAsync(string workspaceId, string memoryStoreName, string memoryId, RevokeMemoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RevokeMemory",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/memorystores/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memories/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryId) + "/actions/revoke",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RevokeMemoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invalidates the specified memory while retaining its content. After revocation, the memory no longer participates in retrieval as a valid memory and can be queried by setting valid=false in ListMemories. Repeated revocations return a success response.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Invalidates the specified memory while retaining its content. After revocation, the memory no longer participates in retrieval as a valid memory and can be queried by setting valid=false in ListMemories. Repeated revocations return a success response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RevokeMemoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeMemoryResponse
+        /// </returns>
+        public RevokeMemoryResponse RevokeMemory(string workspaceId, string memoryStoreName, string memoryId, RevokeMemoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RevokeMemoryWithOptions(workspaceId, memoryStoreName, memoryId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invalidates the specified memory while retaining its content. After revocation, the memory no longer participates in retrieval as a valid memory and can be queried by setting valid=false in ListMemories. Repeated revocations return a success response.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Invalidates the specified memory while retaining its content. After revocation, the memory no longer participates in retrieval as a valid memory and can be queried by setting valid=false in ListMemories. Repeated revocations return a success response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RevokeMemoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeMemoryResponse
+        /// </returns>
+        public async Task<RevokeMemoryResponse> RevokeMemoryAsync(string workspaceId, string memoryStoreName, string memoryId, RevokeMemoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RevokeMemoryWithOptionsAsync(workspaceId, memoryStoreName, memoryId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves relevant memories based on the query text. Supports filtering by association scope, type, and metadata, and sets result thresholds through similarity and relevance scores. If topK is omitted or set to 0, the default value 10 is used, with a maximum of 200.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves relevant memories semantically from a long-term memory store (MemoryStore) for an agent to obtain information required for subsequent tasks.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -26963,12 +28939,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves long-term memory from a MemoryStore based on semantics.</para>
+        /// <para>Retrieves relevant memories based on the query text. Supports filtering by association scope, type, and metadata, and sets result thresholds through similarity and relevance scores. If topK is omitted or set to 0, the default value 10 is used, with a maximum of 200.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves relevant memories from a long-term memory store (MemoryStore) based on semantic search, allowing agents to obtain information required for subsequent tasks.</para>
+        /// <para>Retrieves relevant memories semantically from a long-term memory store (MemoryStore) for an agent to obtain information required for subsequent tasks.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -27020,12 +28996,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves long-term memory from a MemoryStore based on semantics.</para>
+        /// <para>Retrieves relevant memories based on the query text. Supports filtering by association scope, type, and metadata, and sets result thresholds through similarity and relevance scores. If topK is omitted or set to 0, the default value 10 is used, with a maximum of 200.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves relevant memories from a long-term memory store (MemoryStore) based on semantic search, allowing agents to obtain information required for subsequent tasks.</para>
+        /// <para>Retrieves relevant memories semantically from a long-term memory store (MemoryStore) for an agent to obtain information required for subsequent tasks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27044,12 +29020,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves long-term memory from a MemoryStore based on semantics.</para>
+        /// <para>Retrieves relevant memories based on the query text. Supports filtering by association scope, type, and metadata, and sets result thresholds through similarity and relevance scores. If topK is omitted or set to 0, the default value 10 is used, with a maximum of 200.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves relevant memories from a long-term memory store (MemoryStore) based on semantic search, allowing agents to obtain information required for subsequent tasks.</para>
+        /// <para>Retrieves relevant memories semantically from a long-term memory store (MemoryStore) for an agent to obtain information required for subsequent tasks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29768,12 +31744,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the logon configuration of a bound identity provider in a specified workspace. DingTalk and Lark support the logon switch, incremental synchronization switch, application configuration, and synchronization scope. CustomSSO supports SAML configuration and the logon switch. Updates take effect asynchronously. Call GetIdentityProvider to query the status.</para>
+        /// <para>Modifies the configuration of a bound identity provider in a specified workspace. DingTalk and Feishu support login switches, address book synchronization switches, application configurations, and synchronization scopes. CustomSSO supports SAML or OIDC login configurations and login switches. SCIM user synchronization is configured independently. Updates take effect asynchronously. You can query the status by calling GetIdentityProvider.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Modifies the logon or directory configuration of a bound enterprise identity provider to update enterprise application credentials, adjust synchronized departments, or configure custom single sign-on (SSO).</para>
+        /// <para>Modifies the login or address book configuration of a bound enterprise identity provider to update enterprise application credentials, adjust synchronized departments, or configure custom single sign-on (SSO).</para>
         /// <h3>Select the configuration to modify</h3>
         /// <table>
         /// <thead>
@@ -29783,23 +31759,23 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>DingTalk (<c>DingTalk</c>), Lark (<c>Feishu</c>)</td>
-        /// <td>Enterprise application credentials <c>metadata</c>, logon switch <c>loginEnabled</c>, directory change synchronization switch <c>syncEnabled</c>, and synchronization scope <c>syncScope</c>. You must submit at least one item.</td>
+        /// <td>DingTalk, Feishu</td>
+        /// <td>Enterprise application credentials metadata, login switch loginEnabled, address book change synchronization switch syncEnabled, and synchronization scope syncScope. At least one item must be submitted.</td>
         /// </tr>
         /// <tr>
-        /// <td>Custom identity provider (<c>CustomSSO</c>)</td>
-        /// <td>SAML protocol <c>protocol</c>, logon configuration <c>saml</c>, and logon switch <c>loginEnabled</c>. SCIM-based user synchronization is configured separately by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</td>
+        /// <td>Custom identity provider (CustomSSO)</td>
+        /// <td>SAML protocol, login configuration saml, and login switch loginEnabled. SCIM user synchronization is configured independently by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</td>
         /// </tr>
         /// </tbody></table>
-        /// <h3>Update DingTalk or Lark</h3>
-        /// <para><c>metadata</c> is updated by field. You only need to submit the fields that you want to modify. Omitted fields and existing keys remain unchanged. The provided values must be non-empty strings. When you enable directory change synchronization, the configuration must include <c>encryptKey</c> and <c>verificationToken</c>.
+        /// <h3>Update DingTalk or Feishu</h3>
+        /// <para>metadata is updated by field: submit only the fields that need to be modified. Omitted fields and existing keys remain unchanged. The provided values must be non-empty strings. When you enable address book change synchronization, the configuration must include encryptKey and verificationToken.
         /// To adjust synchronized departments:
-        /// <b>Step 1:</b> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListIdentityProviderDepartments">ListIdentityProviderDepartments</a> to query and select departments.
-        /// <b>Step 2:</b> Call this operation to save <c>syncScope</c>. If you omit this field or pass <c>null</c>, the current scope is retained.
-        /// <b>Step 3:</b> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to wait for the configuration processing to complete, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSyncJob">CreateIdentityProviderSyncJob</a> to synchronize users based on the new scope.
-        /// Saving the scope does not automatically trigger a full synchronization. <c>syncEnabled</c> controls subsequent directory change events. The initial synchronization and manual synchronization are executed separately.</para>
+        /// <b>Step 1:</b> Query and select departments by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListIdentityProviderDepartments">ListIdentityProviderDepartments</a>.
+        /// <b>Step 2:</b> Save syncScope by calling this operation. If you omit this field or pass null, the current scope is retained.
+        /// <b>Step 3:</b> Wait for the configuration processing to complete by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSyncJob">CreateIdentityProviderSyncJob</a> to synchronize users based on the new scope.
+        /// Saving the scope does not automatically trigger a full synchronization. syncEnabled controls subsequent address book change events. The initial synchronization and manual synchronization are executed separately.</para>
         /// <h3>Configure custom single sign-on</h3>
-        /// <para><c>CustomSSO</c> uses the SAML protocol to allow users to log on through the enterprise identity system. First, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the access information of AgentCore and configure it in the enterprise identity system. Then, fill in the enterprise-side information in <c>saml</c>.
+        /// <para>CustomSSO uses the SAML protocol to allow users to log on through the enterprise identity system. First, obtain the access information of AgentCore by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> and configure it in the enterprise identity system. Then, fill in the enterprise-side information in saml.
         /// Choose one of the following two methods:</para>
         /// <table>
         /// <thead>
@@ -29810,23 +31786,23 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </thead>
         /// <tbody><tr>
         /// <td>Import metadata</td>
-        /// <td><c>metadataXml</c>: A single IdP metadata XML text exported from the enterprise identity provider. The maximum size is 1 MiB. Enter the XML content instead of a download URL or file path.</td>
+        /// <td>metadataXml: a single IdP metadata XML text exported from the enterprise identity provider, with a maximum size of 1 MiB. Enter the XML content instead of a download URL or file path.</td>
         /// </tr>
         /// <tr>
         /// <td>Manual entry</td>
-        /// <td>Provide <c>entityId</c>, <c>loginUrl</c>, <c>bindingType</c>, and <c>x509Certificates</c> at the same time. Use an HTTPS logon URL and a signing certificate within its validity period. Set <c>bindingType</c> to <c>HTTP-Redirect</c> or <c>HTTP-POST</c>. You can provide up to two certificates.</td>
+        /// <td>Provide entityId, loginUrl, bindingType, and x509Certificates at the same time. Use an HTTPS login URL and a valid signing certificate. Set bindingType to HTTP-Redirect or HTTP-POST. You can provide up to two certificates.</td>
         /// </tr>
         /// <tr>
-        /// <td>The <c>entityId</c> cannot be changed after it is saved. If the XML contains both binding methods at the same time, <c>HTTP-POST</c> and its corresponding URL are used first.</td>
+        /// <td>The entityId cannot be changed after it is saved. If the XML contains both binding methods, HTTP-POST and its corresponding URL take precedence.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>After saving the configuration, set <c>loginEnabled=true</c> to enable logon. You can also enable it when submitting a valid SAML configuration. Setting it to <c>false</c> disables logon and retains the existing configuration.</td>
+        /// <td>After saving the configuration, set loginEnabled=true to enable login. You can also enable it when submitting a valid SAML configuration. Setting it to false disables login and retains the existing configuration.</td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Confirm that the configuration takes effect</h3>
-        /// <para>After the request is accepted, <c>UPDATING</c> is usually returned. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to query the progress. <c>READY</c> indicates that the configuration processing is complete. If it fails, check the returned status and configuration.
+        /// <para>After the request is accepted, UPDATING is usually returned. Query the progress by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>. READY indicates that the configuration processing is complete. If it fails, check the returned status and configuration.
         /// If the request times out, query the current configuration and processing status first, and then decide whether to retry. Query the SCIM processing result by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>.</para>
         /// </description>
         /// 
@@ -29879,12 +31855,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the logon configuration of a bound identity provider in a specified workspace. DingTalk and Lark support the logon switch, incremental synchronization switch, application configuration, and synchronization scope. CustomSSO supports SAML configuration and the logon switch. Updates take effect asynchronously. Call GetIdentityProvider to query the status.</para>
+        /// <para>Modifies the configuration of a bound identity provider in a specified workspace. DingTalk and Feishu support login switches, address book synchronization switches, application configurations, and synchronization scopes. CustomSSO supports SAML or OIDC login configurations and login switches. SCIM user synchronization is configured independently. Updates take effect asynchronously. You can query the status by calling GetIdentityProvider.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Modifies the logon or directory configuration of a bound enterprise identity provider to update enterprise application credentials, adjust synchronized departments, or configure custom single sign-on (SSO).</para>
+        /// <para>Modifies the login or address book configuration of a bound enterprise identity provider to update enterprise application credentials, adjust synchronized departments, or configure custom single sign-on (SSO).</para>
         /// <h3>Select the configuration to modify</h3>
         /// <table>
         /// <thead>
@@ -29894,23 +31870,23 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>DingTalk (<c>DingTalk</c>), Lark (<c>Feishu</c>)</td>
-        /// <td>Enterprise application credentials <c>metadata</c>, logon switch <c>loginEnabled</c>, directory change synchronization switch <c>syncEnabled</c>, and synchronization scope <c>syncScope</c>. You must submit at least one item.</td>
+        /// <td>DingTalk, Feishu</td>
+        /// <td>Enterprise application credentials metadata, login switch loginEnabled, address book change synchronization switch syncEnabled, and synchronization scope syncScope. At least one item must be submitted.</td>
         /// </tr>
         /// <tr>
-        /// <td>Custom identity provider (<c>CustomSSO</c>)</td>
-        /// <td>SAML protocol <c>protocol</c>, logon configuration <c>saml</c>, and logon switch <c>loginEnabled</c>. SCIM-based user synchronization is configured separately by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</td>
+        /// <td>Custom identity provider (CustomSSO)</td>
+        /// <td>SAML protocol, login configuration saml, and login switch loginEnabled. SCIM user synchronization is configured independently by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</td>
         /// </tr>
         /// </tbody></table>
-        /// <h3>Update DingTalk or Lark</h3>
-        /// <para><c>metadata</c> is updated by field. You only need to submit the fields that you want to modify. Omitted fields and existing keys remain unchanged. The provided values must be non-empty strings. When you enable directory change synchronization, the configuration must include <c>encryptKey</c> and <c>verificationToken</c>.
+        /// <h3>Update DingTalk or Feishu</h3>
+        /// <para>metadata is updated by field: submit only the fields that need to be modified. Omitted fields and existing keys remain unchanged. The provided values must be non-empty strings. When you enable address book change synchronization, the configuration must include encryptKey and verificationToken.
         /// To adjust synchronized departments:
-        /// <b>Step 1:</b> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListIdentityProviderDepartments">ListIdentityProviderDepartments</a> to query and select departments.
-        /// <b>Step 2:</b> Call this operation to save <c>syncScope</c>. If you omit this field or pass <c>null</c>, the current scope is retained.
-        /// <b>Step 3:</b> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to wait for the configuration processing to complete, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSyncJob">CreateIdentityProviderSyncJob</a> to synchronize users based on the new scope.
-        /// Saving the scope does not automatically trigger a full synchronization. <c>syncEnabled</c> controls subsequent directory change events. The initial synchronization and manual synchronization are executed separately.</para>
+        /// <b>Step 1:</b> Query and select departments by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListIdentityProviderDepartments">ListIdentityProviderDepartments</a>.
+        /// <b>Step 2:</b> Save syncScope by calling this operation. If you omit this field or pass null, the current scope is retained.
+        /// <b>Step 3:</b> Wait for the configuration processing to complete by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSyncJob">CreateIdentityProviderSyncJob</a> to synchronize users based on the new scope.
+        /// Saving the scope does not automatically trigger a full synchronization. syncEnabled controls subsequent address book change events. The initial synchronization and manual synchronization are executed separately.</para>
         /// <h3>Configure custom single sign-on</h3>
-        /// <para><c>CustomSSO</c> uses the SAML protocol to allow users to log on through the enterprise identity system. First, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the access information of AgentCore and configure it in the enterprise identity system. Then, fill in the enterprise-side information in <c>saml</c>.
+        /// <para>CustomSSO uses the SAML protocol to allow users to log on through the enterprise identity system. First, obtain the access information of AgentCore by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> and configure it in the enterprise identity system. Then, fill in the enterprise-side information in saml.
         /// Choose one of the following two methods:</para>
         /// <table>
         /// <thead>
@@ -29921,23 +31897,23 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </thead>
         /// <tbody><tr>
         /// <td>Import metadata</td>
-        /// <td><c>metadataXml</c>: A single IdP metadata XML text exported from the enterprise identity provider. The maximum size is 1 MiB. Enter the XML content instead of a download URL or file path.</td>
+        /// <td>metadataXml: a single IdP metadata XML text exported from the enterprise identity provider, with a maximum size of 1 MiB. Enter the XML content instead of a download URL or file path.</td>
         /// </tr>
         /// <tr>
         /// <td>Manual entry</td>
-        /// <td>Provide <c>entityId</c>, <c>loginUrl</c>, <c>bindingType</c>, and <c>x509Certificates</c> at the same time. Use an HTTPS logon URL and a signing certificate within its validity period. Set <c>bindingType</c> to <c>HTTP-Redirect</c> or <c>HTTP-POST</c>. You can provide up to two certificates.</td>
+        /// <td>Provide entityId, loginUrl, bindingType, and x509Certificates at the same time. Use an HTTPS login URL and a valid signing certificate. Set bindingType to HTTP-Redirect or HTTP-POST. You can provide up to two certificates.</td>
         /// </tr>
         /// <tr>
-        /// <td>The <c>entityId</c> cannot be changed after it is saved. If the XML contains both binding methods at the same time, <c>HTTP-POST</c> and its corresponding URL are used first.</td>
+        /// <td>The entityId cannot be changed after it is saved. If the XML contains both binding methods, HTTP-POST and its corresponding URL take precedence.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>After saving the configuration, set <c>loginEnabled=true</c> to enable logon. You can also enable it when submitting a valid SAML configuration. Setting it to <c>false</c> disables logon and retains the existing configuration.</td>
+        /// <td>After saving the configuration, set loginEnabled=true to enable login. You can also enable it when submitting a valid SAML configuration. Setting it to false disables login and retains the existing configuration.</td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Confirm that the configuration takes effect</h3>
-        /// <para>After the request is accepted, <c>UPDATING</c> is usually returned. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to query the progress. <c>READY</c> indicates that the configuration processing is complete. If it fails, check the returned status and configuration.
+        /// <para>After the request is accepted, UPDATING is usually returned. Query the progress by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>. READY indicates that the configuration processing is complete. If it fails, check the returned status and configuration.
         /// If the request times out, query the current configuration and processing status first, and then decide whether to retry. Query the SCIM processing result by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>.</para>
         /// </description>
         /// 
@@ -29990,12 +31966,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the logon configuration of a bound identity provider in a specified workspace. DingTalk and Lark support the logon switch, incremental synchronization switch, application configuration, and synchronization scope. CustomSSO supports SAML configuration and the logon switch. Updates take effect asynchronously. Call GetIdentityProvider to query the status.</para>
+        /// <para>Modifies the configuration of a bound identity provider in a specified workspace. DingTalk and Feishu support login switches, address book synchronization switches, application configurations, and synchronization scopes. CustomSSO supports SAML or OIDC login configurations and login switches. SCIM user synchronization is configured independently. Updates take effect asynchronously. You can query the status by calling GetIdentityProvider.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Modifies the logon or directory configuration of a bound enterprise identity provider to update enterprise application credentials, adjust synchronized departments, or configure custom single sign-on (SSO).</para>
+        /// <para>Modifies the login or address book configuration of a bound enterprise identity provider to update enterprise application credentials, adjust synchronized departments, or configure custom single sign-on (SSO).</para>
         /// <h3>Select the configuration to modify</h3>
         /// <table>
         /// <thead>
@@ -30005,23 +31981,23 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>DingTalk (<c>DingTalk</c>), Lark (<c>Feishu</c>)</td>
-        /// <td>Enterprise application credentials <c>metadata</c>, logon switch <c>loginEnabled</c>, directory change synchronization switch <c>syncEnabled</c>, and synchronization scope <c>syncScope</c>. You must submit at least one item.</td>
+        /// <td>DingTalk, Feishu</td>
+        /// <td>Enterprise application credentials metadata, login switch loginEnabled, address book change synchronization switch syncEnabled, and synchronization scope syncScope. At least one item must be submitted.</td>
         /// </tr>
         /// <tr>
-        /// <td>Custom identity provider (<c>CustomSSO</c>)</td>
-        /// <td>SAML protocol <c>protocol</c>, logon configuration <c>saml</c>, and logon switch <c>loginEnabled</c>. SCIM-based user synchronization is configured separately by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</td>
+        /// <td>Custom identity provider (CustomSSO)</td>
+        /// <td>SAML protocol, login configuration saml, and login switch loginEnabled. SCIM user synchronization is configured independently by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</td>
         /// </tr>
         /// </tbody></table>
-        /// <h3>Update DingTalk or Lark</h3>
-        /// <para><c>metadata</c> is updated by field. You only need to submit the fields that you want to modify. Omitted fields and existing keys remain unchanged. The provided values must be non-empty strings. When you enable directory change synchronization, the configuration must include <c>encryptKey</c> and <c>verificationToken</c>.
+        /// <h3>Update DingTalk or Feishu</h3>
+        /// <para>metadata is updated by field: submit only the fields that need to be modified. Omitted fields and existing keys remain unchanged. The provided values must be non-empty strings. When you enable address book change synchronization, the configuration must include encryptKey and verificationToken.
         /// To adjust synchronized departments:
-        /// <b>Step 1:</b> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListIdentityProviderDepartments">ListIdentityProviderDepartments</a> to query and select departments.
-        /// <b>Step 2:</b> Call this operation to save <c>syncScope</c>. If you omit this field or pass <c>null</c>, the current scope is retained.
-        /// <b>Step 3:</b> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to wait for the configuration processing to complete, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSyncJob">CreateIdentityProviderSyncJob</a> to synchronize users based on the new scope.
-        /// Saving the scope does not automatically trigger a full synchronization. <c>syncEnabled</c> controls subsequent directory change events. The initial synchronization and manual synchronization are executed separately.</para>
+        /// <b>Step 1:</b> Query and select departments by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListIdentityProviderDepartments">ListIdentityProviderDepartments</a>.
+        /// <b>Step 2:</b> Save syncScope by calling this operation. If you omit this field or pass null, the current scope is retained.
+        /// <b>Step 3:</b> Wait for the configuration processing to complete by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSyncJob">CreateIdentityProviderSyncJob</a> to synchronize users based on the new scope.
+        /// Saving the scope does not automatically trigger a full synchronization. syncEnabled controls subsequent address book change events. The initial synchronization and manual synchronization are executed separately.</para>
         /// <h3>Configure custom single sign-on</h3>
-        /// <para><c>CustomSSO</c> uses the SAML protocol to allow users to log on through the enterprise identity system. First, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the access information of AgentCore and configure it in the enterprise identity system. Then, fill in the enterprise-side information in <c>saml</c>.
+        /// <para>CustomSSO uses the SAML protocol to allow users to log on through the enterprise identity system. First, obtain the access information of AgentCore by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> and configure it in the enterprise identity system. Then, fill in the enterprise-side information in saml.
         /// Choose one of the following two methods:</para>
         /// <table>
         /// <thead>
@@ -30032,23 +32008,23 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </thead>
         /// <tbody><tr>
         /// <td>Import metadata</td>
-        /// <td><c>metadataXml</c>: A single IdP metadata XML text exported from the enterprise identity provider. The maximum size is 1 MiB. Enter the XML content instead of a download URL or file path.</td>
+        /// <td>metadataXml: a single IdP metadata XML text exported from the enterprise identity provider, with a maximum size of 1 MiB. Enter the XML content instead of a download URL or file path.</td>
         /// </tr>
         /// <tr>
         /// <td>Manual entry</td>
-        /// <td>Provide <c>entityId</c>, <c>loginUrl</c>, <c>bindingType</c>, and <c>x509Certificates</c> at the same time. Use an HTTPS logon URL and a signing certificate within its validity period. Set <c>bindingType</c> to <c>HTTP-Redirect</c> or <c>HTTP-POST</c>. You can provide up to two certificates.</td>
+        /// <td>Provide entityId, loginUrl, bindingType, and x509Certificates at the same time. Use an HTTPS login URL and a valid signing certificate. Set bindingType to HTTP-Redirect or HTTP-POST. You can provide up to two certificates.</td>
         /// </tr>
         /// <tr>
-        /// <td>The <c>entityId</c> cannot be changed after it is saved. If the XML contains both binding methods at the same time, <c>HTTP-POST</c> and its corresponding URL are used first.</td>
+        /// <td>The entityId cannot be changed after it is saved. If the XML contains both binding methods, HTTP-POST and its corresponding URL take precedence.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>After saving the configuration, set <c>loginEnabled=true</c> to enable logon. You can also enable it when submitting a valid SAML configuration. Setting it to <c>false</c> disables logon and retains the existing configuration.</td>
+        /// <td>After saving the configuration, set loginEnabled=true to enable login. You can also enable it when submitting a valid SAML configuration. Setting it to false disables login and retains the existing configuration.</td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Confirm that the configuration takes effect</h3>
-        /// <para>After the request is accepted, <c>UPDATING</c> is usually returned. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to query the progress. <c>READY</c> indicates that the configuration processing is complete. If it fails, check the returned status and configuration.
+        /// <para>After the request is accepted, UPDATING is usually returned. Query the progress by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>. READY indicates that the configuration processing is complete. If it fails, check the returned status and configuration.
         /// If the request times out, query the current configuration and processing status first, and then decide whether to retry. Query the SCIM processing result by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>.</para>
         /// </description>
         /// 
@@ -30068,12 +32044,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the logon configuration of a bound identity provider in a specified workspace. DingTalk and Lark support the logon switch, incremental synchronization switch, application configuration, and synchronization scope. CustomSSO supports SAML configuration and the logon switch. Updates take effect asynchronously. Call GetIdentityProvider to query the status.</para>
+        /// <para>Modifies the configuration of a bound identity provider in a specified workspace. DingTalk and Feishu support login switches, address book synchronization switches, application configurations, and synchronization scopes. CustomSSO supports SAML or OIDC login configurations and login switches. SCIM user synchronization is configured independently. Updates take effect asynchronously. You can query the status by calling GetIdentityProvider.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Modifies the logon or directory configuration of a bound enterprise identity provider to update enterprise application credentials, adjust synchronized departments, or configure custom single sign-on (SSO).</para>
+        /// <para>Modifies the login or address book configuration of a bound enterprise identity provider to update enterprise application credentials, adjust synchronized departments, or configure custom single sign-on (SSO).</para>
         /// <h3>Select the configuration to modify</h3>
         /// <table>
         /// <thead>
@@ -30083,23 +32059,23 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>DingTalk (<c>DingTalk</c>), Lark (<c>Feishu</c>)</td>
-        /// <td>Enterprise application credentials <c>metadata</c>, logon switch <c>loginEnabled</c>, directory change synchronization switch <c>syncEnabled</c>, and synchronization scope <c>syncScope</c>. You must submit at least one item.</td>
+        /// <td>DingTalk, Feishu</td>
+        /// <td>Enterprise application credentials metadata, login switch loginEnabled, address book change synchronization switch syncEnabled, and synchronization scope syncScope. At least one item must be submitted.</td>
         /// </tr>
         /// <tr>
-        /// <td>Custom identity provider (<c>CustomSSO</c>)</td>
-        /// <td>SAML protocol <c>protocol</c>, logon configuration <c>saml</c>, and logon switch <c>loginEnabled</c>. SCIM-based user synchronization is configured separately by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</td>
+        /// <td>Custom identity provider (CustomSSO)</td>
+        /// <td>SAML protocol, login configuration saml, and login switch loginEnabled. SCIM user synchronization is configured independently by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</td>
         /// </tr>
         /// </tbody></table>
-        /// <h3>Update DingTalk or Lark</h3>
-        /// <para><c>metadata</c> is updated by field. You only need to submit the fields that you want to modify. Omitted fields and existing keys remain unchanged. The provided values must be non-empty strings. When you enable directory change synchronization, the configuration must include <c>encryptKey</c> and <c>verificationToken</c>.
+        /// <h3>Update DingTalk or Feishu</h3>
+        /// <para>metadata is updated by field: submit only the fields that need to be modified. Omitted fields and existing keys remain unchanged. The provided values must be non-empty strings. When you enable address book change synchronization, the configuration must include encryptKey and verificationToken.
         /// To adjust synchronized departments:
-        /// <b>Step 1:</b> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListIdentityProviderDepartments">ListIdentityProviderDepartments</a> to query and select departments.
-        /// <b>Step 2:</b> Call this operation to save <c>syncScope</c>. If you omit this field or pass <c>null</c>, the current scope is retained.
-        /// <b>Step 3:</b> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to wait for the configuration processing to complete, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSyncJob">CreateIdentityProviderSyncJob</a> to synchronize users based on the new scope.
-        /// Saving the scope does not automatically trigger a full synchronization. <c>syncEnabled</c> controls subsequent directory change events. The initial synchronization and manual synchronization are executed separately.</para>
+        /// <b>Step 1:</b> Query and select departments by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListIdentityProviderDepartments">ListIdentityProviderDepartments</a>.
+        /// <b>Step 2:</b> Save syncScope by calling this operation. If you omit this field or pass null, the current scope is retained.
+        /// <b>Step 3:</b> Wait for the configuration processing to complete by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSyncJob">CreateIdentityProviderSyncJob</a> to synchronize users based on the new scope.
+        /// Saving the scope does not automatically trigger a full synchronization. syncEnabled controls subsequent address book change events. The initial synchronization and manual synchronization are executed separately.</para>
         /// <h3>Configure custom single sign-on</h3>
-        /// <para><c>CustomSSO</c> uses the SAML protocol to allow users to log on through the enterprise identity system. First, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the access information of AgentCore and configure it in the enterprise identity system. Then, fill in the enterprise-side information in <c>saml</c>.
+        /// <para>CustomSSO uses the SAML protocol to allow users to log on through the enterprise identity system. First, obtain the access information of AgentCore by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> and configure it in the enterprise identity system. Then, fill in the enterprise-side information in saml.
         /// Choose one of the following two methods:</para>
         /// <table>
         /// <thead>
@@ -30110,23 +32086,23 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </thead>
         /// <tbody><tr>
         /// <td>Import metadata</td>
-        /// <td><c>metadataXml</c>: A single IdP metadata XML text exported from the enterprise identity provider. The maximum size is 1 MiB. Enter the XML content instead of a download URL or file path.</td>
+        /// <td>metadataXml: a single IdP metadata XML text exported from the enterprise identity provider, with a maximum size of 1 MiB. Enter the XML content instead of a download URL or file path.</td>
         /// </tr>
         /// <tr>
         /// <td>Manual entry</td>
-        /// <td>Provide <c>entityId</c>, <c>loginUrl</c>, <c>bindingType</c>, and <c>x509Certificates</c> at the same time. Use an HTTPS logon URL and a signing certificate within its validity period. Set <c>bindingType</c> to <c>HTTP-Redirect</c> or <c>HTTP-POST</c>. You can provide up to two certificates.</td>
+        /// <td>Provide entityId, loginUrl, bindingType, and x509Certificates at the same time. Use an HTTPS login URL and a valid signing certificate. Set bindingType to HTTP-Redirect or HTTP-POST. You can provide up to two certificates.</td>
         /// </tr>
         /// <tr>
-        /// <td>The <c>entityId</c> cannot be changed after it is saved. If the XML contains both binding methods at the same time, <c>HTTP-POST</c> and its corresponding URL are used first.</td>
+        /// <td>The entityId cannot be changed after it is saved. If the XML contains both binding methods, HTTP-POST and its corresponding URL take precedence.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>After saving the configuration, set <c>loginEnabled=true</c> to enable logon. You can also enable it when submitting a valid SAML configuration. Setting it to <c>false</c> disables logon and retains the existing configuration.</td>
+        /// <td>After saving the configuration, set loginEnabled=true to enable login. You can also enable it when submitting a valid SAML configuration. Setting it to false disables login and retains the existing configuration.</td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Confirm that the configuration takes effect</h3>
-        /// <para>After the request is accepted, <c>UPDATING</c> is usually returned. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to query the progress. <c>READY</c> indicates that the configuration processing is complete. If it fails, check the returned status and configuration.
+        /// <para>After the request is accepted, UPDATING is usually returned. Query the progress by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>. READY indicates that the configuration processing is complete. If it fails, check the returned status and configuration.
         /// If the request times out, query the current configuration and processing status first, and then decide whether to retry. Query the SCIM processing result by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>.</para>
         /// </description>
         /// 
@@ -30153,23 +32129,23 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <description>
         /// <para>Enables or disables SCIM-based user synchronization for AgentCore. When enabled, all existing users in the shared user pool are fully imported into the workspace. Users in the user pool are provisioned by the enterprise identity system through SCIM.</para>
         /// <h3>Preparations before enabling</h3>
-        /// <para><b>Step 1:</b> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to enable the receiving endpoint and obtain the receiving URL and a valid token.
+        /// <para><b>Step 1:</b> Enable the receiving endpoint by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to obtain the receiving URL and a valid token.
         /// <b>Step 2:</b> Complete the SCIM configuration, connection test, and user assignment in the enterprise identity system.
-        /// <b>Step 3:</b> Call this operation and set <c>syncEnabled</c> to <c>true</c>.</para>
+        /// <b>Step 3:</b> Call this operation and set syncEnabled to true.</para>
         /// <pre><code class="language-http">PUT /workspaces/{workspaceId}/scim-provisioning
         /// {&quot;syncEnabled&quot;:true}
         /// </c></pre>
         /// <para>When the enabling task is executed, the system checks whether the receiving endpoint is enabled and whether valid credentials exist. If no users are provisioned in the enterprise identity system, the initial import may succeed but contain no user records.</para>
         /// <h3>Impact after disabling</h3>
-        /// <para>Setting <c>syncEnabled</c> to <c>false</c> disables user synchronization and the upstream SCIM receiving endpoint. Imported users, existing credentials, and the SAML logon configuration are retained.
+        /// <para>Setting syncEnabled to false disables user synchronization and the upstream SCIM receiving endpoint. The imported users, existing credentials, and SAML logon configuration are retained.
         /// To re-enable synchronization later, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to prepare the receiving endpoint first, and then enable synchronization.</para>
-        /// <h3>Verify the operation result</h3>
+        /// <h3>Confirm the operation result</h3>
         /// <para>After this operation accepts the request, it executes the enabling or disabling task in the background. You can query the progress by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>:</para>
         /// <list type="bullet">
-        /// <item><description><c>syncEnabled</c> indicates whether synchronization is expected to be enabled or disabled.</description></item>
-        /// <item><description><c>operationStatus</c> indicates the execution result of the most recent operation.</description></item>
-        /// <item><description>The <c>status</c> field in the query operation comprehensively indicates the current stage of SCIM, such as pending configuration, processing, available, or disabled.
-        /// If the operation fails, the saved <c>syncEnabled</c> value is not automatically rolled back. Verify the configuration based on the operation result before deciding on subsequent actions.</description></item>
+        /// <item><description>syncEnabled indicates whether synchronization is expected to be enabled or disabled.</description></item>
+        /// <item><description>operationStatus indicates the execution result of the most recent operation.</description></item>
+        /// <item><description>The status field in the query operation comprehensively indicates the current stage of SCIM, such as pending configuration, processing, available, or disabled.
+        /// If the operation fails, the saved syncEnabled value is not automatically rolled back. Verify the configuration based on the operation result and determine the subsequent actions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30229,23 +32205,23 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <description>
         /// <para>Enables or disables SCIM-based user synchronization for AgentCore. When enabled, all existing users in the shared user pool are fully imported into the workspace. Users in the user pool are provisioned by the enterprise identity system through SCIM.</para>
         /// <h3>Preparations before enabling</h3>
-        /// <para><b>Step 1:</b> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to enable the receiving endpoint and obtain the receiving URL and a valid token.
+        /// <para><b>Step 1:</b> Enable the receiving endpoint by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to obtain the receiving URL and a valid token.
         /// <b>Step 2:</b> Complete the SCIM configuration, connection test, and user assignment in the enterprise identity system.
-        /// <b>Step 3:</b> Call this operation and set <c>syncEnabled</c> to <c>true</c>.</para>
+        /// <b>Step 3:</b> Call this operation and set syncEnabled to true.</para>
         /// <pre><code class="language-http">PUT /workspaces/{workspaceId}/scim-provisioning
         /// {&quot;syncEnabled&quot;:true}
         /// </c></pre>
         /// <para>When the enabling task is executed, the system checks whether the receiving endpoint is enabled and whether valid credentials exist. If no users are provisioned in the enterprise identity system, the initial import may succeed but contain no user records.</para>
         /// <h3>Impact after disabling</h3>
-        /// <para>Setting <c>syncEnabled</c> to <c>false</c> disables user synchronization and the upstream SCIM receiving endpoint. Imported users, existing credentials, and the SAML logon configuration are retained.
+        /// <para>Setting syncEnabled to false disables user synchronization and the upstream SCIM receiving endpoint. The imported users, existing credentials, and SAML logon configuration are retained.
         /// To re-enable synchronization later, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to prepare the receiving endpoint first, and then enable synchronization.</para>
-        /// <h3>Verify the operation result</h3>
+        /// <h3>Confirm the operation result</h3>
         /// <para>After this operation accepts the request, it executes the enabling or disabling task in the background. You can query the progress by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>:</para>
         /// <list type="bullet">
-        /// <item><description><c>syncEnabled</c> indicates whether synchronization is expected to be enabled or disabled.</description></item>
-        /// <item><description><c>operationStatus</c> indicates the execution result of the most recent operation.</description></item>
-        /// <item><description>The <c>status</c> field in the query operation comprehensively indicates the current stage of SCIM, such as pending configuration, processing, available, or disabled.
-        /// If the operation fails, the saved <c>syncEnabled</c> value is not automatically rolled back. Verify the configuration based on the operation result before deciding on subsequent actions.</description></item>
+        /// <item><description>syncEnabled indicates whether synchronization is expected to be enabled or disabled.</description></item>
+        /// <item><description>operationStatus indicates the execution result of the most recent operation.</description></item>
+        /// <item><description>The status field in the query operation comprehensively indicates the current stage of SCIM, such as pending configuration, processing, available, or disabled.
+        /// If the operation fails, the saved syncEnabled value is not automatically rolled back. Verify the configuration based on the operation result and determine the subsequent actions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30305,23 +32281,23 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <description>
         /// <para>Enables or disables SCIM-based user synchronization for AgentCore. When enabled, all existing users in the shared user pool are fully imported into the workspace. Users in the user pool are provisioned by the enterprise identity system through SCIM.</para>
         /// <h3>Preparations before enabling</h3>
-        /// <para><b>Step 1:</b> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to enable the receiving endpoint and obtain the receiving URL and a valid token.
+        /// <para><b>Step 1:</b> Enable the receiving endpoint by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to obtain the receiving URL and a valid token.
         /// <b>Step 2:</b> Complete the SCIM configuration, connection test, and user assignment in the enterprise identity system.
-        /// <b>Step 3:</b> Call this operation and set <c>syncEnabled</c> to <c>true</c>.</para>
+        /// <b>Step 3:</b> Call this operation and set syncEnabled to true.</para>
         /// <pre><code class="language-http">PUT /workspaces/{workspaceId}/scim-provisioning
         /// {&quot;syncEnabled&quot;:true}
         /// </c></pre>
         /// <para>When the enabling task is executed, the system checks whether the receiving endpoint is enabled and whether valid credentials exist. If no users are provisioned in the enterprise identity system, the initial import may succeed but contain no user records.</para>
         /// <h3>Impact after disabling</h3>
-        /// <para>Setting <c>syncEnabled</c> to <c>false</c> disables user synchronization and the upstream SCIM receiving endpoint. Imported users, existing credentials, and the SAML logon configuration are retained.
+        /// <para>Setting syncEnabled to false disables user synchronization and the upstream SCIM receiving endpoint. The imported users, existing credentials, and SAML logon configuration are retained.
         /// To re-enable synchronization later, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to prepare the receiving endpoint first, and then enable synchronization.</para>
-        /// <h3>Verify the operation result</h3>
+        /// <h3>Confirm the operation result</h3>
         /// <para>After this operation accepts the request, it executes the enabling or disabling task in the background. You can query the progress by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>:</para>
         /// <list type="bullet">
-        /// <item><description><c>syncEnabled</c> indicates whether synchronization is expected to be enabled or disabled.</description></item>
-        /// <item><description><c>operationStatus</c> indicates the execution result of the most recent operation.</description></item>
-        /// <item><description>The <c>status</c> field in the query operation comprehensively indicates the current stage of SCIM, such as pending configuration, processing, available, or disabled.
-        /// If the operation fails, the saved <c>syncEnabled</c> value is not automatically rolled back. Verify the configuration based on the operation result before deciding on subsequent actions.</description></item>
+        /// <item><description>syncEnabled indicates whether synchronization is expected to be enabled or disabled.</description></item>
+        /// <item><description>operationStatus indicates the execution result of the most recent operation.</description></item>
+        /// <item><description>The status field in the query operation comprehensively indicates the current stage of SCIM, such as pending configuration, processing, available, or disabled.
+        /// If the operation fails, the saved syncEnabled value is not automatically rolled back. Verify the configuration based on the operation result and determine the subsequent actions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30348,23 +32324,23 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <description>
         /// <para>Enables or disables SCIM-based user synchronization for AgentCore. When enabled, all existing users in the shared user pool are fully imported into the workspace. Users in the user pool are provisioned by the enterprise identity system through SCIM.</para>
         /// <h3>Preparations before enabling</h3>
-        /// <para><b>Step 1:</b> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to enable the receiving endpoint and obtain the receiving URL and a valid token.
+        /// <para><b>Step 1:</b> Enable the receiving endpoint by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to obtain the receiving URL and a valid token.
         /// <b>Step 2:</b> Complete the SCIM configuration, connection test, and user assignment in the enterprise identity system.
-        /// <b>Step 3:</b> Call this operation and set <c>syncEnabled</c> to <c>true</c>.</para>
+        /// <b>Step 3:</b> Call this operation and set syncEnabled to true.</para>
         /// <pre><code class="language-http">PUT /workspaces/{workspaceId}/scim-provisioning
         /// {&quot;syncEnabled&quot;:true}
         /// </c></pre>
         /// <para>When the enabling task is executed, the system checks whether the receiving endpoint is enabled and whether valid credentials exist. If no users are provisioned in the enterprise identity system, the initial import may succeed but contain no user records.</para>
         /// <h3>Impact after disabling</h3>
-        /// <para>Setting <c>syncEnabled</c> to <c>false</c> disables user synchronization and the upstream SCIM receiving endpoint. Imported users, existing credentials, and the SAML logon configuration are retained.
+        /// <para>Setting syncEnabled to false disables user synchronization and the upstream SCIM receiving endpoint. The imported users, existing credentials, and SAML logon configuration are retained.
         /// To re-enable synchronization later, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to prepare the receiving endpoint first, and then enable synchronization.</para>
-        /// <h3>Verify the operation result</h3>
+        /// <h3>Confirm the operation result</h3>
         /// <para>After this operation accepts the request, it executes the enabling or disabling task in the background. You can query the progress by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>:</para>
         /// <list type="bullet">
-        /// <item><description><c>syncEnabled</c> indicates whether synchronization is expected to be enabled or disabled.</description></item>
-        /// <item><description><c>operationStatus</c> indicates the execution result of the most recent operation.</description></item>
-        /// <item><description>The <c>status</c> field in the query operation comprehensively indicates the current stage of SCIM, such as pending configuration, processing, available, or disabled.
-        /// If the operation fails, the saved <c>syncEnabled</c> value is not automatically rolled back. Verify the configuration based on the operation result before deciding on subsequent actions.</description></item>
+        /// <item><description>syncEnabled indicates whether synchronization is expected to be enabled or disabled.</description></item>
+        /// <item><description>operationStatus indicates the execution result of the most recent operation.</description></item>
+        /// <item><description>The status field in the query operation comprehensively indicates the current stage of SCIM, such as pending configuration, processing, available, or disabled.
+        /// If the operation fails, the saved syncEnabled value is not automatically rolled back. Verify the configuration based on the operation result and determine the subsequent actions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30384,14 +32360,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the model, instructions, skills, and runtime configuration of a managed Harness agent and executes the update asynchronously. Omitted top-level fields retain their original configurations.</para>
+        /// <para>Updates the model, instructions, skills, and runtime configuration of a managed Harness agent and executes the update asynchronously. Omitted top-level fields retain their original configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Updates the model, instructions, skills, or runtime configuration of a managed Harness agent to adjust the capabilities and runtime behavior of an existing agent.</para>
         /// <h3>Update rules</h3>
-        /// <para>Provide at least one updatable field. Omitted top-level fields retain their original configurations. You can set <c>description=null</c> to clear the description.</para>
+        /// <para>At least one updatable field must be provided. Omitted top-level fields retain their original configuration. You can set description=null to clear the description.</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -30400,35 +32376,35 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td><c>harness</c></td>
-        /// <td>The type cannot be changed. When updating the qodercli account binding, keep the original <c>type</c> and submit the corresponding <c>configuration</c>.</td>
+        /// <td>harness</td>
+        /// <td>The type cannot be changed. When updating the qodercli account binding, keep the original type and submit the corresponding configuration.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>model</c></td>
+        /// <td>model</td>
         /// <td>Provide a model configuration that matches the current Harness. For qwenpaw, specify the model connection ID and model name. For qodercli, use the available model identifier of the connector.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>runtime</c></td>
-        /// <td>Specify both <c>compute</c> and <c>sessionPolicy</c> when submitting. Omitting the entire object retains the original runtime configuration.</td>
+        /// <td>runtime</td>
+        /// <td>Specify both compute and sessionPolicy when submitting. Omitting the entire object retains the original runtime configuration.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>tools</c>, <c>skills</c>, <c>promptVariables</c>, <c>subAgents</c></td>
-        /// <td>The corresponding lists are entirely replaced upon submission. You must include the items to be retained. Pass <c>[]</c> to clear the corresponding explicit lists.</td>
+        /// <td>tools, skills, promptVariables, subAgents</td>
+        /// <td>The corresponding list is entirely replaced upon submission and must include the items to be retained. Pass [] to clear the corresponding explicit list.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>environment</c></td>
+        /// <td>environment</td>
         /// <td>The variable list and credential reference list are entirely replaced respectively. Submit the items to be retained together.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>network</c></td>
-        /// <td>Specify both <c>accessInternet.enabled</c> and <c>accessVpc.enabled</c> when submitting.</td>
+        /// <td>network</td>
+        /// <td>Specify both accessInternet.enabled and accessVpc.enabled when submitting.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>ossMounts</c>, <c>agenticFsMounts</c></td>
-        /// <td>Entirely replaced respectively. Pass <c>[]</c> to clear the corresponding lists. <c>agenticFsMounts</c> does not accept <c>null</c>.</td>
+        /// <td>ossMounts, agenticFsMounts</td>
+        /// <td>Entirely replaced respectively. Pass [] to clear the corresponding list. agenticFsMounts does not accept null.</td>
         /// </tr>
         /// </tbody></table>
-        /// <h3>Harnesses, templates, and skills</h3>
+        /// <h3>Harness, templates, and skills</h3>
         /// <table>
         /// <thead>
         /// <tr>
@@ -30437,28 +32413,28 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td><c>qwenpaw</c></td>
-        /// <td>This type is used by default if <c>harness</c> is omitted during creation. Set <c>model.modelConnectionId</c> to the workspace model connection ID, and set <c>model.modelName</c> to the name of the model created under this connection.</td>
+        /// <td>qwenpaw</td>
+        /// <td>This type is used by default if harness is omitted during creation. Set model.modelConnectionId to the workspace model connection ID, and set model.modelName to the name of a model created under this connection.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>qodercli</c></td>
-        /// <td>The qodercli connector must be enabled in the workspace. Set <c>model.modelConnectionId</c> to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. <c>model.modelName</c> can be omitted.</td>
+        /// <td>qodercli</td>
+        /// <td>The qodercli connector must be enabled in the workspace. Set model.modelConnectionId to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. model.modelName can be omitted.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>harness</c> is an object, such as <c>{&quot;type&quot;:&quot;qwenpaw&quot;}</c>. For qodercli, set <c>harness.configuration.connectorServiceAccountKey</c> to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. This field can be omitted if there is only one key record, but must be specified if there are multiple records. <c>connectorServiceAccountName</c> is the account name. Do not specify these two binding fields for qwenpaw.</td>
+        /// <td>harness is an object, such as {&quot;type&quot;:&quot;qwenpaw&quot;}. For qodercli, set harness.configuration.connectorServiceAccountKey to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. This field can be omitted if there is only one key record, but must be specified if there are multiple records. connectorServiceAccountName is the account name. Do not specify these two binding fields for qwenpaw.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td><c>skills</c> uses the skill names in the workspace AI Registry. For <c>sourceType=REFERENCE</c>, reference the version by <c>versionSelector</c>: use <c>LABEL</c> with a tag name, or <c>VERSION</c> with a specific version number. If the selector is omitted, <c>LABEL/latest</c> is used. For <c>sourceType=STATIC</c>, static files bundled with the package are used, and no version selector is provided.</td>
+        /// <td>skills uses the skill names in the workspace AI Registry. For sourceType=REFERENCE, versions are referenced by versionSelector: use LABEL with a tag name, or VERSION with a specific version number. If the selector is omitted, LABEL/latest is used. For sourceType=STATIC, static files bundled with the package are used, and no version selector is provided.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>For <c>template.aiRegistry</c>, specify the agent template name and an optional version. If the version is omitted during creation, the published version is resolved and fixed. When a template is used, <c>instruction</c>, <c>promptVariables</c>, and <c>subAgents</c> are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions through <c>configuredSkills</c> and <c>skills</c>.</td>
+        /// <td>For template.aiRegistry, specify the agent template name and an optional version. If the version is omitted during creation, the published version is resolved and fixed. When a template is used, instruction, promptVariables, and subAgents are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions through configuredSkills and skills.</td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Elasticity and instances</h3>
-        /// <para>If <c>runtime</c> is committed but <c>hpa</c> or some of its fields are omitted, the following default values are used for unspecified items. To retain the existing elastic policy, commit the complete <c>hpa</c>.</para>
+        /// <para>If you commit runtime but omit hpa or some of its fields, the following default values are used for unspecified items. To retain the existing elastic policy, commit the complete hpa together.</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -30468,42 +32444,42 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td><c>enabled</c></td>
-        /// <td><c>false</c></td>
-        /// <td>Specifies whether elastic scaling is enabled.</td>
+        /// <td>enabled</td>
+        /// <td>false</td>
+        /// <td>Specifies whether to enable elastic scaling.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>minSandboxCount</c></td>
-        /// <td><c>1</c></td>
+        /// <td>minSandboxCount</td>
+        /// <td>1</td>
         /// <td>The minimum number of instances. Valid values: 0 to 100.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>maxSandboxCount</c></td>
-        /// <td><c>10</c></td>
+        /// <td>maxSandboxCount</td>
+        /// <td>10</td>
         /// <td>The maximum number of instances. Valid values: 0 to 100. The value cannot be less than the minimum number.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>maxConcurrentSessionsPerSandbox</c></td>
-        /// <td><c>20</c></td>
+        /// <td>maxConcurrentSessionsPerSandbox</td>
+        /// <td>20</td>
         /// <td>The maximum number of concurrent sessions per instance. Valid values: 1 to 20.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>sessionTtlSeconds</c></td>
-        /// <td><c>600</c></td>
+        /// <td>sessionTtlSeconds</td>
+        /// <td>600</td>
         /// <td>The maximum idle time of a session, in seconds. Valid values: 60 to 86400.</td>
         /// </tr>
         /// <tr>
-        /// <td>If you only modify instructions, models, or skills, you can omit the entire <c>runtime</c> to keep the original runtime configuration unchanged. The minimum and maximum numbers of instances are configuration borders. You can query the actual number through <c>sandboxPhaseCounts</c>.</td>
+        /// <td>If you only modify instructions, models, or skills, you can omit the entire runtime object, and the original runtime configuration remains unchanged. The minimum and maximum number of instances are configuration borders. You can query the actual number through sandboxPhaseCounts.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Environment and mounts</h3>
-        /// <para>Omitting the entire <c>environment</c> retains the original configuration. Submitting <c>environment={}</c> or <c>environment=null</c> clears the environment configuration. Environment variable values must be strings, and variable names must be non-empty and unique.
-        /// The total number of <c>ossMounts</c> and <c>agenticFsMounts</c> cannot exceed 10. The mount target <c>mountPath</c> uses an absolute path in the container, such as <c>/data/train</c>. It cannot conflict with platform reserved directories, and cannot be duplicated or form parent-child directory overwrites.
-        /// The <c>path</c> for OSS mounts must be a non-empty directory prefix in the bucket. For AgenticFS mounts, <c>server</c> is the access point domain name, without a protocol, port, or path. <c>path</c> is an existing non-empty relative directory in the access point. You cannot mount the root directory of the access point. If <c>readOnly</c> is omitted, the default value is <c>false</c>.</para>
+        /// <para>Omitting the entire environment object retains the original configuration. Submitting environment={} or environment=null clears the environment configuration. Environment variable values must be strings, and variable names must be non-empty and unique.
+        /// The total number of ossMounts and agenticFsMounts cannot exceed 10. The mount target mountPath uses an absolute path within the container, such as /data/train. It cannot conflict with platform reserved directories, and cannot be duplicated or form parent-child directory overrides.
+        /// The path for OSS mounts must be a non-empty directory prefix within the bucket. For AgenticFS mounts, server is the AccessPoint domain name, without a protocol, port, or path. path is an existing non-empty relative directory within the AccessPoint, and the root directory of the AccessPoint cannot be mounted. If readOnly is omitted, the default value is false.</para>
         /// <h3>Query update results</h3>
-        /// <para>A successful response indicates that the update request has been accepted. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query <c>latestSpecVersion</c>, <c>latestVersionStatus</c>, <c>status</c>, and <c>sandboxPhaseCounts</c> to confirm the configuration processing and instance status. <c>clientToken</c> does not provide idempotency guarantees at this time.</para>
+        /// <para>A successful response indicates that the update request has been accepted. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query latestSpecVersion, latestVersionStatus, status, and sandboxPhaseCounts to confirm the configuration processing and instance status. clientToken does not currently provide idempotency guarantees.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -30561,14 +32537,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the model, instructions, skills, and runtime configuration of a managed Harness agent and executes the update asynchronously. Omitted top-level fields retain their original configurations.</para>
+        /// <para>Updates the model, instructions, skills, and runtime configuration of a managed Harness agent and executes the update asynchronously. Omitted top-level fields retain their original configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Updates the model, instructions, skills, or runtime configuration of a managed Harness agent to adjust the capabilities and runtime behavior of an existing agent.</para>
         /// <h3>Update rules</h3>
-        /// <para>Provide at least one updatable field. Omitted top-level fields retain their original configurations. You can set <c>description=null</c> to clear the description.</para>
+        /// <para>At least one updatable field must be provided. Omitted top-level fields retain their original configuration. You can set description=null to clear the description.</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -30577,35 +32553,35 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td><c>harness</c></td>
-        /// <td>The type cannot be changed. When updating the qodercli account binding, keep the original <c>type</c> and submit the corresponding <c>configuration</c>.</td>
+        /// <td>harness</td>
+        /// <td>The type cannot be changed. When updating the qodercli account binding, keep the original type and submit the corresponding configuration.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>model</c></td>
+        /// <td>model</td>
         /// <td>Provide a model configuration that matches the current Harness. For qwenpaw, specify the model connection ID and model name. For qodercli, use the available model identifier of the connector.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>runtime</c></td>
-        /// <td>Specify both <c>compute</c> and <c>sessionPolicy</c> when submitting. Omitting the entire object retains the original runtime configuration.</td>
+        /// <td>runtime</td>
+        /// <td>Specify both compute and sessionPolicy when submitting. Omitting the entire object retains the original runtime configuration.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>tools</c>, <c>skills</c>, <c>promptVariables</c>, <c>subAgents</c></td>
-        /// <td>The corresponding lists are entirely replaced upon submission. You must include the items to be retained. Pass <c>[]</c> to clear the corresponding explicit lists.</td>
+        /// <td>tools, skills, promptVariables, subAgents</td>
+        /// <td>The corresponding list is entirely replaced upon submission and must include the items to be retained. Pass [] to clear the corresponding explicit list.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>environment</c></td>
+        /// <td>environment</td>
         /// <td>The variable list and credential reference list are entirely replaced respectively. Submit the items to be retained together.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>network</c></td>
-        /// <td>Specify both <c>accessInternet.enabled</c> and <c>accessVpc.enabled</c> when submitting.</td>
+        /// <td>network</td>
+        /// <td>Specify both accessInternet.enabled and accessVpc.enabled when submitting.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>ossMounts</c>, <c>agenticFsMounts</c></td>
-        /// <td>Entirely replaced respectively. Pass <c>[]</c> to clear the corresponding lists. <c>agenticFsMounts</c> does not accept <c>null</c>.</td>
+        /// <td>ossMounts, agenticFsMounts</td>
+        /// <td>Entirely replaced respectively. Pass [] to clear the corresponding list. agenticFsMounts does not accept null.</td>
         /// </tr>
         /// </tbody></table>
-        /// <h3>Harnesses, templates, and skills</h3>
+        /// <h3>Harness, templates, and skills</h3>
         /// <table>
         /// <thead>
         /// <tr>
@@ -30614,28 +32590,28 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td><c>qwenpaw</c></td>
-        /// <td>This type is used by default if <c>harness</c> is omitted during creation. Set <c>model.modelConnectionId</c> to the workspace model connection ID, and set <c>model.modelName</c> to the name of the model created under this connection.</td>
+        /// <td>qwenpaw</td>
+        /// <td>This type is used by default if harness is omitted during creation. Set model.modelConnectionId to the workspace model connection ID, and set model.modelName to the name of a model created under this connection.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>qodercli</c></td>
-        /// <td>The qodercli connector must be enabled in the workspace. Set <c>model.modelConnectionId</c> to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. <c>model.modelName</c> can be omitted.</td>
+        /// <td>qodercli</td>
+        /// <td>The qodercli connector must be enabled in the workspace. Set model.modelConnectionId to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. model.modelName can be omitted.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>harness</c> is an object, such as <c>{&quot;type&quot;:&quot;qwenpaw&quot;}</c>. For qodercli, set <c>harness.configuration.connectorServiceAccountKey</c> to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. This field can be omitted if there is only one key record, but must be specified if there are multiple records. <c>connectorServiceAccountName</c> is the account name. Do not specify these two binding fields for qwenpaw.</td>
+        /// <td>harness is an object, such as {&quot;type&quot;:&quot;qwenpaw&quot;}. For qodercli, set harness.configuration.connectorServiceAccountKey to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. This field can be omitted if there is only one key record, but must be specified if there are multiple records. connectorServiceAccountName is the account name. Do not specify these two binding fields for qwenpaw.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td><c>skills</c> uses the skill names in the workspace AI Registry. For <c>sourceType=REFERENCE</c>, reference the version by <c>versionSelector</c>: use <c>LABEL</c> with a tag name, or <c>VERSION</c> with a specific version number. If the selector is omitted, <c>LABEL/latest</c> is used. For <c>sourceType=STATIC</c>, static files bundled with the package are used, and no version selector is provided.</td>
+        /// <td>skills uses the skill names in the workspace AI Registry. For sourceType=REFERENCE, versions are referenced by versionSelector: use LABEL with a tag name, or VERSION with a specific version number. If the selector is omitted, LABEL/latest is used. For sourceType=STATIC, static files bundled with the package are used, and no version selector is provided.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>For <c>template.aiRegistry</c>, specify the agent template name and an optional version. If the version is omitted during creation, the published version is resolved and fixed. When a template is used, <c>instruction</c>, <c>promptVariables</c>, and <c>subAgents</c> are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions through <c>configuredSkills</c> and <c>skills</c>.</td>
+        /// <td>For template.aiRegistry, specify the agent template name and an optional version. If the version is omitted during creation, the published version is resolved and fixed. When a template is used, instruction, promptVariables, and subAgents are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions through configuredSkills and skills.</td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Elasticity and instances</h3>
-        /// <para>If <c>runtime</c> is committed but <c>hpa</c> or some of its fields are omitted, the following default values are used for unspecified items. To retain the existing elastic policy, commit the complete <c>hpa</c>.</para>
+        /// <para>If you commit runtime but omit hpa or some of its fields, the following default values are used for unspecified items. To retain the existing elastic policy, commit the complete hpa together.</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -30645,42 +32621,42 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td><c>enabled</c></td>
-        /// <td><c>false</c></td>
-        /// <td>Specifies whether elastic scaling is enabled.</td>
+        /// <td>enabled</td>
+        /// <td>false</td>
+        /// <td>Specifies whether to enable elastic scaling.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>minSandboxCount</c></td>
-        /// <td><c>1</c></td>
+        /// <td>minSandboxCount</td>
+        /// <td>1</td>
         /// <td>The minimum number of instances. Valid values: 0 to 100.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>maxSandboxCount</c></td>
-        /// <td><c>10</c></td>
+        /// <td>maxSandboxCount</td>
+        /// <td>10</td>
         /// <td>The maximum number of instances. Valid values: 0 to 100. The value cannot be less than the minimum number.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>maxConcurrentSessionsPerSandbox</c></td>
-        /// <td><c>20</c></td>
+        /// <td>maxConcurrentSessionsPerSandbox</td>
+        /// <td>20</td>
         /// <td>The maximum number of concurrent sessions per instance. Valid values: 1 to 20.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>sessionTtlSeconds</c></td>
-        /// <td><c>600</c></td>
+        /// <td>sessionTtlSeconds</td>
+        /// <td>600</td>
         /// <td>The maximum idle time of a session, in seconds. Valid values: 60 to 86400.</td>
         /// </tr>
         /// <tr>
-        /// <td>If you only modify instructions, models, or skills, you can omit the entire <c>runtime</c> to keep the original runtime configuration unchanged. The minimum and maximum numbers of instances are configuration borders. You can query the actual number through <c>sandboxPhaseCounts</c>.</td>
+        /// <td>If you only modify instructions, models, or skills, you can omit the entire runtime object, and the original runtime configuration remains unchanged. The minimum and maximum number of instances are configuration borders. You can query the actual number through sandboxPhaseCounts.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Environment and mounts</h3>
-        /// <para>Omitting the entire <c>environment</c> retains the original configuration. Submitting <c>environment={}</c> or <c>environment=null</c> clears the environment configuration. Environment variable values must be strings, and variable names must be non-empty and unique.
-        /// The total number of <c>ossMounts</c> and <c>agenticFsMounts</c> cannot exceed 10. The mount target <c>mountPath</c> uses an absolute path in the container, such as <c>/data/train</c>. It cannot conflict with platform reserved directories, and cannot be duplicated or form parent-child directory overwrites.
-        /// The <c>path</c> for OSS mounts must be a non-empty directory prefix in the bucket. For AgenticFS mounts, <c>server</c> is the access point domain name, without a protocol, port, or path. <c>path</c> is an existing non-empty relative directory in the access point. You cannot mount the root directory of the access point. If <c>readOnly</c> is omitted, the default value is <c>false</c>.</para>
+        /// <para>Omitting the entire environment object retains the original configuration. Submitting environment={} or environment=null clears the environment configuration. Environment variable values must be strings, and variable names must be non-empty and unique.
+        /// The total number of ossMounts and agenticFsMounts cannot exceed 10. The mount target mountPath uses an absolute path within the container, such as /data/train. It cannot conflict with platform reserved directories, and cannot be duplicated or form parent-child directory overrides.
+        /// The path for OSS mounts must be a non-empty directory prefix within the bucket. For AgenticFS mounts, server is the AccessPoint domain name, without a protocol, port, or path. path is an existing non-empty relative directory within the AccessPoint, and the root directory of the AccessPoint cannot be mounted. If readOnly is omitted, the default value is false.</para>
         /// <h3>Query update results</h3>
-        /// <para>A successful response indicates that the update request has been accepted. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query <c>latestSpecVersion</c>, <c>latestVersionStatus</c>, <c>status</c>, and <c>sandboxPhaseCounts</c> to confirm the configuration processing and instance status. <c>clientToken</c> does not provide idempotency guarantees at this time.</para>
+        /// <para>A successful response indicates that the update request has been accepted. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query latestSpecVersion, latestVersionStatus, status, and sandboxPhaseCounts to confirm the configuration processing and instance status. clientToken does not currently provide idempotency guarantees.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -30738,14 +32714,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the model, instructions, skills, and runtime configuration of a managed Harness agent and executes the update asynchronously. Omitted top-level fields retain their original configurations.</para>
+        /// <para>Updates the model, instructions, skills, and runtime configuration of a managed Harness agent and executes the update asynchronously. Omitted top-level fields retain their original configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Updates the model, instructions, skills, or runtime configuration of a managed Harness agent to adjust the capabilities and runtime behavior of an existing agent.</para>
         /// <h3>Update rules</h3>
-        /// <para>Provide at least one updatable field. Omitted top-level fields retain their original configurations. You can set <c>description=null</c> to clear the description.</para>
+        /// <para>At least one updatable field must be provided. Omitted top-level fields retain their original configuration. You can set description=null to clear the description.</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -30754,35 +32730,35 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td><c>harness</c></td>
-        /// <td>The type cannot be changed. When updating the qodercli account binding, keep the original <c>type</c> and submit the corresponding <c>configuration</c>.</td>
+        /// <td>harness</td>
+        /// <td>The type cannot be changed. When updating the qodercli account binding, keep the original type and submit the corresponding configuration.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>model</c></td>
+        /// <td>model</td>
         /// <td>Provide a model configuration that matches the current Harness. For qwenpaw, specify the model connection ID and model name. For qodercli, use the available model identifier of the connector.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>runtime</c></td>
-        /// <td>Specify both <c>compute</c> and <c>sessionPolicy</c> when submitting. Omitting the entire object retains the original runtime configuration.</td>
+        /// <td>runtime</td>
+        /// <td>Specify both compute and sessionPolicy when submitting. Omitting the entire object retains the original runtime configuration.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>tools</c>, <c>skills</c>, <c>promptVariables</c>, <c>subAgents</c></td>
-        /// <td>The corresponding lists are entirely replaced upon submission. You must include the items to be retained. Pass <c>[]</c> to clear the corresponding explicit lists.</td>
+        /// <td>tools, skills, promptVariables, subAgents</td>
+        /// <td>The corresponding list is entirely replaced upon submission and must include the items to be retained. Pass [] to clear the corresponding explicit list.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>environment</c></td>
+        /// <td>environment</td>
         /// <td>The variable list and credential reference list are entirely replaced respectively. Submit the items to be retained together.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>network</c></td>
-        /// <td>Specify both <c>accessInternet.enabled</c> and <c>accessVpc.enabled</c> when submitting.</td>
+        /// <td>network</td>
+        /// <td>Specify both accessInternet.enabled and accessVpc.enabled when submitting.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>ossMounts</c>, <c>agenticFsMounts</c></td>
-        /// <td>Entirely replaced respectively. Pass <c>[]</c> to clear the corresponding lists. <c>agenticFsMounts</c> does not accept <c>null</c>.</td>
+        /// <td>ossMounts, agenticFsMounts</td>
+        /// <td>Entirely replaced respectively. Pass [] to clear the corresponding list. agenticFsMounts does not accept null.</td>
         /// </tr>
         /// </tbody></table>
-        /// <h3>Harnesses, templates, and skills</h3>
+        /// <h3>Harness, templates, and skills</h3>
         /// <table>
         /// <thead>
         /// <tr>
@@ -30791,28 +32767,28 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td><c>qwenpaw</c></td>
-        /// <td>This type is used by default if <c>harness</c> is omitted during creation. Set <c>model.modelConnectionId</c> to the workspace model connection ID, and set <c>model.modelName</c> to the name of the model created under this connection.</td>
+        /// <td>qwenpaw</td>
+        /// <td>This type is used by default if harness is omitted during creation. Set model.modelConnectionId to the workspace model connection ID, and set model.modelName to the name of a model created under this connection.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>qodercli</c></td>
-        /// <td>The qodercli connector must be enabled in the workspace. Set <c>model.modelConnectionId</c> to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. <c>model.modelName</c> can be omitted.</td>
+        /// <td>qodercli</td>
+        /// <td>The qodercli connector must be enabled in the workspace. Set model.modelConnectionId to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. model.modelName can be omitted.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>harness</c> is an object, such as <c>{&quot;type&quot;:&quot;qwenpaw&quot;}</c>. For qodercli, set <c>harness.configuration.connectorServiceAccountKey</c> to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. This field can be omitted if there is only one key record, but must be specified if there are multiple records. <c>connectorServiceAccountName</c> is the account name. Do not specify these two binding fields for qwenpaw.</td>
+        /// <td>harness is an object, such as {&quot;type&quot;:&quot;qwenpaw&quot;}. For qodercli, set harness.configuration.connectorServiceAccountKey to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. This field can be omitted if there is only one key record, but must be specified if there are multiple records. connectorServiceAccountName is the account name. Do not specify these two binding fields for qwenpaw.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td><c>skills</c> uses the skill names in the workspace AI Registry. For <c>sourceType=REFERENCE</c>, reference the version by <c>versionSelector</c>: use <c>LABEL</c> with a tag name, or <c>VERSION</c> with a specific version number. If the selector is omitted, <c>LABEL/latest</c> is used. For <c>sourceType=STATIC</c>, static files bundled with the package are used, and no version selector is provided.</td>
+        /// <td>skills uses the skill names in the workspace AI Registry. For sourceType=REFERENCE, versions are referenced by versionSelector: use LABEL with a tag name, or VERSION with a specific version number. If the selector is omitted, LABEL/latest is used. For sourceType=STATIC, static files bundled with the package are used, and no version selector is provided.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>For <c>template.aiRegistry</c>, specify the agent template name and an optional version. If the version is omitted during creation, the published version is resolved and fixed. When a template is used, <c>instruction</c>, <c>promptVariables</c>, and <c>subAgents</c> are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions through <c>configuredSkills</c> and <c>skills</c>.</td>
+        /// <td>For template.aiRegistry, specify the agent template name and an optional version. If the version is omitted during creation, the published version is resolved and fixed. When a template is used, instruction, promptVariables, and subAgents are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions through configuredSkills and skills.</td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Elasticity and instances</h3>
-        /// <para>If <c>runtime</c> is committed but <c>hpa</c> or some of its fields are omitted, the following default values are used for unspecified items. To retain the existing elastic policy, commit the complete <c>hpa</c>.</para>
+        /// <para>If you commit runtime but omit hpa or some of its fields, the following default values are used for unspecified items. To retain the existing elastic policy, commit the complete hpa together.</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -30822,42 +32798,42 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td><c>enabled</c></td>
-        /// <td><c>false</c></td>
-        /// <td>Specifies whether elastic scaling is enabled.</td>
+        /// <td>enabled</td>
+        /// <td>false</td>
+        /// <td>Specifies whether to enable elastic scaling.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>minSandboxCount</c></td>
-        /// <td><c>1</c></td>
+        /// <td>minSandboxCount</td>
+        /// <td>1</td>
         /// <td>The minimum number of instances. Valid values: 0 to 100.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>maxSandboxCount</c></td>
-        /// <td><c>10</c></td>
+        /// <td>maxSandboxCount</td>
+        /// <td>10</td>
         /// <td>The maximum number of instances. Valid values: 0 to 100. The value cannot be less than the minimum number.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>maxConcurrentSessionsPerSandbox</c></td>
-        /// <td><c>20</c></td>
+        /// <td>maxConcurrentSessionsPerSandbox</td>
+        /// <td>20</td>
         /// <td>The maximum number of concurrent sessions per instance. Valid values: 1 to 20.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>sessionTtlSeconds</c></td>
-        /// <td><c>600</c></td>
+        /// <td>sessionTtlSeconds</td>
+        /// <td>600</td>
         /// <td>The maximum idle time of a session, in seconds. Valid values: 60 to 86400.</td>
         /// </tr>
         /// <tr>
-        /// <td>If you only modify instructions, models, or skills, you can omit the entire <c>runtime</c> to keep the original runtime configuration unchanged. The minimum and maximum numbers of instances are configuration borders. You can query the actual number through <c>sandboxPhaseCounts</c>.</td>
+        /// <td>If you only modify instructions, models, or skills, you can omit the entire runtime object, and the original runtime configuration remains unchanged. The minimum and maximum number of instances are configuration borders. You can query the actual number through sandboxPhaseCounts.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Environment and mounts</h3>
-        /// <para>Omitting the entire <c>environment</c> retains the original configuration. Submitting <c>environment={}</c> or <c>environment=null</c> clears the environment configuration. Environment variable values must be strings, and variable names must be non-empty and unique.
-        /// The total number of <c>ossMounts</c> and <c>agenticFsMounts</c> cannot exceed 10. The mount target <c>mountPath</c> uses an absolute path in the container, such as <c>/data/train</c>. It cannot conflict with platform reserved directories, and cannot be duplicated or form parent-child directory overwrites.
-        /// The <c>path</c> for OSS mounts must be a non-empty directory prefix in the bucket. For AgenticFS mounts, <c>server</c> is the access point domain name, without a protocol, port, or path. <c>path</c> is an existing non-empty relative directory in the access point. You cannot mount the root directory of the access point. If <c>readOnly</c> is omitted, the default value is <c>false</c>.</para>
+        /// <para>Omitting the entire environment object retains the original configuration. Submitting environment={} or environment=null clears the environment configuration. Environment variable values must be strings, and variable names must be non-empty and unique.
+        /// The total number of ossMounts and agenticFsMounts cannot exceed 10. The mount target mountPath uses an absolute path within the container, such as /data/train. It cannot conflict with platform reserved directories, and cannot be duplicated or form parent-child directory overrides.
+        /// The path for OSS mounts must be a non-empty directory prefix within the bucket. For AgenticFS mounts, server is the AccessPoint domain name, without a protocol, port, or path. path is an existing non-empty relative directory within the AccessPoint, and the root directory of the AccessPoint cannot be mounted. If readOnly is omitted, the default value is false.</para>
         /// <h3>Query update results</h3>
-        /// <para>A successful response indicates that the update request has been accepted. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query <c>latestSpecVersion</c>, <c>latestVersionStatus</c>, <c>status</c>, and <c>sandboxPhaseCounts</c> to confirm the configuration processing and instance status. <c>clientToken</c> does not provide idempotency guarantees at this time.</para>
+        /// <para>A successful response indicates that the update request has been accepted. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query latestSpecVersion, latestVersionStatus, status, and sandboxPhaseCounts to confirm the configuration processing and instance status. clientToken does not currently provide idempotency guarantees.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30876,14 +32852,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the model, instructions, skills, and runtime configuration of a managed Harness agent and executes the update asynchronously. Omitted top-level fields retain their original configurations.</para>
+        /// <para>Updates the model, instructions, skills, and runtime configuration of a managed Harness agent and executes the update asynchronously. Omitted top-level fields retain their original configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Updates the model, instructions, skills, or runtime configuration of a managed Harness agent to adjust the capabilities and runtime behavior of an existing agent.</para>
         /// <h3>Update rules</h3>
-        /// <para>Provide at least one updatable field. Omitted top-level fields retain their original configurations. You can set <c>description=null</c> to clear the description.</para>
+        /// <para>At least one updatable field must be provided. Omitted top-level fields retain their original configuration. You can set description=null to clear the description.</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -30892,35 +32868,35 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td><c>harness</c></td>
-        /// <td>The type cannot be changed. When updating the qodercli account binding, keep the original <c>type</c> and submit the corresponding <c>configuration</c>.</td>
+        /// <td>harness</td>
+        /// <td>The type cannot be changed. When updating the qodercli account binding, keep the original type and submit the corresponding configuration.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>model</c></td>
+        /// <td>model</td>
         /// <td>Provide a model configuration that matches the current Harness. For qwenpaw, specify the model connection ID and model name. For qodercli, use the available model identifier of the connector.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>runtime</c></td>
-        /// <td>Specify both <c>compute</c> and <c>sessionPolicy</c> when submitting. Omitting the entire object retains the original runtime configuration.</td>
+        /// <td>runtime</td>
+        /// <td>Specify both compute and sessionPolicy when submitting. Omitting the entire object retains the original runtime configuration.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>tools</c>, <c>skills</c>, <c>promptVariables</c>, <c>subAgents</c></td>
-        /// <td>The corresponding lists are entirely replaced upon submission. You must include the items to be retained. Pass <c>[]</c> to clear the corresponding explicit lists.</td>
+        /// <td>tools, skills, promptVariables, subAgents</td>
+        /// <td>The corresponding list is entirely replaced upon submission and must include the items to be retained. Pass [] to clear the corresponding explicit list.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>environment</c></td>
+        /// <td>environment</td>
         /// <td>The variable list and credential reference list are entirely replaced respectively. Submit the items to be retained together.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>network</c></td>
-        /// <td>Specify both <c>accessInternet.enabled</c> and <c>accessVpc.enabled</c> when submitting.</td>
+        /// <td>network</td>
+        /// <td>Specify both accessInternet.enabled and accessVpc.enabled when submitting.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>ossMounts</c>, <c>agenticFsMounts</c></td>
-        /// <td>Entirely replaced respectively. Pass <c>[]</c> to clear the corresponding lists. <c>agenticFsMounts</c> does not accept <c>null</c>.</td>
+        /// <td>ossMounts, agenticFsMounts</td>
+        /// <td>Entirely replaced respectively. Pass [] to clear the corresponding list. agenticFsMounts does not accept null.</td>
         /// </tr>
         /// </tbody></table>
-        /// <h3>Harnesses, templates, and skills</h3>
+        /// <h3>Harness, templates, and skills</h3>
         /// <table>
         /// <thead>
         /// <tr>
@@ -30929,28 +32905,28 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td><c>qwenpaw</c></td>
-        /// <td>This type is used by default if <c>harness</c> is omitted during creation. Set <c>model.modelConnectionId</c> to the workspace model connection ID, and set <c>model.modelName</c> to the name of the model created under this connection.</td>
+        /// <td>qwenpaw</td>
+        /// <td>This type is used by default if harness is omitted during creation. Set model.modelConnectionId to the workspace model connection ID, and set model.modelName to the name of a model created under this connection.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>qodercli</c></td>
-        /// <td>The qodercli connector must be enabled in the workspace. Set <c>model.modelConnectionId</c> to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. <c>model.modelName</c> can be omitted.</td>
+        /// <td>qodercli</td>
+        /// <td>The qodercli connector must be enabled in the workspace. Set model.modelConnectionId to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. model.modelName can be omitted.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>harness</c> is an object, such as <c>{&quot;type&quot;:&quot;qwenpaw&quot;}</c>. For qodercli, set <c>harness.configuration.connectorServiceAccountKey</c> to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. This field can be omitted if there is only one key record, but must be specified if there are multiple records. <c>connectorServiceAccountName</c> is the account name. Do not specify these two binding fields for qwenpaw.</td>
+        /// <td>harness is an object, such as {&quot;type&quot;:&quot;qwenpaw&quot;}. For qodercli, set harness.configuration.connectorServiceAccountKey to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. This field can be omitted if there is only one key record, but must be specified if there are multiple records. connectorServiceAccountName is the account name. Do not specify these two binding fields for qwenpaw.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td><c>skills</c> uses the skill names in the workspace AI Registry. For <c>sourceType=REFERENCE</c>, reference the version by <c>versionSelector</c>: use <c>LABEL</c> with a tag name, or <c>VERSION</c> with a specific version number. If the selector is omitted, <c>LABEL/latest</c> is used. For <c>sourceType=STATIC</c>, static files bundled with the package are used, and no version selector is provided.</td>
+        /// <td>skills uses the skill names in the workspace AI Registry. For sourceType=REFERENCE, versions are referenced by versionSelector: use LABEL with a tag name, or VERSION with a specific version number. If the selector is omitted, LABEL/latest is used. For sourceType=STATIC, static files bundled with the package are used, and no version selector is provided.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>For <c>template.aiRegistry</c>, specify the agent template name and an optional version. If the version is omitted during creation, the published version is resolved and fixed. When a template is used, <c>instruction</c>, <c>promptVariables</c>, and <c>subAgents</c> are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions through <c>configuredSkills</c> and <c>skills</c>.</td>
+        /// <td>For template.aiRegistry, specify the agent template name and an optional version. If the version is omitted during creation, the published version is resolved and fixed. When a template is used, instruction, promptVariables, and subAgents are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions through configuredSkills and skills.</td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Elasticity and instances</h3>
-        /// <para>If <c>runtime</c> is committed but <c>hpa</c> or some of its fields are omitted, the following default values are used for unspecified items. To retain the existing elastic policy, commit the complete <c>hpa</c>.</para>
+        /// <para>If you commit runtime but omit hpa or some of its fields, the following default values are used for unspecified items. To retain the existing elastic policy, commit the complete hpa together.</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -30960,42 +32936,42 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td><c>enabled</c></td>
-        /// <td><c>false</c></td>
-        /// <td>Specifies whether elastic scaling is enabled.</td>
+        /// <td>enabled</td>
+        /// <td>false</td>
+        /// <td>Specifies whether to enable elastic scaling.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>minSandboxCount</c></td>
-        /// <td><c>1</c></td>
+        /// <td>minSandboxCount</td>
+        /// <td>1</td>
         /// <td>The minimum number of instances. Valid values: 0 to 100.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>maxSandboxCount</c></td>
-        /// <td><c>10</c></td>
+        /// <td>maxSandboxCount</td>
+        /// <td>10</td>
         /// <td>The maximum number of instances. Valid values: 0 to 100. The value cannot be less than the minimum number.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>maxConcurrentSessionsPerSandbox</c></td>
-        /// <td><c>20</c></td>
+        /// <td>maxConcurrentSessionsPerSandbox</td>
+        /// <td>20</td>
         /// <td>The maximum number of concurrent sessions per instance. Valid values: 1 to 20.</td>
         /// </tr>
         /// <tr>
-        /// <td><c>sessionTtlSeconds</c></td>
-        /// <td><c>600</c></td>
+        /// <td>sessionTtlSeconds</td>
+        /// <td>600</td>
         /// <td>The maximum idle time of a session, in seconds. Valid values: 60 to 86400.</td>
         /// </tr>
         /// <tr>
-        /// <td>If you only modify instructions, models, or skills, you can omit the entire <c>runtime</c> to keep the original runtime configuration unchanged. The minimum and maximum numbers of instances are configuration borders. You can query the actual number through <c>sandboxPhaseCounts</c>.</td>
+        /// <td>If you only modify instructions, models, or skills, you can omit the entire runtime object, and the original runtime configuration remains unchanged. The minimum and maximum number of instances are configuration borders. You can query the actual number through sandboxPhaseCounts.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Environment and mounts</h3>
-        /// <para>Omitting the entire <c>environment</c> retains the original configuration. Submitting <c>environment={}</c> or <c>environment=null</c> clears the environment configuration. Environment variable values must be strings, and variable names must be non-empty and unique.
-        /// The total number of <c>ossMounts</c> and <c>agenticFsMounts</c> cannot exceed 10. The mount target <c>mountPath</c> uses an absolute path in the container, such as <c>/data/train</c>. It cannot conflict with platform reserved directories, and cannot be duplicated or form parent-child directory overwrites.
-        /// The <c>path</c> for OSS mounts must be a non-empty directory prefix in the bucket. For AgenticFS mounts, <c>server</c> is the access point domain name, without a protocol, port, or path. <c>path</c> is an existing non-empty relative directory in the access point. You cannot mount the root directory of the access point. If <c>readOnly</c> is omitted, the default value is <c>false</c>.</para>
+        /// <para>Omitting the entire environment object retains the original configuration. Submitting environment={} or environment=null clears the environment configuration. Environment variable values must be strings, and variable names must be non-empty and unique.
+        /// The total number of ossMounts and agenticFsMounts cannot exceed 10. The mount target mountPath uses an absolute path within the container, such as /data/train. It cannot conflict with platform reserved directories, and cannot be duplicated or form parent-child directory overrides.
+        /// The path for OSS mounts must be a non-empty directory prefix within the bucket. For AgenticFS mounts, server is the AccessPoint domain name, without a protocol, port, or path. path is an existing non-empty relative directory within the AccessPoint, and the root directory of the AccessPoint cannot be mounted. If readOnly is omitted, the default value is false.</para>
         /// <h3>Query update results</h3>
-        /// <para>A successful response indicates that the update request has been accepted. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query <c>latestSpecVersion</c>, <c>latestVersionStatus</c>, <c>status</c>, and <c>sandboxPhaseCounts</c> to confirm the configuration processing and instance status. <c>clientToken</c> does not provide idempotency guarantees at this time.</para>
+        /// <para>A successful response indicates that the update request has been accepted. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query latestSpecVersion, latestVersionStatus, status, and sandboxPhaseCounts to confirm the configuration processing and instance status. clientToken does not currently provide idempotency guarantees.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31374,12 +33350,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the long-term memory text or metadata based on the memory ID.</para>
+        /// <para>Updates the content or metadata of a specified memory. At least one field must be provided for the update, and unprovided fields retain their original values. The metadata is fully replaced. Pass an empty object to clear the metadata.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the long-term memory text or metadata based on the memory ID.</para>
+        /// <para>Updates the text or metadata of a long-term memory based on the memory ID.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -31431,12 +33407,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the long-term memory text or metadata based on the memory ID.</para>
+        /// <para>Updates the content or metadata of a specified memory. At least one field must be provided for the update, and unprovided fields retain their original values. The metadata is fully replaced. Pass an empty object to clear the metadata.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the long-term memory text or metadata based on the memory ID.</para>
+        /// <para>Updates the text or metadata of a long-term memory based on the memory ID.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -31488,12 +33464,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the long-term memory text or metadata based on the memory ID.</para>
+        /// <para>Updates the content or metadata of a specified memory. At least one field must be provided for the update, and unprovided fields retain their original values. The metadata is fully replaced. Pass an empty object to clear the metadata.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the long-term memory text or metadata based on the memory ID.</para>
+        /// <para>Updates the text or metadata of a long-term memory based on the memory ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31512,12 +33488,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the long-term memory text or metadata based on the memory ID.</para>
+        /// <para>Updates the content or metadata of a specified memory. At least one field must be provided for the update, and unprovided fields retain their original values. The metadata is fully replaced. Pass an empty object to clear the metadata.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the long-term memory text or metadata based on the memory ID.</para>
+        /// <para>Updates the text or metadata of a long-term memory based on the memory ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31532,6 +33508,168 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateMemoryWithOptionsAsync(workspaceId, memoryStoreName, memoryId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the name, description, enabled status, or extraction strategy of a memory rule. You must specify at least one field to update. Unspecified fields retain their original values.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the name, description, enabled status, or extraction strategy of a memory rule. You must specify at least one field to update. Unspecified fields retain their original values.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateMemoryRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMemoryRuleResponse
+        /// </returns>
+        public UpdateMemoryRuleResponse UpdateMemoryRuleWithOptions(string workspaceId, string memoryStoreName, string ruleId, UpdateMemoryRuleRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateMemoryRuleShrinkRequest request = new UpdateMemoryRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMemoryRule",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/memorystores/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory-rules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ruleId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMemoryRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the name, description, enabled status, or extraction strategy of a memory rule. You must specify at least one field to update. Unspecified fields retain their original values.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the name, description, enabled status, or extraction strategy of a memory rule. You must specify at least one field to update. Unspecified fields retain their original values.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateMemoryRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMemoryRuleResponse
+        /// </returns>
+        public async Task<UpdateMemoryRuleResponse> UpdateMemoryRuleWithOptionsAsync(string workspaceId, string memoryStoreName, string ruleId, UpdateMemoryRuleRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateMemoryRuleShrinkRequest request = new UpdateMemoryRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMemoryRule",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/memorystores/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory-rules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ruleId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMemoryRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the name, description, enabled status, or extraction strategy of a memory rule. You must specify at least one field to update. Unspecified fields retain their original values.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the name, description, enabled status, or extraction strategy of a memory rule. You must specify at least one field to update. Unspecified fields retain their original values.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateMemoryRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMemoryRuleResponse
+        /// </returns>
+        public UpdateMemoryRuleResponse UpdateMemoryRule(string workspaceId, string memoryStoreName, string ruleId, UpdateMemoryRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateMemoryRuleWithOptions(workspaceId, memoryStoreName, ruleId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the name, description, enabled status, or extraction strategy of a memory rule. You must specify at least one field to update. Unspecified fields retain their original values.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the name, description, enabled status, or extraction strategy of a memory rule. You must specify at least one field to update. Unspecified fields retain their original values.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateMemoryRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMemoryRuleResponse
+        /// </returns>
+        public async Task<UpdateMemoryRuleResponse> UpdateMemoryRuleAsync(string workspaceId, string memoryStoreName, string ruleId, UpdateMemoryRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateMemoryRuleWithOptionsAsync(workspaceId, memoryStoreName, ruleId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -32094,6 +34232,180 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateModelConnectionWithOptionsAsync(workspaceId, connectionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a service endpoint.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the name, attached version, authentication method, or elastic policy of a service endpoint. The top-level agentVersion is used to reattach the runtime source of the service endpoint. Router service endpoints and DEFAULT service endpoints of the GATEWAY_API_WITH_VPC_INGRESS or GATEWAY_API_WITH_PUBLIC_INGRESS type support independent operation. Reattaching or changing the elastic policy triggers an independent deployment of the service endpoint. DEFAULT service endpoints of the GATEWAY_API type support reattaching the agentVersion to switch to the target version within the namespace of the original gateway runtime instance. If the original gateway runtime instance is inactive, ServiceEndpointTargetNotReady is returned. This type does not support elastic policy updates. If updateElasticity is set to true, InvalidParameter is returned, and the elastic policy inherits the configuration of the attached version. When a DEFAULT service endpoint is reattached from latest to another version, if the same agent still has a service endpoint attached to latest that is not running independently, Operation.Conflict is returned. Runtimes with the same target and normalized configuration are not repeatedly published. An explicit commit can trigger the initial initialization or a retry of a failed node. A successful response does not indicate that the deployment is complete. You must check the status of the service endpoint to confirm the deployment status.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateServiceEndpointRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateServiceEndpointResponse
+        /// </returns>
+        public UpdateServiceEndpointResponse UpdateServiceEndpointWithOptions(string workspaceId, string serviceEndpointId, UpdateServiceEndpointRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateServiceEndpointShrinkRequest request = new UpdateServiceEndpointShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateServiceEndpoint",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/service-endpoints/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceEndpointId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateServiceEndpointResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a service endpoint.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the name, attached version, authentication method, or elastic policy of a service endpoint. The top-level agentVersion is used to reattach the runtime source of the service endpoint. Router service endpoints and DEFAULT service endpoints of the GATEWAY_API_WITH_VPC_INGRESS or GATEWAY_API_WITH_PUBLIC_INGRESS type support independent operation. Reattaching or changing the elastic policy triggers an independent deployment of the service endpoint. DEFAULT service endpoints of the GATEWAY_API type support reattaching the agentVersion to switch to the target version within the namespace of the original gateway runtime instance. If the original gateway runtime instance is inactive, ServiceEndpointTargetNotReady is returned. This type does not support elastic policy updates. If updateElasticity is set to true, InvalidParameter is returned, and the elastic policy inherits the configuration of the attached version. When a DEFAULT service endpoint is reattached from latest to another version, if the same agent still has a service endpoint attached to latest that is not running independently, Operation.Conflict is returned. Runtimes with the same target and normalized configuration are not repeatedly published. An explicit commit can trigger the initial initialization or a retry of a failed node. A successful response does not indicate that the deployment is complete. You must check the status of the service endpoint to confirm the deployment status.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateServiceEndpointRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateServiceEndpointResponse
+        /// </returns>
+        public async Task<UpdateServiceEndpointResponse> UpdateServiceEndpointWithOptionsAsync(string workspaceId, string serviceEndpointId, UpdateServiceEndpointRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateServiceEndpointShrinkRequest request = new UpdateServiceEndpointShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateServiceEndpoint",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/service-endpoints/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceEndpointId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateServiceEndpointResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a service endpoint.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the name, attached version, authentication method, or elastic policy of a service endpoint. The top-level agentVersion is used to reattach the runtime source of the service endpoint. Router service endpoints and DEFAULT service endpoints of the GATEWAY_API_WITH_VPC_INGRESS or GATEWAY_API_WITH_PUBLIC_INGRESS type support independent operation. Reattaching or changing the elastic policy triggers an independent deployment of the service endpoint. DEFAULT service endpoints of the GATEWAY_API type support reattaching the agentVersion to switch to the target version within the namespace of the original gateway runtime instance. If the original gateway runtime instance is inactive, ServiceEndpointTargetNotReady is returned. This type does not support elastic policy updates. If updateElasticity is set to true, InvalidParameter is returned, and the elastic policy inherits the configuration of the attached version. When a DEFAULT service endpoint is reattached from latest to another version, if the same agent still has a service endpoint attached to latest that is not running independently, Operation.Conflict is returned. Runtimes with the same target and normalized configuration are not repeatedly published. An explicit commit can trigger the initial initialization or a retry of a failed node. A successful response does not indicate that the deployment is complete. You must check the status of the service endpoint to confirm the deployment status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateServiceEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateServiceEndpointResponse
+        /// </returns>
+        public UpdateServiceEndpointResponse UpdateServiceEndpoint(string workspaceId, string serviceEndpointId, UpdateServiceEndpointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateServiceEndpointWithOptions(workspaceId, serviceEndpointId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a service endpoint.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the name, attached version, authentication method, or elastic policy of a service endpoint. The top-level agentVersion is used to reattach the runtime source of the service endpoint. Router service endpoints and DEFAULT service endpoints of the GATEWAY_API_WITH_VPC_INGRESS or GATEWAY_API_WITH_PUBLIC_INGRESS type support independent operation. Reattaching or changing the elastic policy triggers an independent deployment of the service endpoint. DEFAULT service endpoints of the GATEWAY_API type support reattaching the agentVersion to switch to the target version within the namespace of the original gateway runtime instance. If the original gateway runtime instance is inactive, ServiceEndpointTargetNotReady is returned. This type does not support elastic policy updates. If updateElasticity is set to true, InvalidParameter is returned, and the elastic policy inherits the configuration of the attached version. When a DEFAULT service endpoint is reattached from latest to another version, if the same agent still has a service endpoint attached to latest that is not running independently, Operation.Conflict is returned. Runtimes with the same target and normalized configuration are not repeatedly published. An explicit commit can trigger the initial initialization or a retry of a failed node. A successful response does not indicate that the deployment is complete. You must check the status of the service endpoint to confirm the deployment status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateServiceEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateServiceEndpointResponse
+        /// </returns>
+        public async Task<UpdateServiceEndpointResponse> UpdateServiceEndpointAsync(string workspaceId, string serviceEndpointId, UpdateServiceEndpointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateServiceEndpointWithOptionsAsync(workspaceId, serviceEndpointId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
