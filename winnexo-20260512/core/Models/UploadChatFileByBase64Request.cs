@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class UploadChatFileByBase64Request : TeaModel {
         /// <summary>
-        /// <para>文件 MIME 类型（可选，不传时按 application/octet-stream 处理）</para>
+        /// <para>The MIME type of the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>application/pdf</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ContentType { get; set; }
 
         /// <summary>
-        /// <para>标准 Base64 文件内容，不含 data URI 前缀</para>
+        /// <para>The Base64-encoded string of the file content.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FileContentBase64 { get; set; }
 
         /// <summary>
-        /// <para>原始文件名（含后缀）</para>
+        /// <para>The file name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

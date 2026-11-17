@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ContentType { get; set; }
 
         /// <summary>
-        /// <para>作为本轮上下文引用的消息或文件条目</para>
+        /// <para>The message or file entries referenced as context for the current turn.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>
@@ -41,17 +41,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<SendChatMessageRequestContextItems> ContextItems { get; set; }
         public class SendChatMessageRequestContextItems : TeaModel {
             /// <summary>
-            /// <para>用户对引用内容的批注</para>
+            /// <para>The user annotation for the referenced content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>请核对华东区数据</para>
+            /// <para>Please verify the data for the East China region</para>
             /// </summary>
             [NameInMap("annotation")]
             [Validation(Required=false)]
             public string Annotation { get; set; }
 
             /// <summary>
-            /// <para>批注关联的文件列表</para>
+            /// <para>The list of files associated with the annotation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[]</para>
@@ -61,17 +61,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<SendChatMessageRequestContextItemsAnnotationFiles> AnnotationFiles { get; set; }
             public class SendChatMessageRequestContextItemsAnnotationFiles : TeaModel {
                 /// <summary>
-                /// <para>文件名称</para>
+                /// <para>The file name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>补充说明.pdf</para>
+                /// <para>Supplementary notes.pdf</para>
                 /// </summary>
                 [NameInMap("fileName")]
                 [Validation(Required=false)]
                 public string FileName { get; set; }
 
                 /// <summary>
-                /// <para>文件公开访问地址</para>
+                /// <para>The public access URL of the file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example.com/public/file">https://example.com/public/file</a></para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string FilePublicUrl { get; set; }
 
                 /// <summary>
-                /// <para>文件记录 ID</para>
+                /// <para>The file record ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>exampleFileRecordId</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string FileRecordId { get; set; }
 
                 /// <summary>
-                /// <para>文件内部访问地址</para>
+                /// <para>The internal access URL of the file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example.com/file">https://example.com/file</a></para>
@@ -103,17 +103,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             }
 
             /// <summary>
-            /// <para>被引用内容正文</para>
+            /// <para>The body of the referenced content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>本月销售收入</para>
+            /// <para>Sales revenue for this month</para>
             /// </summary>
             [NameInMap("content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>被引用文件 ID</para>
+            /// <para>The ID of the referenced file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleFileId</para>
@@ -123,17 +123,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string FileId { get; set; }
 
             /// <summary>
-            /// <para>被引用文件名称</para>
+            /// <para>The name of the referenced file.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>销售数据.xlsx</para>
+            /// <para>Sales data.xlsx</para>
             /// </summary>
             [NameInMap("fileName")]
             [Validation(Required=false)]
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>被引用文件类型</para>
+            /// <para>The type of the referenced file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xlsx</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string FileType { get; set; }
 
             /// <summary>
-            /// <para>被引用消息 ID</para>
+            /// <para>The ID of the referenced message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleMessageId</para>
@@ -153,17 +153,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string MessageId { get; set; }
 
             /// <summary>
-            /// <para>消息发送者名称</para>
+            /// <para>The name of the message sender.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>销售助手</para>
+            /// <para>Sales Assistant</para>
             /// </summary>
             [NameInMap("senderName")]
             [Validation(Required=false)]
             public string SenderName { get; set; }
 
             /// <summary>
-            /// <para>上下文条目类型</para>
+            /// <para>The context entry type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>message_annotation</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> DigitalEmployeeName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the direct connection mode. If this parameter is set to true, the regular scenario routing is skipped and the direct connection conversation scenario is directly entered.</para>
+        /// <para>Specifies whether to enable direct connection mode. If set to true, regular scenario routing is skipped and the direct conversation scenario is entered directly.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? DirectChat { get; set; }
 
         /// <summary>
-        /// <para>本轮携带的最近完整 direct 问答轮数，不含本轮输入。仅 workMode=direct 或 directChat=true 时生效。有效值为 0–100 的 JSON 整数，省略时由后端按 0 处理，不携带历史但仍保存当前轮。null、布尔值、字符串、小数及越界值按原 direct 路径处理，网关保留原始值供后端判定。work/ask 忽略此字段。该参数不限制转换为 work 时的历史范围</para>
+        /// <para>The number of recent complete direct Q&amp;A rounds carried in the current turn, excluding the input of the current turn. This parameter takes effect only when workMode is set to direct or directChat is set to true. Valid values: JSON integers from 0 to 100. If omitted, the backend processes it as 0, carrying no history but still saving the current turn. Null, Boolean, string, decimal, and out-of-bounds values are processed through the original direct path, and the gateway retains the original values for backend determination. This field is ignored in work and ask modes. This parameter does not limit the history range when converted to the work mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>本轮语言，可选 zh-CN、en-US，用于接口错误文案并透传给 CodeAgent；省略时沿用当前语言行为，不修改用户设置</para>
+        /// <para>The language for the current turn. Valid values: zh-CN and en-US. This parameter is used for API error messages and passed through to CodeAgent. If omitted, the current language behavior is retained and user settings are not modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en-US</para>
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Locale { get; set; }
 
         /// <summary>
-        /// <para>The abstract model tier. Valid values: quick, standard, and flagship. If this parameter is not specified, standard is used for new sessions, and the current tier is used for existing sessions.</para>
+        /// <para>The abstract model tier. Valid values: quick, standard, and flagship. If omitted, standard is used for new sessions, and the current tier is retained for existing sessions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>quick</para>
@@ -275,7 +275,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? ReuseLastSession { get; set; }
 
         /// <summary>
-        /// <para>消息中的结构化片段，例如会话或对象提及</para>
+        /// <para>The structured segments in the message, such as session or object mentions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>
@@ -285,17 +285,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<SendChatMessageRequestSegments> Segments { get; set; }
         public class SendChatMessageRequestSegments : TeaModel {
             /// <summary>
-            /// <para>片段展示内容</para>
+            /// <para>The display content of the segment.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>旧会话</para>
+            /// <para>Previous session</para>
             /// </summary>
             [NameInMap("content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>提及对象类别</para>
+            /// <para>The category of the mentioned object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>conversations</para>
@@ -305,17 +305,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string MentionType { get; set; }
 
             /// <summary>
-            /// <para>被引用对象名称</para>
+            /// <para>The name of the referenced object.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>旧会话</para>
+            /// <para>Previous session</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>被引用对象 ID</para>
+            /// <para>The ID of the referenced object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleObjectId</para>
@@ -325,7 +325,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ObjectId { get; set; }
 
             /// <summary>
-            /// <para>被引用对象类型</para>
+            /// <para>The object type of the referenced object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>conversation</para>
@@ -335,7 +335,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ObjectType { get; set; }
 
             /// <summary>
-            /// <para>会话类型</para>
+            /// <para>The session type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>personal</para>
@@ -345,7 +345,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SessionType { get; set; }
 
             /// <summary>
-            /// <para>片段类型</para>
+            /// <para>The segment type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mention</para>
@@ -367,7 +367,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable streaming output.</para>
+        /// <para>Specifies whether streaming output is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -377,7 +377,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? Stream { get; set; }
 
         /// <summary>
-        /// <para>The task execution metadata returned by executeScheduledTask. If this parameter is passed, the request is processed according to the task execution link.</para>
+        /// <para>The task execution metadata returned by executeScheduledTask. If passed, the request is processed through the task execution pipeline.</para>
         /// </summary>
         [NameInMap("taskExecution")]
         [Validation(Required=false)]
@@ -415,7 +415,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ExecutionId { get; set; }
 
             /// <summary>
-            /// <para>The name of the digital employee.</para>
+            /// <para>The digital employee name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -498,7 +498,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>The session work mode. Valid values: ask (quick Q&amp;A, which trims tools, skills, and connectors for single-turn direct answers), work (deep work, which is the default value), and direct (direct connection mode at the request level, which does not start the sandbox and prevents context pollution, equivalent to directChat=true). The ask and work modes are at the session level. The mode is fixed when a new session is created. Subsequent chats inherit the session mode by default. If the explicitly passed value is inconsistent with the session mode, a parameter error is returned. To switch the mode, create a new session or fork the session. If ask is passed in the multi-digital employee or task execution scenario, it takes effect as work. If directChat is set to true, this parameter is ignored.</para>
+        /// <para>The session work mode. Valid values: ask (quick Q&amp;A, which trims tools, skills, and connectors for single-turn direct answers), work (deep work, which is the default), and direct (direct connection mode at the request level, which does not start a sandbox and prevents context pollution, equivalent to directChat=true). The ask and work modes are session-level. The mode is fixed when a new session is created. Subsequent chats inherit the session mode by default. If the explicitly passed value is inconsistent with the session mode, a parameter error is returned. To switch modes, create a new session or fork the session. If ask is passed in multi-digital employee or task execution scenarios, it takes effect as work. This parameter is ignored when directChat is set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>work</para>

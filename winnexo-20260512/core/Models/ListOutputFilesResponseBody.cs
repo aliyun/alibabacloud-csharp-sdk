@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The name of the digital worker (operating object).</para>
+            /// <para>The name of the digital employee (operating object).</para>
             /// 
             /// <b>Example:</b>
             /// <para>Business Analysis Assistant</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The email information. This field is available only when the item type is email.</para>
+                /// <para>The email information. This field is present when the item type is email.</para>
                 /// </summary>
                 [NameInMap("emailInfo")]
                 [Validation(Required=false)]
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 }
 
                 /// <summary>
-                /// <para>The file information. This field is available only when the item type is file.</para>
+                /// <para>The file information. This field is present when the item type is file.</para>
                 /// </summary>
                 [NameInMap("fileInfo")]
                 [Validation(Required=false)]
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                     /// <para>The file description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Analysis report on quarterly revenue, costs, and trends</para>
+                    /// <para>Quarterly revenue, cost, and trend analysis report</para>
                     /// </summary>
                     [NameInMap("description")]
                     [Validation(Required=false)]
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The file download link. For versioned files, it is bound to the published version and content revision at the time of query. The link has a validity period. If it expires, query the list again to obtain a new link.</para>
+                    /// <para>The file download URL. For versioned files, it is bound to the published version and content revision at the time of query. The URL has a time-to-live (TTL). If it expires, query the list again to obtain a new URL.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="https://winnexo.agentone.console.aliyun.com/api/v1/output-preview/demo_download_ticket/download">https://winnexo.agentone.console.aliyun.com/api/v1/output-preview/demo_download_ticket/download</a></para>
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string OutputItemId { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether sharing is enabled.</para>
+                /// <para>Specifies whether sharing is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public bool? ShareEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The share token. This field is present when sharing is enabled and can be used to access the public share preview API.</para>
+                /// <para>The share token, which is present when sharing is enabled and can be used to access the public share preview API.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>demo_public_preview_token</para>

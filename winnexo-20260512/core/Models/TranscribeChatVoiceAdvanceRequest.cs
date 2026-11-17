@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <list type="bullet">
         /// <item><description><b>image</b>: Image.</description></item>
         /// <item><description><b>document</b>: General document.</description></item>
-        /// <item><description><b>alidoc</b>: Alibaba Cloud document.</description></item>
+        /// <item><description><b>alidoc</b>: AliDoc.</description></item>
         /// <item><description><b>text</b>: Text.</description></item>
         /// <item><description><b>video</b>: Video.</description></item>
         /// <item><description><b>audio</b>: Audio.</description></item>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ContentType { get; set; }
 
         /// <summary>
-        /// <para>标准 Base64 音频内容，不含 data URI 前缀，与 FileUrl 二选一</para>
+        /// <para>The standard Base64-encoded audio content, excluding the data URI prefix. This parameter and FileUrl are mutually exclusive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UklGRg==</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FileContentBase64 { get; set; }
 
         /// <summary>
-        /// <para>The full path name of the file.</para>
+        /// <para>The full path and name of the file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public Stream FileUrlObject { get; set; }
 
         /// <summary>
-        /// <para>The ID of the tenant for which the operation takes effect.</para>
+        /// <para>The ID of the tenant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

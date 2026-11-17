@@ -1,3 +1,6 @@
+2026-11-17 Version: 1.9.1
+- Generated csharp 2026-05-12 for WinNexo.
+
 2026-11-17 Version: 1.9.0
 - Support API ConvertDirectConversationToWork.
 - Support API GetScheduledTaskConversationRecords.

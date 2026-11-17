@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class UpdateScheduledTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. A value of 200 indicates success. A failure returns a backend error code (ERR.* or InvalidParameter.*).</para>
+        /// <para>The business status code. A value of 200 indicates success. A value of a backend error code such as ERR.* or InvalidParameter.* indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error description. Empty when the request is successful.</para>
+        /// <para>The error message. This parameter is empty when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request trace ID.</para>
+        /// <para>The request tracking ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task ID (echoed back).</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleTaskId</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether an actual update was made.</para>
+        /// <para>Specifies whether an actual update is performed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -2251,12 +2251,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将 direct 会话转换为 work 会话</para>
+        /// <para>Converts a direct session to a work session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>将源会话当前有效、已完成的 direct 模型历史冻结并复制为新的 work 会话，源会话保留。混合会话仅转换 direct 历史，不补入普通 work 历史或只有展示记录的旧历史；转换范围不受 directMaxHistoryRounds 限制。转换本身不发起聊天或运行 Skill。对同一源会话重复调用用于查询或继续同一转换，最多产生一个成功目标，成功后始终返回原目标，源后续消息不自动同步。仅 status=succeeded 表示目标已可使用；processing 时继续使用同一源 sessionId 查询，不能向尚未就绪的目标发送消息、Fork 或分享。源正在生成时返回 SourceBusy，无有效模型历史时返回 NoConvertibleHistory，已成功的目标被删除或历史不可恢复时返回 ConvertedTargetUnavailable，不重建目标。仅允许本人可操作且具备 work 权限的普通会话，拒绝 group_shared、task_follow_up、skill_follow_up、skill_output_backfill 等受限来源；后台查看权不授予转换权。</para>
+        /// <para>Freezes the currently valid and completed direct model history of the source session and performs replication into a new work session, while retaining the source session. For hybrid sessions, only the direct history is transformed, and ordinary work history or old history containing only display records is not included. The transform scope is not limited by directMaxHistoryRounds. The transform itself does not initiate a chat or run a skill. To query or continue the same transform, invoke the operation repeatedly for the same source session, producing at most one successful target. Upon success, the original target is always returned, and no automatic synchronization applies to subsequent messages in the source session. Only status=succeeded indicates that the target is ready for use. When the status is processing, continue querying with the same source sessionId. You cannot send messages to, fork, or share a target that is not yet ready. SourceBusy is returned if the source session is currently generating content. NoConvertibleHistory is returned if there is no valid model history. ConvertedTargetUnavailable is returned if a previously successful target is deleted or its history is unrecoverable, and the target is not rebuilt. Only ordinary sessions that the user can operate and that have work permissions are allowed. Access control rules deny restricted sources such as group_shared, task_follow_up, skill_follow_up, and skill_output_backfill. Background view permissions do not grant transform rights.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2308,12 +2308,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将 direct 会话转换为 work 会话</para>
+        /// <para>Converts a direct session to a work session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>将源会话当前有效、已完成的 direct 模型历史冻结并复制为新的 work 会话，源会话保留。混合会话仅转换 direct 历史，不补入普通 work 历史或只有展示记录的旧历史；转换范围不受 directMaxHistoryRounds 限制。转换本身不发起聊天或运行 Skill。对同一源会话重复调用用于查询或继续同一转换，最多产生一个成功目标，成功后始终返回原目标，源后续消息不自动同步。仅 status=succeeded 表示目标已可使用；processing 时继续使用同一源 sessionId 查询，不能向尚未就绪的目标发送消息、Fork 或分享。源正在生成时返回 SourceBusy，无有效模型历史时返回 NoConvertibleHistory，已成功的目标被删除或历史不可恢复时返回 ConvertedTargetUnavailable，不重建目标。仅允许本人可操作且具备 work 权限的普通会话，拒绝 group_shared、task_follow_up、skill_follow_up、skill_output_backfill 等受限来源；后台查看权不授予转换权。</para>
+        /// <para>Freezes the currently valid and completed direct model history of the source session and performs replication into a new work session, while retaining the source session. For hybrid sessions, only the direct history is transformed, and ordinary work history or old history containing only display records is not included. The transform scope is not limited by directMaxHistoryRounds. The transform itself does not initiate a chat or run a skill. To query or continue the same transform, invoke the operation repeatedly for the same source session, producing at most one successful target. Upon success, the original target is always returned, and no automatic synchronization applies to subsequent messages in the source session. Only status=succeeded indicates that the target is ready for use. When the status is processing, continue querying with the same source sessionId. You cannot send messages to, fork, or share a target that is not yet ready. SourceBusy is returned if the source session is currently generating content. NoConvertibleHistory is returned if there is no valid model history. ConvertedTargetUnavailable is returned if a previously successful target is deleted or its history is unrecoverable, and the target is not rebuilt. Only ordinary sessions that the user can operate and that have work permissions are allowed. Access control rules deny restricted sources such as group_shared, task_follow_up, skill_follow_up, and skill_output_backfill. Background view permissions do not grant transform rights.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2365,12 +2365,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将 direct 会话转换为 work 会话</para>
+        /// <para>Converts a direct session to a work session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>将源会话当前有效、已完成的 direct 模型历史冻结并复制为新的 work 会话，源会话保留。混合会话仅转换 direct 历史，不补入普通 work 历史或只有展示记录的旧历史；转换范围不受 directMaxHistoryRounds 限制。转换本身不发起聊天或运行 Skill。对同一源会话重复调用用于查询或继续同一转换，最多产生一个成功目标，成功后始终返回原目标，源后续消息不自动同步。仅 status=succeeded 表示目标已可使用；processing 时继续使用同一源 sessionId 查询，不能向尚未就绪的目标发送消息、Fork 或分享。源正在生成时返回 SourceBusy，无有效模型历史时返回 NoConvertibleHistory，已成功的目标被删除或历史不可恢复时返回 ConvertedTargetUnavailable，不重建目标。仅允许本人可操作且具备 work 权限的普通会话，拒绝 group_shared、task_follow_up、skill_follow_up、skill_output_backfill 等受限来源；后台查看权不授予转换权。</para>
+        /// <para>Freezes the currently valid and completed direct model history of the source session and performs replication into a new work session, while retaining the source session. For hybrid sessions, only the direct history is transformed, and ordinary work history or old history containing only display records is not included. The transform scope is not limited by directMaxHistoryRounds. The transform itself does not initiate a chat or run a skill. To query or continue the same transform, invoke the operation repeatedly for the same source session, producing at most one successful target. Upon success, the original target is always returned, and no automatic synchronization applies to subsequent messages in the source session. Only status=succeeded indicates that the target is ready for use. When the status is processing, continue querying with the same source sessionId. You cannot send messages to, fork, or share a target that is not yet ready. SourceBusy is returned if the source session is currently generating content. NoConvertibleHistory is returned if there is no valid model history. ConvertedTargetUnavailable is returned if a previously successful target is deleted or its history is unrecoverable, and the target is not rebuilt. Only ordinary sessions that the user can operate and that have work permissions are allowed. Access control rules deny restricted sources such as group_shared, task_follow_up, skill_follow_up, and skill_output_backfill. Background view permissions do not grant transform rights.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2389,12 +2389,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将 direct 会话转换为 work 会话</para>
+        /// <para>Converts a direct session to a work session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>将源会话当前有效、已完成的 direct 模型历史冻结并复制为新的 work 会话，源会话保留。混合会话仅转换 direct 历史，不补入普通 work 历史或只有展示记录的旧历史；转换范围不受 directMaxHistoryRounds 限制。转换本身不发起聊天或运行 Skill。对同一源会话重复调用用于查询或继续同一转换，最多产生一个成功目标，成功后始终返回原目标，源后续消息不自动同步。仅 status=succeeded 表示目标已可使用；processing 时继续使用同一源 sessionId 查询，不能向尚未就绪的目标发送消息、Fork 或分享。源正在生成时返回 SourceBusy，无有效模型历史时返回 NoConvertibleHistory，已成功的目标被删除或历史不可恢复时返回 ConvertedTargetUnavailable，不重建目标。仅允许本人可操作且具备 work 权限的普通会话，拒绝 group_shared、task_follow_up、skill_follow_up、skill_output_backfill 等受限来源；后台查看权不授予转换权。</para>
+        /// <para>Freezes the currently valid and completed direct model history of the source session and performs replication into a new work session, while retaining the source session. For hybrid sessions, only the direct history is transformed, and ordinary work history or old history containing only display records is not included. The transform scope is not limited by directMaxHistoryRounds. The transform itself does not initiate a chat or run a skill. To query or continue the same transform, invoke the operation repeatedly for the same source session, producing at most one successful target. Upon success, the original target is always returned, and no automatic synchronization applies to subsequent messages in the source session. Only status=succeeded indicates that the target is ready for use. When the status is processing, continue querying with the same source sessionId. You cannot send messages to, fork, or share a target that is not yet ready. SourceBusy is returned if the source session is currently generating content. NoConvertibleHistory is returned if there is no valid model history. ConvertedTargetUnavailable is returned if a previously successful target is deleted or its history is unrecoverable, and the target is not rebuilt. Only ordinary sessions that the user can operate and that have work permissions are allowed. Access control rules deny restricted sources such as group_shared, task_follow_up, skill_follow_up, and skill_output_backfill. Background view permissions do not grant transform rights.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10906,13 +10906,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation is used to upload files to the enterprise knowledge base.</description></item>
-        /// <item><description>You must have the DEVELOPMENT_KB_MANAGE feature permission to call this API operation.</description></item>
-        /// <item><description>You must provide the persistent OSS URL (filePath) of the file when uploading the file.</description></item>
-        /// <item><description>Optional parameters include the public access URL and the original file name to enhance the completeness of the file information.</description></item>
-        /// <item><description>If directoryId is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee by default.</description></item>
-        /// <item><description>You can use sourceTags to add tags to resources for subsequent management and retrieval.</description></item>
-        /// <item><description>This operation starts a billing bill (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</description></item>
+        /// <item><description>This API is used to upload files to the enterprise knowledge base.</description></item>
+        /// <item><description>You must have the DEVELOPMENT_KB_MANAGE feature permission to call this API.</description></item>
+        /// <item><description>When uploading a file, you must provide the OSS persistence address of the file (filePath).</description></item>
+        /// <item><description>Optional parameters include the public access URL of the file and the original file name to enhance the completeness of the file information.</description></item>
+        /// <item><description>If directoryId is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, it is bound to the default root directory of the current digital employee by default.</description></item>
+        /// <item><description>You can add tags to resources by using sourceTags for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation triggers a billing bill (UNSTRUCTURED_PARSE). Make sure your account balance is sufficient.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11042,13 +11042,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation is used to upload files to the enterprise knowledge base.</description></item>
-        /// <item><description>You must have the DEVELOPMENT_KB_MANAGE feature permission to call this API operation.</description></item>
-        /// <item><description>You must provide the persistent OSS URL (filePath) of the file when uploading the file.</description></item>
-        /// <item><description>Optional parameters include the public access URL and the original file name to enhance the completeness of the file information.</description></item>
-        /// <item><description>If directoryId is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee by default.</description></item>
-        /// <item><description>You can use sourceTags to add tags to resources for subsequent management and retrieval.</description></item>
-        /// <item><description>This operation starts a billing bill (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</description></item>
+        /// <item><description>This API is used to upload files to the enterprise knowledge base.</description></item>
+        /// <item><description>You must have the DEVELOPMENT_KB_MANAGE feature permission to call this API.</description></item>
+        /// <item><description>When uploading a file, you must provide the OSS persistence address of the file (filePath).</description></item>
+        /// <item><description>Optional parameters include the public access URL of the file and the original file name to enhance the completeness of the file information.</description></item>
+        /// <item><description>If directoryId is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, it is bound to the default root directory of the current digital employee by default.</description></item>
+        /// <item><description>You can add tags to resources by using sourceTags for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation triggers a billing bill (UNSTRUCTURED_PARSE). Make sure your account balance is sufficient.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11178,13 +11178,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation is used to upload files to the enterprise knowledge base.</description></item>
-        /// <item><description>You must have the DEVELOPMENT_KB_MANAGE feature permission to call this API operation.</description></item>
-        /// <item><description>You must provide the persistent OSS URL (filePath) of the file when uploading the file.</description></item>
-        /// <item><description>Optional parameters include the public access URL and the original file name to enhance the completeness of the file information.</description></item>
-        /// <item><description>If directoryId is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee by default.</description></item>
-        /// <item><description>You can use sourceTags to add tags to resources for subsequent management and retrieval.</description></item>
-        /// <item><description>This operation starts a billing bill (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</description></item>
+        /// <item><description>This API is used to upload files to the enterprise knowledge base.</description></item>
+        /// <item><description>You must have the DEVELOPMENT_KB_MANAGE feature permission to call this API.</description></item>
+        /// <item><description>When uploading a file, you must provide the OSS persistence address of the file (filePath).</description></item>
+        /// <item><description>Optional parameters include the public access URL of the file and the original file name to enhance the completeness of the file information.</description></item>
+        /// <item><description>If directoryId is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, it is bound to the default root directory of the current digital employee by default.</description></item>
+        /// <item><description>You can add tags to resources by using sourceTags for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation triggers a billing bill (UNSTRUCTURED_PARSE). Make sure your account balance is sufficient.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11211,13 +11211,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation is used to upload files to the enterprise knowledge base.</description></item>
-        /// <item><description>You must have the DEVELOPMENT_KB_MANAGE feature permission to call this API operation.</description></item>
-        /// <item><description>You must provide the persistent OSS URL (filePath) of the file when uploading the file.</description></item>
-        /// <item><description>Optional parameters include the public access URL and the original file name to enhance the completeness of the file information.</description></item>
-        /// <item><description>If directoryId is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee by default.</description></item>
-        /// <item><description>You can use sourceTags to add tags to resources for subsequent management and retrieval.</description></item>
-        /// <item><description>This operation starts a billing bill (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</description></item>
+        /// <item><description>This API is used to upload files to the enterprise knowledge base.</description></item>
+        /// <item><description>You must have the DEVELOPMENT_KB_MANAGE feature permission to call this API.</description></item>
+        /// <item><description>When uploading a file, you must provide the OSS persistence address of the file (filePath).</description></item>
+        /// <item><description>Optional parameters include the public access URL of the file and the original file name to enhance the completeness of the file information.</description></item>
+        /// <item><description>If directoryId is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, it is bound to the default root directory of the current digital employee by default.</description></item>
+        /// <item><description>You can add tags to resources by using sourceTags for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation triggers a billing bill (UNSTRUCTURED_PARSE). Make sure your account balance is sufficient.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18034,12 +18034,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation uploads files to the enterprise knowledge base.</description></item>
-        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> feature permission to call this API operation.</description></item>
-        /// <item><description>When uploading a file, you must provide the OSS persistence address (<c>filePath</c>) of the file.</description></item>
-        /// <item><description>Optional parameters include the public access URL and original file name of the file to enhance the completeness of the file information.</description></item>
-        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
-        /// <item><description>You can use <c>sourceTags</c> to add tags to resources for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation uploads files to the enterprise knowledge base.</description></item>
+        /// <item><description>You must have the DEVELOPMENT_KB_MANAGE feature permission to call this API operation.</description></item>
+        /// <item><description>You must provide the OSS persistence address (filePath) of the file when uploading the file.</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name to improve the completeness of the file information.</description></item>
+        /// <item><description>If you specify directoryId, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
+        /// <item><description>You can use sourceTags to add tags to resources for subsequent management and retrieval.</description></item>
         /// <item><description>This operation generates a bill (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</description></item>
         /// </list>
         /// </description>
@@ -18118,12 +18118,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation uploads files to the enterprise knowledge base.</description></item>
-        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> feature permission to call this API operation.</description></item>
-        /// <item><description>When uploading a file, you must provide the OSS persistence address (<c>filePath</c>) of the file.</description></item>
-        /// <item><description>Optional parameters include the public access URL and original file name of the file to enhance the completeness of the file information.</description></item>
-        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
-        /// <item><description>You can use <c>sourceTags</c> to add tags to resources for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation uploads files to the enterprise knowledge base.</description></item>
+        /// <item><description>You must have the DEVELOPMENT_KB_MANAGE feature permission to call this API operation.</description></item>
+        /// <item><description>You must provide the OSS persistence address (filePath) of the file when uploading the file.</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name to improve the completeness of the file information.</description></item>
+        /// <item><description>If you specify directoryId, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
+        /// <item><description>You can use sourceTags to add tags to resources for subsequent management and retrieval.</description></item>
         /// <item><description>This operation generates a bill (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</description></item>
         /// </list>
         /// </description>
@@ -18202,12 +18202,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation uploads files to the enterprise knowledge base.</description></item>
-        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> feature permission to call this API operation.</description></item>
-        /// <item><description>When uploading a file, you must provide the OSS persistence address (<c>filePath</c>) of the file.</description></item>
-        /// <item><description>Optional parameters include the public access URL and original file name of the file to enhance the completeness of the file information.</description></item>
-        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
-        /// <item><description>You can use <c>sourceTags</c> to add tags to resources for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation uploads files to the enterprise knowledge base.</description></item>
+        /// <item><description>You must have the DEVELOPMENT_KB_MANAGE feature permission to call this API operation.</description></item>
+        /// <item><description>You must provide the OSS persistence address (filePath) of the file when uploading the file.</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name to improve the completeness of the file information.</description></item>
+        /// <item><description>If you specify directoryId, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
+        /// <item><description>You can use sourceTags to add tags to resources for subsequent management and retrieval.</description></item>
         /// <item><description>This operation generates a bill (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</description></item>
         /// </list>
         /// </description>
@@ -18235,12 +18235,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation uploads files to the enterprise knowledge base.</description></item>
-        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> feature permission to call this API operation.</description></item>
-        /// <item><description>When uploading a file, you must provide the OSS persistence address (<c>filePath</c>) of the file.</description></item>
-        /// <item><description>Optional parameters include the public access URL and original file name of the file to enhance the completeness of the file information.</description></item>
-        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
-        /// <item><description>You can use <c>sourceTags</c> to add tags to resources for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation uploads files to the enterprise knowledge base.</description></item>
+        /// <item><description>You must have the DEVELOPMENT_KB_MANAGE feature permission to call this API operation.</description></item>
+        /// <item><description>You must provide the OSS persistence address (filePath) of the file when uploading the file.</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name to improve the completeness of the file information.</description></item>
+        /// <item><description>If you specify directoryId, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
+        /// <item><description>You can use sourceTags to add tags to resources for subsequent management and retrieval.</description></item>
         /// <item><description>This operation generates a bill (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</description></item>
         /// </list>
         /// </description>
@@ -27185,16 +27185,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query for the visible outputs and the latest published file versions of the current user or a specified collaboration workspace. Supports filtering by session, label, and business ID. Calculates paging and total counts based on primary output records.</para>
+        /// <para>Performs a paged query to retrieve the visible outputs and the latest published file versions for the current user or a specified collaboration workspace. Supports filtering by session, label, and business ID. Paging and the total count are calculated based on the primary output records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If collaborationGroupId is not provided, queries the personal outputs of the current caller. If provided, queries the outputs of the specified collaboration workspace and verifies the real-time access permissions of the current workspace members and source resources. The caller identity and tenant permissions are determined by the authentication context.
-        /// The sessionId parameter requires an exact match for regular sessions, skill sessions, or node execution sessions. The tags parameter requires all labels to match simultaneously. The bizId parameter requires an exact match for the business ID of file registration or associated workflow instances. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using the AND operator, and are executed before counting and paging.
-        /// Tags and business IDs are derived from file registration or workflow instance associations. Unregistered tags or business IDs are not inferred from titles. Pagination defaults to page 1 with 20 items per page, up to a maximum of 100 items, sorted in descending order by update time. The response structure remains compatible with the original API operation.
-        /// For versioned files, the latest published version is returned by default without expanding historical versions. This API operation does not currently support querying specific versions. Pagination and the total count are still based on primary output records, deduplicated by outputId, and are not counted by the number of files or historical versions.
-        /// For versioned files, fileInfo.path is a time-sensitive download link attached to the published version and content revisions selected during the query. Downloads do not perform automatic switchover to other versions published later. Invoke this API operation again to obtain a new link after the current link expires. Historical files that have not yet formed a published version may not return download information.</para>
+        /// The sessionId parameter requires an exact match for a regular session, skill session, or node execution session. The tags parameter requires all specified labels to match simultaneously. The bizId parameter requires an exact match for the business ID of a file registration or an associated workflow instance. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using the AND operator, and are executed before counting and paging.
+        /// Tags and business IDs are derived from file registrations or workflow instance associations. Unregistered tags or business IDs are not inferred from titles. Pagination defaults to page 1 with 20 entries per page, up to a maximum of 100 entries, sorted in descending order by update time. The response structure remains compatible with the original API operation.
+        /// For versioned files, the latest published version is returned by default without expanding historical versions. This API operation does not currently support querying specific versions. Pagination and the total count are still based on the primary output records, deduplicated by outputId, and are not counted by the number of files or historical versions.
+        /// For versioned files, fileInfo.path is a time-sensitive download link attached to the published version and content revisions selected during the query. Downloads do not trigger an automatic switchover to other versions published later. Invoke this API operation again to obtain a new link after the current one expires. Historical files that have not yet formed a published version may not return download information.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -27292,16 +27292,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query for the visible outputs and the latest published file versions of the current user or a specified collaboration workspace. Supports filtering by session, label, and business ID. Calculates paging and total counts based on primary output records.</para>
+        /// <para>Performs a paged query to retrieve the visible outputs and the latest published file versions for the current user or a specified collaboration workspace. Supports filtering by session, label, and business ID. Paging and the total count are calculated based on the primary output records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If collaborationGroupId is not provided, queries the personal outputs of the current caller. If provided, queries the outputs of the specified collaboration workspace and verifies the real-time access permissions of the current workspace members and source resources. The caller identity and tenant permissions are determined by the authentication context.
-        /// The sessionId parameter requires an exact match for regular sessions, skill sessions, or node execution sessions. The tags parameter requires all labels to match simultaneously. The bizId parameter requires an exact match for the business ID of file registration or associated workflow instances. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using the AND operator, and are executed before counting and paging.
-        /// Tags and business IDs are derived from file registration or workflow instance associations. Unregistered tags or business IDs are not inferred from titles. Pagination defaults to page 1 with 20 items per page, up to a maximum of 100 items, sorted in descending order by update time. The response structure remains compatible with the original API operation.
-        /// For versioned files, the latest published version is returned by default without expanding historical versions. This API operation does not currently support querying specific versions. Pagination and the total count are still based on primary output records, deduplicated by outputId, and are not counted by the number of files or historical versions.
-        /// For versioned files, fileInfo.path is a time-sensitive download link attached to the published version and content revisions selected during the query. Downloads do not perform automatic switchover to other versions published later. Invoke this API operation again to obtain a new link after the current link expires. Historical files that have not yet formed a published version may not return download information.</para>
+        /// The sessionId parameter requires an exact match for a regular session, skill session, or node execution session. The tags parameter requires all specified labels to match simultaneously. The bizId parameter requires an exact match for the business ID of a file registration or an associated workflow instance. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using the AND operator, and are executed before counting and paging.
+        /// Tags and business IDs are derived from file registrations or workflow instance associations. Unregistered tags or business IDs are not inferred from titles. Pagination defaults to page 1 with 20 entries per page, up to a maximum of 100 entries, sorted in descending order by update time. The response structure remains compatible with the original API operation.
+        /// For versioned files, the latest published version is returned by default without expanding historical versions. This API operation does not currently support querying specific versions. Pagination and the total count are still based on the primary output records, deduplicated by outputId, and are not counted by the number of files or historical versions.
+        /// For versioned files, fileInfo.path is a time-sensitive download link attached to the published version and content revisions selected during the query. Downloads do not trigger an automatic switchover to other versions published later. Invoke this API operation again to obtain a new link after the current one expires. Historical files that have not yet formed a published version may not return download information.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -27399,16 +27399,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query for the visible outputs and the latest published file versions of the current user or a specified collaboration workspace. Supports filtering by session, label, and business ID. Calculates paging and total counts based on primary output records.</para>
+        /// <para>Performs a paged query to retrieve the visible outputs and the latest published file versions for the current user or a specified collaboration workspace. Supports filtering by session, label, and business ID. Paging and the total count are calculated based on the primary output records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If collaborationGroupId is not provided, queries the personal outputs of the current caller. If provided, queries the outputs of the specified collaboration workspace and verifies the real-time access permissions of the current workspace members and source resources. The caller identity and tenant permissions are determined by the authentication context.
-        /// The sessionId parameter requires an exact match for regular sessions, skill sessions, or node execution sessions. The tags parameter requires all labels to match simultaneously. The bizId parameter requires an exact match for the business ID of file registration or associated workflow instances. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using the AND operator, and are executed before counting and paging.
-        /// Tags and business IDs are derived from file registration or workflow instance associations. Unregistered tags or business IDs are not inferred from titles. Pagination defaults to page 1 with 20 items per page, up to a maximum of 100 items, sorted in descending order by update time. The response structure remains compatible with the original API operation.
-        /// For versioned files, the latest published version is returned by default without expanding historical versions. This API operation does not currently support querying specific versions. Pagination and the total count are still based on primary output records, deduplicated by outputId, and are not counted by the number of files or historical versions.
-        /// For versioned files, fileInfo.path is a time-sensitive download link attached to the published version and content revisions selected during the query. Downloads do not perform automatic switchover to other versions published later. Invoke this API operation again to obtain a new link after the current link expires. Historical files that have not yet formed a published version may not return download information.</para>
+        /// The sessionId parameter requires an exact match for a regular session, skill session, or node execution session. The tags parameter requires all specified labels to match simultaneously. The bizId parameter requires an exact match for the business ID of a file registration or an associated workflow instance. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using the AND operator, and are executed before counting and paging.
+        /// Tags and business IDs are derived from file registrations or workflow instance associations. Unregistered tags or business IDs are not inferred from titles. Pagination defaults to page 1 with 20 entries per page, up to a maximum of 100 entries, sorted in descending order by update time. The response structure remains compatible with the original API operation.
+        /// For versioned files, the latest published version is returned by default without expanding historical versions. This API operation does not currently support querying specific versions. Pagination and the total count are still based on the primary output records, deduplicated by outputId, and are not counted by the number of files or historical versions.
+        /// For versioned files, fileInfo.path is a time-sensitive download link attached to the published version and content revisions selected during the query. Downloads do not trigger an automatic switchover to other versions published later. Invoke this API operation again to obtain a new link after the current one expires. Historical files that have not yet formed a published version may not return download information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27427,16 +27427,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query for the visible outputs and the latest published file versions of the current user or a specified collaboration workspace. Supports filtering by session, label, and business ID. Calculates paging and total counts based on primary output records.</para>
+        /// <para>Performs a paged query to retrieve the visible outputs and the latest published file versions for the current user or a specified collaboration workspace. Supports filtering by session, label, and business ID. Paging and the total count are calculated based on the primary output records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If collaborationGroupId is not provided, queries the personal outputs of the current caller. If provided, queries the outputs of the specified collaboration workspace and verifies the real-time access permissions of the current workspace members and source resources. The caller identity and tenant permissions are determined by the authentication context.
-        /// The sessionId parameter requires an exact match for regular sessions, skill sessions, or node execution sessions. The tags parameter requires all labels to match simultaneously. The bizId parameter requires an exact match for the business ID of file registration or associated workflow instances. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using the AND operator, and are executed before counting and paging.
-        /// Tags and business IDs are derived from file registration or workflow instance associations. Unregistered tags or business IDs are not inferred from titles. Pagination defaults to page 1 with 20 items per page, up to a maximum of 100 items, sorted in descending order by update time. The response structure remains compatible with the original API operation.
-        /// For versioned files, the latest published version is returned by default without expanding historical versions. This API operation does not currently support querying specific versions. Pagination and the total count are still based on primary output records, deduplicated by outputId, and are not counted by the number of files or historical versions.
-        /// For versioned files, fileInfo.path is a time-sensitive download link attached to the published version and content revisions selected during the query. Downloads do not perform automatic switchover to other versions published later. Invoke this API operation again to obtain a new link after the current link expires. Historical files that have not yet formed a published version may not return download information.</para>
+        /// The sessionId parameter requires an exact match for a regular session, skill session, or node execution session. The tags parameter requires all specified labels to match simultaneously. The bizId parameter requires an exact match for the business ID of a file registration or an associated workflow instance. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using the AND operator, and are executed before counting and paging.
+        /// Tags and business IDs are derived from file registrations or workflow instance associations. Unregistered tags or business IDs are not inferred from titles. Pagination defaults to page 1 with 20 entries per page, up to a maximum of 100 entries, sorted in descending order by update time. The response structure remains compatible with the original API operation.
+        /// For versioned files, the latest published version is returned by default without expanding historical versions. This API operation does not currently support querying specific versions. Pagination and the total count are still based on the primary output records, deduplicated by outputId, and are not counted by the number of files or historical versions.
+        /// For versioned files, fileInfo.path is a time-sensitive download link attached to the published version and content revisions selected during the query. Downloads do not trigger an automatic switchover to other versions published later. Invoke this API operation again to obtain a new link after the current one expires. Historical files that have not yet formed a published version may not return download information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -41664,11 +41664,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is used to upload a file to My Resources of a specified digital employee.</description></item>
-        /// <item><description>The source_type is fixed to FILE, the scope is fixed to PERSONAL, and the platform is fixed to LOCAL.</description></item>
-        /// <item><description>The file must be provided with an OSS persistence address (filePath). Other information, such as the public access URL and original file name, is optional.</description></item>
-        /// <item><description>If the destination folder ID (directoryId) is not specified, the file is automatically attached to the default root folder of the current digital employee. If it is specified, ensure that the folder belongs to the personal folder of the invoker.</description></item>
-        /// <item><description>Multiple methods to authenticate (such as AK, BearerToken, and APP) are supported for security authentication.</description></item>
+        /// <item><description>This API operation uploads a file to the My Resources section of a specified digital employee.</description></item>
+        /// <item><description>The source_type parameter is fixed to FILE, the scope parameter is fixed to PERSONAL, and the platform parameter is fixed to LOCAL.</description></item>
+        /// <item><description>You must provide an OSS persistence address (filePath) for the file. Other information, such as the public access URL and the original file name, is optional.</description></item>
+        /// <item><description>If you do not specify a target folder ID (directoryId), the file is automatically attached to the default root folder of the current digital employee. If you specify a folder ID, make sure that the folder belongs to the personal folder of the user who invokes the API.</description></item>
+        /// <item><description>You can authenticate through multiple methods (such as AK, BearerToken, and APP) for security authentication.</description></item>
         /// <item><description>The operation type is write, and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
         /// </description>
@@ -41811,11 +41811,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is used to upload a file to My Resources of a specified digital employee.</description></item>
-        /// <item><description>The source_type is fixed to FILE, the scope is fixed to PERSONAL, and the platform is fixed to LOCAL.</description></item>
-        /// <item><description>The file must be provided with an OSS persistence address (filePath). Other information, such as the public access URL and original file name, is optional.</description></item>
-        /// <item><description>If the destination folder ID (directoryId) is not specified, the file is automatically attached to the default root folder of the current digital employee. If it is specified, ensure that the folder belongs to the personal folder of the invoker.</description></item>
-        /// <item><description>Multiple methods to authenticate (such as AK, BearerToken, and APP) are supported for security authentication.</description></item>
+        /// <item><description>This API operation uploads a file to the My Resources section of a specified digital employee.</description></item>
+        /// <item><description>The source_type parameter is fixed to FILE, the scope parameter is fixed to PERSONAL, and the platform parameter is fixed to LOCAL.</description></item>
+        /// <item><description>You must provide an OSS persistence address (filePath) for the file. Other information, such as the public access URL and the original file name, is optional.</description></item>
+        /// <item><description>If you do not specify a target folder ID (directoryId), the file is automatically attached to the default root folder of the current digital employee. If you specify a folder ID, make sure that the folder belongs to the personal folder of the user who invokes the API.</description></item>
+        /// <item><description>You can authenticate through multiple methods (such as AK, BearerToken, and APP) for security authentication.</description></item>
         /// <item><description>The operation type is write, and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
         /// </description>
@@ -41958,11 +41958,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is used to upload a file to My Resources of a specified digital employee.</description></item>
-        /// <item><description>The source_type is fixed to FILE, the scope is fixed to PERSONAL, and the platform is fixed to LOCAL.</description></item>
-        /// <item><description>The file must be provided with an OSS persistence address (filePath). Other information, such as the public access URL and original file name, is optional.</description></item>
-        /// <item><description>If the destination folder ID (directoryId) is not specified, the file is automatically attached to the default root folder of the current digital employee. If it is specified, ensure that the folder belongs to the personal folder of the invoker.</description></item>
-        /// <item><description>Multiple methods to authenticate (such as AK, BearerToken, and APP) are supported for security authentication.</description></item>
+        /// <item><description>This API operation uploads a file to the My Resources section of a specified digital employee.</description></item>
+        /// <item><description>The source_type parameter is fixed to FILE, the scope parameter is fixed to PERSONAL, and the platform parameter is fixed to LOCAL.</description></item>
+        /// <item><description>You must provide an OSS persistence address (filePath) for the file. Other information, such as the public access URL and the original file name, is optional.</description></item>
+        /// <item><description>If you do not specify a target folder ID (directoryId), the file is automatically attached to the default root folder of the current digital employee. If you specify a folder ID, make sure that the folder belongs to the personal folder of the user who invokes the API.</description></item>
+        /// <item><description>You can authenticate through multiple methods (such as AK, BearerToken, and APP) for security authentication.</description></item>
         /// <item><description>The operation type is write, and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
         /// </description>
@@ -41990,11 +41990,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is used to upload a file to My Resources of a specified digital employee.</description></item>
-        /// <item><description>The source_type is fixed to FILE, the scope is fixed to PERSONAL, and the platform is fixed to LOCAL.</description></item>
-        /// <item><description>The file must be provided with an OSS persistence address (filePath). Other information, such as the public access URL and original file name, is optional.</description></item>
-        /// <item><description>If the destination folder ID (directoryId) is not specified, the file is automatically attached to the default root folder of the current digital employee. If it is specified, ensure that the folder belongs to the personal folder of the invoker.</description></item>
-        /// <item><description>Multiple methods to authenticate (such as AK, BearerToken, and APP) are supported for security authentication.</description></item>
+        /// <item><description>This API operation uploads a file to the My Resources section of a specified digital employee.</description></item>
+        /// <item><description>The source_type parameter is fixed to FILE, the scope parameter is fixed to PERSONAL, and the platform parameter is fixed to LOCAL.</description></item>
+        /// <item><description>You must provide an OSS persistence address (filePath) for the file. Other information, such as the public access URL and the original file name, is optional.</description></item>
+        /// <item><description>If you do not specify a target folder ID (directoryId), the file is automatically attached to the default root folder of the current digital employee. If you specify a folder ID, make sure that the folder belongs to the personal folder of the user who invokes the API.</description></item>
+        /// <item><description>You can authenticate through multiple methods (such as AK, BearerToken, and APP) for security authentication.</description></item>
         /// <item><description>The operation type is write, and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
         /// </description>
@@ -43717,29 +43717,29 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts speech to text.</para>
+        /// <para>Transcribes speech to text.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API is used for speech-to-text (ASR) and uses the <b>file transfer upload</b> mode (<c>fileTransfer</c>). Audio files are not transmitted through the request body of this API. Instead, the audio file is first uploaded to OSS, and then the OSS address is passed to the backend through the <c>FileUrl</c> parameter. The backend retrieves the audio bytes from that address and calls the ASR model to convert them to text.</para>
+        /// <para>This API performs automatic speech recognition (ASR) and uses the <b>file transfer upload</b> mode (<c>fileTransfer</c>). Audio files are not transmitted in the request body. Instead, they are first uploaded to Object Storage Service (OSS). The OSS URL is then passed to the backend through the <c>FileUrl</c> request parameter. The backend retrieves the audio bytes from the URL and calls the ASR model to transcribe the audio into text.</para>
         /// <h3>Call methods</h3>
         /// <list type="bullet">
-        /// <item><description><b>Recommended</b>: Use the <c>TranscribeChatVoiceAdvance</c> method generated by the SDK. Pass in the local audio file stream, and the SDK automatically completes the transfer upload and populates the <c>FileUrl</c> parameter.</description></item>
-        /// <item><description><b>Direct upload</b>: Upload the audio file to an OSS address accessible by the server, and then call this API directly with the <c>FileUrl</c> parameter.</description></item>
+        /// <item><description><b>Recommended</b>: Use the <c>TranscribeChatVoiceAdvance</c> method generated by the SDK and pass in the local audio file stream. The SDK automatically completes the transfer upload and populates the <c>FileUrl</c> parameter.</description></item>
+        /// <item><description><b>Direct upload</b>: Upload the audio file to an OSS URL that is accessible by the server. Then, call this API directly and pass in the <c>FileUrl</c> parameter.</description></item>
         /// </list>
         /// <h3>Request parameters</h3>
         /// <list type="bullet">
-        /// <item><description><b>FileUrl</b>: Required. The OSS address of the audio file. When you use the Advance method, the SDK automatically populates this parameter. You do not need to set it manually.</description></item>
-        /// <item><description><b>FileName</b>: Required. The original file name including the extension, such as <c>meeting.mp3</c>. The OSS address generated during the transfer does not carry the original file name. The backend uses this parameter to determine the audio format, so you must explicitly specify it.</description></item>
-        /// <item><description><b>ContentType</b>: Optional. The MIME type of the audio, such as <c>audio/mpeg</c>. If this parameter is not specified, the MIME type is determined based on the file name extension.</description></item>
-        /// <item><description>Supported audio formats: mp3, wav, m4a, mp4, webm, ogg, oga, opus, flac, and amr. Maximum file size: 25 MB.</description></item>
+        /// <item><description><b>FileUrl</b>: Required. The OSS URL of the audio file. If you use the Advance method, the SDK automatically populates this parameter. You do not need to manually assign a value.</description></item>
+        /// <item><description><b>FileName</b>: Required. The original file name, including the extension, such as <c>meeting.mp3</c>. The OSS URL generated during the transfer does not contain the original file name. The backend determines the audio format based on this parameter. Therefore, you must explicitly pass it.</description></item>
+        /// <item><description><b>ContentType</b>: Optional. The MIME type of the audio, such as <c>audio/mpeg</c>. If you do not pass this parameter, the format is determined based on the file name extension.</description></item>
+        /// <item><description>Supported audio formats: MP3, WAV, M4A, MP4, WebM, OGG, OGA, Opus, FLAC, and AMR. Maximum size: 25 MB.</description></item>
         /// </list>
         /// <h3>Response parameters</h3>
-        /// <para>Returns the recognized text content <c>text</c>.</para>
-        /// <h3>Before you begin</h3>
-        /// <para>The tenant must have the speech recognition model (model_audio_flash) configured. If it is not configured, the error <c>ERR.Robject.Chat.VoiceAudioNotConfigured</c> is returned.</para>
+        /// <para>Returns the recognized text content in the <c>text</c> field.</para>
+        /// <h3>Prerequisites</h3>
+        /// <para>The tenant must have configured a speech recognition model (model_audio_flash). If the model is not configured, the <c>ERR.Robject.Chat.VoiceAudioNotConfigured</c> error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43803,29 +43803,29 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts speech to text.</para>
+        /// <para>Transcribes speech to text.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API is used for speech-to-text (ASR) and uses the <b>file transfer upload</b> mode (<c>fileTransfer</c>). Audio files are not transmitted through the request body of this API. Instead, the audio file is first uploaded to OSS, and then the OSS address is passed to the backend through the <c>FileUrl</c> parameter. The backend retrieves the audio bytes from that address and calls the ASR model to convert them to text.</para>
+        /// <para>This API performs automatic speech recognition (ASR) and uses the <b>file transfer upload</b> mode (<c>fileTransfer</c>). Audio files are not transmitted in the request body. Instead, they are first uploaded to Object Storage Service (OSS). The OSS URL is then passed to the backend through the <c>FileUrl</c> request parameter. The backend retrieves the audio bytes from the URL and calls the ASR model to transcribe the audio into text.</para>
         /// <h3>Call methods</h3>
         /// <list type="bullet">
-        /// <item><description><b>Recommended</b>: Use the <c>TranscribeChatVoiceAdvance</c> method generated by the SDK. Pass in the local audio file stream, and the SDK automatically completes the transfer upload and populates the <c>FileUrl</c> parameter.</description></item>
-        /// <item><description><b>Direct upload</b>: Upload the audio file to an OSS address accessible by the server, and then call this API directly with the <c>FileUrl</c> parameter.</description></item>
+        /// <item><description><b>Recommended</b>: Use the <c>TranscribeChatVoiceAdvance</c> method generated by the SDK and pass in the local audio file stream. The SDK automatically completes the transfer upload and populates the <c>FileUrl</c> parameter.</description></item>
+        /// <item><description><b>Direct upload</b>: Upload the audio file to an OSS URL that is accessible by the server. Then, call this API directly and pass in the <c>FileUrl</c> parameter.</description></item>
         /// </list>
         /// <h3>Request parameters</h3>
         /// <list type="bullet">
-        /// <item><description><b>FileUrl</b>: Required. The OSS address of the audio file. When you use the Advance method, the SDK automatically populates this parameter. You do not need to set it manually.</description></item>
-        /// <item><description><b>FileName</b>: Required. The original file name including the extension, such as <c>meeting.mp3</c>. The OSS address generated during the transfer does not carry the original file name. The backend uses this parameter to determine the audio format, so you must explicitly specify it.</description></item>
-        /// <item><description><b>ContentType</b>: Optional. The MIME type of the audio, such as <c>audio/mpeg</c>. If this parameter is not specified, the MIME type is determined based on the file name extension.</description></item>
-        /// <item><description>Supported audio formats: mp3, wav, m4a, mp4, webm, ogg, oga, opus, flac, and amr. Maximum file size: 25 MB.</description></item>
+        /// <item><description><b>FileUrl</b>: Required. The OSS URL of the audio file. If you use the Advance method, the SDK automatically populates this parameter. You do not need to manually assign a value.</description></item>
+        /// <item><description><b>FileName</b>: Required. The original file name, including the extension, such as <c>meeting.mp3</c>. The OSS URL generated during the transfer does not contain the original file name. The backend determines the audio format based on this parameter. Therefore, you must explicitly pass it.</description></item>
+        /// <item><description><b>ContentType</b>: Optional. The MIME type of the audio, such as <c>audio/mpeg</c>. If you do not pass this parameter, the format is determined based on the file name extension.</description></item>
+        /// <item><description>Supported audio formats: MP3, WAV, M4A, MP4, WebM, OGG, OGA, Opus, FLAC, and AMR. Maximum size: 25 MB.</description></item>
         /// </list>
         /// <h3>Response parameters</h3>
-        /// <para>Returns the recognized text content <c>text</c>.</para>
-        /// <h3>Before you begin</h3>
-        /// <para>The tenant must have the speech recognition model (model_audio_flash) configured. If it is not configured, the error <c>ERR.Robject.Chat.VoiceAudioNotConfigured</c> is returned.</para>
+        /// <para>Returns the recognized text content in the <c>text</c> field.</para>
+        /// <h3>Prerequisites</h3>
+        /// <para>The tenant must have configured a speech recognition model (model_audio_flash). If the model is not configured, the <c>ERR.Robject.Chat.VoiceAudioNotConfigured</c> error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43889,29 +43889,29 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts speech to text.</para>
+        /// <para>Transcribes speech to text.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API is used for speech-to-text (ASR) and uses the <b>file transfer upload</b> mode (<c>fileTransfer</c>). Audio files are not transmitted through the request body of this API. Instead, the audio file is first uploaded to OSS, and then the OSS address is passed to the backend through the <c>FileUrl</c> parameter. The backend retrieves the audio bytes from that address and calls the ASR model to convert them to text.</para>
+        /// <para>This API performs automatic speech recognition (ASR) and uses the <b>file transfer upload</b> mode (<c>fileTransfer</c>). Audio files are not transmitted in the request body. Instead, they are first uploaded to Object Storage Service (OSS). The OSS URL is then passed to the backend through the <c>FileUrl</c> request parameter. The backend retrieves the audio bytes from the URL and calls the ASR model to transcribe the audio into text.</para>
         /// <h3>Call methods</h3>
         /// <list type="bullet">
-        /// <item><description><b>Recommended</b>: Use the <c>TranscribeChatVoiceAdvance</c> method generated by the SDK. Pass in the local audio file stream, and the SDK automatically completes the transfer upload and populates the <c>FileUrl</c> parameter.</description></item>
-        /// <item><description><b>Direct upload</b>: Upload the audio file to an OSS address accessible by the server, and then call this API directly with the <c>FileUrl</c> parameter.</description></item>
+        /// <item><description><b>Recommended</b>: Use the <c>TranscribeChatVoiceAdvance</c> method generated by the SDK and pass in the local audio file stream. The SDK automatically completes the transfer upload and populates the <c>FileUrl</c> parameter.</description></item>
+        /// <item><description><b>Direct upload</b>: Upload the audio file to an OSS URL that is accessible by the server. Then, call this API directly and pass in the <c>FileUrl</c> parameter.</description></item>
         /// </list>
         /// <h3>Request parameters</h3>
         /// <list type="bullet">
-        /// <item><description><b>FileUrl</b>: Required. The OSS address of the audio file. When you use the Advance method, the SDK automatically populates this parameter. You do not need to set it manually.</description></item>
-        /// <item><description><b>FileName</b>: Required. The original file name including the extension, such as <c>meeting.mp3</c>. The OSS address generated during the transfer does not carry the original file name. The backend uses this parameter to determine the audio format, so you must explicitly specify it.</description></item>
-        /// <item><description><b>ContentType</b>: Optional. The MIME type of the audio, such as <c>audio/mpeg</c>. If this parameter is not specified, the MIME type is determined based on the file name extension.</description></item>
-        /// <item><description>Supported audio formats: mp3, wav, m4a, mp4, webm, ogg, oga, opus, flac, and amr. Maximum file size: 25 MB.</description></item>
+        /// <item><description><b>FileUrl</b>: Required. The OSS URL of the audio file. If you use the Advance method, the SDK automatically populates this parameter. You do not need to manually assign a value.</description></item>
+        /// <item><description><b>FileName</b>: Required. The original file name, including the extension, such as <c>meeting.mp3</c>. The OSS URL generated during the transfer does not contain the original file name. The backend determines the audio format based on this parameter. Therefore, you must explicitly pass it.</description></item>
+        /// <item><description><b>ContentType</b>: Optional. The MIME type of the audio, such as <c>audio/mpeg</c>. If you do not pass this parameter, the format is determined based on the file name extension.</description></item>
+        /// <item><description>Supported audio formats: MP3, WAV, M4A, MP4, WebM, OGG, OGA, Opus, FLAC, and AMR. Maximum size: 25 MB.</description></item>
         /// </list>
         /// <h3>Response parameters</h3>
-        /// <para>Returns the recognized text content <c>text</c>.</para>
-        /// <h3>Before you begin</h3>
-        /// <para>The tenant must have the speech recognition model (model_audio_flash) configured. If it is not configured, the error <c>ERR.Robject.Chat.VoiceAudioNotConfigured</c> is returned.</para>
+        /// <para>Returns the recognized text content in the <c>text</c> field.</para>
+        /// <h3>Prerequisites</h3>
+        /// <para>The tenant must have configured a speech recognition model (model_audio_flash). If the model is not configured, the <c>ERR.Robject.Chat.VoiceAudioNotConfigured</c> error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43930,29 +43930,29 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts speech to text.</para>
+        /// <para>Transcribes speech to text.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API is used for speech-to-text (ASR) and uses the <b>file transfer upload</b> mode (<c>fileTransfer</c>). Audio files are not transmitted through the request body of this API. Instead, the audio file is first uploaded to OSS, and then the OSS address is passed to the backend through the <c>FileUrl</c> parameter. The backend retrieves the audio bytes from that address and calls the ASR model to convert them to text.</para>
+        /// <para>This API performs automatic speech recognition (ASR) and uses the <b>file transfer upload</b> mode (<c>fileTransfer</c>). Audio files are not transmitted in the request body. Instead, they are first uploaded to Object Storage Service (OSS). The OSS URL is then passed to the backend through the <c>FileUrl</c> request parameter. The backend retrieves the audio bytes from the URL and calls the ASR model to transcribe the audio into text.</para>
         /// <h3>Call methods</h3>
         /// <list type="bullet">
-        /// <item><description><b>Recommended</b>: Use the <c>TranscribeChatVoiceAdvance</c> method generated by the SDK. Pass in the local audio file stream, and the SDK automatically completes the transfer upload and populates the <c>FileUrl</c> parameter.</description></item>
-        /// <item><description><b>Direct upload</b>: Upload the audio file to an OSS address accessible by the server, and then call this API directly with the <c>FileUrl</c> parameter.</description></item>
+        /// <item><description><b>Recommended</b>: Use the <c>TranscribeChatVoiceAdvance</c> method generated by the SDK and pass in the local audio file stream. The SDK automatically completes the transfer upload and populates the <c>FileUrl</c> parameter.</description></item>
+        /// <item><description><b>Direct upload</b>: Upload the audio file to an OSS URL that is accessible by the server. Then, call this API directly and pass in the <c>FileUrl</c> parameter.</description></item>
         /// </list>
         /// <h3>Request parameters</h3>
         /// <list type="bullet">
-        /// <item><description><b>FileUrl</b>: Required. The OSS address of the audio file. When you use the Advance method, the SDK automatically populates this parameter. You do not need to set it manually.</description></item>
-        /// <item><description><b>FileName</b>: Required. The original file name including the extension, such as <c>meeting.mp3</c>. The OSS address generated during the transfer does not carry the original file name. The backend uses this parameter to determine the audio format, so you must explicitly specify it.</description></item>
-        /// <item><description><b>ContentType</b>: Optional. The MIME type of the audio, such as <c>audio/mpeg</c>. If this parameter is not specified, the MIME type is determined based on the file name extension.</description></item>
-        /// <item><description>Supported audio formats: mp3, wav, m4a, mp4, webm, ogg, oga, opus, flac, and amr. Maximum file size: 25 MB.</description></item>
+        /// <item><description><b>FileUrl</b>: Required. The OSS URL of the audio file. If you use the Advance method, the SDK automatically populates this parameter. You do not need to manually assign a value.</description></item>
+        /// <item><description><b>FileName</b>: Required. The original file name, including the extension, such as <c>meeting.mp3</c>. The OSS URL generated during the transfer does not contain the original file name. The backend determines the audio format based on this parameter. Therefore, you must explicitly pass it.</description></item>
+        /// <item><description><b>ContentType</b>: Optional. The MIME type of the audio, such as <c>audio/mpeg</c>. If you do not pass this parameter, the format is determined based on the file name extension.</description></item>
+        /// <item><description>Supported audio formats: MP3, WAV, M4A, MP4, WebM, OGG, OGA, Opus, FLAC, and AMR. Maximum size: 25 MB.</description></item>
         /// </list>
         /// <h3>Response parameters</h3>
-        /// <para>Returns the recognized text content <c>text</c>.</para>
-        /// <h3>Before you begin</h3>
-        /// <para>The tenant must have the speech recognition model (model_audio_flash) configured. If it is not configured, the error <c>ERR.Robject.Chat.VoiceAudioNotConfigured</c> is returned.</para>
+        /// <para>Returns the recognized text content in the <c>text</c> field.</para>
+        /// <h3>Prerequisites</h3>
+        /// <para>The tenant must have configured a speech recognition model (model_audio_flash). If the model is not configured, the <c>ERR.Robject.Chat.VoiceAudioNotConfigured</c> error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48909,12 +48909,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Base64 上传会话文件</para>
+        /// <para>Uploads a session file in Base64 format.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>使用标准 Base64 提交本地附件（应用侧解码上限 50 MiB），返回会话文件记录 ID。</para>
+        /// <para>Submits a local attachment by using standard Base64 encoding (the maximum decoding limit on the application side is 50 MiB) and returns the session file record ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48974,12 +48974,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Base64 上传会话文件</para>
+        /// <para>Uploads a session file in Base64 format.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>使用标准 Base64 提交本地附件（应用侧解码上限 50 MiB），返回会话文件记录 ID。</para>
+        /// <para>Submits a local attachment by using standard Base64 encoding (the maximum decoding limit on the application side is 50 MiB) and returns the session file record ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -49039,12 +49039,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Base64 上传会话文件</para>
+        /// <para>Uploads a session file in Base64 format.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>使用标准 Base64 提交本地附件（应用侧解码上限 50 MiB），返回会话文件记录 ID。</para>
+        /// <para>Submits a local attachment by using standard Base64 encoding (the maximum decoding limit on the application side is 50 MiB) and returns the session file record ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -49063,12 +49063,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Base64 上传会话文件</para>
+        /// <para>Uploads a session file in Base64 format.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>使用标准 Base64 提交本地附件（应用侧解码上限 50 MiB），返回会话文件记录 ID。</para>
+        /// <para>Submits a local attachment by using standard Base64 encoding (the maximum decoding limit on the application side is 50 MiB) and returns the session file record ID.</para>
         /// </description>
         /// 
         /// <param name="request">

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListOutputFilesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The business ID used for exact filtering. The length is 1 to 128 characters. This value is derived from file registration or the businessId of associated workflow instances.</para>
+        /// <para>The business ID used for exact filtering. The length is 1 to 128 characters. This ID is derived from file registrations or the businessId of associated workflow instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>REQ-20261012-001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The collaboration workspace ID. The length is 1 to 64 characters. If this parameter is not provided, the personal outputs of the current user are queried. If provided, the real-time permissions of workspace members and source resources are verified.</para>
+        /// <para>The ID of the collaboration workspace. The length is 1 to 64 characters. This parameter is optional. If not specified, the personal outputs of the current user are queried. If specified, the real-time permissions of the workspace members and source resources are verified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cg_123e4567-e89b-42d3-a456-426614174001</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>The output item type: ppt, html, document, picture, slides, video, audio, email, or others.</para>
+        /// <para>The output detail type. Valid values: ppt, html, document, picture, slides, video, audio, email, and others.</para>
         /// 
         /// <b>Example:</b>
         /// <para>document</para>
@@ -43,14 +43,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The keyword used to match the output title or detail name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Quarterly operations</para>
+        /// <para>Quarterly business</para>
         /// </summary>
         [NameInMap("keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The name of the digital employee. Filters results by name.</para>
+        /// <para>The name of the digital employee (operating object). Filters results by name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Business Analysis Assistant</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>The number of items per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -100,14 +100,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? SharedOnly { get; set; }
 
         /// <summary>
-        /// <para>The tags used for exact filtering. All specified tags must match simultaneously. You can specify up to 20 tags. Each tag must be a non-empty string of 1 to 128 characters. Tags are derived from file registration or the variables.tags of associated instances.</para>
+        /// <para>The tags used for exact filtering. All specified tags must match simultaneously. You can specify up to 20 tags. Each tag must be a non-empty string of 1 to 128 characters. Tags are derived from file registrations or the variables.tags of associated instances.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public string TagsShrink { get; set; }
 
         /// <summary>
-        /// <para>按本次执行 ID 精确筛选产出</para>
+        /// <para>The ID of the current execution used to exactly filter outputs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleExecutionId</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TaskExecutionId { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. If omitted, the default tenant of the caller is used. The identity and tenant permissions are determined by the gateway and backend authentication.</para>
+        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used. The identity and tenant permissions are determined by the gateway and backend authentication.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

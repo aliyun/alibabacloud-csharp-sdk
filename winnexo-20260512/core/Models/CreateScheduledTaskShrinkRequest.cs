@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateScheduledTaskShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the collaboration group to which the task belongs, such as cg_101. If this parameter is passed, a group space task is created, and the caller must be a valid group member. If this parameter is empty, a personal task is created.</para>
+        /// <para>The ID of the associated collaboration group (such as cg_101). If this parameter is passed, a group space task is created, and the caller must be a valid group member. If this parameter is empty, a personal task is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleCollaborationGroupId</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DescriptionShrink { get; set; }
 
         /// <summary>
-        /// <para>The name of the current effective digital employee. This parameter is empty if it is not configured.</para>
+        /// <para>The name of the currently effective digital employee. This parameter is empty if it is not configured.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;pcitc-magent&quot;]</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? IsOpen { get; set; }
 
         /// <summary>
-        /// <para>The large language model used by the assistant. The default value is empty, which indicates that DingTalk automatically selects the model.</para>
+        /// <para>The large model used by the assistant. The default value is empty, which indicates that DingTalk automatically selects the model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>quick</para>
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SampleName.pdf</para>
+        /// <para>Sample name.pdf</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>输出会话模式，默认 NEW_CONVERSATION</para>
+        /// <para>The output conversation mode. Default value: NEW_CONVERSATION.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NEW_CONVERSATION</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TaskDetailShrink { get; set; }
 
         /// <summary>
-        /// <para>The effective tenant ID.</para>
+        /// <para>The ID of the effective tenant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>The trigger configuration of the scheduled task. The triggerMode parameter supports manual (manual trigger) and scheduled (scheduled trigger). If scheduled is used, the cron parameter must be specified. The timezone and language parameters are injected by the server, and the client does not need to pass them. The pushConfig parameter is the list of task push channels. If the list is empty or no channel is enabled, no push is performed.</para>
+        /// <para>The trigger configuration of the scheduled task. triggerMode supports manual (manual trigger) and scheduled (scheduled trigger). If scheduled is used, cron must be specified. timezone and language are injected by the server, and the client does not need to pass them. pushConfig is the list of task push channels. If it is empty or no channel is enabled, no push is performed.</para>
         /// </summary>
         [NameInMap("triggerConfig")]
         [Validation(Required=false)]

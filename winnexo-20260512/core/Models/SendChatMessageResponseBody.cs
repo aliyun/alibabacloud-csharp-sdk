@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The streaming response content.</para>
+        /// <para>The streamed content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yes，i\&quot;m ready</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>The Server-Sent Events (SSE) event stream payload. If the request is successful, the response is the raw frame of text/event-stream, which must be consumed frame by frame in a streaming manner.</para>
+        /// <para>The Server-Sent Events (SSE) event stream payload. Upon success, the response consists of raw text/event-stream frames, which must be consumed frame by frame in a streaming manner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The session work mode. Valid values: ask (quick Q&amp;A, which trims tools, skills, and connectors for single-turn direct answers), work (deep work, which is the default value), and direct (direct connection mode at the request level, which does not start the sandbox and prevents context pollution, equivalent to directChat=true). The ask and work modes are at the session level. The mode is fixed when a new session is created. Subsequent chats inherit the session mode by default. If the explicitly passed value is inconsistent with the session mode, a parameter error is returned. To switch the mode, create a new session or fork the session. If ask is passed in the multi-digital employee or task execution scenario, it takes effect as work. If directChat is set to true, this parameter is ignored.</para>
+        /// <para>The session work mode. Valid values: ask (quick Q&amp;A, which trims tools, skills, and connectors for single-turn direct answers), work (deep work, which is the default), and direct (direct connection mode at the request level, which does not start a sandbox and prevents context pollution, equivalent to directChat=true). The ask and work modes are session-level. The mode is fixed when a new session is created. Subsequent chats inherit the session mode by default. If the explicitly passed value is inconsistent with the session mode, a parameter error is returned. To switch modes, create a new session or fork the session. If ask is passed in multi-digital employee or task execution scenarios, it takes effect as work. This parameter is ignored when directChat is set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>work</para>

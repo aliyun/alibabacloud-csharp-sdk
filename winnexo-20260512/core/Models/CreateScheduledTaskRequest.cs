@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateScheduledTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the collaboration group to which the task belongs, such as cg_101. If this parameter is passed, a group space task is created, and the caller must be a valid group member. If this parameter is empty, a personal task is created.</para>
+        /// <para>The ID of the associated collaboration group (such as cg_101). If this parameter is passed, a group space task is created, and the caller must be a valid group member. If this parameter is empty, a personal task is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleCollaborationGroupId</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>SampleName.pdf</para>
+            /// <para>Sample name.pdf</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
@@ -59,10 +59,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <summary>
             /// <para>The object ID. Pass the project task ID.</para>
             /// <list type="bullet">
-            /// <item><description><para>For internal enterprise applications, call the <a href="https://open.dingtalk.com/document/orgapp-server/create-a-project-task">Create a project task</a> API operation to obtain the taskId.</para>
-            /// </description></item>
-            /// <item><description><para>For third-party enterprise applications, call the <a href="https://open.dingtalk.com/document/isvapp-server/create-a-project-task">Create a project task</a> API operation to obtain the taskId.</para>
-            /// </description></item>
+            /// <item><description>For internal enterprise applications, call the <a href="https://open.dingtalk.com/document/orgapp-server/create-a-project-task">Create a project task</a> API to obtain the taskId.</description></item>
+            /// <item><description>For third-party enterprise applications, call the <a href="https://open.dingtalk.com/document/isvapp-server/create-a-project-task">Create a project task</a> API to obtain the taskId.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,7 +91,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SkillCode { get; set; }
 
             /// <summary>
-            /// <para>The HTTP API type. Valid values: Http (standard HTTP API), Rest (RESTful API), WebSocket (WebSocket API), HttpIngress (HTTP API accessed through Ingress), LLM (large language model API), and Agent (agent API).</para>
+            /// <para>The HTTP API type. Valid values: Http (common HTTP API), Rest (RESTful API), WebSocket (WebSocket API), HttpIngress (HTTP API accessed through Ingress), LLM (large language model API), and Agent (agent API).</para>
             /// 
             /// <b>Example:</b>
             /// <para>text</para>
@@ -105,7 +103,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The name of the current effective digital employee. This parameter is empty if it is not configured.</para>
+        /// <para>The name of the currently effective digital employee. This parameter is empty if it is not configured.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;pcitc-magent&quot;]</para>
@@ -125,7 +123,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? IsOpen { get; set; }
 
         /// <summary>
-        /// <para>The large language model used by the assistant. The default value is empty, which indicates that DingTalk automatically selects the model.</para>
+        /// <para>The large model used by the assistant. The default value is empty, which indicates that DingTalk automatically selects the model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>quick</para>
@@ -139,14 +137,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SampleName.pdf</para>
+        /// <para>Sample name.pdf</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>输出会话模式，默认 NEW_CONVERSATION</para>
+        /// <para>The output conversation mode. Default value: NEW_CONVERSATION.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NEW_CONVERSATION</para>
@@ -173,7 +171,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the feature is enabled.</para>
+            /// <para>Specifies whether to enable the feature.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -186,14 +184,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>SampleName.pdf</para>
+            /// <para>Sample name.pdf</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the recommended item, which can be a <b>feedId</b> or a mini-app ID.</para>
+            /// <para>The ID of the recommended item. The value can be a <b>feedId</b> or a mini-app ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleObjectId</para>
@@ -262,7 +260,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 /// <para>The name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>SampleName.pdf</para>
+                /// <para>Sample name.pdf</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
@@ -271,10 +269,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 /// <summary>
                 /// <para>The object ID. Pass the project task ID.</para>
                 /// <list type="bullet">
-                /// <item><description><para>For internal enterprise applications, call the <a href="https://open.dingtalk.com/document/orgapp-server/create-a-project-task">Create a project task</a> API operation to obtain the taskId.</para>
-                /// </description></item>
-                /// <item><description><para>For third-party enterprise applications, call the <a href="https://open.dingtalk.com/document/isvapp-server/create-a-project-task">Create a project task</a> API operation to obtain the taskId.</para>
-                /// </description></item>
+                /// <item><description>For internal enterprise applications, call the <a href="https://open.dingtalk.com/document/orgapp-server/create-a-project-task">Create a project task</a> API to obtain the taskId.</description></item>
+                /// <item><description>For third-party enterprise applications, call the <a href="https://open.dingtalk.com/document/isvapp-server/create-a-project-task">Create a project task</a> API to obtain the taskId.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -350,7 +346,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 /// <para>The name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>SampleName.pdf</para>
+                /// <para>Sample name.pdf</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
@@ -391,7 +387,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The effective tenant ID.</para>
+        /// <para>The ID of the effective tenant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -401,7 +397,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>The trigger configuration of the scheduled task. The triggerMode parameter supports manual (manual trigger) and scheduled (scheduled trigger). If scheduled is used, the cron parameter must be specified. The timezone and language parameters are injected by the server, and the client does not need to pass them. The pushConfig parameter is the list of task push channels. If the list is empty or no channel is enabled, no push is performed.</para>
+        /// <para>The trigger configuration of the scheduled task. triggerMode supports manual (manual trigger) and scheduled (scheduled trigger). If scheduled is used, cron must be specified. timezone and language are injected by the server, and the client does not need to pass them. pushConfig is the list of task push channels. If it is empty or no channel is enabled, no push is performed.</para>
         /// </summary>
         [NameInMap("triggerConfig")]
         [Validation(Required=false)]
@@ -432,7 +428,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// <para>The list of task push channels. If the list is empty or no channel is enabled, no push is performed.</para>
+            /// <para>The list of task push channels. If this parameter is empty or no channel is enabled, no push is performed.</para>
             /// </summary>
             [NameInMap("pushConfig")]
             [Validation(Required=false)]
@@ -441,10 +437,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 /// <summary>
                 /// <para>The notification method. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>hdm_alarm_sms</b>: SMS.</description></item>
+                /// <item><description><b>hdm_alarm_sms</b>: Text message.</description></item>
                 /// <item><description><b>dingtalk</b>: DingTalk chatbot.</description></item>
-                /// <item><description><b>hdm_alarm_sms_and_email</b>: SMS and email.</description></item>
-                /// <item><description><b>hdm_alarm_sms,dingtalk</b>: SMS and DingTalk chatbot.</description></item>
+                /// <item><description><b>hdm_alarm_sms_and_email</b>: Text message and email.</description></item>
+                /// <item><description><b>hdm_alarm_sms,dingtalk</b>: Text message and DingTalk chatbot.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -477,7 +473,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 /// <summary>
                 /// <para>Specifies whether the credential is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: Enabled. </description></item>
+                /// <item><description>true: Enabled.</description></item>
                 /// <item><description>false: Disabled.</description></item>
                 /// </list>
                 /// 
@@ -509,16 +505,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string OperatingObjectName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the file recipient. Valid values:</para>
+                /// <para>The type of the file receiver. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>0: Private chat.</para>
-                /// </description></item>
-                /// <item><description><para>1: Group chat.</para>
-                /// </description></item>
-                /// <item><description><para>2: DingTalk Drive.</para>
-                /// </description></item>
-                /// <item><description><para>3: Document.</para>
-                /// </description></item>
+                /// <item><description>0: Private chat.</description></item>
+                /// <item><description>1: Group chat.</description></item>
+                /// <item><description>2: DingTalk Drive.</description></item>
+                /// <item><description>3: Document.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -541,14 +533,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Timezone { get; set; }
 
             /// <summary>
+            /// <para>The trigger mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Trigger mode</para>
-            /// <para>1: Manual trigger</para>
-            /// <para>2: Scheduled trigger </para>
-            /// <para>3: Code commit trigger</para>
-            /// <para>5: Pipeline trigger</para>
-            /// <para>6: Webhook trigger</para>
-            /// </description></item>
+            /// <item><description>1: Manual trigger.</description></item>
+            /// <item><description>2: Scheduled trigger.</description></item>
+            /// <item><description>3: Code commit trigger.</description></item>
+            /// <item><description>5: Pipeline trigger.</description></item>
+            /// <item><description>6: WEBHOOK trigger.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
