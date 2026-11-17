@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>Indicates whether the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The list of error message parameters.</para>
+        /// <para>The list of parameters in the error message.</para>
         /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

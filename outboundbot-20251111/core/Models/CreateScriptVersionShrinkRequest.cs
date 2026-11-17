@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string LabelConfigsShrink { get; set; }
 
         /// <summary>
-        /// <para>The scenario ID.</para>
+        /// <para>The script ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b15</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string ScriptId { get; set; }
 
         /// <summary>
-        /// <para>The dialogue capability configuration.</para>
+        /// <para>The dialog capability configuration.</para>
         /// </summary>
         [NameInMap("ScriptProfile")]
         [Validation(Required=false)]
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string SourceVersionId { get; set; }
 
         /// <summary>
-        /// <para>The Text-to-Speech (TTS) configuration.</para>
+        /// <para>The TTS configuration.</para>
         /// </summary>
         [NameInMap("SynthesizerConfig")]
         [Validation(Required=false)]
         public string SynthesizerConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The Automatic Speech Recognition (ASR) configuration.</para>
+        /// <para>The ASR configuration.</para>
         /// </summary>
         [NameInMap("TranscriberConfig")]
         [Validation(Required=false)]

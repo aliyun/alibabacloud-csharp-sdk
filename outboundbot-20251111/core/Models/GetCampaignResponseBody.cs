@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public int? CasesUncompleted { get; set; }
 
             /// <summary>
-            /// <para>The number of cases that were attempted but not completed.</para>
+            /// <para>The number of attempted but uncompleted cases.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public double? CompletedRate { get; set; }
 
             /// <summary>
-            /// <para>The time when the campaign was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1735660800000</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public long? CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>The fixed number of concurrent calls.</para>
+            /// <para>The fixed concurrency.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -150,14 +150,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             /// <para>The name of the campaign.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Satisfaction Survey</para>
+            /// <para>Satisfaction survey</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The list of caller numbers.</para>
+            /// <para>The list of calling numbers.</para>
             /// </summary>
             [NameInMap("Numbers")]
             [Validation(Required=false)]
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public long? PlannedStartTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the campaign continues to run until the planned end time after all contacts have been called.</para>
+            /// <para>Specifies whether to continue running the campaign until the end time after all contacts have been called.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string ScriptId { get; set; }
 
             /// <summary>
-            /// <para>The state of the campaign.</para>
+            /// <para>The status of the campaign.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Completed</para>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public int? TotalCases { get; set; }
 
             /// <summary>
-            /// <para>The time when the campaign was last updated.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1735660800000</para>
@@ -283,7 +283,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

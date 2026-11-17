@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public ListFlashSmsAccessProfilesResponseBodyData Data { get; set; }
         public class ListFlashSmsAccessProfilesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The data list.</para>
+            /// <para>The list of flash SMS access profiles.</para>
             /// </summary>
             [NameInMap("FlashSmsAccessProfiles")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string AccessProfileId { get; set; }
 
                 /// <summary>
-                /// <para>The creation time, in millisecond-level timestamp.</para>
+                /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1735660800000</para>
@@ -64,13 +64,15 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public long? CreatedTime { get; set; }
 
                 /// <summary>
-                /// <para>The provider ID. Valid values:\
-                /// Uincall: Beijing Youyin Communication Co., Ltd.\
-                /// ChuangLan: Beijing ChuangLan Cloud Intelligence Information Co., Ltd.\
-                /// ChinaMobile: China Mobile.\
-                /// ShangHaiTianNan: Shanghai Tiannan.\
-                /// HeDao: Galexis.\
-                /// DySms: Alibaba Communication.</para>
+                /// <para>The provider ID. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Uincall: Beijing Uincall Communication Co., Ltd.</description></item>
+                /// <item><description>ChuangLan: Beijing Chuanglan Cloud Intelligence Information Technology Co., Ltd.</description></item>
+                /// <item><description>ChinaMobile: China Mobile</description></item>
+                /// <item><description>ShangHaiTianNan: Shanghai Tiannan</description></item>
+                /// <item><description>HeDao: Hedaokesi</description></item>
+                /// <item><description>DySms: Alibaba Cloud Communications</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Uincall</para>
@@ -83,14 +85,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 /// <para>The provider name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>北京优音通信有限公司</para>
+                /// <para>Beijing Uincall Communication Co., Ltd</para>
                 /// </summary>
                 [NameInMap("ProviderName")]
                 [Validation(Required=false)]
                 public string ProviderName { get; set; }
 
                 /// <summary>
-                /// <para>The update time, in millisecond-level timestamp.</para>
+                /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1735660800000</para>
@@ -102,7 +104,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             }
 
             /// <summary>
-            /// <para>The page number, starting from 1.</para>
+            /// <para>The page number. Pages start from 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -112,7 +114,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of records per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -122,7 +124,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of records that match the conditions.</para>
+            /// <para>The total number of entries that meet the query conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string InteractionConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The label configurations.</para>
+        /// <para>The label configuration.</para>
         /// </summary>
         [NameInMap("LabelConfigs")]
         [Validation(Required=false)]
@@ -51,14 +51,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string ScriptProfileShrink { get; set; }
 
         /// <summary>
-        /// <para>The Text-to-Speech (TTS) configuration.</para>
+        /// <para>The TTS configuration.</para>
         /// </summary>
         [NameInMap("SynthesizerConfig")]
         [Validation(Required=false)]
         public string SynthesizerConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The Automatic Speech Recognition (ASR) configuration.</para>
+        /// <para>The ASR configuration.</para>
         /// </summary>
         [NameInMap("TranscriberConfig")]
         [Validation(Required=false)]

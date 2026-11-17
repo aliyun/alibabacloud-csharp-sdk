@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
 {
     public class ListScriptsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The chatbot builder type.</para>
+        /// <para>The bot builder type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LITE</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The script name.</para>
+        /// <para>The scenario name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Satisfaction survey</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return only published scripts.</para>
+        /// <para>Specifies whether to return only published scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public bool? PublishOnly { get; set; }
 
         /// <summary>
-        /// <para>The list of script IDs.</para>
+        /// <para>The list of scenario IDs.</para>
         /// </summary>
         [NameInMap("ScriptIds")]
         [Validation(Required=false)]

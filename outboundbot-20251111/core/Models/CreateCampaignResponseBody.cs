@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
 {
     public class CreateCampaignResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code of the operation.</para>
+        /// <para>The API status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned by the operation.</para>
+        /// <para>The message returned by the API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
 {
     public class AbortCampaignRequest : TeaModel {
         /// <summary>
-        /// <para>The outbound call task ID.</para>
+        /// <para>The outbound campaign ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

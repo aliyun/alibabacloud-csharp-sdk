@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number, starting from 1.</para>
+        /// <para>The page number. Pages start from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

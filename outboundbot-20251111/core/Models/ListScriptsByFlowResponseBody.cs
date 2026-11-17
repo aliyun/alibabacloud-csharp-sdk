@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Satisfaction Survey</para>
+            /// <para>Satisfaction survey</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

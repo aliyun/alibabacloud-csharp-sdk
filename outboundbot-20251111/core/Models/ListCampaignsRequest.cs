@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string ActualStartTimeTo { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the outbound robot.</para>
+        /// <para>The outbound instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,10 +41,10 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the campaign.</para>
+        /// <para>The name of the task.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SatisfactionSurvey</para>
+        /// <para>Satisfaction follow-up</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of items per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string PlannedStartTimeTo { get; set; }
 
         /// <summary>
-        /// <para>The status of the campaign.</para>
+        /// <para>The status of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Completed</para>

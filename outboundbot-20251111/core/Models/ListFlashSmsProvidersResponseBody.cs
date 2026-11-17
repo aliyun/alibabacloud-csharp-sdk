@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             /// <para>The provider parameter information.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;Pwd\&quot;:{\&quot;displayName\&quot;:\&quot;密码\&quot;,\&quot;dataType\&quot;:\&quot;TEXT\&quot;,\&quot;displayOrder\&quot;:2,\&quot;required\&quot;:true,\&quot;maxLength\&quot;:64},\&quot;User\&quot;:{\&quot;displayName\&quot;:\&quot;用户\&quot;,\&quot;dataType\&quot;:\&quot;TEXT\&quot;,\&quot;displayOrder\&quot;:1,\&quot;required\&quot;:true,\&quot;maxLength\&quot;:64},\&quot;Account\&quot;:{\&quot;displayName\&quot;:\&quot;账号\&quot;,\&quot;dataType\&quot;:\&quot;TEXT\&quot;,\&quot;displayOrder\&quot;:3,\&quot;required\&quot;:true,\&quot;maxLength\&quot;:64}}</para>
+            /// <para>{&quot;Pwd&quot;:{&quot;displayName&quot;:&quot;Password&quot;,&quot;dataType&quot;:&quot;TEXT&quot;,&quot;displayOrder&quot;:2,&quot;required&quot;:true,&quot;maxLength&quot;:64},&quot;User&quot;:{&quot;displayName&quot;:&quot;User&quot;,&quot;dataType&quot;:&quot;TEXT&quot;,&quot;displayOrder&quot;:1,&quot;required&quot;:true,&quot;maxLength&quot;:64},&quot;Account&quot;:{&quot;displayName&quot;:&quot;Account&quot;,&quot;dataType&quot;:&quot;TEXT&quot;,&quot;displayOrder&quot;:3,&quot;required&quot;:true,&quot;maxLength&quot;:64}}</para>
             /// </summary>
             [NameInMap("ProfileSchema")]
             [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             /// <para>The provider name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>北京优音通信有限公司</para>
+            /// <para>Beijing Youyin Communication Co., Ltd</para>
             /// </summary>
             [NameInMap("ProviderName")]
             [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

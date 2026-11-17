@@ -60,28 +60,28 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public bool? CaseCompleted { get; set; }
 
         /// <summary>
-        /// <para>The list of case IDs.</para>
+        /// <para>The case IDs.</para>
         /// </summary>
         [NameInMap("CaseIds")]
         [Validation(Required=false)]
         public string CaseIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The list of disposition codes.</para>
+        /// <para>The disposition codes.</para>
         /// </summary>
         [NameInMap("DispositionCodes")]
         [Validation(Required=false)]
         public string DispositionCodesShrink { get; set; }
 
         /// <summary>
-        /// <para>The list of disposition reasons.</para>
+        /// <para>The disposition reasons.</para>
         /// </summary>
         [NameInMap("DispositionReasons")]
         [Validation(Required=false)]
         public string DispositionReasonsShrink { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether it is a draft version.</para>
+        /// <para>Specifies whether the version is a draft.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The list of case statuses.</para>
+        /// <para>The case states.</para>
         /// </summary>
         [NameInMap("States")]
         [Validation(Required=false)]

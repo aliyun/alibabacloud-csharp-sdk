@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public CreateScriptVersionRequestInteractionConfigBargeInConfig BargeInConfig { get; set; }
             public class CreateScriptVersionRequestInteractionConfigBargeInConfig : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether barge-in is supported during the closing statement.</para>
+                /// <para>Specifies whether barge-in is supported for the closing remark.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public bool? GlobalBargeInEnabled { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether barge-in is supported during the opening statement.</para>
+                /// <para>Specifies whether barge-in is supported for the opening remark.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -76,14 +76,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             }
 
             /// <summary>
-            /// <para>The hang-up configuration.</para>
+            /// <para>The end conversation configuration.</para>
             /// </summary>
             [NameInMap("EndConversationConfig")]
             [Validation(Required=false)]
             public CreateScriptVersionRequestInteractionConfigEndConversationConfig EndConversationConfig { get; set; }
             public class CreateScriptVersionRequestInteractionConfigEndConversationConfig : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether barge-in is supported during the delayed hang-up waiting period.</para>
+                /// <para>Specifies whether barge-in is supported during the delay before hanging up.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public bool? BargeInEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The delay in seconds after the hang-up script finishes playing before the hang-up action is executed. Valid range: 0 to 5.</para>
+                /// <para>The delay in seconds before hanging up after the hang-up prompt is played. Valid values: 0 to 5.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -103,17 +103,17 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public int? Delay { get; set; }
 
                 /// <summary>
-                /// <para>The special case interception rules.</para>
+                /// <para>The special case interception configuration.</para>
                 /// </summary>
                 [NameInMap("Triggers")]
                 [Validation(Required=false)]
                 public List<CreateScriptVersionRequestInteractionConfigEndConversationConfigTriggers> Triggers { get; set; }
                 public class CreateScriptVersionRequestInteractionConfigEndConversationConfigTriggers : TeaModel {
                     /// <summary>
-                    /// <para>The closing statement played when the turn limit is reached and the hang-up is executed.</para>
+                    /// <para>The closing statement played when the conversation is ended due to reaching the turn limit.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Thank you for your time. Have a great day. Goodbye!</para>
+                    /// <para>Thank you for taking my call. Have a great day. Goodbye!</para>
                     /// </summary>
                     [NameInMap("ClosingStatement")]
                     [Validation(Required=false)]
@@ -127,11 +127,11 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                     public List<string> Keywords { get; set; }
 
                     /// <summary>
-                    /// <para>Valid values:</para>
+                    /// <para>The trigger type. Valid values:\</para>
                     /// <list type="bullet">
-                    /// <item><description>TurnLimit: Maximum interaction turn limit check.</description></item>
-                    /// <item><description>IntelligentVoiceAssistant: Voice assistant.</description></item>
-                    /// <item><description>InteractiveVoiceResponse: Extension number transfer.</description></item>
+                    /// <item><description>TurnLimit: Maximum interaction turns.\</description></item>
+                    /// <item><description>IntelligentVoiceAssistant: Intelligent voice assistant.\</description></item>
+                    /// <item><description>InteractiveVoiceResponse: Extension transfer.\</description></item>
                     /// <item><description>KeyWords: Custom interception.</description></item>
                     /// </list>
                     /// 
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                     public string TriggerType { get; set; }
 
                     /// <summary>
-                    /// <para>The hang-up is executed when the number of interaction turns exceeds the specified value. Valid range: 0 to 100. A value of 0 indicates that the turn-limit hang-up is disabled.</para>
+                    /// <para>The maximum number of interaction turns before hanging up. Valid values: 0 to 100. A value of 0 indicates that the turn limit is disabled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>20</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             }
 
             /// <summary>
-            /// <para>The delay before audio playback after the call is connected. Unit: milliseconds.</para>
+            /// <para>The delay in milliseconds before playing the initial greeting after the call is connected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2000</para>
@@ -174,14 +174,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public CreateScriptVersionRequestInteractionConfigSilenceDetectionConfig SilenceDetectionConfig { get; set; }
             public class CreateScriptVersionRequestInteractionConfigSilenceDetectionConfig : TeaModel {
                 /// <summary>
-                /// <para>The list of actions to execute during consecutive silence.</para>
+                /// <para>The list of actions to perform during consecutive silences.</para>
                 /// </summary>
                 [NameInMap("FallbackControlParamsList")]
                 [Validation(Required=false)]
                 public List<CreateScriptVersionRequestInteractionConfigSilenceDetectionConfigFallbackControlParamsList> FallbackControlParamsList { get; set; }
                 public class CreateScriptVersionRequestInteractionConfigSilenceDetectionConfigFallbackControlParamsList : TeaModel {
                     /// <summary>
-                    /// <para>The action to execute during consecutive silence.</para>
+                    /// <para>The action to perform during consecutive silences.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>HangUp</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 }
 
                 /// <summary>
-                /// <para>The number of consecutive silence turns before hang-up. This parameter takes effect only when NluEngine is set to PROMPTS.</para>
+                /// <para>The maximum number of consecutive silence turns before hanging up. This parameter takes effect only when NluEngine is set to PROMPTS.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -207,8 +207,8 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 /// 
                 /// <b>Example:</b>
                 /// <list type="bullet">
-                /// <item><description>Rephrase the content from the previous turn</description></item>
-                /// <item><description>Ensure natural context continuity</description></item>
+                /// <item><description>Repeat the content of the previous turn.</description></item>
+                /// <item><description>Ensure natural context transition</description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("Prompt")]
@@ -216,7 +216,9 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string Prompt { get; set; }
 
                 /// <summary>
-                /// <para>The silence timeout period in milliseconds. When the user remains silent beyond the specified value, the silence timeout script is played. Valid range: 2000 to 10000.</para>
+                /// <para>The silence timeout in milliseconds.\
+                /// If the user remains silent beyond this value, the silence timeout prompt is played.\
+                /// Valid values: 2000 to 10000.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5000</para>
@@ -235,10 +237,13 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public CreateScriptVersionRequestInteractionConfigTransitionConfig TransitionConfig { get; set; }
             public class CreateScriptVersionRequestInteractionConfigTransitionConfig : TeaModel {
                 /// <summary>
-                /// <para>The model generation prompt.</para>
+                /// <para>The prompt for AI-generated transition phrases.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Based on the user\&quot;s latest reply in the following conversation record, generate a brief transition phrase for the agent to naturally and smoothly continue the conversation. Requirements: 1. Use colloquial expressions common in customer service scenarios, keeping the tone natural, polite, and neutral.....</para>
+                /// <para>Based on the user\&quot;s latest reply in the conversation record below, generate a short transition phrase to help the agent continue the conversation naturally and smoothly. Requirements:</para>
+                /// <ol>
+                /// <item><description>Use colloquial expressions common in customer service scenarios, keeping the tone natural, polite, and neutral..</description></item>
+                /// </ol>
                 /// </summary>
                 [NameInMap("AiPhrasePrompt")]
                 [Validation(Required=false)]
@@ -252,9 +257,9 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public List<string> FixedPhraseList { get; set; }
 
                 /// <summary>
-                /// <para>The transition phrase generation method. Valid values:</para>
+                /// <para>The method for generating transition phrases. Valid values:\</para>
                 /// <list type="bullet">
-                /// <item><description>aiGenerated: Model-generated.</description></item>
+                /// <item><description>aiGenerated: AI-generated.\</description></item>
                 /// <item><description>fixedPhrase: Fixed phrase.</description></item>
                 /// </list>
                 /// 
@@ -316,7 +321,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         }
 
         /// <summary>
-        /// <para>The scenario ID.</para>
+        /// <para>The script ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b15</para>
@@ -326,15 +331,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string ScriptId { get; set; }
 
         /// <summary>
-        /// <para>The dialogue capability configuration.</para>
+        /// <para>The dialog capability configuration.</para>
         /// </summary>
         [NameInMap("ScriptProfile")]
         [Validation(Required=false)]
         public CreateScriptVersionRequestScriptProfile ScriptProfile { get; set; }
         public class CreateScriptVersionRequestScriptProfile : TeaModel {
             /// <summary>
-            /// <para>The AgentKey of the chatbot.\
-            /// This parameter is required when NluEngine is set to BEEBOT for the current scenario.</para>
+            /// <para>The AgentKey of the chatbot. This parameter is required when NluEngine is set to BEEBOT for the current script.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1309723684579735_p_beebot_public</para>
@@ -344,24 +348,24 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string AgentKey { get; set; }
 
             /// <summary>
-            /// <para>The dialogue agent configuration.</para>
+            /// <para>The dialog agent configuration.</para>
             /// </summary>
             [NameInMap("AgentProfile")]
             [Validation(Required=false)]
             public CreateScriptVersionRequestScriptProfileAgentProfile AgentProfile { get; set; }
             public class CreateScriptVersionRequestScriptProfileAgentProfile : TeaModel {
                 /// <summary>
-                /// <para>The prompt in JSON format.</para>
+                /// <para>The prompt JSON.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>{\&quot;prompts\&quot;:\&quot;I am a chatbot.\&quot;}</para>
+                /// <para>{&quot;prompts&quot;:&quot;I am a chatbot.&quot;}</para>
                 /// </summary>
                 [NameInMap("PromptsJson")]
                 [Validation(Required=false)]
                 public string PromptsJson { get; set; }
 
                 /// <summary>
-                /// <para>The scenario template ID.</para>
+                /// <para>The script template ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>OUTBOUND_BOT_PROMPTS_DEFAULT</para>
@@ -373,8 +377,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             }
 
             /// <summary>
-            /// <para>The chatbot type.\
-            /// This parameter is required when NluEngine is set to BEEBOT for the current scenario.</para>
+            /// <para>The chatbot type. This parameter is required when NluEngine is set to BEEBOT for the current script.</para>
             /// 
             /// <b>Example:</b>
             /// <para>LITE</para>
@@ -384,8 +387,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string BuilderType { get; set; }
 
             /// <summary>
-            /// <para>The chatbot ID.\
-            /// This parameter is required when NluEngine is set to BEEBOT for the current scenario.</para>
+            /// <para>The chatbot ID. This parameter is required when NluEngine is set to BEEBOT for the current script.</para>
             /// 
             /// <b>Example:</b>
             /// <para>chatbot-cn-MQuyjjb666</para>
@@ -402,8 +404,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public CreateScriptVersionRequestScriptProfileFunctionMeta FunctionMeta { get; set; }
             public class CreateScriptVersionRequestScriptProfileFunctionMeta : TeaModel {
                 /// <summary>
-                /// <para>The function service ID.\
-                /// This parameter is required when NluEngine is set to FUNCTION for the current scenario.</para>
+                /// <para>The function service ID. This parameter is required when NluEngine is set to FUNCTION for the current script.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9b752bbb-805a-4d3e-9013-eab5555c3fef</para>
@@ -413,8 +414,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string FunctionId { get; set; }
 
                 /// <summary>
-                /// <para>The function service name.\
-                /// This parameter is required when NluEngine is set to FUNCTION for the current scenario.</para>
+                /// <para>The function service name. This parameter is required when NluEngine is set to FUNCTION for the current script.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my_funciton</para>
@@ -424,8 +424,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string FunctionName { get; set; }
 
                 /// <summary>
-                /// <para>The function trigger name.\
-                /// This parameter is required when NluEngine is set to FUNCTION for the current scenario.</para>
+                /// <para>The function trigger name. This parameter is required when NluEngine is set to FUNCTION for the current script.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>defaultTrigger</para>
@@ -435,8 +434,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string HttpTriggerName { get; set; }
 
                 /// <summary>
-                /// <para>The function trigger URL.\
-                /// This parameter is required when NluEngine is set to FUNCTION for the current scenario.</para>
+                /// <para>The function trigger URL. This parameter is required when NluEngine is set to FUNCTION for the current script.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://chat-xxxxx-v-yewiundukb.cn-hangzhou-xxx.run">http://chat-xxxxx-v-yewiundukb.cn-hangzhou-xxx.run</a></para>
@@ -446,8 +444,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string HttpTriggerUrl { get; set; }
 
                 /// <summary>
-                /// <para>The region where the function service resides.\
-                /// This parameter is required when NluEngine is set to FUNCTION for the current scenario.</para>
+                /// <para>The region where the function service resides. This parameter is required when NluEngine is set to FUNCTION for the current script.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -459,8 +456,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             }
 
             /// <summary>
-            /// <para>The dialogue model.\
-            /// This parameter is required when NluEngine is set to PROMPTS for the current scenario.</para>
+            /// <para>The dialog model. This parameter is required when NluEngine is set to PROMPTS for the current script.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qwen-plus</para>
@@ -477,7 +473,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public CreateScriptVersionRequestScriptProfileNluAccessProfile NluAccessProfile { get; set; }
             public class CreateScriptVersionRequestScriptProfileNluAccessProfile : TeaModel {
                 /// <summary>
-                /// <para>The third-party dialogue model configuration ID.</para>
+                /// <para>The ID of the third-party dialog model configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c2c9baae-9351-4c49-a8cb-6f24a83a8718</para>
@@ -489,7 +485,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             }
 
             /// <summary>
-            /// <para>The dialogue model invocation method.</para>
+            /// <para>The dialog model invocation method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MANAGED</para>
@@ -521,7 +517,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string SourceVersionId { get; set; }
 
         /// <summary>
-        /// <para>The Text-to-Speech (TTS) configuration.</para>
+        /// <para>The TTS configuration.</para>
         /// </summary>
         [NameInMap("SynthesizerConfig")]
         [Validation(Required=false)]
@@ -545,7 +541,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public CreateScriptVersionRequestSynthesizerConfigNlsAccessProfile NlsAccessProfile { get; set; }
             public class CreateScriptVersionRequestSynthesizerConfigNlsAccessProfile : TeaModel {
                 /// <summary>
-                /// <para>The third-party speech configuration ID. This parameter is required when you use a third-party ASR service such as Doubao or iFLYTEK.</para>
+                /// <para>The ID of the third-party speech configuration. This is required when you use third-party ASR services such as Doubao or iFlytek.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c2c9baae-9351-4c49-a8cb-6f24a83a8718</para>
@@ -577,9 +573,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string NlsEngine { get; set; }
 
             /// <summary>
-            /// <para>The pitch rate.\
-            /// Valid values: -500 to 500.\
-            /// Default value: 0.</para>
+            /// <para>The pitch. Valid values: -500 to 500. Default value: 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -596,7 +590,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public List<CreateScriptVersionRequestSynthesizerConfigPronRules> PronRules { get; set; }
             public class CreateScriptVersionRequestSynthesizerConfigPronRules : TeaModel {
                 /// <summary>
-                /// <para>The commonly mispronounced character or word.</para>
+                /// <para>The easily confused character or word.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>还钱</para>
@@ -606,7 +600,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string Pattern { get; set; }
 
                 /// <summary>
-                /// <para>The homophonic character or word.</para>
+                /// <para>The homophone character or word.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>环钱</para>
@@ -618,9 +612,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             }
 
             /// <summary>
-            /// <para>The speech rate.\
-            /// Valid values: -500 to 500.\
-            /// Default value: 0.</para>
+            /// <para>The speech rate. Valid values: -500 to 500. Default value: 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -640,9 +632,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string Voice { get; set; }
 
             /// <summary>
-            /// <para>The volume.\
-            /// Valid values: 0 to 100.\
-            /// Default value: 50.</para>
+            /// <para>The volume. Valid values: 0 to 100. Default value: 50.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -654,7 +644,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         }
 
         /// <summary>
-        /// <para>The Automatic Speech Recognition (ASR) configuration.</para>
+        /// <para>The ASR configuration.</para>
         /// </summary>
         [NameInMap("TranscriberConfig")]
         [Validation(Required=false)]
@@ -671,7 +661,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 /// <para>The incorrectly recognized text.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Aliababa</para>
+                /// <para>啊里巴巴</para>
                 /// </summary>
                 [NameInMap("Pattern")]
                 [Validation(Required=false)]
@@ -681,7 +671,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 /// <para>The corrected text.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Alibaba</para>
+                /// <para>阿里巴巴</para>
                 /// </summary>
                 [NameInMap("Replacement")]
                 [Validation(Required=false)]
@@ -690,7 +680,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             }
 
             /// <summary>
-            /// <para>The custom language model ID for ASR.</para>
+            /// <para>The ID of the custom language model for ASR.</para>
             /// 
             /// <b>Example:</b>
             /// <para>700</para>
@@ -700,7 +690,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string CustomizationId { get; set; }
 
             /// <summary>
-            /// <para>The silence detection threshold. When the silence between speech segments exceeds the specified number of milliseconds, sentence segmentation is triggered (Voice Activity Detection, or VAD).</para>
+            /// <para>The silence detection timeout. A sentence break is triggered when the pause exceeds the specified number of milliseconds. This is also known as voice activity detection (VAD).</para>
             /// 
             /// <b>Example:</b>
             /// <para>700</para>
@@ -727,7 +717,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public CreateScriptVersionRequestTranscriberConfigNlsAccessProfile NlsAccessProfile { get; set; }
             public class CreateScriptVersionRequestTranscriberConfigNlsAccessProfile : TeaModel {
                 /// <summary>
-                /// <para>The third-party speech configuration ID. This parameter is required when you use a third-party ASR service such as Doubao or iFLYTEK.</para>
+                /// <para>The ID of the third-party speech configuration. This is required when you use third-party ASR services such as Doubao or iFlytek.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c2c9baae-9351-4c49-a8cb-6f24a83a8718</para>
@@ -759,9 +749,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string NlsEngine { get; set; }
 
             /// <summary>
-            /// <para>The noise threshold. Valid values: -100 to 100.</para>
-            /// <para>A value closer to -100 increases the probability that noise is classified as speech.</para>
-            /// <para>A value closer to +100 increases the probability that speech is classified as noise.</para>
+            /// <para>The noise threshold. Valid values: -100 to 100. A value closer to -100 indicates a higher probability that noise is recognized as speech. A value closer to 100 indicates a higher probability that speech is recognized as noise.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -771,7 +759,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public int? SpeechNoiseThreshold { get; set; }
 
             /// <summary>
-            /// <para>The hot word list ID. You can obtain this ID from the hot word management page.</para>
+            /// <para>The ID of the hot word table. You can obtain the ID from the hot word management page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cd97223f-42f2-4cd9-95af-e734e2fe1fe3</para>

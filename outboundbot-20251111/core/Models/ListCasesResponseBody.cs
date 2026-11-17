@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public ListCasesResponseBodyData Data { get; set; }
         public class ListCasesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The case list.</para>
+            /// <para>The list of cases.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<ListCasesResponseBodyDataList> List { get; set; }
             public class ListCasesResponseBodyDataList : TeaModel {
                 /// <summary>
-                /// <para>The number of call attempts.</para>
+                /// <para>The number of attempts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -151,14 +151,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public List<ListCasesResponseBodyDataListLabels> Labels { get; set; }
                 public class ListCasesResponseBodyDataListLabels : TeaModel {
                     /// <summary>
-                    /// <para>The candidate values of the label.</para>
+                    /// <para>The candidate values for the label.</para>
                     /// </summary>
                     [NameInMap("CandidateValues")]
                     [Validation(Required=false)]
                     public List<string> CandidateValues { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the label is collected.</para>
+                    /// <para>Indicates whether it is collected.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -168,10 +168,10 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                     public bool? Collected { get; set; }
 
                     /// <summary>
-                    /// <para>The description of the label.</para>
+                    /// <para>The label description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Sample description</para>
+                    /// <para>Description content</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                     public string MatchedValue { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the label.</para>
+                    /// <para>The label name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Flexible packaging enterprise call_20251022_165548</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the label is a system label.</para>
+                    /// <para>The system label.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 }
 
                 /// <summary>
-                /// <para>The time of the last call attempt.</para>
+                /// <para>The time of the last attempt.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1786960840667</para>
@@ -280,10 +280,10 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string ScriptId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the script.</para>
+                /// <para>The script name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Sample scenario name</para>
+                /// <para>Scenario name</para>
                 /// </summary>
                 [NameInMap("ScriptName")]
                 [Validation(Required=false)]
@@ -300,7 +300,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string SessionId { get; set; }
 
                 /// <summary>
-                /// <para>The case status.</para>
+                /// <para>The case state.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Executing</para>
@@ -310,7 +310,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string State { get; set; }
 
                 /// <summary>
-                /// <para>The call duration.</para>
+                /// <para>The talk time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -320,7 +320,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public long? TalkTime { get; set; }
 
                 /// <summary>
-                /// <para>The number of dialogue turns.</para>
+                /// <para>The number of conversation turns.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -384,7 +384,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pass-through parameter.</para>
+        /// <para>The pass-through parameters.</para>
         /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]

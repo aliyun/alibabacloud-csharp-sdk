@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminates an outbound call campaign.</para>
+        /// <para>Stops an outbound campaign.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminates an outbound call campaign.</para>
+        /// <para>Stops an outbound campaign.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminates an outbound call campaign.</para>
+        /// <para>Stops an outbound campaign.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminates an outbound call campaign.</para>
+        /// <para>Stops an outbound campaign.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops an outbound call case.</para>
+        /// <para>Terminates outbound call cases.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops an outbound call case.</para>
+        /// <para>Terminates outbound call cases.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -312,7 +312,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops an outbound call case.</para>
+        /// <para>Terminates outbound call cases.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -335,7 +335,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops an outbound call case.</para>
+        /// <para>Terminates outbound call cases.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -358,7 +358,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Appends contacts to an outbound call campaign.</para>
+        /// <para>Appends outbound call cases.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -421,7 +421,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Appends contacts to an outbound call campaign.</para>
+        /// <para>Appends outbound call cases.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -484,7 +484,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Appends contacts to an outbound call campaign.</para>
+        /// <para>Appends outbound call cases.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -507,7 +507,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Appends contacts to an outbound call campaign.</para>
+        /// <para>Appends outbound call cases.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -530,7 +530,743 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an outbound call campaign.</para>
+        /// <para>Creates a text conversation session for a specified instance and scenario, and streams the initial reply from the robot.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a text conversation session for a specified instance and scenario, and streams the initial reply from the robot. An available scenario version must exist before you call this operation. Use DraftVersion to select the draft or published version, and use VendorParams to pass the accompanying variables required by the scenario. The response uses Server-Sent Events (SSE), and each data event carries a business response object. Save the returned SessionId for subsequent Dialogue and EndSession calls. A StreamEnd value of true indicates that the current response stream has ended, but the session remains active. The resource identifiers, phone numbers, and authentication credentials in the examples are masked or placeholder values. Use actual resources and service return values in production calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BeginSessionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BeginSessionResponse
+        /// </returns>
+        public BeginSessionResponse BeginSessionWithOptions(BeginSessionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DraftVersion))
+            {
+                query["DraftVersion"] = request.DraftVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptId))
+            {
+                query["ScriptId"] = request.ScriptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VendorParams))
+            {
+                query["VendorParams"] = request.VendorParams;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BeginSession",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BeginSessionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a text conversation session for a specified instance and scenario, and streams the initial reply from the robot.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a text conversation session for a specified instance and scenario, and streams the initial reply from the robot. An available scenario version must exist before you call this operation. Use DraftVersion to select the draft or published version, and use VendorParams to pass the accompanying variables required by the scenario. The response uses Server-Sent Events (SSE), and each data event carries a business response object. Save the returned SessionId for subsequent Dialogue and EndSession calls. A StreamEnd value of true indicates that the current response stream has ended, but the session remains active. The resource identifiers, phone numbers, and authentication credentials in the examples are masked or placeholder values. Use actual resources and service return values in production calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BeginSessionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BeginSessionResponse
+        /// </returns>
+        public async Task<BeginSessionResponse> BeginSessionWithOptionsAsync(BeginSessionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DraftVersion))
+            {
+                query["DraftVersion"] = request.DraftVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptId))
+            {
+                query["ScriptId"] = request.ScriptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VendorParams))
+            {
+                query["VendorParams"] = request.VendorParams;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BeginSession",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BeginSessionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a text conversation session for a specified instance and scenario, and streams the initial reply from the robot.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a text conversation session for a specified instance and scenario, and streams the initial reply from the robot. An available scenario version must exist before you call this operation. Use DraftVersion to select the draft or published version, and use VendorParams to pass the accompanying variables required by the scenario. The response uses Server-Sent Events (SSE), and each data event carries a business response object. Save the returned SessionId for subsequent Dialogue and EndSession calls. A StreamEnd value of true indicates that the current response stream has ended, but the session remains active. The resource identifiers, phone numbers, and authentication credentials in the examples are masked or placeholder values. Use actual resources and service return values in production calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BeginSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BeginSessionResponse
+        /// </returns>
+        public BeginSessionResponse BeginSession(BeginSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BeginSessionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a text conversation session for a specified instance and scenario, and streams the initial reply from the robot.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a text conversation session for a specified instance and scenario, and streams the initial reply from the robot. An available scenario version must exist before you call this operation. Use DraftVersion to select the draft or published version, and use VendorParams to pass the accompanying variables required by the scenario. The response uses Server-Sent Events (SSE), and each data event carries a business response object. Save the returned SessionId for subsequent Dialogue and EndSession calls. A StreamEnd value of true indicates that the current response stream has ended, but the session remains active. The resource identifiers, phone numbers, and authentication credentials in the examples are masked or placeholder values. Use actual resources and service return values in production calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BeginSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BeginSessionResponse
+        /// </returns>
+        public async Task<BeginSessionResponse> BeginSessionAsync(BeginSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BeginSessionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a trial session.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a trial text session in a specified instance and scenario by using the VisitorToken from a trial link, and returns the first-round reply in Server-Sent Events (SSE) format. The service verifies the channel and expiration time corresponding to the token, and then starts the session based on the tenant to which the channel belongs. The token does not replace the business parameters of the scenario and instance. Save the returned SessionId for subsequent calls to TrialDialogue to send user input, and call EndTrialSession to end the session. StreamEnd=true only indicates that the streaming response for the current round has ended. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BeginTrialSessionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BeginTrialSessionResponse
+        /// </returns>
+        public BeginTrialSessionResponse BeginTrialSessionWithOptions(BeginTrialSessionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DraftVersion))
+            {
+                query["DraftVersion"] = request.DraftVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptId))
+            {
+                query["ScriptId"] = request.ScriptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VendorParams))
+            {
+                query["VendorParams"] = request.VendorParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisitorToken))
+            {
+                query["VisitorToken"] = request.VisitorToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BeginTrialSession",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BeginTrialSessionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a trial session.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a trial text session in a specified instance and scenario by using the VisitorToken from a trial link, and returns the first-round reply in Server-Sent Events (SSE) format. The service verifies the channel and expiration time corresponding to the token, and then starts the session based on the tenant to which the channel belongs. The token does not replace the business parameters of the scenario and instance. Save the returned SessionId for subsequent calls to TrialDialogue to send user input, and call EndTrialSession to end the session. StreamEnd=true only indicates that the streaming response for the current round has ended. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BeginTrialSessionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BeginTrialSessionResponse
+        /// </returns>
+        public async Task<BeginTrialSessionResponse> BeginTrialSessionWithOptionsAsync(BeginTrialSessionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DraftVersion))
+            {
+                query["DraftVersion"] = request.DraftVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptId))
+            {
+                query["ScriptId"] = request.ScriptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VendorParams))
+            {
+                query["VendorParams"] = request.VendorParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisitorToken))
+            {
+                query["VisitorToken"] = request.VisitorToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BeginTrialSession",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BeginTrialSessionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a trial session.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a trial text session in a specified instance and scenario by using the VisitorToken from a trial link, and returns the first-round reply in Server-Sent Events (SSE) format. The service verifies the channel and expiration time corresponding to the token, and then starts the session based on the tenant to which the channel belongs. The token does not replace the business parameters of the scenario and instance. Save the returned SessionId for subsequent calls to TrialDialogue to send user input, and call EndTrialSession to end the session. StreamEnd=true only indicates that the streaming response for the current round has ended. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BeginTrialSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BeginTrialSessionResponse
+        /// </returns>
+        public BeginTrialSessionResponse BeginTrialSession(BeginTrialSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BeginTrialSessionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a trial session.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a trial text session in a specified instance and scenario by using the VisitorToken from a trial link, and returns the first-round reply in Server-Sent Events (SSE) format. The service verifies the channel and expiration time corresponding to the token, and then starts the session based on the tenant to which the channel belongs. The token does not replace the business parameters of the scenario and instance. Save the returned SessionId for subsequent calls to TrialDialogue to send user input, and call EndTrialSession to end the session. StreamEnd=true only indicates that the streaming response for the current round has ended. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BeginTrialSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BeginTrialSessionResponse
+        /// </returns>
+        public async Task<BeginTrialSessionResponse> BeginTrialSessionAsync(BeginTrialSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BeginTrialSessionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a trial call.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initiates a trial web voice call for a specified scenario by using the VisitorToken of a trial link. The service verifies the token, the associated channel, and the validity period, and then delegates the web call service to bridge the web voice channel and the robot channel. The DeviceId must be consistent with the data channel device identifier of the trial client. After the call is initiated, use the returned ChannelId, ServerUrl, and Token to connect to the voice channel. If the data event channel of the trial client is required, you can call GetTrialDataChannelCredential with the same DeviceId. The web voice connection token and the data channel username and password are not the same set of credentials. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BridgeTrialWebCallRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BridgeTrialWebCallResponse
+        /// </returns>
+        public BridgeTrialWebCallResponse BridgeTrialWebCallWithOptions(BridgeTrialWebCallRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Caller))
+            {
+                query["Caller"] = request.Caller;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
+            {
+                query["DeviceId"] = request.DeviceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DraftVersion))
+            {
+                query["DraftVersion"] = request.DraftVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SampleRate))
+            {
+                query["SampleRate"] = request.SampleRate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptId))
+            {
+                query["ScriptId"] = request.ScriptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeoutSeconds))
+            {
+                query["TimeoutSeconds"] = request.TimeoutSeconds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisitorToken))
+            {
+                query["VisitorToken"] = request.VisitorToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BridgeTrialWebCall",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BridgeTrialWebCallResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a trial call.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initiates a trial web voice call for a specified scenario by using the VisitorToken of a trial link. The service verifies the token, the associated channel, and the validity period, and then delegates the web call service to bridge the web voice channel and the robot channel. The DeviceId must be consistent with the data channel device identifier of the trial client. After the call is initiated, use the returned ChannelId, ServerUrl, and Token to connect to the voice channel. If the data event channel of the trial client is required, you can call GetTrialDataChannelCredential with the same DeviceId. The web voice connection token and the data channel username and password are not the same set of credentials. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BridgeTrialWebCallRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BridgeTrialWebCallResponse
+        /// </returns>
+        public async Task<BridgeTrialWebCallResponse> BridgeTrialWebCallWithOptionsAsync(BridgeTrialWebCallRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Caller))
+            {
+                query["Caller"] = request.Caller;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
+            {
+                query["DeviceId"] = request.DeviceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DraftVersion))
+            {
+                query["DraftVersion"] = request.DraftVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SampleRate))
+            {
+                query["SampleRate"] = request.SampleRate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptId))
+            {
+                query["ScriptId"] = request.ScriptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeoutSeconds))
+            {
+                query["TimeoutSeconds"] = request.TimeoutSeconds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisitorToken))
+            {
+                query["VisitorToken"] = request.VisitorToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BridgeTrialWebCall",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BridgeTrialWebCallResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a trial call.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initiates a trial web voice call for a specified scenario by using the VisitorToken of a trial link. The service verifies the token, the associated channel, and the validity period, and then delegates the web call service to bridge the web voice channel and the robot channel. The DeviceId must be consistent with the data channel device identifier of the trial client. After the call is initiated, use the returned ChannelId, ServerUrl, and Token to connect to the voice channel. If the data event channel of the trial client is required, you can call GetTrialDataChannelCredential with the same DeviceId. The web voice connection token and the data channel username and password are not the same set of credentials. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BridgeTrialWebCallRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BridgeTrialWebCallResponse
+        /// </returns>
+        public BridgeTrialWebCallResponse BridgeTrialWebCall(BridgeTrialWebCallRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BridgeTrialWebCallWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a trial call.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initiates a trial web voice call for a specified scenario by using the VisitorToken of a trial link. The service verifies the token, the associated channel, and the validity period, and then delegates the web call service to bridge the web voice channel and the robot channel. The DeviceId must be consistent with the data channel device identifier of the trial client. After the call is initiated, use the returned ChannelId, ServerUrl, and Token to connect to the voice channel. If the data event channel of the trial client is required, you can call GetTrialDataChannelCredential with the same DeviceId. The web voice connection token and the data channel username and password are not the same set of credentials. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BridgeTrialWebCallRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BridgeTrialWebCallResponse
+        /// </returns>
+        public async Task<BridgeTrialWebCallResponse> BridgeTrialWebCallAsync(BridgeTrialWebCallRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BridgeTrialWebCallWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a call.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initiates a web voice call for a specified instance and scenario by bridging the web voice channel and the robot SIP channel through an RTC gateway. Pass information such as DeviceId, audio sampling rate, and scenario version in the request. TimeoutSeconds specifies the timeout for unanswered calls, defaults to 60 seconds, and does not indicate the maximum duration of an answered call. Upon success, returns the connection context such as SessionId, ChannelId, ServerUrl, and Token. The client must use the returned address and valid credentials to establish the web voice connection. This operation initiates a web interactive voice response instead of dialing a real phone number specified by Number. Resource identity, numbers, and authentication credentials in the examples are masked or placeholder values. Use actual resources and service return values when you invoke the operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BridgeWebCallRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BridgeWebCallResponse
+        /// </returns>
+        public BridgeWebCallResponse BridgeWebCallWithOptions(BridgeWebCallRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Caller))
+            {
+                query["Caller"] = request.Caller;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
+            {
+                query["DeviceId"] = request.DeviceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DraftVersion))
+            {
+                query["DraftVersion"] = request.DraftVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SampleRate))
+            {
+                query["SampleRate"] = request.SampleRate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptId))
+            {
+                query["ScriptId"] = request.ScriptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeoutSeconds))
+            {
+                query["TimeoutSeconds"] = request.TimeoutSeconds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BridgeWebCall",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BridgeWebCallResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a call.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initiates a web voice call for a specified instance and scenario by bridging the web voice channel and the robot SIP channel through an RTC gateway. Pass information such as DeviceId, audio sampling rate, and scenario version in the request. TimeoutSeconds specifies the timeout for unanswered calls, defaults to 60 seconds, and does not indicate the maximum duration of an answered call. Upon success, returns the connection context such as SessionId, ChannelId, ServerUrl, and Token. The client must use the returned address and valid credentials to establish the web voice connection. This operation initiates a web interactive voice response instead of dialing a real phone number specified by Number. Resource identity, numbers, and authentication credentials in the examples are masked or placeholder values. Use actual resources and service return values when you invoke the operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BridgeWebCallRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BridgeWebCallResponse
+        /// </returns>
+        public async Task<BridgeWebCallResponse> BridgeWebCallWithOptionsAsync(BridgeWebCallRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Caller))
+            {
+                query["Caller"] = request.Caller;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
+            {
+                query["DeviceId"] = request.DeviceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DraftVersion))
+            {
+                query["DraftVersion"] = request.DraftVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SampleRate))
+            {
+                query["SampleRate"] = request.SampleRate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptId))
+            {
+                query["ScriptId"] = request.ScriptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeoutSeconds))
+            {
+                query["TimeoutSeconds"] = request.TimeoutSeconds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BridgeWebCall",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BridgeWebCallResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a call.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initiates a web voice call for a specified instance and scenario by bridging the web voice channel and the robot SIP channel through an RTC gateway. Pass information such as DeviceId, audio sampling rate, and scenario version in the request. TimeoutSeconds specifies the timeout for unanswered calls, defaults to 60 seconds, and does not indicate the maximum duration of an answered call. Upon success, returns the connection context such as SessionId, ChannelId, ServerUrl, and Token. The client must use the returned address and valid credentials to establish the web voice connection. This operation initiates a web interactive voice response instead of dialing a real phone number specified by Number. Resource identity, numbers, and authentication credentials in the examples are masked or placeholder values. Use actual resources and service return values when you invoke the operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BridgeWebCallRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BridgeWebCallResponse
+        /// </returns>
+        public BridgeWebCallResponse BridgeWebCall(BridgeWebCallRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BridgeWebCallWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a call.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initiates a web voice call for a specified instance and scenario by bridging the web voice channel and the robot SIP channel through an RTC gateway. Pass information such as DeviceId, audio sampling rate, and scenario version in the request. TimeoutSeconds specifies the timeout for unanswered calls, defaults to 60 seconds, and does not indicate the maximum duration of an answered call. Upon success, returns the connection context such as SessionId, ChannelId, ServerUrl, and Token. The client must use the returned address and valid credentials to establish the web voice connection. This operation initiates a web interactive voice response instead of dialing a real phone number specified by Number. Resource identity, numbers, and authentication credentials in the examples are masked or placeholder values. Use actual resources and service return values when you invoke the operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BridgeWebCallRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BridgeWebCallResponse
+        /// </returns>
+        public async Task<BridgeWebCallResponse> BridgeWebCallAsync(BridgeWebCallRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BridgeWebCallWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an outbound campaign.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -661,7 +1397,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an outbound call campaign.</para>
+        /// <para>Creates an outbound campaign.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -792,7 +1528,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an outbound call campaign.</para>
+        /// <para>Creates an outbound campaign.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -815,7 +1551,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an outbound call campaign.</para>
+        /// <para>Creates an outbound campaign.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1718,7 +2454,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scenario configuration.</para>
+        /// <para>Creates a script configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1810,7 +2546,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scenario configuration.</para>
+        /// <para>Creates a script configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1902,7 +2638,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scenario configuration.</para>
+        /// <para>Creates a script configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1920,7 +2656,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scenario configuration.</para>
+        /// <para>Creates a script configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3334,6 +4070,178 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Initiates a session.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sends a round of user input to a text session created by BeginSession and returns the robot reply and control instructions in Server-Sent Events (SSE) format. The InstanceId, ScriptId, and SessionId must be consistent with those used when the session was initiated. The SessionId must use the value returned by the session initiation operation. The conversation cannot continue if the session context does not exist. Utterance is used for plain text input, and Extras is used to pass structured events such as key presses and silence. You can call this operation multiple times in succession. StreamId identifies the reply round, and StreamEnd=true indicates that the output of the current round has ended. Call EndSession after the entire interaction is completed. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DialogueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DialogueResponse
+        /// </returns>
+        public DialogueResponse DialogueWithOptions(DialogueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extras))
+            {
+                query["Extras"] = request.Extras;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptId))
+            {
+                query["ScriptId"] = request.ScriptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Utterance))
+            {
+                query["Utterance"] = request.Utterance;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "Dialogue",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DialogueResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a session.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sends a round of user input to a text session created by BeginSession and returns the robot reply and control instructions in Server-Sent Events (SSE) format. The InstanceId, ScriptId, and SessionId must be consistent with those used when the session was initiated. The SessionId must use the value returned by the session initiation operation. The conversation cannot continue if the session context does not exist. Utterance is used for plain text input, and Extras is used to pass structured events such as key presses and silence. You can call this operation multiple times in succession. StreamId identifies the reply round, and StreamEnd=true indicates that the output of the current round has ended. Call EndSession after the entire interaction is completed. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DialogueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DialogueResponse
+        /// </returns>
+        public async Task<DialogueResponse> DialogueWithOptionsAsync(DialogueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extras))
+            {
+                query["Extras"] = request.Extras;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptId))
+            {
+                query["ScriptId"] = request.ScriptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Utterance))
+            {
+                query["Utterance"] = request.Utterance;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "Dialogue",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DialogueResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a session.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sends a round of user input to a text session created by BeginSession and returns the robot reply and control instructions in Server-Sent Events (SSE) format. The InstanceId, ScriptId, and SessionId must be consistent with those used when the session was initiated. The SessionId must use the value returned by the session initiation operation. The conversation cannot continue if the session context does not exist. Utterance is used for plain text input, and Extras is used to pass structured events such as key presses and silence. You can call this operation multiple times in succession. StreamId identifies the reply round, and StreamEnd=true indicates that the output of the current round has ended. Call EndSession after the entire interaction is completed. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DialogueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DialogueResponse
+        /// </returns>
+        public DialogueResponse Dialogue(DialogueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DialogueWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a session.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sends a round of user input to a text session created by BeginSession and returns the robot reply and control instructions in Server-Sent Events (SSE) format. The InstanceId, ScriptId, and SessionId must be consistent with those used when the session was initiated. The SessionId must use the value returned by the session initiation operation. The conversation cannot continue if the session context does not exist. Utterance is used for plain text input, and Extras is used to pass structured events such as key presses and silence. You can call this operation multiple times in succession. StreamId identifies the reply round, and StreamEnd=true indicates that the output of the current round has ended. Call EndSession after the entire interaction is completed. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DialogueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DialogueResponse
+        /// </returns>
+        public async Task<DialogueResponse> DialogueAsync(DialogueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DialogueWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Disables message subscription.</para>
         /// </summary>
         /// 
@@ -3450,6 +4358,326 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisableSubscriptionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Ends a session.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Ends a text session created by BeginSession, notifies the dialog engine to end the interaction, and clears the text session state. The InstanceId, ScriptId, and SessionId must match those used when the session was started. The Data field in the response returns the SessionId of the ended session. If the text session no longer exists due to prolonged inactivity or cache expiration, the current implementation still returns the SessionId without reporting a session not found error. This operation is used to conclude a text session and is not intended for hanging up web voice or actual phone calls. The resource identifiers, phone numbers, and authentication credentials in the examples are masked or placeholder values. Use actual resources and service return values for real calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EndSessionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EndSessionResponse
+        /// </returns>
+        public EndSessionResponse EndSessionWithOptions(EndSessionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptId))
+            {
+                query["ScriptId"] = request.ScriptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["SessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EndSession",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EndSessionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Ends a session.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Ends a text session created by BeginSession, notifies the dialog engine to end the interaction, and clears the text session state. The InstanceId, ScriptId, and SessionId must match those used when the session was started. The Data field in the response returns the SessionId of the ended session. If the text session no longer exists due to prolonged inactivity or cache expiration, the current implementation still returns the SessionId without reporting a session not found error. This operation is used to conclude a text session and is not intended for hanging up web voice or actual phone calls. The resource identifiers, phone numbers, and authentication credentials in the examples are masked or placeholder values. Use actual resources and service return values for real calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EndSessionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EndSessionResponse
+        /// </returns>
+        public async Task<EndSessionResponse> EndSessionWithOptionsAsync(EndSessionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptId))
+            {
+                query["ScriptId"] = request.ScriptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["SessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EndSession",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EndSessionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Ends a session.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Ends a text session created by BeginSession, notifies the dialog engine to end the interaction, and clears the text session state. The InstanceId, ScriptId, and SessionId must match those used when the session was started. The Data field in the response returns the SessionId of the ended session. If the text session no longer exists due to prolonged inactivity or cache expiration, the current implementation still returns the SessionId without reporting a session not found error. This operation is used to conclude a text session and is not intended for hanging up web voice or actual phone calls. The resource identifiers, phone numbers, and authentication credentials in the examples are masked or placeholder values. Use actual resources and service return values for real calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EndSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EndSessionResponse
+        /// </returns>
+        public EndSessionResponse EndSession(EndSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EndSessionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Ends a session.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Ends a text session created by BeginSession, notifies the dialog engine to end the interaction, and clears the text session state. The InstanceId, ScriptId, and SessionId must match those used when the session was started. The Data field in the response returns the SessionId of the ended session. If the text session no longer exists due to prolonged inactivity or cache expiration, the current implementation still returns the SessionId without reporting a session not found error. This operation is used to conclude a text session and is not intended for hanging up web voice or actual phone calls. The resource identifiers, phone numbers, and authentication credentials in the examples are masked or placeholder values. Use actual resources and service return values for real calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EndSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EndSessionResponse
+        /// </returns>
+        public async Task<EndSessionResponse> EndSessionAsync(EndSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EndSessionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Ends a trial session.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Ends a trial text session created by BeginTrialSession by using a valid VisitorToken from a trial link. The service first validates the token and then delegates the request to the text session termination service. The InstanceId, ScriptId, and SessionId must maintain session persistence consistent with those of the trial session. The returned Data is the SessionId of the ended session. If the text session context has expired, the termination service can still return the SessionId, but the validation will be marked as failed if the trial token itself is invalid or expired. This operation is not used to hang up web voice calls. The resource identity, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values when you invoke the operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EndTrialSessionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EndTrialSessionResponse
+        /// </returns>
+        public EndTrialSessionResponse EndTrialSessionWithOptions(EndTrialSessionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptId))
+            {
+                query["ScriptId"] = request.ScriptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisitorToken))
+            {
+                query["VisitorToken"] = request.VisitorToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EndTrialSession",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EndTrialSessionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Ends a trial session.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Ends a trial text session created by BeginTrialSession by using a valid VisitorToken from a trial link. The service first validates the token and then delegates the request to the text session termination service. The InstanceId, ScriptId, and SessionId must maintain session persistence consistent with those of the trial session. The returned Data is the SessionId of the ended session. If the text session context has expired, the termination service can still return the SessionId, but the validation will be marked as failed if the trial token itself is invalid or expired. This operation is not used to hang up web voice calls. The resource identity, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values when you invoke the operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EndTrialSessionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EndTrialSessionResponse
+        /// </returns>
+        public async Task<EndTrialSessionResponse> EndTrialSessionWithOptionsAsync(EndTrialSessionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptId))
+            {
+                query["ScriptId"] = request.ScriptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisitorToken))
+            {
+                query["VisitorToken"] = request.VisitorToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EndTrialSession",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EndTrialSessionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Ends a trial session.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Ends a trial text session created by BeginTrialSession by using a valid VisitorToken from a trial link. The service first validates the token and then delegates the request to the text session termination service. The InstanceId, ScriptId, and SessionId must maintain session persistence consistent with those of the trial session. The returned Data is the SessionId of the ended session. If the text session context has expired, the termination service can still return the SessionId, but the validation will be marked as failed if the trial token itself is invalid or expired. This operation is not used to hang up web voice calls. The resource identity, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values when you invoke the operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EndTrialSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EndTrialSessionResponse
+        /// </returns>
+        public EndTrialSessionResponse EndTrialSession(EndTrialSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EndTrialSessionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Ends a trial session.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Ends a trial text session created by BeginTrialSession by using a valid VisitorToken from a trial link. The service first validates the token and then delegates the request to the text session termination service. The InstanceId, ScriptId, and SessionId must maintain session persistence consistent with those of the trial session. The returned Data is the SessionId of the ended session. If the text session context has expired, the termination service can still return the SessionId, but the validation will be marked as failed if the trial token itself is invalid or expired. This operation is not used to hang up web voice calls. The resource identity, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values when you invoke the operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EndTrialSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EndTrialSessionResponse
+        /// </returns>
+        public async Task<EndTrialSessionResponse> EndTrialSessionAsync(EndTrialSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EndTrialSessionWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3890,6 +5118,154 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetCaseDetailWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves voice conversation parameters.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves temporary connection credentials for the client data channel of a specified InstanceId and DeviceId. Requests are verified based on the current POP authentication and instance permission configurations. DeviceId cannot be empty. Unlike GetTrialDataChannelCredential, this operation does not use the VisitorToken for trial links. The client must use the actual Topic, ClientId, Endpoint, UserName, and Password returned to connect to and subscribe to the data channel, and must not infer the address, topic, or authentication information. The same client must keep the DeviceId consistent when initiating BridgeWebCall or MakePilotCall. This operation only retrieves data channel credentials and does not create text sessions, initiate phone calls, or establish web voice channels. The username and password for the data channel are not the same set of credentials as the token returned for web calls. The protocol, the unit of ExpirationTime, and field mappings are subject to the actual RTC gateway deployment version and return conventions. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataChannelCredentialRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataChannelCredentialResponse
+        /// </returns>
+        public GetDataChannelCredentialResponse GetDataChannelCredentialWithOptions(GetDataChannelCredentialRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
+            {
+                query["DeviceId"] = request.DeviceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDataChannelCredential",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDataChannelCredentialResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves voice conversation parameters.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves temporary connection credentials for the client data channel of a specified InstanceId and DeviceId. Requests are verified based on the current POP authentication and instance permission configurations. DeviceId cannot be empty. Unlike GetTrialDataChannelCredential, this operation does not use the VisitorToken for trial links. The client must use the actual Topic, ClientId, Endpoint, UserName, and Password returned to connect to and subscribe to the data channel, and must not infer the address, topic, or authentication information. The same client must keep the DeviceId consistent when initiating BridgeWebCall or MakePilotCall. This operation only retrieves data channel credentials and does not create text sessions, initiate phone calls, or establish web voice channels. The username and password for the data channel are not the same set of credentials as the token returned for web calls. The protocol, the unit of ExpirationTime, and field mappings are subject to the actual RTC gateway deployment version and return conventions. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataChannelCredentialRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataChannelCredentialResponse
+        /// </returns>
+        public async Task<GetDataChannelCredentialResponse> GetDataChannelCredentialWithOptionsAsync(GetDataChannelCredentialRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
+            {
+                query["DeviceId"] = request.DeviceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDataChannelCredential",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDataChannelCredentialResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves voice conversation parameters.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves temporary connection credentials for the client data channel of a specified InstanceId and DeviceId. Requests are verified based on the current POP authentication and instance permission configurations. DeviceId cannot be empty. Unlike GetTrialDataChannelCredential, this operation does not use the VisitorToken for trial links. The client must use the actual Topic, ClientId, Endpoint, UserName, and Password returned to connect to and subscribe to the data channel, and must not infer the address, topic, or authentication information. The same client must keep the DeviceId consistent when initiating BridgeWebCall or MakePilotCall. This operation only retrieves data channel credentials and does not create text sessions, initiate phone calls, or establish web voice channels. The username and password for the data channel are not the same set of credentials as the token returned for web calls. The protocol, the unit of ExpirationTime, and field mappings are subject to the actual RTC gateway deployment version and return conventions. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataChannelCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataChannelCredentialResponse
+        /// </returns>
+        public GetDataChannelCredentialResponse GetDataChannelCredential(GetDataChannelCredentialRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetDataChannelCredentialWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves voice conversation parameters.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves temporary connection credentials for the client data channel of a specified InstanceId and DeviceId. Requests are verified based on the current POP authentication and instance permission configurations. DeviceId cannot be empty. Unlike GetTrialDataChannelCredential, this operation does not use the VisitorToken for trial links. The client must use the actual Topic, ClientId, Endpoint, UserName, and Password returned to connect to and subscribe to the data channel, and must not infer the address, topic, or authentication information. The same client must keep the DeviceId consistent when initiating BridgeWebCall or MakePilotCall. This operation only retrieves data channel credentials and does not create text sessions, initiate phone calls, or establish web voice channels. The username and password for the data channel are not the same set of credentials as the token returned for web calls. The protocol, the unit of ExpirationTime, and field mappings are subject to the actual RTC gateway deployment version and return conventions. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataChannelCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataChannelCredentialResponse
+        /// </returns>
+        public async Task<GetDataChannelCredentialResponse> GetDataChannelCredentialAsync(GetDataChannelCredentialRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetDataChannelCredentialWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4390,6 +5766,310 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves the trial channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the corresponding trial access channel and the list of available trial scenarios based on the VisitorToken in a trial link. The service verifies whether the token exists, whether it can locate the channel, and whether it has expired. Upon success, it returns information such as the instance to which the channel belongs, the channel type, display configurations, validity period, and scenario configurations. This operation can be used as an initialization step for the trial page: first read the returned instance and scenarios, and then call the corresponding trial text or web voice operation. This operation does not create a text session or initiate a voice call. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTrialAccessChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTrialAccessChannelResponse
+        /// </returns>
+        public GetTrialAccessChannelResponse GetTrialAccessChannelWithOptions(GetTrialAccessChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisitorToken))
+            {
+                query["VisitorToken"] = request.VisitorToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTrialAccessChannel",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTrialAccessChannelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the trial channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the corresponding trial access channel and the list of available trial scenarios based on the VisitorToken in a trial link. The service verifies whether the token exists, whether it can locate the channel, and whether it has expired. Upon success, it returns information such as the instance to which the channel belongs, the channel type, display configurations, validity period, and scenario configurations. This operation can be used as an initialization step for the trial page: first read the returned instance and scenarios, and then call the corresponding trial text or web voice operation. This operation does not create a text session or initiate a voice call. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTrialAccessChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTrialAccessChannelResponse
+        /// </returns>
+        public async Task<GetTrialAccessChannelResponse> GetTrialAccessChannelWithOptionsAsync(GetTrialAccessChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisitorToken))
+            {
+                query["VisitorToken"] = request.VisitorToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTrialAccessChannel",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTrialAccessChannelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the trial channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the corresponding trial access channel and the list of available trial scenarios based on the VisitorToken in a trial link. The service verifies whether the token exists, whether it can locate the channel, and whether it has expired. Upon success, it returns information such as the instance to which the channel belongs, the channel type, display configurations, validity period, and scenario configurations. This operation can be used as an initialization step for the trial page: first read the returned instance and scenarios, and then call the corresponding trial text or web voice operation. This operation does not create a text session or initiate a voice call. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTrialAccessChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTrialAccessChannelResponse
+        /// </returns>
+        public GetTrialAccessChannelResponse GetTrialAccessChannel(GetTrialAccessChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetTrialAccessChannelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the trial channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the corresponding trial access channel and the list of available trial scenarios based on the VisitorToken in a trial link. The service verifies whether the token exists, whether it can locate the channel, and whether it has expired. Upon success, it returns information such as the instance to which the channel belongs, the channel type, display configurations, validity period, and scenario configurations. This operation can be used as an initialization step for the trial page: first read the returned instance and scenarios, and then call the corresponding trial text or web voice operation. This operation does not create a text session or initiate a voice call. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTrialAccessChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTrialAccessChannelResponse
+        /// </returns>
+        public async Task<GetTrialAccessChannelResponse> GetTrialAccessChannelAsync(GetTrialAccessChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetTrialAccessChannelWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the parameters for a trial voice conversation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves temporary connection credentials for the client data channel for a specified InstanceId and DeviceId by using a valid VisitorToken from a trial link. The response includes information such as Topic, ClientId, Endpoint, UserName, Password, and expiration time. The client must use the actual values returned by the service to connect to and subscribe to the data channel, and must not concatenate addresses, topics, or authentication information. The DeviceId must be consistent with the BridgeTrialWebCall request from the same client. This operation only retrieves data channel credentials and does not initiate text sessions or establish web voice calls. The credential protocol and expiration time unit are subject to the conventions returned by the actual RTC gateway. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTrialDataChannelCredentialRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTrialDataChannelCredentialResponse
+        /// </returns>
+        public GetTrialDataChannelCredentialResponse GetTrialDataChannelCredentialWithOptions(GetTrialDataChannelCredentialRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
+            {
+                query["DeviceId"] = request.DeviceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisitorToken))
+            {
+                query["VisitorToken"] = request.VisitorToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTrialDataChannelCredential",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTrialDataChannelCredentialResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the parameters for a trial voice conversation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves temporary connection credentials for the client data channel for a specified InstanceId and DeviceId by using a valid VisitorToken from a trial link. The response includes information such as Topic, ClientId, Endpoint, UserName, Password, and expiration time. The client must use the actual values returned by the service to connect to and subscribe to the data channel, and must not concatenate addresses, topics, or authentication information. The DeviceId must be consistent with the BridgeTrialWebCall request from the same client. This operation only retrieves data channel credentials and does not initiate text sessions or establish web voice calls. The credential protocol and expiration time unit are subject to the conventions returned by the actual RTC gateway. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTrialDataChannelCredentialRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTrialDataChannelCredentialResponse
+        /// </returns>
+        public async Task<GetTrialDataChannelCredentialResponse> GetTrialDataChannelCredentialWithOptionsAsync(GetTrialDataChannelCredentialRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
+            {
+                query["DeviceId"] = request.DeviceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisitorToken))
+            {
+                query["VisitorToken"] = request.VisitorToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTrialDataChannelCredential",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTrialDataChannelCredentialResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the parameters for a trial voice conversation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves temporary connection credentials for the client data channel for a specified InstanceId and DeviceId by using a valid VisitorToken from a trial link. The response includes information such as Topic, ClientId, Endpoint, UserName, Password, and expiration time. The client must use the actual values returned by the service to connect to and subscribe to the data channel, and must not concatenate addresses, topics, or authentication information. The DeviceId must be consistent with the BridgeTrialWebCall request from the same client. This operation only retrieves data channel credentials and does not initiate text sessions or establish web voice calls. The credential protocol and expiration time unit are subject to the conventions returned by the actual RTC gateway. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTrialDataChannelCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTrialDataChannelCredentialResponse
+        /// </returns>
+        public GetTrialDataChannelCredentialResponse GetTrialDataChannelCredential(GetTrialDataChannelCredentialRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetTrialDataChannelCredentialWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the parameters for a trial voice conversation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves temporary connection credentials for the client data channel for a specified InstanceId and DeviceId by using a valid VisitorToken from a trial link. The response includes information such as Topic, ClientId, Endpoint, UserName, Password, and expiration time. The client must use the actual values returned by the service to connect to and subscribe to the data channel, and must not concatenate addresses, topics, or authentication information. The DeviceId must be consistent with the BridgeTrialWebCall request from the same client. This operation only retrieves data channel credentials and does not initiate text sessions or establish web voice calls. The credential protocol and expiration time unit are subject to the conventions returned by the actual RTC gateway. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTrialDataChannelCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTrialDataChannelCredentialResponse
+        /// </returns>
+        public async Task<GetTrialDataChannelCredentialResponse> GetTrialDataChannelCredentialAsync(GetTrialDataChannelCredentialRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetTrialDataChannelCredentialWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the list of ASR models.</para>
         /// </summary>
         /// 
@@ -4510,7 +6190,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of outbound call campaigns.</para>
+        /// <para>Queries a list of outbound campaigns.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4589,7 +6269,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of outbound call campaigns.</para>
+        /// <para>Queries a list of outbound campaigns.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4668,7 +6348,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of outbound call campaigns.</para>
+        /// <para>Queries a list of outbound campaigns.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4691,7 +6371,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of outbound call campaigns.</para>
+        /// <para>Queries a list of outbound campaigns.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7154,7 +8834,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of scenarios associated with a flow by flow ID.</para>
+        /// <para>Retrieves a list of scenarios based on the flow ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7200,7 +8880,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of scenarios associated with a flow by flow ID.</para>
+        /// <para>Retrieves a list of scenarios based on the flow ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7246,7 +8926,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of scenarios associated with a flow by flow ID.</para>
+        /// <para>Retrieves a list of scenarios based on the flow ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7264,7 +8944,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of scenarios associated with a flow by flow ID.</para>
+        /// <para>Retrieves a list of scenarios based on the flow ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7554,7 +9234,203 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pauses an outbound call campaign.</para>
+        /// <para>Initiates an outbound call.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initiates an outbound call test to the real phone number corresponding to Number by using the specified instance and scenario. Before calling this operation, you must obtain an SMS verification code for the OutboundCallTest scenario for the called number and pass it in VerificationCode. The service verifies the code and initiates the call by using the outbound caller ID configured on the platform. DeviceId is used to bind the client data stream to the current call. CallVariables passes call variables in JSON object format, and Tags passes attached data. Upon success, a SessionId with the test- prefix is returned to associate with the current call. A successful API response does not indicate that the called party has answered or that the conversation has ended. Test only authorized numbers. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use real resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MakePilotCallRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MakePilotCallResponse
+        /// </returns>
+        public MakePilotCallResponse MakePilotCallWithOptions(MakePilotCallRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallVariables))
+            {
+                query["CallVariables"] = request.CallVariables;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
+            {
+                query["DeviceId"] = request.DeviceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DraftVersion))
+            {
+                query["DraftVersion"] = request.DraftVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Number))
+            {
+                query["Number"] = request.Number;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptId))
+            {
+                query["ScriptId"] = request.ScriptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerificationCode))
+            {
+                query["VerificationCode"] = request.VerificationCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MakePilotCall",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MakePilotCallResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates an outbound call.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initiates an outbound call test to the real phone number corresponding to Number by using the specified instance and scenario. Before calling this operation, you must obtain an SMS verification code for the OutboundCallTest scenario for the called number and pass it in VerificationCode. The service verifies the code and initiates the call by using the outbound caller ID configured on the platform. DeviceId is used to bind the client data stream to the current call. CallVariables passes call variables in JSON object format, and Tags passes attached data. Upon success, a SessionId with the test- prefix is returned to associate with the current call. A successful API response does not indicate that the called party has answered or that the conversation has ended. Test only authorized numbers. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use real resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MakePilotCallRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MakePilotCallResponse
+        /// </returns>
+        public async Task<MakePilotCallResponse> MakePilotCallWithOptionsAsync(MakePilotCallRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallVariables))
+            {
+                query["CallVariables"] = request.CallVariables;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
+            {
+                query["DeviceId"] = request.DeviceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DraftVersion))
+            {
+                query["DraftVersion"] = request.DraftVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Number))
+            {
+                query["Number"] = request.Number;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptId))
+            {
+                query["ScriptId"] = request.ScriptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerificationCode))
+            {
+                query["VerificationCode"] = request.VerificationCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MakePilotCall",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MakePilotCallResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates an outbound call.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initiates an outbound call test to the real phone number corresponding to Number by using the specified instance and scenario. Before calling this operation, you must obtain an SMS verification code for the OutboundCallTest scenario for the called number and pass it in VerificationCode. The service verifies the code and initiates the call by using the outbound caller ID configured on the platform. DeviceId is used to bind the client data stream to the current call. CallVariables passes call variables in JSON object format, and Tags passes attached data. Upon success, a SessionId with the test- prefix is returned to associate with the current call. A successful API response does not indicate that the called party has answered or that the conversation has ended. Test only authorized numbers. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use real resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MakePilotCallRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MakePilotCallResponse
+        /// </returns>
+        public MakePilotCallResponse MakePilotCall(MakePilotCallRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return MakePilotCallWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates an outbound call.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initiates an outbound call test to the real phone number corresponding to Number by using the specified instance and scenario. Before calling this operation, you must obtain an SMS verification code for the OutboundCallTest scenario for the called number and pass it in VerificationCode. The service verifies the code and initiates the call by using the outbound caller ID configured on the platform. DeviceId is used to bind the client data stream to the current call. CallVariables passes call variables in JSON object format, and Tags passes attached data. Upon success, a SessionId with the test- prefix is returned to associate with the current call. A successful API response does not indicate that the called party has answered or that the conversation has ended. Test only authorized numbers. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use real resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MakePilotCallRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MakePilotCallResponse
+        /// </returns>
+        public async Task<MakePilotCallResponse> MakePilotCallAsync(MakePilotCallRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await MakePilotCallWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pauses an outbound campaign.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7600,7 +9476,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pauses an outbound call campaign.</para>
+        /// <para>Pauses an outbound campaign.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7646,7 +9522,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pauses an outbound call campaign.</para>
+        /// <para>Pauses an outbound campaign.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7664,7 +9540,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pauses an outbound call campaign.</para>
+        /// <para>Pauses an outbound campaign.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7966,7 +9842,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an outbound call campaign.</para>
+        /// <para>Submits an outbound campaign.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8017,7 +9893,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an outbound call campaign.</para>
+        /// <para>Submits an outbound campaign.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8068,7 +9944,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an outbound call campaign.</para>
+        /// <para>Submits an outbound campaign.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8091,7 +9967,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an outbound call campaign.</para>
+        /// <para>Submits an outbound campaign.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8110,6 +9986,186 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitCampaignWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a user input to a trial text conversation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sends a round of user input to a trial text conversation created by BeginTrialSession and returns the robot reply in Server-Sent Events (SSE) format. Use the same InstanceId, ScriptId, SessionId, and experience link VisitorToken as those used to start the trial conversation. The service validates the token and its expiration time on each call. Utterance is plain text input, and Extras is a JSON array string of structured events such as key presses and silence. StreamEnd=true only ends the response stream for the current turn. Call EndTrialSession when the entire experience ends. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TrialDialogueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TrialDialogueResponse
+        /// </returns>
+        public TrialDialogueResponse TrialDialogueWithOptions(TrialDialogueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extras))
+            {
+                query["Extras"] = request.Extras;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptId))
+            {
+                query["ScriptId"] = request.ScriptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Utterance))
+            {
+                query["Utterance"] = request.Utterance;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisitorToken))
+            {
+                query["VisitorToken"] = request.VisitorToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TrialDialogue",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TrialDialogueResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a user input to a trial text conversation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sends a round of user input to a trial text conversation created by BeginTrialSession and returns the robot reply in Server-Sent Events (SSE) format. Use the same InstanceId, ScriptId, SessionId, and experience link VisitorToken as those used to start the trial conversation. The service validates the token and its expiration time on each call. Utterance is plain text input, and Extras is a JSON array string of structured events such as key presses and silence. StreamEnd=true only ends the response stream for the current turn. Call EndTrialSession when the entire experience ends. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TrialDialogueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TrialDialogueResponse
+        /// </returns>
+        public async Task<TrialDialogueResponse> TrialDialogueWithOptionsAsync(TrialDialogueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extras))
+            {
+                query["Extras"] = request.Extras;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptId))
+            {
+                query["ScriptId"] = request.ScriptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Utterance))
+            {
+                query["Utterance"] = request.Utterance;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisitorToken))
+            {
+                query["VisitorToken"] = request.VisitorToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TrialDialogue",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TrialDialogueResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a user input to a trial text conversation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sends a round of user input to a trial text conversation created by BeginTrialSession and returns the robot reply in Server-Sent Events (SSE) format. Use the same InstanceId, ScriptId, SessionId, and experience link VisitorToken as those used to start the trial conversation. The service validates the token and its expiration time on each call. Utterance is plain text input, and Extras is a JSON array string of structured events such as key presses and silence. StreamEnd=true only ends the response stream for the current turn. Call EndTrialSession when the entire experience ends. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TrialDialogueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TrialDialogueResponse
+        /// </returns>
+        public TrialDialogueResponse TrialDialogue(TrialDialogueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return TrialDialogueWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a user input to a trial text conversation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sends a round of user input to a trial text conversation created by BeginTrialSession and returns the robot reply in Server-Sent Events (SSE) format. Use the same InstanceId, ScriptId, SessionId, and experience link VisitorToken as those used to start the trial conversation. The service validates the token and its expiration time on each call. Utterance is plain text input, and Extras is a JSON array string of structured events such as key presses and silence. StreamEnd=true only ends the response stream for the current turn. Call EndTrialSession when the entire experience ends. The resource identifiers, numbers, and authentication credentials in the examples are desensitized or placeholder values. Use actual resources and service return values for actual calls.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TrialDialogueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TrialDialogueResponse
+        /// </returns>
+        public async Task<TrialDialogueResponse> TrialDialogueAsync(TrialDialogueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await TrialDialogueWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

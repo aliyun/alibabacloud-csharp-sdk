@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The list of scripts.</para>
+            /// <para>The data list.</para>
             /// </summary>
             [NameInMap("Scripts")]
             [Validation(Required=false)]
             public List<ListScriptsResponseBodyDataScripts> Scripts { get; set; }
             public class ListScriptsResponseBodyDataScripts : TeaModel {
                 /// <summary>
-                /// <para>The chatbot builder type.</para>
+                /// <para>The bot builder type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>LITE</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string NluEngine { get; set; }
 
                 /// <summary>
-                /// <para>The phone number bound to the script.</para>
+                /// <para>The phone number bound to the scenario.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>01057316547</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string PublishedVersionId { get; set; }
 
                 /// <summary>
-                /// <para>The script ID.</para>
+                /// <para>The scenario ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string ScriptId { get; set; }
 
                 /// <summary>
-                /// <para>The script status.</para>
+                /// <para>The scenario status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PUBLISHED</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -1,0 +1,105 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.OutboundBot20251111.Models
+{
+    public class BridgeTrialWebCallRequest : TeaModel {
+        /// <summary>
+        /// <para>The caller information used to display and associate with the web call. It is not equivalent to the actual outbound caller phone number. If it is not provided or is empty, the current web call implementation uses the caller identifier as the caller display information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>web-user-001</para>
+        /// </summary>
+        [NameInMap("Caller")]
+        [Validation(Required=false)]
+        public string Caller { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the client device that initiates the web voice call or receives data channel events. The same DeviceId must be used when the same client obtains data channel credentials and initiates a call. The example is only a business device identifier, not a real credential assigned by the platform.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10001</para>
+        /// </summary>
+        [NameInMap("DeviceId")]
+        [Validation(Required=false)]
+        public string DeviceId { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to use the draft version. Valid values: true: uses the draft version. false: uses the published version. This is not a scenario publishing operation. Ensure that the selected scenario version exists before the call.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("DraftVersion")]
+        [Validation(Required=false)]
+        public bool? DraftVersion { get; set; }
+
+        /// <summary>
+        /// <para>The instance identity of the associated product. You must use an instance that the invoker has access to and that actually exists. The instance must be consistent with the instance to which the scenario, channel, and session belong. The maximum length is subject to the current POP parameter definition.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>instance-example-001</para>
+        /// </summary>
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        /// <summary>
+        /// <para>The audio sampling rate for web voice, in Hz. The backend default is 8000. It must match the client audio and gateway capabilities. The current API code does not define a complete list of allowed values, and other sampling rates are not written as guaranteed supported enumerations.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8000</para>
+        /// </summary>
+        [NameInMap("SampleRate")]
+        [Validation(Required=false)]
+        public int? SampleRate { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the dialogue scenario under the instance. Specify an existing scenario. Subsequent dialogues and end requests for the same text session must use the scenario specified when the session is started.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>script-example-001</para>
+        /// </summary>
+        [NameInMap("ScriptId")]
+        [Validation(Required=false)]
+        public string ScriptId { get; set; }
+
+        /// <summary>
+        /// <para>The attached data string passed to the call link. It uses the key=value format. Multiple key-value pairs are separated by semicolons. It is not in JSON format. For example, the Callee key can be used by the web call service to read the called party information. The example number is a placeholder value. For actual business, fill it in according to the access agreement. Do not overwrite internal tags that are not within the business custom scope.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Callee=057100000000</para>
+        /// </summary>
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public string Tags { get; set; }
+
+        /// <summary>
+        /// <para>The timeout period for waiting for the call to be answered, in seconds. If the call is not answered within this period, it is actively hung up. The backend default is 60 seconds. This is not the maximum duration of an answered call. The current request object does not declare additional upper and lower limits, and unverified value ranges are not added to the documentation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>60</para>
+        /// </summary>
+        [NameInMap("TimeoutSeconds")]
+        [Validation(Required=false)]
+        public int? TimeoutSeconds { get; set; }
+
+        /// <summary>
+        /// <para>The visitor token obtained from the trial link. It is used to locate the trial channel and verify the access permissions and validity period. The token is generated by the channel service and must not be constructed manually. It cannot be empty and must still be within the validity period. The example is a placeholder value that cannot be used for authentication. Do not disclose the real token to unrelated personnel.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example-visitor-token</para>
+        /// </summary>
+        [NameInMap("VisitorToken")]
+        [Validation(Required=false)]
+        public string VisitorToken { get; set; }
+
+    }
+
+}

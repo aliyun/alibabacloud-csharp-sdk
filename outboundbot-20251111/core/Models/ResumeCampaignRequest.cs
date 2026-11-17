@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
 {
     public class ResumeCampaignRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the campaign.</para>
+        /// <para>The ID of the task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

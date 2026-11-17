@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         /// <summary>
         /// <para>The call execution order. Default value: MIN_ATTEMPT_FIRST. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PRIORITY_FIRST: prioritize by priority.</description></item>
-        /// <item><description>MIN_ATTEMPT_FIRST: prioritize by minimum attempt count.</description></item>
+        /// <item><description>PRIORITY_FIRST: Prioritize by priority.</description></item>
+        /// <item><description>MIN_ATTEMPT_FIRST: Prioritize by the number of attempts.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string AttemptOrder { get; set; }
 
         /// <summary>
-        /// <para>The callable time range for the task. The value is a JSON object that contains two properties: beginTime and EndTime.</para>
+        /// <para>The callable time period for the task, formatted as a JSON object that contains two properties: beginTime and EndTime.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string CallableTime { get; set; }
 
         /// <summary>
-        /// <para>The task contact list, which is an OSS object key obtained through the GenerateFileUploadParams operation. You can also leave this parameter empty and append contacts later through the AppendCases operation.</para>
+        /// <para>The task contact list. This is the key of an OSS object, which can be obtained by calling the GenerateFileUploadParams operation. You can also leave this parameter empty and add contacts later by calling the AppendCases operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cases/customer.csv</para>
@@ -45,14 +45,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string CaseFileKey { get; set; }
 
         /// <summary>
-        /// <para>The contact list. You can also leave this parameter empty and append contacts later through the AppendCases operation.</para>
+        /// <para>The contact list. You can also leave this parameter empty and add contacts later by calling the AppendCases operation.</para>
         /// </summary>
         [NameInMap("Cases")]
         [Validation(Required=false)]
         public List<CreateCampaignRequestCases> Cases { get; set; }
         public class CreateCampaignRequestCases : TeaModel {
             /// <summary>
-            /// <para>The custom variables defined by the customer. The value is a JSON object that contains up to 10 properties. Both the property names and values are defined by the customer.</para>
+            /// <para>The custom variables defined by the customer, formatted as a JSON object. The object can contain up to 10 properties, and the name and value of each property are defined by the customer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;key1&quot;:&quot;value1&quot;}</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         }
 
         /// <summary>
-        /// <para>The dialing timeout period, in seconds. Default value: 25.</para>
+        /// <para>The outbound call timeout in seconds. Default value: 25.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25</para>
@@ -115,12 +115,12 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The minimum concurrency for the task. A value of 0 indicates no guaranteed minimum, and resources are allocated by weight.</para>
-        /// <para>If multiple campaigns have a minimum concurrency configured:</para>
+        /// <para>The minimum concurrency. This is the minimum concurrency set for the task. A value of 0 indicates that no baseline is set, and resources are allocated based on weights.</para>
+        /// <para>If multiple campaigns have the minimum concurrency set:</para>
         /// <list type="bullet">
-        /// <item><description><para>If the total concurrency is less than the instance total concurrency, the minimum concurrency of each task is satisfied first, and the remaining resources are allocated proportionally by weight.</para>
+        /// <item><description><para>If the total concurrency is less than the total concurrency of the instance, the minimum concurrency of each task is prioritized, and the excess resources are allocated proportionally based on weights.</para>
         /// </description></item>
-        /// <item><description><para>If the total concurrency exceeds the instance total concurrency, the minimum concurrency no longer serves as a guaranteed minimum but is used as a weight factor in the calculation.</para>
+        /// <item><description><para>If the total concurrency is greater than the total concurrency of the instance, the minimum concurrency no longer serves as a baseline, but participates in the calculation as a weight factor.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string FlashSmsParameters { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to restrict outbound calls on holidays.</para>
+        /// <para>Specifies whether to prohibit outbound calls on holidays.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of attempts. This specifies the maximum number of times a number is called when the call fails.</para>
+        /// <para>The maximum number of attempts, which specifies the maximum number of times to call a number when a call fails.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -189,24 +189,24 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Updated job group</para>
+        /// <para>Modified job group</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The list of caller numbers for the outbound call task.</para>
+        /// <para>The list of calling numbers for the outbound task.</para>
         /// </summary>
         [NameInMap("Numbers")]
         [Validation(Required=false)]
         public List<string> Numbers { get; set; }
 
         /// <summary>
-        /// <para>The list of redial restriction conditions. If not specified, no restrictions are applied. Valid values:</para>
+        /// <para>The list of restrictions for outbound call attempts. If this parameter is not specified, no restrictions are applied. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>CALLEE_NOT_EXISTS: Do not call nonexistent numbers.</description></item>
-        /// <item><description>OUT_OF_SERVICE: Do not call numbers that are out of service.</description></item>
+        /// <item><description>OUT_OF_SERVICE: Do not call suspended numbers.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -217,10 +217,10 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string RedialRestrictions { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to keep the scheduling state until the campaign end time after all contacts are called. Default value: false. Valid values:</para>
+        /// <para>Specifies whether to maintain the scheduling state until the campaign end time after all contacts are called. Default value: false. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The task remains in the scheduling state, and you can continue to append contacts.</description></item>
-        /// <item><description>false: The task changes to completed, and you cannot append contacts.</description></item>
+        /// <item><description>true: The task remains in the scheduling state, and you can continue to add contacts.</description></item>
+        /// <item><description>false: The task changes to the completed state, and you cannot add contacts.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The weight. The value is an integer in the range of 0 to 100. A larger value indicates more concurrency allocated during scheduling.</para>
+        /// <para>The weight, which is an integer ranging from 0 to 100. A larger value indicates that more concurrency is allocated during scheduling.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
 {
     public class GetCampaignRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the outbound task.</para>
+        /// <para>The ID of the outbound campaign.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string CampaignId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the outbound robot.</para>
+        /// <para>The outbound instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
