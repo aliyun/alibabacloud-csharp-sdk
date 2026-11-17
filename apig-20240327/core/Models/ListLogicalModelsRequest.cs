@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListLogicalModelsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the gateway instance. Specifies the gateway instance whose logical models you want to query.</para>
+        /// <para>The ID of the gateway instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per page. Valid values: 1 to 100. This parameter is required. This operation uses token-based pagination with maxResults and nextToken, and does not use pageNumber or pageSize.</para>
+        /// <para>The maximum number of entries to return per page. Valid values: 1 to 100. This parameter is required. This operation uses token-based pagination with maxResults and nextToken instead of pageNumber and pageSize.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The nextToken value returned in the response of the previous page. Do not specify this parameter for the first page. The nextToken value is not returned for the last page.</para>
+        /// <para>The pagination token returned from the previous request. Do not specify this parameter for the first request. This token is not returned in the response for the last page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>next-token-xxxxxxxx</para>

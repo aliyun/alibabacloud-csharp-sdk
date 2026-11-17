@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListConsumerGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The gateway type. Valid values: API and AI.</para>
+        /// <para>The gateway type. Valid values: API and AI. Note: This parameter is required. If it is not provided, the API returns the InvalidParameter.IsEmpty (400) error with the message &quot;Parameter gatewayType should not be empty.&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>API</para>

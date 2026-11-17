@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class SyncMCPServersRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name IDs.</para>
+        /// <para>The list of domain name IDs. You can obtain the system default domain name ID from the subDomainInfos[].domainId field in the ListGateways response. Note: This parameter is required. If you do not specify this parameter, the API returns the InvalidParameter.IsEmpty (400) error.</para>
         /// </summary>
         [NameInMap("domainIds")]
         [Validation(Required=false)]
         public List<string> DomainIds { get; set; }
 
         /// <summary>
-        /// <para>The gateway ID.</para>
+        /// <para>The ID of the gateway. Note: This parameter is required. If you do not specify this parameter, the API returns the InvalidParameter.IsEmpty (400) error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-cq7l5s5lhtg***</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The list of Nacos MCP servers to synchronize. If the list includes already synchronized MCP servers, specify the mcpServerId.</para>
+        /// <para>The list of Nacos MCP servers to sync. If the list includes an already synced MCP server, you must specify the mcpServerId parameter.</para>
         /// </summary>
         [NameInMap("nacosMcpServers")]
         [Validation(Required=false)]
         public List<SyncMCPServersRequestNacosMcpServers> NacosMcpServers { get; set; }
         public class SyncMCPServersRequestNacosMcpServers : TeaModel {
             /// <summary>
-            /// <para>The exposed URI path. Required when the protocol is SSE or StreamableHTTP and the type is RealMCP.</para>
+            /// <para>The exposed URI path. This parameter is required when the protocol is SSE or StreamableHTTP and the type is RealMCP.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/sse</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>MCP Server ID</para>
+            /// <para>The unique ID of the MCP server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mcp-d3s8qo6m1hknegofa3bg</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string McpServerId { get; set; }
 
             /// <summary>
-            /// <para>The MCP server name.</para>
+            /// <para>The name of the MCP server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The Nacos namespace.</para>
+        /// <para>The Nacos namespace. Note: This parameter is required. If you do not specify this parameter, the API returns the InvalidParameter.IsEmpty (400) error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The source ID.</para>
+        /// <para>The ID of the source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>src-d40mff6m1hkpt84vep60</para>

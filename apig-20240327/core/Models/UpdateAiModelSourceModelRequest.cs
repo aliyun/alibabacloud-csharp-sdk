@@ -39,14 +39,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The credit pricing configuration of the model.</para>
+        /// <para>The credit pricing configuration for the model.</para>
         /// </summary>
         [NameInMap("credit")]
         [Validation(Required=false)]
         public UpdateAiModelSourceModelRequestCredit Credit { get; set; }
         public class UpdateAiModelSourceModelRequestCredit : TeaModel {
             /// <summary>
-            /// <para>The number of credits per one million cached input tokens. The value must be a non-negative number. A value of 0 indicates that cached input is free of charge.</para>
+            /// <para>The number of credits per million cached input tokens. This value must be a non-negative number. Set this value to 0 to indicate that cached input is free.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.1</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public float? CacheCost { get; set; }
 
             /// <summary>
-            /// <para>The number of credits per one million input tokens. The value must be a non-negative number. A value of 0 indicates that the input is free of charge.</para>
+            /// <para>The number of credits per million input tokens. This value must be a non-negative number. Set this value to 0 to indicate that the input is free.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public float? InputCost { get; set; }
 
             /// <summary>
-            /// <para>The number of credits per one million output tokens. The value must be a non-negative number. A value of 0 indicates that the output is free of charge.</para>
+            /// <para>The number of credits per million output tokens. This value must be a non-negative number. Set this value to 0 to indicate that the output is free.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public float? OutputCost { get; set; }
 
             /// <summary>
-            /// <para>The pricing method. Currently, fixed credit pricing is supported.</para>
+            /// <para>The pricing method. Currently, only fixed credit pricing is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fixed</para>

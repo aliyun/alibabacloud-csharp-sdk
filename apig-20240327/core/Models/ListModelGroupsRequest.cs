@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListModelGroupsRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the AI gateway instance to which the resource belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
+        /// <para>The keyword used to match model groups by name, description, membership, or invocation name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>beta</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Keyword { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of results to return per page. Valid values: 1 to 100. This parameter is required. Token-based pagination is used instead of pageNumber and pageSize.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The pagination token returned from the previous page. Omit this parameter for the first page. The value is empty or omitted for the last page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>eyJvZmZzZXQiOjIwfQ==</para>
         /// </summary>

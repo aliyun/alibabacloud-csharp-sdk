@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public SyncMCPServersResponseBodyData Data { get; set; }
         public class SyncMCPServersResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of MCP servers that failed to synchronize.</para>
+            /// <para>The list of MCP servers that fail to sync.</para>
             /// </summary>
             [NameInMap("failedMcpServers")]
             [Validation(Required=false)]
             public List<SyncMCPServersResponseBodyDataFailedMcpServers> FailedMcpServers { get; set; }
             public class SyncMCPServersResponseBodyDataFailedMcpServers : TeaModel {
                 /// <summary>
-                /// <para>The MCP server name.</para>
+                /// <para>The name of the MCP server.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mcp-fail</para>
@@ -53,14 +53,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The list of successfully synchronized MCP servers.</para>
+            /// <para>The list of MCP servers that are successfully synced.</para>
             /// </summary>
             [NameInMap("succeedMcpServers")]
             [Validation(Required=false)]
             public List<SyncMCPServersResponseBodyDataSucceedMcpServers> SucceedMcpServers { get; set; }
             public class SyncMCPServersResponseBodyDataSucceedMcpServers : TeaModel {
                 /// <summary>
-                /// <para>The MCP server name.</para>
+                /// <para>The name of the MCP server.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mcp-success</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2F46B9E7-67EF-5C8A-BA52-D38D5B32AF2C</para>

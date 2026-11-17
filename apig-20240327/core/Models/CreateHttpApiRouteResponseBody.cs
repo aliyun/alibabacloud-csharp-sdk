@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public CreateHttpApiRouteResponseBodyData Data { get; set; }
         public class CreateHttpApiRouteResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The route ID.</para>
+            /// <para>The ID of the route.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hr-cr82undlhtgrlej***</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3ACFC7A7-45A9-58CF-B2D5-765B60254695</para>

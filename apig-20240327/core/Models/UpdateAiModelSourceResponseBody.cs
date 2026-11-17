@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ServiceId { get; set; }
 
             /// <summary>
-            /// <para>The time of the most recent business update. The time is in RFC 3339 format and in the UTC time zone.</para>
+            /// <para>The time of the most recent business update, in RFC 3339 format and the UTC time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-11-12T00:00:00Z</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The current version of the object. This version is used for conditional validation during updates or deletions.</para>
+            /// <para>The current version of the object, used for conditional validation during update or delete operations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

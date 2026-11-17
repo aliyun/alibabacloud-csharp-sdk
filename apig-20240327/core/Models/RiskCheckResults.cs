@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The basic information about the instance.</para>
+        /// <para>The basic information of the instance.</para>
         /// </summary>
         [NameInMap("metadata")]
         [Validation(Required=false)]
@@ -79,14 +79,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The list of detailed risk items.</para>
+        /// <para>The list of detailed risk item information.</para>
         /// </summary>
         [NameInMap("riskDetails")]
         [Validation(Required=false)]
         public List<RiskCheckResultsRiskDetails> RiskDetails { get; set; }
         public class RiskCheckResultsRiskDetails : TeaModel {
             /// <summary>
-            /// <para>The name of the module that performed the check.</para>
+            /// <para>The name of the module that performs the check.</para>
             /// 
             /// <b>Example:</b>
             /// <para>BaseInfo</para>
@@ -96,7 +96,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string CheckModule { get; set; }
 
             /// <summary>
-            /// <para>The detailed data related to the risk. The data structure varies by risk type.</para>
+            /// <para>The detailed data related to the risk. The data structure varies based on the risk type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;30010010001&quot;:&quot;[\&quot;\&quot;,\&quot;\&quot;]&quot;}</para>
             /// </summary>
             [NameInMap("data")]
             [Validation(Required=false)]
@@ -106,14 +109,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The detailed description of the risk in JSON string format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;desc&quot;:&quot;The single-node instance has an architecture risk. A single point of failure can cause service unavailability. Scale out to two or more nodes.&quot;}</para>
+            /// <para>{&quot;desc&quot;:&quot;Single-node instances have architecture risks. A single point of failure causes service unavailability. Scale out to two or more nodes.&quot;}</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the alert notification for the risk item is muted.</para>
+            /// <para>Specifies whether the alert notification for the risk item is muted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -153,13 +156,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string RiskName { get; set; }
 
             /// <summary>
-            /// <para>The risk category. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>SYSTEM: System risk.</description></item>
-            /// <item><description>VERSION: Version risk.</description></item>
-            /// <item><description>SAFE: Security risk.</description></item>
-            /// <item><description>CAPACITY: Capacity risk.</description></item>
-            /// </list>
+            /// <para>The risk categorization. Valid values: SYSTEM (system risk), VERSION (version risk), SAFE (security risk), and CAPACITY (capacity risk).</para>
             /// 
             /// <b>Example:</b>
             /// <para>SYSTEM</para>
@@ -179,10 +176,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Situation { get; set; }
 
             /// <summary>
-            /// <para>The optimization suggestions for the risk in JSON string format, including descriptions and action links.</para>
+            /// <para>The optimization suggestions for the risk in JSON string format, including descriptions and operation links.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;desc&quot;:&quot;Scale out to two or more nodes.&quot;,&quot;links&quot;:[{&quot;descEn&quot;:&quot;click to upgrade specification&quot;,&quot;type&quot;:&quot;upgrade&quot;,&quot;desc&quot;:&quot;Click to scale out&quot;}]}</para>
+            /// <para>{&quot;desc&quot;:&quot;Scale out to two or more nodes&quot;,&quot;links&quot;:[{&quot;descEn&quot;:&quot;click to upgrade specification&quot;,&quot;type&quot;:&quot;upgrade&quot;,&quot;desc&quot;:&quot;Click to scale out&quot;}]}</para>
             /// </summary>
             [NameInMap("suggestion")]
             [Validation(Required=false)]
@@ -191,13 +188,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The overall risk level. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>LOW: Low risk.</description></item>
-        /// <item><description>MEDIUM: Medium risk.</description></item>
-        /// <item><description>HIGH: High risk.</description></item>
-        /// <item><description>CRITICAL: Critical risk.</description></item>
-        /// </list>
+        /// <para>The overall risk level. Valid values: LOW (low risk), MEDIUM (medium risk), HIGH (high risk), and CRITICAL (critical risk).</para>
         /// 
         /// <b>Example:</b>
         /// <para>MEDIUM</para>
@@ -227,12 +218,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public long? SnapshotTime { get; set; }
 
         /// <summary>
-        /// <para>The risk detection status. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>SUCCESS: The detection succeeded.</description></item>
-        /// <item><description>FAIL: The detection failed.</description></item>
-        /// <item><description>RUNNING: The detection is running.</description></item>
-        /// </list>
+        /// <para>The risk check status. Valid values: SUCCESS, FAIL, and RUNNING.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>

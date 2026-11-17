@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreatePolicyAttachmentRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the attached resource.</para>
+        /// <para>The attached resource ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

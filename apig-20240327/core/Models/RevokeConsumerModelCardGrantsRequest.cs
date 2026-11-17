@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class RevokeConsumerModelCardGrantsRequest : TeaModel {
         /// <summary>
-        /// <para>The collection of model card IDs to be revoked within this API. Revoking a non-existent license is a valid no-op.</para>
+        /// <para>The collection of model card IDs to revoke within this API. Revoking non-existent entitlements is a valid no-op.</para>
         /// </summary>
         [NameInMap("modelCardIds")]
         [Validation(Required=false)]
         public List<string> ModelCardIds { get; set; }
 
         /// <summary>
-        /// <para>The collection of actual model group IDs to be revoked within this API. When revoking only group licenses, modelCardIds can be empty, and the group or principal is not required to exist. At least one of the two target types must be non-empty. This operation does not delete consumers, keys, or quotas.</para>
+        /// <para>The actual model group IDs to revoke within this API. When revoking only group entitlements, modelCardIds can be empty, and the group or principal is not required to still exist. At least one of the two target types must be non-empty. This operation does not delete consumers, keys, or quotas.</para>
         /// </summary>
         [NameInMap("modelGroupIds")]
         [Validation(Required=false)]
         public List<string> ModelGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The immutable ID of the principal for which the license is revoked. This is not the name.</para>
+        /// <para>The immutable ID of the principal for revocation, not the name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string PrincipalId { get; set; }
 
         /// <summary>
-        /// <para>The type of the principal for which the license is revoked. Valid values: Consumer and ConsumerGroup.</para>
+        /// <para>The type of the principal for revocation. Valid values: Consumer, ConsumerGroup.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

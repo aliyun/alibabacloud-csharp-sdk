@@ -2248,7 +2248,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a standalone AI model source.</para>
+        /// <para>Creates an independent AI model source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2312,7 +2312,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a standalone AI model source.</para>
+        /// <para>Creates an independent AI model source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2376,7 +2376,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a standalone AI model source.</para>
+        /// <para>Creates an independent AI model source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2395,7 +2395,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a standalone AI model source.</para>
+        /// <para>Creates an independent AI model source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4437,21 +4437,21 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Procedure</h2>
-        /// <para>This operation creates an export task for the consumption details of a consumer or consumer group under a specified gateway quota rule. The exported content is sourced from gateway access logs.</para>
+        /// <h2>Call procedure</h2>
+        /// <para>This operation creates an export task for the consumption details of a consumer or consumer group under a specified gateway quota rule. The exported content is derived from gateway access logs.</para>
         /// <ol>
-        /// <item><description>Call this operation to obtain the taskId. A new task returns Pending, which indicates that the task is submitted and the file is not yet generated.</description></item>
-        /// <item><description>Call GetGatewayQuotaRuleSubjectUsageExportTask with the same gatewayId, ruleId, subjectId, and the returned taskId to poll the task status.</description></item>
+        /// <item><description>Call this operation to obtain the taskId. A new task returns Pending, indicating that the task is submitted and the file is not yet generated.</description></item>
+        /// <item><description>Use the same gatewayId, ruleId, subjectId, and the returned taskId to call GetGatewayQuotaRuleSubjectUsageExportTask and poll the task status.</description></item>
         /// <item><description>When the polled status is Success and the file has not expired, download the csv.gz file by using GetGatewayQuotaRuleSubjectUsageExportTask. If the status is Failed, troubleshoot the issue based on the errorMessage and recreate the task.</description></item>
         /// </ol>
         /// <h2>Prerequisites and limits</h2>
         /// <list type="bullet">
         /// <item><description>When you create a task, the quota rule must exist, and the target subject must be bound to the rule. Use the consumer ID for consumer rules and the consumer group ID for consumer group rules.</description></item>
         /// <item><description>The details within the valid export time range depend on the delivery of gateway access logs. Enable log delivery first and ensure that the logs for the required time period are queryable.</description></item>
-        /// <item><description>The time span for a single export cannot exceed one rule period. A single export can contain up to 100,000 details. If the background statistics exceed this limit, the task fails. Narrow the time range and try again.</description></item>
-        /// <item><description>If the same user already has a Pending or Running task for the same gateway, rule, and subject in the current region within the last 10 minutes, repeated creation is rejected. Creation is also rejected if the total number of export tasks created within the last 10 minutes that are still Pending or Running reaches three. Wait for the existing tasks to complete. Idempotent retries with the same clientToken and parameters can reuse existing tasks.</description></item>
-        /// <item><description>The processing timeout for a task is 10 minutes from creation. After a timeout, the task is processed as Failed. This is not a guarantee that the task will successfully complete within the time limit.</description></item>
-        /// <item><description>The export time range, metering dimension, and subject name are determined at creation. Subsequent queries do not recalculate these conditions. After the file is successfully generated, the download link is available for 24 hours. The signed link generated for each query is valid for 10 minutes. The exact validity period is subject to the query result.</description></item>
+        /// <item><description>The time span for a single export cannot exceed one rule period. A single export can contain up to 100,000 details. If the background statistics exceed the limit, the task fails. Narrow the time range and try again.</description></item>
+        /// <item><description>If the same user already has a Pending or Running task for the same gateway, rule, and subject in the current region within the last 10 minutes, repeated creation is rejected. Creation is also rejected if the total number of export tasks created within the last 10 minutes that are still Pending or Running reaches 3. Wait for the existing tasks to complete. Idempotent retries with the same clientToken and identical parameters can reuse existing tasks.</description></item>
+        /// <item><description>The processing timeout for a task is 10 minutes from the time of creation. After the timeout, the task is processed as Failed. This is not a guarantee that the task will definitely complete successfully within this time limit.</description></item>
+        /// <item><description>The export time range, metering dimension, and subject name are determined at creation time, and subsequent queries do not recalculate these conditions. After the file is successfully generated, the download link can be obtained within 24 hours. The signed link generated for each query is valid for 10 minutes, subject to the actual query result.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4519,21 +4519,21 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Procedure</h2>
-        /// <para>This operation creates an export task for the consumption details of a consumer or consumer group under a specified gateway quota rule. The exported content is sourced from gateway access logs.</para>
+        /// <h2>Call procedure</h2>
+        /// <para>This operation creates an export task for the consumption details of a consumer or consumer group under a specified gateway quota rule. The exported content is derived from gateway access logs.</para>
         /// <ol>
-        /// <item><description>Call this operation to obtain the taskId. A new task returns Pending, which indicates that the task is submitted and the file is not yet generated.</description></item>
-        /// <item><description>Call GetGatewayQuotaRuleSubjectUsageExportTask with the same gatewayId, ruleId, subjectId, and the returned taskId to poll the task status.</description></item>
+        /// <item><description>Call this operation to obtain the taskId. A new task returns Pending, indicating that the task is submitted and the file is not yet generated.</description></item>
+        /// <item><description>Use the same gatewayId, ruleId, subjectId, and the returned taskId to call GetGatewayQuotaRuleSubjectUsageExportTask and poll the task status.</description></item>
         /// <item><description>When the polled status is Success and the file has not expired, download the csv.gz file by using GetGatewayQuotaRuleSubjectUsageExportTask. If the status is Failed, troubleshoot the issue based on the errorMessage and recreate the task.</description></item>
         /// </ol>
         /// <h2>Prerequisites and limits</h2>
         /// <list type="bullet">
         /// <item><description>When you create a task, the quota rule must exist, and the target subject must be bound to the rule. Use the consumer ID for consumer rules and the consumer group ID for consumer group rules.</description></item>
         /// <item><description>The details within the valid export time range depend on the delivery of gateway access logs. Enable log delivery first and ensure that the logs for the required time period are queryable.</description></item>
-        /// <item><description>The time span for a single export cannot exceed one rule period. A single export can contain up to 100,000 details. If the background statistics exceed this limit, the task fails. Narrow the time range and try again.</description></item>
-        /// <item><description>If the same user already has a Pending or Running task for the same gateway, rule, and subject in the current region within the last 10 minutes, repeated creation is rejected. Creation is also rejected if the total number of export tasks created within the last 10 minutes that are still Pending or Running reaches three. Wait for the existing tasks to complete. Idempotent retries with the same clientToken and parameters can reuse existing tasks.</description></item>
-        /// <item><description>The processing timeout for a task is 10 minutes from creation. After a timeout, the task is processed as Failed. This is not a guarantee that the task will successfully complete within the time limit.</description></item>
-        /// <item><description>The export time range, metering dimension, and subject name are determined at creation. Subsequent queries do not recalculate these conditions. After the file is successfully generated, the download link is available for 24 hours. The signed link generated for each query is valid for 10 minutes. The exact validity period is subject to the query result.</description></item>
+        /// <item><description>The time span for a single export cannot exceed one rule period. A single export can contain up to 100,000 details. If the background statistics exceed the limit, the task fails. Narrow the time range and try again.</description></item>
+        /// <item><description>If the same user already has a Pending or Running task for the same gateway, rule, and subject in the current region within the last 10 minutes, repeated creation is rejected. Creation is also rejected if the total number of export tasks created within the last 10 minutes that are still Pending or Running reaches 3. Wait for the existing tasks to complete. Idempotent retries with the same clientToken and identical parameters can reuse existing tasks.</description></item>
+        /// <item><description>The processing timeout for a task is 10 minutes from the time of creation. After the timeout, the task is processed as Failed. This is not a guarantee that the task will definitely complete successfully within this time limit.</description></item>
+        /// <item><description>The export time range, metering dimension, and subject name are determined at creation time, and subsequent queries do not recalculate these conditions. After the file is successfully generated, the download link can be obtained within 24 hours. The signed link generated for each query is valid for 10 minutes, subject to the actual query result.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4601,21 +4601,21 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Procedure</h2>
-        /// <para>This operation creates an export task for the consumption details of a consumer or consumer group under a specified gateway quota rule. The exported content is sourced from gateway access logs.</para>
+        /// <h2>Call procedure</h2>
+        /// <para>This operation creates an export task for the consumption details of a consumer or consumer group under a specified gateway quota rule. The exported content is derived from gateway access logs.</para>
         /// <ol>
-        /// <item><description>Call this operation to obtain the taskId. A new task returns Pending, which indicates that the task is submitted and the file is not yet generated.</description></item>
-        /// <item><description>Call GetGatewayQuotaRuleSubjectUsageExportTask with the same gatewayId, ruleId, subjectId, and the returned taskId to poll the task status.</description></item>
+        /// <item><description>Call this operation to obtain the taskId. A new task returns Pending, indicating that the task is submitted and the file is not yet generated.</description></item>
+        /// <item><description>Use the same gatewayId, ruleId, subjectId, and the returned taskId to call GetGatewayQuotaRuleSubjectUsageExportTask and poll the task status.</description></item>
         /// <item><description>When the polled status is Success and the file has not expired, download the csv.gz file by using GetGatewayQuotaRuleSubjectUsageExportTask. If the status is Failed, troubleshoot the issue based on the errorMessage and recreate the task.</description></item>
         /// </ol>
         /// <h2>Prerequisites and limits</h2>
         /// <list type="bullet">
         /// <item><description>When you create a task, the quota rule must exist, and the target subject must be bound to the rule. Use the consumer ID for consumer rules and the consumer group ID for consumer group rules.</description></item>
         /// <item><description>The details within the valid export time range depend on the delivery of gateway access logs. Enable log delivery first and ensure that the logs for the required time period are queryable.</description></item>
-        /// <item><description>The time span for a single export cannot exceed one rule period. A single export can contain up to 100,000 details. If the background statistics exceed this limit, the task fails. Narrow the time range and try again.</description></item>
-        /// <item><description>If the same user already has a Pending or Running task for the same gateway, rule, and subject in the current region within the last 10 minutes, repeated creation is rejected. Creation is also rejected if the total number of export tasks created within the last 10 minutes that are still Pending or Running reaches three. Wait for the existing tasks to complete. Idempotent retries with the same clientToken and parameters can reuse existing tasks.</description></item>
-        /// <item><description>The processing timeout for a task is 10 minutes from creation. After a timeout, the task is processed as Failed. This is not a guarantee that the task will successfully complete within the time limit.</description></item>
-        /// <item><description>The export time range, metering dimension, and subject name are determined at creation. Subsequent queries do not recalculate these conditions. After the file is successfully generated, the download link is available for 24 hours. The signed link generated for each query is valid for 10 minutes. The exact validity period is subject to the query result.</description></item>
+        /// <item><description>The time span for a single export cannot exceed one rule period. A single export can contain up to 100,000 details. If the background statistics exceed the limit, the task fails. Narrow the time range and try again.</description></item>
+        /// <item><description>If the same user already has a Pending or Running task for the same gateway, rule, and subject in the current region within the last 10 minutes, repeated creation is rejected. Creation is also rejected if the total number of export tasks created within the last 10 minutes that are still Pending or Running reaches 3. Wait for the existing tasks to complete. Idempotent retries with the same clientToken and identical parameters can reuse existing tasks.</description></item>
+        /// <item><description>The processing timeout for a task is 10 minutes from the time of creation. After the timeout, the task is processed as Failed. This is not a guarantee that the task will definitely complete successfully within this time limit.</description></item>
+        /// <item><description>The export time range, metering dimension, and subject name are determined at creation time, and subsequent queries do not recalculate these conditions. After the file is successfully generated, the download link can be obtained within 24 hours. The signed link generated for each query is valid for 10 minutes, subject to the actual query result.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4640,21 +4640,21 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Procedure</h2>
-        /// <para>This operation creates an export task for the consumption details of a consumer or consumer group under a specified gateway quota rule. The exported content is sourced from gateway access logs.</para>
+        /// <h2>Call procedure</h2>
+        /// <para>This operation creates an export task for the consumption details of a consumer or consumer group under a specified gateway quota rule. The exported content is derived from gateway access logs.</para>
         /// <ol>
-        /// <item><description>Call this operation to obtain the taskId. A new task returns Pending, which indicates that the task is submitted and the file is not yet generated.</description></item>
-        /// <item><description>Call GetGatewayQuotaRuleSubjectUsageExportTask with the same gatewayId, ruleId, subjectId, and the returned taskId to poll the task status.</description></item>
+        /// <item><description>Call this operation to obtain the taskId. A new task returns Pending, indicating that the task is submitted and the file is not yet generated.</description></item>
+        /// <item><description>Use the same gatewayId, ruleId, subjectId, and the returned taskId to call GetGatewayQuotaRuleSubjectUsageExportTask and poll the task status.</description></item>
         /// <item><description>When the polled status is Success and the file has not expired, download the csv.gz file by using GetGatewayQuotaRuleSubjectUsageExportTask. If the status is Failed, troubleshoot the issue based on the errorMessage and recreate the task.</description></item>
         /// </ol>
         /// <h2>Prerequisites and limits</h2>
         /// <list type="bullet">
         /// <item><description>When you create a task, the quota rule must exist, and the target subject must be bound to the rule. Use the consumer ID for consumer rules and the consumer group ID for consumer group rules.</description></item>
         /// <item><description>The details within the valid export time range depend on the delivery of gateway access logs. Enable log delivery first and ensure that the logs for the required time period are queryable.</description></item>
-        /// <item><description>The time span for a single export cannot exceed one rule period. A single export can contain up to 100,000 details. If the background statistics exceed this limit, the task fails. Narrow the time range and try again.</description></item>
-        /// <item><description>If the same user already has a Pending or Running task for the same gateway, rule, and subject in the current region within the last 10 minutes, repeated creation is rejected. Creation is also rejected if the total number of export tasks created within the last 10 minutes that are still Pending or Running reaches three. Wait for the existing tasks to complete. Idempotent retries with the same clientToken and parameters can reuse existing tasks.</description></item>
-        /// <item><description>The processing timeout for a task is 10 minutes from creation. After a timeout, the task is processed as Failed. This is not a guarantee that the task will successfully complete within the time limit.</description></item>
-        /// <item><description>The export time range, metering dimension, and subject name are determined at creation. Subsequent queries do not recalculate these conditions. After the file is successfully generated, the download link is available for 24 hours. The signed link generated for each query is valid for 10 minutes. The exact validity period is subject to the query result.</description></item>
+        /// <item><description>The time span for a single export cannot exceed one rule period. A single export can contain up to 100,000 details. If the background statistics exceed the limit, the task fails. Narrow the time range and try again.</description></item>
+        /// <item><description>If the same user already has a Pending or Running task for the same gateway, rule, and subject in the current region within the last 10 minutes, repeated creation is rejected. Creation is also rejected if the total number of export tasks created within the last 10 minutes that are still Pending or Running reaches 3. Wait for the existing tasks to complete. Idempotent retries with the same clientToken and identical parameters can reuse existing tasks.</description></item>
+        /// <item><description>The processing timeout for a task is 10 minutes from the time of creation. After the timeout, the task is processed as Failed. This is not a guarantee that the task will definitely complete successfully within this time limit.</description></item>
+        /// <item><description>The export time range, metering dimension, and subject name are determined at creation time, and subsequent queries do not recalculate these conditions. After the file is successfully generated, the download link can be obtained within 24 hours. The signed link generated for each query is valid for 10 minutes, subject to the actual query result.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5134,6 +5134,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["environmentId"] = request.EnvironmentId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                body["gatewayId"] = request.GatewayId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Match))
             {
                 body["match"] = request.Match;
@@ -5215,6 +5219,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentId))
             {
                 body["environmentId"] = request.EnvironmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                body["gatewayId"] = request.GatewayId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Match))
             {
@@ -8067,6 +8075,17 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Generates a secret.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Before you begin</h2>
+        /// <para>Before calling this operation, you must prepare the following resources in Key Management Service (KMS):</para>
+        /// <list type="bullet">
+        /// <item><description>KMS instance: Create an instance in KMS and obtain the instance ID. Pass the instance ID as kmsConfig.kmsInstanceId.</description></item>
+        /// <item><description>KMS key: Create a key in the instance and obtain the key ID. Pass the key ID as kmsConfig.kmsKeyId.
+        /// When calling this operation, you must set secretSource to KMS and pass the preceding two identifiers in kmsConfig. After the secret is created, you can call ListSecrets to query the list of secrets under your account.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateSecretRequest
         /// </param>
@@ -8132,6 +8151,17 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <summary>
         /// <para>Generates a secret.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Before you begin</h2>
+        /// <para>Before calling this operation, you must prepare the following resources in Key Management Service (KMS):</para>
+        /// <list type="bullet">
+        /// <item><description>KMS instance: Create an instance in KMS and obtain the instance ID. Pass the instance ID as kmsConfig.kmsInstanceId.</description></item>
+        /// <item><description>KMS key: Create a key in the instance and obtain the key ID. Pass the key ID as kmsConfig.kmsKeyId.
+        /// When calling this operation, you must set secretSource to KMS and pass the preceding two identifiers in kmsConfig. After the secret is created, you can call ListSecrets to query the list of secrets under your account.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateSecretRequest
@@ -8199,6 +8229,17 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Generates a secret.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Before you begin</h2>
+        /// <para>Before calling this operation, you must prepare the following resources in Key Management Service (KMS):</para>
+        /// <list type="bullet">
+        /// <item><description>KMS instance: Create an instance in KMS and obtain the instance ID. Pass the instance ID as kmsConfig.kmsInstanceId.</description></item>
+        /// <item><description>KMS key: Create a key in the instance and obtain the key ID. Pass the key ID as kmsConfig.kmsKeyId.
+        /// When calling this operation, you must set secretSource to KMS and pass the preceding two identifiers in kmsConfig. After the secret is created, you can call ListSecrets to query the list of secrets under your account.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateSecretRequest
         /// </param>
@@ -8217,6 +8258,17 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <summary>
         /// <para>Generates a secret.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Before you begin</h2>
+        /// <para>Before calling this operation, you must prepare the following resources in Key Management Service (KMS):</para>
+        /// <list type="bullet">
+        /// <item><description>KMS instance: Create an instance in KMS and obtain the instance ID. Pass the instance ID as kmsConfig.kmsInstanceId.</description></item>
+        /// <item><description>KMS key: Create a key in the instance and obtain the key ID. Pass the key ID as kmsConfig.kmsKeyId.
+        /// When calling this operation, you must set secretSource to KMS and pass the preceding two identifiers in kmsConfig. After the secret is created, you can call ListSecrets to query the list of secrets under your account.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateSecretRequest
@@ -11030,7 +11082,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型组</para>
+        /// <para>Deletes a model group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11076,7 +11128,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型组</para>
+        /// <para>Deletes a model group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11122,7 +11174,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型组</para>
+        /// <para>Deletes a model group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11141,7 +11193,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型组</para>
+        /// <para>Deletes a model group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13552,7 +13604,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询AI模型源编辑影响</para>
+        /// <para>Queries the impact of editing an AI model source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13592,7 +13644,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询AI模型源编辑影响</para>
+        /// <para>Queries the impact of editing an AI model source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13632,7 +13684,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询AI模型源编辑影响</para>
+        /// <para>Queries the impact of editing an AI model source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13651,7 +13703,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询AI模型源编辑影响</para>
+        /// <para>Queries the impact of editing an AI model source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14977,6 +15029,19 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Queries the account information of the currently logged-on developer and returns the developer ID, portal ID, username, and status.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Before you begin and call sequence</h2>
+        /// <para>This operation queries the account information of the currently logged-on developer. You must complete the following steps in order:</para>
+        /// <ol>
+        /// <item><description>Call CreatePortal to create a developer portal and obtain the portalId.</description></item>
+        /// <item><description>Call CreateDeveloper to register a developer account under the portal.</description></item>
+        /// <item><description>Call LoginDeveloper to log on to the developer account and obtain the accessToken.</description></item>
+        /// <item><description>Call this operation with the accessToken obtained in the previous step.
+        /// Related operations: CreatePortal, CreateDeveloper, and LoginDeveloper.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetDeveloperRequest
         /// </param>
@@ -15016,6 +15081,19 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <summary>
         /// <para>Queries the account information of the currently logged-on developer and returns the developer ID, portal ID, username, and status.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Before you begin and call sequence</h2>
+        /// <para>This operation queries the account information of the currently logged-on developer. You must complete the following steps in order:</para>
+        /// <ol>
+        /// <item><description>Call CreatePortal to create a developer portal and obtain the portalId.</description></item>
+        /// <item><description>Call CreateDeveloper to register a developer account under the portal.</description></item>
+        /// <item><description>Call LoginDeveloper to log on to the developer account and obtain the accessToken.</description></item>
+        /// <item><description>Call this operation with the accessToken obtained in the previous step.
+        /// Related operations: CreatePortal, CreateDeveloper, and LoginDeveloper.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDeveloperRequest
@@ -15057,6 +15135,19 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Queries the account information of the currently logged-on developer and returns the developer ID, portal ID, username, and status.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Before you begin and call sequence</h2>
+        /// <para>This operation queries the account information of the currently logged-on developer. You must complete the following steps in order:</para>
+        /// <ol>
+        /// <item><description>Call CreatePortal to create a developer portal and obtain the portalId.</description></item>
+        /// <item><description>Call CreateDeveloper to register a developer account under the portal.</description></item>
+        /// <item><description>Call LoginDeveloper to log on to the developer account and obtain the accessToken.</description></item>
+        /// <item><description>Call this operation with the accessToken obtained in the previous step.
+        /// Related operations: CreatePortal, CreateDeveloper, and LoginDeveloper.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetDeveloperRequest
         /// </param>
@@ -15075,6 +15166,19 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <summary>
         /// <para>Queries the account information of the currently logged-on developer and returns the developer ID, portal ID, username, and status.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Before you begin and call sequence</h2>
+        /// <para>This operation queries the account information of the currently logged-on developer. You must complete the following steps in order:</para>
+        /// <ol>
+        /// <item><description>Call CreatePortal to create a developer portal and obtain the portalId.</description></item>
+        /// <item><description>Call CreateDeveloper to register a developer account under the portal.</description></item>
+        /// <item><description>Call LoginDeveloper to log on to the developer account and obtain the accessToken.</description></item>
+        /// <item><description>Call this operation with the accessToken obtained in the previous step.
+        /// Related operations: CreatePortal, CreateDeveloper, and LoginDeveloper.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDeveloperRequest
@@ -16232,24 +16336,24 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status, processing progress, failure cause, and file download information of an export task for the usage details of a quota rule subject.</para>
+        /// <para>Queries the status, processing progress, failure cause, and file download information of an export task for quota rule subject consumption details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Workflow</h2>
+        /// <h2>Call flow</h2>
         /// <para>First, call CreateGatewayQuotaRuleSubjectUsageExportTask to create a task. Then, use the returned taskId along with the same gatewayId, ruleId, and subjectId to call this operation in the same region.</para>
         /// <list type="bullet">
-        /// <item><description>Pending or Running: The task is not completed. You can query again after a period of time.</description></item>
+        /// <item><description>Pending or Running: The task is not completed. You can query the task again after a period of time.</description></item>
         /// <item><description>Success: Check result.fileExpired and result.downloadUrl. If the file is not expired and a link is returned, you can download the file.</description></item>
-        /// <item><description>Failed: Troubleshoot the issue based on errorMessage. To export again, call the create operation with a new clientToken.</description></item>
+        /// <item><description>Failed: Troubleshoot the issue based on errorMessage. To export the data again, call the create operation with a new clientToken.</description></item>
         /// </list>
-        /// <h2>Download links and file validity periods</h2>
-        /// <para>For each successful query where the file is not expired, a signed link with a validity period of 10 minutes is generated. Download the file promptly based on downloadUrlExpiredAt. If the link expires but fileExpiredAt is not reached, you can query again to obtain a new link. Querying again does not regenerate the file or extend the 24-hour validity period of the file.
-        /// After fileExpiredAt is reached, this operation no longer issues new links, returns fileExpired=true, and omits downloadUrl and downloadUrlExpiredAt. The task status remains Success. To export again, create a new task.</para>
+        /// <h2>Download link and file validity period</h2>
+        /// <para>For each successful query where the file is not expired, a signed link with a validity period of 10 minutes is generated. Download the file promptly based on downloadUrlExpiredAt. If the link expires but the file has not reached fileExpiredAt, you can query the task again to obtain a new link. Querying the task again does not regenerate the file or extend the 24-hour validity period of the file.
+        /// After the file reaches fileExpiredAt, this operation no longer issues new links. It returns fileExpired=true and omits downloadUrl and downloadUrlExpiredAt. The task status remains Success. To export the data again, create a new task.</para>
         /// <h2>Query scope and task progress</h2>
-        /// <para>This operation returns only the export tasks of the current user in the current region that match the gateway, rule, and subject paths. If the paths do not match or the task does not exist, a not found error is returned. Existing tasks are queried based on the information recorded at creation. Export conditions are not recalculated due to subsequent rule resets or subject name changes.
-        /// If a task remains in the Pending or Running state for more than 10 minutes after creation, the query treats it as a timeout failure. Determine whether the task is completed based on status, not just totalCount or processedCount.</para>
+        /// <para>This operation returns only the export tasks of the current user in the current region that match the gateway, rule, and subject paths. If the paths do not match or the task does not exist, a not found error is returned. Existing tasks are queried based on the information recorded at creation. The export conditions are not recalculated due to subsequent rule resets or subject name changes.
+        /// If a task remains in the Pending or Running state for more than 10 minutes after creation, the query treats it as a timeout failure. Determine whether the task is completed based on the status, not only on totalCount or processedCount.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16289,24 +16393,24 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status, processing progress, failure cause, and file download information of an export task for the usage details of a quota rule subject.</para>
+        /// <para>Queries the status, processing progress, failure cause, and file download information of an export task for quota rule subject consumption details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Workflow</h2>
+        /// <h2>Call flow</h2>
         /// <para>First, call CreateGatewayQuotaRuleSubjectUsageExportTask to create a task. Then, use the returned taskId along with the same gatewayId, ruleId, and subjectId to call this operation in the same region.</para>
         /// <list type="bullet">
-        /// <item><description>Pending or Running: The task is not completed. You can query again after a period of time.</description></item>
+        /// <item><description>Pending or Running: The task is not completed. You can query the task again after a period of time.</description></item>
         /// <item><description>Success: Check result.fileExpired and result.downloadUrl. If the file is not expired and a link is returned, you can download the file.</description></item>
-        /// <item><description>Failed: Troubleshoot the issue based on errorMessage. To export again, call the create operation with a new clientToken.</description></item>
+        /// <item><description>Failed: Troubleshoot the issue based on errorMessage. To export the data again, call the create operation with a new clientToken.</description></item>
         /// </list>
-        /// <h2>Download links and file validity periods</h2>
-        /// <para>For each successful query where the file is not expired, a signed link with a validity period of 10 minutes is generated. Download the file promptly based on downloadUrlExpiredAt. If the link expires but fileExpiredAt is not reached, you can query again to obtain a new link. Querying again does not regenerate the file or extend the 24-hour validity period of the file.
-        /// After fileExpiredAt is reached, this operation no longer issues new links, returns fileExpired=true, and omits downloadUrl and downloadUrlExpiredAt. The task status remains Success. To export again, create a new task.</para>
+        /// <h2>Download link and file validity period</h2>
+        /// <para>For each successful query where the file is not expired, a signed link with a validity period of 10 minutes is generated. Download the file promptly based on downloadUrlExpiredAt. If the link expires but the file has not reached fileExpiredAt, you can query the task again to obtain a new link. Querying the task again does not regenerate the file or extend the 24-hour validity period of the file.
+        /// After the file reaches fileExpiredAt, this operation no longer issues new links. It returns fileExpired=true and omits downloadUrl and downloadUrlExpiredAt. The task status remains Success. To export the data again, create a new task.</para>
         /// <h2>Query scope and task progress</h2>
-        /// <para>This operation returns only the export tasks of the current user in the current region that match the gateway, rule, and subject paths. If the paths do not match or the task does not exist, a not found error is returned. Existing tasks are queried based on the information recorded at creation. Export conditions are not recalculated due to subsequent rule resets or subject name changes.
-        /// If a task remains in the Pending or Running state for more than 10 minutes after creation, the query treats it as a timeout failure. Determine whether the task is completed based on status, not just totalCount or processedCount.</para>
+        /// <para>This operation returns only the export tasks of the current user in the current region that match the gateway, rule, and subject paths. If the paths do not match or the task does not exist, a not found error is returned. Existing tasks are queried based on the information recorded at creation. The export conditions are not recalculated due to subsequent rule resets or subject name changes.
+        /// If a task remains in the Pending or Running state for more than 10 minutes after creation, the query treats it as a timeout failure. Determine whether the task is completed based on the status, not only on totalCount or processedCount.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16346,24 +16450,24 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status, processing progress, failure cause, and file download information of an export task for the usage details of a quota rule subject.</para>
+        /// <para>Queries the status, processing progress, failure cause, and file download information of an export task for quota rule subject consumption details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Workflow</h2>
+        /// <h2>Call flow</h2>
         /// <para>First, call CreateGatewayQuotaRuleSubjectUsageExportTask to create a task. Then, use the returned taskId along with the same gatewayId, ruleId, and subjectId to call this operation in the same region.</para>
         /// <list type="bullet">
-        /// <item><description>Pending or Running: The task is not completed. You can query again after a period of time.</description></item>
+        /// <item><description>Pending or Running: The task is not completed. You can query the task again after a period of time.</description></item>
         /// <item><description>Success: Check result.fileExpired and result.downloadUrl. If the file is not expired and a link is returned, you can download the file.</description></item>
-        /// <item><description>Failed: Troubleshoot the issue based on errorMessage. To export again, call the create operation with a new clientToken.</description></item>
+        /// <item><description>Failed: Troubleshoot the issue based on errorMessage. To export the data again, call the create operation with a new clientToken.</description></item>
         /// </list>
-        /// <h2>Download links and file validity periods</h2>
-        /// <para>For each successful query where the file is not expired, a signed link with a validity period of 10 minutes is generated. Download the file promptly based on downloadUrlExpiredAt. If the link expires but fileExpiredAt is not reached, you can query again to obtain a new link. Querying again does not regenerate the file or extend the 24-hour validity period of the file.
-        /// After fileExpiredAt is reached, this operation no longer issues new links, returns fileExpired=true, and omits downloadUrl and downloadUrlExpiredAt. The task status remains Success. To export again, create a new task.</para>
+        /// <h2>Download link and file validity period</h2>
+        /// <para>For each successful query where the file is not expired, a signed link with a validity period of 10 minutes is generated. Download the file promptly based on downloadUrlExpiredAt. If the link expires but the file has not reached fileExpiredAt, you can query the task again to obtain a new link. Querying the task again does not regenerate the file or extend the 24-hour validity period of the file.
+        /// After the file reaches fileExpiredAt, this operation no longer issues new links. It returns fileExpired=true and omits downloadUrl and downloadUrlExpiredAt. The task status remains Success. To export the data again, create a new task.</para>
         /// <h2>Query scope and task progress</h2>
-        /// <para>This operation returns only the export tasks of the current user in the current region that match the gateway, rule, and subject paths. If the paths do not match or the task does not exist, a not found error is returned. Existing tasks are queried based on the information recorded at creation. Export conditions are not recalculated due to subsequent rule resets or subject name changes.
-        /// If a task remains in the Pending or Running state for more than 10 minutes after creation, the query treats it as a timeout failure. Determine whether the task is completed based on status, not just totalCount or processedCount.</para>
+        /// <para>This operation returns only the export tasks of the current user in the current region that match the gateway, rule, and subject paths. If the paths do not match or the task does not exist, a not found error is returned. Existing tasks are queried based on the information recorded at creation. The export conditions are not recalculated due to subsequent rule resets or subject name changes.
+        /// If a task remains in the Pending or Running state for more than 10 minutes after creation, the query treats it as a timeout failure. Determine whether the task is completed based on the status, not only on totalCount or processedCount.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16382,24 +16486,24 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status, processing progress, failure cause, and file download information of an export task for the usage details of a quota rule subject.</para>
+        /// <para>Queries the status, processing progress, failure cause, and file download information of an export task for quota rule subject consumption details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Workflow</h2>
+        /// <h2>Call flow</h2>
         /// <para>First, call CreateGatewayQuotaRuleSubjectUsageExportTask to create a task. Then, use the returned taskId along with the same gatewayId, ruleId, and subjectId to call this operation in the same region.</para>
         /// <list type="bullet">
-        /// <item><description>Pending or Running: The task is not completed. You can query again after a period of time.</description></item>
+        /// <item><description>Pending or Running: The task is not completed. You can query the task again after a period of time.</description></item>
         /// <item><description>Success: Check result.fileExpired and result.downloadUrl. If the file is not expired and a link is returned, you can download the file.</description></item>
-        /// <item><description>Failed: Troubleshoot the issue based on errorMessage. To export again, call the create operation with a new clientToken.</description></item>
+        /// <item><description>Failed: Troubleshoot the issue based on errorMessage. To export the data again, call the create operation with a new clientToken.</description></item>
         /// </list>
-        /// <h2>Download links and file validity periods</h2>
-        /// <para>For each successful query where the file is not expired, a signed link with a validity period of 10 minutes is generated. Download the file promptly based on downloadUrlExpiredAt. If the link expires but fileExpiredAt is not reached, you can query again to obtain a new link. Querying again does not regenerate the file or extend the 24-hour validity period of the file.
-        /// After fileExpiredAt is reached, this operation no longer issues new links, returns fileExpired=true, and omits downloadUrl and downloadUrlExpiredAt. The task status remains Success. To export again, create a new task.</para>
+        /// <h2>Download link and file validity period</h2>
+        /// <para>For each successful query where the file is not expired, a signed link with a validity period of 10 minutes is generated. Download the file promptly based on downloadUrlExpiredAt. If the link expires but the file has not reached fileExpiredAt, you can query the task again to obtain a new link. Querying the task again does not regenerate the file or extend the 24-hour validity period of the file.
+        /// After the file reaches fileExpiredAt, this operation no longer issues new links. It returns fileExpired=true and omits downloadUrl and downloadUrlExpiredAt. The task status remains Success. To export the data again, create a new task.</para>
         /// <h2>Query scope and task progress</h2>
-        /// <para>This operation returns only the export tasks of the current user in the current region that match the gateway, rule, and subject paths. If the paths do not match or the task does not exist, a not found error is returned. Existing tasks are queried based on the information recorded at creation. Export conditions are not recalculated due to subsequent rule resets or subject name changes.
-        /// If a task remains in the Pending or Running state for more than 10 minutes after creation, the query treats it as a timeout failure. Determine whether the task is completed based on status, not just totalCount or processedCount.</para>
+        /// <para>This operation returns only the export tasks of the current user in the current region that match the gateway, rule, and subject paths. If the paths do not match or the task does not exist, a not found error is returned. Existing tasks are queried based on the information recorded at creation. The export conditions are not recalculated due to subsequent rule resets or subject name changes.
+        /// If a task remains in the Pending or Running state for more than 10 minutes after creation, the query treats it as a timeout failure. Determine whether the task is completed based on the status, not only on totalCount or processedCount.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17126,7 +17230,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询逻辑模型详情</para>
+        /// <para>Queries the details of a logical model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17166,7 +17270,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询逻辑模型详情</para>
+        /// <para>Queries the details of a logical model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17206,7 +17310,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询逻辑模型详情</para>
+        /// <para>Queries the details of a logical model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17225,7 +17329,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询逻辑模型详情</para>
+        /// <para>Queries the details of a logical model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17244,7 +17348,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询逻辑模型配置下发</para>
+        /// <para>Queries the delivery of logical model configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17284,7 +17388,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询逻辑模型配置下发</para>
+        /// <para>Queries the delivery of logical model configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17324,7 +17428,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询逻辑模型配置下发</para>
+        /// <para>Queries the delivery of logical model configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17343,7 +17447,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询逻辑模型配置下发</para>
+        /// <para>Queries the delivery of logical model configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17720,12 +17824,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型API详情</para>
+        /// <para>Queries the details of a model API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除期间通过deleteStatus读取Deleting或DeleteFailed及deployErrorMessage。只有目标模型API完整删除后返回NotFound.ModelApi；依赖缺失、权限或存储错误不是删除完成信号。</para>
+        /// <para>During deletion, check deleteStatus for Deleting or DeleteFailed and review deployErrorMessage. The NotFound.ModelApi error is returned only after the target model API is completely deleted. Missing dependencies, permission errors, or storage errors do not indicate that the deletion is complete.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17765,12 +17869,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型API详情</para>
+        /// <para>Queries the details of a model API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除期间通过deleteStatus读取Deleting或DeleteFailed及deployErrorMessage。只有目标模型API完整删除后返回NotFound.ModelApi；依赖缺失、权限或存储错误不是删除完成信号。</para>
+        /// <para>During deletion, check deleteStatus for Deleting or DeleteFailed and review deployErrorMessage. The NotFound.ModelApi error is returned only after the target model API is completely deleted. Missing dependencies, permission errors, or storage errors do not indicate that the deletion is complete.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17810,12 +17914,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型API详情</para>
+        /// <para>Queries the details of a model API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除期间通过deleteStatus读取Deleting或DeleteFailed及deployErrorMessage。只有目标模型API完整删除后返回NotFound.ModelApi；依赖缺失、权限或存储错误不是删除完成信号。</para>
+        /// <para>During deletion, check deleteStatus for Deleting or DeleteFailed and review deployErrorMessage. The NotFound.ModelApi error is returned only after the target model API is completely deleted. Missing dependencies, permission errors, or storage errors do not indicate that the deletion is complete.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17834,12 +17938,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型API详情</para>
+        /// <para>Queries the details of a model API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除期间通过deleteStatus读取Deleting或DeleteFailed及deployErrorMessage。只有目标模型API完整删除后返回NotFound.ModelApi；依赖缺失、权限或存储错误不是删除完成信号。</para>
+        /// <para>During deletion, check deleteStatus for Deleting or DeleteFailed and review deployErrorMessage. The NotFound.ModelApi error is returned only after the target model API is completely deleted. Missing dependencies, permission errors, or storage errors do not indicate that the deletion is complete.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17858,7 +17962,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型组</para>
+        /// <para>Queries the configuration, entitlement status, and the summary of the latest configuration deployment for a specified model group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17898,7 +18002,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型组</para>
+        /// <para>Queries the configuration, entitlement status, and the summary of the latest configuration deployment for a specified model group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17938,7 +18042,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型组</para>
+        /// <para>Queries the configuration, entitlement status, and the summary of the latest configuration deployment for a specified model group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17957,7 +18061,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型组</para>
+        /// <para>Queries the configuration, entitlement status, and the summary of the latest configuration deployment for a specified model group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20938,7 +21042,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询源内AI模型列表</para>
+        /// <para>Queries the AI models in a model source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21000,7 +21104,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询源内AI模型列表</para>
+        /// <para>Queries the AI models in a model source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21062,7 +21166,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询源内AI模型列表</para>
+        /// <para>Queries the AI models in a model source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21081,7 +21185,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询源内AI模型列表</para>
+        /// <para>Queries the AI models in a model source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25674,7 +25778,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the route list of an HTTP API.</para>
+        /// <para>Queries the routes of an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25776,7 +25880,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the route list of an HTTP API.</para>
+        /// <para>Queries the routes of an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25878,7 +25982,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the route list of an HTTP API.</para>
+        /// <para>Queries the routes of an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25897,7 +26001,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the route list of an HTTP API.</para>
+        /// <para>Queries the routes of an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27366,7 +27470,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型组列表</para>
+        /// <para>Queries model groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27424,7 +27528,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型组列表</para>
+        /// <para>Queries model groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27482,7 +27586,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型组列表</para>
+        /// <para>Queries model groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27501,7 +27605,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型组列表</para>
+        /// <para>Queries model groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31822,7 +31926,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预演逻辑模型修改影响</para>
+        /// <para>Simulates the impact of modifying a logical model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31892,7 +31996,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预演逻辑模型修改影响</para>
+        /// <para>Simulates the impact of modifying a logical model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31962,7 +32066,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预演逻辑模型修改影响</para>
+        /// <para>Simulates the impact of modifying a logical model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31981,7 +32085,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预演逻辑模型修改影响</para>
+        /// <para>Simulates the impact of modifying a logical model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33158,12 +33262,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the currently active credentials for the AI service.</para>
+        /// <para>Queries the currently active credentials for an AI service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the currently active credentials for the AI service.</para>
+        /// <para>Queries the currently active credentials for an AI service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33203,12 +33307,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the currently active credentials for the AI service.</para>
+        /// <para>Queries the currently active credentials for an AI service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the currently active credentials for the AI service.</para>
+        /// <para>Queries the currently active credentials for an AI service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33248,12 +33352,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the currently active credentials for the AI service.</para>
+        /// <para>Queries the currently active credentials for an AI service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the currently active credentials for the AI service.</para>
+        /// <para>Queries the currently active credentials for an AI service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33272,12 +33376,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the currently active credentials for the AI service.</para>
+        /// <para>Queries the currently active credentials for an AI service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the currently active credentials for the AI service.</para>
+        /// <para>Queries the currently active credentials for an AI service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33296,7 +33400,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes model card licenses for consumers.</para>
+        /// <para>Revokes model card entitlements for a consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33354,7 +33458,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes model card licenses for consumers.</para>
+        /// <para>Revokes model card entitlements for a consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33412,7 +33516,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes model card licenses for consumers.</para>
+        /// <para>Revokes model card entitlements for a consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33431,7 +33535,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes model card licenses for consumers.</para>
+        /// <para>Revokes model card entitlements for a consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33698,8 +33802,20 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronizes external MCP servers.</para>
+        /// <para>Syncs MCP servers from an external Nacos registry to a gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Before you begin</h2>
+        /// <para>Before you call this operation, complete the following preparations:</para>
+        /// <ol>
+        /// <item><description>Create a Nacos instance in Microservices Engine (MSE) and register an MCP server in the instance.</description></item>
+        /// <item><description>Call CreateSource to register a service source for the target gateway. Set the type parameter to MSE_NACOS and point it to the Nacos instance.</description></item>
+        /// <item><description>Call ListGateways to obtain the system default domain name ID (subDomainInfos[].domainId) of the gateway for the domainIds parameter.
+        /// After you complete the preceding steps, pass the gatewayId, domainIds, and namespace parameters to call this operation. This syncs the MCP servers in the specified namespace to the gateway.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// SyncMCPServersRequest
@@ -33760,8 +33876,20 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronizes external MCP servers.</para>
+        /// <para>Syncs MCP servers from an external Nacos registry to a gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Before you begin</h2>
+        /// <para>Before you call this operation, complete the following preparations:</para>
+        /// <ol>
+        /// <item><description>Create a Nacos instance in Microservices Engine (MSE) and register an MCP server in the instance.</description></item>
+        /// <item><description>Call CreateSource to register a service source for the target gateway. Set the type parameter to MSE_NACOS and point it to the Nacos instance.</description></item>
+        /// <item><description>Call ListGateways to obtain the system default domain name ID (subDomainInfos[].domainId) of the gateway for the domainIds parameter.
+        /// After you complete the preceding steps, pass the gatewayId, domainIds, and namespace parameters to call this operation. This syncs the MCP servers in the specified namespace to the gateway.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// SyncMCPServersRequest
@@ -33822,8 +33950,20 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronizes external MCP servers.</para>
+        /// <para>Syncs MCP servers from an external Nacos registry to a gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Before you begin</h2>
+        /// <para>Before you call this operation, complete the following preparations:</para>
+        /// <ol>
+        /// <item><description>Create a Nacos instance in Microservices Engine (MSE) and register an MCP server in the instance.</description></item>
+        /// <item><description>Call CreateSource to register a service source for the target gateway. Set the type parameter to MSE_NACOS and point it to the Nacos instance.</description></item>
+        /// <item><description>Call ListGateways to obtain the system default domain name ID (subDomainInfos[].domainId) of the gateway for the domainIds parameter.
+        /// After you complete the preceding steps, pass the gatewayId, domainIds, and namespace parameters to call this operation. This syncs the MCP servers in the specified namespace to the gateway.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// SyncMCPServersRequest
@@ -33841,8 +33981,20 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronizes external MCP servers.</para>
+        /// <para>Syncs MCP servers from an external Nacos registry to a gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Before you begin</h2>
+        /// <para>Before you call this operation, complete the following preparations:</para>
+        /// <ol>
+        /// <item><description>Create a Nacos instance in Microservices Engine (MSE) and register an MCP server in the instance.</description></item>
+        /// <item><description>Call CreateSource to register a service source for the target gateway. Set the type parameter to MSE_NACOS and point it to the Nacos instance.</description></item>
+        /// <item><description>Call ListGateways to obtain the system default domain name ID (subDomainInfos[].domainId) of the gateway for the domainIds parameter.
+        /// After you complete the preceding steps, pass the gatewayId, domainIds, and namespace parameters to call this operation. This syncs the MCP servers in the specified namespace to the gateway.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// SyncMCPServersRequest
@@ -38360,6 +38512,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["environmentId"] = request.EnvironmentId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                body["gatewayId"] = request.GatewayId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Match))
             {
                 body["match"] = request.Match;
@@ -38434,6 +38590,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["environmentId"] = request.EnvironmentId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                body["gatewayId"] = request.GatewayId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Match))
             {
                 body["match"] = request.Match;
@@ -38506,7 +38666,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改逻辑模型</para>
+        /// <para>Modifies a logical model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38586,7 +38746,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改逻辑模型</para>
+        /// <para>Modifies a logical model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38666,7 +38826,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改逻辑模型</para>
+        /// <para>Modifies a logical model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38685,7 +38845,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改逻辑模型</para>
+        /// <para>Modifies a logical model.</para>
         /// </summary>
         /// 
         /// <param name="request">

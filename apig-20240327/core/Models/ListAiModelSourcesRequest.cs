@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results per page. Valid values: 1 to 100. This parameter is required. Token-based pagination does not use pageNumber or pageSize.</para>
+        /// <para>The maximum number of results to return per page. Valid values: 1 to 100. This parameter is required. Token-based pagination does not use the pageNumber or pageSize parameters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token returned from the previous page. Omit this parameter for the first page. For the last page, this parameter is empty or omitted.</para>
+        /// <para>The pagination token returned from the previous page. Omit this parameter for the first page. The token is empty or omitted for the last page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJvZmZzZXQiOjIwfQ==</para>

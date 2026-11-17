@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<UpdateHttpApiRouteRequestBackendConfigServices> Services { get; set; }
             public class UpdateHttpApiRouteRequestBackendConfigServices : TeaModel {
                 /// <summary>
-                /// <para>The service group. Used in HTTP-to-Dubbo conversion scenarios.</para>
+                /// <para>The service group. Used for HTTP-to-Dubbo conversion scenarios.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DEFAULT_GROUP</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public HttpDubboTranscoder HttpDubboTranscoder { get; set; }
 
                 /// <summary>
-                /// <para>The target model name. This field is shared by multiple existing model backend scenarios. The specific routing or model rewriting semantics are determined by backendConfig.scene. It must be configured for the SemanticRouter scenario. If it is not configured for the AiAutoRouter scenario, the default model of the AI service is used.</para>
+                /// <para>The target model name. This field is shared by multiple existing model backend scenarios. The specific routing or model rewriting semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If this field is not configured for the AiAutoRouter scenario, the default model of the AI service is used.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qwen-plus</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ModelName { get; set; }
 
                 /// <summary>
-                /// <para>The service namespace. Used in HTTP-to-Dubbo conversion scenarios.</para>
+                /// <para>The service namespace. Used for HTTP-to-Dubbo conversion scenarios.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>public</para>
@@ -84,10 +84,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// <para>The service protocol:</para>
+                /// <para>The service protocol. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>HTTP.</description></item>
-                /// <item><description>HTTPS.</description></item>
+                /// <item><description>HTTP</description></item>
+                /// <item><description>HTTPS</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -152,14 +152,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The current ExtProc service selection for fixed DFP routes. Only edit mounted routes. This parameter cannot be submitted together with backendConfig, mcpRouteConfig, or policyConfigs.</para>
+        /// <para>The ExtProc service selection for fixed DFP routes. You can only edit mounted routes. This parameter cannot be submitted together with backendConfig, mcpRouteConfig, or policyConfigs.</para>
         /// </summary>
         [NameInMap("dfpConfig")]
         [Validation(Required=false)]
         public UpdateHttpApiRouteRequestDfpConfig DfpConfig { get; set; }
         public class UpdateHttpApiRouteRequestDfpConfig : TeaModel {
             /// <summary>
-            /// <para>The ID of the ExtProc service mounted to the current route. When updating a fixed DFP route, the value must be consistent with the existing service. Service switching is not supported.</para>
+            /// <para>The ID of the ExtProc service mounted to the current route. When updating a fixed DFP route, this ID must match the existing service. Service switching is not supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>svc-cr8k0udlhtgt80sh7png</para>
@@ -177,6 +177,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public List<string> DomainIds { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The environment ID.</para>
         /// 
@@ -185,7 +187,18 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// </summary>
         [NameInMap("environmentId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string EnvironmentId { get; set; }
+
+        /// <summary>
+        /// <para>The gateway ID. This parameter is used to replace the deprecated environment ID for verifying the gateway to which the route belongs. If the gateway ID does not match the gateway to which the route record belongs, the request is rejected. If the environment ID is omitted, the route ownership remains unchanged.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gw-xxx</para>
+        /// </summary>
+        [NameInMap("gatewayId")]
+        [Validation(Required=false)]
+        public string GatewayId { get; set; }
 
         /// <summary>
         /// <para>The route match rule.</para>

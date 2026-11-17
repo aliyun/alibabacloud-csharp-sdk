@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetLogicalModelDeploymentResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response status code. Ok is returned for a successful request, and a specific business error code is returned for a failed request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The business result returned by the logical model operation.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetLogicalModelDeploymentResponseBodyData Data { get; set; }
         public class GetLogicalModelDeploymentResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The logical model ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vm-d00000000000000000000</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string LogicalModelId { get; set; }
 
             /// <summary>
+            /// <para>The persistent delivery ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>op-d00000000000000000000</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string OperationId { get; set; }
 
             /// <summary>
+            /// <para>The configuration version.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? Revision { get; set; }
 
             /// <summary>
+            /// <para>The current processing status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Succeeded</para>
             /// </summary>
@@ -53,11 +66,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>The configuration targets and stage results.</para>
+            /// </summary>
             [NameInMap("targets")]
             [Validation(Required=false)]
             public List<GetLogicalModelDeploymentResponseBodyDataTargets> Targets { get; set; }
             public class GetLogicalModelDeploymentResponseBodyDataTargets : TeaModel {
                 /// <summary>
+                /// <para>The semantic version of the target configuration. This version is used only for delivery recovery and does not record the API release time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>7e4f52a9b0c34d16a268e913f5c2087b</para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ConfigRevision { get; set; }
 
                 /// <summary>
+                /// <para>The related configuration environment.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>env-d00000000000000000000</para>
                 /// </summary>
@@ -74,14 +94,18 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string EnvironmentId { get; set; }
 
                 /// <summary>
+                /// <para>The configuration error summary.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>目标模型配置不可用。</para>
+                /// <para>The target model configuration is unavailable</para>
                 /// </summary>
                 [NameInMap("error")]
                 [Validation(Required=false)]
                 public string Error { get; set; }
 
                 /// <summary>
+                /// <para>The related API configuration target.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>api-d00000000000000000000</para>
                 /// </summary>
@@ -90,6 +114,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string HttpApiId { get; set; }
 
                 /// <summary>
+                /// <para>The plugin stage results.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;binding&quot;:&quot;Succeeded&quot;}</para>
                 /// </summary>
@@ -98,6 +124,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public Dictionary<string, object> Stages { get; set; }
 
                 /// <summary>
+                /// <para>The status of the configuration target.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Succeeded</para>
                 /// </summary>
@@ -110,6 +138,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
+        /// <para>The response message that describes the request processing result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -118,6 +148,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID generated by the system to locate the call.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>

@@ -1,3 +1,6 @@
+2026-11-17 Version: 11.9.1
+- Generated csharp 2024-03-27 for APIG.
+
 2026-11-13 Version: 11.9.0
 - Support API AuthorizeConsumerModelCardGrants.
 - Support API CreateAiModelSource.

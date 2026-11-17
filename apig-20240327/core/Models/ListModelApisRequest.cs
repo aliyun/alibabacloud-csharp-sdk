@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListModelApisRequest : TeaModel {
         /// <summary>
-        /// <para>The gateway instance ID.</para>
+        /// <para>The gateway instance ID used to filter results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-d00000000000000000000</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The name for exact search.</para>
+        /// <para>The name for an exact search.</para>
         /// 
         /// <b>Example:</b>
         /// <para>beta-model-api</para>

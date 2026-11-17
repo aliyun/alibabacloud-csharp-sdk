@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayType { get; set; }
 
         /// <summary>
-        /// <para>The KMS key configuration information.</para>
+        /// <para>The KMS key configuration. This parameter is required when secretSource is set to KMS. If this parameter is omitted, the API returns InvalidParameter.IsEmpty(400) with the message &quot;Parameter kmsConfig should not be empty.&quot;. This parameter contains two sub-fields: kmsInstanceId (the KMS instance ID) and kmsKeyId (the KMS key ID).</para>
         /// </summary>
         [NameInMap("kmsConfig")]
         [Validation(Required=false)]
         public KMSConfig KmsConfig { get; set; }
 
         /// <summary>
-        /// <para>The name of the secret. The name can contain letters, digits, and underscores (_) and must not exceed 64 characters in length.</para>
+        /// <para>The name of the secret. The name can contain letters, digits, and underscores (_) and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_secret</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string SecretData { get; set; }
 
         /// <summary>
-        /// <para>The source of the secret.</para>
+        /// <para>The source of the secret. Currently, only KMS is supported. If you specify other values such as MANUAL, the API returns InvalidParameter.WithValue(400). This parameter is required. If this parameter is not provided, the API also returns InvalidParameter.WithValue(400).</para>
         /// 
         /// <b>Example:</b>
         /// <para>KMS</para>

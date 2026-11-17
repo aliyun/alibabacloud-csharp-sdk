@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public RevealServiceCredentialResponseBodyData Data { get; set; }
         public class RevealServiceCredentialResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The current configuration revision. The value is legacy for historical objects.</para>
+            /// <para>The current configuration version. The value is legacy for historical objects.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ConfigRevision { get; set; }
 
             /// <summary>
-            /// <para>The credential object of the currently active type. Only the fields corresponding to the credentialType are populated.</para>
+            /// <para>The credential object of the currently active type. Only the fields corresponding to credentialType are populated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;apiKeyGenerateMode&quot;:&quot;Custom&quot;,&quot;apiKeys&quot;:[&quot;sk-xxxxxxxx&quot;]}</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public RevealServiceCredentialResponseBodyDataCredential Credential { get; set; }
             public class RevealServiceCredentialResponseBodyDataCredential : TeaModel {
                 /// <summary>
-                /// <para>The API key generation mode. Valid values: Custom and Reference. Historical null values are treated as Custom.</para>
+                /// <para>The API key generation mode. Valid values: Custom and Reference. Historical null values are processed as Custom.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Custom</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string AwsSecretKey { get; set; }
 
                 /// <summary>
-                /// <para>The source of the credential. The value is pai-eas when the credential is backfilled by the PAI-EAS system.</para>
+                /// <para>The source of the credential. The value is pai-eas when backfilled by the PAI-EAS system.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pai-eas</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string VertexProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The region for Vertex.</para>
+                /// <para>The Vertex region.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>us-central1</para>

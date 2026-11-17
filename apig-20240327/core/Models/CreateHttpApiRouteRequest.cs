@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateHttpApiRouteRequest : TeaModel {
         /// <summary>
-        /// <para>The backend service configuration for the route.</para>
+        /// <para>The backend service configuration of the route.</para>
         /// </summary>
         [NameInMap("backendConfig")]
         [Validation(Required=false)]
@@ -19,10 +19,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <summary>
             /// <para>The backend service scenario. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SingleService: Single service.</description></item>
-            /// <item><description>MultiServiceByRatio: Multiple services with ratio-based canary release.</description></item>
-            /// <item><description>Mock: Mock service.</description></item>
-            /// <item><description>Redirect: Redirect service.</description></item>
+            /// <item><description>SingleService: single service.</description></item>
+            /// <item><description>MultiServiceByRatio: canary release for multiple services by ratio.</description></item>
+            /// <item><description>Mock: mock service.</description></item>
+            /// <item><description>Redirect: redirect service.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<CreateHttpApiRouteRequestBackendConfigServices> Services { get; set; }
             public class CreateHttpApiRouteRequestBackendConfigServices : TeaModel {
                 /// <summary>
-                /// <para>The service group. Used for HTTP-to-Dubbo conversion scenarios.</para>
+                /// <para>The group of the service. This parameter is used in HTTP-to-Dubbo conversion scenarios.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DEFAULT_GROUP</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// <para>The HTTP-to-Dubbo protocol conversion configuration. This configuration only supports SingleService MSE_NACOS DUBBO backends for HTTP APIs.</para>
+                /// <para>The HTTP-to-Dubbo protocol conversion configuration. This parameter is supported only for SingleService MSE_NACOS DUBBO backends of HTTP APIs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;dubboServiceName&quot;:&quot;com.alibaba.nacos.example.dubbo.service.DemoService&quot;,&quot;dubboServiceVersion&quot;:&quot;1.0.0&quot;,&quot;dubboServiceGroup&quot;:&quot;DEV&quot;,&quot;methodMapList&quot;:[{&quot;dubboMethodName&quot;:&quot;sayName&quot;,&quot;httpMethod&quot;:&quot;ALL_GET&quot;,&quot;methodPath&quot;:&quot;/dubbo/sayName&quot;,&quot;passThroughAllHeaders&quot;:&quot;PASS_ALL&quot;}]}</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public HttpDubboTranscoder HttpDubboTranscoder { get; set; }
 
                 /// <summary>
-                /// <para>The target model name. This field is shared by multiple existing model backend scenarios, and the specific routing or model rewriting semantics are determined by backendConfig.scene. It is required for the SemanticRouter scenario. If not configured for the AiAutoRouter scenario, the default model of the AI service is used.</para>
+                /// <para>The name of the target model. This field is shared by multiple existing model backend scenarios. The specific routing or model rewriting semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If this field is not configured for the AiAutoRouter scenario, the default model of the AI service is used.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qwen-plus</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ModelName { get; set; }
 
                 /// <summary>
-                /// <para>The service namespace. Used for HTTP-to-Dubbo conversion scenarios.</para>
+                /// <para>The namespace of the service. This parameter is used in HTTP-to-Dubbo conversion scenarios.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>public</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Namespace { get; set; }
 
                 /// <summary>
-                /// <para>The service port. Do not specify this parameter for dynamic ports.</para>
+                /// <para>The service port. Do not pass this parameter for dynamic ports.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8080</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Protocol { get; set; }
 
                 /// <summary>
-                /// <para>The service ID.</para>
+                /// <para>The ID of the service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>svc-crbgq0dlhtgr***</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ServiceId { get; set; }
 
                 /// <summary>
-                /// <para>The service source type. Used for HTTP-to-Dubbo conversion scenarios.</para>
+                /// <para>The source type of the service. This parameter is used in HTTP-to-Dubbo conversion scenarios.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MSE_NACOS</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<HttpApiDeployConfig> DeployConfigs { get; set; }
 
         /// <summary>
-        /// <para>The route description.</para>
+        /// <para>The description of the route.</para>
         /// 
         /// <b>Example:</b>
         /// <para>User login route</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The fixed dynamic forwarding and ExtProc combination configuration. When you use this configuration, specify only serviceId, and do not specify environmentId or backendConfig.</para>
+        /// <para>The combination configuration of fixed dynamic forwarding and ExtProc. When you use this parameter, specify only serviceId, and do not specify environmentId or backendConfig.</para>
         /// </summary>
         [NameInMap("dfpConfig")]
         [Validation(Required=false)]
@@ -193,18 +193,31 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public List<string> DomainIds { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>The environment ID.</para>
+        /// <para>The ID of the environment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>env-cpqnr6tlhtgubcv***</para>
         /// </summary>
         [NameInMap("environmentId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// <para>The route match rules.</para>
+        /// <para>The ID of the gateway. This parameter replaces the deprecated environment ID to specify the gateway to which the route belongs. If only this parameter is passed, the server uses the unique valid default environment of the gateway. If this parameter and environmentId are passed at the same time, the environment must belong to this gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gw-xxx</para>
+        /// </summary>
+        [NameInMap("gatewayId")]
+        [Validation(Required=false)]
+        public string GatewayId { get; set; }
+
+        /// <summary>
+        /// <para>The match rules of the route.</para>
         /// </summary>
         [NameInMap("match")]
         [Validation(Required=false)]
@@ -255,7 +268,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The route name.</para>
+        /// <para>The name of the route.</para>
         /// 
         /// <b>Example:</b>
         /// <para>login</para>
