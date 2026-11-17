@@ -14521,6 +14521,346 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Disables session sharing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Idempotently disables session sharing owned by the current calling user. Existing share links become invalid immediately.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableConversationShareRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableConversationShareResponse
+        /// </returns>
+        public DisableConversationShareResponse DisableConversationShareWithOptions(DisableConversationShareRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["sessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableConversationShare",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/disableConversationShare",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableConversationShareResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables session sharing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Idempotently disables session sharing owned by the current calling user. Existing share links become invalid immediately.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableConversationShareRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableConversationShareResponse
+        /// </returns>
+        public async Task<DisableConversationShareResponse> DisableConversationShareWithOptionsAsync(DisableConversationShareRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["sessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableConversationShare",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/disableConversationShare",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableConversationShareResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables session sharing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Idempotently disables session sharing owned by the current calling user. Existing share links become invalid immediately.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableConversationShareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableConversationShareResponse
+        /// </returns>
+        public DisableConversationShareResponse DisableConversationShare(DisableConversationShareRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DisableConversationShareWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables session sharing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Idempotently disables session sharing owned by the current calling user. Existing share links become invalid immediately.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableConversationShareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableConversationShareResponse
+        /// </returns>
+        public async Task<DisableConversationShareResponse> DisableConversationShareAsync(DisableConversationShareRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DisableConversationShareWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables sharing for output item details.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Idempotently disables sharing for output item details owned by the current calling user, and immediately invalidates previous sharing links. You can locate the target by outputItemId, or precisely by sessionId and outputItemName.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableOutputItemShareRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableOutputItemShareResponse
+        /// </returns>
+        public DisableOutputItemShareResponse DisableOutputItemShareWithOptions(DisableOutputItemShareRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputItemId))
+            {
+                body["outputItemId"] = request.OutputItemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputItemName))
+            {
+                body["outputItemName"] = request.OutputItemName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["sessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableOutputItemShare",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/disableOutputItemShare",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableOutputItemShareResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables sharing for output item details.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Idempotently disables sharing for output item details owned by the current calling user, and immediately invalidates previous sharing links. You can locate the target by outputItemId, or precisely by sessionId and outputItemName.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableOutputItemShareRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableOutputItemShareResponse
+        /// </returns>
+        public async Task<DisableOutputItemShareResponse> DisableOutputItemShareWithOptionsAsync(DisableOutputItemShareRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputItemId))
+            {
+                body["outputItemId"] = request.OutputItemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputItemName))
+            {
+                body["outputItemName"] = request.OutputItemName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["sessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableOutputItemShare",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/disableOutputItemShare",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableOutputItemShareResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables sharing for output item details.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Idempotently disables sharing for output item details owned by the current calling user, and immediately invalidates previous sharing links. You can locate the target by outputItemId, or precisely by sessionId and outputItemName.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableOutputItemShareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableOutputItemShareResponse
+        /// </returns>
+        public DisableOutputItemShareResponse DisableOutputItemShare(DisableOutputItemShareRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DisableOutputItemShareWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables sharing for output item details.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Idempotently disables sharing for output item details owned by the current calling user, and immediately invalidates previous sharing links. You can locate the target by outputItemId, or precisely by sessionId and outputItemName.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableOutputItemShareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableOutputItemShareResponse
+        /// </returns>
+        public async Task<DisableOutputItemShareResponse> DisableOutputItemShareAsync(DisableOutputItemShareRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DisableOutputItemShareWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Disables an API token.</para>
         /// </summary>
         /// 
@@ -14703,6 +15043,434 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DisableTokenWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables session sharing and retrieves the sharing link.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables sharing for a session owned by the current calling user and returns the sharing link. The first time sharing is enabled, a snapshot of the currently shareable messages is taken. Subsequent enabling retains the original link.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// EnableConversationShareRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableConversationShareResponse
+        /// </returns>
+        public EnableConversationShareResponse EnableConversationShareWithOptions(EnableConversationShareRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            EnableConversationShareShrinkRequest request = new EnableConversationShareShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ShareUserGroupIds))
+            {
+                request.ShareUserGroupIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ShareUserGroupIds, "shareUserGroupIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ShareUserIds))
+            {
+                request.ShareUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ShareUserIds, "shareUserIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["sessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareAccessType))
+            {
+                body["shareAccessType"] = request.ShareAccessType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareUserGroupIdsShrink))
+            {
+                body["shareUserGroupIds"] = request.ShareUserGroupIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareUserIdsShrink))
+            {
+                body["shareUserIds"] = request.ShareUserIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableConversationShare",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/enableConversationShare",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableConversationShareResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables session sharing and retrieves the sharing link.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables sharing for a session owned by the current calling user and returns the sharing link. The first time sharing is enabled, a snapshot of the currently shareable messages is taken. Subsequent enabling retains the original link.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// EnableConversationShareRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableConversationShareResponse
+        /// </returns>
+        public async Task<EnableConversationShareResponse> EnableConversationShareWithOptionsAsync(EnableConversationShareRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            EnableConversationShareShrinkRequest request = new EnableConversationShareShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ShareUserGroupIds))
+            {
+                request.ShareUserGroupIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ShareUserGroupIds, "shareUserGroupIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ShareUserIds))
+            {
+                request.ShareUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ShareUserIds, "shareUserIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["sessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareAccessType))
+            {
+                body["shareAccessType"] = request.ShareAccessType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareUserGroupIdsShrink))
+            {
+                body["shareUserGroupIds"] = request.ShareUserGroupIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareUserIdsShrink))
+            {
+                body["shareUserIds"] = request.ShareUserIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableConversationShare",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/enableConversationShare",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableConversationShareResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables session sharing and retrieves the sharing link.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables sharing for a session owned by the current calling user and returns the sharing link. The first time sharing is enabled, a snapshot of the currently shareable messages is taken. Subsequent enabling retains the original link.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableConversationShareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableConversationShareResponse
+        /// </returns>
+        public EnableConversationShareResponse EnableConversationShare(EnableConversationShareRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return EnableConversationShareWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables session sharing and retrieves the sharing link.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables sharing for a session owned by the current calling user and returns the sharing link. The first time sharing is enabled, a snapshot of the currently shareable messages is taken. Subsequent enabling retains the original link.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableConversationShareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableConversationShareResponse
+        /// </returns>
+        public async Task<EnableConversationShareResponse> EnableConversationShareAsync(EnableConversationShareRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await EnableConversationShareWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables sharing for an output item and retrieves the share link.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables sharing for an output item owned by the current caller and returns the share link. You can locate the output item by outputItemId, or precisely locate it by sessionId and outputItemName. If both methods are provided, outputItemId takes precedence.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// EnableOutputItemShareRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableOutputItemShareResponse
+        /// </returns>
+        public EnableOutputItemShareResponse EnableOutputItemShareWithOptions(EnableOutputItemShareRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            EnableOutputItemShareShrinkRequest request = new EnableOutputItemShareShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ShareUserGroupIds))
+            {
+                request.ShareUserGroupIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ShareUserGroupIds, "shareUserGroupIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ShareUserIds))
+            {
+                request.ShareUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ShareUserIds, "shareUserIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputItemId))
+            {
+                body["outputItemId"] = request.OutputItemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputItemName))
+            {
+                body["outputItemName"] = request.OutputItemName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["sessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareAccessType))
+            {
+                body["shareAccessType"] = request.ShareAccessType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareUserGroupIdsShrink))
+            {
+                body["shareUserGroupIds"] = request.ShareUserGroupIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareUserIdsShrink))
+            {
+                body["shareUserIds"] = request.ShareUserIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableOutputItemShare",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/enableOutputItemShare",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableOutputItemShareResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables sharing for an output item and retrieves the share link.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables sharing for an output item owned by the current caller and returns the share link. You can locate the output item by outputItemId, or precisely locate it by sessionId and outputItemName. If both methods are provided, outputItemId takes precedence.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// EnableOutputItemShareRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableOutputItemShareResponse
+        /// </returns>
+        public async Task<EnableOutputItemShareResponse> EnableOutputItemShareWithOptionsAsync(EnableOutputItemShareRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            EnableOutputItemShareShrinkRequest request = new EnableOutputItemShareShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ShareUserGroupIds))
+            {
+                request.ShareUserGroupIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ShareUserGroupIds, "shareUserGroupIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ShareUserIds))
+            {
+                request.ShareUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ShareUserIds, "shareUserIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputItemId))
+            {
+                body["outputItemId"] = request.OutputItemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputItemName))
+            {
+                body["outputItemName"] = request.OutputItemName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["sessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareAccessType))
+            {
+                body["shareAccessType"] = request.ShareAccessType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareUserGroupIdsShrink))
+            {
+                body["shareUserGroupIds"] = request.ShareUserGroupIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareUserIdsShrink))
+            {
+                body["shareUserIds"] = request.ShareUserIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableOutputItemShare",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/enableOutputItemShare",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableOutputItemShareResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables sharing for an output item and retrieves the share link.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables sharing for an output item owned by the current caller and returns the share link. You can locate the output item by outputItemId, or precisely locate it by sessionId and outputItemName. If both methods are provided, outputItemId takes precedence.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableOutputItemShareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableOutputItemShareResponse
+        /// </returns>
+        public EnableOutputItemShareResponse EnableOutputItemShare(EnableOutputItemShareRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return EnableOutputItemShareWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables sharing for an output item and retrieves the share link.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables sharing for an output item owned by the current caller and returns the share link. You can locate the output item by outputItemId, or precisely locate it by sessionId and outputItemName. If both methods are provided, outputItemId takes precedence.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableOutputItemShareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableOutputItemShareResponse
+        /// </returns>
+        public async Task<EnableOutputItemShareResponse> EnableOutputItemShareAsync(EnableOutputItemShareRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await EnableOutputItemShareWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -25083,6 +25851,192 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Reads group chat text and multimedia content in message order.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Reads the connected DingTalk, AliDing, or WeCom group chat sources, and paginates the results in ascending order by send time and message record ID. Each message includes the original text, as well as document content, image descriptions, or audio and video transcriptions arranged in the order they appear in the message. The caller must have read permissions for the source. Reading does not trigger attachment parsing. Pagination provides a real-time view, and historical backfilling may change pagination positions. Attachment content is retrieved from the Document Agent. For unparsed items, the API returns found=false and the local processing status. Upstream failures return errors.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListChatMessageContentsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListChatMessageContentsResponse
+        /// </returns>
+        public ListChatMessageContentsResponse ListChatMessageContentsWithOptions(ListChatMessageContentsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxCharsPerAttachment))
+            {
+                body["maxCharsPerAttachment"] = request.MaxCharsPerAttachment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                body["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["sourceId"] = request.SourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListChatMessageContents",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/listChatMessageContents",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListChatMessageContentsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reads group chat text and multimedia content in message order.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Reads the connected DingTalk, AliDing, or WeCom group chat sources, and paginates the results in ascending order by send time and message record ID. Each message includes the original text, as well as document content, image descriptions, or audio and video transcriptions arranged in the order they appear in the message. The caller must have read permissions for the source. Reading does not trigger attachment parsing. Pagination provides a real-time view, and historical backfilling may change pagination positions. Attachment content is retrieved from the Document Agent. For unparsed items, the API returns found=false and the local processing status. Upstream failures return errors.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListChatMessageContentsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListChatMessageContentsResponse
+        /// </returns>
+        public async Task<ListChatMessageContentsResponse> ListChatMessageContentsWithOptionsAsync(ListChatMessageContentsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxCharsPerAttachment))
+            {
+                body["maxCharsPerAttachment"] = request.MaxCharsPerAttachment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                body["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["sourceId"] = request.SourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListChatMessageContents",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/listChatMessageContents",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListChatMessageContentsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reads group chat text and multimedia content in message order.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Reads the connected DingTalk, AliDing, or WeCom group chat sources, and paginates the results in ascending order by send time and message record ID. Each message includes the original text, as well as document content, image descriptions, or audio and video transcriptions arranged in the order they appear in the message. The caller must have read permissions for the source. Reading does not trigger attachment parsing. Pagination provides a real-time view, and historical backfilling may change pagination positions. Attachment content is retrieved from the Document Agent. For unparsed items, the API returns found=false and the local processing status. Upstream failures return errors.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListChatMessageContentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListChatMessageContentsResponse
+        /// </returns>
+        public ListChatMessageContentsResponse ListChatMessageContents(ListChatMessageContentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListChatMessageContentsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reads group chat text and multimedia content in message order.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Reads the connected DingTalk, AliDing, or WeCom group chat sources, and paginates the results in ascending order by send time and message record ID. Each message includes the original text, as well as document content, image descriptions, or audio and video transcriptions arranged in the order they appear in the message. The caller must have read permissions for the source. Reading does not trigger attachment parsing. Pagination provides a real-time view, and historical backfilling may change pagination positions. Attachment content is retrieved from the Document Agent. For unparsed items, the API returns found=false and the local processing status. Upstream failures return errors.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListChatMessageContentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListChatMessageContentsResponse
+        /// </returns>
+        public async Task<ListChatMessageContentsResponse> ListChatMessageContentsAsync(ListChatMessageContentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListChatMessageContentsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Lists chat sessions of the current user in reverse chronological order by creation time.</para>
         /// </summary>
         /// 
@@ -33049,6 +34003,176 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await PreviewKnowledgeBaseSourceWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Previews an output file or a non-file output.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Previews the output that the current calling user has permission to access based on the output item ID. This operation supports managed versions, archived history, unversioned history, and non-file outputs such as emails and slide decks. If a short-term preview or download URL is returned, you must call the operation again after the URL expires.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PreviewOutputFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PreviewOutputFileResponse
+        /// </returns>
+        public PreviewOutputFileResponse PreviewOutputFileWithOptions(PreviewOutputFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputItemId))
+            {
+                body["outputItemId"] = request.OutputItemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                body["versionId"] = request.VersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PreviewOutputFile",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/previewOutputFile",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PreviewOutputFileResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Previews an output file or a non-file output.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Previews the output that the current calling user has permission to access based on the output item ID. This operation supports managed versions, archived history, unversioned history, and non-file outputs such as emails and slide decks. If a short-term preview or download URL is returned, you must call the operation again after the URL expires.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PreviewOutputFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PreviewOutputFileResponse
+        /// </returns>
+        public async Task<PreviewOutputFileResponse> PreviewOutputFileWithOptionsAsync(PreviewOutputFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputItemId))
+            {
+                body["outputItemId"] = request.OutputItemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                body["versionId"] = request.VersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PreviewOutputFile",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/previewOutputFile",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PreviewOutputFileResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Previews an output file or a non-file output.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Previews the output that the current calling user has permission to access based on the output item ID. This operation supports managed versions, archived history, unversioned history, and non-file outputs such as emails and slide decks. If a short-term preview or download URL is returned, you must call the operation again after the URL expires.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PreviewOutputFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PreviewOutputFileResponse
+        /// </returns>
+        public PreviewOutputFileResponse PreviewOutputFile(PreviewOutputFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return PreviewOutputFileWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Previews an output file or a non-file output.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Previews the output that the current calling user has permission to access based on the output item ID. This operation supports managed versions, archived history, unversioned history, and non-file outputs such as emails and slide decks. If a short-term preview or download URL is returned, you must call the operation again after the URL expires.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PreviewOutputFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PreviewOutputFileResponse
+        /// </returns>
+        public async Task<PreviewOutputFileResponse> PreviewOutputFileAsync(PreviewOutputFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await PreviewOutputFileWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -46651,6 +47775,252 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateScheduledTaskWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the sharing status, scope, or output link.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the sharing status and scope of a session or output item. Only output items support refreshing the sharing link. For session targets, use sessionId. For output targets, use outputItemId or a combination of sessionId and outputItemName.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateShareRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateShareResponse
+        /// </returns>
+        public UpdateShareResponse UpdateShareWithOptions(UpdateShareRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateShareShrinkRequest request = new UpdateShareShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ShareUserGroupIds))
+            {
+                request.ShareUserGroupIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ShareUserGroupIds, "shareUserGroupIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ShareUserIds))
+            {
+                request.ShareUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ShareUserIds, "shareUserIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputItemId))
+            {
+                body["outputItemId"] = request.OutputItemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputItemName))
+            {
+                body["outputItemName"] = request.OutputItemName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefreshShareLink))
+            {
+                body["refreshShareLink"] = request.RefreshShareLink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["sessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareAccessType))
+            {
+                body["shareAccessType"] = request.ShareAccessType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareEnabled))
+            {
+                body["shareEnabled"] = request.ShareEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareUserGroupIdsShrink))
+            {
+                body["shareUserGroupIds"] = request.ShareUserGroupIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareUserIdsShrink))
+            {
+                body["shareUserIds"] = request.ShareUserIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                body["targetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateShare",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/updateShare",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateShareResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the sharing status, scope, or output link.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the sharing status and scope of a session or output item. Only output items support refreshing the sharing link. For session targets, use sessionId. For output targets, use outputItemId or a combination of sessionId and outputItemName.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateShareRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateShareResponse
+        /// </returns>
+        public async Task<UpdateShareResponse> UpdateShareWithOptionsAsync(UpdateShareRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateShareShrinkRequest request = new UpdateShareShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ShareUserGroupIds))
+            {
+                request.ShareUserGroupIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ShareUserGroupIds, "shareUserGroupIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ShareUserIds))
+            {
+                request.ShareUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ShareUserIds, "shareUserIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputItemId))
+            {
+                body["outputItemId"] = request.OutputItemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputItemName))
+            {
+                body["outputItemName"] = request.OutputItemName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefreshShareLink))
+            {
+                body["refreshShareLink"] = request.RefreshShareLink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["sessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareAccessType))
+            {
+                body["shareAccessType"] = request.ShareAccessType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareEnabled))
+            {
+                body["shareEnabled"] = request.ShareEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareUserGroupIdsShrink))
+            {
+                body["shareUserGroupIds"] = request.ShareUserGroupIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareUserIdsShrink))
+            {
+                body["shareUserIds"] = request.ShareUserIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                body["targetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateShare",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/updateShare",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateShareResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the sharing status, scope, or output link.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the sharing status and scope of a session or output item. Only output items support refreshing the sharing link. For session targets, use sessionId. For output targets, use outputItemId or a combination of sessionId and outputItemName.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateShareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateShareResponse
+        /// </returns>
+        public UpdateShareResponse UpdateShare(UpdateShareRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateShareWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the sharing status, scope, or output link.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the sharing status and scope of a session or output item. Only output items support refreshing the sharing link. For session targets, use sessionId. For output targets, use outputItemId or a combination of sessionId and outputItemName.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateShareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateShareResponse
+        /// </returns>
+        public async Task<UpdateShareResponse> UpdateShareAsync(UpdateShareRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateShareWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
