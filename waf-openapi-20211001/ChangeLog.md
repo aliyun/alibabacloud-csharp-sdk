@@ -1,3 +1,6 @@
+2026-11-17 Version: 7.10.0
+- Generated csharp 2021-10-01 for waf-openapi.
+
 2026-11-13 Version: 7.9.0
 - Support API DescribeAccessConfig.
 - Support API ModifyAccessConfig.

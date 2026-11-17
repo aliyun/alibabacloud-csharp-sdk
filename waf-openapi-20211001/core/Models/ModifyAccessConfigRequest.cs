@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyAccessConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration key of the item to be updated. Valid values:</para>
+        /// <para>The name of the configuration item to be modified. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>auto_access</b>: Specifies whether to enable the automatic access feature.</description></item>
+        /// <item><description><b>auto_access</b>: specifies whether to enable the automatic access feature.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

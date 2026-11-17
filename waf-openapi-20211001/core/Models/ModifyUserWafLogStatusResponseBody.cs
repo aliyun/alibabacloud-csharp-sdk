@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <para>Indicates whether the Simple Log Service project is created.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>wafng-project-14316572********-cn-hangzhou</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
