@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
 {
     public class CustomerNoteCreateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denial returned by the POP API when the caller does not have RAM permissions.</para>
+        /// <para>The access denied details returned by the POP API when RAM permissions are missing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned with the result.</para>
+        /// <para>The message returned for the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>成功</para>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         /// <para>Same as Message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>成功</para>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Msg")]
         [Validation(Required=false)]

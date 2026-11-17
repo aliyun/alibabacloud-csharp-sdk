@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
 {
     public class CustomerNoteListDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The access denied details returned by the POP API when RAM permissions are missing.</para>
+        /// <para>The detailed information about the access denial returned in the POP API response when the RAM user lacks the required permissions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -37,31 +37,34 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public CustomerNoteListDetailResponseBodyData Data { get; set; }
         public class CustomerNoteListDetailResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The AI parsing result (JSON string).</para>
+            /// <para>The AI analysis result. The value is a JSON string.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;TouchDate&quot;:&quot;2026-07-17 10:00:01&quot;}</para>
+            /// <para>{&quot;Contact date&quot;:&quot;2026-07-17 10:00:01&quot;}</para>
             /// </summary>
             [NameInMap("AiResult")]
             [Validation(Required=false)]
             public string AiResult { get; set; }
 
             /// <summary>
-            /// <para>The attachment list.</para>
+            /// <para>The list of attachments.</para>
             /// </summary>
             [NameInMap("Attachment")]
             [Validation(Required=false)]
             public List<CustomerNoteListDetailResponseBodyDataAttachment> Attachment { get; set; }
             public class CustomerNoteListDetailResponseBodyDataAttachment : TeaModel {
                 /// <summary>
-                /// <para>The attachment signature.</para>
+                /// <para>The download URL of the attachment.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="http://geoip-sdk-user.oss-cn-zhangjiakou.aliyuncs.com/product/v1/ipv4-inner/common/v1.20251010002216.dex?Expires=1760062445&OSSAccessKeyId=x6R87i97yKeKRggz&Signature=">http://geoip-sdk-user.oss-cn-zhangjiakou.aliyuncs.com/product/v1/ipv4-inner/common/v1.20251010002216.dex?Expires=1760062445&amp;OSSAccessKeyId=x6R87i97yKeKRggz&amp;Signature=</a>****</para>
                 /// </summary>
                 [NameInMap("DownloadUrl")]
                 [Validation(Required=false)]
                 public string DownloadUrl { get; set; }
 
                 /// <summary>
-                /// <para>The attachment ID.</para>
+                /// <para>The ID of the attachment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>307</para>
@@ -71,17 +74,17 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The attachment name.</para>
+                /// <para>The name of the attachment.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Course Training</para>
+                /// <para>Course training</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The attachment signature.</para>
+                /// <para>The signature of the attachment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hF2UrEMc4XWy990sh9LGM0+ScI8=</para>
@@ -91,7 +94,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
                 public string Signature { get; set; }
 
                 /// <summary>
-                /// <para>The attachment size in bytes.</para>
+                /// <para>The size of the attachment. Unit: bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>111222121</para>
@@ -101,7 +104,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
                 public long? Size { get; set; }
 
                 /// <summary>
-                /// <para>The attachment type.</para>
+                /// <para>The type of the attachment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>image/png</para>
@@ -123,10 +126,10 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string ContactInformation { get; set; }
 
             /// <summary>
-            /// <para>The contact name.</para>
+            /// <para>The name of the contact.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>John</para>
+            /// <para>Zhang San</para>
             /// </summary>
             [NameInMap("ContactName")]
             [Validation(Required=false)]
@@ -146,14 +149,14 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             /// <para>The logon name of the creator.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>John</para>
+            /// <para>Zhang San</para>
             /// </summary>
             [NameInMap("CreatorName")]
             [Validation(Required=false)]
             public string CreatorName { get; set; }
 
             /// <summary>
-            /// <para>The customer name.</para>
+            /// <para>The name of the customer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>XXXX Co., Ltd</para>
@@ -163,7 +166,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string CustomerName { get; set; }
 
             /// <summary>
-            /// <para>The customer UID.</para>
+            /// <para>The UID of the customer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1271202085096245</para>
@@ -173,7 +176,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public long? CustomerUid { get; set; }
 
             /// <summary>
-            /// <para>The creation time in the yyyy-MM-dd HH:mm:ss format.</para>
+            /// <para>The time when the note was created. Format: yyyy-MM-dd HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-05-07 10:27:46</para>
@@ -183,7 +186,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The note content.</para>
+            /// <para>The content of the note.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Note content</para>
@@ -193,7 +196,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string NoteContent { get; set; }
 
             /// <summary>
-            /// <para>The note ID.</para>
+            /// <para>The ID of the note.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1620737</para>
@@ -203,7 +206,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public long? NoteId { get; set; }
 
             /// <summary>
-            /// <para>The note type (CUSTOMER).</para>
+            /// <para>The type of the note.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CUSTOMER</para>
@@ -213,7 +216,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string NoteType { get; set; }
 
             /// <summary>
-            /// <para>The note type label.</para>
+            /// <para>The name of the note type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Customer</para>
@@ -223,7 +226,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string NoteTypeLabel { get; set; }
 
             /// <summary>
-            /// <para>The touch date (timestamp).</para>
+            /// <para>The contact date. The value is a timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1784266662000</para>
@@ -235,7 +238,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code returned by the POP API.</para>
+        /// <para>The HTTP status code used in the POP API response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -255,7 +258,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The prompt message. This is the same as Message.</para>
+        /// <para>The prompt message, which is the same as Message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -265,7 +268,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</para>

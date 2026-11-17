@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         /// <para>The product name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>弹性计算</para>
+        /// <para>Elastic computing</para>
         /// </summary>
         [NameInMap("ProductName")]
         [Validation(Required=false)]
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         /// <para>The name of the secondary partner.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>XXX有限公司</para>
+        /// <para>XXX Co., Ltd.</para>
         /// </summary>
         [NameInMap("SubPartnerName")]
         [Validation(Required=false)]

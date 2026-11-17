@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
 {
     public class CustomerNoteListRequest : TeaModel {
         /// <summary>
-        /// <para>The UID of the customer.</para>
+        /// <para>The customer UID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5625862916391497</para>

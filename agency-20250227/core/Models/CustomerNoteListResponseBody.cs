@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
 {
     public class CustomerNoteListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denied error returned by the POP API when the caller does not have the required RAM permissions.</para>
+        /// <para>The details of the access denial returned by the POP API when the RAM user lacks the required permissions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public CustomerNoteListResponseBodyData Data { get; set; }
         public class CustomerNoteListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The details of the access denied error returned by the POP API when the caller does not have the required RAM permissions.</para>
+            /// <para>The details of the access denial returned by the POP API when the RAM user lacks the required permissions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
                 /// <para>The name of the contact.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>张三</para>
+                /// <para>Zhang San</para>
                 /// </summary>
                 [NameInMap("ContactName")]
                 [Validation(Required=false)]
@@ -87,14 +87,14 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
                 /// <para>The logon name of the creator.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>张三</para>
+                /// <para>Zhang San</para>
                 /// </summary>
                 [NameInMap("CreatorName")]
                 [Validation(Required=false)]
                 public string CreatorName { get; set; }
 
                 /// <summary>
-                /// <para>The creation time in the format of yyyy-MM-dd HH:mm:ss.</para>
+                /// <para>The creation time. Format: yyyy-MM-dd HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-07-17 12:18:23</para>
@@ -107,14 +107,14 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
                 /// <para>The content of the note.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>讨论技术方案</para>
+                /// <para>Discuss technical solutions</para>
                 /// </summary>
                 [NameInMap("NoteContent")]
                 [Validation(Required=false)]
                 public string NoteContent { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the note.</para>
+                /// <para>The note ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2932252</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
                 public long? NoteId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the note (CUSTOMER).</para>
+                /// <para>The note type. Valid value: CUSTOMER.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CUSTOMER</para>
@@ -134,17 +134,17 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
                 public string NoteType { get; set; }
 
                 /// <summary>
-                /// <para>The label of the note type.</para>
+                /// <para>The name of the note type.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>客户</para>
+                /// <para>Customer</para>
                 /// </summary>
                 [NameInMap("NoteTypeLabel")]
                 [Validation(Required=false)]
                 public string NoteTypeLabel { get; set; }
 
                 /// <summary>
-                /// <para>The touch date (timestamp).</para>
+                /// <para>The contact date. The value is a timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1784266662000</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The prompt message, same as message.</para>
+            /// <para>The prompt message. This parameter is the same as Message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string Msg { get; set; }
 
             /// <summary>
-            /// <para>The pagination information compatible with the legacy interface (deprecated).</para>
+            /// <para><b>[Deprecated]</b> The pagination information compatible with the legacy fenxiao-service API.</para>
             /// </summary>
             [NameInMap("PageInfo")]
             [Validation(Required=false)]
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The prompt message, same as message.</para>
+        /// <para>The prompt message. This parameter is the same as Message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

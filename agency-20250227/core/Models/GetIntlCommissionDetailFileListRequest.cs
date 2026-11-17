@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
 {
     public class GetIntlCommissionDetailFileListRequest : TeaModel {
         /// <summary>
-        /// <para>The bill month.</para>
+        /// <para>The billing month.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string OssBucketName { get; set; }
 
         /// <summary>
-        /// <para>The endpoint of the region where the Object Storage Service (OSS) bucket for file sharing resides.</para>
+        /// <para>The endpoint of the OSS bucket used for file sharing.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string OssEndpoint { get; set; }
 
         /// <summary>
-        /// <para>The region where the current OSS bucket resides.</para>
+        /// <para>The region where the current OSS bucket is located.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

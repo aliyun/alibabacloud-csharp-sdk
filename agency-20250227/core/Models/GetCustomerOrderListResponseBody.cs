@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             /// <para>The customer classification.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>C类</para>
+            /// <para>Type C</para>
             /// </summary>
             [NameInMap("CustomerClassification")]
             [Validation(Required=false)]
@@ -221,6 +221,14 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             [NameInMap("RamAccountForCustomerManagers")]
             [Validation(Required=false)]
             public List<string> RamAccountForCustomerManagers { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("RebateType")]
+            [Validation(Required=false)]
+            public int? RebateType { get; set; }
 
         }
 

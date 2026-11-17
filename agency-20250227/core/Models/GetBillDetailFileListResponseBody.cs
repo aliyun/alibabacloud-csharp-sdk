@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             /// <para>The file name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>账单202502021112</para>
+            /// <para>Bill202502021112</para>
             /// </summary>
             [NameInMap("FileName")]
             [Validation(Required=false)]
@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             /// <summary>
             /// <para>The OSS file push status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: pending</description></item>
-            /// <item><description>2: processing</description></item>
-            /// <item><description>3: completed.</description></item>
+            /// <item><description>1: Pending.</description></item>
+            /// <item><description>2: Processing.</description></item>
+            /// <item><description>3: Completed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,10 +72,10 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The type. Valid values: customer acquisition or channel expansion.</para>
+            /// <para>The type. Valid values: Customer Acquisition, Channel Expansion.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>拓渠</para>
+            /// <para>Channel Expansion</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>成功</para>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         /// <para>Same as Message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>成功</para>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Msg")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
 {
     public class CustomerNoteListDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The note ID.</para>
+        /// <para>The ID of the note.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1620737</para>

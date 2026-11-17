@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "Agency";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -77,7 +80,6 @@ namespace AlibabaCloud.SDK.Agency20250227
                 {"rus-west-1-pop", "agency.aliyuncs.com"},
                 {"us-east-1", "agency.aliyuncs.com"},
                 {"us-west-1", "agency.aliyuncs.com"},
-                {"ap-southeast-1", "agency.ap-southeast-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("agency", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -259,7 +261,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a customer note.</para>
+        /// <para>Updates a customer note.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -317,7 +319,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a customer note.</para>
+        /// <para>Updates a customer note.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -375,7 +377,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a customer note.</para>
+        /// <para>Updates a customer note.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -393,7 +395,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a customer note.</para>
+        /// <para>Updates a customer note.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -411,7 +413,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paged query list of customer notes with paging support.</para>
+        /// <para>Queries the customer note list by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -461,7 +463,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paged query list of customer notes with paging support.</para>
+        /// <para>Queries the customer note list by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -511,7 +513,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paged query list of customer notes with paging support.</para>
+        /// <para>Queries the customer note list by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -529,7 +531,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paged query list of customer notes with paging support.</para>
+        /// <para>Queries the customer note list by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -667,7 +669,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries exported bill files.</para>
+        /// <para>Queries the bill export file of a China partner for a specific billing cycle. The system pushes the file to the OSS bucket specified by the partner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -733,7 +735,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries exported bill files.</para>
+        /// <para>Queries the bill export file of a China partner for a specific billing cycle. The system pushes the file to the OSS bucket specified by the partner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -799,7 +801,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries exported bill files.</para>
+        /// <para>Queries the bill export file of a China partner for a specific billing cycle. The system pushes the file to the OSS bucket specified by the partner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -817,7 +819,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries exported bill files.</para>
+        /// <para>Queries the bill export file of a China partner for a specific billing cycle. The system pushes the file to the OSS bucket specified by the partner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1098,6 +1100,10 @@ namespace AlibabaCloud.SDK.Agency20250227
             {
                 query["RamAccountForCustomerManager"] = request.RamAccountForCustomerManager;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RebateType))
+            {
+                query["RebateType"] = request.RebateType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1214,6 +1220,10 @@ namespace AlibabaCloud.SDK.Agency20250227
             {
                 query["RamAccountForCustomerManager"] = request.RamAccountForCustomerManager;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RebateType))
+            {
+                query["RebateType"] = request.RebateType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1271,13 +1281,13 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Downloads the commission details of an international partner.</para>
+        /// <para>Downloads the commission details of international partners.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Ensure that the current caller identity is a T1 distribution partner. 
-        /// <notice>Available only for international site.</notice>.</para>
+        /// <para>Ensure that the current caller account is a T1 distribution partner. 
+        /// <notice>Available only on the international site.</notice></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1343,13 +1353,13 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Downloads the commission details of an international partner.</para>
+        /// <para>Downloads the commission details of international partners.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Ensure that the current caller identity is a T1 distribution partner. 
-        /// <notice>Available only for international site.</notice>.</para>
+        /// <para>Ensure that the current caller account is a T1 distribution partner. 
+        /// <notice>Available only on the international site.</notice></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1415,13 +1425,13 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Downloads the commission details of an international partner.</para>
+        /// <para>Downloads the commission details of international partners.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Ensure that the current caller identity is a T1 distribution partner. 
-        /// <notice>Available only for international site.</notice>.</para>
+        /// <para>Ensure that the current caller account is a T1 distribution partner. 
+        /// <notice>Available only on the international site.</notice></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1439,13 +1449,13 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Downloads the commission details of an international partner.</para>
+        /// <para>Downloads the commission details of international partners.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Ensure that the current caller identity is a T1 distribution partner. 
-        /// <notice>Available only for international site.</notice>.</para>
+        /// <para>Ensure that the current caller account is a T1 distribution partner. 
+        /// <notice>Available only on the international site.</notice></para>
         /// </description>
         /// 
         /// <param name="request">

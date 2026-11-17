@@ -20,27 +20,27 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string ContactInformation { get; set; }
 
         /// <summary>
-        /// <para>The name of the contact.</para>
+        /// <para>The contact name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>张三</para>
+        /// <para>Zhang San</para>
         /// </summary>
         [NameInMap("ContactName")]
         [Validation(Required=false)]
         public string ContactName { get; set; }
 
         /// <summary>
-        /// <para>The name of the customer.</para>
+        /// <para>The customer name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>XXXX有限公司</para>
+        /// <para>XXXX Co., Ltd</para>
         /// </summary>
         [NameInMap("CustomerName")]
         [Validation(Required=false)]
         public string CustomerName { get; set; }
 
         /// <summary>
-        /// <para>The UID of the customer.</para>
+        /// <para>The customer UID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1647796581073291</para>
@@ -50,17 +50,17 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string CustomerUid { get; set; }
 
         /// <summary>
-        /// <para>The content of the note.</para>
+        /// <para>The note content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>日常拜访客户，讨论客户agent建设方案</para>
+        /// <para>Routine customer visit to discuss the agent implementation plan for the customer</para>
         /// </summary>
         [NameInMap("NoteContent")]
         [Validation(Required=false)]
         public string NoteContent { get; set; }
 
         /// <summary>
-        /// <para>The touch time. This value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The contact time (timestamp, in milliseconds).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1784266662000</para>

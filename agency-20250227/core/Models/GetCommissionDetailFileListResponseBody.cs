@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
                 /// <para>The push status of the OSS file. Valid values: Processing, Succeeded, or Failed.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>处理中</para>
+                /// <para>Processing</para>
                 /// </summary>
                 [NameInMap("BucketSyncStatus")]
                 [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
                 /// <para>The policy name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>参考【APS佣金查询下载功能】的政策名称</para>
+                /// <para>The policy name. For more information, see the APS commission query and download feature.</para>
                 /// </summary>
                 [NameInMap("CommissionPolicyName")]
                 [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
                 /// <para>The file name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>佣金202502021112</para>
+                /// <para>Commission202502021112</para>
                 /// </summary>
                 [NameInMap("FileName")]
                 [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
                 /// <para>The file type.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>总代政策为拓渠、普通政策为拓客</para>
+                /// <para>Distributor policies are used to expand channels, and standard policies are used to acquire customers.</para>
                 /// </summary>
                 [NameInMap("FileType")]
                 [Validation(Required=false)]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         /// <para>The message returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>成功</para>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

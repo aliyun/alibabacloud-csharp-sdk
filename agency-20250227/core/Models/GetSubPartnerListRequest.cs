@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         /// <para>The company name of the secondary partner.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx有限公司</para>
+        /// <para>xxx Co., Ltd.</para>
         /// </summary>
         [NameInMap("SubPartnerCompanyName")]
         [Validation(Required=false)]

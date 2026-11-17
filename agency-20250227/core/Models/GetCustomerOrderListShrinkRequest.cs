@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         /// <para>The product name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>弹性计算</para>
+        /// <para>Elastic computing</para>
         /// </summary>
         [NameInMap("ProductName")]
         [Validation(Required=false)]
@@ -196,6 +196,14 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         [NameInMap("RamAccountForCustomerManager")]
         [Validation(Required=false)]
         public string RamAccountForCustomerManager { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("RebateType")]
+        [Validation(Required=false)]
+        public int? RebateType { get; set; }
 
     }
 

@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         /// <para>The name of the contact.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>张三</para>
+        /// <para>John Smith</para>
         /// </summary>
         [NameInMap("ContactName")]
         [Validation(Required=false)]
@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         /// <para>The content of the note.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>日常拜访客户，讨论客户agent建设方案</para>
+        /// <para>Routine customer visit to discuss the agent development plan for the customer</para>
         /// </summary>
         [NameInMap("NoteContent")]
         [Validation(Required=false)]
         public string NoteContent { get; set; }
 
         /// <summary>
-        /// <para>The note ID. This parameter is required.</para>
+        /// <para>The ID of the note. This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1629862</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public long? NoteId { get; set; }
 
         /// <summary>
-        /// <para>The touch date. The value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The time when the contact was made. The value is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1784266662000</para>

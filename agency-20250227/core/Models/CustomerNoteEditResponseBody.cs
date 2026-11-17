@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
 {
     public class CustomerNoteEditResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denial returned by the POP API when RAM permissions are not granted.</para>
+        /// <para>The details about the access denial. This parameter is returned by the POP API operation when the RAM user does not have the required permissions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned by the POP API.</para>
+        /// <para>The HTTP status code returned by the POP API operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -40,27 +40,27 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned by the operation.</para>
+        /// <para>The message returned by the API operation.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>成功</para>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Same as Message.</para>
+        /// <para>The message. This parameter is the same as Message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>成功</para>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Msg")]
         [Validation(Required=false)]
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</para>

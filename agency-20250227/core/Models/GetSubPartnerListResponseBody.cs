@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         /// <para>The message returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>成功</para>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             /// <para>The detailed registered address.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx街道xxx号</para>
+            /// <para>xxx Street, No. xxx</para>
             /// </summary>
             [NameInMap("Address")]
             [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             /// <para>The description of the agreement status.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>生效期</para>
+            /// <para>Effective period</para>
             /// </summary>
             [NameInMap("AgreementStatusDesc")]
             [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             /// <para>The city of the registered address.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>杭州市</para>
+            /// <para>Hangzhou</para>
             /// </summary>
             [NameInMap("City")]
             [Validation(Required=false)]
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             /// <para>The name of the secondary distributor.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx有限公司</para>
+            /// <para>xxx Co., Ltd.</para>
             /// </summary>
             [NameInMap("CompanyName")]
             [Validation(Required=false)]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             /// <para>The name of the contact.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>张三</para>
+            /// <para>Zhang San</para>
             /// </summary>
             [NameInMap("Contact")]
             [Validation(Required=false)]
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             /// <para>The district or county of the registered address.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>西湖区</para>
+            /// <para>Xihu District</para>
             /// </summary>
             [NameInMap("District")]
             [Validation(Required=false)]
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             /// <para>The name of the primary account of the secondary distributor.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxxxxx有限公司主账号</para>
+            /// <para>Primary account of xxxxxx Co., Ltd.</para>
             /// </summary>
             [NameInMap("MasterAccount")]
             [Validation(Required=false)]
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             /// <para>The province of the registered address.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>浙江省</para>
+            /// <para>Zhejiang Province</para>
             /// </summary>
             [NameInMap("Province")]
             [Validation(Required=false)]

@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             /// <para>The partner PID name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>XX有限公司</para>
+            /// <para>XX Co., Ltd.</para>
             /// </summary>
             [NameInMap("MasterPidName")]
             [Validation(Required=false)]
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         /// <para>The prompt message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>成功</para>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

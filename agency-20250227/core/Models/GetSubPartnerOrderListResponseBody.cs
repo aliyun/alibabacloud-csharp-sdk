@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             /// <para>The customer classification.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>C类</para>
+            /// <para>Type C</para>
             /// </summary>
             [NameInMap("CustomerClassification")]
             [Validation(Required=false)]
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             /// <para>The product name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>弹性计算</para>
+            /// <para>Elastic computing</para>
             /// </summary>
             [NameInMap("ProductName")]
             [Validation(Required=false)]
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             /// <para>The name of the secondary partner.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx有限公司</para>
+            /// <para>xxx Co., Ltd.</para>
             /// </summary>
             [NameInMap("SubPartnerName")]
             [Validation(Required=false)]
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         /// <para>The message returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>成功</para>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

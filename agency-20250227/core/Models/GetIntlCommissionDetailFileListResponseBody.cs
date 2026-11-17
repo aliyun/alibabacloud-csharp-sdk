@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public GetIntlCommissionDetailFileListResponseBodyData Data { get; set; }
         public class GetIntlCommissionDetailFileListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The bill month.</para>
+            /// <para>The billing month.</para>
             /// 
             /// <b>Example:</b>
             /// <para>202502</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public List<GetIntlCommissionDetailFileListResponseBodyDataFileList> FileList { get; set; }
             public class GetIntlCommissionDetailFileListResponseBodyDataFileList : TeaModel {
                 /// <summary>
-                /// <para>The OSS file push status. Valid values: init, processing, succeeded, or failed.</para>
+                /// <para>The push status of the file to OSS. Valid values: Initialized, Processing, Succeeded, Failed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PROCESSING</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
                 public string BucketSyncStatus { get; set; }
 
                 /// <summary>
-                /// <para>The commission policy name.</para>
+                /// <para>The name of the policy.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>202606_FY27_TEST</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
                 public string CommissionPolicyName { get; set; }
 
                 /// <summary>
-                /// <para>The file name.</para>
+                /// <para>The name of the file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>202606_FY27_TEST_4397912340.xlsx</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         }
 
         /// <summary>
-        /// <para>The message information.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>Indicates whether the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
