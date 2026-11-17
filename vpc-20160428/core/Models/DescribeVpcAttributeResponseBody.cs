@@ -78,11 +78,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Indicates whether ClassicLink is enabled. Valid values:</para>
+        /// <para>Indicates whether the ClassicLink feature is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: ClassicLink is enabled.</para>
+        /// <item><description><para><b>true</b>: The ClassicLink feature is enabled.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): ClassicLink is not enabled.</para>
+        /// <item><description><para><b>false</b> (default): The ClassicLink feature is disabled.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The creation time of the VPC.</para>
+        /// <para>The time when the VPC was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-10-16T07:31:09Z</para>
@@ -147,13 +147,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The status of the DHCP options set. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Available</b>: active.</para>
+        /// <item><description><para><b>Available</b>: The DHCP options set is available.</para>
         /// </description></item>
-        /// <item><description><para><b>InUse</b>: in use.</para>
+        /// <item><description><para><b>InUse</b>: The DHCP options set is in use.</para>
         /// </description></item>
-        /// <item><description><para><b>Deleted</b>: deleted.</para>
+        /// <item><description><para><b>Deleted</b>: The DHCP options set is deleted.</para>
         /// </description></item>
-        /// <item><description><para><b>Pending</b>: being configured.</para>
+        /// <item><description><para><b>Pending</b>: The DHCP options set is being configured.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DhcpOptionsSetStatus { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether DNS hostnames are enabled.</para>
+        /// <para>Indicates whether the DNS hostname feature is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DISABLED</para>
@@ -271,7 +271,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxazbvgb4ph****</para>
@@ -293,9 +293,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The status of the VPC. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Available</b>: active.</para>
+        /// <item><description><para><b>Available</b>: The VPC is available.</para>
         /// </description></item>
-        /// <item><description><para><b>Pending</b>: being configured.</para>
+        /// <item><description><para><b>Pending</b>: The VPC is being configured.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -307,13 +307,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the VPC operates in centralized control with IPv4 gateway mode.</para>
+        /// <para>Indicates whether the VPC operates in the centralized control mode with the IPv4 gateway. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The VPC operates in centralized control with IPv4 gateway mode, where Internet traffic is centrally managed by the IPv4 gateway (activated after the IPv4 gateway is created and routing is configured), or the VPC is a private network-only VPC (the IPv4 gateway is deleted in private mode).</description></item>
-        /// <item><description><b>false</b>: The VPC operates in Direct Internet Access mode (access mode).</description></item>
+        /// <item><description><b>true</b>: The VPC operates in the centralized control mode with the IPv4 gateway. Internet traffic is centrally managed by the IPv4 gateway (the IPv4 gateway is activated after it is created and routes are configured), or the VPC is a private network-only VPC (the IPv4 gateway is deleted in private mode).</description></item>
+        /// <item><description><b>false</b>: Direct Internet Access mode.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>For details, see <a href="https://help.aliyun.com/document_detail/376445.html">IPv4 gateway</a>.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/376445.html">IPv4 gateway</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -354,7 +354,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The ID of the vRouter in the VPC.</para>
+        /// <para>The ID of the vRouter of the VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vrt-bp1jso6ng1at0ajsc****</para>

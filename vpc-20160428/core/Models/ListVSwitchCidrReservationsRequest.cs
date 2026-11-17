@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IpVersion { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Valid values:</para>
+        /// <para>The token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If this is the first request or no subsequent query exists, leave this parameter empty.</description></item>
-        /// <item><description>If a subsequent query exists, set this parameter to the NextToken value returned in the previous API call.</description></item>
+        /// <item><description>Leave this parameter empty for the first query and when no next query is required.</description></item>
+        /// <item><description>If a next query is required, set this parameter to the NextToken value returned from the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the vSwitch.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -83,8 +83,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<ListVSwitchCidrReservationsRequestTags> Tags { get; set; }
         public class ListVSwitchCidrReservationsRequestTags : TeaModel {
             /// <summary>
-            /// <para>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, the value cannot be an empty string.</para>
-            /// <para>A tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
+            /// <para>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot enter an empty string. A tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -94,8 +93,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, the value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
+            /// <para>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can enter an empty string. A tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>
@@ -107,7 +105,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The instance IDs of the reserved CIDR block for a vSwitch. You can specify up to 10 reserved CIDR blocks.</para>
+        /// <para>The instance IDs of the reserved CIDR blocks for a vSwitch. You can specify up to 10 reserved CIDR blocks.</para>
         /// </summary>
         [NameInMap("VSwitchCidrReservationIds")]
         [Validation(Required=false)]
@@ -116,7 +114,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The type of the reserved CIDR block for a vSwitch. Valid values: <b>prefix</b>, which indicates that addresses are allocated by CIDR block.</para>
         /// <remarks>
-        /// <para>When users or cloud services automatically assign CIDR blocks to elastic network interfaces (ENIs), the CIDR blocks must be allocated from the reserved CIDR block. If all addresses in the reserved CIDR block are allocated, the system returns an error.</para>
+        /// <para>When users and cloud services automatically allocate CIDR blocks for elastic network interfaces (ENIs), the CIDR blocks must be allocated from the reserved CIDR blocks. If all addresses in the reserved CIDR blocks are allocated, the system returns an error.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -127,7 +125,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VSwitchCidrReservationType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch to which the reserved CIDR block for a vSwitch belongs.</para>
+        /// <para>The ID of the vSwitch to which the reserved CIDR block that you want to query belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-25navfgbue4g****</para>

@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class CreateNatIpRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run on the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: sends a dry run request. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the request fails the dry run, the corresponding error is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// <item><description><para><b>true</b>: The system performs a dry run on the request without creating the NAT IP address. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user has the required authorization, and whether the required parameters are specified. If the request fails the dry run, the corresponding error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): sends a normal request. If the request passes the dry run, a 2xx HTTP status code is returned and the NAT IP address is created.</para>
+        /// <item><description><para><b>false</b> (default): The system sends a normal request. If the request passes the dry run, a 2xx HTTP status code is returned and the NAT IP address is created.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The IP prefix CIDR block to create.</para>
-        /// <para>The IP prefix CIDR block must be within the reserved CIDR block of the vSwitch where the NAT gateway resides, and the reserved CIDR block must not be occupied. The IP prefix mask must be /28.</para>
+        /// <para>The IP prefix CIDR block.</para>
+        /// <para>The IP prefix CIDR block must fall within the reserved CIDR block of the vSwitch to which the NAT gateway belongs, and the reserved CIDR block must not be occupied. The mask of the IP prefix must be /28.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.0.0/28</para>
@@ -51,8 +51,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Ipv4Prefix { get; set; }
 
         /// <summary>
-        /// <para>The number of IP prefixes to automatically assign.</para>
-        /// <para>The IP prefixes are randomly assigned from unallocated reserved CIDR blocks of the vSwitch where the NAT gateway resides. Valid values: 1 to 10.</para>
+        /// <para>The number of IP prefixes to be automatically allocated.</para>
+        /// <para>The IP prefixes are randomly allocated from the unallocated reserved CIDR block of the vSwitch to which the NAT gateway belongs. Valid values: 1 to 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -73,8 +73,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NatGatewayId { get; set; }
 
         /// <summary>
-        /// <para>The NAT IP address to create.</para>
-        /// <para>If you do not specify this parameter, the system randomly assigns an IP address from the NAT CIDR block.</para>
+        /// <para>The NAT IP address.</para>
+        /// <para>If you do not specify an IP address, the system randomly allocates an IP address from the NAT CIDR block.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.0.34</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NatIp { get; set; }
 
         /// <summary>
-        /// <para>The NAT CIDR block from which the NAT IP address is created.</para>
+        /// <para>The CIDR block from which the NAT IP address is created.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -95,8 +95,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NatIpCidr { get; set; }
 
         /// <summary>
-        /// <para>The description of the NAT IP address to create.</para>
-        /// <para>The description must be 2 to 256 characters in length and must start with a letter or Chinese character. It cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description of the NAT IP address.</para>
+        /// <para>The description must be 2 to 256 characters in length, and must start with a letter or a Chinese character. It cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -106,8 +106,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NatIpDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the NAT IP address to create.</para>
-        /// <para>The name must be 2 to 128 characters in length and must start with a letter or Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name of the NAT IP address.</para>
+        /// <para>The name must be 2 to 128 characters in length, and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>newnatip</para>
@@ -125,8 +125,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the VPC NAT gateway instance to which the NAT IP address belongs.</para>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</para>
+        /// <para>The region ID of the NAT gateway instance to which the NAT IP address belongs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateVirtualBorderRouterRequest : TeaModel {
         /// <summary>
-        /// <para>The bandwidth of the VBR instance. Unit: Mbit/s.</para>
+        /// <para>The bandwidth value of the VBR instance. Unit: Mbit/s.</para>
         /// <list type="bullet">
         /// <item><description>When you create a VBR instance for a dedicated Express Connect circuit, valid values are <b>50</b>, <b>100</b>, <b>200</b>, <b>300</b>, <b>400</b>, <b>500</b>, <b>1000</b>, <b>2048</b>, <b>5120</b>, <b>8192</b>, <b>10240</b>, <b>20480</b>, <b>40960</b>, <b>50120</b>, <b>61440</b>, and <b>102400</b>.</description></item>
-        /// <item><description>When you create a VBR instance for shared Express Connect circuits, you do not need to configure this parameter. The bandwidth of the VBR is the bandwidth of the shared Express Connect circuits that is specified in Settings when the shared Express Connect circuits are created.</description></item>
+        /// <item><description>When you create a VBR instance for shared Express Connect circuits, you do not need to configure this parameter. The bandwidth of the VBR is the bandwidth of the shared Express Connect circuits that was specified in Settings when the shared Express Connect circuits were created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public class CreateVirtualBorderRouterRequestTags : TeaModel {
             /// <summary>
             /// <para>The tag key of the resource. You must specify at least 1 tag key and can specify at most 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>A tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>A tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The tag value of the resource. You can specify at most 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The account ID of the VBR instance owner.</para>
-        /// <para>The default value is the Alibaba Cloud account ID used for logon.</para>
+        /// <para>The default value is the Alibaba Cloud account ID used to logon.</para>
         /// 
         /// <b>Example:</b>
         /// <para>168811111****</para>

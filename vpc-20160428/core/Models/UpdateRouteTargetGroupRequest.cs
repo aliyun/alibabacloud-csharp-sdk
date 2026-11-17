@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class UpdateRouteTargetGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters. If you do not specify this parameter, the system uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, and you must ensure that the value is unique among different requests. The client token can contain only ASCII characters. Note: If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request may be different.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouteTargetGroupDescription { get; set; }
 
         /// <summary>
-        /// <para>The routing target group instance ID.</para>
+        /// <para>The instance ID of the routing target group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,11 +64,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouteTargetGroupName { get; set; }
 
         /// <summary>
-        /// <para>The member list of the route target group.</para>
-        /// <para>In active/standby mode, the following limits apply to route target group members:</para>
+        /// <para>The list of members in the route target group.</para>
+        /// <para>In active/standby mode, the following limits apply to the members of the route target group:</para>
         /// <ol>
-        /// <item><description>The number of route target group members must be 2.</description></item>
-        /// <item><description>The route target group members must belong to different zones.</description></item>
+        /// <item><description>The route target group must contain exactly two members.</description></item>
+        /// <item><description>The members of the route target group must belong to different zones.</description></item>
         /// </ol>
         /// </summary>
         [NameInMap("RouteTargetMemberList")]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<UpdateRouteTargetGroupRequestRouteTargetMemberList> RouteTargetMemberList { get; set; }
         public class UpdateRouteTargetGroupRequestRouteTargetMemberList : TeaModel {
             /// <summary>
-            /// <para>The instance ID of the route target group member.</para>
+            /// <para>The instance ID of the member in the routing target group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ep-xxxx</para>
@@ -86,12 +86,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string MemberId { get; set; }
 
             /// <summary>
-            /// <para>The member type of the route target group.</para>
-            /// <para>Currently supported type:</para>
+            /// <para>The type of the member in the route target group.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>GatewayLoadBalancerEndpoint</b></description></item>
             /// </list>
-            /// <para>In active/standby mode, all members of the route target group must be of the same type.</para>
+            /// <para>In active/standby mode, all members in the route target group must be of the same type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GatewayLoadBalancerEndpoint</para>
@@ -101,10 +101,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string MemberType { get; set; }
 
             /// <summary>
-            /// <para>The weight of the route target group member. Valid values:</para>
+            /// <para>The weight of the member in the route target group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>100: The member is the active instance.</description></item>
-            /// <item><description>0: The member is the standby instance.</description></item>
+            /// <item><description>100: The member is the primary instance.</description></item>
+            /// <item><description>0: The member is the secondary instance.</description></item>
             /// </list>
             /// <para>The weight can only be set during creation and cannot be modified.</para>
             /// 

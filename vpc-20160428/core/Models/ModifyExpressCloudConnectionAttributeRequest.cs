@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyExpressCloudConnectionAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The local BGP autonomous system (AS) number to be configured on the Smart Access Gateway device.</para>
+        /// <para>The local BGP Autonomous System (AS) number to be configured on the Smart Access Gateway (SAG) device.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sag-ejfge***</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string BgpAs { get; set; }
 
         /// <summary>
-        /// <para>The cloud-side IP address used for peering with the Smart Access Gateway device.</para>
+        /// <para>The cloud-side IP address used to connect the Smart Access Gateway (SAG) device to Alibaba Cloud.</para>
         /// 
         /// <b>Example:</b>
         /// <para><c>172.16.**.**</c></para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string CeIp { get; set; }
 
         /// <summary>
-        /// <para>The description of the Express Cloud Connection instance.</para>
+        /// <para>The description of the Express Cloud Connection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ECC</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the Express Cloud Connection instance.</para>
+        /// <para>The Express Cloud Connection instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The local IP address of the Smart Access Gateway device used for peering with the cloud.</para>
+        /// <para>The local IP address of the Smart Access Gateway (SAG) device used to connect to Alibaba Cloud.</para>
         /// 
         /// <b>Example:</b>
         /// <para><c>10.10.**.**</c></para>

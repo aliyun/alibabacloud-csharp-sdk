@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string ChargeType { get; set; }
 
+                [NameInMap("CommonBandwidthPackageIpBandwidth")]
+                [Validation(Required=false)]
+                public string CommonBandwidthPackageIpBandwidth { get; set; }
+
                 [NameInMap("DeletionProtection")]
                 [Validation(Required=false)]
                 public bool? DeletionProtection { get; set; }

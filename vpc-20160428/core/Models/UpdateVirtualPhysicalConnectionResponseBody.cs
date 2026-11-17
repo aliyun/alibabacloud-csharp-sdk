@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the VLAN ID of the shared Express Connect circuit is modified.</para>
+        /// <para>Specifies whether the VLAN ID of the shared Express Connect circuit is successfully modified.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The VLAN ID is modified.</description></item>
-        /// <item><description><b>false</b>: The VLAN ID failed to be modified.</description></item>
+        /// <item><description><b>true</b>: The VLAN ID was modified.</description></item>
+        /// <item><description><b>false</b>: The VLAN ID was not modified.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

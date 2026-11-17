@@ -49,7 +49,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the IPsec-VPN connection.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +60,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The ID of the resource group to which the IPsec-VPN connection belongs.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzs372yg****</para>
@@ -99,8 +97,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The tag value.</para>
-            /// <para>The tag value can be up to 128 characters in length and can be an empty string. It cannot start with <c>aliyun</c> or <c>acs:</c>, or contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagValue</para>

@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class DescribeFlowLogsRequest : TeaModel {
         /// <summary>
         /// <para>The description of the flow log.</para>
-        /// <para>The description must be 1 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description must be 1 to 256 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is my Flowlog.</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The name of the flow log.</para>
-        /// <para>The name must be 1 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name must be 1 to 128 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myFlowlog</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string FlowLogName { get; set; }
 
         /// <summary>
-        /// <para>The name of the Logstore that stores the captured traffic.</para>
+        /// <para>The Logstore that stores the captured traffic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FlowLogStore</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in paging query. Maximum value: <b>50</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries per page for paging in a paged query. Maximum value: <b>50</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the project that manages the captured traffic.</para>
+        /// <para>The Log Service project that manages the captured traffic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FlowLogProject</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the flow log.</para>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -132,11 +132,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The resource type of the traffic to catch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>NetworkInterface</b>: network interface controller (NIC).</para>
+        /// <item><description><para><b>NetworkInterface</b>: elastic network interface controller (NIC).</para>
         /// </description></item>
-        /// <item><description><para><b>VSwitch</b>: all network interface controllers (NICs) in a vSwitch.</para>
+        /// <item><description><para><b>VSwitch</b>: all elastic network interface controller (NIC) in a vSwitch.</para>
         /// </description></item>
-        /// <item><description><para><b>VPC</b>: all network interface controllers (NICs) in a virtual private cloud (VPC).</para>
+        /// <item><description><para><b>VPC</b>: all elastic network interface controller (NIC) in a virtual private cloud (VPC).</para>
         /// </description></item>
         /// </list>
         /// 
@@ -150,11 +150,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The status of the flow log. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Active</b>: the flow log is active.</para>
+        /// <item><description><para><b>Active</b>: The flow log is active.</para>
         /// </description></item>
-        /// <item><description><para><b>Activating</b>: the flow log is being created.</para>
+        /// <item><description><para><b>Activating</b>: The flow log is being created.</para>
         /// </description></item>
-        /// <item><description><para><b>Inactive</b>: the flow log is inactive.</para>
+        /// <item><description><para><b>Inactive</b>: The flow log is inactive.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<DescribeFlowLogsRequestTags> Tags { get; set; }
         public class DescribeFlowLogsRequestTags : TeaModel {
             /// <summary>
-            /// <para>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
+            /// <para>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot specify an empty string.</para>
             /// <para>A tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
@@ -184,8 +184,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can specify an empty string.</para>
+            /// <para>A tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>
@@ -197,13 +197,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The traffic type to collect. Valid values:</para>
+        /// <para>The traffic type to catch. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>All</b>: all traffic.</para>
         /// </description></item>
-        /// <item><description><para><b>Allow</b>: traffic allowed by access control.</para>
+        /// <item><description><para><b>Allow</b>: traffic that access control allows.</para>
         /// </description></item>
-        /// <item><description><para><b>Drop</b>: traffic deny by access control.</para>
+        /// <item><description><para><b>Drop</b>: traffic that access control policies deny.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string TrafficType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC whose flow logs you want to query.</para>
+        /// <para>The ID of the VPC for which you want to query flow logs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1nwd16gvo1wgs****</para>

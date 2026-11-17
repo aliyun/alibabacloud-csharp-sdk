@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class UpdateVirtualBorderBandwidthRequest : TeaModel {
         /// <summary>
-        /// <para>The new bandwidth limit of the VBR. Unit: Mbit/s.</para>
+        /// <para>The updated bandwidth limit of the VBR. Unit: Mbit/s.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</para>
+        /// <para>You can generate the value from your client. Make sure that the value is unique across different requests. The client token only supports ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is different.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

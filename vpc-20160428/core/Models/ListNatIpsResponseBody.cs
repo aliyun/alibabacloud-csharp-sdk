@@ -27,11 +27,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Ipv4Prefix { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the NAT IP address is the default one. Valid values:</para>
+            /// <para>Specifies whether the NAT IP address is the default NAT IP address. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: The NAT IP address is the default one.</para>
+            /// <item><description><para><b>true</b>: The NAT IP address is the default NAT IP address.</para>
             /// </description></item>
-            /// <item><description><para><b>false</b>: The NAT IP address is not the default one.</para>
+            /// <item><description><para><b>false</b>: The NAT IP address is not the default NAT IP address.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -105,12 +105,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The status of the NAT IP address. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Available</b>: available.</description></item>
-            /// <item><description><b>Deleted</b>: deleted.</description></item>
-            /// <item><description><b>Deleting</b>: being deleted.</description></item>
-            /// <item><description><b>Creating</b>: being created.</description></item>
-            /// <item><description><b>Associated</b>: associated with an SNAT or DNAT entry.</description></item>
-            /// <item><description><b>Associating</b>: being associated with an SNAT or DNAT entry.</description></item>
+            /// <item><description><b>Available</b>: Available.</description></item>
+            /// <item><description><b>Deleted</b>: Deleted.</description></item>
+            /// <item><description><b>Deleting</b>: Deleting.</description></item>
+            /// <item><description><b>Creating</b>: Creating.</description></item>
+            /// <item><description><b>Associated</b>: Associated with an SNAT or DNAT entry.</description></item>
+            /// <item><description><b>Associating</b>: Being associated with an SNAT or DNAT entry.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -123,10 +123,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token that is used to start the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next query exists.</description></item>
-        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no next query is available.</description></item>
+        /// <item><description>If <b>NextToken</b> has a return value, the value indicates the token used to start the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

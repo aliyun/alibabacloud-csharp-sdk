@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListEnhanhcedNatGatewayAvailableZonesRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language in which the response is returned. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh-CN</b> (default): Chinese.</description></item>
         /// <item><description><b>en-US</b>: English.</description></item>
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The filter information. You can specify key-value pairs to filter the query results.</para>
+        /// <para>The filter conditions. You can specify key-value pairs to filter the query results.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<ListEnhanhcedNatGatewayAvailableZonesRequestFilter> Filter { get; set; }
         public class ListEnhanhcedNatGatewayAvailableZonesRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The filter condition. Currently, only <b>PrivateLinkEnabled</b> is supported.</para>
+            /// <para>The filter key. Only <b>PrivateLinkEnabled</b> is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PrivateLinkEnabled</para>
@@ -41,9 +41,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The filter value that corresponds to the filter condition.</para>
+            /// <para>The filter value corresponding to the filter key.</para>
             /// <remarks>
-            /// <para>If the filter condition is <b>PrivateLinkEnabled</b>, you must specify a filter value. Valid values: <b>true</b> and <b>false</b>.</para>
+            /// <para>If the filter key is <b>PrivateLinkEnabled</b>, you must specify a filter value. Valid values: <b>true</b> and <b>false</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -64,9 +64,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to query.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.
-        /// This example queries the zones available for NAT gateway resources in the UAE (Dubai) region.</para>
+        /// <para>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs. This example queries the available zones for NAT gateway resources in the UAE (Dubai) region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListPublicIpAddressPoolsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to only precheck the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run without querying available IP address pool information. The system checks whether the required parameters are specified, whether the request format is valid, and whether business restrictions are met. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and sends the request. If the check succeeds, an HTTP 2xx status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>true</b>: prechecks the request without querying available IP address pools. The system checks whether required parameters are specified, the request format is valid, and the service limits are met. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,13 +26,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The line type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>BGP</b> (default): BGP (multi-ISP) line.</para>
+        /// <item><description><para><b>BGP</b> (default): BGP (Multi-ISP) line.</para>
         /// </description></item>
-        /// <item><description><para><b>BGP_PRO</b>: BGP (multi-ISP) Pro line.</para>
+        /// <item><description><para><b>BGP_PRO</b>: BGP (Multi-ISP) Pro line.</para>
         /// </description></item>
         /// </list>
-        /// <para>For more information about BGP (multi-ISP) lines and BGP (multi-ISP) Pro lines, see <a href="https://help.aliyun.com/document_detail/32321.html">EIP line types</a>.</para>
-        /// <para>If you are a whitelist user of single-ISP bandwidth, you can also select the following types:</para>
+        /// <para>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro lines, see <a href="https://help.aliyun.com/document_detail/32321.html">EIP line types</a>.</para>
+        /// <para>If you are a single-ISP bandwidth whitelist user, you can also select the following types:</para>
         /// <list type="bullet">
         /// <item><description><b>ChinaTelecom</b>: China Telecom</description></item>
         /// <item><description><b>ChinaUnicom</b>: China Unicom</description></item>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <item><description><b>ChinaUnicom_L2</b>: China Unicom L2</description></item>
         /// <item><description><b>ChinaMobile_L2</b>: China Mobile L2</description></item>
         /// </list>
-        /// <para>If you are a China (Hangzhou) Finance Cloud user, this field is required. Set the value to <b>BGP_FinanceCloud</b>.</para>
+        /// <para>If you are an Alibaba Finance Cloud user in the China (Hangzhou) region, this parameter is required. Set the value to <b>BGP_FinanceCloud</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BGP</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Isp { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return in this request. Valid values: <b>10</b> to <b>100</b>. Default value: <b>10</b>.</para>
+        /// <para>The maximum number of entries to return for a single request. Valid values: <b>10</b> to <b>100</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The name of the IP address pool instance.</para>
+        /// <para>The name of the IP address pool.</para>
         /// <para>The name must be 0 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
@@ -72,10 +72,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The pagination token that is used to retrieve the next page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>You do not need to specify this parameter for the first request or if no subsequent request is to be sent.</description></item>
-        /// <item><description>If a subsequent request is to be sent, set the value to the NextToken value returned in the previous API call.</description></item>
+        /// <item><description>Leave this parameter empty for the first request and when no subsequent request is required.</description></item>
+        /// <item><description>For subsequent requests, set this parameter to the NextToken value returned from the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,16 +94,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The list of IP address pool instance IDs.</para>
-        /// <para>You can specify up to 100 IP address pool instance IDs.</para>
+        /// <para>The list of IP address instance IDs.</para>
+        /// <para>You can enter up to 100 IP address instance IDs.</para>
         /// </summary>
         [NameInMap("PublicIpAddressPoolIds")]
         [Validation(Required=false)]
         public List<string> PublicIpAddressPoolIds { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the IP address pool that you want to query.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</para>
+        /// <para>The region ID of the IP address pool.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -134,8 +134,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to enable Anti-DDoS (Enhanced). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b>: disabled.</description></item>
-        /// <item><description><b>true</b>: enabled.</description></item>
+        /// <item><description><b>false</b>: disables Anti-DDoS (Enhanced).</description></item>
+        /// <item><description><b>true</b>: enables Anti-DDoS (Enhanced).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -146,11 +146,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? SecurityProtectionEnabled { get; set; }
 
         /// <summary>
-        /// <para>The instance status of the IPAM pool. Valid values:</para>
+        /// <para>The instance status of the IP address pool. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Created</b>: active.</description></item>
-        /// <item><description><b>Deleting</b>: being deleted.</description></item>
-        /// <item><description><b>Modifying</b>: being modified.</description></item>
+        /// <item><description><b>Created</b>: available.</description></item>
+        /// <item><description><b>Deleting</b>: delete in progress.</description></item>
+        /// <item><description><b>Modifying</b>: modify in progress.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -168,8 +168,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<ListPublicIpAddressPoolsRequestTags> Tags { get; set; }
         public class ListPublicIpAddressPoolsRequestTags : TeaModel {
             /// <summary>
-            /// <para>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>A tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot enter an empty string.</para>
+            /// <para>A tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -179,8 +179,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can enter an empty string.</para>
+            /// <para>A tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>

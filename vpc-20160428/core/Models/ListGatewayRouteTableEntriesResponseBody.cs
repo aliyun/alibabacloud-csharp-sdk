@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListGatewayRouteTableEntriesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the route entries in the gateway route table.</para>
+        /// <para>The details of the routes in the gateway route table.</para>
         /// </summary>
         [NameInMap("GatewayRouteEntryModels")]
         [Validation(Required=false)]
         public List<ListGatewayRouteTableEntriesResponseBodyGatewayRouteEntryModels> GatewayRouteEntryModels { get; set; }
         public class ListGatewayRouteTableEntriesResponseBodyGatewayRouteEntryModels : TeaModel {
             /// <summary>
-            /// <para>The description of the route entry.</para>
+            /// <para>The description of the route.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The destination CIDR block of the route entry.</para>
+            /// <para>The destination CIDR block of the route.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.0.5</para>
@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string DestinationCidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The name of the route entry.</para>
-            /// <para>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</para>
+            /// <para>The name of the route.</para>
+            /// <para>The name must be 2 to 128 characters in length, and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the next hop.</para>
+            /// <para>The next hop instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-bp11gcl0sm85t9bi****</para>
@@ -58,10 +58,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string NextHopId { get; set; }
 
             /// <summary>
-            /// <para>The next hop type. Valid values:</para>
+            /// <para>The type of the next hop. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>EcsInstance</b>: ECS instance.</description></item>
-            /// <item><description><b>NetworkInterface</b>: elastic network interfaces (ENIs).</description></item>
+            /// <item><description><b>NetworkInterface</b>: elastic network interface (ENI).</description></item>
             /// <item><description><b>Local</b>: local.</description></item>
             /// </list>
             /// 
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Enabled { get; set; }
 
                 /// <summary>
-                /// <para>The instance ID of the next hop.</para>
+                /// <para>The next hop instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpn-bp10zyaph5cc8b7c7****</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <item><description><b>HaVip</b>: high-availability virtual IP address.</description></item>
                 /// <item><description><b>VpnGateway</b>: VPN gateway.</description></item>
                 /// <item><description><b>NatGateway</b>: NAT gateway.</description></item>
-                /// <item><description><b>NetworkInterface</b>: secondary elastic network interfaces (ENIs).</description></item>
+                /// <item><description><b>NetworkInterface</b>: secondary elastic network interface (ENI).</description></item>
                 /// <item><description><b>RouterInterface</b>: vRouter interface.</description></item>
                 /// <item><description><b>IPv6Gateway</b>: IPv6 gateway.</description></item>
                 /// <item><description><b>Attachment</b>: transit router.</description></item>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string NextHopType { get; set; }
 
                 /// <summary>
-                /// <para>The weight of the route entry.</para>
+                /// <para>The weight of the route.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -136,11 +136,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// <para>The status of the route entry. Valid values:</para>
+            /// <para>The status of the route. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Pending</b>: being configured.</description></item>
-            /// <item><description><b>Available</b>: available.</description></item>
-            /// <item><description><b>Modifying</b>: being modified.</description></item>
+            /// <item><description><b>Pending</b>: The route is being configured.</description></item>
+            /// <item><description><b>Available</b>: The route is available.</description></item>
+            /// <item><description><b>Modifying</b>: The route is being modified.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -153,10 +153,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The pagination token. Valid values:</para>
+        /// <para>The pagination token that is used to retrieve the next page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no subsequent query exists.</description></item>
-        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no more results are available.</description></item>
+        /// <item><description>If <b>NextToken</b> returns a value, the value is the token used to start the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

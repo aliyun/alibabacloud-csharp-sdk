@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class CreateRouteEntryRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>Generate a parameter value from your client. Make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The description of the custom route entry.</para>
-        /// <para>The description must be 1 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description must be 1 to 256 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -35,11 +35,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The destination CIDR block of the custom route entry. IPv4 CIDR blocks, IPv6 CIDR blocks, destination CIDR blocks of prefix lists, and instance IDs of prefix lists are supported. The following requirements must be met:</para>
+        /// <para>The destination CIDR block of the custom route entry. IPv4 CIDR blocks, IPv6 CIDR blocks, destination CIDR blocks of prefix lists, and instance IDs of prefix lists are supported. The destination CIDR block must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description><para>The destination CIDR block cannot point to or be contained by 100.64.0.0/10.  </para>
+        /// <item><description><para>The destination CIDR block cannot point to 100.64.0.0/10 or be contained by 100.64.0.0/10.  </para>
         /// </description></item>
-        /// <item><description><para>The destination CIDR blocks of different route entries in the same route table must be unique.</para>
+        /// <item><description><para>Route entries in the same route table cannot have the same destination CIDR block.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -52,10 +52,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DestinationCidrBlock { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to only precheck the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run without creating the route entry. The system checks required parameters, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): sends the request. After the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>true</b>: prechecks the request without creating the route entry. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ID of the next hop instance of the custom route entry.</para>
+        /// <para>The ID of the next hop instance for the custom route entry.</para>
         /// <remarks>
         /// <h2>If you set NextHopType to ECR, you can call the <a href="https://help.aliyun.com/document_detail/2712069.html">DescribeExpressConnectRouterAssociation</a> operation to obtain the AssociationId as the next hop ID.</h2>
         /// </remarks>
@@ -79,14 +79,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextHopId { get; set; }
 
         /// <summary>
-        /// <para>The information about the next hop.</para>
+        /// <para>The information about the next hops.</para>
         /// </summary>
         [NameInMap("NextHopList")]
         [Validation(Required=false)]
         public List<CreateRouteEntryRequestNextHopList> NextHopList { get; set; }
         public class CreateRouteEntryRequestNextHopList : TeaModel {
             /// <summary>
-            /// <para>The ID of the next hop instance of the ECMP route.</para>
+            /// <para>The ID of the next hop instance for the ECMP route.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ri-2zeo3xzyf3cd8r4****</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string NextHopId { get; set; }
 
             /// <summary>
-            /// <para>The type of next hop for the ECMP route. Set the value to <b>RouterInterface</b> (router interface).</para>
+            /// <para>The type of the next hop for the ECMP route. Set the value to <b>RouterInterface</b>, which specifies a router interface.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RouterInterface</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string NextHopType { get; set; }
 
             /// <summary>
-            /// <para>The weight of the next hop for the ECMP route.</para>
+            /// <para>The route weight of the next hop for the ECMP route.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -118,35 +118,35 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The type of next hop for the custom route entry. Valid values: </para>
+        /// <para>The type of the next hop for the custom route entry. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para><b>Instance</b> (default): ECS instance.</para>
+        /// <item><description><para><b>Instance</b> (default): an ECS instance.</para>
         /// </description></item>
-        /// <item><description><para><b>HaVip</b>: high-availability virtual IP address.  </para>
+        /// <item><description><para><b>HaVip</b>: a high-availability virtual IP address.  </para>
         /// </description></item>
-        /// <item><description><para><b>RouterInterface</b>: vRouter interface.</para>
+        /// <item><description><para><b>RouterInterface</b>: a vRouter interface.</para>
         /// </description></item>
-        /// <item><description><para><b>NetworkInterface</b>: network interface controller (NIC).</para>
+        /// <item><description><para><b>NetworkInterface</b>: an elastic network interface controller (NIC).</para>
         /// </description></item>
-        /// <item><description><para><b>VpnGateway</b>: VPN gateway.</para>
+        /// <item><description><para><b>VpnGateway</b>: a VPN gateway.</para>
         /// </description></item>
-        /// <item><description><para><b>IPv6Gateway</b>: IPv6 gateway.</para>
+        /// <item><description><para><b>IPv6Gateway</b>: an IPv6 gateway.</para>
         /// </description></item>
-        /// <item><description><para><b>NatGateway</b>: NAT gateway.</para>
+        /// <item><description><para><b>NatGateway</b>: a NAT gateway.</para>
         /// </description></item>
-        /// <item><description><para><b>Attachment</b>: transit router.</para>
+        /// <item><description><para><b>Attachment</b>: a forward router.</para>
         /// </description></item>
-        /// <item><description><para><b>VpcPeer</b>: VPC peering connection.</para>
+        /// <item><description><para><b>VpcPeer</b>: a VPC peering connection.</para>
         /// </description></item>
-        /// <item><description><para><b>Ipv4Gateway</b>: IPv4 gateway.</para>
+        /// <item><description><para><b>Ipv4Gateway</b>: an IPv4 gateway.</para>
         /// </description></item>
-        /// <item><description><para><b>GatewayEndpoint</b>: gateway endpoint.</para>
+        /// <item><description><para><b>GatewayEndpoint</b>: a gateway endpoint.</para>
         /// </description></item>
-        /// <item><description><para><b>Ecr</b>: Express Connect Router (ECR).</para>
+        /// <item><description><para><b>Ecr</b>: an Express Connect Router (ECR).</para>
         /// </description></item>
-        /// <item><description><para><b>GatewayLoadBalancerEndpoint</b>: Gateway Load Balancer endpoint (GWLBe).</para>
+        /// <item><description><para><b>GatewayLoadBalancerEndpoint</b>: a gateway load balancing endpoint (GWLBe).</para>
         /// </description></item>
-        /// <item><description><para><b>RouteTargetGroup</b>: route target group.</para>
+        /// <item><description><para><b>RouteTargetGroup</b>: a routing target group.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -166,8 +166,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the route table.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>The ID of the region to which the route table belongs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -185,8 +185,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the custom route entry to add.</para>
-        /// <para>The name must be 1 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name of the custom route entry to be added.</para>
+        /// <para>The name must be 1 to 128 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouteEntryName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route table to which you want to add a custom route entry.</para>
+        /// <para>The ID of the route table to which you want to add the custom route entry.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

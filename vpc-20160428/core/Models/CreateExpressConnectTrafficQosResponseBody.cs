@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateExpressConnectTrafficQosResponseBody : TeaModel {
         /// <summary>
-        /// <para>The QoS policy ID.</para>
+        /// <para>The ID of the QoS policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qos-2giu0a6vd5x0mv****</para>

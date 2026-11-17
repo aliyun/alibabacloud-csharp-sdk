@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListVpcPublishedRouteEntriesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token for the next query. Valid values:</para>
+        /// <para>The token used to retrieve the next page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next query exists.</description></item>
-        /// <item><description>If <b>NextToken</b> has a value, the value indicates the token for the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no more results are available.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value is the token used to start the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of route entry publish status information.</para>
+        /// <para>The list of route publication status information.</para>
         /// </summary>
         [NameInMap("RouteEntries")]
         [Validation(Required=false)]
         public List<ListVpcPublishedRouteEntriesResponseBodyRouteEntries> RouteEntries { get; set; }
         public class ListVpcPublishedRouteEntriesResponseBodyRouteEntries : TeaModel {
             /// <summary>
-            /// <para>The destination CIDR block of the route entry.</para>
+            /// <para>The destination CIDR block of the route.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.0.0.0/24</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string DestinationCidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The ID of the route entry.</para>
+            /// <para>The ID of the route.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rte-bp1mnnr2al0naomnpv****</para>
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string RouteEntryId { get; set; }
 
             /// <summary>
-            /// <para>The list of publish status information for the route entry in publish targets.</para>
+            /// <para>The list of publication status information of the route at the publication targets.</para>
             /// </summary>
             [NameInMap("RoutePublishTargets")]
             [Validation(Required=false)]
             public List<ListVpcPublishedRouteEntriesResponseBodyRouteEntriesRoutePublishTargets> RoutePublishTargets { get; set; }
             public class ListVpcPublishedRouteEntriesResponseBodyRouteEntriesRoutePublishTargets : TeaModel {
                 /// <summary>
-                /// <para>The publish status of the route entry in the publish target.</para>
+                /// <para>The publication status of the route at the publication target.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Published</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string PublishStatus { get; set; }
 
                 /// <summary>
-                /// <para>The instance ID of the route publish target.</para>
+                /// <para>The instance ID of the route publication target.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ecr-xvuqdfma6x57ei****</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string PublishTargetInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The route publish target.</para>
+                /// <para>The route publication target.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ECR</para>

@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class CreateRouterInterfaceRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the access point to which the VBR belongs. </para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36062.html">DescribeAccessPoints</a> operation to query the access point ID of the Express Connect circuit.  </para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36062.html">DescribeAccessPoints</a> operation to query the IDs of access points for Express Connect circuits.  </para>
         /// <remarks>
-        /// <para>This parameter is required in Express Connect circuit scenarios.</para>
+        /// <para>This parameter is required when you connect to an Express Connect circuit.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -26,9 +26,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b> (default): Automatic payment is disabled. After an order is generated, go to the Order Center to complete the payment.   </para>
+        /// <item><description><para><b>false</b> (default): disables automatic payment. You must complete the payment in the User Center after the order is generated.   </para>
         /// </description></item>
-        /// <item><description><para><b>true</b>: Automatic payment is enabled. The order is automatically paid.</para>
+        /// <item><description><para><b>true</b>: enables automatic payment. The system automatically pays the order.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
@@ -45,8 +45,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): Auto-renewal is disabled.</description></item>
-        /// <item><description><b>true</b>: Auto-renewal is enabled.</description></item>
+        /// <item><description><b>false</b> (default): no.</description></item>
+        /// <item><description><b>true</b>: yes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,9 +58,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request. </para>
-        /// <para>The client generates the value of this parameter. Ensure that the value is unique among different requests. </para>
+        /// <para>You can use the client to generate the value, but you must ensure that it is unique among different requests. </para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The description of the router interface.  </para>
-        /// <para>The description must be 2 to 256 characters in length and must start with a letter or a Chinese character. It cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description must be 2 to 256 characters in length, and must start with a letter or a Chinese character. It cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abcabc</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the router interface on the VBR is created in fast link mode. Fast link mode allows the router interfaces on the VBR and VPC to be automatically connected after they are created. Valid values:</para>
+        /// <para>Specifies whether the router interface is an uplink router interface of a VBR created in fast connection mode. Fast connection mode allows the router interfaces at the VBR and VPC ends to be automatically connected after they are created. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: yes.</description></item>
         /// <item><description><b>false</b> (default): no.</description></item>
@@ -90,9 +90,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This parameter takes effect only when <b>RouterType</b> is set to <b>VBR</b> and <b>OppositeRouterType</b> is set to <b>VRouter</b>.</description></item>
-        /// <item><description>When <b>FastLinkMode</b> is set to <b>true</b>, <b>Role</b> must be set to <b>InitiatingSide</b>, and <b>AccessPointId</b>, <b>OppositeRouterType</b>, <b>OppositeRouterId</b>, and <b>OppositeInterfaceOwnerId</b> are required.</description></item>
         /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>When <b>FastLinkMode</b> is set to <b>true</b>, <b>Role</b> must be set to <b>InitiatingSide</b>, and <b>AccessPointId</b>, <b>OppositeRouterType</b>, <b>OppsiteRouterId</b>, and <b>OppositeInterfaceOwnerId</b> are required.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -102,9 +104,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? FastLinkMode { get; set; }
 
         /// <summary>
-        /// <para>The source IP address for health checks. The IP address must be an unused IP address in the local VPC. </para>
+        /// <para>The source IP address for health checks. It must be an unused IP address in the local VPC. </para>
         /// <remarks>
-        /// <para>You can specify this parameter in Express Connect circuit scenarios.</para>
+        /// <para>You can specify this parameter when you connect to an Express Connect circuit.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -145,7 +147,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The name of the router interface.  </para>
-        /// <para>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</para>
+        /// <para>The name must be 2 to 128 characters in length, and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -157,7 +159,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The ID of the access point to which the peer belongs.</para>
         /// <remarks>
-        /// <para>This parameter is required when the peer router interface is on a VBR. This parameter cannot be modified after the router interface is created.</para>
+        /// <para>This parameter is required when the peer router interface belongs to a VBR. It cannot be modified after the router interface is created.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -235,9 +237,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The subscription duration. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para>If you select monthly billing, the valid values are <b>1</b> to <b>9</b>.</para>
+        /// <item><description><para>If you select monthly subscription, valid values are <b>1</b> to <b>9</b>.</para>
         /// </description></item>
-        /// <item><description><para>If you select yearly billing, the valid values are <b>1</b> to <b>3</b>.</para>
+        /// <item><description><para>If you select yearly subscription, valid values are <b>1</b> to <b>3</b>.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
@@ -252,11 +254,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The billing cycle of the subscription. Valid values:</para>
+        /// <para>The billing cycle of the subscription. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para><b>Month</b> (default): monthly billing.</para>
+        /// <item><description><para><b>Month</b> (default): monthly subscription.</para>
         /// </description></item>
-        /// <item><description><para><b>Year</b>: yearly billing.</para>
+        /// <item><description><para><b>Year</b>: yearly subscription.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
@@ -272,7 +274,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the router interface.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -283,7 +285,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// <para>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/2381067.html">What is a resource group?</a>.</para>
         /// 
         /// <b>Example:</b>
@@ -347,35 +349,35 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouterType { get; set; }
 
         /// <summary>
-        /// <para>The specification of the router interface. The available specifications and corresponding bandwidth values are as follows: </para>
+        /// <para>The specification of the router interface. Valid values and their corresponding bandwidths: </para>
         /// <list type="bullet">
-        /// <item><description><para><b>Mini.2</b>: 2 Mbps   </para>
+        /// <item><description><para><b>Mini.2</b>: 2 Mbit/s   </para>
         /// </description></item>
-        /// <item><description><para><b>Mini.5</b>: 5 Mbps   </para>
+        /// <item><description><para><b>Mini.5</b>: 5 Mbit/s   </para>
         /// </description></item>
-        /// <item><description><para><b>Small.1</b>: 10 Mbps   </para>
+        /// <item><description><para><b>Small.1</b>: 10 Mbit/s   </para>
         /// </description></item>
-        /// <item><description><para><b>Small.2</b>: 20 Mbps   </para>
+        /// <item><description><para><b>Small.2</b>: 20 Mbit/s   </para>
         /// </description></item>
-        /// <item><description><para><b>Small.5</b>: 50 Mbps   </para>
+        /// <item><description><para><b>Small.5</b>: 50 Mbit/s   </para>
         /// </description></item>
-        /// <item><description><para><b>Middle.1</b>: 100 Mbps   </para>
+        /// <item><description><para><b>Middle.1</b>: 100 Mbit/s   </para>
         /// </description></item>
-        /// <item><description><para><b>Middle.2</b>: 200 Mbps   </para>
+        /// <item><description><para><b>Middle.2</b>: 200 Mbit/s   </para>
         /// </description></item>
-        /// <item><description><para><b>Middle.5</b>: 500 Mbps   </para>
+        /// <item><description><para><b>Middle.5</b>: 500 Mbit/s   </para>
         /// </description></item>
-        /// <item><description><para><b>Large.1</b>: 1000 Mbps   </para>
+        /// <item><description><para><b>Large.1</b>: 1000 Mbit/s   </para>
         /// </description></item>
-        /// <item><description><para><b>Large.2</b>: 2000 Mbps   </para>
+        /// <item><description><para><b>Large.2</b>: 2000 Mbit/s   </para>
         /// </description></item>
-        /// <item><description><para><b>Large.5</b>: 5000 Mbps   </para>
+        /// <item><description><para><b>Large.5</b>: 5000 Mbit/s   </para>
         /// </description></item>
-        /// <item><description><para><b>Xlarge.1</b>: 10000 Mbps</para>
+        /// <item><description><para><b>Xlarge.1</b>: 10000 Mbit/s</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>When <b>Role</b> is set to <b>AcceptingSide</b> (accepter), set <b>Spec</b> to <b>Negative</b>. No specification is required when you create an accepter router interface.</para>
+        /// <para>When <b>Role</b> is set to <b>AcceptingSide</b> (accepter), set <b>Spec</b> to <b>Negative</b>. This means that specifications are not required when you create an accepter router interface.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -394,8 +396,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<CreateRouterInterfaceRequestTags> Tags { get; set; }
         public class CreateRouterInterfaceRequestTags : TeaModel {
             /// <summary>
-            /// <para>The tag key of the resource. You must specify at least 1 and can specify at most 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>A tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the resource. You must specify at least one tag key and can specify up to 20 tag keys. This value cannot be an empty string.</para>
+            /// <para>A tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -405,8 +407,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the resource. You can specify at most 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the resource. You can specify up to 20 tag values. This value can be an empty string.</para>
+            /// <para>A tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>

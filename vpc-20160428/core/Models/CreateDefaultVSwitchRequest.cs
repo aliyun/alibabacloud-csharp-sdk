@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class CreateDefaultVSwitchRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the default vSwitch that you want to create.</para>
+        /// <para>The region ID of the default vSwitch to be created.</para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the default vSwitch that you want to create.</para>
+        /// <para>The zone ID of the default vSwitch to be created.</para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query zone IDs.</para>
         /// <para>This parameter is required.</para>
         /// 

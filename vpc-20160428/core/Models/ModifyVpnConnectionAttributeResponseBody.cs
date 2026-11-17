@@ -11,6 +11,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class ModifyVpnConnectionAttributeResponseBody : TeaModel {
         /// <summary>
         /// <para>The timestamp when the IPsec-VPN connection was created. Unit: milliseconds.</para>
+        /// <para>The timestamp is in UNIX format, which indicates the total number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1492753817000</para>
@@ -21,6 +22,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The ID of the customer gateway associated with the IPsec-VPN connection.</para>
+        /// <para>This parameter is returned only for IPsec-VPN connections in single-tunnel mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cgw-p0w2jemrcj5u61un8****</para>
@@ -40,11 +42,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the IPsec-VPN connection configuration takes effect immediately.</para>
+        /// <para>Indicates whether the configuration of the IPsec-VPN connection takes effect immediately. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The system immediately initiates IPsec protocol negotiation after the configuration is complete.</para>
+        /// <item><description><para><b>true</b>: Yes. The system immediately initiates IPsec negotiations after the configuration is completed.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: The system initiates IPsec protocol negotiation only when traffic enters.</para>
+        /// <item><description><para><b>false</b>: No. The system initiates IPsec negotiations only when traffic enters the connection.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -56,11 +58,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? EffectImmediately { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether Dead Peer Detection (DPD) is enabled for the IPsec-VPN connection.</para>
+        /// <para>Indicates whether dead peer detection (DPD) is enabled for the IPsec-VPN connection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b>: Not enabled.</para>
+        /// <item><description><para><b>false</b>: DPD is disabled.</para>
         /// </description></item>
-        /// <item><description><para><b>true</b>: Enabled.</para>
+        /// <item><description><para><b>true</b>: DPD is enabled.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is returned only for IPsec-VPN connections in single-tunnel mode.</para>
@@ -74,6 +76,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>Indicates whether NAT traversal is enabled for the IPsec-VPN connection. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>false</b>: NAT traversal is disabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: NAT traversal is enabled.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>This parameter is returned only for IPsec-VPN connections in single-tunnel mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -83,12 +92,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? EnableNatTraversal { get; set; }
 
         /// <summary>
-        /// <para>The BGP status of the tunnel.</para>
+        /// <para>The enabling status of BGP for the tunnel. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enabled.</description></item>
-        /// <item><description><b>false</b>: disabled.</description></item>
+        /// <item><description><b>true</b>: BGP is enabled.</description></item>
+        /// <item><description><b>false</b>: BGP is disabled.</description></item>
         /// </list>
-        /// <para>This parameter is returned only for IPsec-VPN connections in dual-tunnel mode.</para>
+        /// <para>This parameter is returned only for IPsec-VPN connections in the dual-tunnel pattern.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -98,14 +107,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? EnableTunnelsBgp { get; set; }
 
         /// <summary>
-        /// <para>The configuration of Phase 1 negotiation.</para>
+        /// <para>The Phase 1 negotiation configuration.</para>
+        /// <para>The parameters in the <b>IkeConfig</b> array are returned only for IPsec-VPN connections in single-tunnel mode.</para>
         /// </summary>
         [NameInMap("IkeConfig")]
         [Validation(Required=false)]
         public ModifyVpnConnectionAttributeResponseBodyIkeConfig IkeConfig { get; set; }
         public class ModifyVpnConnectionAttributeResponseBodyIkeConfig : TeaModel {
             /// <summary>
-            /// <para>The authentication algorithm of the IKE phase.</para>
+            /// <para>The authentication algorithm for Phase 1 negotiations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sha1</para>
@@ -115,7 +125,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string IkeAuthAlg { get; set; }
 
             /// <summary>
-            /// <para>The encryption algorithm of the IKE phase.</para>
+            /// <para>The encryption algorithm for Phase 1 negotiations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aes</para>
@@ -125,7 +135,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string IkeEncAlg { get; set; }
 
             /// <summary>
-            /// <para>The lifetime of the IKE phase. Unit: seconds.</para>
+            /// <para>The lifetime of the IKE SA. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>86400</para>
@@ -135,10 +145,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public long? IkeLifetime { get; set; }
 
             /// <summary>
-            /// <para>The IKE negotiation mode.</para>
+            /// <para>The IKE negotiation mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>main</b>: Main mode. The negotiation process is highly secure.</description></item>
-            /// <item><description><b>aggressive</b>: Aggressive mode. Negotiation is fast and has a high success rate.</description></item>
+            /// <item><description><b>main</b>: Main mode. This mode provides high security during negotiations.</description></item>
+            /// <item><description><b>aggressive</b>: Aggressive mode. This mode features faster negotiations and a higher success rate.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -149,7 +159,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string IkeMode { get; set; }
 
             /// <summary>
-            /// <para>The DH group of the IKE phase.</para>
+            /// <para>The Diffie-Hellman (DH) group for Phase 1 negotiations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>group2</para>
@@ -159,12 +169,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string IkePfs { get; set; }
 
             /// <summary>
-            /// <para>The IKE protocol version.</para>
+            /// <para>The IKE version. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>ikev1</b></description></item>
             /// <item><description><b>ikev2</b></description></item>
             /// </list>
-            /// <para>Compared with IKEv1, IKEv2 simplifies the SA negotiation process and provides better support for multi-CIDR-block scenarios.</para>
+            /// <para>Compared with IKEv1, IKEv2 simplifies the SA negotiation process and provides better support for multi-CIDR block scenarios.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ikev1</para>
@@ -174,7 +184,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string IkeVersion { get; set; }
 
             /// <summary>
-            /// <para>The identifier on the VPC side. FQDN and IP formats are supported. The default value is the IP address of the selected VPN gateway.</para>
+            /// <para>The identifier of the VPC. Both FQDNs and IP addresses are supported. By default, this parameter is set to the IP address of the selected VPN gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>116.64.XX.XX</para>
@@ -194,7 +204,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Psk { get; set; }
 
             /// <summary>
-            /// <para>The identifier on the on-premises data center side. FQDN and IP formats are supported. The default value is the IP address of the selected customer gateway.</para>
+            /// <para>The identifier of the on-premises data center. Both fully qualified domain names (FQDNs) and IP addresses are supported. By default, this parameter is set to the IP address of the selected customer gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>139.18.XX.XX</para>
@@ -206,14 +216,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The configuration of Phase 2 negotiation.</para>
+        /// <para>The Phase 2 negotiation configuration.</para>
+        /// <para>The parameters in the <b>IpsecConfig</b> array are returned only for IPsec-VPN connections in single-tunnel mode.</para>
         /// </summary>
         [NameInMap("IpsecConfig")]
         [Validation(Required=false)]
         public ModifyVpnConnectionAttributeResponseBodyIpsecConfig IpsecConfig { get; set; }
         public class ModifyVpnConnectionAttributeResponseBodyIpsecConfig : TeaModel {
             /// <summary>
-            /// <para>The authentication algorithm of the IPsec phase.</para>
+            /// <para>The authentication algorithm for Phase 2 negotiations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sha1</para>
@@ -223,7 +234,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string IpsecAuthAlg { get; set; }
 
             /// <summary>
-            /// <para>The encryption algorithm of the IPsec phase.</para>
+            /// <para>The encryption algorithm for Phase 2 negotiations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aes</para>
@@ -233,7 +244,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string IpsecEncAlg { get; set; }
 
             /// <summary>
-            /// <para>The lifetime of the IPsec phase. Unit: seconds.</para>
+            /// <para>The lifetime of the IPsec SA. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>86400</para>
@@ -243,7 +254,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public long? IpsecLifetime { get; set; }
 
             /// <summary>
-            /// <para>The DH group of the IPsec phase.</para>
+            /// <para>The DH group for Phase 2 negotiations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>group2</para>
@@ -275,7 +286,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The CIDR block on the on-premises data center side.</para>
+        /// <para>The CIDR block of the on-premises data center.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.2.1.0/24,10.2.2.0/24</para>
@@ -296,6 +307,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The ID of the resource group to which the IPsec-VPN connection belongs.</para>
+        /// <para>The IPsec-VPN connection belongs to the same resource group as its associated VPN gateway. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzs372yg****</para>
@@ -444,7 +456,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The health check configuration.</para>
-        /// <para>Parameters in the <b>VcoHealthCheck</b> array are returned only for IPsec-VPN connections in single-tunnel mode.</para>
+        /// <para>The parameters in the <b>VcoHealthCheck</b> array are returned only for IPsec-VPN connections in single-tunnel mode.</para>
         /// </summary>
         [NameInMap("VcoHealthCheck")]
         [Validation(Required=false)]
@@ -461,11 +473,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Dip { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the health check feature is enabled for the IPsec-VPN connection.</para>
+            /// <para>Indicates whether the health check feature is enabled for the IPsec-VPN connection. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: Enabled.</para>
+            /// <item><description><para><b>true</b>: The health check feature is enabled.</para>
             /// </description></item>
-            /// <item><description><para><b>false</b>: Not enabled.</para>
+            /// <item><description><para><b>false</b>: The health check feature is disabled.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -477,7 +489,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Enable { get; set; }
 
             /// <summary>
-            /// <para>The retry interval of the health check. Unit: seconds.</para>
+            /// <para>The retry interval for health checks. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -487,7 +499,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public int? Interval { get; set; }
 
             /// <summary>
-            /// <para>The number of retry packets sent for the health check.</para>
+            /// <para>The number of health check retries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -510,13 +522,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The BGP configuration.</para>
+        /// <para>The parameters in the <b>VpnBgpConfig</b> array are returned only for IPsec-VPN connections in single-tunnel mode.</para>
         /// </summary>
         [NameInMap("VpnBgpConfig")]
         [Validation(Required=false)]
         public ModifyVpnConnectionAttributeResponseBodyVpnBgpConfig VpnBgpConfig { get; set; }
         public class ModifyVpnConnectionAttributeResponseBodyVpnBgpConfig : TeaModel {
             /// <summary>
-            /// <para>The enabling status of BGP.</para>
+            /// <para>The enabling status of BGP. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>true</b>: BGP is enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: BGP is disabled.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -536,7 +555,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public int? LocalAsn { get; set; }
 
             /// <summary>
-            /// <para>The BGP address on the Alibaba Cloud side.</para>
+            /// <para>The BGP IP address on the Alibaba Cloud side.</para>
             /// 
             /// <b>Example:</b>
             /// <para>169.254.11.1</para>
@@ -546,7 +565,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string LocalBgpIp { get; set; }
 
             /// <summary>
-            /// <para>The autonomous system number on the on-premises data center side.</para>
+            /// <para>The autonomous system number (ASN) of the on-premises data center.</para>
             /// 
             /// <b>Example:</b>
             /// <para>65531</para>
@@ -556,7 +575,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public int? PeerAsn { get; set; }
 
             /// <summary>
-            /// <para>The BGP address on the on-premises data center side.</para>
+            /// <para>The BGP IP address on the on-premises data center side.</para>
             /// 
             /// <b>Example:</b>
             /// <para>169.254.11.2</para>
@@ -566,7 +585,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string PeerBgpIp { get; set; }
 
             /// <summary>
-            /// <para>The BGP negotiation status.</para>
+            /// <para>The BGP negotiation status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>success</b>: Normal.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Abnormal.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -598,7 +623,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VpnConnectionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPN gateway instance.</para>
+        /// <para>The ID of the VPN gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpn-bp1q8bgx4xnkm2ogj****</para>

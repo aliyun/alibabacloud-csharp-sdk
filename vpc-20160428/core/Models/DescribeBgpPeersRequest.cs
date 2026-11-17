@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeBgpPeersRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the BGP group to which the BGP peer that you want to query belongs.</para>
+        /// <para>The ID of the BGP group to which the BGP peer belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bgpg-2zev8h2wo414sfh****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string BgpGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the BGP peer that you want to query.</para>
+        /// <para>The ID of the BGP peer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bgp-2ze3un0ft1jd1xd****</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the list. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paging query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -74,8 +74,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the BGP group to which the BGP peer that you want to query belongs. </para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>The region ID of the BGP group to which the BGP peer belongs. </para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Virtual Border Router (VBR) associated with the BGP peer that you want to query.</para>
+        /// <para>The ID of the Virtual Border Router (VBR) associated with the BGP peer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vbr-2zecmmvg5gvu8i4te****</para>

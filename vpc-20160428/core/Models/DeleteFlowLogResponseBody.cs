@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DeleteFlowLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F7DDDC17-FA06-4AC2-8F35-59D2470FCFC1</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The call is successful.</description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
         /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 

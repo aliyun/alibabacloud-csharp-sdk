@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of EPs that can be created.</para>
+        /// <para>The number of endpoints that can be created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

@@ -10,10 +10,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AssociateRouteTableWithGatewayRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>The client generates the value. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among multiple requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may vary for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -26,8 +25,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run without associating the gateway route table with the IPv4 gateway instance. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and sends the request. If the check succeeds, an HTTP 2xx status code is returned and the gateway route table is associated with the IPv4 gateway instance.</description></item>
+        /// <item><description><b>true</b>: performs a dry run and does not associate the gateway route table with the IPv4 gateway. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the gateway route table is associated with the IPv4 gateway.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,8 +37,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the IPv4 gateway to associate.</para>
-        /// <para>The IPv4 gateway instance to associate must be in the <b>Activated</b> state.</para>
+        /// <para>The instance ID of the IPv4 gateway to be associated.</para>
+        /// <para>The IPv4 gateway instance must be in the <b>Activated</b> state.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +49,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The type of the gateway instance to associate.</para>
+        /// <para>The type of the gateway to be associated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ipv4Gateway</para>
@@ -68,8 +67,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the gateway route table and IPv4 gateway instance to associate.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>The region ID of the gateway route table and the IPv4 gateway. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -88,7 +86,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the gateway route table to associate.</para>
+        /// <para>The ID of the gateway route table to be associated.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

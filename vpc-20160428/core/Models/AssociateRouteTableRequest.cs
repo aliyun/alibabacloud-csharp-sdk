@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class AssociateRouteTableRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
         /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
@@ -32,8 +32,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the VPC to which the route table that you want to associate with a vSwitch belongs.</para>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</para>
+        /// <para>The region ID of the VPC to which the route table to be associated with the vSwitch belongs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route table that you want to associate with a vSwitch.</para>
+        /// <para>The ID of the route table to be associated with the vSwitch.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouteTableId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch with which you want to associate the route table.</para>
+        /// <para>The ID of the vSwitch to be associated with the route table.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class ListNatIpsRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among multiple requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses <b>RequestId</b> as <b>ClientToken</b>. The value of <b>RequestId</b> may differ for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to only precheck the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>true</b>: The system prechecks the request without querying the NAT IP addresses. The system checks whether required parameters are specified, the request format is valid, and the service limits are met. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): The system sends a normal request. If the request passes the precheck, the system returns an HTTP 2xx status code and performs the operation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,13 +38,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The origin of the NAT IP address to query. Valid values:</para>
+        /// <para>The origin of the NAT IP addresses to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>prefix: a NAT IP address that belongs to an IP prefix.</para>
+        /// <item><description><para>prefix: NAT IP addresses that belong to an IP prefix.</para>
         /// </description></item>
-        /// <item><description><para>cidr: a standalone NAT IP address that does not belong to any IP prefix.</para>
+        /// <item><description><para>cidr: Standalone NAT IP addresses that do not belong to any IP prefix.</para>
         /// </description></item>
-        /// <item><description><para>Empty: queries all NAT IP addresses.</para>
+        /// <item><description><para>Empty: All NAT IP addresses.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Ipv4Prefix { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NatIpCidr { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the NAT IP address to query. Valid values of <b>N</b>: <b>1</b> to <b>20</b>.</para>
+        /// <para>The instance IDs of the NAT IP addresses to query. Valid values of <b>N</b>: <b>1</b> to <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpcnatip-gw8a863sut1zijxh0****</para>
@@ -119,9 +119,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The status of the NAT IP addresses to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Available</b>: available.</description></item>
-        /// <item><description><b>Deleting</b>: being deleted.</description></item>
-        /// <item><description><b>Creating</b>: being created.</description></item>
+        /// <item><description><b>Available</b>: Available.</description></item>
+        /// <item><description><b>Deleting</b>: Deleting.</description></item>
+        /// <item><description><b>Creating</b>: Creating.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -132,10 +132,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NatIpStatus { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token that is used to start the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>You do not need to specify this parameter for the first request or if no subsequent query exists.</description></item>
-        /// <item><description>If a next query exists, set the value to the NextToken value returned in the previous API call.</description></item>
+        /// <item><description>If this is the first query or no next query is to be sent, ignore this parameter.</description></item>
+        /// <item><description>If a next query is to be sent, set the value to the NextToken value returned in the last API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the NAT gateway instance to which the NAT IP addresses belong.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

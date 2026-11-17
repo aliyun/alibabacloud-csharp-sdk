@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string QueueId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4CF20CC7-D1FC-425B-A15B-DF7C8E2131A7</para>

@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The page number of the list.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query.</para>
+        /// <para>The number of entries per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

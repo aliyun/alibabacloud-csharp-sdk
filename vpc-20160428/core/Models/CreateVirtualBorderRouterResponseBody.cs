@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the VBR.</para>
+        /// <para>The VBR instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vbr-bp1jcg5cmxjbl9xgc****</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Count { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paginated queries. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries to return per page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,11 +30,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Valid values:</para>
+        /// <para>The token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Leave this parameter empty for the first query or if no subsequent query is required.</para>
+        /// <item><description><para>Leave empty for the first query or when no next query is required.</para>
         /// </description></item>
-        /// <item><description><para>If a next query is to be sent, set the value to the <b>NextToken</b> value returned in the previous API call.</para>
+        /// <item><description><para>If a next query is required, set the value to the <b>NextToken</b> value returned by the previous API call.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -82,11 +82,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// <para>The status of the associated instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>Normal</b>: available.</para>
+                /// <item><description><para><b>Normal</b>: The instance is available.</para>
                 /// </description></item>
-                /// <item><description><para><b>Configuring</b>: being configured.</para>
+                /// <item><description><para><b>Configuring</b>: The instance is being configured.</para>
                 /// </description></item>
-                /// <item><description><para><b>Deleting</b>: being deleted.</para>
+                /// <item><description><para><b>Deleting</b>: The instance is being deleted.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string InstanceStatus { get; set; }
 
                 /// <summary>
-                /// <para>The type of the associated instance. Valid values: <b>PHYSICALCONNECTION</b>: Express Connect circuit.</para>
+                /// <para>The type of the associated instance. Valid value: <b>PHYSICALCONNECTION</b> (Express Connect circuit).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PHYSICALCONNECTION</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The description of the QoS policy. </para>
-            /// <para>The description is <b>0</b> to <b>256</b> characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The description must be <b>0</b> to <b>256</b> characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qos-test</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string QosDescription { get; set; }
 
             /// <summary>
-            /// <para>The QoS policy ID.</para>
+            /// <para>The ID of the QoS policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qos-pksbqfmotl5hzq****</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The name of the QoS policy. </para>
-            /// <para>The name is <b>0</b> to <b>128</b> characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The name must be <b>0</b> to <b>128</b> characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qos-test</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <list type="bullet">
                 /// <item><description><para>When the QoS queue type is <b>Medium</b>, this parameter is required. Valid values: <b>1</b> to <b>100</b>.</para>
                 /// </description></item>
-                /// <item><description><para>When the QoS queue type is <b>Default</b>, this parameter is set to &quot;-&quot;.</para>
+                /// <item><description><para>When the QoS queue type is <b>Default</b>, the value of this parameter is &quot;-&quot;.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string BandwidthPercent { get; set; }
 
                 /// <summary>
-                /// <para>The QoS policy ID.</para>
+                /// <para>The ID of the QoS policy.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qos-pksbqfmotl5hzq****</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 /// <summary>
                 /// <para>The description of the QoS queue.</para>
-                /// <para>The description is <b>0</b> to <b>256</b> characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+                /// <para>The description must be <b>0</b> to <b>256</b> characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qos-queue-test</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string QueueDescription { get; set; }
 
                 /// <summary>
-                /// <para>The QoS queue ID.</para>
+                /// <para>The ID of the QoS queue.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qos-queue-9nyx2u7n71s2rc****</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 /// <summary>
                 /// <para>The name of the QoS queue.</para>
-                /// <para>The name is <b>0</b> to <b>128</b> characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+                /// <para>The name must be <b>0</b> to <b>128</b> characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qos-queue-test</para>
@@ -217,17 +217,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string QueueName { get; set; }
 
                 /// <summary>
-                /// <para>The QoS queue type. Valid values:</para>
+                /// <para>The type of the QoS queue. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>High</b>: high-priority queue.</para>
+                /// <item><description><para><b>High</b>: High-priority queue.</para>
                 /// </description></item>
-                /// <item><description><para><b>Medium</b>: medium-priority queue.</para>
+                /// <item><description><para><b>Medium</b>: Medium-priority queue.</para>
                 /// </description></item>
-                /// <item><description><para><b>Default</b>: default-priority queue.</para>
+                /// <item><description><para><b>Default</b>: Default-priority queue.</para>
                 /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>The default-priority queue cannot be created.</para>
+                /// <para>You cannot create a default-priority queue.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -240,11 +240,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// <para>The status of the QoS queue. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>Normal</b>: available.</para>
+                /// <item><description><para><b>Normal</b>: The queue is available.</para>
                 /// </description></item>
-                /// <item><description><para><b>Configuring</b>: being configured.</para>
+                /// <item><description><para><b>Configuring</b>: The queue is being configured.</para>
                 /// </description></item>
-                /// <item><description><para><b>Deleting</b>: being deleted.</para>
+                /// <item><description><para><b>Deleting</b>: The queue is being deleted.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// <para>The resource group ID.</para>
+            /// <para>The ID of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-acfmz7vtyl4f***</para>
@@ -270,13 +270,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The status of the QoS policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Normal</b>: available.</para>
+            /// <item><description><para><b>Normal</b>: The QoS policy is available.</para>
             /// </description></item>
-            /// <item><description><para><b>Configuring</b>: being configured.</para>
+            /// <item><description><para><b>Configuring</b>: The QoS policy is being configured.</para>
             /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>A QoS policy in the Configuring state restricts most create, update, and delete operations on QoS policies, QoS queues, and QoS rules.</para>
+            /// <para>When a QoS policy is in the Configuring state, most creation, update, and deletion operations for QoS policies, QoS queues, and QoS rules are restricted.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

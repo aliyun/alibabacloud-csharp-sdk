@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class ModifyExpressConnectTrafficQosRuleRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The destination IP address IPv4 CIDR block for traffic matching in the QoS rule.</para>
+        /// <para>The destination IPv4 CIDR block of the destination IP address that matches the traffic of the QoS rule.</para>
         /// <remarks>
-        /// <para>This parameter cannot be specified together with <b>SrcIPv6Cidr</b> or <b>DstIPv6Cidr</b>.</para>
+        /// <para>You cannot specify this parameter together with the <b>SrcIPv6Cidr</b> or <b>DstIPv6Cidr</b> parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DstCidr { get; set; }
 
         /// <summary>
-        /// <para>The destination IP address IPv6 CIDR block for traffic matching in the QoS rule.</para>
+        /// <para>The destination IPv6 CIDR block of the destination IP address that matches the traffic of the QoS rule.</para>
         /// <remarks>
-        /// <para>This parameter cannot be specified together with <b>SrcCidr</b> or <b>DstCidr</b>.</para>
+        /// <para>You cannot specify this parameter together with the <b>SrcCidr</b> or <b>DstCidr</b> parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DstIPv6Cidr { get; set; }
 
         /// <summary>
-        /// <para>The destination port range for traffic matching in the QoS rule. Valid values: <b>0</b> to <b>65535</b>. Set the value to -1 if no matching is required. Currently, only a single port number can be specified. The start and end port numbers must be the same. The destination port range is fixed for each protocol type. Valid values:</para>
+        /// <para>The destination port range that matches the traffic of the QoS rule. Valid values: <b>0</b> to <b>65535</b>. A value of -1 indicates that all ports are matched. Currently, you can specify only a single port number. The start port and end port must be the same. The destination port range is fixed for different protocol types. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>ALL</b>: -1/-1. Not editable.</para>
         /// </description></item>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DstPortRange { get; set; }
 
         /// <summary>
-        /// <para>The DSCP value for traffic matching in the QoS rule. Valid values: <b>0</b> to <b>63</b>. Set the value to -1 if no matching is required.</para>
+        /// <para>The Differentiated Services Code Point (DSCP) value that matches the traffic of the QoS rule. Valid values: <b>0</b> to <b>63</b>. A value of -1 indicates that the DSCP value is not matched.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The priority of the QoS rule. Valid values: <b>1</b> to <b>9000</b>. A larger value indicates a higher priority. The priority of each QoS rule must be unique within the same QoS policy.</para>
+        /// <para>The priority of the QoS rule. Valid values: <b>1</b> to <b>9000</b>. A greater value indicates a higher priority. The priorities of QoS rules in the same QoS policy must be unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>The QoS policy ID.</para>
+        /// <para>The ID of the QoS policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string QosId { get; set; }
 
         /// <summary>
-        /// <para>The QoS queue ID.</para>
+        /// <para>The ID of the QoS queue.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The new DSCP value to remark in the traffic. Valid values: <b>0</b> to <b>63</b>. Set the value to -1 if no remarking is required.</para>
+        /// <para>The DSCP value to which the traffic is remarked. Valid values: <b>0</b> to <b>63</b>. A value of -1 indicates that the DSCP value is not modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RuleDescription { get; set; }
 
         /// <summary>
-        /// <para>The QoS rule ID.</para>
+        /// <para>The ID of the QoS rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -247,9 +247,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The source IPv4 CIDR block for traffic matching in the QoS rule.</para>
+        /// <para>The source IPv4 CIDR block that matches the traffic of the QoS rule.</para>
         /// <remarks>
-        /// <para>This parameter cannot be specified together with <b>SrcIPv6Cidr</b> or <b>DstIPv6Cidr</b>.</para>
+        /// <para>You cannot specify this parameter together with the <b>SrcIPv6Cidr</b> or <b>DstIPv6Cidr</b> parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -260,9 +260,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string SrcCidr { get; set; }
 
         /// <summary>
-        /// <para>The source IPv6 CIDR block for traffic matching in the QoS rule.</para>
+        /// <para>The source IPv6 CIDR block that matches the traffic of the QoS rule.</para>
         /// <remarks>
-        /// <para>This parameter cannot be specified together with <b>SrcCidr</b> or <b>DstCidr</b>.</para>
+        /// <para>You cannot specify this parameter together with the <b>SrcCidr</b> or <b>DstCidr</b> parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string SrcIPv6Cidr { get; set; }
 
         /// <summary>
-        /// <para>The source port range for traffic matching in the QoS rule. Valid values: <b>0</b> to <b>65535</b>. Set the value to -1 if no matching is required. Currently, only a single port number can be specified. The start and end port numbers must be the same.</para>
+        /// <para>The source port range that matches the traffic of the QoS rule. Valid values: <b>0</b> to <b>65535</b>. A value of -1 indicates that all ports are matched. Currently, you can specify only a single port number. The start port and end port must be the same.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-1/-1</para>

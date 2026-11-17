@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string NatIpCidrName { get; set; }
 
             /// <summary>
-            /// <para>The status of the NAT CIDR block. The value is <b>Available</b>, which indicates that the NAT CIDR block is available.</para>
+            /// <para>The status of the NAT CIDR block. Valid values: <b>Available</b>, which indicates that the NAT CIDR block is active.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Available</para>
@@ -103,10 +103,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no subsequent requests exist.</description></item>
-        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no next query is available.</description></item>
+        /// <item><description>If <b>NextToken</b> returns a value, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of NAT CIDR block entries returned.</para>
+        /// <para>The total number of NAT CIDR blocks returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

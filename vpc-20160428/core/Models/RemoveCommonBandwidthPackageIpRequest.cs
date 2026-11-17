@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may vary for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,15 +35,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run without performing the actual operation.</para>
+        /// <para>Specifies whether to perform a dry run without executing the actual request.</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ID of the EIP. </para>
-        /// <para>You can call the <a href="https://www.alibabacloud.com/help/en/eip/developer-reference/api-vpc-2016-04-28-describeeipaddresses-eips">DescribeEipAddresses</a> operation to query the EIP ID.</para>
+        /// <para>The ID of the public IP address instance to be removed from the Internet Shared Bandwidth instance.</para>
+        /// <list type="bullet">
+        /// <item><description>If IpType is set to <b>EIP</b>, specify the EIP ID. You can call the <a href="https://www.alibabacloud.com/help/en/eip/developer-reference/api-vpc-2016-04-28-describeeipaddresses-eips">DescribeEipAddresses</a> operation to query the EIP ID.</description></item>
+        /// <item><description>If IpType is set to <b>VpcIpv6</b>, specify the IPv6 address ID of the VPC. You can call the DescribeIpv6Addresses operation to query the IPv6 address ID.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

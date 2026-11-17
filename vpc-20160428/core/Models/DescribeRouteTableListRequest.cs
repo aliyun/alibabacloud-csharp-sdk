@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paging query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries to return per page during paging in a paged query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the VPC to which the route table belongs.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>A tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>
@@ -161,8 +161,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The ID of the VPC to which the route table belongs.</para>
-        /// <para>If you specify this parameter, the value of <b>RouterType</b> is automatically set to <b>VRouter</b>.</para>
+        /// <para>The ID of the virtual private cloud (VPC) to which the route table belongs.</para>
+        /// <para>If you specify this parameter, the value of the <b>RouterType</b> parameter is automatically set to <b>VRouter</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp15zckdt37pq72****</para>

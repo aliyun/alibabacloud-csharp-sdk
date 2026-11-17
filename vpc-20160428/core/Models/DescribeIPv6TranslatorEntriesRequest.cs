@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to enable access control. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: enabled.</description></item>
-        /// <item><description><b>off</b>: disabled.</description></item>
+        /// <item><description><b>on</b>: Enabled.</description></item>
+        /// <item><description><b>off</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,9 +36,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The type of the access control policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>white</b>: allows the IPv6 addresses in the access control policy group to access backend services.</para>
+        /// <item><description><para><b>white</b>: Allows IPv6 addresses in the access control policy group to access the backend service.</para>
         /// </description></item>
-        /// <item><description><para><b>black</b>: denies the IPv6 addresses in the access control policy group from accessing backend services.</para>
+        /// <item><description><para><b>black</b>: Denies IPv6 addresses in the access control policy group from accessing the backend service.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AclType { get; set; }
 
         /// <summary>
-        /// <para>The IPv6 address allocated by the IPv6 Translation Service instance.</para>
+        /// <para>The IPv6 address assigned to the IPv6 Translation Service instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2400:3200:1600::XX</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AllocateIpv6Addr { get; set; }
 
         /// <summary>
-        /// <para>The port used by the IPv6 address allocated by the IPv6 Translation Service instance.</para>
+        /// <para>The port used by the IPv6 address assigned to the IPv6 Translation Service instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</para>
+        /// <para>You can generate the parameter value from your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The name of the IPv6 Translation mapping entry.</para>
+        /// <para>The name of the IPv6 translation mapping entry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>entryname</para>
@@ -111,9 +111,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string EntryName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the IPv6 Translation mapping entry to query. </para>
+        /// <para>The ID of the IPv6 translation mapping entry to query. </para>
         /// <remarks>
-        /// <para>If both <b>Ipv6TranslatorId</b> and <b>Ipv6TranslatorEntryId</b> are empty, all IPv6 Translation mapping entries are returned. If only <b>Ipv6TranslatorEntryId</b> is empty, all IPv6 Translation mapping entries under the current IPv6 Translation Service instance are returned.</para>
+        /// <para>If both the <b>Ipv6TranslatorId</b> and <b>Ipv6TranslatorEntryId</b> parameters are left empty, all IPv6 translation mapping entries are returned. If only the <b>Ipv6TranslatorEntryId</b> parameter is left empty, all IPv6 translation mapping entries under the current IPv6 Translation Service instance are returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number of the list. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page for a paged query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region of the IPv6 Translation Service instance. You can call the <b>DescribeRegions</b> operation to query region IDs.</para>
+        /// <para>The region ID of the IPv6 Translation Service instance. You can call the <b>DescribeRegions</b> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

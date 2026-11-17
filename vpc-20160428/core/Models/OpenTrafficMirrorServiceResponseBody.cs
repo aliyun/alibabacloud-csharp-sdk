@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The message returned after the traffic mirroring feature is activated.</para>
+        /// <para>The message returned when the traffic mirroring feature is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>

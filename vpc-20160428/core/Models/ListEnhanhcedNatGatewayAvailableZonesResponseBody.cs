@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of zones.</para>
+        /// <para>The zones.</para>
         /// </summary>
         [NameInMap("Zones")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <para>The zone name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>中东1 可用区A</para>
+            /// <para>Middle East 1 Zone A</para>
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]

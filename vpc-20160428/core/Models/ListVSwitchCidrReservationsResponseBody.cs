@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListVSwitchCidrReservationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Valid values:</para>
+        /// <para>The token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no subsequent query exists.</description></item>
-        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no next query is required.</description></item>
+        /// <item><description>If <b>NextToken</b> returns a value, the value indicates the token used to start the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public int? AssignedCidrCount { get; set; }
 
             /// <summary>
-            /// <para>The number of active prefix CIDR blocks in the reserved CIDR block for a vSwitch.</para>
+            /// <para>The number of available prefix CIDR blocks in the reserved CIDR block for a vSwitch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public int? AvailableCidrCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the reserved CIDR block was created.</para>
+            /// <para>The time when the reserved CIDR block was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format and is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-03-14T10:02:37Z</para>
@@ -107,10 +107,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The status of the reserved CIDR block. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Assigning</b>: being allocated.</description></item>
-            /// <item><description><b>Assigned</b>: allocated.</description></item>
-            /// <item><description><b>Releasing</b>: being released.</description></item>
-            /// <item><description><b>Released</b>: released.</description></item>
+            /// <item><description><b>Assigning</b>: The CIDR block is being allocated.</description></item>
+            /// <item><description><b>Assigned</b>: The CIDR block is allocated.</description></item>
+            /// <item><description><b>Releasing</b>: The CIDR block is being released.</description></item>
+            /// <item><description><b>Released</b>: The CIDR block is released.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC to which the reserved CIDR block for a vSwitch belongs.</para>
+            /// <para>The VPC to which the reserved CIDR block for a vSwitch belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp1wdz2pdhgurz1od****</para>

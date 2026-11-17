@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListVpcPublishedRouteEntriesRequest : TeaModel {
         /// <summary>
-        /// <para>The destination CIDR block of the route entry. IPv4 and IPv6 CIDR blocks are supported.</para>
+        /// <para>The destination CIDR block of the route. Both IPv4 and IPv6 CIDR blocks are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>47.100.XX.XX/16</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DestinationCidrBlock { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Valid values: <b>1</b> to <b>500</b>. Default value: <b>50</b>.</para>
+        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>500</b>. Default value: <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. Valid values:</para>
+        /// <para>The token used to retrieve the next page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next query exists.</description></item>
-        /// <item><description>If <b>NextToken</b> has a value, the value indicates the token for the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no more results are available.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value is the token used to start the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouteTableId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the route publish target.</para>
+        /// <para>The instance ID of the route publication target.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecr-dhw2xsds5****</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string TargetInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the route publish target.</para>
+        /// <para>The type of the route publication target.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class UnassociateHaVipRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <c>ClientToken</c> value can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>Specifies the client token that is used to ensure the idempotence of the request. You can use the client to generate the value, and you must make sure that the value is unique among different requests. The <c>ClientToken</c> parameter can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0c593ea1-3bea-11e9-b96b-88e9fe63****</para>
@@ -20,15 +20,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully disassociate HaVip from the ECS instance or network interface controller (NIC). Valid values:</para>
+        /// <para>Specifies whether to forcibly disassociate HaVip from the associated ECS instance or elastic network interface controller (NIC). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>True</b>: forcefully disassociates the instance.</para>
+        /// <item><description><para><b>True</b>: forcibly disassociates the instance or elastic network interface controller (NIC).</para>
         /// </description></item>
-        /// <item><description><para><b>False</b> (default): does not forcefully disassociate the instance.</para>
+        /// <item><description><para><b>False</b> (default): does not forcibly disassociate the instance or elastic network interface controller (NIC).</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If this parameter is set to <b>False</b>, the primary instance attached to the HaVip cannot be disassociated.</para>
+        /// <para>If this parameter is set to <b>False</b>, you cannot disassociate the primary instance attached to the HaVip.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string HaVipId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ECS instance or network interface controller (NIC) to disassociate HaVip from.</para>
+        /// <para>The ID of the ECS instance or the elastic network interface controller (NIC) from which the HaVip is disassociated.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,15 +61,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the instance to disassociate HaVip from. Valid values:</para>
+        /// <para>The type of the instance from which you want to disassociate HaVip. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>EcsInstance</b>: ECS instance.</para>
         /// </description></item>
-        /// <item><description><para><b>NetworkInterface</b>: network interface controller (NIC) instance.</para>
+        /// <item><description><para><b>NetworkInterface</b>: elastic network interface controller (NIC).</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is required when the instance to be disassociated is a network interface controller (NIC) instance.</para>
+        /// <para>This parameter is required when the instance to be disassociated is an elastic network interface controller (NIC).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

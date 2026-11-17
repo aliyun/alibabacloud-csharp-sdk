@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class UpdateEnhancedVpnGatewayResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether BGP route automatic propagation to the VPC is enabled. Valid values:</para>
+        /// <para>Indicates whether BGP routes are automatically propagated to the VPC. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Automatic propagation is enabled.</para>
+        /// <item><description><para><b>true</b>: automatic propagation</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: Automatic propagation is not enabled.</para>
+        /// <item><description><para><b>false</b>: no automatic propagation</para>
         /// </description></item>
         /// </list>
         /// 
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? AutoPropagate { get; set; }
 
         /// <summary>
-        /// <para>The timestamp when the enhanced VPN gateway instance was created. Unit: milliseconds.<br>
-        /// The timestamp follows the UNIX time format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The timestamp of when the enhanced VPN gateway instance was created. Unit: milliseconds. <br>
+        /// The timestamp follows the UNIX time format. It is the total number of milliseconds that have elapsed since the UNIX epoch (January 1, 1970, 00:00:00 UTC) to the time when the enhanced VPN gateway instance was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1492753580000</para>
@@ -57,11 +57,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DisasterRecoveryVSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The enabling status of the BGP feature for the enhanced VPN gateway. Valid values:<br></para>
+        /// <para>The enabling status of the BGP feature for the enhanced VPN gateway. Valid values: <br></para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: enabled.</para>
+        /// <item><description><para><b>true</b>: enabled</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: disabled.</para>
+        /// <item><description><para><b>false</b>: disabled</para>
         /// </description></item>
         /// </list>
         /// 
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The type of the enhanced VPN gateway. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enhanced.SiteToSite</b>: enhanced site-to-cloud VPN that supports only IPsec functionality.</description></item>
+        /// <item><description><b>Enhanced.SiteToSite</b>: enhanced site-to-cloud VPN, which supports only the IPsec feature</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The network type of the enhanced VPN gateway. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>public</b> (default): public VPN gateway.</description></item>
+        /// <item><description><b>public</b> (default): Internet VPN gateway</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -129,8 +129,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the enhanced VPN gateway instance belongs.<br>
-        /// You can call <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> to query resource group information.</para>
+        /// <para>The ID of the resource group to which the enhanced VPN gateway instance belongs. <br>
+        /// You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzs372yg****</para>
@@ -140,13 +140,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The status of the enhanced VPN gateway.</para>
+        /// <para>The status of the enhanced VPN gateway. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>init</b>: initializing.</description></item>
-        /// <item><description><b>provisioning</b>: preparing.</description></item>
-        /// <item><description><b>active</b>: normal.</description></item>
-        /// <item><description><b>updating</b>: updating.</description></item>
-        /// <item><description><b>deleting</b>: deleting.</description></item>
+        /// <item><description><b>init</b>: initializing</description></item>
+        /// <item><description><b>provisioning</b>: preparing</description></item>
+        /// <item><description><b>active</b>: active</description></item>
+        /// <item><description><b>updating</b>: updating</description></item>
+        /// <item><description><b>deleting</b>: deleting</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -217,9 +217,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VpnGatewayId { get; set; }
 
         /// <summary>
-        /// <para>The type of the enhanced VPN gateway.</para>
+        /// <para>The type of the enhanced VPN gateway. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Normal</b> (default): standard.</description></item>
+        /// <item><description><b>Normal</b> (default): standard</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

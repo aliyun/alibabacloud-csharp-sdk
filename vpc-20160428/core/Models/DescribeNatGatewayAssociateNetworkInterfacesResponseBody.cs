@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paginated query. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -96,11 +96,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NatGatewayId { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Valid values:</para>
+        /// <para>The token that is used for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If <b>NextToken</b> is empty, no subsequent query exists.</para>
+        /// <item><description><para>If <b>NextToken</b> is empty, no next query is to be sent.</para>
         /// </description></item>
-        /// <item><description><para>If <b>NextToken</b> is returned, the value indicates the token for the next query.</para>
+        /// <item><description><para>If <b>NextToken</b> is returned, the value indicates the token that is used for the next query.</para>
         /// </description></item>
         /// </list>
         /// 

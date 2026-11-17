@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class CreateDefaultVpcRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to enable the IPv6 CIDR block. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): does not enable the IPv6 CIDR block.</description></item>
-        /// <item><description><b>true</b>: enables the IPv6 CIDR block.</description></item>
+        /// <item><description><b>false</b> (default): disabled.</description></item>
+        /// <item><description><b>true</b>: enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the default VPC.</para>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmystnjq4****</para>

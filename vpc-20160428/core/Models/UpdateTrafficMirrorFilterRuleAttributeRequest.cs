@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class UpdateTrafficMirrorFilterRuleAttributeRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the value, and you must ensure that the value is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The destination CIDR block of the network traffic for the inbound or outbound rule to be modified.</para>
+        /// <para>The destination CIDR block of the network traffic for the inbound or outbound rule to be updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.0.0.0/24</para>
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DestinationCidrBlock { get; set; }
 
         /// <summary>
-        /// <para>The destination port range of the network traffic for the inbound or outbound rule to be modified.</para>
+        /// <para>The destination port range of the network traffic for the inbound or outbound rule to be updated.</para>
         /// <remarks>
-        /// <para>If <b>Protocol</b> is set to <b>ICMP</b>, the port range cannot be modified.</para>
+        /// <para>If <b>Protocol</b> is set to <b>ICMP</b>, you cannot update the port range.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -47,11 +47,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DestinationPortRange { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to only precheck the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// <item><description><para><b>true</b>: prechecks the request without updating the configuration of the inbound or outbound rule. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the configuration of the inbound or outbound rule is modified.</para>
+        /// <item><description><para><b>false</b> (default): sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the configuration of the inbound or outbound rule is updated.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The priority of the inbound or outbound rule to be modified. A smaller value indicates a higher priority.</para>
+        /// <para>The priority of the inbound or outbound rule to be updated. A smaller value indicates a higher priority.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The Protocol Type of the network traffic to be mirrored by the inbound or outbound rule. Valid values:</para>
+        /// <para>The protocol type of the network traffic to be mirrored by the inbound or outbound rule to be updated. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>ALL</b>: all protocols.</para>
         /// </description></item>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the traffic mirror.</para>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list. For more information about regions that support traffic mirroring, see <a href="https://help.aliyun.com/document_detail/207513.html">Traffic mirroring overview</a>.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list. For more information about the regions that support traffic mirroring, see <a href="https://help.aliyun.com/document_detail/207513.html">Traffic mirroring overview</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The collection policy of the inbound or outbound rule to be modified. Valid values:</para>
+        /// <para>The collection policy of the inbound or outbound rule to be updated. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>accept</b>: collects network traffic.</para>
         /// </description></item>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RuleAction { get; set; }
 
         /// <summary>
-        /// <para>The source CIDR block of the network traffic for the inbound or outbound rule to be modified.</para>
+        /// <para>The source CIDR block of the network traffic for the inbound or outbound rule to be updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.0.0.0/0</para>
@@ -147,9 +147,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string SourceCidrBlock { get; set; }
 
         /// <summary>
-        /// <para>The source port range of the network traffic for the inbound or outbound rule to be modified.</para>
+        /// <para>The source port range of the network traffic for the inbound or outbound rule to be updated.</para>
         /// <remarks>
-        /// <para>If <b>Protocol</b> is set to <b>ICMP</b>, the port range cannot be modified.</para>
+        /// <para>If <b>Protocol</b> is set to <b>ICMP</b>, you cannot update the port range.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string SourcePortRange { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the inbound or outbound rule of the traffic mirroring filter.</para>
+        /// <para>The instance ID of the inbound or outbound traffic mirroring rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

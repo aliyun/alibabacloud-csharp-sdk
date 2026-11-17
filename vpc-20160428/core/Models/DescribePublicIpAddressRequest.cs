@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribePublicIpAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The version of the IP protocol. Valid values:</para>
+        /// <para>The IP protocol version. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>ipv4</b> (default): IPv4.</para>
         /// </description></item>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region to query.
-        /// You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</para>
+        /// You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

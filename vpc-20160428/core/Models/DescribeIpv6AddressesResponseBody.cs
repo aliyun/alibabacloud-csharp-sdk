@@ -33,6 +33,24 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string AssociatedInstanceType { get; set; }
 
+                [NameInMap("CommonBandwidthPackageInfo")]
+                [Validation(Required=false)]
+                public DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressCommonBandwidthPackageInfo CommonBandwidthPackageInfo { get; set; }
+                public class DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressCommonBandwidthPackageInfo : TeaModel {
+                    [NameInMap("BandwidthPackageBandwidth")]
+                    [Validation(Required=false)]
+                    public long? BandwidthPackageBandwidth { get; set; }
+
+                    [NameInMap("BandwidthPackageId")]
+                    [Validation(Required=false)]
+                    public string BandwidthPackageId { get; set; }
+
+                    [NameInMap("CommonBandwidthPackageIpBandwidth")]
+                    [Validation(Required=false)]
+                    public long? CommonBandwidthPackageIpBandwidth { get; set; }
+
+                }
+
                 [NameInMap("Ipv6Address")]
                 [Validation(Required=false)]
                 public string Ipv6Address { get; set; }
@@ -166,7 +184,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging queries. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paging query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

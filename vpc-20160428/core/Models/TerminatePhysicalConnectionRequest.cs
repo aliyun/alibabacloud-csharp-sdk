@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the Express Connect circuit.</para>
+        /// <para>The instance ID of the Express Connect circuit instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

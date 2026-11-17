@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVSwitchAttributesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to only precheck the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run without querying the vSwitch configuration. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and sends the request. After the request passes the check, an HTTP 2xx status code is returned and the vSwitch configuration is queried.</description></item>
+        /// <item><description><b>true</b>: The system prechecks the request without querying the configuration information of the vSwitch. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): The system sends a normal request. If the request passes the precheck, an HTTP 2xx status code is returned and the configuration information of the vSwitch is queried.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the VPC to which the route table belongs.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch to query.</para>
+        /// <para>The ID of the vSwitch.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

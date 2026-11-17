@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class RecoverPhysicalConnectionRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run on the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run without recovering the Express Connect circuit access. The system checks the required parameters, request format, and instance status. If the check fails, the corresponding error is returned. If the check succeeds, the request ID is returned.</description></item>
-        /// <item><description><b>false</b> (default): sends the request. After the request passes the check, the Express Connect circuit access is recovered.</description></item>
+        /// <item><description><b>true</b>: performs only a dry run and does not restore the connection of the Express Connect circuit. The system checks whether the required parameters are specified, the request format is valid, and the instance status is normal. If the request fails the dry run, an error message is returned. If the request passes the dry run, the request ID is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and restores the connection of the Express Connect circuit if the request passes the dry run.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the Express Connect circuit.</para>
+        /// <para>The instance ID of the Express Connect circuit to recover.</para>
         /// <remarks>
-        /// <para>Currently, only shared Express Connect circuits can be recovered.</para>
+        /// <para>Currently, only the connection of shared Express Connect circuits can be recovered.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the Express Connect circuit.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>The client generates the value of this parameter. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</para>
+        /// <para>You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CBCE910E-D396-4944-8****</para>

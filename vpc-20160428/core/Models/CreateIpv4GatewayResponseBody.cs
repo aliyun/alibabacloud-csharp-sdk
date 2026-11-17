@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateIpv4GatewayResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the IPv4 gateway.</para>
+        /// <para>The instance ID of the created IPv4 gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ipv4gw-5tsnc6s4ogsedtp3k****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxazb4ph6aiy****</para>

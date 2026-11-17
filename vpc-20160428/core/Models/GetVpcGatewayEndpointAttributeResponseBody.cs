@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetVpcGatewayEndpointAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the gateway endpoint was created. The time is displayed in UTC in the YYYY-MM-DDThh:mm:ssZ format.</para>
+        /// <para>The time when the gateway endpoint was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-08-27T01:58:37Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string EndpointDescription { get; set; }
 
         /// <summary>
-        /// <para>The endpoint instance ID of the gateway endpoint.</para>
+        /// <para>The gateway endpoint instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpce-bp1w1dmdqjpwul0v3****</para>
@@ -52,17 +52,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The status of the gateway endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Creating</b>: being created.</para>
+        /// <item><description><para><b>Creating</b>: The gateway endpoint is being created.</para>
         /// </description></item>
-        /// <item><description><para><b>Created</b>: created and in a normal state.</para>
+        /// <item><description><para><b>Created</b>: The gateway endpoint is created and in a normal state.</para>
         /// </description></item>
-        /// <item><description><para><b>Modifying</b>: being modified.</para>
+        /// <item><description><para><b>Modifying</b>: The gateway endpoint is being modified.</para>
         /// </description></item>
-        /// <item><description><para><b>Associating</b>: being associated.</para>
+        /// <item><description><para><b>Associating</b>: The gateway endpoint is being associated.</para>
         /// </description></item>
-        /// <item><description><para><b>Dissociating</b>: being disassociated.</para>
+        /// <item><description><para><b>Dissociating</b>: The gateway endpoint is being disassociated.</para>
         /// </description></item>
-        /// <item><description><para><b>Deleting</b>: being deleted.</para>
+        /// <item><description><para><b>Deleting</b>: The gateway endpoint is being deleted.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<string> RouteTables { get; set; }
 
         /// <summary>
-        /// <para>The service name of the endpoint service.</para>
+        /// <para>The endpoint service name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>com.aliyun.cn-hangzhou.oss</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The ID of the VPC to which the gateway endpoint belongs.</para>
+        /// <para>The ID of the VPC where the gateway endpoint resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1nh86rugg01zol0****</para>

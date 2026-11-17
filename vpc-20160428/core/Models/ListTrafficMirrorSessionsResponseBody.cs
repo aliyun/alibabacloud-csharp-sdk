@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListTrafficMirrorSessionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next query exists.</description></item>
-        /// <item><description>If <b>NextToken</b> has a value, the value is the token for the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no next query is available.</description></item>
+        /// <item><description>If <b>NextToken</b> returns a value, the value is the token used to start the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>739CA01C-92EB-4C69-BCC0-280149C6F41E</para>
@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The details of traffic mirror sessions.</para>
+        /// <para>The details of the traffic mirror sessions.</para>
         /// </summary>
         [NameInMap("TrafficMirrorSessions")]
         [Validation(Required=false)]
         public List<ListTrafficMirrorSessionsResponseBodyTrafficMirrorSessions> TrafficMirrorSessions { get; set; }
         public class ListTrafficMirrorSessionsResponseBodyTrafficMirrorSessions : TeaModel {
             /// <summary>
-            /// <para>The time when the traffic mirror session was created.</para>
+            /// <para>The creation time of the traffic mirror session. The time is specified in the ISO 8601 standard in UTC. The example is accurate to the minute in the YYYY-MM-DDThh:mmZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-09-05T15:26Z</para>
@@ -61,9 +61,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the traffic mirror session is enabled. Valid values:</para>
+            /// <para>Specifies whether the traffic mirror session is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>false</b> (default): The traffic mirror session is not enabled.</para>
+            /// <item><description><para><b>false</b> (default): The traffic mirror session is disabled.</para>
             /// </description></item>
             /// <item><description><para><b>true</b>: The traffic mirror session is enabled.</para>
             /// </description></item>
@@ -77,11 +77,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The length of the original packet to be mirrored (excluding the VXLAN packet length). Default value: <b>1500</b>. Valid values: <b>64</b> to <b>8500</b>. Unit: bytes.</para>
+            /// <para>The length of the original mirrored packet, excluding the length of the VXLAN packet. Default value: <b>1500</b>. Valid values: <b>64</b> to <b>8500</b>. Unit: bytes.</para>
             /// <list type="bullet">
-            /// <item><description><para>This parameter affects the packet length received by the traffic mirror destination. For more information, see the mirrored packet length and MTU limits in <a href="https://help.aliyun.com/document_detail/207513.html">Traffic mirroring overview</a>.</para>
+            /// <item><description><para>The value of this parameter affects the length of the packet received by the traffic mirror destination. For more information, see the &quot;Mirrored packet length and MTU limits&quot; section in <a href="https://help.aliyun.com/document_detail/207513.html">Traffic mirroring overview</a>.</para>
             /// </description></item>
-            /// <item><description><para>This parameter is available only in specific regions. For more information, see the mirrored packet length parameter description in <a href="https://help.aliyun.com/document_detail/207514.html">Create and manage traffic mirrors</a>.</para>
+            /// <item><description><para>This parameter is available only in specific regions. For more information, see the description of the mirrored packet length parameter in <a href="https://help.aliyun.com/document_detail/207514.html">Create and manage traffic mirroring</a>.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group to which the traffic mirroring session belongs.</para>
+            /// <para>The ID of the resource group to which the traffic mirroring belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-bp67acfmxazb4ph****</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The tags.</para>
+            /// <para>The list of tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -155,9 +155,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The business status of the traffic mirror session. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Normal</b>: Normal.</para>
+            /// <item><description><para><b>Normal</b>: The traffic mirror session is working as expected.</para>
             /// </description></item>
-            /// <item><description><para><b>FinancialLocked</b>: financial lock.</para>
+            /// <item><description><para><b>FinancialLocked</b>: locked due to overdue payment.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -201,10 +201,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The status of the traffic mirror session. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Creating</b>: being created.</description></item>
-            /// <item><description><b>Created</b>: created.</description></item>
-            /// <item><description><b>Modifying</b>: being modified.</description></item>
-            /// <item><description><b>Deleting</b>: being deleted.</description></item>
+            /// <item><description><b>Creating</b>: The traffic mirror session is being created.</description></item>
+            /// <item><description><b>Created</b>: The traffic mirror session is created.</description></item>
+            /// <item><description><b>Modifying</b>: The traffic mirror session is being modified.</description></item>
+            /// <item><description><b>Deleting</b>: The traffic mirror session is being deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -232,11 +232,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string TrafficMirrorTargetId { get; set; }
 
             /// <summary>
-            /// <para>The traffic mirror destination type. Valid values:</para>
+            /// <para>The type of the traffic mirror destination. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>NetworkInterface</b>: network interface controller (NIC).</para>
+            /// <item><description><para><b>NetworkInterface</b>: an elastic network interface (ENI).</para>
             /// </description></item>
-            /// <item><description><para><b>SLB</b>: internal-facing SLB instance.</para>
+            /// <item><description><para><b>SLB</b>: an internal-facing SLB instance.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string TrafficMirrorTargetType { get; set; }
 
             /// <summary>
-            /// <para>The VNI used to distinguish different mirrored data.</para>
+            /// <para>The VNI that is used to distinguish different mirrored traffic.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

@@ -41,10 +41,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The tunnel mode type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>geneve</b>: Geneve type.</description></item>
+            /// <item><description><b>geneve</b>: Geneve.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>This value takes effect only when the access mode is tunnel mode.</para>
+            /// <para>This value is valid only when the access mode is set to tunnel mode.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -57,24 +57,37 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>Subscription-based Internet NAT gateways are no longer available for purchase. This parameter is no longer used.</para>
+        /// <para>Subscription Internet NAT gateways are no longer available for purchase. This parameter is no longer used.</para>
+        /// <remarks>
+        /// <para>Notice:  This parameter is deprecated.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>无效参数</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
+        /// <summary>
+        /// <para>The disaster recovery type of the NAT gateway. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>CrossAZ</b>: cross-zone disaster recovery.</description></item>
+        /// <item><description><b>SingleAZ</b>: single-zone disaster recovery.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CrossAZ</para>
+        /// </summary>
         [NameInMap("AvailabilityMode")]
         [Validation(Required=false)]
         public string AvailabilityMode { get; set; }
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests.</para>
+        /// <para>You can use the client to generate the value, but you must ensure that it is unique among different requests.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -86,7 +99,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The description of the NAT gateway.</para>
-        /// <para>The description can be empty or 2 to 256 characters in length. It cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description can be left empty or be 2 to 256 characters in length. It cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testnat</para>
@@ -96,21 +109,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Subscription-based Internet NAT gateways are no longer available for purchase. This parameter is no longer used.</para>
+        /// <para>Subscription Internet NAT gateways are no longer available for purchase. This parameter is no longer used.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无效参数</para>
+        /// <para>Invalid parameter</para>
         /// </summary>
         [NameInMap("Duration")]
         [Validation(Required=false)]
         public string Duration { get; set; }
 
         /// <summary>
-        /// <para>The EIP binding pattern of the NAT gateway. Valid values:</para>
+        /// <para>The EIP binding mode of the NAT gateway. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MULTI_BINDED</b> (default): multi-EIP network interface controller (NIC)-visible pattern.</description></item>
-        /// <item><description><b>NAT</b>: EIP normal pattern, compatible with IPv4 gateways.<remarks>
-        /// <para>When the EIP binding pattern of the NAT gateway is set to EIP normal pattern, each EIP occupies a private IP address in the vSwitch to which the NAT gateway belongs. Make sure that the vSwitch has sufficient private IP addresses. If no idle private IP addresses are available in the vSwitch, new EIPs cannot be attached. In EIP normal pattern, a maximum of 50 EIPs can be attached to the NAT gateway.</para>
+        /// <item><description><b>MULTI_BINDED</b> (default): multi-EIP NIC-visible mode.</description></item>
+        /// <item><description><b>NAT</b>: NAT mode, which is compatible with IPv4 gateways.<remarks>
+        /// <para>When the EIP binding mode of the NAT gateway is set to NAT mode, the EIP occupies a private IP address of the vSwitch to which the NAT gateway belongs. Make sure that the vSwitch has sufficient private IP addresses. If the vSwitch to which the NAT gateway belongs does not have available idle private IP addresses, you cannot bind new EIPs. When the EIP binding mode of the NAT gateway is set to NAT mode, the NAT gateway supports a maximum of 50 EIPs.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -125,8 +138,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to enable ICMP echo reply. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b> (default): Enabled.</description></item>
-        /// <item><description><b>false</b>: Disabled.</description></item>
+        /// <item><description><b>true</b> (default): enables ICMP echo reply.</description></item>
+        /// <item><description><b>false</b>: disables ICMP echo reply.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -139,7 +152,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The billing method of the NAT gateway. Valid values:</para>
         /// <para><b>PostPaid</b> (default): pay-as-you-go.</para>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/48126.html">Billing of Internet NAT gateways</a> and <a href="https://help.aliyun.com/document_detail/270913.html">Billing of VPC NAT gateways</a>.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/48126.html">Internet NAT gateway billing</a> and <a href="https://help.aliyun.com/document_detail/270913.html">VPC NAT gateway billing</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PostPaid</para>
@@ -149,7 +162,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// <para>The metering method of the NAT gateway. Valid values: <b>PayByLcu</b>: pay-by-data-transfer.</para>
+        /// <para>The metering method of the NAT gateway. Set the value to <b>PayByLcu</b>, which specifies pay-by-LCU.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PayByLcu</para>
@@ -159,7 +172,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InternetChargeType { get; set; }
 
         /// <summary>
-        /// <para>The IP prefix CIDR block used to create NAT IP addresses in batches. Specify an unassigned reserved CIDR block from the vSwitch to which the NAT gateway belongs.</para>
+        /// <para>The IP prefix CIDR block that is used to create NAT IP addresses in batches. Use an unallocated reserved CIDR block in the vSwitch to which the NAT gateway belongs.</para>
+        /// <remarks>
+        /// <para>This parameter takes effect only for VPC NAT gateways.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.0.0/28</para>
@@ -170,8 +186,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The name of the NAT gateway.</para>
-        /// <para>The name must be 2 to 128 characters in length and must start with a letter or Chinese character. It can contain digits, underscores (_), and hyphens (-).</para>
-        /// <para>If you do not specify this parameter, the system assigns a default name to the NAT gateway.</para>
+        /// <para>The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character, and can contain digits, underscores (_), and hyphens (-).</para>
+        /// <para>If you do not specify this parameter, the system generates a default name for the NAT gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fortest</para>
@@ -181,7 +197,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The private IP address occupied by the NAT gateway. Specify an unallocated IP address from the vSwitch CIDR block to which the NAT gateway belongs. If this parameter is left empty, a random IP address is allocated.</para>
+        /// <para>The private IP address that is allocated to the NAT gateway. Use an unallocated IP address in the vSwitch CIDR block of the NAT gateway. If this parameter is left empty, an IP address is randomly allocated.</para>
+        /// <remarks>
+        /// <para>This parameter takes effect only for VPC NAT gateways.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.0.2</para>
@@ -191,7 +210,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NatIp { get; set; }
 
         /// <summary>
-        /// <para>The type of the NAT gateway. Valid values: <b>Enhanced</b>: enhanced NAT gateway.</para>
+        /// <para>The type of the NAT gateway. Set the value to <b>Enhanced</b>, which specifies an enhanced NAT gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Enhanced</para>
@@ -201,7 +220,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NatType { get; set; }
 
         /// <summary>
-        /// <para>The type of NAT gateway to create. Valid values:</para>
+        /// <para>The type of the NAT gateway that you want to create. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>internet</b>: Internet NAT gateway.</para>
         /// </description></item>
@@ -225,10 +244,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Subscription-based Internet NAT gateways are no longer available for purchase. This parameter is no longer used.</para>
+        /// <para>Subscription Internet NAT gateways are no longer available for purchase. This parameter is no longer used.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无效参数</para>
+        /// <para>Invalid parameter</para>
         /// </summary>
         [NameInMap("PricingCycle")]
         [Validation(Required=false)]
@@ -237,9 +256,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to enable PrivateLink. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Enabled.</para>
+        /// <item><description><para>true: enables PrivateLink.</para>
         /// </description></item>
-        /// <item><description><para>false (default): Disabled.</para>
+        /// <item><description><para>false (default): disables PrivateLink.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -252,7 +271,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the NAT gateway.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -275,7 +294,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to enable the firewall feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): Disabled.<remarks>
+        /// <item><description><b>false</b> (default): disables the firewall feature.<remarks>
         /// <para>Notice:  This parameter is deprecated.</para>
         /// </remarks>
         /// </description></item>
@@ -290,10 +309,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? SecurityProtectionEnabled { get; set; }
 
         /// <summary>
-        /// <para>Subscription-based Internet NAT gateways are no longer available for purchase. This parameter is no longer used.</para>
+        /// <para>Subscription Internet NAT gateways are no longer available for purchase. This parameter is no longer used.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无效参数</para>
+        /// <para>Invalid parameter</para>
         /// </summary>
         [NameInMap("Spec")]
         [Validation(Required=false)]
@@ -310,7 +329,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<CreateNatGatewayRequestTag> Tag { get; set; }
         public class CreateNatGatewayRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. Specify this parameter in the Tag.N.Key format. N is the index of the tag, with valid values from 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</para>
+            /// <para>The tag key. You can use the Tag.N.Key format when you call API operations. Valid values of N: 1 to 20. If you specify this parameter, it cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -320,7 +339,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. Specify this parameter in the Tag.N.Value format. N is the index of the tag, with valid values from 1 to 20. The tag value cannot be an empty string. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</para>
+            /// <para>The tag value. You can use the Tag.N.Value format when you call API operations. Valid values of N: 1 to 20. If you specify this parameter, it cannot be an empty string. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
@@ -333,11 +352,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The ID of the vSwitch to which the NAT gateway belongs.</para>
-        /// <para>When you create a NAT gateway, you must specify the vSwitch to which the NAT gateway belongs. The system allocates an available private IP address from the vSwitch to the NAT gateway.</para>
+        /// <para>When you create a NAT gateway, you must specify the vSwitch to which the NAT gateway belongs. The system allocates an idle private IP address from the vSwitch to the NAT gateway.</para>
         /// <list type="bullet">
-        /// <item><description><para>To create a NAT gateway in an existing vSwitch, make sure that the zone to which the vSwitch belongs supports NAT gateways and the vSwitch has active IP addresses.</para>
+        /// <item><description><para>If you want to create a NAT gateway in an existing vSwitch, make sure that the zone to which the vSwitch belongs supports NAT gateways and the vSwitch has available IP addresses.</para>
         /// </description></item>
-        /// <item><description><para>If you have not created a vSwitch, create a vSwitch in a zone that supports NAT gateways first, and then specify the vSwitch for the NAT gateway.</para>
+        /// <item><description><para>If you have not created a vSwitch, create a vSwitch in a zone that supports NAT gateways, and then specify the vSwitch to which the NAT gateway belongs.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
@@ -352,7 +371,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC in which you want to create the NAT gateway.</para>
+        /// <para>The ID of the VPC where you want to create the NAT gateway.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

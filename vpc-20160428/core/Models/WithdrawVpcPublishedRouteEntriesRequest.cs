@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run without withdrawing the published routing entry. The system checks the required parameters, request format, and business limits. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</description></item>
-        /// <item><description><b>false</b> (default): sends a normal request. If the check succeeds, an HTTP 2xx status code is returned and the operation to withdraw the VPC published routing entry is performed.</description></item>
+        /// <item><description><b>true</b>: performs a dry run without withdrawing the VPC published route entry. The system checks the required parameters, request format, and business limitations. If the check fails, the corresponding error is returned. If the check passes, the error code <c>DryRunOperation</c> is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a Normal request. If the check passes, an HTTP 2xx status code is returned and the operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,6 +51,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The list of route entries to withdraw. You can specify up to 50 route entries.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RouteEntries")]
         [Validation(Required=false)]
@@ -81,7 +82,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The publish route entry target instance ID.</para>
+        /// <para>The target instance ID for the routing publish operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

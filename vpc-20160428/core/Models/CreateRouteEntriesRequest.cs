@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateRouteEntriesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
-        /// <para><b>true</b>: performs a dry run without creating routes. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check passes, the error code <c>DryRunOperation</c> is returned.</para>
-        /// <para><b>false</b> (default): performs a normal request and sends the request. If the check passes, a 2xx HTTP status code is returned and the routes are created.</para>
+        /// <para>Specifies whether to perform only a dry run for this request. Valid values:</para>
+        /// <para><b>true</b>: The system performs a dry run without creating the custom route entry (routing). The system checks whether your AccessKey pair is valid, the authorization of the Resource Access Management (RAM) user, and whether the required parameters are specified. If the request fails the dry run, the system returns an error. If the request passes the dry run, the system returns the <c>DryRunOperation</c> error code.</para>
+        /// <para><b>false</b> (default): The system sends a normal request. If the request passes the dry run, the system returns a 2xx HTTP status code and creates the custom route entry (routing).</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the route table resides.</para>
+        /// <para>The ID of the region to which the route table belongs.</para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The list of route entry information.</para>
+        /// <para>The list of route entries.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RouteEntries")]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<CreateRouteEntriesRequestRouteEntries> RouteEntries { get; set; }
         public class CreateRouteEntriesRequestRouteEntries : TeaModel {
             /// <summary>
-            /// <para>The description of the custom route entry. You can specify up to 50 descriptions.</para>
+            /// <para>The description of the custom route entry. You can specify at most 50 descriptions.</para>
             /// <para>The description must be 1 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The destination CIDR block of the custom route entry. Both IPv4 and IPv6 destination CIDR blocks are supported. You can specify up to 50 destination CIDR blocks. The following requirements must be met:</para>
+            /// <para>The destination CIDR block of the custom route entry. Both IPv4 and IPv6 CIDR blocks are supported. You can specify at most 50 destination CIDR blocks. The destination CIDR block must meet the following requirements:</para>
             /// <list type="bullet">
             /// <item><description><para>The destination CIDR block cannot point to 100.64.0.0/10 or be contained by 100.64.0.0/10.  </para>
             /// </description></item>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string DstCidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The version of the IP protocol. You can specify up to 50 IP protocol versions. Valid values:</para>
+            /// <para>The IP version. You can specify at most 50 IP versions. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>4</b>: IPv4.</description></item>
             /// <item><description><b>6</b>: IPv6.</description></item>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public int? IpVersion { get; set; }
 
             /// <summary>
-            /// <para>The name of the custom route entry to add. You can specify up to 50 names.</para>
+            /// <para>The name of the custom route entry to be added. You can specify at most 50 names.</para>
             /// <para>The name must be 1 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
@@ -108,9 +108,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the next hop instance of the custom route entry. You can specify up to 50 instance IDs.</para>
+            /// <para>The ID of the next hop instance for the custom route entry. You can specify at most 50 instance IDs.</para>
             /// <remarks>
-            /// <para>If NextHopType is set to ECR, you can call the <a href="https://help.aliyun.com/document_detail/2712069.html">DescribeExpressConnectRouterAssociation</a> operation to obtain the AssociationId as the next hop ID.</para>
+            /// <para>If you set NextHopType to ECR, you can call the <a href="https://help.aliyun.com/document_detail/2712069.html">DescribeExpressConnectRouterAssociation</a> operation to obtain the AssociationId as the next hop ID.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -122,37 +122,37 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string NextHop { get; set; }
 
             /// <summary>
-            /// <para>The type of the next hop of the custom route entry. You can specify up to 50 next hop types. Valid values: </para>
+            /// <para>The type of the next hop for the custom route entry. You can specify at most 50 next hop types. Valid values: </para>
             /// <list type="bullet">
-            /// <item><description><para><b>Instance</b> (default): ECS instance.</para>
+            /// <item><description><para><b>Instance</b> (default): an ECS instance.</para>
             /// </description></item>
-            /// <item><description><para><b>HaVip</b>: high-availability virtual IP address.  </para>
+            /// <item><description><para><b>HaVip</b>: a high-availability (active) virtual IP address.  </para>
             /// </description></item>
-            /// <item><description><para><b>RouterInterface</b>: vRouter interface.</para>
+            /// <item><description><para><b>RouterInterface</b>: a vRouter interface.</para>
             /// </description></item>
-            /// <item><description><para><b>NetworkInterface</b>: elastic network interfaces (ENIs).</para>
+            /// <item><description><para><b>NetworkInterface</b>: elastic network interface controller (NIC).</para>
             /// </description></item>
-            /// <item><description><para><b>VpnGateway</b>: VPN gateway.</para>
+            /// <item><description><para><b>VpnGateway</b>: a VPN gateway.</para>
             /// </description></item>
-            /// <item><description><para><b>IPv6Gateway</b>: IPv6 gateway.</para>
+            /// <item><description><para><b>IPv6Gateway</b>: an IPv6 gateway.</para>
             /// </description></item>
-            /// <item><description><para><b>NatGateway</b>: NAT gateway.</para>
+            /// <item><description><para><b>NatGateway</b>: a NAT gateway.</para>
             /// </description></item>
-            /// <item><description><para><b>Attachment</b>: forward router.</para>
+            /// <item><description><para><b>Attachment</b>: a forward transit router (TR).</para>
             /// </description></item>
-            /// <item><description><para><b>VpcPeer</b>: VPC peering connection.</para>
+            /// <item><description><para><b>VpcPeer</b>: a VPC peering connection.</para>
             /// </description></item>
-            /// <item><description><para><b>Ipv4Gateway</b>: IPv4 gateway.</para>
+            /// <item><description><para><b>Ipv4Gateway</b>: an IPv4 gateway.</para>
             /// </description></item>
-            /// <item><description><para><b>GatewayEndpoint</b>: gateway endpoint.</para>
+            /// <item><description><para><b>GatewayEndpoint</b>: a gateway endpoint.</para>
             /// </description></item>
-            /// <item><description><para><b>CenBasic</b>: CEN that does not support forward routers.</para>
+            /// <item><description><para><b>CenBasic</b>: a CEN instance that does not support forward transit routers.</para>
             /// </description></item>
-            /// <item><description><para><b>Ecr</b>: Express Connect Router (ECR).</para>
+            /// <item><description><para><b>Ecr</b>: an Express Connect Router (ECR).</para>
             /// </description></item>
-            /// <item><description><para><b>GatewayLoadBalancerEndpoint</b>: Gateway Load Balancer endpoint (GWLBe).</para>
+            /// <item><description><para><b>GatewayLoadBalancerEndpoint</b>: a Gateway Load Balancer (load balancing) endpoint (GWLBe).</para>
             /// </description></item>
-            /// <item><description><para><b>RouteTargetGroup</b>: route target group.</para>
+            /// <item><description><para><b>RouteTargetGroup</b>: a routing target group.</para>
             /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string NextHopType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the route table to which you want to add custom route entries. You can specify up to 50 route table IDs.</para>
+            /// <para>The ID of the route table to which you want to add the custom route entry. You can specify at most 50 route table IDs.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

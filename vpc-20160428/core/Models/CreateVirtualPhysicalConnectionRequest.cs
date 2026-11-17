@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class CreateVirtualPhysicalConnectionRequest : TeaModel {
         /// <summary>
         /// <para>The description of the shared Express Connect circuits.</para>
-        /// <para>The description must be 2 to 256 characters in length and must start with a letter or a Chinese character, but cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description must be 2 to 256 characters in length, and must start with a letter or a Chinese character. It cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desctest</para>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to only dry run the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run without creating the shared Express Connect circuits. The system checks required parameters, request format, and instance status. If the check fails, the corresponding error is returned. If the check passes, <c>DRYRUN.SUCCESS</c> is returned.</description></item>
-        /// <item><description><b>false</b> (default): sends a Normal request. After the check passes, the shared Express Connect circuits are created.</description></item>
+        /// <item><description><b>true</b>: The system performs a dry run on the request without creating the shared Express Connect circuits. The system checks whether the required parameters are specified, the request format, and the instance status. If the request fails the dry run, the corresponding error is returned. If the request passes the dry run, <c>DRYRUN.SUCCESS</c> is returned.</description></item>
+        /// <item><description><b>false</b> (default): The system sends a Normal request. After the request passes the dry run, the shared Express Connect circuits are created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The name of the shared Express Connect circuits.</para>
-        /// <para>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-), but cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name must be 2 to 128 characters in length, and must start with a letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-). It cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nametest</para>
@@ -46,11 +46,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The payer of the shared Express Connect circuits. Valid values:</para>
+        /// <para>Specifies the payer of the shared Express Connect circuits. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PayByPhysicalConnectionOwner</b>: The partner pays.</description></item>
-        /// <item><description><b>PayByVirtualPhysicalConnectionOwner</b>: The tenant pays.<remarks>
-        /// <para>Default value: PayByVirtualPhysicalConnectionOwner (tenant pays).</para>
+        /// <item><description><b>PayByPhysicalConnectionOwner</b>: The partner pays the bills.</description></item>
+        /// <item><description><b>PayByVirtualPhysicalConnectionOwner</b>: The tenant pays the bills.<remarks>
+        /// <para>Default value: PayByVirtualPhysicalConnectionOwner. The tenant pays the bills.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The ID of the Express Connect circuit associated with the shared Express Connect circuits.</para>
         /// <remarks>
-        /// <para>The Express Connect circuit must be in the Enabled state and must be an Express Connect circuit (shared Express Connect circuits IDs are not supported). Otherwise, ResourceNotFound.PhysicalConnectionId or IncorrectStatus.PhysicalConnection is returned. You can invoke DescribePhysicalConnections to query the status of the Express Connect circuit. The caller must be the account (partner) that owns the Express Connect circuit.</para>
+        /// <para>The Express Connect circuit must be in the Enabled state and must be a physical Express Connect circuit. You cannot specify the ID of a shared Express Connect circuit. Otherwise, the ResourceNotFound.PhysicalConnectionId or IncorrectStatus.PhysicalConnection error is returned. You can invoke the DescribePhysicalConnections operation to query the status of the Express Connect circuit. The caller must be the account (partner) to which the Express Connect circuit belongs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the shared Express Connect circuits.</para>
-        /// <para>You can invoke <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -100,17 +100,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The bandwidth value of the shared Express Connect circuits.</para>
+        /// <para>The bandwidth of the shared Express Connect circuits.</para>
         /// <para>Valid values: <b>50M</b>, <b>100M</b>, <b>200M</b>, <b>300M</b>, <b>400M</b>, <b>500M</b>, <b>1G</b>, <b>2G</b>, <b>5G</b>, <b>8G</b>, and <b>10G</b>.</para>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <remarks>
-        /// <para>The bandwidth values <b>2G</b>, <b>5G</b>, <b>8G</b>, and <b>10G</b> are not available by default. To use these values, contact your account manager.</para>
+        /// <para>By default, the bandwidth values of <b>2G</b>, <b>5G</b>, <b>8G</b>, and <b>10G</b> are not available. To use these values, contact your account manager.</para>
         /// </remarks>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <remarks>
-        /// <para>The bandwidth values <b>2G</b>, <b>5G</b>, <b>8G</b>, and <b>10G</b> are not available by default. To use these values, contact your account manager.</para>
+        /// <para>By default, the bandwidth values of <b>2G</b>, <b>5G</b>, <b>8G</b>, and <b>10G</b> are not available. To use these values, contact your account manager.</para>
         /// </remarks>
-        /// <para>Unit: <b>M</b> indicates Mbit/s and <b>G</b> indicates Gbit/s.</para>
+        /// <para>Unit: <b>M</b> indicates Mbit/s, and <b>G</b> indicates Gbit/s.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public class CreateVirtualPhysicalConnectionRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key can be up to 64 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value can be up to 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>
@@ -153,9 +153,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</para>
+        /// <para>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -168,8 +168,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The VLAN ID of the shared Express Connect circuits. Valid values: <b>0</b> to <b>2999</b>.</para>
         /// <list type="bullet">
-        /// <item><description>If the VLAN ID is <b>0</b>, the physical switch port of the Virtual Border Router (VBR) does not use VLAN mode but uses Layer 3 routing interface mode. In Layer 3 routing interface mode, each Express Connect circuit corresponds to one VBR.</description></item>
-        /// <item><description>If the VLAN ID is <b>1</b> to <b>2999</b>, the physical switch port of the VBR uses VLAN-based Layer 3 sub-interfaces. In Layer 3 sub-interface mode, each VLAN ID corresponds to one VBR. In this case, the Express Connect circuit of the VBR can connect to VPCs under multiple accounts. VBRs in different VLANs have network isolation at Layer 2 and cannot communicate with each other.</description></item>
+        /// <item><description>If the VLAN ID is <b>0</b>, the physical vSwitch port of the vRouter (Virtual Border Router) does not use the VLAN pattern, but uses the Layer 3 routing interface pattern. In the Layer 3 routing interface pattern, each Express Connect circuit corresponds to one VBR.</description></item>
+        /// <item><description>If the VLAN ID is <b>1</b> to <b>2999</b>, the physical vSwitch port of the VBR uses a VLAN-based Layer 3 sub-interface. In the Layer 3 sub-interface pattern, each VLAN ID corresponds to one VBR. In this case, the Express Connect circuit of the VBR can be connected to VPCs under multiple accounts. VBRs in different VLANs have Layer 2 network isolation and cannot communicate with each other.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? VlanId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the tenant\&quot;s Alibaba Cloud account.</para>
+        /// <para>The ID of the Alibaba Cloud account (primary account) of the tenant.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

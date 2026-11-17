@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateRouteEntriesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of route entries that failed to be added.</para>
+        /// <para>The number of route entries that fail to be added.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? FailedCount { get; set; }
 
         /// <summary>
-        /// <para>The details of the route entries that failed to be added.</para>
+        /// <para>The details of the route entries that fail to be added.</para>
         /// </summary>
         [NameInMap("FailedRouteEntries")]
         [Validation(Required=false)]
         public List<CreateRouteEntriesResponseBodyFailedRouteEntries> FailedRouteEntries { get; set; }
         public class CreateRouteEntriesResponseBodyFailedRouteEntries : TeaModel {
             /// <summary>
-            /// <para>The destination CIDR block of the custom route entry that failed to be added.</para>
+            /// <para>The destination CIDR block of the custom route entry that fails to be added.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.0.0/24</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string DstCidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The error code of the failure.</para>
+            /// <para>The error code for the failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VPC_ROUTE_ENTRY_CIDR_BLOCK_DUPLICATE</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string FailedCode { get; set; }
 
             /// <summary>
-            /// <para>The error message of the failure.</para>
+            /// <para>The specific error message for the failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Specified CIDR block is already exists, entry.cidrBlock=xxxx</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string FailedMessage { get; set; }
 
             /// <summary>
-            /// <para>The ID of the next hop instance of the custom route entry that failed to be added.</para>
+            /// <para>The ID of the next hop instance for the custom route entry that fails to be added.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-j6c2fp57q8rr4jlu****</para>
@@ -79,14 +79,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The routing instance IDs returned for the custom route entries that were successfully added.</para>
+        /// <para>The instance IDs returned for the custom route entry (routing) that is successfully added.</para>
         /// </summary>
         [NameInMap("RouteEntryIds")]
         [Validation(Required=false)]
         public List<string> RouteEntryIds { get; set; }
 
         /// <summary>
-        /// <para>The number of route entries that were successfully added.</para>
+        /// <para>The number of route entries that are successfully added.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

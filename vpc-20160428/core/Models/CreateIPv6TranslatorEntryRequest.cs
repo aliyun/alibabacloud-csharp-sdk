@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to enable access control. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: Enabled.</description></item>
-        /// <item><description><b>off</b>: Disabled.</description></item>
+        /// <item><description><b>on</b>: yes.</description></item>
+        /// <item><description><b>off</b>: no.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,11 +34,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AclStatus { get; set; }
 
         /// <summary>
-        /// <para>The type of access control:</para>
+        /// <para>The access control type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>white</b>: Allows the IPv6 addresses in the access control policy group to access backend services.</para>
+        /// <item><description><para><b>white</b>: allows IPv6 addresses in the access control policy group to access the backend service.</para>
         /// </description></item>
-        /// <item><description><para><b>black</b>: Denies the IPv6 addresses in the access control policy group from accessing backend services.</para>
+        /// <item><description><para><b>black</b>: denies IPv6 addresses in the access control policy group from accessing the backend service.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AclType { get; set; }
 
         /// <summary>
-        /// <para>The port used by the IPv6 address allocated by the IPv6 Translation Service instance.</para>
+        /// <para>The port used by the IPv6 address assigned to the IPv6 Translation Service instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? AllocateIpv6Port { get; set; }
 
         /// <summary>
-        /// <para>The public IPv4 address that requires IPv6 services (the IPv4 address of the IPv4-only server).</para>
+        /// <para>The public IPv4 address that requires IPv6 services, which is the IPv4 address of an IPv4-only server.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -85,11 +85,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The peak bandwidth of the IPv6 translation mapping entry. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>-1 (default): No bandwidth limit is imposed on the IPv6 translation mapping entry.  </description></item>
-        /// <item><description>1-200Mbps: The bandwidth value of the mapping entry.</description></item>
+        /// <item><description>-1: does not limit the peak bandwidth of the IPv6 translation mapping entry. This is the default value.  </description></item>
+        /// <item><description>1 to 200: the bandwidth value of the mapping entry, in Mbit/s.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The sum of peak bandwidth values of all IPv6 translation mapping entries cannot exceed the peak bandwidth of the instance.</para>
+        /// <para>The sum of the peak bandwidth values of all IPv6 translation mapping entries cannot exceed the peak bandwidth of the instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string EntryDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the IPv6 translation mapping entry. The name must be 2 to 100 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name of the IPv6 translation mapping entry. The name must be 2 to 100 characters in length, and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>name1</para>
@@ -160,8 +160,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The protocol type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>tcp</b>: Forwards TCP packets.  </description></item>
-        /// <item><description><b>udp</b>: Forwards UDP packets.</description></item>
+        /// <item><description><b>tcp</b>: forwards TCP packets.  </description></item>
+        /// <item><description><b>udp</b>: forwards UDP packets.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

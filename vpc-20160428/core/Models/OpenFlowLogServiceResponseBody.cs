@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The message returned when the flow log service is activated.</para>
+        /// <para>The message returned when the flow log feature is activated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>

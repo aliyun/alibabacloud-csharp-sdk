@@ -12,17 +12,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The encryption algorithm used by the SSL-VPN connection.</para>
         /// <list type="bullet">
-        /// <item><description><para>If the client uses Tunnelblick or OpenVPN 2.4.0 or later, the SSL server and the client dynamically negotiate the encryption algorithm and preferentially use the encryption algorithm with the highest security level supported by both parties. The encryption algorithm you specify for the SSL server does not take effect.</para>
+        /// <item><description><para>If the client uses Tunnelblick or OpenVPN 2.4.0 or later, the SSL server and the client dynamically negotiate the encryption algorithm and prefer the highest-security encryption algorithm supported by both parties. The encryption algorithm that you specify for the SSL server does not take effect.</para>
         /// </description></item>
-        /// <item><description><para>If the client uses OpenVPN earlier than 2.4.0, the SSL server and the client use the encryption algorithm you specify for the SSL server. The SSL server supports the following encryption algorithms:</para>
+        /// <item><description><para>If the client uses OpenVPN earlier than 2.4.0, the SSL server and the client use the encryption algorithm that you specify for the SSL server. The SSL server supports the following encryption algorithms:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>AES-128-CBC</b> (default): AES-128-CBC algorithm.</para>
+        /// <item><description><para><b>AES-128-CBC</b> (default): AES-128-CBC</para>
         /// </description></item>
-        /// <item><description><para><b>AES-192-CBC</b>: AES-192-CBC algorithm.</para>
+        /// <item><description><para><b>AES-192-CBC</b>: AES-192-CBC</para>
         /// </description></item>
-        /// <item><description><para><b>AES-256-CBC</b>: AES-256-CBC algorithm.</para>
+        /// <item><description><para><b>AES-256-CBC</b>: AES-256-CBC</para>
         /// </description></item>
-        /// <item><description><para><b>none</b>: no encryption algorithm is used.</para>
+        /// <item><description><para><b>none</b>: No encryption algorithm is used.</para>
         /// </description></item>
         /// </list>
         /// </description></item>
@@ -37,46 +37,46 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client CIDR block.</para>
-        /// <para>The client CIDR block is used to allocate IP addresses to virtual network interface controllers (NICs) of clients. It does not refer to the existing internal network CIDR block of the client.</para>
+        /// <para>This is the CIDR block from which IP addresses are allocated to the virtual network interface controller (NIC) of clients. It is not the existing internal network CIDR block of the clients.</para>
         /// <para>When a client accesses the local network through an SSL-VPN connection, the VPN gateway allocates an IP address from the specified client CIDR block to the client. The client uses the allocated IP address to access cloud resources.</para>
-        /// <para>When you specify the client CIDR block, make sure that the number of IP addresses in the client CIDR block is at least four times the number of SSL connections supported by the VPN gateway.</para>
+        /// <para>When you specify the client CIDR block, make sure that the number of IP addresses included in the client CIDR block is at least four times the number of SSL connections supported by the current VPN gateway.</para>
         /// <details>
         /// <summary>Click to view the reason</summary>
         /// 
-        /// <para>For example, if you specify 192.168.0.0/24 as the client CIDR block, the system first divides a subnet with a 30-bit subnet mask from the 192.168.0.0/24 CIDR block, such as 192.168.0.4/30, and then allocates one IP address from 192.168.0.4/30 to the client. The remaining three IP addresses are used by the system to ensure network communication. In this case, one client consumes four IP addresses. Therefore, to ensure that all clients can be allocated IP addresses, make sure that the number of IP addresses in the client CIDR block is at least four times the number of SSL connections supported by the VPN gateway.</para>
+        /// <para>For example, if you specify 192.168.0.0/24 as the client CIDR block, the system first divides a subnet with a subnet mask of 30 from the 192.168.0.0/24 CIDR block, such as 192.168.0.4/30. Then, the system allocates an IP address from 192.168.0.4/30 for the client to use. The remaining three IP addresses are occupied by the system to ensure network communication. In this case, one client consumes four IP addresses. Therefore, to ensure that all your clients can be allocated IP addresses, make sure that the number of IP addresses included in the specified client CIDR block is at least four times the number of SSL connections supported by the VPN gateway.</para>
         /// </details>
         /// 
         /// <details>
-        /// <summary>Click to view unsupported CIDR blocks</summary>
+        /// <summary>Click to view the CIDR blocks that are not supported</summary>
         /// 
         /// <list type="bullet">
-        /// <item><description>100.64.0.0~100.127.255.255</description></item>
-        /// <item><description>127.0.0.0~127.255.255.255</description></item>
-        /// <item><description>169.254.0.0~169.254.255.255</description></item>
-        /// <item><description>224.0.0.0~239.255.255.255</description></item>
-        /// <item><description>255.0.0.0~255.255.255.255</details></description></item>
+        /// <item><description>100.64.0.0 to 100.127.255.255</description></item>
+        /// <item><description>127.0.0.0 to 127.255.255.255</description></item>
+        /// <item><description>169.254.0.0 to 169.254.255.255</description></item>
+        /// <item><description>224.0.0.0 to 239.255.255.255</description></item>
+        /// <item><description>255.0.0.0 to 255.255.255.255</details></description></item>
         /// </list>
         /// <details>
         /// <summary>Click to view the recommended client CIDR blocks for each number of SSL connections</summary>
         /// 
         /// <list type="bullet">
-        /// <item><description>If the number of SSL connections is 5, the subnet mask of the client CIDR block must be 27 bits or less. For example: 10.0.0.0/27 or 10.0.0.0/26.</description></item>
-        /// <item><description>If the number of SSL connections is 10, the subnet mask of the client CIDR block must be 26 bits or less. For example: 10.0.0.0/26 or 10.0.0.0/25.</description></item>
-        /// <item><description>If the number of SSL connections is 20, the subnet mask of the client CIDR block must be 25 bits or less. For example: 10.0.0.0/25 or 10.0.0.0/24.</description></item>
-        /// <item><description>If the number of SSL connections is 50, the subnet mask of the client CIDR block must be 24 bits or less. For example: 10.0.0.0/24 or 10.0.0.0/23.</description></item>
-        /// <item><description>If the number of SSL connections is 100, the subnet mask of the client CIDR block must be 23 bits or less. For example: 10.0.0.0/23 or 10.0.0.0/22.</description></item>
-        /// <item><description>If the number of SSL connections is 200, the subnet mask of the client CIDR block must be 22 bits or less. For example: 10.0.0.0/22 or 10.0.0.0/21.</description></item>
-        /// <item><description>If the number of SSL connections is 500, the subnet mask of the client CIDR block must be 21 bits or less. For example: 10.0.0.0/21 or 10.0.0.0/20.</description></item>
-        /// <item><description>If the number of SSL connections is 1000, the subnet mask of the client CIDR block must be 20 bits or less. For example: 10.0.0.0/20 or 10.0.0.0/19.</description></item>
+        /// <item><description>If the number of SSL connections is 5, we recommend that the subnet mask of the client CIDR block be 27 bits or less. Examples: 10.0.0.0/27 and 10.0.0.0/26.</description></item>
+        /// <item><description>If the number of SSL connections is 10, we recommend that the subnet mask of the client CIDR block be 26 bits or less. Examples: 10.0.0.0/26 and 10.0.0.0/25.</description></item>
+        /// <item><description>If the number of SSL connections is 20, we recommend that the subnet mask of the client CIDR block be 25 bits or less. Examples: 10.0.0.0/25 and 10.0.0.0/24.</description></item>
+        /// <item><description>If the number of SSL connections is 50, we recommend that the subnet mask of the client CIDR block be 24 bits or less. Examples: 10.0.0.0/24 and 10.0.0.0/23.</description></item>
+        /// <item><description>If the number of SSL connections is 100, we recommend that the subnet mask of the client CIDR block be 23 bits or less. Examples: 10.0.0.0/23 and 10.0.0.0/22.</description></item>
+        /// <item><description>If the number of SSL connections is 200, we recommend that the subnet mask of the client CIDR block be 22 bits or less. Examples: 10.0.0.0/22 and 10.0.0.0/21.</description></item>
+        /// <item><description>If the number of SSL connections is 500, we recommend that the subnet mask of the client CIDR block be 21 bits or less. Examples: 10.0.0.0/21 and 10.0.0.0/20.</description></item>
+        /// <item><description>If the number of SSL connections is 1000, we recommend that the subnet mask of the client CIDR block be 20 bits or less. Examples: 10.0.0.0/20 and 10.0.0.0/19.</description></item>
         /// </list>
         /// </details>
         /// 
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The subnet mask of the client CIDR block must be 16 to 29 bits.</description></item>
+        /// <item><description>The subnet mask of the client CIDR block must be 16 to 29 bits in length.</description></item>
         /// <item><description>Make sure that the client CIDR block does not overlap with the local CIDR block, the VPC CIDR block, or any routing CIDR block associated with the client terminal.</description></item>
-        /// <item><description>When you specify the client CIDR block, use 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, or their subnets. If you want to specify a public CIDR block as the client CIDR block, set the public CIDR block as a user CIDR block of the virtual private cloud (VPC) to ensure that the VPC can access the public CIDR block. For more information about user CIDR blocks, see <a href="https://help.aliyun.com/document_detail/185311.html">VPC FAQ</a>.</description></item>
-        /// <item><description>After the SSL server is created, the system automatically adds a routing entry for the client CIDR block to the route table of the VPC instance. Do not manually add a routing entry for the client CIDR block to the route table of the VPC instance. Otherwise, SSL-VPN connection traffic may be abnormal.</description></item>
+        /// <item><description>When you specify the client CIDR block, we recommend that you use the 10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16 CIDR blocks and their subnets. If you need to specify a public CIDR block as the client CIDR block, you must add the public CIDR block to the user CIDR block Settings of the VPC to ensure that the VPC can access the public CIDR block. For more information about user CIDR blocks, see <a href="https://help.aliyun.com/document_detail/185311.html">virtual private cloud (VPC) FAQ</a>.</description></item>
+        /// <item><description>After you create an SSL server, the system automatically adds routing for the client CIDR block in the route table of the VPC instance. Do not manually add routing for the client CIDR block in the route table of the VPC instance. Otherwise, SSL-VPN connection traffic transmission exceptions may occur.</description></item>
         /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>
@@ -90,9 +90,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
+        /// <para>You can generate a parameter value on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -105,9 +105,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to compress communication. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: compresses communication.</para>
+        /// <item><description><para><b>true</b>: Compresses communication.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): does not compress communication.</para>
+        /// <item><description><para><b>false</b> (default): Does not compress communication.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -118,16 +118,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? Compress { get; set; }
 
+        /// <summary>
+        /// <para>The DNS server addresses configured for the client. You can enter up to two addresses, separated by commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>223.5.5.5,114.114.114.114</para>
+        /// </summary>
         [NameInMap("DnsServers")]
         [Validation(Required=false)]
         public string DnsServers { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to only precheck the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: performs only a dry run. The system checks the request for potential issues, including required parameters, request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// <item><description><para><b>true</b>: Prechecks the request without performing the operation. The system prechecks required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</para>
+        /// <item><description><para><b>false</b> (default): Sends the request. After the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.</para>
         /// </description></item>
         /// </list>
         /// </summary>
@@ -136,18 +142,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable two-factor authentication. If you enable two-factor authentication, you must also configure <c>IDaaSInstanceId</c>, <c>IDaaSRegionId</c>, and <c>IDaaSApplicationId</c>. Valid values:</para>
+        /// <para>Specifies whether to enable two-factor authentication. If you enable two-factor authentication, you must also configure the <c>IDaaSInstanceId</c>, <c>IDaaSRegionId</c>, and <c>IDaaSApplicationId</c> parameters. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: enabled.</para>
+        /// <item><description><para><b>true</b>: Enables two-factor authentication.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): disabled.</para>
+        /// <item><description><para><b>false</b> (default): Disables two-factor authentication.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If you use two-factor authentication for the first time, complete <a href="https://ram.console.aliyun.com/role/authorization?request=%7B%22Services%22%3A%5B%7B%22Service%22%3A%22VPN%22%2C%22Roles%22%3A%5B%7B%22RoleName%22%3A%22AliyunVpnAccessingIdaasRole%22%2C%22TemplateId%22%3A%22IdaasRole%22%7D%5D%7D%5D%2C%22ReturnUrl%22%3A%22https%3A%2F%2Fvpc.console.aliyun.com%2Fsslvpn%2Fcn-shanghai%2Fvpn-servers%22%7D">authorization</a> before creating the SSL server.</description></item>
-        /// <item><description>When you create an SSL server in the UAE (Dubai) region, bind an IDaaS EIAM 2.0 instance in the Singapore region to reduce cross-region latency.</description></item>
-        /// <item><description>IDaaS EIAM 1.0 instances are no longer available for purchase. If your Alibaba Cloud account has IDaaS EIAM 1.0 instances, you can still bind IDaaS EIAM 1.0 instances after enabling two-factor authentication. If your Alibaba Cloud account does not have IDaaS EIAM 1.0 instances, you can only bind IDaaS EIAM 2.0 instances after enabling two-factor authentication.</description></item>
+        /// <item><description>If you use the two-factor authentication feature for the first time, complete the <a href="https://ram.console.aliyun.com/role/authorization?request=%7B%22Services%22%3A%5B%7B%22Service%22%3A%22VPN%22%2C%22Roles%22%3A%5B%7B%22RoleName%22%3A%22AliyunVpnAccessingIdaasRole%22%2C%22TemplateId%22%3A%22IdaasRole%22%7D%5D%7D%5D%2C%22ReturnUrl%22%3A%22https%3A%2F%2Fvpc.console.aliyun.com%2Fsslvpn%2Fcn-shanghai%2Fvpn-servers%22%7D">authorization</a> before you create an SSL server.</description></item>
+        /// <item><description>When you create an SSL server in the UAE (Dubai) region, we recommend that you bind an IDaaS EIAM 2.0 instance in the Singapore region to reduce cross-region latency.</description></item>
+        /// <item><description>IDaaS EIAM 1.0 instances are no longer available for purchase. If your Alibaba Cloud account has an IDaaS EIAM 1.0 instance, you can still bind the IDaaS EIAM 1.0 instance after you enable two-factor authentication. If your Alibaba Cloud account does not have an IDaaS EIAM 1.0 instance, you can only bind an IDaaS EIAM 2.0 instance after you enable two-factor authentication.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -161,8 +167,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The ID of the IDaaS application.</para>
         /// <list type="bullet">
-        /// <item><description>If you bind an IDaaS EIAM 2.0 instance, enter the IDaaS application ID.</description></item>
-        /// <item><description>If you bind an IDaaS EIAM 1.0 instance, you do not need to enter the IDaaS application ID.</description></item>
+        /// <item><description>If you bind an IDaaS EIAM 2.0 instance, you must enter the ID of the IDaaS application.</description></item>
+        /// <item><description>If you bind an IDaaS EIAM 1.0 instance, you do not need to enter the ID of the IDaaS application.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -194,14 +200,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The local CIDR block.</para>
-        /// <para>The local CIDR block is the CIDR block that the client needs to access through the SSL-VPN connection.</para>
-        /// <para>The local CIDR block can be the CIDR block of a VPC, the CIDR block of a vSwitch, the CIDR block of an on-premises data center that is connected to the VPC through an Express Connect circuit, or the CIDR block of a cloud service such as Object Storage Service (OSS).</para>
-        /// <para>The subnet mask of the local CIDR block must be 8 to 32 bits. The following CIDR blocks cannot be specified as the local CIDR block:</para>
+        /// <para>This is the CIDR block that the client wants to access through the SSL-VPN connection.</para>
+        /// <para>The local CIDR block can be the CIDR block of a VPC, the CIDR block of a vSwitch, the CIDR block of a data center that is connected to the VPC through an Express Connect circuit, or the CIDR block of a cloud service such as Object Storage Service (OSS).</para>
+        /// <para>The subnet mask of the local CIDR block must be 8 to 32 bits in length. The following CIDR blocks cannot be specified as the local CIDR block:</para>
         /// <list type="bullet">
-        /// <item><description>127.0.0.0~127.255.255.255</description></item>
-        /// <item><description>169.254.0.0~169.254.255.255</description></item>
-        /// <item><description>224.0.0.0~239.255.255.255</description></item>
-        /// <item><description>255.0.0.0~255.255.255.255</description></item>
+        /// <item><description>127.0.0.0 to 127.255.255.255</description></item>
+        /// <item><description>169.254.0.0 to 169.254.255.255</description></item>
+        /// <item><description>224.0.0.0 to 239.255.255.255</description></item>
+        /// <item><description>255.0.0.0 to 255.255.255.255</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -245,8 +251,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The protocol used by the SSL-VPN server. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>TCP</b> (default): TCP protocol.</description></item>
-        /// <item><description><b>UDP</b>: UDP protocol.</description></item>
+        /// <item><description><b>TCP</b> (default): TCP</description></item>
+        /// <item><description><b>UDP</b>: UDP</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -258,7 +264,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the VPN gateway.</para>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

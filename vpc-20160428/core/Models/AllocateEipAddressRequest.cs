@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AllocateEipAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The special activity ID. You do not need to configure this parameter.</para>
+        /// <para>The ID of the special activity. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -22,12 +22,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b> (default): Automatic payment is disabled. After an order is generated, go to the Order Center to complete the payment.</para>
+        /// <item><description><para><b>false</b> (default): disables automatic payment. After an order is generated, you must go to the User Center to complete the payment.</para>
         /// </description></item>
-        /// <item><description><para><b>true</b>: Automatic payment is enabled. The order is automatically paid.</para>
+        /// <item><description><para><b>true</b>: enables automatic payment. The order is automatically paid.</para>
         /// </description></item>
         /// </list>
-        /// <para>This parameter is required if <b>InstanceChargeType</b> is set to <b>PrePaid</b>. This parameter is optional if <b>InstanceChargeType</b> is set to <b>PostPaid</b>.</para>
+        /// <para>This parameter is required if <b>InstanceChargeType</b> is set to <b>PrePaid</b>. If <b>InstanceChargeType</b> is set to <b>PostPaid</b>, you do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -39,11 +39,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The maximum bandwidth of the EIP. Unit: Mbit/s.</para>
         /// <list type="bullet">
-        /// <item><description><para>If <b>InstanceChargeType</b> is set to <b>PostPaid</b> and <b>InternetChargeType</b> is set to <b>PayByBandwidth</b>, valid values of <b>Bandwidth</b> are <b>1</b> to <b>500</b>.</para>
+        /// <item><description><para>If <b>InstanceChargeType</b> is set to <b>PostPaid</b> and <b>InternetChargeType</b> is set to <b>PayByBandwidth</b>, valid values for <b>Bandwidth</b> are <b>1</b> to <b>500</b>.</para>
         /// </description></item>
-        /// <item><description><para>If <b>InstanceChargeType</b> is set to <b>PostPaid</b> and <b>InternetChargeType</b> is set to <b>PayByTraffic</b>, valid values of <b>Bandwidth</b> are <b>1</b> to <b>200</b>.</para>
+        /// <item><description><para>If <b>InstanceChargeType</b> is set to <b>PostPaid</b> and <b>InternetChargeType</b> is set to <b>PayByTraffic</b>, valid values for <b>Bandwidth</b> are <b>1</b> to <b>200</b>.</para>
         /// </description></item>
-        /// <item><description><para>If <b>InstanceChargeType</b> is set to <b>PrePaid</b>, valid values of <b>Bandwidth</b> are <b>1</b> to <b>1000</b>.</para>
+        /// <item><description><para>If <b>InstanceChargeType</b> is set to <b>PrePaid</b>, valid values for <b>Bandwidth</b> are <b>1</b> to <b>1000</b>.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: <b>5</b> Mbit/s.</para>
@@ -57,9 +57,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>Generate a value from your client to ensure uniqueness across different requests. <b>ClientToken</b> supports only ASCII characters.</para>
+        /// <para>You can use the client to generate the value, but you must make sure that the value is unique among different requests. <b>ClientToken</b> can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -70,10 +70,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the EIP instance.</para>
-        /// <para>The description must be 0 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description of the EIP.</para>
+        /// <para>The description must be 0 to 256 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// <remarks>
-        /// <para>This parameter is not supported when you create a subscription EIP instance.</para>
+        /// <para>You cannot specify this parameter when you create a subscription EIP.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -86,12 +86,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The line type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BGP</b> (default): BGP (multi-ISP) line. All regions support BGP (multi-ISP) line EIPs.</description></item>
-        /// <item><description><b>BGP_PRO</b>: BGP (multi-ISP) Pro line. Only the following regions support BGP (multi-ISP) Pro line EIPs: Hong Kong (China), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).</description></item>
+        /// <item><description><b>BGP</b> (default): BGP (Multi-ISP) line. BGP (Multi-ISP) EIPs are supported in all regions.</description></item>
+        /// <item><description><b>BGP_PRO</b>: BGP (Multi-ISP) Pro line. BGP (Multi-ISP) Pro EIPs are supported only in the Hong Kong (China), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok) regions.</description></item>
         /// </list>
-        /// <para>For more information about BGP (multi-ISP) lines and BGP (multi-ISP) Pro lines, see <a href="https://help.aliyun.com/document_detail/32321.html">EIP line types</a>.</para>
+        /// <para>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro lines, see <a href="https://help.aliyun.com/document_detail/32321.html">EIP line types</a>.</para>
         /// <list type="bullet">
-        /// <item><description>If you are a whitelist user of single-ISP bandwidth, you can also select the following types:<list type="bullet">
+        /// <item><description>If you are a whitelisted user of single-ISP bandwidth, you can also select the following types:<list type="bullet">
         /// <item><description><b>ChinaTelecom</b>: China Telecom</description></item>
         /// <item><description><b>ChinaUnicom</b>: China Unicom</description></item>
         /// <item><description><b>ChinaMobile</b>: China Mobile</description></item>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <item><description><b>ChinaMobile_L2</b>: China Mobile L2</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>If you are a China (Hangzhou) Finance Cloud user, this field is required. Set the value to <b>BGP_FinanceCloud</b>.</description></item>
+        /// <item><description>If you are an Alibaba Finance Cloud user in the China (Hangzhou) region, this parameter is required. Set the value to <b>BGP_FinanceCloud</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <list type="bullet">
         /// <item><description><para><b>PrePaid</b>: subscription.</para>
         /// </description></item>
-        /// <item><description><para><b>PostPaid</b> (default): pay-as-you-go.</para>
+        /// <item><description><para><b>PostPaid</b> (default): pay-as-you-go billing method.</para>
         /// </description></item>
         /// </list>
         /// <para>If <b>InstanceChargeType</b> is set to <b>PrePaid</b>, <b>InternetChargeType</b> must be set to <b>PayByBandwidth</b>. If <b>InstanceChargeType</b> is set to <b>PostPaid</b>, <b>InternetChargeType</b> can be set to <b>PayByBandwidth</b> or <b>PayByTraffic</b>.</para>
@@ -128,8 +128,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the EIP that you want to apply for.</para>
-        /// <para>You need to specify only one of <b>IpAddress</b> and <b>InstanceId</b>. If neither is specified, the system randomly allocates an EIP.</para>
+        /// <para>The instance ID of the EIP to be allocated.</para>
+        /// <para>You need to specify only one of the <b>IpAddress</b> and <b>InstanceId</b> parameters. If neither is specified, the system randomly allocates an EIP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eip-25877c70gddh****</para>
@@ -157,8 +157,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InternetChargeType { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the EIP that you want to apply for.</para>
-        /// <para>You need to specify only one of <b>IpAddress</b> and <b>InstanceId</b>. If neither is specified, the system randomly allocates an EIP.</para>
+        /// <para>The IP address of the EIP to be allocated.</para>
+        /// <para>You need to specify only one of the <b>IpAddress</b> and <b>InstanceId</b> parameters. If neither is specified, the system randomly allocates an EIP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX</para>
@@ -168,10 +168,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IpAddress { get; set; }
 
         /// <summary>
-        /// <para>The name of the EIP instance.</para>
-        /// <para>The name must be 0 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name of the EIP.</para>
+        /// <para>The name must be 0 to 128 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// <remarks>
-        /// <para>This parameter is not supported when you create a subscription EIP instance.</para>
+        /// <para>You cannot specify this parameter when you create a subscription EIP.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The network type. The value is set to <b>public</b> (default), which specifies the public network.</para>
+        /// <para>The network type. Set the value to <b>public</b> (default), which indicates the Internet.</para>
         /// 
         /// <b>Example:</b>
         /// <para>public</para>
@@ -201,9 +201,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The subscription duration.</para>
-        /// <para>If <b>PricingCycle</b> is set to <b>Month</b>, valid values of <b>Period</b> are <b>1</b> to <b>9</b>.</para>
-        /// <para>If <b>PricingCycle</b> is set to <b>Year</b>, valid values of <b>Period</b> are <b>1</b> to <b>5</b>.</para>
-        /// <para>This parameter is required if <b>InstanceChargeType</b> is set to <b>PrePaid</b>. This parameter is not required if <b>InstanceChargeType</b> is set to <b>PostPaid</b>.</para>
+        /// <para>If <b>PricingCycle</b> is set to <b>Month</b>, valid values for <b>Period</b> are <b>1</b> to <b>9</b>.</para>
+        /// <para>If <b>PricingCycle</b> is set to <b>Year</b>, valid values for <b>Period</b> are <b>1</b> to <b>5</b>.</para>
+        /// <para>This parameter is required if <b>InstanceChargeType</b> is set to <b>PrePaid</b>. If <b>InstanceChargeType</b> is set to <b>PostPaid</b>, you do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -215,10 +215,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The billing cycle of the subscription. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Month</b> (default): billed on a monthly basis.</description></item>
-        /// <item><description><b>Year</b>: billed on a yearly basis.</description></item>
+        /// <item><description><b>Month</b> (default): monthly subscription.</description></item>
+        /// <item><description><b>Year</b>: yearly subscription.</description></item>
         /// </list>
-        /// <para>This parameter is required if <b>InstanceChargeType</b> is set to <b>PrePaid</b>. This parameter is optional if <b>InstanceChargeType</b> is set to <b>PostPaid</b>.</para>
+        /// <para>This parameter is required if <b>InstanceChargeType</b> is set to <b>PrePaid</b>. If <b>InstanceChargeType</b> is set to <b>PostPaid</b>, you do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -229,8 +229,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The ID of the IP address pool.</para>
-        /// <para>The EIP is allocated from the specified IP address pool.</para>
-        /// <para>The IP address pool feature is not enabled by default. To use this feature, apply for the IP address pool privilege quota in Quota Center. For more information, see <a href="https://help.aliyun.com/document_detail/108213.html">Increase a quota in Quota Center</a>.</para>
+        /// <para>The EIP is allocated from the IP address pool.</para>
+        /// <para>By default, the IP address pool feature is disabled. To use this feature, apply for the IP address pool quota privilege quota Center. For more information, see <a href="https://help.aliyun.com/document_detail/108213.html">Increase quotas privilege quota Center</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pippool-2vc0kxcedhquybdsz****</para>
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the EIP.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxazffggds****</para>
@@ -272,12 +272,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The security protection level.</para>
         /// <list type="bullet">
-        /// <item><description><para>If this parameter is left empty, the default value is Anti-DDoS Basic.</para>
+        /// <item><description><para>If this parameter is left empty, Anti-DDoS Basic is used by default.</para>
         /// </description></item>
-        /// <item><description><para>If this parameter is set to <b>AntiDDoS_Enhanced</b>, the value indicates Anti-DDoS (Enhanced).</para>
+        /// <item><description><para>If this parameter is set to <b>AntiDDoS_Enhanced</b>, Anti-DDoS Pro/Premium is used.</para>
         /// </description></item>
         /// </list>
-        /// <para>You can specify at most one security protection level.</para>
+        /// <para>You can specify only one security protection level.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AntiDDoS_Enhanced</para>
@@ -294,8 +294,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<AllocateEipAddressRequestTag> Tag { get; set; }
         public class AllocateEipAddressRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>A tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot specify an empty string.</para>
+            /// <para>A tag key can be up to 128 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -305,7 +305,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. Specify the value in the Tag.N.Value format. Valid values of N: 1 to 20. The tag value cannot be an empty string. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
+            /// <para>The tag value. When you call the API operation, use the Tag.N.Value format. Valid values of N: 1 to 20. If you specify this parameter, you cannot specify an empty string. A tag value can be up to 128 characters in length, and cannot start with aliyun or acs:. It cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>
@@ -319,7 +319,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The zone of the EIP.</para>
         /// <para>If the IP address pool specified by <b>PublicIpAddressPoolId</b> is of the CloudBox type, this parameter defaults to the zone of the IP address pool.</para>
-        /// <para>For information about how to view the business type of an IP address pool, see <a href="https://help.aliyun.com/document_detail/429098.html">ListPublicIpAddressPools</a>.</para>
+        /// <para>For more information about how to view the service type of an IP address pool, see <a href="https://api.aliyun.com/document/Vpc/2016-04-28/ListPublicIpAddressPools">ListPublicIpAddressPools</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ap-southeast-1-lzdvn-cb</para>

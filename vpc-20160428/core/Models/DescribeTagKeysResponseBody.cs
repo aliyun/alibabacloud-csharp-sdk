@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeTagKeysResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination token. Valid values:</para>
+        /// <para>The pagination token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no subsequent query exists.</description></item>
-        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no subsequent query is required.</description></item>
+        /// <item><description>If <b>NextToken</b> returns a value, the value is the pagination token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

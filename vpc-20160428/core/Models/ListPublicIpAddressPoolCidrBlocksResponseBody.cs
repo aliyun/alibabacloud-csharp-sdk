@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListPublicIpAddressPoolCidrBlocksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination token. Valid values:</para>
+        /// <para>The token used to retrieve the next page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no subsequent query exists.</description></item>
-        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no subsequent requests are to be sent.</description></item>
+        /// <item><description>If <b>NextToken</b> has a return value, the value indicates the token used to start the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The time when the CIDR block was created. The time is in the <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
+            /// <para>The creation time. The time follows the <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-10T01:37:38Z</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries returned for the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

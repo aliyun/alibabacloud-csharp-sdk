@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class UnTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to unbind all tags from the resources. Valid values:</para>
+        /// <para>Specifies whether to remove all tags from the resources. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Unbinds all tags from the resources.</description></item>
-        /// <item><description><b>false</b> (default): Does not unbind all tags from the resources.</description></item>
+        /// <item><description><b>true</b>: Removes all tags from the resources.</description></item>
+        /// <item><description><b>false</b> (default): Does not remove all tags from the resources.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the resources.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -73,20 +73,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <item><description><b>NATGATEWAY</b>: NAT gateway instance.</description></item>
         /// <item><description><b>COMMONBANDWIDTHPACKAGE</b>: Internet Shared Bandwidth instance.</description></item>
         /// <item><description><b>PREFIXLIST</b>: prefix list instance.</description></item>
-        /// <item><description><b>PUBLICIPADDRESSPOOL</b>: IP address pool instance.</description></item>
+        /// <item><description><b>PUBLICIPADDRESSPOOL</b>: IPAM pool instance.</description></item>
         /// <item><description><b>IPV4GATEWAY</b>: IPv4 gateway instance.</description></item>
         /// <item><description><b>IPV6GATEWAY</b>: IPv6 gateway instance.</description></item>
         /// <item><description><b>NETWORKACL</b>: network ACL instance.</description></item>
         /// <item><description><b>TRAFFICMIRRORFILTER</b>: traffic mirror filter instance.</description></item>
         /// <item><description><b>TRAFFICMIRRORSESSION</b>: traffic mirror session instance.</description></item>
         /// <item><description><b>FLOWLOG</b>: flow log instance.</description></item>
-        /// <item><description><b>HAVIP</b>: high-availability virtual IP address (HaVip) instance.</description></item>
+        /// <item><description><b>HAVIP</b>: high-availability virtual IP address instance.</description></item>
         /// <item><description><b>DHCPOPTIONSSET</b>: DHCP options set instance.</description></item>
         /// <item><description><b>GATEWAYENDPOINT</b>: gateway endpoint instance.</description></item>
         /// <item><description><b>IPV6ADDRESS</b>: IPv6 address instance.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The resource type value is case-insensitive.</para>
+        /// <para>The resource type values are case-insensitive.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -98,8 +98,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tag keys to unbind. You can specify up to 20 tag keys.</para>
-        /// <para>Each tag key can be up to 128 characters in length, can be an empty string, and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The tag keys to be removed. You can specify up to 20 tag keys.</para>
+        /// <para>A tag key can be up to 128 characters in length and can be an empty string. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FinanceDept</para>

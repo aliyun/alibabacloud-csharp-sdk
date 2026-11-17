@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class DeleteVpnRouteEntryRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
+        /// <para>You can generate the parameter value from your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextHop { get; set; }
 
         /// <summary>
-        /// <para>The tunneling protocol. Set the value to <b>Ipsec</b> (IPsec tunneling protocol).</para>
+        /// <para>The tunneling protocol. Valid values: <b>Ipsec</b> (IPsec tunneling protocol).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ipsec</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the VPN gateway instance. You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the VPN gateway instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -96,9 +96,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The weight of the destination route. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b>: low priority.</para>
+        /// <item><description><para><b>0</b>: low priority</para>
         /// </description></item>
-        /// <item><description><para><b>100</b>: high priority.</para>
+        /// <item><description><para><b>100</b>: high priority</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

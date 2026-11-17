@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AssociateMacSecKeyRequest : TeaModel {
         /// <summary>
-        /// <para>The passphrase. Only hexadecimal characters are supported. Lowercase characters are automatically transformed to uppercase. When the encryption algorithm type is GCM-AES-128 or GCM-AES-XPN-128, the length must be 32 hexadecimal characters. When the encryption algorithm type is GCM-AES-256 or GCM-AES-XPN-256, the length must be 64 hexadecimal characters.</para>
+        /// <para>The passphrase of the key. Only hexadecimal characters are supported, and lowercase letters are automatically transformed to uppercase letters. If the encryption algorithm type is GCM-AES-128 or GCM-AES-XPN-128, the length must be 32 hexadecimal characters. If the encryption algorithm type is GCM-AES-256 or GCM-AES-XPN-256, the length must be 64 hexadecimal characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string CipherSuite { get; set; }
 
         /// <summary>
-        /// <para>The key name. Only hexadecimal characters are supported. Lowercase characters are automatically transformed to uppercase. When the encryption algorithm type is GCM-AES-128 or GCM-AES-XPN-128, the length must be 32 hexadecimal characters. When the encryption algorithm type is GCM-AES-256 or GCM-AES-XPN-256, the length must be 64 hexadecimal characters.</para>
+        /// <para>The name of the key. Only hexadecimal characters are supported, and lowercase letters are automatically transformed to uppercase letters. If the encryption algorithm type is GCM-AES-128 or GCM-AES-XPN-128, the length must be 32 hexadecimal characters. If the encryption algorithm type is GCM-AES-256 or GCM-AES-XPN-256, the length must be 64 hexadecimal characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Ckn { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Express Connect circuit. The Express Connect circuit must be a dedicated circuit that has completed payment, supports MACsec, and is in the <b>Enabled</b> state. You can call DescribePhysicalConnections to query the current status and device capabilities.</para>
+        /// <para>The ID of the Express Connect circuit. The Express Connect circuit must be a dedicated Express Connect circuit that has been paid for, is hosted on a device that supports MACsec, and is in the <b>Enabled</b> state. You can call the DescribePhysicalConnections operation to query the current state and device capabilities.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,8 +64,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PhysicalConnectionId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the Express Connect circuit.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to query region IDs.</para>
+        /// <para>The region ID of the Express Connect circuit. You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResult { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Valid values:</para>
+        /// <para>The pagination token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If this is the first query or no subsequent query exists, leave this parameter empty.</description></item>
-        /// <item><description>If a subsequent query exists, set the value to the NextToken value returned by the previous API call.</description></item>
+        /// <item><description>Leave this parameter empty for the first query or when no subsequent query is required.</description></item>
+        /// <item><description>If a subsequent query is required, set this parameter to the NextToken value returned by the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,8 +52,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the resource.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,7 +63,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource ID. You can specify up to 50 resource IDs.</para>
+        /// <para>The resource IDs. You can specify up to 50 resource IDs.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -84,7 +83,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <item><description><b>VPC</b>: virtual private cloud (VPC) instance.</description></item>
         /// <item><description><b>VSWITCH</b>: vSwitch instance.</description></item>
         /// <item><description><b>ROUTETABLE</b>: route table instance.</description></item>
-        /// <item><description><b>EIP</b>: Elastic IP Address (EIP) instance.</description></item>
+        /// <item><description><b>EIP</b>: EIP instance.</description></item>
         /// <item><description><b>VpnGateWay</b>: VPN gateway instance.</description></item>
         /// <item><description><b>NATGATEWAY</b>: NAT gateway instance.</description></item>
         /// <item><description><b>COMMONBANDWIDTHPACKAGE</b>: Internet Shared Bandwidth instance.</description></item>

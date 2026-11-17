@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The description must be 1 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>描述信息</para>
+        /// <para>Description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the VPC to which the route table belongs. </para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,10 +49,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to receive dynamic routes by enabling or disabling route propagation. Valid values:</para>
+        /// <para>Specifies whether to accept dynamic routes by enabling or disabling route propagation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b> (default): enabled.</description></item>
-        /// <item><description><b>false</b>: disabled.</description></item>
+        /// <item><description><b>true</b> (default): enables route propagation.</description></item>
+        /// <item><description><b>false</b>: disables route propagation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

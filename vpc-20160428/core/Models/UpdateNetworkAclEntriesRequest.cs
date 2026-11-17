@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class UpdateNetworkAclEntriesRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,11 +24,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and sends the request.</description></item>
-        /// </list>
+        /// <para>Specifies whether to perform a dry run.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -91,8 +87,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string IpVersion { get; set; }
 
             /// <summary>
-            /// <para>The ID of the outbound rule entry.</para>
-            /// <para>Valid values of <b>N</b>: <b>0</b> to <b>99</b>. You can update up to 100 outbound rule entries.</para>
+            /// <para>The ID of the outbound rule entries.</para>
+            /// <para>Valid values of <b>N</b>: <b>0</b> to <b>99</b>. You can update up to 100 outbound rules at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nae-2zecs97e0brcge46****</para>
@@ -115,9 +111,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The authorization policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>accept</b>: allows access.</para>
+            /// <item><description><para><b>accept</b>: allows the traffic.</para>
             /// </description></item>
-            /// <item><description><para><b>drop</b>: denies access.</para>
+            /// <item><description><para><b>drop</b>: denies the traffic.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -131,8 +127,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The destination port range of the outbound rule.</para>
             /// <list type="bullet">
-            /// <item><description>If <b>Protocol</b> (Protocol Type) is set to <b>all</b>, <b>icmp</b>, or <b>gre</b>, the port range is -1/-1, which indicates all ports.</description></item>
-            /// <item><description>If <b>Protocol</b> (Protocol Type) is set to <b>tcp</b> or <b>udp</b>, the port range is <b>1</b> to <b>65535</b>. The format is <b>1/200</b> or <b>80/80</b>, which indicates port 1 to port 200 or port 80.</description></item>
+            /// <item><description>If the <b>Protocol</b> (Protocol Type) of the outbound rule is set to <b>all</b>, <b>icmp</b>, or <b>gre</b>, the port range is -1/-1, which indicates that all ports are available.</description></item>
+            /// <item><description>If the <b>Protocol</b> (Protocol Type) of the outbound rule is set to <b>tcp</b> or <b>udp</b>, the port range is <b>1</b> to <b>65535</b>. The format is <b>1/200</b> or <b>80/80</b>, which indicates Port 1 to Port 200 or Port 80.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -145,17 +141,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The protocol type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>icmp</b>: Internet Control Message Protocol.</para>
+            /// <item><description><para><b>icmp</b>: Internet Control Message Protocol (ICMP).</para>
             /// </description></item>
-            /// <item><description><para><b>gre</b>: Generic Routing Encapsulation.</para>
+            /// <item><description><para><b>gre</b>: Generic Routing Encapsulation (GRE).</para>
             /// </description></item>
-            /// <item><description><para><b>tcp</b>: Transmission Control Protocol.</para>
+            /// <item><description><para><b>tcp</b>: Transmission Control Protocol (TCP).</para>
             /// </description></item>
-            /// <item><description><para><b>udp</b>: User Datagram Protocol.</para>
+            /// <item><description><para><b>udp</b>: User Datagram Protocol (UDP).</para>
             /// </description></item>
             /// <item><description><para><b>all</b>: all protocols.</para>
             /// </description></item>
-            /// <item><description><para><b>icmpv6</b>: Internet Control Message Protocol for IPv6.</para>
+            /// <item><description><para><b>icmpv6</b>: Internet Control Message Protocol version 6 (ICMPv6).</para>
             /// </description></item>
             /// </list>
             /// 
@@ -211,8 +207,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string IpVersion { get; set; }
 
             /// <summary>
-            /// <para>The ID of the inbound rule entry.</para>
-            /// <para>Valid values of <b>N</b>: <b>0</b> to <b>99</b>. You can update up to 100 inbound rule entries.</para>
+            /// <para>The ID of the inbound rule entries.</para>
+            /// <para>Valid values of <b>N</b>: <b>0</b> to <b>99</b>. You can update up to 100 inbound rules at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nae-2zepn32de59j8m4****</para>
@@ -235,9 +231,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The authorization policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>accept</b>: allows access.</para>
+            /// <item><description><para><b>accept</b>: allows the traffic.</para>
             /// </description></item>
-            /// <item><description><para><b>drop</b>: denies access.</para>
+            /// <item><description><para><b>drop</b>: denies the traffic.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -251,8 +247,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The source port range of the inbound rule.</para>
             /// <list type="bullet">
-            /// <item><description>If <b>Protocol</b> (Protocol Type) is set to <b>all</b>, <b>icmp</b>, or <b>gre</b>, the port range is -1/-1, which indicates all ports.</description></item>
-            /// <item><description>If <b>Protocol</b> (Protocol Type) is set to <b>tcp</b> or <b>udp</b>, the port range is <b>1</b> to <b>65535</b>. The format is <b>1/200</b> or <b>80/80</b>, which indicates port 1 to port 200 or port 80.</description></item>
+            /// <item><description>If the <b>Protocol</b> (Protocol Type) of the inbound rule is set to <b>all</b>, <b>icmp</b>, or <b>gre</b>, the port range is -1/-1, which indicates that all ports are available.</description></item>
+            /// <item><description>If the <b>Protocol</b> (Protocol Type) of the inbound rule is set to <b>tcp</b> or <b>udp</b>, the port range is <b>1</b> to <b>65535</b>. The format is <b>1/200</b> or <b>80/80</b>, which indicates Port 1 to Port 200 or Port 80.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -265,17 +261,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The protocol type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>icmp</b>: Internet Control Message Protocol.</para>
+            /// <item><description><para><b>icmp</b>: Internet Control Message Protocol (ICMP).</para>
             /// </description></item>
-            /// <item><description><para><b>gre</b>: Generic Routing Encapsulation.</para>
+            /// <item><description><para><b>gre</b>: Generic Routing Encapsulation (GRE).</para>
             /// </description></item>
-            /// <item><description><para><b>tcp</b>: Transmission Control Protocol.</para>
+            /// <item><description><para><b>tcp</b>: Transmission Control Protocol (TCP).</para>
             /// </description></item>
-            /// <item><description><para><b>udp</b>: User Datagram Protocol.</para>
+            /// <item><description><para><b>udp</b>: User Datagram Protocol (UDP).</para>
             /// </description></item>
             /// <item><description><para><b>all</b>: all protocols.</para>
             /// </description></item>
-            /// <item><description><para><b>icmpv6</b>: Internet Control Message Protocol for IPv6.</para>
+            /// <item><description><para><b>icmpv6</b>: Internet Control Message Protocol version 6 (ICMPv6).</para>
             /// </description></item>
             /// </list>
             /// 
@@ -320,7 +316,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the network ACL.</para>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -339,15 +335,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to update outbound rules. Valid values:</para>
+        /// <para>Specifies whether to update the outbound rules. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: updates outbound rules.</para>
+        /// <item><description><para><b>true</b>: yes.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): does not update outbound rules.</para>
+        /// <item><description><para><b>false</b> (default): no.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter does not support incremental updates. If the ACL already has one outbound rule and you want to add another outbound rule, you must pass in both rules when calling this operation. If you pass in only the new outbound rule, the existing outbound rule is deleted.</para>
+        /// <para>This parameter does not support incremental updates. If the network ACL already has an outbound rule and you want to add another outbound rule, you must pass both rules when you call this operation. If you pass only the new outbound rule, the existing outbound rule is deleted.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -358,15 +354,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? UpdateEgressAclEntries { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to update inbound rules. Valid values:</para>
+        /// <para>Specifies whether to update the inbound rules. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: updates inbound rules.</para>
+        /// <item><description><para><b>true</b>: yes.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): does not update inbound rules.</para>
+        /// <item><description><para><b>false</b> (default): no.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter does not support incremental updates. If the ACL already has one inbound rule and you want to add another inbound rule, you must pass in both rules when calling this operation. If you pass in only the new inbound rule, the existing inbound rule is deleted.</para>
+        /// <para>This parameter does not support incremental updates. If the network ACL already has an inbound rule and you want to add another inbound rule, you must pass both rules when you call this operation. If you pass only the new inbound rule, the existing inbound rule is deleted.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

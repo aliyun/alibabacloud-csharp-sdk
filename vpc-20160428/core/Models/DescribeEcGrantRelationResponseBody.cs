@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeEcGrantRelationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of query results.</para>
+        /// <para>The number of returned entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The list of authorization relationship query results.</para>
+        /// <para>The list of authorization relationships.</para>
         /// </summary>
         [NameInMap("EcGrantRelations")]
         [Validation(Required=false)]
         public List<DescribeEcGrantRelationResponseBodyEcGrantRelations> EcGrantRelations { get; set; }
         public class DescribeEcGrantRelationResponseBodyEcGrantRelations : TeaModel {
             /// <summary>
-            /// <para>The Alibaba Cloud account ID of the VPC instance owner in the authorization relationship.</para>
+            /// <para>The ID of the Alibaba Cloud account to which the VPC instance in the authorization relationship belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1250123456123456</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public long? AliUid { get; set; }
 
             /// <summary>
-            /// <para>The time when the VPC-connected instance granted authorization to the VBR instance.</para>
+            /// <para>The time when the VPC-connected instance granted the authorization to the VBR instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-09-02T11:46Z</para>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The scope of VBR instances that are granted authorization. Valid values:</para>
+            /// <para>The scope of VBR instances that receive the authorization. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>All</b>: The VPC-connected instance is authorized to all VBR instances under the specified region and Alibaba Cloud account.</description></item>
-            /// <item><description><b>Specify</b>: The VPC-connected instance is authorized to a specified VBR instance.</description></item>
+            /// <item><description><b>All</b>: Grants authorization of the VPC-connected instance to all VBR instances in the specified region and under the specified Alibaba Cloud account.</description></item>
+            /// <item><description><b>Specify</b>: Grants authorization of the VPC-connected instance to a specified VBR instance.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The vRouter ID of the VPC instance in the authorization relationship.</para>
+            /// <para>The ID of the vRouter of the VPC instance in the authorization relationship.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vrt-bp1i0yzgjd8ra05ec****</para>
@@ -101,10 +101,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string RegionNo { get; set; }
 
             /// <summary>
-            /// <para>The status of the authorization relationship. Valid values:</para>
+            /// <para>The result of the authorization relationship query. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Created</b>: An authorization relationship exists between the VPC-connected instance and the VBR instance.</description></item>
-            /// <item><description><b>Deleted</b>: No authorization relationship exists between the VPC-connected instance and the VBR instance.</description></item>
+            /// <item><description><b>Created</b>: The VPC-connected instance and the VBR instance have an authorization relationship.</description></item>
+            /// <item><description><b>Deleted</b>: The VPC-connected instance and the VBR instance do not have an authorization relationship.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string VbrInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud account ID of the VBR instance owner.</para>
+            /// <para>The ID of the Alibaba Cloud account to which the VBR instance belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1210123456123456</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The page number of the list.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query.</para>
+        /// <para>The number of entries per page for paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries in the list.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

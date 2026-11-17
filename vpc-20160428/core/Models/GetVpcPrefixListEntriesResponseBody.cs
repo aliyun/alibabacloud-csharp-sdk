@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? Count { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Valid values:</para>
+        /// <para>The token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no subsequent query is required.</description></item>
-        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, it indicates that no next query is available.</description></item>
+        /// <item><description>If <b>NextToken</b> has a return value, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The information about the prefix list.</para>
+        /// <para>The information about the queried prefix list.</para>
         /// </summary>
         [NameInMap("PrefixListEntry")]
         [Validation(Required=false)]
         public List<GetVpcPrefixListEntriesResponseBodyPrefixListEntry> PrefixListEntry { get; set; }
         public class GetVpcPrefixListEntriesResponseBodyPrefixListEntry : TeaModel {
             /// <summary>
-            /// <para>The Classless Inter-Domain Routing (CIDR) block of the prefix list.</para>
+            /// <para>The Classless Inter-Domain Routing block of the prefix list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.0.0/16</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

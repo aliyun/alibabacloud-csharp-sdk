@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class DescribeGrantRulesToCenRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>Generate a parameter value from your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,11 +37,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The type of the network instance to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>VPC</b>: virtual private cloud (VPC).</para>
+        /// <item><description><para><b>VPC</b>: virtual private cloud (VPC)</para>
         /// </description></item>
-        /// <item><description><para><b>VBR</b>: Virtual Border Router.</para>
+        /// <item><description><para><b>VBR</b>: Virtual Border Router (VBR)</para>
         /// </description></item>
-        /// <item><description><para><b>CCN</b>: Cloud Connect Network.</para>
+        /// <item><description><para><b>CCN</b>: Cloud Connect Network (CCN)</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paging query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region of the network instance to query.</para>
+        /// <para>The region ID of the network instance to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the network instance belongs.</para>
+        /// <para>The ID of the resource group that contains the network instance to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxazb4p****</para>

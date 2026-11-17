@@ -10,10 +10,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AddBgpNetworkRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,7 +23,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The CIDR block of the VPC or vSwitch that needs to be interconnected with the on-premises data center.</para>
+        /// <para>The CIDR block of the VPC or vSwitch to be connected to the on-premises data center.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,8 +42,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region where the VBR group resides.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>The region ID of the VBR group. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +61,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vRouter associated with the router interface.</para>
+        /// <para>The ID of the router associated with the router interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

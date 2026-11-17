@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

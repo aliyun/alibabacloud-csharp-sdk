@@ -85,9 +85,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         [Validation(Required=false)]
                         public string BandwidthPackageIpRelationStatus { get; set; }
 
+                        [NameInMap("CommonBandwidthPackageIpBandwidth")]
+                        [Validation(Required=false)]
+                        public string CommonBandwidthPackageIpBandwidth { get; set; }
+
                         [NameInMap("IpAddress")]
                         [Validation(Required=false)]
                         public string IpAddress { get; set; }
+
+                        [NameInMap("IpInstanceId")]
+                        [Validation(Required=false)]
+                        public string IpInstanceId { get; set; }
+
+                        [NameInMap("IpType")]
+                        [Validation(Required=false)]
+                        public string IpType { get; set; }
 
                     }
 
@@ -168,7 +180,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The page number of the list.</para>
+        /// <para>The page number of the returned page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -178,7 +190,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging queries.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

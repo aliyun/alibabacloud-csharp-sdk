@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeGrantRulesToEcrResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries returned.</para>
+        /// <para>The number of queried results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The cross-account authorization list of Express Connect Router (ECR).</para>
+        /// <para>The cross-account authorization list of the Express Connect Router (ECR).</para>
         /// </summary>
         [NameInMap("EcrGrantRules")]
         [Validation(Required=false)]
         public List<DescribeGrantRulesToEcrResponseBodyEcrGrantRules> EcrGrantRules { get; set; }
         public class DescribeGrantRulesToEcrResponseBodyEcrGrantRules : TeaModel {
             /// <summary>
-            /// <para>The authorization time. The time is displayed in UTC in the YYYY-MM-DDThh:mm:ssZ format.</para>
+            /// <para>The time when the authorization was granted. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-09-15T14:00:00Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the cross-account authorization for the Express Connect Router (ECR).</para>
+            /// <para>The instance ID of the Express Connect Router (ECR) for which cross-account authorization is granted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecr-xxxxxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string EcrInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The authorized user ID for the cross-account authorization of the Express Connect Router (ECR).</para>
+            /// <para>The ID of the authorized user for the Express Connect Router (ECR) cross-account authorization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11111111111</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The page number of the list. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Maximum value: 50. Default value: 10.</para>
+        /// <para>The number of entries returned per page during paging in a paged query. Maximum value: 50. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries in the list.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

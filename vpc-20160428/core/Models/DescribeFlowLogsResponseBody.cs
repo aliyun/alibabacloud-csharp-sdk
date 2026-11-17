@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in paging query.</para>
+        /// <para>The number of entries per page for paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -158,9 +158,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The call is successful.</description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
         /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of flow logs returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

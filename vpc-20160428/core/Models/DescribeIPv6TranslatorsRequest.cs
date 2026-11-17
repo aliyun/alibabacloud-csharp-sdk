@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The business status of the IPv6 Translation Service instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Normal</b>: normal.</para>
+        /// <item><description><para><b>Normal</b>: Normal.</para>
         /// </description></item>
-        /// <item><description><para><b>FinancialLocked</b>: locked.</para>
+        /// <item><description><para><b>FinancialLocked</b>: Locked.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the list. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in paging query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -94,11 +94,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The billing transform type of the IPv6 Translation Service instance. Valid values:</para>
+        /// <para>The billing method of the IPv6 Translation Service instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Prepay</b>: subscription.</para>
+        /// <item><description><para><b>Prepay</b>: Subscription.</para>
         /// </description></item>
-        /// <item><description><para><b>Postpay</b>: pay-as-you-go.</para>
+        /// <item><description><para><b>Postpay</b>: Pay-as-you-go.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The region of the IPv6 Translation Service instance. You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to obtain the region ID.</para>
+        /// <para>The region of the IPv6 Translation Service instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The specification of the IPv6 Translation Service instance. Valid values: <b>small</b>.</para>
+        /// <para>The specifications of the IPv6 Translation Service instance. Valid value: <b>small</b> (Small).</para>
         /// 
         /// <b>Example:</b>
         /// <para>small</para>
@@ -141,19 +141,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The status of the IPv6 Translation Service instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>init</b>: initializing.</para>
+        /// <item><description><para><b>init</b>: The instance is being initialized.</para>
         /// </description></item>
-        /// <item><description><para><b>provisioning</b>: being provisioned.</para>
+        /// <item><description><para><b>provisioning</b>: The instance is being provisioned.</para>
         /// </description></item>
-        /// <item><description><para><b>active</b>: available.</para>
+        /// <item><description><para><b>active</b>: The instance is active.</para>
         /// </description></item>
-        /// <item><description><para><b>updating</b>: being updated.</para>
+        /// <item><description><para><b>updating</b>: The instance is being updated.</para>
         /// </description></item>
-        /// <item><description><para><b>upgrading</b>: being upgraded.</para>
+        /// <item><description><para><b>upgrading</b>: The instance is being upgraded.</para>
         /// </description></item>
-        /// <item><description><para><b>deleting</b>: being deleted.</para>
+        /// <item><description><para><b>deleting</b>: The instance is being deleted.</para>
         /// </description></item>
-        /// <item><description><para><b>deleted</b>: deleted.</para>
+        /// <item><description><para><b>deleted</b>: The instance is deleted.</para>
         /// </description></item>
         /// </list>
         /// 

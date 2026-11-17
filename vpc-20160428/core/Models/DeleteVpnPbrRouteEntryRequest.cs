@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class DeleteVpnPbrRouteEntryRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
+        /// <para>Generate a value for this parameter in your client to ensure that the value is unique across different requests. The client token only supports ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextHop { get; set; }
 
         /// <summary>
-        /// <para>The tunneling protocol. Set the value to <b>Ipsec</b> (IPsec tunneling protocol).</para>
+        /// <para>The tunneling protocol. Valid value: <b>Ipsec</b> (IPsec tunnel).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ipsec</para>
@@ -53,12 +53,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The policy priority of the policy-based route.</para>
+        /// <para>Policy priority of the policy-based route.</para>
         /// <list type="bullet">
-        /// <item><description><para>If no policy priority was previously configured for the policy-based route, you do not need to specify this parameter.</para>
+        /// <item><description><para>If the policy-based route does not have a priority configured, you can leave this parameter empty.</para>
         /// </description></item>
-        /// <item><description><para>If a policy priority was previously configured for the policy-based route, you can choose whether to specify this parameter.</para>
-        /// <para>  If you specify this parameter, enter the policy priority that was previously configured for the policy-based route. If you enter a different value, the operation fails.</para>
+        /// <item><description><para>If the policy-based route has a priority configured, you can specify this parameter or leave it empty.</para>
+        /// <para>  If you specify this parameter, you must set it to policy priority that is already configured for the policy-based route. If you set it to another value, the call to this operation fails.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouteSource { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the VPN gateway.</para>
+        /// <para>The VPN gateway instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The Alibaba Cloud account ID to which the network ACL belongs.</para>
             /// <remarks>
-            /// <para>Notice: This value is of the Long type. Precision loss may occur in certain languages. Use this value with caution.</para>
+            /// <para>Notice: This value is of the Long type. Precision loss may occur in some programming languages. Use it with caution.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -202,9 +202,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The status of the associated resource. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Available</b>: available.</para>
+            /// <item><description><para><b>Available</b>: The resource is available.</para>
             /// </description></item>
-            /// <item><description><para><b>Modifying</b>: being modified.</para>
+            /// <item><description><para><b>Modifying</b>: The resource is being configured.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// <para>The ID of the VPC associated with the network ACL.</para>
+            /// <para>The ID of the virtual private cloud (VPC) associated with the network ACL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-a2d33rfpl72k5defr****</para>

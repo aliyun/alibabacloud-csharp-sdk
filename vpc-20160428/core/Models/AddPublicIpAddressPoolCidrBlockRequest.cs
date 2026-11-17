@@ -23,8 +23,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string CidrBlock { get; set; }
 
         /// <summary>
-        /// <para>The subnet mask of the CIDR block.
-        /// After you enter the subnet mask, the system automatically allocates a CIDR block.</para>
+        /// <para>The mask of the CIDR block.
+        /// After you specify the mask, the system automatically allocates a CIDR block.</para>
         /// <para>Valid values: <b>24</b> to <b>28</b>.</para>
         /// <remarks>
         /// <para>You cannot specify both <b>CidrBlock</b> and <b>CidrMask</b>. Specify only one of them.</para>
@@ -39,9 +39,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -52,10 +52,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to only perform a dry run on the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>true</b>: performs a dry run without adding the CIDR block. The system checks whether required parameters are specified, the request format is valid, and the service limits are met. If the request fails the dry run, the corresponding error is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends the request. If the request passes the dry run, the HTTP 2xx status code is returned and the operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the IPAM pool.</para>
+        /// <para>The instance ID of the IP address pool.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

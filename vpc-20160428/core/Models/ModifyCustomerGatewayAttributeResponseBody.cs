@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The public IP address of the on-premises data center gateway device.</para>
+        /// <para>The public IP address of the gateway device in the on-premises data center.</para>
         /// 
         /// <b>Example:</b>
         /// <para>139.32.XX.XX</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8AA5CE21-2E6A-4530-BDF5-F055849476E6</para>

@@ -10,10 +10,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateNatIpCidrRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, and you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may differ for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,10 +23,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to only precheck the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run without creating the NAT CIDR block. The system checks whether your AccessKey pair is valid, whether RAM users are granted permissions, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>true</b>: prechecks the request without creating the NAT CIDR block. The system checks whether required parameters are specified, the request format is valid, and the service limits are met. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +37,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the VPC NAT gateway for which you want to create the NAT CIDR block.</para>
+        /// <para>The instance ID of the VPC NAT gateway to which the NAT CIDR block belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,13 +48,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NatGatewayId { get; set; }
 
         /// <summary>
-        /// <para>The NAT CIDR block to create.</para>
-        /// <para>The new CIDR block must meet the following conditions:</para>
+        /// <para>The NAT CIDR block to be created. The new CIDR block must meet the following conditions:</para>
         /// <list type="bullet">
-        /// <item><description>It must belong to 10.0.0.0/8, 172.16.0.0/12, or 192.168.0.0/16 and their subnets.</description></item>
+        /// <item><description>It must belong to the 10.0.0.0/8, 172.16.0.0/12, or 192.168.0.0/16 CIDR block or their subnets.</description></item>
         /// <item><description>The subnet mask must be 16 to 32 bits in length.</description></item>
-        /// <item><description>It cannot overlap with the private CIDR block of the VPC to which the VPC NAT gateway belongs. If you want to transform a private endpoint to another address within the VPC private network CIDR block, create a vSwitch in the corresponding VPC private network CIDR block, and then create a new VPC NAT gateway in the vSwitch to provide private network address transform services.</description></item>
-        /// <item><description>To use a public CIDR block as the NAT CIDR block, the CIDR block must belong to the user CIDR block of the VPC to which the VPC NAT gateway belongs. For more information about user CIDR blocks, see <a href="https://help.aliyun.com/document_detail/185311.html">What is a user CIDR block?</a>.</description></item>
+        /// <item><description>It cannot overlap with the private CIDR block of the VPC to which the VPC NAT gateway belongs. If you need to transform private IP addresses to other addresses within the private CIDR block of the VPC, create a vSwitch in the corresponding private CIDR block of the VPC, and then create a new VPC NAT gateway in the vSwitch to provide private IP address translation services.</description></item>
+        /// <item><description>If you want to use a public CIDR block as the NAT CIDR block, the CIDR block must belong to the user CIDR block of the VPC to which the VPC NAT gateway belongs. For more information about user CIDR blocks, see <a href="https://help.aliyun.com/document_detail/185311.html">What is a user CIDR block?</a>.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -67,8 +65,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NatIpCidr { get; set; }
 
         /// <summary>
-        /// <para>The description of the NAT CIDR block.</para>
-        /// <para>The description must be 2 to 256 characters in length and must start with a letter or Chinese character. It cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description of the NAT CIDR block. The description must be 2 to 256 characters in length, and must start with a letter or a Chinese character. It cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mycidr</para>
@@ -78,8 +75,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NatIpCidrDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the NAT CIDR block.</para>
-        /// <para>The name must be 2 to 128 characters in length and must start with a letter or Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name of the NAT CIDR block. The name must be 2 to 128 characters in length, and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>newcidr</para>
@@ -97,8 +93,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the NAT gateway instance to which the NAT CIDR block belongs.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>The region ID of the NAT gateway to which the NAT CIDR block to be created belongs. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpnRouteEntriesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the list.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging queries.</para>
+        /// <para>The number of entries returned per page for paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries in the list.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -100,6 +100,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [NameInMap("NextHopTunnelId")]
                 [Validation(Required=false)]
                 public string NextHopTunnelId { get; set; }
+
+                [NameInMap("PrefixListId")]
+                [Validation(Required=false)]
+                public string PrefixListId { get; set; }
 
                 [NameInMap("RouteDest")]
                 [Validation(Required=false)]

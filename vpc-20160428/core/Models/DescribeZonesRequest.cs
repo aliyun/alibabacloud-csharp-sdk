@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeZonesRequest : TeaModel {
         /// <summary>
-        /// <para>The display language of the zone name <b>LocalName</b> in the response. Valid values:</para>
+        /// <para>The display language of the zone name returned in the <b>LocalName</b> parameter. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>zh-cn</b>: Chinese.</para>
         /// </description></item>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the zones reside. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</para>
+        /// <para>The ID of the region where the zone resides. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of zones to query. Default value: <b>AvailabilityZone</b>, which indicates a standard cloud zone.</para>
+        /// <para>The type of zone to query. Default value: <b>AvailabilityZone</b>, which indicates a regular cloud zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AvailabilityZone</para>

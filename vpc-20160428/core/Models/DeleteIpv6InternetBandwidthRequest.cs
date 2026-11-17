@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DeleteIpv6InternetBandwidthRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among multiple requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <h2>If you do not specify this parameter, the system uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</h2>
+        /// <h2>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request may be different.</h2>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,11 +23,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run on this request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: performs a dry run without actually deleting the Internet bandwidth. The system checks the required parameters, request syntax, and business restrictions. If the check fails, the corresponding error message is returned. If the check succeeds, <c>DryRunOperation</c> is returned.</para>
+        /// <item><description><para><b>true</b>: performs a dry run on this request without deleting the IPsec server. The system checks whether all required parameters are specified, the request format is valid, and service limits are met. If the request fails the check, the corresponding error message is returned. If the request passes the check, <c>DryRunOperation</c> is returned.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): performs a dry run and sends the request. If the check succeeds, the Internet bandwidth is deleted.</para>
+        /// <item><description><para><b>false</b> (default): sends a regular request and deletes the IPsec server after the request passes the check.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The ID of the IPv6 address.</para>
         /// <remarks>
-        /// <para>You must specify either <b>Ipv6AddressId</b> or <b>Ipv6InternetBandwidthId</b>.</para>
+        /// <para>You must specify either the <b>Ipv6AddressId</b> parameter or the <b>Ipv6InternetBandwidthId</b> parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Ipv6AddressId { get; set; }
 
         /// <summary>
-        /// <para>The Internet bandwidth instance ID of the IPv6 address.</para>
+        /// <para>The instance ID of the Internet bandwidth for the IPv6 address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ipv6bw-uf6hcyzu65v98v3du****</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the IPv6 gateway.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetPhysicalConnectionServiceStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether outbound traffic billing is enabled.</para>
+        /// <para>Indicates whether the outbound data transfer service is enabled.</para>
         /// <list type="bullet">
         /// <item><description><para><b>true</b>: Enabled.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: Not enabled.</para>
+        /// <item><description><para><b>false</b>: Disabled.</para>
         /// </description></item>
         /// </list>
         /// 

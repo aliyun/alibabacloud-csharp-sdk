@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListTrafficMirrorSessionsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether the traffic mirror session is enabled. Valid values:</para>
+        /// <para>Specifies whether to enable the traffic mirror session. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b> (default): The traffic mirror session is not enabled.</para>
+        /// <item><description><para><b>false</b> (default): disables the traffic mirror session.</para>
         /// </description></item>
-        /// <item><description><para><b>true</b>: The traffic mirror session is enabled.</para>
+        /// <item><description><para><b>true</b>: enables the traffic mirror session.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return in this query. Valid values: <b>1</b> to <b>100</b>. Default value: <b>10</b>.</para>
+        /// <para>The maximum number of entries to return for a single request. Valid values: <b>1</b> to <b>100</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -36,10 +36,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>You do not need to specify this parameter for the first request or if no next query exists.</description></item>
-        /// <item><description>If a next query exists, set the value to the NextToken value returned in the previous API call.</description></item>
+        /// <item><description>For the first query and when no next query is required, you do not need to specify this parameter.</description></item>
+        /// <item><description>If a next query is required, set the value to the NextToken value returned from the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,8 +58,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The priority of traffic mirror session. Valid values: <b>1</b> to <b>32766</b>.</para>
-        /// <para>A smaller value indicates a higher priority. The priority of traffic mirror session created by the same account in the same region must be unique.</para>
+        /// <para>The priority of the traffic mirror session. Valid values: <b>1</b> to <b>32766</b>.</para>
+        /// <para>A smaller value indicates a higher priority. The priorities of traffic mirror sessions created by the same Alibaba Cloud account in the same region must be unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the traffic mirror session. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID. For information about the regions that support traffic mirroring, see <a href="https://help.aliyun.com/document_detail/207513.html">Traffic mirroring overview</a>.</para>
+        /// <para>The region ID of the traffic mirror session. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list. For more information about the regions that support traffic mirroring, see <a href="https://help.aliyun.com/document_detail/207513.html">Traffic mirroring overview</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the traffic mirroring session belongs.</para>
+        /// <para>The ID of the resource group to which the traffic mirroring belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4ph****</para>
@@ -98,15 +98,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<ListTrafficMirrorSessionsRequestTags> Tags { get; set; }
         public class ListTrafficMirrorSessionsRequestTags : TeaModel {
             /// <summary>
-            /// <para>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot enter an empty string.</para>
+            /// <para>A tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -116,8 +116,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can enter an empty string.</para>
+            /// <para>A tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string TrafficMirrorFilterId { get; set; }
 
         /// <summary>
-        /// <para>The instance IDs of traffic mirror sessions. The maximum value of <b>N</b> is <b>100</b>, which means you can query up to 100 traffic mirror sessions.</para>
+        /// <para>The instance IDs of the traffic mirror sessions. The maximum value of <b>N</b> is <b>100</b>, which means you can query up to 100 traffic mirror sessions at a time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tms-j6cla50buc44ap8tu****</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string TrafficMirrorSessionName { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the traffic mirror source. Currently, elastic network interfaces (ENIs) are supported as traffic mirror sources.</para>
+        /// <para>The instance ID of the traffic mirror source. Currently, only elastic network interfaces (ENIs) are supported as traffic mirror sources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eni-j6c8znm5l1yt4sox*****</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string TrafficMirrorSourceId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the traffic mirror destination. Currently, elastic network interfaces (ENIs) and internal-facing SLB instances are supported as traffic mirror destinations. Elastic network interfaces are also referred to as network interface controllers (NICs).</para>
+        /// <para>The instance ID of the traffic mirror destination. Currently, elastic network interfaces (ENIs) and internal-facing SLB instances are supported as traffic mirror destinations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eni-j6c2fp57q8rr47rp****</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string TrafficMirrorTargetId { get; set; }
 
         /// <summary>
-        /// <para>The Virtual Network Identifier (VNI) used to distinguish different mirrored data. Valid values: <b>0</b> to <b>16777215</b>. You can use the VNI to identify mirrored data from different sessions at the traffic mirror destination. You can specify a custom VNI value or let the system randomly assign one. To let the system randomly assign a value, do not specify this parameter.</para>
+        /// <para>The virtual network identifier (VNI) that is used to distinguish different mirrored traffic. Valid values: <b>0</b> to <b>16777215</b>. You can use the VNI to distinguish mirrored traffic of different sessions at the traffic mirror destination. You can specify a custom VNI or let the system randomly allocate one. To let the system randomly allocate a VNI, do not specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

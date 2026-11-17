@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? AvailableIpAddressCount { get; set; }
 
         /// <summary>
-        /// <para>The private network address range of the vSwitch.</para>
+        /// <para>The private endpoint range of the vSwitch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.0.1/24</para>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the IPv6 CIDR block is enabled for the vSwitch. Valid values:</para>
+        /// <para>Specifies whether the IPv6 CIDR block is enabled and configured for the vSwitch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enabled.</description></item>
-        /// <item><description><b>false</b>: not enabled.</description></item>
+        /// <item><description><b>true</b>: Enabled.</description></item>
+        /// <item><description><b>false</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Ipv6CidrBlock { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the vSwitch is the default vSwitch. Valid values:</para>
+        /// <para>Indicates whether the vSwitch is an IPv6 single-stack vSwitch. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The vSwitch is an IPv6 single-stack vSwitch.</description></item>
+        /// <item><description>false: The vSwitch is not an IPv6 single-stack vSwitch.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("Ipv6Only")]
+        [Validation(Required=false)]
+        public bool? Ipv6Only { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether the vSwitch is the default vSwitch. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: The vSwitch is the default vSwitch.</description></item>
         /// <item><description><b>false</b>: The vSwitch is not the default vSwitch.</description></item>
@@ -98,9 +112,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NetworkAclId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the resource ownership.</para>
+        /// <para>The Alibaba Cloud account ID of the resource owner.</para>
         /// <remarks>
-        /// <para>Notice: This value is of the Long type. Precision loss may occur in certain programming languages. Use this value with caution.</para>
+        /// <para>Notice: This value is of the Long type and may cause precision loss in some programming languages. Use it with caution.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -111,7 +125,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7B48B4B9-1EAD-469F-B488-594DAB4B6A1A</para>
@@ -121,7 +135,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxazb4ph****</para>
@@ -150,9 +164,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The type of the route table. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>System</b>: system route table.</para>
+            /// <item><description><para><b>System</b>: System route table.</para>
             /// </description></item>
-            /// <item><description><para><b>Custom</b>: custom route table.</para>
+            /// <item><description><para><b>Custom</b>: Custom route table.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -166,11 +180,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The sharing type of the vSwitch.</para>
+        /// <para>The share type of the vSwitch.</para>
         /// <list type="bullet">
-        /// <item><description>If the value is empty, the vSwitch is a private vSwitch.</description></item>
+        /// <item><description>If the value is empty, the vSwitch is a standard vSwitch.</description></item>
         /// <item><description>If the value is <b>Shared</b>, the vSwitch is a shared vSwitch.</description></item>
-        /// <item><description>If the value is <b>Sharing</b>, the vSwitch is being shared with other accounts.</description></item>
+        /// <item><description>If the value is <b>Sharing</b>, the vSwitch is being shared.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -183,9 +197,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The status of the vSwitch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Pending</b>: being configured. </para>
+        /// <item><description><para><b>Pending</b>: Configuring. </para>
         /// </description></item>
-        /// <item><description><para><b>Available</b>: active.</para>
+        /// <item><description><para><b>Available</b>: Available.</para>
         /// </description></item>
         /// </list>
         /// 

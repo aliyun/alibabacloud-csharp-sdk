@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Connections { get; set; }
 
         /// <summary>
-        /// <para>The time when the SSL-VPN server was created.</para>
+        /// <para>The creation time of the SSL server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1492753580000</para>
@@ -62,9 +62,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Indicates whether two-factor authentication is enabled.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: enabled.</para>
+        /// <item><description><para><b>true</b>: Enabled.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): not enabled.</para>
+        /// <item><description><para><b>false</b> (default): Disabled.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IDaaSApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the IDaaS EIAM instance.</para>
+        /// <para>The instance ID of the IDaaS EIAM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>idaas-cn-hangzhou-****</para>
@@ -98,8 +98,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The version of the IDaaS EIAM instance.</para>
         /// <list type="bullet">
-        /// <item><description>This parameter is returned only when the SSL server is bound to an IDaaS EIAM 2.0 instance. The value is <b>EIAM 2.0</b>.</description></item>
-        /// <item><description>If the SSL server is bound to an IDaaS EIAM 1.0 instance, this parameter is not returned.</description></item>
+        /// <item><description>This parameter is returned only when the SSL server is bound to an IDaaS EIAM 2.0 instance. Valid value: <b>EIAM 2.0</b>.</description></item>
+        /// <item><description>This parameter is not returned if the SSL server is bound to an IDaaS EIAM 1.0 instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxConnections { get; set; }
 
         /// <summary>
-        /// <para>The name of the SSL-VPN server.</para>
+        /// <para>The name of the SSL server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The port of the SSL-VPN server.</para>
+        /// <para>The port of the SSL server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1194</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Port { get; set; }
 
         /// <summary>
-        /// <para>The protocol used by the SSL-VPN server.</para>
+        /// <para>The protocol used by the SSL server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UDP</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Proto { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the SSL-VPN server.</para>
+        /// <para>The region ID of the SSL server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -190,8 +190,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the SSL-VPN server belongs.</para>
-        /// <para>The SSL-VPN server belongs to the same resource group as the associated VPN gateway instance. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group information.</para>
+        /// <para>The ID of the resource group to which the SSL server belongs.</para>
+        /// <para>The SSL server belongs to the same resource group as its associated VPN gateway. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzs372yg****</para>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SSL-VPN server.</para>
+        /// <para>The ID of the SSL server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vss-bp18q7hzj6largv4v****</para>

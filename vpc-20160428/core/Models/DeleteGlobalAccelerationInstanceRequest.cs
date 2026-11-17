@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DeleteGlobalAccelerationInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud Global Accelerator (GA) instance.</para>
+        /// <para>The ID of the Global Accelerator instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,8 +29,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region where the Alibaba Cloud Global Accelerator (GA) instance is located. </para>
-        /// <para>You can invoke <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to obtain the region ID.</para>
+        /// <para>The region where the Global Accelerator instance resides. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

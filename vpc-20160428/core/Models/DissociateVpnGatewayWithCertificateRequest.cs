@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DissociateVpnGatewayWithCertificateRequest : TeaModel {
         /// <summary>
-        /// <para>The certificate ID.</para>
+        /// <para>The ID of the certificate.</para>
         /// <remarks>
         /// <para>The certificate ID refers to the ID generated after the SSL certificate is associated with the VPN gateway, not the ID of the SSL certificate itself.
         /// &lt;props=&quot;china&quot;&gt;You can call the <a href="https://help.aliyun.com/document_detail/2521961.html">ListVpnCertificateAssociations</a> operation to query the certificate ID.</para>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string CertificateId { get; set; }
 
         /// <summary>
-        /// <para>The certificate type. Valid values:</para>
+        /// <para>The type of the certificate. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>Encryption</b>: encryption certificate.</para>
         /// </description></item>
@@ -43,9 +43,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the value, and you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may differ for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -56,11 +56,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run on the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: performs a dry run without performing the actual request. The system checks the request for potential issues, including required parameters, request format, and instance status. If the request fails the dry run, the corresponding error is returned. If the request passes the dry run, the error code <c>DryRunOperation</c> is returned.</para>
+        /// <item><description><para><b>true</b>: Performs only a dry run and does not perform the dissociation operation. The system checks whether required parameters are specified, the request format is valid, and the instance status is valid. If the request fails the dry run, an error is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, the VPN gateway is dissociated from the SSL certificate.</para>
+        /// <item><description><para><b>false</b> (default): Sends a normal request. If the request passes the dry run, the VPN gateway is dissociated from the SSL certificate.</para>
         /// </description></item>
         /// </list>
         /// 

@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
+        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -48,9 +48,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned. The system does not associate a prefix list with a route table.</para>
+        /// <item><description><para><b>true</b>: performs a dry run without associating a prefix list with a route table. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): sends a normal request. After the request passes the check, a 2xx HTTP status code is returned and the system associates the prefix list with a route table. The system checks whether the AccessKey pair is valid, whether the Resource Access Management (RAM) user has the required authorization, and whether the required parameters are specified.</para>
+        /// <item><description><para><b>false</b> (default): sends a Normal request. If the check succeeds, a 2xx HTTP status code is returned and the prefix list is associated with a route table.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The billable methods of the IPv6 Internet bandwidth. Valid values:</para>
+        /// <para>The billable methods for IPv6 Internet bandwidth. Valid values:</para>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
         /// <item><description><b>PayByTraffic</b>: pay-by-data-transfer.</description></item>

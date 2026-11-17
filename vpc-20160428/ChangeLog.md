@@ -1,3 +1,25 @@
+2026-11-17 Version: 7.4.0
+- Support API CalculateNatGatewayCapacityUnits.
+- Support API DeleteNatRateLimitRule.
+- Support API DescribeNatGatewayCapacityReservation.
+- Support API ModifyNatGatewayCapacityReservation.
+- Support API ModifyNatRateLimitRule.
+- Update API CancelCommonBandwidthPackageIpBandwidth: add request parameters IpInstanceId.
+- Update API CancelCommonBandwidthPackageIpBandwidth: add request parameters IpType.
+- Update API CreateVSwitch: add request parameters Ipv6Only.
+- Update API DescribeCommonBandwidthPackages: add response parameters Body.CommonBandwidthPackages.$.PublicIpAddresses.$.CommonBandwidthPackageIpBandwidth.
+- Update API DescribeCommonBandwidthPackages: add response parameters Body.CommonBandwidthPackages.$.PublicIpAddresses.$.IpInstanceId.
+- Update API DescribeCommonBandwidthPackages: add response parameters Body.CommonBandwidthPackages.$.PublicIpAddresses.$.IpType.
+- Update API DescribeEipAddresses: add response parameters Body.EipAddresses.$.CommonBandwidthPackageIpBandwidth.
+- Update API DescribeIpv6Addresses: add response parameters Body.Ipv6Addresses.$.CommonBandwidthPackageInfo.
+- Update API DescribeVSwitchAttributes: add response parameters Body.Ipv6Only.
+- Update API DescribeVSwitches: add request parameters Ipv6Only.
+- Update API DescribeVcoRouteEntries: add response parameters Body.VcoRouteEntries.$.PrefixListId.
+- Update API DescribeVpnRouteEntries: add response parameters Body.VpnRouteEntries.$.PrefixListId.
+- Update API ModifyCommonBandwidthPackageIpBandwidth: add request parameters IpInstanceId.
+- Update API ModifyCommonBandwidthPackageIpBandwidth: add request parameters IpType.
+
+
 2026-09-15 Version: 7.3.2
 - Update API DescribeRouteEntryList: add response parameters Body.TotalCount.
 - Update API GetVpcPrefixListAssociations: add response parameters Body.PrefixListAssociation.$.SuppressedList.

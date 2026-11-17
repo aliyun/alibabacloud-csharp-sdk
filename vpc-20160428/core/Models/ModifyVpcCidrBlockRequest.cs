@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class ModifyVpcCidrBlockRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
+        /// <para>Generate a parameter value from your client and ensure that the value is unique among different requests. The ClientToken parameter supports only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b> identifier. The <b>RequestId</b> of each API request is different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run for this request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run without modifying the CIDR block of the virtual private cloud (VPC). The system checks the request for potential issues. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</description></item>
-        /// <item><description><b>false</b> (default): sends a Normal request. If the check succeeds, an HTTP 2xx status code is returned and the modification is performed.</description></item>
+        /// <item><description><b>true</b>: The system sends a check request and does not modify the CIDR block of the virtual private cloud (VPC). If the check fails, the system returns the corresponding error. If the check succeeds, the system returns the error code <c>DryRunOperation</c>.</description></item>
+        /// <item><description><b>false</b> (default): The system sends a normal request. After the request passes the check, the system returns an HTTP 2xx status code and directly performs the modification.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The CIDR block of the VPC to modify. Both primary and secondary CIDR blocks are supported.</para>
+        /// <para>The CIDR block of the VPC that you want to modify. Both primary and secondary CIDR blocks are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string OriginalCidrBlock { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the VPC resides.</para>
+        /// <para>The ID of the region where the VPC is deployed.</para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The new CIDR block for the VPC after modification.</para>
+        /// <para>The target CIDR block of the VPC after the modification.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string TargetCidrBlock { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC to modify.</para>
+        /// <para>The ID of the VPC that you want to modify.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

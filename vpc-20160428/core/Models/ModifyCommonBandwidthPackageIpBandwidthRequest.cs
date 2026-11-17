@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyCommonBandwidthPackageIpBandwidthRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum bandwidth that can be allocated within the Internet Shared Bandwidth instance. Unit: Mbps.</para>
+        /// <para>The maximum bandwidth that can be allocated in the Internet Shared Bandwidth instance. Unit: Mbit/s.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the Internet Shared Bandwidth instance.</para>
+        /// <para>The instance ID of the Internet Shared Bandwidth.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,8 +32,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string BandwidthPackageId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the EIP that has been added to the Internet Shared Bandwidth instance.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The ID of the EIP that is added to the Internet Shared Bandwidth instance. This parameter applies only to EIPs. For IPv6 addresses, use IpInstanceId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eip-2zewysoansu0svfbg****</para>
@@ -41,6 +40,31 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("EipId")]
         [Validation(Required=false)]
         public string EipId { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the public IP address instance for which you want to set the maximum available bandwidth in the Internet Shared Bandwidth instance. This parameter and EipId are mutually exclusive. We recommend that you use this parameter for new workloads. If IpType is set to <b>VpcIpv6</b>, specify the ID of the IPv6 address.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>eip-2zewysoansu0svfbg****</para>
+        /// </summary>
+        [NameInMap("IpInstanceId")]
+        [Validation(Required=false)]
+        public string IpInstanceId { get; set; }
+
+        /// <summary>
+        /// <para>The resource type of the public IP address for which you want to set the maximum available bandwidth in the Internet Shared Bandwidth instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>EIP</b>: the public IP address of an EIP.</description></item>
+        /// <item><description><b>VpcIpv6</b>: the IPv6 address of a VPC.</description></item>
+        /// </list>
+        /// <para>If this parameter is not specified, the default value is <b>EIP</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EIP</para>
+        /// </summary>
+        [NameInMap("IpType")]
+        [Validation(Required=false)]
+        public string IpType { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]

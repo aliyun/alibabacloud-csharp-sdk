@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class DeleteDhcpOptionsSetRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> value as the <b>ClientToken</b> value. The <b>RequestId</b> value may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,9 +35,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DhcpOptionsSetId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
-        /// <para><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
-        /// <para><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, the DHCP options set is deleted.</para>
+        /// <para>Specifies whether to perform only a dry run on the request. Valid values:</para>
+        /// <para><b>true</b>: performs only a dry run and does not delete the DHCP options set. The system checks whether the required parameters are specified, the request format is valid, and the limits are met. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// <para><b>false</b> (default): performs a dry run and deletes the DHCP options set if the request passes the dry run.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the DHCP options set that you want to delete. You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>The region ID of the DHCP options set that you want to delete. You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

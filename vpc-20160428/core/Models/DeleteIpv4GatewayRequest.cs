@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class DeleteIpv4GatewayRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to only precheck the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, an HTTP 2xx status code is returned and the IPv4 gateway is deleted.</description></item>
+        /// <item><description><b>true</b>: prechecks the request without deleting the IPv4 gateway. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends the request. If the request passes the precheck, the HTTP 2xx status code is returned and the IPv4 gateway is deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,10 +38,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The public pattern of the VPC after the IPv4 gateway is deleted. Valid values:</para>
+        /// <para>The public network pattern of the VPC after the IPv4 gateway is deleted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>private</b>: default value. After the IPv4 gateway is deleted, the VPC becomes a purely private network VPC without public network access.</description></item>
-        /// <item><description><b>public</b>: after the IPv4 gateway is deleted, public network access of the VPC is no longer centrally controlled by the IPv4 gateway. After a public IP address is attached to an instance, the instance can directly access the Internet.</description></item>
+        /// <item><description><b>private</b>: the default value. After the IPv4 gateway is deleted, the VPC becomes a purely private network VPC and does not have public network access capabilities.</description></item>
+        /// <item><description><b>public</b>: After the IPv4 gateway is deleted, public network access to the VPC is no longer centrally controlled by the IPv4 gateway. By default, after a public IP address is associated with an instance, the instance can directly access the public network.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InternetMode { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the IPv4 gateway that you want to delete.</para>
+        /// <para>The instance ID of the IPv4 gateway to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,8 +71,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the IPv4 gateway that you want to delete.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the IPv4 gateway.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <list type="bullet">
             /// <item><description><para><b>Available</b>: available.</para>
             /// </description></item>
-            /// <item><description><para><b>Modifying</b>: being modified.</para>
+            /// <item><description><para><b>Modifying</b>: configuring.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC associated with the network ACL.</para>
+            /// <para>The ID of the VPC with which the network ACL is associated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-a2d33rfpl72k5xsscd****</para>

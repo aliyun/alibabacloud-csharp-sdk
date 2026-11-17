@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListDhcpOptionsSetsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of DHCP options sets.</para>
+        /// <para>The information about the DHCP options sets.</para>
         /// </summary>
         [NameInMap("DhcpOptionsSets")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The DHCP options configuration.</para>
+            /// <para>The configuration information of the DHCP options.</para>
             /// </summary>
             [NameInMap("DhcpOptions")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string DomainName { get; set; }
 
                 /// <summary>
-                /// <para>The IP address of the DNS server.</para>
+                /// <para>The IP addresses of the DNS servers.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>192.168.XX.XX</para>
@@ -66,9 +66,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// <para>The lease time of the IPv6 DHCP options set.</para>
                 /// <list type="bullet">
-                /// <item><description><para>If the lease time is in hours, the unit is h. Valid values: <b>24h</b> to <b>1176h</b> and <b>87600h</b> to <b>175200h</b>. Default value: <b>24h</b>.</para>
+                /// <item><description><para>If the lease time is set in hours, the unit is h. Valid values: <b>24h</b> to <b>1176h</b> and <b>87600h</b> to <b>175200h</b>. Default value: <b>24h</b>.</para>
                 /// </description></item>
-                /// <item><description><para>If the lease time is in days, the unit is d. Valid values: <b>1d</b> to <b>49d</b> and <b>3650d</b> to <b>7300d</b>. Default value: <b>1d</b>.</para>
+                /// <item><description><para>If the lease time is set in days, the unit is d. Valid values: <b>1d</b> to <b>49d</b> and <b>3650d</b> to <b>7300d</b>. Default value: <b>1d</b>.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -82,9 +82,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// <para>The lease time of the IPv4 DHCP options set.</para>
                 /// <list type="bullet">
-                /// <item><description><para>If the lease time is in hours, the unit is h. Valid values: <b>24h</b> to <b>1176h</b> and <b>87600h</b> to <b>175200h</b>. Default value: <b>87600h</b>.</para>
+                /// <item><description><para>If the lease time is set in hours, the unit is h. Valid values: <b>24h</b> to <b>1176h</b> and <b>87600h</b> to <b>175200h</b>. Default value: <b>87600h</b>.</para>
                 /// </description></item>
-                /// <item><description><para>If the lease time is in days, the unit is d. Valid values: <b>1d</b> to <b>49d</b> and <b>3650d</b> to <b>7300d</b>. Default value: <b>3650d</b>.</para>
+                /// <item><description><para>If the lease time is set in days, the unit is d. Valid values: <b>1d</b> to <b>49d</b> and <b>3650d</b> to <b>7300d</b>. Default value: <b>3650d</b>.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -150,13 +150,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The status of the DHCP options set. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Available</b>: available.</para>
+            /// <item><description><para><b>Available</b>: Available.</para>
             /// </description></item>
-            /// <item><description><para><b>InUse</b>: in use.</para>
+            /// <item><description><para><b>InUse</b>: In use.</para>
             /// </description></item>
-            /// <item><description><para><b>Pending</b>: being configured.</para>
+            /// <item><description><para><b>Pending</b>: Being configured.</para>
             /// </description></item>
-            /// <item><description><para><b>Deleted</b>: deleted.</para>
+            /// <item><description><para><b>Deleted</b>: Deleted.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -199,10 +199,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The pagination token. Valid values:</para>
+        /// <para>The token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no subsequent query exists.</description></item>
-        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no subsequent query is required.</description></item>
+        /// <item><description>If <b>NextToken</b> returns a value, the value is the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListVpcEndpointServicesByEndUserRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
+        /// <para>The maximum number of entries to return per page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Leave this parameter empty for the first query or if no next query exists.</description></item>
-        /// <item><description>If a next query exists, set this parameter to the NextToken value returned in the previous API call.</description></item>
+        /// <item><description>Leave this parameter empty for the first query or when no subsequent query is required.</description></item>
+        /// <item><description>If a subsequent query is required, set the value to the NextToken value returned by the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

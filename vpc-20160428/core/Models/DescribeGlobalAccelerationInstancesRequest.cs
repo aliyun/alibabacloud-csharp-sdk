@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeGlobalAccelerationInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The bandwidth type of the Alibaba Cloud Global Accelerator (GA) instance. Valid values: </para>
+        /// <para>The bandwidth type of the Global Accelerator (GA) instance. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para><b>Sharing</b>: Queries shared-bandwidth instances.</para>
+        /// <item><description><para><b>Sharing</b>: Shared bandwidth instance.</para>
         /// </description></item>
-        /// <item><description><para><b>Exclusive</b> (default): Queries dedicated-bandwidth instances.</para>
+        /// <item><description><para><b>Exclusive</b> (default): Exclusive bandwidth instance.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string BandwidthType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud Global Accelerator (GA) instance.</para>
+        /// <para>The ID of the Global Accelerator (GA) instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ga-234sljmxaz****</para>
@@ -36,11 +36,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string GlobalAccelerationInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include reservation data that has not taken effect. Valid values:</para>
+        /// <para>Specifies whether to include subscription data that has not taken effect. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b> (default): Does not include reservation data that has not taken effect.</para>
+        /// <item><description><para><b>false</b> (default): Does not include subscription data that has not taken effect.</para>
         /// </description></item>
-        /// <item><description><para><b>true</b>: Includes reservation data that has not taken effect.</para>
+        /// <item><description><para><b>true</b>: Includes subscription data that has not taken effect.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? IncludeReservationData { get; set; }
 
         /// <summary>
-        /// <para>The public IP address of the Alibaba Cloud Global Accelerator (GA) instance.</para>
+        /// <para>The public IP address of the Global Accelerator (GA) instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12.xx.xx.78</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IpAddress { get; set; }
 
         /// <summary>
-        /// <para>The name of the Alibaba Cloud Global Accelerator (GA) instance.</para>
+        /// <para>The name of the Global Accelerator (GA) instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GA-1</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The page number of the list. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging queries. Maximum value: <b>100</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page for a paged query. Maximum value: <b>100</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region where the Alibaba Cloud Global Accelerator (GA) instance resides. You can invoke the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>The region where the Global Accelerator (GA) instance resides. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -129,13 +129,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ServerId { get; set; }
 
         /// <summary>
-        /// <para>The backend service region. Valid values: </para>
+        /// <para>The region of the backend service. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para><b>china-mainland</b>: the Chinese mainland.</para>
+        /// <item><description><para><b>china-mainland</b>: The Chinese mainland.</para>
         /// </description></item>
         /// <item><description><para><b>north-america</b>: North America.</para>
         /// </description></item>
-        /// <item><description><para><b>asia-pacific</b>: Asia Pacific.</para>
+        /// <item><description><para><b>asia-pacific</b>: Asia-Pacific.</para>
         /// </description></item>
         /// <item><description><para><b>europe</b>: Europe.</para>
         /// </description></item>
@@ -149,15 +149,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ServiceLocation { get; set; }
 
         /// <summary>
-        /// <para>The instance status of the Alibaba Cloud Global Accelerator (GA) instance. Valid values: </para>
+        /// <para>The status of the Global Accelerator (GA) instance. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para><b>Available</b>: active.</para>
+        /// <item><description><para><b>Available</b>: Available.</para>
         /// </description></item>
         /// <item><description><para><b>Inuse</b>: Allocated.</para>
         /// </description></item>
-        /// <item><description><para><b>Associating</b>: Being attached.</para>
+        /// <item><description><para><b>Associating</b>: Associating.</para>
         /// </description></item>
-        /// <item><description><para><b>Unassociating</b>: Being disassociated.</para>
+        /// <item><description><para><b>Unassociating</b>: Unassociating.</para>
         /// </description></item>
         /// </list>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DiagnoseVpnConnectionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the list.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query.</para>
+        /// <para>The number of entries per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries in the list.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The diagnostic information list of IPsec-VPN connections.</para>
+        /// <para>The diagnostic information about the IPsec-VPN connections.</para>
         /// </summary>
         [NameInMap("VpnConnections")]
         [Validation(Required=false)]
         public List<DiagnoseVpnConnectionsResponseBodyVpnConnections> VpnConnections { get; set; }
         public class DiagnoseVpnConnectionsResponseBodyVpnConnections : TeaModel {
             /// <summary>
-            /// <para>The error reason.</para>
+            /// <para>The cause of the error.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Phase1 negotiation timeout</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The timestamp when the current error occurred on the IPsec-VPN connection. Unit: milliseconds.</para>
-            /// <para>The timestamp is in UNIX format and represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC to the time when the current error occurred on the IPsec-VPN connection.</para>
+            /// <para>The timestamp follows the UNIX timestamp format, which indicates the total duration from 00:00:00 on January 1, 1970 (UTC) to the time when the current error occurred on the IPsec-VPN connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1673581161000</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public long? FailedTime { get; set; }
 
             /// <summary>
-            /// <para>The parameter value configured on the IPsec-VPN connection when the parameter values configured on the IPsec-VPN connection and the peer gateway device do not match.</para>
+            /// <para>The parameter values configured on the IPsec-VPN connection when the parameter values configured on the IPsec-VPN connection and the peer gateway device do not match.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SHA256</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string MismatchLocalParam { get; set; }
 
             /// <summary>
-            /// <para>The parameter value configured on the peer gateway device when the parameter values configured on the IPsec-VPN connection and the peer gateway device do not match.</para>
+            /// <para>The parameter values configured on the peer gateway device when the parameter values configured on the IPsec-VPN connection and the peer gateway device do not match.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SHA</para>
@@ -108,10 +108,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string MismatchRemoteParam { get; set; }
 
             /// <summary>
-            /// <para>The severity level of the current error.</para>
+            /// <para>The severity level of the current error. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Critical</b>: Critical. Troubleshoot the issue immediately.</description></item>
-            /// <item><description><b>Warn</b>: Warning. Troubleshoot the issue as soon as possible.</description></item>
+            /// <item><description><b>Critical</b>: Critical. Troubleshoot and resolve the issue as soon as possible.</description></item>
+            /// <item><description><b>Warn</b>: Warning. Troubleshoot and resolve the issue promptly.</description></item>
             /// <item><description><b>Normal</b>: Normal.</description></item>
             /// </list>
             /// 
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string SourceLog { get; set; }
 
             /// <summary>
-            /// <para>The tunnel ID.</para>
+            /// <para>The ID of the tunnel.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tun-64n1sr9dig64k6****</para>

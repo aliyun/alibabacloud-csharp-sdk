@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetVSwitchCidrReservationUsageRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Valid values: <b>1</b> to <b>100</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Valid values:</para>
+        /// <para>The pagination token that is used to retrieve the next page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Leave this parameter empty for the first query or if no subsequent query is required.</description></item>
-        /// <item><description>If a subsequent query is required, set this parameter to the NextToken value returned in the previous API call.</description></item>
+        /// <item><description>If this is the first query or no subsequent query is required, leave this parameter empty.</description></item>
+        /// <item><description>If a subsequent query is required, set this parameter to the NextToken value returned from the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the vSwitch.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the reserved CIDR block for a vSwitch that you want to query.</para>
+        /// <para>The instance ID of the reserved CIDR block for a vSwitch to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

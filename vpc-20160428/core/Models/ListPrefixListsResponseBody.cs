@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListPrefixListsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page for a paged query. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Valid values:</para>
+        /// <para>The pagination token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no subsequent query exists.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no subsequent query is required.</description></item>
         /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
@@ -34,21 +34,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The information about the prefix lists.</para>
+        /// <para>The details of the prefix lists.</para>
         /// </summary>
         [NameInMap("PrefixLists")]
         [Validation(Required=false)]
         public List<ListPrefixListsResponseBodyPrefixLists> PrefixLists { get; set; }
         public class ListPrefixListsResponseBodyPrefixLists : TeaModel {
             /// <summary>
-            /// <para>The Classless Inter-Domain Routing (CIDR) block information of the prefix list.</para>
+            /// <para>The Classless Inter-Domain Routing information of the prefix list.</para>
             /// </summary>
             [NameInMap("CidrBlocks")]
             [Validation(Required=false)]
             public List<string> CidrBlocks { get; set; }
 
             /// <summary>
-            /// <para>The time when the prefix list was created.</para>
+            /// <para>The time when the prefix list was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-07-12T14:22:32Z</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string IpVersion { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of entries for Classless Inter-Domain Routing (CIDR) blocks in the prefix list.</para>
+            /// <para>The maximum number of entries of Classless Inter-Domain Routing in the prefix list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -124,9 +124,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The status of the prefix list. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Created</b>: Created.</description></item>
-            /// <item><description><b>Deleted</b>: Deleted.</description></item>
-            /// <item><description><b>Modifying</b>: Being modified.</description></item>
+            /// <item><description><b>Created</b>: The prefix list is created.</description></item>
+            /// <item><description><b>Deleted</b>: The prefix list is deleted.</description></item>
+            /// <item><description><b>Modifying</b>: The prefix list is being modified.</description></item>
             /// </list>
             /// <remarks>
             /// <para>This parameter has the same meaning and valid values as <b>Status</b>.</para>
@@ -172,8 +172,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The sharing type of the prefix list. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Shared</b>: The prefix list is a shared prefix list.</description></item>
-            /// <item><description>Empty: The prefix list is not a shared prefix list.</description></item>
+            /// <item><description><b>Shared</b>: The prefix list is shared.</description></item>
+            /// <item><description>Empty: The prefix list is not shared.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -186,9 +186,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The status of the prefix list. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Created</b>: Created.</description></item>
-            /// <item><description><b>Deleted</b>: Deleted.</description></item>
-            /// <item><description><b>Modifying</b>: Being modified.</description></item>
+            /// <item><description><b>Created</b>: The prefix list is created.</description></item>
+            /// <item><description><b>Deleted</b>: The prefix list is deleted.</description></item>
+            /// <item><description><b>Modifying</b>: The prefix list is being modified.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tags.</para>
+            /// <para>The list of tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DF72F7BB-5DFA-529C-887E-B0BB70D89C4F</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of prefix lists returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

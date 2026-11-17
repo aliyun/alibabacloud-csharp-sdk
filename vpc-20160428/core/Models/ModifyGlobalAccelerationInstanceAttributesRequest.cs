@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyGlobalAccelerationInstanceAttributesRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the Alibaba Cloud Global Accelerator (GA) instance.  </para>
+        /// <para>The description of the Global Accelerator instance.  </para>
         /// <para>The description must be 2 to 256 characters in length and must start with a letter or a Chinese character. It cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud Global Accelerator (GA) instance.</para>
+        /// <para>The ID of the Global Accelerator instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string GlobalAccelerationInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the Alibaba Cloud Global Accelerator (GA) instance.  </para>
+        /// <para>The name of the Global Accelerator instance.  </para>
         /// <para>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
@@ -51,8 +51,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region where the Alibaba Cloud Global Accelerator (GA) instance is located. </para>
-        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>The region where the Global Accelerator instance resides. </para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

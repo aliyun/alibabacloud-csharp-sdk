@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: performs a dry run without publishing route entries. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</para>
+        /// <item><description><para><b>true</b>: performs a dry run without publishing routes. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): sends a normal request. If the check succeeds, a 2xx HTTP status code is returned and the resource status is queried.</para>
+        /// <item><description><para><b>false</b> (default): sends a Normal request. After the check succeeds, a 2xx HTTP status code is returned and the route publishing operation is performed.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -53,6 +53,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The list of route entries to publish. You can specify up to 50 routes.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RouteEntries")]
         [Validation(Required=false)]
@@ -83,7 +84,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The publish route entry target instance ID.</para>
+        /// <para>The target instance ID for route publishing.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

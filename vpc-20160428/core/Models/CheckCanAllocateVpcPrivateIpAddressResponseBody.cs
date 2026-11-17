@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CheckCanAllocateVpcPrivateIpAddressResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the private IP address is available. Valid values:</para>
+        /// <para>Indicates whether the queried private IP address is available. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The private IP address is not occupied in the specified vSwitch and can be used.</description></item>
-        /// <item><description><b>false</b>: The private IP address is already occupied in the specified vSwitch and cannot be used.</description></item>
+        /// <item><description><b>true</b>: The private IP address is not in use in the specified vSwitch and is available.</description></item>
+        /// <item><description><b>false</b>: The private IP address is already in use in the specified vSwitch and is unavailable.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

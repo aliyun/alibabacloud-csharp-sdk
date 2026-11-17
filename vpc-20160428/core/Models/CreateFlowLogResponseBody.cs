@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateFlowLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The flow log ID.</para>
+        /// <para>The ID of the flow log.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fl-m5e8vhz2t21sel1nq****</para>
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The call is successful.</description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
         /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 

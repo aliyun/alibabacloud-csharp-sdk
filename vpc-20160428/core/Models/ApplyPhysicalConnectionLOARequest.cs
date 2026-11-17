@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>Generate a unique value from your client to ensure that different requests have unique ClientToken values. ClientToken supports only ASCII characters.</para>
+        /// <para>You can generate the value from your client to ensure that the value is unique among different requests. The ClientToken parameter supports only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The name of the company that accesses the Express Connect circuit.</para>
+        /// <para>The name of the customer company that connects to the Express Connect circuit.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string CompanyName { get; set; }
 
         /// <summary>
-        /// <para>The time when the construction company enters the site. The time is in the ISO 8601 standard and must be in UTC. Format: YYYY-MM-DDThh:mm:ssZ.</para>
+        /// <para>The time when the construction unit enters the site. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,10 +70,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The type of the Express Connect circuit. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MSTP</b>: MSTP line.</description></item>
-        /// <item><description><b>MPLSVPN</b>: MPLSVPN line.</description></item>
-        /// <item><description><b>FIBRE</b>: fiber optic direct connection.</description></item>
-        /// <item><description><b>Other</b>: other type of line.</description></item>
+        /// <item><description><b>MSTP</b>: MSTP circuit.</description></item>
+        /// <item><description><b>MPLSVPN</b>: MPLS VPN circuit.</description></item>
+        /// <item><description><b>FIBRE</b>: Direct optical fiber connection.</description></item>
+        /// <item><description><b>Other</b>: Other types of circuits.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The information about the construction engineer.</para>
+        /// <para>The information about the construction engineers.</para>
         /// <remarks>
         /// <para>This parameter is required. Specify the relevant information.</para>
         /// </remarks>
@@ -103,8 +103,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<ApplyPhysicalConnectionLOARequestPMInfo> PMInfo { get; set; }
         public class ApplyPhysicalConnectionLOARequestPMInfo : TeaModel {
             /// <summary>
-            /// <para>The ID number of the construction engineer. You can specify an ID card number or an international passport number.</para>
-            /// <para>You can specify information about up to 16 construction engineers.</para>
+            /// <para>The ID number of the construction engineer. You can enter an ID card number or an international passport number.</para>
+            /// <para>You can configure the information of up to 16 construction engineers.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5****************9</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <para>The type of the ID document of the construction engineer. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>IDCard</b>: ID card.</description></item>
-            /// <item><description><b>Passport</b>: international passport.</description></item>
+            /// <item><description><b>Passport</b>: International passport.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <para>The name of the construction engineer.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>张三</para>
+            /// <para>Zhang San</para>
             /// </summary>
             [NameInMap("PMName")]
             [Validation(Required=false)]
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The geographical location where the Express Connect circuit is deployed.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>杭州</para>
+        /// <para>Hangzhou</para>
         /// </summary>
         [NameInMap("PeerLocation")]
         [Validation(Required=false)]
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the Express Connect circuit.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -190,11 +190,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The construction company of the Express Connect circuit.</para>
+        /// <para>The construction unit of the Express Connect circuit.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>阿里</para>
+        /// <para>Alibaba</para>
         /// </summary>
         [NameInMap("Si")]
         [Validation(Required=false)]

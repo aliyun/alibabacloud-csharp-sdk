@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Sends a check request without querying instance information. The system checks whether the required parameters are specified, whether the request format is valid, and whether the instance status is valid. If the check fails, the corresponding error is returned. If the check succeeds, <c>DryRunOperation</c> is returned.</para>
+        /// <item><description><para><b>true</b>: sends a check request and does not query instance information. The check items include whether required parameters are specified, the request format, and the instance status. If the check fails, an error is returned. If the check succeeds, <c>DryRunOperation</c> is returned.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): Sends a normal request. After the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</para>
+        /// <item><description><para><b>false</b> (default): sends a normal request. If the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -36,10 +36,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include pending subscription data. Valid values:</para>
+        /// <para>Specifies whether to include inactive subscription data. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): Does not include pending subscription data.</description></item>
-        /// <item><description><b>true</b>: Includes pending subscription data.</description></item>
+        /// <item><description><b>false</b> (default): Does not include inactive subscription data.</description></item>
+        /// <item><description><b>true</b>: Includes inactive subscription data.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the list. Default value: <b>1</b>.</para>
+        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging queries. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries to return on each page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the Internet Shared Bandwidth instance. </para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxazb4ph****</para>
@@ -121,11 +121,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to enable Anti-DDoS (Enhanced). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b>: Disabled.</description></item>
-        /// <item><description><b>true</b>: Enabled.</description></item>
+        /// <item><description><b>false</b>: disables Anti-DDoS (Enhanced).</description></item>
+        /// <item><description><b>true</b>: enables Anti-DDoS (Enhanced).</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is deprecated.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? SecurityProtectionEnabled { get; set; }
 
         /// <summary>
-        /// <para>The list of tags associated with the Internet Shared Bandwidth instance.</para>
+        /// <para>The tags of the Internet Shared Bandwidth instance.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public class DescribeCommonBandwidthPackagesRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>A tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>A tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>KeyTest</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>A tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ValueTest</para>

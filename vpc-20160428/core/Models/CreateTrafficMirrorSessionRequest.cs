@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class CreateTrafficMirrorSessionRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to only precheck the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// <item><description><para><b>true</b>: prechecks the request without creating the traffic mirror session. The system checks whether the required parameters are specified, the request format, and the limits. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, the traffic mirror session is created.</para>
+        /// <item><description><para><b>false</b> (default): sends the request. If the request passes the precheck, the traffic mirror session is created.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to enable the traffic mirror session. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b> (default): does not enable the traffic mirror session.</para>
+        /// <item><description><para><b>false</b> (default): disables the traffic mirror session.</para>
         /// </description></item>
         /// <item><description><para><b>true</b>: enables the traffic mirror session.</para>
         /// </description></item>
@@ -64,11 +64,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The maximum length of the mirrored original packet, excluding the VXLAN packet length. Default value: <b>1500</b>. Valid values: <b>64</b> to <b>8500</b>. Unit: bytes.</para>
+        /// <para>The length of the original mirrored packet, excluding the length of the VXLAN packet. Default value: <b>1500</b>. Valid values: <b>64</b> to <b>8500</b>. Unit: bytes.</para>
         /// <list type="bullet">
-        /// <item><description><para>This parameter affects the length of packets received at the traffic mirror destination. For more information, see the mirrored packet length and MTU limits in <a href="https://help.aliyun.com/document_detail/207513.html">Traffic mirroring overview</a>.</para>
+        /// <item><description><para>The value of this parameter affects the length of the packet received by the traffic mirror destination. For more information, see the mirrored packet length and MTU limits in <a href="https://help.aliyun.com/document_detail/207513.html">Traffic mirroring overview</a>.</para>
         /// </description></item>
-        /// <item><description><para>This parameter is available only in specific regions. For more information, see the description of the mirrored packet length parameter in <a href="https://help.aliyun.com/document_detail/207514.html">Create and manage traffic mirrors</a>.</para>
+        /// <item><description><para>This parameter is available only in specific regions. For more information, see the description of the mirrored packet length parameter in <a href="https://help.aliyun.com/document_detail/207514.html">Create and manage traffic mirroring</a>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -80,8 +80,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PacketLength { get; set; }
 
         /// <summary>
-        /// <para>The priority of traffic mirror session. Valid values: <b>1</b> to <b>32766</b>.
-        /// A smaller value indicates a higher priority. The priorities of traffic mirror sessions created in the same region under the same account must be unique.</para>
+        /// <para>The priority of the traffic mirror session. Valid values: <b>1</b> to <b>32766</b>.</para>
+        /// <para>A smaller value indicates a higher priority. The priorities of traffic mirror sessions created by the same Alibaba Cloud account in the same region must be unique.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the traffic mirror session. You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list. For information about the regions that support traffic mirroring, see <a href="https://help.aliyun.com/document_detail/207513.html">Traffic mirroring overview</a>.</para>
+        /// <para>The region ID of the traffic mirror session. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list. For more information about the regions that support traffic mirroring, see <a href="https://help.aliyun.com/document_detail/207513.html">Traffic mirroring overview</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the traffic mirroring instance belongs.</para>
+        /// <para>The ID of the resource group to which the traffic mirroring belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4ph****</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public class CreateTrafficMirrorSessionRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>A tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>A tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The description of the traffic mirror session.</para>
-        /// <para>The description must be 1 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description must be 1 to 256 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a trafficmirrorsession.</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The name of the traffic mirror session.</para>
-        /// <para>The name must be 1 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name must be 1 to 128 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string TrafficMirrorSessionName { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the traffic mirror source. Elastic network interfaces (ENIs) are supported as traffic mirror sources. The default value of <b>N</b> is <b>1</b>, which indicates that only one traffic mirror source can be added to a traffic mirror session.</para>
+        /// <para>The instance ID of the traffic mirror source. Currently, network interface controllers (NICs) are supported as traffic mirror sources. The default value of <b>N</b> is <b>1</b>, which means that you can add only one traffic mirror source to a traffic mirror session.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<string> TrafficMirrorSourceIds { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the traffic mirror destination. Elastic network interfaces (ENIs) and private network load balancing instances are supported as traffic mirror destinations.</para>
+        /// <para>The instance ID of the traffic mirror destination. Currently, network interface controllers (NICs) and internal-facing SLB instances are supported as traffic mirror destinations.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -209,9 +209,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The type of the traffic mirror destination. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>NetworkInterface</b>: elastic network interface (ENI).</para>
+        /// <item><description><para><b>NetworkInterface</b>: network interface controllers (NICs).</para>
         /// </description></item>
-        /// <item><description><para><b>SLB</b>: private network load balancing instance.</para>
+        /// <item><description><para><b>SLB</b>: internal-facing SLB instances.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -224,8 +224,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string TrafficMirrorTargetType { get; set; }
 
         /// <summary>
-        /// <para>The VXLAN network identifier (VNI) that is used to distinguish mirrored data from different traffic mirror sessions. Valid values: <b>0</b> to <b>16777215</b>.</para>
-        /// <para>You can use the VNI to identify mirrored data from different sessions at the traffic mirror destination. You can specify a custom VNI or use a system-assigned value. To use a system-assigned value, do not specify this parameter. The system randomly allocates the value.</para>
+        /// <para>The VXLAN network identifier (VNI) that is used to distinguish different mirrored data. Valid values: <b>0</b> to <b>16777215</b>.</para>
+        /// <para>You can use the VNI to distinguish the mirrored data of different sessions at the traffic mirror destination. You can specify a custom VNI or let the system randomly allocate the value. If you want the system to randomly allocate the VNI, do not specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

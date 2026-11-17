@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the instance for which high-precision second-level monitoring is queried. The value is <b>EIP</b>.</para>
+        /// <para>The type of the instance for which high-precision second-level monitoring is queried. Valid value: <b>EIP</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EIP</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The name of the LogProject.</para>
+        /// <para>The name of the Simple Log Service LogProject.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hdmonitor-cn-shenzhen-1658206966225390</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string LogProject { get; set; }
 
         /// <summary>
-        /// <para>The name of the LogStore.</para>
+        /// <para>The name of the Simple Log Service Logstore.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hdmonitor</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string LogStore { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>54B48E3D-DF70-471B-AA93-08E683A1B457</para>

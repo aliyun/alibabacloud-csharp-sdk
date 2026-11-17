@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpcAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run for this request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: performs a dry run without querying the resource. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, the corresponding error is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// <item><description><para><b>true</b>: sends a dry run request without querying the resource status. The system checks whether the AccessKey pair is valid, whether the Resource Access Management (RAM) user has the required authorization, and whether required parameters are specified. If the dry run fails, the corresponding error is returned. If the dry run succeeds, the DryRunOperation error code is returned.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): sends a normal request. After the request passes the check, a 2xx HTTP status code is returned and the resource is queried directly.</para>
+        /// <item><description><para><b>false</b> (default): sends a normal request. If the request passes the dry run, a 2xx HTTP status code is returned and the resource status is queried.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC to query.</para>
+        /// <para>The ID of the VPC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeIpv6EgressOnlyRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the IPv6 address for which an IPv6 egress-only rule is configured.</para>
+        /// <para>The ID of the IPv6 address for which the IPv6 egress-only rule is configured.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ipv6-bp12uzwhac8tv3xx6****</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the instance for which you want to configure an IPv6 egress-only rule. Valid values:</para>
+        /// <para>The type of the instance for which you want to configure the IPv6 egress-only rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>IPv6Address (default): The instance is a single IPv6 address.</description></item>
-        /// <item><description>IPv6Prefix: The instance is an IPv6 CIDR block.</description></item>
+        /// <item><description>IPv6Address: a single IPv6 address. This is the default value.</description></item>
+        /// <item><description>IPv6Prefix: an IPv6 CIDR block.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the list to return. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page for paging in a paged query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

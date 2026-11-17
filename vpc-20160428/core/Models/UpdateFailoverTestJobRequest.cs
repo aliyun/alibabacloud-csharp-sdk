@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class UpdateFailoverTestJobRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,10 +35,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to only perform a dry run for the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: sends a request without updating the failover test node. The system checks the request for potential issues, including whether the AccessKey pair is valid, the authorization status of the Resource Access Management (RAM) user, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check passes, the DryRunOperation error code is returned.                             </description></item>
-        /// <item><description><b>false</b> (default): sends a Normal request, and the failover test node is updated after the check passes. A 2xx HTTP status code is returned.</description></item>
+        /// <item><description><b>true</b>: The system performs a dry run without updating the failover test node. The system checks whether your AccessKey pair is valid, the authorization of the Resource Access Management (RAM) user, and whether the required parameters are specified. If the request fails the dry run, the system returns an error. If the request passes the dry run, the system returns the error code DryRunOperation.                             </description></item>
+        /// <item><description><b>false</b> (default): The system sends a Normal request. If the request passes the dry run, the system returns a 2xx HTTP status code and updates the failover test node.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The duration of the failover test job. Unit: minutes. Valid values: <b>1 to 4320</b>.</para>
+        /// <para>The duration of the failover test job. Unit: minutes. Valid values: <b>1</b> to <b>4320</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of failover test resource IDs. You can add up to 16 resources.</para>
+        /// <para>The list of resource IDs for the failover test job. You can add up to 16 resources.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]

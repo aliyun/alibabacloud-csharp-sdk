@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Indicates whether the IP address pool feature is activated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: activated.</para>
+        /// <item><description><para><b>true</b>: Activated.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: not activated. You can call the OpenPublicIpAddressPoolService operation to activate the IP address pool feature.</para>
+        /// <item><description><para><b>false</b>: Not activated. You can call the OpenPublicIpAddressPoolService operation to activate the IP address pool feature.</para>
         /// </description></item>
         /// </list>
         /// 

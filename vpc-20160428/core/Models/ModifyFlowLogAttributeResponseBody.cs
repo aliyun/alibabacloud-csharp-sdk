@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <list type="bullet">
         /// <item><description><para><b>true</b>: The operation is successful.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: The operation failed.</para>
+        /// <item><description><para><b>false</b>: The operation fails.</para>
         /// </description></item>
         /// </list>
         /// 

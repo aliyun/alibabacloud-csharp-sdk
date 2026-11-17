@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AclName { get; set; }
 
         /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, and you must ensure that the token is unique among different requests.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sha123456</para>
         /// </summary>
@@ -37,7 +39,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region of the IPv6 Translation Service instance. You can call the DescribeRegions operation to query region IDs.</para>
+        /// <para>The region ID of the IPv6 Translation Service instance. You can call the DescribeRegions operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

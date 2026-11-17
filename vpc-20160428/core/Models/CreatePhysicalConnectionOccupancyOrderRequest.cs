@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: enables automatic payment. Make sure that your account balance is sufficient. If your account balance is insufficient, an abnormal order is generated and can only be canceled.</description></item>
-        /// <item><description><b>false</b> (default): generates an order without charging.</description></item>
+        /// <item><description><b>false</b> (default): generates an order without deducting fees.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>The client generates the value. The value must be unique among different requests.</para>
+        /// <para>You can use the client to generate the value, but you must make sure that it is unique among different requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CBCE910E-D396-4944</para>
@@ -80,8 +80,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The subscription duration.</para>
         /// <list type="bullet">
-        /// <item><description>If <b>PricingCycle</b> is set to <b>Month</b>, valid values of <b>Period</b> are <b>1 to 9</b>.</description></item>
-        /// <item><description>If <b>PricingCycle</b> is set to <b>Year</b>, valid values of <b>Period</b> are <b>1 to 5</b>.</description></item>
+        /// <item><description>If <b>PricingCycle</b> is set to <b>Month</b>, valid values for <b>Period</b> are <b>1</b> to <b>9</b>.</description></item>
+        /// <item><description>If <b>PricingCycle</b> is set to <b>Year</b>, valid values for <b>Period</b> are <b>1</b> to <b>5</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -105,8 +105,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The billing cycle of the subscription. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Month</b> (default): billed on a monthly basis.</description></item>
-        /// <item><description><b>Year</b>: billed on a yearly basis.</description></item>
+        /// <item><description><b>Month</b> (default): monthly subscription.</description></item>
+        /// <item><description><b>Year</b>: yearly subscription.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the Express Connect circuit. </para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

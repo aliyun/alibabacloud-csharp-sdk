@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeEipGatewayInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The operation status code.</para>
+        /// <para>The status code of the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The operation message.</para>
+        /// <para>The message returned by the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>

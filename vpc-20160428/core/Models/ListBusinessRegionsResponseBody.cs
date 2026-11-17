@@ -20,24 +20,24 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? Count { get; set; }
 
         /// <summary>
-        /// <para>The list of regions where Express Connect circuits are available for purchase.</para>
+        /// <para>The list of regions where Express Connect circuits can be purchased.</para>
         /// </summary>
         [NameInMap("GeographicSubRegions")]
         [Validation(Required=false)]
         public List<ListBusinessRegionsResponseBodyGeographicSubRegions> GeographicSubRegions { get; set; }
         public class ListBusinessRegionsResponseBodyGeographicSubRegions : TeaModel {
             /// <summary>
-            /// <para>The name of the region where Express Connect circuits are available for purchase.</para>
+            /// <para>The name of the region where Express Connect circuits can be purchased.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>华东1(杭州)</para>
+            /// <para>China (Hangzhou)</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The region ID where Express Connect circuits are available for purchase.</para>
+            /// <para>The ID of the region where Express Connect circuits can be purchased.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class SetHighDefinitionMonitorLogStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the instance for which you want to configure high-definition second-level monitoring.</para>
+        /// <para>The instance ID for which you want to configure high-precision second-level monitoring.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The name of the LogProject in Simple Log Service.</para>
+        /// <para>The name of the LogProject.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string LogProject { get; set; }
 
         /// <summary>
-        /// <para>The name of the LogStore in Simple Log Service.</para>
+        /// <para>The name of the Logstore.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,8 +61,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,10 +80,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The high-definition second-level monitoring status of the instance. Valid values:</para>
+        /// <para>The status of high-precision second-level monitoring for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ON</b>: Enables high-definition second-level monitoring.</description></item>
-        /// <item><description><b>OFF</b>: Disables high-definition second-level monitoring.</description></item>
+        /// <item><description><b>ON</b>: enables high-precision second-level monitoring.</description></item>
+        /// <item><description><b>OFF</b>: disables high-precision second-level monitoring.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

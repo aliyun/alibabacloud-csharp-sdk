@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The type of the IPv6 address. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>IPv6Address (default): The instance is a single IPv6 address.</description></item>
-        /// <item><description>IPv6Prefix: The instance is an IPv6 CIDR block.</description></item>
+        /// <item><description>IPv6Address: single IPv6 address. This is the default value.</description></item>
+        /// <item><description>IPv6Prefix: IPv6 CIDR block.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AddressType { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,11 +37,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to only precheck the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: performs a dry run. The system checks the required parameters, request syntax, and business restrictions. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.</para>
+        /// <item><description><para>true: prechecks the request without querying the resource status. The system checks whether required parameters are specified, the request format is valid, and the service limits are met. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the DryRunOperation error code is returned.</para>
         /// </description></item>
-        /// <item><description><para>false (default): performs a dry run and sends the request. If the check succeeds, an HTTP 2xx status code is returned and the operation is performed.</para>
+        /// <item><description><para>false: sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed. This is the default value.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The IPv6 address to allocate. The specified IPv6 address must be an idle address within the CIDR block of the vSwitch.</para>
+        /// <para>Specifies the IPv6 address to apply for. The specified IPv6 address must be an available IP address within the CIDR block of the vSwitch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2408:XXXX:153:3921:851c:c435:7b12:1c5f</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Ipv6Address { get; set; }
 
         /// <summary>
-        /// <para>The description of the IPv6 address instance.</para>
+        /// <para>The description of the IPv6 address.</para>
         /// <para>The description must be 0 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Ipv6AddressDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the IPv6 address instance.</para>
+        /// <para>The name of the IPv6 address.</para>
         /// <para>The name must be 0 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/2381067.html">What is a resource group?</a>.</para>
+        /// <para>The ID of the resource group. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/2381067.html">What is a resource group?</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4ph****</para>
@@ -122,15 +122,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tags of the resource.</para>
+        /// <para>The list of tags for the resource.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<AllocateIpv6AddressRequestTag> Tag { get; set; }
         public class AllocateIpv6AddressRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the resource. You can specify up to 20 tag keys. Do not specify an empty string.</para>
-            /// <para>A tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key. You can specify up to 20 tag keys. Do not enter an empty string if you specify this parameter.</para>
+            /// <para>A tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -140,8 +140,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the resource. You can specify up to 20 tag values. You can specify an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</para>
+            /// <para>The tag value. You can specify up to 20 tag values. You can enter an empty string if you specify this parameter.</para>
+            /// <para>A tag value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>

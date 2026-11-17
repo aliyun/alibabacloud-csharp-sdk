@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyFlowLogAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The new sampling interval of the flow log. Unit: minutes. Valid values: <b>1</b>, <b>5</b>, and <b>10</b>.</para>
+        /// <para>The sampling interval of the flow log. Unit: minutes. Valid values: <b>1</b>, <b>5</b>, and <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? AggregationInterval { get; set; }
 
         /// <summary>
-        /// <para>The new description of the flow log.</para>
-        /// <para>The description must be 1 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description of the flow log.</para>
+        /// <para>The description must be 1 to 256 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is my Flowlog.</para>
@@ -42,8 +42,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string FlowLogId { get; set; }
 
         /// <summary>
-        /// <para>The new name of the flow log.</para>
-        /// <para>The name must be 1 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name of the flow log.</para>
+        /// <para>The name must be 1 to 128 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myFlowlog</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the flow log.</para>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

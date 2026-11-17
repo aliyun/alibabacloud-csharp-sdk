@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyNatGatewaySpecRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable automatic payment.</para>
+        /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: enables automatic payment. The order is automatically paid.</para>
+        /// <item><description><para><b>true</b>: Enables automatic payment and automatically pays the order.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): disables automatic payment. After the order is generated, complete the payment in the Order Center.</para>
+        /// <item><description><para><b>false</b> (default): Disables automatic payment. After an order is generated, you must complete the payment in the User Center.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</para>
+        /// <para>You can use the client to generate the value, and you must ensure that the value is unique among different requests. The client token can contain only ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Internet NAT gateway whose specification you want to modify.</para>
+        /// <para>The ID of the Internet NAT gateway whose specifications you want to modify.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,11 +78,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The specification of the Internet NAT gateway. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Small</b></para>
+        /// <item><description><para><b>Small</b>: Small.</para>
         /// </description></item>
-        /// <item><description><para><b>Middle</b>: medium.</para>
+        /// <item><description><para><b>Middle</b>: Medium.</para>
         /// </description></item>
-        /// <item><description><para><b>Large</b></para>
+        /// <item><description><para><b>Large</b>: Large.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

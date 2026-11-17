@@ -56,10 +56,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string LogFormat { get; set; }
 
         /// <summary>
-        /// <para>The name of the Logstore that stores the captured traffic.</para>
+        /// <para>The name of the Log Service Logstore that is used to store the captured traffic.</para>
         /// <list type="bullet">
-        /// <item><description>The Logstore name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</description></item>
-        /// <item><description>The name must start and end with a lowercase letter or digit.</description></item>
+        /// <item><description>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</description></item>
+        /// <item><description>The name must start and end with a lowercase letter or a digit.</description></item>
         /// <item><description>The name must be 3 to 63 characters in length.</description></item>
         /// </list>
         /// 
@@ -79,10 +79,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the project that manages the captured traffic.</para>
+        /// <para>The name of the Log Service project that is used to manage the captured traffic.</para>
         /// <list type="bullet">
-        /// <item><description>The project name can contain only lowercase letters, digits, and hyphens (-).</description></item>
-        /// <item><description>The name must start and end with a lowercase letter or digit.</description></item>
+        /// <item><description>The name can contain only lowercase letters, digits, and hyphens (-).</description></item>
+        /// <item><description>The name must start and end with a lowercase letter or a digit.</description></item>
         /// <item><description>The name must be 3 to 63 characters in length.</description></item>
         /// </list>
         /// 
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the flow log. You can call <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the flow log. You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -134,13 +134,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource whose traffic you want to capture. Valid values:</para>
+        /// <para>The type of the resource whose traffic you want to catch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>NetworkInterface</b>: network interface controllers (NICs).</para>
+        /// <item><description><para><b>NetworkInterface</b>: elastic network interfaces (ENIs), which act as a network interface controller (NIC).</para>
         /// </description></item>
-        /// <item><description><para><b>VSwitch</b>: all network interface controllers (NICs) in a vSwitch.</para>
+        /// <item><description><para><b>VSwitch</b>: all elastic network interfaces (ENIs) in the vSwitch.</para>
         /// </description></item>
-        /// <item><description><para><b>VPC</b>: all network interface controllers (NICs) in a virtual private cloud (VPC).</para>
+        /// <item><description><para><b>VPC</b>: all elastic network interfaces (ENIs) in the virtual private cloud (VPC).</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -160,8 +160,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<CreateFlowLogRequestTag> Tag { get; set; }
         public class CreateFlowLogRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the resource. You can specify up to 20 tag keys. Do not specify an empty string for this parameter.</para>
-            /// <para>A tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, do not enter an empty string.</para>
+            /// <para>A tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -171,8 +171,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can enter an empty string.</para>
+            /// <para>A tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>
@@ -184,18 +184,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The traffic path to collect. Valid values:</para>
+        /// <para>The traffic path to catch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>all</b> (default): all scenarios.</description></item>
-        /// <item><description><b>internetGateway</b>: traffic to access the Internet.</description></item>
-        /// <item><description><b>natGateway</b>: traffic through NAT gateway.</description></item>
-        /// <item><description><b>vpnGateway</b>: traffic through VPN gateway.</description></item>
-        /// <item><description><b>transitRouter</b>: traffic through TR.</description></item>
-        /// <item><description><b>gatewayEndpoint</b>: traffic through gateway endpoint to access Alibaba Cloud services.</description></item>
-        /// <item><description><b>vbr</b>: traffic through Virtual Border Router (VBR) to access Express Connect circuits.</description></item>
-        /// <item><description><b>ecr</b>: traffic through Express Connect Router (ECR).</description></item>
-        /// <item><description><b>ipv4Gateway</b>: traffic through IPv4 gateway to access the Internet.</description></item>
-        /// <item><description><b>gatewayLoadBalancerEndpoint</b>: traffic through Gateway Load Balancer endpoint (GWLBe).</description></item>
+        /// <item><description><b>all</b> (default): catches all traffic.</description></item>
+        /// <item><description><b>internetGateway</b>: catches traffic to access the Internet.</description></item>
+        /// <item><description><b>natGateway</b>: catches traffic through NAT gateways.</description></item>
+        /// <item><description><b>vpnGateway</b>: catches traffic through VPN gateways.</description></item>
+        /// <item><description><b>transitRouter</b>: catches traffic through TR.</description></item>
+        /// <item><description><b>gatewayEndpoint</b>: catches traffic through gateway endpoints to access cloud services.</description></item>
+        /// <item><description><b>vbr</b>: catches traffic through the border router (VBR) to access Express Connect circuits.</description></item>
+        /// <item><description><b>ecr</b>: catches traffic through the Express Connect Router (ECR).</description></item>
+        /// <item><description><b>ipv4Gateway</b>: catches traffic to access the Internet through IPv4 gateways.</description></item>
+        /// <item><description><b>gatewayLoadBalancerEndpoint</b>: catches traffic through the Gateway Load Balancer endpoint (GWLBe).</description></item>
         /// </list>
         /// </summary>
         [NameInMap("TrafficPath")]
@@ -203,13 +203,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<string> TrafficPath { get; set; }
 
         /// <summary>
-        /// <para>The traffic type to collect. Valid values:</para>
+        /// <para>The traffic type to catch. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>All</b>: all traffic.</para>
         /// </description></item>
         /// <item><description><para><b>Allow</b>: traffic allowed by access control.</para>
         /// </description></item>
-        /// <item><description><para><b>Drop</b>: traffic denied by access control.</para>
+        /// <item><description><para><b>Drop</b>: traffic that access control rules deny.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

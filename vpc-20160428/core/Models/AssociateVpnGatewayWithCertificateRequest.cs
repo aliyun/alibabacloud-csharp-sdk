@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AssociateVpnGatewayWithCertificateRequest : TeaModel {
         /// <summary>
-        /// <para>The certificate ID.</para>
+        /// <para>The ID of the certificate.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string CertificateId { get; set; }
 
         /// <summary>
-        /// <para>The certificate type. Valid values:</para>
+        /// <para>The type of the certificate. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Encryption</b>: specifies the SSL certificate as the encryption certificate.</description></item>
-        /// <item><description><b>Signature</b>: specifies the SSL certificate as the signing certificate.</description></item>
+        /// <item><description><b>Encryption</b>: specifies the SSL certificate as an encrypt certificate.</description></item>
+        /// <item><description><b>Signature</b>: specifies the SSL certificate as a signing certificate.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,11 +50,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to only precheck the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: performs a dry run without actually associating the certificate. The system checks the required parameters, request syntax, and instance status. If the check fails, the corresponding error is returned. If the check succeeds, the corresponding request ID is returned.</para>
+        /// <item><description><para><b>true</b>: prechecks the request without performing the association operation. The system checks whether the required parameters are specified, the request format, and the instance status. If the request fails the precheck, an error is returned. If the request passes the precheck, the request ID is returned.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): sends the request. After the request passes the check, the VPN gateway is associated with the certificate.</para>
+        /// <item><description><para><b>false</b> (default): sends the request. After the request passes the precheck, the VPN gateway is associated with the certificate.</para>
         /// </description></item>
         /// </list>
         /// 

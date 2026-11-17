@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The range of public IP addresses in a virtual private cloud (VPC) in the specified region.</para>
+        /// <para>The range of public IP addresses in a virtual private cloud (VPC) within the specified region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>110.11.1.0/24</para>

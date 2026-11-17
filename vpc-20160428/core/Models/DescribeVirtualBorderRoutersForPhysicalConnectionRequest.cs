@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter> Filter { get; set; }
         public class DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The filter condition. You can specify up to 5 filter conditions. The following filter conditions are supported:</para>
+            /// <para>The filter condition. You can specify up to five filter conditions. Supported filter conditions:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>PhysicalConnectionId</b>: instance ID of the Express Connect circuit instance.</para>
+            /// <item><description><para><b>PhysicalConnectionId</b>: instance ID of the Express Connect circuit.</para>
             /// </description></item>
-            /// <item><description><para><b>VbrId</b>: instance ID of the Virtual Border Router instance.</para>
+            /// <item><description><para><b>VbrId</b>: instance ID of the VBR.</para>
             /// </description></item>
-            /// <item><description><para><b>Status</b>: the status of the Virtual Border Router.</para>
+            /// <item><description><para><b>Status</b>: the status of the VBR.</para>
             /// </description></item>
-            /// <item><description><para><b>Name</b>: the name of the Virtual Border Router.</para>
+            /// <item><description><para><b>Name</b>: the name of the VBR.</para>
             /// </description></item>
             /// <item><description><para><b>AccessPointId</b>: instance ID of the access point.</para>
             /// </description></item>
             /// <item><description><para><b>eccId</b>: instance ID of the Express Cloud Connect instance.</para>
             /// </description></item>
-            /// <item><description><para><b>type</b>: the type of the Virtual Border Router.</para>
+            /// <item><description><para><b>type</b>: the type of the VBR.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The filter values based on the specified Key. You can specify multiple filter values for a single Key. The relationship between multiple filter values is OR, which means that a match with any one of the filter values is considered a match for the filter condition.</para>
+            /// <para>The filter value corresponding to the filter condition. You can specify multiple filter values for a single filter condition. The filter values are evaluated by using the OR logical operator. If a resource matches one of the filter values, it matches the filter condition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the list. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page during paging in a paged query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PhysicalConnectionId { get; set; }
 
         /// <summary>
-        /// <para>The region where the Express Connect circuit resides. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</para>
+        /// <para>The region where the Express Connect circuit is located. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

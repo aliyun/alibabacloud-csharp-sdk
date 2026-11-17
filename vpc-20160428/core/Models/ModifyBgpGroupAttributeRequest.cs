@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string BgpGroupId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to clear the authentication key. Valid values:</para>
+        /// <para>Specifies whether to clear the key. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Yes.</description></item>
-        /// <item><description><b>false</b> (default): No.</description></item>
+        /// <item><description><b>true</b>: yes.</description></item>
+        /// <item><description><b>false</b> (default): no.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,9 +46,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -70,13 +70,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use a fake ASN. Valid values:</para>
+        /// <para>Specifies whether to use a fake AS number. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): No.</description></item>
-        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: no.</description></item>
+        /// <item><description><b>true</b> (default): yes.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>A router that runs BGP can belong to only one AS. When you need to replace an existing AS with a new one (for example, during AS migration or merger with another AS) and cannot immediately modify the BGP configuration due to business constraints, you can specify a fake ASN to establish a connection with the local end to ensure service continuity.</para>
+        /// <para>A router that runs BGP typically belongs to only one AS. If you need to replace the original AS with a new AS (for example, when the AS needs to be migrated or merged with another AS) and cannot immediately modify the BGP configurations due to business or other objective factors, you can specify a fake AS number to establish a connection with the local end to ensure service continuity.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -87,14 +87,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? IsFakeAsn { get; set; }
 
         /// <summary>
-        /// <para>The custom Alibaba Cloud-side BGP autonomous system number (ASN). Valid values:</para>
+        /// <para>The custom autonomous system (AS) number on the Alibaba Cloud side. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>45104</b></description></item>
         /// <item><description><b>64512 to 65534</b></description></item>
         /// <item><description><b>4200000000 to 4294967294</b></description></item>
         /// </list>
         /// <remarks>
-        /// <para><b>65025</b> is reserved by Alibaba Cloud. The Alibaba Cloud side uses <b>45104</b> as the default <b>LocalAsn</b> value. Using a custom <b>LocalAsn</b> value in multi-ISP access scenarios may cause BGP routing loops. Evaluate the risks before you use this feature.</para>
+        /// <para><b>65025</b> is reserved by Alibaba Cloud. By default, Alibaba Cloud uses <b>45104</b> as the <b>LocalAsn</b>. If you use a custom <b>LocalAsn</b> in multi-line access scenarios, BGP routing loops may occur. Evaluate the risks before you use this feature.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ASN of the on-premises device.</para>
+        /// <para>The AS number of the on-premises device.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1****</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of routes for a BGP peer. Unit: entries. Default value: <b>110</b>.</para>
+        /// <para>The maximum number of route entries that can be received by the BGP peer. Unit: entries. Default value: <b>110</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>110</para>

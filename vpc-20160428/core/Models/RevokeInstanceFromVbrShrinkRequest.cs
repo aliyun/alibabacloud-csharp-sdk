@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class RevokeInstanceFromVbrShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The scope of VBR instances for which the VPC-connected instance authorization is being revoked. Valid values:</para>
+        /// <para>The scope of VBR instances from which the authorization of the VPC-connected instance is revoked. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>ALL</b>: Revokes the VPC-connected instance authorization for all VBR instances in the specified region. In this case, the <b>VbrInstanceIds</b> parameter can be left empty.</para>
+        /// <item><description><para><b>ALL</b>: revokes the authorization between the VPC-connected instance and all VBR instances in the specified region. In this case, the <b>VbrInstanceIds</b> parameter can be left empty.</para>
         /// </description></item>
-        /// <item><description><para><b>Specify</b>: Revokes the VPC-connected instance authorization for the specified VBR instances. In this case, the <b>VbrInstanceIds</b> parameter is required.</para>
+        /// <item><description><para><b>Specify</b>: revokes the authorization between the VPC-connected instance and the specified VBR instances. In this case, the <b>VbrInstanceIds</b> parameter is required.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string GrantType { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the VPC-connected instance for which you want to revoke the authorization.</para>
+        /// <para>The VPC-connected instance ID for which you want to revoke the authorization.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,8 +38,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the VPC-connected instance for which you want to revoke the authorization.</para>
-        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>The region ID of the VPC-connected instance for which you want to revoke the authorization. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,14 +49,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of VBR instance IDs for which the VPC-connected instance authorization is being revoked.</para>
+        /// <para>The list of VBR instance IDs from which the authorization of the VPC-connected instance is revoked.</para>
         /// </summary>
         [NameInMap("VbrInstanceIds")]
         [Validation(Required=false)]
         public string VbrInstanceIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the VBR instance for which the authorization is being revoked.</para>
+        /// <para>The ID of the Alibaba Cloud account that owns the VBR instance from which the authorization is revoked.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,7 +67,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VbrOwnerUid { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the VBR instance for which the VPC-connected instance authorization is being revoked.</para>
+        /// <para>The region ID of the VBR instance from which the authorization of the VPC-connected instance is revoked.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

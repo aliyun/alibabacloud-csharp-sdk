@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyGlobalAccelerationInstanceSpecRequest : TeaModel {
         /// <summary>
-        /// <para>The peak bandwidth of the Alibaba Cloud Global Accelerator (GA) instance. Unit: Mbit/s. Valid value: <b>10</b>.</para>
+        /// <para>The peak bandwidth of the Global Accelerator instance. Unit: Mbit/s. Valid values: <b>10</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud Global Accelerator (GA) instance.</para>
+        /// <para>The ID of the Global Accelerator instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region where the Alibaba Cloud Global Accelerator (GA) instance is deployed. </para>
-        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
+        /// <para>The region where the Global Accelerator instance resides. </para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

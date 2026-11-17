@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The peak bandwidth of the EIP. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b> to <b>200</b>: If the EIP is billed on a pay-by-data-transfer basis. Unit: Mbit/s. </para>
+        /// <item><description><para><b>1</b> to <b>200</b> if the EIP is billed by data transfer. Unit: Mbit/s. </para>
         /// </description></item>
-        /// <item><description><para><b>1</b> to <b>500</b>: If the EIP is billed on a pay-by-bandwidth basis. Unit: Mbit/s.</para>
+        /// <item><description><para><b>1</b> to <b>500</b> if the EIP is billed by bandwidth. Unit: Mbit/s.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The description of the EIP that you want to modify.  </para>
+        /// <para>The description of the EIP.  </para>
         /// <para>The description must be 0 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the EIP that you want to modify.  </para>
+        /// <para>The name of the EIP.  </para>
         /// <para>The name must be 0 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the EIP.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

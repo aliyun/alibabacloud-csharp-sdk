@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVcoRouteEntriesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the list.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging queries.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The timestamp when the destination route was created.</para>
-            /// <para>The timestamp is in the UNIX format and represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The timestamp follows the UNIX time format. It represents the total number of seconds that have elapsed since 00:00:00 UTC on January 1, 1970.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1658217008000</para>
@@ -98,17 +98,27 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string NextHop { get; set; }
 
             /// <summary>
-            /// <para>The list of next-hop tunnels.</para>
+            /// <para>The list of next hop tunnels.</para>
             /// <remarks>
             /// <list type="bullet">
             /// <item><description>This information is returned only for IPsec-VPN connections in dual-tunnel mode.</description></item>
-            /// <item><description>Tunnel information is returned only when the tunnel status is <b>Phase 2 negotiations succeeded</b>.</description></item>
+            /// <item><description>Tunnel information is returned only when the tunnel status is <b>Phase 2 negotiation succeeded</b>.</description></item>
             /// </list>
             /// </remarks>
             /// </summary>
             [NameInMap("NextHopTunnelIdList")]
             [Validation(Required=false)]
             public List<string> NextHopTunnelIdList { get; set; }
+
+            /// <summary>
+            /// <para>The instance ID of the prefix list.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>pl-m5estsqsdqwg88hjf****</para>
+            /// </summary>
+            [NameInMap("PrefixListId")]
+            [Validation(Required=false)]
+            public string PrefixListId { get; set; }
 
             /// <summary>
             /// <para>The destination CIDR block of the route.</para>
@@ -137,8 +147,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The source of the BGP route.</para>
             /// <list type="bullet">
-            /// <item><description><b>CLOUD</b>: The BGP route is learned by the IPsec-VPN connection from the transit router.</description></item>
-            /// <item><description><b>VPN_BGP</b>: The BGP route is learned by the IPsec-VPN connection from the on-premises data center.</description></item>
+            /// <item><description><b>CLOUD</b>: The BGP route is learned by the IPsec-VPN connection from a transit router.</description></item>
+            /// <item><description><b>VPN_BGP</b>: The BGP route is learned by the IPsec-VPN connection from an on-premises data center.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -151,7 +161,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The status of the route.</para>
             /// <list type="bullet">
-            /// <item><description><b>published</b>: The destination route has been published to the transit router instance.</description></item>
+            /// <item><description><b>published</b>: The destination route is published to the transit router.</description></item>
             /// <item><description><b>Active</b>: The BGP route is available.</description></item>
             /// </list>
             /// 
@@ -175,7 +185,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The weight of the destination route.</para>
             /// <remarks>
-            /// <para>This parameter is not in use.</para>
+            /// <para>This parameter does not take effect.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -224,8 +234,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The source of the BGP route.</para>
             /// <list type="bullet">
-            /// <item><description><b>CLOUD</b>: The BGP route is learned by the IPsec-VPN connection from the transit router.</description></item>
-            /// <item><description><b>VPN_BGP</b>: The BGP route is learned by the IPsec-VPN connection from the on-premises data center.</description></item>
+            /// <item><description><b>CLOUD</b>: The BGP route is learned by the IPsec-VPN connection from a transit router.</description></item>
+            /// <item><description><b>VPN_BGP</b>: The BGP route is learned by the IPsec-VPN connection from an on-premises data center.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

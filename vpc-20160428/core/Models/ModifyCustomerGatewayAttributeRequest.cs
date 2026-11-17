@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyCustomerGatewayAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The authentication key of the BGP route routing protocol for the on-premises data center gateway device.</para>
-        /// <para>The key must be 1 to 64 characters in length, can contain only ASCII characters, and cannot contain spaces, Chinese characters, or half-width question marks (?).</para>
+        /// <para>The authentication key for the BGP routing protocol of the gateway device in the on-premises data center.</para>
+        /// <para>The key must be 1 to 64 characters in length, and can contain only ASCII characters. It cannot contain spaces, Chinese characters, or half-width question marks (?).</para>
         /// 
         /// <b>Example:</b>
         /// <para>AuthKey****</para>
@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may differ for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The description of the customer gateway.  </para>
-        /// <para>The description must be 1 to 100 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description must be 1 to 100 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desctest</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The name of the customer gateway.  </para>
-        /// <para>The name must be 1 to 100 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name must be 1 to 100 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nametest</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the customer gateway. </para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

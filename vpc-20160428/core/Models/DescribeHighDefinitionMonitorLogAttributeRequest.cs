@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeHighDefinitionMonitorLogAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID for which you want to query high-precision second-level monitoring.</para>
+        /// <para>The instance ID for which to query high-precision second-level monitoring.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

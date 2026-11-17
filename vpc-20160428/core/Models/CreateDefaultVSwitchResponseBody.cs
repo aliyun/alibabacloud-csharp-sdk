@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the default vSwitch that was created.</para>
+        /// <para>The ID of the created default vSwitch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-bp1a4b5qhmxftjimq****</para>

@@ -10,10 +10,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DeletionProtectionRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,7 +23,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance for which you want to set deletion protection.</para>
+        /// <para>The ID of the instance for which you want to configure deletion protection.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,9 +40,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to enable deletion protection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enabled.</para>
+        /// <item><description><para><b>true</b>: enables deletion protection.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: Disabled.</para>
+        /// <item><description><para><b>false</b>: disables deletion protection.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -56,7 +55,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? ProtectionEnable { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance for which you want to set deletion protection. You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the instance for which you want to configure deletion protection. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,9 +74,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of instance for which you want to set deletion protection. Valid values:</para>
+        /// <para>The type of the instance for which you want to configure deletion protection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>EIP</b>: elastic IP address.</para>
+        /// <item><description><para><b>EIP</b>: elastic IP address (EIP).</para>
         /// </description></item>
         /// <item><description><para><b>CBWP</b>: Internet Shared Bandwidth.</para>
         /// </description></item>

@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class ListFullNatEntriesRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can generate the value from your client and make sure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the FULLNAT entry to query.</para>
+        /// <para>The ID of the FULLNAT entry to be queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fullnat-gw8fz23jezpbblf1j****</para>
@@ -34,17 +34,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string FullNatEntryId { get; set; }
 
         /// <summary>
-        /// <para>The names of the FULLNAT entries to query. You can specify up to 20 names.</para>
-        /// <para>The name must be 2 to 128 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). The name must start with a letter or Chinese character.</para>
+        /// <para>The names of the FULLNAT entries to be queried. You can query the names of up to 20 FULLNAT entries.</para>
+        /// <para>The name must be 2 to 128 characters in length, and must start with a letter or a Chinese character. It can contain digits, hyphens (-), and underscores (_).</para>
         /// </summary>
         [NameInMap("FullNatEntryNames")]
         [Validation(Required=false)]
         public List<string> FullNatEntryNames { get; set; }
 
         /// <summary>
-        /// <para>The ID of the FULLNAT table to which the FULLNAT entries belong.</para>
+        /// <para>The ID of the FULLNAT table to which the FULLNAT entries to be queried belong.</para>
         /// <remarks>
-        /// <para>You must specify at least one of <b>FullNatTableId</b> and <b>NatGatewayId</b>.</para>
+        /// <para>You must specify at least one of the <b>FullNatTableId</b> and <b>NatGatewayId</b> parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IpProtocol { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -79,9 +79,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The ID of the NAT gateway to query.</para>
+        /// <para>The ID of the NAT gateway to be queried.</para>
         /// <remarks>
-        /// <para>You must specify at least one of <b>FullNatTableId</b> and <b>NatGatewayId</b>.</para>
+        /// <para>You must specify at least one of the <b>FullNatTableId</b> and <b>NatGatewayId</b> parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NatGatewayId { get; set; }
 
         /// <summary>
-        /// <para>The NAT IP address in the FULLNAT entry to query.</para>
+        /// <para>The NAT IP address of the FULLNAT entry to be queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.0.XX.XX</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NatIp { get; set; }
 
         /// <summary>
-        /// <para>The frontend port in the FULLNAT entry to query. Valid values: 1 to 65535.</para>
+        /// <para>The frontend port of the FULLNAT entry to be queried. Valid values: 1 to 65535.</para>
         /// 
         /// <b>Example:</b>
         /// <para>443</para>
@@ -112,17 +112,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NatIpPort { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the elastic network interfaces (ENIs) to query.</para>
+        /// <para>The IDs of the elastic network interfaces (ENIs) to be queried.</para>
         /// </summary>
         [NameInMap("NetworkInterfaceIds")]
         [Validation(Required=false)]
         public List<string> NetworkInterfaceIds { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token that is used for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>You do not need to specify this parameter for the first request or if no next query exists.</description></item>
-        /// <item><description>If a next query exists, set the value to the <b>NextToken</b> value returned in the previous API call.</description></item>
+        /// <item><description>If this is the first query or no next query is to be sent, you do not need to specify this parameter.</description></item>
+        /// <item><description>If a next query is to be sent, set the value to the <b>NextToken</b> value returned from the last API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -141,8 +141,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the VPC NAT gateway to which the FULLNAT entries belong.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the VPC NAT gateway to which the FULLNAT entries to be queried belong.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
