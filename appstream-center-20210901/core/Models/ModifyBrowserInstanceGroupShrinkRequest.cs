@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? MaxAmount { get; set; }
 
         /// <summary>
-        /// <para>The network configurations.</para>
+        /// <para>The network configuration.</para>
         /// </summary>
         [NameInMap("Network")]
         [Validation(Required=false)]
@@ -72,14 +72,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string PolicyShrink { get; set; }
 
         /// <summary>
-        /// <para>The storage-related policy.</para>
+        /// <para>The storage-related policies.</para>
         /// </summary>
         [NameInMap("StoragePolicy")]
         [Validation(Required=false)]
         public string StoragePolicyShrink { get; set; }
 
         /// <summary>
-        /// <para>The timer.</para>
+        /// <para>The timers.</para>
         /// </summary>
         [NameInMap("Timers")]
         [Validation(Required=false)]

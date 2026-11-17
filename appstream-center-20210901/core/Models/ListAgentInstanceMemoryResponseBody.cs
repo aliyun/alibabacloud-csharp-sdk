@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListAgentInstanceMemoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The memory configurations and statistics information of the agent instances on the current page.</para>
+        /// <para>The memory configurations and statistics information of agent instances on the current page.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListAgentInstanceMemoryResponseBodyData> Data { get; set; }
         public class ListAgentInstanceMemoryResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the agent instance, which can be used to configure the instance memory switch or clear the instance memory.</para>
+            /// <para>The Agent instance ID, which can be used to set the instance memory switch or clear the instance memory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>agi-08vm****</para>
@@ -27,19 +27,19 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AgentInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The instance lifetime and epoch status of the agent instance.</para>
+            /// <para>The lifecycle status of the agent instance.</para>
             /// <list type="bullet">
-            /// <item><description><c>UNDEPLOYED</c>: No deployment.</description></item>
-            /// <item><description><c>DEPLOYING</c>: Deployment in progress.</description></item>
-            /// <item><description><c>DEPLOYED</c>: Deployment completed.</description></item>
+            /// <item><description><c>UNDEPLOYED</c>: Undeployed.</description></item>
+            /// <item><description><c>DEPLOYING</c>: Deploying.</description></item>
+            /// <item><description><c>DEPLOYED</c>: Deployed.</description></item>
             /// <item><description><c>STARTING</c>: Starting.</description></item>
             /// <item><description><c>RUNNING</c>: Running.</description></item>
             /// <item><description><c>STOPPING</c>: Stopping.</description></item>
             /// <item><description><c>STOPPED</c>: Stopped.</description></item>
-            /// <item><description><c>UNAVAILABLE</c>: Not active.</description></item>
+            /// <item><description><c>UNAVAILABLE</c>: Unavailable.</description></item>
             /// <item><description><c>FAILED</c>: Failed.</description></item>
-            /// <item><description><c>UPGRADING</c>: Upgrade in progress.</description></item>
-            /// <item><description><c>REBUILDING</c>: Reset in progress.</description></item>
+            /// <item><description><c>UPGRADING</c>: Upgrading.</description></item>
+            /// <item><description><c>REBUILDING</c>: Resetting.</description></item>
             /// <item><description><c>DELETING</c>: Deleting.</description></item>
             /// <item><description><c>DELETED</c>: Deleted.</description></item>
             /// </list>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AgentInstanceStatus { get; set; }
 
             /// <summary>
-            /// <para>The business platform to which the agent belongs.</para>
+            /// <para>The business platform to which the Agent belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ENTERPRISE_AGENTIC_COMPUTER</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AgentPlatform { get; set; }
 
             /// <summary>
-            /// <para>The provider of the agent.</para>
+            /// <para>The Agent provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AgenticComputer</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string EndUserId { get; set; }
 
             /// <summary>
-            /// <para>The time of the last memory update. The time is returned in the YYYY-MM-DDThh:mm:ss format, with optional fractional seconds. The time value uses the default time zone of the server, and the string does not include a time zone offset. This field is omitted if the last update time is unavailable.</para>
+            /// <para>The time of the last memory update. The time is returned in the YYYY-MM-DDThh:mm:ss format, which may include fractional seconds. The time value uses the default time zone of the server, and the string does not contain a time zone offset. This field is omitted if the last update time is unavailable.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-26T21:14:36.693</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string LastMemoryUpdatedAt { get; set; }
 
             /// <summary>
-            /// <para>The time of the latest backup. The time is returned in the YYYY-MM-DDThh:mm:ss format, with optional fractional seconds. The time value uses the default time zone of the server, and the string does not include a time zone offset. This field is omitted if the backup time is unavailable.</para>
+            /// <para>The time of the latest backup. The time is returned in the YYYY-MM-DDThh:mm:ss format, which may include fractional seconds. The time value uses the default time zone of the server, and the string does not contain a time zone offset. This field is omitted if the backup time is unavailable.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-26T20:58:00.536</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string MemoryEnabled { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region where the runtime environment is located.</para>
+            /// <para>The ID of the region where the runtime is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string RuntimeId { get; set; }
 
             /// <summary>
-            /// <para>The name of the runtime environment. The name of the associated resource is returned first. If the resource name is unavailable, the instance name is returned.</para>
+            /// <para>The runtime name. The associated resource name is returned in preference. If the resource name is unavailable, the instance name is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Office Assistant</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public List<ListAgentInstanceMemoryResponseBodyDataUserGroups> UserGroups { get; set; }
             public class ListAgentInstanceMemoryResponseBodyDataUserGroups : TeaModel {
                 /// <summary>
-                /// <para>The ID of the user group.</para>
+                /// <para>The user group ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>group-aliy****</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string GroupId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the user group.</para>
+                /// <para>The user group name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Office user group</para>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public List<ListAgentInstanceMemoryResponseBodyDataUserOrgs> UserOrgs { get; set; }
             public class ListAgentInstanceMemoryResponseBodyDataUserOrgs : TeaModel {
                 /// <summary>
-                /// <para>The ID of the organization.</para>
+                /// <para>The organization ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>org-aliy****</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string OrgId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the organization.</para>
+                /// <para>The organization name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Enterprise office</para>

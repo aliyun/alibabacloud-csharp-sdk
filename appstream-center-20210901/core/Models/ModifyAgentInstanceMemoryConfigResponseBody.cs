@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ModifyAgentInstanceMemoryConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The unique identifier of the request, which can be used for troubleshooting.</para>
+        /// <para>The unique identifier of the request, which can be used to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>01A1CEEB-CDFF-18F9-B2BF-9997600D****</para>

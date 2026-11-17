@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ModifyAgentInstanceMemoryConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The list of agent instance IDs. Specify 1 to 100 IDs. The IDs must be unique. Each instance must belong to the current account, support memory management, and have the memory feature configured.</para>
+        /// <para>The list of agent instance IDs. You can specify 1 to 100 IDs, and the IDs must be unique. Each instance must belong to the current account, support memory management, and have the memory feature configured.</para>
         /// </summary>
         [NameInMap("AgentInstanceIds")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <list type="bullet">
         /// <item><description>true: Enables the memory feature.</description></item>
         /// <item><description>false: Disables the memory feature.
-        /// Before enabling the feature, ensure that the tenant-level memory store switch is turned on.</description></item>
+        /// Before you enable the feature, ensure that the tenant-level memory store is enabled.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("Enabled")]

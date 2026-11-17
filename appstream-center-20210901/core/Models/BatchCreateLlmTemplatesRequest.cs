@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<BatchCreateLlmTemplatesRequestLlmTemplateItems> LlmTemplateItems { get; set; }
         public class BatchCreateLlmTemplatesRequestLlmTemplateItems : TeaModel {
             /// <summary>
-            /// <para>The JSON object for model configuration.</para>
+            /// <para>The model configuration JSON object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to set the model as the default model. Each model group can have at most one default model.</para>
+            /// <para>Specifies whether to set the model as the default model. A model group can have at most one default model.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public bool? IsDefaultModel { get; set; }
 
             /// <summary>
-            /// <para>The model code. It must be unique under the same provider.</para>
+            /// <para>The model code. The code must be unique under the same provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qwen3.6-plus</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ModelTemplateId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the model provider template to which the model templates belong.</para>
+        /// <para>The ID of the model provider template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

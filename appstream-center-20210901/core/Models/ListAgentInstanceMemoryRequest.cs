@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListAgentInstanceMemoryRequest : TeaModel {
         /// <summary>
-        /// <para>Filters results by the business platform to which the agent belongs. If this parameter is omitted, no restriction is applied to the business platform.</para>
+        /// <para>Filters by the business platform to which the Agent belongs. If omitted, no restriction is applied to the business platform.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE_AGENTIC_COMPUTER</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AgentPlatform { get; set; }
 
         /// <summary>
-        /// <para>Filters results by agent provider. If this parameter is omitted, the system queries providers that support memory management. <c>JVSCopilot</c> is not supported for memory management in this API operation.</para>
+        /// <para>Filters by Agent provider. If omitted, queries providers that support memory management. <c>JVSCopilot</c> is not supported for memory management in this operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AgenticComputer</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AgentProvider { get; set; }
 
         /// <summary>
-        /// <para>Filters results by business type code. If this parameter is omitted, no restriction is applied to the business type.</para>
+        /// <para>Filters by business type code. If omitted, no restriction is applied to the business type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,25 +40,25 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? BizType { get; set; }
 
         /// <summary>
-        /// <para>The list of end user IDs to be included in the query results. Exact matching is applied. Maximum value: 200.</para>
+        /// <para>The list of end user IDs to include in the query results. Exact match is applied. You can specify up to 200 IDs.</para>
         /// </summary>
         [NameInMap("EndUserIds")]
         [Validation(Required=false)]
         public List<string> EndUserIds { get; set; }
 
         /// <summary>
-        /// <para>The list of end user IDs to be excluded from the query results. Maximum value: 200. When used together with EndUserIds, these users are removed from the inclusion scope.</para>
+        /// <para>The list of end user IDs to exclude from the query results. You can specify up to 200 IDs. If used together with EndUserIds, these users are excluded from the inclusion scope.</para>
         /// </summary>
         [NameInMap("ExcludedEndUserIds")]
         [Validation(Required=false)]
         public List<string> ExcludedEndUserIds { get; set; }
 
         /// <summary>
-        /// <para>Filters results by the memory switch configured for the instance.</para>
+        /// <para>Filters by the memory switch configured for the instance.</para>
         /// <list type="bullet">
         /// <item><description><c>ENABLED</c>: The instance memory switch is turned on.</description></item>
         /// <item><description><c>DISABLED</c>: The instance memory switch is turned off.
-        /// If both values are passed, instances matching either status are returned.</description></item>
+        /// If both values are specified, instances matching either status are returned.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("MemoryStatuses")]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The keyword used for inclusion matching. Use SearchType to specify the search field. If this parameter is left empty, no keyword filtering is applied.</para>
+        /// <para>The keyword used for inclusion matching. Specify the search field by using SearchType. If left empty, no keyword filtering is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-d8ut</para>
@@ -96,13 +96,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string SearchKeyword { get; set; }
 
         /// <summary>
-        /// <para>The scope of the keyword search. Default value: <c>ALL</c>.</para>
+        /// <para>The search scope for the keyword. Default value: <c>ALL</c>.</para>
         /// <list type="bullet">
-        /// <item><description><c>ALL</c>: Searches resource IDs, resource names, runtime IDs, and end user IDs.</description></item>
-        /// <item><description><c>RESOURCE_ID</c>: Searches resource IDs.</description></item>
-        /// <item><description><c>RESOURCE_NAME</c>: Searches resource names.</description></item>
-        /// <item><description><c>RUNTIME_ID</c>: Searches runtime IDs.</description></item>
-        /// <item><description><c>END_USER_ID</c>: Searches end user IDs.</description></item>
+        /// <item><description><c>ALL</c>: Searches the resource ID, resource name, runtime ID, and end user ID.</description></item>
+        /// <item><description><c>RESOURCE_ID</c>: Searches the resource ID.</description></item>
+        /// <item><description><c>RESOURCE_NAME</c>: Searches the resource name.</description></item>
+        /// <item><description><c>RUNTIME_ID</c>: Searches the runtime ID.</description></item>
+        /// <item><description><c>END_USER_ID</c>: Searches the end user ID.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

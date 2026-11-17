@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class CreateBrowserInstanceGroupShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The package ID.</para>
+        /// <para>The package identifier.</para>
         /// <para>You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +24,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>Specifies whether to send notification emails for authorization and deauthorization.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>true</c>: Sends notification emails.</description></item>
         /// <item><description><c>false</c>: Does not send notification emails.</description></item>
@@ -63,7 +64,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The ID of the business region. This parameter is required.</para>
+        /// <para>The business region identifier. This parameter is required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,7 +83,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The resource billing method.</para>
-        /// <para><b>For MAU scenarios:</b> Set this parameter to <c>AppInstance</c>, which indicates billing by instance resource.</para>
+        /// <para><b>For MAU scenarios:</b> Set this parameter to <c>AppInstance</c>, which indicates billing by instance resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AppInstance</para>
@@ -103,7 +104,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The name of the cloud browser group. This parameter is required. It is used to distinguish different browser groups in business management scenarios.</para>
+        /// <para>The name of the cloud browser group. This parameter cannot be empty. It is used to distinguish different browser groups in business management scenarios.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -116,7 +117,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The image ID used by the cloud browser. The image must be compatible with the operating system.</para>
         /// <para>If this parameter is omitted, the default image available for the account is used. If no default image is available, the creation may fail.</para>
-        /// <para><b>Usage condition:</b> When <c>CookiesSync</c> is enabled, explicitly specify an image that supports cookie synchronization.</para>
+        /// <para><b>Usage condition:</b> When CookiesSync is enabled, explicitly specify an image that supports cookie synchronization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>img-bp13mu****</para>
@@ -137,7 +138,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The capacity configuration for the MAU billing scenario.</para>
+        /// <para>The capacity configuration for MAU billing scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -147,7 +148,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? MaxAmount { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the office network and website access restrictions. The selected office network must belong to the current account and reside in the region specified by BizRegionId.</para>
+        /// <para>The configurations for the office network and website access restrictions. The selected office network must belong to the current account and be located in the region specified by <c>BizRegionId</c>.</para>
         /// </summary>
         [NameInMap("Network")]
         [Validation(Required=false)]
@@ -168,7 +169,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The operating system type. This parameter is required.</para>
-        /// <para>Only <c>Windows</c> is supported. Other operating systems are not supported.</para>
+        /// <para>Only Windows is supported. Other operating systems are not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Windows</para>
@@ -178,7 +179,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string OsType { get; set; }
 
         /// <summary>
-        /// <para>The number of subscription periods.</para>
+        /// <para>The number of billing cycles for the purchase.</para>
         /// <para>You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
@@ -191,7 +192,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription period.</para>
+        /// <para>The unit of the billing cycle for the purchase.</para>
         /// <para>You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
@@ -204,15 +205,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The configurations of clipboard, video, watermark, session, and client access policies.</para>
+        /// <para>The configurations for clipboard, video, watermark, session, and client access policies.</para>
         /// </summary>
         [NameInMap("Policy")]
         [Validation(Required=false)]
         public string PolicyShrink { get; set; }
 
         /// <summary>
-        /// <para>The promotion ID, which is used to specify the promotional offer applied to the order.</para>
-        /// <para>The applicability and specific discounts are subject to the promotion rules. You do not need to specify this parameter if no promotional offer is applied.</para>
+        /// <para>The promotion identifier, which is used to specify the promotional offer applied to the order.</para>
+        /// <para>Applicability and specific discounts are subject to the promotion rules. You do not need to specify this parameter if no promotional offer is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17440009****</para>
@@ -222,14 +223,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// <para>The connection security policy of the browser group.</para>
+        /// <para>The connection security policy for the browser group.</para>
         /// </summary>
         [NameInMap("SecurityPolicy")]
         [Validation(Required=false)]
         public string SecurityPolicyShrink { get; set; }
 
         /// <summary>
-        /// <para>The user data storage configuration of the browser group.</para>
+        /// <para>The user data storage configuration for the browser group.</para>
         /// </summary>
         [NameInMap("StoragePolicy")]
         [Validation(Required=false)]
@@ -237,7 +238,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The billing sub-type.</para>
-        /// <para><b>You must explicitly set this parameter to <c>mau</c>, which indicates billing by monthly active users.</b> Omitting this parameter does not enable MAU billing.</para>
+        /// <para><b>You must explicitly set this parameter to <c>mau</c>, which indicates billing by monthly active users.</b> Omitting this field does not enable MAU billing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mau</para>
@@ -271,8 +272,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string TimersShrink { get; set; }
 
         /// <summary>
-        /// <para>The list of authorized user group IDs. You can specify up to 10 user group IDs. The user groups must belong to the current account and match the account type of the office network.</para>
-        /// <para><b>Limits:</b> This parameter cannot be specified together with a non-empty <c>Users</c> parameter.</para>
+        /// <para>The list of authorized user group IDs. You can specify up to 10 user group IDs. The user groups must belong to the current account and match the office network account type.</para>
+        /// <para><b>Limits:</b> This parameter cannot be specified together with a non-empty Users parameter.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -289,8 +290,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string UserInfoShrink { get; set; }
 
         /// <summary>
-        /// <para>The list of authorized users. You can specify up to 200 users. The users must be created in advance and match the account type.</para>
-        /// <para><b>Limit:</b> This parameter cannot be specified together with a non-empty UserGroupIds parameter.</para>
+        /// <para>The list of authorized users. You can specify up to 200 users. Users must be created in advance and match the account type.</para>
+        /// <para><b>Limits:</b> This parameter cannot be specified together with a non-empty <c>UserGroupIds</c> parameter.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]

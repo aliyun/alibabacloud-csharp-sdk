@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AgentInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The business platform to which the agent belongs. Specify the platform corresponding to the tenant memory configuration, such as <c>ENTERPRISE</c> for the enterprise platform.</para>
+        /// <para>The business platform to which the agent belongs. Specify the platform corresponding to the tenant memory configuration, such as the enterprise platform <c>ENTERPRISE</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AgentProvider { get; set; }
 
         /// <summary>
-        /// <para>The business type code. This parameter is used together with the provider and business platform. Common values include <c>1</c> for Enterprise Edition, <c>10</c> for Personal Edition, and <c>20</c> for Commercial Edition.</para>
+        /// <para>The business type code. This parameter is used together with the provider and business platform. Common values include <c>1</c> (Enterprise Edition), <c>10</c> (Personal Edition), and <c>20</c> (Commercial Edition).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

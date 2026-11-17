@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class CreateBrowserInstanceGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The creation result of the cloud browser group, including the resource ID and the order ID.</para>
+        /// <para>The creation result of the cloud browser group, including the resource ID and order ID.</para>
         /// </summary>
         [NameInMap("BrowserInstanceGroupModel")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string BrowserInstanceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the order generated for this creation.</para>
+            /// <para>The order ID generated for this creation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12345****</para>

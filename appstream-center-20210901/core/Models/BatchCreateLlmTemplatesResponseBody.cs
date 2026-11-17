@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string LlmCode { get; set; }
 
                 /// <summary>
-                /// <para>The reason why the model configuration item was skipped.</para>
+                /// <para>The reason why the item is skipped.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>LLM template already exists with same providerTemplateId and llmCode.</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The number of successfully created model templates.</para>
+            /// <para>The number of successfully created items.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? SuccessCount { get; set; }
 
             /// <summary>
-            /// <para>The total number of requested model templates.</para>
+            /// <para>The total number of requested items.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>

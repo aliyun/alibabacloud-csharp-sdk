@@ -1,3 +1,15 @@
+2026-11-17 Version: 5.16.0
+- Support API BatchConfigRuntimeChannel.
+- Support API DescribeSlsDeliveryConfig.
+- Support API GetRuntimeChannelQrCodeDetail.
+- Support API ListCommandInvocationResults.
+- Support API ModifyWuyingServerSpec.
+- Support API ResizeWuyingServerDisk.
+- Support API RunAppInstanceCommand.
+- Support API SendRuntimeQrCodeConfigChannelMessage.
+- Update API DescribeEvents: add request parameters EndUserIds.
+
+
 2026-11-17 Version: 5.15.1
 - Generated csharp 2021-09-01 for appstream-center.
 

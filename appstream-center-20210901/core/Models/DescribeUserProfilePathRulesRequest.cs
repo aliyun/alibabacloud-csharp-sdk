@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class DescribeUserProfilePathRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the app instance group. Specify either this parameter or AppInstanceGroupSetId when querying app instance group rules. This parameter can be omitted when querying system default rules.</para>
+        /// <para>The app instance group ID. Specify either this parameter or AppInstanceGroupSetId when querying app instance group rules. This parameter can be omitted when querying system default rules.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aig-0bi83v****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the app instance group set. Specify either this parameter or AppInstanceGroupId when querying app instance group set rules. This parameter can be omitted when querying system default rules.</para>
+        /// <para>The app instance group set ID. Specify either this parameter or AppInstanceGroupId when querying app instance group set rules. This parameter can be omitted when querying system default rules.</para>
         /// 
         /// <b>Example:</b>
         /// <para>set-3jm9d0abc00example</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupSetId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the request. When querying or setting the rules for a specified app instance group, use the region where the target app instance group is located.</para>
+        /// <para>The region ID of the request. When querying or setting rules for a specified app instance group, use the region where the target app instance group is located.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,8 +43,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The path rule type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Default: Queries the system default rules. Both target IDs can be omitted.</description></item>
-        /// <item><description>AppInstanceGroup: Queries the rules of an app instance group or an app instance group set.</description></item>
+        /// <item><description><c>Default</c>: Queries system default rules. Both target IDs can be omitted.</description></item>
+        /// <item><description><c>AppInstanceGroup</c>: Queries the rules of an app instance group or an app instance group set.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

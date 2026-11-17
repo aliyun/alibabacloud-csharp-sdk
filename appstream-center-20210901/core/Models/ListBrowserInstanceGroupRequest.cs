@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListBrowserInstanceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the browser group set. This parameter is used to query the valid members of the set by exact match.</para>
+        /// <para>The browser group set ID. This parameter is used to query the valid members of the set by exact match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>set-3jm9d0abc00example</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud browser group. This parameter is used for exact match.</para>
+        /// <para>The cloud browser group ID, which is used for exact match queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>big-0c7loey7fzjq****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string BrowserInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the browser group. Fuzzy match is supported.</para>
+        /// <para>The browser group name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Office</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string BrowserInstanceGroupName { get; set; }
 
         /// <summary>
-        /// <para>Filters by browser group name or ID by using partial match.</para>
+        /// <para>Filters browser groups by name or ID by using a contains match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Office</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string CloudBrowserName { get; set; }
 
         /// <summary>
-        /// <para>Excludes browser groups that are authorized to the specified user groups.</para>
+        /// <para>Excludes browser groups that are authorized for the specified user groups.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1.</para>
+        /// <para>The page number. Pages start from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Filters by browser group status.</para>
+        /// <para>Filters browser groups by status.</para>
         /// <para><b>Limit:</b> You can specify only one status at a time.</para>
         /// </summary>
         [NameInMap("Status")]
@@ -108,14 +108,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> Status { get; set; }
 
         /// <summary>
-        /// <para>The tag filter parameter. This parameter is not supported in customer-facing scenarios. Do not specify this parameter.</para>
+        /// <para>The tag filtering parameter. This parameter is not supported in current customer-facing scenarios. Do not specify this parameter.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListBrowserInstanceGroupRequestTag> Tag { get; set; }
         public class ListBrowserInstanceGroupRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. Do not specify this parameter in customer-facing scenarios.</para>
+            /// <para>The tag key. Do not specify this parameter in current customer-facing scenarios.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. Do not specify this parameter in customer-facing scenarios.</para>
+            /// <para>The tag value. Do not specify this parameter in current customer-facing scenarios.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>Filters by the version of the browser. Valid values:</para>
+        /// <para>Filters browser groups by the version of the browser. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>Basic</c>: Basic Edition.</description></item>
         /// <item><description><c>Pro</c>: Premium Edition.</description></item>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Tier { get; set; }
 
         /// <summary>
-        /// <para>Filters by the IDs of authorized user groups.</para>
+        /// <para>Filters browser groups by authorized user group ID.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>

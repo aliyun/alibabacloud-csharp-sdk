@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class AuthorizeUsersForAppShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application. The application must be deployed in the image used by the app instance group. You can obtain the application ID from the Apps list returned by the <a href="https://help.aliyun.com/document_detail/600836.html">GetAppInstanceGroup</a> operation.</para>
+        /// <para>The application ID. The application must be deployed in the image used by the app instance group. You can obtain the ID from the Apps list returned by the <a href="https://help.aliyun.com/document_detail/600836.html">GetAppInstanceGroup</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the app instance group. You can call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> operation to query the ID.</para>
+        /// <para>The app instance group ID. You can call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> operation to obtain the ID.</para>
         /// <para>The application specified by AppId must be deployed in the image used by the app instance group.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The list of usernames of the users to be authorized for the application. You can specify up to 100 usernames in a single call.</para>
-        /// <para>You must specify at least one of AuthorizeUserIds and UnAuthorizeUserIds, or specify both. Adding authorization is subject to the authorized user quota limit of the application.</para>
+        /// <para>The list of usernames to be authorized for the application. You can specify up to 100 usernames at a time.</para>
+        /// <para>Specify at least one of AuthorizeUserIds and UnAuthorizeUserIds, or specify both. Adding authorization is subject to the authorized user quota limit of the application.</para>
         /// </summary>
         [NameInMap("AuthorizeUserIds")]
         [Validation(Required=false)]
@@ -56,8 +56,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The list of usernames of the users whose authorization for the application is to be removed. You can specify up to 100 usernames in a single call.</para>
-        /// <para>You must specify at least one of AuthorizeUserIds and UnAuthorizeUserIds, or specify both. Removing authorization is not subject to quota limits.</para>
+        /// <para>The list of usernames whose authorization for the application is to be removed. You can specify up to 100 usernames at a time.</para>
+        /// <para>Specify at least one of AuthorizeUserIds and UnAuthorizeUserIds, or specify both. Removing authorization is not subject to quota limits.</para>
         /// </summary>
         [NameInMap("UnAuthorizeUserIds")]
         [Validation(Required=false)]
@@ -66,8 +66,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The account information of the authorized user, which is used to specify the account type corresponding to the username.</para>
         /// <list type="bullet">
-        /// <item><description><b>Required</b> if the workspace to which the app instance group belongs is an AD workspace: Set Type to ad, and set AdDomain to the AD domain bound to the workspace.</description></item>
-        /// <item><description>If this parameter is not specified, the default account type is WUYING convenience account (simple).</description></item>
+        /// <item><description><b>Must be specified</b> when the workspace to which the app instance group belongs is an AD workspace: set Type to ad, and set AdDomain to the AD domain bound to the workspace.</description></item>
+        /// <item><description>If this parameter is not specified, the default WUYING convenience account (simple) is used.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("UserMeta")]

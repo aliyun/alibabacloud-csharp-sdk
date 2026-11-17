@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The path rules and user data roaming configurations.</para>
+        /// <para>The path rules and user profile roaming configurations.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeUserProfilePathRulesResponseBodyData Data { get; set; }
         public class DescribeUserProfilePathRulesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the app instance group to which the rule applies. When querying set rules, this is the ID of the primary app instance group.</para>
+            /// <para>The app instance group ID corresponding to the rule. When querying set rules, this is the primary app instance group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aig-0bi83v****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstanceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the app instance group set to which the rule applies. This parameter is returned when querying set rules.</para>
+            /// <para>The app instance group set ID corresponding to the rule. This is returned when querying set rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>set-3jm9d0abc00example</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstanceGroupSetId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user data roaming storage domain bound to the app instance group. This parameter may be omitted if no domain is bound.</para>
+            /// <para>The user profile roaming storage domain ID bound to the app instance group. This field may be omitted if no domain is bound.</para>
             /// 
             /// <b>Example:</b>
             /// <para>domain-existing</para>
@@ -57,28 +57,24 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string DomainId { get; set; }
 
             /// <summary>
-            /// <para>This field is not enabled. The current query result does not provide the file system ID. The example is used to illustrate the field status.</para>
+            /// <para>Not enabled. The current query result does not provide the file system ID. The example is used to illustrate the field status.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>N/A (not enabled)</para>
+            /// <para>Not applicable (not enabled)</para>
             /// </summary>
             [NameInMap("FileSystemId")]
             [Validation(Required=false)]
             public string FileSystemId { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether user data roaming is enabled. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true: Enabled.</description></item>
-            /// <item><description>false: Disabled.</description></item>
-            /// </list>
+            /// <para>The user profile roaming switch. A value of <c>true</c> indicates that the feature is enabled, and a value of <c>false</c> indicates that the feature is disabled.</para>
             /// </summary>
             [NameInMap("ProfileFollowSwitch")]
             [Validation(Required=false)]
             public bool? ProfileFollowSwitch { get; set; }
 
             /// <summary>
-            /// <para>The remote storage path for user data roaming. If the app instance group is not separately configured with this path, the app instance group ID is returned.</para>
+            /// <para>The remote storage path for user profile roaming. If this path is not separately configured for the app instance group, the app instance group ID is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aig-0bi83v****</para>
@@ -90,8 +86,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <summary>
             /// <para>The path rule type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Default: Queries the system default rules. Both target IDs can be omitted.</description></item>
-            /// <item><description>AppInstanceGroup: Queries the rules of an app instance group or an app instance group set.</description></item>
+            /// <item><description><c>Default</c>: Queries system default rules. Both target IDs can be omitted.</description></item>
+            /// <item><description><c>AppInstanceGroup</c>: Queries the rules of an app instance group or an app instance group set.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -102,14 +98,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string RuleType { get; set; }
 
             /// <summary>
-            /// <para>The list of user data roaming path rules.</para>
+            /// <para>The list of user profile roaming path rules.</para>
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
             public List<DescribeUserProfilePathRulesResponseBodyDataRules> Rules { get; set; }
             public class DescribeUserProfilePathRulesResponseBodyDataRules : TeaModel {
                 /// <summary>
-                /// <para>The file or directory excluded from user data roaming.</para>
+                /// <para>The file or directory excluded from user profile roaming.</para>
                 /// </summary>
                 [NameInMap("BlackPath")]
                 [Validation(Required=false)]
@@ -128,8 +124,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                     /// <summary>
                     /// <para>The path type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>file: File.</description></item>
-                    /// <item><description>folder: Folder.</description></item>
+                    /// <item><description><c>file</c>: File.</description></item>
+                    /// <item><description><c>folder</c>: Folder.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -142,7 +138,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 }
 
                 /// <summary>
-                /// <para>The list of files or directories that still participate in user data roaming under the excluded directories.</para>
+                /// <para>The list of files or directories that still participate in user profile roaming under the excluded directories.</para>
                 /// </summary>
                 [NameInMap("WhitePaths")]
                 [Validation(Required=false)]
@@ -161,8 +157,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                     /// <summary>
                     /// <para>The path type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>file: File.</description></item>
-                    /// <item><description>folder: Folder.</description></item>
+                    /// <item><description><c>file</c>: File.</description></item>
+                    /// <item><description><c>folder</c>: Folder.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -177,7 +173,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The storage quota for user data roaming, in GB. This parameter may be omitted if it is not configured.</para>
+            /// <para>The storage quota for user profile roaming, in GB. This field may be omitted if it is not configured.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -187,11 +183,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public long? UserProfileSize { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether user data roaming is enabled. The value is the same as ProfileFollowSwitch. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true: Enabled.</description></item>
-            /// <item><description>false: Disabled.</description></item>
-            /// </list>
+            /// <para>The user profile roaming switch. The value is the same as ProfileFollowSwitch. A value of <c>true</c> indicates that the feature is enabled, and a value of <c>false</c> indicates that the feature is disabled.</para>
             /// </summary>
             [NameInMap("UserProfileSwitch")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class SetUserProfilePathRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of a single app instance group. This parameter and AppInstanceGroupSetId are mutually exclusive. If a cloud app or cloud browser app instance group belongs to an enabled set, you must configure the rules at the set level.</para>
+        /// <para>The ID of a single app instance group. You must specify either this parameter or AppInstanceGroupSetId. If the cloud application or cloud browser app instance group belongs to an enabled set, you must configure the rules for the set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aig-0bi83v****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of an enabled app instance group set. This parameter and AppInstanceGroupId are mutually exclusive. You can set rules for up to 200 member app instance groups at a time.</para>
+        /// <para>The ID of an enabled app instance group set. You must specify either this parameter or AppInstanceGroupId. You can configure rules for up to 200 member app instance groups at a time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>set-3jm9d0abc00example</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupSetId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the request. When you query or set rules for a specified app instance group, use the region where the target app instance group resides.</para>
+        /// <para>The region ID. When you query or configure rules for a specific app instance group, specify the region where the target app instance group resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The JSON array string of the complete rule list. Each item uses <c>blackPath</c> to specify the excluded path and <c>whitePaths</c> to specify the relative paths that still require roaming within the excluded directory. The path type <c>file</c> indicates a file, and <c>folder</c> indicates a directory.</para>
+        /// <para>The JSON array string that contains the complete list of rules. Each item uses <c>blackPath</c> to specify the excluded path and <c>whitePaths</c> to specify the relative paths that still require roaming within the excluded directory. The path type <c>file</c> indicates a file, and <c>folder</c> indicates a directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;blackPath&quot;:{&quot;path&quot;:&quot;AppData\\Local&quot;,&quot;type&quot;:&quot;folder&quot;},&quot;whitePaths&quot;:[{&quot;path&quot;:&quot;.\\Microsoft\\Office&quot;,&quot;type&quot;:&quot;folder&quot;}]}]</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string UserProfilePathRules { get; set; }
 
         /// <summary>
-        /// <para>The type of rule to set. Set this parameter to <c>AppInstanceGroup</c> when you configure rules for an app instance group or an app instance group set.</para>
+        /// <para>The type of rule to configure. Set this parameter to <c>AppInstanceGroup</c> when you configure rules for an app instance group or an app instance group set.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

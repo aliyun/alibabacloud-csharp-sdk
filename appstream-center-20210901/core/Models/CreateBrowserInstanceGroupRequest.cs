@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class CreateBrowserInstanceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The package ID.</para>
+        /// <para>The package identifier.</para>
         /// <para>You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +24,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>Specifies whether to send notification emails for authorization and deauthorization.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>true</c>: Sends notification emails.</description></item>
         /// <item><description><c>false</c>: Does not send notification emails.</description></item>
@@ -63,7 +64,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The ID of the business region. This parameter is required.</para>
+        /// <para>The business region identifier. This parameter is required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,7 +83,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public class CreateBrowserInstanceGroupRequestBrowserConfig : TeaModel {
             /// <summary>
             /// <para>The list of browser bookmarks.</para>
-            /// <para><b>Limits:</b> This parameter cannot be specified together with a non-empty <c>BookmarksFilePath</c>, and bookmark URLs cannot be duplicated.</para>
+            /// <para><b>Limits:</b> This parameter cannot be specified together with a non-empty BookmarksFilePath, and bookmark URLs cannot be duplicated.</para>
             /// </summary>
             [NameInMap("Bookmarks")]
             [Validation(Required=false)]
@@ -103,14 +104,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Alibaba Cloud official website</para>
+                /// <para>Alibaba Cloud website</para>
                 /// </summary>
                 [NameInMap("BookmarkName")]
                 [Validation(Required=false)]
                 public string BookmarkName { get; set; }
 
                 /// <summary>
-                /// <para>The URL of the bookmark. This parameter is required when you create a bookmark. The length cannot exceed 1024 characters after leading and trailing spaces are removed.</para>
+                /// <para>The URL of the bookmark. This parameter is required when you create a bookmark. The length cannot exceed 1,024 characters after leading and trailing spaces are removed.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -123,7 +124,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The path of the uploaded bookmark file. This parameter cannot be specified together with a non-empty <c>Bookmarks</c> parameter.</para>
+            /// <para>The path of the uploaded bookmark file. This parameter cannot be specified together with a non-empty Bookmarks parameter.</para>
             /// <para><b>File format:</b> A CSV file without a header. Specify the following four columns in order:</para>
             /// <ol>
             /// <item><description>Bookmark name.</description></item>
@@ -138,14 +139,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>cn-hangzhou/aig_upm/xxx/temp/BrowserBookmarks/BrowserBookmarkTemplate.csv</para>
+            /// <para>cn-hangzhou/aig_upm/xxx/temp/BrowserBookmarks/BrowserBookmarksTemplate.csv</para>
             /// </summary>
             [NameInMap("BookmarksFilePath")]
             [Validation(Required=false)]
             public string BookmarksFilePath { get; set; }
 
             /// <summary>
-            /// <para>The browser startup parameters. For example, <c>--incognito</c> indicates that an incognito window is used.</para>
+            /// <para>The browser startup parameters. For example, <c>--incognito</c> specifies that an incognito window is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>--incognito</para>
@@ -178,7 +179,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The resource billing method.</para>
-        /// <para><b>For MAU scenarios:</b> Set this parameter to <c>AppInstance</c>, which indicates billing by instance resource.</para>
+        /// <para><b>For MAU scenarios:</b> Set this parameter to <c>AppInstance</c>, which indicates billing by instance resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AppInstance</para>
@@ -199,7 +200,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The name of the cloud browser group. This parameter is required. It is used to distinguish different browser groups in business management scenarios.</para>
+        /// <para>The name of the cloud browser group. This parameter cannot be empty. It is used to distinguish different browser groups in business management scenarios.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -212,7 +213,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The image ID used by the cloud browser. The image must be compatible with the operating system.</para>
         /// <para>If this parameter is omitted, the default image available for the account is used. If no default image is available, the creation may fail.</para>
-        /// <para><b>Usage condition:</b> When <c>CookiesSync</c> is enabled, explicitly specify an image that supports cookie synchronization.</para>
+        /// <para><b>Usage condition:</b> When CookiesSync is enabled, explicitly specify an image that supports cookie synchronization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>img-bp13mu****</para>
@@ -233,7 +234,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The capacity configuration for the MAU billing scenario.</para>
+        /// <para>The capacity configuration for MAU billing scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -243,7 +244,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? MaxAmount { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the office network and website access restrictions. The selected office network must belong to the current account and reside in the region specified by BizRegionId.</para>
+        /// <para>The configurations for the office network and website access restrictions. The selected office network must belong to the current account and be located in the region specified by <c>BizRegionId</c>.</para>
         /// </summary>
         [NameInMap("Network")]
         [Validation(Required=false)]
@@ -253,7 +254,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <para>The website access restriction mode.</para>
             /// <list type="bullet">
             /// <item><description><c>ALLOW_ALL</c>: allows access to all domain names.</description></item>
-            /// <item><description><c>ALLOW_LIST</c>: allows access only to websites in the whitelist.</description></item>
+            /// <item><description><c>ALLOW_LIST</c>: allows access only to websites in the list.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -264,7 +265,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AccessRestriction { get; set; }
 
             /// <summary>
-            /// <para>The ID of the created office network. The office network must belong to the current account and reside in the target region specified by BizRegionId. You can view the office network ID on the Office Networks page in the Elastic Desktop Service Enterprise Edition console, or call the DescribeOfficeSites operation of Elastic Desktop Service Enterprise Edition to query the ID.</para>
+            /// <para>The identifier of the created office network. The office network must belong to the current account and the target region specified by BizRegionId. You can view the office network ID on the Network &amp; Storage &gt; Office Networks page in the Wuying Workspace Enterprise Edition console, or call the DescribeOfficeSites operation of Wuying Workspace Enterprise Edition to query it.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou+dir-643067****</para>
@@ -277,9 +278,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <para>The list of websites that are allowed for access. This parameter is used in <c>ALLOW_LIST</c> mode.</para>
             /// <para><b>Limits:</b></para>
             /// <list type="bullet">
-            /// <item><description>You can specify up to 20 URLs directly. To specify more than 20 URLs, use RestrictedURLsFilePath to import the URLs from a file.</description></item>
-            /// <item><description>This parameter cannot be specified together with RestrictedURLsFilePath.</description></item>
-            /// <item><description>The URLs in the list must be unique.</description></item>
+            /// <item><description>You can specify up to 20 URLs directly. To specify more than 20 URLs, use <c>RestrictedURLsFilePath</c> to import them from a file.</description></item>
+            /// <item><description>This parameter cannot be specified together with <c>RestrictedURLsFilePath</c>.</description></item>
+            /// <item><description>URLs in the list cannot be duplicated.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("RestrictedURLs")]
@@ -299,20 +300,20 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The path of the uploaded website whitelist file. This parameter is used in <c>ALLOW_LIST</c> mode.</para>
-            /// <para>If you need to specify more than 20 URLs, import the URLs from a file. By default, you can configure up to 1,000 URLs.</para>
-            /// <para>This parameter cannot be specified together with RestrictedURLs.</para>
+            /// <para>The path of the uploaded website allowlist file. This parameter is used in <c>ALLOW_LIST</c> mode.</para>
+            /// <para>To specify more than 20 URLs, import them from a file. By default, you can configure up to 1,000 URLs.</para>
+            /// <para>This parameter cannot be specified together with <c>RestrictedURLs</c>.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cn-hangzhou/aig_upm/xxx/temp/BrowserRestrictionUrls/URL_whitelist_template.csv</para>
+            /// <para>cn-hangzhou/aig_upm/xxx/temp/BrowserRestrictionUrls/URL_allowlist_template.csv</para>
             /// </summary>
             [NameInMap("RestrictedURLsFilePath")]
             [Validation(Required=false)]
             public string RestrictedURLsFilePath { get; set; }
 
             /// <summary>
-            /// <para>The list of vSwitch IDs.</para>
-            /// <para><b>Usage condition:</b> This parameter is required only when you use a custom office network. Do not specify this parameter for other types of office networks.</para>
+            /// <para>The list of vSwitch identifiers.</para>
+            /// <para><b>Conditions:</b> This parameter is required only when a custom office network is used. Do not specify this parameter for other types of office networks.</para>
             /// <para>Select vSwitches that match the target business region and the custom office network.</para>
             /// </summary>
             [NameInMap("VSwitchIds")]
@@ -348,7 +349,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? NodeAmount { get; set; }
 
             /// <summary>
-            /// <para>The node specifications identity.</para>
+            /// <para>The identity of the node specifications.</para>
             /// <para>You do not need to specify this parameter.</para>
             /// 
             /// <b>Example:</b>
@@ -361,7 +362,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string NodeInstanceType { get; set; }
 
             /// <summary>
-            /// <para>The node scaling strategy.</para>
+            /// <para>The node scaling policy.</para>
             /// <para>You do not need to specify this parameter.</para>
             /// 
             /// <b>Example:</b>
@@ -377,7 +378,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The operating system type. This parameter is required.</para>
-        /// <para>Only <c>Windows</c> is supported. Other operating systems are not supported.</para>
+        /// <para>Only Windows is supported. Other operating systems are not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Windows</para>
@@ -387,7 +388,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string OsType { get; set; }
 
         /// <summary>
-        /// <para>The number of subscription periods.</para>
+        /// <para>The number of billing cycles for the purchase.</para>
         /// <para>You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
@@ -400,7 +401,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription period.</para>
+        /// <para>The unit of the billing cycle for the purchase.</para>
         /// <para>You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
@@ -413,7 +414,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The configurations of clipboard, video, watermark, session, and client access policies.</para>
+        /// <para>The configurations for clipboard, video, watermark, session, and client access policies.</para>
         /// </summary>
         [NameInMap("Policy")]
         [Validation(Required=false)]
@@ -434,7 +435,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppContentProtection { get; set; }
 
             /// <summary>
-            /// <para>The IP address whitelist for client access, which is used to restrict the source IP addresses of clients that can access the cloud browser.</para>
+            /// <para>The client access IP address whitelist, which is used to restrict the source IP addresses of clients that can access the cloud browser.</para>
             /// </summary>
             [NameInMap("AuthorizeAccessPolicyRules")]
             [Validation(Required=false)]
@@ -451,7 +452,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string CidrIp { get; set; }
 
                 /// <summary>
-                /// <para>The description of the IP address whitelist rule for client access.</para>
+                /// <para>The description of the client access IP address whitelist rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Office network access</para>
@@ -463,7 +464,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The access control list for clients.</para>
+            /// <para>The client access control list.</para>
             /// </summary>
             [NameInMap("ClientTypes")]
             [Validation(Required=false)]
@@ -503,19 +504,19 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>Sets the clipboard transfer direction, content type, and size limits. read indicates transfer from the local PC to the cloud browser, and write indicates transfer from the cloud browser to the local PC.</para>
+            /// <para>Sets the clipboard transfer direction, content types, and size limits. The value <c>read</c> indicates transfer from the local PC to the cloud browser, and <c>write</c> indicates transfer from the cloud browser to the local PC.</para>
             /// </summary>
             [NameInMap("ClipboardPolicy")]
             [Validation(Required=false)]
             public CreateBrowserInstanceGroupRequestPolicyClipboardPolicy ClipboardPolicy { get; set; }
             public class CreateBrowserInstanceGroupRequestPolicyClipboardPolicy : TeaModel {
                 /// <summary>
-                /// <para>The clipboard transfer direction. The value is case-insensitive.</para>
+                /// <para>The clipboard transfer direction. The value is not case-sensitive. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>off</c>: Disables bidirectional transfer.</description></item>
+                /// <item><description><c>off</c>: Bidirectional transfer is prohibited.</description></item>
                 /// <item><description><c>read</c>: Allows copy and paste from the local PC to the cloud browser.</description></item>
                 /// <item><description><c>write</c>: Allows copy and paste from the cloud browser to the local PC.</description></item>
-                /// <item><description><c>readwrite</c>: Allows bidirectional transfer.</description></item>
+                /// <item><description><c>readwrite</c>: Bidirectional transfer is allowed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -527,8 +528,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
                 /// <summary>
                 /// <para>The clipboard size limit for inbound transfer from the local PC to the cloud browser.</para>
-                /// <para><b>Value limits:</b> The value ranges from 1 to 102400, and the unit is specified by ClipboardSizeUnit.</para>
-                /// <para>This value range does not change with unit conversion.</para>
+                /// <para><b>Value limits:</b> The value ranges from 1 to 102400. The unit is specified by ClipboardSizeUnit.</para>
+                /// <para>The value range remains unchanged regardless of the unit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1024</para>
@@ -538,7 +539,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? ClipboardReadLimit { get; set; }
 
                 /// <summary>
-                /// <para>The clipboard control granularity.</para>
+                /// <para>The clipboard control granularity. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><c>global</c>: Unified control.</description></item>
                 /// <item><description><c>grained</c>: Separate control for text, rich text, and files.</description></item>
@@ -552,7 +553,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string ClipboardScope { get; set; }
 
                 /// <summary>
-                /// <para>The clipboard size unit.</para>
+                /// <para>The clipboard size unit. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><c>B</c>: Bytes.</description></item>
                 /// <item><description><c>KB</c>: 1024 bytes.</description></item>
@@ -567,8 +568,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
                 /// <summary>
                 /// <para>The clipboard size limit for outbound transfer from the cloud browser to the local PC.</para>
-                /// <para><b>Value limits:</b> The value ranges from 1 to 102400, and the unit is specified by ClipboardSizeUnit.</para>
-                /// <para>This value range does not change with unit conversion.</para>
+                /// <para><b>Value limits:</b> The value ranges from 1 to 102400. The unit is specified by ClipboardSizeUnit.</para>
+                /// <para>The value range remains unchanged regardless of the unit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1024</para>
@@ -578,12 +579,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? ClipboardWriteLimit { get; set; }
 
                 /// <summary>
-                /// <para>The clipboard transfer direction. The value is case-insensitive.</para>
+                /// <para>The clipboard transfer direction. The value is not case-sensitive. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>off</c>: Disables bidirectional transfer.</description></item>
+                /// <item><description><c>off</c>: Bidirectional transfer is prohibited.</description></item>
                 /// <item><description><c>read</c>: Allows copy and paste from the local PC to the cloud browser.</description></item>
                 /// <item><description><c>write</c>: Allows copy and paste from the cloud browser to the local PC.</description></item>
-                /// <item><description><c>readwrite</c>: Allows bidirectional transfer.</description></item>
+                /// <item><description><c>readwrite</c>: Bidirectional transfer is allowed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -594,12 +595,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string FileClipboard { get; set; }
 
                 /// <summary>
-                /// <para>The clipboard transfer direction. The value is case-insensitive.</para>
+                /// <para>The clipboard transfer direction. The value is not case-sensitive. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>off</c>: Disables bidirectional transfer.</description></item>
+                /// <item><description><c>off</c>: Bidirectional transfer is prohibited.</description></item>
                 /// <item><description><c>read</c>: Allows copy and paste from the local PC to the cloud browser.</description></item>
                 /// <item><description><c>write</c>: Allows copy and paste from the cloud browser to the local PC.</description></item>
-                /// <item><description><c>readwrite</c>: Allows bidirectional transfer.</description></item>
+                /// <item><description><c>readwrite</c>: Bidirectional transfer is allowed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -610,9 +611,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string RichTextClipboard { get; set; }
 
                 /// <summary>
-                /// <para>The rich text clipboard size limit.</para>
-                /// <para><b>Value limits:</b> The value ranges from 1 to 204800, and the unit is specified by RichTextClipboardSizeUnit.</para>
-                /// <para>This value range does not change with unit conversion.</para>
+                /// <para>The clipboard size limit for rich text.</para>
+                /// <para><b>Value limits:</b> The value ranges from 1 to 204800. The unit is specified by RichTextClipboardSizeUnit.</para>
+                /// <para>The value range remains unchanged regardless of the unit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1024</para>
@@ -622,9 +623,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? RichTextClipboardLimit { get; set; }
 
                 /// <summary>
-                /// <para>The clipboard size limit for inbound transfer from the local PC to the cloud browser.</para>
-                /// <para><b>Value limits:</b> The value ranges from 1 to 204800, and the unit is specified by RichTextClipboardReadSizeUnit.</para>
-                /// <para>This value range does not change with unit conversion.</para>
+                /// <para>The clipboard size limit for inbound rich text transfer from the local PC to the cloud browser.</para>
+                /// <para><b>Value limits:</b> The value ranges from 1 to 204800. The unit is specified by RichTextClipboardReadSizeUnit.</para>
+                /// <para>The value range remains unchanged regardless of the unit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -634,7 +635,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? RichTextClipboardReadLimit { get; set; }
 
                 /// <summary>
-                /// <para>The clipboard size unit.</para>
+                /// <para>The clipboard size unit. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><c>B</c>: Bytes.</description></item>
                 /// <item><description><c>KB</c>: 1024 bytes.</description></item>
@@ -649,7 +650,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string RichTextClipboardReadSizeUnit { get; set; }
 
                 /// <summary>
-                /// <para>The clipboard size unit.</para>
+                /// <para>The clipboard size unit. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><c>B</c>: Bytes.</description></item>
                 /// <item><description><c>KB</c>: 1024 bytes.</description></item>
@@ -663,9 +664,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string RichTextClipboardSizeUnit { get; set; }
 
                 /// <summary>
-                /// <para>The clipboard size limit for outbound transfer from the cloud browser to the local PC.</para>
-                /// <para><b>Value limits:</b> The value ranges from 1 to 204800, and the unit is specified by RichTextClipboardWriteSizeUnit.</para>
-                /// <para>This value range does not change with unit conversion.</para>
+                /// <para>The clipboard size limit for outbound rich text transfer from the cloud browser to the local PC.</para>
+                /// <para><b>Value limits:</b> The value ranges from 1 to 204800. The unit is specified by RichTextClipboardWriteSizeUnit.</para>
+                /// <para>The value range remains unchanged regardless of the unit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -675,7 +676,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? RichTextClipboardWriteLimit { get; set; }
 
                 /// <summary>
-                /// <para>The clipboard size unit.</para>
+                /// <para>The clipboard size unit. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><c>B</c>: Bytes.</description></item>
                 /// <item><description><c>KB</c>: 1024 bytes.</description></item>
@@ -690,12 +691,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string RichTextClipboardWriteSizeUnit { get; set; }
 
                 /// <summary>
-                /// <para>The clipboard transfer direction. The value is case-insensitive.</para>
+                /// <para>The clipboard transfer direction. The value is not case-sensitive. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>off</c>: Disables bidirectional transfer.</description></item>
+                /// <item><description><c>off</c>: Bidirectional transfer is prohibited.</description></item>
                 /// <item><description><c>read</c>: Allows copy and paste from the local PC to the cloud browser.</description></item>
                 /// <item><description><c>write</c>: Allows copy and paste from the cloud browser to the local PC.</description></item>
-                /// <item><description><c>readwrite</c>: Allows bidirectional transfer.</description></item>
+                /// <item><description><c>readwrite</c>: Bidirectional transfer is allowed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -706,9 +707,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string TextClipboard { get; set; }
 
                 /// <summary>
-                /// <para>The clipboard size limit for inbound transfer from the local PC to the cloud browser.</para>
-                /// <para><b>Value limits:</b> The value ranges from 1 to 102400, and the unit is specified by TextClipboardReadSizeUnit.</para>
-                /// <para>This value range does not change with unit conversion.</para>
+                /// <para>The clipboard size limit for inbound text transfer from the local PC to the cloud browser.</para>
+                /// <para><b>Value limits:</b> The value ranges from 1 to 102400. The unit is specified by TextClipboardReadSizeUnit.</para>
+                /// <para>The value range remains unchanged regardless of the unit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -718,7 +719,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? TextClipboardReadLimit { get; set; }
 
                 /// <summary>
-                /// <para>The clipboard size unit.</para>
+                /// <para>The clipboard size unit. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><c>B</c>: Bytes.</description></item>
                 /// <item><description><c>KB</c>: 1024 bytes.</description></item>
@@ -733,9 +734,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string TextClipboardReadSizeUnit { get; set; }
 
                 /// <summary>
-                /// <para>The clipboard size limit for outbound transfer from the cloud browser to the local PC.</para>
-                /// <para><b>Value limits:</b> The value ranges from 1 to 102400, and the unit is specified by TextClipboardWriteSizeUnit.</para>
-                /// <para>This value range does not change with unit conversion.</para>
+                /// <para>The clipboard size limit for outbound text transfer from the cloud browser to the local PC.</para>
+                /// <para><b>Value limits:</b> The value ranges from 1 to 102400. The unit is specified by TextClipboardWriteSizeUnit.</para>
+                /// <para>The value range remains unchanged regardless of the unit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -745,7 +746,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? TextClipboardWriteLimit { get; set; }
 
                 /// <summary>
-                /// <para>The clipboard size unit.</para>
+                /// <para>The clipboard size unit. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><c>B</c>: Bytes.</description></item>
                 /// <item><description><c>KB</c>: 1024 bytes.</description></item>
@@ -762,12 +763,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The data retention policy for sessions after disconnection.</para>
+            /// <para>The session data retention policy after disconnection. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>customTime</c>: Retains the session based on the data retention policy. Custom durations through <c>DisconnectKeepSessionTime</c> are not supported.</description></item>
-            /// <item><description><c>persistent</c>: The session is not automatically released based on the disconnection duration.</description></item>
+            /// <item><description><c>customTime</c>: Retains the session based on the session data retention policy. Custom durations through <c>DisconnectKeepSessionTime</c> are not supported.</description></item>
+            /// <item><description><c>persistent</c>: The session is not subject to automatic release based on the disconnection duration.</description></item>
             /// </list>
-            /// <para><b>Note:</b> <c>persistent</c> is still affected by authorization and other release policies.</para>
+            /// <para><b>Note:</b> The <c>persistent</c> value is still subject to authorization and other release policies.</para>
             /// 
             /// <b>Example:</b>
             /// <para>customTime</para>
@@ -789,7 +790,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? DisconnectKeepSessionTime { get; set; }
 
             /// <summary>
-            /// <para>The floating ball file manager switch.</para>
+            /// <para>Specifies whether to enable the file manager floating button. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>on</c>: Enabled.</description></item>
             /// <item><description><c>off</c>: Disabled.</description></item>
@@ -804,12 +805,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string FileManager { get; set; }
 
             /// <summary>
-            /// <para>The file transfer policy for the web client.</para>
+            /// <para>The file transfer policy for the web client. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>off</c>: Disables transfer.</description></item>
-            /// <item><description><c>upload</c>: Allows upload only.</description></item>
-            /// <item><description><c>download</c>: Allows download only.</description></item>
-            /// <item><description><c>full</c>: Allows upload and download.</description></item>
+            /// <item><description><c>off</c>: Prohibits file transfer.</description></item>
+            /// <item><description><c>upload</c>: Allows only uploads.</description></item>
+            /// <item><description><c>download</c>: Allows only downloads.</description></item>
+            /// <item><description><c>full</c>: Allows both uploads and downloads.</description></item>
             /// </list>
             /// <para>Configure this parameter in conjunction with the clipboard policy.</para>
             /// 
@@ -821,7 +822,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Html5FileTransfer { get; set; }
 
             /// <summary>
-            /// <para>The cloud browser dual-screen switch.</para>
+            /// <para>Specifies whether to enable the dual-screen mode for the cloud browser. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>on</c>: Enables dual-screen mode.</description></item>
+            /// <item><description><c>off</c>: Disables dual-screen mode.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -831,12 +836,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string MultiScreen { get; set; }
 
             /// <summary>
-            /// <para>The automatic disconnection switch for inactivity. The value is case-insensitive.</para>
+            /// <para>Specifies whether to automatically disconnect the session after a period of inactivity. The value is not case-sensitive. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>on</c>: Enabled.</description></item>
             /// <item><description><c>off</c>: Disabled.</description></item>
             /// </list>
-            /// <para>When enabled, use <c>NoOperationDisconnectTime</c> to set the wait time.</para>
+            /// <para>When enabled, use <c>NoOperationDisconnectTime</c> to set the idle timeout.</para>
             /// 
             /// <b>Example:</b>
             /// <para>on</para>
@@ -846,8 +851,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string NoOperationDisconnect { get; set; }
 
             /// <summary>
-            /// <para>The wait time in seconds before disconnection is triggered due to user inactivity.</para>
-            /// <para><b>Conditions:</b> When <c>NoOperationDisconnect</c> is enabled, you must specify a value greater than 0.</para>
+            /// <para>The idle timeout in seconds before the session is automatically disconnected.</para>
+            /// <para><b>Prerequisites:</b> When <c>NoOperationDisconnect</c> is enabled, you must specify a value greater than 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>300</para>
@@ -857,7 +862,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? NoOperationDisconnectTime { get; set; }
 
             /// <summary>
-            /// <para>The policy version. The value is case-insensitive.</para>
+            /// <para>The policy version. The value is not case-sensitive. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>DEFAULT</c>: Legacy policy.</description></item>
             /// <item><description><c>CENTER</c>: Centralized policy.</description></item>
@@ -899,6 +904,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public class CreateBrowserInstanceGroupRequestPolicyWatermarkPolicy : TeaModel {
                 /// <summary>
                 /// <para>The watermark switch. The value is case-insensitive.</para>
+                /// <para>Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><c>ON</c>: Enables the watermark.</description></item>
                 /// <item><description><c>OFF</c>: Disables the watermark.</description></item>
@@ -914,10 +920,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
                 /// <summary>
                 /// <para>The list of watermark content types.</para>
+                /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>EndUserId</c>: the user identifier.</description></item>
-                /// <item><description><c>InstanceGroupId</c>: the delivery group identifier.</description></item>
-                /// <item><description><c>ClientTime</c>: the current time of the client.</description></item>
+                /// <item><description><c>EndUserId</c>: The user identifier.</description></item>
+                /// <item><description><c>InstanceGroupId</c>: The delivery group identifier.</description></item>
+                /// <item><description><c>ClientTime</c>: The current client time.</description></item>
                 /// </list>
                 /// <para>Use the watermark types supported by the browser and the client.</para>
                 /// </summary>
@@ -930,8 +937,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The promotion ID, which is used to specify the promotional offer applied to the order.</para>
-        /// <para>The applicability and specific discounts are subject to the promotion rules. You do not need to specify this parameter if no promotional offer is applied.</para>
+        /// <para>The promotion identifier, which is used to specify the promotional offer applied to the order.</para>
+        /// <para>Applicability and specific discounts are subject to the promotion rules. You do not need to specify this parameter if no promotional offer is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17440009****</para>
@@ -941,7 +948,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// <para>The connection security policy of the browser group.</para>
+        /// <para>The connection security policy for the browser group.</para>
         /// </summary>
         [NameInMap("SecurityPolicy")]
         [Validation(Required=false)]
@@ -949,11 +956,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public class CreateBrowserInstanceGroupRequestSecurityPolicy : TeaModel {
             /// <summary>
             /// <para>Specifies whether to skip the user authorization check when connecting to the application.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>true</c>: Skips the check.</description></item>
             /// <item><description><c>false</c>: Performs the check.</description></item>
             /// </list>
-            /// <para>If <c>SecurityPolicy</c> is configured but this field is omitted, the user authorization check is performed.</para>
+            /// <para>If you configure SecurityPolicy but omit this field, the user authorization check is performed.</para>
             /// <para><b>Note:</b> This field cannot be used to skip OpenAPI authentication and RAM permission verification.</para>
             /// 
             /// <b>Example:</b>
@@ -966,7 +974,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The user data storage configuration of the browser group.</para>
+        /// <para>The user data storage configuration for the browser group.</para>
         /// </summary>
         [NameInMap("StoragePolicy")]
         [Validation(Required=false)]
@@ -980,7 +988,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public CreateBrowserInstanceGroupRequestStoragePolicyUserProfile UserProfile { get; set; }
             public class CreateBrowserInstanceGroupRequestStoragePolicyUserProfile : TeaModel {
                 /// <summary>
-                /// <para>The size of the user data roaming disk, in GB.</para>
+                /// <para>The disk size for user data roaming, in GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30</para>
@@ -991,6 +999,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
                 /// <summary>
                 /// <para>Specifies whether to enable user data roaming.</para>
+                /// <para>Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><c>true</c>: Enables user data roaming.</description></item>
                 /// <item><description><c>false</c>: Disables user data roaming.</description></item>
@@ -1010,7 +1019,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The billing sub-type.</para>
-        /// <para><b>You must explicitly set this parameter to <c>mau</c>, which indicates billing by monthly active users.</b> Omitting this parameter does not enable MAU billing.</para>
+        /// <para><b>You must explicitly set this parameter to <c>mau</c>, which indicates billing by monthly active users.</b> Omitting this field does not enable MAU billing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mau</para>
@@ -1096,8 +1105,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The list of authorized user group IDs. You can specify up to 10 user group IDs. The user groups must belong to the current account and match the account type of the office network.</para>
-        /// <para><b>Limits:</b> This parameter cannot be specified together with a non-empty <c>Users</c> parameter.</para>
+        /// <para>The list of authorized user group IDs. You can specify up to 10 user group IDs. The user groups must belong to the current account and match the office network account type.</para>
+        /// <para><b>Limits:</b> This parameter cannot be specified together with a non-empty Users parameter.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -1115,11 +1124,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public class CreateBrowserInstanceGroupRequestUserInfo : TeaModel {
             /// <summary>
             /// <para>The account type of the authorized user.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>simple</c>: convenience account.</description></item>
+            /// <item><description><c>simple</c>: Convenience account.</description></item>
             /// <item><description><c>ad</c>: AD domain account.</description></item>
             /// </list>
-            /// <para>The account type must match the account types of the user and the office network.</para>
+            /// <para>The account type must match the user and office network account types.</para>
             /// 
             /// <b>Example:</b>
             /// <para>simple</para>
@@ -1131,15 +1141,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The list of authorized users. You can specify up to 200 users. The users must be created in advance and match the account type.</para>
-        /// <para><b>Limit:</b> This parameter cannot be specified together with a non-empty UserGroupIds parameter.</para>
+        /// <para>The list of authorized users. You can specify up to 200 users. Users must be created in advance and match the account type.</para>
+        /// <para><b>Limits:</b> This parameter cannot be specified together with a non-empty <c>UserGroupIds</c> parameter.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
         public List<CreateBrowserInstanceGroupRequestUsers> Users { get; set; }
         public class CreateBrowserInstanceGroupRequestUsers : TeaModel {
             /// <summary>
-            /// <para>The identity of the authorized user to be granted authorization.</para>
+            /// <para>Authorized user identifier of authorized user to be authorized.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alice</para>
