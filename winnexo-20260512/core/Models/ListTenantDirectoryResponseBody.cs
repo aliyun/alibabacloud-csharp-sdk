@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The last modification time.</para>
+            /// <para>The last update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The signing record ID.</para>
+            /// <para>The ID of the signing record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleItemId</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ItemId { get; set; }
 
             /// <summary>
-            /// <para>The data type (group, user, or role).</para>
+            /// <para>The data type, such as group, user, or role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<Dictionary<string, object>> ObjectBindings { get; set; }
 
             /// <summary>
-            /// <para>The number of resources with the FAILED status. This field is returned only when the top-level directory list of the knowledge base is queried.</para>
+            /// <para>The number of resources in the FAILED state. This parameter is returned only when the top-level directory list of the knowledge base is queried.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? SourceFailedCount { get; set; }
 
             /// <summary>
-            /// <para>The number of resources with the READY status. This field is returned only when the top-level directory list of the knowledge base is queried.</para>
+            /// <para>The number of resources in the READY state. This parameter is returned only when the top-level directory list of the knowledge base is queried.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? SourceReadyCount { get; set; }
 
             /// <summary>
-            /// <para>The resource status. This field has a value only when itemType is set to resource.</para>
+            /// <para>The resource status. This parameter has a value only when itemType is set to resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SourceStatus { get; set; }
 
             /// <summary>
-            /// <para>The total number of resources in the directory and its subdirectories. This field is returned only when the top-level directory list of the knowledge base is queried.</para>
+            /// <para>The total number of resources in the directory and its subdirectories. This parameter is returned only when the top-level directory list of the knowledge base is queried.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The description of the status code.</para>
+        /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>

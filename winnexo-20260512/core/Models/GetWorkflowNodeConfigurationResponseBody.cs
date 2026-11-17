@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetWorkflowNodeConfigurationResponseBody : TeaModel {
         /// <summary>
-        /// <para>当前用户是否可编辑此节点</para>
+        /// <para>Indicates whether the current user can edit this node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? CanEdit { get; set; }
 
         /// <summary>
-        /// <para>公共业务状态码</para>
+        /// <para>The common business status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>配置版本；更新或恢复时作为expectedVersion</para>
+        /// <para>The configuration version. It is used as the expectedVersion when updating or restoring the configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? ConfigVersion { get; set; }
 
         /// <summary>
-        /// <para>模板默认执行主体</para>
+        /// <para>The default executor of the template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;type&quot;:&quot;AGENT&quot;,&quot;id&quot;:&quot;agent_1001&quot;}</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public GetWorkflowNodeConfigurationResponseBodyDefaultExecutor DefaultExecutor { get; set; }
         public class GetWorkflowNodeConfigurationResponseBodyDefaultExecutor : TeaModel {
             /// <summary>
-            /// <para>USER 为正整数平台用户ID字符串；AGENT 为空间数字员工技术名称</para>
+            /// <para>The ID of the executor. If the type is USER, this is a positive integer string representing the platform user ID. If the type is AGENT, this is the technical name of the digital employee in the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>agent_1001</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>USER 真人、AGENT 数字员工或历史 SYSTEM 系统执行人；SYSTEM仅用于响应</para>
+            /// <para>The type of the executor. Valid values: USER for a real person, AGENT for a digital employee, and SYSTEM for a legacy system executor. The SYSTEM value is used only in responses.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AGENT</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>模板默认模型运行档</para>
+        /// <para>The default model runtime profile of the template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qwen-max</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DefaultModel { get; set; }
 
         /// <summary>
-        /// <para>模板默认负责人用户ID列表</para>
+        /// <para>The list of user IDs for the default responsible users of the template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[10001]</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> DefaultResponsibleUserIds { get; set; }
 
         /// <summary>
-        /// <para>当前生效的执行主体</para>
+        /// <para>The currently effective executor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;type&quot;:&quot;AGENT&quot;,&quot;id&quot;:&quot;agent_1001&quot;}</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public GetWorkflowNodeConfigurationResponseBodyEffectiveExecutor EffectiveExecutor { get; set; }
         public class GetWorkflowNodeConfigurationResponseBodyEffectiveExecutor : TeaModel {
             /// <summary>
-            /// <para>USER 为正整数平台用户ID字符串；AGENT 为空间数字员工技术名称</para>
+            /// <para>The ID of the executor. If the type is USER, this is a positive integer string representing the platform user ID. If the type is AGENT, this is the technical name of the digital employee in the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>agent_1001</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>USER 真人、AGENT 数字员工或历史 SYSTEM 系统执行人；SYSTEM仅用于响应</para>
+            /// <para>The type of the executor. Valid values: USER for a real person, AGENT for a digital employee, and SYSTEM for a legacy system executor. The SYSTEM value is used only in responses.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AGENT</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>当前生效的模型运行档</para>
+        /// <para>The currently effective model runtime profile.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qwen-max-plus</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string EffectiveModel { get; set; }
 
         /// <summary>
-        /// <para>当前生效的负责人用户ID列表</para>
+        /// <para>The list of user IDs for the currently effective responsible users.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[10001]</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> EffectiveResponsibleUserIds { get; set; }
 
         /// <summary>
-        /// <para>当前物理计划ID</para>
+        /// <para>The ID of the current physical plan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>inst_2081</para>
@@ -154,17 +154,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>公共错误描述</para>
+        /// <para>The common error description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>请求的资源不存在</para>
+        /// <para>The requested resource does not exist</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>业务节点key</para>
+        /// <para>The key of the business node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>node_7f3a2c</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>实例覆盖值；字段为null时使用模板默认值</para>
+        /// <para>The override values for the instance. If a field is null, the default value of the template is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;model&quot;:&quot;qwen-max-plus&quot;}</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public GetWorkflowNodeConfigurationResponseBodyOverrides Overrides { get; set; }
         public class GetWorkflowNodeConfigurationResponseBodyOverrides : TeaModel {
             /// <summary>
-            /// <para>覆盖执行主体；null为默认</para>
+            /// <para>The override executor. A null value indicates that the default is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;type&quot;:&quot;AGENT&quot;,&quot;id&quot;:&quot;agent_1001&quot;}</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public GetWorkflowNodeConfigurationResponseBodyOverridesExecutor Executor { get; set; }
             public class GetWorkflowNodeConfigurationResponseBodyOverridesExecutor : TeaModel {
                 /// <summary>
-                /// <para>USER 为正整数平台用户ID字符串；AGENT 为空间数字员工技术名称</para>
+                /// <para>The ID of the executor. If the type is USER, this is a positive integer string representing the platform user ID. If the type is AGENT, this is the technical name of the digital employee in the workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>agent_1001</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>USER 真人、AGENT 数字员工或历史 SYSTEM 系统执行人；SYSTEM仅用于响应</para>
+                /// <para>The type of the executor. Valid values: USER for a real person, AGENT for a digital employee, and SYSTEM for a legacy system executor. The SYSTEM value is used only in responses.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AGENT</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             }
 
             /// <summary>
-            /// <para>覆盖模型运行档；null为默认</para>
+            /// <para>The override model runtime profile. A null value indicates that the default is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qwen-max</para>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Model { get; set; }
 
             /// <summary>
-            /// <para>覆盖负责人ID列表；null为默认</para>
+            /// <para>The list of override responsible user IDs. A null value indicates that the default is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[10001]</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>请求追踪ID</para>
+        /// <para>The request tracking ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>状态刷新游标，不能作为配置版本</para>
+        /// <para>The state refresh cursor. This cannot be used as a configuration version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? StateVersion { get; set; }
 
         /// <summary>
-        /// <para>最后配置更新时间ISO8601；从未更新时为空</para>
+        /// <para>The time when the configuration was last updated, in ISO 8601 format. This field is empty if the configuration has never been updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-11-05T08:00:00Z</para>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string UpdatedAt { get; set; }
 
         /// <summary>
-        /// <para>最后更新配置的平台用户ID；从未更新时为空</para>
+        /// <para>The platform user ID of the user who last updated the configuration. This field is empty if the configuration has never been updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10001</para>

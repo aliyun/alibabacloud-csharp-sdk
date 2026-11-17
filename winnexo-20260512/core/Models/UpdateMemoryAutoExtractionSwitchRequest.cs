@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class UpdateMemoryAutoExtractionSwitchRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to synchronously clear the automatically collected memories. This parameter can be used regardless of whether the feature is enabled or disabled.</para>
+        /// <para>Specifies whether to synchronously clear the automatically collected memory. This parameter can be used when enabling or disabling the feature.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>The collaborative workspace ID. This parameter is required when ownerType is set to group.</para>
+        /// <para>The ID of the collaboration workspace. This parameter is required when ownerType is set to group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cg_12345</para>
@@ -41,7 +41,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The owner type. A value of user indicates personal memories of the authenticated user. A value of group indicates memories of a specified collaborative workspace.</para>
+        /// <para>The owner type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>user: the personal memory of the authenticated user</description></item>
+        /// <item><description>group: the memory of the specified collaboration workspace</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>group</para>

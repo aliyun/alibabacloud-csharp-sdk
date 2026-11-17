@@ -51,6 +51,9 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 
         /// <summary>
         /// <para>A reserved field for extension purposes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;source&quot;:&quot;openapi&quot;}</para>
         /// </summary>
         [NameInMap("metadata")]
         [Validation(Required=false)]

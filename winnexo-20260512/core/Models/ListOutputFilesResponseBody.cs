@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The list of output main records on the current page. By default, the latest published version is returned for file details.</para>
+        /// <para>The list of output master records on the current page. File details return the latest published version by default.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ConversationId { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the output or detail, serialized from a backend datetime value into an ISO 8601 string. The time zone information is returned with the original value.</para>
+            /// <para>The creation time of the output or detail. The backend datetime value is serialized into an ISO 8601 string, and the time zone information is returned with the original value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-12T03:10:00+00:00</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The update time of the output or detail, serialized from a backend datetime value into an ISO 8601 string. The time zone information is returned with the original value.</para>
+            /// <para>The update time of the output or detail. The backend datetime value is serialized into an ISO 8601 string, and the time zone information is returned with the original value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-12T03:12:00+00:00</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The name of the digital employee (operating object).</para>
+            /// <para>The name of the digital worker (operating object).</para>
             /// 
             /// <b>Example:</b>
             /// <para>Business Analysis Assistant</para>
@@ -87,14 +87,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string OutputId { get; set; }
 
             /// <summary>
-            /// <para>The list of details under the current output main record. For versioned files, only the latest published version is returned, and historical versions are not expanded.</para>
+            /// <para>The list of details under the current output master record. For versioned files, only the latest published version is returned, and historical versions are not expanded.</para>
             /// </summary>
             [NameInMap("outputItems")]
             [Validation(Required=false)]
             public List<ListOutputFilesResponseBodyItemsOutputItems> OutputItems { get; set; }
             public class ListOutputFilesResponseBodyItemsOutputItems : TeaModel {
                 /// <summary>
-                /// <para>The creation time of the output detail, serialized from a backend datetime value into an ISO 8601 string. The time zone information is returned with the original value.</para>
+                /// <para>The creation time of the output detail. The backend datetime value is serialized into an ISO 8601 string, and the time zone information is returned with the original value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-10-12T03:10:00+00:00</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The email information. This field is present when the type is email.</para>
+                /// <para>The email information. This field is available only when the item type is email.</para>
                 /// </summary>
                 [NameInMap("emailInfo")]
                 [Validation(Required=false)]
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                     /// <para>The email content.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>The quarterly business report has been generated. Please check your inbox</para>
+                    /// <para>The quarterly business report has been generated. Please check it</para>
                     /// </summary>
                     [NameInMap("body")]
                     [Validation(Required=false)]
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 }
 
                 /// <summary>
-                /// <para>The file information. This field is present when the type is file.</para>
+                /// <para>The file information. This field is available only when the item type is file.</para>
                 /// </summary>
                 [NameInMap("fileInfo")]
                 [Validation(Required=false)]
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                     /// <para>The file description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Quarterly revenue, cost, and trend analysis report</para>
+                    /// <para>Analysis report on quarterly revenue, costs, and trends</para>
                     /// </summary>
                     [NameInMap("description")]
                     [Validation(Required=false)]
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The file download link. For versioned files, it is bound to the published version and content revision at the time of query. The link has a time-to-live. If it expires, query the list again to obtain a new link.</para>
+                    /// <para>The file download link. For versioned files, it is bound to the published version and content revision at the time of query. The link has a validity period. If it expires, query the list again to obtain a new link.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="https://winnexo.agentone.console.aliyun.com/api/v1/output-preview/demo_download_ticket/download">https://winnexo.agentone.console.aliyun.com/api/v1/output-preview/demo_download_ticket/download</a></para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 }
 
                 /// <summary>
-                /// <para>The creation time of the output or detail, serialized from a backend datetime value into an ISO 8601 string. The time zone information is returned with the original value.</para>
+                /// <para>The creation time of the output or detail. The backend datetime value is serialized into an ISO 8601 string, and the time zone information is returned with the original value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-10-12T03:10:00+00:00</para>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The update time of the output or detail, serialized from a backend datetime value into an ISO 8601 string. The time zone information is returned with the original value.</para>
+                /// <para>The update time of the output or detail. The backend datetime value is serialized into an ISO 8601 string, and the time zone information is returned with the original value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-10-12T03:12:00+00:00</para>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string ItemType { get; set; }
 
                 /// <summary>
-                /// <para>The internationalized display name of the output detail type.</para>
+                /// <para>The localized display name of the output detail type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Document</para>
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string OutputItemId { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether sharing is enabled.</para>
+                /// <para>Indicates whether sharing is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public bool? ShareEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The share token. This field is present when sharing is enabled. You can use this token to access the public share preview API.</para>
+                /// <para>The share token. This field is present when sharing is enabled and can be used to access the public share preview API.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>demo_public_preview_token</para>
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string SkillOutputId { get; set; }
 
                 /// <summary>
-                /// <para>The slide deck information. This field is present when the type is slide deck.</para>
+                /// <para>The slide deck information. This field is present when the output type is a slide deck.</para>
                 /// </summary>
                 [NameInMap("slidesInfo")]
                 [Validation(Required=false)]
@@ -319,7 +319,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                     public long? CompletedSlides { get; set; }
 
                     /// <summary>
-                    /// <para>The PPT file ID.</para>
+                    /// <para>The ID of the PPT file.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ppt_123e4567-e89b-42d3-a456-426614174015</para>
@@ -329,10 +329,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                     public string PptId { get; set; }
 
                     /// <summary>
-                    /// <para>The PPT name.</para>
+                    /// <para>The name of the PPT file.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Quarterly Business Analysis Presentation</para>
+                    /// <para>Quarterly Business Analysis Report</para>
                     /// </summary>
                     [NameInMap("pptName")]
                     [Validation(Required=false)]
@@ -415,7 +415,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The current page number, starting from 1. Pagination is based on primary output records.</para>
+        /// <para>The current page number. The value starts from 1, and pagination is based on output master records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -425,7 +425,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>The number of primary output records per page. Default value: 20. Valid values: 1 to 100.</para>
+        /// <para>The number of output master records per page. Default value: 20. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -445,7 +445,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of primary output records that meet the filter conditions. The count is deduplicated by outputId and does not include the number of files or historical versions.</para>
+        /// <para>The total number of output master records that match the filter conditions. The count is deduplicated by outputId and does not include the number of files or historical versions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

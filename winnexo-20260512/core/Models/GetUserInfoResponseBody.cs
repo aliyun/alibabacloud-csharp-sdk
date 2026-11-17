@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetUserInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The profile picture URL.</para>
+        /// <para>The avatar URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/avatar.png">https://example.com/avatar.png</a></para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? IsAdmin { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the current logon tenant is a system tenant (tenantId=10000).</para>
+        /// <para>Indicates whether the currently logged-on tenant is the system tenant (tenantId=10000).</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The user service description. The value can be up to 1000 characters in length.</para>
+        /// <para>The user service description. Maximum length: 1,000 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Offering { get; set; }
 
         /// <summary>
-        /// <para>The parsed result of the user service description in JSON format.</para>
+        /// <para>The parsing result of the user service in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The user self-introduction. The value can be up to 1000 characters in length.</para>
+        /// <para>The user self-introduction. Maximum length: 1,000 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -199,9 +199,9 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <summary>
             /// <para>The tenant type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>user: individual.</description></item>
-            /// <item><description>org: enterprise.</description></item>
-            /// <item><description>group: group.</description></item>
+            /// <item><description>user: individual</description></item>
+            /// <item><description>org: enterprise</description></item>
+            /// <item><description>group: group</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -226,9 +226,9 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <summary>
         /// <para>The tenant type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>user: individual.</description></item>
-        /// <item><description>org: enterprise.</description></item>
-        /// <item><description>group: group.</description></item>
+        /// <item><description>user: individual</description></item>
+        /// <item><description>org: enterprise</description></item>
+        /// <item><description>group: group</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

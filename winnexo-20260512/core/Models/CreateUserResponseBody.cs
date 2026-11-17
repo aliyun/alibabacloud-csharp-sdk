@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The cluster name.</para>
+        /// <para>The display name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The WINNEXO platform user ID.</para>
+        /// <para>The user ID in the WINNEXO platform.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

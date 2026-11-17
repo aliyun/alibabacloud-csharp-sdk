@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Permission { get; set; }
 
         /// <summary>
-        /// <para>The dot-separated resource key. The first segment is the APP application key.</para>
+        /// <para>The dot-separated resource key. The first segment is the application key.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? TargetUserId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the tenant to which the target user belongs. This parameter is required for cross-tenant targets.</para>
+        /// <para>The tenant to which the target user belongs. This parameter is required for cross-tenant targets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

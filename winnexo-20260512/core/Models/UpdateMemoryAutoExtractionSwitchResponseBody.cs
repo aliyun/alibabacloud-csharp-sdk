@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class UpdateMemoryAutoExtractionSwitchResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of automatic memory files cleared in this synchronous operation. The value is 0 if no files are cleared or no memories are available to be cleared.</para>
+        /// <para>The number of automatic memory files cleared in this synchronous operation. The value is 0 if no files are cleared or no memory is available to be cleared.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The updated status of the automatic memory collection toggle. A value of true indicates that the feature is enabled, and a value of false indicates that the feature is disabled.</para>
+        /// <para>The updated status of the automatic memory collection switch. A value of true indicates that the feature is enabled, and false indicates that it is disabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

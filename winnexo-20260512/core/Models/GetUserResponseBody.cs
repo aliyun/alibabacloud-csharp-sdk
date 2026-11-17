@@ -94,27 +94,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of system role codes. The list performs a full replacement and must contain at least one role. Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER.</para>
+        /// <para>The list of new system role codes. This list fully replaces the existing roles and must contain at least one role. Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>string_value</para>
+        /// <para>[&quot;SYSTEM_ADMIN&quot;]</para>
         /// </summary>
         [NameInMap("roleCodes")]
         [Validation(Required=false)]
         public List<string> RoleCodes { get; set; }
 
         /// <summary>
-        /// <para>The list of user group IDs to which the user belongs.</para>
+        /// <para>The list of IDs of the user groups to which the user belongs.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>string_value</para>
+        /// <para>[&quot;1023&quot;]</para>
         /// </summary>
         [NameInMap("userGroupIds")]
         [Validation(Required=false)]
         public List<string> UserGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The WINNEXO platform user ID.</para>
+        /// <para>The user ID on the WINNEXO platform.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

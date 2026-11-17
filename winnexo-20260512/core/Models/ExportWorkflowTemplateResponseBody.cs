@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The error description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The requested resource does not exist</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request tracking ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The simplified template definition that can be re-imported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;name\&quot;:\&quot;客户投诉处理流程\&quot;,\&quot;schemaVersion\&quot;:2}</para>
+        /// <para>{&quot;name&quot;:&quot;Customer Complaint Handling Process&quot;,&quot;schemaVersion&quot;:2}</para>
         /// </summary>
         [NameInMap("template")]
         [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>节点依赖边；每项包含from/to，引用稳定stepId</para>
+            /// <para>The node dependency edges. Each item contains from and to fields that reference stable step IDs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[]</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<Dictionary<string, object>> Edges { get; set; }
 
             /// <summary>
-            /// <para>可选画布布局，按stepId索引；只影响展示，不决定依赖</para>
+            /// <para>The optional canvas layout, indexed by step ID. This only affects the display and does not determine dependencies.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;collect&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;review&quot;:{&quot;x&quot;:240,&quot;y&quot;:0}}</para>
@@ -83,14 +83,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The template name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Customer complaint handling process</para>
+            /// <para>Customer Complaint Handling Process</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>模板结构版本，当前为2，与业务版本vN独立</para>
+            /// <para>The schema version of the template. The current value is 2, which is independent of the business version vN.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -100,10 +100,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? SchemaVersion { get; set; }
 
             /// <summary>
-            /// <para>The standardized steps.</para>
+            /// <para>The normalized steps.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{\&quot;stepId\&quot;:\&quot;collect\&quot;,\&quot;sortOrder\&quot;:1,\&quot;name\&quot;:\&quot;收集客户信息\&quot;}]</para>
+            /// <para>[{&quot;stepId&quot;:&quot;collect&quot;,&quot;sortOrder&quot;:1,&quot;name&quot;:&quot;Collect customer information&quot;}]</para>
             /// </summary>
             [NameInMap("steps")]
             [Validation(Required=false)]
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 /// <para>The step name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Customer complaint handling process</para>
+                /// <para>Customer Complaint Handling Process</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public long? OwnerUserId { get; set; }
 
                 /// <summary>
-                /// <para>是否人工审核产出物，默认关闭；仅数字员工可开启，审核待办自动发负责人</para>
+                /// <para>Specifies whether to manually review the output. Default value: false. This can only be enabled for digital workers, and review tasks are automatically sent to the owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public bool? ReviewOutput { get; set; }
 
                 /// <summary>
-                /// <para>The user IDs of the reviewers.</para>
+                /// <para>The list of user IDs of the reviewers.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public long? SortOrder { get; set; }
 
                 /// <summary>
-                /// <para>The step handling instructions.</para>
+                /// <para>The step processing instructions.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Collect customer information and submit it to the owner for review</para>
@@ -204,10 +204,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string Specification { get; set; }
 
                 /// <summary>
-                /// <para>The ordered array of fragments. Supports text, mention, skill, app, files, and web_search. Preserves referenced identities and order.</para>
+                /// <para>An ordered array of segments. Supports text, mention, skill, app, files, and web_search. Preserves reference identities and order.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>[{&quot;type&quot;:&quot;text&quot;,&quot;content&quot;:&quot;整理输入资料&quot;}]</para>
+                /// <para>[{&quot;type&quot;:&quot;text&quot;,&quot;content&quot;:&quot;Organize input materials&quot;}]</para>
                 /// </summary>
                 [NameInMap("specificationJson")]
                 [Validation(Required=false)]

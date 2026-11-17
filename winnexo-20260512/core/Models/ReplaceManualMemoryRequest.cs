@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ReplaceManualMemoryRequest : TeaModel {
         /// <summary>
-        /// <para>The complete content of profile.md. An empty string indicates that the memory is cleared. This field is required, but an empty value is allowed.</para>
+        /// <para>The complete content of profile.md. An empty string indicates that the memory is cleared. This field must be provided, but an empty value is allowed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The owner type. A value of user indicates the personal memory of the authenticated user. A value of group indicates the memory of a specified workspace.</para>
+        /// <para>The owner type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>user: the personal memory of the authenticated user.</description></item>
+        /// <item><description>group: the memory of the specified workspace.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>group</para>

@@ -31,6 +31,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ContentType { get; set; }
 
         /// <summary>
+        /// <para>作为本轮上下文引用的消息或文件条目</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[]</para>
+        /// </summary>
+        [NameInMap("contextItems")]
+        [Validation(Required=false)]
+        public string ContextItemsShrink { get; set; }
+
+        /// <summary>
         /// <para>The list of digital employee names. For compatibility with the legacy format, a single string can also be passed.</para>
         /// 
         /// <b>Example:</b>
@@ -51,6 +61,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? DirectChat { get; set; }
 
         /// <summary>
+        /// <para>本轮携带的最近完整 direct 问答轮数，不含本轮输入。仅 workMode=direct 或 directChat=true 时生效。有效值为 0–100 的 JSON 整数，省略时由后端按 0 处理，不携带历史但仍保存当前轮。null、布尔值、字符串、小数及越界值按原 direct 路径处理，网关保留原始值供后端判定。work/ask 忽略此字段。该参数不限制转换为 work 时的历史范围</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("directMaxHistoryRounds")]
+        [Validation(Required=false)]
+        public object DirectMaxHistoryRounds { get; set; }
+
+        /// <summary>
         /// <para>Specifies whether to enable web search. Default value: false. In the task execution scenario where taskExecution is passed, the task configuration prevails.</para>
         /// 
         /// <b>Example:</b>
@@ -66,6 +86,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [NameInMap("files")]
         [Validation(Required=false)]
         public string FilesShrink { get; set; }
+
+        /// <summary>
+        /// <para>本轮语言，可选 zh-CN、en-US，用于接口错误文案并透传给 CodeAgent；省略时沿用当前语言行为，不修改用户设置</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en-US</para>
+        /// </summary>
+        [NameInMap("locale")]
+        [Validation(Required=false)]
+        public string Locale { get; set; }
 
         /// <summary>
         /// <para>The abstract model tier. Valid values: quick, standard, and flagship. If not specified, standard is used for new sessions, and the current tier is retained for existing sessions.</para>
@@ -86,6 +116,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [NameInMap("reuseLastSession")]
         [Validation(Required=false)]
         public bool? ReuseLastSession { get; set; }
+
+        /// <summary>
+        /// <para>消息中的结构化片段，例如会话或对象提及</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[]</para>
+        /// </summary>
+        [NameInMap("segments")]
+        [Validation(Required=false)]
+        public string SegmentsShrink { get; set; }
 
         /// <summary>
         /// <para>The session ID. If not specified, a new session is created.</para>

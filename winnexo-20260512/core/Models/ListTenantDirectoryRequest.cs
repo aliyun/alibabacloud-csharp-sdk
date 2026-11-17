@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListTenantDirectoryRequest : TeaModel {
         /// <summary>
-        /// <para>The folder ID.</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -40,11 +40,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The field by which the results are sorted. Valid values:</para>
+        /// <para>The field by which to sort the returned results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>event_time: the event creation time.</description></item>
-        /// <item><description>event_execute_start_time: the event execution time.</description></item>
-        /// <item><description>event_execute_finish_time: the event completion time.</description></item>
+        /// <item><description>event_time: the time when the event was created.</description></item>
+        /// <item><description>event_execute_start_time: the time when the event execution started.</description></item>
+        /// <item><description>event_execute_finish_time: the time when the event execution finished.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SortField { get; set; }
 
         /// <summary>
-        /// <para>The sort order. This parameter takes effect only when sortBy is specified. Valid values: ASC and DESC (case-insensitive).</para>
+        /// <para>The sort order. This parameter takes effect only when the sort field is specified. Valid values: ASC and DESC (case-insensitive).</para>
         /// 
         /// <b>Example:</b>
         /// <para>asc</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SortOrder { get; set; }
 
         /// <summary>
-        /// <para>The list of source types.</para>
+        /// <para>The list of service source types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>

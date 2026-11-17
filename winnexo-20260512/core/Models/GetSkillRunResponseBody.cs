@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The task end time in ISO 8601 format. This parameter has a value only when the task is in a desired state (Succeeded, Failed, or Cancelled).</para>
+        /// <para>The task end time in ISO 8601 format. This parameter has a value only when the task reaches a terminal state (Succeeded, Failed, or Cancelled).</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FinishedAt { get; set; }
 
         /// <summary>
-        /// <para>The execution log list. This parameter is returned only when IncludeLogs is set to true.</para>
+        /// <para>The list of execution logs. This parameter is returned only when IncludeLogs is set to true.</para>
         /// </summary>
         [NameInMap("logs")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> Logs { get; set; }
 
         /// <summary>
-        /// <para>The description of the status code.</para>
+        /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -107,14 +107,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The execution result. This parameter is returned only when the status is Succeeded. It contains a content list.</para>
+        /// <para>The execution result. This parameter is returned only when the status is Succeeded and includes a list of content blocks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;content&quot;:[{&quot;type&quot;:&quot;Text&quot;,&quot;text&quot;:&quot;Execution completed&quot;}]}</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public Dictionary<string, object> Result { get; set; }
 
         /// <summary>
-        /// <para>The asynchronous task ID.</para>
+        /// <para>The ID of the asynchronous task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleRunId</para>
@@ -144,7 +147,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SkillName { get; set; }
 
         /// <summary>
-        /// <para>The task execution start time in ISO 8601 format.</para>
+        /// <para>The task start time in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -165,6 +168,9 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 
         /// <summary>
         /// <para>The LLM token usage statistics. This parameter is returned only when the status is Succeeded.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;inputTokens&quot;:100,&quot;outputTokens&quot;:20,&quot;totalTokens&quot;:120}</para>
         /// </summary>
         [NameInMap("usage")]
         [Validation(Required=false)]

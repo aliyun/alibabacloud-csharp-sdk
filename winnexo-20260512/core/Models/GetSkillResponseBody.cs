@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetSkillResponseBody : TeaModel {
         /// <summary>
-        /// <para>The simplified parameter schema that describes what to pass in runSkill.arguments. Automatically extracted from inputConfigFormatted.</para>
+        /// <para>The simplified parameter schema that describes the required arguments for runSkill.arguments. This is automatically extracted from inputConfigFormatted.</para>
         /// </summary>
         [NameInMap("arguments")]
         [Validation(Required=false)]
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The list of valid values when options are limited.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>string_value</para>
+            /// <para>[&quot;123&quot;]</para>
             /// </summary>
             [NameInMap("enum")]
             [Validation(Required=false)]
             public List<string> Enum { get; set; }
 
             /// <summary>
-            /// <para>The parameter name, corresponding to the key in runSkill.arguments.</para>
+            /// <para>The parameter name, which corresponds to the key in runSkill.arguments.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SampleName.pdf</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The creation time in ISO 8601 format.</para>
+        /// <para>The creation time in ISO8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-10-01T12:00:00Z</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CreatedTime { get; set; }
 
         /// <summary>
-        /// <para>The skill description. The value is resolved through i18n.</para>
+        /// <para>The description of the skill, resolved by i18n.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Sample description</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? GlobalAccess { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether unpublished draft changes exist.</para>
+        /// <para>Indicates whether there are unpublished draft changes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? HasDraftChanges { get; set; }
 
         /// <summary>
-        /// <para>The raw input parameter configuration.</para>
+        /// <para>The raw text of the input parameter configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -169,14 +169,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string InputConfig { get; set; }
 
         /// <summary>
-        /// <para>The structured input parameter schema array.</para>
+        /// <para>The array of the structured input parameter schema.</para>
         /// </summary>
         [NameInMap("inputConfigFormatted")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> InputConfigFormatted { get; set; }
 
         /// <summary>
-        /// <para>The status code description.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The skill name. The value is resolved through i18n.</para>
+        /// <para>The name of the skill, resolved by i18n.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SampleName.pdf</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The skill code, which is globally unique.</para>
+        /// <para>The globally unique code of the skill.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -216,14 +216,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SkillCode { get; set; }
 
         /// <summary>
-        /// <para>The nested skill file tree. This parameter is returned only when includeSkillFiles is set to True.</para>
+        /// <para>The nested tree of skill files. This is returned only when includeSkillFiles is set to true.</para>
         /// </summary>
         [NameInMap("skillFiles")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> SkillFiles { get; set; }
 
         /// <summary>
-        /// <para>The skill definition ID.</para>
+        /// <para>The ID of the skill definition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? SkillHubDefinitionId { get; set; }
 
         /// <summary>
-        /// <para>The SKILL.md summary, which is generated by a large language model (LLM).</para>
+        /// <para>The summary of SKILL.md, generated by an LLM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The skill status. Valid values: ACTIVE and DRAFT.</para>
+        /// <para>The status of the skill. Valid values: ACTIVE and DRAFT.</para>
         /// 
         /// <b>Example:</b>
         /// <para>READY</para>
@@ -263,17 +263,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The label list. The values are resolved through i18n.</para>
+        /// <para>The list of tags, resolved by i18n.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>string_value</para>
+        /// <para>[&quot;[{\\\&quot;value\\\&quot;:\\\&quot;dataworks#0#1#33935#176145#T3_26059405665#94046932754\\\&quot;,\\\&quot;key\\\&quot;:\\\&quot;dataworksTag\\\&quot;}]&quot;]</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public List<string> Tags { get; set; }
 
         /// <summary>
-        /// <para>The update time in ISO 8601 format.</para>
+        /// <para>The update time in ISO8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-10-01T12:00:00Z</para>

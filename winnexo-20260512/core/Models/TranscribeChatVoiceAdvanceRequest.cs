@@ -32,6 +32,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ContentType { get; set; }
 
         /// <summary>
+        /// <para>标准 Base64 音频内容，不含 data URI 前缀，与 FileUrl 二选一</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UklGRg==</para>
+        /// </summary>
+        [NameInMap("fileContentBase64")]
+        [Validation(Required=false)]
+        public string FileContentBase64 { get; set; }
+
+        /// <summary>
         /// <para>The full path name of the file.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -44,7 +54,6 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 
         /// <summary>
         /// <para>The publicly accessible URL of the attachment.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://winnexo-file-transfer.oss-cn-hangzhou.aliyuncs.com/openapi/2026-09-08/9f8c2a1b">http://winnexo-file-transfer.oss-cn-hangzhou.aliyuncs.com/openapi/2026-09-08/9f8c2a1b</a></para>

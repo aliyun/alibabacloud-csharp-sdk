@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>todo_abc123</para>
+        /// <para>[&quot;todo_abc123&quot;]</para>
         /// </summary>
         [NameInMap("todoIds")]
         [Validation(Required=false)]

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The complete content of the manual memory after it is saved. If the memory is successfully cleared, an empty string is returned.</para>
+        /// <para>The complete content of the manual memory after it is saved. If the memory is cleared, this value is an empty string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Prefers concise answers</para>

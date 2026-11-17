@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The owner type. A value of user indicates the personal memory of the authenticated user, and a value of group indicates the memory of the specified collaboration workspace.</para>
+        /// <para>The owner type. A value of user indicates the personal memory of the authenticated user. A value of group indicates the memory of the specified collaboration workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>group</para>

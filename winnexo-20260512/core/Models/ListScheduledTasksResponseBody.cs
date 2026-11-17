@@ -20,11 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether more data is available. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: More data is available.</description></item>
-        /// <item><description>false: No more data is available.</description></item>
-        /// </list>
+        /// <para>Indicates whether more data is available. Valid values: true (yes) and false (no).</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -41,7 +37,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<ListScheduledTasksResponseBodyItems> Items { get; set; }
         public class ListScheduledTasksResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The reason for the exception. This parameter has a value only when status is abnormal.</para>
+            /// <para>The cause of the exception. This field has a value only when status is abnormal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -51,7 +47,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string AbnormalReason { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the current caller can delete the task. Only the task creator and group owner can delete the task. For personal tasks, this value is always true.</para>
+            /// <para>Indicates whether the current caller can delete the task. This is valid only for the task creator and group owner. For personal tasks, the value is always true.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -71,7 +67,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? CanEdit { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the current caller can immediately execute the task. A task is executable if it is visible to the caller, except for abnormal tasks which return false. For personal tasks, this value is always true.</para>
+            /// <para>Indicates whether the current caller can immediately execute the task. Visible means operable. For abnormal tasks, the value is false. For personal tasks, the value is always true.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -81,7 +77,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? CanExecute { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the current caller can start or stop the task. Only the task creator and group owner can toggle the task. Abnormal tasks return false. For personal tasks, this value is always true.</para>
+            /// <para>Indicates whether the current caller can start or stop the task. This is valid only for the task creator and group owner. For abnormal tasks, the value is false. For personal tasks, the value is always true.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -91,7 +87,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? CanToggle { get; set; }
 
             /// <summary>
-            /// <para>The ID of the collaboration group (such as cg_101). If specified, a group task is created (the caller must be a valid group member). If left empty, a personal task is created.</para>
+            /// <para>The ID of the collaboration group to which the task belongs, such as cg_101. If this parameter is specified, a group space task is created, and the caller must be a valid group member. If this parameter is left empty, a personal task is created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleCollaborationGroupId</para>
@@ -144,7 +140,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The list of digital employee names.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>string_value</para>
+            /// <para>[&quot;pcitc-magent&quot;]</para>
             /// </summary>
             [NameInMap("digitalEmployeeName")]
             [Validation(Required=false)]
@@ -171,7 +167,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The last modification time.</para>
+            /// <para>The last update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -191,7 +187,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? IsOpen { get; set; }
 
             /// <summary>
-            /// <para>The execution model tier. If not specified, the value is not updated.</para>
+            /// <para>The execution model tier. If this parameter is not specified, the model tier is not updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>standard</para>
@@ -211,7 +207,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The task status. Running is returned upon submission.</para>
+            /// <para>The task output session mode.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>NEW_CONVERSATION</para>
+            /// </summary>
+            [NameInMap("outputMode")]
+            [Validation(Required=false)]
+            public string OutputMode { get; set; }
+
+            /// <summary>
+            /// <para>The task status. Running is returned immediately after submission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>active</para>
@@ -241,13 +247,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string TriggerType { get; set; }
 
             /// <summary>
-            /// <para>The visibility scope of the group task. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>PRIVATE: visible only to the creator and group owner.</description></item>
-            /// <item><description>COLLABORATIVE: visible to specified collaborators.</description></item>
-            /// <item><description>PUBLIC: visible to all group members.</description></item>
-            /// </list>
-            /// <para>If not specified for a group task, the default value is PRIVATE. This parameter is ignored for personal tasks.</para>
+            /// <para>The visibility scope of the group task. Valid values: PRIVATE (visible only to the creator and group owner), COLLABORATIVE (visible to specified collaboration members), and PUBLIC (visible to all group members). Default value for group tasks: PRIVATE. This field is ignored for personal tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PRIVATE</para>
@@ -257,10 +257,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Visibility { get; set; }
 
             /// <summary>
-            /// <para>The list of collaborator members, excluding the task creator and group creator whose access is governed by the authentication layer. This parameter is returned only for group tasks. An empty list is returned for PRIVATE and PUBLIC visibility.</para>
+            /// <para>The list of collaboration members, excluding the task creator and group creator, which are covered by the authentication layer. This field is returned only for group tasks. An empty list is returned for PRIVATE or PUBLIC visibility scopes.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>string_value</para>
+            /// <para>[&quot;1001&quot;]</para>
             /// </summary>
             [NameInMap("visibleMemberUserIds")]
             [Validation(Required=false)]
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries to return in this request.</para>
+        /// <para>The maximum number of records to return for this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -279,7 +279,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The status code description.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>
@@ -289,7 +289,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token.</para>
+        /// <para>The pagination cursor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1763604514518000_531300</para>
@@ -299,7 +299,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The specified page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -309,7 +309,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of records per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

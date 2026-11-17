@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateFreeExplorationWorkItemResponseBody : TeaModel {
         /// <summary>
-        /// <para>已选择的数字员工技术名称</para>
+        /// <para>The technical names of the selected digital workers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;sales-agent&quot;]</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> AgentNames { get; set; }
 
         /// <summary>
-        /// <para>业务状态码，成功为200</para>
+        /// <para>The business status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>所属协作空间 ID</para>
+        /// <para>The ID of the collaboration workspace to which the work item belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cg_9401</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>真实群话题 ID，可在 queryWorkItemFeed 中关联；不可作为 Workflow workItemId</para>
+        /// <para>The actual group topic ID, which can be associated in queryWorkItemFeed. It cannot be used as a workItemId in Workflow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>conv_20261105_9f2c</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>平台创建人用户 ID</para>
+        /// <para>The user ID of the creator on the platform.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10001</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? CreatedByUserId { get; set; }
 
         /// <summary>
-        /// <para>工作项模式，固定 FREE_EXPLORATION</para>
+        /// <para>The work item mode. The value is fixed to FREE_EXPLORATION.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FREE_EXPLORATION</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ItemType { get; set; }
 
         /// <summary>
-        /// <para>实际话题成员，含创建人；公开档不枚举全空间成员</para>
+        /// <para>The actual members of the topic, including the creator. For public topics, members of the entire workspace are not enumerated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[43]</para>
@@ -80,17 +80,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<long?> MemberUserIds { get; set; }
 
         /// <summary>
-        /// <para>错误描述</para>
+        /// <para>The error description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>请求的资源不存在</para>
+        /// <para>The requested resource does not exist</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -100,17 +100,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>工作项标题</para>
+        /// <para>The title of the work item.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>调查销售机会</para>
+        /// <para>Investigate sales opportunities</para>
         /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>实际可见范围 PRIVATE/COLLABORATIVE/PUBLIC</para>
+        /// <para>The actual visibility scope. Valid values: PRIVATE, COLLABORATIVE, and PUBLIC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PRIVATE</para>

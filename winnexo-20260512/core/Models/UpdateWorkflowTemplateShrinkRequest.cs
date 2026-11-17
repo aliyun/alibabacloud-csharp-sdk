@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <summary>
         /// <para>The write action. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SAVE: Saves the template as a draft. The changes do not take effect. Node names and assignees can be left empty.</description></item>
-        /// <item><description>SUBMIT: Requires complete nodes. Saves and submits the template as the only effective version.
+        /// <item><description>SAVE: Saves the template as a draft without taking effect, allowing node names and executors to be left empty.</description></item>
+        /// <item><description>SUBMIT: Requires complete nodes, and saves and submits the template as the only effective version.
         /// Default value: SUBMIT.</description></item>
         /// </list>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Action { get; set; }
 
         /// <summary>
-        /// <para>The ID of the collaboration workspace.</para>
+        /// <para>The collaboration workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>The complete JSON definition of the template. This overwrites the existing definition.</para>
+        /// <para>The complete JSON definition of the template for full overwriting.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DefinitionShrink { get; set; }
 
         /// <summary>
-        /// <para>The submitted version number on which the new version is based. This parameter is mutually exclusive with version. If you do not specify this parameter, the current effective version is used.</para>
+        /// <para>The submitted version number on which the new version is based. This parameter is mutually exclusive with version. If not specified, the system falls back to the current effective version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the template.</para>
+        /// <para>The template ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>The version number to which the content belongs.</para>
+        /// <para>The version number to which the returned content belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v2</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The change description for this version. An empty value indicates that no description is provided.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Added a review step</para>
+        /// <para>Added review step</para>
         /// </summary>
         [NameInMap("versionDescription")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ResetWorkflowNodeConfigurationRequest : TeaModel {
         /// <summary>
-        /// <para>协作空间ID</para>
+        /// <para>The collaboration workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>读取接口返回的configVersion；非负整数；版本冲突须刷新</para>
+        /// <para>The configuration version returned by the read API. This must be a non-negative integer. Refresh the data if a version conflict occurs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? ExpectedVersion { get; set; }
 
         /// <summary>
-        /// <para>当前物理计划ID（planId）</para>
+        /// <para>The current physical plan ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>业务节点key（nodeKey）</para>
+        /// <para>The business node key.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>租户ID；缺省使用调用方默认租户</para>
+        /// <para>The tenant ID. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

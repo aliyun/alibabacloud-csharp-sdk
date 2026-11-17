@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class UpdateWorkflowNodeConfigurationRequest : TeaModel {
         /// <summary>
-        /// <para>协作空间ID</para>
+        /// <para>The ID of the collaboration workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>节点执行人；省略保持，null恢复默认；与负责人、模型至少修改一项</para>
+        /// <para>The executor of the node. If this parameter is omitted, the current value is retained. If this parameter is set to null, the default value is restored. You must modify at least one of the owner, model, or executor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;type&quot;:&quot;AGENT&quot;,&quot;id&quot;:&quot;agent_1001&quot;}</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public UpdateWorkflowNodeConfigurationRequestExecutor Executor { get; set; }
         public class UpdateWorkflowNodeConfigurationRequestExecutor : TeaModel {
             /// <summary>
-            /// <para>USER 为正整数平台用户ID字符串；AGENT 为空间数字员工技术名称</para>
+            /// <para>The executor ID. If the type is USER, the value is a string representing a positive integer platform user ID. If the type is AGENT, the value is the technical name of the digital worker in the workspace.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>USER 真人或 AGENT 数字员工</para>
+            /// <para>The executor type. Valid values: USER (a human user) and AGENT (a digital worker).</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>读取接口返回的configVersion；非负整数；版本冲突须刷新</para>
+        /// <para>The configuration version returned by the read operation. The value must be a non-negative integer. If a version conflict occurs, you must refresh the version.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? ExpectedVersion { get; set; }
 
         /// <summary>
-        /// <para>当前物理计划ID（planId）</para>
+        /// <para>The ID of the current physical plan.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>模型模式；quick归一化standard；省略保持，null恢复默认</para>
+        /// <para>The model mode. The quick value is normalized to standard. If this parameter is omitted, the current value is retained. If this parameter is set to null, the default value is restored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>standard</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Model { get; set; }
 
         /// <summary>
-        /// <para>业务节点key（nodeKey）</para>
+        /// <para>The key of the business node.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>节点负责人用户ID列表，非空正整数数组；省略保持，null恢复默认</para>
+        /// <para>The list of user IDs for the node owners. The value must be a non-empty array of positive integers. If this parameter is omitted, the current value is retained. If this parameter is set to null, the default value is restored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[10001]</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<long?> ResponsibleUserIds { get; set; }
 
         /// <summary>
-        /// <para>租户ID；缺省使用调用方默认租户</para>
+        /// <para>The tenant ID. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

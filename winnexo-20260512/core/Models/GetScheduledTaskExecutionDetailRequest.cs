@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetScheduledTaskExecutionDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The execution record ID.</para>
+        /// <para>The ID of the execution record.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

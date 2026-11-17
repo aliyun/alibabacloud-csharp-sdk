@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;name&quot;:&quot;Customer Complaint Handling Process&quot;,&quot;schemaVersion&quot;:2}</para>
+        /// <para>{\&quot;name\&quot;:\&quot;Customer Complaint Handling Process\&quot;,\&quot;schemaVersion\&quot;:2}</para>
         /// </summary>
         [NameInMap("template")]
         [Validation(Required=false)]

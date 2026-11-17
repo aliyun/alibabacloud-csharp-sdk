@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The write action. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>SAVE: Saves the template as a draft. The draft does not take effect. Node names and assignees can be left empty.</description></item>
-        /// <item><description>SUBMIT: Requires complete nodes. The template is saved and submitted as the only effective version.
+        /// <item><description>SUBMIT: Requires complete nodes, and saves and submits the template as the only effective version.
         /// Default value: SUBMIT.</description></item>
         /// </list>
         /// 
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DefinitionShrink { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</para>
+        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

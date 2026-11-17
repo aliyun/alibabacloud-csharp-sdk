@@ -31,6 +31,150 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ContentType { get; set; }
 
         /// <summary>
+        /// <para>作为本轮上下文引用的消息或文件条目</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[]</para>
+        /// </summary>
+        [NameInMap("contextItems")]
+        [Validation(Required=false)]
+        public List<SendAsyncChatMessageRequestContextItems> ContextItems { get; set; }
+        public class SendAsyncChatMessageRequestContextItems : TeaModel {
+            /// <summary>
+            /// <para>用户对引用内容的批注</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>请核对华东区数据</para>
+            /// </summary>
+            [NameInMap("annotation")]
+            [Validation(Required=false)]
+            public string Annotation { get; set; }
+
+            /// <summary>
+            /// <para>批注关联的文件列表</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[]</para>
+            /// </summary>
+            [NameInMap("annotationFiles")]
+            [Validation(Required=false)]
+            public List<SendAsyncChatMessageRequestContextItemsAnnotationFiles> AnnotationFiles { get; set; }
+            public class SendAsyncChatMessageRequestContextItemsAnnotationFiles : TeaModel {
+                /// <summary>
+                /// <para>文件名称</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>补充说明.pdf</para>
+                /// </summary>
+                [NameInMap("fileName")]
+                [Validation(Required=false)]
+                public string FileName { get; set; }
+
+                /// <summary>
+                /// <para>文件公开访问地址</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://example.com/public/file">https://example.com/public/file</a></para>
+                /// </summary>
+                [NameInMap("filePublicUrl")]
+                [Validation(Required=false)]
+                public string FilePublicUrl { get; set; }
+
+                /// <summary>
+                /// <para>文件记录 ID</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>exampleFileRecordId</para>
+                /// </summary>
+                [NameInMap("fileRecordId")]
+                [Validation(Required=false)]
+                public string FileRecordId { get; set; }
+
+                /// <summary>
+                /// <para>文件内部访问地址</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://example.com/file">https://example.com/file</a></para>
+                /// </summary>
+                [NameInMap("fileUrl")]
+                [Validation(Required=false)]
+                public string FileUrl { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>被引用内容正文</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>本月销售收入</para>
+            /// </summary>
+            [NameInMap("content")]
+            [Validation(Required=false)]
+            public string Content { get; set; }
+
+            /// <summary>
+            /// <para>被引用文件 ID</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>exampleFileId</para>
+            /// </summary>
+            [NameInMap("fileId")]
+            [Validation(Required=false)]
+            public string FileId { get; set; }
+
+            /// <summary>
+            /// <para>被引用文件名称</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>销售数据.xlsx</para>
+            /// </summary>
+            [NameInMap("fileName")]
+            [Validation(Required=false)]
+            public string FileName { get; set; }
+
+            /// <summary>
+            /// <para>被引用文件类型</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xlsx</para>
+            /// </summary>
+            [NameInMap("fileType")]
+            [Validation(Required=false)]
+            public string FileType { get; set; }
+
+            /// <summary>
+            /// <para>被引用消息 ID</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>exampleMessageId</para>
+            /// </summary>
+            [NameInMap("messageId")]
+            [Validation(Required=false)]
+            public string MessageId { get; set; }
+
+            /// <summary>
+            /// <para>消息发送者名称</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>销售助手</para>
+            /// </summary>
+            [NameInMap("senderName")]
+            [Validation(Required=false)]
+            public string SenderName { get; set; }
+
+            /// <summary>
+            /// <para>上下文条目类型</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>message_annotation</para>
+            /// </summary>
+            [NameInMap("type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+        }
+
+        /// <summary>
         /// <para>The list of digital employee names. For compatibility with the legacy format, a single string can also be passed.</para>
         /// 
         /// <b>Example:</b>
@@ -49,6 +193,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [NameInMap("directChat")]
         [Validation(Required=false)]
         public bool? DirectChat { get; set; }
+
+        /// <summary>
+        /// <para>本轮携带的最近完整 direct 问答轮数，不含本轮输入。仅 workMode=direct 或 directChat=true 时生效。有效值为 0–100 的 JSON 整数，省略时由后端按 0 处理，不携带历史但仍保存当前轮。null、布尔值、字符串、小数及越界值按原 direct 路径处理，网关保留原始值供后端判定。work/ask 忽略此字段。该参数不限制转换为 work 时的历史范围</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("directMaxHistoryRounds")]
+        [Validation(Required=false)]
+        public object DirectMaxHistoryRounds { get; set; }
 
         /// <summary>
         /// <para>Specifies whether to enable web search. Default value: false. In the task execution scenario where taskExecution is passed, the task configuration prevails.</para>
@@ -91,6 +245,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
+        /// <para>本轮语言，可选 zh-CN、en-US，用于接口错误文案并透传给 CodeAgent；省略时沿用当前语言行为，不修改用户设置</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en-US</para>
+        /// </summary>
+        [NameInMap("locale")]
+        [Validation(Required=false)]
+        public string Locale { get; set; }
+
+        /// <summary>
         /// <para>The abstract model tier. Valid values: quick, standard, and flagship. If not specified, standard is used for new sessions, and the current tier is retained for existing sessions.</para>
         /// 
         /// <b>Example:</b>
@@ -109,6 +273,88 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [NameInMap("reuseLastSession")]
         [Validation(Required=false)]
         public bool? ReuseLastSession { get; set; }
+
+        /// <summary>
+        /// <para>消息中的结构化片段，例如会话或对象提及</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[]</para>
+        /// </summary>
+        [NameInMap("segments")]
+        [Validation(Required=false)]
+        public List<SendAsyncChatMessageRequestSegments> Segments { get; set; }
+        public class SendAsyncChatMessageRequestSegments : TeaModel {
+            /// <summary>
+            /// <para>片段展示内容</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>旧会话</para>
+            /// </summary>
+            [NameInMap("content")]
+            [Validation(Required=false)]
+            public string Content { get; set; }
+
+            /// <summary>
+            /// <para>提及对象类别</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>conversations</para>
+            /// </summary>
+            [NameInMap("mentionType")]
+            [Validation(Required=false)]
+            public string MentionType { get; set; }
+
+            /// <summary>
+            /// <para>被引用对象名称</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>旧会话</para>
+            /// </summary>
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            /// <summary>
+            /// <para>被引用对象 ID</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>exampleObjectId</para>
+            /// </summary>
+            [NameInMap("objectId")]
+            [Validation(Required=false)]
+            public string ObjectId { get; set; }
+
+            /// <summary>
+            /// <para>被引用对象类型</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>conversation</para>
+            /// </summary>
+            [NameInMap("objectType")]
+            [Validation(Required=false)]
+            public string ObjectType { get; set; }
+
+            /// <summary>
+            /// <para>会话类型</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>personal</para>
+            /// </summary>
+            [NameInMap("sessionType")]
+            [Validation(Required=false)]
+            public string SessionType { get; set; }
+
+            /// <summary>
+            /// <para>片段类型</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>mention</para>
+            /// </summary>
+            [NameInMap("type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The session ID. If not specified, a new session is created.</para>

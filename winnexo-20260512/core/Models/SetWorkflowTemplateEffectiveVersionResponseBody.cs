@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>节点依赖边；每项包含from/to，引用稳定stepId</para>
+        /// <para>The node dependency edges. Each item contains a from and to field, referencing a stable stepId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GmtModified { get; set; }
 
         /// <summary>
-        /// <para>可选画布布局，按stepId索引；只影响展示，不决定依赖</para>
+        /// <para>The optional canvas layout, indexed by stepId. This only affects the display and does not determine dependencies.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;collect&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;review&quot;:{&quot;x&quot;:240,&quot;y&quot;:0}}</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The step name. This field can be empty for drafts but is required upon submission.</para>
+        /// <para>The step name. This can be empty for drafts but is required upon submission.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Customer complaint handling process</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>模板结构版本，当前为2，与业务版本vN独立</para>
+        /// <para>The template structure version. The current value is 2, which is independent of the business version vN.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The ordered steps.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;stepId&quot;:&quot;collect&quot;,&quot;sortOrder&quot;:1,&quot;name&quot;:&quot;收集客户信息&quot;}]</para>
+        /// <para>[{&quot;stepId&quot;:&quot;collect&quot;,&quot;sortOrder&quot;:1,&quot;name&quot;:&quot;Collect customer information&quot;}]</para>
         /// </summary>
         [NameInMap("steps")]
         [Validation(Required=false)]
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ModelMode { get; set; }
 
             /// <summary>
-            /// <para>The step name. This field can be empty for drafts but is required upon submission.</para>
+            /// <para>The step name. This can be empty for drafts but is required upon submission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Collect customer information</para>
@@ -170,11 +170,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string OwnerAgentName { get; set; }
 
             /// <summary>
-            /// <para>The owner type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>MEMBER: Human.</description></item>
-            /// <item><description>AGENT: Agent.</description></item>
-            /// </list>
+            /// <para>The owner type. Valid values: MEMBER (human) and AGENT (agent).</para>
             /// 
             /// <b>Example:</b>
             /// <para>MEMBER</para>
@@ -194,7 +190,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? OwnerUserId { get; set; }
 
             /// <summary>
-            /// <para>是否人工审核产出物，默认关闭；仅数字员工可开启，审核待办自动发负责人</para>
+            /// <para>Specifies whether to manually review deliverables. This is disabled by default and can only be enabled for digital employees. Review tasks are automatically sent to the owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -204,7 +200,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? ReviewOutput { get; set; }
 
             /// <summary>
-            /// <para>The list of user IDs of the reviewers.</para>
+            /// <para>The list of reviewer user IDs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -224,20 +220,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? SortOrder { get; set; }
 
             /// <summary>
-            /// <para>The display text derived from ordered segments. Fixed titles are not added, and the text is not stored independently.</para>
+            /// <para>The display text derived from ordered segments. Fixed titles are not added, and it is not stored independently.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Collect customer information and submit it to the person in charge for review</para>
+            /// <para>Collect customer information and submit it to the owner for review</para>
             /// </summary>
             [NameInMap("specification")]
             [Validation(Required=false)]
             public string Specification { get; set; }
 
             /// <summary>
-            /// <para>The array of ordered segments. Supports text, mention, skill, app, files, and web_search. Retains reference identities and order.</para>
+            /// <para>The array of ordered segments. Supports text, mention, skill, app, files, and web_search. Preserves reference identities and order.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{&quot;type&quot;:&quot;text&quot;,&quot;text&quot;:&quot;收集客户信息&quot;}]</para>
+            /// <para>[{&quot;type&quot;:&quot;text&quot;,&quot;text&quot;:&quot;Collect customer information&quot;}]</para>
             /// </summary>
             [NameInMap("specificationJson")]
             [Validation(Required=false)]
@@ -266,7 +262,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The version number of the returned content.</para>
+        /// <para>The version number to which the returned content belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1</para>
@@ -286,11 +282,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string VersionDescription { get; set; }
 
         /// <summary>
-        /// <para>The version status. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>DRAFT: Draft.</description></item>
-        /// <item><description>SUBMITTED: Submitted.</description></item>
-        /// </list>
+        /// <para>The version status. Valid values: DRAFT (draft) and SUBMITTED (submitted).</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUBMITTED</para>

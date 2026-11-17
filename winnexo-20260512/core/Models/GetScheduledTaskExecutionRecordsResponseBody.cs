@@ -164,6 +164,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string ActualTime { get; set; }
 
                 /// <summary>
+                /// <para>本次任务执行使用的真实会话 ID</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>exampleConversationId</para>
+                /// </summary>
+                [NameInMap("conversationId")]
+                [Validation(Required=false)]
+                public string ConversationId { get; set; }
+
+                /// <summary>
                 /// <para>The name of the schedule location.</para>
                 /// 
                 /// <b>Example:</b>
@@ -202,6 +212,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 [NameInMap("isExpired")]
                 [Validation(Required=false)]
                 public bool? IsExpired { get; set; }
+
+                /// <summary>
+                /// <para>本次任务执行生成的结果消息 ID</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>exampleMessageId</para>
+                /// </summary>
+                [NameInMap("messageId")]
+                [Validation(Required=false)]
+                public string MessageId { get; set; }
 
                 /// <summary>
                 /// <para>The execution output content (history records only).</para>

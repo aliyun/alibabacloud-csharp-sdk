@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateUserShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster name.</para>
+        /// <para>The display name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The base64-encoded password ciphertext encrypted by using RSA-OAEP-SHA256 (required).</para>
+        /// <para>The Base64-encoded password ciphertext encrypted by using RSA-OAEP-SHA256. This parameter is required and cannot be empty.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,17 +32,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string PasswordEncrypted { get; set; }
 
         /// <summary>
-        /// <para>The list of new system role codes (full replacement, must contain at least one role). Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER.</para>
+        /// <para>The list of new system role codes. This list fully replaces the existing roles and must contain at least one role. Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>string_value</para>
+        /// <para>[&quot;SYSTEM_ADMIN&quot;]</para>
         /// </summary>
         [NameInMap("roleCodes")]
         [Validation(Required=false)]
         public string RoleCodesShrink { get; set; }
 
         /// <summary>
-        /// <para>The SSO provider type. This parameter is optional if the tenant has only one external logon method. This parameter is required if the tenant has multiple external logon methods. Currently, createUser supports BUILD_IN and AGENT_ONE.</para>
+        /// <para>The type of the SSO provider. This parameter is optional if the tenant has only one external logon method, and is required if the tenant has multiple external logon methods. Currently, createUser supports BUILD_IN and AGENT_ONE.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AGENT_ONE</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SsoProvider { get; set; }
 
         /// <summary>
-        /// <para>The ID of the tenant on which the operation takes effect.</para>
+        /// <para>The ID of the effective tenant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>The WINNEXO logon account (unique identifier, required).</para>
+        /// <para>The WINNEXO logon account. This is a unique identifier and cannot be empty.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

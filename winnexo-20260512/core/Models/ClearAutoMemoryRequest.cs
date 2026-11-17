@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ClearAutoMemoryRequest : TeaModel {
         /// <summary>
-        /// <para>The workspace ID. This parameter is required when ownerType is set to group.</para>
+        /// <para>The collaboration workspace ID. This parameter is required when ownerType is set to group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cg_12345</para>
@@ -20,11 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The owner type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>user: the personal memory of the authenticated user.</description></item>
-        /// <item><description>group: the memory of a specified workspace.</description></item>
-        /// </list>
+        /// <para>The owner type. Valid values: user: the personal memory of the authenticated user; group: the memory of the specified collaboration workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>group</para>
@@ -44,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>The memory type. Valid values: user, feedback, reference, project, and all. A value of all does not clear manual memory.</para>
+        /// <para>The memory type. Valid values: user, feedback, reference, project, or all. The value all does not clear manual memory.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

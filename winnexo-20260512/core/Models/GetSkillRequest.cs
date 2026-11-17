@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetSkillRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to return the complete file tree. Default value: False. This avoids large responses.</para>
+        /// <para>Specifies whether to return the complete file tree. Default value: false. This prevents large response payloads.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SkillCode { get; set; }
 
         /// <summary>
-        /// <para>The skill name.</para>
+        /// <para>The name of the skill.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>The view mode. Valid values: draft (draft/editing view) and published (published view, default).</para>
+        /// <para>The view mode. Valid values: draft (draft or edit view) and published (published view, default).</para>
         /// 
         /// <b>Example:</b>
         /// <para>draft</para>

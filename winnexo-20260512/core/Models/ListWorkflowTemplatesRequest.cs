@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Obtain the token from the nextToken parameter in the previous response. This parameter takes precedence over page if both are specified.</para>
+        /// <para>The pagination token. Obtain the token from the nextToken value in the previous response. This parameter takes precedence over page if both are specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tok_9401</para>

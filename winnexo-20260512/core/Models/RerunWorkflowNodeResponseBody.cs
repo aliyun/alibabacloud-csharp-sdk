@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class RerunWorkflowNodeResponseBody : TeaModel {
         /// <summary>
-        /// <para>本次重跑影响的节点 key 列表，供调用方刷新；成功响应恒包含，错误响应可缺省</para>
+        /// <para>The list of node keys affected by this rerun, which the caller can use to refresh data. This list is always included in a successful response and may be omitted in an error response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;query.amount&quot;]</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> AffectedNodeKeys { get; set; }
 
         /// <summary>
-        /// <para>业务状态码；成功为200</para>
+        /// <para>The business status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>错误描述</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>请求的资源不存在</para>
+        /// <para>The requested resource does not exist</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>重跑后的当前物理计划ID；固定规划节点重跑可能生成新计划，后续查询应使用此值</para>
+        /// <para>The current physical plan ID after the rerun. Rerunning a fixed planning node may generate a new plan. Use this value for subsequent queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>plan_new</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string PlanId { get; set; }
 
         /// <summary>
-        /// <para>请求追踪ID</para>
+        /// <para>The request tracking ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>重跑后的当前计划修订号</para>
+        /// <para>The current plan revision number after the rerun.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Revision { get; set; }
 
         /// <summary>
-        /// <para>当前工作流运行ID，固定节点生成新 revision 时保持不变</para>
+        /// <para>The current workflow run ID. This value remains unchanged when a fixed node generates a new revision.</para>
         /// 
         /// <b>Example:</b>
         /// <para>run_20261105_01</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RunId { get; set; }
 
         /// <summary>
-        /// <para>重跑被接受后的工作流状态版本</para>
+        /// <para>The workflow state version after the rerun is accepted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>

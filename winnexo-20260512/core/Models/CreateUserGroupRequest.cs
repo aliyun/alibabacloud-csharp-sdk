@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parent user group. If this parameter is not specified, a root node is created.</para>
+        /// <para>The ID of the parent user group. If this parameter is not specified, the user group is created under the root node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7ea8973f-7a5c-4e8a-956b-4fe0e7e2eb11</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ParentId { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
+        /// <para>The tenant ID. This is a common parameter that can be explicitly passed by using the <c>--tenant-id</c> option in winnexo-cli.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

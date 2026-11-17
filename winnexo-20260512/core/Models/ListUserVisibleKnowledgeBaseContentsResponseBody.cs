@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The name of the creator.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>John</para>
+            /// <para>Zhang San</para>
             /// </summary>
             [NameInMap("creatorName")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The description of the to-do card type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Product materials and user guide</para>
+            /// <para>Product materials and user instructions</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The last modification time.</para>
+            /// <para>The last update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The name of the modifier.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Jane</para>
+            /// <para>Li Si</para>
             /// </summary>
             [NameInMap("modifierName")]
             [Validation(Required=false)]
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<Dictionary<string, object>> ObjectBindings { get; set; }
 
             /// <summary>
-            /// <para>The visibility mode of the knowledge base to digital employees.</para>
+            /// <para>The visibility mode of the knowledge base for digital employees.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PUBLIC</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<ListUserVisibleKnowledgeBaseContentsResponseBodyItemsShareInfos> ShareInfos { get; set; }
             public class ListUserVisibleKnowledgeBaseContentsResponseBodyItemsShareInfos : TeaModel {
                 /// <summary>
-                /// <para>The Ray Job ID.</para>
+                /// <para>The ID of the Ray job.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>submission_example</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string SubmissionId { get; set; }
 
                 /// <summary>
-                /// <para>The user ID of the submitter.</para>
+                /// <para>The user ID of the timesheet submitter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -191,17 +191,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public long? SubmitterId { get; set; }
 
                 /// <summary>
-                /// <para>The submitter name.</para>
+                /// <para>The name of the submitter.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>John</para>
+                /// <para>Zhang San</para>
                 /// </summary>
                 [NameInMap("submitterName")]
                 [Validation(Required=false)]
                 public string SubmitterName { get; set; }
 
                 /// <summary>
-                /// <para>The target directory ID.</para>
+                /// <para>The ID of the target directory.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dir_target</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string TargetDirectoryId { get; set; }
 
                 /// <summary>
-                /// <para>The target directory name.</para>
+                /// <para>The name of the target directory.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Shared directory</para>
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string TargetDirectoryName { get; set; }
 
                 /// <summary>
-                /// <para>The root directory ID of the target enterprise knowledge base.</para>
+                /// <para>The ID of the root directory of the target enterprise knowledge base.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dir_kb_root</para>
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? Shared { get; set; }
 
             /// <summary>
-            /// <para>The number of resources in FAILED status. Returned only when listing top-level KB directories.</para>
+            /// <para>The number of resources in the FAILED state. This parameter is returned only when the top-level directory list of the knowledge base is queried.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -263,7 +263,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? SourceFailedCount { get; set; }
 
             /// <summary>
-            /// <para>The knowledge base affiliation type. Valid values: aliding_kb_doc (DingTalk knowledge base document), normal (common knowledge).</para>
+            /// <para>The ownership type of the knowledge base. Valid values: aliding_kb_doc (DingTalk knowledge base document) and normal (common knowledge).</para>
             /// 
             /// <b>Example:</b>
             /// <para>normal</para>
@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SourceKind { get; set; }
 
             /// <summary>
-            /// <para>The number of resources in READY status. Returned only when listing top-level KB directories.</para>
+            /// <para>The number of resources in the READY state. This parameter is returned only when the top-level directory list of the knowledge base is queried.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -283,7 +283,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? SourceReadyCount { get; set; }
 
             /// <summary>
-            /// <para>The resource status. This field has a value only when itemType is resource.</para>
+            /// <para>The resource status. This parameter has a value only when itemType is set to resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>READY</para>
@@ -293,7 +293,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SourceStatus { get; set; }
 
             /// <summary>
-            /// <para>The total number of resources under the directory and its subdirectories. Returned only when listing top-level KB directories.</para>
+            /// <para>The total number of resources in the directory and its subdirectories. This parameter is returned only when the top-level directory list of the knowledge base is queried.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -325,7 +325,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1. Pages start from page 1.</para>
+        /// <para>The page number. Default value: 1. The pages start from page 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -335,7 +335,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

@@ -130,6 +130,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>输出会话模式，省略时保留当前配置</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SAME_CONVERSATION</para>
+        /// </summary>
+        [NameInMap("outputMode")]
+        [Validation(Required=false)]
+        public string OutputMode { get; set; }
+
+        /// <summary>
         /// <para>The segments.</para>
         /// </summary>
         [NameInMap("segments")]

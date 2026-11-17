@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>The version number of the returned content.</para>
+        /// <para>The version number to which the returned content belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
