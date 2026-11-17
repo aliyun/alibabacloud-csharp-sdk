@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class RestartWuyingServerRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to enable the restart retry feature.</para>
+        /// </summary>
+        [NameInMap("EnableRestartRetry")]
+        [Validation(Required=false)]
+        public bool? EnableRestartRetry { get; set; }
+
+        /// <summary>
         /// <para>The product type.</para>
         /// 
         /// <b>Example:</b>

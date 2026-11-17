@@ -1,3 +1,6 @@
+2026-11-17 Version: 5.15.1
+- Generated csharp 2021-09-01 for appstream-center.
+
 2026-11-14 Version: 5.15.0
 - Support API ClearAgentInstanceMemory.
 - Support API DescribeUserProfilePathRules.
