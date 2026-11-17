@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public CreateCrossProjectPipelineRunResponseBodyData Data { get; set; }
         public class CreateCrossProjectPipelineRunResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the cross-workspace deployment pipeline.</para>
+            /// <para>The cross-workspace deployment pipeline ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fcfd4160-e2ff-4603-9719-09128fe733df</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate and troubleshoot the API call.</para>
+        /// <para>The request ID, which is used to locate and troubleshoot this API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>735894D1-D5E5-50B8-8A6D-041C90A98B23</para>

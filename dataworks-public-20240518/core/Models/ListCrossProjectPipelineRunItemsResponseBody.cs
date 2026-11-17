@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListCrossProjectPipelineRunItemsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The business response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;RequestId&quot;:&quot;735894D1-D5E5-50B8-8A6D-041C90A98B23&quot;,&quot;PageNumber&quot;:1,&quot;PageSize&quot;:10,&quot;TotalCount&quot;:1,&quot;PipelineRunItems&quot;:[{&quot;ObjectId&quot;:&quot;1&quot;,&quot;ObjectType&quot;:&quot;ODPS_SQL&quot;,&quot;ObjectName&quot;:&quot;object-1&quot;,&quot;ObjectVersion&quot;:&quot;7&quot;,&quot;ChangeType&quot;:&quot;ADD&quot;,&quot;IsRoot&quot;:true,&quot;Status&quot;:&quot;Ready&quot;}]}</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The list of publish items for the root object and its child objects in the cross-workspace publish pipeline.</para>
+            /// <para>The list of deployment items for the root object and its child objects snapshotted in the cross-workspace deployment pipeline.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{&quot;ObjectId&quot;:&quot;1&quot;,&quot;ObjectType&quot;:&quot;ODPS_SQL&quot;,&quot;ObjectName&quot;:&quot;object-1&quot;,&quot;ObjectVersion&quot;:&quot;7&quot;,&quot;ChangeType&quot;:&quot;ADD&quot;,&quot;IsRoot&quot;:true,&quot;Status&quot;:&quot;Ready&quot;}]</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<ListCrossProjectPipelineRunItemsResponseBodyDataPipelineRunItems> PipelineRunItems { get; set; }
             public class ListCrossProjectPipelineRunItemsResponseBodyDataPipelineRunItems : TeaModel {
                 /// <summary>
-                /// <para>The change type.</para>
+                /// <para>The type of the change.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ADD</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public bool? IsRoot { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the deployment object.</para>
+                /// <para>The ID of the object to deploy.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ObjectId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the deployment object.</para>
+                /// <para>The name of the object to deploy.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>object-1</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ObjectName { get; set; }
 
                 /// <summary>
-                /// <para>The deployment object type.</para>
+                /// <para>The type of the object to deploy.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ODPS_SQL</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ObjectType { get; set; }
 
                 /// <summary>
-                /// <para>The version of the deployment object.</para>
+                /// <para>The version of the object to deploy.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>7</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID used to locate and troubleshoot the API call.</para>
+        /// <para>The request ID, which is used to locate and troubleshoot the API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>735894D1-D5E5-50B8-8A6D-041C90A98B23</para>

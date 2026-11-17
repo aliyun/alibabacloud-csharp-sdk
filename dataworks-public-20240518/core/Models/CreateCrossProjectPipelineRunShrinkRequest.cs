@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateCrossProjectPipelineRunShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cross-workspace deployment environment.</para>
+        /// <para>The cross-workspace deployment environment ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The deployment description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>This is a workflow created by calling the API operation</para>
+        /// <para>This is a business process created through an API operation</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The list of top-level object IDs from the source project to be deployed. The list must contain exactly one object. Sub-objects of composite objects such as workflows are automatically included by the system.</para>
+        /// <para>The list of top-level object IDs from the source workspace to be deployed. The list must contain one and only one object. Sub-objects of composite objects such as workflows are automatically included by the system.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

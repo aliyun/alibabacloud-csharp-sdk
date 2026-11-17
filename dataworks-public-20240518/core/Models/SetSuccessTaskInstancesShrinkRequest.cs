@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The list of task instance IDs.</para>
+        /// <para>The list of node instance IDs.</para>
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]

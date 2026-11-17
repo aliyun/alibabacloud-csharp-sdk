@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class AbolishCrossProjectPipelineRunRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cross-workspace deployment pipeline run.</para>
+        /// <para>The ID of the cross-workspace deployment pipeline.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,10 +32,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The reason for terminating the pipeline run.</para>
+        /// <para>The reason for stopping the pipeline.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The target deployment plan has changed. Terminate the pipeline run that has not yet executed</para>
+        /// <para>The target deployment plan has changed. Stop the pipeline that has not run yet.</para>
         /// </summary>
         [NameInMap("Reason")]
         [Validation(Required=false)]

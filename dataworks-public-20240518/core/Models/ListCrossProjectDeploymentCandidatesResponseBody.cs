@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public ListCrossProjectDeploymentCandidatesResponseBodyData Data { get; set; }
         public class ListCrossProjectDeploymentCandidatesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of candidate objects in the source workspace that are available for cross-workspace deployment.</para>
+            /// <para>The list of candidate objects in the source workspace that can be used for cross-workspace deployment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{&quot;ObjectId&quot;:&quot;1&quot;,&quot;ObjectType&quot;:&quot;ODPS_SQL&quot;,&quot;ObjectName&quot;:&quot;object-1&quot;,&quot;ObjectVersion&quot;:&quot;7&quot;,&quot;ChangeType&quot;:&quot;ADD&quot;,&quot;CommitUser&quot;:&quot;operator&quot;,&quot;CommitTime&quot;:1788739200000}]</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<ListCrossProjectDeploymentCandidatesResponseBodyDataDeploymentCandidates> DeploymentCandidates { get; set; }
             public class ListCrossProjectDeploymentCandidatesResponseBodyDataDeploymentCandidates : TeaModel {
                 /// <summary>
-                /// <para>The change type.</para>
+                /// <para>The type of the change.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ADD</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? CommitTime { get; set; }
 
                 /// <summary>
-                /// <para>The submitter.</para>
+                /// <para>The committer.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>operator</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string CommitUser { get; set; }
 
                 /// <summary>
-                /// <para>The candidate object ID.</para>
+                /// <para>The ID of the candidate object.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The number of items per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID. You can use the ID to locate and troubleshoot the API call.</para>
+        /// <para>The request ID, which is used to locate and troubleshoot the API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>735894D1-D5E5-50B8-8A6D-041C90A98B23</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListCrossProjectDeploymentCandidatesRequest : TeaModel {
         /// <summary>
-        /// <para>The change type.</para>
+        /// <para>The type of the change.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ADD</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ChangeType { get; set; }
 
         /// <summary>
-        /// <para>The start of the commit time range. The value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The start time of the commit. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1788739200000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? CommitTimeFrom { get; set; }
 
         /// <summary>
-        /// <para>The end of the commit time range. The value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The end time of the commit. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1788825599999</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? CommitTimeTo { get; set; }
 
         /// <summary>
-        /// <para>The submitter.</para>
+        /// <para>The committer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>operator</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string CommitUser { get; set; }
 
         /// <summary>
-        /// <para>The cross-workspace deployment environment ID.</para>
+        /// <para>The ID of the cross-workspace deployment environment.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The candidate object ID.</para>
+        /// <para>The ID of the candidate object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of items per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class Partition : TeaModel {
         /// <summary>
-        /// <para>The creation time, in millisecond-level timestamp.</para>
+        /// <para>The creation time (millisecond timestamp).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1700192563000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? DataSize { get; set; }
 
         /// <summary>
-        /// <para>The modification time, in millisecond-level timestamp.</para>
+        /// <para>The modification time (millisecond timestamp).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1700192563000</para>
@@ -60,10 +60,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? RecordCount { get; set; }
 
         /// <summary>
-        /// <para>The resource ID of the data table to which the partition belongs.</para>
+        /// <para>The ID of the parent data table. Refer to the <c>Table</c> object.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>maxcompute-table:accountId::project::table</para>
+        /// <para>maxcompute-table:::project_name:[schema_name]:table_name</para>
         /// </summary>
         [NameInMap("TableId")]
         [Validation(Required=false)]

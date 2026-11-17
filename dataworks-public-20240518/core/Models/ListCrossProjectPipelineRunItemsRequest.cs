@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The cross-workspace deployment pipeline ID.</para>
+        /// <para>The ID of the cross-workspace deployment pipeline.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

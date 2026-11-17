@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListKnowledgeBasesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business error code. This field is omitted when the request is successful. If the request fails, the common error response protocol is followed.</para>
+        /// <para>The business error code. This field may be omitted if the request succeeds. If the request fails, the common error response protocol applies.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidParameter</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The readable description of the business error. This field is omitted when the request is successful. Provide the RequestId along with this message when troubleshooting failures.</para>
+        /// <para>A human-readable description of the business error. This field may be omitted if the request succeeds. Provide the RequestId when troubleshooting failures.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The request parameters are invalid.</para>

@@ -313,7 +313,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminates a cross-workspace deployment pipeline run.</para>
+        /// <para>Stops the cross-workspace deployment pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -363,7 +363,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminates a cross-workspace deployment pipeline run.</para>
+        /// <para>Stops the cross-workspace deployment pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -413,7 +413,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminates a cross-workspace deployment pipeline run.</para>
+        /// <para>Stops the cross-workspace deployment pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -431,7 +431,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminates a cross-workspace deployment pipeline run.</para>
+        /// <para>Stops the cross-workspace deployment pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -765,6 +765,154 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddEntityIntoMetaCollectionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds an administrator to a specified knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Adds an administrator. Only the owner or an administrator of the knowledge base can perform this operation. The caller and tenant are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddKnowledgeBaseAdministratorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddKnowledgeBaseAdministratorResponse
+        /// </returns>
+        public AddKnowledgeBaseAdministratorResponse AddKnowledgeBaseAdministratorWithOptions(AddKnowledgeBaseAdministratorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdministratorUserId))
+            {
+                body["AdministratorUserId"] = request.AdministratorUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddKnowledgeBaseAdministrator",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddKnowledgeBaseAdministratorResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds an administrator to a specified knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Adds an administrator. Only the owner or an administrator of the knowledge base can perform this operation. The caller and tenant are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddKnowledgeBaseAdministratorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddKnowledgeBaseAdministratorResponse
+        /// </returns>
+        public async Task<AddKnowledgeBaseAdministratorResponse> AddKnowledgeBaseAdministratorWithOptionsAsync(AddKnowledgeBaseAdministratorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdministratorUserId))
+            {
+                body["AdministratorUserId"] = request.AdministratorUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddKnowledgeBaseAdministrator",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddKnowledgeBaseAdministratorResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds an administrator to a specified knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Adds an administrator. Only the owner or an administrator of the knowledge base can perform this operation. The caller and tenant are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddKnowledgeBaseAdministratorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddKnowledgeBaseAdministratorResponse
+        /// </returns>
+        public AddKnowledgeBaseAdministratorResponse AddKnowledgeBaseAdministrator(AddKnowledgeBaseAdministratorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddKnowledgeBaseAdministratorWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds an administrator to a specified knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Adds an administrator. Only the owner or an administrator of the knowledge base can perform this operation. The caller and tenant are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddKnowledgeBaseAdministratorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddKnowledgeBaseAdministratorResponse
+        /// </returns>
+        public async Task<AddKnowledgeBaseAdministratorResponse> AddKnowledgeBaseAdministratorAsync(AddKnowledgeBaseAdministratorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddKnowledgeBaseAdministratorWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4918,7 +5066,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates and solidifies a cross-project deployment pipeline. The ObjectIds parameter must contain exactly one top-level object ID from the source project. Sub-objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call the ListCrossProjectDeploymentCandidates operation to query candidate objects. After the pipeline is created, call the ExecCrossProjectPipelineRun operation to execute the deployment, and call the GetCrossProjectPipelineRun operation to query the status.</para>
+        /// <para>Creates and finalizes a cross-workspace deployment pipeline. The ObjectIds parameter must contain one and only one top-level object ID from the source workspace. Sub-objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call ListCrossProjectDeploymentCandidates to query candidate objects. After creation, call ExecCrossProjectPipelineRun to execute the deployment, and call GetCrossProjectPipelineRun to query the status.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4987,7 +5135,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates and solidifies a cross-project deployment pipeline. The ObjectIds parameter must contain exactly one top-level object ID from the source project. Sub-objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call the ListCrossProjectDeploymentCandidates operation to query candidate objects. After the pipeline is created, call the ExecCrossProjectPipelineRun operation to execute the deployment, and call the GetCrossProjectPipelineRun operation to query the status.</para>
+        /// <para>Creates and finalizes a cross-workspace deployment pipeline. The ObjectIds parameter must contain one and only one top-level object ID from the source workspace. Sub-objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call ListCrossProjectDeploymentCandidates to query candidate objects. After creation, call ExecCrossProjectPipelineRun to execute the deployment, and call GetCrossProjectPipelineRun to query the status.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5056,7 +5204,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates and solidifies a cross-project deployment pipeline. The ObjectIds parameter must contain exactly one top-level object ID from the source project. Sub-objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call the ListCrossProjectDeploymentCandidates operation to query candidate objects. After the pipeline is created, call the ExecCrossProjectPipelineRun operation to execute the deployment, and call the GetCrossProjectPipelineRun operation to query the status.</para>
+        /// <para>Creates and finalizes a cross-workspace deployment pipeline. The ObjectIds parameter must contain one and only one top-level object ID from the source workspace. Sub-objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call ListCrossProjectDeploymentCandidates to query candidate objects. After creation, call ExecCrossProjectPipelineRun to execute the deployment, and call GetCrossProjectPipelineRun to query the status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5079,7 +5227,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates and solidifies a cross-project deployment pipeline. The ObjectIds parameter must contain exactly one top-level object ID from the source project. Sub-objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call the ListCrossProjectDeploymentCandidates operation to query candidate objects. After the pipeline is created, call the ExecCrossProjectPipelineRun operation to execute the deployment, and call the GetCrossProjectPipelineRun operation to query the status.</para>
+        /// <para>Creates and finalizes a cross-workspace deployment pipeline. The ObjectIds parameter must contain one and only one top-level object ID from the source workspace. Sub-objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call ListCrossProjectDeploymentCandidates to query candidate objects. After creation, call ExecCrossProjectPipelineRun to execute the deployment, and call GetCrossProjectPipelineRun to query the status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9581,6 +9729,1186 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateImageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a knowledge base and returns the knowledge base ID, name, ownership, and the access role of the current caller. This operation does not automatically add sources, build knowledge, or generate retrieval results. You can continue to configure knowledge sources and build tasks. The tenant and owner of the knowledge base are determined by the current caller identity. You do not need to specify a workspace or resource group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a knowledge base. The tenant and caller identity are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeBaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBaseResponse
+        /// </returns>
+        public CreateKnowledgeBaseResponse CreateKnowledgeBaseWithOptions(CreateKnowledgeBaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKnowledgeBase",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKnowledgeBaseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a knowledge base and returns the knowledge base ID, name, ownership, and the access role of the current caller. This operation does not automatically add sources, build knowledge, or generate retrieval results. You can continue to configure knowledge sources and build tasks. The tenant and owner of the knowledge base are determined by the current caller identity. You do not need to specify a workspace or resource group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a knowledge base. The tenant and caller identity are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeBaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBaseResponse
+        /// </returns>
+        public async Task<CreateKnowledgeBaseResponse> CreateKnowledgeBaseWithOptionsAsync(CreateKnowledgeBaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKnowledgeBase",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKnowledgeBaseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a knowledge base and returns the knowledge base ID, name, ownership, and the access role of the current caller. This operation does not automatically add sources, build knowledge, or generate retrieval results. You can continue to configure knowledge sources and build tasks. The tenant and owner of the knowledge base are determined by the current caller identity. You do not need to specify a workspace or resource group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a knowledge base. The tenant and caller identity are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBaseResponse
+        /// </returns>
+        public CreateKnowledgeBaseResponse CreateKnowledgeBase(CreateKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateKnowledgeBaseWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a knowledge base and returns the knowledge base ID, name, ownership, and the access role of the current caller. This operation does not automatically add sources, build knowledge, or generate retrieval results. You can continue to configure knowledge sources and build tasks. The tenant and owner of the knowledge base are determined by the current caller identity. You do not need to specify a workspace or resource group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a knowledge base. The tenant and caller identity are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBaseResponse
+        /// </returns>
+        public async Task<CreateKnowledgeBaseResponse> CreateKnowledgeBaseAsync(CreateKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateKnowledgeBaseWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a repeatable knowledge build task and configures the input scope, trigger mode, and runtime resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a knowledge base build task. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateKnowledgeBaseBuildTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBaseBuildTaskResponse
+        /// </returns>
+        public CreateKnowledgeBaseBuildTaskResponse CreateKnowledgeBaseBuildTaskWithOptions(CreateKnowledgeBaseBuildTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateKnowledgeBaseBuildTaskShrinkRequest request = new CreateKnowledgeBaseBuildTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Input))
+            {
+                request.InputShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Input, "Input", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RuntimeResource))
+            {
+                request.RuntimeResourceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RuntimeResource, "RuntimeResource", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Trigger))
+            {
+                request.TriggerShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Trigger, "Trigger", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentLocale))
+            {
+                body["ContentLocale"] = request.ContentLocale;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputShrink))
+            {
+                body["Input"] = request.InputShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LlmModel))
+            {
+                body["LlmModel"] = request.LlmModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeResourceShrink))
+            {
+                body["RuntimeResource"] = request.RuntimeResourceShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerShrink))
+            {
+                body["Trigger"] = request.TriggerShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKnowledgeBaseBuildTask",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKnowledgeBaseBuildTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a repeatable knowledge build task and configures the input scope, trigger mode, and runtime resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a knowledge base build task. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateKnowledgeBaseBuildTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBaseBuildTaskResponse
+        /// </returns>
+        public async Task<CreateKnowledgeBaseBuildTaskResponse> CreateKnowledgeBaseBuildTaskWithOptionsAsync(CreateKnowledgeBaseBuildTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateKnowledgeBaseBuildTaskShrinkRequest request = new CreateKnowledgeBaseBuildTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Input))
+            {
+                request.InputShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Input, "Input", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RuntimeResource))
+            {
+                request.RuntimeResourceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RuntimeResource, "RuntimeResource", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Trigger))
+            {
+                request.TriggerShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Trigger, "Trigger", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentLocale))
+            {
+                body["ContentLocale"] = request.ContentLocale;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputShrink))
+            {
+                body["Input"] = request.InputShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LlmModel))
+            {
+                body["LlmModel"] = request.LlmModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeResourceShrink))
+            {
+                body["RuntimeResource"] = request.RuntimeResourceShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerShrink))
+            {
+                body["Trigger"] = request.TriggerShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKnowledgeBaseBuildTask",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKnowledgeBaseBuildTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a repeatable knowledge build task and configures the input scope, trigger mode, and runtime resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a knowledge base build task. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeBaseBuildTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBaseBuildTaskResponse
+        /// </returns>
+        public CreateKnowledgeBaseBuildTaskResponse CreateKnowledgeBaseBuildTask(CreateKnowledgeBaseBuildTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateKnowledgeBaseBuildTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a repeatable knowledge build task and configures the input scope, trigger mode, and runtime resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a knowledge base build task. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeBaseBuildTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBaseBuildTaskResponse
+        /// </returns>
+        public async Task<CreateKnowledgeBaseBuildTaskResponse> CreateKnowledgeBaseBuildTaskAsync(CreateKnowledgeBaseBuildTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateKnowledgeBaseBuildTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a build instance based on the current configuration of a specified task, and freezes the input and runtime configurations for this execution.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a knowledge base build task instance. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeBaseBuildTaskInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBaseBuildTaskInstanceResponse
+        /// </returns>
+        public CreateKnowledgeBaseBuildTaskInstanceResponse CreateKnowledgeBaseBuildTaskInstanceWithOptions(CreateKnowledgeBaseBuildTaskInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKnowledgeBaseBuildTaskInstance",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKnowledgeBaseBuildTaskInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a build instance based on the current configuration of a specified task, and freezes the input and runtime configurations for this execution.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a knowledge base build task instance. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeBaseBuildTaskInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBaseBuildTaskInstanceResponse
+        /// </returns>
+        public async Task<CreateKnowledgeBaseBuildTaskInstanceResponse> CreateKnowledgeBaseBuildTaskInstanceWithOptionsAsync(CreateKnowledgeBaseBuildTaskInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKnowledgeBaseBuildTaskInstance",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKnowledgeBaseBuildTaskInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a build instance based on the current configuration of a specified task, and freezes the input and runtime configurations for this execution.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a knowledge base build task instance. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeBaseBuildTaskInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBaseBuildTaskInstanceResponse
+        /// </returns>
+        public CreateKnowledgeBaseBuildTaskInstanceResponse CreateKnowledgeBaseBuildTaskInstance(CreateKnowledgeBaseBuildTaskInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateKnowledgeBaseBuildTaskInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a build instance based on the current configuration of a specified task, and freezes the input and runtime configurations for this execution.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a knowledge base build task instance. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeBaseBuildTaskInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBaseBuildTaskInstanceResponse
+        /// </returns>
+        public async Task<CreateKnowledgeBaseBuildTaskInstanceResponse> CreateKnowledgeBaseBuildTaskInstanceAsync(CreateKnowledgeBaseBuildTaskInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateKnowledgeBaseBuildTaskInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a document object in a knowledge base by using the document body or an uploaded file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a knowledge object. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateKnowledgeObjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeObjectResponse
+        /// </returns>
+        public CreateKnowledgeObjectResponse CreateKnowledgeObjectWithOptions(CreateKnowledgeObjectRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateKnowledgeObjectShrinkRequest request = new CreateKnowledgeObjectShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Content))
+            {
+                request.ContentShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Content, "Content", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentShrink))
+            {
+                body["Content"] = request.ContentShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadId))
+            {
+                body["UploadId"] = request.UploadId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKnowledgeObject",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKnowledgeObjectResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a document object in a knowledge base by using the document body or an uploaded file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a knowledge object. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateKnowledgeObjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeObjectResponse
+        /// </returns>
+        public async Task<CreateKnowledgeObjectResponse> CreateKnowledgeObjectWithOptionsAsync(CreateKnowledgeObjectRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateKnowledgeObjectShrinkRequest request = new CreateKnowledgeObjectShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Content))
+            {
+                request.ContentShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Content, "Content", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentShrink))
+            {
+                body["Content"] = request.ContentShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadId))
+            {
+                body["UploadId"] = request.UploadId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKnowledgeObject",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKnowledgeObjectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a document object in a knowledge base by using the document body or an uploaded file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a knowledge object. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeObjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeObjectResponse
+        /// </returns>
+        public CreateKnowledgeObjectResponse CreateKnowledgeObject(CreateKnowledgeObjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateKnowledgeObjectWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a document object in a knowledge base by using the document body or an uploaded file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a knowledge object. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeObjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeObjectResponse
+        /// </returns>
+        public async Task<CreateKnowledgeObjectResponse> CreateKnowledgeObjectAsync(CreateKnowledgeObjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateKnowledgeObjectWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Requests a file upload session and a temporary direct upload URL without creating a knowledge object or starting a build.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an upload session for a knowledge object. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeObjectUploadRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeObjectUploadResponse
+        /// </returns>
+        public CreateKnowledgeObjectUploadResponse CreateKnowledgeObjectUploadWithOptions(CreateKnowledgeObjectUploadRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentMd5))
+            {
+                body["ContentMd5"] = request.ContentMd5;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentSha256))
+            {
+                body["ContentSha256"] = request.ContentSha256;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentType))
+            {
+                body["ContentType"] = request.ContentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                body["FileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SizeBytes))
+            {
+                body["SizeBytes"] = request.SizeBytes;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKnowledgeObjectUpload",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKnowledgeObjectUploadResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Requests a file upload session and a temporary direct upload URL without creating a knowledge object or starting a build.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an upload session for a knowledge object. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeObjectUploadRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeObjectUploadResponse
+        /// </returns>
+        public async Task<CreateKnowledgeObjectUploadResponse> CreateKnowledgeObjectUploadWithOptionsAsync(CreateKnowledgeObjectUploadRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentMd5))
+            {
+                body["ContentMd5"] = request.ContentMd5;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentSha256))
+            {
+                body["ContentSha256"] = request.ContentSha256;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentType))
+            {
+                body["ContentType"] = request.ContentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                body["FileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SizeBytes))
+            {
+                body["SizeBytes"] = request.SizeBytes;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKnowledgeObjectUpload",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKnowledgeObjectUploadResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Requests a file upload session and a temporary direct upload URL without creating a knowledge object or starting a build.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an upload session for a knowledge object. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeObjectUploadRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeObjectUploadResponse
+        /// </returns>
+        public CreateKnowledgeObjectUploadResponse CreateKnowledgeObjectUpload(CreateKnowledgeObjectUploadRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateKnowledgeObjectUploadWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Requests a file upload session and a temporary direct upload URL without creating a knowledge object or starting a build.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an upload session for a knowledge object. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeObjectUploadRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeObjectUploadResponse
+        /// </returns>
+        public async Task<CreateKnowledgeObjectUploadResponse> CreateKnowledgeObjectUploadAsync(CreateKnowledgeObjectUploadRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateKnowledgeObjectUploadWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Registers projects, data sources, or external document sources that can be referenced by a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Manages knowledge sources for a knowledge base. The identity is determined by the POP context, and credentials are not returned in query responses.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateKnowledgeSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeSourceResponse
+        /// </returns>
+        public CreateKnowledgeSourceResponse CreateKnowledgeSourceWithOptions(CreateKnowledgeSourceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateKnowledgeSourceShrinkRequest request = new CreateKnowledgeSourceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataSource))
+            {
+                request.DataSourceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataSource, "DataSource", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Document))
+            {
+                request.DocumentShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Document, "Document", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Project))
+            {
+                request.ProjectShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Project, "Project", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceShrink))
+            {
+                body["DataSource"] = request.DataSourceShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentShrink))
+            {
+                body["Document"] = request.DocumentShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectShrink))
+            {
+                body["Project"] = request.ProjectShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKnowledgeSource",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKnowledgeSourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Registers projects, data sources, or external document sources that can be referenced by a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Manages knowledge sources for a knowledge base. The identity is determined by the POP context, and credentials are not returned in query responses.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateKnowledgeSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeSourceResponse
+        /// </returns>
+        public async Task<CreateKnowledgeSourceResponse> CreateKnowledgeSourceWithOptionsAsync(CreateKnowledgeSourceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateKnowledgeSourceShrinkRequest request = new CreateKnowledgeSourceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataSource))
+            {
+                request.DataSourceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataSource, "DataSource", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Document))
+            {
+                request.DocumentShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Document, "Document", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Project))
+            {
+                request.ProjectShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Project, "Project", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceShrink))
+            {
+                body["DataSource"] = request.DataSourceShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentShrink))
+            {
+                body["Document"] = request.DocumentShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectShrink))
+            {
+                body["Project"] = request.ProjectShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKnowledgeSource",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKnowledgeSourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Registers projects, data sources, or external document sources that can be referenced by a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Manages knowledge sources for a knowledge base. The identity is determined by the POP context, and credentials are not returned in query responses.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeSourceResponse
+        /// </returns>
+        public CreateKnowledgeSourceResponse CreateKnowledgeSource(CreateKnowledgeSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateKnowledgeSourceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Registers projects, data sources, or external document sources that can be referenced by a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Manages knowledge sources for a knowledge base. The identity is determined by the POP context, and credentials are not returned in query responses.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeSourceResponse
+        /// </returns>
+        public async Task<CreateKnowledgeSourceResponse> CreateKnowledgeSourceAsync(CreateKnowledgeSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateKnowledgeSourceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -16916,6 +18244,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <para>Deletes a data quality monitoring rule.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteDataQualityRuleRequest
         /// </param>
@@ -16961,6 +18294,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <summary>
         /// <para>Deletes a data quality monitoring rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDataQualityRuleRequest
@@ -17008,6 +18346,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <para>Deletes a data quality monitoring rule.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteDataQualityRuleRequest
         /// </param>
@@ -17025,6 +18368,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <summary>
         /// <para>Deletes a data quality monitoring rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDataQualityRuleRequest
@@ -18661,6 +20009,590 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteImageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified knowledge base and returns the deleted status upon success.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a knowledge base. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteKnowledgeBaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKnowledgeBaseResponse
+        /// </returns>
+        public DeleteKnowledgeBaseResponse DeleteKnowledgeBaseWithOptions(DeleteKnowledgeBaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteKnowledgeBase",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteKnowledgeBaseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified knowledge base and returns the deleted status upon success.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a knowledge base. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteKnowledgeBaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKnowledgeBaseResponse
+        /// </returns>
+        public async Task<DeleteKnowledgeBaseResponse> DeleteKnowledgeBaseWithOptionsAsync(DeleteKnowledgeBaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteKnowledgeBase",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteKnowledgeBaseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified knowledge base and returns the deleted status upon success.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a knowledge base. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKnowledgeBaseResponse
+        /// </returns>
+        public DeleteKnowledgeBaseResponse DeleteKnowledgeBase(DeleteKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteKnowledgeBaseWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified knowledge base and returns the deleted status upon success.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a knowledge base. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKnowledgeBaseResponse
+        /// </returns>
+        public async Task<DeleteKnowledgeBaseResponse> DeleteKnowledgeBaseAsync(DeleteKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteKnowledgeBaseWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified knowledge base build task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a knowledge base build task. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteKnowledgeBaseBuildTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKnowledgeBaseBuildTaskResponse
+        /// </returns>
+        public DeleteKnowledgeBaseBuildTaskResponse DeleteKnowledgeBaseBuildTaskWithOptions(DeleteKnowledgeBaseBuildTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteKnowledgeBaseBuildTask",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteKnowledgeBaseBuildTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified knowledge base build task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a knowledge base build task. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteKnowledgeBaseBuildTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKnowledgeBaseBuildTaskResponse
+        /// </returns>
+        public async Task<DeleteKnowledgeBaseBuildTaskResponse> DeleteKnowledgeBaseBuildTaskWithOptionsAsync(DeleteKnowledgeBaseBuildTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteKnowledgeBaseBuildTask",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteKnowledgeBaseBuildTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified knowledge base build task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a knowledge base build task. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteKnowledgeBaseBuildTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKnowledgeBaseBuildTaskResponse
+        /// </returns>
+        public DeleteKnowledgeBaseBuildTaskResponse DeleteKnowledgeBaseBuildTask(DeleteKnowledgeBaseBuildTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteKnowledgeBaseBuildTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified knowledge base build task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a knowledge base build task. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteKnowledgeBaseBuildTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKnowledgeBaseBuildTaskResponse
+        /// </returns>
+        public async Task<DeleteKnowledgeBaseBuildTaskResponse> DeleteKnowledgeBaseBuildTaskAsync(DeleteKnowledgeBaseBuildTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteKnowledgeBaseBuildTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a document object from a knowledge base or archives a semantic model object.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a knowledge object. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteKnowledgeObjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKnowledgeObjectResponse
+        /// </returns>
+        public DeleteKnowledgeObjectResponse DeleteKnowledgeObjectWithOptions(DeleteKnowledgeObjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeObjectId))
+            {
+                body["KnowledgeObjectId"] = request.KnowledgeObjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteKnowledgeObject",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteKnowledgeObjectResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a document object from a knowledge base or archives a semantic model object.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a knowledge object. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteKnowledgeObjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKnowledgeObjectResponse
+        /// </returns>
+        public async Task<DeleteKnowledgeObjectResponse> DeleteKnowledgeObjectWithOptionsAsync(DeleteKnowledgeObjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeObjectId))
+            {
+                body["KnowledgeObjectId"] = request.KnowledgeObjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteKnowledgeObject",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteKnowledgeObjectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a document object from a knowledge base or archives a semantic model object.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a knowledge object. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteKnowledgeObjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKnowledgeObjectResponse
+        /// </returns>
+        public DeleteKnowledgeObjectResponse DeleteKnowledgeObject(DeleteKnowledgeObjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteKnowledgeObjectWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a document object from a knowledge base or archives a semantic model object.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a knowledge object. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteKnowledgeObjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKnowledgeObjectResponse
+        /// </returns>
+        public async Task<DeleteKnowledgeObjectResponse> DeleteKnowledgeObjectAsync(DeleteKnowledgeObjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteKnowledgeObjectWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a knowledge source from a specified knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Manages knowledge sources in a knowledge base. The identity is determined by the POP context, and credentials are not returned in the response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteKnowledgeSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKnowledgeSourceResponse
+        /// </returns>
+        public DeleteKnowledgeSourceResponse DeleteKnowledgeSourceWithOptions(DeleteKnowledgeSourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["SourceId"] = request.SourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteKnowledgeSource",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteKnowledgeSourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a knowledge source from a specified knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Manages knowledge sources in a knowledge base. The identity is determined by the POP context, and credentials are not returned in the response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteKnowledgeSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKnowledgeSourceResponse
+        /// </returns>
+        public async Task<DeleteKnowledgeSourceResponse> DeleteKnowledgeSourceWithOptionsAsync(DeleteKnowledgeSourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["SourceId"] = request.SourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteKnowledgeSource",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteKnowledgeSourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a knowledge source from a specified knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Manages knowledge sources in a knowledge base. The identity is determined by the POP context, and credentials are not returned in the response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteKnowledgeSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKnowledgeSourceResponse
+        /// </returns>
+        public DeleteKnowledgeSourceResponse DeleteKnowledgeSource(DeleteKnowledgeSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteKnowledgeSourceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a knowledge source from a specified knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Manages knowledge sources in a knowledge base. The identity is determined by the POP context, and credentials are not returned in the response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteKnowledgeSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKnowledgeSourceResponse
+        /// </returns>
+        public async Task<DeleteKnowledgeSourceResponse> DeleteKnowledgeSourceAsync(DeleteKnowledgeSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteKnowledgeSourceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -30793,6 +32725,606 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves the current configuration of a specified knowledge base build task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Reads a knowledge base build task or instance. The tenant and caller identity are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeBaseBuildTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeBaseBuildTaskResponse
+        /// </returns>
+        public GetKnowledgeBaseBuildTaskResponse GetKnowledgeBaseBuildTaskWithOptions(GetKnowledgeBaseBuildTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKnowledgeBaseBuildTask",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKnowledgeBaseBuildTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the current configuration of a specified knowledge base build task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Reads a knowledge base build task or instance. The tenant and caller identity are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeBaseBuildTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeBaseBuildTaskResponse
+        /// </returns>
+        public async Task<GetKnowledgeBaseBuildTaskResponse> GetKnowledgeBaseBuildTaskWithOptionsAsync(GetKnowledgeBaseBuildTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKnowledgeBaseBuildTask",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKnowledgeBaseBuildTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the current configuration of a specified knowledge base build task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Reads a knowledge base build task or instance. The tenant and caller identity are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeBaseBuildTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeBaseBuildTaskResponse
+        /// </returns>
+        public GetKnowledgeBaseBuildTaskResponse GetKnowledgeBaseBuildTask(GetKnowledgeBaseBuildTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetKnowledgeBaseBuildTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the current configuration of a specified knowledge base build task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Reads a knowledge base build task or instance. The tenant and caller identity are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeBaseBuildTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeBaseBuildTaskResponse
+        /// </returns>
+        public async Task<GetKnowledgeBaseBuildTaskResponse> GetKnowledgeBaseBuildTaskAsync(GetKnowledgeBaseBuildTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetKnowledgeBaseBuildTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the execution status, input and configuration snapshots, and failure details for a build.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a knowledge base build task or instance. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeBaseBuildTaskInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeBaseBuildTaskInstanceResponse
+        /// </returns>
+        public GetKnowledgeBaseBuildTaskInstanceResponse GetKnowledgeBaseBuildTaskInstanceWithOptions(GetKnowledgeBaseBuildTaskInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskInstanceId))
+            {
+                body["TaskInstanceId"] = request.TaskInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKnowledgeBaseBuildTaskInstance",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKnowledgeBaseBuildTaskInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the execution status, input and configuration snapshots, and failure details for a build.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a knowledge base build task or instance. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeBaseBuildTaskInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeBaseBuildTaskInstanceResponse
+        /// </returns>
+        public async Task<GetKnowledgeBaseBuildTaskInstanceResponse> GetKnowledgeBaseBuildTaskInstanceWithOptionsAsync(GetKnowledgeBaseBuildTaskInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskInstanceId))
+            {
+                body["TaskInstanceId"] = request.TaskInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKnowledgeBaseBuildTaskInstance",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKnowledgeBaseBuildTaskInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the execution status, input and configuration snapshots, and failure details for a build.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a knowledge base build task or instance. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeBaseBuildTaskInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeBaseBuildTaskInstanceResponse
+        /// </returns>
+        public GetKnowledgeBaseBuildTaskInstanceResponse GetKnowledgeBaseBuildTaskInstance(GetKnowledgeBaseBuildTaskInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetKnowledgeBaseBuildTaskInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the execution status, input and configuration snapshots, and failure details for a build.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a knowledge base build task or instance. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeBaseBuildTaskInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeBaseBuildTaskInstanceResponse
+        /// </returns>
+        public async Task<GetKnowledgeBaseBuildTaskInstanceResponse> GetKnowledgeBaseBuildTaskInstanceAsync(GetKnowledgeBaseBuildTaskInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetKnowledgeBaseBuildTaskInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the original artifact information and temporary download URL of a successful build.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the temporary download link for the original artifact package of a successful build instance. The model YAML is obtained through the knowledge object API and is not included in the TGZ result of this API.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeBaseBuildTaskResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeBaseBuildTaskResultResponse
+        /// </returns>
+        public GetKnowledgeBaseBuildTaskResultResponse GetKnowledgeBaseBuildTaskResultWithOptions(GetKnowledgeBaseBuildTaskResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskInstanceId))
+            {
+                body["TaskInstanceId"] = request.TaskInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKnowledgeBaseBuildTaskResult",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKnowledgeBaseBuildTaskResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the original artifact information and temporary download URL of a successful build.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the temporary download link for the original artifact package of a successful build instance. The model YAML is obtained through the knowledge object API and is not included in the TGZ result of this API.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeBaseBuildTaskResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeBaseBuildTaskResultResponse
+        /// </returns>
+        public async Task<GetKnowledgeBaseBuildTaskResultResponse> GetKnowledgeBaseBuildTaskResultWithOptionsAsync(GetKnowledgeBaseBuildTaskResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskInstanceId))
+            {
+                body["TaskInstanceId"] = request.TaskInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKnowledgeBaseBuildTaskResult",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKnowledgeBaseBuildTaskResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the original artifact information and temporary download URL of a successful build.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the temporary download link for the original artifact package of a successful build instance. The model YAML is obtained through the knowledge object API and is not included in the TGZ result of this API.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeBaseBuildTaskResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeBaseBuildTaskResultResponse
+        /// </returns>
+        public GetKnowledgeBaseBuildTaskResultResponse GetKnowledgeBaseBuildTaskResult(GetKnowledgeBaseBuildTaskResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetKnowledgeBaseBuildTaskResultWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the original artifact information and temporary download URL of a successful build.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the temporary download link for the original artifact package of a successful build instance. The model YAML is obtained through the knowledge object API and is not included in the TGZ result of this API.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeBaseBuildTaskResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeBaseBuildTaskResultResponse
+        /// </returns>
+        public async Task<GetKnowledgeBaseBuildTaskResultResponse> GetKnowledgeBaseBuildTaskResultAsync(GetKnowledgeBaseBuildTaskResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetKnowledgeBaseBuildTaskResultWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the current content and available download URLs of a document or semantic model.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a knowledge object. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeObjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeObjectResponse
+        /// </returns>
+        public GetKnowledgeObjectResponse GetKnowledgeObjectWithOptions(GetKnowledgeObjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeObjectId))
+            {
+                body["KnowledgeObjectId"] = request.KnowledgeObjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionNo))
+            {
+                body["VersionNo"] = request.VersionNo;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKnowledgeObject",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKnowledgeObjectResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the current content and available download URLs of a document or semantic model.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a knowledge object. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeObjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeObjectResponse
+        /// </returns>
+        public async Task<GetKnowledgeObjectResponse> GetKnowledgeObjectWithOptionsAsync(GetKnowledgeObjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeObjectId))
+            {
+                body["KnowledgeObjectId"] = request.KnowledgeObjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionNo))
+            {
+                body["VersionNo"] = request.VersionNo;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKnowledgeObject",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKnowledgeObjectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the current content and available download URLs of a document or semantic model.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a knowledge object. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeObjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeObjectResponse
+        /// </returns>
+        public GetKnowledgeObjectResponse GetKnowledgeObject(GetKnowledgeObjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetKnowledgeObjectWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the current content and available download URLs of a document or semantic model.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a knowledge object. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeObjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeObjectResponse
+        /// </returns>
+        public async Task<GetKnowledgeObjectResponse> GetKnowledgeObjectAsync(GetKnowledgeObjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetKnowledgeObjectWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the current details of a single knowledge point, supporting local graphs, topic pages, and knowledge content.</para>
         /// </summary>
         /// 
@@ -30961,6 +33493,154 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetKnowledgePointWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the current configuration of a knowledge source without returning connector credentials.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Manages knowledge sources for a knowledge base. The identity is determined by the POP context, and credentials are not returned in the query response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeSourceResponse
+        /// </returns>
+        public GetKnowledgeSourceResponse GetKnowledgeSourceWithOptions(GetKnowledgeSourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["SourceId"] = request.SourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKnowledgeSource",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKnowledgeSourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the current configuration of a knowledge source without returning connector credentials.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Manages knowledge sources for a knowledge base. The identity is determined by the POP context, and credentials are not returned in the query response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeSourceResponse
+        /// </returns>
+        public async Task<GetKnowledgeSourceResponse> GetKnowledgeSourceWithOptionsAsync(GetKnowledgeSourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["SourceId"] = request.SourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKnowledgeSource",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKnowledgeSourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the current configuration of a knowledge source without returning connector credentials.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Manages knowledge sources for a knowledge base. The identity is determined by the POP context, and credentials are not returned in the query response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeSourceResponse
+        /// </returns>
+        public GetKnowledgeSourceResponse GetKnowledgeSource(GetKnowledgeSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetKnowledgeSourceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the current configuration of a knowledge source without returning connector credentials.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Manages knowledge sources for a knowledge base. The identity is determined by the POP context, and credentials are not returned in the query response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeSourceResponse
+        /// </returns>
+        public async Task<GetKnowledgeSourceResponse> GetKnowledgeSourceAsync(GetKnowledgeSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetKnowledgeSourceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -35697,6 +38377,162 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Grants a specified user retrieval access to a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Grants retrieval permissions to a user. Only the knowledge base owner or administrator can perform this operation. The caller and tenant are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GrantKnowledgeBaseRetrievalRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantKnowledgeBaseRetrievalResponse
+        /// </returns>
+        public GrantKnowledgeBaseRetrievalResponse GrantKnowledgeBaseRetrievalWithOptions(GrantKnowledgeBaseRetrievalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrincipalId))
+            {
+                body["PrincipalId"] = request.PrincipalId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrincipalType))
+            {
+                body["PrincipalType"] = request.PrincipalType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GrantKnowledgeBaseRetrieval",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GrantKnowledgeBaseRetrievalResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Grants a specified user retrieval access to a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Grants retrieval permissions to a user. Only the knowledge base owner or administrator can perform this operation. The caller and tenant are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GrantKnowledgeBaseRetrievalRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantKnowledgeBaseRetrievalResponse
+        /// </returns>
+        public async Task<GrantKnowledgeBaseRetrievalResponse> GrantKnowledgeBaseRetrievalWithOptionsAsync(GrantKnowledgeBaseRetrievalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrincipalId))
+            {
+                body["PrincipalId"] = request.PrincipalId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrincipalType))
+            {
+                body["PrincipalType"] = request.PrincipalType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GrantKnowledgeBaseRetrieval",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GrantKnowledgeBaseRetrievalResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Grants a specified user retrieval access to a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Grants retrieval permissions to a user. Only the knowledge base owner or administrator can perform this operation. The caller and tenant are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GrantKnowledgeBaseRetrievalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantKnowledgeBaseRetrievalResponse
+        /// </returns>
+        public GrantKnowledgeBaseRetrievalResponse GrantKnowledgeBaseRetrieval(GrantKnowledgeBaseRetrievalRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GrantKnowledgeBaseRetrievalWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Grants a specified user retrieval access to a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Grants retrieval permissions to a user. Only the knowledge base owner or administrator can perform this operation. The caller and tenant are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GrantKnowledgeBaseRetrievalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantKnowledgeBaseRetrievalResponse
+        /// </returns>
+        public async Task<GrantKnowledgeBaseRetrievalResponse> GrantKnowledgeBaseRetrievalAsync(GrantKnowledgeBaseRetrievalRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GrantKnowledgeBaseRetrievalWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Assigns roles to members in a workspace.</para>
         /// </summary>
         /// 
@@ -39413,7 +42249,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries cross-workspace deployment candidates.</para>
+        /// <para>Queries candidate objects for cross-workspace deployment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39495,7 +42331,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries cross-workspace deployment candidates.</para>
+        /// <para>Queries candidate objects for cross-workspace deployment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39577,7 +42413,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries cross-workspace deployment candidates.</para>
+        /// <para>Queries candidate objects for cross-workspace deployment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39595,7 +42431,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries cross-workspace deployment candidates.</para>
+        /// <para>Queries candidate objects for cross-workspace deployment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46037,7 +48873,647 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the knowledge bases that the current caller has permission to view in a specified region by using paging.</para>
+        /// <para>Lists administrators of a specified knowledge base with pagination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the administrators. Only the owner or administrators of the knowledge base can perform this operation. The caller and tenant are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBaseAdministratorsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBaseAdministratorsResponse
+        /// </returns>
+        public ListKnowledgeBaseAdministratorsResponse ListKnowledgeBaseAdministratorsWithOptions(ListKnowledgeBaseAdministratorsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgeBaseAdministrators",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKnowledgeBaseAdministratorsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists administrators of a specified knowledge base with pagination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the administrators. Only the owner or administrators of the knowledge base can perform this operation. The caller and tenant are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBaseAdministratorsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBaseAdministratorsResponse
+        /// </returns>
+        public async Task<ListKnowledgeBaseAdministratorsResponse> ListKnowledgeBaseAdministratorsWithOptionsAsync(ListKnowledgeBaseAdministratorsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgeBaseAdministrators",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKnowledgeBaseAdministratorsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists administrators of a specified knowledge base with pagination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the administrators. Only the owner or administrators of the knowledge base can perform this operation. The caller and tenant are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBaseAdministratorsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBaseAdministratorsResponse
+        /// </returns>
+        public ListKnowledgeBaseAdministratorsResponse ListKnowledgeBaseAdministrators(ListKnowledgeBaseAdministratorsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListKnowledgeBaseAdministratorsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists administrators of a specified knowledge base with pagination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the administrators. Only the owner or administrators of the knowledge base can perform this operation. The caller and tenant are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBaseAdministratorsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBaseAdministratorsResponse
+        /// </returns>
+        public async Task<ListKnowledgeBaseAdministratorsResponse> ListKnowledgeBaseAdministratorsAsync(ListKnowledgeBaseAdministratorsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListKnowledgeBaseAdministratorsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists knowledge base build task instances and their run statuses with pagination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Reads knowledge base build tasks or instances. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBaseBuildTaskInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBaseBuildTaskInstancesResponse
+        /// </returns>
+        public ListKnowledgeBaseBuildTaskInstancesResponse ListKnowledgeBaseBuildTaskInstancesWithOptions(ListKnowledgeBaseBuildTaskInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgeBaseBuildTaskInstances",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKnowledgeBaseBuildTaskInstancesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists knowledge base build task instances and their run statuses with pagination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Reads knowledge base build tasks or instances. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBaseBuildTaskInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBaseBuildTaskInstancesResponse
+        /// </returns>
+        public async Task<ListKnowledgeBaseBuildTaskInstancesResponse> ListKnowledgeBaseBuildTaskInstancesWithOptionsAsync(ListKnowledgeBaseBuildTaskInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgeBaseBuildTaskInstances",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKnowledgeBaseBuildTaskInstancesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists knowledge base build task instances and their run statuses with pagination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Reads knowledge base build tasks or instances. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBaseBuildTaskInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBaseBuildTaskInstancesResponse
+        /// </returns>
+        public ListKnowledgeBaseBuildTaskInstancesResponse ListKnowledgeBaseBuildTaskInstances(ListKnowledgeBaseBuildTaskInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListKnowledgeBaseBuildTaskInstancesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists knowledge base build task instances and their run statuses with pagination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Reads knowledge base build tasks or instances. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBaseBuildTaskInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBaseBuildTaskInstancesResponse
+        /// </returns>
+        public async Task<ListKnowledgeBaseBuildTaskInstancesResponse> ListKnowledgeBaseBuildTaskInstancesAsync(ListKnowledgeBaseBuildTaskInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListKnowledgeBaseBuildTaskInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the build tasks for a specified knowledge base with pagination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Reads knowledge base build tasks or instances. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBaseBuildTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBaseBuildTasksResponse
+        /// </returns>
+        public ListKnowledgeBaseBuildTasksResponse ListKnowledgeBaseBuildTasksWithOptions(ListKnowledgeBaseBuildTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgeBaseBuildTasks",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKnowledgeBaseBuildTasksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the build tasks for a specified knowledge base with pagination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Reads knowledge base build tasks or instances. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBaseBuildTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBaseBuildTasksResponse
+        /// </returns>
+        public async Task<ListKnowledgeBaseBuildTasksResponse> ListKnowledgeBaseBuildTasksWithOptionsAsync(ListKnowledgeBaseBuildTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgeBaseBuildTasks",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKnowledgeBaseBuildTasksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the build tasks for a specified knowledge base with pagination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Reads knowledge base build tasks or instances. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBaseBuildTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBaseBuildTasksResponse
+        /// </returns>
+        public ListKnowledgeBaseBuildTasksResponse ListKnowledgeBaseBuildTasks(ListKnowledgeBaseBuildTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListKnowledgeBaseBuildTasksWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the build tasks for a specified knowledge base with pagination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Reads knowledge base build tasks or instances. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBaseBuildTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBaseBuildTasksResponse
+        /// </returns>
+        public async Task<ListKnowledgeBaseBuildTasksResponse> ListKnowledgeBaseBuildTasksAsync(ListKnowledgeBaseBuildTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListKnowledgeBaseBuildTasksWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists retrieval grants for a specified knowledge base with pagination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists user retrieval authorizations. Only the knowledge base owner or administrator can perform this operation. The caller and tenant are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBaseRetrievalGrantsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBaseRetrievalGrantsResponse
+        /// </returns>
+        public ListKnowledgeBaseRetrievalGrantsResponse ListKnowledgeBaseRetrievalGrantsWithOptions(ListKnowledgeBaseRetrievalGrantsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrincipalType))
+            {
+                body["PrincipalType"] = request.PrincipalType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgeBaseRetrievalGrants",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKnowledgeBaseRetrievalGrantsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists retrieval grants for a specified knowledge base with pagination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists user retrieval authorizations. Only the knowledge base owner or administrator can perform this operation. The caller and tenant are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBaseRetrievalGrantsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBaseRetrievalGrantsResponse
+        /// </returns>
+        public async Task<ListKnowledgeBaseRetrievalGrantsResponse> ListKnowledgeBaseRetrievalGrantsWithOptionsAsync(ListKnowledgeBaseRetrievalGrantsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrincipalType))
+            {
+                body["PrincipalType"] = request.PrincipalType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgeBaseRetrievalGrants",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKnowledgeBaseRetrievalGrantsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists retrieval grants for a specified knowledge base with pagination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists user retrieval authorizations. Only the knowledge base owner or administrator can perform this operation. The caller and tenant are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBaseRetrievalGrantsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBaseRetrievalGrantsResponse
+        /// </returns>
+        public ListKnowledgeBaseRetrievalGrantsResponse ListKnowledgeBaseRetrievalGrants(ListKnowledgeBaseRetrievalGrantsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListKnowledgeBaseRetrievalGrantsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists retrieval grants for a specified knowledge base with pagination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists user retrieval authorizations. Only the knowledge base owner or administrator can perform this operation. The caller and tenant are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBaseRetrievalGrantsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBaseRetrievalGrantsResponse
+        /// </returns>
+        public async Task<ListKnowledgeBaseRetrievalGrantsResponse> ListKnowledgeBaseRetrievalGrantsAsync(ListKnowledgeBaseRetrievalGrantsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListKnowledgeBaseRetrievalGrantsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the knowledge bases that the current caller can view in the specified region, with pagination.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -46088,7 +49564,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the knowledge bases that the current caller has permission to view in a specified region by using paging.</para>
+        /// <para>Lists the knowledge bases that the current caller can view in the specified region, with pagination.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -46139,7 +49615,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the knowledge bases that the current caller has permission to view in a specified region by using paging.</para>
+        /// <para>Lists the knowledge bases that the current caller can view in the specified region, with pagination.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -46162,7 +49638,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the knowledge bases that the current caller has permission to view in a specified region by using paging.</para>
+        /// <para>Lists the knowledge bases that the current caller can view in the specified region, with pagination.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -46181,6 +49657,170 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListKnowledgeBasesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists knowledge objects in a knowledge base with pagination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists knowledge objects. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeObjectsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeObjectsResponse
+        /// </returns>
+        public ListKnowledgeObjectsResponse ListKnowledgeObjectsWithOptions(ListKnowledgeObjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgeObjects",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKnowledgeObjectsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists knowledge objects in a knowledge base with pagination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists knowledge objects. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeObjectsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeObjectsResponse
+        /// </returns>
+        public async Task<ListKnowledgeObjectsResponse> ListKnowledgeObjectsWithOptionsAsync(ListKnowledgeObjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgeObjects",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKnowledgeObjectsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists knowledge objects in a knowledge base with pagination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists knowledge objects. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeObjectsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeObjectsResponse
+        /// </returns>
+        public ListKnowledgeObjectsResponse ListKnowledgeObjects(ListKnowledgeObjectsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListKnowledgeObjectsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists knowledge objects in a knowledge base with pagination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists knowledge objects. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeObjectsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeObjectsResponse
+        /// </returns>
+        public async Task<ListKnowledgeObjectsResponse> ListKnowledgeObjectsAsync(ListKnowledgeObjectsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListKnowledgeObjectsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -46345,6 +49985,170 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListKnowledgePointsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the registered knowledge sources for a specified knowledge base with pagination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Manages knowledge sources in a knowledge base. The identity is determined by the POP context, and credentials are not returned in the query response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeSourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeSourcesResponse
+        /// </returns>
+        public ListKnowledgeSourcesResponse ListKnowledgeSourcesWithOptions(ListKnowledgeSourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgeSources",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKnowledgeSourcesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the registered knowledge sources for a specified knowledge base with pagination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Manages knowledge sources in a knowledge base. The identity is determined by the POP context, and credentials are not returned in the query response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeSourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeSourcesResponse
+        /// </returns>
+        public async Task<ListKnowledgeSourcesResponse> ListKnowledgeSourcesWithOptionsAsync(ListKnowledgeSourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgeSources",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKnowledgeSourcesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the registered knowledge sources for a specified knowledge base with pagination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Manages knowledge sources in a knowledge base. The identity is determined by the POP context, and credentials are not returned in the query response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeSourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeSourcesResponse
+        /// </returns>
+        public ListKnowledgeSourcesResponse ListKnowledgeSources(ListKnowledgeSourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListKnowledgeSourcesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the registered knowledge sources for a specified knowledge base with pagination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Manages knowledge sources in a knowledge base. The identity is determined by the POP context, and credentials are not returned in the query response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeSourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeSourcesResponse
+        /// </returns>
+        public async Task<ListKnowledgeSourcesResponse> ListKnowledgeSourcesAsync(ListKnowledgeSourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListKnowledgeSourcesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -56065,7 +59869,155 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes multiple upstream dependencies of a node instance in batches.</para>
+        /// <para>Removes an administrator from a specified knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Removes an administrator. Only the owner or an administrator of the knowledge base can perform this operation. The caller and tenant are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveKnowledgeBaseAdministratorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveKnowledgeBaseAdministratorResponse
+        /// </returns>
+        public RemoveKnowledgeBaseAdministratorResponse RemoveKnowledgeBaseAdministratorWithOptions(RemoveKnowledgeBaseAdministratorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdministratorUserId))
+            {
+                body["AdministratorUserId"] = request.AdministratorUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveKnowledgeBaseAdministrator",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveKnowledgeBaseAdministratorResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes an administrator from a specified knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Removes an administrator. Only the owner or an administrator of the knowledge base can perform this operation. The caller and tenant are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveKnowledgeBaseAdministratorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveKnowledgeBaseAdministratorResponse
+        /// </returns>
+        public async Task<RemoveKnowledgeBaseAdministratorResponse> RemoveKnowledgeBaseAdministratorWithOptionsAsync(RemoveKnowledgeBaseAdministratorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdministratorUserId))
+            {
+                body["AdministratorUserId"] = request.AdministratorUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveKnowledgeBaseAdministrator",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveKnowledgeBaseAdministratorResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes an administrator from a specified knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Removes an administrator. Only the owner or an administrator of the knowledge base can perform this operation. The caller and tenant are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveKnowledgeBaseAdministratorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveKnowledgeBaseAdministratorResponse
+        /// </returns>
+        public RemoveKnowledgeBaseAdministratorResponse RemoveKnowledgeBaseAdministrator(RemoveKnowledgeBaseAdministratorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RemoveKnowledgeBaseAdministratorWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes an administrator from a specified knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Removes an administrator. Only the owner or an administrator of the knowledge base can perform this operation. The caller and tenant are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveKnowledgeBaseAdministratorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveKnowledgeBaseAdministratorResponse
+        /// </returns>
+        public async Task<RemoveKnowledgeBaseAdministratorResponse> RemoveKnowledgeBaseAdministratorAsync(RemoveKnowledgeBaseAdministratorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RemoveKnowledgeBaseAdministratorWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes multiple upstream dependencies from a node instance in a single call.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -56128,7 +60080,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes multiple upstream dependencies of a node instance in batches.</para>
+        /// <para>Removes multiple upstream dependencies from a node instance in a single call.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -56191,7 +60143,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes multiple upstream dependencies of a node instance in batches.</para>
+        /// <para>Removes multiple upstream dependencies from a node instance in a single call.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -56214,7 +60166,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes multiple upstream dependencies of a node instance in batches.</para>
+        /// <para>Removes multiple upstream dependencies from a node instance in a single call.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -57681,6 +61633,318 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retries a specified build instance using the original frozen input and configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retries a knowledge base build task instance. The tenant and caller identity are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RetryKnowledgeBaseBuildTaskInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryKnowledgeBaseBuildTaskInstanceResponse
+        /// </returns>
+        public RetryKnowledgeBaseBuildTaskInstanceResponse RetryKnowledgeBaseBuildTaskInstanceWithOptions(RetryKnowledgeBaseBuildTaskInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskInstanceId))
+            {
+                body["TaskInstanceId"] = request.TaskInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RetryKnowledgeBaseBuildTaskInstance",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RetryKnowledgeBaseBuildTaskInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retries a specified build instance using the original frozen input and configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retries a knowledge base build task instance. The tenant and caller identity are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RetryKnowledgeBaseBuildTaskInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryKnowledgeBaseBuildTaskInstanceResponse
+        /// </returns>
+        public async Task<RetryKnowledgeBaseBuildTaskInstanceResponse> RetryKnowledgeBaseBuildTaskInstanceWithOptionsAsync(RetryKnowledgeBaseBuildTaskInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskInstanceId))
+            {
+                body["TaskInstanceId"] = request.TaskInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RetryKnowledgeBaseBuildTaskInstance",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RetryKnowledgeBaseBuildTaskInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retries a specified build instance using the original frozen input and configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retries a knowledge base build task instance. The tenant and caller identity are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RetryKnowledgeBaseBuildTaskInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryKnowledgeBaseBuildTaskInstanceResponse
+        /// </returns>
+        public RetryKnowledgeBaseBuildTaskInstanceResponse RetryKnowledgeBaseBuildTaskInstance(RetryKnowledgeBaseBuildTaskInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RetryKnowledgeBaseBuildTaskInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retries a specified build instance using the original frozen input and configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retries a knowledge base build task instance. The tenant and caller identity are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RetryKnowledgeBaseBuildTaskInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryKnowledgeBaseBuildTaskInstanceResponse
+        /// </returns>
+        public async Task<RetryKnowledgeBaseBuildTaskInstanceResponse> RetryKnowledgeBaseBuildTaskInstanceAsync(RetryKnowledgeBaseBuildTaskInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RetryKnowledgeBaseBuildTaskInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes a specified user’s retrieval access to a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Revokes user retrieval permissions. Only the knowledge base owner or administrator can perform this operation. The caller and tenant are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RevokeKnowledgeBaseRetrievalRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeKnowledgeBaseRetrievalResponse
+        /// </returns>
+        public RevokeKnowledgeBaseRetrievalResponse RevokeKnowledgeBaseRetrievalWithOptions(RevokeKnowledgeBaseRetrievalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrincipalId))
+            {
+                body["PrincipalId"] = request.PrincipalId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrincipalType))
+            {
+                body["PrincipalType"] = request.PrincipalType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RevokeKnowledgeBaseRetrieval",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RevokeKnowledgeBaseRetrievalResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes a specified user’s retrieval access to a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Revokes user retrieval permissions. Only the knowledge base owner or administrator can perform this operation. The caller and tenant are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RevokeKnowledgeBaseRetrievalRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeKnowledgeBaseRetrievalResponse
+        /// </returns>
+        public async Task<RevokeKnowledgeBaseRetrievalResponse> RevokeKnowledgeBaseRetrievalWithOptionsAsync(RevokeKnowledgeBaseRetrievalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrincipalId))
+            {
+                body["PrincipalId"] = request.PrincipalId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrincipalType))
+            {
+                body["PrincipalType"] = request.PrincipalType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RevokeKnowledgeBaseRetrieval",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RevokeKnowledgeBaseRetrievalResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes a specified user’s retrieval access to a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Revokes user retrieval permissions. Only the knowledge base owner or administrator can perform this operation. The caller and tenant are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RevokeKnowledgeBaseRetrievalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeKnowledgeBaseRetrievalResponse
+        /// </returns>
+        public RevokeKnowledgeBaseRetrievalResponse RevokeKnowledgeBaseRetrieval(RevokeKnowledgeBaseRetrievalRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RevokeKnowledgeBaseRetrievalWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes a specified user’s retrieval access to a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Revokes user retrieval permissions. Only the knowledge base owner or administrator can perform this operation. The caller and tenant are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RevokeKnowledgeBaseRetrievalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeKnowledgeBaseRetrievalResponse
+        /// </returns>
+        public async Task<RevokeKnowledgeBaseRetrievalResponse> RevokeKnowledgeBaseRetrievalAsync(RevokeKnowledgeBaseRetrievalRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RevokeKnowledgeBaseRetrievalWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Revokes roles from a workspace member.</para>
         /// </summary>
         /// 
@@ -58697,12 +62961,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Marks multiple task instances as successful.</para>
+        /// <para>Marks multiple node instances as successful.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or higher to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -58754,12 +63018,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Marks multiple task instances as successful.</para>
+        /// <para>Marks multiple node instances as successful.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or higher to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -58811,12 +63075,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Marks multiple task instances as successful.</para>
+        /// <para>Marks multiple node instances as successful.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or higher to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -58834,12 +63098,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Marks multiple task instances as successful.</para>
+        /// <para>Marks multiple node instances as successful.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or higher to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -59613,6 +63877,154 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StopDIJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Requests that a specified build task instance stop and returns its current status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Stops a knowledge base build task instance. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopKnowledgeBaseBuildTaskInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopKnowledgeBaseBuildTaskInstanceResponse
+        /// </returns>
+        public StopKnowledgeBaseBuildTaskInstanceResponse StopKnowledgeBaseBuildTaskInstanceWithOptions(StopKnowledgeBaseBuildTaskInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskInstanceId))
+            {
+                body["TaskInstanceId"] = request.TaskInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopKnowledgeBaseBuildTaskInstance",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopKnowledgeBaseBuildTaskInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Requests that a specified build task instance stop and returns its current status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Stops a knowledge base build task instance. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopKnowledgeBaseBuildTaskInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopKnowledgeBaseBuildTaskInstanceResponse
+        /// </returns>
+        public async Task<StopKnowledgeBaseBuildTaskInstanceResponse> StopKnowledgeBaseBuildTaskInstanceWithOptionsAsync(StopKnowledgeBaseBuildTaskInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskInstanceId))
+            {
+                body["TaskInstanceId"] = request.TaskInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopKnowledgeBaseBuildTaskInstance",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopKnowledgeBaseBuildTaskInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Requests that a specified build task instance stop and returns its current status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Stops a knowledge base build task instance. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopKnowledgeBaseBuildTaskInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopKnowledgeBaseBuildTaskInstanceResponse
+        /// </returns>
+        public StopKnowledgeBaseBuildTaskInstanceResponse StopKnowledgeBaseBuildTaskInstance(StopKnowledgeBaseBuildTaskInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StopKnowledgeBaseBuildTaskInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Requests that a specified build task instance stop and returns its current status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Stops a knowledge base build task instance. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopKnowledgeBaseBuildTaskInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopKnowledgeBaseBuildTaskInstanceResponse
+        /// </returns>
+        public async Task<StopKnowledgeBaseBuildTaskInstanceResponse> StopKnowledgeBaseBuildTaskInstanceAsync(StopKnowledgeBaseBuildTaskInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StopKnowledgeBaseBuildTaskInstanceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -67361,6 +71773,834 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Updates the editable information of a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a knowledge base. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateKnowledgeBaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKnowledgeBaseResponse
+        /// </returns>
+        public UpdateKnowledgeBaseResponse UpdateKnowledgeBaseWithOptions(UpdateKnowledgeBaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateKnowledgeBase",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateKnowledgeBaseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the editable information of a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a knowledge base. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateKnowledgeBaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKnowledgeBaseResponse
+        /// </returns>
+        public async Task<UpdateKnowledgeBaseResponse> UpdateKnowledgeBaseWithOptionsAsync(UpdateKnowledgeBaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateKnowledgeBase",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateKnowledgeBaseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the editable information of a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a knowledge base. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKnowledgeBaseResponse
+        /// </returns>
+        public UpdateKnowledgeBaseResponse UpdateKnowledgeBase(UpdateKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateKnowledgeBaseWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the editable information of a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a knowledge base. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKnowledgeBaseResponse
+        /// </returns>
+        public async Task<UpdateKnowledgeBaseResponse> UpdateKnowledgeBaseAsync(UpdateKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateKnowledgeBaseWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configuration of a knowledge base build task without changing the input and configuration snapshots of created instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a knowledge base build task. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateKnowledgeBaseBuildTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKnowledgeBaseBuildTaskResponse
+        /// </returns>
+        public UpdateKnowledgeBaseBuildTaskResponse UpdateKnowledgeBaseBuildTaskWithOptions(UpdateKnowledgeBaseBuildTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateKnowledgeBaseBuildTaskShrinkRequest request = new UpdateKnowledgeBaseBuildTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Input))
+            {
+                request.InputShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Input, "Input", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RuntimeResource))
+            {
+                request.RuntimeResourceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RuntimeResource, "RuntimeResource", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Trigger))
+            {
+                request.TriggerShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Trigger, "Trigger", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentLocale))
+            {
+                body["ContentLocale"] = request.ContentLocale;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputShrink))
+            {
+                body["Input"] = request.InputShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LlmModel))
+            {
+                body["LlmModel"] = request.LlmModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeResourceShrink))
+            {
+                body["RuntimeResource"] = request.RuntimeResourceShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerShrink))
+            {
+                body["Trigger"] = request.TriggerShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateKnowledgeBaseBuildTask",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateKnowledgeBaseBuildTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configuration of a knowledge base build task without changing the input and configuration snapshots of created instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a knowledge base build task. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateKnowledgeBaseBuildTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKnowledgeBaseBuildTaskResponse
+        /// </returns>
+        public async Task<UpdateKnowledgeBaseBuildTaskResponse> UpdateKnowledgeBaseBuildTaskWithOptionsAsync(UpdateKnowledgeBaseBuildTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateKnowledgeBaseBuildTaskShrinkRequest request = new UpdateKnowledgeBaseBuildTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Input))
+            {
+                request.InputShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Input, "Input", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RuntimeResource))
+            {
+                request.RuntimeResourceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RuntimeResource, "RuntimeResource", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Trigger))
+            {
+                request.TriggerShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Trigger, "Trigger", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentLocale))
+            {
+                body["ContentLocale"] = request.ContentLocale;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputShrink))
+            {
+                body["Input"] = request.InputShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LlmModel))
+            {
+                body["LlmModel"] = request.LlmModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeResourceShrink))
+            {
+                body["RuntimeResource"] = request.RuntimeResourceShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerShrink))
+            {
+                body["Trigger"] = request.TriggerShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateKnowledgeBaseBuildTask",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateKnowledgeBaseBuildTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configuration of a knowledge base build task without changing the input and configuration snapshots of created instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a knowledge base build task. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateKnowledgeBaseBuildTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKnowledgeBaseBuildTaskResponse
+        /// </returns>
+        public UpdateKnowledgeBaseBuildTaskResponse UpdateKnowledgeBaseBuildTask(UpdateKnowledgeBaseBuildTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateKnowledgeBaseBuildTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configuration of a knowledge base build task without changing the input and configuration snapshots of created instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a knowledge base build task. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateKnowledgeBaseBuildTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKnowledgeBaseBuildTaskResponse
+        /// </returns>
+        public async Task<UpdateKnowledgeBaseBuildTaskResponse> UpdateKnowledgeBaseBuildTaskAsync(UpdateKnowledgeBaseBuildTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateKnowledgeBaseBuildTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the name, description, or content of a document or semantic model.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a knowledge object. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateKnowledgeObjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKnowledgeObjectResponse
+        /// </returns>
+        public UpdateKnowledgeObjectResponse UpdateKnowledgeObjectWithOptions(UpdateKnowledgeObjectRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateKnowledgeObjectShrinkRequest request = new UpdateKnowledgeObjectShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Content))
+            {
+                request.ContentShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Content, "Content", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentShrink))
+            {
+                body["Content"] = request.ContentShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectedModifyTime))
+            {
+                body["ExpectedModifyTime"] = request.ExpectedModifyTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeObjectId))
+            {
+                body["KnowledgeObjectId"] = request.KnowledgeObjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadId))
+            {
+                body["UploadId"] = request.UploadId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionNo))
+            {
+                body["VersionNo"] = request.VersionNo;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateKnowledgeObject",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateKnowledgeObjectResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the name, description, or content of a document or semantic model.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a knowledge object. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateKnowledgeObjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKnowledgeObjectResponse
+        /// </returns>
+        public async Task<UpdateKnowledgeObjectResponse> UpdateKnowledgeObjectWithOptionsAsync(UpdateKnowledgeObjectRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateKnowledgeObjectShrinkRequest request = new UpdateKnowledgeObjectShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Content))
+            {
+                request.ContentShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Content, "Content", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentShrink))
+            {
+                body["Content"] = request.ContentShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectedModifyTime))
+            {
+                body["ExpectedModifyTime"] = request.ExpectedModifyTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeObjectId))
+            {
+                body["KnowledgeObjectId"] = request.KnowledgeObjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadId))
+            {
+                body["UploadId"] = request.UploadId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionNo))
+            {
+                body["VersionNo"] = request.VersionNo;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateKnowledgeObject",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateKnowledgeObjectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the name, description, or content of a document or semantic model.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a knowledge object. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateKnowledgeObjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKnowledgeObjectResponse
+        /// </returns>
+        public UpdateKnowledgeObjectResponse UpdateKnowledgeObject(UpdateKnowledgeObjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateKnowledgeObjectWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the name, description, or content of a document or semantic model.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a knowledge object. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateKnowledgeObjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKnowledgeObjectResponse
+        /// </returns>
+        public async Task<UpdateKnowledgeObjectResponse> UpdateKnowledgeObjectAsync(UpdateKnowledgeObjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateKnowledgeObjectWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the name, description, or supported connector configuration of a knowledge source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Manages knowledge sources in a knowledge base. The identity is determined by the POP context, and credentials are not returned in the response.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateKnowledgeSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKnowledgeSourceResponse
+        /// </returns>
+        public UpdateKnowledgeSourceResponse UpdateKnowledgeSourceWithOptions(UpdateKnowledgeSourceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateKnowledgeSourceShrinkRequest request = new UpdateKnowledgeSourceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataSource))
+            {
+                request.DataSourceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataSource, "DataSource", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Document))
+            {
+                request.DocumentShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Document, "Document", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Project))
+            {
+                request.ProjectShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Project, "Project", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceShrink))
+            {
+                body["DataSource"] = request.DataSourceShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentShrink))
+            {
+                body["Document"] = request.DocumentShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectShrink))
+            {
+                body["Project"] = request.ProjectShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["SourceId"] = request.SourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateKnowledgeSource",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateKnowledgeSourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the name, description, or supported connector configuration of a knowledge source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Manages knowledge sources in a knowledge base. The identity is determined by the POP context, and credentials are not returned in the response.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateKnowledgeSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKnowledgeSourceResponse
+        /// </returns>
+        public async Task<UpdateKnowledgeSourceResponse> UpdateKnowledgeSourceWithOptionsAsync(UpdateKnowledgeSourceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateKnowledgeSourceShrinkRequest request = new UpdateKnowledgeSourceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataSource))
+            {
+                request.DataSourceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataSource, "DataSource", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Document))
+            {
+                request.DocumentShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Document, "Document", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Project))
+            {
+                request.ProjectShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Project, "Project", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceShrink))
+            {
+                body["DataSource"] = request.DataSourceShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentShrink))
+            {
+                body["Document"] = request.DocumentShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectShrink))
+            {
+                body["Project"] = request.ProjectShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["SourceId"] = request.SourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateKnowledgeSource",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateKnowledgeSourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the name, description, or supported connector configuration of a knowledge source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Manages knowledge sources in a knowledge base. The identity is determined by the POP context, and credentials are not returned in the response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateKnowledgeSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKnowledgeSourceResponse
+        /// </returns>
+        public UpdateKnowledgeSourceResponse UpdateKnowledgeSource(UpdateKnowledgeSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateKnowledgeSourceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the name, description, or supported connector configuration of a knowledge source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Manages knowledge sources in a knowledge base. The identity is determined by the POP context, and credentials are not returned in the response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateKnowledgeSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKnowledgeSourceResponse
+        /// </returns>
+        public async Task<UpdateKnowledgeSourceResponse> UpdateKnowledgeSourceAsync(UpdateKnowledgeSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateKnowledgeSourceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Updates an MCP server.</para>
         /// </summary>
         /// 
@@ -70873,17 +76113,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously updates a specified node and syncs the changes to Data Studio as a new saved version.</para>
+        /// <para>Asynchronously updates a specified node and syncs the updates to Data Studio to generate a new saved version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is asynchronous. Use the <c>GetUpdateTaskResult</c> operation to poll for the update result.</description></item>
-        /// <item><description>This API updates the information of a specified node, including but not limited to the node name, description, and owner.</description></item>
-        /// <item><description>Changes are synchronized to Data Studio, and Data Studio creates a new saved version.</description></item>
-        /// <item><description>Supports settings for the node trigger method, runtime environment configuration, dependencies, and other detailed parameters.</description></item>
+        /// <item><description>This API operation is asynchronous. You must call the <c>GetUpdateTaskResult</c> operation to poll the update result.</description></item>
+        /// <item><description>This API operation is used to update the information of a specified node, including but not limited to the node name, description, and owner.</description></item>
+        /// <item><description>The modifications are synced to Data Studio, and a new saved version is generated in Data Studio.</description></item>
+        /// <item><description>You can set detailed parameters such as the trigger mode, runtime environment configuration, and dependencies of the node.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -71032,17 +76272,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously updates a specified node and syncs the changes to Data Studio as a new saved version.</para>
+        /// <para>Asynchronously updates a specified node and syncs the updates to Data Studio to generate a new saved version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is asynchronous. Use the <c>GetUpdateTaskResult</c> operation to poll for the update result.</description></item>
-        /// <item><description>This API updates the information of a specified node, including but not limited to the node name, description, and owner.</description></item>
-        /// <item><description>Changes are synchronized to Data Studio, and Data Studio creates a new saved version.</description></item>
-        /// <item><description>Supports settings for the node trigger method, runtime environment configuration, dependencies, and other detailed parameters.</description></item>
+        /// <item><description>This API operation is asynchronous. You must call the <c>GetUpdateTaskResult</c> operation to poll the update result.</description></item>
+        /// <item><description>This API operation is used to update the information of a specified node, including but not limited to the node name, description, and owner.</description></item>
+        /// <item><description>The modifications are synced to Data Studio, and a new saved version is generated in Data Studio.</description></item>
+        /// <item><description>You can set detailed parameters such as the trigger mode, runtime environment configuration, and dependencies of the node.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -71191,17 +76431,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously updates a specified node and syncs the changes to Data Studio as a new saved version.</para>
+        /// <para>Asynchronously updates a specified node and syncs the updates to Data Studio to generate a new saved version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is asynchronous. Use the <c>GetUpdateTaskResult</c> operation to poll for the update result.</description></item>
-        /// <item><description>This API updates the information of a specified node, including but not limited to the node name, description, and owner.</description></item>
-        /// <item><description>Changes are synchronized to Data Studio, and Data Studio creates a new saved version.</description></item>
-        /// <item><description>Supports settings for the node trigger method, runtime environment configuration, dependencies, and other detailed parameters.</description></item>
+        /// <item><description>This API operation is asynchronous. You must call the <c>GetUpdateTaskResult</c> operation to poll the update result.</description></item>
+        /// <item><description>This API operation is used to update the information of a specified node, including but not limited to the node name, description, and owner.</description></item>
+        /// <item><description>The modifications are synced to Data Studio, and a new saved version is generated in Data Studio.</description></item>
+        /// <item><description>You can set detailed parameters such as the trigger mode, runtime environment configuration, and dependencies of the node.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -71220,17 +76460,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously updates a specified node and syncs the changes to Data Studio as a new saved version.</para>
+        /// <para>Asynchronously updates a specified node and syncs the updates to Data Studio to generate a new saved version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is asynchronous. Use the <c>GetUpdateTaskResult</c> operation to poll for the update result.</description></item>
-        /// <item><description>This API updates the information of a specified node, including but not limited to the node name, description, and owner.</description></item>
-        /// <item><description>Changes are synchronized to Data Studio, and Data Studio creates a new saved version.</description></item>
-        /// <item><description>Supports settings for the node trigger method, runtime environment configuration, dependencies, and other detailed parameters.</description></item>
+        /// <item><description>This API operation is asynchronous. You must call the <c>GetUpdateTaskResult</c> operation to poll the update result.</description></item>
+        /// <item><description>This API operation is used to update the information of a specified node, including but not limited to the node name, description, and owner.</description></item>
+        /// <item><description>The modifications are synced to Data Studio, and a new saved version is generated in Data Studio.</description></item>
+        /// <item><description>You can set detailed parameters such as the trigger mode, runtime environment configuration, and dependencies of the node.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -72065,12 +77305,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传 Agent 会话附件</para>
+        /// <para>Issues a file upload URL for an agent session and confirms that the file has been written to the session instance for use in later messages. This operation is available during a canary release. Before calling it, make sure the canary release is enabled for your account and the target region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>将文件通过 OSS 上传到当前账号有权访问的 Agent 会话。先用 prepare 获取 5 分钟公网 PUT 签名，上传原始字节后用 complete 确认，由会话 runtime 下载、校验并写入工作目录。UploadMode 必填，不接受 ContentBase64。须同时检查 POP/BFF 外层错误与 JsonRpcResponse.Error。</para>
+        /// <para>This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.
+        /// Uploads a local file to an agent session that the current caller has access to, and references the file in the conversation. The size of a single file ranges from 1 byte to 10,485,760 bytes (10 MiB). The caller must have access permissions to the target session and the dataworks:UploadAgentSessionFile permission.
+        /// Call sequence.</para>
+        /// <ol>
+        /// <item><description>Use the SessionId of an existing session, set UploadMode to prepare, and pass the original file name, the byte count Size, and the 32-character lowercase hexadecimal ContentMd5 of the original bytes. The prepare step returns UploadId and Signature, issuing only the upload URL without starting a cold session instance.</description></item>
+        /// <item><description>Within the validity period of the signature, send an HTTP PUT request to Signature.Url with the original file bytes as the request body, using all the request headers returned in Signature.Headers. The URL and request headers must be used exactly as provided. The ContentMd5 parameter is in hexadecimal format, while the Content-MD5 signature header is Base64-encoded. The two are not interchangeable. The signature is valid for 5 minutes. For the exact expiration time, see ExpiresAt.</description></item>
+        /// <item><description>After the PUT request succeeds, set UploadMode to complete, pass the UploadId returned by prepare, and keep SessionId, Name, Size, and ContentMd5 consistent. The server resumes the session, and the runtime within the instance downloads the staged object, verifies the size and MD5, writes it to the working directory, and returns Id, Name, RelativePath, and Size. Repeated complete calls use the same UploadId. The same attachment receipt is returned only when the existing file content is identical.</description></item>
+        /// <item><description>Call PromptAgentSession, add a content block with Type set to resource_link, Name set to the original file name, and Uri set to dataagent-attachment: followed by RelativePath in Params.Prompt, and send it along with the text content block. The backend resolves the reference to the working directory of the session based on the current authenticated session.
+        /// For the sample file sample.csv, the original bytes are hello followed by a line feed, Size is 6, and ContentMd5 is b1946ac92492d2347c6235b4d2611184. The SessionId example session and the upload identifier examples are used only to illustrate the parameter structure. Actual calls must use a created session and the values returned by prepare. The Signature.Url example is used only to illustrate the format. The actual PUT request must use the complete signed URL returned by the current prepare call.
+        /// Error handling.
+        /// You must check the outer POP/BFF failures, JsonRpcResponse.Error, and the expected result fields simultaneously. Missing upload stages or size limit exceedances may result in an HTTP 400 response from the gateway, such as MissingUploadMode or InvalidSize. Business rejections such as object not found or metadata mismatch return an HTTP 400 response with a general Code 400 in the public POP, and the Message retains the actual business code, such as SESSION_ATTACHMENT_OBJECT_MISMATCH. Dependency failures, HTTP 5xx errors, timeouts, and unknown execution results must not be treated as parameter rejections or successful uploads, and automatic write retries must not be performed. When the result is unknown, retain the original upload metadata and UploadId, and verify the result first.
+        /// This API operation does not accept ContentBase64. Signature expiration only invalidates the upload authorization and does not indicate that the staged object has been deleted. This description does not guarantee an automatic cleanup cycle for the object.</description></item>
+        /// </ol>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -72126,12 +77378,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传 Agent 会话附件</para>
+        /// <para>Issues a file upload URL for an agent session and confirms that the file has been written to the session instance for use in later messages. This operation is available during a canary release. Before calling it, make sure the canary release is enabled for your account and the target region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>将文件通过 OSS 上传到当前账号有权访问的 Agent 会话。先用 prepare 获取 5 分钟公网 PUT 签名，上传原始字节后用 complete 确认，由会话 runtime 下载、校验并写入工作目录。UploadMode 必填，不接受 ContentBase64。须同时检查 POP/BFF 外层错误与 JsonRpcResponse.Error。</para>
+        /// <para>This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.
+        /// Uploads a local file to an agent session that the current caller has access to, and references the file in the conversation. The size of a single file ranges from 1 byte to 10,485,760 bytes (10 MiB). The caller must have access permissions to the target session and the dataworks:UploadAgentSessionFile permission.
+        /// Call sequence.</para>
+        /// <ol>
+        /// <item><description>Use the SessionId of an existing session, set UploadMode to prepare, and pass the original file name, the byte count Size, and the 32-character lowercase hexadecimal ContentMd5 of the original bytes. The prepare step returns UploadId and Signature, issuing only the upload URL without starting a cold session instance.</description></item>
+        /// <item><description>Within the validity period of the signature, send an HTTP PUT request to Signature.Url with the original file bytes as the request body, using all the request headers returned in Signature.Headers. The URL and request headers must be used exactly as provided. The ContentMd5 parameter is in hexadecimal format, while the Content-MD5 signature header is Base64-encoded. The two are not interchangeable. The signature is valid for 5 minutes. For the exact expiration time, see ExpiresAt.</description></item>
+        /// <item><description>After the PUT request succeeds, set UploadMode to complete, pass the UploadId returned by prepare, and keep SessionId, Name, Size, and ContentMd5 consistent. The server resumes the session, and the runtime within the instance downloads the staged object, verifies the size and MD5, writes it to the working directory, and returns Id, Name, RelativePath, and Size. Repeated complete calls use the same UploadId. The same attachment receipt is returned only when the existing file content is identical.</description></item>
+        /// <item><description>Call PromptAgentSession, add a content block with Type set to resource_link, Name set to the original file name, and Uri set to dataagent-attachment: followed by RelativePath in Params.Prompt, and send it along with the text content block. The backend resolves the reference to the working directory of the session based on the current authenticated session.
+        /// For the sample file sample.csv, the original bytes are hello followed by a line feed, Size is 6, and ContentMd5 is b1946ac92492d2347c6235b4d2611184. The SessionId example session and the upload identifier examples are used only to illustrate the parameter structure. Actual calls must use a created session and the values returned by prepare. The Signature.Url example is used only to illustrate the format. The actual PUT request must use the complete signed URL returned by the current prepare call.
+        /// Error handling.
+        /// You must check the outer POP/BFF failures, JsonRpcResponse.Error, and the expected result fields simultaneously. Missing upload stages or size limit exceedances may result in an HTTP 400 response from the gateway, such as MissingUploadMode or InvalidSize. Business rejections such as object not found or metadata mismatch return an HTTP 400 response with a general Code 400 in the public POP, and the Message retains the actual business code, such as SESSION_ATTACHMENT_OBJECT_MISMATCH. Dependency failures, HTTP 5xx errors, timeouts, and unknown execution results must not be treated as parameter rejections or successful uploads, and automatic write retries must not be performed. When the result is unknown, retain the original upload metadata and UploadId, and verify the result first.
+        /// This API operation does not accept ContentBase64. Signature expiration only invalidates the upload authorization and does not indicate that the staged object has been deleted. This description does not guarantee an automatic cleanup cycle for the object.</description></item>
+        /// </ol>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -72187,12 +77451,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传 Agent 会话附件</para>
+        /// <para>Issues a file upload URL for an agent session and confirms that the file has been written to the session instance for use in later messages. This operation is available during a canary release. Before calling it, make sure the canary release is enabled for your account and the target region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>将文件通过 OSS 上传到当前账号有权访问的 Agent 会话。先用 prepare 获取 5 分钟公网 PUT 签名，上传原始字节后用 complete 确认，由会话 runtime 下载、校验并写入工作目录。UploadMode 必填，不接受 ContentBase64。须同时检查 POP/BFF 外层错误与 JsonRpcResponse.Error。</para>
+        /// <para>This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.
+        /// Uploads a local file to an agent session that the current caller has access to, and references the file in the conversation. The size of a single file ranges from 1 byte to 10,485,760 bytes (10 MiB). The caller must have access permissions to the target session and the dataworks:UploadAgentSessionFile permission.
+        /// Call sequence.</para>
+        /// <ol>
+        /// <item><description>Use the SessionId of an existing session, set UploadMode to prepare, and pass the original file name, the byte count Size, and the 32-character lowercase hexadecimal ContentMd5 of the original bytes. The prepare step returns UploadId and Signature, issuing only the upload URL without starting a cold session instance.</description></item>
+        /// <item><description>Within the validity period of the signature, send an HTTP PUT request to Signature.Url with the original file bytes as the request body, using all the request headers returned in Signature.Headers. The URL and request headers must be used exactly as provided. The ContentMd5 parameter is in hexadecimal format, while the Content-MD5 signature header is Base64-encoded. The two are not interchangeable. The signature is valid for 5 minutes. For the exact expiration time, see ExpiresAt.</description></item>
+        /// <item><description>After the PUT request succeeds, set UploadMode to complete, pass the UploadId returned by prepare, and keep SessionId, Name, Size, and ContentMd5 consistent. The server resumes the session, and the runtime within the instance downloads the staged object, verifies the size and MD5, writes it to the working directory, and returns Id, Name, RelativePath, and Size. Repeated complete calls use the same UploadId. The same attachment receipt is returned only when the existing file content is identical.</description></item>
+        /// <item><description>Call PromptAgentSession, add a content block with Type set to resource_link, Name set to the original file name, and Uri set to dataagent-attachment: followed by RelativePath in Params.Prompt, and send it along with the text content block. The backend resolves the reference to the working directory of the session based on the current authenticated session.
+        /// For the sample file sample.csv, the original bytes are hello followed by a line feed, Size is 6, and ContentMd5 is b1946ac92492d2347c6235b4d2611184. The SessionId example session and the upload identifier examples are used only to illustrate the parameter structure. Actual calls must use a created session and the values returned by prepare. The Signature.Url example is used only to illustrate the format. The actual PUT request must use the complete signed URL returned by the current prepare call.
+        /// Error handling.
+        /// You must check the outer POP/BFF failures, JsonRpcResponse.Error, and the expected result fields simultaneously. Missing upload stages or size limit exceedances may result in an HTTP 400 response from the gateway, such as MissingUploadMode or InvalidSize. Business rejections such as object not found or metadata mismatch return an HTTP 400 response with a general Code 400 in the public POP, and the Message retains the actual business code, such as SESSION_ATTACHMENT_OBJECT_MISMATCH. Dependency failures, HTTP 5xx errors, timeouts, and unknown execution results must not be treated as parameter rejections or successful uploads, and automatic write retries must not be performed. When the result is unknown, retain the original upload metadata and UploadId, and verify the result first.
+        /// This API operation does not accept ContentBase64. Signature expiration only invalidates the upload authorization and does not indicate that the staged object has been deleted. This description does not guarantee an automatic cleanup cycle for the object.</description></item>
+        /// </ol>
         /// </description>
         /// 
         /// <param name="request">
@@ -72210,12 +77486,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传 Agent 会话附件</para>
+        /// <para>Issues a file upload URL for an agent session and confirms that the file has been written to the session instance for use in later messages. This operation is available during a canary release. Before calling it, make sure the canary release is enabled for your account and the target region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>将文件通过 OSS 上传到当前账号有权访问的 Agent 会话。先用 prepare 获取 5 分钟公网 PUT 签名，上传原始字节后用 complete 确认，由会话 runtime 下载、校验并写入工作目录。UploadMode 必填，不接受 ContentBase64。须同时检查 POP/BFF 外层错误与 JsonRpcResponse.Error。</para>
+        /// <para>This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.
+        /// Uploads a local file to an agent session that the current caller has access to, and references the file in the conversation. The size of a single file ranges from 1 byte to 10,485,760 bytes (10 MiB). The caller must have access permissions to the target session and the dataworks:UploadAgentSessionFile permission.
+        /// Call sequence.</para>
+        /// <ol>
+        /// <item><description>Use the SessionId of an existing session, set UploadMode to prepare, and pass the original file name, the byte count Size, and the 32-character lowercase hexadecimal ContentMd5 of the original bytes. The prepare step returns UploadId and Signature, issuing only the upload URL without starting a cold session instance.</description></item>
+        /// <item><description>Within the validity period of the signature, send an HTTP PUT request to Signature.Url with the original file bytes as the request body, using all the request headers returned in Signature.Headers. The URL and request headers must be used exactly as provided. The ContentMd5 parameter is in hexadecimal format, while the Content-MD5 signature header is Base64-encoded. The two are not interchangeable. The signature is valid for 5 minutes. For the exact expiration time, see ExpiresAt.</description></item>
+        /// <item><description>After the PUT request succeeds, set UploadMode to complete, pass the UploadId returned by prepare, and keep SessionId, Name, Size, and ContentMd5 consistent. The server resumes the session, and the runtime within the instance downloads the staged object, verifies the size and MD5, writes it to the working directory, and returns Id, Name, RelativePath, and Size. Repeated complete calls use the same UploadId. The same attachment receipt is returned only when the existing file content is identical.</description></item>
+        /// <item><description>Call PromptAgentSession, add a content block with Type set to resource_link, Name set to the original file name, and Uri set to dataagent-attachment: followed by RelativePath in Params.Prompt, and send it along with the text content block. The backend resolves the reference to the working directory of the session based on the current authenticated session.
+        /// For the sample file sample.csv, the original bytes are hello followed by a line feed, Size is 6, and ContentMd5 is b1946ac92492d2347c6235b4d2611184. The SessionId example session and the upload identifier examples are used only to illustrate the parameter structure. Actual calls must use a created session and the values returned by prepare. The Signature.Url example is used only to illustrate the format. The actual PUT request must use the complete signed URL returned by the current prepare call.
+        /// Error handling.
+        /// You must check the outer POP/BFF failures, JsonRpcResponse.Error, and the expected result fields simultaneously. Missing upload stages or size limit exceedances may result in an HTTP 400 response from the gateway, such as MissingUploadMode or InvalidSize. Business rejections such as object not found or metadata mismatch return an HTTP 400 response with a general Code 400 in the public POP, and the Message retains the actual business code, such as SESSION_ATTACHMENT_OBJECT_MISMATCH. Dependency failures, HTTP 5xx errors, timeouts, and unknown execution results must not be treated as parameter rejections or successful uploads, and automatic write retries must not be performed. When the result is unknown, retain the original upload metadata and UploadId, and verify the result first.
+        /// This API operation does not accept ContentBase64. Signature expiration only invalidates the upload authorization and does not indicate that the staged object has been deleted. This description does not guarantee an automatic cleanup cycle for the object.</description></item>
+        /// </ol>
         /// </description>
         /// 
         /// <param name="request">

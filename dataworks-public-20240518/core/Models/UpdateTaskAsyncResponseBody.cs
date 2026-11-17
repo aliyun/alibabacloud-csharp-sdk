@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateTaskAsyncResponseBody : TeaModel {
         /// <summary>
-        /// <para>The operation ID, used to retrieve the result of the asynchronous node update. You can obtain this value from the <c>UpdateTaskAsync</c> operation.</para>
+        /// <para>The operation ID, which is used to query the result of the asynchronous node update. You can obtain this ID from the <c>UpdateTaskAsync</c> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e15ad21c-b0e9-4792-8f55-b037xxxxxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string OperationId { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of this request. If an error occurs, you can use this ID to troubleshoot the issue.</para>
+        /// <para>The unique ID of the request. If an error occurs, you can use this ID to troubleshoot the issue.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000001</para>

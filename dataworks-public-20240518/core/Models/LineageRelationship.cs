@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The destination entity.</para>
+        /// <para>The target entity.</para>
         /// </summary>
         [NameInMap("DstEntity")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>ID</para>
         /// 
         /// <b>Example:</b>
-        /// <para>maxcompute-table.p.table:custom-table.xxx:custom-sql.123</para>
+        /// <para>as78d756asd</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public LineageEntity SrcEntity { get; set; }
 
         /// <summary>
-        /// <para>The node.</para>
+        /// <para>The task.</para>
         /// </summary>
         [NameInMap("Task")]
         [Validation(Required=false)]

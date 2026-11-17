@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The results of the batch operation. The data structure is a map where the key is the task instance ID and the value is the result information.</para>
+        /// <para>The results of the batch operation. Each map entry uses a node instance ID as the key and the corresponding operation result as the value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;10001&quot;: {&quot;Success&quot;: false, &quot;Message&quot;: &quot;The instance does not exist.&quot;}}</para>
