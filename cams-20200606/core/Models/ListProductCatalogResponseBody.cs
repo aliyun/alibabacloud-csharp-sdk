@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The details about the access denial.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description><para>OK indicates that the request was successful.</para>
+        /// <item><description><para>A value of OK indicates that the request is successful.</para>
         /// </description></item>
         /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public ListProductCatalogResponseBodyModelPaging Paging { get; set; }
             public class ListProductCatalogResponseBodyModelPaging : TeaModel {
                 /// <summary>
-                /// <para>The cursor position for pagination.</para>
+                /// <para>The pagination cursors.</para>
                 /// </summary>
                 [NameInMap("Cursors")]
                 [Validation(Required=false)]
                 public ListProductCatalogResponseBodyModelPagingCursors Cursors { get; set; }
                 public class ListProductCatalogResponseBodyModelPagingCursors : TeaModel {
                     /// <summary>
-                    /// <para>The position of the next record.</para>
+                    /// <para>The cursor for the next record.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>sjsuueu83838</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     public string After { get; set; }
 
                     /// <summary>
-                    /// <para>The position of the previous record.</para>
+                    /// <para>The cursor for the previous record.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>sjjsjdjjdjd83883</para>

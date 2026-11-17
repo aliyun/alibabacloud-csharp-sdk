@@ -30,20 +30,20 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BizExtendShrink { get; set; }
 
         /// <summary>
-        /// <para>The source flowCode for creation.</para>
+        /// <para>The source flow code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("CreateFromFlowCode")]
         [Validation(Required=false)]
         public string CreateFromFlowCode { get; set; }
 
         /// <summary>
-        /// <para>The source flowVersion for creation.</para>
+        /// <para>The source flow version.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>Example value example value example value</para>
         /// </summary>
         [NameInMap("CreateFromFlowVersion")]
         [Validation(Required=false)]
@@ -66,22 +66,32 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string FlowTriggerType { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The lifecycle extension input parameters.</para>
         /// </summary>
         [NameInMap("LifeCycleExtendData")]
         [Validation(Required=false)]
+        [Obsolete]
         public string LifeCycleExtendDataShrink { get; set; }
+
+        /// <summary>
+        /// <para>The lifecycle extension input parameters.</para>
+        /// </summary>
+        [NameInMap("LifeCycleExtendDataV2")]
+        [Validation(Required=false)]
+        public string LifeCycleExtendDataV2Shrink { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The flow remarks.</para>
+        /// <para>The flow remark.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Send verification template triggered by API</para>
+        /// <para>Trigger and deliver a verification template through the API</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]

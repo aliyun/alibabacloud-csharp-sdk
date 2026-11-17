@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string PhoneNumber { get; set; }
 
         /// <summary>
-        /// <para>The profile picture URL.</para>
+        /// <para>The URL of the profile picture.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://a.img">http://a.img</a></para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The industry vertical.</para>
+        /// <para>The industry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OTHER</para>

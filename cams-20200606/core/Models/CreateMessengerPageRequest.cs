@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public List<string> AdAccountIds { get; set; }
 
         /// <summary>
-        /// <para>The authorization code obtained after the embedded authorization is completed.</para>
+        /// <para>The authorization code obtained after the embedding process is completed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AuthenticationCode { get; set; }
 
         /// <summary>
-        /// <para>The Business platform ID.</para>
+        /// <para>The ID of the Business platform.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BusinessId { get; set; }
 
         /// <summary>
-        /// <para>The SpaceId of the ISV sub-customer or the instance ID of the direct customer.</para>
+        /// <para>The space ID of the ISV sub-customer or the instance ID of the direct customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The PageId of the messenger.</para>
+        /// <para>The Page ID of the Messenger.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

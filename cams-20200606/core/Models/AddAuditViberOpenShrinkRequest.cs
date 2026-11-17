@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AuditResult { get; set; }
 
         /// <summary>
-        /// <para>The Space ID of the ISV sub-customer.</para>
+        /// <para>The space ID of the ISV sub-customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

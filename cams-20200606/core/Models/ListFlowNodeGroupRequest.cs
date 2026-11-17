@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page.</para>
+        /// <para>The number of entries per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -582,6 +582,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <para>The collection of template parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        ///   &quot;param1&quot;: &quot;value1&quot;,
+        ///   &quot;param2&quot;: &quot;value2&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("TemplateParams")]
         [Validation(Required=false)]

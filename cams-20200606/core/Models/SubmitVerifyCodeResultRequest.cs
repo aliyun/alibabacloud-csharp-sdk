@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string MessageId { get; set; }
 
         /// <summary>
-        /// <para>The verification result.</para>
+        /// <para>The backfill result.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

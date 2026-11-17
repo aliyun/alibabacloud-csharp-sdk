@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetFbInstagramPagesRequest : TeaModel {
         /// <summary>
-        /// <para>The personal access token.
-        /// This field is not required if you use Alibaba Cloud AccessKey pair (AK+SK) or STS temporary authorization.</para>
+        /// <para>The personal access token. This parameter is not required if you use an Alibaba Cloud AccessKey pair or Security Token Service (STS) for temporary authorization.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,7 +21,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessToken { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. The unique identifier of the instance.</para>
+        /// <para>The instance ID, which is the unique identity of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

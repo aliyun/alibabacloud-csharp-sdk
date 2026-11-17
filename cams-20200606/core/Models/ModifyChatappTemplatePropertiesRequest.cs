@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public bool? AllowSend { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to block sending after the Utility template category is changed.</para>
+        /// <para>Specifies whether sending is blocked for utility templates after a category change.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// <para>The template language. For more information about language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</para>
+        /// <para>The template language. For detailed language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

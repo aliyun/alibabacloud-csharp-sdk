@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListMarketingFlowResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The request status code.</para>
+        /// <para>The status code of the request.</para>
         /// <list type="bullet">
-        /// <item><description><para>OK indicates that the request was successful.</para>
+        /// <item><description><para>A value of OK indicates that the request is successful.</para>
         /// </description></item>
         /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
@@ -36,14 +36,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data object.</para>
+        /// <para>The data object returned in the response.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListMarketingFlowResponseBodyData> Data { get; set; }
         public class ListMarketingFlowResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The campaign code.</para>
+            /// <para>The operational activity code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3243243***</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string ActivityCode { get; set; }
 
             /// <summary>
-            /// <para>The campaign description.</para>
+            /// <para>The operational activity description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aaa</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string ActivityDesc { get; set; }
 
             /// <summary>
-            /// <para>The campaign name.</para>
+            /// <para>The operational activity name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aaa</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string ActivityName { get; set; }
 
             /// <summary>
-            /// <para>The campaign status.</para>
+            /// <para>The operational activity status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>active</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string BizCode { get; set; }
 
             /// <summary>
-            /// <para>The business extension information. Default value: &quot;{}&quot;.</para>
+            /// <para>The business extension information. Default value: {}.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -103,8 +103,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public Dictionary<string, object> BizExtend { get; set; }
 
             /// <summary>
-            /// <para>The upgrade start time. The upgrade start time is specified as a cron expression.</para>
-            /// <para>For example, <c>0 0 4 1/1 * ?</c> indicates that the upgrade starts at 4:00 on the first day of each month and is performed at 4:00 every day.</para>
+            /// <para>The cron expression for the upgrade start time. For example, <c>0 0 4 1/1 * ?</c> indicates that the upgrade starts at 04:00 on the first day of each month and runs at 04:00 every day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0 0 4 1/1 * ?</para>
@@ -114,7 +113,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string CronExpression { get; set; }
 
             /// <summary>
-            /// <para>The end time.</para>
+            /// <para>The end time. Format: YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-01 XX1:11:11</para>
@@ -127,14 +126,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The execution method.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1(默认corn)</para>
+            /// <para>1 (default: cron)</para>
             /// </summary>
             [NameInMap("ExecutionType")]
             [Validation(Required=false)]
             public string ExecutionType { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. Format: YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-XX-01 11:11:11</para>
@@ -144,7 +143,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The modification time (deprecated).</para>
+            /// <para>The modification time. <b>[Deprecated]</b></para>
             /// 
             /// <b>Example:</b>
             /// <para>N/A</para>
@@ -164,7 +163,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether custom parameters are enabled.</para>
+            /// <para>Specifies whether custom parameters are enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Y</para>
@@ -177,14 +176,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The custom user parameters.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;CustomerLimit\&quot;:false}</para>
+            /// <para>{&quot;CustomerLimit&quot;:false}</para>
             /// </summary>
             [NameInMap("Params")]
             [Validation(Required=false)]
             public Dictionary<string, object> Params { get; set; }
 
             /// <summary>
-            /// <para>The associated flow code.</para>
+            /// <para>The code of the associated flow.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dsafdsf***</para>
@@ -227,14 +226,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The specific time. This parameter is valid when the execution method is set to 2.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>特定时间(执行方式为2时)</para>
+            /// <para>Specific time (when the execution method is 2)</para>
             /// </summary>
             [NameInMap("SpecificTime")]
             [Validation(Required=false)]
             public string SpecificTime { get; set; }
 
             /// <summary>
-            /// <para>The start time.</para>
+            /// <para>The start time. Format: YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-XX 11:11:11</para>
@@ -244,7 +243,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string StartDate { get; set; }
 
             /// <summary>
-            /// <para>The tenant.</para>
+            /// <para>The tenant code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1111</para>
@@ -256,7 +255,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
-        /// <para>The message returned for the request.</para>
+        /// <para>The message returned in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NULL</para>
@@ -266,7 +265,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID of the request. The ID is a unique identifier generated by Alibaba Cloud for the request and can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CB6122C9-09B5-5926-**476A96CB0</para>
@@ -276,10 +275,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The call was successful.                                 </description></item>
-        /// <item><description>false: The call failed.</description></item>
+        /// <item><description>true: The call is successful.                                 </description></item>
+        /// <item><description>false: The call fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -290,7 +289,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries in the list.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

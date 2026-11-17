@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class UpdateChatFlowLogSettingRequest : TeaModel {
         /// <summary>
-        /// <para>The flow code. You can view the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a>.</para>
+        /// <para>The flow code. You can view the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9ccc41**************************</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string FlowCode { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the setting. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2937212.html">ReadChatFlowLogSetting</a> operation.</para>
+        /// <para>The unique ID of the settings. You can obtain the unique ID by calling the <a href="https://api.aliyun.com/document/cams/2020-06-06/ReadChatFlowLogSetting">ReadChatFlowLogSetting</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -46,9 +46,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <list type="bullet">
         /// <item><description><para>ENABLED: Enables log writing.</para>
         /// </description></item>
-        /// <item><description><para>DISABLED: Disables log writing but retains the Simple Log Service log instance.</para>
+        /// <item><description><para>DISABLED: Disables log writing and retains the Simple Log Service instance.</para>
         /// </description></item>
-        /// <item><description><para>DELETED: Disables log writing and deletes the Simple Log Service log instance.</para>
+        /// <item><description><para>DELETED: Disables log writing and deletes the Simple Log Service instance.</para>
         /// </description></item>
         /// </list>
         /// 

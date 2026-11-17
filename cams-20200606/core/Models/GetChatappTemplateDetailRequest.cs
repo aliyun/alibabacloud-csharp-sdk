@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The WabaId of the ISV customer.</para>
         /// <remarks>
-        /// <para>Deprecated parameter. Use CustSpaceId instead.</para>
+        /// <para>This parameter is deprecated. Use CustSpaceId instead.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The ISV verification code, which is used to verify whether the sub-account is authorized by the ISV.</para>
+        /// <para>The ISV verification code, which is used to verify whether the RAM user is authorized by the ISV.</para>
         /// 
         /// <b>Example:</b>
         /// <para>skdi3kksloslikdkkdk</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string IsvCode { get; set; }
 
         /// <summary>
-        /// <para>The language of the template. For detailed language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</para>
+        /// <para>The language of the template. For more information about language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The code of the template.</para>
+        /// <para>The template code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>****4b5c79c9432497a075bdfca36bf5</para>

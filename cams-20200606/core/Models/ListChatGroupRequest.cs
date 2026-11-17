@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListChatGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The business phone number.</para>
+        /// <para>The business number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The channel type. Valid values: <b>WHATSAPP</b>.</para>
         /// <remarks>
-        /// <para>Only the WhatsApp channel type is supported.</para>
+        /// <para>Currently, only messages of the WhatsApp channel type are supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ChannelType { get; set; }
 
         /// <summary>
-        /// <para>The SpaceId or instance ID of the ISV sub-customer. This is the channel ID, which can be viewed on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</para>
+        /// <para>The space ID or instance ID of the ISV sub-customer, which is the channel ID. You can view the channel ID on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,17 +57,17 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The group status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ACTIVE: In use.</para>
+        /// <item><description><para>ACTIVE: The group is in use.</para>
         /// </description></item>
-        /// <item><description><para>INACTIVE: Not activated.</para>
+        /// <item><description><para>INACTIVE: The group is inactive.</para>
         /// </description></item>
-        /// <item><description><para>SUSPENDED: Suspended.</para>
+        /// <item><description><para>SUSPENDED: The group is suspended.</para>
         /// </description></item>
-        /// <item><description><para>CREATING: Being created.</para>
+        /// <item><description><para>CREATING: The group is being created.</para>
         /// </description></item>
-        /// <item><description><para>DELETING: Being deleted.</para>
+        /// <item><description><para>DELETING: The group is being deleted.</para>
         /// </description></item>
-        /// <item><description><para>UPDATING: Being updated.</para>
+        /// <item><description><para>UPDATING: The group is being updated.</para>
         /// </description></item>
         /// </list>
         /// 

@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The response content.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Response")]
         [Validation(Required=false)]
         public Dictionary<string, object> Response { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. Valid values:</para>
+        /// <para>Specifies whether the operation is successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>true: Successful.</para>
         /// </description></item>

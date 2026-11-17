@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class UpdateChatGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The business phone number. You can view the business phone number by calling the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</para>
+        /// <para>The business phone number. You can call the <a href="https://api.aliyun.com/document/cams/2020-06-06/ListChatGroup">ListChatGroup</a> operation to query the business phone number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,10 +23,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The channel type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>WHATSAPP</b>.</description></item>
+        /// <item><description><b>WHATSAPP</b></description></item>
         /// </list>
         /// <remarks>
-        /// <para>Only the WhatsApp channel type is supported.</para>
+        /// <para>Currently, only the WhatsApp channel is supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ChannelType { get; set; }
 
         /// <summary>
-        /// <para>The space ID of the ISV sub-customer, which is also the instance ID. This is the channel ID, which can be viewed on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</para>
+        /// <para>The space ID or instance ID of the ISV sub-customer, which is the channel ID. You can view the channel ID on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channels Management</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The group ID. You can view the group ID by calling the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</para>
+        /// <para>The group ID. You can call the <a href="https://api.aliyun.com/document/cams/2020-06-06/ListChatGroup">ListChatGroup</a> operation to query the group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,11 +75,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The group profile picture.</para>
         /// <remarks>
-        /// <para>Image restrictions:</para>
+        /// <para>Image limits:</para>
         /// <list type="bullet">
-        /// <item><description>Supported MIME type: image/jpeg</description></item>
-        /// <item><description>Maximum image size: 5 MB</description></item>
-        /// <item><description>The image must be square with a minimum dimension of 192 × 192 pixels.</description></item>
+        /// <item><description>Supported MIME type: image/jpeg.</description></item>
+        /// <item><description>Maximum image size: 5 MB.</description></item>
+        /// <item><description>The image must be square, with a minimum width and height of 192 × 192 pixels.</description></item>
         /// </list>
         /// </remarks>
         /// </summary>

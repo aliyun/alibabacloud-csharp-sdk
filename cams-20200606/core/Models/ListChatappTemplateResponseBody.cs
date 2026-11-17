@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListChatappTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The status code of the request.</para>
         /// <list type="bullet">
-        /// <item><description><para>A value of OK indicates that the request was successful.</para>
+        /// <item><description><para>A value of OK indicates that the request is successful.</para>
         /// </description></item>
         /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// </description></item>
             /// <item><description><para><b>auditing</b>: Under review.</para>
             /// </description></item>
-            /// <item><description><para><b>unaudit</b>: Review suspended.</para>
+            /// <item><description><para><b>unaudit</b>: Review paused.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -63,22 +63,22 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string AuditStatus { get; set; }
 
             /// <summary>
-            /// <para>The WhatsApp template category. Valid values:</para>
+            /// <para>The categorization of the WhatsApp template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>UTILITY</b>: Transaction-related.</para>
+            /// <item><description><para><b>UTILITY</b>: Transactional.</para>
             /// </description></item>
-            /// <item><description><para><b>MARKETING</b>: Marketing template.</para>
+            /// <item><description><para><b>MARKETING</b>: Marketing.</para>
             /// </description></item>
-            /// <item><description><para><b>AUTHENTICATION</b>: Identity verification.</para>
+            /// <item><description><para><b>AUTHENTICATION</b>: authenticate.</para>
             /// </description></item>
             /// </list>
-            /// <para>Viber template category. Valid values:</para>
+            /// <para>The categorization of Viber templates. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>UTILITY</b>: Transaction-related.</para>
+            /// <item><description><para><b>UTILITY</b>: Transactional.</para>
             /// </description></item>
-            /// <item><description><para><b>MARKETING</b>: Marketing template.</para>
+            /// <item><description><para><b>MARKETING</b>: Marketing.</para>
             /// </description></item>
-            /// <item><description><para><b>AUTHENTICATION</b>: Identity verification.</para>
+            /// <item><description><para><b>AUTHENTICATION</b>: authenticate.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// <para>The time when the template was last updated.</para>
+            /// <para>The last modification time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1711006633000</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public long? LastUpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The reason why the template was rejected during review.</para>
+            /// <para>The reason why the template was rejected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -172,10 +172,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is reserved for internal use.</para>
+        /// <para>The internal parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

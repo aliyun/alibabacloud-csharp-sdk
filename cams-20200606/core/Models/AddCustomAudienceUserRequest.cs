@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AdAccountId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether this is the last batch of data.</para>
+        /// <para>The flag that indicates whether this is the last batch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -31,7 +31,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public bool? BatchLastFlag { get; set; }
 
         /// <summary>
-        /// <para>The space ID of the Independent Software Vendor (ISV) sub-customer or the instance ID of a direct customer.</para>
+        /// <para>The SpaceId of the ISV sub-customer.</para>
+        /// <list type="bullet">
+        /// <item><description>The instance ID of the direct customer.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +56,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustomAudienceId { get; set; }
 
         /// <summary>
-        /// <para>The estimated total number of users.</para>
+        /// <para>The estimated number of phone numbers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>26</para>
@@ -67,7 +70,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The Page ID for Messenger.</para>
+        /// <para>The PageId of Messenger.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,7 +89,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>A list of users.</para>
+        /// <para>The list of users.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Users")]

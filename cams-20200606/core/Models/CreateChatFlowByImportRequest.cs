@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public Dictionary<string, object> BizExtend { get; set; }
 
         /// <summary>
-        /// <para>The imported flow DSL data, which is a JSON-formatted string. You can arrange flow components on the canvas in the flow orchestration console in advance, save the flow, and then click <b>Settings</b> &gt; <b>Export</b> in the upper-right corner of the canvas to export a JSON data file for viewing.</para>
+        /// <para>The imported flow DSL data, which is a JSON-formatted string. You can orchestrate the flow components on the canvas in the Flow Editor in advance, save the flow, and then click <b>Settings</b> &gt; <b>Export</b> in the upper-right corner of the canvas to export and view it as a JSON data file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The flow remarks.</para>
+        /// <para>The remark of the flow.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Trigger Subscription.</para>
+        /// <para>Trigger subscription</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
@@ -72,10 +72,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The flow title.</para>
+        /// <para>The title of the flow.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>WhatsApp Trigger Subscription.</para>
+        /// <para>WhatsApp trigger subscription</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

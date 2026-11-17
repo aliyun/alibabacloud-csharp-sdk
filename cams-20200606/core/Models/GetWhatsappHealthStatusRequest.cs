@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetWhatsappHealthStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The space ID of the RAM user within the independent software vendor (ISV) account or the instance ID of the customer of Alibaba Cloud.</para>
+        /// <para>The space ID of the ISV sub-customer or the instance ID of the direct customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,15 +32,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <para>The node type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>template: message template</para>
-        /// </description></item>
-        /// <item><description><para>phone: phone number</para>
-        /// </description></item>
-        /// <item><description><para>waba: WhatsApp Business Account (WABA)</para>
-        /// </description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +46,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The phone number of the enterprise.</para>
+        /// <para>The merchant phone number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>86138***</para>
@@ -83,7 +74,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string TemplateCode { get; set; }
 
         /// <summary>
-        /// <para>WabaId</para>
+        /// <para>The WABA ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>299399****</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BizCode { get; set; }
 
         /// <summary>
-        /// <para>The business extension information. Default value: an empty collection.</para>
+        /// <para>The business extension information. Default value: an empty set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>flowCode</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SampleValueSampleValue</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("FlowCode")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The flow status.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SampleValueSampleValue</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("FlowStatus")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string FlowTriggerType { get; set; }
 
         /// <summary>
-        /// <para>The search keyword. This parameter is used for fuzzy match of flow names.</para>
+        /// <para>The search keyword. This parameter is used to perform a fuzzy match on flow names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LLM</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The phone number.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SampleValue</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The title.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SampleValueSampleValue</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

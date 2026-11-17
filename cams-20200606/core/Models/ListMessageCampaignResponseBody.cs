@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListMessageCampaignResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the access denial.</para>
+        /// <para>The access denial details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description><para>A value of OK indicates that the request was successful.</para>
+        /// <item><description><para>OK: The request was successful.</para>
         /// </description></item>
         /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public List<ListMessageCampaignResponseBodyData> Data { get; set; }
         public class ListMessageCampaignResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the Meta ad account.</para>
+            /// <para>The Meta ad account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2339**</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string BudgetType { get; set; }
 
             /// <summary>
-            /// <para>The campaign ID.</para>
+            /// <para>The budget ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>233**</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string CampaignId { get; set; }
 
             /// <summary>
-            /// <para>The name of the campaign.</para>
+            /// <para>The budget name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>campaign-name</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string CampaignName { get; set; }
 
             /// <summary>
-            /// <para>The time when the campaign was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>173029392838</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The Page ID for Messenger.</para>
+            /// <para>The Page ID of Messenger.</para>
             /// 
             /// <b>Example:</b>
             /// <para>238***</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string PageId { get; set; }
 
             /// <summary>
-            /// <para>The status of the campaign.</para>
+            /// <para>The budget status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AVAILABLE</para>
@@ -147,9 +147,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: successful.</para>
+        /// <item><description><para>true: The operation was successful.</para>
         /// </description></item>
-        /// <item><description><para>false: failed.</para>
+        /// <item><description><para>false: The operation failed.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>70</para>

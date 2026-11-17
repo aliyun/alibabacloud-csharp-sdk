@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListFlowNodePrototypeV2ResponseBody : TeaModel {
         /// <summary>
-        /// <para>The access denied details.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public ListFlowNodePrototypeV2ResponseBodyData Data { get; set; }
         public class ListFlowNodePrototypeV2ResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of request result data.</para>
+            /// <para>The list of result data.</para>
             /// </summary>
             [NameInMap("Model")]
             [Validation(Required=false)]
             public List<ListFlowNodePrototypeV2ResponseBodyDataModel> Model { get; set; }
             public class ListFlowNodePrototypeV2ResponseBodyDataModel : TeaModel {
                 /// <summary>
-                /// <para>The component prototype code.</para>
+                /// <para>The code of the component prototype.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SendWhatsAppMessageNode</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The component group code.</para>
+                /// <para>The code of the component group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Core</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string GroupCode { get; set; }
 
                 /// <summary>
-                /// <para>The public extension information. This is used by the frontend to display extended information of flow components. The value is a JSON string. The first parameter in the string represents the flow component title. The following section describes the other fields:</para>
+                /// <para>The public extension information. This information is used to display the extension information of the flow component on the frontend. It is a string in JSON format. The first parameter in the string represents the title of the flow component. The other fields are described as follows:</para>
                 /// <list type="bullet">
                 /// <item><description><para>en: the English information of the flow component.</para>
                 /// </description></item>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 /// </description></item>
                 /// <item><description><para>style: the style of the flow component.</para>
                 /// </description></item>
-                /// <item><description><para>svg: the icon URL of the flow component.</para>
+                /// <item><description><para>svg: the URL of the flow component icon.</para>
                 /// </description></item>
                 /// <item><description><para>icon: a deprecated field.</para>
                 /// </description></item>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string PublicExtend { get; set; }
 
                 /// <summary>
-                /// <para>The component prototype status. Default value: NORMAL.</para>
+                /// <para>The status of the component prototype. Default value: NORMAL (normal).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>NORMAL</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90E63D28-E31D-1EB2-8939-A94866411B2O</para>
@@ -128,11 +128,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. Valid values:</para>
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The operation was successful.</para>
+        /// <item><description><para>true: successful</para>
         /// </description></item>
-        /// <item><description><para>false: The operation failed.</para>
+        /// <item><description><para>false: failed</para>
         /// </description></item>
         /// </list>
         /// 

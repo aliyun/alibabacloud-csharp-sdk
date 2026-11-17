@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public Dictionary<string, object> BizExtend { get; set; }
 
         /// <summary>
-        /// <para>The flow code. You can view the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a>.</para>
+        /// <para>The flow code. You can view the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9ccc41**************************</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string FlowCode { get; set; }
 
         /// <summary>
-        /// <para>The flow version. Click a flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> to go to the canvas page and view the flow version.</para>
+        /// <para>The flow version. You can click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas page of the flow editor and view the flow version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

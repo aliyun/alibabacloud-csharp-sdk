@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class AddGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The access denied details.</para>
+        /// <para>The access denial details.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description><para>OK indicates that the request was successful.</para>
+        /// <item><description><para>A value of OK indicates that the request is successful.</para>
         /// </description></item>
         /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The prompt message. This parameter has a value when an exception is returned.</para>
+        /// <para>The message. This parameter has a value when an exception is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -66,10 +66,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Specifies whether the call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The call was successful.</description></item>
-        /// <item><description><b>false</b>: The call failed.</description></item>
+        /// <item><description><b>true</b>: The call is successful.</description></item>
+        /// <item><description><b>false</b>: The call fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

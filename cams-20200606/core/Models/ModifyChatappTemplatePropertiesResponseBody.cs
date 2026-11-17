@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ModifyChatappTemplatePropertiesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The access denial details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -22,10 +22,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description><para>OK indicates that the request was successful.</para>
-        /// </description></item>
-        /// <item><description><para>For other error codes, see <a href="https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes">Error codes</a>.</para>
-        /// </description></item>
+        /// <item><description>A return value of OK indicates that the request is successful.</description></item>
+        /// <item><description>For other error codes, see <a href="https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes">Error codes</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,9 +64,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>true</b>: The call is successful.</description></item>
         /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 

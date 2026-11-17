@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListMarketingFlowShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The campaign code. You can use the system code or modify it to use a custom code.</para>
+        /// <para>The operational activity code. You can use the system-generated code or modify it to use a custom code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rewrwerw</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ActivityName { get; set; }
 
         /// <summary>
-        /// <para>The campaign status.</para>
+        /// <para>The operational activity status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sucess</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BizCode { get; set; }
 
         /// <summary>
-        /// <para>The business extension information. Default value: &quot;{}&quot;.</para>
+        /// <para>The business extension information. Default value: {}.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string PageIndex { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

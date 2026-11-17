@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// <para>The ISV verification code, used to verify that the sub-account is authorized.</para>
+        /// <para>The ISV verification code, used to verify whether the sub-account is authorized by the ISV.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aksik93kdkkxmwol9****</para>

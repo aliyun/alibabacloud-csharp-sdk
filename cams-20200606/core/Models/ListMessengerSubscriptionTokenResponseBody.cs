@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListMessengerSubscriptionTokenResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the access denial.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The status code of the request.</para>
+        /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description><para>A return value of OK indicates that the request was successful.</para>
+        /// <item><description><para>A value of OK indicates that the request is successful.</para>
         /// </description></item>
-        /// <item><description><para>For a list of other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
+        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -36,14 +36,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned data object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListMessengerSubscriptionTokenResponseBodyData> Data { get; set; }
         public class ListMessengerSubscriptionTokenResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the security token was created.</para>
+            /// <para>The creation time of the token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172546854885</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public long? NextEligibleTime { get; set; }
 
             /// <summary>
-            /// <para>The re-subscription status.</para>
+            /// <para>The resubscription status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Example</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string NotificationMessagesReoptin { get; set; }
 
             /// <summary>
-            /// <para>The customer\&quot;s time zone.</para>
+            /// <para>The time zone of the customer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Example</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string NotificationMessagesTimezone { get; set; }
 
             /// <summary>
-            /// <para>The page-scoped ID of the customer.</para>
+            /// <para>The public page scope ID of the customer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Example</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string NotificationMessagesToken { get; set; }
 
             /// <summary>
-            /// <para>The page ID for Messenger.</para>
+            /// <para>The Page ID of Messenger.</para>
             /// 
             /// <b>Example:</b>
             /// <para>239***</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string RecipientId { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the security token.</para>
+            /// <para>The expiration time of the token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172546854885</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string TopicTitle { get; set; }
 
             /// <summary>
-            /// <para>The status of the security token.</para>
+            /// <para>The token status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Example</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The identifier for the next page. Pass this value to query the next page.</para>
+        /// <para>The next page token. This parameter is required when you query the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3399***</para>
@@ -185,11 +185,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. Valid values:</para>
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: successful.</para>
+        /// <item><description><para>true: Successful.</para>
         /// </description></item>
-        /// <item><description><para>false: failed.</para>
+        /// <item><description><para>false: Failed.</para>
         /// </description></item>
         /// </list>
         /// 

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class CreateChatappTemplateShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to allow Facebook to automatically change the template category (to improve the template approval rate). This property is valid only when TemplateType is set to WHATSAPP.</para>
+        /// <para>Specifies whether to allow Facebook to automatically change the category of the template to improve the approval rate. This property is valid only when TemplateType is set to WHATSAPP.</para>
         /// <remarks>
-        /// <para>Notice: This property has been deprecated. WhatsApp no longer supports this property.</notice></para>
+        /// <para>Notice: <b>[Deprecated]</b> WhatsApp no longer supports this property.</notice></para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,22 +23,22 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public bool? AllowCategoryChange { get; set; }
 
         /// <summary>
-        /// <para>WhatsApp template category. Valid values:</para>
+        /// <para>WhatsApp template categories:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>UTILITY</b>: transaction-related.</para>
+        /// <item><description><para><b>UTILITY</b>: Transaction-related.</para>
         /// </description></item>
-        /// <item><description><para><b>MARKETING</b>: marketing.</para>
+        /// <item><description><para><b>MARKETING</b>: Marketing templates.</para>
         /// </description></item>
-        /// <item><description><para><b>AUTHENTICATION</b>: identity verification.</para>
+        /// <item><description><para><b>AUTHENTICATION</b>: Authenticate identity.</para>
         /// </description></item>
         /// </list>
-        /// <para>Viber template category. Valid values:</para>
+        /// <para>Viber template categories:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>UTILITY</b>: transaction-related.</para>
+        /// <item><description><para><b>UTILITY</b>: Transaction-related.</para>
         /// </description></item>
-        /// <item><description><para><b>MARKETING</b>: marketing.</para>
+        /// <item><description><para><b>MARKETING</b>: Marketing templates.</para>
         /// </description></item>
-        /// <item><description><para><b>AUTHENTICATION</b>: identity verification.</para>
+        /// <item><description><para><b>AUTHENTICATION</b>: Authenticate identity.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to pause template sending when a Utility template is changed to Marketing type. This property is valid only for WhatsApp templates.</para>
+        /// <para>Specifies whether to pause sending the template when a utility template is changed to a marketing template. This property is valid only for WhatsApp templates.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The list of message template components.</para>
         /// <remarks>
-        /// <para>When Category=AUTHENTICATION, Components cannot contain nodes with Type=HEADER. When Type=BODY or FOOTER, the Text content must be empty.</para>
+        /// <para>When Category is set to AUTHENTICATION, Components cannot contain nodes with Type set to HEADER. Additionally, when Type is set to BODY or FOOTER, the Text content must be empty.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ComponentsShrink { get; set; }
 
         /// <summary>
-        /// <para>The SpaceId of the ISV sub-customer or the direct customer instance ID.</para>
+        /// <para>The SpaceId of the ISV sub-customer or the instance ID of the direct customer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>293483938849493</para>
@@ -84,9 +84,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The ISV customer WabaId.</para>
+        /// <para>The WabaId of the ISV customer.</para>
         /// <remarks>
-        /// <para>Deprecated parameter. Use CustSpaceId instead.</para>
+        /// <para><b>[Deprecated]</b> Use CustSpaceId instead.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustWabaId { get; set; }
 
         /// <summary>
-        /// <para>The example for creating the template.</para>
+        /// <para>The example for creating a template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hello_whatsapp</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The ISV verification code, used to verify whether the sub-account is authorized by the ISV.</para>
+        /// <para>The ISV verification code used to verify whether the RAM user is authorized by the ISV.</para>
         /// 
         /// <b>Example:</b>
         /// <para>skdi3kksloslikdkkdk</para>
@@ -132,10 +132,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The time-to-live (TTL) for template messages in WhatsApp.</para>
+        /// <para>The validity period for sending template messages in WhatsApp.</para>
         /// <list type="bullet">
-        /// <item><description>AUTHENTICATION: valid values range from 30 to 900. </description></item>
-        /// <item><description>UTILITY: valid values range from 30 to 43200.</description></item>
+        /// <item><description>AUTHENTICATION: 30 to 900. </description></item>
+        /// <item><description>UTILITY: 30 to 43200.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ProductSetId { get; set; }
 
         /// <summary>
-        /// <para>The templatetype. Valid values:</para>
+        /// <para>The templatetype.</para>
         /// <list type="bullet">
         /// <item><description><para><b>WHATSAPP</b></para>
         /// </description></item>

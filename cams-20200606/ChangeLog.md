@@ -1,3 +1,6 @@
+2026-11-17 Version: 5.4.0
+- Generated csharp 2020-06-06 for cams.
+
 2026-08-27 Version: 5.3.1
 - Update API CreateChatFlow: add request parameters CreateFromFlowCode.
 - Update API CreateChatFlow: add request parameters CreateFromFlowVersion.

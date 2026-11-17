@@ -13,18 +13,18 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The description of the campaign.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Example value example value.</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("ActivityDesc")]
         [Validation(Required=false)]
         public string ActivityDesc { get; set; }
 
         /// <summary>
-        /// <para>The name of the node instance.</para>
+        /// <para>The name of the node task instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Example value example value.</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("ActivityName")]
         [Validation(Required=false)]
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The business code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Example value.</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("BizCode")]
         [Validation(Required=false)]
         public string BizCode { get; set; }
 
         /// <summary>
-        /// <para>The business extension information. Default value: an empty collection.</para>
+        /// <para>The business extension information. Default value: an empty set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -54,32 +54,32 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The cron expression.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Example value example value example value.</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("CronExpression")]
         [Validation(Required=false)]
         public string CronExpression { get; set; }
 
         /// <summary>
-        /// <para>The end time.</para>
+        /// <para>The end time. Format: YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Example value example value example value.</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("EndDate")]
         [Validation(Required=false)]
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The trigger method of the baseline scan. Valid values:</para>
+        /// <para>The trigger method for baseline scans. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Schedule</b>: Triggered by a periodic configuration task.</description></item>
+        /// <item><description><b>Schedule</b>: Triggered by a scheduled task.</description></item>
         /// <item><description><b>Manual</b>: Manually triggered.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Example value.</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("ExecutionType")]
         [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The parameter flag.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Example value.</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("ParamFlag")]
         [Validation(Required=false)]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The code of the associated flow.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Example value.</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("RelatedFlowCode")]
         [Validation(Required=false)]
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The name of the associated flow.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Example value.</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("RelatedFlowName")]
         [Validation(Required=false)]
@@ -148,10 +148,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The start time.</para>
+        /// <para>The start time. Format: YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Example value.</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("StartDate")]
         [Validation(Required=false)]

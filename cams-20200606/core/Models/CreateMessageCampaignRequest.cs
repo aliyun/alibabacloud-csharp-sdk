@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AdAccountId { get; set; }
 
         /// <summary>
-        /// <para>The budget, in cents.</para>
+        /// <para>The budget amount in cents.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BudgetType { get; set; }
 
         /// <summary>
-        /// <para>The space ID of an Independent Software Vendor (ISV) sub-customer or the instance ID of a direct customer.</para>
+        /// <para>The space ID of the ISV sub-customer or the instance ID of the direct customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The Messenger Page ID.</para>
+        /// <para>The page ID of Messenger.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

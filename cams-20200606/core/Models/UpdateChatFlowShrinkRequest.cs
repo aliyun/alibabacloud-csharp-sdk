@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BizCode { get; set; }
 
         /// <summary>
-        /// <para>The business extension information. Default value: an empty collection.</para>
+        /// <para>The business extension information. Default value: an empty set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BizExtendShrink { get; set; }
 
         /// <summary>
-        /// <para>The flow code. View the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a>.</para>
+        /// <para>The flow code. You can view the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9ccc41**************************</para>
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The updated flow remark.</para>
+        /// <para>The updated flow remarks.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>FlowRemark.</para>
+        /// <para>Flow remarks</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The updated flow name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>TestFlow.</para>
+        /// <para>Test flow</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

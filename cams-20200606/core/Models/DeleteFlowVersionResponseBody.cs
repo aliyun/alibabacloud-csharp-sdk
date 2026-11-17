@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class DeleteFlowVersionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access was denied.</para>
+        /// <para>The details about the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The response content.</para>
+        /// <para>The response data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>434991</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public Dictionary<string, object> Response { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. Valid values:</para>
+        /// <para>Specifies whether the operation is successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>true: Successful.</para>
         /// </description></item>

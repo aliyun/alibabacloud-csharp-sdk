@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ReadChatFlowLogSettingResponseBody : TeaModel {
         /// <summary>
-        /// <para>The access denied details.</para>
+        /// <para>The details about the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>

@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string PageId { get; set; }
 
         /// <summary>
-        /// <para>The region of the instance.</para>
+        /// <para>The region ID of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ap-southeast-1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetFbMessengerPagesRequest : TeaModel {
         /// <summary>
-        /// <para>The token of the Meta public page.</para>
+        /// <para>The token for the Meta public page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

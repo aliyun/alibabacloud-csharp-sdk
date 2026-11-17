@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The response status code. Valid values:</para>
+        /// <para>The status code of the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>OK: The request was successful.</para>
+        /// <item><description><para>OK: The request is successful.</para>
         /// </description></item>
         /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string AccountName { get; set; }
 
             /// <summary>
-            /// <para>The time when the account was created.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1743579634000</para>
@@ -75,8 +75,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <summary>
             /// <para>The type of the sender address. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>batch: batch emails</description></item>
-            /// <item><description>trigger: triggered emails</description></item>
+            /// <item><description>batch: batch email</description></item>
+            /// <item><description>trigger: triggered email</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -109,11 +109,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. Valid values:</para>
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Successful.</para>
+        /// <item><description><para>true: The operation is successful.</para>
         /// </description></item>
-        /// <item><description><para>false: Failed.</para>
+        /// <item><description><para>false: The operation failed.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class UpdateInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The contact email address.</para>
+        /// <para>The email address of the contact.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:123@alibaba.com">123@alibaba.com</a></para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ContactMail { get; set; }
 
         /// <summary>
-        /// <para>The country code.</para>
+        /// <para>The country code ID.</para>
         /// <remarks>
-        /// <para>For a list of country codes, see <a href="https://help.aliyun.com/document_detail/608210.html">Country Codes</a>.</para>
+        /// <para>For detailed country codes, refer to <a href="https://help.aliyun.com/document_detail/608210.html">Country codes</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CountryId { get; set; }
 
         /// <summary>
-        /// <para>The Facebook Business Manager ID.</para>
+        /// <para>fb bmId</para>
         /// 
         /// <b>Example:</b>
         /// <para>393998****</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string InstanceDescription { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID, which uniquely identifies the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable automatic audit confirmation.</para>
+        /// <para>Specifies whether to automatically confirm.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Y</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string IsConfirmAudit { get; set; }
 
         /// <summary>
-        /// <para>The URL of the Independent Software Vendor (ISV) agreement file.</para>
+        /// <para>The ISV/client agreement file name.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://aa.com/a.pdf">https://aa.com/a.pdf</a></para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string IsvTerms { get; set; }
 
         /// <summary>
-        /// <para>The company address.</para>
+        /// <para>The enterprise address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>

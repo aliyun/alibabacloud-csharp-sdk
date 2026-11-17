@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class AddMarketingFlowResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The access denial details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Example value example value.</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -33,17 +33,17 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The returned data.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Example value example value.</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The message returned with the result.</para>
+        /// <para>The message returned in the response.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Example value.</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Example value.</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

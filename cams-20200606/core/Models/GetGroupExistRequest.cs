@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BizCode { get; set; }
 
         /// <summary>
-        /// <para>The business extension information. Default value: &quot;{}&quot;.</para>
+        /// <para>The business extension information. Default value: {}.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

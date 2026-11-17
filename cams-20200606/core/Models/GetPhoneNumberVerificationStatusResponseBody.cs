@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description><para>OK: The request was successful.</para>
+        /// <item><description><para>OK: The request is successful.</para>
         /// </description></item>
         /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The phone number.</para>
+            /// <para>The mobile phone number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>861390000****</para>

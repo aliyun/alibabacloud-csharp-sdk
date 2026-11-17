@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BizCode { get; set; }
 
         /// <summary>
-        /// <para>The business extension information. Default value: an empty collection.</para>
+        /// <para>The business extension information. Default value: an empty set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string FlowCode { get; set; }
 
         /// <summary>
-        /// <para>The flow version. On the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, click the flow name to enter the flow editor canvas page and view the flow version.</para>
+        /// <para>The flow version. To view the flow version, click the flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page to go to the canvas page of the flow editor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string FlowVersion { get; set; }
 
         /// <summary>
-        /// <para>The start time. This value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The start time. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1751299200</para>
@@ -60,11 +60,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? From { get; set; }
 
         /// <summary>
-        /// <para>The metric name. Valid values:</para>
+        /// <para>The name of the monitoring metric. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>nodeUsageStatistics: node usage statistics.</para>
+        /// <item><description><para>nodeUsageStatistics: node usage statistics</para>
         /// </description></item>
-        /// <item><description><para>nodeErrorDetails: node error details.</para>
+        /// <item><description><para>nodeErrorDetails: node error details</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -77,13 +77,13 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>The extended parameter for the metric query. When MetricName is set to nodeErrorDetails, pass in a JSON string. Valid JSON fields:</para>
+        /// <para>The extended parameters for querying the monitoring metric. When MetricName is set to nodeErrorDetails, you must pass a JSON string. Valid JSON fields:</para>
         /// <list type="bullet">
-        /// <item><description><para>pageNo: the current page number.</para>
+        /// <item><description><para>pageNo: the current page number</para>
         /// </description></item>
-        /// <item><description><para>pageSize: the number of entries per page.</para>
+        /// <item><description><para>pageSize: the number of entries per page</para>
         /// </description></item>
-        /// <item><description><para>nodeId: the node ID. On the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, click the flow name to enter the canvas orchestration page and copy the node ID.</para>
+        /// <item><description><para>nodeId: the node ID. To copy the node ID, click the flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page to go to the canvas orchestration page.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The end time. This value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The end time. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1751385599</para>

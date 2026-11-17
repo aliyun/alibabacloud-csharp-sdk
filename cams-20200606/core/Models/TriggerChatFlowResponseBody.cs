@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class TriggerChatFlowResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the access denied error.</para>
+        /// <para>The details of the permission check failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -31,6 +31,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <para>The returned data.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -57,12 +60,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Specifies whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

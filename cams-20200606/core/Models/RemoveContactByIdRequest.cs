@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ContactId { get; set; }
 
         /// <summary>
-        /// <para>The contact group ID.</para>
+        /// <para>The group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

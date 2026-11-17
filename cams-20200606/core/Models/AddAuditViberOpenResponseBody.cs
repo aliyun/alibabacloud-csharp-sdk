@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class AddAuditViberOpenResponseBody : TeaModel {
         /// <summary>
-        /// <para>Detailed information about the access denial.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The response status code.</para>
+        /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>OK</c>: The request succeeded.</para>
+        /// <item><description><para>OK indicates that the request succeeded.</para>
         /// </description></item>
-        /// <item><description><para>For other values, see <a href="https://help.aliyun.com/document_detail/196974.html">Error Codes</a>.</para>
+        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>122</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public Dictionary<string, object> Data { get; set; }
 
         /// <summary>
-        /// <para>A message describing the result of the request.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2121-112</para>
@@ -66,12 +66,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the request succeeded.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request succeeded.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

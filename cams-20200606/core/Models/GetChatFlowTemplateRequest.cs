@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BizCode { get; set; }
 
         /// <summary>
-        /// <para>The template ID. You can obtain the template ID by calling the <a href="https://help.aliyun.com/document_detail/2937208.html">ListChatFlowTemplate</a> operation.</para>
+        /// <para>The template ID. You can obtain the template ID by calling the <a href="https://api.aliyun.com/document/cams/2020-06-06/ListChatFlowTemplate">ListChatFlowTemplate</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

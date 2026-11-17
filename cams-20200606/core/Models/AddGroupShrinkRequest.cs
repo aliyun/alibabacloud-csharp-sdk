@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The business tenant code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>Sample value sample value sample value</para>
         /// </summary>
         [NameInMap("BizCode")]
         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The email address.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>Sample value sample value</para>
         /// </summary>
         [NameInMap("Email")]
         [Validation(Required=false)]

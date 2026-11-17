@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The request status code.</para>
+        /// <para>The status code of the request.</para>
         /// <list type="bullet">
-        /// <item><description><para>A value of OK indicates that the request was successful.</para>
+        /// <item><description><para>A value of OK indicates that the request is successful.</para>
         /// </description></item>
         /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
@@ -36,21 +36,21 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data object.</para>
+        /// <para>The data object returned in the response.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListInstagramPageResponseBodyData Data { get; set; }
         public class ListInstagramPageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The agent information.</para>
+            /// <para>The human agent information.</para>
             /// </summary>
             [NameInMap("AgentInfo")]
             [Validation(Required=false)]
             public ListInstagramPageResponseBodyDataAgentInfo AgentInfo { get; set; }
             public class ListInstagramPageResponseBodyDataAgentInfo : TeaModel {
                 /// <summary>
-                /// <para>The agent-related configurations.</para>
+                /// <para>The configurations related to human agents.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aaa,bbb</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string AgentKeywords { get; set; }
 
                 /// <summary>
-                /// <para>The agent-related configurations.</para>
+                /// <para>The configurations related to human agents.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Y</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public ListInstagramPageResponseBodyDataInstagramInfo InstagramInfo { get; set; }
             public class ListInstagramPageResponseBodyDataInstagramInfo : TeaModel {
                 /// <summary>
-                /// <para>The ID of the account to which the page belongs.</para>
+                /// <para>The ID of the associated account.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>176546546464</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 /// <summary>
                 /// <para>The endpoint connection status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>Pending</b>: Being modified.</para>
+                /// <item><description><para><b>Pending</b>: Modifying.</para>
                 /// </description></item>
                 /// <item><description><para><b>Connecting</b>: Connecting.</para>
                 /// </description></item>
@@ -138,11 +138,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 /// </description></item>
                 /// <item><description><para><b>Disconnecting</b>: Disconnecting.</para>
                 /// </description></item>
-                /// <item><description><para><b>Disconnected</b>: Not connected.</para>
+                /// <item><description><para><b>Disconnected</b>: Disconnected.</para>
                 /// </description></item>
-                /// <item><description><para><b>Deleting</b>: Being deleted.</para>
+                /// <item><description><para><b>Deleting</b>: Deleting.</para>
                 /// </description></item>
-                /// <item><description><para><b>ServiceDeleted</b>: The service associated with the endpoint has been deleted.</para>
+                /// <item><description><para><b>ServiceDeleted</b>: The service corresponding to the endpoint is deleted.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string ConnectionStatus { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether receipts are received through HTTP. Valid values:</para>
+                /// <para>Specifies whether to use HTTP to receive receipts. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>Y: Yes.</description></item>
                 /// <item><description>N: No.</description></item>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string PageId { get; set; }
 
                 /// <summary>
-                /// <para>The page name.</para>
+                /// <para>The name of the page.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>iwhaclecloud-2</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string PageName { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether receipts are received through a queue. Valid values:</para>
+                /// <para>Specifies whether to use a queue to receive receipts. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><para>Y: Yes.</para>
                 /// </description></item>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string QueueFlag { get; set; }
 
                 /// <summary>
-                /// <para>The queue name.</para>
+                /// <para>The name of the queue.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aaa</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string QueueName { get; set; }
 
                 /// <summary>
-                /// <para>The callback URL for status reports over HTTP.</para>
+                /// <para>The callback URL for the status report API over HTTP.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="HTTP://WWW.***.COM">HTTP://WWW.***.COM</a></para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string StatusQueue { get; set; }
 
                 /// <summary>
-                /// <para>The callback URL for upstream messages over HTTP.</para>
+                /// <para>The callback URL for the upstream message API over HTTP.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="HTTP://WWW.***.COM">HTTP://WWW.***.COM</a></para>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
-        /// <para>The message returned with the result.</para>
+        /// <para>The message returned in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID. It is a unique identifier generated by Alibaba Cloud for the request and can be used for troubleshooting.</para>
+        /// <para>The ID of the request. The ID is generated by Alibaba Cloud for the request and can be used to troubleshoot and locate issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dsfdsf-3jfj***</para>
@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. Valid values:</para>
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>true: Successful.</para>
         /// </description></item>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The target resource group.</para>
+        /// <para>The destination resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

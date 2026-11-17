@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The industry.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Retail</para>
+            /// <para>零售</para>
             /// </summary>
             [NameInMap("Vertical")]
             [Validation(Required=false)]

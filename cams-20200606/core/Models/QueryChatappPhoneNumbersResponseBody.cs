@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class QueryChatappPhoneNumbersResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the access denial.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description><para>A value of OK indicates that the request was successful.</para>
+        /// <item><description><para>A return value of OK indicates that the request is successful.</para>
         /// </description></item>
         /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
@@ -36,15 +36,17 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The returned data.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -60,19 +62,30 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public List<QueryChatappPhoneNumbersResponseBodyPhoneNumbers> PhoneNumbers { get; set; }
         public class QueryChatappPhoneNumbersResponseBodyPhoneNumbers : TeaModel {
+            /// <summary>
+            /// <para>The calling configuration.</para>
+            /// </summary>
             [NameInMap("CallingConfigure")]
             [Validation(Required=false)]
             public QueryChatappPhoneNumbersResponseBodyPhoneNumbersCallingConfigure CallingConfigure { get; set; }
             public class QueryChatappPhoneNumbersResponseBodyPhoneNumbersCallingConfigure : TeaModel {
+                /// <summary>
+                /// <para>The calling feature configuration.</para>
+                /// </summary>
                 [NameInMap("Calling")]
                 [Validation(Required=false)]
                 public QueryChatappPhoneNumbersResponseBodyPhoneNumbersCallingConfigureCalling Calling { get; set; }
                 public class QueryChatappPhoneNumbersResponseBodyPhoneNumbersCallingConfigureCalling : TeaModel {
+                    /// <summary>
+                    /// <para>The calling hours configuration.</para>
+                    /// </summary>
                     [NameInMap("CallHours")]
                     [Validation(Required=false)]
                     public QueryChatappPhoneNumbersResponseBodyPhoneNumbersCallingConfigureCallingCallHours CallHours { get; set; }
                     public class QueryChatappPhoneNumbersResponseBodyPhoneNumbersCallingConfigureCallingCallHours : TeaModel {
                         /// <summary>
+                        /// <para>The call icon visibility.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>DEFAULT</para>
                         /// </summary>
@@ -81,6 +94,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                         public string CallIconVisibility { get; set; }
 
                         /// <summary>
+                        /// <para>The callback permission status.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>ENABLED</para>
                         /// </summary>
@@ -88,11 +103,16 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                         [Validation(Required=false)]
                         public string CallbackPermissionStatus { get; set; }
 
+                        /// <summary>
+                        /// <para>The holiday calling schedule.</para>
+                        /// </summary>
                         [NameInMap("HolidaySchedule")]
                         [Validation(Required=false)]
                         public List<QueryChatappPhoneNumbersResponseBodyPhoneNumbersCallingConfigureCallingCallHoursHolidaySchedule> HolidaySchedule { get; set; }
                         public class QueryChatappPhoneNumbersResponseBodyPhoneNumbersCallingConfigureCallingCallHoursHolidaySchedule : TeaModel {
                             /// <summary>
+                            /// <para>The date in the YYYY-MM-DD format.</para>
+                            /// 
                             /// <b>Example:</b>
                             /// <para>2026-01-01</para>
                             /// </summary>
@@ -101,6 +121,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                             public string Date { get; set; }
 
                             /// <summary>
+                            /// <para>The end time in the HHmm format.</para>
+                            /// 
                             /// <b>Example:</b>
                             /// <para>2359</para>
                             /// </summary>
@@ -109,6 +131,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                             public string EndTime { get; set; }
 
                             /// <summary>
+                            /// <para>The start time in the HHmm format.</para>
+                            /// 
                             /// <b>Example:</b>
                             /// <para>0000</para>
                             /// </summary>
@@ -119,6 +143,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                         }
 
                         /// <summary>
+                        /// <para>The calling hours configuration status.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>ENABLED</para>
                         /// </summary>
@@ -127,6 +153,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                         public string Status { get; set; }
 
                         /// <summary>
+                        /// <para>The time zone ID, such as Asia/Shanghai.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>Asia/Shanghai</para>
                         /// </summary>
@@ -134,11 +162,16 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                         [Validation(Required=false)]
                         public string TimezoneId { get; set; }
 
+                        /// <summary>
+                        /// <para>The weekly operating hours schedule.</para>
+                        /// </summary>
                         [NameInMap("WeeklyOperatingHours")]
                         [Validation(Required=false)]
                         public List<QueryChatappPhoneNumbersResponseBodyPhoneNumbersCallingConfigureCallingCallHoursWeeklyOperatingHours> WeeklyOperatingHours { get; set; }
                         public class QueryChatappPhoneNumbersResponseBodyPhoneNumbersCallingConfigureCallingCallHoursWeeklyOperatingHours : TeaModel {
                             /// <summary>
+                            /// <para>The closing time in the HHmm format.</para>
+                            /// 
                             /// <b>Example:</b>
                             /// <para>2359</para>
                             /// </summary>
@@ -147,14 +180,18 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                             public string CloseTime { get; set; }
 
                             /// <summary>
+                            /// <para>The day of the week.</para>
+                            /// 
                             /// <b>Example:</b>
-                            /// <para>示例值示例值示例值</para>
+                            /// <para>Sample value sample value sample value</para>
                             /// </summary>
                             [NameInMap("DayOfWeek")]
                             [Validation(Required=false)]
                             public string DayOfWeek { get; set; }
 
                             /// <summary>
+                            /// <para>The opening time in the HHmm format.</para>
+                            /// 
                             /// <b>Example:</b>
                             /// <para>0000</para>
                             /// </summary>
@@ -167,6 +204,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     }
 
                     /// <summary>
+                    /// <para>The calling feature status.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>ENABLED</para>
                     /// </summary>
@@ -177,6 +216,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 }
 
                 /// <summary>
+                /// <para>The calling callback URL.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://aliyun.com">https://aliyun.com</a></para>
                 /// </summary>
@@ -185,6 +226,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string CallingCallbackUrl { get; set; }
 
                 /// <summary>
+                /// <para>The maximum talk time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
                 /// </summary>
@@ -195,7 +238,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             }
 
             /// <summary>
-            /// <para>The verification status of the phone number.</para>
+            /// <para>The code verification status of the phone number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VERIFIED</para>
@@ -205,6 +248,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string CodeVerificationStatus { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the phone number is verified.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>N</para>
             /// </summary>
@@ -223,7 +268,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string MessagingLimitTier { get; set; }
 
             /// <summary>
-            /// <para>The status of the name.</para>
+            /// <para>The name status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Approval</para>
@@ -263,7 +308,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string QualityRating { get; set; }
 
             /// <summary>
-            /// <para>The status of the phone number.</para>
+            /// <para>The phone number status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CONNECTED</para>
@@ -273,7 +318,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The callback URL for delivery receipts.</para>
+            /// <para>The URL for status report notifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://ali.com/status">https://ali.com/status</a></para>
@@ -283,7 +328,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string StatusCallbackUrl { get; set; }
 
             /// <summary>
-            /// <para>The queue for delivery receipts of mobile terminated messages.</para>
+            /// <para>The queue for status report notifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alicom-Queue-****-ChatAppStatus</para>
@@ -293,7 +338,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string StatusQueue { get; set; }
 
             /// <summary>
-            /// <para>The callback URL for mobile originated messages.</para>
+            /// <para>The URL for inbound message notifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://ali.com/inbound">https://ali.com/inbound</a></para>
@@ -303,7 +348,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string UpCallbackUrl { get; set; }
 
             /// <summary>
-            /// <para>The queue for mobile originated messages.</para>
+            /// <para>The inbound message notification queue.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alicom-Queue-****-ChatAppInbound</para>
@@ -313,7 +358,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string UpQueue { get; set; }
 
             /// <summary>
-            /// <para>The name used for the request.</para>
+            /// <para>The applied name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alibaba</para>
@@ -335,6 +380,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The call is successful.</description></item>
+        /// <item><description><b>false</b>: The call fails.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

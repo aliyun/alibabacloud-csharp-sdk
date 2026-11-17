@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class AddChatGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of the access denial.</para>
+        /// <para>The access denial details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The response status code. Valid values:</para>
+        /// <para>The status code of the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>OK</c>: The request was successful.</para>
+        /// <item><description><para>OK: The request is successful.</para>
         /// </description></item>
-        /// <item><description><para>For other error codes, see the <a href="https://help.aliyun.com/document_detail/196974.html">error code list</a>.</para>
+        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier for the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90E63D28-E31D-1EB2-8939-A94866411B2O</para>
@@ -56,12 +56,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates if the API call succeeded. Valid values:</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The API call was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The API call failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The call is successful.</description></item>
+        /// <item><description><b>false</b>: The call fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,7 +70,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The unique request code.</para>
+        /// <para>The unique code of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8938****</para>

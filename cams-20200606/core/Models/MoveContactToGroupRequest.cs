@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BizCode { get; set; }
 
         /// <summary>
-        /// <para>The business extension information. Default value: an empty collection.</para>
+        /// <para>The business extension information. Default value: an empty set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public Dictionary<string, object> BizExtend { get; set; }
 
         /// <summary>
-        /// <para>The list of contacts whose group associations are to be modified.</para>
+        /// <para>The list of contacts whose groups are to be modified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Contacts { get; set; }
 
         /// <summary>
-        /// <para>The list of existing group IDs to associate with.</para>
+        /// <para>The list of existing group IDs to associate with the contacts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;id&quot;:1}]</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string LinkExistGroups { get; set; }
 
         /// <summary>
-        /// <para>The list of new group names to associate with.</para>
+        /// <para>The list of new group names to associate with the contacts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;groupName&quot;:&quot;aaa&quot;}]</para>

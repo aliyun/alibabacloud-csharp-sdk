@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class FlowUnbindPhoneResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -40,11 +40,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is successful. Valid values:</para>
+        /// <para>Indicates whether the result is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The operation is successful.</para>
+        /// <item><description><para>true: Yes.</para>
         /// </description></item>
-        /// <item><description><para>false: The operation failed.</para>
+        /// <item><description><para>false: No.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -55,6 +55,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public bool? Model { get; set; }
 
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>90E63D28-E31D-1EB2-8939-A94866411B2O</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -62,9 +68,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>Indicates whether the operation is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The operation is successful.</para>
+        /// <item><description><para>true: Successful.</para>
         /// </description></item>
-        /// <item><description><para>false: The operation failed.</para>
+        /// <item><description><para>false: Failed.</para>
         /// </description></item>
         /// </list>
         /// 

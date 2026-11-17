@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class UpdateAuditRequestShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Viber audit items.</para>
+        /// <para>The Viber audit items.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AuditRecord")]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AuditResult { get; set; }
 
         /// <summary>
-        /// <para>The Space ID of the ISV sub-customer or the instance ID. View it on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</para>
+        /// <para>The space ID or instance ID of the ISV sub-customer. This is the channel ID. You can view it on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The request number.</para>
+        /// <para>The request number to update.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

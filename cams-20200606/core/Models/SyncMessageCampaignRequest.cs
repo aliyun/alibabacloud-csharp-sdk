@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class SyncMessageCampaignRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Meta ad account.</para>
+        /// <para>The Meta ad account ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Messenger page.</para>
+        /// <para>The Messenger page ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

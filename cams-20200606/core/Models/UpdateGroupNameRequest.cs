@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Sample value sample value sample value.</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Sample value sample value.</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]

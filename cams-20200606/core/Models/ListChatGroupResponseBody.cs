@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListChatGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The request status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>OK: The request was successful.</para>
+        /// <item><description><para>OK: The request is successful.</para>
         /// </description></item>
         /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public List<ListChatGroupResponseBodyDataList> List { get; set; }
             public class ListChatGroupResponseBodyDataList : TeaModel {
                 /// <summary>
-                /// <para>The business phone number.</para>
+                /// <para>The business number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8613800**</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
-        /// <para>The prompt message. This parameter has a value when an exception is returned.</para>
+        /// <para>The prompt message. This parameter is returned only when an exception occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -201,10 +201,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The call was successful.</description></item>
-        /// <item><description><b>false</b>: The call failed.</description></item>
+        /// <item><description><b>true</b>: The call is successful.</description></item>
+        /// <item><description><b>false</b>: The call fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

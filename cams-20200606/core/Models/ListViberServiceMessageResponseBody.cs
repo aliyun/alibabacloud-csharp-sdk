@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListViberServiceMessageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The access denial details.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description><para>OK indicates that the request was successful.</para>
+        /// <item><description><para>A value of OK indicates that the request is successful.</para>
         /// </description></item>
         /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
@@ -46,31 +46,31 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The business account name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test.</para>
+            /// <para>Test</para>
             /// </summary>
             [NameInMap("BusinessAccountName")]
             [Validation(Required=false)]
             public string BusinessAccountName { get; set; }
 
             /// <summary>
-            /// <para>The destination country or region ID.</para>
+            /// <para>The ID of the destination country or region.</para>
             /// </summary>
             [NameInMap("DestinationCountryId")]
             [Validation(Required=false)]
             public List<string> DestinationCountryId { get; set; }
 
             /// <summary>
-            /// <para>The destination country or region ID.</para>
+            /// <para>The ID of the destination country or region.</para>
             /// </summary>
             [NameInMap("DestinationInternationalCountryId")]
             [Validation(Required=false)]
             public List<string> DestinationInternationalCountryId { get; set; }
 
             /// <summary>
-            /// <para>The industry involved.</para>
+            /// <para>The involved industry.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Healthcare.</para>
+            /// <para>Healthcare</para>
             /// </summary>
             [NameInMap("IndustryInvolved")]
             [Validation(Required=false)]
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID. This is used for troubleshooting when an error occurs.</para>
+        /// <para>The request ID. You can use this ID to troubleshoot issues when errors occur.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ddhjdn-dnjdnkdjknd**</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. Valid values:</para>
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>true: Successful.</para>
         /// </description></item>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetViberByRequestNoRequest : TeaModel {
         /// <summary>
-        /// <para>The Space ID of an ISV sub-customer or the Instance ID of a direct customer.</para>
+        /// <para>The space ID of the ISV sub-customer or the instance ID of the direct customer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>28251486512358****</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class DeleteContactsByIdsRequest : TeaModel {
         /// <summary>
-        /// <para>The list of contact codes, separated by commas (,).</para>
+        /// <para>The list of contact codes, separated by commas.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>Example value example value example value</para>
         /// </summary>
         [NameInMap("Contacts")]
         [Validation(Required=false)]

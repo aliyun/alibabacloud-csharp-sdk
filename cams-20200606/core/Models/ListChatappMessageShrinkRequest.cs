@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListChatappMessageShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The business phone number.</para>
+        /// <para>The business number.</para>
         /// <list type="bullet">
-        /// <item><description>For WhatsApp channels, view the business phone number in the <a href="https://chatapp.console.aliyun.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>WABA Management</b> &gt; <b>Phone Number Management</b> console.</description></item>
+        /// <item><description>For a WhatsApp channel, you can view the business number on the <a href="https://chatapp.console.aliyun.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>WABA Management</b> &gt; <b>Number Management</b> page.</description></item>
         /// </list>
-        /// <para>&lt;props=&quot;intl&quot;&gt;- For Viber channels, view the Service ID in the <a href="https://chatapp.console.aliyun.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>Service Account Management</b> console.</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;- For a Viber channel, you can view the Service ID on the <a href="https://chatapp.console.aliyun.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>Service Account Management</b> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ChannelType { get; set; }
 
         /// <summary>
-        /// <para>The message receiving status of the user.</para>
+        /// <para>The user reception status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ClientAcceptStatus { get; set; }
 
         /// <summary>
-        /// <para>The space ID of the ISV sub-customer or the instance ID of the direct customer. View the Space ID in the <a href="https://chatapp.console.aliyun.com/CustomerList">Channel Management</a> console.</para>
+        /// <para>The space ID of the ISV sub-customer or the instance ID of the direct customer. You can view the space ID on the <a href="https://chatapp.console.aliyun.com/CustomerList">Channel Management</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// <para>The end time. This value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The end time. The value is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1727057232686</para>
@@ -73,6 +73,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>The end time. Format: YYYY-MM-DD HH:mm:ss.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-01-30 00:00:00</para>
         /// </summary>
@@ -83,8 +85,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The message type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DOWN: outbound message.</description></item>
-        /// <item><description>UP: inbound message.</description></item>
+        /// <item><description>DOWN: downstream message.</description></item>
+        /// <item><description>UP: upstream message.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,7 +97,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string EventAction { get; set; }
 
         /// <summary>
-        /// <para>The bulk message ID. View the bulk message ID in the <a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>Message List</b> &gt; <b>Bulk Sending List</b> console.</para>
+        /// <para>The batch message ID. You can view the batch message ID on the <a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>Message List</b> &gt; <b>Batch Sending List</b> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9292****</para>
@@ -119,7 +121,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The pagination object.</para>
+        /// <para>The pagination parameter object.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Page")]
@@ -135,7 +137,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The start time. This value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The start time. The value is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1727057232686</para>
@@ -145,6 +147,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? StartTime { get; set; }
 
         /// <summary>
+        /// <para>The start time. Format: YYYY-MM-DD HH:mm:ss.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-01-01 00:00:00</para>
         /// </summary>
@@ -153,7 +157,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string StartTimeStr { get; set; }
 
         /// <summary>
-        /// <para>The template code. View the template code in the <a href="https://chatapp.console.aliyun.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>Template Design</b> console.</para>
+        /// <para>The template code. You can view the template code on the <a href="https://chatapp.console.aliyun.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>Template Design</b> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9938***</para>
@@ -163,7 +167,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string TemplateCode { get; set; }
 
         /// <summary>
-        /// <para>The user phone number. This is the phone number that you imported when sending messages in the <a href="https://chatapp.console.aliyun.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>Message Sending</b> console.</para>
+        /// <para>The user phone number. This refers to the user phone number that you imported when sending messages on the <a href="https://chatapp.console.aliyun.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>Message Sending</b> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>86138***</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The access denial details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The status code of the request.</para>
         /// <list type="bullet">
-        /// <item><description><para>OK indicates that the request was successful.</para>
+        /// <item><description><para>A value of OK indicates that the request is successful.</para>
         /// </description></item>
         /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The ISV/Client agreement file name.</para>
+            /// <para>The name of the ISV or client agreement file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aa</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The submit time.</para>
+            /// <para>The submission time. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-12-12 00:00:00</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message returned by the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NULL</para>
@@ -205,10 +205,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The call was successful.</description></item>
-        /// <item><description><b>false</b>: The call failed.</description></item>
+        /// <item><description><b>true</b>: The call is successful.</description></item>
+        /// <item><description><b>false</b>: The call fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of records that meet the conditions.</para>
+        /// <para>The total number of entries that meet the conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

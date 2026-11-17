@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The PageId of the Messenger page.</para>
+        /// <para>The Messenger page ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

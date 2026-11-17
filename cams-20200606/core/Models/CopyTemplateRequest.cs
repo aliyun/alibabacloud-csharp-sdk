@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The space ID of the ISV sub-customer.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The language.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("SceneTemplateName")]
         [Validation(Required=false)]

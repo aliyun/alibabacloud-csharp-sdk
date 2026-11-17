@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BizCode { get; set; }
 
         /// <summary>
-        /// <para>The search keyword. Used for fuzzy match of template names.</para>
+        /// <para>The search keyword. This parameter is used to fuzzy match template names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LLM</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

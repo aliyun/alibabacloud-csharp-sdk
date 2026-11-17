@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListInstanceRequest : TeaModel {
+        /// <summary>
+        /// <para>The binding ID.</para>
+        /// </summary>
         [NameInMap("BindId")]
         [Validation(Required=false)]
         public string BindId { get; set; }
@@ -33,7 +36,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ChannelType { get; set; }
 
         /// <summary>
-        /// <para>The filter condition.</para>
+        /// <para>The filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aa</para>
@@ -62,6 +65,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether the instance is bound.</para>
+        /// </summary>
         [NameInMap("IsBind")]
         [Validation(Required=false)]
         public bool? IsBind { get; set; }
@@ -77,7 +83,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? PageIndex { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>87</para>
@@ -87,7 +93,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the enterprise resource group to which the instance belongs.</para>
+        /// <para>The ID of the resource group to which the instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11</para>
@@ -97,7 +103,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The submit time.</para>
+        /// <para>The submission time. The format is YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-12-12 00:00:00</para>

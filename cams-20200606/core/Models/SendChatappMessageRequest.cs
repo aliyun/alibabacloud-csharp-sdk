@@ -257,6 +257,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public class SendChatappMessageRequestFlowAction : TeaModel {
             /// <summary>
             /// <para>The collection of Flow default parameters.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{
+            ///   &quot;name&quot;: &quot;name&quot;
+            /// }</para>
             /// </summary>
             [NameInMap("FlowActionData")]
             [Validation(Required=false)]
@@ -651,6 +656,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <para>The collection of template parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        ///   &quot;param1&quot;: &quot;value1&quot;,
+        ///   &quot;param2&quot;: &quot;value2&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("TemplateParams")]
         [Validation(Required=false)]

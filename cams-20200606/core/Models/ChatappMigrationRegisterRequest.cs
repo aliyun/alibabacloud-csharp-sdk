@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The phone number.</para>
+        /// <para>The mobile phone number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

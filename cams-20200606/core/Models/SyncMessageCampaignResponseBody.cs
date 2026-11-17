@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class SyncMessageCampaignResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The access denial details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,8 +20,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The status code of the request. A value of OK indicates that the request was successful.</para>
-        /// <para>For other error codes, see Error Codes.</para>
+        /// <para>The request status code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>OK: The request is successful.</description></item>
+        /// </list>
+        /// <para>For other error codes, refer to the error code list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -41,7 +44,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>233**</para>
@@ -51,12 +54,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The call was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The call failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The call is successful.</description></item>
+        /// <item><description><b>false</b>: The call fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

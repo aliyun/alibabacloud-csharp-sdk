@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The response status code.</para>
+        /// <para>The status code of the request.</para>
         /// <list type="bullet">
-        /// <item><description><para>OK indicates that the request was successful.</para>
+        /// <item><description><para>OK indicates that the request succeeded.</para>
         /// </description></item>
         /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The tag description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx</para>
+            /// <para>Used to tag technical documentation</para>
             /// </summary>
             [NameInMap("TagDescription")]
             [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The tag name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx</para>
+            /// <para>Technical documentation</para>
             /// </summary>
             [NameInMap("TagName")]
             [Validation(Required=false)]
@@ -97,9 +97,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The operation was successful.</para>
+        /// <item><description><para>true: Successful.</para>
         /// </description></item>
-        /// <item><description><para>false: The operation failed.</para>
+        /// <item><description><para>false: Failed.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>42</para>

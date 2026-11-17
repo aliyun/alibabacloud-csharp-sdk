@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class QueryChatappBindWabaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The access denial details.</para>
+        /// <para>The details about the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description><para>A value of <c>OK</c> indicates the request was successful.</para>
+        /// <item><description><para>A return value of OK indicates that the request was successful.</para>
         /// </description></item>
         /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
@@ -43,16 +43,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public QueryChatappBindWabaResponseBodyData Data { get; set; }
         public class QueryChatappBindWabaResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The account review status. Valid values:</para>
+            /// <para>The review status of the WABA. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>PENDING</c>: The account is under review.</para>
-            /// </description></item>
-            /// <item><description><para><c>APPROVED</c>: The account is approved.</para>
-            /// </description></item>
-            /// <item><description><para><c>REJECTED</c>: The account is rejected.</para>
-            /// </description></item>
-            /// <item><description><para><c>DISABLED</c>: The account is disabled.</para>
-            /// </description></item>
+            /// <item><description>PENDING: Pending review.</description></item>
+            /// <item><description>APPROVED: Review approved.</description></item>
+            /// <item><description>REJECTED: Review rejected.</description></item>
+            /// <item><description>DISABLED: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,14 +59,17 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string AccountReviewStatus { get; set; }
 
             /// <summary>
-            /// <para>Details about the WABA account.</para>
+            /// <para>The WABA-related information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;exception_countries&quot;:[{&quot;country_code&quot;:&quot;ID&quot;,&quot;start_time&quot;:1721952000}]}</para>
             /// </summary>
             [NameInMap("AuthInternationalRateEligibility")]
             [Validation(Required=false)]
             public Dictionary<string, object> AuthInternationalRateEligibility { get; set; }
 
             /// <summary>
-            /// <para>The Business platform ID.</para>
+            /// <para>The ID of the Business platform.</para>
             /// 
             /// <b>Example:</b>
             /// <para>19293988***</para>
@@ -80,7 +79,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string BusinessId { get; set; }
 
             /// <summary>
-            /// <para>The Business platform name.</para>
+            /// <para>The name of the Business platform.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alibaba</para>
@@ -110,6 +109,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the phone number is in use in the WhatsApp Business app.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>N</para>
             /// </summary>
@@ -148,7 +149,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The international rate capability qualification.</para>
+            /// <para>The international rate eligibility.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;start_time&quot;:1721952000</para>
@@ -180,12 +181,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The call succeeded.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

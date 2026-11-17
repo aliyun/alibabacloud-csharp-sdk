@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The response code. OK indicates success.</para>
+        /// <para>The response code. A value of OK indicates a successful call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public UpdateFlowJSONAssetResponseBodyData Data { get; set; }
         public class UpdateFlowJSONAssetResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Flow ID。</para>
+            /// <para>The flow ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>92675332812643****</para>

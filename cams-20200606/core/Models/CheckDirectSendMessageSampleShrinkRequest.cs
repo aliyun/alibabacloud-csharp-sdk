@@ -22,6 +22,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <para>The message body of the interactive type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;type&quot;: &quot;cta_url&quot;, &quot;header&quot;: { &quot;type&quot;: &quot;text&quot;,&quot;text&quot;: &quot;Order Update&quot;}, &quot;body&quot;: { &quot;text&quot;: &quot;Your order is ready.&quot;}, &quot;action&quot;: { &quot;name&quot;: &quot;cta_url&quot;, &quot;parameters&quot;: { &quot;display_text&quot;: &quot;View Order&quot;,&quot;url&quot;: &quot;<a href="https://example.com">https://example.com</a>&quot;  } } }</para>
         /// </summary>
         [NameInMap("Interactive")]
         [Validation(Required=false)]

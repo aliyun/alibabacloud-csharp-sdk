@@ -10,20 +10,20 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ModifyChatappTemplateShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The templatetype cannot be modified.</para>
+        /// <para>The template category for Viber templates. This parameter is invalid for WhatsApp templates.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>text</para>
+        /// <para>MARKETING</para>
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>When a Utility template is changed to Marketing type, the template is paused for sending.</para>
+        /// <para>Specifies whether to pause sending the template when its category is changed from Utility to Marketing.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>120</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("CategoryChangePaused")]
         [Validation(Required=false)]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The list of message template components.</para>
         /// <remarks>
-        /// <para>When Category is AUTHENTICATION, Components cannot contain a node with Type set to HEADER. When Type is BODY/FOOTER, the Text content is empty and is automatically generated.</para>
+        /// <para>When Category is AUTHENTICATION, Components cannot contain nodes with Type set to HEADER. When Type is BODY or FOOTER, if Text is empty, the content is automatically generated.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -41,30 +41,27 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ComponentsShrink { get; set; }
 
         /// <summary>
-        /// <para>The SpaceId of the ISV sub-customer or the instance ID of the direct customer.</para>
+        /// <para>The Space ID of the ISV sub-customer or the instance ID of the direct customer.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>28251486512358****</para>
+        /// <para>cams-did***</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// <para>The ISV customer WabaId.</para>
-        /// <remarks>
-        /// <para>This parameter is deprecated. Use CustSpaceId instead.</para>
-        /// </remarks>
+        /// <para>The WABA ID of the ISV customer. This parameter is deprecated. Use CustSpaceId instead.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>65921621816****</para>
+        /// <para>939***</para>
         /// </summary>
         [NameInMap("CustWabaId")]
         [Validation(Required=false)]
         public string CustWabaId { get; set; }
 
         /// <summary>
-        /// <para>The example for creating a template.</para>
+        /// <para>The variables in a key-value structure.</para>
         /// </summary>
         [NameInMap("Example")]
         [Validation(Required=false)]
@@ -73,10 +70,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The ISV verification code used to verify whether the sub-account is authorized by the ISV.</para>
+        /// <para>The ISV verification code, which is used to verify whether the RAM user is authorized by the ISV.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ksiekdki39ksks93939</para>
+        /// <para>9393***</para>
         /// </summary>
         [NameInMap("IsvCode")]
         [Validation(Required=false)]
@@ -84,7 +81,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string IsvCode { get; set; }
 
         /// <summary>
-        /// <para>The template language. For language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</para>
+        /// <para>The language.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -95,11 +92,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The validity period for sending template messages in WhatsApp.</para>
-        /// <list type="bullet">
-        /// <item><description>AUTHENTICATION: valid values range from 30 to 900. </description></item>
-        /// <item><description>UTILITY: valid values range from 30 to 43200.</description></item>
-        /// </list>
+        /// <para>The validity period for sending WhatsApp authentication template messages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>120</para>
@@ -122,7 +115,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The message template code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>8472929283883</para>
+        /// <para>93938**</para>
         /// </summary>
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]
@@ -139,10 +132,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>The templatetype.</para>
-        /// <list type="bullet">
-        /// <item><description><b>WHATSAPP</b></description></item>
-        /// </list>
+        /// <para>The templatetype to modify. Valid values: WHATSAPP and VIBER. Default value: WHATSAPP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WHATSAPP</para>

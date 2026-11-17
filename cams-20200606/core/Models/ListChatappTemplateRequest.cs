@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// </description></item>
         /// <item><description><para><b>auditing</b>: Under review.</para>
         /// </description></item>
-        /// <item><description><para><b>unaudit</b>: Review suspended.</para>
+        /// <item><description><para><b>unaudit</b>: Review paused.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The space ID of the ISV sub-customer, or the instance ID of a direct customer.</para>
+        /// <para>The space ID of the ISV sub-customer or the instance ID of the direct customer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>28251486512358****</para>
@@ -62,9 +62,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The WabaId of the ISV customer.</para>
+        /// <para>The WABA ID of the ISV customer.</para>
         /// <remarks>
-        /// <para>This is a deprecated parameter. Use CustSpaceId instead.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated. Use CustSpaceId instead.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustWabaId { get; set; }
 
         /// <summary>
-        /// <para>The ISV verification code, which is used to verify whether the RAM user is authorized by the ISV.</para>
+        /// <para>The verification code of the ISV, which is used to verify whether the RAM user is authorized by the ISV.</para>
         /// 
         /// <b>Example:</b>
         /// <para>skdi3kksloslikdkkdk</para>
@@ -110,10 +110,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The pagination settings.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>&quot;page&quot;: &quot;{\&quot;index\&quot;: 1,\&quot;size\&quot;: 20}</para>
+        /// <para>The pagination parameters.</para>
         /// </summary>
         [NameInMap("Page")]
         [Validation(Required=false)]
@@ -131,7 +128,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public int? Index { get; set; }
 
             /// <summary>
-            /// <para>The number of templates to query per page. Default value: 10.</para>
+            /// <para>The number of templates to return per page. Default value: 10.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

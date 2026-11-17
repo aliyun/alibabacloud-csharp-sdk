@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class UpdatePhoneWebhookRequest : TeaModel {
         /// <summary>
-        /// <para>The SpaceId of the ISV sub-customer.</para>
+        /// <para>The space ID of the ISV sub-customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The callback URL for the HTTP-based status report.</para>
+        /// <para>The callback URL for the status report API over HTTP.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.aliyun.com">http://www.aliyun.com</a></para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string StatusCallbackUrl { get; set; }
 
         /// <summary>
-        /// <para>The callback URL for the HTTP-based upstream message.</para>
+        /// <para>The callback URL for the upstream message API over HTTP.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://aliyun.com">http://aliyun.com</a></para>

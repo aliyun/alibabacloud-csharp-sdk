@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class AddChatGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The phone number associated with the business account.</para>
+        /// <para>The phone number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,12 +21,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BusinessNumber { get; set; }
 
         /// <summary>
-        /// <para>The channel type. Valid value:</para>
+        /// <para>The channel type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>WHATSAPP</b></description></item>
+        /// <item><description><b>WHATSAPP</b>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Currently, only the WhatsApp channel type is supported.</para>
+        /// <para>Currently, only WhatsApp channel messages are supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ChannelType { get; set; }
 
         /// <summary>
-        /// <para>The SpaceId or instance ID of the ISV sub-customer, which is the channel ID. Find it on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</para>
+        /// <para>The space ID or instance ID of the ISV sub-customer, which is the channel ID. You can view the channel ID on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channels Management</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The link to the WhatsApp group.</para>
+        /// <para>The Telegram group link.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://t.me/testgroup">https://t.me/testgroup</a></para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The group title.</para>
+        /// <para>The group subject.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

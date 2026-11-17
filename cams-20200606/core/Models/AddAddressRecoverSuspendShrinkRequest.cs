@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The customer space ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>Example value example value example value</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The request type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("RequestType")]
         [Validation(Required=false)]

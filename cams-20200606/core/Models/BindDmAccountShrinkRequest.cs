@@ -14,18 +14,18 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("AccountCode")]
         [Validation(Required=false)]
         public string AccountCode { get; set; }
 
         /// <summary>
-        /// <para>The SpaceId of the ISV sub-customer.</para>
+        /// <para>The space ID of the ISV sub-customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]

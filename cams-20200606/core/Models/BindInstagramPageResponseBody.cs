@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class BindInstagramPageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string ConnectionStatus { get; set; }
 
             /// <summary>
-            /// <para>The current page ID.</para>
+            /// <para>The page ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234322333</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: The call was successful.</description></item>
         /// <item><description><b>false</b>: The call failed.</description></item>

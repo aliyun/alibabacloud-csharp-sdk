@@ -18,11 +18,10 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "cams";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"ap-southeast-1", "cams.ap-southeast-1.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("cams", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -43,7 +42,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a request to change the destination, resume, or pause.</para>
+        /// <para>Applies for a destination change, resumption, or suspension.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -111,7 +110,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a request to change the destination, resume, or pause.</para>
+        /// <para>Applies for a destination change, resumption, or suspension.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -179,7 +178,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a request to change the destination, resume, or pause.</para>
+        /// <para>Applies for a destination change, resumption, or suspension.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -197,7 +196,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a request to change the destination, resume, or pause.</para>
+        /// <para>Applies for a destination change, resumption, or suspension.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -215,7 +214,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Signs up for a Viber account.</para>
+        /// <para>Registers a Viber account and opens an account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -283,7 +282,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Signs up for a Viber account.</para>
+        /// <para>Registers a Viber account and opens an account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -351,7 +350,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Signs up for a Viber account.</para>
+        /// <para>Registers a Viber account and opens an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -369,7 +368,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Signs up for a Viber account.</para>
+        /// <para>Registers a Viber account and opens an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -393,13 +392,12 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: 
-        /// Creating IM groups via the API is a feature in closed beta testing by Meta. Please contact your account manager to be added to the allowlist.</para>
+        /// <para>Notice: Creating IM groups by calling API operations is a Meta closed beta feature. Contact your account manager to apply for whitelist access.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>You can only create an IM group by calling this API.</description></item>
-        /// <item><description>After creating an IM group, you can call the <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> API to generate an invite link.</description></item>
-        /// <item><description>For the WhatsApp channel type, an IM group is limited to eight members.</description></item>
+        /// <item><description>You can call this operation to create an IM group. Currently, you can create IM groups only by calling API operations.</description></item>
+        /// <item><description>After the group is created, you can call the <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operation to add an invitation link and invite members to join the IM group.</description></item>
+        /// <item><description>The maximum number of members in a group whose channel type is WhatsApp is 8.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -480,13 +478,12 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: 
-        /// Creating IM groups via the API is a feature in closed beta testing by Meta. Please contact your account manager to be added to the allowlist.</para>
+        /// <para>Notice: Creating IM groups by calling API operations is a Meta closed beta feature. Contact your account manager to apply for whitelist access.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>You can only create an IM group by calling this API.</description></item>
-        /// <item><description>After creating an IM group, you can call the <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> API to generate an invite link.</description></item>
-        /// <item><description>For the WhatsApp channel type, an IM group is limited to eight members.</description></item>
+        /// <item><description>You can call this operation to create an IM group. Currently, you can create IM groups only by calling API operations.</description></item>
+        /// <item><description>After the group is created, you can call the <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operation to add an invitation link and invite members to join the IM group.</description></item>
+        /// <item><description>The maximum number of members in a group whose channel type is WhatsApp is 8.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -567,13 +564,12 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: 
-        /// Creating IM groups via the API is a feature in closed beta testing by Meta. Please contact your account manager to be added to the allowlist.</para>
+        /// <para>Notice: Creating IM groups by calling API operations is a Meta closed beta feature. Contact your account manager to apply for whitelist access.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>You can only create an IM group by calling this API.</description></item>
-        /// <item><description>After creating an IM group, you can call the <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> API to generate an invite link.</description></item>
-        /// <item><description>For the WhatsApp channel type, an IM group is limited to eight members.</description></item>
+        /// <item><description>You can call this operation to create an IM group. Currently, you can create IM groups only by calling API operations.</description></item>
+        /// <item><description>After the group is created, you can call the <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operation to add an invitation link and invite members to join the IM group.</description></item>
+        /// <item><description>The maximum number of members in a group whose channel type is WhatsApp is 8.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -598,13 +594,12 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: 
-        /// Creating IM groups via the API is a feature in closed beta testing by Meta. Please contact your account manager to be added to the allowlist.</para>
+        /// <para>Notice: Creating IM groups by calling API operations is a Meta closed beta feature. Contact your account manager to apply for whitelist access.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>You can only create an IM group by calling this API.</description></item>
-        /// <item><description>After creating an IM group, you can call the <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> API to generate an invite link.</description></item>
-        /// <item><description>For the WhatsApp channel type, an IM group is limited to eight members.</description></item>
+        /// <item><description>You can call this operation to create an IM group. Currently, you can create IM groups only by calling API operations.</description></item>
+        /// <item><description>After the group is created, you can call the <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operation to add an invitation link and invite members to join the IM group.</description></item>
+        /// <item><description>The maximum number of members in a group whose channel type is WhatsApp is 8.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -623,20 +618,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an invite link for an IM group.</para>
+        /// <para>Creates an IM group invitation link.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>Notice: Adding IM group invite links through the API is a Meta beta feature. Contact your account manager to apply for access.</para>
-        /// </remarks>
+        /// <para><notice>The feature of adding an IM group invitation link through the API is a Meta beta feature. Contact your account manager to apply for whitelist access.</notice></para>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure that you have a successfully created IM group.</description></item>
-        /// <item><description>If you do not have a successfully created IM group, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> operation to create one.</description></item>
-        /// <item><description>After you call this operation to add an IM group invite link, you can use the link to invite members to join the IM group.</description></item>
-        /// <item><description>Currently, members can join an IM group only through an invite link.</description></item>
-        /// <item><description>The maximum number of members in a WhatsApp group is 8.</description></item>
+        /// <item><description>Before calling this API operation, make sure that you have created an IM group.</description></item>
+        /// <item><description>If you do not have an IM group, you can call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> API operation to create one.</description></item>
+        /// <item><description>After you call this API operation to generate an IM group invitation link, you can use the link to invite members to the IM group.</description></item>
+        /// <item><description>Currently, members can only join an IM group by using an invitation link.</description></item>
+        /// <item><description>The maximum number of members in a group with the WhatsApp channel type is 8.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -703,20 +696,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an invite link for an IM group.</para>
+        /// <para>Creates an IM group invitation link.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>Notice: Adding IM group invite links through the API is a Meta beta feature. Contact your account manager to apply for access.</para>
-        /// </remarks>
+        /// <para><notice>The feature of adding an IM group invitation link through the API is a Meta beta feature. Contact your account manager to apply for whitelist access.</notice></para>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure that you have a successfully created IM group.</description></item>
-        /// <item><description>If you do not have a successfully created IM group, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> operation to create one.</description></item>
-        /// <item><description>After you call this operation to add an IM group invite link, you can use the link to invite members to join the IM group.</description></item>
-        /// <item><description>Currently, members can join an IM group only through an invite link.</description></item>
-        /// <item><description>The maximum number of members in a WhatsApp group is 8.</description></item>
+        /// <item><description>Before calling this API operation, make sure that you have created an IM group.</description></item>
+        /// <item><description>If you do not have an IM group, you can call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> API operation to create one.</description></item>
+        /// <item><description>After you call this API operation to generate an IM group invitation link, you can use the link to invite members to the IM group.</description></item>
+        /// <item><description>Currently, members can only join an IM group by using an invitation link.</description></item>
+        /// <item><description>The maximum number of members in a group with the WhatsApp channel type is 8.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -783,20 +774,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an invite link for an IM group.</para>
+        /// <para>Creates an IM group invitation link.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>Notice: Adding IM group invite links through the API is a Meta beta feature. Contact your account manager to apply for access.</para>
-        /// </remarks>
+        /// <para><notice>The feature of adding an IM group invitation link through the API is a Meta beta feature. Contact your account manager to apply for whitelist access.</notice></para>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure that you have a successfully created IM group.</description></item>
-        /// <item><description>If you do not have a successfully created IM group, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> operation to create one.</description></item>
-        /// <item><description>After you call this operation to add an IM group invite link, you can use the link to invite members to join the IM group.</description></item>
-        /// <item><description>Currently, members can join an IM group only through an invite link.</description></item>
-        /// <item><description>The maximum number of members in a WhatsApp group is 8.</description></item>
+        /// <item><description>Before calling this API operation, make sure that you have created an IM group.</description></item>
+        /// <item><description>If you do not have an IM group, you can call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> API operation to create one.</description></item>
+        /// <item><description>After you call this API operation to generate an IM group invitation link, you can use the link to invite members to the IM group.</description></item>
+        /// <item><description>Currently, members can only join an IM group by using an invitation link.</description></item>
+        /// <item><description>The maximum number of members in a group with the WhatsApp channel type is 8.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -815,20 +804,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an invite link for an IM group.</para>
+        /// <para>Creates an IM group invitation link.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>Notice: Adding IM group invite links through the API is a Meta beta feature. Contact your account manager to apply for access.</para>
-        /// </remarks>
+        /// <para><notice>The feature of adding an IM group invitation link through the API is a Meta beta feature. Contact your account manager to apply for whitelist access.</notice></para>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure that you have a successfully created IM group.</description></item>
-        /// <item><description>If you do not have a successfully created IM group, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> operation to create one.</description></item>
-        /// <item><description>After you call this operation to add an IM group invite link, you can use the link to invite members to join the IM group.</description></item>
-        /// <item><description>Currently, members can join an IM group only through an invite link.</description></item>
-        /// <item><description>The maximum number of members in a WhatsApp group is 8.</description></item>
+        /// <item><description>Before calling this API operation, make sure that you have created an IM group.</description></item>
+        /// <item><description>If you do not have an IM group, you can call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> API operation to create one.</description></item>
+        /// <item><description>After you call this API operation to generate an IM group invitation link, you can use the link to invite members to the IM group.</description></item>
+        /// <item><description>Currently, members can only join an IM group by using an invitation link.</description></item>
+        /// <item><description>The maximum number of members in a group with the WhatsApp channel type is 8.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -847,12 +834,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a phone number to a WABA.</para>
+        /// <para>Adds a phone number to WABA.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China site (Chinese mainland) QPS limit for a single user on this API is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <para>The QPS limit per user for this API operation is 10 requests per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this API operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -922,12 +909,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a phone number to a WABA.</para>
+        /// <para>Adds a phone number to WABA.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China site (Chinese mainland) QPS limit for a single user on this API is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <para>The QPS limit per user for this API operation is 10 requests per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this API operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -997,12 +984,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a phone number to a WABA.</para>
+        /// <para>Adds a phone number to WABA.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China site (Chinese mainland) QPS limit for a single user on this API is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <para>The QPS limit per user for this API operation is 10 requests per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this API operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1020,12 +1007,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a phone number to a WABA.</para>
+        /// <para>Adds a phone number to WABA.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China site (Chinese mainland) QPS limit for a single user on this API is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <para>The QPS limit per user for this API operation is 10 requests per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this API operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1271,12 +1258,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds users to a custom audience.</para>
+        /// <para>Adds a custom audience.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After users are submitted to a custom audience, Meta matches them. If fewer than 100 users are matched, Meta discards the data. This prevents phone numbers from being linked directly to user tokens. Each API call supports up to 10,000 user records.</para>
+        /// <para>After the users in the added custom audience are submitted to Meta, Meta discards the matching data if the number of successfully matched users is less than 100. This prevents the submitted phone numbers from being compared with tokens to establish direct relationships. You can pass up to 10,000 user data records at a time in a single request.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1360,12 +1347,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds users to a custom audience.</para>
+        /// <para>Adds a custom audience.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After users are submitted to a custom audience, Meta matches them. If fewer than 100 users are matched, Meta discards the data. This prevents phone numbers from being linked directly to user tokens. Each API call supports up to 10,000 user records.</para>
+        /// <para>After the users in the added custom audience are submitted to Meta, Meta discards the matching data if the number of successfully matched users is less than 100. This prevents the submitted phone numbers from being compared with tokens to establish direct relationships. You can pass up to 10,000 user data records at a time in a single request.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1449,12 +1436,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds users to a custom audience.</para>
+        /// <para>Adds a custom audience.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After users are submitted to a custom audience, Meta matches them. If fewer than 100 users are matched, Meta discards the data. This prevents phone numbers from being linked directly to user tokens. Each API call supports up to 10,000 user records.</para>
+        /// <para>After the users in the added custom audience are submitted to Meta, Meta discards the matching data if the number of successfully matched users is less than 100. This prevents the submitted phone numbers from being compared with tokens to establish direct relationships. You can pass up to 10,000 user data records at a time in a single request.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1472,12 +1459,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds users to a custom audience.</para>
+        /// <para>Adds a custom audience.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After users are submitted to a custom audience, Meta matches them. If fewer than 100 users are matched, Meta discards the data. This prevents phone numbers from being linked directly to user tokens. Each API call supports up to 10,000 user records.</para>
+        /// <para>After the users in the added custom audience are submitted to Meta, Meta discards the matching data if the number of successfully matched users is less than 100. This prevents the submitted phone numbers from being compared with tokens to establish direct relationships. You can pass up to 10,000 user data records at a time in a single request.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1715,7 +1702,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a campaign.</para>
+        /// <para>Creates a marketing campaign.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1827,7 +1814,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a campaign.</para>
+        /// <para>Creates a marketing campaign.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1939,7 +1926,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a campaign.</para>
+        /// <para>Creates a marketing campaign.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1957,7 +1944,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a campaign.</para>
+        /// <para>Creates a marketing campaign.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1975,7 +1962,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Archives a Chat App Message Service template. Currently, only WhatsApp templates support archiving.</para>
+        /// <para>Archives Chat App templates. Currently, only WhatsApp templates support archiving.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2035,7 +2022,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Archives a Chat App Message Service template. Currently, only WhatsApp templates support archiving.</para>
+        /// <para>Archives Chat App templates. Currently, only WhatsApp templates support archiving.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2095,7 +2082,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Archives a Chat App Message Service template. Currently, only WhatsApp templates support archiving.</para>
+        /// <para>Archives Chat App templates. Currently, only WhatsApp templates support archiving.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2113,7 +2100,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Archives a Chat App Message Service template. Currently, only WhatsApp templates support archiving.</para>
+        /// <para>Archives Chat App templates. Currently, only WhatsApp templates support archiving.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2303,7 +2290,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a page with an instance.</para>
+        /// <para>Binds a page to an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2365,7 +2352,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a page with an instance.</para>
+        /// <para>Binds a page to an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2427,7 +2414,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a page with an instance.</para>
+        /// <para>Binds a page to an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2445,7 +2432,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a page with an instance.</para>
+        /// <para>Binds a page to an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2463,7 +2450,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds the selected pageId.</para>
+        /// <para>Binds the selected page ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2525,7 +2512,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds the selected pageId.</para>
+        /// <para>Binds the selected page ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2587,7 +2574,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds the selected pageId.</para>
+        /// <para>Binds the selected page ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2605,7 +2592,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds the selected pageId.</para>
+        /// <para>Binds the selected page ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2623,7 +2610,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves a resource to a different resource group.</para>
+        /// <para>Transfers resources to another resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2673,7 +2660,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves a resource to a different resource group.</para>
+        /// <para>Transfers resources to another resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2723,7 +2710,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves a resource to a different resource group.</para>
+        /// <para>Transfers resources to another resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2741,7 +2728,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves a resource to a different resource group.</para>
+        /// <para>Transfers resources to another resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2759,12 +2746,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a WhatsApp Business Account (WABA) through the northbound interface.</para>
+        /// <para>Binds a WABA to the northbound interface.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The per-user QPS limit for this API is 10 calls per second. If this limit is exceeded, API calls will be throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If you exceed this limit, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2818,12 +2805,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a WhatsApp Business Account (WABA) through the northbound interface.</para>
+        /// <para>Binds a WABA to the northbound interface.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The per-user QPS limit for this API is 10 calls per second. If this limit is exceeded, API calls will be throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If you exceed this limit, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2877,12 +2864,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a WhatsApp Business Account (WABA) through the northbound interface.</para>
+        /// <para>Binds a WABA to the northbound interface.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The per-user QPS limit for this API is 10 calls per second. If this limit is exceeded, API calls will be throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If you exceed this limit, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2900,12 +2887,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a WhatsApp Business Account (WABA) through the northbound interface.</para>
+        /// <para>Binds a WABA to the northbound interface.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The per-user QPS limit for this API is 10 calls per second. If this limit is exceeded, API calls will be throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If you exceed this limit, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2928,7 +2915,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second per user. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2991,7 +2978,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second per user. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3054,7 +3041,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second per user. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3077,7 +3064,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second per user. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3275,12 +3262,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deregisters a phone number from WABA.</para>
+        /// <para>Unregisters a phone number from WABA.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China Mainland site (Chinese) QPS limit for a single user for this API is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Manage your calls appropriately.</para>
+        /// <para>The queries per second (QPS) limit per user for this operation is 10. If this limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3338,12 +3325,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deregisters a phone number from WABA.</para>
+        /// <para>Unregisters a phone number from WABA.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China Mainland site (Chinese) QPS limit for a single user for this API is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Manage your calls appropriately.</para>
+        /// <para>The queries per second (QPS) limit per user for this operation is 10. If this limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3401,12 +3388,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deregisters a phone number from WABA.</para>
+        /// <para>Unregisters a phone number from WABA.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China Mainland site (Chinese) QPS limit for a single user for this API is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Manage your calls appropriately.</para>
+        /// <para>The queries per second (QPS) limit per user for this operation is 10. If this limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3424,12 +3411,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deregisters a phone number from WABA.</para>
+        /// <para>Unregisters a phone number from WABA.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China Mainland site (Chinese) QPS limit for a single user for this API is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Manage your calls appropriately.</para>
+        /// <para>The queries per second (QPS) limit per user for this operation is 10. If this limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3447,12 +3434,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers a phone number through the northbound interface.</para>
+        /// <para>Registers a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China Mainland Messaging API has a single-user QPS limit of 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3510,12 +3497,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers a phone number through the northbound interface.</para>
+        /// <para>Registers a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China Mainland Messaging API has a single-user QPS limit of 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3573,12 +3560,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers a phone number through the northbound interface.</para>
+        /// <para>Registers a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China Mainland Messaging API has a single-user QPS limit of 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3596,12 +3583,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers a phone number through the northbound interface.</para>
+        /// <para>Registers a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China Mainland Messaging API has a single-user QPS limit of 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3624,7 +3611,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China-specific QPS limit for this API is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
+        /// <para>The single-user QPS limit for this API operation is 10 requests per second. If you exceed the limit, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3683,7 +3670,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China-specific QPS limit for this API is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
+        /// <para>The single-user QPS limit for this API operation is 10 requests per second. If you exceed the limit, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3742,7 +3729,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China-specific QPS limit for this API is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
+        /// <para>The single-user QPS limit for this API operation is 10 requests per second. If you exceed the limit, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3765,7 +3752,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China-specific QPS limit for this API is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
+        /// <para>The single-user QPS limit for this API operation is 10 requests per second. If you exceed the limit, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3783,12 +3770,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies a verification code and registers through the northbound interface.</para>
+        /// <para>Verifies the verification code and registers a user through the northbound API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The queries per second (QPS) limit for this API is 10 calls per second per user. If this limit is exceeded, API calls are throttled, which may affect your business. Call this API appropriately.</para>
+        /// <para>The QPS limit per user is 10 requests per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call this API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3850,12 +3837,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies a verification code and registers through the northbound interface.</para>
+        /// <para>Verifies the verification code and registers a user through the northbound API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The queries per second (QPS) limit for this API is 10 calls per second per user. If this limit is exceeded, API calls are throttled, which may affect your business. Call this API appropriately.</para>
+        /// <para>The QPS limit per user is 10 requests per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call this API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3917,12 +3904,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies a verification code and registers through the northbound interface.</para>
+        /// <para>Verifies the verification code and registers a user through the northbound API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The queries per second (QPS) limit for this API is 10 calls per second per user. If this limit is exceeded, API calls are throttled, which may affect your business. Call this API appropriately.</para>
+        /// <para>The QPS limit per user is 10 requests per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call this API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3940,12 +3927,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies a verification code and registers through the northbound interface.</para>
+        /// <para>Verifies the verification code and registers a user through the northbound API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The queries per second (QPS) limit for this API is 10 calls per second per user. If this limit is exceeded, API calls are throttled, which may affect your business. Call this API appropriately.</para>
+        /// <para>The QPS limit per user is 10 requests per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call this API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4301,8 +4288,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can create a flow by calling this operation or manually in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a>.</description></item>
-        /// <item><description>After creating a flow, refer to <a href="https://help.aliyun.com/document_detail/2836818.html">Flow editor component description</a> to orchestrate the canvas.</description></item>
+        /// <item><description>You can use this operation to create a flow, or manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> interface.</description></item>
+        /// <item><description>After creating a flow, refer to <a href="https://help.aliyun.com/document_detail/2836818.html">Flow Editor component description</a> for canvas orchestration.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4329,6 +4316,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 request.LifeCycleExtendDataShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LifeCycleExtendData, "LifeCycleExtendData", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LifeCycleExtendDataV2))
+            {
+                request.LifeCycleExtendDataV2Shrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LifeCycleExtendDataV2, "LifeCycleExtendDataV2", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
             {
@@ -4353,6 +4344,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifeCycleExtendDataShrink))
             {
                 query["LifeCycleExtendData"] = request.LifeCycleExtendDataShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifeCycleExtendDataV2Shrink))
+            {
+                query["LifeCycleExtendDataV2"] = request.LifeCycleExtendDataV2Shrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
@@ -4401,8 +4396,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can create a flow by calling this operation or manually in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a>.</description></item>
-        /// <item><description>After creating a flow, refer to <a href="https://help.aliyun.com/document_detail/2836818.html">Flow editor component description</a> to orchestrate the canvas.</description></item>
+        /// <item><description>You can use this operation to create a flow, or manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> interface.</description></item>
+        /// <item><description>After creating a flow, refer to <a href="https://help.aliyun.com/document_detail/2836818.html">Flow Editor component description</a> for canvas orchestration.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4429,6 +4424,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 request.LifeCycleExtendDataShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LifeCycleExtendData, "LifeCycleExtendData", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LifeCycleExtendDataV2))
+            {
+                request.LifeCycleExtendDataV2Shrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LifeCycleExtendDataV2, "LifeCycleExtendDataV2", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
             {
@@ -4453,6 +4452,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifeCycleExtendDataShrink))
             {
                 query["LifeCycleExtendData"] = request.LifeCycleExtendDataShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifeCycleExtendDataV2Shrink))
+            {
+                query["LifeCycleExtendDataV2"] = request.LifeCycleExtendDataV2Shrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
@@ -4501,8 +4504,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can create a flow by calling this operation or manually in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a>.</description></item>
-        /// <item><description>After creating a flow, refer to <a href="https://help.aliyun.com/document_detail/2836818.html">Flow editor component description</a> to orchestrate the canvas.</description></item>
+        /// <item><description>You can use this operation to create a flow, or manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> interface.</description></item>
+        /// <item><description>After creating a flow, refer to <a href="https://help.aliyun.com/document_detail/2836818.html">Flow Editor component description</a> for canvas orchestration.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4527,8 +4530,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can create a flow by calling this operation or manually in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a>.</description></item>
-        /// <item><description>After creating a flow, refer to <a href="https://help.aliyun.com/document_detail/2836818.html">Flow editor component description</a> to orchestrate the canvas.</description></item>
+        /// <item><description>You can use this operation to create a flow, or manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> interface.</description></item>
+        /// <item><description>After creating a flow, refer to <a href="https://help.aliyun.com/document_detail/2836818.html">Flow Editor component description</a> for canvas orchestration.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4553,9 +4556,9 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to create and import a flow, or manually create and import a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow orchestration</a> console.</description></item>
-        /// <item><description>Before calling this operation, make sure you have exported flow DSL data.</description></item>
-        /// <item><description>If you do not have exported flow DSL data, go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow orchestration</a> console, click a flow name to open the canvas orchestration page, arrange canvas components, save the flow, and export it as a JSON data file.</description></item>
+        /// <item><description>You can call this operation to create and import a flow, or manually create and import a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</description></item>
+        /// <item><description>Before calling this operation, ensure that you have the exported flow DSL data.</description></item>
+        /// <item><description>If you do not have the exported flow DSL data, click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration interface, orchestrate the canvas components, save the flow, and then export it as a JSON data file.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4638,9 +4641,9 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to create and import a flow, or manually create and import a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow orchestration</a> console.</description></item>
-        /// <item><description>Before calling this operation, make sure you have exported flow DSL data.</description></item>
-        /// <item><description>If you do not have exported flow DSL data, go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow orchestration</a> console, click a flow name to open the canvas orchestration page, arrange canvas components, save the flow, and export it as a JSON data file.</description></item>
+        /// <item><description>You can call this operation to create and import a flow, or manually create and import a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</description></item>
+        /// <item><description>Before calling this operation, ensure that you have the exported flow DSL data.</description></item>
+        /// <item><description>If you do not have the exported flow DSL data, click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration interface, orchestrate the canvas components, save the flow, and then export it as a JSON data file.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4723,9 +4726,9 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to create and import a flow, or manually create and import a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow orchestration</a> console.</description></item>
-        /// <item><description>Before calling this operation, make sure you have exported flow DSL data.</description></item>
-        /// <item><description>If you do not have exported flow DSL data, go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow orchestration</a> console, click a flow name to open the canvas orchestration page, arrange canvas components, save the flow, and export it as a JSON data file.</description></item>
+        /// <item><description>You can call this operation to create and import a flow, or manually create and import a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</description></item>
+        /// <item><description>Before calling this operation, ensure that you have the exported flow DSL data.</description></item>
+        /// <item><description>If you do not have the exported flow DSL data, click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration interface, orchestrate the canvas components, save the flow, and then export it as a JSON data file.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4750,9 +4753,9 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to create and import a flow, or manually create and import a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow orchestration</a> console.</description></item>
-        /// <item><description>Before calling this operation, make sure you have exported flow DSL data.</description></item>
-        /// <item><description>If you do not have exported flow DSL data, go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow orchestration</a> console, click a flow name to open the canvas orchestration page, arrange canvas components, save the flow, and export it as a JSON data file.</description></item>
+        /// <item><description>You can call this operation to create and import a flow, or manually create and import a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</description></item>
+        /// <item><description>Before calling this operation, ensure that you have the exported flow DSL data.</description></item>
+        /// <item><description>If you do not have the exported flow DSL data, click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration interface, orchestrate the canvas components, save the flow, and then export it as a JSON data file.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4771,16 +4774,16 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a flow log setting.</para>
+        /// <para>Creates chat flow log settings.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>To update a flow log setting by using an API, you must first create a flow log setting. After the setting is created, you can call the <a href="https://help.aliyun.com/document_detail/2937212.html">ReadChatFlowLogSetting</a> operation to view the flow log setting information, and then call the <a href="https://help.aliyun.com/document_detail/2937210.html">UpdateChatFlowLogSetting</a> operation to update the flow log setting.</description></item>
-        /// <item><description>If you do not need to update the flow log setting by using an API, you can manually update the flow log information in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a> &gt; <b>Settings</b> &gt; <b>Log</b> page.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have a successfully created flow.</description></item>
-        /// <item><description>If you do not have a successfully created flow, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page or call the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation to create a flow.</description></item>
+        /// <item><description>To update chat flow log settings by calling API operations, you must first create the log settings. After the log settings are created, you can call the <a href="https://api.aliyun.com/document/cams/2020-06-06/ReadChatFlowLogSetting">ReadChatFlowLogSetting</a> operation to query the log settings, and then call the <a href="https://help.aliyun.com/document_detail/2937210.html">UpdateChatFlowLogSetting</a> operation to update the log settings.</description></item>
+        /// <item><description>If you do not need to update chat flow log settings by calling API operations, you can manually update the log settings by choosing <b>Settings</b> &gt; <b>Log</b> in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Chat Flow Builder</b></a>.</description></item>
+        /// <item><description>Before you call this operation, make sure that a chat flow is created.</description></item>
+        /// <item><description>If no chat flow is created, you can manually create a chat flow in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Chat Flow Builder</a> or call the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation to create a chat flow.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4835,16 +4838,16 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a flow log setting.</para>
+        /// <para>Creates chat flow log settings.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>To update a flow log setting by using an API, you must first create a flow log setting. After the setting is created, you can call the <a href="https://help.aliyun.com/document_detail/2937212.html">ReadChatFlowLogSetting</a> operation to view the flow log setting information, and then call the <a href="https://help.aliyun.com/document_detail/2937210.html">UpdateChatFlowLogSetting</a> operation to update the flow log setting.</description></item>
-        /// <item><description>If you do not need to update the flow log setting by using an API, you can manually update the flow log information in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a> &gt; <b>Settings</b> &gt; <b>Log</b> page.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have a successfully created flow.</description></item>
-        /// <item><description>If you do not have a successfully created flow, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page or call the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation to create a flow.</description></item>
+        /// <item><description>To update chat flow log settings by calling API operations, you must first create the log settings. After the log settings are created, you can call the <a href="https://api.aliyun.com/document/cams/2020-06-06/ReadChatFlowLogSetting">ReadChatFlowLogSetting</a> operation to query the log settings, and then call the <a href="https://help.aliyun.com/document_detail/2937210.html">UpdateChatFlowLogSetting</a> operation to update the log settings.</description></item>
+        /// <item><description>If you do not need to update chat flow log settings by calling API operations, you can manually update the log settings by choosing <b>Settings</b> &gt; <b>Log</b> in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Chat Flow Builder</b></a>.</description></item>
+        /// <item><description>Before you call this operation, make sure that a chat flow is created.</description></item>
+        /// <item><description>If no chat flow is created, you can manually create a chat flow in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Chat Flow Builder</a> or call the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation to create a chat flow.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4899,16 +4902,16 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a flow log setting.</para>
+        /// <para>Creates chat flow log settings.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>To update a flow log setting by using an API, you must first create a flow log setting. After the setting is created, you can call the <a href="https://help.aliyun.com/document_detail/2937212.html">ReadChatFlowLogSetting</a> operation to view the flow log setting information, and then call the <a href="https://help.aliyun.com/document_detail/2937210.html">UpdateChatFlowLogSetting</a> operation to update the flow log setting.</description></item>
-        /// <item><description>If you do not need to update the flow log setting by using an API, you can manually update the flow log information in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a> &gt; <b>Settings</b> &gt; <b>Log</b> page.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have a successfully created flow.</description></item>
-        /// <item><description>If you do not have a successfully created flow, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page or call the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation to create a flow.</description></item>
+        /// <item><description>To update chat flow log settings by calling API operations, you must first create the log settings. After the log settings are created, you can call the <a href="https://api.aliyun.com/document/cams/2020-06-06/ReadChatFlowLogSetting">ReadChatFlowLogSetting</a> operation to query the log settings, and then call the <a href="https://help.aliyun.com/document_detail/2937210.html">UpdateChatFlowLogSetting</a> operation to update the log settings.</description></item>
+        /// <item><description>If you do not need to update chat flow log settings by calling API operations, you can manually update the log settings by choosing <b>Settings</b> &gt; <b>Log</b> in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Chat Flow Builder</b></a>.</description></item>
+        /// <item><description>Before you call this operation, make sure that a chat flow is created.</description></item>
+        /// <item><description>If no chat flow is created, you can manually create a chat flow in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Chat Flow Builder</a> or call the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation to create a chat flow.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4927,16 +4930,16 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a flow log setting.</para>
+        /// <para>Creates chat flow log settings.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>To update a flow log setting by using an API, you must first create a flow log setting. After the setting is created, you can call the <a href="https://help.aliyun.com/document_detail/2937212.html">ReadChatFlowLogSetting</a> operation to view the flow log setting information, and then call the <a href="https://help.aliyun.com/document_detail/2937210.html">UpdateChatFlowLogSetting</a> operation to update the flow log setting.</description></item>
-        /// <item><description>If you do not need to update the flow log setting by using an API, you can manually update the flow log information in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a> &gt; <b>Settings</b> &gt; <b>Log</b> page.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have a successfully created flow.</description></item>
-        /// <item><description>If you do not have a successfully created flow, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page or call the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation to create a flow.</description></item>
+        /// <item><description>To update chat flow log settings by calling API operations, you must first create the log settings. After the log settings are created, you can call the <a href="https://api.aliyun.com/document/cams/2020-06-06/ReadChatFlowLogSetting">ReadChatFlowLogSetting</a> operation to query the log settings, and then call the <a href="https://help.aliyun.com/document_detail/2937210.html">UpdateChatFlowLogSetting</a> operation to update the log settings.</description></item>
+        /// <item><description>If you do not need to update chat flow log settings by calling API operations, you can manually update the log settings by choosing <b>Settings</b> &gt; <b>Log</b> in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Chat Flow Builder</b></a>.</description></item>
+        /// <item><description>Before you call this operation, make sure that a chat flow is created.</description></item>
+        /// <item><description>If no chat flow is created, you can manually create a chat flow in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Chat Flow Builder</a> or call the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation to create a chat flow.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5135,15 +5138,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a message template. After the template is approved, you can use it to send messages.</para>
+        /// <para>Creates a message template. You can send messages after the template is approved.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 50 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</para>
+        /// <para>The QPS limit for a single user calling this API operation is 50. If the limit is exceeded, API calls are throttled, which may affect your business. Call this API operation at a reasonable rate.</para>
         /// <h3>Status changes</h3>
-        /// <para>You can monitor template status and quality changes through MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</para>
+        /// <para>You can listen for template status and quality changes by using MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Message receipts</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5243,15 +5246,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a message template. After the template is approved, you can use it to send messages.</para>
+        /// <para>Creates a message template. You can send messages after the template is approved.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 50 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</para>
+        /// <para>The QPS limit for a single user calling this API operation is 50. If the limit is exceeded, API calls are throttled, which may affect your business. Call this API operation at a reasonable rate.</para>
         /// <h3>Status changes</h3>
-        /// <para>You can monitor template status and quality changes through MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</para>
+        /// <para>You can listen for template status and quality changes by using MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Message receipts</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5351,15 +5354,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a message template. After the template is approved, you can use it to send messages.</para>
+        /// <para>Creates a message template. You can send messages after the template is approved.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 50 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</para>
+        /// <para>The QPS limit for a single user calling this API operation is 50. If the limit is exceeded, API calls are throttled, which may affect your business. Call this API operation at a reasonable rate.</para>
         /// <h3>Status changes</h3>
-        /// <para>You can monitor template status and quality changes through MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</para>
+        /// <para>You can listen for template status and quality changes by using MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Message receipts</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5377,15 +5380,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a message template. After the template is approved, you can use it to send messages.</para>
+        /// <para>Creates a message template. You can send messages after the template is approved.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 50 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</para>
+        /// <para>The QPS limit for a single user calling this API operation is 50. If the limit is exceeded, API calls are throttled, which may affect your business. Call this API operation at a reasonable rate.</para>
         /// <h3>Status changes</h3>
-        /// <para>You can monitor template status and quality changes through MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</para>
+        /// <para>You can listen for template status and quality changes by using MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Message receipts</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5801,9 +5804,9 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to create a new flow version, or click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to enter the canvas orchestration page and manually copy a new flow version.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have a successfully created flow.</description></item>
-        /// <item><description>If you do not have a successfully created flow, you can manually create a flow on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</description></item>
+        /// <item><description>You can call this operation to create a new flow version. Alternatively, you can go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, click the flow name to go to the canvas orchestration page, and manually copy a new flow version.</description></item>
+        /// <item><description>Before calling this operation, ensure that you have created a flow.</description></item>
+        /// <item><description>If you have not created a flow, you can manually create one on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlow">CreateChatFlow</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5886,9 +5889,9 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to create a new flow version, or click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to enter the canvas orchestration page and manually copy a new flow version.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have a successfully created flow.</description></item>
-        /// <item><description>If you do not have a successfully created flow, you can manually create a flow on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</description></item>
+        /// <item><description>You can call this operation to create a new flow version. Alternatively, you can go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, click the flow name to go to the canvas orchestration page, and manually copy a new flow version.</description></item>
+        /// <item><description>Before calling this operation, ensure that you have created a flow.</description></item>
+        /// <item><description>If you have not created a flow, you can manually create one on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlow">CreateChatFlow</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5971,9 +5974,9 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to create a new flow version, or click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to enter the canvas orchestration page and manually copy a new flow version.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have a successfully created flow.</description></item>
-        /// <item><description>If you do not have a successfully created flow, you can manually create a flow on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</description></item>
+        /// <item><description>You can call this operation to create a new flow version. Alternatively, you can go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, click the flow name to go to the canvas orchestration page, and manually copy a new flow version.</description></item>
+        /// <item><description>Before calling this operation, ensure that you have created a flow.</description></item>
+        /// <item><description>If you have not created a flow, you can manually create one on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlow">CreateChatFlow</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5998,9 +6001,9 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to create a new flow version, or click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to enter the canvas orchestration page and manually copy a new flow version.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have a successfully created flow.</description></item>
-        /// <item><description>If you do not have a successfully created flow, you can manually create a flow on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</description></item>
+        /// <item><description>You can call this operation to create a new flow version. Alternatively, you can go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, click the flow name to go to the canvas orchestration page, and manually copy a new flow version.</description></item>
+        /// <item><description>Before calling this operation, ensure that you have created a flow.</description></item>
+        /// <item><description>If you have not created a flow, you can manually create one on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlow">CreateChatFlow</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6395,7 +6398,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes an embedded messenger.</para>
+        /// <para>Authorizes an embedded Messenger.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6471,7 +6474,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes an embedded messenger.</para>
+        /// <para>Authorizes an embedded Messenger.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6547,7 +6550,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes an embedded messenger.</para>
+        /// <para>Authorizes an embedded Messenger.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6565,7 +6568,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes an embedded messenger.</para>
+        /// <para>Authorizes an embedded Messenger.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6807,7 +6810,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves and stores the pageId based on the embedded code.</para>
+        /// <para>Retrieves the page ID based on the embedded code and stores it in the database.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6875,7 +6878,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves and stores the pageId based on the embedded code.</para>
+        /// <para>Retrieves the page ID based on the embedded code and stores it in the database.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6943,7 +6946,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves and stores the pageId based on the embedded code.</para>
+        /// <para>Retrieves the page ID based on the embedded code and stores it in the database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6961,7 +6964,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves and stores the pageId based on the embedded code.</para>
+        /// <para>Retrieves the page ID based on the embedded code and stores it in the database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6985,8 +6988,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to delete a flow, or manually delete a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a>.</description></item>
-        /// <item><description>Before deleting a flow, make sure the flow status is offline.</description></item>
+        /// <item><description>You can call this operation to delete a flow, or manually delete it in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</description></item>
+        /// <item><description>Before deleting a flow, make sure that the flow is offline.</description></item>
         /// <item><description>A deleted flow cannot be recovered. Proceed with caution.</description></item>
         /// </list>
         /// </description>
@@ -7062,8 +7065,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to delete a flow, or manually delete a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a>.</description></item>
-        /// <item><description>Before deleting a flow, make sure the flow status is offline.</description></item>
+        /// <item><description>You can call this operation to delete a flow, or manually delete it in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</description></item>
+        /// <item><description>Before deleting a flow, make sure that the flow is offline.</description></item>
         /// <item><description>A deleted flow cannot be recovered. Proceed with caution.</description></item>
         /// </list>
         /// </description>
@@ -7139,8 +7142,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to delete a flow, or manually delete a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a>.</description></item>
-        /// <item><description>Before deleting a flow, make sure the flow status is offline.</description></item>
+        /// <item><description>You can call this operation to delete a flow, or manually delete it in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</description></item>
+        /// <item><description>Before deleting a flow, make sure that the flow is offline.</description></item>
         /// <item><description>A deleted flow cannot be recovered. Proceed with caution.</description></item>
         /// </list>
         /// </description>
@@ -7166,8 +7169,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to delete a flow, or manually delete a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a>.</description></item>
-        /// <item><description>Before deleting a flow, make sure the flow status is offline.</description></item>
+        /// <item><description>You can call this operation to delete a flow, or manually delete it in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</description></item>
+        /// <item><description>Before deleting a flow, make sure that the flow is offline.</description></item>
         /// <item><description>A deleted flow cannot be recovered. Proceed with caution.</description></item>
         /// </list>
         /// </description>
@@ -7187,18 +7190,16 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a successfully created IM group.</para>
+        /// <para>Deletes an existing IM group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>Notice: The API-based IM group deletion feature is a Meta beta feature. Contact your account manager to apply for access.</para>
-        /// </remarks>
+        /// <para><notice>The feature to delete an IM group by calling an API operation is in the closed beta phase of Meta. Contact your account manager to apply for whitelist access.</notice></para>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure that you have a successfully created IM group.</description></item>
-        /// <item><description>If you do not have a successfully created IM group, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> operation to create one.</description></item>
-        /// <item><description>A deleted IM group cannot be recovered. Proceed with caution.</description></item>
+        /// <item><description>Before calling this operation, make sure that you have created an IM group.</description></item>
+        /// <item><description>If you do not have an IM group, you can call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> operation to create one.</description></item>
+        /// <item><description>An IM group cannot be recovered after it is deleted. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7265,18 +7266,16 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a successfully created IM group.</para>
+        /// <para>Deletes an existing IM group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>Notice: The API-based IM group deletion feature is a Meta beta feature. Contact your account manager to apply for access.</para>
-        /// </remarks>
+        /// <para><notice>The feature to delete an IM group by calling an API operation is in the closed beta phase of Meta. Contact your account manager to apply for whitelist access.</notice></para>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure that you have a successfully created IM group.</description></item>
-        /// <item><description>If you do not have a successfully created IM group, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> operation to create one.</description></item>
-        /// <item><description>A deleted IM group cannot be recovered. Proceed with caution.</description></item>
+        /// <item><description>Before calling this operation, make sure that you have created an IM group.</description></item>
+        /// <item><description>If you do not have an IM group, you can call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> operation to create one.</description></item>
+        /// <item><description>An IM group cannot be recovered after it is deleted. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7343,18 +7342,16 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a successfully created IM group.</para>
+        /// <para>Deletes an existing IM group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>Notice: The API-based IM group deletion feature is a Meta beta feature. Contact your account manager to apply for access.</para>
-        /// </remarks>
+        /// <para><notice>The feature to delete an IM group by calling an API operation is in the closed beta phase of Meta. Contact your account manager to apply for whitelist access.</notice></para>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure that you have a successfully created IM group.</description></item>
-        /// <item><description>If you do not have a successfully created IM group, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> operation to create one.</description></item>
-        /// <item><description>A deleted IM group cannot be recovered. Proceed with caution.</description></item>
+        /// <item><description>Before calling this operation, make sure that you have created an IM group.</description></item>
+        /// <item><description>If you do not have an IM group, you can call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> operation to create one.</description></item>
+        /// <item><description>An IM group cannot be recovered after it is deleted. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7373,18 +7370,16 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a successfully created IM group.</para>
+        /// <para>Deletes an existing IM group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>Notice: The API-based IM group deletion feature is a Meta beta feature. Contact your account manager to apply for access.</para>
-        /// </remarks>
+        /// <para><notice>The feature to delete an IM group by calling an API operation is in the closed beta phase of Meta. Contact your account manager to apply for whitelist access.</notice></para>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure that you have a successfully created IM group.</description></item>
-        /// <item><description>If you do not have a successfully created IM group, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> operation to create one.</description></item>
-        /// <item><description>A deleted IM group cannot be recovered. Proceed with caution.</description></item>
+        /// <item><description>Before calling this operation, make sure that you have created an IM group.</description></item>
+        /// <item><description>If you do not have an IM group, you can call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> operation to create one.</description></item>
+        /// <item><description>An IM group cannot be recovered after it is deleted. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7403,18 +7398,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an IM group invitation link.</para>
+        /// <para>Deletes an IM group invite link.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: The ability to delete IM group invitation links through the API is a Meta beta feature. Contact your account manager to request access.</para>
+        /// <para>Notice: The feature to delete an IM group invite link through the API is a Meta beta feature. Contact your account manager to apply for whitelist access.</notice></para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure that the IM group you created already has an IM group invitation link added.</description></item>
-        /// <item><description>If you do not have an existing IM group, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations to create an IM group and add an invitation link.</description></item>
-        /// <item><description>After you delete an IM group invitation link, the IM group can no longer invite members to join. Proceed with caution.</description></item>
+        /// <item><description>Before you call this operation, make sure that an IM group invite link has been added to the IM group you created.</description></item>
+        /// <item><description>If you do not have a successfully created IM group, you can call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations to create an IM group and add an invite link.</description></item>
+        /// <item><description>After the IM group invite link is deleted, the IM group cannot invite members. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7481,18 +7476,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an IM group invitation link.</para>
+        /// <para>Deletes an IM group invite link.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: The ability to delete IM group invitation links through the API is a Meta beta feature. Contact your account manager to request access.</para>
+        /// <para>Notice: The feature to delete an IM group invite link through the API is a Meta beta feature. Contact your account manager to apply for whitelist access.</notice></para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure that the IM group you created already has an IM group invitation link added.</description></item>
-        /// <item><description>If you do not have an existing IM group, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations to create an IM group and add an invitation link.</description></item>
-        /// <item><description>After you delete an IM group invitation link, the IM group can no longer invite members to join. Proceed with caution.</description></item>
+        /// <item><description>Before you call this operation, make sure that an IM group invite link has been added to the IM group you created.</description></item>
+        /// <item><description>If you do not have a successfully created IM group, you can call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations to create an IM group and add an invite link.</description></item>
+        /// <item><description>After the IM group invite link is deleted, the IM group cannot invite members. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7559,18 +7554,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an IM group invitation link.</para>
+        /// <para>Deletes an IM group invite link.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: The ability to delete IM group invitation links through the API is a Meta beta feature. Contact your account manager to request access.</para>
+        /// <para>Notice: The feature to delete an IM group invite link through the API is a Meta beta feature. Contact your account manager to apply for whitelist access.</notice></para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure that the IM group you created already has an IM group invitation link added.</description></item>
-        /// <item><description>If you do not have an existing IM group, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations to create an IM group and add an invitation link.</description></item>
-        /// <item><description>After you delete an IM group invitation link, the IM group can no longer invite members to join. Proceed with caution.</description></item>
+        /// <item><description>Before you call this operation, make sure that an IM group invite link has been added to the IM group you created.</description></item>
+        /// <item><description>If you do not have a successfully created IM group, you can call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations to create an IM group and add an invite link.</description></item>
+        /// <item><description>After the IM group invite link is deleted, the IM group cannot invite members. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7589,18 +7584,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an IM group invitation link.</para>
+        /// <para>Deletes an IM group invite link.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: The ability to delete IM group invitation links through the API is a Meta beta feature. Contact your account manager to request access.</para>
+        /// <para>Notice: The feature to delete an IM group invite link through the API is a Meta beta feature. Contact your account manager to apply for whitelist access.</notice></para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure that the IM group you created already has an IM group invitation link added.</description></item>
-        /// <item><description>If you do not have an existing IM group, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations to create an IM group and add an invitation link.</description></item>
-        /// <item><description>After you delete an IM group invitation link, the IM group can no longer invite members to join. Proceed with caution.</description></item>
+        /// <item><description>Before you call this operation, make sure that an IM group invite link has been added to the IM group you created.</description></item>
+        /// <item><description>If you do not have a successfully created IM group, you can call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations to create an IM group and add an invite link.</description></item>
+        /// <item><description>After the IM group invite link is deleted, the IM group cannot invite members. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7625,13 +7620,12 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: 
-        /// This operation is a beta feature from Meta. Contact your account manager to add your account to the allowlist before use.</para>
+        /// <para>Notice: The feature of removing IM group members through the API is a Meta beta feature. Contact your account manager to request whitelist access.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>This operation requires an existing IM group that members have joined via an invitation link.</description></item>
-        /// <item><description>To create an IM group and add an invitation link, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations.</description></item>
-        /// <item><description>Removed members no longer receive messages from the group. Use this operation with caution.</description></item>
+        /// <item><description>Before calling this API operation, make sure that an IM group invite link has been added to the created IM group and members have joined the group through the link.</description></item>
+        /// <item><description>If you do not have a created IM group, you can call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations to create an IM group and add an invite link.</description></item>
+        /// <item><description>After a member is removed from an IM group, the member no longer receives any messages from the group. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7714,13 +7708,12 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: 
-        /// This operation is a beta feature from Meta. Contact your account manager to add your account to the allowlist before use.</para>
+        /// <para>Notice: The feature of removing IM group members through the API is a Meta beta feature. Contact your account manager to request whitelist access.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>This operation requires an existing IM group that members have joined via an invitation link.</description></item>
-        /// <item><description>To create an IM group and add an invitation link, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations.</description></item>
-        /// <item><description>Removed members no longer receive messages from the group. Use this operation with caution.</description></item>
+        /// <item><description>Before calling this API operation, make sure that an IM group invite link has been added to the created IM group and members have joined the group through the link.</description></item>
+        /// <item><description>If you do not have a created IM group, you can call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations to create an IM group and add an invite link.</description></item>
+        /// <item><description>After a member is removed from an IM group, the member no longer receives any messages from the group. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7803,13 +7796,12 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: 
-        /// This operation is a beta feature from Meta. Contact your account manager to add your account to the allowlist before use.</para>
+        /// <para>Notice: The feature of removing IM group members through the API is a Meta beta feature. Contact your account manager to request whitelist access.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>This operation requires an existing IM group that members have joined via an invitation link.</description></item>
-        /// <item><description>To create an IM group and add an invitation link, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations.</description></item>
-        /// <item><description>Removed members no longer receive messages from the group. Use this operation with caution.</description></item>
+        /// <item><description>Before calling this API operation, make sure that an IM group invite link has been added to the created IM group and members have joined the group through the link.</description></item>
+        /// <item><description>If you do not have a created IM group, you can call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations to create an IM group and add an invite link.</description></item>
+        /// <item><description>After a member is removed from an IM group, the member no longer receives any messages from the group. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7834,13 +7826,12 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: 
-        /// This operation is a beta feature from Meta. Contact your account manager to add your account to the allowlist before use.</para>
+        /// <para>Notice: The feature of removing IM group members through the API is a Meta beta feature. Contact your account manager to request whitelist access.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>This operation requires an existing IM group that members have joined via an invitation link.</description></item>
-        /// <item><description>To create an IM group and add an invitation link, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations.</description></item>
-        /// <item><description>Removed members no longer receive messages from the group. Use this operation with caution.</description></item>
+        /// <item><description>Before calling this API operation, make sure that an IM group invite link has been added to the created IM group and members have joined the group through the link.</description></item>
+        /// <item><description>If you do not have a created IM group, you can call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations to create an IM group and add an invite link.</description></item>
+        /// <item><description>After a member is removed from an IM group, the member no longer receives any messages from the group. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8075,7 +8066,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a contact from the contact list.</para>
+        /// <para>Deletes a contact.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8155,7 +8146,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a contact from the contact list.</para>
+        /// <para>Deletes a contact.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8235,7 +8226,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a contact from the contact list.</para>
+        /// <para>Deletes a contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8253,7 +8244,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a contact from the contact list.</para>
+        /// <para>Deletes a contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8271,7 +8262,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes contacts by selecting and removing them.</para>
+        /// <para>Deletes contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8325,7 +8316,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes contacts by selecting and removing them.</para>
+        /// <para>Deletes contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8379,7 +8370,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes contacts by selecting and removing them.</para>
+        /// <para>Deletes contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8397,7 +8388,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes contacts by selecting and removing them.</para>
+        /// <para>Deletes contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8415,12 +8406,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Flow (only Flows in DRAFT status can be deleted).</para>
+        /// <para>Deletes a flow. Only flows in the DRAFT state can be deleted.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The single-user QPS limit for this operation is 5 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 5. If you exceed this limit, API calls are throttled, which may affect your business. Call this API operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8478,12 +8469,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Flow (only Flows in DRAFT status can be deleted).</para>
+        /// <para>Deletes a flow. Only flows in the DRAFT state can be deleted.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The single-user QPS limit for this operation is 5 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 5. If you exceed this limit, API calls are throttled, which may affect your business. Call this API operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8541,12 +8532,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Flow (only Flows in DRAFT status can be deleted).</para>
+        /// <para>Deletes a flow. Only flows in the DRAFT state can be deleted.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The single-user QPS limit for this operation is 5 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 5. If you exceed this limit, API calls are throttled, which may affect your business. Call this API operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8564,12 +8555,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Flow (only Flows in DRAFT status can be deleted).</para>
+        /// <para>Deletes a flow. Only flows in the DRAFT state can be deleted.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The single-user QPS limit for this operation is 5 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 5. If you exceed this limit, API calls are throttled, which may affect your business. Call this API operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8593,10 +8584,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to delete a flow version, or click a flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> to go to the canvas orchestration page and manually delete the flow version.</description></item>
-        /// <item><description>Before calling this operation, make sure that the flow version is in the offline state and that at least two flow versions exist.</description></item>
-        /// <item><description>If the flow version is in the online state, click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> to go to the canvas orchestration page and manually take the flow version offline, or call the <a href="https://help.aliyun.com/document_detail/2937198.html">OfflineFlowVersion</a> operation to take the flow version offline.</description></item>
-        /// <item><description>After a flow version is deleted, the canvas flow that you orchestrated cannot be recovered. Proceed with caution.</description></item>
+        /// <item><description>You can call this operation to delete a flow version, or click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and manually delete the flow version.</description></item>
+        /// <item><description>Before calling this operation, ensure that the flow version is offline and that at least two flow versions are available.</description></item>
+        /// <item><description>If your flow version is online, you can click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and manually take the flow version offline, or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/OfflineFlowVersion">OfflineFlowVersion</a> operation to take the flow version offline.</description></item>
+        /// <item><description>After a flow version is deleted, the orchestrated canvas flow cannot be recovered. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8675,10 +8666,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to delete a flow version, or click a flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> to go to the canvas orchestration page and manually delete the flow version.</description></item>
-        /// <item><description>Before calling this operation, make sure that the flow version is in the offline state and that at least two flow versions exist.</description></item>
-        /// <item><description>If the flow version is in the online state, click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> to go to the canvas orchestration page and manually take the flow version offline, or call the <a href="https://help.aliyun.com/document_detail/2937198.html">OfflineFlowVersion</a> operation to take the flow version offline.</description></item>
-        /// <item><description>After a flow version is deleted, the canvas flow that you orchestrated cannot be recovered. Proceed with caution.</description></item>
+        /// <item><description>You can call this operation to delete a flow version, or click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and manually delete the flow version.</description></item>
+        /// <item><description>Before calling this operation, ensure that the flow version is offline and that at least two flow versions are available.</description></item>
+        /// <item><description>If your flow version is online, you can click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and manually take the flow version offline, or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/OfflineFlowVersion">OfflineFlowVersion</a> operation to take the flow version offline.</description></item>
+        /// <item><description>After a flow version is deleted, the orchestrated canvas flow cannot be recovered. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8757,10 +8748,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to delete a flow version, or click a flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> to go to the canvas orchestration page and manually delete the flow version.</description></item>
-        /// <item><description>Before calling this operation, make sure that the flow version is in the offline state and that at least two flow versions exist.</description></item>
-        /// <item><description>If the flow version is in the online state, click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> to go to the canvas orchestration page and manually take the flow version offline, or call the <a href="https://help.aliyun.com/document_detail/2937198.html">OfflineFlowVersion</a> operation to take the flow version offline.</description></item>
-        /// <item><description>After a flow version is deleted, the canvas flow that you orchestrated cannot be recovered. Proceed with caution.</description></item>
+        /// <item><description>You can call this operation to delete a flow version, or click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and manually delete the flow version.</description></item>
+        /// <item><description>Before calling this operation, ensure that the flow version is offline and that at least two flow versions are available.</description></item>
+        /// <item><description>If your flow version is online, you can click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and manually take the flow version offline, or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/OfflineFlowVersion">OfflineFlowVersion</a> operation to take the flow version offline.</description></item>
+        /// <item><description>After a flow version is deleted, the orchestrated canvas flow cannot be recovered. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8785,10 +8776,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to delete a flow version, or click a flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> to go to the canvas orchestration page and manually delete the flow version.</description></item>
-        /// <item><description>Before calling this operation, make sure that the flow version is in the offline state and that at least two flow versions exist.</description></item>
-        /// <item><description>If the flow version is in the online state, click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> to go to the canvas orchestration page and manually take the flow version offline, or call the <a href="https://help.aliyun.com/document_detail/2937198.html">OfflineFlowVersion</a> operation to take the flow version offline.</description></item>
-        /// <item><description>After a flow version is deleted, the canvas flow that you orchestrated cannot be recovered. Proceed with caution.</description></item>
+        /// <item><description>You can call this operation to delete a flow version, or click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and manually delete the flow version.</description></item>
+        /// <item><description>Before calling this operation, ensure that the flow version is offline and that at least two flow versions are available.</description></item>
+        /// <item><description>If your flow version is online, you can click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and manually take the flow version offline, or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/OfflineFlowVersion">OfflineFlowVersion</a> operation to take the flow version offline.</description></item>
+        /// <item><description>After a flow version is deleted, the orchestrated canvas flow cannot be recovered. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8951,7 +8942,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a page from an Instagram instance.</para>
+        /// <para>Deletes a page of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9009,7 +9000,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a page from an Instagram instance.</para>
+        /// <para>Deletes a page of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9067,7 +9058,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a page from an Instagram instance.</para>
+        /// <para>Deletes a page of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9085,7 +9076,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a page from an Instagram instance.</para>
+        /// <para>Deletes a page of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9103,7 +9094,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified instance.</para>
+        /// <para>Deletes an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9145,7 +9136,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified instance.</para>
+        /// <para>Deletes an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9187,7 +9178,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified instance.</para>
+        /// <para>Deletes an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9205,7 +9196,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified instance.</para>
+        /// <para>Deletes an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9375,7 +9366,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the budget for a marketing campaign.</para>
+        /// <para>Deletes the campaign budget created for sending Messenger messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9441,7 +9432,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the budget for a marketing campaign.</para>
+        /// <para>Deletes the campaign budget created for sending Messenger messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9507,7 +9498,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the budget for a marketing campaign.</para>
+        /// <para>Deletes the campaign budget created for sending Messenger messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9525,7 +9516,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the budget for a marketing campaign.</para>
+        /// <para>Deletes the campaign budget created for sending Messenger messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10395,18 +10386,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a phone number or merchant account ID to a flow.</para>
+        /// <para>Associates a phone number or business account ID with a flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to bind a phone number or merchant account ID to a flow, or manually bind them in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b> page.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have a successfully created flow and a successfully created message channel that corresponds to the flow type.</description></item>
-        /// <item><description>For the WhatsApp channel type, complete <a href="https://help.aliyun.com/document_detail/172335.html">WABA registration and bindng</a> and <a href="https://help.aliyun.com/document_detail/2656131.html">add a phone number</a>.</description></item>
-        /// <item><description>For the Messenger channel type, complete <a href="https://help.aliyun.com/document_detail/2837713.html">connecting a public page account</a>.</description></item>
-        /// <item><description>For the Instagram channel type, complete <a href="https://help.aliyun.com/document_detail/2837720.html">connecting a professional account</a>.
-        /// &lt;props=&quot;intl&quot;&gt;- For the Viber channel type, complete <a href="https://help.aliyun.com/document_detail/2807995.html">applying for a service ID</a>.</description></item>
+        /// <item><description>You can call this operation to associate a phone number or business account ID with a flow. You can also manually bind them on the <b>Settings</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>.</description></item>
+        /// <item><description>Before you call this operation, ensure that you have created a flow and a message channel of the corresponding flow type.</description></item>
+        /// <item><description>For the WhatsApp channel type, you must have completed <a href="https://help.aliyun.com/document_detail/172335.html">WABA registration and binding</a> and <a href="https://help.aliyun.com/document_detail/2656131.html">added a phone number</a>.</description></item>
+        /// <item><description>For the Messenger channel type, you must have <a href="https://help.aliyun.com/document_detail/2837713.html">connected a Page account</a>.</description></item>
+        /// <item><description>For the Instagram channel type, you must have <a href="https://help.aliyun.com/document_detail/2837720.html">connected a professional account</a>.
+        /// &lt;props=&quot;intl&quot;&gt;- For the Viber channel type, you must have <a href="https://help.aliyun.com/document_detail/2807995.html">applied for a service account</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10495,18 +10486,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a phone number or merchant account ID to a flow.</para>
+        /// <para>Associates a phone number or business account ID with a flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to bind a phone number or merchant account ID to a flow, or manually bind them in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b> page.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have a successfully created flow and a successfully created message channel that corresponds to the flow type.</description></item>
-        /// <item><description>For the WhatsApp channel type, complete <a href="https://help.aliyun.com/document_detail/172335.html">WABA registration and bindng</a> and <a href="https://help.aliyun.com/document_detail/2656131.html">add a phone number</a>.</description></item>
-        /// <item><description>For the Messenger channel type, complete <a href="https://help.aliyun.com/document_detail/2837713.html">connecting a public page account</a>.</description></item>
-        /// <item><description>For the Instagram channel type, complete <a href="https://help.aliyun.com/document_detail/2837720.html">connecting a professional account</a>.
-        /// &lt;props=&quot;intl&quot;&gt;- For the Viber channel type, complete <a href="https://help.aliyun.com/document_detail/2807995.html">applying for a service ID</a>.</description></item>
+        /// <item><description>You can call this operation to associate a phone number or business account ID with a flow. You can also manually bind them on the <b>Settings</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>.</description></item>
+        /// <item><description>Before you call this operation, ensure that you have created a flow and a message channel of the corresponding flow type.</description></item>
+        /// <item><description>For the WhatsApp channel type, you must have completed <a href="https://help.aliyun.com/document_detail/172335.html">WABA registration and binding</a> and <a href="https://help.aliyun.com/document_detail/2656131.html">added a phone number</a>.</description></item>
+        /// <item><description>For the Messenger channel type, you must have <a href="https://help.aliyun.com/document_detail/2837713.html">connected a Page account</a>.</description></item>
+        /// <item><description>For the Instagram channel type, you must have <a href="https://help.aliyun.com/document_detail/2837720.html">connected a professional account</a>.
+        /// &lt;props=&quot;intl&quot;&gt;- For the Viber channel type, you must have <a href="https://help.aliyun.com/document_detail/2807995.html">applied for a service account</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10595,18 +10586,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a phone number or merchant account ID to a flow.</para>
+        /// <para>Associates a phone number or business account ID with a flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to bind a phone number or merchant account ID to a flow, or manually bind them in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b> page.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have a successfully created flow and a successfully created message channel that corresponds to the flow type.</description></item>
-        /// <item><description>For the WhatsApp channel type, complete <a href="https://help.aliyun.com/document_detail/172335.html">WABA registration and bindng</a> and <a href="https://help.aliyun.com/document_detail/2656131.html">add a phone number</a>.</description></item>
-        /// <item><description>For the Messenger channel type, complete <a href="https://help.aliyun.com/document_detail/2837713.html">connecting a public page account</a>.</description></item>
-        /// <item><description>For the Instagram channel type, complete <a href="https://help.aliyun.com/document_detail/2837720.html">connecting a professional account</a>.
-        /// &lt;props=&quot;intl&quot;&gt;- For the Viber channel type, complete <a href="https://help.aliyun.com/document_detail/2807995.html">applying for a service ID</a>.</description></item>
+        /// <item><description>You can call this operation to associate a phone number or business account ID with a flow. You can also manually bind them on the <b>Settings</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>.</description></item>
+        /// <item><description>Before you call this operation, ensure that you have created a flow and a message channel of the corresponding flow type.</description></item>
+        /// <item><description>For the WhatsApp channel type, you must have completed <a href="https://help.aliyun.com/document_detail/172335.html">WABA registration and binding</a> and <a href="https://help.aliyun.com/document_detail/2656131.html">added a phone number</a>.</description></item>
+        /// <item><description>For the Messenger channel type, you must have <a href="https://help.aliyun.com/document_detail/2837713.html">connected a Page account</a>.</description></item>
+        /// <item><description>For the Instagram channel type, you must have <a href="https://help.aliyun.com/document_detail/2837720.html">connected a professional account</a>.
+        /// &lt;props=&quot;intl&quot;&gt;- For the Viber channel type, you must have <a href="https://help.aliyun.com/document_detail/2807995.html">applied for a service account</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10625,18 +10616,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a phone number or merchant account ID to a flow.</para>
+        /// <para>Associates a phone number or business account ID with a flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to bind a phone number or merchant account ID to a flow, or manually bind them in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b> page.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have a successfully created flow and a successfully created message channel that corresponds to the flow type.</description></item>
-        /// <item><description>For the WhatsApp channel type, complete <a href="https://help.aliyun.com/document_detail/172335.html">WABA registration and bindng</a> and <a href="https://help.aliyun.com/document_detail/2656131.html">add a phone number</a>.</description></item>
-        /// <item><description>For the Messenger channel type, complete <a href="https://help.aliyun.com/document_detail/2837713.html">connecting a public page account</a>.</description></item>
-        /// <item><description>For the Instagram channel type, complete <a href="https://help.aliyun.com/document_detail/2837720.html">connecting a professional account</a>.
-        /// &lt;props=&quot;intl&quot;&gt;- For the Viber channel type, complete <a href="https://help.aliyun.com/document_detail/2807995.html">applying for a service ID</a>.</description></item>
+        /// <item><description>You can call this operation to associate a phone number or business account ID with a flow. You can also manually bind them on the <b>Settings</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>.</description></item>
+        /// <item><description>Before you call this operation, ensure that you have created a flow and a message channel of the corresponding flow type.</description></item>
+        /// <item><description>For the WhatsApp channel type, you must have completed <a href="https://help.aliyun.com/document_detail/172335.html">WABA registration and binding</a> and <a href="https://help.aliyun.com/document_detail/2656131.html">added a phone number</a>.</description></item>
+        /// <item><description>For the Messenger channel type, you must have <a href="https://help.aliyun.com/document_detail/2837713.html">connected a Page account</a>.</description></item>
+        /// <item><description>For the Instagram channel type, you must have <a href="https://help.aliyun.com/document_detail/2837720.html">connected a professional account</a>.
+        /// &lt;props=&quot;intl&quot;&gt;- For the Viber channel type, you must have <a href="https://help.aliyun.com/document_detail/2807995.html">applied for a service account</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10655,15 +10646,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rebinds a phone number or merchant account ID to a flow.</para>
+        /// <para>Rebinds a phone number or a merchant account ID to a flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Call this operation to rebind a phone number or merchant account ID to a flow that already has a binding. You can also manually rebind in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b>.</description></item>
-        /// <item><description>Before calling this operation, make sure that your flow already has a phone number or merchant account ID bound to it.</description></item>
-        /// <item><description>If you are binding a phone number or merchant account ID to a flow for the first time, use the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operation.</description></item>
+        /// <item><description>You can call this operation to rebind a phone number or a merchant account ID to a bound flow. You can also manually rebind it on the <b>Settings</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>.</description></item>
+        /// <item><description>Before calling this operation, ensure that the flow you created is bound to a phone number or a merchant account ID.</description></item>
+        /// <item><description>If you are binding a phone number or a merchant account ID to a flow for the first time, you can call the <a href="https://api.aliyun.com/document/cams/2020-06-06/FlowBindPhone">FlowBindPhone</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10752,15 +10743,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rebinds a phone number or merchant account ID to a flow.</para>
+        /// <para>Rebinds a phone number or a merchant account ID to a flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Call this operation to rebind a phone number or merchant account ID to a flow that already has a binding. You can also manually rebind in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b>.</description></item>
-        /// <item><description>Before calling this operation, make sure that your flow already has a phone number or merchant account ID bound to it.</description></item>
-        /// <item><description>If you are binding a phone number or merchant account ID to a flow for the first time, use the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operation.</description></item>
+        /// <item><description>You can call this operation to rebind a phone number or a merchant account ID to a bound flow. You can also manually rebind it on the <b>Settings</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>.</description></item>
+        /// <item><description>Before calling this operation, ensure that the flow you created is bound to a phone number or a merchant account ID.</description></item>
+        /// <item><description>If you are binding a phone number or a merchant account ID to a flow for the first time, you can call the <a href="https://api.aliyun.com/document/cams/2020-06-06/FlowBindPhone">FlowBindPhone</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10849,15 +10840,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rebinds a phone number or merchant account ID to a flow.</para>
+        /// <para>Rebinds a phone number or a merchant account ID to a flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Call this operation to rebind a phone number or merchant account ID to a flow that already has a binding. You can also manually rebind in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b>.</description></item>
-        /// <item><description>Before calling this operation, make sure that your flow already has a phone number or merchant account ID bound to it.</description></item>
-        /// <item><description>If you are binding a phone number or merchant account ID to a flow for the first time, use the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operation.</description></item>
+        /// <item><description>You can call this operation to rebind a phone number or a merchant account ID to a bound flow. You can also manually rebind it on the <b>Settings</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>.</description></item>
+        /// <item><description>Before calling this operation, ensure that the flow you created is bound to a phone number or a merchant account ID.</description></item>
+        /// <item><description>If you are binding a phone number or a merchant account ID to a flow for the first time, you can call the <a href="https://api.aliyun.com/document/cams/2020-06-06/FlowBindPhone">FlowBindPhone</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10876,15 +10867,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rebinds a phone number or merchant account ID to a flow.</para>
+        /// <para>Rebinds a phone number or a merchant account ID to a flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Call this operation to rebind a phone number or merchant account ID to a flow that already has a binding. You can also manually rebind in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b>.</description></item>
-        /// <item><description>Before calling this operation, make sure that your flow already has a phone number or merchant account ID bound to it.</description></item>
-        /// <item><description>If you are binding a phone number or merchant account ID to a flow for the first time, use the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operation.</description></item>
+        /// <item><description>You can call this operation to rebind a phone number or a merchant account ID to a bound flow. You can also manually rebind it on the <b>Settings</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>.</description></item>
+        /// <item><description>Before calling this operation, ensure that the flow you created is bound to a phone number or a merchant account ID.</description></item>
+        /// <item><description>If you are binding a phone number or a merchant account ID to a flow for the first time, you can call the <a href="https://api.aliyun.com/document/cams/2020-06-06/FlowBindPhone">FlowBindPhone</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10909,11 +10900,11 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure your flow is in the offline state. If your flow is in the online state, go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> page, click the flow name to enter the canvas orchestration page, and manually take it offline, or call the <a href="https://help.aliyun.com/document_detail/2937198.html">OfflineFlowVersion</a> operation to take the flow offline.</description></item>
-        /// <item><description>You can call this operation to dissociate a phone number or merchant account ID from a flow, or manually dissociate them on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b> page.</description></item>
-        /// <item><description>Before calling this operation, make sure your successfully created flow has a phone number or merchant account ID associated with it.</description></item>
-        /// <item><description>If you have not associated a phone number or merchant account ID, you can manually associate one on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b> page, or call the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operation to associate one.</description></item>
-        /// <item><description>After dissociating a phone number or merchant account ID from a flow, the flow cannot be published. You must re-associate a phone number or merchant account ID before the flow can be published.</description></item>
+        /// <item><description>Before you call this operation, ensure that your flow is offline. If your flow is online, click the flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page to go to the canvas orchestration page and manually take it offline, or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/OfflineFlowVersion">OfflineFlowVersion</a> operation to take the flow offline.</description></item>
+        /// <item><description>You can call this operation to dissociate a phone number or merchant account ID from a flow, or manually dissociate it on the <b>Settings</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>.</description></item>
+        /// <item><description>Before you call this operation, ensure that a phone number or merchant account ID is associated with the flow you created.</description></item>
+        /// <item><description>If no phone number or merchant account ID is associated, you can manually associate one on the <b>Settings</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a> or call the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operation.</description></item>
+        /// <item><description>After a phone number or merchant account ID is dissociated from a flow, the flow cannot be taken online. You must associate a phone number or merchant account ID again before the flow can be taken online.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10992,11 +10983,11 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure your flow is in the offline state. If your flow is in the online state, go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> page, click the flow name to enter the canvas orchestration page, and manually take it offline, or call the <a href="https://help.aliyun.com/document_detail/2937198.html">OfflineFlowVersion</a> operation to take the flow offline.</description></item>
-        /// <item><description>You can call this operation to dissociate a phone number or merchant account ID from a flow, or manually dissociate them on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b> page.</description></item>
-        /// <item><description>Before calling this operation, make sure your successfully created flow has a phone number or merchant account ID associated with it.</description></item>
-        /// <item><description>If you have not associated a phone number or merchant account ID, you can manually associate one on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b> page, or call the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operation to associate one.</description></item>
-        /// <item><description>After dissociating a phone number or merchant account ID from a flow, the flow cannot be published. You must re-associate a phone number or merchant account ID before the flow can be published.</description></item>
+        /// <item><description>Before you call this operation, ensure that your flow is offline. If your flow is online, click the flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page to go to the canvas orchestration page and manually take it offline, or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/OfflineFlowVersion">OfflineFlowVersion</a> operation to take the flow offline.</description></item>
+        /// <item><description>You can call this operation to dissociate a phone number or merchant account ID from a flow, or manually dissociate it on the <b>Settings</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>.</description></item>
+        /// <item><description>Before you call this operation, ensure that a phone number or merchant account ID is associated with the flow you created.</description></item>
+        /// <item><description>If no phone number or merchant account ID is associated, you can manually associate one on the <b>Settings</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a> or call the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operation.</description></item>
+        /// <item><description>After a phone number or merchant account ID is dissociated from a flow, the flow cannot be taken online. You must associate a phone number or merchant account ID again before the flow can be taken online.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11075,11 +11066,11 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure your flow is in the offline state. If your flow is in the online state, go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> page, click the flow name to enter the canvas orchestration page, and manually take it offline, or call the <a href="https://help.aliyun.com/document_detail/2937198.html">OfflineFlowVersion</a> operation to take the flow offline.</description></item>
-        /// <item><description>You can call this operation to dissociate a phone number or merchant account ID from a flow, or manually dissociate them on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b> page.</description></item>
-        /// <item><description>Before calling this operation, make sure your successfully created flow has a phone number or merchant account ID associated with it.</description></item>
-        /// <item><description>If you have not associated a phone number or merchant account ID, you can manually associate one on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b> page, or call the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operation to associate one.</description></item>
-        /// <item><description>After dissociating a phone number or merchant account ID from a flow, the flow cannot be published. You must re-associate a phone number or merchant account ID before the flow can be published.</description></item>
+        /// <item><description>Before you call this operation, ensure that your flow is offline. If your flow is online, click the flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page to go to the canvas orchestration page and manually take it offline, or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/OfflineFlowVersion">OfflineFlowVersion</a> operation to take the flow offline.</description></item>
+        /// <item><description>You can call this operation to dissociate a phone number or merchant account ID from a flow, or manually dissociate it on the <b>Settings</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>.</description></item>
+        /// <item><description>Before you call this operation, ensure that a phone number or merchant account ID is associated with the flow you created.</description></item>
+        /// <item><description>If no phone number or merchant account ID is associated, you can manually associate one on the <b>Settings</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a> or call the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operation.</description></item>
+        /// <item><description>After a phone number or merchant account ID is dissociated from a flow, the flow cannot be taken online. You must associate a phone number or merchant account ID again before the flow can be taken online.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11104,11 +11095,11 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure your flow is in the offline state. If your flow is in the online state, go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> page, click the flow name to enter the canvas orchestration page, and manually take it offline, or call the <a href="https://help.aliyun.com/document_detail/2937198.html">OfflineFlowVersion</a> operation to take the flow offline.</description></item>
-        /// <item><description>You can call this operation to dissociate a phone number or merchant account ID from a flow, or manually dissociate them on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b> page.</description></item>
-        /// <item><description>Before calling this operation, make sure your successfully created flow has a phone number or merchant account ID associated with it.</description></item>
-        /// <item><description>If you have not associated a phone number or merchant account ID, you can manually associate one on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b> page, or call the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operation to associate one.</description></item>
-        /// <item><description>After dissociating a phone number or merchant account ID from a flow, the flow cannot be published. You must re-associate a phone number or merchant account ID before the flow can be published.</description></item>
+        /// <item><description>Before you call this operation, ensure that your flow is offline. If your flow is online, click the flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page to go to the canvas orchestration page and manually take it offline, or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/OfflineFlowVersion">OfflineFlowVersion</a> operation to take the flow offline.</description></item>
+        /// <item><description>You can call this operation to dissociate a phone number or merchant account ID from a flow, or manually dissociate it on the <b>Settings</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>.</description></item>
+        /// <item><description>Before you call this operation, ensure that a phone number or merchant account ID is associated with the flow you created.</description></item>
+        /// <item><description>If no phone number or merchant account ID is associated, you can manually associate one on the <b>Settings</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a> or call the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operation.</description></item>
+        /// <item><description>After a phone number or merchant account ID is dissociated from a flow, the flow cannot be taken online. You must associate a phone number or merchant account ID again before the flow can be taken online.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11271,7 +11262,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries pending review tickets for an individual by type.</para>
+        /// <para>Queries personal pending review requests by type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11329,7 +11320,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries pending review tickets for an individual by type.</para>
+        /// <para>Queries personal pending review requests by type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11387,7 +11378,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries pending review tickets for an individual by type.</para>
+        /// <para>Queries personal pending review requests by type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11405,7 +11396,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries pending review tickets for an individual by type.</para>
+        /// <para>Queries personal pending review requests by type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11565,10 +11556,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure that the flow you created is online and has been triggered.</description></item>
-        /// <item><description>If your flow is not online, go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, click the flow name to enter the canvas orchestration page, and manually bring the flow online. Alternatively, call the <a href="https://help.aliyun.com/document_detail/2937203.html">OnlineFlowVersion</a> operation to bring the flow online.</description></item>
-        /// <item><description>For flows with a manual trigger type, call the <a href="https://help.aliyun.com/document_detail/2859101.html">TriggerChatFlow</a> operation to trigger the flow, or go to the <a href="https://chatapp.console.aliyun.com/MarketingActivityManagement">Marketing Activity Management</a> page and trigger the flow by associating it with a marketing activity.</description></item>
-        /// <item><description>For flows with a non-manual trigger type, you do not need to manually trigger the flow. The flow is triggered when a message is sent to the business account bound to the flow.</description></item>
+        /// <item><description>Before calling this operation, ensure that the flow you created is online and has been triggered.</description></item>
+        /// <item><description>If your flow is not online, click the flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page to go to the canvas orchestration page and manually bring the flow online, or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/OnlineFlowVersion">OnlineFlowVersion</a> operation to bring the flow online.</description></item>
+        /// <item><description>For flows with a manual trigger, trigger the flow by calling the <a href="https://help.aliyun.com/document_detail/2859101.html">TriggerChatFlow</a> operation or by associating a marketing campaign on the <a href="https://chatapp.console.aliyun.com/MarketingActivityManagement">Marketing Campaign Management</a> page.</description></item>
+        /// <item><description>Flows with a non-manual trigger do not require manual triggering. The flow is automatically triggered after a message is sent to the merchant from the associated bound merchant account.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11667,10 +11658,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure that the flow you created is online and has been triggered.</description></item>
-        /// <item><description>If your flow is not online, go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, click the flow name to enter the canvas orchestration page, and manually bring the flow online. Alternatively, call the <a href="https://help.aliyun.com/document_detail/2937203.html">OnlineFlowVersion</a> operation to bring the flow online.</description></item>
-        /// <item><description>For flows with a manual trigger type, call the <a href="https://help.aliyun.com/document_detail/2859101.html">TriggerChatFlow</a> operation to trigger the flow, or go to the <a href="https://chatapp.console.aliyun.com/MarketingActivityManagement">Marketing Activity Management</a> page and trigger the flow by associating it with a marketing activity.</description></item>
-        /// <item><description>For flows with a non-manual trigger type, you do not need to manually trigger the flow. The flow is triggered when a message is sent to the business account bound to the flow.</description></item>
+        /// <item><description>Before calling this operation, ensure that the flow you created is online and has been triggered.</description></item>
+        /// <item><description>If your flow is not online, click the flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page to go to the canvas orchestration page and manually bring the flow online, or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/OnlineFlowVersion">OnlineFlowVersion</a> operation to bring the flow online.</description></item>
+        /// <item><description>For flows with a manual trigger, trigger the flow by calling the <a href="https://help.aliyun.com/document_detail/2859101.html">TriggerChatFlow</a> operation or by associating a marketing campaign on the <a href="https://chatapp.console.aliyun.com/MarketingActivityManagement">Marketing Campaign Management</a> page.</description></item>
+        /// <item><description>Flows with a non-manual trigger do not require manual triggering. The flow is automatically triggered after a message is sent to the merchant from the associated bound merchant account.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11769,10 +11760,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure that the flow you created is online and has been triggered.</description></item>
-        /// <item><description>If your flow is not online, go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, click the flow name to enter the canvas orchestration page, and manually bring the flow online. Alternatively, call the <a href="https://help.aliyun.com/document_detail/2937203.html">OnlineFlowVersion</a> operation to bring the flow online.</description></item>
-        /// <item><description>For flows with a manual trigger type, call the <a href="https://help.aliyun.com/document_detail/2859101.html">TriggerChatFlow</a> operation to trigger the flow, or go to the <a href="https://chatapp.console.aliyun.com/MarketingActivityManagement">Marketing Activity Management</a> page and trigger the flow by associating it with a marketing activity.</description></item>
-        /// <item><description>For flows with a non-manual trigger type, you do not need to manually trigger the flow. The flow is triggered when a message is sent to the business account bound to the flow.</description></item>
+        /// <item><description>Before calling this operation, ensure that the flow you created is online and has been triggered.</description></item>
+        /// <item><description>If your flow is not online, click the flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page to go to the canvas orchestration page and manually bring the flow online, or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/OnlineFlowVersion">OnlineFlowVersion</a> operation to bring the flow online.</description></item>
+        /// <item><description>For flows with a manual trigger, trigger the flow by calling the <a href="https://help.aliyun.com/document_detail/2859101.html">TriggerChatFlow</a> operation or by associating a marketing campaign on the <a href="https://chatapp.console.aliyun.com/MarketingActivityManagement">Marketing Campaign Management</a> page.</description></item>
+        /// <item><description>Flows with a non-manual trigger do not require manual triggering. The flow is automatically triggered after a message is sent to the merchant from the associated bound merchant account.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11797,10 +11788,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure that the flow you created is online and has been triggered.</description></item>
-        /// <item><description>If your flow is not online, go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, click the flow name to enter the canvas orchestration page, and manually bring the flow online. Alternatively, call the <a href="https://help.aliyun.com/document_detail/2937203.html">OnlineFlowVersion</a> operation to bring the flow online.</description></item>
-        /// <item><description>For flows with a manual trigger type, call the <a href="https://help.aliyun.com/document_detail/2859101.html">TriggerChatFlow</a> operation to trigger the flow, or go to the <a href="https://chatapp.console.aliyun.com/MarketingActivityManagement">Marketing Activity Management</a> page and trigger the flow by associating it with a marketing activity.</description></item>
-        /// <item><description>For flows with a non-manual trigger type, you do not need to manually trigger the flow. The flow is triggered when a message is sent to the business account bound to the flow.</description></item>
+        /// <item><description>Before calling this operation, ensure that the flow you created is online and has been triggered.</description></item>
+        /// <item><description>If your flow is not online, click the flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page to go to the canvas orchestration page and manually bring the flow online, or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/OnlineFlowVersion">OnlineFlowVersion</a> operation to bring the flow online.</description></item>
+        /// <item><description>For flows with a manual trigger, trigger the flow by calling the <a href="https://help.aliyun.com/document_detail/2859101.html">TriggerChatFlow</a> operation or by associating a marketing campaign on the <a href="https://chatapp.console.aliyun.com/MarketingActivityManagement">Marketing Campaign Management</a> page.</description></item>
+        /// <item><description>Flows with a non-manual trigger do not require manual triggering. The flow is automatically triggered after a message is sent to the merchant from the associated bound merchant account.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11825,8 +11816,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query the details of a flow template. You can also view template details by clicking the template name on the <b>Template View</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>.</description></item>
-        /// <item><description>After you view template details by clicking the template name on the <b>Template View</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>, you can directly use the template to create a flow.</description></item>
+        /// <item><description>You can call this operation to query the details of a flow template. You can also click the template name on the <b>View Templates</b> page in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Chat Flow Builder</b></a> to view the template details.</description></item>
+        /// <item><description>After you view the template details by clicking the template name on the <b>View Templates</b> page in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Chat Flow Builder</b></a>, you can directly use the template to create a flow.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11891,8 +11882,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query the details of a flow template. You can also view template details by clicking the template name on the <b>Template View</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>.</description></item>
-        /// <item><description>After you view template details by clicking the template name on the <b>Template View</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>, you can directly use the template to create a flow.</description></item>
+        /// <item><description>You can call this operation to query the details of a flow template. You can also click the template name on the <b>View Templates</b> page in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Chat Flow Builder</b></a> to view the template details.</description></item>
+        /// <item><description>After you view the template details by clicking the template name on the <b>View Templates</b> page in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Chat Flow Builder</b></a>, you can directly use the template to create a flow.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11957,8 +11948,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query the details of a flow template. You can also view template details by clicking the template name on the <b>Template View</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>.</description></item>
-        /// <item><description>After you view template details by clicking the template name on the <b>Template View</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>, you can directly use the template to create a flow.</description></item>
+        /// <item><description>You can call this operation to query the details of a flow template. You can also click the template name on the <b>View Templates</b> page in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Chat Flow Builder</b></a> to view the template details.</description></item>
+        /// <item><description>After you view the template details by clicking the template name on the <b>View Templates</b> page in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Chat Flow Builder</b></a>, you can directly use the template to create a flow.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11983,8 +11974,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query the details of a flow template. You can also view template details by clicking the template name on the <b>Template View</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>.</description></item>
-        /// <item><description>After you view template details by clicking the template name on the <b>Template View</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>, you can directly use the template to create a flow.</description></item>
+        /// <item><description>You can call this operation to query the details of a flow template. You can also click the template name on the <b>View Templates</b> page in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Chat Flow Builder</b></a> to view the template details.</description></item>
+        /// <item><description>After you view the template details by clicking the template name on the <b>View Templates</b> page in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Chat Flow Builder</b></a>, you can directly use the template to create a flow.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12371,7 +12362,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves other controls for a ChatApp phone number.</para>
+        /// <para>Retrieves other control settings for a Chatapp phone number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12429,7 +12420,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves other controls for a ChatApp phone number.</para>
+        /// <para>Retrieves other control settings for a Chatapp phone number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12487,7 +12478,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves other controls for a ChatApp phone number.</para>
+        /// <para>Retrieves other control settings for a Chatapp phone number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12505,7 +12496,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves other controls for a ChatApp phone number.</para>
+        /// <para>Retrieves other control settings for a Chatapp phone number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12523,13 +12514,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Chat App Message Service message template.</para>
+        /// <para>Retrieves the details of a Chat App message template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this API is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <h3>Rate limit</h3>
+        /// <para>The rate limit for this API operation is 5 queries per second (QPS) per user. If you exceed the limit, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12595,13 +12586,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Chat App Message Service message template.</para>
+        /// <para>Retrieves the details of a Chat App message template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this API is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <h3>Rate limit</h3>
+        /// <para>The rate limit for this API operation is 5 queries per second (QPS) per user. If you exceed the limit, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12667,13 +12658,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Chat App Message Service message template.</para>
+        /// <para>Retrieves the details of a Chat App message template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this API is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <h3>Rate limit</h3>
+        /// <para>The rate limit for this API operation is 5 queries per second (QPS) per user. If you exceed the limit, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12691,13 +12682,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Chat App Message Service message template.</para>
+        /// <para>Retrieves the details of a Chat App message template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this API is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <h3>Rate limit</h3>
+        /// <para>The rate limit for this API operation is 5 queries per second (QPS) per user. If you exceed the limit, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13663,7 +13654,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the source site of a customer.</para>
+        /// <para>Queries the source site of the customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13713,7 +13704,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the source site of a customer.</para>
+        /// <para>Queries the source site of the customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13763,7 +13754,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the source site of a customer.</para>
+        /// <para>Queries the source site of the customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13781,7 +13772,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the source site of a customer.</para>
+        /// <para>Queries the source site of the customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14027,7 +14018,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of Instagram pages for an instance.</para>
+        /// <para>Retrieves a list of Instagram pages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14085,7 +14076,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of Instagram pages for an instance.</para>
+        /// <para>Retrieves a list of Instagram pages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14143,7 +14134,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of Instagram pages for an instance.</para>
+        /// <para>Retrieves a list of Instagram pages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14161,7 +14152,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of Instagram pages for an instance.</para>
+        /// <para>Retrieves a list of Instagram pages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14911,7 +14902,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether a group name already exists.</para>
+        /// <para>Checks whether a group name is duplicated.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14979,7 +14970,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether a group name already exists.</para>
+        /// <para>Checks whether a group name is duplicated.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15047,7 +15038,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether a group name already exists.</para>
+        /// <para>Checks whether a group name is duplicated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15065,7 +15056,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether a group name already exists.</para>
+        /// <para>Checks whether a group name is duplicated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15083,7 +15074,135 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves campaign metrics.</para>
+        /// <para>Queries Instagram user information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstagramUserInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstagramUserInfoResponse
+        /// </returns>
+        public GetInstagramUserInfoResponse GetInstagramUserInfoWithOptions(GetInstagramUserInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustSpaceId))
+            {
+                query["CustSpaceId"] = request.CustSpaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryId))
+            {
+                query["QueryId"] = request.QueryId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetInstagramUserInfo",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetInstagramUserInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Instagram user information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstagramUserInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstagramUserInfoResponse
+        /// </returns>
+        public async Task<GetInstagramUserInfoResponse> GetInstagramUserInfoWithOptionsAsync(GetInstagramUserInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustSpaceId))
+            {
+                query["CustSpaceId"] = request.CustSpaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryId))
+            {
+                query["QueryId"] = request.QueryId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetInstagramUserInfo",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetInstagramUserInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Instagram user information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstagramUserInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstagramUserInfoResponse
+        /// </returns>
+        public GetInstagramUserInfoResponse GetInstagramUserInfo(GetInstagramUserInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetInstagramUserInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Instagram user information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstagramUserInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstagramUserInfoResponse
+        /// </returns>
+        public async Task<GetInstagramUserInfoResponse> GetInstagramUserInfoAsync(GetInstagramUserInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetInstagramUserInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries budget metrics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15149,7 +15268,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves campaign metrics.</para>
+        /// <para>Queries budget metrics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15215,7 +15334,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves campaign metrics.</para>
+        /// <para>Queries budget metrics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15233,7 +15352,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves campaign metrics.</para>
+        /// <para>Queries budget metrics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15247,6 +15366,134 @@ namespace AlibabaCloud.SDK.Cams20200606
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetMessageCampaignInsightsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Messenger user information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMessengerUserInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMessengerUserInfoResponse
+        /// </returns>
+        public GetMessengerUserInfoResponse GetMessengerUserInfoWithOptions(GetMessengerUserInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustSpaceId))
+            {
+                query["CustSpaceId"] = request.CustSpaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryId))
+            {
+                query["QueryId"] = request.QueryId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMessengerUserInfo",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMessengerUserInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Messenger user information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMessengerUserInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMessengerUserInfoResponse
+        /// </returns>
+        public async Task<GetMessengerUserInfoResponse> GetMessengerUserInfoWithOptionsAsync(GetMessengerUserInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustSpaceId))
+            {
+                query["CustSpaceId"] = request.CustSpaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryId))
+            {
+                query["QueryId"] = request.QueryId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMessengerUserInfo",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMessengerUserInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Messenger user information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMessengerUserInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMessengerUserInfoResponse
+        /// </returns>
+        public GetMessengerUserInfoResponse GetMessengerUserInfo(GetMessengerUserInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetMessengerUserInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Messenger user information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMessengerUserInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMessengerUserInfoResponse
+        /// </returns>
+        public async Task<GetMessengerUserInfoResponse> GetMessengerUserInfoAsync(GetMessengerUserInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetMessengerUserInfoWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -15829,13 +16076,13 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to retrieve the verification status of a phone number. You can also view the verification status in the
+        /// <item><description>You can call this operation to retrieve the verification status of a phone number. You can also view the verification status on the 
         /// &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>
-        /// &lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a>&gt; <b>Manage</b> &gt; <b>WABA Management</b> &gt; <b>Phone Number Management</b> page.</description></item>
-        /// <item><description>This operation only queries the verification status of a phone number. If the phone number status is verified, you can directly call the registration operation to register the phone number without obtaining a new verification code.</description></item>
-        /// <item><description>Before calling this operation, make sure that a phone number has been added to your WABA and that phone number verification has been submitted.</description></item>
-        /// <item><description>If a phone number has been added to your WABA and needs to be registered, but the verification status is unverified or verification has expired, call <a href="https://help.aliyun.com/document_detail/600746.html">GetChatappVerifyCode</a> and <a href="https://help.aliyun.com/document_detail/600770.html">ChatappVerifyAndRegister</a> to obtain a verification code and register the phone number.
-        /// The queries per second (QPS) limit for a single user on this operation is 10. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</description></item>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>WABA Management</b> &gt; <b>Number Management</b> page.</description></item>
+        /// <item><description>This operation only queries the verification status of a phone number. If the phone number is verified, you can directly call the registration operation to register the phone number without obtaining a new verification code.</description></item>
+        /// <item><description>Before calling this operation, make sure that you have added a phone number to your WABA and submitted it for verification.</description></item>
+        /// <item><description>If you have a new phone number in your WABA that needs to be registered, but its verification status is unverified or the verification has expired, call the <a href="https://help.aliyun.com/document_detail/600746.html">GetChatappVerifyCode</a> and <a href="https://help.aliyun.com/document_detail/600770.html">ChatappVerifyAndRegister</a> operations to obtain a verification code, verify the phone number, and register it.
+        /// The queries per second (QPS) limit per user for this operation is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation within the limit.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15900,13 +16147,13 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to retrieve the verification status of a phone number. You can also view the verification status in the
+        /// <item><description>You can call this operation to retrieve the verification status of a phone number. You can also view the verification status on the 
         /// &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>
-        /// &lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a>&gt; <b>Manage</b> &gt; <b>WABA Management</b> &gt; <b>Phone Number Management</b> page.</description></item>
-        /// <item><description>This operation only queries the verification status of a phone number. If the phone number status is verified, you can directly call the registration operation to register the phone number without obtaining a new verification code.</description></item>
-        /// <item><description>Before calling this operation, make sure that a phone number has been added to your WABA and that phone number verification has been submitted.</description></item>
-        /// <item><description>If a phone number has been added to your WABA and needs to be registered, but the verification status is unverified or verification has expired, call <a href="https://help.aliyun.com/document_detail/600746.html">GetChatappVerifyCode</a> and <a href="https://help.aliyun.com/document_detail/600770.html">ChatappVerifyAndRegister</a> to obtain a verification code and register the phone number.
-        /// The queries per second (QPS) limit for a single user on this operation is 10. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</description></item>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>WABA Management</b> &gt; <b>Number Management</b> page.</description></item>
+        /// <item><description>This operation only queries the verification status of a phone number. If the phone number is verified, you can directly call the registration operation to register the phone number without obtaining a new verification code.</description></item>
+        /// <item><description>Before calling this operation, make sure that you have added a phone number to your WABA and submitted it for verification.</description></item>
+        /// <item><description>If you have a new phone number in your WABA that needs to be registered, but its verification status is unverified or the verification has expired, call the <a href="https://help.aliyun.com/document_detail/600746.html">GetChatappVerifyCode</a> and <a href="https://help.aliyun.com/document_detail/600770.html">ChatappVerifyAndRegister</a> operations to obtain a verification code, verify the phone number, and register it.
+        /// The queries per second (QPS) limit per user for this operation is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation within the limit.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15971,13 +16218,13 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to retrieve the verification status of a phone number. You can also view the verification status in the
+        /// <item><description>You can call this operation to retrieve the verification status of a phone number. You can also view the verification status on the 
         /// &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>
-        /// &lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a>&gt; <b>Manage</b> &gt; <b>WABA Management</b> &gt; <b>Phone Number Management</b> page.</description></item>
-        /// <item><description>This operation only queries the verification status of a phone number. If the phone number status is verified, you can directly call the registration operation to register the phone number without obtaining a new verification code.</description></item>
-        /// <item><description>Before calling this operation, make sure that a phone number has been added to your WABA and that phone number verification has been submitted.</description></item>
-        /// <item><description>If a phone number has been added to your WABA and needs to be registered, but the verification status is unverified or verification has expired, call <a href="https://help.aliyun.com/document_detail/600746.html">GetChatappVerifyCode</a> and <a href="https://help.aliyun.com/document_detail/600770.html">ChatappVerifyAndRegister</a> to obtain a verification code and register the phone number.
-        /// The queries per second (QPS) limit for a single user on this operation is 10. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</description></item>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>WABA Management</b> &gt; <b>Number Management</b> page.</description></item>
+        /// <item><description>This operation only queries the verification status of a phone number. If the phone number is verified, you can directly call the registration operation to register the phone number without obtaining a new verification code.</description></item>
+        /// <item><description>Before calling this operation, make sure that you have added a phone number to your WABA and submitted it for verification.</description></item>
+        /// <item><description>If you have a new phone number in your WABA that needs to be registered, but its verification status is unverified or the verification has expired, call the <a href="https://help.aliyun.com/document_detail/600746.html">GetChatappVerifyCode</a> and <a href="https://help.aliyun.com/document_detail/600770.html">ChatappVerifyAndRegister</a> operations to obtain a verification code, verify the phone number, and register it.
+        /// The queries per second (QPS) limit per user for this operation is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation within the limit.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16002,13 +16249,13 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to retrieve the verification status of a phone number. You can also view the verification status in the
+        /// <item><description>You can call this operation to retrieve the verification status of a phone number. You can also view the verification status on the 
         /// &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>
-        /// &lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a>&gt; <b>Manage</b> &gt; <b>WABA Management</b> &gt; <b>Phone Number Management</b> page.</description></item>
-        /// <item><description>This operation only queries the verification status of a phone number. If the phone number status is verified, you can directly call the registration operation to register the phone number without obtaining a new verification code.</description></item>
-        /// <item><description>Before calling this operation, make sure that a phone number has been added to your WABA and that phone number verification has been submitted.</description></item>
-        /// <item><description>If a phone number has been added to your WABA and needs to be registered, but the verification status is unverified or verification has expired, call <a href="https://help.aliyun.com/document_detail/600746.html">GetChatappVerifyCode</a> and <a href="https://help.aliyun.com/document_detail/600770.html">ChatappVerifyAndRegister</a> to obtain a verification code and register the phone number.
-        /// The queries per second (QPS) limit for a single user on this operation is 10. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</description></item>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>WABA Management</b> &gt; <b>Number Management</b> page.</description></item>
+        /// <item><description>This operation only queries the verification status of a phone number. If the phone number is verified, you can directly call the registration operation to register the phone number without obtaining a new verification code.</description></item>
+        /// <item><description>Before calling this operation, make sure that you have added a phone number to your WABA and submitted it for verification.</description></item>
+        /// <item><description>If you have a new phone number in your WABA that needs to be registered, but its verification status is unverified or the verification has expired, call the <a href="https://help.aliyun.com/document_detail/600746.html">GetChatappVerifyCode</a> and <a href="https://help.aliyun.com/document_detail/600770.html">ChatappVerifyAndRegister</a> operations to obtain a verification code, verify the phone number, and register it.
+        /// The queries per second (QPS) limit per user for this operation is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation within the limit.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16327,7 +16574,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the application by its requestNo.</para>
+        /// <para>Queries an application by request number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16385,7 +16632,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the application by its requestNo.</para>
+        /// <para>Queries an application by request number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16443,7 +16690,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the application by its requestNo.</para>
+        /// <para>Queries an application by request number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16461,7 +16708,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the application by its requestNo.</para>
+        /// <para>Queries an application by request number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16479,7 +16726,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of times that a pause can be requested.</para>
+        /// <para>Queries the number of allowed pause requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16533,7 +16780,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of times that a pause can be requested.</para>
+        /// <para>Queries the number of allowed pause requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16587,7 +16834,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of times that a pause can be requested.</para>
+        /// <para>Queries the number of allowed pause requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16605,7 +16852,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of times that a pause can be requested.</para>
+        /// <para>Queries the number of allowed pause requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16939,14 +17186,14 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the messaging health status of different types of nodes.</para>
+        /// <para>Retrieves the message sending health status for different node types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps-"></a>QPS limit</h3>
-        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.
-        /// This operation retrieves data directly from Meta. Meta imposes its own rate limits on the total number of calls. Stay within the specified limit.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 5 calls per second. If you exceed this limit, API calls are throttled, which may affect your business. Call this API at a reasonable frequency.
+        /// This API directly retrieves data from Facebook. The total number of Facebook API calls is limited. Use this API as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17020,14 +17267,14 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the messaging health status of different types of nodes.</para>
+        /// <para>Retrieves the message sending health status for different node types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps-"></a>QPS limit</h3>
-        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.
-        /// This operation retrieves data directly from Meta. Meta imposes its own rate limits on the total number of calls. Stay within the specified limit.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 5 calls per second. If you exceed this limit, API calls are throttled, which may affect your business. Call this API at a reasonable frequency.
+        /// This API directly retrieves data from Facebook. The total number of Facebook API calls is limited. Use this API as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17101,14 +17348,14 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the messaging health status of different types of nodes.</para>
+        /// <para>Retrieves the message sending health status for different node types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps-"></a>QPS limit</h3>
-        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.
-        /// This operation retrieves data directly from Meta. Meta imposes its own rate limits on the total number of calls. Stay within the specified limit.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 5 calls per second. If you exceed this limit, API calls are throttled, which may affect your business. Call this API at a reasonable frequency.
+        /// This API directly retrieves data from Facebook. The total number of Facebook API calls is limited. Use this API as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17126,14 +17373,14 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the messaging health status of different types of nodes.</para>
+        /// <para>Retrieves the message sending health status for different node types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps-"></a>QPS limit</h3>
-        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.
-        /// This operation retrieves data directly from Meta. Meta imposes its own rate limits on the total number of calls. Stay within the specified limit.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 5 calls per second. If you exceed this limit, API calls are throttled, which may affect your business. Call this API at a reasonable frequency.
+        /// This API directly retrieves data from Facebook. The total number of Facebook API calls is limited. Use this API as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17587,7 +17834,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of groups.</para>
+        /// <para>Queries a list of groups.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17651,7 +17898,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of groups.</para>
+        /// <para>Queries a list of groups.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17715,7 +17962,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of groups.</para>
+        /// <para>Queries a list of groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17733,7 +17980,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of groups.</para>
+        /// <para>Queries a list of groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17895,15 +18142,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of phone numbers or business account IDs bound to a flow based on the flow code.</para>
+        /// <para>Queries the list of phone numbers or merchant account IDs bound to a flow based on the flow code.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query the list of phone numbers or business account IDs bound to a flow. You can also view the list in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b>.</description></item>
-        /// <item><description>Before calling this operation, make sure that your flow is already bound to phone numbers or business account IDs.</description></item>
-        /// <item><description>If your flow is not bound to phone numbers or business account IDs, manually bind them in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b>, or call the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operation to bind them.</description></item>
+        /// <item><description>You can call this operation to query the list of phone numbers or merchant account IDs bound to a flow. You can also view the list on the <b>Settings</b> page of the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>.</description></item>
+        /// <item><description>Before calling this operation, ensure that the flow you created is bound to a phone number or merchant account ID.</description></item>
+        /// <item><description>If the flow you created is not bound to a phone number or merchant account ID, you can manually bind a phone number or merchant account ID on the <b>Settings</b> page of the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>, or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/FlowBindPhone">FlowBindPhone</a> operation to bind a phone number or merchant account ID.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17962,15 +18209,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of phone numbers or business account IDs bound to a flow based on the flow code.</para>
+        /// <para>Queries the list of phone numbers or merchant account IDs bound to a flow based on the flow code.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query the list of phone numbers or business account IDs bound to a flow. You can also view the list in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b>.</description></item>
-        /// <item><description>Before calling this operation, make sure that your flow is already bound to phone numbers or business account IDs.</description></item>
-        /// <item><description>If your flow is not bound to phone numbers or business account IDs, manually bind them in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b>, or call the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operation to bind them.</description></item>
+        /// <item><description>You can call this operation to query the list of phone numbers or merchant account IDs bound to a flow. You can also view the list on the <b>Settings</b> page of the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>.</description></item>
+        /// <item><description>Before calling this operation, ensure that the flow you created is bound to a phone number or merchant account ID.</description></item>
+        /// <item><description>If the flow you created is not bound to a phone number or merchant account ID, you can manually bind a phone number or merchant account ID on the <b>Settings</b> page of the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>, or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/FlowBindPhone">FlowBindPhone</a> operation to bind a phone number or merchant account ID.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18029,15 +18276,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of phone numbers or business account IDs bound to a flow based on the flow code.</para>
+        /// <para>Queries the list of phone numbers or merchant account IDs bound to a flow based on the flow code.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query the list of phone numbers or business account IDs bound to a flow. You can also view the list in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b>.</description></item>
-        /// <item><description>Before calling this operation, make sure that your flow is already bound to phone numbers or business account IDs.</description></item>
-        /// <item><description>If your flow is not bound to phone numbers or business account IDs, manually bind them in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b>, or call the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operation to bind them.</description></item>
+        /// <item><description>You can call this operation to query the list of phone numbers or merchant account IDs bound to a flow. You can also view the list on the <b>Settings</b> page of the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>.</description></item>
+        /// <item><description>Before calling this operation, ensure that the flow you created is bound to a phone number or merchant account ID.</description></item>
+        /// <item><description>If the flow you created is not bound to a phone number or merchant account ID, you can manually bind a phone number or merchant account ID on the <b>Settings</b> page of the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>, or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/FlowBindPhone">FlowBindPhone</a> operation to bind a phone number or merchant account ID.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18056,15 +18303,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of phone numbers or business account IDs bound to a flow based on the flow code.</para>
+        /// <para>Queries the list of phone numbers or merchant account IDs bound to a flow based on the flow code.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query the list of phone numbers or business account IDs bound to a flow. You can also view the list in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b>.</description></item>
-        /// <item><description>Before calling this operation, make sure that your flow is already bound to phone numbers or business account IDs.</description></item>
-        /// <item><description>If your flow is not bound to phone numbers or business account IDs, manually bind them in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b>, or call the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operation to bind them.</description></item>
+        /// <item><description>You can call this operation to query the list of phone numbers or merchant account IDs bound to a flow. You can also view the list on the <b>Settings</b> page of the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>.</description></item>
+        /// <item><description>Before calling this operation, ensure that the flow you created is bound to a phone number or merchant account ID.</description></item>
+        /// <item><description>If the flow you created is not bound to a phone number or merchant account ID, you can manually bind a phone number or merchant account ID on the <b>Settings</b> page of the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>, or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/FlowBindPhone">FlowBindPhone</a> operation to bind a phone number or merchant account ID.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18089,10 +18336,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query flows, or manually query flows in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> console.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have successfully created flows.</description></item>
-        /// <item><description>If you do not have any successfully created flows, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> console or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</description></item>
-        /// <item><description>The optional parameters in this operation are filter conditions for querying flows. If you do not specify them, all flows are queried.</description></item>
+        /// <item><description>You can call this operation to query flows, or manually query flows in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> console.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created at least one flow.</description></item>
+        /// <item><description>If you have not created any flows, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> console or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlow">CreateChatFlow</a> operation to create a flow.</description></item>
+        /// <item><description>The optional parameters in this operation are used as filter conditions for querying flows. If you do not specify these parameters, all flows are queried.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18203,10 +18450,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query flows, or manually query flows in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> console.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have successfully created flows.</description></item>
-        /// <item><description>If you do not have any successfully created flows, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> console or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</description></item>
-        /// <item><description>The optional parameters in this operation are filter conditions for querying flows. If you do not specify them, all flows are queried.</description></item>
+        /// <item><description>You can call this operation to query flows, or manually query flows in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> console.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created at least one flow.</description></item>
+        /// <item><description>If you have not created any flows, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> console or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlow">CreateChatFlow</a> operation to create a flow.</description></item>
+        /// <item><description>The optional parameters in this operation are used as filter conditions for querying flows. If you do not specify these parameters, all flows are queried.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18317,10 +18564,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query flows, or manually query flows in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> console.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have successfully created flows.</description></item>
-        /// <item><description>If you do not have any successfully created flows, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> console or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</description></item>
-        /// <item><description>The optional parameters in this operation are filter conditions for querying flows. If you do not specify them, all flows are queried.</description></item>
+        /// <item><description>You can call this operation to query flows, or manually query flows in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> console.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created at least one flow.</description></item>
+        /// <item><description>If you have not created any flows, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> console or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlow">CreateChatFlow</a> operation to create a flow.</description></item>
+        /// <item><description>The optional parameters in this operation are used as filter conditions for querying flows. If you do not specify these parameters, all flows are queried.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18345,10 +18592,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query flows, or manually query flows in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> console.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have successfully created flows.</description></item>
-        /// <item><description>If you do not have any successfully created flows, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> console or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</description></item>
-        /// <item><description>The optional parameters in this operation are filter conditions for querying flows. If you do not specify them, all flows are queried.</description></item>
+        /// <item><description>You can call this operation to query flows, or manually query flows in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> console.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created at least one flow.</description></item>
+        /// <item><description>If you have not created any flows, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> console or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlow">CreateChatFlow</a> operation to create a flow.</description></item>
+        /// <item><description>The optional parameters in this operation are used as filter conditions for querying flows. If you do not specify these parameters, all flows are queried.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18373,8 +18620,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to view the template list, or view the template list in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a> &gt; <b>Template View</b> page.</description></item>
-        /// <item><description>The optional parameters in this operation are filter conditions for the template list. If not specified, all templates are queried.</description></item>
+        /// <item><description>You can call this operation to view the template list. You can also view the template list on the <b>View Templates</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a>.</description></item>
+        /// <item><description>The optional parameters in this operation are filter conditions for the template list. If you do not specify these parameters, all templates are queried.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18451,8 +18698,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to view the template list, or view the template list in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a> &gt; <b>Template View</b> page.</description></item>
-        /// <item><description>The optional parameters in this operation are filter conditions for the template list. If not specified, all templates are queried.</description></item>
+        /// <item><description>You can call this operation to view the template list. You can also view the template list on the <b>View Templates</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a>.</description></item>
+        /// <item><description>The optional parameters in this operation are filter conditions for the template list. If you do not specify these parameters, all templates are queried.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18529,8 +18776,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to view the template list, or view the template list in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a> &gt; <b>Template View</b> page.</description></item>
-        /// <item><description>The optional parameters in this operation are filter conditions for the template list. If not specified, all templates are queried.</description></item>
+        /// <item><description>You can call this operation to view the template list. You can also view the template list on the <b>View Templates</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a>.</description></item>
+        /// <item><description>The optional parameters in this operation are filter conditions for the template list. If you do not specify these parameters, all templates are queried.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18555,8 +18802,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to view the template list, or view the template list in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a> &gt; <b>Template View</b> page.</description></item>
-        /// <item><description>The optional parameters in this operation are filter conditions for the template list. If not specified, all templates are queried.</description></item>
+        /// <item><description>You can call this operation to view the template list. You can also view the template list on the <b>View Templates</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a>.</description></item>
+        /// <item><description>The optional parameters in this operation are filter conditions for the template list. If you do not specify these parameters, all templates are queried.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18575,18 +18822,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of IM groups.</para>
+        /// <para>Queries the list of IM groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: The feature of retrieving IM group lists through API is a Meta beta feature. Contact your account manager to apply for access.</para>
+        /// <para>Notice: The feature to query the list of IM groups through the API is a Meta closed beta feature. Contact your account manager to apply for whitelist access.</notice></para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure you have successfully created IM groups.</description></item>
-        /// <item><description>If you do not have any created IM groups, you can only create IM groups through the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> operation.</description></item>
-        /// <item><description>The optional parameters of this operation are filter conditions for the IM group list. If you do not specify them, all IM groups are returned.</description></item>
+        /// <item><description>Before calling this API operation, make sure that you have created an IM group.</description></item>
+        /// <item><description>If you have not created an IM group, you can only create one by calling the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> API operation.</description></item>
+        /// <item><description>The optional parameters of this API operation are filter conditions for the IM group list. If you do not specify these parameters, all IM groups are queried.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18675,18 +18922,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of IM groups.</para>
+        /// <para>Queries the list of IM groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: The feature of retrieving IM group lists through API is a Meta beta feature. Contact your account manager to apply for access.</para>
+        /// <para>Notice: The feature to query the list of IM groups through the API is a Meta closed beta feature. Contact your account manager to apply for whitelist access.</notice></para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure you have successfully created IM groups.</description></item>
-        /// <item><description>If you do not have any created IM groups, you can only create IM groups through the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> operation.</description></item>
-        /// <item><description>The optional parameters of this operation are filter conditions for the IM group list. If you do not specify them, all IM groups are returned.</description></item>
+        /// <item><description>Before calling this API operation, make sure that you have created an IM group.</description></item>
+        /// <item><description>If you have not created an IM group, you can only create one by calling the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> API operation.</description></item>
+        /// <item><description>The optional parameters of this API operation are filter conditions for the IM group list. If you do not specify these parameters, all IM groups are queried.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18775,18 +19022,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of IM groups.</para>
+        /// <para>Queries the list of IM groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: The feature of retrieving IM group lists through API is a Meta beta feature. Contact your account manager to apply for access.</para>
+        /// <para>Notice: The feature to query the list of IM groups through the API is a Meta closed beta feature. Contact your account manager to apply for whitelist access.</notice></para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure you have successfully created IM groups.</description></item>
-        /// <item><description>If you do not have any created IM groups, you can only create IM groups through the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> operation.</description></item>
-        /// <item><description>The optional parameters of this operation are filter conditions for the IM group list. If you do not specify them, all IM groups are returned.</description></item>
+        /// <item><description>Before calling this API operation, make sure that you have created an IM group.</description></item>
+        /// <item><description>If you have not created an IM group, you can only create one by calling the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> API operation.</description></item>
+        /// <item><description>The optional parameters of this API operation are filter conditions for the IM group list. If you do not specify these parameters, all IM groups are queried.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18805,18 +19052,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of IM groups.</para>
+        /// <para>Queries the list of IM groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: The feature of retrieving IM group lists through API is a Meta beta feature. Contact your account manager to apply for access.</para>
+        /// <para>Notice: The feature to query the list of IM groups through the API is a Meta closed beta feature. Contact your account manager to apply for whitelist access.</notice></para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure you have successfully created IM groups.</description></item>
-        /// <item><description>If you do not have any created IM groups, you can only create IM groups through the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> operation.</description></item>
-        /// <item><description>The optional parameters of this operation are filter conditions for the IM group list. If you do not specify them, all IM groups are returned.</description></item>
+        /// <item><description>Before calling this API operation, make sure that you have created an IM group.</description></item>
+        /// <item><description>If you have not created an IM group, you can only create one by calling the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> API operation.</description></item>
+        /// <item><description>The optional parameters of this API operation are filter conditions for the IM group list. If you do not specify these parameters, all IM groups are queried.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18840,12 +19087,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>Notice: The feature of retrieving IM group member lists through API is a Meta beta feature. Contact your account manager to apply for access.</para>
-        /// </remarks>
+        /// <para><notice>The feature to retrieve the IM group member list through the API is a Meta beta feature. Contact your account manager to apply for whitelist access.</notice></para>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure that the IM group you created has an IM group invitation link added and that members have joined the IM group through the link.</description></item>
-        /// <item><description>If you do not have a created IM group, use the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations to create an IM group and add an invitation link.</description></item>
+        /// <item><description>Before you call this operation, make sure that an IM group invite link has been added to the created IM group and that members have joined the group through the link.</description></item>
+        /// <item><description>If you do not have a created IM group, you can call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations to create an IM group and add an invite link.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18927,12 +19172,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>Notice: The feature of retrieving IM group member lists through API is a Meta beta feature. Contact your account manager to apply for access.</para>
-        /// </remarks>
+        /// <para><notice>The feature to retrieve the IM group member list through the API is a Meta beta feature. Contact your account manager to apply for whitelist access.</notice></para>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure that the IM group you created has an IM group invitation link added and that members have joined the IM group through the link.</description></item>
-        /// <item><description>If you do not have a created IM group, use the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations to create an IM group and add an invitation link.</description></item>
+        /// <item><description>Before you call this operation, make sure that an IM group invite link has been added to the created IM group and that members have joined the group through the link.</description></item>
+        /// <item><description>If you do not have a created IM group, you can call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations to create an IM group and add an invite link.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19014,12 +19257,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>Notice: The feature of retrieving IM group member lists through API is a Meta beta feature. Contact your account manager to apply for access.</para>
-        /// </remarks>
+        /// <para><notice>The feature to retrieve the IM group member list through the API is a Meta beta feature. Contact your account manager to apply for whitelist access.</notice></para>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure that the IM group you created has an IM group invitation link added and that members have joined the IM group through the link.</description></item>
-        /// <item><description>If you do not have a created IM group, use the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations to create an IM group and add an invitation link.</description></item>
+        /// <item><description>Before you call this operation, make sure that an IM group invite link has been added to the created IM group and that members have joined the group through the link.</description></item>
+        /// <item><description>If you do not have a created IM group, you can call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations to create an IM group and add an invite link.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19043,12 +19284,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>Notice: The feature of retrieving IM group member lists through API is a Meta beta feature. Contact your account manager to apply for access.</para>
-        /// </remarks>
+        /// <para><notice>The feature to retrieve the IM group member list through the API is a Meta beta feature. Contact your account manager to apply for whitelist access.</notice></para>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure that the IM group you created has an IM group invitation link added and that members have joined the IM group through the link.</description></item>
-        /// <item><description>If you do not have a created IM group, use the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations to create an IM group and add an invitation link.</description></item>
+        /// <item><description>Before you call this operation, make sure that an IM group invite link has been added to the created IM group and that members have joined the group through the link.</description></item>
+        /// <item><description>If you do not have a created IM group, you can call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations to create an IM group and add an invite link.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19073,9 +19312,9 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query the message list. You can also view the message list in the <a href="https://chatapp.console.aliyun.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>Message List</b> console.</description></item>
-        /// <item><description>This operation only supports querying the message list for WhatsApp&lt;props=&quot;intl&quot;&gt; and Viber channel types.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have created a WhatsApp&lt;props=&quot;intl&quot;&gt; or Viber channel, bound a phone number or merchant account ID, created a template that has passed the review, and sent messages through the channel.</description></item>
+        /// <item><description>You can call this operation to query the message list, or view it on the <a href="https://chatapp.console.aliyun.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>Message List</b> page.</description></item>
+        /// <item><description>This operation only supports querying the message list for WhatsApp&lt;props=&quot;intl&quot;&gt; and Viber channels.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created a WhatsApp&lt;props=&quot;intl&quot;&gt; or Viber channel, associated a phone number or business account ID, created and approved a template, and sent messages by using the channel.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19194,9 +19433,9 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query the message list. You can also view the message list in the <a href="https://chatapp.console.aliyun.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>Message List</b> console.</description></item>
-        /// <item><description>This operation only supports querying the message list for WhatsApp&lt;props=&quot;intl&quot;&gt; and Viber channel types.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have created a WhatsApp&lt;props=&quot;intl&quot;&gt; or Viber channel, bound a phone number or merchant account ID, created a template that has passed the review, and sent messages through the channel.</description></item>
+        /// <item><description>You can call this operation to query the message list, or view it on the <a href="https://chatapp.console.aliyun.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>Message List</b> page.</description></item>
+        /// <item><description>This operation only supports querying the message list for WhatsApp&lt;props=&quot;intl&quot;&gt; and Viber channels.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created a WhatsApp&lt;props=&quot;intl&quot;&gt; or Viber channel, associated a phone number or business account ID, created and approved a template, and sent messages by using the channel.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19315,9 +19554,9 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query the message list. You can also view the message list in the <a href="https://chatapp.console.aliyun.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>Message List</b> console.</description></item>
-        /// <item><description>This operation only supports querying the message list for WhatsApp&lt;props=&quot;intl&quot;&gt; and Viber channel types.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have created a WhatsApp&lt;props=&quot;intl&quot;&gt; or Viber channel, bound a phone number or merchant account ID, created a template that has passed the review, and sent messages through the channel.</description></item>
+        /// <item><description>You can call this operation to query the message list, or view it on the <a href="https://chatapp.console.aliyun.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>Message List</b> page.</description></item>
+        /// <item><description>This operation only supports querying the message list for WhatsApp&lt;props=&quot;intl&quot;&gt; and Viber channels.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created a WhatsApp&lt;props=&quot;intl&quot;&gt; or Viber channel, associated a phone number or business account ID, created and approved a template, and sent messages by using the channel.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19342,9 +19581,9 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query the message list. You can also view the message list in the <a href="https://chatapp.console.aliyun.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>Message List</b> console.</description></item>
-        /// <item><description>This operation only supports querying the message list for WhatsApp&lt;props=&quot;intl&quot;&gt; and Viber channel types.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have created a WhatsApp&lt;props=&quot;intl&quot;&gt; or Viber channel, bound a phone number or merchant account ID, created a template that has passed the review, and sent messages through the channel.</description></item>
+        /// <item><description>You can call this operation to query the message list, or view it on the <a href="https://chatapp.console.aliyun.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>Message List</b> page.</description></item>
+        /// <item><description>This operation only supports querying the message list for WhatsApp&lt;props=&quot;intl&quot;&gt; and Viber channels.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created a WhatsApp&lt;props=&quot;intl&quot;&gt; or Viber channel, associated a phone number or business account ID, created and approved a template, and sent messages by using the channel.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19363,13 +19602,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of message templates.</para>
+        /// <para>Retrieves the list of message templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <h3>Rate limits</h3>
+        /// <para>The rate limit for this API operation is 5 queries per second (QPS) per user. If you exceed the limit, API calls are throttled, which may affect your services. Make API calls at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -19465,13 +19704,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of message templates.</para>
+        /// <para>Retrieves the list of message templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <h3>Rate limits</h3>
+        /// <para>The rate limit for this API operation is 5 queries per second (QPS) per user. If you exceed the limit, API calls are throttled, which may affect your services. Make API calls at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -19567,13 +19806,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of message templates.</para>
+        /// <para>Retrieves the list of message templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <h3>Rate limits</h3>
+        /// <para>The rate limit for this API operation is 5 queries per second (QPS) per user. If you exceed the limit, API calls are throttled, which may affect your services. Make API calls at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19591,13 +19830,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of message templates.</para>
+        /// <para>Retrieves the list of message templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <h3>Rate limits</h3>
+        /// <para>The rate limit for this API operation is 5 queries per second (QPS) per user. If you exceed the limit, API calls are throttled, which may affect your services. Make API calls at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19819,7 +20058,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the DirectMail accounts under your Alibaba Cloud account.</para>
+        /// <para>Queries the Direct Mail accounts under the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19885,7 +20124,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the DirectMail accounts under your Alibaba Cloud account.</para>
+        /// <para>Queries the Direct Mail accounts under the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19951,7 +20190,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the DirectMail accounts under your Alibaba Cloud account.</para>
+        /// <para>Queries the Direct Mail accounts under the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19969,7 +20208,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the DirectMail accounts under your Alibaba Cloud account.</para>
+        /// <para>Queries the Direct Mail accounts under the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19987,7 +20226,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags of DirectMail.</para>
+        /// <para>Queries DM tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20049,7 +20288,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags of DirectMail.</para>
+        /// <para>Queries DM tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20111,7 +20350,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags of DirectMail.</para>
+        /// <para>Queries DM tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20129,7 +20368,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags of DirectMail.</para>
+        /// <para>Queries DM tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20147,7 +20386,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Facebook posts.</para>
+        /// <para>Queries a list of Facebook posts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20201,7 +20440,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Facebook posts.</para>
+        /// <para>Queries a list of Facebook posts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20255,7 +20494,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Facebook posts.</para>
+        /// <para>Queries a list of Facebook posts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20273,7 +20512,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Facebook posts.</para>
+        /// <para>Queries a list of Facebook posts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20641,8 +20880,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query flow component prototypes. You can also click a flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and view flow component prototypes.</description></item>
-        /// <item><description>The optional parameters in this operation are filter conditions for flow component prototypes. If you do not specify them, all flow component prototypes are queried.</description></item>
+        /// <item><description>You can call this operation to query flow component prototypes. Alternatively, you can click a flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and view the flow component prototypes.</description></item>
+        /// <item><description>The optional parameters in this operation are used as filter conditions for flow component prototypes. If you do not specify these parameters, all flow component prototypes are queried.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20719,8 +20958,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query flow component prototypes. You can also click a flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and view flow component prototypes.</description></item>
-        /// <item><description>The optional parameters in this operation are filter conditions for flow component prototypes. If you do not specify them, all flow component prototypes are queried.</description></item>
+        /// <item><description>You can call this operation to query flow component prototypes. Alternatively, you can click a flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and view the flow component prototypes.</description></item>
+        /// <item><description>The optional parameters in this operation are used as filter conditions for flow component prototypes. If you do not specify these parameters, all flow component prototypes are queried.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20797,8 +21036,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query flow component prototypes. You can also click a flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and view flow component prototypes.</description></item>
-        /// <item><description>The optional parameters in this operation are filter conditions for flow component prototypes. If you do not specify them, all flow component prototypes are queried.</description></item>
+        /// <item><description>You can call this operation to query flow component prototypes. Alternatively, you can click a flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and view the flow component prototypes.</description></item>
+        /// <item><description>The optional parameters in this operation are used as filter conditions for flow component prototypes. If you do not specify these parameters, all flow component prototypes are queried.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20823,8 +21062,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query flow component prototypes. You can also click a flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and view flow component prototypes.</description></item>
-        /// <item><description>The optional parameters in this operation are filter conditions for flow component prototypes. If you do not specify them, all flow component prototypes are queried.</description></item>
+        /// <item><description>You can call this operation to query flow component prototypes. Alternatively, you can click a flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and view the flow component prototypes.</description></item>
+        /// <item><description>The optional parameters in this operation are used as filter conditions for flow component prototypes. If you do not specify these parameters, all flow component prototypes are queried.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20849,10 +21088,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query flow versions. You can also click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to go to the canvas orchestration page and view flow versions.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have a successfully created flow.</description></item>
-        /// <item><description>If you do not have a successfully created flow, you can manually create a flow on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</description></item>
-        /// <item><description>The optional parameters in this operation are filter conditions for querying flow versions. If you do not specify them, all flow versions are queried.</description></item>
+        /// <item><description>You can call this operation to query flow versions, or click a flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and view the flow versions.</description></item>
+        /// <item><description>Before calling this operation, make sure that you have created a flow.</description></item>
+        /// <item><description>If you have not created a flow, you can manually create one in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlow">CreateChatFlow</a> operation to create a flow.</description></item>
+        /// <item><description>The optional parameters in this operation are used as filter conditions for querying flow versions. If you do not specify these parameters, all flow versions are queried.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20939,10 +21178,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query flow versions. You can also click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to go to the canvas orchestration page and view flow versions.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have a successfully created flow.</description></item>
-        /// <item><description>If you do not have a successfully created flow, you can manually create a flow on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</description></item>
-        /// <item><description>The optional parameters in this operation are filter conditions for querying flow versions. If you do not specify them, all flow versions are queried.</description></item>
+        /// <item><description>You can call this operation to query flow versions, or click a flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and view the flow versions.</description></item>
+        /// <item><description>Before calling this operation, make sure that you have created a flow.</description></item>
+        /// <item><description>If you have not created a flow, you can manually create one in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlow">CreateChatFlow</a> operation to create a flow.</description></item>
+        /// <item><description>The optional parameters in this operation are used as filter conditions for querying flow versions. If you do not specify these parameters, all flow versions are queried.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21029,10 +21268,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query flow versions. You can also click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to go to the canvas orchestration page and view flow versions.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have a successfully created flow.</description></item>
-        /// <item><description>If you do not have a successfully created flow, you can manually create a flow on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</description></item>
-        /// <item><description>The optional parameters in this operation are filter conditions for querying flow versions. If you do not specify them, all flow versions are queried.</description></item>
+        /// <item><description>You can call this operation to query flow versions, or click a flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and view the flow versions.</description></item>
+        /// <item><description>Before calling this operation, make sure that you have created a flow.</description></item>
+        /// <item><description>If you have not created a flow, you can manually create one in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlow">CreateChatFlow</a> operation to create a flow.</description></item>
+        /// <item><description>The optional parameters in this operation are used as filter conditions for querying flow versions. If you do not specify these parameters, all flow versions are queried.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21057,10 +21296,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query flow versions. You can also click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to go to the canvas orchestration page and view flow versions.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have a successfully created flow.</description></item>
-        /// <item><description>If you do not have a successfully created flow, you can manually create a flow on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</description></item>
-        /// <item><description>The optional parameters in this operation are filter conditions for querying flow versions. If you do not specify them, all flow versions are queried.</description></item>
+        /// <item><description>You can call this operation to query flow versions, or click a flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and view the flow versions.</description></item>
+        /// <item><description>Before calling this operation, make sure that you have created a flow.</description></item>
+        /// <item><description>If you have not created a flow, you can manually create one in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlow">CreateChatFlow</a> operation to create a flow.</description></item>
+        /// <item><description>The optional parameters in this operation are used as filter conditions for querying flow versions. If you do not specify these parameters, all flow versions are queried.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21079,7 +21318,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the Instagram pages associated with an instance.</para>
+        /// <para>Retrieves Instagram pages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21133,7 +21372,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the Instagram pages associated with an instance.</para>
+        /// <para>Retrieves Instagram pages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21187,7 +21426,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the Instagram pages associated with an instance.</para>
+        /// <para>Retrieves Instagram pages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21205,7 +21444,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the Instagram pages associated with an instance.</para>
+        /// <para>Retrieves Instagram pages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21223,7 +21462,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Instagram posts.</para>
+        /// <para>Queries a list of Instagram posts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21277,7 +21516,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Instagram posts.</para>
+        /// <para>Queries a list of Instagram posts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21331,7 +21570,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Instagram posts.</para>
+        /// <para>Queries a list of Instagram posts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21349,7 +21588,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Instagram posts.</para>
+        /// <para>Queries a list of Instagram posts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21367,7 +21606,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Queries the list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21445,7 +21684,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Queries the list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21523,7 +21762,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Queries the list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21541,7 +21780,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Queries the list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21559,7 +21798,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of marketing campaigns.</para>
+        /// <para>Queries the list of operational activities.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -21651,7 +21890,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of marketing campaigns.</para>
+        /// <para>Queries the list of operational activities.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -21743,7 +21982,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of marketing campaigns.</para>
+        /// <para>Queries the list of operational activities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21761,7 +22000,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of marketing campaigns.</para>
+        /// <para>Queries the list of operational activities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21779,7 +22018,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of budgets.</para>
+        /// <para>Queries the budget list.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -21863,7 +22102,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of budgets.</para>
+        /// <para>Queries the budget list.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -21947,7 +22186,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of budgets.</para>
+        /// <para>Queries the budget list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21965,7 +22204,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of budgets.</para>
+        /// <para>Queries the budget list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22167,7 +22406,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of ad accounts bound to a page.</para>
+        /// <para>Queries the ad accounts bound to a page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22225,7 +22464,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of ad accounts bound to a page.</para>
+        /// <para>Queries the ad accounts bound to a page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22283,7 +22522,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of ad accounts bound to a page.</para>
+        /// <para>Queries the ad accounts bound to a page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22301,7 +22540,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of ad accounts bound to a page.</para>
+        /// <para>Queries the ad accounts bound to a page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22703,12 +22942,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the catalog list of the Meta Business platform.</para>
+        /// <para>Queries the list of catalogs on the Meta Business platform.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China (Hangzhou) region is used as an example. The China (Hangzhou) region is used as an example. The China (Hangzhou) region is used as an example. The per-user QPS limit for this API is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <para>The queries per second (QPS) limit per user is 10. If this limit is exceeded, API calls are throttled, which may affect your services. Call this API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22782,12 +23021,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the catalog list of the Meta Business platform.</para>
+        /// <para>Queries the list of catalogs on the Meta Business platform.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China (Hangzhou) region is used as an example. The China (Hangzhou) region is used as an example. The China (Hangzhou) region is used as an example. The per-user QPS limit for this API is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <para>The queries per second (QPS) limit per user is 10. If this limit is exceeded, API calls are throttled, which may affect your services. Call this API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22861,12 +23100,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the catalog list of the Meta Business platform.</para>
+        /// <para>Queries the list of catalogs on the Meta Business platform.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China (Hangzhou) region is used as an example. The China (Hangzhou) region is used as an example. The China (Hangzhou) region is used as an example. The per-user QPS limit for this API is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <para>The queries per second (QPS) limit per user is 10. If this limit is exceeded, API calls are throttled, which may affect your services. Call this API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22884,12 +23123,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the catalog list of the Meta Business platform.</para>
+        /// <para>Queries the list of catalogs on the Meta Business platform.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China (Hangzhou) region is used as an example. The China (Hangzhou) region is used as an example. The China (Hangzhou) region is used as an example. The per-user QPS limit for this API is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <para>The queries per second (QPS) limit per user is 10. If this limit is exceeded, API calls are throttled, which may affect your services. Call this API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22907,7 +23146,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Displays the Viber service number card for an application form.</para>
+        /// <para>Retrieves the Viber service account card of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22961,7 +23200,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Displays the Viber service number card for an application form.</para>
+        /// <para>Retrieves the Viber service account card of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23015,7 +23254,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Displays the Viber service number card for an application form.</para>
+        /// <para>Retrieves the Viber service account card of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23033,7 +23272,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Displays the Viber service number card for an application form.</para>
+        /// <para>Retrieves the Viber service account card of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23051,7 +23290,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists message templates.</para>
+        /// <para>Queries a list of templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23097,7 +23336,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists message templates.</para>
+        /// <para>Queries a list of templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23143,7 +23382,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists message templates.</para>
+        /// <para>Queries a list of templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23161,7 +23400,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists message templates.</para>
+        /// <para>Queries a list of templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23179,15 +23418,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a message template. Only templates that have not been reviewed or that failed the review can be modified.</para>
+        /// <para>Modifies a message template. Only templates that are pending review or have failed the review can be modified.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 50 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</para>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 50. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
         /// <h3>Status changes</h3>
-        /// <para>You can monitor template status and quality changes through MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</para>
+        /// <para>You can listen for template status and quality changes by using MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -23287,15 +23526,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a message template. Only templates that have not been reviewed or that failed the review can be modified.</para>
+        /// <para>Modifies a message template. Only templates that are pending review or have failed the review can be modified.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 50 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</para>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 50. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
         /// <h3>Status changes</h3>
-        /// <para>You can monitor template status and quality changes through MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</para>
+        /// <para>You can listen for template status and quality changes by using MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -23395,15 +23634,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a message template. Only templates that have not been reviewed or that failed the review can be modified.</para>
+        /// <para>Modifies a message template. Only templates that are pending review or have failed the review can be modified.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 50 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</para>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 50. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
         /// <h3>Status changes</h3>
-        /// <para>You can monitor template status and quality changes through MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</para>
+        /// <para>You can listen for template status and quality changes by using MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23421,15 +23660,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a message template. Only templates that have not been reviewed or that failed the review can be modified.</para>
+        /// <para>Modifies a message template. Only templates that are pending review or have failed the review can be modified.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 50 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</para>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 50. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
         /// <h3>Status changes</h3>
-        /// <para>You can monitor template status and quality changes through MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</para>
+        /// <para>You can listen for template status and quality changes by using MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23447,7 +23686,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies some properties of a template.</para>
+        /// <para>Modifies specific attributes of a template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23521,7 +23760,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies some properties of a template.</para>
+        /// <para>Modifies specific attributes of a template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23595,7 +23834,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies some properties of a template.</para>
+        /// <para>Modifies specific attributes of a template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23613,7 +23852,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies some properties of a template.</para>
+        /// <para>Modifies specific attributes of a template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23839,12 +24078,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the commercial information of a phone number.</para>
+        /// <para>Updates the business information of a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China Message Service (China) API has a single-user QPS limit of 10 calls per second. If this limit is exceeded, throttling is triggered, which may affect your business. Manage your calls appropriately.</para>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -23936,12 +24175,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the commercial information of a phone number.</para>
+        /// <para>Updates the business information of a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China Message Service (China) API has a single-user QPS limit of 10 calls per second. If this limit is exceeded, throttling is triggered, which may affect your business. Manage your calls appropriately.</para>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -24033,12 +24272,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the commercial information of a phone number.</para>
+        /// <para>Updates the business information of a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China Message Service (China) API has a single-user QPS limit of 10 calls per second. If this limit is exceeded, throttling is triggered, which may affect your business. Manage your calls appropriately.</para>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24056,12 +24295,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the commercial information of a phone number.</para>
+        /// <para>Updates the business information of a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China Message Service (China) API has a single-user QPS limit of 10 calls per second. If this limit is exceeded, throttling is triggered, which may affect your business. Manage your calls appropriately.</para>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24079,7 +24318,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the group associations of contacts.</para>
+        /// <para>Modifies the groups of contacts.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24155,7 +24394,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the group associations of contacts.</para>
+        /// <para>Modifies the groups of contacts.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24231,7 +24470,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the group associations of contacts.</para>
+        /// <para>Modifies the groups of contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24249,7 +24488,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the group associations of contacts.</para>
+        /// <para>Modifies the groups of contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24267,16 +24506,16 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Offlines a flow version.</para>
+        /// <para>Takes a flow version offline.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to offline a flow version, or click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> to enter the canvas orchestration page and manually offline the flow version.</description></item>
-        /// <item><description>Before calling this operation, make sure the flow you created is already online.</description></item>
-        /// <item><description>If the flow you created is not online, click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> to enter the canvas orchestration page and manually bring the flow version online, or call the <a href="https://help.aliyun.com/document_detail/2937203.html">OnlineFlowVersion</a> operation to bring the flow version online.</description></item>
-        /// <item><description>After the flow version is offlined, the orchestrated flow stops running, which may affect your business. Proceed with caution.</description></item>
+        /// <item><description>You can call this operation to take a flow version offline, or click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and manually take the flow version offline.</description></item>
+        /// <item><description>Before calling this operation, make sure that the flow you created is online.</description></item>
+        /// <item><description>If the flow you created is not online, you can click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and manually bring the flow version online, or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/OnlineFlowVersion">OnlineFlowVersion</a> operation to bring the flow version online.</description></item>
+        /// <item><description>After a flow version is taken offline, the orchestrated flow stops running. This may affect your business. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24353,16 +24592,16 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Offlines a flow version.</para>
+        /// <para>Takes a flow version offline.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to offline a flow version, or click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> to enter the canvas orchestration page and manually offline the flow version.</description></item>
-        /// <item><description>Before calling this operation, make sure the flow you created is already online.</description></item>
-        /// <item><description>If the flow you created is not online, click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> to enter the canvas orchestration page and manually bring the flow version online, or call the <a href="https://help.aliyun.com/document_detail/2937203.html">OnlineFlowVersion</a> operation to bring the flow version online.</description></item>
-        /// <item><description>After the flow version is offlined, the orchestrated flow stops running, which may affect your business. Proceed with caution.</description></item>
+        /// <item><description>You can call this operation to take a flow version offline, or click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and manually take the flow version offline.</description></item>
+        /// <item><description>Before calling this operation, make sure that the flow you created is online.</description></item>
+        /// <item><description>If the flow you created is not online, you can click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and manually bring the flow version online, or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/OnlineFlowVersion">OnlineFlowVersion</a> operation to bring the flow version online.</description></item>
+        /// <item><description>After a flow version is taken offline, the orchestrated flow stops running. This may affect your business. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24439,16 +24678,16 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Offlines a flow version.</para>
+        /// <para>Takes a flow version offline.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to offline a flow version, or click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> to enter the canvas orchestration page and manually offline the flow version.</description></item>
-        /// <item><description>Before calling this operation, make sure the flow you created is already online.</description></item>
-        /// <item><description>If the flow you created is not online, click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> to enter the canvas orchestration page and manually bring the flow version online, or call the <a href="https://help.aliyun.com/document_detail/2937203.html">OnlineFlowVersion</a> operation to bring the flow version online.</description></item>
-        /// <item><description>After the flow version is offlined, the orchestrated flow stops running, which may affect your business. Proceed with caution.</description></item>
+        /// <item><description>You can call this operation to take a flow version offline, or click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and manually take the flow version offline.</description></item>
+        /// <item><description>Before calling this operation, make sure that the flow you created is online.</description></item>
+        /// <item><description>If the flow you created is not online, you can click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and manually bring the flow version online, or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/OnlineFlowVersion">OnlineFlowVersion</a> operation to bring the flow version online.</description></item>
+        /// <item><description>After a flow version is taken offline, the orchestrated flow stops running. This may affect your business. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24467,16 +24706,16 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Offlines a flow version.</para>
+        /// <para>Takes a flow version offline.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to offline a flow version, or click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> to enter the canvas orchestration page and manually offline the flow version.</description></item>
-        /// <item><description>Before calling this operation, make sure the flow you created is already online.</description></item>
-        /// <item><description>If the flow you created is not online, click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> to enter the canvas orchestration page and manually bring the flow version online, or call the <a href="https://help.aliyun.com/document_detail/2937203.html">OnlineFlowVersion</a> operation to bring the flow version online.</description></item>
-        /// <item><description>After the flow version is offlined, the orchestrated flow stops running, which may affect your business. Proceed with caution.</description></item>
+        /// <item><description>You can call this operation to take a flow version offline, or click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and manually take the flow version offline.</description></item>
+        /// <item><description>Before calling this operation, make sure that the flow you created is online.</description></item>
+        /// <item><description>If the flow you created is not online, you can click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and manually bring the flow version online, or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/OnlineFlowVersion">OnlineFlowVersion</a> operation to bring the flow version online.</description></item>
+        /// <item><description>After a flow version is taken offline, the orchestrated flow stops running. This may affect your business. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24501,10 +24740,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to publish a flow version. You can also click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page to go to the canvas orchestration page and manually publish a flow version.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have a successfully created flow and that your flow is bindded to a phone number or merchant account ID.</description></item>
-        /// <item><description>If you do not have a successfully created flow, you can manually create a flow and bindded it to a phone number or merchant account ID on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, or call the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> and <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operations to create a flow and bind it to a phone number or merchant account ID.</description></item>
-        /// <item><description>After a flow with a non-manual trigger type is published, the flow is triggered when the bound phone number or merchant account sends a message to the merchant. If your flow contains components that incur fees for corresponding cloud services, such as message sending or function calling, make sure that you fully understand the billing methods and pricing of the related services before using this operation.</description></item>
+        /// <item><description>You can call this operation to publish a flow version. You can also click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and manually publish the flow version.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created a flow and bound a phone number or merchant account ID to it.</description></item>
+        /// <item><description>If you do not have a created flow, you can manually create a flow and bind a phone number or merchant account ID to it in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>, or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlow">CreateChatFlow</a> and <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operations to create a flow and bind a phone number or merchant account ID to it.</description></item>
+        /// <item><description>After a flow with a non-manual trigger type is published, the flow is triggered when the bound phone number or merchant account sends a message to the merchant. If your flow contains components that incur fees for corresponding cloud services, such as message sending and function calling, make sure that you fully understand the billing methods and pricing of the related services before you use this operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24587,10 +24826,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to publish a flow version. You can also click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page to go to the canvas orchestration page and manually publish a flow version.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have a successfully created flow and that your flow is bindded to a phone number or merchant account ID.</description></item>
-        /// <item><description>If you do not have a successfully created flow, you can manually create a flow and bindded it to a phone number or merchant account ID on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, or call the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> and <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operations to create a flow and bind it to a phone number or merchant account ID.</description></item>
-        /// <item><description>After a flow with a non-manual trigger type is published, the flow is triggered when the bound phone number or merchant account sends a message to the merchant. If your flow contains components that incur fees for corresponding cloud services, such as message sending or function calling, make sure that you fully understand the billing methods and pricing of the related services before using this operation.</description></item>
+        /// <item><description>You can call this operation to publish a flow version. You can also click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and manually publish the flow version.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created a flow and bound a phone number or merchant account ID to it.</description></item>
+        /// <item><description>If you do not have a created flow, you can manually create a flow and bind a phone number or merchant account ID to it in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>, or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlow">CreateChatFlow</a> and <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operations to create a flow and bind a phone number or merchant account ID to it.</description></item>
+        /// <item><description>After a flow with a non-manual trigger type is published, the flow is triggered when the bound phone number or merchant account sends a message to the merchant. If your flow contains components that incur fees for corresponding cloud services, such as message sending and function calling, make sure that you fully understand the billing methods and pricing of the related services before you use this operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24673,10 +24912,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to publish a flow version. You can also click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page to go to the canvas orchestration page and manually publish a flow version.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have a successfully created flow and that your flow is bindded to a phone number or merchant account ID.</description></item>
-        /// <item><description>If you do not have a successfully created flow, you can manually create a flow and bindded it to a phone number or merchant account ID on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, or call the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> and <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operations to create a flow and bind it to a phone number or merchant account ID.</description></item>
-        /// <item><description>After a flow with a non-manual trigger type is published, the flow is triggered when the bound phone number or merchant account sends a message to the merchant. If your flow contains components that incur fees for corresponding cloud services, such as message sending or function calling, make sure that you fully understand the billing methods and pricing of the related services before using this operation.</description></item>
+        /// <item><description>You can call this operation to publish a flow version. You can also click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and manually publish the flow version.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created a flow and bound a phone number or merchant account ID to it.</description></item>
+        /// <item><description>If you do not have a created flow, you can manually create a flow and bind a phone number or merchant account ID to it in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>, or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlow">CreateChatFlow</a> and <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operations to create a flow and bind a phone number or merchant account ID to it.</description></item>
+        /// <item><description>After a flow with a non-manual trigger type is published, the flow is triggered when the bound phone number or merchant account sends a message to the merchant. If your flow contains components that incur fees for corresponding cloud services, such as message sending and function calling, make sure that you fully understand the billing methods and pricing of the related services before you use this operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24701,10 +24940,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to publish a flow version. You can also click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page to go to the canvas orchestration page and manually publish a flow version.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have a successfully created flow and that your flow is bindded to a phone number or merchant account ID.</description></item>
-        /// <item><description>If you do not have a successfully created flow, you can manually create a flow and bindded it to a phone number or merchant account ID on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, or call the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> and <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operations to create a flow and bind it to a phone number or merchant account ID.</description></item>
-        /// <item><description>After a flow with a non-manual trigger type is published, the flow is triggered when the bound phone number or merchant account sends a message to the merchant. If your flow contains components that incur fees for corresponding cloud services, such as message sending or function calling, make sure that you fully understand the billing methods and pricing of the related services before using this operation.</description></item>
+        /// <item><description>You can call this operation to publish a flow version. You can also click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and manually publish the flow version.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created a flow and bound a phone number or merchant account ID to it.</description></item>
+        /// <item><description>If you do not have a created flow, you can manually create a flow and bind a phone number or merchant account ID to it in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>, or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlow">CreateChatFlow</a> and <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> operations to create a flow and bind a phone number or merchant account ID to it.</description></item>
+        /// <item><description>After a flow with a non-manual trigger type is published, the flow is triggered when the bound phone number or merchant account sends a message to the merchant. If your flow contains components that incur fees for corresponding cloud services, such as message sending and function calling, make sure that you fully understand the billing methods and pricing of the related services before you use this operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25203,12 +25442,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the WhatsApp Business Account (WABA) that is bound to a customer account.</para>
+        /// <para>Queries the WABA bound to a customer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API has a per-user QPS limit of 10. Calls that exceed this limit are subject to flow control, which may impact your business. Make API calls at a reasonable rate.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled. This may affect your business. Call this operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25266,12 +25505,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the WhatsApp Business Account (WABA) that is bound to a customer account.</para>
+        /// <para>Queries the WABA bound to a customer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API has a per-user QPS limit of 10. Calls that exceed this limit are subject to flow control, which may impact your business. Make API calls at a reasonable rate.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled. This may affect your business. Call this operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25329,12 +25568,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the WhatsApp Business Account (WABA) that is bound to a customer account.</para>
+        /// <para>Queries the WABA bound to a customer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API has a per-user QPS limit of 10. Calls that exceed this limit are subject to flow control, which may impact your business. Make API calls at a reasonable rate.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled. This may affect your business. Call this operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25352,12 +25591,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the WhatsApp Business Account (WABA) that is bound to a customer account.</para>
+        /// <para>Queries the WABA bound to a customer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API has a per-user QPS limit of 10. Calls that exceed this limit are subject to flow control, which may impact your business. Make API calls at a reasonable rate.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled. This may affect your business. Call this operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25375,12 +25614,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all phone numbers used for sending messages and their statuses for a customer.</para>
+        /// <para>Queries all sender phone numbers and their statuses for a customer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 10. If you exceed this limit, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25442,12 +25681,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all phone numbers used for sending messages and their statuses for a customer.</para>
+        /// <para>Queries all sender phone numbers and their statuses for a customer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 10. If you exceed this limit, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25509,12 +25748,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all phone numbers used for sending messages and their statuses for a customer.</para>
+        /// <para>Queries all sender phone numbers and their statuses for a customer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 10. If you exceed this limit, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25532,12 +25771,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all phone numbers used for sending messages and their statuses for a customer.</para>
+        /// <para>Queries all sender phone numbers and their statuses for a customer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 10. If you exceed this limit, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25555,7 +25794,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a specified instance.</para>
+        /// <para>Queries an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25597,7 +25836,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a specified instance.</para>
+        /// <para>Queries an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25639,7 +25878,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a specified instance.</para>
+        /// <para>Queries an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25657,7 +25896,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a specified instance.</para>
+        /// <para>Queries an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25675,7 +25914,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether a marketing message is effective.</para>
+        /// <para>Queries whether a marketing message takes effect.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25729,7 +25968,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether a marketing message is effective.</para>
+        /// <para>Queries whether a marketing message takes effect.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25783,7 +26022,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether a marketing message is effective.</para>
+        /// <para>Queries whether a marketing message takes effect.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25801,7 +26040,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether a marketing message is effective.</para>
+        /// <para>Queries whether a marketing message takes effect.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25824,7 +26063,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The queries per second (QPS) limit for this operation is 10 per user. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
+        /// <para>The queries per second (QPS) limit per user is 10. If this limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25887,7 +26126,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The queries per second (QPS) limit for this operation is 10 per user. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
+        /// <para>The queries per second (QPS) limit per user is 10. If this limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25950,7 +26189,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The queries per second (QPS) limit for this operation is 10 per user. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
+        /// <para>The queries per second (QPS) limit per user is 10. If this limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25973,7 +26212,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The queries per second (QPS) limit for this operation is 10 per user. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
+        /// <para>The queries per second (QPS) limit per user is 10. If this limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26169,9 +26408,9 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to retrieve flow details, or manually view flow details in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a>.</description></item>
-        /// <item><description>Before calling this operation, ensure that you have a successfully created flow.</description></item>
-        /// <item><description>If you do not have a successfully created flow, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</description></item>
+        /// <item><description>You can call this operation to retrieve flow details or manually view the flow details in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</description></item>
+        /// <item><description>Before calling this operation, ensure that you have successfully created a flow.</description></item>
+        /// <item><description>If you do not have a successfully created flow, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlow">CreateChatFlow</a> operation to create one.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26246,9 +26485,9 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to retrieve flow details, or manually view flow details in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a>.</description></item>
-        /// <item><description>Before calling this operation, ensure that you have a successfully created flow.</description></item>
-        /// <item><description>If you do not have a successfully created flow, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</description></item>
+        /// <item><description>You can call this operation to retrieve flow details or manually view the flow details in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</description></item>
+        /// <item><description>Before calling this operation, ensure that you have successfully created a flow.</description></item>
+        /// <item><description>If you do not have a successfully created flow, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlow">CreateChatFlow</a> operation to create one.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26323,9 +26562,9 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to retrieve flow details, or manually view flow details in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a>.</description></item>
-        /// <item><description>Before calling this operation, ensure that you have a successfully created flow.</description></item>
-        /// <item><description>If you do not have a successfully created flow, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</description></item>
+        /// <item><description>You can call this operation to retrieve flow details or manually view the flow details in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</description></item>
+        /// <item><description>Before calling this operation, ensure that you have successfully created a flow.</description></item>
+        /// <item><description>If you do not have a successfully created flow, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlow">CreateChatFlow</a> operation to create one.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26350,9 +26589,9 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to retrieve flow details, or manually view flow details in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a>.</description></item>
-        /// <item><description>Before calling this operation, ensure that you have a successfully created flow.</description></item>
-        /// <item><description>If you do not have a successfully created flow, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</description></item>
+        /// <item><description>You can call this operation to retrieve flow details or manually view the flow details in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</description></item>
+        /// <item><description>Before calling this operation, ensure that you have successfully created a flow.</description></item>
+        /// <item><description>If you do not have a successfully created flow, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlow">CreateChatFlow</a> operation to create one.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26377,9 +26616,9 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure that flow log settings have been created for your flow.</description></item>
-        /// <item><description>If flow log settings have not been created for your flow, first create them by calling the <a href="https://help.aliyun.com/document_detail/2937211.html">CreateChatFlowLogSetting</a> operation.</description></item>
-        /// <item><description>You can use the unique ID returned by this operation to call the <a href="https://help.aliyun.com/document_detail/2937210.html">UpdateChatFlowLogSetting</a> operation to update the flow log settings.</description></item>
+        /// <item><description>Before calling this operation, make sure that flow log settings are created for your flow.</description></item>
+        /// <item><description>If flow log settings are not created for your flow, call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlowLogSetting">CreateChatFlowLogSetting</a> operation to create flow log settings first.</description></item>
+        /// <item><description>You can use the unique ID of the settings returned by this operation to call the <a href="https://help.aliyun.com/document_detail/2937210.html">UpdateChatFlowLogSetting</a> operation to update the flow log settings.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26440,9 +26679,9 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure that flow log settings have been created for your flow.</description></item>
-        /// <item><description>If flow log settings have not been created for your flow, first create them by calling the <a href="https://help.aliyun.com/document_detail/2937211.html">CreateChatFlowLogSetting</a> operation.</description></item>
-        /// <item><description>You can use the unique ID returned by this operation to call the <a href="https://help.aliyun.com/document_detail/2937210.html">UpdateChatFlowLogSetting</a> operation to update the flow log settings.</description></item>
+        /// <item><description>Before calling this operation, make sure that flow log settings are created for your flow.</description></item>
+        /// <item><description>If flow log settings are not created for your flow, call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlowLogSetting">CreateChatFlowLogSetting</a> operation to create flow log settings first.</description></item>
+        /// <item><description>You can use the unique ID of the settings returned by this operation to call the <a href="https://help.aliyun.com/document_detail/2937210.html">UpdateChatFlowLogSetting</a> operation to update the flow log settings.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26503,9 +26742,9 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure that flow log settings have been created for your flow.</description></item>
-        /// <item><description>If flow log settings have not been created for your flow, first create them by calling the <a href="https://help.aliyun.com/document_detail/2937211.html">CreateChatFlowLogSetting</a> operation.</description></item>
-        /// <item><description>You can use the unique ID returned by this operation to call the <a href="https://help.aliyun.com/document_detail/2937210.html">UpdateChatFlowLogSetting</a> operation to update the flow log settings.</description></item>
+        /// <item><description>Before calling this operation, make sure that flow log settings are created for your flow.</description></item>
+        /// <item><description>If flow log settings are not created for your flow, call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlowLogSetting">CreateChatFlowLogSetting</a> operation to create flow log settings first.</description></item>
+        /// <item><description>You can use the unique ID of the settings returned by this operation to call the <a href="https://help.aliyun.com/document_detail/2937210.html">UpdateChatFlowLogSetting</a> operation to update the flow log settings.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26530,9 +26769,9 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, make sure that flow log settings have been created for your flow.</description></item>
-        /// <item><description>If flow log settings have not been created for your flow, first create them by calling the <a href="https://help.aliyun.com/document_detail/2937211.html">CreateChatFlowLogSetting</a> operation.</description></item>
-        /// <item><description>You can use the unique ID returned by this operation to call the <a href="https://help.aliyun.com/document_detail/2937210.html">UpdateChatFlowLogSetting</a> operation to update the flow log settings.</description></item>
+        /// <item><description>Before calling this operation, make sure that flow log settings are created for your flow.</description></item>
+        /// <item><description>If flow log settings are not created for your flow, call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlowLogSetting">CreateChatFlowLogSetting</a> operation to create flow log settings first.</description></item>
+        /// <item><description>You can use the unique ID of the settings returned by this operation to call the <a href="https://help.aliyun.com/document_detail/2937210.html">UpdateChatFlowLogSetting</a> operation to update the flow log settings.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26551,15 +26790,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a flow version.</para>
+        /// <para>Retrieves the flow version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query a flow version. You can also click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to go to the canvas orchestration page and view the flow version.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have successfully created a flow.</description></item>
-        /// <item><description>If you do not have a successfully created flow, you can manually create a flow on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page or create a flow by calling <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a>.</description></item>
+        /// <item><description>You can call this operation to query the flow version, or click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and view the flow version.</description></item>
+        /// <item><description>Before calling this operation, make sure that you have created a flow.</description></item>
+        /// <item><description>If you do not have a created flow, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlow">CreateChatFlow</a> operation to create a flow.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26640,15 +26879,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a flow version.</para>
+        /// <para>Retrieves the flow version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query a flow version. You can also click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to go to the canvas orchestration page and view the flow version.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have successfully created a flow.</description></item>
-        /// <item><description>If you do not have a successfully created flow, you can manually create a flow on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page or create a flow by calling <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a>.</description></item>
+        /// <item><description>You can call this operation to query the flow version, or click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and view the flow version.</description></item>
+        /// <item><description>Before calling this operation, make sure that you have created a flow.</description></item>
+        /// <item><description>If you do not have a created flow, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlow">CreateChatFlow</a> operation to create a flow.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26729,15 +26968,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a flow version.</para>
+        /// <para>Retrieves the flow version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query a flow version. You can also click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to go to the canvas orchestration page and view the flow version.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have successfully created a flow.</description></item>
-        /// <item><description>If you do not have a successfully created flow, you can manually create a flow on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page or create a flow by calling <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a>.</description></item>
+        /// <item><description>You can call this operation to query the flow version, or click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and view the flow version.</description></item>
+        /// <item><description>Before calling this operation, make sure that you have created a flow.</description></item>
+        /// <item><description>If you do not have a created flow, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlow">CreateChatFlow</a> operation to create a flow.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26756,15 +26995,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a flow version.</para>
+        /// <para>Retrieves the flow version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query a flow version. You can also click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to go to the canvas orchestration page and view the flow version.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have successfully created a flow.</description></item>
-        /// <item><description>If you do not have a successfully created flow, you can manually create a flow on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page or create a flow by calling <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a>.</description></item>
+        /// <item><description>You can call this operation to query the flow version, or click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas orchestration page and view the flow version.</description></item>
+        /// <item><description>Before calling this operation, make sure that you have created a flow.</description></item>
+        /// <item><description>If you do not have a created flow, you can manually create a flow in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlow">CreateChatFlow</a> operation to create a flow.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26935,12 +27174,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a request to the WhatsApp Conversions API.</para>
+        /// <para>Calls the WhatsApp Conversion API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China-specific QPS limit for a single user of this API operation is 100 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation as needed.</para>
+        /// <para>The queries per second (QPS) limit per user is 100. If this limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -27008,12 +27247,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a request to the WhatsApp Conversions API.</para>
+        /// <para>Calls the WhatsApp Conversion API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China-specific QPS limit for a single user of this API operation is 100 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation as needed.</para>
+        /// <para>The queries per second (QPS) limit per user is 100. If this limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -27081,12 +27320,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a request to the WhatsApp Conversions API.</para>
+        /// <para>Calls the WhatsApp Conversion API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China-specific QPS limit for a single user of this API operation is 100 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation as needed.</para>
+        /// <para>The queries per second (QPS) limit per user is 100. If this limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27104,12 +27343,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a request to the WhatsApp Conversions API.</para>
+        /// <para>Calls the WhatsApp Conversion API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China-specific QPS limit for a single user of this API operation is 100 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation as needed.</para>
+        /// <para>The queries per second (QPS) limit per user is 100. If this limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27133,20 +27372,20 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to send messages in batches. You can also manually send messages in batches on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>Message Sending</b> page.</description></item>
+        /// <item><description>You can call this operation to send messages in batches, or manually send messages in batches on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>Message Sending</b> page.</description></item>
         /// <item><description>Before calling this operation, make sure that you have created a channel and have an approved template.</description></item>
-        /// <item><description>For WhatsApp channels, complete <a href="https://help.aliyun.com/document_detail/172335.html">WABA registration and bindng</a> and <a href="https://help.aliyun.com/document_detail/2656131.html">add a phone number</a>.</description></item>
-        /// <item><description>For Messenger channels, complete <a href="https://help.aliyun.com/document_detail/2837713.html">connecting a public page account</a>.</description></item>
-        /// <item><description>For Instagram channels, complete <a href="https://help.aliyun.com/document_detail/2837720.html">connecting a professional account</a>.
-        /// &lt;props=&quot;intl&quot;&gt;- For Viber channels, complete <a href="https://help.aliyun.com/document_detail/2807995.html">applying for a service ID</a>.</description></item>
+        /// <item><description>For the WhatsApp channel type, complete <a href="https://help.aliyun.com/document_detail/172335.html">WABA registration and binding</a> and <a href="https://help.aliyun.com/document_detail/2656131.html">add a phone number</a>.</description></item>
+        /// <item><description>For the Messenger channel type, complete <a href="https://help.aliyun.com/document_detail/2837713.html">connecting a public page account</a>.</description></item>
+        /// <item><description>For the Instagram channel type, complete <a href="https://help.aliyun.com/document_detail/2837720.html">connecting a professional account</a>.
+        /// &lt;props=&quot;intl&quot;&gt;- For the Viber channel type, complete <a href="https://help.aliyun.com/document_detail/2807995.html">applying for a service number</a>.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
+        /// <h3>QPS limits</h3>
         /// <list type="bullet">
-        /// <item><description>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation as appropriate.</description></item>
-        /// <item><description>A maximum of 1,000 phone numbers are supported per request.</description></item>
+        /// <item><description>The QPS limit for this operation is 10 calls per second per user. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</description></item>
+        /// <item><description>A single request supports a maximum of 1,000 phone numbers.</description></item>
         /// </list>
         /// <h3>Status changes</h3>
-        /// <para>You can monitor message sending status through MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</para>
+        /// <para>You can monitor message delivery status changes through MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -27276,20 +27515,20 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to send messages in batches. You can also manually send messages in batches on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>Message Sending</b> page.</description></item>
+        /// <item><description>You can call this operation to send messages in batches, or manually send messages in batches on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>Message Sending</b> page.</description></item>
         /// <item><description>Before calling this operation, make sure that you have created a channel and have an approved template.</description></item>
-        /// <item><description>For WhatsApp channels, complete <a href="https://help.aliyun.com/document_detail/172335.html">WABA registration and bindng</a> and <a href="https://help.aliyun.com/document_detail/2656131.html">add a phone number</a>.</description></item>
-        /// <item><description>For Messenger channels, complete <a href="https://help.aliyun.com/document_detail/2837713.html">connecting a public page account</a>.</description></item>
-        /// <item><description>For Instagram channels, complete <a href="https://help.aliyun.com/document_detail/2837720.html">connecting a professional account</a>.
-        /// &lt;props=&quot;intl&quot;&gt;- For Viber channels, complete <a href="https://help.aliyun.com/document_detail/2807995.html">applying for a service ID</a>.</description></item>
+        /// <item><description>For the WhatsApp channel type, complete <a href="https://help.aliyun.com/document_detail/172335.html">WABA registration and binding</a> and <a href="https://help.aliyun.com/document_detail/2656131.html">add a phone number</a>.</description></item>
+        /// <item><description>For the Messenger channel type, complete <a href="https://help.aliyun.com/document_detail/2837713.html">connecting a public page account</a>.</description></item>
+        /// <item><description>For the Instagram channel type, complete <a href="https://help.aliyun.com/document_detail/2837720.html">connecting a professional account</a>.
+        /// &lt;props=&quot;intl&quot;&gt;- For the Viber channel type, complete <a href="https://help.aliyun.com/document_detail/2807995.html">applying for a service number</a>.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
+        /// <h3>QPS limits</h3>
         /// <list type="bullet">
-        /// <item><description>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation as appropriate.</description></item>
-        /// <item><description>A maximum of 1,000 phone numbers are supported per request.</description></item>
+        /// <item><description>The QPS limit for this operation is 10 calls per second per user. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</description></item>
+        /// <item><description>A single request supports a maximum of 1,000 phone numbers.</description></item>
         /// </list>
         /// <h3>Status changes</h3>
-        /// <para>You can monitor message sending status through MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</para>
+        /// <para>You can monitor message delivery status changes through MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -27419,20 +27658,20 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to send messages in batches. You can also manually send messages in batches on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>Message Sending</b> page.</description></item>
+        /// <item><description>You can call this operation to send messages in batches, or manually send messages in batches on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>Message Sending</b> page.</description></item>
         /// <item><description>Before calling this operation, make sure that you have created a channel and have an approved template.</description></item>
-        /// <item><description>For WhatsApp channels, complete <a href="https://help.aliyun.com/document_detail/172335.html">WABA registration and bindng</a> and <a href="https://help.aliyun.com/document_detail/2656131.html">add a phone number</a>.</description></item>
-        /// <item><description>For Messenger channels, complete <a href="https://help.aliyun.com/document_detail/2837713.html">connecting a public page account</a>.</description></item>
-        /// <item><description>For Instagram channels, complete <a href="https://help.aliyun.com/document_detail/2837720.html">connecting a professional account</a>.
-        /// &lt;props=&quot;intl&quot;&gt;- For Viber channels, complete <a href="https://help.aliyun.com/document_detail/2807995.html">applying for a service ID</a>.</description></item>
+        /// <item><description>For the WhatsApp channel type, complete <a href="https://help.aliyun.com/document_detail/172335.html">WABA registration and binding</a> and <a href="https://help.aliyun.com/document_detail/2656131.html">add a phone number</a>.</description></item>
+        /// <item><description>For the Messenger channel type, complete <a href="https://help.aliyun.com/document_detail/2837713.html">connecting a public page account</a>.</description></item>
+        /// <item><description>For the Instagram channel type, complete <a href="https://help.aliyun.com/document_detail/2837720.html">connecting a professional account</a>.
+        /// &lt;props=&quot;intl&quot;&gt;- For the Viber channel type, complete <a href="https://help.aliyun.com/document_detail/2807995.html">applying for a service number</a>.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
+        /// <h3>QPS limits</h3>
         /// <list type="bullet">
-        /// <item><description>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation as appropriate.</description></item>
-        /// <item><description>A maximum of 1,000 phone numbers are supported per request.</description></item>
+        /// <item><description>The QPS limit for this operation is 10 calls per second per user. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</description></item>
+        /// <item><description>A single request supports a maximum of 1,000 phone numbers.</description></item>
         /// </list>
         /// <h3>Status changes</h3>
-        /// <para>You can monitor message sending status through MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</para>
+        /// <para>You can monitor message delivery status changes through MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27456,20 +27695,20 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to send messages in batches. You can also manually send messages in batches on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>Message Sending</b> page.</description></item>
+        /// <item><description>You can call this operation to send messages in batches, or manually send messages in batches on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>Message Sending</b> page.</description></item>
         /// <item><description>Before calling this operation, make sure that you have created a channel and have an approved template.</description></item>
-        /// <item><description>For WhatsApp channels, complete <a href="https://help.aliyun.com/document_detail/172335.html">WABA registration and bindng</a> and <a href="https://help.aliyun.com/document_detail/2656131.html">add a phone number</a>.</description></item>
-        /// <item><description>For Messenger channels, complete <a href="https://help.aliyun.com/document_detail/2837713.html">connecting a public page account</a>.</description></item>
-        /// <item><description>For Instagram channels, complete <a href="https://help.aliyun.com/document_detail/2837720.html">connecting a professional account</a>.
-        /// &lt;props=&quot;intl&quot;&gt;- For Viber channels, complete <a href="https://help.aliyun.com/document_detail/2807995.html">applying for a service ID</a>.</description></item>
+        /// <item><description>For the WhatsApp channel type, complete <a href="https://help.aliyun.com/document_detail/172335.html">WABA registration and binding</a> and <a href="https://help.aliyun.com/document_detail/2656131.html">add a phone number</a>.</description></item>
+        /// <item><description>For the Messenger channel type, complete <a href="https://help.aliyun.com/document_detail/2837713.html">connecting a public page account</a>.</description></item>
+        /// <item><description>For the Instagram channel type, complete <a href="https://help.aliyun.com/document_detail/2837720.html">connecting a professional account</a>.
+        /// &lt;props=&quot;intl&quot;&gt;- For the Viber channel type, complete <a href="https://help.aliyun.com/document_detail/2807995.html">applying for a service number</a>.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
+        /// <h3>QPS limits</h3>
         /// <list type="bullet">
-        /// <item><description>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation as appropriate.</description></item>
-        /// <item><description>A maximum of 1,000 phone numbers are supported per request.</description></item>
+        /// <item><description>The QPS limit for this operation is 10 calls per second per user. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</description></item>
+        /// <item><description>A single request supports a maximum of 1,000 phone numbers.</description></item>
         /// </list>
         /// <h3>Status changes</h3>
-        /// <para>You can monitor message sending status through MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</para>
+        /// <para>You can monitor message delivery status changes through MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27971,7 +28210,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits the result of a verification code check.</para>
+        /// <para>Submits the verification code validation result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28021,7 +28260,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits the result of a verification code check.</para>
+        /// <para>Submits the verification code validation result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28071,7 +28310,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits the result of a verification code check.</para>
+        /// <para>Submits the verification code validation result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28089,7 +28328,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits the result of a verification code check.</para>
+        /// <para>Submits the verification code validation result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28107,14 +28346,14 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronizes business app historical records.</para>
+        /// <para>Synchronizes the history records of a business app.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, configure the webhooks for messages and receipts by using <a href="https://help.aliyun.com/document_detail/600763.html">UpdatePhoneWebhook</a> and <a href="https://help.aliyun.com/document_detail/600765.html">UpdateAccountWebhook</a>. Otherwise, the webhook address cannot be found during historical message synchronization, which causes the synchronization to fail.</description></item>
-        /// <item><description>This operation takes effect only once. After the first call, subsequent calls do not trigger historical message pushes.</description></item>
+        /// <item><description>Before calling this operation, configure webhooks for messages and receipts by using <a href="https://help.aliyun.com/document_detail/600763.html">UpdatePhoneWebhook</a> and <a href="https://help.aliyun.com/document_detail/600765.html">UpdateAccountWebhook</a>. Otherwise, the system cannot find the configured webhook URLs during history message synchronization, which causes the synchronization to fail.</description></item>
+        /// <item><description>This operation takes effect only once. Subsequent calls do not push history messages again.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28173,14 +28412,14 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronizes business app historical records.</para>
+        /// <para>Synchronizes the history records of a business app.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, configure the webhooks for messages and receipts by using <a href="https://help.aliyun.com/document_detail/600763.html">UpdatePhoneWebhook</a> and <a href="https://help.aliyun.com/document_detail/600765.html">UpdateAccountWebhook</a>. Otherwise, the webhook address cannot be found during historical message synchronization, which causes the synchronization to fail.</description></item>
-        /// <item><description>This operation takes effect only once. After the first call, subsequent calls do not trigger historical message pushes.</description></item>
+        /// <item><description>Before calling this operation, configure webhooks for messages and receipts by using <a href="https://help.aliyun.com/document_detail/600763.html">UpdatePhoneWebhook</a> and <a href="https://help.aliyun.com/document_detail/600765.html">UpdateAccountWebhook</a>. Otherwise, the system cannot find the configured webhook URLs during history message synchronization, which causes the synchronization to fail.</description></item>
+        /// <item><description>This operation takes effect only once. Subsequent calls do not push history messages again.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28239,14 +28478,14 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronizes business app historical records.</para>
+        /// <para>Synchronizes the history records of a business app.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, configure the webhooks for messages and receipts by using <a href="https://help.aliyun.com/document_detail/600763.html">UpdatePhoneWebhook</a> and <a href="https://help.aliyun.com/document_detail/600765.html">UpdateAccountWebhook</a>. Otherwise, the webhook address cannot be found during historical message synchronization, which causes the synchronization to fail.</description></item>
-        /// <item><description>This operation takes effect only once. After the first call, subsequent calls do not trigger historical message pushes.</description></item>
+        /// <item><description>Before calling this operation, configure webhooks for messages and receipts by using <a href="https://help.aliyun.com/document_detail/600763.html">UpdatePhoneWebhook</a> and <a href="https://help.aliyun.com/document_detail/600765.html">UpdateAccountWebhook</a>. Otherwise, the system cannot find the configured webhook URLs during history message synchronization, which causes the synchronization to fail.</description></item>
+        /// <item><description>This operation takes effect only once. Subsequent calls do not push history messages again.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28265,14 +28504,14 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronizes business app historical records.</para>
+        /// <para>Synchronizes the history records of a business app.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, configure the webhooks for messages and receipts by using <a href="https://help.aliyun.com/document_detail/600763.html">UpdatePhoneWebhook</a> and <a href="https://help.aliyun.com/document_detail/600765.html">UpdateAccountWebhook</a>. Otherwise, the webhook address cannot be found during historical message synchronization, which causes the synchronization to fail.</description></item>
-        /// <item><description>This operation takes effect only once. After the first call, subsequent calls do not trigger historical message pushes.</description></item>
+        /// <item><description>Before calling this operation, configure webhooks for messages and receipts by using <a href="https://help.aliyun.com/document_detail/600763.html">UpdatePhoneWebhook</a> and <a href="https://help.aliyun.com/document_detail/600765.html">UpdateAccountWebhook</a>. Otherwise, the system cannot find the configured webhook URLs during history message synchronization, which causes the synchronization to fail.</description></item>
+        /// <item><description>This operation takes effect only once. Subsequent calls do not push history messages again.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28291,7 +28530,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Syncs a WhatsApp flow.</para>
+        /// <para>Synchronizes a flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28345,7 +28584,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Syncs a WhatsApp flow.</para>
+        /// <para>Synchronizes a flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28399,7 +28638,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Syncs a WhatsApp flow.</para>
+        /// <para>Synchronizes a flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28417,7 +28656,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Syncs a WhatsApp flow.</para>
+        /// <para>Synchronizes a flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28435,7 +28674,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronously queries the budget.</para>
+        /// <para>Queries the budget synchronously.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28493,7 +28732,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronously queries the budget.</para>
+        /// <para>Queries the budget synchronously.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28551,7 +28790,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronously queries the budget.</para>
+        /// <para>Queries the budget synchronously.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28569,7 +28808,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronously queries the budget.</para>
+        /// <para>Queries the budget synchronously.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28755,16 +28994,16 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers an online chat flow that has a manual trigger.</para>
+        /// <para>Triggers an online flow version with a manual trigger.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to trigger a published version of a flow that has a manual trigger. You can also trigger the flow from the <a href="https://chatapp.console.aliyun.com/MarketingActivityManagement">Marketing Campaign Management</a> page if the flow is associated with a marketing campaign.</description></item>
-        /// <item><description>Before you call this operation, make sure that the flow has a manual trigger and is published.</description></item>
-        /// <item><description>If a flow with a manual trigger does not have a published version, you must publish it. In <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Chat Flow</a>, you can click the flow name to open the canvas and publish the version. Alternatively, you can call the <a href="https://help.aliyun.com/document_detail/2937203.html">OnlineFlowVersion</a> API to publish the version.</description></item>
-        /// <item><description>If your flow contains components that incur costs, such as message sending or function invocations, make sure that you understand the billing methods and pricing for these products before you trigger the flow.</description></item>
+        /// <item><description>You can call this operation to trigger an online flow version with a manual trigger. You can also trigger the flow in the <a href="https://chatapp.console.aliyun.com/MarketingActivityManagement">Marketing Activity Management</a> console by using a flow with a manual trigger that is associated with a marketing activity.</description></item>
+        /// <item><description>Before calling this operation, make sure that the flow you created has a manual trigger and is online.</description></item>
+        /// <item><description>If the flow with a manual trigger that you created does not have an online version, you can click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> console to go to the canvas orchestration page and manually publish the flow version, or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/OnlineFlowVersion">OnlineFlowVersion</a> operation to publish the flow version.</description></item>
+        /// <item><description>After triggering an online flow, if your flow contains components that incur fees for corresponding cloud services, such as message sending and function calling, make sure that you fully understand the billing methods and pricing of the related services before using this operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28845,16 +29084,16 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers an online chat flow that has a manual trigger.</para>
+        /// <para>Triggers an online flow version with a manual trigger.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to trigger a published version of a flow that has a manual trigger. You can also trigger the flow from the <a href="https://chatapp.console.aliyun.com/MarketingActivityManagement">Marketing Campaign Management</a> page if the flow is associated with a marketing campaign.</description></item>
-        /// <item><description>Before you call this operation, make sure that the flow has a manual trigger and is published.</description></item>
-        /// <item><description>If a flow with a manual trigger does not have a published version, you must publish it. In <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Chat Flow</a>, you can click the flow name to open the canvas and publish the version. Alternatively, you can call the <a href="https://help.aliyun.com/document_detail/2937203.html">OnlineFlowVersion</a> API to publish the version.</description></item>
-        /// <item><description>If your flow contains components that incur costs, such as message sending or function invocations, make sure that you understand the billing methods and pricing for these products before you trigger the flow.</description></item>
+        /// <item><description>You can call this operation to trigger an online flow version with a manual trigger. You can also trigger the flow in the <a href="https://chatapp.console.aliyun.com/MarketingActivityManagement">Marketing Activity Management</a> console by using a flow with a manual trigger that is associated with a marketing activity.</description></item>
+        /// <item><description>Before calling this operation, make sure that the flow you created has a manual trigger and is online.</description></item>
+        /// <item><description>If the flow with a manual trigger that you created does not have an online version, you can click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> console to go to the canvas orchestration page and manually publish the flow version, or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/OnlineFlowVersion">OnlineFlowVersion</a> operation to publish the flow version.</description></item>
+        /// <item><description>After triggering an online flow, if your flow contains components that incur fees for corresponding cloud services, such as message sending and function calling, make sure that you fully understand the billing methods and pricing of the related services before using this operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28935,16 +29174,16 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers an online chat flow that has a manual trigger.</para>
+        /// <para>Triggers an online flow version with a manual trigger.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to trigger a published version of a flow that has a manual trigger. You can also trigger the flow from the <a href="https://chatapp.console.aliyun.com/MarketingActivityManagement">Marketing Campaign Management</a> page if the flow is associated with a marketing campaign.</description></item>
-        /// <item><description>Before you call this operation, make sure that the flow has a manual trigger and is published.</description></item>
-        /// <item><description>If a flow with a manual trigger does not have a published version, you must publish it. In <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Chat Flow</a>, you can click the flow name to open the canvas and publish the version. Alternatively, you can call the <a href="https://help.aliyun.com/document_detail/2937203.html">OnlineFlowVersion</a> API to publish the version.</description></item>
-        /// <item><description>If your flow contains components that incur costs, such as message sending or function invocations, make sure that you understand the billing methods and pricing for these products before you trigger the flow.</description></item>
+        /// <item><description>You can call this operation to trigger an online flow version with a manual trigger. You can also trigger the flow in the <a href="https://chatapp.console.aliyun.com/MarketingActivityManagement">Marketing Activity Management</a> console by using a flow with a manual trigger that is associated with a marketing activity.</description></item>
+        /// <item><description>Before calling this operation, make sure that the flow you created has a manual trigger and is online.</description></item>
+        /// <item><description>If the flow with a manual trigger that you created does not have an online version, you can click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> console to go to the canvas orchestration page and manually publish the flow version, or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/OnlineFlowVersion">OnlineFlowVersion</a> operation to publish the flow version.</description></item>
+        /// <item><description>After triggering an online flow, if your flow contains components that incur fees for corresponding cloud services, such as message sending and function calling, make sure that you fully understand the billing methods and pricing of the related services before using this operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28963,16 +29202,16 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers an online chat flow that has a manual trigger.</para>
+        /// <para>Triggers an online flow version with a manual trigger.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to trigger a published version of a flow that has a manual trigger. You can also trigger the flow from the <a href="https://chatapp.console.aliyun.com/MarketingActivityManagement">Marketing Campaign Management</a> page if the flow is associated with a marketing campaign.</description></item>
-        /// <item><description>Before you call this operation, make sure that the flow has a manual trigger and is published.</description></item>
-        /// <item><description>If a flow with a manual trigger does not have a published version, you must publish it. In <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Chat Flow</a>, you can click the flow name to open the canvas and publish the version. Alternatively, you can call the <a href="https://help.aliyun.com/document_detail/2937203.html">OnlineFlowVersion</a> API to publish the version.</description></item>
-        /// <item><description>If your flow contains components that incur costs, such as message sending or function invocations, make sure that you understand the billing methods and pricing for these products before you trigger the flow.</description></item>
+        /// <item><description>You can call this operation to trigger an online flow version with a manual trigger. You can also trigger the flow in the <a href="https://chatapp.console.aliyun.com/MarketingActivityManagement">Marketing Activity Management</a> console by using a flow with a manual trigger that is associated with a marketing activity.</description></item>
+        /// <item><description>Before calling this operation, make sure that the flow you created has a manual trigger and is online.</description></item>
+        /// <item><description>If the flow with a manual trigger that you created does not have an online version, you can click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> console to go to the canvas orchestration page and manually publish the flow version, or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/OnlineFlowVersion">OnlineFlowVersion</a> operation to publish the flow version.</description></item>
+        /// <item><description>After triggering an online flow, if your flow contains components that incur fees for corresponding cloud services, such as message sending and function calling, make sure that you fully understand the billing methods and pricing of the related services before using this operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28991,7 +29230,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds an email account.</para>
+        /// <para>Disassociates an email account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29045,7 +29284,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds an email account.</para>
+        /// <para>Disassociates an email account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29099,7 +29338,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds an email account.</para>
+        /// <para>Disassociates an email account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29117,7 +29356,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds an email account.</para>
+        /// <para>Disassociates an email account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29323,7 +29562,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a Viber application.</para>
+        /// <para>Updates a Viber application form.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29395,7 +29634,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a Viber application.</para>
+        /// <para>Updates a Viber application form.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29467,7 +29706,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a Viber application.</para>
+        /// <para>Updates a Viber application form.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29485,7 +29724,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a Viber application.</para>
+        /// <para>Updates a Viber application form.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29509,9 +29748,9 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to update the basic information of a flow, or manually update it in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b> &gt; <b>Basic Information</b>.</description></item>
-        /// <item><description>Before calling this operation, make sure you have a successfully created flow.</description></item>
-        /// <item><description>If you do not have a successfully created flow, click <b>Create Flow</b> in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> to manually create one.</description></item>
+        /// <item><description>You can call this operation to update the basic information of a flow, or manually update it on the <b>Basic Information</b> page by choosing <b>Settings</b> &gt; <b>Basic Information</b> in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>.</description></item>
+        /// <item><description>Before calling this operation, ensure that you have created a flow.</description></item>
+        /// <item><description>If you do not have a created flow, you can click <b>Create Flow</b> in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a> to manually create one.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29594,9 +29833,9 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to update the basic information of a flow, or manually update it in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b> &gt; <b>Basic Information</b>.</description></item>
-        /// <item><description>Before calling this operation, make sure you have a successfully created flow.</description></item>
-        /// <item><description>If you do not have a successfully created flow, click <b>Create Flow</b> in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> to manually create one.</description></item>
+        /// <item><description>You can call this operation to update the basic information of a flow, or manually update it on the <b>Basic Information</b> page by choosing <b>Settings</b> &gt; <b>Basic Information</b> in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>.</description></item>
+        /// <item><description>Before calling this operation, ensure that you have created a flow.</description></item>
+        /// <item><description>If you do not have a created flow, you can click <b>Create Flow</b> in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a> to manually create one.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29679,9 +29918,9 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to update the basic information of a flow, or manually update it in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b> &gt; <b>Basic Information</b>.</description></item>
-        /// <item><description>Before calling this operation, make sure you have a successfully created flow.</description></item>
-        /// <item><description>If you do not have a successfully created flow, click <b>Create Flow</b> in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> to manually create one.</description></item>
+        /// <item><description>You can call this operation to update the basic information of a flow, or manually update it on the <b>Basic Information</b> page by choosing <b>Settings</b> &gt; <b>Basic Information</b> in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>.</description></item>
+        /// <item><description>Before calling this operation, ensure that you have created a flow.</description></item>
+        /// <item><description>If you do not have a created flow, you can click <b>Create Flow</b> in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a> to manually create one.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29706,9 +29945,9 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to update the basic information of a flow, or manually update it in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b> &gt; <b>Basic Information</b>.</description></item>
-        /// <item><description>Before calling this operation, make sure you have a successfully created flow.</description></item>
-        /// <item><description>If you do not have a successfully created flow, click <b>Create Flow</b> in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> to manually create one.</description></item>
+        /// <item><description>You can call this operation to update the basic information of a flow, or manually update it on the <b>Basic Information</b> page by choosing <b>Settings</b> &gt; <b>Basic Information</b> in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>.</description></item>
+        /// <item><description>Before calling this operation, ensure that you have created a flow.</description></item>
+        /// <item><description>If you do not have a created flow, you can click <b>Create Flow</b> in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a> to manually create one.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29733,10 +29972,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to update flow log settings, or manually update them in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b> &gt; <b>Log</b>.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have activated <a href="https://sls.console.aliyun.com/lognext/open">Simple Log Service</a> and created flow log settings.</description></item>
-        /// <item><description>If you have not created flow log settings for the flow, first create them by calling the <a href="https://help.aliyun.com/document_detail/2937211.html">CreateChatFlowLogSetting</a> operation.</description></item>
-        /// <item><description>Updating flow log settings may affect your business. Proceed with caution.</description></item>
+        /// <item><description>You can call this operation to update the flow log settings, or manually update them on the <b>Logs</b> tab of the <b>Settings</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have activated <a href="https://sls.console.aliyun.com/lognext/open">Simple Log Service</a> and created flow log settings.</description></item>
+        /// <item><description>If you have not created flow log settings for the flow, call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlowLogSetting">CreateChatFlowLogSetting</a> operation to create flow log settings first.</description></item>
+        /// <item><description>Updating the flow log settings may affect your business. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29805,10 +30044,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to update flow log settings, or manually update them in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b> &gt; <b>Log</b>.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have activated <a href="https://sls.console.aliyun.com/lognext/open">Simple Log Service</a> and created flow log settings.</description></item>
-        /// <item><description>If you have not created flow log settings for the flow, first create them by calling the <a href="https://help.aliyun.com/document_detail/2937211.html">CreateChatFlowLogSetting</a> operation.</description></item>
-        /// <item><description>Updating flow log settings may affect your business. Proceed with caution.</description></item>
+        /// <item><description>You can call this operation to update the flow log settings, or manually update them on the <b>Logs</b> tab of the <b>Settings</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have activated <a href="https://sls.console.aliyun.com/lognext/open">Simple Log Service</a> and created flow log settings.</description></item>
+        /// <item><description>If you have not created flow log settings for the flow, call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlowLogSetting">CreateChatFlowLogSetting</a> operation to create flow log settings first.</description></item>
+        /// <item><description>Updating the flow log settings may affect your business. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29877,10 +30116,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to update flow log settings, or manually update them in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b> &gt; <b>Log</b>.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have activated <a href="https://sls.console.aliyun.com/lognext/open">Simple Log Service</a> and created flow log settings.</description></item>
-        /// <item><description>If you have not created flow log settings for the flow, first create them by calling the <a href="https://help.aliyun.com/document_detail/2937211.html">CreateChatFlowLogSetting</a> operation.</description></item>
-        /// <item><description>Updating flow log settings may affect your business. Proceed with caution.</description></item>
+        /// <item><description>You can call this operation to update the flow log settings, or manually update them on the <b>Logs</b> tab of the <b>Settings</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have activated <a href="https://sls.console.aliyun.com/lognext/open">Simple Log Service</a> and created flow log settings.</description></item>
+        /// <item><description>If you have not created flow log settings for the flow, call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlowLogSetting">CreateChatFlowLogSetting</a> operation to create flow log settings first.</description></item>
+        /// <item><description>Updating the flow log settings may affect your business. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29905,10 +30144,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to update flow log settings, or manually update them in <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Builder</b></a> &gt; <b>Settings</b> &gt; <b>Log</b>.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have activated <a href="https://sls.console.aliyun.com/lognext/open">Simple Log Service</a> and created flow log settings.</description></item>
-        /// <item><description>If you have not created flow log settings for the flow, first create them by calling the <a href="https://help.aliyun.com/document_detail/2937211.html">CreateChatFlowLogSetting</a> operation.</description></item>
-        /// <item><description>Updating flow log settings may affect your business. Proceed with caution.</description></item>
+        /// <item><description>You can call this operation to update the flow log settings, or manually update them on the <b>Logs</b> tab of the <b>Settings</b> page in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a>.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have activated <a href="https://sls.console.aliyun.com/lognext/open">Simple Log Service</a> and created flow log settings.</description></item>
+        /// <item><description>If you have not created flow log settings for the flow, call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlowLogSetting">CreateChatFlowLogSetting</a> operation to create flow log settings first.</description></item>
+        /// <item><description>Updating the flow log settings may affect your business. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29932,13 +30171,11 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>Notice: Modifying IM group information through API is a Meta beta feature. Contact your account manager to request allowlisting.</para>
-        /// </remarks>
+        /// <para><notice>The feature to modify IM groups through the API is in the Meta closed beta. Contact your account manager to apply for whitelist access.</notice></para>
         /// <list type="bullet">
-        /// <item><description>Creating WhatsApp groups through API is a Meta beta feature. Contact your account manager to request allowlisting.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have an IM group that has been created.</description></item>
-        /// <item><description>If you do not have a created IM group, create one by calling the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> operation.</description></item>
+        /// <item><description>The feature to create WhatsApp groups through the API is in the Meta closed beta. Contact your account manager to apply for whitelist access.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created an IM group.</description></item>
+        /// <item><description>If you do not have an IM group, you can call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> operation to create one.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30022,13 +30259,11 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>Notice: Modifying IM group information through API is a Meta beta feature. Contact your account manager to request allowlisting.</para>
-        /// </remarks>
+        /// <para><notice>The feature to modify IM groups through the API is in the Meta closed beta. Contact your account manager to apply for whitelist access.</notice></para>
         /// <list type="bullet">
-        /// <item><description>Creating WhatsApp groups through API is a Meta beta feature. Contact your account manager to request allowlisting.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have an IM group that has been created.</description></item>
-        /// <item><description>If you do not have a created IM group, create one by calling the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> operation.</description></item>
+        /// <item><description>The feature to create WhatsApp groups through the API is in the Meta closed beta. Contact your account manager to apply for whitelist access.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created an IM group.</description></item>
+        /// <item><description>If you do not have an IM group, you can call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> operation to create one.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30112,13 +30347,11 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>Notice: Modifying IM group information through API is a Meta beta feature. Contact your account manager to request allowlisting.</para>
-        /// </remarks>
+        /// <para><notice>The feature to modify IM groups through the API is in the Meta closed beta. Contact your account manager to apply for whitelist access.</notice></para>
         /// <list type="bullet">
-        /// <item><description>Creating WhatsApp groups through API is a Meta beta feature. Contact your account manager to request allowlisting.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have an IM group that has been created.</description></item>
-        /// <item><description>If you do not have a created IM group, create one by calling the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> operation.</description></item>
+        /// <item><description>The feature to create WhatsApp groups through the API is in the Meta closed beta. Contact your account manager to apply for whitelist access.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created an IM group.</description></item>
+        /// <item><description>If you do not have an IM group, you can call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> operation to create one.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30142,13 +30375,11 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>Notice: Modifying IM group information through API is a Meta beta feature. Contact your account manager to request allowlisting.</para>
-        /// </remarks>
+        /// <para><notice>The feature to modify IM groups through the API is in the Meta closed beta. Contact your account manager to apply for whitelist access.</notice></para>
         /// <list type="bullet">
-        /// <item><description>Creating WhatsApp groups through API is a Meta beta feature. Contact your account manager to request allowlisting.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have an IM group that has been created.</description></item>
-        /// <item><description>If you do not have a created IM group, create one by calling the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> operation.</description></item>
+        /// <item><description>The feature to create WhatsApp groups through the API is in the Meta closed beta. Contact your account manager to apply for whitelist access.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created an IM group.</description></item>
+        /// <item><description>If you do not have an IM group, you can call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> operation to create one.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30355,7 +30586,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a contact.</para>
+        /// <para>Updates a contact.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30443,7 +30674,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a contact.</para>
+        /// <para>Updates a contact.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30531,7 +30762,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a contact.</para>
+        /// <para>Updates a contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30549,7 +30780,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a contact.</para>
+        /// <para>Updates a contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30567,14 +30798,14 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the welcome message, conversation starters, and commands for a phone number.</para>
+        /// <para>Modifies the welcome message, prompts, and commands for a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this API is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this API appropriately.
-        /// This API directly retrieves data from Facebook. Facebook imposes a limit on the total number of API calls. Use this API appropriately.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 5 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.
+        /// This operation directly pulls data from Facebook. The total number of Facebook API calls is limited. Use this operation reasonably.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -30654,14 +30885,14 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the welcome message, conversation starters, and commands for a phone number.</para>
+        /// <para>Modifies the welcome message, prompts, and commands for a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this API is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this API appropriately.
-        /// This API directly retrieves data from Facebook. Facebook imposes a limit on the total number of API calls. Use this API appropriately.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 5 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.
+        /// This operation directly pulls data from Facebook. The total number of Facebook API calls is limited. Use this operation reasonably.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -30741,14 +30972,14 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the welcome message, conversation starters, and commands for a phone number.</para>
+        /// <para>Modifies the welcome message, prompts, and commands for a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this API is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this API appropriately.
-        /// This API directly retrieves data from Facebook. Facebook imposes a limit on the total number of API calls. Use this API appropriately.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 5 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.
+        /// This operation directly pulls data from Facebook. The total number of Facebook API calls is limited. Use this operation reasonably.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30766,14 +30997,14 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the welcome message, conversation starters, and commands for a phone number.</para>
+        /// <para>Modifies the welcome message, prompts, and commands for a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this API is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this API appropriately.
-        /// This API directly retrieves data from Facebook. Facebook imposes a limit on the total number of API calls. Use this API appropriately.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 5 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.
+        /// This operation directly pulls data from Facebook. The total number of Facebook API calls is limited. Use this operation reasonably.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30796,7 +31027,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China Mobile (China) QPS limit for this API is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Manage your calls appropriately.</para>
+        /// <para>The queries per second (QPS) limit per user is 5. If the number of API calls exceeds this limit, throttling is triggered, which may affect your business. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30863,7 +31094,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China Mobile (China) QPS limit for this API is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Manage your calls appropriately.</para>
+        /// <para>The queries per second (QPS) limit per user is 5. If the number of API calls exceeds this limit, throttling is triggered, which may affect your business. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30930,7 +31161,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China Mobile (China) QPS limit for this API is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Manage your calls appropriately.</para>
+        /// <para>The queries per second (QPS) limit per user is 5. If the number of API calls exceeds this limit, throttling is triggered, which may affect your business. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30953,7 +31184,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China Mobile (China) QPS limit for this API is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Manage your calls appropriately.</para>
+        /// <para>The queries per second (QPS) limit per user is 5. If the number of API calls exceeds this limit, throttling is triggered, which may affect your business. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30971,15 +31202,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the DSL data of a flow version, used for updating the flow version on the canvas.</para>
+        /// <para>Updates the DSL data of a flow version for updating the flow version on the canvas.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to update the DSL data of a flow version, or click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to go to the canvas orchestration page and update the DSL data of the flow version.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have created a flow and the flow status is offline.</description></item>
-        /// <item><description>If you have not created a flow, you can manually create a flow on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</description></item>
+        /// <item><description>You can call this operation to update the DSL data of a flow version. Alternatively, you can click the flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page to go to the canvas orchestration page and update the DSL data of the flow version.</description></item>
+        /// <item><description>Before calling this operation, ensure that you have created a flow and the flow is offline.</description></item>
+        /// <item><description>If you have not created a flow, you can manually create one on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlow">CreateChatFlow</a> operation to create a flow.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31064,15 +31295,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the DSL data of a flow version, used for updating the flow version on the canvas.</para>
+        /// <para>Updates the DSL data of a flow version for updating the flow version on the canvas.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to update the DSL data of a flow version, or click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to go to the canvas orchestration page and update the DSL data of the flow version.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have created a flow and the flow status is offline.</description></item>
-        /// <item><description>If you have not created a flow, you can manually create a flow on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</description></item>
+        /// <item><description>You can call this operation to update the DSL data of a flow version. Alternatively, you can click the flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page to go to the canvas orchestration page and update the DSL data of the flow version.</description></item>
+        /// <item><description>Before calling this operation, ensure that you have created a flow and the flow is offline.</description></item>
+        /// <item><description>If you have not created a flow, you can manually create one on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlow">CreateChatFlow</a> operation to create a flow.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31157,15 +31388,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the DSL data of a flow version, used for updating the flow version on the canvas.</para>
+        /// <para>Updates the DSL data of a flow version for updating the flow version on the canvas.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to update the DSL data of a flow version, or click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to go to the canvas orchestration page and update the DSL data of the flow version.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have created a flow and the flow status is offline.</description></item>
-        /// <item><description>If you have not created a flow, you can manually create a flow on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</description></item>
+        /// <item><description>You can call this operation to update the DSL data of a flow version. Alternatively, you can click the flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page to go to the canvas orchestration page and update the DSL data of the flow version.</description></item>
+        /// <item><description>Before calling this operation, ensure that you have created a flow and the flow is offline.</description></item>
+        /// <item><description>If you have not created a flow, you can manually create one on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlow">CreateChatFlow</a> operation to create a flow.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31184,15 +31415,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the DSL data of a flow version, used for updating the flow version on the canvas.</para>
+        /// <para>Updates the DSL data of a flow version for updating the flow version on the canvas.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to update the DSL data of a flow version, or click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to go to the canvas orchestration page and update the DSL data of the flow version.</description></item>
-        /// <item><description>Before calling this operation, make sure that you have created a flow and the flow status is offline.</description></item>
-        /// <item><description>If you have not created a flow, you can manually create a flow on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page or create a flow by calling the <a href="https://help.aliyun.com/document_detail/2937204.html">CreateChatFlow</a> operation.</description></item>
+        /// <item><description>You can call this operation to update the DSL data of a flow version. Alternatively, you can click the flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page to go to the canvas orchestration page and update the DSL data of the flow version.</description></item>
+        /// <item><description>Before calling this operation, ensure that you have created a flow and the flow is offline.</description></item>
+        /// <item><description>If you have not created a flow, you can manually create one on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page or call the <a href="https://api.aliyun.com/document/cams/2020-06-06/CreateChatFlow">CreateChatFlow</a> operation to create a flow.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31363,7 +31594,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the specified instance.</para>
+        /// <para>Modifies an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31437,7 +31668,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the specified instance.</para>
+        /// <para>Modifies an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31511,7 +31742,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the specified instance.</para>
+        /// <para>Modifies an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31529,7 +31760,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the specified instance.</para>
+        /// <para>Modifies an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31547,7 +31778,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies campaign information.</para>
+        /// <para>Updates the marketing campaign information.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31655,7 +31886,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies campaign information.</para>
+        /// <para>Updates the marketing campaign information.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31763,7 +31994,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies campaign information.</para>
+        /// <para>Updates the marketing campaign information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31781,7 +32012,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies campaign information.</para>
+        /// <para>Updates the marketing campaign information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32219,12 +32450,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the callback URL information for a phone number.</para>
+        /// <para>Updates the callback URL information for a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The per-user QPS limit for this API is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Call this API at a reasonable frequency.</para>
+        /// <para>The queries per second (QPS) limit per user is 10. If this limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32298,12 +32529,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the callback URL information for a phone number.</para>
+        /// <para>Updates the callback URL information for a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The per-user QPS limit for this API is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Call this API at a reasonable frequency.</para>
+        /// <para>The queries per second (QPS) limit per user is 10. If this limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32377,12 +32608,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the callback URL information for a phone number.</para>
+        /// <para>Updates the callback URL information for a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The per-user QPS limit for this API is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Call this API at a reasonable frequency.</para>
+        /// <para>The queries per second (QPS) limit per user is 10. If this limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32400,12 +32631,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the callback URL information for a phone number.</para>
+        /// <para>Updates the callback URL information for a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The per-user QPS limit for this API is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Call this API at a reasonable frequency.</para>
+        /// <para>The queries per second (QPS) limit per user is 10. If this limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">

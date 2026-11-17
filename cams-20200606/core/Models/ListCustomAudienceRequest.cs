@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AdAccountId { get; set; }
 
         /// <summary>
-        /// <para>The Space ID of the Independent Software Vendor (ISV) sub-customer or the instance ID of the direct customers. This is the channel ID. Find the ID on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</para>
+        /// <para>The SpaceId or instance ID of the ISV sub-customer. This is the channel ID, which you can view on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The pagination settings.</para>
+        /// <para>The pagination information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Page")]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
-        /// <para>The Page ID for Messenger.</para>
+        /// <para>The Page ID of Messenger.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

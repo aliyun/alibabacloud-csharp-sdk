@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class BindMessengerPageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string ConnectionStatus { get; set; }
 
             /// <summary>
-            /// <para>The current page ID.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1654543543543</para>

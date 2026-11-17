@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The business code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Sample value.</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("BizCode")]
         [Validation(Required=false)]
         public string BizCode { get; set; }
 
         /// <summary>
-        /// <para>The business extension information. Default value: an empty collection.</para>
+        /// <para>The extended business information. Default value: an empty set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Sample value sample value.</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("ContactDetails")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Sample value sample value sample value.</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("ContactId")]
         [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Sample value sample value.</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("ContactName")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Sample value sample value.</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("Country")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The email address.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Sample value.</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("Email")]
         [Validation(Required=false)]

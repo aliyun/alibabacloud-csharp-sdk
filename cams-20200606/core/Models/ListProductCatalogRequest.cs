@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Before { get; set; }
 
         /// <summary>
-        /// <para>The ID of the business platform where the WABA is located. You can view the business platform ID in the Chat App Message Service console after WABA registration is complete.</para>
+        /// <para>The ID of the business platform where the WhatsApp Business Account (WABA) is located. You can view the business platform ID in the Chat App Message Service console after the WABA registration is completed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,8 +51,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// <para>The list of fields, separated by commas (,).
-        /// For specific fields, see <a href="https://help.aliyun.com/document_detail/2579419.html">Catalog fields</a>.</para>
+        /// <para>The list of fields. Separate multiple fields with commas (,). For specific fields, refer to <a href="https://help.aliyun.com/document_detail/2579419.html">Catalog fields</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>id,name</para>

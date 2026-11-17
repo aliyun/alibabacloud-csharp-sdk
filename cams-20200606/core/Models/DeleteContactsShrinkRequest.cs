@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BizCode { get; set; }
 
         /// <summary>
-        /// <para>The business extension information. Default value: an empty collection.</para>
+        /// <para>The extended business information. Default value: an empty set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ContactDetails { get; set; }
 
         /// <summary>
-        /// <para>The contact name.</para>
+        /// <para>The name of the contact.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hahaha</para>

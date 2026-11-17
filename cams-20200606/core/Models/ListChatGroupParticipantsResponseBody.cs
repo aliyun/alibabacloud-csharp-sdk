@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListChatGroupParticipantsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The request status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>OK: The request was successful.</para>
+        /// <item><description><para>OK: The request is successful.</para>
         /// </description></item>
         /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public List<ListChatGroupParticipantsResponseBodyDataList> List { get; set; }
             public class ListChatGroupParticipantsResponseBodyDataList : TeaModel {
                 /// <summary>
-                /// <para>The group member number.</para>
+                /// <para>The group member.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>861382***</para>

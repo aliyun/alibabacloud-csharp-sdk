@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public Dictionary<string, object> BizExtend { get; set; }
 
         /// <summary>
-        /// <para>The flow code. You can view the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page.</para>
+        /// <para>The flow code. You can view the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9ccc41**************************</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string FlowCode { get; set; }
 
         /// <summary>
-        /// <para>The flow version. You can click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to go to the flow editor canvas page and view the flow version.</para>
+        /// <para>The flow version. You can click the flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page to go to the canvas page and view the flow version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string FlowVersion { get; set; }
 
         /// <summary>
-        /// <para>The DSL data of the flow version. This is a JSON-formatted data string. You can orchestrate flow components on the flow editor canvas in advance, save the flow, and then click <b>Settings</b> &gt; <b>Export</b> in the upper-right corner of the canvas orchestration page to export a JSON-formatted data file for viewing.</para>
+        /// <para>The DSL data of the flow version. The data is in JSON format. You can orchestrate flow components on the canvas in the flow editor in advance, save the flow, and then click <b>Settings</b> &gt; <b>Export</b> in the upper-right corner of the canvas to export the data as a JSON data file for viewing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -74,10 +74,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The version remarks.</para>
+        /// <para>The version remark.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Fix WhatsApp message sending error</para>
+        /// <para>Fix the error in sending WhatsApp messages</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The save type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Sample value</para>
+        /// <para>Sample value sample value sample value</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

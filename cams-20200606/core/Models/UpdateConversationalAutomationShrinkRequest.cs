@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The business phone number.</para>
+        /// <para>The merchant phone number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string PhoneNumber { get; set; }
 
         /// <summary>
-        /// <para>The list of conversation starters.</para>
+        /// <para>The list of prompts.</para>
         /// </summary>
         [NameInMap("Prompts")]
         [Validation(Required=false)]

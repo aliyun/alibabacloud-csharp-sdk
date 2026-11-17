@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The business code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("BizCode")]
         [Validation(Required=false)]
         public string BizCode { get; set; }
 
         /// <summary>
-        /// <para>The business extension information. Default value: an empty collection.</para>
+        /// <para>The business extension information. Default value: an empty set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The email address.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("Email")]
         [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The file path.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("FilePath")]
         [Validation(Required=false)]
@@ -84,14 +84,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("Groups")]
         [Validation(Required=false)]
         public string Groups { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the back-to-origin IP address whitelist needs to be updated. This parameter returns true when the current back-to-origin IP address whitelist differs from the latest back-to-origin IP address whitelist.</para>
+        /// <para>Specifies whether the whitelist for back-to-origin IP addresses needs to be updated. If the whitelist for back-to-origin IP addresses in use differs from the latest whitelist for back-to-origin IP addresses, it needs to be updated and this parameter returns true. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: The whitelist needs to be updated.</description></item>
         /// <item><description>false: The whitelist does not need to be updated.</description></item>

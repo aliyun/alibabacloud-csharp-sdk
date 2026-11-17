@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListMessageCampaignRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Meta ad account.</para>
+        /// <para>The Meta ad account ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>239**</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AdAccountId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the budget.</para>
+        /// <para>The budget ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>233**</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CampaignId { get; set; }
 
         /// <summary>
-        /// <para>The name of the campaign.</para>
+        /// <para>The budget name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-campaign</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CampaignName { get; set; }
 
         /// <summary>
-        /// <para>The Space ID of the ISV sub-customer or the instance ID of the direct customer. You can view this ID on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</para>
+        /// <para>The SpaceId or instance ID of the ISV sub-customer. This is the channel ID, which you can view on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The pagination parameters.</para>
+        /// <para>The pagination parameter object.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Page")]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public long? Index { get; set; }
 
             /// <summary>
-            /// <para>The number of entries to return on each page.</para>
+            /// <para>The number of entries per page.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
-        /// <para>The Page ID for Messenger.</para>
+        /// <para>The Page ID of Messenger.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The status of the budget.</para>
+        /// <para>The budget status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AVAILABLE</para>

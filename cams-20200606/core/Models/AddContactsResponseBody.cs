@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class AddContactsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The access denial details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -53,14 +53,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: The call was successful.</description></item>
         /// <item><description><b>false</b>: The call failed.</description></item>

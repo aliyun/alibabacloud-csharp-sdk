@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class UpdateMarketingFLowRequest : TeaModel {
         /// <summary>
-        /// <para>The code of the campaign to modify.</para>
+        /// <para>The code of the campaign to be updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>115311507XXXX49888</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ActivityCode { get; set; }
 
         /// <summary>
-        /// <para>The campaign description.</para>
+        /// <para>The description of the campaign.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>活动描述</para>
+        /// <para>Campaign description</para>
         /// </summary>
         [NameInMap("ActivityDesc")]
         [Validation(Required=false)]
         public string ActivityDesc { get; set; }
 
         /// <summary>
-        /// <para>The ID of the campaign to modify.</para>
+        /// <para>The ID of the campaign to be updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>674574575658675XX</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ActivityId { get; set; }
 
         /// <summary>
-        /// <para>The campaign name.</para>
+        /// <para>The name of the campaign.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ActivityName { get; set; }
 
         /// <summary>
-        /// <para>The cron expression for timed scheduling.</para>
+        /// <para>The cron expression for periodic scheduling.</para>
         /// </summary>
         [NameInMap("CronExpression")]
         [Validation(Required=false)]
         public string CronExpression { get; set; }
 
         /// <summary>
-        /// <para>The end time.</para>
+        /// <para>The end time in the YYYY-MM-DD HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-11-26 09:59:00</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The execution method. Set this parameter to 1 (cron).</para>
+        /// <para>The execution method. Set the value to 1, which indicates cron.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,17 +82,17 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use custom pass-through parameters.</para>
+        /// <para>Specifies whether to pass custom parameters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Y:传入自定义参数 N:不传参数</para>
+        /// <para>Y: Pass custom parameters. N: Do not pass parameters</para>
         /// </summary>
         [NameInMap("ParamFlag")]
         [Validation(Required=false)]
         public string ParamFlag { get; set; }
 
         /// <summary>
-        /// <para>The custom pass-through parameters.</para>
+        /// <para>The custom parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;testEmail&quot;:&quot;wy****<a href="mailto:999@alibaba-inc.com">999@alibaba-inc.com</a>&quot;}</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The start time.</para>
+        /// <para>The start time in the YYYY-MM-DD HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-11-25 09:59:00</para>

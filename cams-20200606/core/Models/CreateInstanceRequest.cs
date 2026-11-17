@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
     public class CreateInstanceRequest : TeaModel {
         /// <summary>
         /// <para>The channel type.</para>
+        /// <remarks>
+        /// <para>Notice: The Singapore site supports all channels. The Germany site currently supports only WhatsApp.</notice></para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +44,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CountryId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Facebook Business Manager (BM).</para>
+        /// <para>FacebookBmId</para>
         /// 
         /// <b>Example:</b>
         /// <para>393992929</para>
@@ -51,7 +54,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string FacebookBmId { get; set; }
 
         /// <summary>
-        /// <para>The description of the instance.</para>
+        /// <para>The instance description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ins</para>
@@ -61,7 +64,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string InstanceDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance.</para>
+        /// <para>The instance name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +75,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to confirm the audit.</para>
+        /// <para>Specifies whether the audit is confirmed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Y</para>
@@ -82,7 +85,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string IsConfirmAudit { get; set; }
 
         /// <summary>
-        /// <para>The URL of the ISV terms file.</para>
+        /// <para>The name of the ISV/Client agreement file.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://a.com/1.pdf">https://a.com/1.pdf</a></para>
@@ -92,7 +95,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string IsvTerms { get; set; }
 
         /// <summary>
-        /// <para>The office address of the business.</para>
+        /// <para>The enterprise address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -102,7 +105,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string OfficeAddress { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group that contains the instance.</para>
+        /// <para>The ID of the resource group to which the instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>

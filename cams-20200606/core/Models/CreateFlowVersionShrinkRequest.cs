@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BizExtendShrink { get; set; }
 
         /// <summary>
-        /// <para>The flow code. You can view the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page.</para>
+        /// <para>The flow code. You can view the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9ccc41**************************</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string FlowCode { get; set; }
 
         /// <summary>
-        /// <para>The flow version to copy. Click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to enter the canvas orchestration page and view historical flow versions.</para>
+        /// <para>The flow version to copy. You can click the flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page to go to the canvas orchestration page and view the historical versions of the flow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The version remarks.</para>
+        /// <para>The version remark.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Fix WhatsApp message sending error.</para>
+        /// <para>Fixed WhatsApp message sending errors</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]

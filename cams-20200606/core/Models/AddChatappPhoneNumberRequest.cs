@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The pre-validated phone number.</para>
         /// <remarks>
-        /// <para>This parameter is deprecated.</para>
+        /// <para><b>[Deprecated]</b></para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The display name of the phone number.</para>
+        /// <para>The name of the phone number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

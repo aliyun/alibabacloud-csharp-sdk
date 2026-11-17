@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class FlowBindPhoneShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The message channel code, which is the channel ID. View the channel ID in the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</para>
+        /// <para>The message channel code, which is the channel ID. You can view the channel ID on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cams-8c8*********</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ChannelType { get; set; }
 
         /// <summary>
-        /// <para>The flow code. View the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> page.</para>
+        /// <para>The flow code. You can view the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string FlowCode { get; set; }
 
         /// <summary>
-        /// <para>The flow version. Click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> page to enter the flow builder canvas and view the flow version.</para>
+        /// <para>The flow version. To view the flow version, click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string FlowVersion { get; set; }
 
         /// <summary>
-        /// <para>The multi-WABA binding configuration.</para>
+        /// <para>The multi-WABA binding.</para>
         /// </summary>
         [NameInMap("MultiWabaPhoneNumbers")]
         [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The list of phone numbers, PageIds, or AccountIds&lt;props=&quot;intl&quot;&gt;, or ServiceIds under the channel instance.</para>
+        /// <para>The list of phone numbers, Page IDs, or account IDs&lt;props=&quot;intl&quot;&gt;, or service IDs under the channel instance.</para>
         /// </summary>
         [NameInMap("PhoneNumbers")]
         [Validation(Required=false)]
@@ -84,11 +84,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The WABA account ID, PageId, or AccountId&lt;props=&quot;intl&quot;&gt;, or ServiceId.</para>
+        /// <para>The WABA account ID, Page ID, or account ID&lt;props=&quot;intl&quot;&gt;, or service ID.</para>
         /// <list type="bullet">
-        /// <item><description><para>If the ChannelType parameter is set to WHATSAPP, specify the WABA account ID. View the WABA account ID in <a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>WABA Management</b>.</para>
+        /// <item><description><para>If the ChannelType parameter is set to WHATSAPP, specify the WABA account ID. You can view the WABA account ID by choosing <a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>WABA Management</b>.</para>
         /// </description></item>
-        /// <item><description><para>If the ChannelType parameter is not set to WHATSAPP, specify the PageId for MESSENGER, the AccountId for INSTAGRAM&lt;props=&quot;intl&quot;&gt;, or the ServiceId for VIBER.</para>
+        /// <item><description><para>If the ChannelType parameter is not set to WHATSAPP, specify the Page ID for MESSENGER, the account ID for INSTAGRAM&lt;props=&quot;intl&quot;&gt;, or the service ID for VIBER.</para>
         /// </description></item>
         /// </list>
         /// 

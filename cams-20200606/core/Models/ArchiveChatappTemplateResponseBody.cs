@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ArchiveChatappTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The detailed reason for the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The request status code.</para>
+        /// <para>The status code of the request.</para>
         /// <list type="bullet">
-        /// <item><description><para>OK indicates that the request was successful.</para>
+        /// <item><description><para>A value of OK indicates that the request is successful.</para>
         /// </description></item>
         /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
@@ -43,16 +43,16 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public ArchiveChatappTemplateResponseBodyData Data { get; set; }
         public class ArchiveChatappTemplateResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The request status code.</para>
+            /// <para>The status code of the request.</para>
             /// <list type="bullet">
-            /// <item><description><para>OK indicates that the request was successful.</para>
+            /// <item><description><para>A value of OK indicates that the request is successful.</para>
             /// </description></item>
             /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
             /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>示例值示例值</para>
+            /// <para>Sample value</para>
             /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The error message.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例值示例值</para>
+            /// <para>Sample value</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -72,16 +72,16 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The request ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例值示例值示例值</para>
+            /// <para>Sample value</para>
             /// </summary>
             [NameInMap("RequestId")]
             [Validation(Required=false)]
             public string RequestId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the call was successful. Valid values:</para>
+            /// <para>Indicates whether the call is successful. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The call was successful.</description></item>
+            /// <item><description><b>true</b>: The call is successful.</description></item>
             /// <item><description><b>false</b>: The call failed.</description></item>
             /// </list>
             /// 
@@ -115,9 +115,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>true</b>: The call is successful.</description></item>
         /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 

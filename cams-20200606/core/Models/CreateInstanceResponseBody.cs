@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class CreateInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of the access denial.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The response code. A value of <c>OK</c> indicates that the request was successful.</para>
+        /// <para>The status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data object.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string ChannelType { get; set; }
 
             /// <summary>
-            /// <para>The description of the instance.</para>
+            /// <para>The instance description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>des</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string InstanceDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2999292</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the instance.</para>
+            /// <para>The instance name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ins</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public long? InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region where the resource is located.</para>
+            /// <para>The region to which the resource belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string ResourceRegionId { get; set; }
 
             /// <summary>
-            /// <para>The time when the request was submitted.</para>
+            /// <para>The submission time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
-        /// <para>The error message returned if the request fails.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NULL</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2992939*****</para>
@@ -119,7 +119,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. A value of <c>true</c> indicates success and <c>false</c> indicates failure.</para>
+        /// <para>Specifies whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

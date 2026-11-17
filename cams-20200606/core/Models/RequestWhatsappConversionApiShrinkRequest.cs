@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class RequestWhatsappConversionApiShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The space ID or instance ID of the customer.</para>
+        /// <para>The customer Space ID or instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The PageId of Meta.</para>
+        /// <para>The Meta Page ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

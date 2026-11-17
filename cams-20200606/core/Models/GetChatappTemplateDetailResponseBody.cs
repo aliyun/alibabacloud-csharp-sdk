@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetChatappTemplateDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The access denied detail information.</para>
+        /// <para>The details of the access denied error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description><para>OK indicates that the request was successful.</para>
+        /// <item><description><para>A value of OK indicates that the request is successful.</para>
         /// </description></item>
         /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{ 		&quot;category&quot;: &quot;ACCOUNT_UPDATE&quot;, 		&quot;name&quot;: &quot;account_notice&quot;, 		&quot;language&quot;: &quot;en_US&quot;, 		&quot;templateCode&quot;: &quot;744c4b5c79c9432497a075bdfca3****&quot;, 		&quot;auditStatus&quot;: &quot;APPROVED&quot;, 		&quot;components&quot;: &quot;[{\&quot;type\&quot;:\&quot;BODY\&quot;,\&quot;text\&quot;:\&quot;body_text$(textVariable)\&quot;},{\&quot;type\&quot;:\&quot;HEADER\&quot;,\&quot;formate\&quot;:\&quot;IMAGE\&quot;,\&quot;url\&quot;:\&quot;$(linkVariable)\&quot;},{\&quot;type\&quot;:\&quot;FOOTER\&quot;,\&quot;text\&quot;:\&quot;footer-text\&quot;},{\&quot;type\&quot;:\&quot;BUTTONS\&quot;,\&quot;buttons\&quot;:[{\&quot;type\&quot;:\&quot;PHONE_NUMBER\&quot;,\&quot;text\&quot;:\&quot;phone-button-text\&quot;,\&quot;phone_number\&quot;:\&quot;+861388888****\&quot;},{\&quot;type\&quot;:\&quot;URL\&quot;,\&quot;text\&quot;:\&quot;url-button-text\&quot;,\&quot;url\&quot;:\&quot;<a href="https://www.website.com/%5C%5C%22%7D%5D%7D%5D">https://www.website.com/\\&quot;}]}]</a>&quot;, 		&quot;example&quot;: &quot;{\&quot;textVariable\&quot;: \&quot;text\&quot;, \&quot;linkVariable\&quot;: \&quot;link\&quot;}&quot; 	}</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public GetChatappTemplateDetailResponseBodyData Data { get; set; }
         public class GetChatappTemplateDetailResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the current template can be used for sending. This parameter is valid only for Marketing templates.</para>
+            /// <para>Indicates whether the current template can be sent. This parameter is valid only for marketing templates.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public bool? AllowSend { get; set; }
 
             /// <summary>
-            /// <para>The audit status. Valid values:</para>
+            /// <para>The review status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>pass</b>: Approved.</para>
             /// </description></item>
@@ -76,22 +76,22 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string AuditStatus { get; set; }
 
             /// <summary>
-            /// <para>The WhatsApp template category. Valid values:</para>
+            /// <para>The WhatsApp template categorization. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>UTILITY</b>: transaction-related.</para>
+            /// <item><description><para><b>UTILITY</b>: Transaction-related.</para>
             /// </description></item>
-            /// <item><description><para><b>MARKETING</b>: marketing template.</para>
+            /// <item><description><para><b>MARKETING</b>: Marketing template.</para>
             /// </description></item>
-            /// <item><description><para><b>AUTHENTICATION</b>: identity verification.</para>
+            /// <item><description><para><b>AUTHENTICATION</b>: Identity verification.</para>
             /// </description></item>
             /// </list>
-            /// <para>Viber template category. Valid values:</para>
+            /// <para>Viber template categorization:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>UTILITY</b>: transaction-related.</para>
+            /// <item><description><para><b>UTILITY</b>: Transaction-related.</para>
             /// </description></item>
-            /// <item><description><para><b>MARKETING</b>: marketing template.</para>
+            /// <item><description><para><b>MARKETING</b>: Marketing template.</para>
             /// </description></item>
-            /// <item><description><para><b>AUTHENTICATION</b>: identity verification.</para>
+            /// <item><description><para><b>AUTHENTICATION</b>: Identity verification.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether template sending is paused when a Utility template is changed to a Marketing template.</para>
+            /// <para>Indicates whether the sending of the template is paused when a utility template is changed to a marketing template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public List<GetChatappTemplateDetailResponseBodyDataComponents> Components { get; set; }
             public class GetChatappTemplateDetailResponseBodyDataComponents : TeaModel {
                 /// <summary>
-                /// <para>Valid for WhatsApp templates when Category is Authentication and Component Type is Body. Indicates whether a security recommendation message that advises users not to share the verification code is displayed above the Body.</para>
+                /// <para>Indicates whether to display a security recommendation above the body to remind users not to share the verification code with others. This parameter is valid only for WhatsApp templates whose category is AUTHENTICATION and component type is BODY.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -130,14 +130,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public bool? AddSecretRecommendation { get; set; }
 
                 /// <summary>
-                /// <para>The button list. Applicable only to the <b>BUTTONS</b> component.</para>
+                /// <para>The list of buttons. This parameter is valid only for the <b>BUTTONS</b> component.</para>
                 /// <remarks>
-                /// <para>WhatsApp button quantity rules:</para>
+                /// <para>WhatsApp button limits</para>
                 /// <list type="bullet">
-                /// <item><description>For WhatsApp templates with Category set to MARKETING or UTILITY, a maximum of 10 buttons are allowed.</description></item>
-                /// <item><description>Only 1 PHONE_NUMBER button is allowed.</description></item>
-                /// <item><description>A maximum of 2 URL buttons are allowed.</description></item>
-                /// <item><description>QUICK_REPLY buttons cannot be mixed in random order with PHONE_NUMBER or URL buttons.</description></item>
+                /// <item><description>For MARKETING or UTILITY templates, a maximum of 10 buttons are allowed.</description></item>
+                /// <item><description>Only one PHONE_NUMBER button is allowed.</description></item>
+                /// <item><description>A maximum of two URL buttons are allowed.</description></item>
+                /// <item><description>QUICK_REPLY buttons cannot be mixed with PHONE_NUMBER or URL buttons in an unordered manner.</description></item>
                 /// </list>
                 /// </remarks>
                 /// </summary>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public List<GetChatappTemplateDetailResponseBodyDataComponentsButtons> Buttons { get; set; }
                 public class GetChatappTemplateDetailResponseBodyDataComponentsButtons : TeaModel {
                     /// <summary>
-                    /// <para>Required for WhatsApp templates with Category set to Authentication and Button Type set to ONE_TAP. Specifies the button text for the WhatsApp Autofill operation.</para>
+                    /// <para>The button text for the WhatsApp autofill operation. This parameter is required for WhatsApp templates whose category is AUTHENTICATION and button type is ONE_TAP.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Autofill</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     public string CouponCode { get; set; }
 
                     /// <summary>
-                    /// <para>The extended fields.</para>
+                    /// <para>The extended attributes.</para>
                     /// </summary>
                     [NameInMap("ExtendAttrs")]
                     [Validation(Required=false)]
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                         public string IntentCode { get; set; }
 
                         /// <summary>
-                        /// <para>The next template language.</para>
+                        /// <para>The language of the next template.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>en</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                         public string NextLanguageCode { get; set; }
 
                         /// <summary>
-                        /// <para>The next template code.</para>
+                        /// <para>The code of the next template.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>20939920093993</para>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                         public string NextTemplateCode { get; set; }
 
                         /// <summary>
-                        /// <para>The next template name.</para>
+                        /// <para>The name of the next template.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>abc</para>
@@ -225,11 +225,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     }
 
                     /// <summary>
-                    /// <para>The Flow data event type. Valid values:</para>
+                    /// <para>The flow data event type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>NAVIGATE: navigation.</para>
+                    /// <item><description><para>NAVIGATE: Navigation.</para>
                     /// </description></item>
-                    /// <item><description><para>DATA_EXCHANGE: data exchange.</para>
+                    /// <item><description><para>DATA_EXCHANGE: Data exchange.</para>
                     /// </description></item>
                     /// </list>
                     /// 
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     public string FlowId { get; set; }
 
                     /// <summary>
-                    /// <para>Valid for WhatsApp templates with Category set to Marketing and Button Type set to QUICK_REPLY. Indicates that the button is a marketing opt-out button. If a customer clicks this button and the send control operation is configured on the Chat App Message Service platform, subsequent Marketing messages will not be sent to the customer.</para>
+                    /// <para>Indicates whether the button is a marketing opt-out button. This parameter is valid only for WhatsApp templates whose category is MARKETING and button type is QUICK_REPLY. If a customer clicks this button and send control operations are configured on the Chat App Message Service platform, subsequent marketing messages are not sent to the customer.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -261,7 +261,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     public bool? IsOptOut { get; set; }
 
                     /// <summary>
-                    /// <para>The navigate screen. Required when FlowAction is set to NAVIGATE.</para>
+                    /// <para>The navigation screen. This parameter is required when FlowAction is set to NAVIGATE.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>DETAILS</para>
@@ -271,7 +271,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     public string NavigateScreen { get; set; }
 
                     /// <summary>
-                    /// <para>Required for WhatsApp templates with Category set to Authentication and Button Type set to ONE_TAP. Specifies the package name for WhatsApp to launch the application.</para>
+                    /// <para>The package name of the application invoked by WhatsApp. This parameter is required for WhatsApp templates whose category is AUTHENTICATION and button type is ONE_TAP.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>com.aliyun</para>
@@ -281,7 +281,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     public string PackageName { get; set; }
 
                     /// <summary>
-                    /// <para>The phone number. Valid only when the button type is <b>PHONE_NUMBER</b>.</para>
+                    /// <para>The phone number. This parameter is valid only when the button type is <b>PHONE_NUMBER</b>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>+861398745****</para>
@@ -291,7 +291,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     public string PhoneNumber { get; set; }
 
                     /// <summary>
-                    /// <para>Required for WhatsApp templates with Category set to Authentication and Button Type set to ONE_TAP. Specifies the signature hash value for WhatsApp to launch the application.</para>
+                    /// <para>The signature hash value of the application invoked by WhatsApp. This parameter is required for WhatsApp templates whose category is AUTHENTICATION and button type is ONE_TAP.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2993839</para>
@@ -301,7 +301,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     public string SignatureHash { get; set; }
 
                     /// <summary>
-                    /// <para>The applications supported by the ONE_TAP/ZERO_TAP verification code.</para>
+                    /// <para>The applications supported by the ONE_TAP or ZERO_TAP verification code.</para>
                     /// </summary>
                     [NameInMap("SupportedApps")]
                     [Validation(Required=false)]
@@ -340,31 +340,41 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     public string Text { get; set; }
 
                     /// <summary>
-                    /// <para>The button type.</para>
+                    /// <para>The validity period.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>10800</para>
+                    /// </summary>
+                    [NameInMap("TtlMinutes")]
+                    [Validation(Required=false)]
+                    public long? TtlMinutes { get; set; }
+
+                    /// <summary>
+                    /// <para>The button type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para><b>PHONE_NUMBER</b>: phone call button.</para>
+                    /// <item><description><para><b>PHONE_NUMBER</b>: Call button.</para>
                     /// </description></item>
-                    /// <item><description><para><b>URL</b>: web page button.</para>
+                    /// <item><description><para><b>URL</b>: URL button.</para>
                     /// </description></item>
-                    /// <item><description><para><b>QUICK_REPLY</b>: quick reply button.</para>
+                    /// <item><description><para><b>QUICK_REPLY</b>: Quick reply button.</para>
                     /// </description></item>
-                    /// <item><description><para><b>COPY_CODE</b>: copy verification code or coupon code.</para>
+                    /// <item><description><para><b>COPY_CODE</b>: Copy verification code or coupon code button.</para>
                     /// </description></item>
-                    /// <item><description><para><b>ONE_TAP</b>: autofill button for AUTHENTICATION templates.</para>
+                    /// <item><description><para><b>ONE_TAP</b>: Autofill button for AUTHENTICATION templates.</para>
                     /// </description></item>
-                    /// <item><description><para><b>ZERO_TAP</b>: autofill button for AUTHENTICATION templates.</para>
+                    /// <item><description><para><b>ZERO_TAP</b>: Autofill button for AUTHENTICATION templates.</para>
                     /// </description></item>
-                    /// <item><description><para><b>MPM</b>: multi-product catalog.</para>
+                    /// <item><description><para><b>MPM</b>: Multi-product message.</para>
                     /// </description></item>
-                    /// <item><description><para><b>CATALOG</b>: catalog.</para>
+                    /// <item><description><para><b>CATALOG</b>: Catalog.</para>
                     /// </description></item>
-                    /// <item><description><para><b>FLOW</b>: open WhatsApp flow.</para>
+                    /// <item><description><para><b>FLOW</b>: Open WhatsApp flow.</para>
                     /// </description></item>
                     /// </list>
                     /// <remarks>
                     /// <list type="bullet">
-                    /// <item><description>For WhatsApp templates with Category set to AUTHENTICATION, only one button is allowed, and the type can only be COPY_CODE or ONE_TAP. If the type is COPY_CODE, Text is required. If the type is ONE_TAP, Text (displayed when the target application is not installed on the device, indicating the name of the copy verification code button), SignatureHash, PackageName, and AutofillText are required.</description></item>
-                    /// <item><description>Viber templates allow only one button, and it must be of the URL type.</description></item>
+                    /// <item><description>For WhatsApp templates whose category is AUTHENTICATION, only one button is allowed, and the type must be COPY_CODE or ONE_TAP. If the type is COPY_CODE, Text is required. If the type is ONE_TAP, Text (displayed when the target application is not installed on the terminal, indicating the name of the copy verification code button), SignatureHash, PackageName, and AutofillText are required.</description></item>
+                    /// <item><description>For Viber templates, only one button is allowed, and the type must be URL.</description></item>
                     /// </list>
                     /// </remarks>
                     /// 
@@ -376,7 +386,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The URL that is accessed when the link button is clicked.</para>
+                    /// <para>The URL to be accessed when the link button is clicked.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="https://example.com">https://example.com</a></para>
@@ -386,11 +396,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     public string Url { get; set; }
 
                     /// <summary>
-                    /// <para>The URL type.</para>
+                    /// <para>The URL type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para><b>static</b>: static.</para>
+                    /// <item><description><para><b>static</b>: Static.</para>
                     /// </description></item>
-                    /// <item><description><para><b>dynamic</b>: dynamic.</para>
+                    /// <item><description><para><b>dynamic</b>: Dynamic.</para>
                     /// </description></item>
                     /// </list>
                     /// 
@@ -404,7 +414,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 }
 
                 /// <summary>
-                /// <para>The file description.</para>
+                /// <para>The description of the file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example</para>
@@ -421,7 +431,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public List<GetChatappTemplateDetailResponseBodyDataComponentsCards> Cards { get; set; }
                 public class GetChatappTemplateDetailResponseBodyDataComponentsCards : TeaModel {
                     /// <summary>
-                    /// <para>The list of card components.</para>
+                    /// <para>The list of card controls.</para>
                     /// </summary>
                     [NameInMap("CardComponents")]
                     [Validation(Required=false)]
@@ -455,7 +465,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                             public string Text { get; set; }
 
                             /// <summary>
-                            /// <para>The button type for a carousel template. Valid values: URL, PHONE_NUMBER, or QUICK_REPLY.</para>
+                            /// <para>The button type for carousel templates. Valid values: URL, PHONE_NUMBER, and QUICK_REQLY.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>URL</para>
@@ -465,7 +475,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                             public string Type { get; set; }
 
                             /// <summary>
-                            /// <para>The URL to visit when the button is clicked.</para>
+                            /// <para>The URL to visit after the button is clicked.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para><a href="https://aliyun.com">https://aliyun.com</a></para>
@@ -477,10 +487,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                             /// <summary>
                             /// <para>The URL type. Valid values:</para>
                             /// <list type="bullet">
-                            /// <item><description><para>static: static.</para>
-                            /// </description></item>
-                            /// <item><description><para>dynamic: dynamic.</para>
-                            /// </description></item>
+                            /// <item><description>static: Static.</description></item>
+                            /// <item><description>dynamic: Dynamic.</description></item>
                             /// </list>
                             /// 
                             /// <b>Example:</b>
@@ -493,7 +501,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                         }
 
                         /// <summary>
-                        /// <para>The header type in a carousel template. Only IMAGE and VIDEO are supported. All cards must have the same header type.</para>
+                        /// <para>The header type for carousel templates. Only IMAGE and VIDEO are supported. The header must be consistent across all cards.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>HEADER</para>
@@ -503,7 +511,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                         public string Format { get; set; }
 
                         /// <summary>
-                        /// <para>The card text content.</para>
+                        /// <para>The text content of the card.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Body</para>
@@ -523,7 +531,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                         public string Type { get; set; }
 
                         /// <summary>
-                        /// <para>The web URL.</para>
+                        /// <para>The web address.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para><a href="https://aliyun.com">https://aliyun.com</a></para>
@@ -537,7 +545,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 }
 
                 /// <summary>
-                /// <para>The verification code validity period in minutes for WhatsApp Authentication templates. Valid only when the message type is WhatsApp, Category is Authentication, and Component Type is Footer. This information is displayed in the Footer position.</para>
+                /// <para>The validity period of the verification code in minutes for WhatsApp authentication templates. This is valid only for WhatsApp messages where the category is Authentication and the component type is Footer. This information is displayed in the footer.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -547,7 +555,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public int? CodeExpirationMinutes { get; set; }
 
                 /// <summary>
-                /// <para>The video duration of a Viber video message. Valid values: 0 to 600.</para>
+                /// <para>The video duration in seconds for Viber video messages. Valid values: 0 to 600.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50</para>
@@ -557,7 +565,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public int? Duration { get; set; }
 
                 /// <summary>
-                /// <para>The file name.</para>
+                /// <para>The name of the file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example</para>
@@ -567,7 +575,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string FileName { get; set; }
 
                 /// <summary>
-                /// <para>The file type of a Viber file message.</para>
+                /// <para>The file type for Viber file messages.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>docx</para>
@@ -597,7 +605,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string Latitude { get; set; }
 
                 /// <summary>
-                /// <para>The location address.</para>
+                /// <para>The address of the location.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hangzhou</para>
@@ -607,7 +615,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string LocationAddress { get; set; }
 
                 /// <summary>
-                /// <para>The location name.</para>
+                /// <para>The name of the location.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hangzhou</para>
@@ -627,7 +635,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string Longitude { get; set; }
 
                 /// <summary>
-                /// <para>The offer code expiration variable in a Limited Time Offer (LTO) template.</para>
+                /// <para>The offer expiration variable for limited-time offer (LTO) templates.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>$(offerExpirationTimeMs)</para>
@@ -637,7 +645,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string OfferExpirationTimeMs { get; set; }
 
                 /// <summary>
-                /// <para>The text of the message to be sent.</para>
+                /// <para>The text of the message to send.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hello</para>
@@ -647,7 +655,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string Text { get; set; }
 
                 /// <summary>
-                /// <para>The thumbnail for a Viber video message.</para>
+                /// <para>The thumbnail URL for Viber video messages.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://img.png">https://img.png</a></para>
@@ -657,7 +665,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string ThumbUrl { get; set; }
 
                 /// <summary>
-                /// <para>The component type.</para>
+                /// <para>The component type. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><para><b>BODY</b></para>
                 /// </description></item>
@@ -674,9 +682,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 /// </list>
                 /// <remarks>
                 /// <list type="bullet">
-                /// <item><description>For WhatsApp templates, the <b>BODY</b> component cannot exceed 1024 characters. The <b>HEADER</b> and <b>FOOTER</b> components cannot exceed 60 characters.</description></item>
+                /// <item><description>For WhatsApp templates, the <b>BODY</b> component cannot exceed 1,024 characters. The <b>HEADER</b> and <b>FOOTER</b> components cannot exceed 60 characters.</description></item>
                 /// <item><description>For Viber templates, the <b>FOOTER</b>, <b>CAROUSEL</b>, and <b>LIMITED_TIME_OFFER</b> types are invalid.</description></item>
-                /// <item><description>For Viber templates, images, videos, and files are placed in the <b>HEADER</b> (the device displays images below the text).</description></item>
+                /// <item><description>In Viber templates, images, videos, and files are placed in the <b>HEADER</b>. The client displays the image below the text.</description></item>
                 /// </list>
                 /// </remarks>
                 /// 
@@ -688,7 +696,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The material URL.</para>
+                /// <para>The media URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://image.developer.aliyundoc.com">https://image.developer.aliyundoc.com</a></para>
@@ -698,7 +706,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string Url { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the offer code has an expiration time in a Limited Time Offer (LTO) template.</para>
+                /// <para>Specifies whether the offer code has an expiration time in LTO templates.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -711,13 +719,16 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <para>The variable example.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;textVariable&quot;:&quot;text&quot;}</para>
             /// </summary>
             [NameInMap("Example")]
             [Validation(Required=false)]
             public Dictionary<string, string> Example { get; set; }
 
             /// <summary>
-            /// <para>The language of the template. For detailed language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</para>
+            /// <para>The language of the template. For more information about language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>en_US</para>
@@ -727,7 +738,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// <para>The message time-to-live when sending WhatsApp Authentication template messages.</para>
+            /// <para>The time-to-live (TTL) in seconds for messages sent by using WhatsApp authentication templates.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120</para>
@@ -757,11 +768,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string ProductSetId { get; set; }
 
             /// <summary>
-            /// <para>The template quality.</para>
+            /// <para>The template quality. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>RED: Low quality.</description></item>
             /// <item><description>YELLOW: Medium quality.</description></item>
-            /// <item><description>UNKNOWN: Quality unknown.</description></item>
+            /// <item><description>UNKNOWN: Unknown quality.</description></item>
             /// <item><description>GREEN: High quality.</description></item>
             /// </list>
             /// 
@@ -773,7 +784,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string QualityScore { get; set; }
 
             /// <summary>
-            /// <para>The reason for template review rejection.</para>
+            /// <para>The reason why the template was rejected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -783,7 +794,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Reason { get; set; }
 
             /// <summary>
-            /// <para>The code of the template.</para>
+            /// <para>The template code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>744c4b5c79c9432497a075bdfca3****</para>
@@ -793,7 +804,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string TemplateCode { get; set; }
 
             /// <summary>
-            /// <para>The templatetype.</para>
+            /// <para>The templatetype. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>WHATSAPP</b></para>
             /// </description></item>
@@ -831,6 +842,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

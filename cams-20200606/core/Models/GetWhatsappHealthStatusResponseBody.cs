@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetWhatsappHealthStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The access denial details.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description><para>The value OK indicates that the request was successful.</para>
+        /// <item><description><para>A return value of OK indicates that the request is successful.</para>
         /// </description></item>
-        /// <item><description><para>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
+        /// <item><description><para>For other error codes, see <a href="https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes">Error codes</a>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -36,14 +36,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetWhatsappHealthStatusResponseBodyData Data { get; set; }
         public class GetWhatsappHealthStatusResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the messages can be sent.</para>
+            /// <para>Specifies whether messages can be sent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AVAILABLE</para>
@@ -53,14 +53,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string CanSendMessage { get; set; }
 
             /// <summary>
-            /// <para>The queried entities.</para>
+            /// <para>The retrieved entity data.</para>
             /// </summary>
             [NameInMap("Entities")]
             [Validation(Required=false)]
             public List<GetWhatsappHealthStatusResponseBodyDataEntities> Entities { get; set; }
             public class GetWhatsappHealthStatusResponseBodyDataEntities : TeaModel {
                 /// <summary>
-                /// <para>The Business Manager ID.</para>
+                /// <para>The business platform ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3992****</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string BusinessId { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the messages can be sent.</para>
+                /// <para>Specifies whether messages can be sent.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AVAILABLE</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string EntityType { get; set; }
 
                 /// <summary>
-                /// <para>The reasons why the messages failed to be sent.</para>
+                /// <para>The list of errors.</para>
                 /// </summary>
                 [NameInMap("Errors")]
                 [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     public string ErrorCode { get; set; }
 
                     /// <summary>
-                    /// <para>The description of the error.</para>
+                    /// <para>The error description.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>There is an error with the payment method.</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     public string ErrorDescription { get; set; }
 
                     /// <summary>
-                    /// <para>The possible solution to the error.</para>
+                    /// <para>The possible solutions.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>There was an error with your payment method. Please add a new payment method to the account.</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string Language { get; set; }
 
                 /// <summary>
-                /// <para>The phone number to which the messages are sent.</para>
+                /// <para>The sender phone number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>86138****</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string PhoneNumber { get; set; }
 
                 /// <summary>
-                /// <para>The template code. This parameter is returned when the NodeType parameter is set to <b>template</b>.</para>
+                /// <para>The template code. This field is required when NodeType is set to <b>template</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>939928****</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string TemplateCode { get; set; }
 
                 /// <summary>
-                /// <para>The WABA ID. You can view the WABA ID in the Chat App Message Service console after you create the WABA.</para>
+                /// <para>The WABA account ID. You can view the WABA ID in the <a href="https://cams.console.aliyun.com/">Chat App Message Service console</a> after WABA registration is completed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>39939***</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -193,12 +193,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the call is successful.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b></para>
-        /// </description></item>
-        /// <item><description><para><b>false</b></para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The call is successful.</description></item>
+        /// <item><description><b>false</b>: The call fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

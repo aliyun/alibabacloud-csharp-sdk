@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description><para>OK: The request was successful.</para>
+        /// <item><description><para>OK: The request is successful.</para>
         /// </description></item>
         /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public List<ListChatappMessageResponseBodyData> Data { get; set; }
         public class ListChatappMessageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The business phone number.</para>
+            /// <para>The business number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>86183********</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string ChannelType { get; set; }
 
             /// <summary>
-            /// <para>The name of the message receiving status.</para>
+            /// <para>The name of the message reception status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Success</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string ClientReadStatus { get; set; }
 
             /// <summary>
-            /// <para>The message read status name.</para>
+            /// <para>The name of the message read status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Success</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string ConversationId { get; set; }
 
             /// <summary>
-            /// <para>The inbound or outbound message type.</para>
+            /// <para>The upstream or downstream message type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DOWN</para>
@@ -113,11 +113,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string EventAction { get; set; }
 
             /// <summary>
-            /// <para>The name of the inbound or outbound message type. Valid values:</para>
+            /// <para>The name of the upstream or downstream message. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>DOWN: outbound message.</para>
+            /// <item><description><para>DOWN: downstream message.</para>
             /// </description></item>
-            /// <item><description><para>UP: inbound message.</para>
+            /// <item><description><para>UP: upstream message.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string FailBackContent { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the message falls back to SMS. Valid values:</para>
+            /// <para>Specifies whether the message falls back to SMS. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>Y: Yes.</para>
             /// </description></item>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string MessageStatus { get; set; }
 
             /// <summary>
-            /// <para>The message status name.</para>
+            /// <para>The name of the message status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Success</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string MessageType { get; set; }
 
             /// <summary>
-            /// <para>The message type name.</para>
+            /// <para>The name of the message type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>interactive</para>
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Month { get; set; }
 
             /// <summary>
-            /// <para>The sending time.</para>
+            /// <para>The sending time in ISO 8601 format, including the time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-07-11T01:16:49.761+00:00</para>
@@ -337,10 +337,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The call was successful.</description></item>
-        /// <item><description><b>false</b>: The call failed.</description></item>
+        /// <item><description><b>true</b>: The call is successful.</description></item>
+        /// <item><description><b>false</b>: The call fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

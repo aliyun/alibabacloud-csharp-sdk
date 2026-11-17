@@ -10,10 +10,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetPhoneNumberVerificationStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The space ID of the ISV sub-customer or the instance ID of the direct customer. You can view the Space ID in the
+        /// <para>The space ID of the ISV sub-customer or the instance ID of the direct customer. You can view the space ID on the 
         /// &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>
-        /// &lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a>
-        /// page.</para>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,9 +27,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The phone number. You can view it in the
+        /// <para>The phone number. You can view it on the 
         /// &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>
-        /// &lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a>&gt; <b>Manage</b> &gt; <b>WABA Management</b> &gt; <b>Phone Number Management</b> page.</para>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> &gt; <b>Management</b> &gt; <b>WABA Management</b> &gt; <b>Number Management</b> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

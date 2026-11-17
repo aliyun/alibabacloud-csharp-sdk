@@ -21,15 +21,15 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BizCode { get; set; }
 
         /// <summary>
-        /// <para>The component group code. Valid values:</para>
+        /// <para>The code of the component group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Messaging: messaging components.</para>
+        /// <item><description><para>Messaging: messaging components</para>
         /// </description></item>
-        /// <item><description><para>Core: core components.</para>
+        /// <item><description><para>Core: core components</para>
         /// </description></item>
-        /// <item><description><para>Intelligence: intelligent components.</para>
+        /// <item><description><para>Intelligence: intelligent components</para>
         /// </description></item>
-        /// <item><description><para>Contact: contact management components.</para>
+        /// <item><description><para>Contact: contact management components</para>
         /// </description></item>
         /// </list>
         /// 
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string GroupCode { get; set; }
 
         /// <summary>
-        /// <para>The search keyword. This parameter is used for fuzzy match based on the flow component name.</para>
+        /// <para>The search keyword. This parameter is used to perform a fuzzy match based on the flow component name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WhatsApp</para>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class CopyTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The access denial details.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The template code.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例值示例值</para>
+            /// <para>Example value</para>
             /// </summary>
             [NameInMap("SceneTemplateCode")]
             [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The template name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例值示例值示例值</para>
+            /// <para>Example value</para>
             /// </summary>
             [NameInMap("SceneTemplateName")]
             [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The WhatsApp category.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例值示例值</para>
+            /// <para>Example value</para>
             /// </summary>
             [NameInMap("WhatsappCatagory")]
             [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

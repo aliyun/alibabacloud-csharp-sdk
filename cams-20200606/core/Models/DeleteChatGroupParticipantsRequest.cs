@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class DeleteChatGroupParticipantsRequest : TeaModel {
         /// <summary>
-        /// <para>The business number. You can obtain the business number by calling the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</para>
+        /// <para>The business number. You can call the <a href="https://api.aliyun.com/document/cams/2020-06-06/ListChatGroup">ListChatGroup</a> operation to view the business number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,12 +21,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BusinessNumber { get; set; }
 
         /// <summary>
-        /// <para>The channel type. Valid value:</para>
+        /// <para>The channel type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>WHATSAPP</b></description></item>
         /// </list>
         /// <remarks>
-        /// <para>Currently, only the WhatsApp channel is supported.</para>
+        /// <para>Currently, only WhatsApp channel messages are supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ChannelType { get; set; }
 
         /// <summary>
-        /// <para>The space ID of the ISV sub-customer or the instance ID. This ID is also the channel ID. You can find the channel ID on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</para>
+        /// <para>The space ID or instance ID of the ISV sub-customer. This is the channel ID. You can view it on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channels Management</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// <para>The group ID. You can obtain the group ID by calling the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</para>
+        /// <para>The group ID. You can call the <a href="https://api.aliyun.com/document/cams/2020-06-06/ListChatGroup">ListChatGroup</a> operation to obtain the group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>A list of group members to remove.</para>
+        /// <para>The list of group members.</para>
         /// </summary>
         [NameInMap("List")]
         [Validation(Required=false)]
         public List<DeleteChatGroupParticipantsRequestList> List { get; set; }
         public class DeleteChatGroupParticipantsRequestList : TeaModel {
             /// <summary>
-            /// <para>The participant number of the group member. You can obtain the participant numbers of group members by calling the <a href="https://help.aliyun.com/document_detail/2932628.html">ListChatGroupParticipants</a> operation.</para>
+            /// <para>The group member. You can call the <a href="https://api.aliyun.com/document/cams/2020-06-06/ListChatGroupParticipants">ListChatGroupParticipants</a> operation to obtain the group members.</para>
             /// 
             /// <b>Example:</b>
             /// <para>86138***</para>

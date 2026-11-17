@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class AddAddressRecoverSuspendResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The access denial details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>Example value example value</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -33,17 +33,17 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The returned data.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public Dictionary<string, object> Data { get; set; }
 
         /// <summary>
-        /// <para>The returned message. A success message is returned if the request succeeds. A failure reason is returned if the request fails.</para>
+        /// <para>The returned message. If the request is successful, a success message is returned. If the request fails, the cause of the failure is returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>Example value example value</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -53,18 +53,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>Example value example value example value</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: Successful.</description></item>
-        /// <item><description>false: Failed.</description></item>
-        /// </list>
+        /// <para>Indicates whether the operation is successful. A value of true indicates success. A value of false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
