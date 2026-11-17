@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public Dictionary<string, string> Attributes { get; set; }
 
         /// <summary>
-        /// <para>The default rule of the digital employee.</para>
+        /// <para>The default rules for the digital employee.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -47,21 +47,21 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The knowledge base list.</para>
+        /// <para>The list of knowledge bases.</para>
         /// </summary>
         [NameInMap("knowledges")]
         [Validation(Required=false)]
         public UpdateDigitalEmployeeRequestKnowledges Knowledges { get; set; }
         public class UpdateDigitalEmployeeRequestKnowledges : TeaModel {
             /// <summary>
-            /// <para>The Bailian knowledge base list.</para>
+            /// <para>The list of Model Studio knowledge bases.</para>
             /// </summary>
             [NameInMap("bailian")]
             [Validation(Required=false)]
             public List<UpdateDigitalEmployeeRequestKnowledgesBailian> Bailian { get; set; }
             public class UpdateDigitalEmployeeRequestKnowledgesBailian : TeaModel {
                 /// <summary>
-                /// <para>The knowledge base attributes.</para>
+                /// <para>The attributes of the knowledge base.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 public string Attributes { get; set; }
 
                 /// <summary>
-                /// <para>The Bailian index ID.</para>
+                /// <para>The ID of the Model Studio index.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>index-xxxx</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 public string Region { get; set; }
 
                 /// <summary>
-                /// <para>The Bailian workspace ID.</para>
+                /// <para>The ID of the Model Studio workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>llm-xxxx</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             }
 
             /// <summary>
-            /// <para>The SOP knowledge base list.</para>
+            /// <para>The list of SOP knowledge bases.</para>
             /// </summary>
             [NameInMap("sop")]
             [Validation(Required=false)]
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string RoleArn { get; set; }
 
         /// <summary>
-        /// <para>The list of CIDRs or IP addresses that are allowed to be accessed.</para>
+        /// <para>The list of allowed CIDR blocks or IP addresses.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;allowFqdns&quot;:[&quot;api.example.com&quot;],&quot;allowCidrs&quot;:[&quot;1.2.3.0/24&quot;,&quot;8.8.8.8&quot;],&quot;enableAcl&quot;:false}</para>
@@ -132,14 +132,14 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public UpdateDigitalEmployeeRequestSandboxNetworkPolicy SandboxNetworkPolicy { get; set; }
         public class UpdateDigitalEmployeeRequestSandboxNetworkPolicy : TeaModel {
             /// <summary>
-            /// <para>The list of CIDRs or IP addresses that are allowed to be accessed.</para>
+            /// <para>The list of allowed CIDR blocks or IP addresses.</para>
             /// </summary>
             [NameInMap("allowCidrs")]
             [Validation(Required=false)]
             public List<string> AllowCidrs { get; set; }
 
             /// <summary>
-            /// <para>The list of FQDNs that are allowed to be accessed.</para>
+            /// <para>The list of allowed FQDNs.</para>
             /// </summary>
             [NameInMap("allowFqdns")]
             [Validation(Required=false)]
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         }
 
         /// <summary>
-        /// <para>The security policy configuration for tool calling of the digital employee.</para>
+        /// <para>The security policy configuration for tool calling by the digital employee.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;aliyun&quot;:{&quot;enable&quot;:true,&quot;denyPolicy&quot;:[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;],&quot;autoPassPolicy&quot;:[&quot;log:Get*&quot;,&quot;log:List*&quot;],&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}}</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public UpdateDigitalEmployeeRequestToolPolicyAliyun Aliyun { get; set; }
             public class UpdateDigitalEmployeeRequestToolPolicyAliyun : TeaModel {
                 /// <summary>
-                /// <para>The list of auto-approved RAM actions in the format of <em>, product:ApiName, or product:Prefix</em>.</para>
+                /// <para>The list of auto-approved RAM actions. The format is <em>, product:ApiName, or product:Prefix</em>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;log:Get*&quot;,&quot;log:List*&quot;]</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 public List<string> AutoPassPolicy { get; set; }
 
                 /// <summary>
-                /// <para>The list of denied RAM actions in the format of <em>, product:ApiName, or product:Prefix</em>.</para>
+                /// <para>The list of denied RAM actions. The format is <em>, product:ApiName, or product:Prefix</em>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;]</para>
@@ -244,12 +244,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                     public string ApiVersion { get; set; }
 
                     /// <summary>
-                    /// <para>The execution policy. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>allow: Allowed.</description></item>
-                    /// <item><description>deny: Denied.</description></item>
-                    /// <item><description>user_ack: Requires user confirmation before execution.</description></item>
-                    /// </list>
+                    /// <para>The execution policy.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>user_ack</para>
@@ -259,7 +254,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                     public string Decision { get; set; }
 
                     /// <summary>
-                    /// <para>The cloud service code.</para>
+                    /// <para>The code of the cloud service.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Cms</para>
@@ -271,6 +266,32 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 }
 
             }
+
+            /// <summary>
+            /// <para>The global auto-approval rules for tool calling.</para>
+            /// </summary>
+            [NameInMap("global")]
+            [Validation(Required=false)]
+            public UpdateDigitalEmployeeRequestToolPolicyGlobal Global { get; set; }
+            public class UpdateDigitalEmployeeRequestToolPolicyGlobal : TeaModel {
+                /// <summary>
+                /// <para>The array of auto-approval policies.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[{&quot;version&quot;:&quot;v1.0.0&quot;,&quot;fullCommand&quot;:&quot;starops tool list&quot;},{&quot;version&quot;:&quot;v1.0.0&quot;,&quot;commandPrefix&quot;:[&quot;starops sls&quot;]}]</para>
+                /// </summary>
+                [NameInMap("autoPassPolicy")]
+                [Validation(Required=false)]
+                public List<AutoPassPolicy> AutoPassPolicy { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The hook configuration.</para>
+            /// </summary>
+            [NameInMap("hooks")]
+            [Validation(Required=false)]
+            public List<Hook> Hooks { get; set; }
 
         }
 

@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "STAROps";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("starops", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);

@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public ConnectorAuthentication Authentication { get; set; }
 
         /// <summary>
-        /// <para>The list of capabilities granted to the Connector.</para>
+        /// <para>The list of capabilities granted to the connector.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("capabilityGrants")]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the Connector is enabled.</para>
+        /// <para>Specifies whether the connector is enabled.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("enabled")]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The execution policy of the Connector.</para>
+        /// <para>The execution policy of the connector.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("policy")]
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public long? Revision { get; set; }
 
         /// <summary>
-        /// <para>The runtime configuration of the Connector.</para>
+        /// <para>The runtime configuration of the connector.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("runtime")]
