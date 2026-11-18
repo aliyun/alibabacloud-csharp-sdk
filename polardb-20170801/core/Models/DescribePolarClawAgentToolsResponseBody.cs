@@ -100,14 +100,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <para>The group name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>文件操作</para>
+            /// <para>File operations</para>
             /// </summary>
             [NameInMap("Label")]
             [Validation(Required=false)]
             public string Label { get; set; }
 
             /// <summary>
-            /// <para>The source, which is core or a plugin ID.</para>
+            /// <para>The source: core or plug-in ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>core</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <para>The tool description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>读取指定文件内容</para>
+                /// <para>Read the content of the specified file</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <para>The tool name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>读取文件</para>
+                /// <para>Read file</para>
                 /// </summary>
                 [NameInMap("Label")]
                 [Validation(Required=false)]
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <para>The display name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>全部工具</para>
+            /// <para>All tools</para>
             /// </summary>
             [NameInMap("Label")]
             [Validation(Required=false)]

@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include plugin tools.</para>
+        /// <para>Specifies whether to include plug-in tools.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

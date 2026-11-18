@@ -32,10 +32,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBNodeIds { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to execute the parameter modification and restart immediately or at a scheduled time. Valid values:</para>
+        /// <para>Specifies whether to immediately execute or schedule the parameter modification and restart. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false: executes the task at a scheduled time. This is the default value.</description></item>
-        /// <item><description>true: executes the task immediately.</description></item>
+        /// <item><description>false: schedules the task. This is the default value.</description></item>
+        /// <item><description>true: immediately executes the task.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Parameters { get; set; }
 
         /// <summary>
-        /// <para>The latest time to start the scheduled task. Specify the time in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The latest time to start the scheduled task. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-04-28T14:30:00Z</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PlannedEndTime { get; set; }
 
         /// <summary>
-        /// <para>The earliest time to execute the scheduled kernel version upgrade task. Specify the time in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The earliest time to start the scheduled kernel version upgrade task within the specified time window. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-04-28T14:00:00Z</para>

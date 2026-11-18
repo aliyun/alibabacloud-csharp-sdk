@@ -12,12 +12,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The database type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Oracle</para>
-        /// </description></item>
-        /// <item><description><para>PostgreSQL</para>
-        /// </description></item>
-        /// <item><description><para>MySQL</para>
-        /// </description></item>
+        /// <item><description>Oracle</description></item>
+        /// <item><description>PostgreSQL</description></item>
+        /// <item><description>MySQL</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

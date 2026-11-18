@@ -33332,6 +33332,202 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the performance of an AgenticDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to PolarDB for MySQL.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAgenticDBPerformanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAgenticDBPerformanceResponse
+        /// </returns>
+        public DescribeAgenticDBPerformanceResponse DescribeAgenticDBPerformanceWithOptions(DescribeAgenticDBPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Aggregate))
+            {
+                query["Aggregate"] = request.Aggregate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchId))
+            {
+                query["BranchId"] = request.BranchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                query["Key"] = request.Key;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAgenticDBPerformance",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAgenticDBPerformanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the performance of an AgenticDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to PolarDB for MySQL.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAgenticDBPerformanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAgenticDBPerformanceResponse
+        /// </returns>
+        public async Task<DescribeAgenticDBPerformanceResponse> DescribeAgenticDBPerformanceWithOptionsAsync(DescribeAgenticDBPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Aggregate))
+            {
+                query["Aggregate"] = request.Aggregate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchId))
+            {
+                query["BranchId"] = request.BranchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                query["Key"] = request.Key;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAgenticDBPerformance",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAgenticDBPerformanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the performance of an AgenticDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to PolarDB for MySQL.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAgenticDBPerformanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAgenticDBPerformanceResponse
+        /// </returns>
+        public DescribeAgenticDBPerformanceResponse DescribeAgenticDBPerformance(DescribeAgenticDBPerformanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeAgenticDBPerformanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the performance of an AgenticDB instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to PolarDB for MySQL.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAgenticDBPerformanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAgenticDBPerformanceResponse
+        /// </returns>
+        public async Task<DescribeAgenticDBPerformanceResponse> DescribeAgenticDBPerformanceAsync(DescribeAgenticDBPerformanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeAgenticDBPerformanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the details of an AgenticDB project.</para>
         /// </summary>
         /// 
@@ -45020,7 +45216,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the supported character sets, collations, and other properties of a PolarDB database.</para>
+        /// <para>Queries the attributes supported by PolarDB databases, such as character sets and collations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45078,7 +45274,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the supported character sets, collations, and other properties of a PolarDB database.</para>
+        /// <para>Queries the attributes supported by PolarDB databases, such as character sets and collations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45136,7 +45332,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the supported character sets, collations, and other properties of a PolarDB database.</para>
+        /// <para>Queries the attributes supported by PolarDB databases, such as character sets and collations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45154,7 +45350,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the supported character sets, collations, and other properties of a PolarDB database.</para>
+        /// <para>Queries the attributes supported by PolarDB databases, such as character sets and collations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46376,7 +46572,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the parameters for specified nodes in a cluster.</para>
+        /// <para>Queries the parameters of a specified node in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46438,7 +46634,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the parameters for specified nodes in a cluster.</para>
+        /// <para>Queries the parameters of a specified node in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46500,7 +46696,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the parameters for specified nodes in a cluster.</para>
+        /// <para>Queries the parameters of a specified node in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46518,7 +46714,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the parameters for specified nodes in a cluster.</para>
+        /// <para>Queries the parameters of a specified node in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -68032,7 +68228,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a manual primary/secondary switchover for a PolarDB cluster. You can specify a read-only node as the new primary node.</para>
+        /// <para>Performs a manual primary/secondary switchover for a PolarDB cluster, allowing you to specify a read-only node as the new primary node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -68106,7 +68302,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a manual primary/secondary switchover for a PolarDB cluster. You can specify a read-only node as the new primary node.</para>
+        /// <para>Performs a manual primary/secondary switchover for a PolarDB cluster, allowing you to specify a read-only node as the new primary node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -68180,7 +68376,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a manual primary/secondary switchover for a PolarDB cluster. You can specify a read-only node as the new primary node.</para>
+        /// <para>Performs a manual primary/secondary switchover for a PolarDB cluster, allowing you to specify a read-only node as the new primary node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -68198,7 +68394,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a manual primary/secondary switchover for a PolarDB cluster. You can specify a read-only node as the new primary node.</para>
+        /// <para>Performs a manual primary/secondary switchover for a PolarDB cluster, allowing you to specify a read-only node as the new primary node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -68216,14 +68412,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a manual primary/secondary switchover for an edge cluster.</para>
+        /// <para>Performs a primary/secondary switchover.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Switches the primary node of an edge cloud cluster. This operation applies only to edge clusters deployed through MyBase or ENS infrastructure. You can call DescribeEdgeCloudRegion to query edge regions and call DescribeDBClustersZonal to obtain the edge cluster ID. For standard PolarDB clusters, use FailoverDBCluster.</para>
+        /// <para>Switches the primary node of an edge cloud cluster. This operation applies only to edge clusters deployed by using MyBase or ENS infrastructure. You can call DescribeEdgeCloudRegion to query edge regions and call DescribeDBClustersZonal to obtain the edge cluster ID. For standard PolarDB clusters, use FailoverDBCluster.</para>
         /// <h2>Before you begin</h2>
-        /// <para>Complete the prerequisites, specify that this API applies only to edge clusters deployed through MyBase or ENS, indicate the path to obtain edge clusters, and specify that FailoverDBCluster should be used for standard clusters.</para>
+        /// <para>Complete the prerequisites. Note that this API applies only to edge clusters deployed by using MyBase or ENS. Specify the method to obtain the edge cluster ID, and note that you must use FailoverDBCluster for standard clusters.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -68297,14 +68493,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a manual primary/secondary switchover for an edge cluster.</para>
+        /// <para>Performs a primary/secondary switchover.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Switches the primary node of an edge cloud cluster. This operation applies only to edge clusters deployed through MyBase or ENS infrastructure. You can call DescribeEdgeCloudRegion to query edge regions and call DescribeDBClustersZonal to obtain the edge cluster ID. For standard PolarDB clusters, use FailoverDBCluster.</para>
+        /// <para>Switches the primary node of an edge cloud cluster. This operation applies only to edge clusters deployed by using MyBase or ENS infrastructure. You can call DescribeEdgeCloudRegion to query edge regions and call DescribeDBClustersZonal to obtain the edge cluster ID. For standard PolarDB clusters, use FailoverDBCluster.</para>
         /// <h2>Before you begin</h2>
-        /// <para>Complete the prerequisites, specify that this API applies only to edge clusters deployed through MyBase or ENS, indicate the path to obtain edge clusters, and specify that FailoverDBCluster should be used for standard clusters.</para>
+        /// <para>Complete the prerequisites. Note that this API applies only to edge clusters deployed by using MyBase or ENS. Specify the method to obtain the edge cluster ID, and note that you must use FailoverDBCluster for standard clusters.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -68378,14 +68574,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a manual primary/secondary switchover for an edge cluster.</para>
+        /// <para>Performs a primary/secondary switchover.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Switches the primary node of an edge cloud cluster. This operation applies only to edge clusters deployed through MyBase or ENS infrastructure. You can call DescribeEdgeCloudRegion to query edge regions and call DescribeDBClustersZonal to obtain the edge cluster ID. For standard PolarDB clusters, use FailoverDBCluster.</para>
+        /// <para>Switches the primary node of an edge cloud cluster. This operation applies only to edge clusters deployed by using MyBase or ENS infrastructure. You can call DescribeEdgeCloudRegion to query edge regions and call DescribeDBClustersZonal to obtain the edge cluster ID. For standard PolarDB clusters, use FailoverDBCluster.</para>
         /// <h2>Before you begin</h2>
-        /// <para>Complete the prerequisites, specify that this API applies only to edge clusters deployed through MyBase or ENS, indicate the path to obtain edge clusters, and specify that FailoverDBCluster should be used for standard clusters.</para>
+        /// <para>Complete the prerequisites. Note that this API applies only to edge clusters deployed by using MyBase or ENS. Specify the method to obtain the edge cluster ID, and note that you must use FailoverDBCluster for standard clusters.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -68403,14 +68599,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a manual primary/secondary switchover for an edge cluster.</para>
+        /// <para>Performs a primary/secondary switchover.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Switches the primary node of an edge cloud cluster. This operation applies only to edge clusters deployed through MyBase or ENS infrastructure. You can call DescribeEdgeCloudRegion to query edge regions and call DescribeDBClustersZonal to obtain the edge cluster ID. For standard PolarDB clusters, use FailoverDBCluster.</para>
+        /// <para>Switches the primary node of an edge cloud cluster. This operation applies only to edge clusters deployed by using MyBase or ENS infrastructure. You can call DescribeEdgeCloudRegion to query edge regions and call DescribeDBClustersZonal to obtain the edge cluster ID. For standard PolarDB clusters, use FailoverDBCluster.</para>
         /// <h2>Before you begin</h2>
-        /// <para>Complete the prerequisites, specify that this API applies only to edge clusters deployed through MyBase or ENS, indicate the path to obtain edge clusters, and specify that FailoverDBCluster should be used for standard clusters.</para>
+        /// <para>Complete the prerequisites. Note that this API applies only to edge clusters deployed by using MyBase or ENS. Specify the method to obtain the edge cluster ID, and note that you must use FailoverDBCluster for standard clusters.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -82344,7 +82540,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the Snapshot Consistency Cluster (SCC) mode for a specified node in a PolarDB cluster.</para>
+        /// <para>Modifies the SCC settings of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -82410,7 +82606,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the Snapshot Consistency Cluster (SCC) mode for a specified node in a PolarDB cluster.</para>
+        /// <para>Modifies the SCC settings of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -82476,7 +82672,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the Snapshot Consistency Cluster (SCC) mode for a specified node in a PolarDB cluster.</para>
+        /// <para>Modifies the SCC settings of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -82494,7 +82690,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the Snapshot Consistency Cluster (SCC) mode for a specified node in a PolarDB cluster.</para>
+        /// <para>Modifies the SCC settings of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -94004,7 +94200,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Temporarily changes the specifications of a cluster.</para>
+        /// <para>Temporarily modifies the configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -94090,7 +94286,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Temporarily changes the specifications of a cluster.</para>
+        /// <para>Temporarily modifies the configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -94176,7 +94372,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Temporarily changes the specifications of a cluster.</para>
+        /// <para>Temporarily modifies the configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -94194,7 +94390,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Temporarily changes the specifications of a cluster.</para>
+        /// <para>Temporarily modifies the configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">

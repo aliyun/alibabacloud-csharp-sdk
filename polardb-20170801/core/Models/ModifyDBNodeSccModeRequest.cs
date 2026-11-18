@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The SCC mode to set for the node.</para>
+        /// <para>SCC</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
