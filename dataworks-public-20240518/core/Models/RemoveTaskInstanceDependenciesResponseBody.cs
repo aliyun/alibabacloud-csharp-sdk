@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class RemoveTaskInstanceDependenciesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</para>
+        /// <para>The ID of the request. You can use this ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22C97E95-F023-56B5-8852-B1A77A17XXXX</para>

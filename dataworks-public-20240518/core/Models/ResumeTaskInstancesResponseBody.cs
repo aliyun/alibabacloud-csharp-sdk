@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ResumeTaskInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22C97E95-F023-56B5-8852-B1A77A17****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The results of the batch operation. The results are returned as a map where the keys are task instance IDs and the values are the result details.</para>
+        /// <para>The results of the batch operation. The results are returned as a map where the keys are node instance IDs and the values are the result details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;10001&quot;: {&quot;Success&quot;: false, &quot;Message&quot;: &quot;The instance does not exist.&quot;}}</para>

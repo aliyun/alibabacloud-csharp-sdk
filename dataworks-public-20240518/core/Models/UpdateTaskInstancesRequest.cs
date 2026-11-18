@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateTaskInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The remarks.</para>
+        /// <para>The comment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is a comment</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The list of node instances.</para>
+        /// <para>The list of task instances.</para>
         /// </summary>
         [NameInMap("TaskInstances")]
         [Validation(Required=false)]
         public List<UpdateTaskInstancesRequestTaskInstances> TaskInstances { get; set; }
         public class UpdateTaskInstancesRequestTaskInstances : TeaModel {
             /// <summary>
-            /// <para>The information about the associated data source.</para>
+            /// <para>The associated data source information.</para>
             /// </summary>
             [NameInMap("DataSource")]
             [Validation(Required=false)]

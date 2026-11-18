@@ -1,3 +1,6 @@
+2026-11-18 Version: 7.2.1
+- Generated csharp 2024-05-18 for dataworks-public.
+
 2026-11-17 Version: 7.2.0
 - Support API AddKnowledgeBaseAdministrator.
 - Support API CreateKnowledgeBase.

@@ -60017,12 +60017,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes multiple upstream dependencies from a node instance in a single call.</para>
+        /// <para>Removes multiple upstream dependencies of a node instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a later edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -60080,12 +60080,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes multiple upstream dependencies from a node instance in a single call.</para>
+        /// <para>Removes multiple upstream dependencies of a node instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a later edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -60143,12 +60143,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes multiple upstream dependencies from a node instance in a single call.</para>
+        /// <para>Removes multiple upstream dependencies of a node instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a later edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -60166,12 +60166,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes multiple upstream dependencies from a node instance in a single call.</para>
+        /// <para>Removes multiple upstream dependencies of a node instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a later edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -61289,12 +61289,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes multiple paused task instances.</para>
+        /// <para>Resumes multiple paused node instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>DataWorks Basic Edition or later is required.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -61346,12 +61346,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes multiple paused task instances.</para>
+        /// <para>Resumes multiple paused node instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>DataWorks Basic Edition or later is required.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -61403,12 +61403,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes multiple paused task instances.</para>
+        /// <para>Resumes multiple paused node instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>DataWorks Basic Edition or later is required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -61426,12 +61426,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes multiple paused task instances.</para>
+        /// <para>Resumes multiple paused node instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>DataWorks Basic Edition or later is required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -76489,12 +76489,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the properties of multiple node instances, including the priority, scheduling resource group, and data source.</para>
+        /// <para>Updates the properties of multiple task instances in batches, including the priority, scheduling resource group, and data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or higher to use this feature.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -76546,12 +76546,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the properties of multiple node instances, including the priority, scheduling resource group, and data source.</para>
+        /// <para>Updates the properties of multiple task instances in batches, including the priority, scheduling resource group, and data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or higher to use this feature.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -76603,12 +76603,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the properties of multiple node instances, including the priority, scheduling resource group, and data source.</para>
+        /// <para>Updates the properties of multiple task instances in batches, including the priority, scheduling resource group, and data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or higher to use this feature.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -76626,12 +76626,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the properties of multiple node instances, including the priority, scheduling resource group, and data source.</para>
+        /// <para>Updates the properties of multiple task instances in batches, including the priority, scheduling resource group, and data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or higher to use this feature.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">

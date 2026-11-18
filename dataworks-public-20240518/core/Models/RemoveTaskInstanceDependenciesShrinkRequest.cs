@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The list of upstream node instance IDs.</para>
+        /// <para>The upstream node instance IDs.</para>
         /// </summary>
         [NameInMap("UpstreamTaskInstanceIds")]
         [Validation(Required=false)]

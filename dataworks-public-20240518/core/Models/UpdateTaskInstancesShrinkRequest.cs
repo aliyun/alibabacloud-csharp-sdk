@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateTaskInstancesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The remarks.</para>
+        /// <para>The comment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is a comment</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The list of node instances.</para>
+        /// <para>The list of task instances.</para>
         /// </summary>
         [NameInMap("TaskInstances")]
         [Validation(Required=false)]
