@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the agent is updated. A success response always returns <c>true</c>. An error response is returned upon failure.</para>
+        /// <para>Indicates whether the agent was successfully updated. A success response always returns <c>true</c>. An error response is returned upon failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The most recent update time. The value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The time of the most recent update. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1788332700000</para>

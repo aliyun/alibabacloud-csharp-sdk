@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         /// <para>The description of the agent.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Analyzes code changes and generates code review comments</para>
+        /// <para>Analyze code changes and generate code review comments</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         /// <para>The display name of the agent.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Code Review Agent</para>
+        /// <para>Code review agent</para>
         /// </summary>
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string SystemPrompt { get; set; }
 
         /// <summary>
-        /// <para>The list of MCP server and connector name references. The same array supports both types of entries. Specify only one type of reference for each entry. For MCP, omitting items indicates all public tools, and historically specified items retain their original values.</para>
+        /// <para>The list of references to MCP server and connector names. The same array supports both types of entries. Specify only one type of reference for each entry. For MCP, omitting items indicates all public tools, and historically specified items retain their original values.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;mcpServerName&quot;:&quot;code-repository-mcp&quot;},{&quot;connectorName&quot;:&quot;code-review-data&quot;}]</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public object Tools { get; set; }
 
         /// <summary>
-        /// <para>The visibility scope of the agent. Valid values: <c>user</c> and <c>tenant</c>. Default value: <c>user</c>.</para>
+        /// <para>The visibility scope of the agent. Valid values: user and tenant. Default value: user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user</para>

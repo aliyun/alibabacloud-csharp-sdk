@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
 {
     public class CreateAgentSessionRequest : TeaModel {
         /// <summary>
-        /// <para>The correlation identifier for this call. It is echoed in the response and does not provide idempotence guarantees.</para>
+        /// <para>The correlation identifier for this call. It is echoed in the response and does not provide idempotency guarantees.</para>
         /// 
         /// <b>Example:</b>
         /// <para>request-001</para>

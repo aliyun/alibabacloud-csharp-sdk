@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         /// <para>The JSON-RPC response object. The business result is located in Result.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;Jsonrpc&quot;:&quot;2.0&quot;,&quot;Id&quot;:&quot;request-001&quot;,&quot;Result&quot;:{&quot;MaxResults&quot;:20,&quot;NextToken&quot;:&quot;next-token-example&quot;,&quot;SessionList&quot;:[{&quot;sessionId&quot;:&quot;0123456789abcdef0123456789abcdef&quot;,&quot;title&quot;:&quot;代码评审&quot;,&quot;agentName&quot;:&quot;review-agent-demo&quot;,&quot;createdAt&quot;:1793232000000,&quot;updatedAt&quot;:1793232060000}]}}</para>
+        /// <para>{&quot;Jsonrpc&quot;:&quot;2.0&quot;,&quot;Id&quot;:&quot;request-001&quot;,&quot;Result&quot;:{&quot;MaxResults&quot;:20,&quot;NextToken&quot;:&quot;next-token-example&quot;,&quot;SessionList&quot;:[{&quot;sessionId&quot;:&quot;0123456789abcdef0123456789abcdef&quot;,&quot;title&quot;:&quot;Code review&quot;,&quot;agentName&quot;:&quot;review-agent-demo&quot;,&quot;createdAt&quot;:1793232000000,&quot;updatedAt&quot;:1793232060000}]}}</para>
         /// </summary>
         [NameInMap("JsonRpcResponse")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The fixed value <c>2.0</c>.</para>
+            /// <para>The fixed value 2.0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.0</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
                 public int? MaxResults { get; set; }
 
                 /// <summary>
-                /// <para>The credential to continue querying the next page. Pass it as is to Params.NextToken. Pagination ends when the token is not returned or is empty.</para>
+                /// <para>The credential for querying the next page. Pass this value as is to Params.NextToken. Pagination ends when this value is not returned or is empty.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>next-token-example</para>

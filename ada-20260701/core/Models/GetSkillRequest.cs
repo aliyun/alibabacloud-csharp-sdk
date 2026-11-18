@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string Network { get; set; }
 
         /// <summary>
-        /// <para>Specifies the published history version number to query. If omitted, the current main record of the skill is returned.</para>
+        /// <para>Specifies the published historical version number to query. If omitted, the current primary record of the skill is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

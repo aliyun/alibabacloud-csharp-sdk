@@ -21,18 +21,18 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The metadata of the skill, in JSON object format. You must and can only provide one content source. For specific fields, refer to the supplementary description of request parameters.</para>
+        /// <para>The metadata of the skill, in JSON object format. One and only one content source must be provided. For specific fields, refer to the supplementary description of request parameters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;skillMd&quot;:&quot;# Code Review\nChecks code quality, security risks, and coding standards.&quot;}</para>
+        /// <para>{&quot;skillMd&quot;:&quot;# Code Review\nCheck code quality, security risks, and coding standards.&quot;}</para>
         /// </summary>
         [NameInMap("Metadata")]
         [Validation(Required=false)]
         public object Metadata { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the skill. Only English letters, digits, underscores, and hyphens are supported. The length cannot exceed 64 characters.</para>
+        /// <para>The unique identifier of the skill. Only letters, digits, underscores, and hyphens are supported. The length cannot exceed 64 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The visibility of the skill. Valid values: user and tenant. Default value: user.</para>
+        /// <para>The visibility of the skill. Valid values: <c>user</c> and <c>tenant</c>. Default value: <c>user</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user</para>

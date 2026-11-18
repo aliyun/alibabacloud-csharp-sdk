@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
 {
     public class ListModelsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of results used for the current pagination. If pagination is not used, this value is the total number of results. This value is not the actual number of entries returned on the current page.</para>
+        /// <para>The maximum number of results used for this pagination. If not paginated, it is the total number of results. It is not the actual number of entries returned on this page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         /// <para>The array of model structures. For nested fields, refer to the supplementary description of response parameters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;Id&quot;:&quot;text-model-example&quot;,&quot;Object&quot;:&quot;model&quot;,&quot;Created&quot;:1793491200,&quot;OwnedBy&quot;:&quot;provider-example&quot;,&quot;DisplayName&quot;:&quot;示例文本模型&quot;,&quot;Capabilities&quot;:{&quot;InputModalities&quot;:[&quot;text&quot;]},&quot;CreditsCoefficient&quot;:&quot;2.5&quot;,&quot;ThinkingLevels&quot;:[&quot;off&quot;,&quot;low&quot;,&quot;medium&quot;,&quot;high&quot;],&quot;ThinkingLevel&quot;:&quot;off&quot;}]</para>
+        /// <para>[{&quot;Id&quot;:&quot;text-model-example&quot;,&quot;Object&quot;:&quot;model&quot;,&quot;Created&quot;:1793491200,&quot;OwnedBy&quot;:&quot;provider-example&quot;,&quot;DisplayName&quot;:&quot;Sample text model&quot;,&quot;Capabilities&quot;:{&quot;InputModalities&quot;:[&quot;text&quot;]},&quot;CreditsCoefficient&quot;:&quot;2.5&quot;,&quot;ThinkingLevels&quot;:[&quot;off&quot;,&quot;low&quot;,&quot;medium&quot;,&quot;high&quot;],&quot;ThinkingLevel&quot;:&quot;off&quot;}]</para>
         /// </summary>
         [NameInMap("Models")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The deprecated compatibility field. This field is not returned. Do not rely on this field for integration.</para>
+            /// <para><b>[Deprecated]</b> The legacy compatibility field. It is no longer returned. Do not use it as a dependency for integration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32768</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
             public long? ContextWindow { get; set; }
 
             /// <summary>
-            /// <para>The time when the model was created. The value is a UNIX timestamp in seconds.</para>
+            /// <para>The time when the model was created. It is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1793491200</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
             public long? Created { get; set; }
 
             /// <summary>
-            /// <para>The credits coefficient of the model. The value is returned as a decimal string. This parameter is not returned if it is not configured.</para>
+            /// <para>The credit coefficient of the model, returned as a decimal string. Not returned if not configured.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.5</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
             public string CreditsCoefficient { get; set; }
 
             /// <summary>
-            /// <para>The display name of the model. Do not pass this value as the model identifier.</para>
+            /// <para>The display name of the model. Do not pass it as the model identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Sample text model</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The deprecated compatibility field. This field is not returned. Do not rely on this field for integration.</para>
+            /// <para><b>[Deprecated]</b> The legacy compatibility field. It is no longer returned. Do not use it as a dependency for integration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>131072</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
             public long? MaxContextWindow { get; set; }
 
             /// <summary>
-            /// <para>The object type. The value is fixed to model.</para>
+            /// <para>The object type. Fixed to model.</para>
             /// 
             /// <b>Example:</b>
             /// <para>model</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The deprecated compatibility field. This field is not returned. Use ThinkingLevels instead.</para>
+            /// <para><b>[Deprecated]</b> The legacy compatibility field. It is no longer returned. Use ThinkingLevels instead.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
             public int? SupportsThinking { get; set; }
 
             /// <summary>
-            /// <para>The default thinking level in the model catalog. This value does not represent the current value of the session. Query the current value by using GetAgentSessionModel.</para>
+            /// <para>The default thinking level in the model catalog. It does not represent the current value of the session. Query the current value by using GetAgentSessionModel.</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
             public string ThinkingLevel { get; set; }
 
             /// <summary>
-            /// <para>The thinking levels supported by the model. An empty array does not indicate that all levels are supported. The target session still requires validation.</para>
+            /// <para>The thinking levels supported by the model. An empty array does not mean all levels are supported. The target session still needs to be verified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;off&quot;,&quot;low&quot;,&quot;medium&quot;,&quot;high&quot;]</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The deprecated compatibility field. This field is not returned. Use ThinkingLevel instead.</para>
+            /// <para><b>[Deprecated]</b> The legacy compatibility field. It is no longer returned. Use ThinkingLevel instead.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         }
 
         /// <summary>
-        /// <para>The token for the next page. An empty value indicates that no more pages exist.</para>
+        /// <para>The token for the next page. An empty value indicates that there is no next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>next-token-example</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. You can use the ID to troubleshoot issues.</para>
+        /// <para>The ID of the request. It is used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0A1B2C3D-4E5F-6789-ABCD-EF0123456789</para>

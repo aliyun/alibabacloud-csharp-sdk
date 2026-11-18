@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The JSON-RPC protocol version. Set the value to <c>2.0</c>.</para>
+        /// <para>The JSON-RPC protocol version. Set this parameter to <c>2.0</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2.0</para>

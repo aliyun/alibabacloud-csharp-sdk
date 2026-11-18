@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
 {
     public class CancelAgentSessionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response object. The business result is located in result.</para>
+        /// <para>The response object. The business result is located in <c>result</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;request-001&quot;,&quot;result&quot;:{&quot;sessionId&quot;:&quot;0123456789abcdef0123456789abcdef&quot;,&quot;removed&quot;:true}}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is successful. Determine the final execution state based on the description of this API operation.</para>
+        /// <para>Indicates whether the operation is successful. Determine the desired state of the execution based on the description of this operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

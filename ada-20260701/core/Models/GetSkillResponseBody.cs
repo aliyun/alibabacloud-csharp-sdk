@@ -40,17 +40,17 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public long? CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The description in the current main record of the skill.</para>
+        /// <para>The description in the current primary record of the skill.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>A skill for code review and risk alerting</para>
+        /// <para>A skill for performing code review and risk alerts</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The download URL of the bundle. This field is returned when the network is specified, an accessible artifact exists, and the pre-signing is successful.</para>
+        /// <para>The download URL of the bundle. This field is returned when the network is specified, an accessible artifact exists, and presigning is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/artifacts/code-review-v2.zip?signature=example">https://example.com/artifacts/code-review-v2.zip?signature=example</a></para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string SkillId { get; set; }
 
         /// <summary>
-        /// <para>The current status of the skill. Common values include DRAFT and PUBLISHED.</para>
+        /// <para>The current status of the skill. Common values are DRAFT and PUBLISHED.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PUBLISHED</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public long? UpdatedAt { get; set; }
 
         /// <summary>
-        /// <para>The visibility of the current skill. Common values include user and tenant.</para>
+        /// <para>The visibility of the current skill. Common values are user and tenant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user</para>

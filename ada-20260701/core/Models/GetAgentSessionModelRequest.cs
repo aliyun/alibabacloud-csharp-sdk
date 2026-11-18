@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
 {
     public class GetAgentSessionModelRequest : TeaModel {
         /// <summary>
-        /// <para>The client request identifier, which is echoed in the response. It is used to correlate this call and does not have idempotent semantics.</para>
+        /// <para>The client request identifier, which is echoed in the response. It is used to associate this call and does not have idempotent semantics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>request-001</para>

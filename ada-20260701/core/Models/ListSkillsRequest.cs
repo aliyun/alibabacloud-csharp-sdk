@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
 {
     public class ListSkillsRequest : TeaModel {
         /// <summary>
-        /// <para>Filters the skills by creator ID.</para>
+        /// <para>Filters skills by the creator ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example-user</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string CreatorId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for cursor-based pagination. Valid values: 1 to 100. Default value: 20. If you explicitly specify this parameter, cursor-based pagination takes precedence.</para>
+        /// <para>The number of entries per page for cursor-based pagination. Valid values: 1 to 100. Default value: <c>20</c>. If this parameter is explicitly specified, cursor-based pagination takes precedence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The next token returned by the server. Do not pass this parameter for the first query. For subsequent queries, use the value from the previous response.</para>
+        /// <para>The next token returned by the server. Do not specify this parameter for the first query. For subsequent queries, use the value from the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJzIjoiZDc3ZGRhYmE3MDMwYWM1NCIsInAiOjJ9.vkKVySx9G26993sTNLZqwGSmgciRsrRm2SgsjOMJoCQ</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The compatible page number parameter for page number-based pagination. Pages start from 1. Default value: 1.</para>
+        /// <para>The compatible page number parameter for page number-based pagination. Pages start from 1. Default value: <c>1</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The compatible number of entries per page for page number-based pagination. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The compatible number of entries per page for page number-based pagination. Valid values: 1 to 100. Default value: <c>20</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

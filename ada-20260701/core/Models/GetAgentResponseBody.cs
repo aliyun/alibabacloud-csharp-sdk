@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public long? AgentVersion { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the current identity can delete the agent.</para>
+        /// <para>Specifies whether the current identity can delete the agent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public bool? CanDelete { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the current identity can modify the agent.</para>
+        /// <para>Specifies whether the current identity can modify the agent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -60,10 +60,10 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public long? CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The agent description. This field may not be returned if it is not configured.</para>
+        /// <para>The description of the agent. This field may not be returned if it is not configured.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Analyze code changes and generate code review comments</para>
+        /// <para>Analyzes code changes and generates CR review comments</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -73,14 +73,14 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         /// <para>The display name of the agent. This field may not be returned if it is not configured.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Code review agent</para>
+        /// <para>CR code review agent</para>
         /// </summary>
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The knowledge base reference list. The list contains at most one element.</para>
+        /// <para>The list of knowledge base references. The list contains at most one element.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;name&quot;:&quot;code-review-guidelines&quot;}]</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public object KnowledgeBases { get; set; }
 
         /// <summary>
-        /// <para>The display metadata of the agent. For specific fields, refer to the supplementary description of response parameters.</para>
+        /// <para>The display metadata of the agent. For specific fields, see the supplementary description of response parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;iconUrl&quot;:&quot;<a href="https://example.com/icons/code-review-agent.png%22%7D">https://example.com/icons/code-review-agent.png&quot;}</a></para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public object Metadata { get; set; }
 
         /// <summary>
-        /// <para>The saved model configuration. This information is returned only for official agents. Object arrays are supported, and historical single objects and strings are compatible. An empty array is returned as [ \]. Object arrays retain the original order, duplicate names, and object fields.</para>
+        /// <para>The saved model configuration. This information is returned only for official agents. Object arrays are supported, and historical single objects and strings are compatible. An empty array returns [ \]. Object arrays retain the original order, duplicate names, and object fields.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;name&quot;:&quot;base&quot;,&quot;default&quot;:true},{&quot;name&quot;:&quot;base&quot;},{&quot;name&quot;:&quot;base&quot;,&quot;settings&quot;:{&quot;thinking&quot;:false,&quot;topK&quot;:5}}]</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public object Model { get; set; }
 
         /// <summary>
-        /// <para>The agent name.</para>
+        /// <para>The name of the agent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>code-review-agent</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the agent is an official agent provided by the platform.</para>
+        /// <para>Specifies whether the agent is an official agent provided by the platform.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The skill reference list. For specific fields, refer to the supplementary description of response parameters.</para>
+        /// <para>The list of skill references. For specific fields, see the supplementary description of response parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;name&quot;:&quot;code-review&quot;}]</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public object Skills { get; set; }
 
         /// <summary>
-        /// <para>The agent status. The default status of a newly created agent is <c>draft</c>.</para>
+        /// <para>The status of the agent. The default status of a newly created agent is <c>draft</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>draft</para>
@@ -163,14 +163,14 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         /// <para>The system prompt. This field may not be returned if it is not configured.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Check the correctness, security, and maintainability of code changes in the code review, and provide review comments based on severity</para>
+        /// <para>Please check the correctness, security, and maintainability of the code changes in the CR, and provide review comments based on severity</para>
         /// </summary>
         [NameInMap("SystemPrompt")]
         [Validation(Required=false)]
         public string SystemPrompt { get; set; }
 
         /// <summary>
-        /// <para>The reference list of MCP server and connector names. For element fields, refer to the following sections.</para>
+        /// <para>The list of MCP server and connector name references. For element fields, see the following sections.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;mcpServerName&quot;:&quot;code-repository-mcp&quot;},{&quot;connectorName&quot;:&quot;code-review-data&quot;}]</para>

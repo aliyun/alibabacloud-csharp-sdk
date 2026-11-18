@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string SkillId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is successful. Returns <c>true</c> if the skill update and optional package replacement have been fully submitted and confirmed by read-back.</para>
+        /// <para>Indicates whether the operation is successful. A value of <c>true</c> is returned when the skill update and optional bundle replacement are fully submitted and confirmed by read-back.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

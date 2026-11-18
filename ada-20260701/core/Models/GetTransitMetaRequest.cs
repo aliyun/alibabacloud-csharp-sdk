@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
 {
     public class GetTransitMetaRequest : TeaModel {
         /// <summary>
-        /// <para>The validity period of the temporary download URL generated for the current request, in milliseconds. The value must be an integer greater than or equal to 1000 and is rounded down to the nearest whole second. If ExpireMs is omitted, the default validity period is 900000 milliseconds (15 minutes). A download URL is generated only when Network is specified.</para>
+        /// <para>The validity period of the temporary download URL generated for the current request, in milliseconds. The value must be an integer no less than 1000 and is rounded down to the nearest second. If ExpireMs is omitted, the default validity period is 900000 milliseconds, which indicates 15 minutes. A download URL is generated only when Network is specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>900000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public long? ExpireMs { get; set; }
 
         /// <summary>
-        /// <para>The opaque object path returned by CreateTransitUploadPolicy. Specify at least one of this parameter and TransitId.</para>
+        /// <para>The opaque object path returned by CreateTransitUploadPolicy. Specify at least one of FilePath and TransitId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>skill-bundle/tenant-demo/user-demo/20260904120000_code-review.zip</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string Network { get; set; }
 
         /// <summary>
-        /// <para>The transit ID. Specify at least one of this parameter and FilePath. If both are provided, this parameter takes precedence.</para>
+        /// <para>The transit ID. Specify at least one of TransitId and FilePath. If both are provided, TransitId takes precedence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>transit_0123456789abcdef0123456789abcdef</para>

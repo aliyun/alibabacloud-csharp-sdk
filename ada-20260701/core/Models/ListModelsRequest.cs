@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Set this parameter to <c>text</c> for text sessions. If you omit this parameter, all visible models are queried.</para>
+        /// <para>Set to <c>text</c> for text sessions. If omitted, all visible models are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>text</para>

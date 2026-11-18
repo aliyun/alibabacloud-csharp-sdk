@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
 {
     public class SetAgentSessionModelResponseBody : TeaModel {
         /// <summary>
-        /// <para>The defined JSON-RPC response structure. For core nested fields, see the supplementary description.</para>
+        /// <para>The defined JSON-RPC response structure. For more information about the core nested fields, see the supplementary description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;request-001&quot;,&quot;result&quot;:{&quot;modelId&quot;:&quot;text-model-example&quot;,&quot;thinkingLevel&quot;:&quot;off&quot;,&quot;thinkingLevels&quot;:[&quot;off&quot;,&quot;low&quot;,&quot;medium&quot;,&quot;high&quot;]}}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the setting is successful. The value is <c>true</c> if the setting is successful. Read the actual model and thinking level from the business result.</para>
+        /// <para>Indicates whether the setting is successful. The value is true if the setting is successful. Read the actual model and thinking level from the business result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is successful. Returns <c>true</c> if the skill is logically deleted and optional artifacts are logically archived.</para>
+        /// <para>Indicates whether the operation is successful. Returns <c>true</c> when the logical deletion of the skill and the optional logical archiving of artifacts are complete.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

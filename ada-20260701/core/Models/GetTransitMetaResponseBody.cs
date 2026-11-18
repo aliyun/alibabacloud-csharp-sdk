@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
 {
     public class GetTransitMetaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The temporary download URL. If Network is not specified, null is returned. The URL may be unavailable if the file is not yet available. Do not write this URL to logs, store it for a long time, or forward it to irrelevant users.</para>
+        /// <para>The temporary download URL. If Network is not specified, null is returned. If the file is not yet available, the URL may be unavailable. Do not write this URL to logs, store it for a long time, or forward it to unrelated users.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://download.example.invalid/code-review.zip?signature=">https://download.example.invalid/code-review.zip?signature=</a><REDACTED></para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string DownloadUrl { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the transit record. The value is a UTC UNIX timestamp in milliseconds, which is the number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970. You can directly compare this value with the current UNIX timestamp in milliseconds without adding or subtracting 8 hours. Do not continue to use the record after this time.</para>
+        /// <para>The expiration time of the transit record. The value is a UTC UNIX timestamp in milliseconds, which indicates the number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970. You can directly compare it with the current UNIX timestamp in milliseconds without adding or subtracting 8 hours. Do not continue to use the record after this time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1787734800000</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The file size, in bytes. If no available file is detected, null may be returned.</para>
+        /// <para>The file size in bytes. If no available file is detected, null may be returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4096</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public long? Size { get; set; }
 
         /// <summary>
-        /// <para>The status of the transit file. A value of PENDING indicates that the file is not yet available, and the caller can query again later. A value of SUCCESS indicates that the file is available.</para>
+        /// <para>The status of the transit file. A value of PENDING indicates that the file is not yet available and the caller can query again later. A value of SUCCESS indicates that the file is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>

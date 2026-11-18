@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
 {
     public class LoadAgentSessionRequest : TeaModel {
         /// <summary>
-        /// <para>The client call identifier. It is used to associate the current response and does not provide idempotence guarantees.</para>
+        /// <para>The client call identifier used to associate the current response. It does not provide idempotency guarantees.</para>
         /// 
         /// <b>Example:</b>
         /// <para>request-001</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string Jsonrpc { get; set; }
 
         /// <summary>
-        /// <para>The business parameter structure. For core nested fields, refer to the supplementary description.</para>
+        /// <para>The business parameter structure. For core nested fields, see the supplementary description.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

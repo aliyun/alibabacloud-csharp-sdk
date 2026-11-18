@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public object Error { get; set; }
 
         /// <summary>
-        /// <para>The <c>Id</c> field in the frame. It is used to associate the request. Notification frames may not contain this field.</para>
+        /// <para>The <c>Id</c> field in the frame, used to associate the request. Notification frames may not contain this field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>request-001</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string Jsonrpc { get; set; }
 
         /// <summary>
-        /// <para>The <c>Method</c> field in the frame. It is used to distinguish notification categories.</para>
+        /// <para>The <c>Method</c> field in the frame, used to distinguish notification categories.</para>
         /// 
         /// <b>Example:</b>
         /// <para>session/update</para>

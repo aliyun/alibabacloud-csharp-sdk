@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the agent was created. A success response always returns <c>true</c>. An error response is returned upon failure.</para>
+        /// <para>Indicates whether the agent was created successfully. A success response always returns true. An error response is returned upon failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

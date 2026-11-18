@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string RequiredRuntime { get; set; }
 
         /// <summary>
-        /// <para>The query scope. Valid values: <c>SYSTEM</c> and <c>CUSTOM</c>.</para>
+        /// <para>The query scope. Valid values: SYSTEM and CUSTOM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CUSTOM</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>Filters agents by visibility scope. Valid values: <c>user</c> and <c>tenant</c>.</para>
+        /// <para>Filters agents by visibility scope. Valid values: user and tenant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user</para>

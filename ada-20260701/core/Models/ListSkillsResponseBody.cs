@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
 {
     public class ListSkillsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page for the current cursor-based pagination.</para>
+        /// <para>The current number of entries per page for cursor-based pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The next token. An empty string is returned if no next page exists.</para>
+        /// <para>The next token. An empty string is returned if there are no more pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for the current compatible pagination.</para>
+        /// <para>The current compatible number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -60,10 +60,10 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of skill summaries. The structure of list items is not fixed in the current public contract. For common fields, see the supplementary description of response parameters.</para>
+        /// <para>The list of skill summaries. The structure of list items is not fixed in the current public contract. For common fields, refer to the supplementary description of response parameters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;skillId&quot;:&quot;skill_example123&quot;,&quot;name&quot;:&quot;code-review&quot;,&quot;official&quot;:false,&quot;description&quot;:&quot;A skill for performing code reviews&quot;,&quot;iconUrl&quot;:&quot;<a href="https://example.com/icons/code-review.png%22,%22visibility%22:%22user%22,%22status%22:%22PUBLISHED%22,%22publishedVersion%22:2,%22creatorId%22:%22example-user%22,%22createdAt%22:1760000000000,%22canModify%22:true,%22canDelete%22:true%7D%5D">https://example.com/icons/code-review.png&quot;,&quot;visibility&quot;:&quot;user&quot;,&quot;status&quot;:&quot;PUBLISHED&quot;,&quot;publishedVersion&quot;:2,&quot;creatorId&quot;:&quot;example-user&quot;,&quot;createdAt&quot;:1760000000000,&quot;canModify&quot;:true,&quot;canDelete&quot;:true}]</a></para>
+        /// <para>[{&quot;skillId&quot;:&quot;skill_example123&quot;,&quot;name&quot;:&quot;code-review&quot;,&quot;official&quot;:false,&quot;description&quot;:&quot;Skill for code review&quot;,&quot;iconUrl&quot;:&quot;<a href="https://example.com/icons/code-review.png%22,%22visibility%22:%22user%22,%22status%22:%22PUBLISHED%22,%22publishedVersion%22:2,%22creatorId%22:%22example-user%22,%22createdAt%22:1760000000000,%22canModify%22:true,%22canDelete%22:true%7D%5D">https://example.com/icons/code-review.png&quot;,&quot;visibility&quot;:&quot;user&quot;,&quot;status&quot;:&quot;PUBLISHED&quot;,&quot;publishedVersion&quot;:2,&quot;creatorId&quot;:&quot;example-user&quot;,&quot;createdAt&quot;:1760000000000,&quot;canModify&quot;:true,&quot;canDelete&quot;:true}]</a></para>
         /// </summary>
         [NameInMap("Skills")]
         [Validation(Required=false)]

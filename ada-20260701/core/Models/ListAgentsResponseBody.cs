@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
 {
     public class ListAgentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of agent summaries. For the fields of each element, see the supplementary description of response parameters.</para>
+        /// <para>The list of agent summaries. For field details of each element, see the supplementary description of response parameters.</para>
         /// </summary>
         [NameInMap("Agents")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The next token. An empty string is returned if no next page exists.</para>
+        /// <para>The next token. An empty string is returned if there are no more pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJwYWdlIjoyfQ.example</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID, used for Tracing Analysis and troubleshooting.</para>
+        /// <para>The request ID, which is used for Tracing Analysis and troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0A1B2C3D-4E5F-6789-ABCD-EF0123456789</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of agents that meet the filter conditions.</para>
+        /// <para>The total number of agents that match the filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

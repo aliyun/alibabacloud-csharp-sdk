@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string SkillId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is successful. A value of true is returned when the skill and its body or bundle are fully created and readable. Business failures are indicated by error responses.</para>
+        /// <para>Indicates whether the operation is successful. true is returned when the skill and its body or bundle are fully created and readable. Business failures are returned in error responses.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

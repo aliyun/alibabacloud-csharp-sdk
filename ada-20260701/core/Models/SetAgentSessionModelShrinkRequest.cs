@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The JSON-RPC version. Set this parameter to <c>2.0</c>.</para>
+        /// <para>The JSON-RPC version. Set this parameter to 2.0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2.0</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string Jsonrpc { get; set; }
 
         /// <summary>
-        /// <para>The defined business parameter structure. For core nested fields, see the supplementary description.</para>
+        /// <para>The defined business parameter structure. For more information about the core nested fields, see the supplementary description.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

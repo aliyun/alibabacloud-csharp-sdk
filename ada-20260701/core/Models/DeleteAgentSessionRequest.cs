@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
 {
     public class DeleteAgentSessionRequest : TeaModel {
         /// <summary>
-        /// <para>The correlation identifier for this call, which is echoed in the response. It does not provide idempotency guarantees.</para>
+        /// <para>The correlation identifier for this call, which is echoed in the response. This parameter does not provide idempotence guarantees.</para>
         /// 
         /// <b>Example:</b>
         /// <para>request-001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The JSON-RPC protocol version. Set the value to <c>2.0</c>.</para>
+        /// <para>The JSON-RPC protocol version. Set this parameter to <c>2.0</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2.0</para>

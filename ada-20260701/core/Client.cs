@@ -42,13 +42,12 @@ namespace AlibabaCloud.SDK.Ada20260701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops the execution of a session or cancels a specified turn.</para>
+        /// <para>Stops a session execution or cancels a specified turn.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If Params._meta.promptId is provided, only that turn is canceled. If omitted, the current execution of the session is canceled. To avoid affecting other turns, use the actual promptId obtained from the response stream instead of the request Id.
-        /// A cancellation receipt does not mean the turn has ended, nor does it revoke external operations that have already occurred. After calling this operation, continue reading the original response stream or resume reading through LoadAgentSession to confirm the desired state of the target turn. Disconnecting the stream connection cannot replace a cancellation request.</para>
+        /// <para>If <c>Params._meta.promptId</c> is provided, only that turn is canceled. If omitted, the current execution of the session is canceled. To avoid affecting other turns, use the actual <c>promptId</c> obtained from the response stream instead of the request <c>Id</c>. A cancellation receipt does not mean the turn has ended, nor does it revoke external operations that have already occurred. After calling this operation, continue reading the original response stream or resume reading through <c>LoadAgentSession</c> to confirm the desired state of the target turn. Disconnecting the stream connection cannot replace a cancellation request.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -104,13 +103,12 @@ namespace AlibabaCloud.SDK.Ada20260701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops the execution of a session or cancels a specified turn.</para>
+        /// <para>Stops a session execution or cancels a specified turn.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If Params._meta.promptId is provided, only that turn is canceled. If omitted, the current execution of the session is canceled. To avoid affecting other turns, use the actual promptId obtained from the response stream instead of the request Id.
-        /// A cancellation receipt does not mean the turn has ended, nor does it revoke external operations that have already occurred. After calling this operation, continue reading the original response stream or resume reading through LoadAgentSession to confirm the desired state of the target turn. Disconnecting the stream connection cannot replace a cancellation request.</para>
+        /// <para>If <c>Params._meta.promptId</c> is provided, only that turn is canceled. If omitted, the current execution of the session is canceled. To avoid affecting other turns, use the actual <c>promptId</c> obtained from the response stream instead of the request <c>Id</c>. A cancellation receipt does not mean the turn has ended, nor does it revoke external operations that have already occurred. After calling this operation, continue reading the original response stream or resume reading through <c>LoadAgentSession</c> to confirm the desired state of the target turn. Disconnecting the stream connection cannot replace a cancellation request.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -166,13 +164,12 @@ namespace AlibabaCloud.SDK.Ada20260701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops the execution of a session or cancels a specified turn.</para>
+        /// <para>Stops a session execution or cancels a specified turn.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If Params._meta.promptId is provided, only that turn is canceled. If omitted, the current execution of the session is canceled. To avoid affecting other turns, use the actual promptId obtained from the response stream instead of the request Id.
-        /// A cancellation receipt does not mean the turn has ended, nor does it revoke external operations that have already occurred. After calling this operation, continue reading the original response stream or resume reading through LoadAgentSession to confirm the desired state of the target turn. Disconnecting the stream connection cannot replace a cancellation request.</para>
+        /// <para>If <c>Params._meta.promptId</c> is provided, only that turn is canceled. If omitted, the current execution of the session is canceled. To avoid affecting other turns, use the actual <c>promptId</c> obtained from the response stream instead of the request <c>Id</c>. A cancellation receipt does not mean the turn has ended, nor does it revoke external operations that have already occurred. After calling this operation, continue reading the original response stream or resume reading through <c>LoadAgentSession</c> to confirm the desired state of the target turn. Disconnecting the stream connection cannot replace a cancellation request.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -190,13 +187,12 @@ namespace AlibabaCloud.SDK.Ada20260701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops the execution of a session or cancels a specified turn.</para>
+        /// <para>Stops a session execution or cancels a specified turn.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If Params._meta.promptId is provided, only that turn is canceled. If omitted, the current execution of the session is canceled. To avoid affecting other turns, use the actual promptId obtained from the response stream instead of the request Id.
-        /// A cancellation receipt does not mean the turn has ended, nor does it revoke external operations that have already occurred. After calling this operation, continue reading the original response stream or resume reading through LoadAgentSession to confirm the desired state of the target turn. Disconnecting the stream connection cannot replace a cancellation request.</para>
+        /// <para>If <c>Params._meta.promptId</c> is provided, only that turn is canceled. If omitted, the current execution of the session is canceled. To avoid affecting other turns, use the actual <c>promptId</c> obtained from the response stream instead of the request <c>Id</c>. A cancellation receipt does not mean the turn has ended, nor does it revoke external operations that have already occurred. After calling this operation, continue reading the original response stream or resume reading through <c>LoadAgentSession</c> to confirm the desired state of the target turn. Disconnecting the stream connection cannot replace a cancellation request.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -220,7 +216,7 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><c>Name</c> is the unique identifier of the agent within the current tenant. It can contain only letters, digits, underscores (_), and hyphens (-), and must be 1 to 128 characters in length. It cannot be modified after creation.</description></item>
+        /// <item><description>Name is the unique identifier of the agent within the current tenant. It can contain only letters, digits, underscores, and hyphens, and must be 1 to 128 characters in length. It cannot be modified after creation.</description></item>
         /// <item><description>Each agent can be bound to only one knowledge base.</description></item>
         /// </list>
         /// </description>
@@ -298,7 +294,7 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><c>Name</c> is the unique identifier of the agent within the current tenant. It can contain only letters, digits, underscores (_), and hyphens (-), and must be 1 to 128 characters in length. It cannot be modified after creation.</description></item>
+        /// <item><description>Name is the unique identifier of the agent within the current tenant. It can contain only letters, digits, underscores, and hyphens, and must be 1 to 128 characters in length. It cannot be modified after creation.</description></item>
         /// <item><description>Each agent can be bound to only one knowledge base.</description></item>
         /// </list>
         /// </description>
@@ -376,7 +372,7 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><c>Name</c> is the unique identifier of the agent within the current tenant. It can contain only letters, digits, underscores (_), and hyphens (-), and must be 1 to 128 characters in length. It cannot be modified after creation.</description></item>
+        /// <item><description>Name is the unique identifier of the agent within the current tenant. It can contain only letters, digits, underscores, and hyphens, and must be 1 to 128 characters in length. It cannot be modified after creation.</description></item>
         /// <item><description>Each agent can be bound to only one knowledge base.</description></item>
         /// </list>
         /// </description>
@@ -402,7 +398,7 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><c>Name</c> is the unique identifier of the agent within the current tenant. It can contain only letters, digits, underscores (_), and hyphens (-), and must be 1 to 128 characters in length. It cannot be modified after creation.</description></item>
+        /// <item><description>Name is the unique identifier of the agent within the current tenant. It can contain only letters, digits, underscores, and hyphens, and must be 1 to 128 characters in length. It cannot be modified after creation.</description></item>
         /// <item><description>Each agent can be bound to only one knowledge base.</description></item>
         /// </list>
         /// </description>
@@ -428,7 +424,7 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before calling this operation, obtain the name of an agent accessible to the current identity. After the session is created, save <c>JsonRpcResponse.result.sessionId</c> and use it as <c>Params.sessionId</c> for subsequent operations such as <c>PromptAgentSession</c> and <c>LoadAgentSession</c>.
-        /// You can set the approval mode during creation. If omitted, the default value is <c>default</c>. The availability of <c>yolo</c> depends on the target agent. If it is not supported, an error is returned. This mode does not change the caller\&quot;s permissions or replace business Q&amp;A. To retry the same creation request, reuse the same <c>clientToken</c> and the same business parameters.</para>
+        /// You can set the approval mode during creation. If omitted, the mode defaults to <c>default</c>. The availability of <c>yolo</c> depends on the target agent. If it is not supported, an error is returned. This mode does not change the caller\&quot;s permissions or replace business Q&amp;A. To retry the same creation request, reuse the same <c>clientToken</c> and the same business parameters.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -490,7 +486,7 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before calling this operation, obtain the name of an agent accessible to the current identity. After the session is created, save <c>JsonRpcResponse.result.sessionId</c> and use it as <c>Params.sessionId</c> for subsequent operations such as <c>PromptAgentSession</c> and <c>LoadAgentSession</c>.
-        /// You can set the approval mode during creation. If omitted, the default value is <c>default</c>. The availability of <c>yolo</c> depends on the target agent. If it is not supported, an error is returned. This mode does not change the caller\&quot;s permissions or replace business Q&amp;A. To retry the same creation request, reuse the same <c>clientToken</c> and the same business parameters.</para>
+        /// You can set the approval mode during creation. If omitted, the mode defaults to <c>default</c>. The availability of <c>yolo</c> depends on the target agent. If it is not supported, an error is returned. This mode does not change the caller\&quot;s permissions or replace business Q&amp;A. To retry the same creation request, reuse the same <c>clientToken</c> and the same business parameters.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -552,7 +548,7 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before calling this operation, obtain the name of an agent accessible to the current identity. After the session is created, save <c>JsonRpcResponse.result.sessionId</c> and use it as <c>Params.sessionId</c> for subsequent operations such as <c>PromptAgentSession</c> and <c>LoadAgentSession</c>.
-        /// You can set the approval mode during creation. If omitted, the default value is <c>default</c>. The availability of <c>yolo</c> depends on the target agent. If it is not supported, an error is returned. This mode does not change the caller\&quot;s permissions or replace business Q&amp;A. To retry the same creation request, reuse the same <c>clientToken</c> and the same business parameters.</para>
+        /// You can set the approval mode during creation. If omitted, the mode defaults to <c>default</c>. The availability of <c>yolo</c> depends on the target agent. If it is not supported, an error is returned. This mode does not change the caller\&quot;s permissions or replace business Q&amp;A. To retry the same creation request, reuse the same <c>clientToken</c> and the same business parameters.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -576,7 +572,7 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before calling this operation, obtain the name of an agent accessible to the current identity. After the session is created, save <c>JsonRpcResponse.result.sessionId</c> and use it as <c>Params.sessionId</c> for subsequent operations such as <c>PromptAgentSession</c> and <c>LoadAgentSession</c>.
-        /// You can set the approval mode during creation. If omitted, the default value is <c>default</c>. The availability of <c>yolo</c> depends on the target agent. If it is not supported, an error is returned. This mode does not change the caller\&quot;s permissions or replace business Q&amp;A. To retry the same creation request, reuse the same <c>clientToken</c> and the same business parameters.</para>
+        /// You can set the approval mode during creation. If omitted, the mode defaults to <c>default</c>. The availability of <c>yolo</c> depends on the target agent. If it is not supported, an error is returned. This mode does not change the caller\&quot;s permissions or replace business Q&amp;A. To retry the same creation request, reuse the same <c>clientToken</c> and the same business parameters.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -601,21 +597,21 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <description>
         /// <list type="bullet">
         /// <item><description>Creation rules:<list type="bullet">
-        /// <item><description>Name must be unique within the current tenant and cannot be the same as an official skill.</description></item>
-        /// <item><description>Description and Metadata are required. Metadata must and can only contain one valid content source. Different sources cannot be mixed.</description></item>
-        /// <item><description>After the skill is created, you can modify it by calling UpdateSkill.</description></item>
+        /// <item><description><c>Name</c> must be unique within the current tenant and cannot be the same as an official skill.</description></item>
+        /// <item><description><c>Description</c> and <c>Metadata</c> are required. <c>Metadata</c> must contain one and only one valid content source. Different sources cannot be mixed.</description></item>
+        /// <item><description>After the skill is created, you can modify it by calling <c>UpdateSkill</c>.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Content sources:<list type="bullet">
-        /// <item><description>skillMd: Directly enter the Markdown body. No YAML front matter is required. Use Name and Description for the name and description respectively.</description></item>
-        /// <item><description>transitId: Upload and confirm a ZIP file through Transit. The call sequence is as follows:<ol>
-        /// <item><description>Call CreateTransitUploadPolicy and pass in FileShowName to obtain TransitId, FilePath, and PolicyInfo.</description></item>
-        /// <item><description>Use PolicyInfo and FilePath to upload the ZIP file to Object Storage Service (OSS).</description></item>
-        /// <item><description>Call ConfirmTransitUpload and pass in TransitId. Proceed with creation only if Confirmed=true is returned.</description></item>
-        /// <item><description>Call CreateSkill and pass the confirmed TransitId in Metadata.transitId.</description></item>
+        /// <item><description><c>skillMd</c>: Directly enter the Markdown body. No YAML front matter is required. Use <c>Name</c> and <c>Description</c> for the name and description.</description></item>
+        /// <item><description><c>transitId</c>: Upload and confirm a ZIP file through Transit. The call sequence is as follows:<ol>
+        /// <item><description>Call <c>CreateTransitUploadPolicy</c> and pass in <c>FileShowName</c> to obtain <c>TransitId</c>, <c>FilePath</c>, and <c>PolicyInfo</c>.</description></item>
+        /// <item><description>Use <c>PolicyInfo</c> and <c>FilePath</c> to upload the ZIP file to Object Storage Service (OSS).</description></item>
+        /// <item><description>Call <c>ConfirmTransitUpload</c> and pass in <c>TransitId</c>. Proceed with creation only if <c>Confirmed=true</c> is returned.</description></item>
+        /// <item><description>Call <c>CreateSkill</c> and pass the confirmed <c>TransitId</c> in <c>Metadata.transitId</c>.</description></item>
         /// </ol>
         /// </description></item>
-        /// <item><description>bundleUrl: Pass in a public HTTPS ZIP direct link. The platform downloads and saves it as an artifact. The original URL is not saved or echoed.</description></item>
+        /// <item><description><c>bundleUrl</c>: Pass in a public HTTPS ZIP direct link. The platform downloads the file and saves it as an artifact. The original URL is not saved or echoed.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -679,21 +675,21 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <description>
         /// <list type="bullet">
         /// <item><description>Creation rules:<list type="bullet">
-        /// <item><description>Name must be unique within the current tenant and cannot be the same as an official skill.</description></item>
-        /// <item><description>Description and Metadata are required. Metadata must and can only contain one valid content source. Different sources cannot be mixed.</description></item>
-        /// <item><description>After the skill is created, you can modify it by calling UpdateSkill.</description></item>
+        /// <item><description><c>Name</c> must be unique within the current tenant and cannot be the same as an official skill.</description></item>
+        /// <item><description><c>Description</c> and <c>Metadata</c> are required. <c>Metadata</c> must contain one and only one valid content source. Different sources cannot be mixed.</description></item>
+        /// <item><description>After the skill is created, you can modify it by calling <c>UpdateSkill</c>.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Content sources:<list type="bullet">
-        /// <item><description>skillMd: Directly enter the Markdown body. No YAML front matter is required. Use Name and Description for the name and description respectively.</description></item>
-        /// <item><description>transitId: Upload and confirm a ZIP file through Transit. The call sequence is as follows:<ol>
-        /// <item><description>Call CreateTransitUploadPolicy and pass in FileShowName to obtain TransitId, FilePath, and PolicyInfo.</description></item>
-        /// <item><description>Use PolicyInfo and FilePath to upload the ZIP file to Object Storage Service (OSS).</description></item>
-        /// <item><description>Call ConfirmTransitUpload and pass in TransitId. Proceed with creation only if Confirmed=true is returned.</description></item>
-        /// <item><description>Call CreateSkill and pass the confirmed TransitId in Metadata.transitId.</description></item>
+        /// <item><description><c>skillMd</c>: Directly enter the Markdown body. No YAML front matter is required. Use <c>Name</c> and <c>Description</c> for the name and description.</description></item>
+        /// <item><description><c>transitId</c>: Upload and confirm a ZIP file through Transit. The call sequence is as follows:<ol>
+        /// <item><description>Call <c>CreateTransitUploadPolicy</c> and pass in <c>FileShowName</c> to obtain <c>TransitId</c>, <c>FilePath</c>, and <c>PolicyInfo</c>.</description></item>
+        /// <item><description>Use <c>PolicyInfo</c> and <c>FilePath</c> to upload the ZIP file to Object Storage Service (OSS).</description></item>
+        /// <item><description>Call <c>ConfirmTransitUpload</c> and pass in <c>TransitId</c>. Proceed with creation only if <c>Confirmed=true</c> is returned.</description></item>
+        /// <item><description>Call <c>CreateSkill</c> and pass the confirmed <c>TransitId</c> in <c>Metadata.transitId</c>.</description></item>
         /// </ol>
         /// </description></item>
-        /// <item><description>bundleUrl: Pass in a public HTTPS ZIP direct link. The platform downloads and saves it as an artifact. The original URL is not saved or echoed.</description></item>
+        /// <item><description><c>bundleUrl</c>: Pass in a public HTTPS ZIP direct link. The platform downloads the file and saves it as an artifact. The original URL is not saved or echoed.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -757,21 +753,21 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <description>
         /// <list type="bullet">
         /// <item><description>Creation rules:<list type="bullet">
-        /// <item><description>Name must be unique within the current tenant and cannot be the same as an official skill.</description></item>
-        /// <item><description>Description and Metadata are required. Metadata must and can only contain one valid content source. Different sources cannot be mixed.</description></item>
-        /// <item><description>After the skill is created, you can modify it by calling UpdateSkill.</description></item>
+        /// <item><description><c>Name</c> must be unique within the current tenant and cannot be the same as an official skill.</description></item>
+        /// <item><description><c>Description</c> and <c>Metadata</c> are required. <c>Metadata</c> must contain one and only one valid content source. Different sources cannot be mixed.</description></item>
+        /// <item><description>After the skill is created, you can modify it by calling <c>UpdateSkill</c>.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Content sources:<list type="bullet">
-        /// <item><description>skillMd: Directly enter the Markdown body. No YAML front matter is required. Use Name and Description for the name and description respectively.</description></item>
-        /// <item><description>transitId: Upload and confirm a ZIP file through Transit. The call sequence is as follows:<ol>
-        /// <item><description>Call CreateTransitUploadPolicy and pass in FileShowName to obtain TransitId, FilePath, and PolicyInfo.</description></item>
-        /// <item><description>Use PolicyInfo and FilePath to upload the ZIP file to Object Storage Service (OSS).</description></item>
-        /// <item><description>Call ConfirmTransitUpload and pass in TransitId. Proceed with creation only if Confirmed=true is returned.</description></item>
-        /// <item><description>Call CreateSkill and pass the confirmed TransitId in Metadata.transitId.</description></item>
+        /// <item><description><c>skillMd</c>: Directly enter the Markdown body. No YAML front matter is required. Use <c>Name</c> and <c>Description</c> for the name and description.</description></item>
+        /// <item><description><c>transitId</c>: Upload and confirm a ZIP file through Transit. The call sequence is as follows:<ol>
+        /// <item><description>Call <c>CreateTransitUploadPolicy</c> and pass in <c>FileShowName</c> to obtain <c>TransitId</c>, <c>FilePath</c>, and <c>PolicyInfo</c>.</description></item>
+        /// <item><description>Use <c>PolicyInfo</c> and <c>FilePath</c> to upload the ZIP file to Object Storage Service (OSS).</description></item>
+        /// <item><description>Call <c>ConfirmTransitUpload</c> and pass in <c>TransitId</c>. Proceed with creation only if <c>Confirmed=true</c> is returned.</description></item>
+        /// <item><description>Call <c>CreateSkill</c> and pass the confirmed <c>TransitId</c> in <c>Metadata.transitId</c>.</description></item>
         /// </ol>
         /// </description></item>
-        /// <item><description>bundleUrl: Pass in a public HTTPS ZIP direct link. The platform downloads and saves it as an artifact. The original URL is not saved or echoed.</description></item>
+        /// <item><description><c>bundleUrl</c>: Pass in a public HTTPS ZIP direct link. The platform downloads the file and saves it as an artifact. The original URL is not saved or echoed.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -799,21 +795,21 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <description>
         /// <list type="bullet">
         /// <item><description>Creation rules:<list type="bullet">
-        /// <item><description>Name must be unique within the current tenant and cannot be the same as an official skill.</description></item>
-        /// <item><description>Description and Metadata are required. Metadata must and can only contain one valid content source. Different sources cannot be mixed.</description></item>
-        /// <item><description>After the skill is created, you can modify it by calling UpdateSkill.</description></item>
+        /// <item><description><c>Name</c> must be unique within the current tenant and cannot be the same as an official skill.</description></item>
+        /// <item><description><c>Description</c> and <c>Metadata</c> are required. <c>Metadata</c> must contain one and only one valid content source. Different sources cannot be mixed.</description></item>
+        /// <item><description>After the skill is created, you can modify it by calling <c>UpdateSkill</c>.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Content sources:<list type="bullet">
-        /// <item><description>skillMd: Directly enter the Markdown body. No YAML front matter is required. Use Name and Description for the name and description respectively.</description></item>
-        /// <item><description>transitId: Upload and confirm a ZIP file through Transit. The call sequence is as follows:<ol>
-        /// <item><description>Call CreateTransitUploadPolicy and pass in FileShowName to obtain TransitId, FilePath, and PolicyInfo.</description></item>
-        /// <item><description>Use PolicyInfo and FilePath to upload the ZIP file to Object Storage Service (OSS).</description></item>
-        /// <item><description>Call ConfirmTransitUpload and pass in TransitId. Proceed with creation only if Confirmed=true is returned.</description></item>
-        /// <item><description>Call CreateSkill and pass the confirmed TransitId in Metadata.transitId.</description></item>
+        /// <item><description><c>skillMd</c>: Directly enter the Markdown body. No YAML front matter is required. Use <c>Name</c> and <c>Description</c> for the name and description.</description></item>
+        /// <item><description><c>transitId</c>: Upload and confirm a ZIP file through Transit. The call sequence is as follows:<ol>
+        /// <item><description>Call <c>CreateTransitUploadPolicy</c> and pass in <c>FileShowName</c> to obtain <c>TransitId</c>, <c>FilePath</c>, and <c>PolicyInfo</c>.</description></item>
+        /// <item><description>Use <c>PolicyInfo</c> and <c>FilePath</c> to upload the ZIP file to Object Storage Service (OSS).</description></item>
+        /// <item><description>Call <c>ConfirmTransitUpload</c> and pass in <c>TransitId</c>. Proceed with creation only if <c>Confirmed=true</c> is returned.</description></item>
+        /// <item><description>Call <c>CreateSkill</c> and pass the confirmed <c>TransitId</c> in <c>Metadata.transitId</c>.</description></item>
         /// </ol>
         /// </description></item>
-        /// <item><description>bundleUrl: Pass in a public HTTPS ZIP direct link. The platform downloads and saves it as an artifact. The original URL is not saved or echoed.</description></item>
+        /// <item><description><c>bundleUrl</c>: Pass in a public HTTPS ZIP direct link. The platform downloads the file and saves it as an artifact. The original URL is not saved or echoed.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -840,11 +836,11 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><c>Network</c> can be set to <c>public</c> or <c>internal</c> to generate a public network or same-region internal network upload address, respectively. The default value is <c>public</c>.</description></item>
+        /// <item><description>The Network parameter can be set to public or internal to generate a public network or same-region internal network upload address, respectively. The default value is public.</description></item>
         /// <item><description>The maximum size of a single file is 50 MiB.</description></item>
-        /// <item><description><c>PolicyInfo</c> contains short-term upload authorization information and is only used for the current file upload. Do not log, permanently store, or forward it to other users.</description></item>
-        /// <item><description><c>ExpireMs</c> specifies the validity period of the current upload policy and Transit record in milliseconds, not an absolute timestamp. Both the default and maximum values are <c>604800000</c> (7 days), and the minimum value is <c>1000</c> (1 second). The validity period is rounded down to the nearest whole second. For example, 1500 milliseconds takes effect as 1 second.</description></item>
-        /// <item><description>You can call <c>GetTransitMeta</c> to read <c>ExpireAt</c> and obtain the expiration time of the Transit record. Confirming the upload and querying do not extend the validity period of the record.</description></item>
+        /// <item><description>PolicyInfo contains short-term upload authorization information and is only used for the current file upload. Do not log, permanently store, or forward it to other users.</description></item>
+        /// <item><description>ExpireMs specifies the validity period of the upload policy and the transit record in milliseconds, not an absolute timestamp. The default and maximum values are both 604800000 (7 days), and the minimum value is 1000 (1 second). The validity period is rounded down to the nearest whole second. For example, 1500 milliseconds takes effect as 1 second.</description></item>
+        /// <item><description>You can call GetTransitMeta to read ExpireAt and obtain the expiration time of the transit record. Confirming the upload and querying the record do not extend its validity period.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -905,11 +901,11 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><c>Network</c> can be set to <c>public</c> or <c>internal</c> to generate a public network or same-region internal network upload address, respectively. The default value is <c>public</c>.</description></item>
+        /// <item><description>The Network parameter can be set to public or internal to generate a public network or same-region internal network upload address, respectively. The default value is public.</description></item>
         /// <item><description>The maximum size of a single file is 50 MiB.</description></item>
-        /// <item><description><c>PolicyInfo</c> contains short-term upload authorization information and is only used for the current file upload. Do not log, permanently store, or forward it to other users.</description></item>
-        /// <item><description><c>ExpireMs</c> specifies the validity period of the current upload policy and Transit record in milliseconds, not an absolute timestamp. Both the default and maximum values are <c>604800000</c> (7 days), and the minimum value is <c>1000</c> (1 second). The validity period is rounded down to the nearest whole second. For example, 1500 milliseconds takes effect as 1 second.</description></item>
-        /// <item><description>You can call <c>GetTransitMeta</c> to read <c>ExpireAt</c> and obtain the expiration time of the Transit record. Confirming the upload and querying do not extend the validity period of the record.</description></item>
+        /// <item><description>PolicyInfo contains short-term upload authorization information and is only used for the current file upload. Do not log, permanently store, or forward it to other users.</description></item>
+        /// <item><description>ExpireMs specifies the validity period of the upload policy and the transit record in milliseconds, not an absolute timestamp. The default and maximum values are both 604800000 (7 days), and the minimum value is 1000 (1 second). The validity period is rounded down to the nearest whole second. For example, 1500 milliseconds takes effect as 1 second.</description></item>
+        /// <item><description>You can call GetTransitMeta to read ExpireAt and obtain the expiration time of the transit record. Confirming the upload and querying the record do not extend its validity period.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -970,11 +966,11 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><c>Network</c> can be set to <c>public</c> or <c>internal</c> to generate a public network or same-region internal network upload address, respectively. The default value is <c>public</c>.</description></item>
+        /// <item><description>The Network parameter can be set to public or internal to generate a public network or same-region internal network upload address, respectively. The default value is public.</description></item>
         /// <item><description>The maximum size of a single file is 50 MiB.</description></item>
-        /// <item><description><c>PolicyInfo</c> contains short-term upload authorization information and is only used for the current file upload. Do not log, permanently store, or forward it to other users.</description></item>
-        /// <item><description><c>ExpireMs</c> specifies the validity period of the current upload policy and Transit record in milliseconds, not an absolute timestamp. Both the default and maximum values are <c>604800000</c> (7 days), and the minimum value is <c>1000</c> (1 second). The validity period is rounded down to the nearest whole second. For example, 1500 milliseconds takes effect as 1 second.</description></item>
-        /// <item><description>You can call <c>GetTransitMeta</c> to read <c>ExpireAt</c> and obtain the expiration time of the Transit record. Confirming the upload and querying do not extend the validity period of the record.</description></item>
+        /// <item><description>PolicyInfo contains short-term upload authorization information and is only used for the current file upload. Do not log, permanently store, or forward it to other users.</description></item>
+        /// <item><description>ExpireMs specifies the validity period of the upload policy and the transit record in milliseconds, not an absolute timestamp. The default and maximum values are both 604800000 (7 days), and the minimum value is 1000 (1 second). The validity period is rounded down to the nearest whole second. For example, 1500 milliseconds takes effect as 1 second.</description></item>
+        /// <item><description>You can call GetTransitMeta to read ExpireAt and obtain the expiration time of the transit record. Confirming the upload and querying the record do not extend its validity period.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -999,11 +995,11 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><c>Network</c> can be set to <c>public</c> or <c>internal</c> to generate a public network or same-region internal network upload address, respectively. The default value is <c>public</c>.</description></item>
+        /// <item><description>The Network parameter can be set to public or internal to generate a public network or same-region internal network upload address, respectively. The default value is public.</description></item>
         /// <item><description>The maximum size of a single file is 50 MiB.</description></item>
-        /// <item><description><c>PolicyInfo</c> contains short-term upload authorization information and is only used for the current file upload. Do not log, permanently store, or forward it to other users.</description></item>
-        /// <item><description><c>ExpireMs</c> specifies the validity period of the current upload policy and Transit record in milliseconds, not an absolute timestamp. Both the default and maximum values are <c>604800000</c> (7 days), and the minimum value is <c>1000</c> (1 second). The validity period is rounded down to the nearest whole second. For example, 1500 milliseconds takes effect as 1 second.</description></item>
-        /// <item><description>You can call <c>GetTransitMeta</c> to read <c>ExpireAt</c> and obtain the expiration time of the Transit record. Confirming the upload and querying do not extend the validity period of the record.</description></item>
+        /// <item><description>PolicyInfo contains short-term upload authorization information and is only used for the current file upload. Do not log, permanently store, or forward it to other users.</description></item>
+        /// <item><description>ExpireMs specifies the validity period of the upload policy and the transit record in milliseconds, not an absolute timestamp. The default and maximum values are both 604800000 (7 days), and the minimum value is 1000 (1 second). The validity period is rounded down to the nearest whole second. For example, 1500 milliseconds takes effect as 1 second.</description></item>
+        /// <item><description>You can call GetTransitMeta to read ExpireAt and obtain the expiration time of the transit record. Confirming the upload and querying the record do not extend its validity period.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1029,7 +1025,7 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <description>
         /// <list type="bullet">
         /// <item><description>Creators can delete the agents they created.</description></item>
-        /// <item><description>After deletion, the agent can no longer be queried, updated, or executed.</description></item>
+        /// <item><description>After deletion, the agent can no longer be queried, updated, or run.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1079,7 +1075,7 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <description>
         /// <list type="bullet">
         /// <item><description>Creators can delete the agents they created.</description></item>
-        /// <item><description>After deletion, the agent can no longer be queried, updated, or executed.</description></item>
+        /// <item><description>After deletion, the agent can no longer be queried, updated, or run.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1129,7 +1125,7 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <description>
         /// <list type="bullet">
         /// <item><description>Creators can delete the agents they created.</description></item>
-        /// <item><description>After deletion, the agent can no longer be queried, updated, or executed.</description></item>
+        /// <item><description>After deletion, the agent can no longer be queried, updated, or run.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1155,7 +1151,7 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <description>
         /// <list type="bullet">
         /// <item><description>Creators can delete the agents they created.</description></item>
-        /// <item><description>After deletion, the agent can no longer be queried, updated, or executed.</description></item>
+        /// <item><description>After deletion, the agent can no longer be queried, updated, or run.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1346,20 +1342,20 @@ namespace AlibabaCloud.SDK.Ada20260701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Soft-deletes a skill that the caller has permission to modify.</para>
+        /// <para>Soft-deletes a skill that the current caller has permission to modify.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
         /// <item><description>Deletion permissions:<list type="bullet">
-        /// <item><description>Only custom skills that the caller has permission to modify can be deleted.</description></item>
-        /// <item><description>The caller must be the creator of the skill or the root account of the tenant that has permission to manage the tenant-level skill. Official skills cannot be deleted.</description></item>
+        /// <item><description>You can delete only custom skills that you have permission to modify.</description></item>
+        /// <item><description>You must be the creator of the skill or the root account of the tenant that has permission to manage the tenant-level skill. Official skills cannot be deleted.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Deletion results:<list type="bullet">
-        /// <item><description>Deletion is performed as a soft delete. After a successful deletion, <c>GetSkill</c> and <c>ListSkills</c> no longer return the skill, and you can create a new skill with the same name.</description></item>
-        /// <item><description>Recovery is not supported. You cannot repeatedly delete a skill or delete a non-existent skill.</description></item>
+        /// <item><description>This operation performs a soft delete. After the skill is deleted, the <c>GetSkill</c> and <c>ListSkills</c> operations no longer return the skill, and you can create a new skill with the same name.</description></item>
+        /// <item><description>Recovery is not supported. You cannot delete a skill multiple times or delete a non-existent skill.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -1404,20 +1400,20 @@ namespace AlibabaCloud.SDK.Ada20260701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Soft-deletes a skill that the caller has permission to modify.</para>
+        /// <para>Soft-deletes a skill that the current caller has permission to modify.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
         /// <item><description>Deletion permissions:<list type="bullet">
-        /// <item><description>Only custom skills that the caller has permission to modify can be deleted.</description></item>
-        /// <item><description>The caller must be the creator of the skill or the root account of the tenant that has permission to manage the tenant-level skill. Official skills cannot be deleted.</description></item>
+        /// <item><description>You can delete only custom skills that you have permission to modify.</description></item>
+        /// <item><description>You must be the creator of the skill or the root account of the tenant that has permission to manage the tenant-level skill. Official skills cannot be deleted.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Deletion results:<list type="bullet">
-        /// <item><description>Deletion is performed as a soft delete. After a successful deletion, <c>GetSkill</c> and <c>ListSkills</c> no longer return the skill, and you can create a new skill with the same name.</description></item>
-        /// <item><description>Recovery is not supported. You cannot repeatedly delete a skill or delete a non-existent skill.</description></item>
+        /// <item><description>This operation performs a soft delete. After the skill is deleted, the <c>GetSkill</c> and <c>ListSkills</c> operations no longer return the skill, and you can create a new skill with the same name.</description></item>
+        /// <item><description>Recovery is not supported. You cannot delete a skill multiple times or delete a non-existent skill.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -1462,20 +1458,20 @@ namespace AlibabaCloud.SDK.Ada20260701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Soft-deletes a skill that the caller has permission to modify.</para>
+        /// <para>Soft-deletes a skill that the current caller has permission to modify.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
         /// <item><description>Deletion permissions:<list type="bullet">
-        /// <item><description>Only custom skills that the caller has permission to modify can be deleted.</description></item>
-        /// <item><description>The caller must be the creator of the skill or the root account of the tenant that has permission to manage the tenant-level skill. Official skills cannot be deleted.</description></item>
+        /// <item><description>You can delete only custom skills that you have permission to modify.</description></item>
+        /// <item><description>You must be the creator of the skill or the root account of the tenant that has permission to manage the tenant-level skill. Official skills cannot be deleted.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Deletion results:<list type="bullet">
-        /// <item><description>Deletion is performed as a soft delete. After a successful deletion, <c>GetSkill</c> and <c>ListSkills</c> no longer return the skill, and you can create a new skill with the same name.</description></item>
-        /// <item><description>Recovery is not supported. You cannot repeatedly delete a skill or delete a non-existent skill.</description></item>
+        /// <item><description>This operation performs a soft delete. After the skill is deleted, the <c>GetSkill</c> and <c>ListSkills</c> operations no longer return the skill, and you can create a new skill with the same name.</description></item>
+        /// <item><description>Recovery is not supported. You cannot delete a skill multiple times or delete a non-existent skill.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -1496,20 +1492,20 @@ namespace AlibabaCloud.SDK.Ada20260701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Soft-deletes a skill that the caller has permission to modify.</para>
+        /// <para>Soft-deletes a skill that the current caller has permission to modify.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
         /// <item><description>Deletion permissions:<list type="bullet">
-        /// <item><description>Only custom skills that the caller has permission to modify can be deleted.</description></item>
-        /// <item><description>The caller must be the creator of the skill or the root account of the tenant that has permission to manage the tenant-level skill. Official skills cannot be deleted.</description></item>
+        /// <item><description>You can delete only custom skills that you have permission to modify.</description></item>
+        /// <item><description>You must be the creator of the skill or the root account of the tenant that has permission to manage the tenant-level skill. Official skills cannot be deleted.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Deletion results:<list type="bullet">
-        /// <item><description>Deletion is performed as a soft delete. After a successful deletion, <c>GetSkill</c> and <c>ListSkills</c> no longer return the skill, and you can create a new skill with the same name.</description></item>
-        /// <item><description>Recovery is not supported. You cannot repeatedly delete a skill or delete a non-existent skill.</description></item>
+        /// <item><description>This operation performs a soft delete. After the skill is deleted, the <c>GetSkill</c> and <c>ListSkills</c> operations no longer return the skill, and you can create a new skill with the same name.</description></item>
+        /// <item><description>Recovery is not supported. You cannot delete a skill multiple times or delete a non-existent skill.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -1850,15 +1846,15 @@ namespace AlibabaCloud.SDK.Ada20260701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the current model and thinking level configuration used by a session.</para>
+        /// <para>Queries the model and thinking level configurations currently used by the session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Use the <c>sessionId</c> returned by CreateAgentSession to query the configuration. This operation does not send messages or replay session history.</description></item>
+        /// <item><description>Use the <c>sessionId</c> returned by CreateAgentSession to query the configurations. This operation does not send messages or replay session history.</description></item>
         /// <item><description>Read the current model from <c>JsonRpcResponse.result.modelId</c>. To modify it, call SetAgentSessionModel.</description></item>
-        /// <item><description>The thinking level is an optional advanced configuration. The supported levels and current values are subject to the actual return values of this operation, which may vary across different agents, models, and sessions.</description></item>
+        /// <item><description>The thinking level is an optional advanced configuration. The supported levels and current values are subject to the actual response of this operation, which may vary across different agents, models, and sessions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1915,15 +1911,15 @@ namespace AlibabaCloud.SDK.Ada20260701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the current model and thinking level configuration used by a session.</para>
+        /// <para>Queries the model and thinking level configurations currently used by the session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Use the <c>sessionId</c> returned by CreateAgentSession to query the configuration. This operation does not send messages or replay session history.</description></item>
+        /// <item><description>Use the <c>sessionId</c> returned by CreateAgentSession to query the configurations. This operation does not send messages or replay session history.</description></item>
         /// <item><description>Read the current model from <c>JsonRpcResponse.result.modelId</c>. To modify it, call SetAgentSessionModel.</description></item>
-        /// <item><description>The thinking level is an optional advanced configuration. The supported levels and current values are subject to the actual return values of this operation, which may vary across different agents, models, and sessions.</description></item>
+        /// <item><description>The thinking level is an optional advanced configuration. The supported levels and current values are subject to the actual response of this operation, which may vary across different agents, models, and sessions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1980,15 +1976,15 @@ namespace AlibabaCloud.SDK.Ada20260701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the current model and thinking level configuration used by a session.</para>
+        /// <para>Queries the model and thinking level configurations currently used by the session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Use the <c>sessionId</c> returned by CreateAgentSession to query the configuration. This operation does not send messages or replay session history.</description></item>
+        /// <item><description>Use the <c>sessionId</c> returned by CreateAgentSession to query the configurations. This operation does not send messages or replay session history.</description></item>
         /// <item><description>Read the current model from <c>JsonRpcResponse.result.modelId</c>. To modify it, call SetAgentSessionModel.</description></item>
-        /// <item><description>The thinking level is an optional advanced configuration. The supported levels and current values are subject to the actual return values of this operation, which may vary across different agents, models, and sessions.</description></item>
+        /// <item><description>The thinking level is an optional advanced configuration. The supported levels and current values are subject to the actual response of this operation, which may vary across different agents, models, and sessions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2007,15 +2003,15 @@ namespace AlibabaCloud.SDK.Ada20260701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the current model and thinking level configuration used by a session.</para>
+        /// <para>Queries the model and thinking level configurations currently used by the session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Use the <c>sessionId</c> returned by CreateAgentSession to query the configuration. This operation does not send messages or replay session history.</description></item>
+        /// <item><description>Use the <c>sessionId</c> returned by CreateAgentSession to query the configurations. This operation does not send messages or replay session history.</description></item>
         /// <item><description>Read the current model from <c>JsonRpcResponse.result.modelId</c>. To modify it, call SetAgentSessionModel.</description></item>
-        /// <item><description>The thinking level is an optional advanced configuration. The supported levels and current values are subject to the actual return values of this operation, which may vary across different agents, models, and sessions.</description></item>
+        /// <item><description>The thinking level is an optional advanced configuration. The supported levels and current values are subject to the actual response of this operation, which may vary across different agents, models, and sessions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2042,15 +2038,15 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <list type="bullet">
         /// <item><description>Query target:<list type="bullet">
         /// <item><description>Queries by <c>Name</c>. Querying by <c>SkillId</c> is not supported.</description></item>
-        /// <item><description>Prioritizes returning skills with the same name that are visible to the caller under the current tenant. If no visible records are found, queries official skills with the same name.</description></item>
+        /// <item><description>Prioritizes returning skills with the same name that are visible to the caller under the current tenant. If no visible records are found, it queries official skills with the same name.</description></item>
         /// <item><description>If <c>SkillVersion</c> is omitted, the current skill is returned. This parameter is omitted by default.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Download URL:<list type="bullet">
         /// <item><description><c>Network</c> supports <c>public</c> and <c>internal</c>. If omitted, no download URL is generated.</description></item>
         /// <item><description>If the skill has an accessible artifact, a temporary <c>DownloadUrl</c> and the corresponding <c>DownloadUrlNetwork</c> are returned.</description></item>
-        /// <item><description>If the artifact does not exist, access is denied, or URL generation fails, the skill query can still succeed, but the download URL-related fields may not be returned.</description></item>
-        /// <item><description>The original <c>bundleUrl</c> used during creation is not saved and is not returned by this API.</description></item>
+        /// <item><description>If the artifact does not exist, access is denied, or URL generation fails, the skill query still succeeds, but the download URL-related fields may not be returned.</description></item>
+        /// <item><description>The original <c>bundleUrl</c> used during creation is not saved and will not be echoed back through this API.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -2111,15 +2107,15 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <list type="bullet">
         /// <item><description>Query target:<list type="bullet">
         /// <item><description>Queries by <c>Name</c>. Querying by <c>SkillId</c> is not supported.</description></item>
-        /// <item><description>Prioritizes returning skills with the same name that are visible to the caller under the current tenant. If no visible records are found, queries official skills with the same name.</description></item>
+        /// <item><description>Prioritizes returning skills with the same name that are visible to the caller under the current tenant. If no visible records are found, it queries official skills with the same name.</description></item>
         /// <item><description>If <c>SkillVersion</c> is omitted, the current skill is returned. This parameter is omitted by default.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Download URL:<list type="bullet">
         /// <item><description><c>Network</c> supports <c>public</c> and <c>internal</c>. If omitted, no download URL is generated.</description></item>
         /// <item><description>If the skill has an accessible artifact, a temporary <c>DownloadUrl</c> and the corresponding <c>DownloadUrlNetwork</c> are returned.</description></item>
-        /// <item><description>If the artifact does not exist, access is denied, or URL generation fails, the skill query can still succeed, but the download URL-related fields may not be returned.</description></item>
-        /// <item><description>The original <c>bundleUrl</c> used during creation is not saved and is not returned by this API.</description></item>
+        /// <item><description>If the artifact does not exist, access is denied, or URL generation fails, the skill query still succeeds, but the download URL-related fields may not be returned.</description></item>
+        /// <item><description>The original <c>bundleUrl</c> used during creation is not saved and will not be echoed back through this API.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -2180,15 +2176,15 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <list type="bullet">
         /// <item><description>Query target:<list type="bullet">
         /// <item><description>Queries by <c>Name</c>. Querying by <c>SkillId</c> is not supported.</description></item>
-        /// <item><description>Prioritizes returning skills with the same name that are visible to the caller under the current tenant. If no visible records are found, queries official skills with the same name.</description></item>
+        /// <item><description>Prioritizes returning skills with the same name that are visible to the caller under the current tenant. If no visible records are found, it queries official skills with the same name.</description></item>
         /// <item><description>If <c>SkillVersion</c> is omitted, the current skill is returned. This parameter is omitted by default.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Download URL:<list type="bullet">
         /// <item><description><c>Network</c> supports <c>public</c> and <c>internal</c>. If omitted, no download URL is generated.</description></item>
         /// <item><description>If the skill has an accessible artifact, a temporary <c>DownloadUrl</c> and the corresponding <c>DownloadUrlNetwork</c> are returned.</description></item>
-        /// <item><description>If the artifact does not exist, access is denied, or URL generation fails, the skill query can still succeed, but the download URL-related fields may not be returned.</description></item>
-        /// <item><description>The original <c>bundleUrl</c> used during creation is not saved and is not returned by this API.</description></item>
+        /// <item><description>If the artifact does not exist, access is denied, or URL generation fails, the skill query still succeeds, but the download URL-related fields may not be returned.</description></item>
+        /// <item><description>The original <c>bundleUrl</c> used during creation is not saved and will not be echoed back through this API.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -2217,15 +2213,15 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <list type="bullet">
         /// <item><description>Query target:<list type="bullet">
         /// <item><description>Queries by <c>Name</c>. Querying by <c>SkillId</c> is not supported.</description></item>
-        /// <item><description>Prioritizes returning skills with the same name that are visible to the caller under the current tenant. If no visible records are found, queries official skills with the same name.</description></item>
+        /// <item><description>Prioritizes returning skills with the same name that are visible to the caller under the current tenant. If no visible records are found, it queries official skills with the same name.</description></item>
         /// <item><description>If <c>SkillVersion</c> is omitted, the current skill is returned. This parameter is omitted by default.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Download URL:<list type="bullet">
         /// <item><description><c>Network</c> supports <c>public</c> and <c>internal</c>. If omitted, no download URL is generated.</description></item>
         /// <item><description>If the skill has an accessible artifact, a temporary <c>DownloadUrl</c> and the corresponding <c>DownloadUrlNetwork</c> are returned.</description></item>
-        /// <item><description>If the artifact does not exist, access is denied, or URL generation fails, the skill query can still succeed, but the download URL-related fields may not be returned.</description></item>
-        /// <item><description>The original <c>bundleUrl</c> used during creation is not saved and is not returned by this API.</description></item>
+        /// <item><description>If the artifact does not exist, access is denied, or URL generation fails, the skill query still succeeds, but the download URL-related fields may not be returned.</description></item>
+        /// <item><description>The original <c>bundleUrl</c> used during creation is not saved and will not be echoed back through this API.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -2253,11 +2249,11 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <description>
         /// <list type="bullet">
         /// <item><description>Specify at least one of TransitId and FilePath. If both are provided, TransitId takes precedence.</description></item>
-        /// <item><description>Use the TransitId returned by CreateTransitUploadPolicy for queries. TransitId is a temporary capability identifier in the file upload process. Do not forward it to irrelevant users.</description></item>
-        /// <item><description>FilePath is the opaque object path returned by CreateTransitUploadPolicy. Callers must use it as is and must not parse, modify, or concatenate it.</description></item>
-        /// <item><description>When querying by FilePath, an error is returned if the record does not exist or is inaccessible to the current caller.</description></item>
-        /// <item><description>ExpireMs specifies the validity period of the download URL in milliseconds. The default value is 900000 (15 minutes). The validity period is rounded down to the nearest whole second. For example, 1500 milliseconds takes effect as 1 second.</description></item>
-        /// <item><description>ExpireAt indicates the expiration time of the transit record, not the expiration time of the download URL. Querying, generating a download URL, and confirming an upload do not extend the validity period of the record.</description></item>
+        /// <item><description>Use the TransitId returned by CreateTransitUploadPolicy. TransitId is a temporary capability identifier in the file upload process. Do not forward it to unrelated users.</description></item>
+        /// <item><description>FilePath is the opaque object path returned by CreateTransitUploadPolicy. Callers must use it as is. Do not parse, modify, or concatenate it.</description></item>
+        /// <item><description>When you query by FilePath, an error is returned if the record does not exist or is inaccessible to the current caller.</description></item>
+        /// <item><description>ExpireMs specifies the validity period of the download URL in milliseconds. The default value is 900000, which indicates 15 minutes. The validity period is rounded down to the nearest second. For example, 1500 milliseconds takes effect as 1 second.</description></item>
+        /// <item><description>ExpireAt is the expiration time of the transit record, not the expiration time of the download URL. Querying, generating a download URL, and confirming the upload do not extend the validity period of the record.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2319,11 +2315,11 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <description>
         /// <list type="bullet">
         /// <item><description>Specify at least one of TransitId and FilePath. If both are provided, TransitId takes precedence.</description></item>
-        /// <item><description>Use the TransitId returned by CreateTransitUploadPolicy for queries. TransitId is a temporary capability identifier in the file upload process. Do not forward it to irrelevant users.</description></item>
-        /// <item><description>FilePath is the opaque object path returned by CreateTransitUploadPolicy. Callers must use it as is and must not parse, modify, or concatenate it.</description></item>
-        /// <item><description>When querying by FilePath, an error is returned if the record does not exist or is inaccessible to the current caller.</description></item>
-        /// <item><description>ExpireMs specifies the validity period of the download URL in milliseconds. The default value is 900000 (15 minutes). The validity period is rounded down to the nearest whole second. For example, 1500 milliseconds takes effect as 1 second.</description></item>
-        /// <item><description>ExpireAt indicates the expiration time of the transit record, not the expiration time of the download URL. Querying, generating a download URL, and confirming an upload do not extend the validity period of the record.</description></item>
+        /// <item><description>Use the TransitId returned by CreateTransitUploadPolicy. TransitId is a temporary capability identifier in the file upload process. Do not forward it to unrelated users.</description></item>
+        /// <item><description>FilePath is the opaque object path returned by CreateTransitUploadPolicy. Callers must use it as is. Do not parse, modify, or concatenate it.</description></item>
+        /// <item><description>When you query by FilePath, an error is returned if the record does not exist or is inaccessible to the current caller.</description></item>
+        /// <item><description>ExpireMs specifies the validity period of the download URL in milliseconds. The default value is 900000, which indicates 15 minutes. The validity period is rounded down to the nearest second. For example, 1500 milliseconds takes effect as 1 second.</description></item>
+        /// <item><description>ExpireAt is the expiration time of the transit record, not the expiration time of the download URL. Querying, generating a download URL, and confirming the upload do not extend the validity period of the record.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2385,11 +2381,11 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <description>
         /// <list type="bullet">
         /// <item><description>Specify at least one of TransitId and FilePath. If both are provided, TransitId takes precedence.</description></item>
-        /// <item><description>Use the TransitId returned by CreateTransitUploadPolicy for queries. TransitId is a temporary capability identifier in the file upload process. Do not forward it to irrelevant users.</description></item>
-        /// <item><description>FilePath is the opaque object path returned by CreateTransitUploadPolicy. Callers must use it as is and must not parse, modify, or concatenate it.</description></item>
-        /// <item><description>When querying by FilePath, an error is returned if the record does not exist or is inaccessible to the current caller.</description></item>
-        /// <item><description>ExpireMs specifies the validity period of the download URL in milliseconds. The default value is 900000 (15 minutes). The validity period is rounded down to the nearest whole second. For example, 1500 milliseconds takes effect as 1 second.</description></item>
-        /// <item><description>ExpireAt indicates the expiration time of the transit record, not the expiration time of the download URL. Querying, generating a download URL, and confirming an upload do not extend the validity period of the record.</description></item>
+        /// <item><description>Use the TransitId returned by CreateTransitUploadPolicy. TransitId is a temporary capability identifier in the file upload process. Do not forward it to unrelated users.</description></item>
+        /// <item><description>FilePath is the opaque object path returned by CreateTransitUploadPolicy. Callers must use it as is. Do not parse, modify, or concatenate it.</description></item>
+        /// <item><description>When you query by FilePath, an error is returned if the record does not exist or is inaccessible to the current caller.</description></item>
+        /// <item><description>ExpireMs specifies the validity period of the download URL in milliseconds. The default value is 900000, which indicates 15 minutes. The validity period is rounded down to the nearest second. For example, 1500 milliseconds takes effect as 1 second.</description></item>
+        /// <item><description>ExpireAt is the expiration time of the transit record, not the expiration time of the download URL. Querying, generating a download URL, and confirming the upload do not extend the validity period of the record.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2415,11 +2411,11 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <description>
         /// <list type="bullet">
         /// <item><description>Specify at least one of TransitId and FilePath. If both are provided, TransitId takes precedence.</description></item>
-        /// <item><description>Use the TransitId returned by CreateTransitUploadPolicy for queries. TransitId is a temporary capability identifier in the file upload process. Do not forward it to irrelevant users.</description></item>
-        /// <item><description>FilePath is the opaque object path returned by CreateTransitUploadPolicy. Callers must use it as is and must not parse, modify, or concatenate it.</description></item>
-        /// <item><description>When querying by FilePath, an error is returned if the record does not exist or is inaccessible to the current caller.</description></item>
-        /// <item><description>ExpireMs specifies the validity period of the download URL in milliseconds. The default value is 900000 (15 minutes). The validity period is rounded down to the nearest whole second. For example, 1500 milliseconds takes effect as 1 second.</description></item>
-        /// <item><description>ExpireAt indicates the expiration time of the transit record, not the expiration time of the download URL. Querying, generating a download URL, and confirming an upload do not extend the validity period of the record.</description></item>
+        /// <item><description>Use the TransitId returned by CreateTransitUploadPolicy. TransitId is a temporary capability identifier in the file upload process. Do not forward it to unrelated users.</description></item>
+        /// <item><description>FilePath is the opaque object path returned by CreateTransitUploadPolicy. Callers must use it as is. Do not parse, modify, or concatenate it.</description></item>
+        /// <item><description>When you query by FilePath, an error is returned if the record does not exist or is inaccessible to the current caller.</description></item>
+        /// <item><description>ExpireMs specifies the validity period of the download URL in milliseconds. The default value is 900000, which indicates 15 minutes. The validity period is rounded down to the nearest second. For example, 1500 milliseconds takes effect as 1 second.</description></item>
+        /// <item><description>ExpireAt is the expiration time of the transit record, not the expiration time of the download URL. Querying, generating a download URL, and confirming the upload do not extend the validity period of the record.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2438,13 +2434,137 @@ namespace AlibabaCloud.SDK.Ada20260701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries session summary by page, allowing the caller to select or resume existing sessions.</para>
+        /// <para>Queries the global workflow configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can filter sessions by agent name. Omit Params.NextToken on the first page. For subsequent queries, keep the filter conditions and page size unchanged, and pass the JsonRpcResponse.Result.NextToken returned from the previous page as is to Params.NextToken. Pagination ends when the token is not returned or is empty.
-        /// The list returns session summaries such as session ID, title, and time, but does not provide the final state of the turn execution. After selecting a session, you can use GetAgentSession to query details or LoadAgentSession to load history.
+        /// <para>Queries the global workflow configurations for a tenant and a region. The content is sensitive information. In addition to the permissions required for this operation, the ada:DownloadFile permission is also required.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetWorkflowGlobalEnvRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkflowGlobalEnvResponse
+        /// </returns>
+        public GetWorkflowGlobalEnvResponse GetWorkflowGlobalEnvWithOptions(GetWorkflowGlobalEnvRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWorkflowGlobalEnv",
+                Version = "2026-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWorkflowGlobalEnvResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global workflow configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the global workflow configurations for a tenant and a region. The content is sensitive information. In addition to the permissions required for this operation, the ada:DownloadFile permission is also required.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetWorkflowGlobalEnvRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkflowGlobalEnvResponse
+        /// </returns>
+        public async Task<GetWorkflowGlobalEnvResponse> GetWorkflowGlobalEnvWithOptionsAsync(GetWorkflowGlobalEnvRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWorkflowGlobalEnv",
+                Version = "2026-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWorkflowGlobalEnvResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global workflow configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the global workflow configurations for a tenant and a region. The content is sensitive information. In addition to the permissions required for this operation, the ada:DownloadFile permission is also required.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetWorkflowGlobalEnvRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkflowGlobalEnvResponse
+        /// </returns>
+        public GetWorkflowGlobalEnvResponse GetWorkflowGlobalEnv(GetWorkflowGlobalEnvRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetWorkflowGlobalEnvWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global workflow configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the global workflow configurations for a tenant and a region. The content is sensitive information. In addition to the permissions required for this operation, the ada:DownloadFile permission is also required.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetWorkflowGlobalEnvRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkflowGlobalEnvResponse
+        /// </returns>
+        public async Task<GetWorkflowGlobalEnvResponse> GetWorkflowGlobalEnvAsync(GetWorkflowGlobalEnvRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetWorkflowGlobalEnvWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the session summary by paging for the caller to select or resume existing sessions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can filter sessions by agent name. Omit Params.NextToken on the first page. When querying subsequent pages, keep the filter conditions and page size unchanged, and pass the JsonRpcResponse.Result.NextToken returned from the previous page as is to Params.NextToken. Pagination ends when the token is not returned or is empty.
+        /// The list returns session summaries such as session ID, title, and time, but does not provide the final state of turn execution. After selecting a session, you can use GetAgentSession to query details or LoadAgentSession to load history.
         /// Params in the request, and JsonRpcResponse and Result in the response are explicit objects. The pagination field MaxResults is of type integer<int32>, and NextToken is of type string. SessionList retains the any type. For session summary fields, see the supplementary description.</para>
         /// </description>
         /// 
@@ -2501,13 +2621,13 @@ namespace AlibabaCloud.SDK.Ada20260701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries session summary by page, allowing the caller to select or resume existing sessions.</para>
+        /// <para>Queries the session summary by paging for the caller to select or resume existing sessions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can filter sessions by agent name. Omit Params.NextToken on the first page. For subsequent queries, keep the filter conditions and page size unchanged, and pass the JsonRpcResponse.Result.NextToken returned from the previous page as is to Params.NextToken. Pagination ends when the token is not returned or is empty.
-        /// The list returns session summaries such as session ID, title, and time, but does not provide the final state of the turn execution. After selecting a session, you can use GetAgentSession to query details or LoadAgentSession to load history.
+        /// <para>You can filter sessions by agent name. Omit Params.NextToken on the first page. When querying subsequent pages, keep the filter conditions and page size unchanged, and pass the JsonRpcResponse.Result.NextToken returned from the previous page as is to Params.NextToken. Pagination ends when the token is not returned or is empty.
+        /// The list returns session summaries such as session ID, title, and time, but does not provide the final state of turn execution. After selecting a session, you can use GetAgentSession to query details or LoadAgentSession to load history.
         /// Params in the request, and JsonRpcResponse and Result in the response are explicit objects. The pagination field MaxResults is of type integer<int32>, and NextToken is of type string. SessionList retains the any type. For session summary fields, see the supplementary description.</para>
         /// </description>
         /// 
@@ -2564,13 +2684,13 @@ namespace AlibabaCloud.SDK.Ada20260701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries session summary by page, allowing the caller to select or resume existing sessions.</para>
+        /// <para>Queries the session summary by paging for the caller to select or resume existing sessions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can filter sessions by agent name. Omit Params.NextToken on the first page. For subsequent queries, keep the filter conditions and page size unchanged, and pass the JsonRpcResponse.Result.NextToken returned from the previous page as is to Params.NextToken. Pagination ends when the token is not returned or is empty.
-        /// The list returns session summaries such as session ID, title, and time, but does not provide the final state of the turn execution. After selecting a session, you can use GetAgentSession to query details or LoadAgentSession to load history.
+        /// <para>You can filter sessions by agent name. Omit Params.NextToken on the first page. When querying subsequent pages, keep the filter conditions and page size unchanged, and pass the JsonRpcResponse.Result.NextToken returned from the previous page as is to Params.NextToken. Pagination ends when the token is not returned or is empty.
+        /// The list returns session summaries such as session ID, title, and time, but does not provide the final state of turn execution. After selecting a session, you can use GetAgentSession to query details or LoadAgentSession to load history.
         /// Params in the request, and JsonRpcResponse and Result in the response are explicit objects. The pagination field MaxResults is of type integer<int32>, and NextToken is of type string. SessionList retains the any type. For session summary fields, see the supplementary description.</para>
         /// </description>
         /// 
@@ -2589,13 +2709,13 @@ namespace AlibabaCloud.SDK.Ada20260701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries session summary by page, allowing the caller to select or resume existing sessions.</para>
+        /// <para>Queries the session summary by paging for the caller to select or resume existing sessions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can filter sessions by agent name. Omit Params.NextToken on the first page. For subsequent queries, keep the filter conditions and page size unchanged, and pass the JsonRpcResponse.Result.NextToken returned from the previous page as is to Params.NextToken. Pagination ends when the token is not returned or is empty.
-        /// The list returns session summaries such as session ID, title, and time, but does not provide the final state of the turn execution. After selecting a session, you can use GetAgentSession to query details or LoadAgentSession to load history.
+        /// <para>You can filter sessions by agent name. Omit Params.NextToken on the first page. When querying subsequent pages, keep the filter conditions and page size unchanged, and pass the JsonRpcResponse.Result.NextToken returned from the previous page as is to Params.NextToken. Pagination ends when the token is not returned or is empty.
+        /// The list returns session summaries such as session ID, title, and time, but does not provide the final state of turn execution. After selecting a session, you can use GetAgentSession to query details or LoadAgentSession to load history.
         /// Params in the request, and JsonRpcResponse and Result in the response are explicit objects. The pagination field MaxResults is of type integer<int32>, and NextToken is of type string. SessionList retains the any type. For session summary fields, see the supplementary description.</para>
         /// </description>
         /// 
@@ -2614,15 +2734,15 @@ namespace AlibabaCloud.SDK.Ada20260701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query for agents visible to the current identity.</para>
+        /// <para>Queries the agents visible to the current identity by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>By default, the official agents provided by the platform and the tenant agents visible to the current identity are returned.</description></item>
-        /// <item><description>If <c>Scope</c> is set to <c>SYSTEM</c>, only official agents are queried. If <c>Scope</c> is set to <c>CUSTOM</c>, only custom agents are queried.</description></item>
-        /// <item><description>Both cursor-based pagination and page number-based pagination are supported. When using cursor-based pagination, pass the <c>NextToken</c> value returned in the previous response to the next request as is, and keep the calling identity, filter conditions, and <c>MaxResults</c> unchanged.</description></item>
+        /// <item><description>By default, the API returns the official agents provided by the platform and the tenant agents visible to the current identity.</description></item>
+        /// <item><description>If Scope is set to SYSTEM, only official agents are queried. If Scope is set to CUSTOM, only custom agents are queried.</description></item>
+        /// <item><description>Supports both cursor-based pagination and page number-based pagination. When using cursor-based pagination, pass the NextToken value exactly as returned in the next request, and keep the calling identity, filter conditions, and MaxResults unchanged.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2697,15 +2817,15 @@ namespace AlibabaCloud.SDK.Ada20260701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query for agents visible to the current identity.</para>
+        /// <para>Queries the agents visible to the current identity by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>By default, the official agents provided by the platform and the tenant agents visible to the current identity are returned.</description></item>
-        /// <item><description>If <c>Scope</c> is set to <c>SYSTEM</c>, only official agents are queried. If <c>Scope</c> is set to <c>CUSTOM</c>, only custom agents are queried.</description></item>
-        /// <item><description>Both cursor-based pagination and page number-based pagination are supported. When using cursor-based pagination, pass the <c>NextToken</c> value returned in the previous response to the next request as is, and keep the calling identity, filter conditions, and <c>MaxResults</c> unchanged.</description></item>
+        /// <item><description>By default, the API returns the official agents provided by the platform and the tenant agents visible to the current identity.</description></item>
+        /// <item><description>If Scope is set to SYSTEM, only official agents are queried. If Scope is set to CUSTOM, only custom agents are queried.</description></item>
+        /// <item><description>Supports both cursor-based pagination and page number-based pagination. When using cursor-based pagination, pass the NextToken value exactly as returned in the next request, and keep the calling identity, filter conditions, and MaxResults unchanged.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2780,15 +2900,15 @@ namespace AlibabaCloud.SDK.Ada20260701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query for agents visible to the current identity.</para>
+        /// <para>Queries the agents visible to the current identity by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>By default, the official agents provided by the platform and the tenant agents visible to the current identity are returned.</description></item>
-        /// <item><description>If <c>Scope</c> is set to <c>SYSTEM</c>, only official agents are queried. If <c>Scope</c> is set to <c>CUSTOM</c>, only custom agents are queried.</description></item>
-        /// <item><description>Both cursor-based pagination and page number-based pagination are supported. When using cursor-based pagination, pass the <c>NextToken</c> value returned in the previous response to the next request as is, and keep the calling identity, filter conditions, and <c>MaxResults</c> unchanged.</description></item>
+        /// <item><description>By default, the API returns the official agents provided by the platform and the tenant agents visible to the current identity.</description></item>
+        /// <item><description>If Scope is set to SYSTEM, only official agents are queried. If Scope is set to CUSTOM, only custom agents are queried.</description></item>
+        /// <item><description>Supports both cursor-based pagination and page number-based pagination. When using cursor-based pagination, pass the NextToken value exactly as returned in the next request, and keep the calling identity, filter conditions, and MaxResults unchanged.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2807,15 +2927,15 @@ namespace AlibabaCloud.SDK.Ada20260701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query for agents visible to the current identity.</para>
+        /// <para>Queries the agents visible to the current identity by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>By default, the official agents provided by the platform and the tenant agents visible to the current identity are returned.</description></item>
-        /// <item><description>If <c>Scope</c> is set to <c>SYSTEM</c>, only official agents are queried. If <c>Scope</c> is set to <c>CUSTOM</c>, only custom agents are queried.</description></item>
-        /// <item><description>Both cursor-based pagination and page number-based pagination are supported. When using cursor-based pagination, pass the <c>NextToken</c> value returned in the previous response to the next request as is, and keep the calling identity, filter conditions, and <c>MaxResults</c> unchanged.</description></item>
+        /// <item><description>By default, the API returns the official agents provided by the platform and the tenant agents visible to the current identity.</description></item>
+        /// <item><description>If Scope is set to SYSTEM, only official agents are queried. If Scope is set to CUSTOM, only custom agents are queried.</description></item>
+        /// <item><description>Supports both cursor-based pagination and page number-based pagination. When using cursor-based pagination, pass the NextToken value exactly as returned in the next request, and keep the calling identity, filter conditions, and MaxResults unchanged.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2840,9 +2960,9 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For text sessions, pass <c>ModelType=text</c> and use <c>MaxResults</c> and <c>NextToken</c> for paging. The model identity is obtained from <c>Models[].Id</c> and passed as the <c>Params.modelId</c> for SetAgentSessionModel.</description></item>
-        /// <item><description>The visibility of a model in the model catalog does not guarantee that the target session supports the model. After configuration, refer to the SetAgentSessionModel response or the GetAgentSessionModel query result.</description></item>
-        /// <item><description><c>ThinkingLevels</c> and <c>ThinkingLevel</c> are used for optional thinking level configurations and do not affect the integration flow when you only select a model.</description></item>
+        /// <item><description>For text sessions, pass <c>ModelType=text</c> and use <c>MaxResults</c> and <c>NextToken</c> for paging. Obtain the model identifier from <c>Models[].Id</c> and pass it as <c>Params.modelId</c> to SetAgentSessionModel.</description></item>
+        /// <item><description>Visibility in the model catalog does not mean the target session supports the model. After setting the model, refer to the return value of SetAgentSessionModel or the query result of GetAgentSessionModel.</description></item>
+        /// <item><description><c>ThinkingLevels</c> and <c>ThinkingLevel</c> are used for optional thinking level configurations and do not affect the integration flow for selecting a model only.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2907,9 +3027,9 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For text sessions, pass <c>ModelType=text</c> and use <c>MaxResults</c> and <c>NextToken</c> for paging. The model identity is obtained from <c>Models[].Id</c> and passed as the <c>Params.modelId</c> for SetAgentSessionModel.</description></item>
-        /// <item><description>The visibility of a model in the model catalog does not guarantee that the target session supports the model. After configuration, refer to the SetAgentSessionModel response or the GetAgentSessionModel query result.</description></item>
-        /// <item><description><c>ThinkingLevels</c> and <c>ThinkingLevel</c> are used for optional thinking level configurations and do not affect the integration flow when you only select a model.</description></item>
+        /// <item><description>For text sessions, pass <c>ModelType=text</c> and use <c>MaxResults</c> and <c>NextToken</c> for paging. Obtain the model identifier from <c>Models[].Id</c> and pass it as <c>Params.modelId</c> to SetAgentSessionModel.</description></item>
+        /// <item><description>Visibility in the model catalog does not mean the target session supports the model. After setting the model, refer to the return value of SetAgentSessionModel or the query result of GetAgentSessionModel.</description></item>
+        /// <item><description><c>ThinkingLevels</c> and <c>ThinkingLevel</c> are used for optional thinking level configurations and do not affect the integration flow for selecting a model only.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2974,9 +3094,9 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For text sessions, pass <c>ModelType=text</c> and use <c>MaxResults</c> and <c>NextToken</c> for paging. The model identity is obtained from <c>Models[].Id</c> and passed as the <c>Params.modelId</c> for SetAgentSessionModel.</description></item>
-        /// <item><description>The visibility of a model in the model catalog does not guarantee that the target session supports the model. After configuration, refer to the SetAgentSessionModel response or the GetAgentSessionModel query result.</description></item>
-        /// <item><description><c>ThinkingLevels</c> and <c>ThinkingLevel</c> are used for optional thinking level configurations and do not affect the integration flow when you only select a model.</description></item>
+        /// <item><description>For text sessions, pass <c>ModelType=text</c> and use <c>MaxResults</c> and <c>NextToken</c> for paging. Obtain the model identifier from <c>Models[].Id</c> and pass it as <c>Params.modelId</c> to SetAgentSessionModel.</description></item>
+        /// <item><description>Visibility in the model catalog does not mean the target session supports the model. After setting the model, refer to the return value of SetAgentSessionModel or the query result of GetAgentSessionModel.</description></item>
+        /// <item><description><c>ThinkingLevels</c> and <c>ThinkingLevel</c> are used for optional thinking level configurations and do not affect the integration flow for selecting a model only.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3001,9 +3121,9 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For text sessions, pass <c>ModelType=text</c> and use <c>MaxResults</c> and <c>NextToken</c> for paging. The model identity is obtained from <c>Models[].Id</c> and passed as the <c>Params.modelId</c> for SetAgentSessionModel.</description></item>
-        /// <item><description>The visibility of a model in the model catalog does not guarantee that the target session supports the model. After configuration, refer to the SetAgentSessionModel response or the GetAgentSessionModel query result.</description></item>
-        /// <item><description><c>ThinkingLevels</c> and <c>ThinkingLevel</c> are used for optional thinking level configurations and do not affect the integration flow when you only select a model.</description></item>
+        /// <item><description>For text sessions, pass <c>ModelType=text</c> and use <c>MaxResults</c> and <c>NextToken</c> for paging. Obtain the model identifier from <c>Models[].Id</c> and pass it as <c>Params.modelId</c> to SetAgentSessionModel.</description></item>
+        /// <item><description>Visibility in the model catalog does not mean the target session supports the model. After setting the model, refer to the return value of SetAgentSessionModel or the query result of GetAgentSessionModel.</description></item>
+        /// <item><description><c>ThinkingLevels</c> and <c>ThinkingLevel</c> are used for optional thinking level configurations and do not affect the integration flow for selecting a model only.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3022,7 +3142,7 @@ namespace AlibabaCloud.SDK.Ada20260701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query using paging for skills visible to the current invoker.</para>
+        /// <para>Performs a paging query for skills visible to the current invoker.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3031,16 +3151,16 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <item><description>Query and filter: <list type="bullet">
         /// <item><description><c>Scope=SYSTEM</c> queries only official skills, and <c>Scope=CUSTOM</c> queries only custom skills. If omitted, both are queried.</description></item>
         /// <item><description>Custom skills with <c>user</c> visibility are visible only to the creator, while skills with <c>tenant</c> visibility are visible to the current tenant.</description></item>
-        /// <item><description>You can filter by <c>CreatorId</c>, <c>Q</c>, and <c>Visibility</c>. <c>Q</c> performs a fuzzy match on the skill name or description.</description></item>
+        /// <item><description>Supports filtering by <c>CreatorId</c>, <c>Q</c>, and <c>Visibility</c>. <c>Q</c> performs a fuzzy match on the skill name or description.</description></item>
         /// <item><description>Results are sorted by update time in descending order by default.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Pagination: <list type="bullet">
-        /// <item><description>Cursor-based pagination uses <c>MaxResults</c> and <c>NextToken</c>. Do not pass <c>NextToken</c> for the first query. For subsequent pages, use the token from the previous response. When using <c>NextToken</c> for subsequent pages, <c>CreatorId</c>, <c>Q</c>, <c>Visibility</c>, <c>Scope</c>, and <c>MaxResults</c> must remain the same as the previous page. If you modify the query conditions, you must query from the first page again.</description></item>
+        /// <item><description>Cursor-based pagination uses <c>MaxResults</c> and <c>NextToken</c>. Do not pass <c>NextToken</c> for the first query. For subsequent pages, use the token from the previous response. When using <c>NextToken</c> for subsequent pages, <c>CreatorId</c>, <c>Q</c>, <c>Visibility</c>, <c>Scope</c>, and <c>MaxResults</c> must remain the same as the previous page. If you modify the query conditions, you must restart the query from the first page.</description></item>
         /// <item><description>Page number-based pagination uses <c>PageNumber</c> and <c>PageSize</c>. If <c>MaxResults</c> is explicitly passed, cursor-based pagination takes precedence. If <c>NextToken</c> is passed, <c>PageNumber</c> is ignored.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Response content: <list type="bullet">
+        /// <item><description>Returned content: <list type="bullet">
         /// <item><description>This operation returns only skill summaries and does not generate bundle download URLs. To obtain a download URL, call <c>GetSkill</c> and specify <c>Network</c>.</description></item>
         /// </list>
         /// </description></item>
@@ -3114,7 +3234,7 @@ namespace AlibabaCloud.SDK.Ada20260701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query using paging for skills visible to the current invoker.</para>
+        /// <para>Performs a paging query for skills visible to the current invoker.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3123,16 +3243,16 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <item><description>Query and filter: <list type="bullet">
         /// <item><description><c>Scope=SYSTEM</c> queries only official skills, and <c>Scope=CUSTOM</c> queries only custom skills. If omitted, both are queried.</description></item>
         /// <item><description>Custom skills with <c>user</c> visibility are visible only to the creator, while skills with <c>tenant</c> visibility are visible to the current tenant.</description></item>
-        /// <item><description>You can filter by <c>CreatorId</c>, <c>Q</c>, and <c>Visibility</c>. <c>Q</c> performs a fuzzy match on the skill name or description.</description></item>
+        /// <item><description>Supports filtering by <c>CreatorId</c>, <c>Q</c>, and <c>Visibility</c>. <c>Q</c> performs a fuzzy match on the skill name or description.</description></item>
         /// <item><description>Results are sorted by update time in descending order by default.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Pagination: <list type="bullet">
-        /// <item><description>Cursor-based pagination uses <c>MaxResults</c> and <c>NextToken</c>. Do not pass <c>NextToken</c> for the first query. For subsequent pages, use the token from the previous response. When using <c>NextToken</c> for subsequent pages, <c>CreatorId</c>, <c>Q</c>, <c>Visibility</c>, <c>Scope</c>, and <c>MaxResults</c> must remain the same as the previous page. If you modify the query conditions, you must query from the first page again.</description></item>
+        /// <item><description>Cursor-based pagination uses <c>MaxResults</c> and <c>NextToken</c>. Do not pass <c>NextToken</c> for the first query. For subsequent pages, use the token from the previous response. When using <c>NextToken</c> for subsequent pages, <c>CreatorId</c>, <c>Q</c>, <c>Visibility</c>, <c>Scope</c>, and <c>MaxResults</c> must remain the same as the previous page. If you modify the query conditions, you must restart the query from the first page.</description></item>
         /// <item><description>Page number-based pagination uses <c>PageNumber</c> and <c>PageSize</c>. If <c>MaxResults</c> is explicitly passed, cursor-based pagination takes precedence. If <c>NextToken</c> is passed, <c>PageNumber</c> is ignored.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Response content: <list type="bullet">
+        /// <item><description>Returned content: <list type="bullet">
         /// <item><description>This operation returns only skill summaries and does not generate bundle download URLs. To obtain a download URL, call <c>GetSkill</c> and specify <c>Network</c>.</description></item>
         /// </list>
         /// </description></item>
@@ -3206,7 +3326,7 @@ namespace AlibabaCloud.SDK.Ada20260701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query using paging for skills visible to the current invoker.</para>
+        /// <para>Performs a paging query for skills visible to the current invoker.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3215,16 +3335,16 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <item><description>Query and filter: <list type="bullet">
         /// <item><description><c>Scope=SYSTEM</c> queries only official skills, and <c>Scope=CUSTOM</c> queries only custom skills. If omitted, both are queried.</description></item>
         /// <item><description>Custom skills with <c>user</c> visibility are visible only to the creator, while skills with <c>tenant</c> visibility are visible to the current tenant.</description></item>
-        /// <item><description>You can filter by <c>CreatorId</c>, <c>Q</c>, and <c>Visibility</c>. <c>Q</c> performs a fuzzy match on the skill name or description.</description></item>
+        /// <item><description>Supports filtering by <c>CreatorId</c>, <c>Q</c>, and <c>Visibility</c>. <c>Q</c> performs a fuzzy match on the skill name or description.</description></item>
         /// <item><description>Results are sorted by update time in descending order by default.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Pagination: <list type="bullet">
-        /// <item><description>Cursor-based pagination uses <c>MaxResults</c> and <c>NextToken</c>. Do not pass <c>NextToken</c> for the first query. For subsequent pages, use the token from the previous response. When using <c>NextToken</c> for subsequent pages, <c>CreatorId</c>, <c>Q</c>, <c>Visibility</c>, <c>Scope</c>, and <c>MaxResults</c> must remain the same as the previous page. If you modify the query conditions, you must query from the first page again.</description></item>
+        /// <item><description>Cursor-based pagination uses <c>MaxResults</c> and <c>NextToken</c>. Do not pass <c>NextToken</c> for the first query. For subsequent pages, use the token from the previous response. When using <c>NextToken</c> for subsequent pages, <c>CreatorId</c>, <c>Q</c>, <c>Visibility</c>, <c>Scope</c>, and <c>MaxResults</c> must remain the same as the previous page. If you modify the query conditions, you must restart the query from the first page.</description></item>
         /// <item><description>Page number-based pagination uses <c>PageNumber</c> and <c>PageSize</c>. If <c>MaxResults</c> is explicitly passed, cursor-based pagination takes precedence. If <c>NextToken</c> is passed, <c>PageNumber</c> is ignored.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Response content: <list type="bullet">
+        /// <item><description>Returned content: <list type="bullet">
         /// <item><description>This operation returns only skill summaries and does not generate bundle download URLs. To obtain a download URL, call <c>GetSkill</c> and specify <c>Network</c>.</description></item>
         /// </list>
         /// </description></item>
@@ -3246,7 +3366,7 @@ namespace AlibabaCloud.SDK.Ada20260701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query using paging for skills visible to the current invoker.</para>
+        /// <para>Performs a paging query for skills visible to the current invoker.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3255,16 +3375,16 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <item><description>Query and filter: <list type="bullet">
         /// <item><description><c>Scope=SYSTEM</c> queries only official skills, and <c>Scope=CUSTOM</c> queries only custom skills. If omitted, both are queried.</description></item>
         /// <item><description>Custom skills with <c>user</c> visibility are visible only to the creator, while skills with <c>tenant</c> visibility are visible to the current tenant.</description></item>
-        /// <item><description>You can filter by <c>CreatorId</c>, <c>Q</c>, and <c>Visibility</c>. <c>Q</c> performs a fuzzy match on the skill name or description.</description></item>
+        /// <item><description>Supports filtering by <c>CreatorId</c>, <c>Q</c>, and <c>Visibility</c>. <c>Q</c> performs a fuzzy match on the skill name or description.</description></item>
         /// <item><description>Results are sorted by update time in descending order by default.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Pagination: <list type="bullet">
-        /// <item><description>Cursor-based pagination uses <c>MaxResults</c> and <c>NextToken</c>. Do not pass <c>NextToken</c> for the first query. For subsequent pages, use the token from the previous response. When using <c>NextToken</c> for subsequent pages, <c>CreatorId</c>, <c>Q</c>, <c>Visibility</c>, <c>Scope</c>, and <c>MaxResults</c> must remain the same as the previous page. If you modify the query conditions, you must query from the first page again.</description></item>
+        /// <item><description>Cursor-based pagination uses <c>MaxResults</c> and <c>NextToken</c>. Do not pass <c>NextToken</c> for the first query. For subsequent pages, use the token from the previous response. When using <c>NextToken</c> for subsequent pages, <c>CreatorId</c>, <c>Q</c>, <c>Visibility</c>, <c>Scope</c>, and <c>MaxResults</c> must remain the same as the previous page. If you modify the query conditions, you must restart the query from the first page.</description></item>
         /// <item><description>Page number-based pagination uses <c>PageNumber</c> and <c>PageSize</c>. If <c>MaxResults</c> is explicitly passed, cursor-based pagination takes precedence. If <c>NextToken</c> is passed, <c>PageNumber</c> is ignored.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Response content: <list type="bullet">
+        /// <item><description>Returned content: <list type="bullet">
         /// <item><description>This operation returns only skill summaries and does not generate bundle download URLs. To obtain a download URL, call <c>GetSkill</c> and specify <c>Network</c>.</description></item>
         /// </list>
         /// </description></item>
@@ -3292,8 +3412,8 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>A normal load requires only the session ID. It returns the configuration, history, and output to be continuously received. The response is SSE, not a standard JSON message list.</description></item>
-        /// <item><description>When resuming from a disconnection, pass back the actually received cursor, event epoch, and turn ID. History and increments may be returned simultaneously. Existing pages should be rebuilt or deduplicated based on the confirmed cursor. Do not directly append all returned data.</description></item>
+        /// <item><description>A standard load requires only the session ID. It returns the configuration, history, and output to be continuously received. The response is SSE, not a standard JSON message list.</description></item>
+        /// <item><description>When resuming from a stream interruption, pass back the actually received cursor, event epoch, and turn ID. History and incremental data may be returned simultaneously. Existing pages should be rebuilt or deduplicated based on the confirmed cursor. Do not directly append all returned data.</description></item>
         /// <item><description>During the load process, you may receive pending approvals or questions again. Use the interaction notification that is still valid for this session to call ReplyAgentSession.</description></item>
         /// <item><description>For an idle session, <c>stopReason=end_turn</c> may only indicate the end of the current load. It cannot be used to determine the success of a previously interrupted turn. You must associate it with the actual desired state of the target turn. If it cannot be determined, keep the result for verification.</description></item>
         /// </list>
@@ -3358,8 +3478,8 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>A normal load requires only the session ID. It returns the configuration, history, and output to be continuously received. The response is SSE, not a standard JSON message list.</description></item>
-        /// <item><description>When resuming from a disconnection, pass back the actually received cursor, event epoch, and turn ID. History and increments may be returned simultaneously. Existing pages should be rebuilt or deduplicated based on the confirmed cursor. Do not directly append all returned data.</description></item>
+        /// <item><description>A standard load requires only the session ID. It returns the configuration, history, and output to be continuously received. The response is SSE, not a standard JSON message list.</description></item>
+        /// <item><description>When resuming from a stream interruption, pass back the actually received cursor, event epoch, and turn ID. History and incremental data may be returned simultaneously. Existing pages should be rebuilt or deduplicated based on the confirmed cursor. Do not directly append all returned data.</description></item>
         /// <item><description>During the load process, you may receive pending approvals or questions again. Use the interaction notification that is still valid for this session to call ReplyAgentSession.</description></item>
         /// <item><description>For an idle session, <c>stopReason=end_turn</c> may only indicate the end of the current load. It cannot be used to determine the success of a previously interrupted turn. You must associate it with the actual desired state of the target turn. If it cannot be determined, keep the result for verification.</description></item>
         /// </list>
@@ -3424,8 +3544,8 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>A normal load requires only the session ID. It returns the configuration, history, and output to be continuously received. The response is SSE, not a standard JSON message list.</description></item>
-        /// <item><description>When resuming from a disconnection, pass back the actually received cursor, event epoch, and turn ID. History and increments may be returned simultaneously. Existing pages should be rebuilt or deduplicated based on the confirmed cursor. Do not directly append all returned data.</description></item>
+        /// <item><description>A standard load requires only the session ID. It returns the configuration, history, and output to be continuously received. The response is SSE, not a standard JSON message list.</description></item>
+        /// <item><description>When resuming from a stream interruption, pass back the actually received cursor, event epoch, and turn ID. History and incremental data may be returned simultaneously. Existing pages should be rebuilt or deduplicated based on the confirmed cursor. Do not directly append all returned data.</description></item>
         /// <item><description>During the load process, you may receive pending approvals or questions again. Use the interaction notification that is still valid for this session to call ReplyAgentSession.</description></item>
         /// <item><description>For an idle session, <c>stopReason=end_turn</c> may only indicate the end of the current load. It cannot be used to determine the success of a previously interrupted turn. You must associate it with the actual desired state of the target turn. If it cannot be determined, keep the result for verification.</description></item>
         /// </list>
@@ -3452,8 +3572,8 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>A normal load requires only the session ID. It returns the configuration, history, and output to be continuously received. The response is SSE, not a standard JSON message list.</description></item>
-        /// <item><description>When resuming from a disconnection, pass back the actually received cursor, event epoch, and turn ID. History and increments may be returned simultaneously. Existing pages should be rebuilt or deduplicated based on the confirmed cursor. Do not directly append all returned data.</description></item>
+        /// <item><description>A standard load requires only the session ID. It returns the configuration, history, and output to be continuously received. The response is SSE, not a standard JSON message list.</description></item>
+        /// <item><description>When resuming from a stream interruption, pass back the actually received cursor, event epoch, and turn ID. History and incremental data may be returned simultaneously. Existing pages should be rebuilt or deduplicated based on the confirmed cursor. Do not directly append all returned data.</description></item>
         /// <item><description>During the load process, you may receive pending approvals or questions again. Use the interaction notification that is still valid for this session to call ReplyAgentSession.</description></item>
         /// <item><description>For an idle session, <c>stopReason=end_turn</c> may only indicate the end of the current load. It cannot be used to determine the success of a previously interrupted turn. You must associate it with the actual desired state of the target turn. If it cannot be determined, keep the result for verification.</description></item>
         /// </list>
@@ -3474,15 +3594,15 @@ namespace AlibabaCloud.SDK.Ada20260701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends text to an existing session and continuously receives agent output through Server-Sent Events (SSE).</para>
+        /// <para>Sends text to an existing session and continuously receives agent output over Server-Sent Events (SSE).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Pass the session ID returned by CreateAgentSession to <c>Params.sessionId</c> and place the user text in <c>Params.prompt</c>.</description></item>
-        /// <item><description>When an execution or pending interaction is already in progress, the default call path rejects new prompts. After receiving an approval or Q&amp;A notification, submit the selection or answer through ReplyAgentSession before continuing to read the original stream.</description></item>
-        /// <item><description>A connection interruption does not cancel the execution. If the result is unknown, call LoadAgentSession to resume reading. Submitting duplicate prompts may generate new messages, and duplicate <c>Id</c> values are not deduplicated.</description></item>
+        /// <item><description>Pass the session ID returned by CreateAgentSession to Params.sessionId and place the user text in Params.prompt.</description></item>
+        /// <item><description>When an execution or pending interaction is already in progress, the default call path rejects new prompts. After receiving an approval or Q&amp;A notification, submit your choice or answer through ReplyAgentSession before continuing to read the original stream.</description></item>
+        /// <item><description>A connection interruption does not cancel the execution. If the result is unknown, call LoadAgentSession to resume reading. Submitting duplicate prompts may generate new messages, and duplicate Id values are not deduplicated.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3539,15 +3659,15 @@ namespace AlibabaCloud.SDK.Ada20260701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends text to an existing session and continuously receives agent output through Server-Sent Events (SSE).</para>
+        /// <para>Sends text to an existing session and continuously receives agent output over Server-Sent Events (SSE).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Pass the session ID returned by CreateAgentSession to <c>Params.sessionId</c> and place the user text in <c>Params.prompt</c>.</description></item>
-        /// <item><description>When an execution or pending interaction is already in progress, the default call path rejects new prompts. After receiving an approval or Q&amp;A notification, submit the selection or answer through ReplyAgentSession before continuing to read the original stream.</description></item>
-        /// <item><description>A connection interruption does not cancel the execution. If the result is unknown, call LoadAgentSession to resume reading. Submitting duplicate prompts may generate new messages, and duplicate <c>Id</c> values are not deduplicated.</description></item>
+        /// <item><description>Pass the session ID returned by CreateAgentSession to Params.sessionId and place the user text in Params.prompt.</description></item>
+        /// <item><description>When an execution or pending interaction is already in progress, the default call path rejects new prompts. After receiving an approval or Q&amp;A notification, submit your choice or answer through ReplyAgentSession before continuing to read the original stream.</description></item>
+        /// <item><description>A connection interruption does not cancel the execution. If the result is unknown, call LoadAgentSession to resume reading. Submitting duplicate prompts may generate new messages, and duplicate Id values are not deduplicated.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3604,15 +3724,15 @@ namespace AlibabaCloud.SDK.Ada20260701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends text to an existing session and continuously receives agent output through Server-Sent Events (SSE).</para>
+        /// <para>Sends text to an existing session and continuously receives agent output over Server-Sent Events (SSE).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Pass the session ID returned by CreateAgentSession to <c>Params.sessionId</c> and place the user text in <c>Params.prompt</c>.</description></item>
-        /// <item><description>When an execution or pending interaction is already in progress, the default call path rejects new prompts. After receiving an approval or Q&amp;A notification, submit the selection or answer through ReplyAgentSession before continuing to read the original stream.</description></item>
-        /// <item><description>A connection interruption does not cancel the execution. If the result is unknown, call LoadAgentSession to resume reading. Submitting duplicate prompts may generate new messages, and duplicate <c>Id</c> values are not deduplicated.</description></item>
+        /// <item><description>Pass the session ID returned by CreateAgentSession to Params.sessionId and place the user text in Params.prompt.</description></item>
+        /// <item><description>When an execution or pending interaction is already in progress, the default call path rejects new prompts. After receiving an approval or Q&amp;A notification, submit your choice or answer through ReplyAgentSession before continuing to read the original stream.</description></item>
+        /// <item><description>A connection interruption does not cancel the execution. If the result is unknown, call LoadAgentSession to resume reading. Submitting duplicate prompts may generate new messages, and duplicate Id values are not deduplicated.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3631,15 +3751,15 @@ namespace AlibabaCloud.SDK.Ada20260701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends text to an existing session and continuously receives agent output through Server-Sent Events (SSE).</para>
+        /// <para>Sends text to an existing session and continuously receives agent output over Server-Sent Events (SSE).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Pass the session ID returned by CreateAgentSession to <c>Params.sessionId</c> and place the user text in <c>Params.prompt</c>.</description></item>
-        /// <item><description>When an execution or pending interaction is already in progress, the default call path rejects new prompts. After receiving an approval or Q&amp;A notification, submit the selection or answer through ReplyAgentSession before continuing to read the original stream.</description></item>
-        /// <item><description>A connection interruption does not cancel the execution. If the result is unknown, call LoadAgentSession to resume reading. Submitting duplicate prompts may generate new messages, and duplicate <c>Id</c> values are not deduplicated.</description></item>
+        /// <item><description>Pass the session ID returned by CreateAgentSession to Params.sessionId and place the user text in Params.prompt.</description></item>
+        /// <item><description>When an execution or pending interaction is already in progress, the default call path rejects new prompts. After receiving an approval or Q&amp;A notification, submit your choice or answer through ReplyAgentSession before continuing to read the original stream.</description></item>
+        /// <item><description>A connection interruption does not cancel the execution. If the result is unknown, call LoadAgentSession to resume reading. Submitting duplicate prompts may generate new messages, and duplicate Id values are not deduplicated.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3664,9 +3784,9 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Read <c>data.sessionId</c>, <c>data.requestId</c>, and <c>data.options</c> from the <c>permission_request</c> notification of PromptAgentSession or LoadAgentSession. This operation uses the interaction ID, not the tool invoke ID or the server-side RequestId.</description></item>
-        /// <item><description>When selecting an action, use the <c>optionId</c> actually provided in the notification. For Q&amp;A scenarios, you must also write the question key and answer text into <c>answers</c>. Do not pass this field for common tool approvals.</description></item>
-        /// <item><description><c>accepted=true</c> only indicates that the reply has been accepted. Subsequent output must still be read through Prompt or Load. <c>false</c> indicates that the reply was not adopted this time. You should reload the current interaction and must not automatically change it to approve other requests.</description></item>
+        /// <item><description>Read <c>data.sessionId</c>, <c>data.requestId</c>, and <c>data.options</c> from the <c>permission_request</c> notification of PromptAgentSession or LoadAgentSession. This operation uses the interaction ID, not the tool invocation ID or the server-side RequestId.</description></item>
+        /// <item><description>When selecting an action, use the <c>optionId</c> actually provided in the notification. For Q&amp;A scenarios, you must also write the question key and answer text into <c>answers</c>. Do not pass this field for regular tool approvals.</description></item>
+        /// <item><description><c>accepted=true</c> only indicates that the reply has been accepted. Subsequent output is still read through Prompt/Load. <c>false</c> indicates that the reply is not adopted this time. You should reload the current interaction and not automatically change to approve other requests.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3729,9 +3849,9 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Read <c>data.sessionId</c>, <c>data.requestId</c>, and <c>data.options</c> from the <c>permission_request</c> notification of PromptAgentSession or LoadAgentSession. This operation uses the interaction ID, not the tool invoke ID or the server-side RequestId.</description></item>
-        /// <item><description>When selecting an action, use the <c>optionId</c> actually provided in the notification. For Q&amp;A scenarios, you must also write the question key and answer text into <c>answers</c>. Do not pass this field for common tool approvals.</description></item>
-        /// <item><description><c>accepted=true</c> only indicates that the reply has been accepted. Subsequent output must still be read through Prompt or Load. <c>false</c> indicates that the reply was not adopted this time. You should reload the current interaction and must not automatically change it to approve other requests.</description></item>
+        /// <item><description>Read <c>data.sessionId</c>, <c>data.requestId</c>, and <c>data.options</c> from the <c>permission_request</c> notification of PromptAgentSession or LoadAgentSession. This operation uses the interaction ID, not the tool invocation ID or the server-side RequestId.</description></item>
+        /// <item><description>When selecting an action, use the <c>optionId</c> actually provided in the notification. For Q&amp;A scenarios, you must also write the question key and answer text into <c>answers</c>. Do not pass this field for regular tool approvals.</description></item>
+        /// <item><description><c>accepted=true</c> only indicates that the reply has been accepted. Subsequent output is still read through Prompt/Load. <c>false</c> indicates that the reply is not adopted this time. You should reload the current interaction and not automatically change to approve other requests.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3794,9 +3914,9 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Read <c>data.sessionId</c>, <c>data.requestId</c>, and <c>data.options</c> from the <c>permission_request</c> notification of PromptAgentSession or LoadAgentSession. This operation uses the interaction ID, not the tool invoke ID or the server-side RequestId.</description></item>
-        /// <item><description>When selecting an action, use the <c>optionId</c> actually provided in the notification. For Q&amp;A scenarios, you must also write the question key and answer text into <c>answers</c>. Do not pass this field for common tool approvals.</description></item>
-        /// <item><description><c>accepted=true</c> only indicates that the reply has been accepted. Subsequent output must still be read through Prompt or Load. <c>false</c> indicates that the reply was not adopted this time. You should reload the current interaction and must not automatically change it to approve other requests.</description></item>
+        /// <item><description>Read <c>data.sessionId</c>, <c>data.requestId</c>, and <c>data.options</c> from the <c>permission_request</c> notification of PromptAgentSession or LoadAgentSession. This operation uses the interaction ID, not the tool invocation ID or the server-side RequestId.</description></item>
+        /// <item><description>When selecting an action, use the <c>optionId</c> actually provided in the notification. For Q&amp;A scenarios, you must also write the question key and answer text into <c>answers</c>. Do not pass this field for regular tool approvals.</description></item>
+        /// <item><description><c>accepted=true</c> only indicates that the reply has been accepted. Subsequent output is still read through Prompt/Load. <c>false</c> indicates that the reply is not adopted this time. You should reload the current interaction and not automatically change to approve other requests.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3821,9 +3941,9 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Read <c>data.sessionId</c>, <c>data.requestId</c>, and <c>data.options</c> from the <c>permission_request</c> notification of PromptAgentSession or LoadAgentSession. This operation uses the interaction ID, not the tool invoke ID or the server-side RequestId.</description></item>
-        /// <item><description>When selecting an action, use the <c>optionId</c> actually provided in the notification. For Q&amp;A scenarios, you must also write the question key and answer text into <c>answers</c>. Do not pass this field for common tool approvals.</description></item>
-        /// <item><description><c>accepted=true</c> only indicates that the reply has been accepted. Subsequent output must still be read through Prompt or Load. <c>false</c> indicates that the reply was not adopted this time. You should reload the current interaction and must not automatically change it to approve other requests.</description></item>
+        /// <item><description>Read <c>data.sessionId</c>, <c>data.requestId</c>, and <c>data.options</c> from the <c>permission_request</c> notification of PromptAgentSession or LoadAgentSession. This operation uses the interaction ID, not the tool invocation ID or the server-side RequestId.</description></item>
+        /// <item><description>When selecting an action, use the <c>optionId</c> actually provided in the notification. For Q&amp;A scenarios, you must also write the question key and answer text into <c>answers</c>. Do not pass this field for regular tool approvals.</description></item>
+        /// <item><description><c>accepted=true</c> only indicates that the reply has been accepted. Subsequent output is still read through Prompt/Load. <c>false</c> indicates that the reply is not adopted this time. You should reload the current interaction and not automatically change to approve other requests.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3842,16 +3962,156 @@ namespace AlibabaCloud.SDK.Ada20260701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Saves the global workflow configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Saves or queries the global workflow configuration by tenant and region. The content is sensitive information.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SaveWorkflowGlobalEnvRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveWorkflowGlobalEnvResponse
+        /// </returns>
+        public SaveWorkflowGlobalEnvResponse SaveWorkflowGlobalEnvWithOptions(SaveWorkflowGlobalEnvRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["Content"] = request.Content;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SaveWorkflowGlobalEnv",
+                Version = "2026-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SaveWorkflowGlobalEnvResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves the global workflow configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Saves or queries the global workflow configuration by tenant and region. The content is sensitive information.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SaveWorkflowGlobalEnvRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveWorkflowGlobalEnvResponse
+        /// </returns>
+        public async Task<SaveWorkflowGlobalEnvResponse> SaveWorkflowGlobalEnvWithOptionsAsync(SaveWorkflowGlobalEnvRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["Content"] = request.Content;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SaveWorkflowGlobalEnv",
+                Version = "2026-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SaveWorkflowGlobalEnvResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves the global workflow configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Saves or queries the global workflow configuration by tenant and region. The content is sensitive information.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SaveWorkflowGlobalEnvRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveWorkflowGlobalEnvResponse
+        /// </returns>
+        public SaveWorkflowGlobalEnvResponse SaveWorkflowGlobalEnv(SaveWorkflowGlobalEnvRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SaveWorkflowGlobalEnvWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves the global workflow configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Saves or queries the global workflow configuration by tenant and region. The content is sensitive information.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SaveWorkflowGlobalEnvRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveWorkflowGlobalEnvResponse
+        /// </returns>
+        public async Task<SaveWorkflowGlobalEnvResponse> SaveWorkflowGlobalEnvAsync(SaveWorkflowGlobalEnvRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SaveWorkflowGlobalEnvWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Sets the model used by a session and optionally configures the thinking level.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Pass the <c>sessionId</c> returned by CreateAgentSession and the <c>Models[].Id</c> returned by ListModels as <c>Params.sessionId</c> and <c>Params.modelId</c>, respectively. The visibility of a model in the model catalog does not guarantee that the target session supports the model. The final validation is performed by the target session.</description></item>
-        /// <item><description><c>modelId</c> is required. When only modifying the model, you can omit <c>thinkingLevel</c>. For details about how to configure the thinking level, see the supplementary description of request parameters.</description></item>
-        /// <item><description>This operation only modifies the target session and does not modify the global default model of the agent or account. The session may deny configuration modifications during execution, and switching models during runtime is not guaranteed to be supported.</description></item>
-        /// <item><description>The model and thinking level Settings are applied in steps. If the call fails, the model may have already been changed, and a full rollback is not guaranteed. You should call GetAgentSessionModel to query the current configuration before deciding what to do next. After a successful call, you can read the actual effective values from the returned result.</description></item>
+        /// <item><description>Pass the <c>sessionId</c> returned by CreateAgentSession and the <c>Models[].Id</c> returned by ListModels as <c>Params.sessionId</c> and <c>Params.modelId</c>, respectively. The visibility of a model in the model catalog does not mean that the target session supports the model. The final validation is performed by the target session.</description></item>
+        /// <item><description><c>modelId</c> is required. When you only modify the model, you can omit <c>thinkingLevel</c>. For more information about how to configure the thinking level, see the supplementary description of request parameters.</description></item>
+        /// <item><description>This operation only modifies the target session and does not modify the global default model of the agent or account. The session may deny configuration modifications during execution, and switching during runtime is not guaranteed to be supported.</description></item>
+        /// <item><description>The model and thinking level settings are applied step by step. If the call fails, the model may have already been changed, and an overall rollback is not guaranteed. You should call GetAgentSessionModel to query the current configuration before deciding on subsequent operations. After a successful call, you can read the actual effective values from the returned result.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3914,10 +4174,10 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Pass the <c>sessionId</c> returned by CreateAgentSession and the <c>Models[].Id</c> returned by ListModels as <c>Params.sessionId</c> and <c>Params.modelId</c>, respectively. The visibility of a model in the model catalog does not guarantee that the target session supports the model. The final validation is performed by the target session.</description></item>
-        /// <item><description><c>modelId</c> is required. When only modifying the model, you can omit <c>thinkingLevel</c>. For details about how to configure the thinking level, see the supplementary description of request parameters.</description></item>
-        /// <item><description>This operation only modifies the target session and does not modify the global default model of the agent or account. The session may deny configuration modifications during execution, and switching models during runtime is not guaranteed to be supported.</description></item>
-        /// <item><description>The model and thinking level Settings are applied in steps. If the call fails, the model may have already been changed, and a full rollback is not guaranteed. You should call GetAgentSessionModel to query the current configuration before deciding what to do next. After a successful call, you can read the actual effective values from the returned result.</description></item>
+        /// <item><description>Pass the <c>sessionId</c> returned by CreateAgentSession and the <c>Models[].Id</c> returned by ListModels as <c>Params.sessionId</c> and <c>Params.modelId</c>, respectively. The visibility of a model in the model catalog does not mean that the target session supports the model. The final validation is performed by the target session.</description></item>
+        /// <item><description><c>modelId</c> is required. When you only modify the model, you can omit <c>thinkingLevel</c>. For more information about how to configure the thinking level, see the supplementary description of request parameters.</description></item>
+        /// <item><description>This operation only modifies the target session and does not modify the global default model of the agent or account. The session may deny configuration modifications during execution, and switching during runtime is not guaranteed to be supported.</description></item>
+        /// <item><description>The model and thinking level settings are applied step by step. If the call fails, the model may have already been changed, and an overall rollback is not guaranteed. You should call GetAgentSessionModel to query the current configuration before deciding on subsequent operations. After a successful call, you can read the actual effective values from the returned result.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3980,10 +4240,10 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Pass the <c>sessionId</c> returned by CreateAgentSession and the <c>Models[].Id</c> returned by ListModels as <c>Params.sessionId</c> and <c>Params.modelId</c>, respectively. The visibility of a model in the model catalog does not guarantee that the target session supports the model. The final validation is performed by the target session.</description></item>
-        /// <item><description><c>modelId</c> is required. When only modifying the model, you can omit <c>thinkingLevel</c>. For details about how to configure the thinking level, see the supplementary description of request parameters.</description></item>
-        /// <item><description>This operation only modifies the target session and does not modify the global default model of the agent or account. The session may deny configuration modifications during execution, and switching models during runtime is not guaranteed to be supported.</description></item>
-        /// <item><description>The model and thinking level Settings are applied in steps. If the call fails, the model may have already been changed, and a full rollback is not guaranteed. You should call GetAgentSessionModel to query the current configuration before deciding what to do next. After a successful call, you can read the actual effective values from the returned result.</description></item>
+        /// <item><description>Pass the <c>sessionId</c> returned by CreateAgentSession and the <c>Models[].Id</c> returned by ListModels as <c>Params.sessionId</c> and <c>Params.modelId</c>, respectively. The visibility of a model in the model catalog does not mean that the target session supports the model. The final validation is performed by the target session.</description></item>
+        /// <item><description><c>modelId</c> is required. When you only modify the model, you can omit <c>thinkingLevel</c>. For more information about how to configure the thinking level, see the supplementary description of request parameters.</description></item>
+        /// <item><description>This operation only modifies the target session and does not modify the global default model of the agent or account. The session may deny configuration modifications during execution, and switching during runtime is not guaranteed to be supported.</description></item>
+        /// <item><description>The model and thinking level settings are applied step by step. If the call fails, the model may have already been changed, and an overall rollback is not guaranteed. You should call GetAgentSessionModel to query the current configuration before deciding on subsequent operations. After a successful call, you can read the actual effective values from the returned result.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4008,10 +4268,10 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Pass the <c>sessionId</c> returned by CreateAgentSession and the <c>Models[].Id</c> returned by ListModels as <c>Params.sessionId</c> and <c>Params.modelId</c>, respectively. The visibility of a model in the model catalog does not guarantee that the target session supports the model. The final validation is performed by the target session.</description></item>
-        /// <item><description><c>modelId</c> is required. When only modifying the model, you can omit <c>thinkingLevel</c>. For details about how to configure the thinking level, see the supplementary description of request parameters.</description></item>
-        /// <item><description>This operation only modifies the target session and does not modify the global default model of the agent or account. The session may deny configuration modifications during execution, and switching models during runtime is not guaranteed to be supported.</description></item>
-        /// <item><description>The model and thinking level Settings are applied in steps. If the call fails, the model may have already been changed, and a full rollback is not guaranteed. You should call GetAgentSessionModel to query the current configuration before deciding what to do next. After a successful call, you can read the actual effective values from the returned result.</description></item>
+        /// <item><description>Pass the <c>sessionId</c> returned by CreateAgentSession and the <c>Models[].Id</c> returned by ListModels as <c>Params.sessionId</c> and <c>Params.modelId</c>, respectively. The visibility of a model in the model catalog does not mean that the target session supports the model. The final validation is performed by the target session.</description></item>
+        /// <item><description><c>modelId</c> is required. When you only modify the model, you can omit <c>thinkingLevel</c>. For more information about how to configure the thinking level, see the supplementary description of request parameters.</description></item>
+        /// <item><description>This operation only modifies the target session and does not modify the global default model of the agent or account. The session may deny configuration modifications during execution, and switching during runtime is not guaranteed to be supported.</description></item>
+        /// <item><description>The model and thinking level settings are applied step by step. If the call fails, the model may have already been changed, and an overall rollback is not guaranteed. You should call GetAgentSessionModel to query the current configuration before deciding on subsequent operations. After a successful call, you can read the actual effective values from the returned result.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4038,7 +4298,7 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <list type="bullet">
         /// <item><description><c>Name</c> is used only to locate the agent and cannot be modified after creation.</description></item>
         /// <item><description>Each agent can be bound to only one knowledge base.</description></item>
-        /// <item><description><c>Tools</c> is updated according to the rules below. If <c>Skills</c> or <c>KnowledgeBases</c> is not passed, the original values are retained. If a non-empty array is passed, the entire list is replaced. If an empty array is passed, the corresponding bindings are removed. Other optional fields retain their original values if not passed.</description></item>
+        /// <item><description><c>Tools</c> is updated according to the rules below. If <c>Skills</c> or <c>KnowledgeBases</c> is not passed, the original value is retained. If a non-empty array is passed, it replaces the original value entirely. If an empty array is passed, the corresponding binding is removed. Other optional fields retain their original values if not passed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4123,7 +4383,7 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <list type="bullet">
         /// <item><description><c>Name</c> is used only to locate the agent and cannot be modified after creation.</description></item>
         /// <item><description>Each agent can be bound to only one knowledge base.</description></item>
-        /// <item><description><c>Tools</c> is updated according to the rules below. If <c>Skills</c> or <c>KnowledgeBases</c> is not passed, the original values are retained. If a non-empty array is passed, the entire list is replaced. If an empty array is passed, the corresponding bindings are removed. Other optional fields retain their original values if not passed.</description></item>
+        /// <item><description><c>Tools</c> is updated according to the rules below. If <c>Skills</c> or <c>KnowledgeBases</c> is not passed, the original value is retained. If a non-empty array is passed, it replaces the original value entirely. If an empty array is passed, the corresponding binding is removed. Other optional fields retain their original values if not passed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4208,7 +4468,7 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <list type="bullet">
         /// <item><description><c>Name</c> is used only to locate the agent and cannot be modified after creation.</description></item>
         /// <item><description>Each agent can be bound to only one knowledge base.</description></item>
-        /// <item><description><c>Tools</c> is updated according to the rules below. If <c>Skills</c> or <c>KnowledgeBases</c> is not passed, the original values are retained. If a non-empty array is passed, the entire list is replaced. If an empty array is passed, the corresponding bindings are removed. Other optional fields retain their original values if not passed.</description></item>
+        /// <item><description><c>Tools</c> is updated according to the rules below. If <c>Skills</c> or <c>KnowledgeBases</c> is not passed, the original value is retained. If a non-empty array is passed, it replaces the original value entirely. If an empty array is passed, the corresponding binding is removed. Other optional fields retain their original values if not passed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4235,7 +4495,7 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <list type="bullet">
         /// <item><description><c>Name</c> is used only to locate the agent and cannot be modified after creation.</description></item>
         /// <item><description>Each agent can be bound to only one knowledge base.</description></item>
-        /// <item><description><c>Tools</c> is updated according to the rules below. If <c>Skills</c> or <c>KnowledgeBases</c> is not passed, the original values are retained. If a non-empty array is passed, the entire list is replaced. If an empty array is passed, the corresponding bindings are removed. Other optional fields retain their original values if not passed.</description></item>
+        /// <item><description><c>Tools</c> is updated according to the rules below. If <c>Skills</c> or <c>KnowledgeBases</c> is not passed, the original value is retained. If a non-empty array is passed, it replaces the original value entirely. If an empty array is passed, the corresponding binding is removed. Other optional fields retain their original values if not passed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4261,19 +4521,19 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <description>
         /// <list type="bullet">
         /// <item><description>Update rules:<list type="bullet">
-        /// <item><description>Name is only used to locate the skill and cannot be modified.</description></item>
-        /// <item><description>The caller must be the creator of the skill, or the root account of the tenant that has the permission to manage the tenant-level skill.</description></item>
+        /// <item><description><c>Name</c> is used only to locate the skill and cannot be modified.</description></item>
+        /// <item><description>The caller must be the creator of the skill or the root account of the tenant that has permissions to manage the tenant-level skill.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Replacement rules:<list type="bullet">
-        /// <item><description>If Description and Visibility are omitted, their original values are retained. Passing <c>null</c> is also treated as omission and cannot be used to clear the original values.</description></item>
-        /// <item><description>Metadata is replaced as a whole, not merged incrementally. If Metadata is omitted, the original content is retained. If it is passed, old fields not included in the new object are deleted.</description></item>
-        /// <item><description>When modifying only Description or Visibility, do not pass Metadata, and do not pass an empty object <c>{}</c>. An empty object replaces the original metadata with an empty object as a whole.</description></item>
+        /// <item><description>If <c>Description</c> and <c>Visibility</c> are omitted, their original values are retained. Passing <c>null</c> is treated as omission and cannot be used to clear the original values.</description></item>
+        /// <item><description><c>Metadata</c> is replaced as a whole, not merged incrementally. If <c>Metadata</c> is omitted, the original content is retained. If it is passed, old fields not included in the new object are deleted.</description></item>
+        /// <item><description>When modifying only <c>Description</c> or <c>Visibility</c>, do not pass <c>Metadata</c> or an empty object <c>{}</c>. An empty object replaces the original metadata with an empty object.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Content sources:<list type="bullet">
-        /// <item><description>When replacing the body or bundle, you must and can only choose one of skillMd, transitId, or bundleUrl.</description></item>
-        /// <item><description>For the field formats of the three sources, the Transit upload confirmation process, and the bundleUrl restrictions, refer to CreateSkill. Finally, pass the selected source in UpdateSkill.Metadata.</description></item>
+        /// <item><description>When replacing the body or bundle, you must choose one and only one of <c>skillMd</c>, <c>transitId</c>, or <c>bundleUrl</c>.</description></item>
+        /// <item><description>For the field formats of the three sources, the Transit upload confirmation process, and the <c>bundleUrl</c> restrictions, refer to CreateSkill. Pass the selected source in <c>UpdateSkill.Metadata</c>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -4343,19 +4603,19 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <description>
         /// <list type="bullet">
         /// <item><description>Update rules:<list type="bullet">
-        /// <item><description>Name is only used to locate the skill and cannot be modified.</description></item>
-        /// <item><description>The caller must be the creator of the skill, or the root account of the tenant that has the permission to manage the tenant-level skill.</description></item>
+        /// <item><description><c>Name</c> is used only to locate the skill and cannot be modified.</description></item>
+        /// <item><description>The caller must be the creator of the skill or the root account of the tenant that has permissions to manage the tenant-level skill.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Replacement rules:<list type="bullet">
-        /// <item><description>If Description and Visibility are omitted, their original values are retained. Passing <c>null</c> is also treated as omission and cannot be used to clear the original values.</description></item>
-        /// <item><description>Metadata is replaced as a whole, not merged incrementally. If Metadata is omitted, the original content is retained. If it is passed, old fields not included in the new object are deleted.</description></item>
-        /// <item><description>When modifying only Description or Visibility, do not pass Metadata, and do not pass an empty object <c>{}</c>. An empty object replaces the original metadata with an empty object as a whole.</description></item>
+        /// <item><description>If <c>Description</c> and <c>Visibility</c> are omitted, their original values are retained. Passing <c>null</c> is treated as omission and cannot be used to clear the original values.</description></item>
+        /// <item><description><c>Metadata</c> is replaced as a whole, not merged incrementally. If <c>Metadata</c> is omitted, the original content is retained. If it is passed, old fields not included in the new object are deleted.</description></item>
+        /// <item><description>When modifying only <c>Description</c> or <c>Visibility</c>, do not pass <c>Metadata</c> or an empty object <c>{}</c>. An empty object replaces the original metadata with an empty object.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Content sources:<list type="bullet">
-        /// <item><description>When replacing the body or bundle, you must and can only choose one of skillMd, transitId, or bundleUrl.</description></item>
-        /// <item><description>For the field formats of the three sources, the Transit upload confirmation process, and the bundleUrl restrictions, refer to CreateSkill. Finally, pass the selected source in UpdateSkill.Metadata.</description></item>
+        /// <item><description>When replacing the body or bundle, you must choose one and only one of <c>skillMd</c>, <c>transitId</c>, or <c>bundleUrl</c>.</description></item>
+        /// <item><description>For the field formats of the three sources, the Transit upload confirmation process, and the <c>bundleUrl</c> restrictions, refer to CreateSkill. Pass the selected source in <c>UpdateSkill.Metadata</c>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -4425,19 +4685,19 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <description>
         /// <list type="bullet">
         /// <item><description>Update rules:<list type="bullet">
-        /// <item><description>Name is only used to locate the skill and cannot be modified.</description></item>
-        /// <item><description>The caller must be the creator of the skill, or the root account of the tenant that has the permission to manage the tenant-level skill.</description></item>
+        /// <item><description><c>Name</c> is used only to locate the skill and cannot be modified.</description></item>
+        /// <item><description>The caller must be the creator of the skill or the root account of the tenant that has permissions to manage the tenant-level skill.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Replacement rules:<list type="bullet">
-        /// <item><description>If Description and Visibility are omitted, their original values are retained. Passing <c>null</c> is also treated as omission and cannot be used to clear the original values.</description></item>
-        /// <item><description>Metadata is replaced as a whole, not merged incrementally. If Metadata is omitted, the original content is retained. If it is passed, old fields not included in the new object are deleted.</description></item>
-        /// <item><description>When modifying only Description or Visibility, do not pass Metadata, and do not pass an empty object <c>{}</c>. An empty object replaces the original metadata with an empty object as a whole.</description></item>
+        /// <item><description>If <c>Description</c> and <c>Visibility</c> are omitted, their original values are retained. Passing <c>null</c> is treated as omission and cannot be used to clear the original values.</description></item>
+        /// <item><description><c>Metadata</c> is replaced as a whole, not merged incrementally. If <c>Metadata</c> is omitted, the original content is retained. If it is passed, old fields not included in the new object are deleted.</description></item>
+        /// <item><description>When modifying only <c>Description</c> or <c>Visibility</c>, do not pass <c>Metadata</c> or an empty object <c>{}</c>. An empty object replaces the original metadata with an empty object.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Content sources:<list type="bullet">
-        /// <item><description>When replacing the body or bundle, you must and can only choose one of skillMd, transitId, or bundleUrl.</description></item>
-        /// <item><description>For the field formats of the three sources, the Transit upload confirmation process, and the bundleUrl restrictions, refer to CreateSkill. Finally, pass the selected source in UpdateSkill.Metadata.</description></item>
+        /// <item><description>When replacing the body or bundle, you must choose one and only one of <c>skillMd</c>, <c>transitId</c>, or <c>bundleUrl</c>.</description></item>
+        /// <item><description>For the field formats of the three sources, the Transit upload confirmation process, and the <c>bundleUrl</c> restrictions, refer to CreateSkill. Pass the selected source in <c>UpdateSkill.Metadata</c>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -4465,19 +4725,19 @@ namespace AlibabaCloud.SDK.Ada20260701
         /// <description>
         /// <list type="bullet">
         /// <item><description>Update rules:<list type="bullet">
-        /// <item><description>Name is only used to locate the skill and cannot be modified.</description></item>
-        /// <item><description>The caller must be the creator of the skill, or the root account of the tenant that has the permission to manage the tenant-level skill.</description></item>
+        /// <item><description><c>Name</c> is used only to locate the skill and cannot be modified.</description></item>
+        /// <item><description>The caller must be the creator of the skill or the root account of the tenant that has permissions to manage the tenant-level skill.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Replacement rules:<list type="bullet">
-        /// <item><description>If Description and Visibility are omitted, their original values are retained. Passing <c>null</c> is also treated as omission and cannot be used to clear the original values.</description></item>
-        /// <item><description>Metadata is replaced as a whole, not merged incrementally. If Metadata is omitted, the original content is retained. If it is passed, old fields not included in the new object are deleted.</description></item>
-        /// <item><description>When modifying only Description or Visibility, do not pass Metadata, and do not pass an empty object <c>{}</c>. An empty object replaces the original metadata with an empty object as a whole.</description></item>
+        /// <item><description>If <c>Description</c> and <c>Visibility</c> are omitted, their original values are retained. Passing <c>null</c> is treated as omission and cannot be used to clear the original values.</description></item>
+        /// <item><description><c>Metadata</c> is replaced as a whole, not merged incrementally. If <c>Metadata</c> is omitted, the original content is retained. If it is passed, old fields not included in the new object are deleted.</description></item>
+        /// <item><description>When modifying only <c>Description</c> or <c>Visibility</c>, do not pass <c>Metadata</c> or an empty object <c>{}</c>. An empty object replaces the original metadata with an empty object.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Content sources:<list type="bullet">
-        /// <item><description>When replacing the body or bundle, you must and can only choose one of skillMd, transitId, or bundleUrl.</description></item>
-        /// <item><description>For the field formats of the three sources, the Transit upload confirmation process, and the bundleUrl restrictions, refer to CreateSkill. Finally, pass the selected source in UpdateSkill.Metadata.</description></item>
+        /// <item><description>When replacing the body or bundle, you must choose one and only one of <c>skillMd</c>, <c>transitId</c>, or <c>bundleUrl</c>.</description></item>
+        /// <item><description>For the field formats of the three sources, the Transit upload confirmation process, and the <c>bundleUrl</c> restrictions, refer to CreateSkill. Pass the selected source in <c>UpdateSkill.Metadata</c>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>

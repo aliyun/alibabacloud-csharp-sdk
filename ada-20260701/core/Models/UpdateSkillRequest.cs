@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         /// <para>The updated description of the skill.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>A skill used for code review, security checks, and risk alerts</para>
+        /// <para>A skill used to perform code review, security checks, and risk alerts</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public object Metadata { get; set; }
 
         /// <summary>
-        /// <para>The name of the skill to be updated. This parameter is only used to locate the skill and cannot be used to modify the name.</para>
+        /// <para>The name of the skill to be updated. This parameter is used only to locate the skill and cannot be used to modify the name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
