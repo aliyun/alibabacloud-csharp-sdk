@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class ListCustomDomainsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. A value of 200 indicates success.</para>
+        /// <para>The response code. The value is 200 if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public List<CustomDomainResp> CustomDomains { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether there is a next page.</para>
+        /// <para>Indicates whether a next page is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? NextOffset { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. This value is empty when no more results are available.</para>
+        /// <para>The pagination token for the next page. This parameter is empty if no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cae5f900-8b1d-4c0e-9c2a-1a2b3c4d5e6f</para>

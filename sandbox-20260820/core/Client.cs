@@ -1776,7 +1776,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a warm pool.</para>
+        /// <para>Deletes a warm-up pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1816,7 +1816,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a warm pool.</para>
+        /// <para>Deletes a warm-up pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1856,7 +1856,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a warm pool.</para>
+        /// <para>Deletes a warm-up pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1875,7 +1875,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a warm pool.</para>
+        /// <para>Deletes a warm-up pool.</para>
         /// </summary>
         /// 
         /// <param name="request">

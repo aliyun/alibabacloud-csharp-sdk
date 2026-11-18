@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class UpdateWarmPoolResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response business code.</para>
+        /// <para>The business code in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
