@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class WeiboItem : TeaModel {
         /// <summary>
+        /// <para>The search result template. Fixed as weibo_strong for Weibo scenarios.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public string CardType { get; set; }
 
         /// <summary>
+        /// <para>The Weibo homepage of the user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://m.weibo.cn/u/7761793874?luicode=20000061&lfid=5024099350350075">https://m.weibo.cn/u/7761793874?luicode=20000061&amp;lfid=5024099350350075</a></para>
         /// </summary>
@@ -28,20 +31,27 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public string HomepageLink { get; set; }
 
         /// <summary>
+        /// <para>The content of the Weibo post.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>【小调查：你会买<em>小米SU7</em>吗？】#小米SU7路测覆盖300多城市#4月17日，@小米汽车 发文称SU7道路测试覆盖全国300多个城市，涵盖极寒，极热天气，总里程数高达540万公里，目前仍在进行中。  网页链接</para>
+        /// <para>[Quick poll: Would you buy the Xiaomi SU7?]
+        /// #Xiaomi SU7 road tests now cover more than 300 cities#
+        /// On April 17, @Xiaomi Auto posted that SU7 road testing now covers over 300 cities nationwide, including tests in extremely cold and extremely hot weather. The total test mileage has reached 5.4 million kilometers and is still ongoing. Web link</para>
         /// </summary>
         [NameInMap("htmlSnippet")]
         [Validation(Required=false)]
         public string HtmlSnippet { get; set; }
 
+        /// <summary>
+        /// <para>The image information.</para>
+        /// </summary>
         [NameInMap("images")]
         [Validation(Required=false)]
         public List<string> Images { get; set; }
 
         /// <summary>
+        /// <para>The Weibo URL of the search result.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,18 +62,21 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public string Link { get; set; }
 
         /// <summary>
+        /// <para>The publish time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1小时前</para>
+        /// <para>An hour ago</para>
         /// </summary>
         [NameInMap("publishDisplayTime")]
         [Validation(Required=false)]
         public string PublishDisplayTime { get; set; }
 
         /// <summary>
+        /// <para>The Weibo username.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>白鹿科技</para>
+        /// <para>Bailu Tech</para>
         /// </summary>
         [NameInMap("username")]
         [Validation(Required=false)]

@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public string Link { get; set; }
 
         /// <summary>
-        /// <para>The description excerpt of the search result in text format.</para>
+        /// <para>The truncated description of the search result in text format.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>100km/h-0制动能力上，仅有33.3m，不黑不吹，单看这个，小米SU7确实表现不错。而续航方面，101kWh电池容量，实现CLTC续航800km，还有现5分钟补能220km，15分钟补能510km的800V高压平台。而在...</para>
+        /// <para>In terms of 100 km/h to 0 braking performance, the distance is only 33.3 m. Objectively speaking, the Xiaomi SU7 performs really well in this regard. As for range, it features a 101 kWh battery capacity, achieving a CLTC range of 800 km, and an 800 V high-voltage platform that supports 220 km of range in 5 minutes and 510 km in 15 minutes. And in..</para>
         /// </summary>
         [NameInMap("snippet")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>小米SU7售价22.99万元起 高管亲自辟谣：发布前不会有价格</para>
+        /// <para>Xiaomi SU7 priced from 229,900 CNY, executive personally dispels rumors: no price will be announced before launch</para>
         /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]

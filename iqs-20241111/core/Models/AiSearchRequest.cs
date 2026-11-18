@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class AiSearchRequest : TeaModel {
         /// <summary>
-        /// <para>The industry. After you specify an industry, only content from websites within the specified industry is recalled. Separate multiple industries with commas.</para>
+        /// <para>The industry. If specified, only site content restricted to the specified industry is recalled. Separate multiple industries with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>finance</para>
@@ -20,28 +20,28 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public string Industry { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from 1.</para>
+        /// <para>The page number. Starts from 1.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;total_count\&quot;: 6851, \&quot;page_number\&quot;: 54, \&quot;page_size\&quot;: 100}</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>The query to search for.</para>
+        /// <para>The search query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>苹果手机</para>
+        /// <para>iPhone</para>
         /// </summary>
         [NameInMap("query")]
         [Validation(Required=false)]
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>The time range for filtering web page publication dates.</para>
+        /// <para>The query range for the web page publish time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17dc8bcd-f34a-46d1-a7a3-0fa3d1ce3824</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>The session ID for multi-turn interactions.</para>
+        /// <para>The session ID for multi-turn interaction.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OneWeek</para>

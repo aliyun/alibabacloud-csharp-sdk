@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class GlobalSearchRequest : TeaModel {
         /// <summary>
-        /// <para>Page number, starting from 1</para>
+        /// <para>The page number. The value starts from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>Number of items per page</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,18 +30,18 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Search query content</para>
+        /// <para>The search query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>特朗普最新关税消息</para>
+        /// <para>Latest Trump tariff news</para>
         /// </summary>
         [NameInMap("query")]
         [Validation(Required=false)]
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>Web page publish time range</para>
+        /// <para>The relative time range of the webpage publication time. Specify a value based on the relative time options.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OneWeek</para>

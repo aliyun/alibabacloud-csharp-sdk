@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         /// <para>The request query.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>杭州美食</para>
+        /// <para>Hangzhou cuisine</para>
         /// </summary>
         [NameInMap("query")]
         [Validation(Required=false)]

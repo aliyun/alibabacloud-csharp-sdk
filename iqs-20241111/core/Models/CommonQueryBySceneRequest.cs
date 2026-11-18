@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class CommonQueryBySceneRequest : TeaModel {
+        /// <summary>
+        /// <para>The request body.</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public CommonAgentQuery Body { get; set; }

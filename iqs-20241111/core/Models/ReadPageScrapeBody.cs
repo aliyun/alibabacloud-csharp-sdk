@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class ReadPageScrapeBody : TeaModel {
         /// <summary>
-        /// <para>The format of the parsing result.</para>
+        /// <para>The formats of the parsed result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>rawHtml: the HTML of the target site.</description></item>
-        /// <item><description>html: the page content processed based on readabilityMode.</description></item>
-        /// <item><description>markdown: the Markdown content converted from the HTML.</description></item>
-        /// <item><description>text: the text content extracted from the HTML.</description></item>
-        /// <item><description>screenshot: a screenshot of the target site.</description></item>
+        /// <item><description>rawHtml: The HTML of the target site.</description></item>
+        /// <item><description>html: The page content processed based on the readabilityMode.</description></item>
+        /// <item><description>markdown: The Markdown content converted from the HTML.</description></item>
+        /// <item><description>text: The text content in the HTML.</description></item>
+        /// <item><description>screenshot: The screenshot of the target site.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("formats")]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public List<string> Formats { get; set; }
 
         /// <summary>
-        /// <para>This parameter does not need to be specified.</para>
+        /// <para>This parameter is not required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -34,11 +34,12 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public string Location { get; set; }
 
         /// <summary>
-        /// <para>The maximum cache validity period. Unit: seconds. Default value: 1296000.</para>
-        /// <ol>
-        /// <item><description>If the cache duration is less than the value of maxAge, cached content is returned.</description></item>
-        /// <item><description>If maxAge is set to 0, caching is not used.</description></item>
-        /// </ol>
+        /// <para>The maximum cache duration, in seconds.</para>
+        /// <list type="bullet">
+        /// <item><description>If the cache duration is less than the maxAge value, the cached content is returned.</description></item>
+        /// <item><description>If the maxAge value is set to 0, the cache is not used.</description></item>
+        /// </list>
+        /// <para>Default value: 1296000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1296000</para>
@@ -48,7 +49,7 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public int? MaxAge { get; set; }
 
         /// <summary>
-        /// <para>The timeout period for waiting for the target site resources to fully load. The value of pageTimeout must be less than the value of timeout.</para>
+        /// <para>The timeout period for waiting for the resources of the target site to fully load. The pageTimeout value must be less than the timeout value.</para>
         /// <para>Default value: 15000.</para>
         /// 
         /// <b>Example:</b>
@@ -59,15 +60,15 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public int? PageTimeout { get; set; }
 
         /// <summary>
-        /// <para>The readability configuration for the parsing result.</para>
+        /// <para>The readability configuration of the parsed result.</para>
         /// </summary>
         [NameInMap("readability")]
         [Validation(Required=false)]
         public ReadPageScrapeBodyReadability Readability { get; set; }
         public class ReadPageScrapeBodyReadability : TeaModel {
             /// <summary>
-            /// <para>是否剔除所有图片</para>
-            /// <para>默认值：false</para>
+            /// <para>Specifies whether to remove all images.</para>
+            /// <para>Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -77,8 +78,8 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
             public bool? ExcludeAllImages { get; set; }
 
             /// <summary>
-            /// <para>是否剔除所有链接</para>
-            /// <para>默认值：false</para>
+            /// <para>Specifies whether to remove all links.</para>
+            /// <para>Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -88,16 +89,19 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
             public bool? ExcludeAllLinks { get; set; }
 
             /// <summary>
-            /// <para>指定排除的标签</para>
+            /// <para>The tags to exclude.</para>
             /// </summary>
             [NameInMap("excludedTags")]
             [Validation(Required=false)]
             public List<string> ExcludedTags { get; set; }
 
             /// <summary>
-            /// <para>none：不删除信息，默认为 none</para>
-            /// <para>normal: 基于自研算法，剔除目标页面无关信息（页头/页脚，导航等）</para>
-            /// <para>article: 基于自研算法，获取站点主要正文内容(适用于博客、新闻站点，不适用于目录页、导航页)</para>
+            /// <para>The readability mode. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>none: Does not remove any information. This is the default value.</description></item>
+            /// <item><description>normal: Removes irrelevant information from the target page, such as headers, footers, and navigation elements, based on a proprietary algorithm.</description></item>
+            /// <item><description>article: Extracts the main body content of the site based on a proprietary algorithm. This mode is suitable for blogs and news sites, but not for directory or navigation pages.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>none</para>
@@ -109,8 +113,8 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         }
 
         /// <summary>
-        /// <para>The end-to-end processing timeout period. Unit: ms.</para>
-        /// <para>Valid values: [0, 180000].</para>
+        /// <para>The end-to-end processing timeout period, in milliseconds.</para>
+        /// <para>Valid values: 0 to 180000.</para>
         /// <para>Default value: 60000.</para>
         /// 
         /// <b>Example:</b>
@@ -121,7 +125,7 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public int? Timeout { get; set; }
 
         /// <summary>
-        /// <para>The target URL to parse. The URL must start with http:// or https://.</para>
+        /// <para>The target URL to parse. It must start with http:// or https://.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

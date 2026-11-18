@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class AiSearchResponseBody : TeaModel {
         /// <summary>
-        /// <para>The header of the response.</para>
+        /// <para>The header of the returned result.</para>
         /// </summary>
         [NameInMap("header")]
         [Validation(Required=false)]
@@ -52,6 +52,9 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
                 public class AiSearchResponseBodyHeaderQueryContextOriginalQuery : TeaModel {
                     /// <summary>
                     /// <para>The industry.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>medical</para>
                     /// </summary>
                     [NameInMap("industry")]
                     [Validation(Required=false)]
@@ -59,13 +62,19 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
 
                     /// <summary>
                     /// <para>The page number.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
                     /// </summary>
                     [NameInMap("page")]
                     [Validation(Required=false)]
                     public int? Page { get; set; }
 
                     /// <summary>
-                    /// <para>The query condition.</para>
+                    /// <para>The query conditions.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Hangzhou cuisine</para>
                     /// </summary>
                     [NameInMap("query")]
                     [Validation(Required=false)]
@@ -73,6 +82,9 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
 
                     /// <summary>
                     /// <para>The time range.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>NoLimit</para>
                     /// </summary>
                     [NameInMap("timeRange")]
                     [Validation(Required=false)]
@@ -88,7 +100,7 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
                 public AiSearchResponseBodyHeaderQueryContextRewrite Rewrite { get; set; }
                 public class AiSearchResponseBodyHeaderQueryContextRewrite : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether query rewriting is enabled.</para>
+                    /// <para>Specifies whether query rewrite is enabled.</para>
                     /// </summary>
                     [NameInMap("enabled")]
                     [Validation(Required=false)]
@@ -96,6 +108,9 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
 
                     /// <summary>
                     /// <para>The rewritten time range.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>OneMonth</para>
                     /// </summary>
                     [NameInMap("timeRange")]
                     [Validation(Required=false)]
@@ -106,7 +121,7 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
             }
 
             /// <summary>
-            /// <para>The response time, in milliseconds.</para>
+            /// <para>The time taken (ms).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1293</para>
@@ -118,7 +133,7 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         }
 
         /// <summary>
-        /// <para>The payload of the response. The value is a JSON structure that varies by event type.</para>
+        /// <para>The payload of the returned result in JSON format. The structure varies based on the event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;header&quot;:{&quot;eventId&quot;:&quot;6f617de0-204f-406f-a9be-34779c06d498&quot;,&quot;event&quot;:&quot;on_common_search_start&quot;,&quot;responseTime&quot;:120},&quot;payload&quot;:&quot;&quot;,&quot;requestId&quot;:&quot;715d01a0-de7e-42c3-abca-b901fcd79b39&quot;}</para>

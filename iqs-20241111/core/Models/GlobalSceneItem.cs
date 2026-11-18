@@ -14,9 +14,9 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         /// 
         /// <b>Example:</b>
         /// <para>{
-        /// &quot;snippet&quot;: &quot;截至2025年3月7日，SpaceX星舰已经发射了8次，并取得4次成功及4次失败。&quot;,
-        /// &quot;snippetHighlighted&quot;: [&quot;8次&quot;],
-        /// &quot;title&quot;: &quot;星舰发射任务列表&quot;
+        /// &quot;snippet&quot;: &quot;As of March 7, 2025, SpaceX Starship has been launched 8 times, with 4 successes and 4 failures.&quot;,
+        /// &quot;snippetHighlighted&quot;: [&quot;8 times&quot;],
+        /// &quot;title&quot;: &quot;List of Starship launch missions&quot;
         /// }</para>
         /// </summary>
         [NameInMap("detail")]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public string Detail { get; set; }
 
         /// <summary>
-        /// <para>The type of the vertical data.</para>
+        /// <para>The type of vertical data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>answerBox</para>

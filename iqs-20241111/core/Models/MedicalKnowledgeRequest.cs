@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class MedicalKnowledgeRequest : TeaModel {
         /// <summary>
-        /// <para>Health Graph query conditions</para>
+        /// <para>The query conditions for the health graph.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

@@ -10,18 +10,21 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class GenericAdvancedSearchRequest : TeaModel {
         /// <summary>
-        /// <para>The industry. After you specify this parameter, only content from websites within the specified industries is recalled. Separate multiple industries with commas.</para>
+        /// <para>The industry. If you specify this parameter, only website content specific to the specified industry is recalled. Separate multiple industries with commas.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>medical</para>
         /// </summary>
         [NameInMap("industry")]
         [Validation(Required=false)]
         public string Industry { get; set; }
 
         /// <summary>
-        /// <para>The query text to search for.</para>
+        /// <para>The search query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>苹果手机</para>
+        /// <para>iPhone</para>
         /// </summary>
         [NameInMap("query")]
         [Validation(Required=false)]
@@ -38,7 +41,7 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>The time range for filtering web pages by publish time.</para>
+        /// <para>The relative query range for the web page publication time. Valid values: OneDay, OneWeek, OneMonth, OneYear, and NoLimit. A value of NoLimit indicates that no time limit is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OneWeek</para>

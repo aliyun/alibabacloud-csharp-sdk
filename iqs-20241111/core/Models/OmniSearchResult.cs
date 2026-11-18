@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class OmniSearchResult : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>35E5608A-A737-2038-AFB6-D9D34C6BFD9E</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

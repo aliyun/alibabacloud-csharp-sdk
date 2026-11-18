@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class OmniAnswerRequest : TeaModel {
         /// <summary>
-        /// <para>Search information</para>
+        /// <para>The search information.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

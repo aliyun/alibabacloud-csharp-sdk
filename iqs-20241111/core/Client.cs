@@ -18,11 +18,10 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "IQS";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"cn-zhangjiakou", "iqs.cn-zhangjiakou.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("iqs", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -43,13 +42,12 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the method to invoke the multi-stage streaming API V3 for general search by using the Alibaba Cloud OpenAPI SDK, including parameter descriptions.</para>
+        /// <para>Describes how to invoke the multi-stage streaming API V3 for general search by using the Alibaba Cloud OpenAPI SDK and provides parameter descriptions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Provides streaming results in two stages, common_search and post_retrieval, for on-demand use.
-        /// General search results (common_search): The raw search results. Covers key fields such as web page title, dynamic summary, body text, source website, and publication time. Post-retrieval processing (post_retrieval): Uses a rerank model to rerank and filter the common_search results from the previous stage. The mAP metric for context relevancy improves by approximately 5%, with an additional latency of approximately 110 ms.</para>
+        /// <para>Provides streaming results in two stages, common_search and post_retrieval, for customers to use on demand. General search results (common_search): the original search results. Covers key fields such as web page title, dynamic summary, body text, source website, and publish time. Post-retrieval processing (post_retrieval): reranks and filters the common_search results from the previous stage by using a rerank model. The mean average precision (mAP) metric for context relevancy of search results is improved by about 5%, and the latency is increased by about 110 ms.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -111,13 +109,12 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the method to invoke the multi-stage streaming API V3 for general search by using the Alibaba Cloud OpenAPI SDK, including parameter descriptions.</para>
+        /// <para>Describes how to invoke the multi-stage streaming API V3 for general search by using the Alibaba Cloud OpenAPI SDK and provides parameter descriptions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Provides streaming results in two stages, common_search and post_retrieval, for on-demand use.
-        /// General search results (common_search): The raw search results. Covers key fields such as web page title, dynamic summary, body text, source website, and publication time. Post-retrieval processing (post_retrieval): Uses a rerank model to rerank and filter the common_search results from the previous stage. The mAP metric for context relevancy improves by approximately 5%, with an additional latency of approximately 110 ms.</para>
+        /// <para>Provides streaming results in two stages, common_search and post_retrieval, for customers to use on demand. General search results (common_search): the original search results. Covers key fields such as web page title, dynamic summary, body text, source website, and publish time. Post-retrieval processing (post_retrieval): reranks and filters the common_search results from the previous stage by using a rerank model. The mean average precision (mAP) metric for context relevancy of search results is improved by about 5%, and the latency is increased by about 110 ms.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -179,13 +176,12 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the method to invoke the multi-stage streaming API V3 for general search by using the Alibaba Cloud OpenAPI SDK, including parameter descriptions.</para>
+        /// <para>Describes how to invoke the multi-stage streaming API V3 for general search by using the Alibaba Cloud OpenAPI SDK and provides parameter descriptions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Provides streaming results in two stages, common_search and post_retrieval, for on-demand use.
-        /// General search results (common_search): The raw search results. Covers key fields such as web page title, dynamic summary, body text, source website, and publication time. Post-retrieval processing (post_retrieval): Uses a rerank model to rerank and filter the common_search results from the previous stage. The mAP metric for context relevancy improves by approximately 5%, with an additional latency of approximately 110 ms.</para>
+        /// <para>Provides streaming results in two stages, common_search and post_retrieval, for customers to use on demand. General search results (common_search): the original search results. Covers key fields such as web page title, dynamic summary, body text, source website, and publish time. Post-retrieval processing (post_retrieval): reranks and filters the common_search results from the previous stage by using a rerank model. The mean average precision (mAP) metric for context relevancy of search results is improved by about 5%, and the latency is increased by about 110 ms.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -204,13 +200,12 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the method to invoke the multi-stage streaming API V3 for general search by using the Alibaba Cloud OpenAPI SDK, including parameter descriptions.</para>
+        /// <para>Describes how to invoke the multi-stage streaming API V3 for general search by using the Alibaba Cloud OpenAPI SDK and provides parameter descriptions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Provides streaming results in two stages, common_search and post_retrieval, for on-demand use.
-        /// General search results (common_search): The raw search results. Covers key fields such as web page title, dynamic summary, body text, source website, and publication time. Post-retrieval processing (post_retrieval): Uses a rerank model to rerank and filter the common_search results from the previous stage. The mAP metric for context relevancy improves by approximately 5%, with an additional latency of approximately 110 ms.</para>
+        /// <para>Provides streaming results in two stages, common_search and post_retrieval, for customers to use on demand. General search results (common_search): the original search results. Covers key fields such as web page title, dynamic summary, body text, source website, and publish time. Post-retrieval processing (post_retrieval): reranks and filters the common_search results from the previous stage by using a rerank model. The mean average precision (mAP) metric for context relevancy of search results is improved by about 5%, and the latency is increased by about 110 ms.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -229,12 +224,12 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自然语言通用查询</para>
+        /// <para>Performs general natural language queries.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>自然语言搜索通用接口</para>
+        /// <para>The general API for natural language search.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -275,12 +270,12 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自然语言通用查询</para>
+        /// <para>Performs general natural language queries.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>自然语言搜索通用接口</para>
+        /// <para>The general API for natural language search.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -321,12 +316,12 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自然语言通用查询</para>
+        /// <para>Performs general natural language queries.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>自然语言搜索通用接口</para>
+        /// <para>The general API for natural language search.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -345,12 +340,12 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自然语言通用查询</para>
+        /// <para>Performs general natural language queries.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>自然语言搜索通用接口</para>
+        /// <para>The general API for natural language search.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -369,7 +364,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes how to invoke the enhanced search operation (GenericAdvancedSearch) by using the Alibaba Cloud OpenAPI SDK, including the method and metric description. Compared with GenericSearch, GenericAdvancedSearch provides better recall of authoritative websites, with a maximum recall count of 40, delivering improved authoritativeness and data diversity. The response parameters and format of the enhanced operation are consistent with those of GenericAdvancedSearch.</para>
+        /// <para>This topic describes how to call the GenericAdvancedSearch operation by using Alibaba Cloud OpenAPI SDKs and provides parameter descriptions. Compared with GenericSearch, GenericAdvancedSearch provides better recall from authoritative websites and returns up to 40 results, delivering more authoritative and diverse data. The response parameters and format of the enhanced operation are the same as those of GenericAdvancedSearch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -432,7 +427,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes how to invoke the enhanced search operation (GenericAdvancedSearch) by using the Alibaba Cloud OpenAPI SDK, including the method and metric description. Compared with GenericSearch, GenericAdvancedSearch provides better recall of authoritative websites, with a maximum recall count of 40, delivering improved authoritativeness and data diversity. The response parameters and format of the enhanced operation are consistent with those of GenericAdvancedSearch.</para>
+        /// <para>This topic describes how to call the GenericAdvancedSearch operation by using Alibaba Cloud OpenAPI SDKs and provides parameter descriptions. Compared with GenericSearch, GenericAdvancedSearch provides better recall from authoritative websites and returns up to 40 results, delivering more authoritative and diverse data. The response parameters and format of the enhanced operation are the same as those of GenericAdvancedSearch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -495,7 +490,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes how to invoke the enhanced search operation (GenericAdvancedSearch) by using the Alibaba Cloud OpenAPI SDK, including the method and metric description. Compared with GenericSearch, GenericAdvancedSearch provides better recall of authoritative websites, with a maximum recall count of 40, delivering improved authoritativeness and data diversity. The response parameters and format of the enhanced operation are consistent with those of GenericAdvancedSearch.</para>
+        /// <para>This topic describes how to call the GenericAdvancedSearch operation by using Alibaba Cloud OpenAPI SDKs and provides parameter descriptions. Compared with GenericSearch, GenericAdvancedSearch provides better recall from authoritative websites and returns up to 40 results, delivering more authoritative and diverse data. The response parameters and format of the enhanced operation are the same as those of GenericAdvancedSearch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -519,7 +514,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes how to invoke the enhanced search operation (GenericAdvancedSearch) by using the Alibaba Cloud OpenAPI SDK, including the method and metric description. Compared with GenericSearch, GenericAdvancedSearch provides better recall of authoritative websites, with a maximum recall count of 40, delivering improved authoritativeness and data diversity. The response parameters and format of the enhanced operation are consistent with those of GenericAdvancedSearch.</para>
+        /// <para>This topic describes how to call the GenericAdvancedSearch operation by using Alibaba Cloud OpenAPI SDKs and provides parameter descriptions. Compared with GenericSearch, GenericAdvancedSearch provides better recall from authoritative websites and returns up to 40 results, delivering more authoritative and diverse data. The response parameters and format of the enhanced operation are the same as those of GenericAdvancedSearch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -543,7 +538,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a general-purpose search.</para>
+        /// <para>Performs a general search.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -635,7 +630,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a general-purpose search.</para>
+        /// <para>Performs a general search.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -727,7 +722,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a general-purpose search.</para>
+        /// <para>Performs a general search.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -746,7 +741,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a general-purpose search.</para>
+        /// <para>Performs a general search.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -765,7 +760,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query daily usage by dimension for the Information Query Service API</para>
+        /// <para>Queries the daily usage of the information query service API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -819,7 +814,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query daily usage by dimension for the Information Query Service API</para>
+        /// <para>Queries the daily usage of the information query service API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -873,7 +868,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query daily usage by dimension for the Information Query Service API</para>
+        /// <para>Queries the daily usage of the information query service API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -892,7 +887,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query daily usage by dimension for the Information Query Service API</para>
+        /// <para>Queries the daily usage of the information query service API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -911,12 +906,12 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>IQS Search - Global Edition (Global Information Search)</para>
+        /// <para>Searches for global information by using the Global Edition search.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This document describes the usage and parameter specifications of GlobalSearch, the global edition of IQS Search.</para>
+        /// <para>This topic describes how to use the Global Edition search (GlobalSearch) and provides parameter descriptions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -974,12 +969,12 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>IQS Search - Global Edition (Global Information Search)</para>
+        /// <para>Searches for global information by using the Global Edition search.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This document describes the usage and parameter specifications of GlobalSearch, the global edition of IQS Search.</para>
+        /// <para>This topic describes how to use the Global Edition search (GlobalSearch) and provides parameter descriptions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1037,12 +1032,12 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>IQS Search - Global Edition (Global Information Search)</para>
+        /// <para>Searches for global information by using the Global Edition search.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This document describes the usage and parameter specifications of GlobalSearch, the global edition of IQS Search.</para>
+        /// <para>This topic describes how to use the Global Edition search (GlobalSearch) and provides parameter descriptions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1061,12 +1056,12 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>IQS Search - Global Edition (Global Information Search)</para>
+        /// <para>Searches for global information by using the Global Edition search.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This document describes the usage and parameter specifications of GlobalSearch, the global edition of IQS Search.</para>
+        /// <para>This topic describes how to use the Global Edition search (GlobalSearch) and provides parameter descriptions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1085,7 +1080,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Medical Q&amp;A</para>
+        /// <para>Provides medical Q&amp;A.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1126,7 +1121,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Medical Q&amp;A</para>
+        /// <para>Provides medical Q&amp;A.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1167,7 +1162,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Medical Q&amp;A</para>
+        /// <para>Provides medical Q&amp;A.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1186,7 +1181,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Medical Q&amp;A</para>
+        /// <para>Provides medical Q&amp;A.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1205,7 +1200,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Health Graph</para>
+        /// <para>Queries the health graph.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1246,7 +1241,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Health Graph</para>
+        /// <para>Queries the health graph.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1287,7 +1282,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Health Graph</para>
+        /// <para>Queries the health graph.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1306,7 +1301,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Health Graph</para>
+        /// <para>Queries the health graph.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1325,7 +1320,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Multimodal search</para>
+        /// <para>Performs a multimodal search.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1366,7 +1361,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Multimodal search</para>
+        /// <para>Performs a multimodal search.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1407,7 +1402,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Multimodal search</para>
+        /// <para>Performs a multimodal search.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1426,7 +1421,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Multimodal search</para>
+        /// <para>Performs a multimodal search.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1445,7 +1440,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the intelligent search Q&amp;A streaming API (SearchStream). Based on retrieval-augmented generation (RAG) and large language model technologies, this API accepts natural language questions from users and automatically performs intent recognition, query rewrite, multi-source retrieval, and content generation. The API returns data using the Server-Sent Events (SSE) streaming protocol, supporting real-time output of inference status, reference sources, and token-by-token generated answers. It is suitable for AI chat and search scenarios that require low latency and high interpretability.</para>
+        /// <para>This topic describes the SearchStream streaming API for intelligent search and AI chat. Based on retrieval augmented generation (RAG) and large language models, this API accepts natural language questions from users and can automatically execute intent recognition, query rewrite, and content generation, and retrieve data from multiple sources. The API uses the Server-Sent Events (SSE) streaming protocol to return data, supporting real-time output of the infer status, reference sources, and token-by-token generated answers. This API is suitable for AI chat and search scenarios that require low latency and high interpretability.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1486,7 +1481,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the intelligent search Q&amp;A streaming API (SearchStream). Based on retrieval-augmented generation (RAG) and large language model technologies, this API accepts natural language questions from users and automatically performs intent recognition, query rewrite, multi-source retrieval, and content generation. The API returns data using the Server-Sent Events (SSE) streaming protocol, supporting real-time output of inference status, reference sources, and token-by-token generated answers. It is suitable for AI chat and search scenarios that require low latency and high interpretability.</para>
+        /// <para>This topic describes the SearchStream streaming API for intelligent search and AI chat. Based on retrieval augmented generation (RAG) and large language models, this API accepts natural language questions from users and can automatically execute intent recognition, query rewrite, and content generation, and retrieve data from multiple sources. The API uses the Server-Sent Events (SSE) streaming protocol to return data, supporting real-time output of the infer status, reference sources, and token-by-token generated answers. This API is suitable for AI chat and search scenarios that require low latency and high interpretability.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1527,7 +1522,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the intelligent search Q&amp;A streaming API (SearchStream). Based on retrieval-augmented generation (RAG) and large language model technologies, this API accepts natural language questions from users and automatically performs intent recognition, query rewrite, multi-source retrieval, and content generation. The API returns data using the Server-Sent Events (SSE) streaming protocol, supporting real-time output of inference status, reference sources, and token-by-token generated answers. It is suitable for AI chat and search scenarios that require low latency and high interpretability.</para>
+        /// <para>This topic describes the SearchStream streaming API for intelligent search and AI chat. Based on retrieval augmented generation (RAG) and large language models, this API accepts natural language questions from users and can automatically execute intent recognition, query rewrite, and content generation, and retrieve data from multiple sources. The API uses the Server-Sent Events (SSE) streaming protocol to return data, supporting real-time output of the infer status, reference sources, and token-by-token generated answers. This API is suitable for AI chat and search scenarios that require low latency and high interpretability.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1546,7 +1541,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the intelligent search Q&amp;A streaming API (SearchStream). Based on retrieval-augmented generation (RAG) and large language model technologies, this API accepts natural language questions from users and automatically performs intent recognition, query rewrite, multi-source retrieval, and content generation. The API returns data using the Server-Sent Events (SSE) streaming protocol, supporting real-time output of inference status, reference sources, and token-by-token generated answers. It is suitable for AI chat and search scenarios that require low latency and high interpretability.</para>
+        /// <para>This topic describes the SearchStream streaming API for intelligent search and AI chat. Based on retrieval augmented generation (RAG) and large language models, this API accepts natural language questions from users and can automatically execute intent recognition, query rewrite, and content generation, and retrieve data from multiple sources. The API uses the Server-Sent Events (SSE) streaming protocol to return data, supporting real-time output of the infer status, reference sources, and token-by-token generated answers. This API is suitable for AI chat and search scenarios that require low latency and high interpretability.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1565,15 +1560,15 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Quickly retrieve HTML and parse static web page content.</para>
+        /// <para>Retrieves HTML and parses static web page content.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>When the HTTP status code (httpcode) of the target address is less than 500, it is counted as one valid request.  </description></item>
-        /// <item><description>If the content type (Content-Type) in the response header of the target address is application/pdf, the system automatically triggers PDF parsing (PDF file size must not exceed 20 MB). This operation is counted as an additional valid request.  </description></item>
-        /// <item><description>Trial terms: During the trial period, the API is limited to 5 queries per second (QPS); the trial quota is 1,000 requests per 30 days.</description></item>
+        /// <item><description>A request is counted as valid when the HTTP response code of the destination URL is less than 500.</description></item>
+        /// <item><description>If the content type in the response header of the destination URL is application/pdf, the system automatically triggers PDF parsing (the maximum PDF size is 20 MB). This operation is counted as an additional valid request.</description></item>
+        /// <item><description>Trial instructions: During the trial period, the API rate limit is 5 QPS, and the trial quota is 1,000 requests per 30 days.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -1615,15 +1610,15 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Quickly retrieve HTML and parse static web page content.</para>
+        /// <para>Retrieves HTML and parses static web page content.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>When the HTTP status code (httpcode) of the target address is less than 500, it is counted as one valid request.  </description></item>
-        /// <item><description>If the content type (Content-Type) in the response header of the target address is application/pdf, the system automatically triggers PDF parsing (PDF file size must not exceed 20 MB). This operation is counted as an additional valid request.  </description></item>
-        /// <item><description>Trial terms: During the trial period, the API is limited to 5 queries per second (QPS); the trial quota is 1,000 requests per 30 days.</description></item>
+        /// <item><description>A request is counted as valid when the HTTP response code of the destination URL is less than 500.</description></item>
+        /// <item><description>If the content type in the response header of the destination URL is application/pdf, the system automatically triggers PDF parsing (the maximum PDF size is 20 MB). This operation is counted as an additional valid request.</description></item>
+        /// <item><description>Trial instructions: During the trial period, the API rate limit is 5 QPS, and the trial quota is 1,000 requests per 30 days.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -1665,15 +1660,15 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Quickly retrieve HTML and parse static web page content.</para>
+        /// <para>Retrieves HTML and parses static web page content.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>When the HTTP status code (httpcode) of the target address is less than 500, it is counted as one valid request.  </description></item>
-        /// <item><description>If the content type (Content-Type) in the response header of the target address is application/pdf, the system automatically triggers PDF parsing (PDF file size must not exceed 20 MB). This operation is counted as an additional valid request.  </description></item>
-        /// <item><description>Trial terms: During the trial period, the API is limited to 5 queries per second (QPS); the trial quota is 1,000 requests per 30 days.</description></item>
+        /// <item><description>A request is counted as valid when the HTTP response code of the destination URL is less than 500.</description></item>
+        /// <item><description>If the content type in the response header of the destination URL is application/pdf, the system automatically triggers PDF parsing (the maximum PDF size is 20 MB). This operation is counted as an additional valid request.</description></item>
+        /// <item><description>Trial instructions: During the trial period, the API rate limit is 5 QPS, and the trial quota is 1,000 requests per 30 days.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -1693,15 +1688,15 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Quickly retrieve HTML and parse static web page content.</para>
+        /// <para>Retrieves HTML and parses static web page content.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>When the HTTP status code (httpcode) of the target address is less than 500, it is counted as one valid request.  </description></item>
-        /// <item><description>If the content type (Content-Type) in the response header of the target address is application/pdf, the system automatically triggers PDF parsing (PDF file size must not exceed 20 MB). This operation is counted as an additional valid request.  </description></item>
-        /// <item><description>Trial terms: During the trial period, the API is limited to 5 queries per second (QPS); the trial quota is 1,000 requests per 30 days.</description></item>
+        /// <item><description>A request is counted as valid when the HTTP response code of the destination URL is less than 500.</description></item>
+        /// <item><description>If the content type in the response header of the destination URL is application/pdf, the system automatically triggers PDF parsing (the maximum PDF size is 20 MB). This operation is counted as an additional valid request.</description></item>
+        /// <item><description>Trial instructions: During the trial period, the API rate limit is 5 QPS, and the trial quota is 1,000 requests per 30 days.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -1721,18 +1716,15 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <ol>
-        /// <item><description>Read HTML and parse web page content through the browser sandbox environment.  </description></item>
-        /// <item><description>The API starts parsing after all resources on the target page are fully loaded (the maximum waiting duration can be adjusted via the pageTimeout parameter). The overall Duration of the API call is significantly affected by the resource loading performance of the target site.</description></item>
-        /// </ol>
+        /// <para>Reads HTML and parses web page content in a browser sandbox environment. The operation starts parsing after the resources on the target page are fully loaded. You can adjust the maximum wait time by using the pageTimeout parameter. The overall execution duration is significantly affected by the resource loading status of the target site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>A request is counted as valid when the HTTP status code (httpcode) of the target URL is less than 500.  </description></item>
-        /// <item><description>If the content type (Content-Type) in the response header of the target URL is application/pdf, the system automatically triggers PDF parsing (PDF files up to 20 MB are supported). This operation is counted as an additional valid request.  </description></item>
-        /// <item><description>Trial terms: During the trial period, the API is limited to 5 queries per second (QPS); the trial quota is 1,000 requests per 30 days.</description></item>
+        /// <item><description>A request is counted as a valid request when the HTTP status code of the target URL is less than 500.</description></item>
+        /// <item><description>If the Content-Type in the response header of the target URL is application/pdf, the system automatically triggers PDF parsing (the maximum size of a PDF file that can be processed is 20 MB). This operation is counted as an additional valid request.</description></item>
+        /// <item><description>Trial description: During the trial period, the API operation is limited to 5 QPS. The trial quota is 1,000 requests per 30 days.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -1774,18 +1766,15 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <ol>
-        /// <item><description>Read HTML and parse web page content through the browser sandbox environment.  </description></item>
-        /// <item><description>The API starts parsing after all resources on the target page are fully loaded (the maximum waiting duration can be adjusted via the pageTimeout parameter). The overall Duration of the API call is significantly affected by the resource loading performance of the target site.</description></item>
-        /// </ol>
+        /// <para>Reads HTML and parses web page content in a browser sandbox environment. The operation starts parsing after the resources on the target page are fully loaded. You can adjust the maximum wait time by using the pageTimeout parameter. The overall execution duration is significantly affected by the resource loading status of the target site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>A request is counted as valid when the HTTP status code (httpcode) of the target URL is less than 500.  </description></item>
-        /// <item><description>If the content type (Content-Type) in the response header of the target URL is application/pdf, the system automatically triggers PDF parsing (PDF files up to 20 MB are supported). This operation is counted as an additional valid request.  </description></item>
-        /// <item><description>Trial terms: During the trial period, the API is limited to 5 queries per second (QPS); the trial quota is 1,000 requests per 30 days.</description></item>
+        /// <item><description>A request is counted as a valid request when the HTTP status code of the target URL is less than 500.</description></item>
+        /// <item><description>If the Content-Type in the response header of the target URL is application/pdf, the system automatically triggers PDF parsing (the maximum size of a PDF file that can be processed is 20 MB). This operation is counted as an additional valid request.</description></item>
+        /// <item><description>Trial description: During the trial period, the API operation is limited to 5 QPS. The trial quota is 1,000 requests per 30 days.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -1827,18 +1816,15 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <ol>
-        /// <item><description>Read HTML and parse web page content through the browser sandbox environment.  </description></item>
-        /// <item><description>The API starts parsing after all resources on the target page are fully loaded (the maximum waiting duration can be adjusted via the pageTimeout parameter). The overall Duration of the API call is significantly affected by the resource loading performance of the target site.</description></item>
-        /// </ol>
+        /// <para>Reads HTML and parses web page content in a browser sandbox environment. The operation starts parsing after the resources on the target page are fully loaded. You can adjust the maximum wait time by using the pageTimeout parameter. The overall execution duration is significantly affected by the resource loading status of the target site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>A request is counted as valid when the HTTP status code (httpcode) of the target URL is less than 500.  </description></item>
-        /// <item><description>If the content type (Content-Type) in the response header of the target URL is application/pdf, the system automatically triggers PDF parsing (PDF files up to 20 MB are supported). This operation is counted as an additional valid request.  </description></item>
-        /// <item><description>Trial terms: During the trial period, the API is limited to 5 queries per second (QPS); the trial quota is 1,000 requests per 30 days.</description></item>
+        /// <item><description>A request is counted as a valid request when the HTTP status code of the target URL is less than 500.</description></item>
+        /// <item><description>If the Content-Type in the response header of the target URL is application/pdf, the system automatically triggers PDF parsing (the maximum size of a PDF file that can be processed is 20 MB). This operation is counted as an additional valid request.</description></item>
+        /// <item><description>Trial description: During the trial period, the API operation is limited to 5 QPS. The trial quota is 1,000 requests per 30 days.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -1858,18 +1844,15 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <ol>
-        /// <item><description>Read HTML and parse web page content through the browser sandbox environment.  </description></item>
-        /// <item><description>The API starts parsing after all resources on the target page are fully loaded (the maximum waiting duration can be adjusted via the pageTimeout parameter). The overall Duration of the API call is significantly affected by the resource loading performance of the target site.</description></item>
-        /// </ol>
+        /// <para>Reads HTML and parses web page content in a browser sandbox environment. The operation starts parsing after the resources on the target page are fully loaded. You can adjust the maximum wait time by using the pageTimeout parameter. The overall execution duration is significantly affected by the resource loading status of the target site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>A request is counted as valid when the HTTP status code (httpcode) of the target URL is less than 500.  </description></item>
-        /// <item><description>If the content type (Content-Type) in the response header of the target URL is application/pdf, the system automatically triggers PDF parsing (PDF files up to 20 MB are supported). This operation is counted as an additional valid request.  </description></item>
-        /// <item><description>Trial terms: During the trial period, the API is limited to 5 queries per second (QPS); the trial quota is 1,000 requests per 30 days.</description></item>
+        /// <item><description>A request is counted as a valid request when the HTTP status code of the target URL is less than 500.</description></item>
+        /// <item><description>If the Content-Type in the response header of the target URL is application/pdf, the system automatically triggers PDF parsing (the maximum size of a PDF file that can be processed is 20 MB). This operation is counted as an additional valid request.</description></item>
+        /// <item><description>Trial description: During the trial period, the API operation is limited to 5 QPS. The trial quota is 1,000 requests per 30 days.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -1889,127 +1872,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>扫描文件</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ScanFileRequest
-        /// </param>
-        /// <param name="headers">
-        /// map
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// ScanFileResponse
-        /// </returns>
-        public ScanFileResponse ScanFileWithOptions(ScanFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ScanFile",
-                Version = "2024-11-11",
-                Protocol = "HTTPS",
-                Pathname = "/linked-retrieval/linked-retrieval-entry/v1/iqs/domain/scan/file",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ScanFileResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>扫描文件</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ScanFileRequest
-        /// </param>
-        /// <param name="headers">
-        /// map
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// ScanFileResponse
-        /// </returns>
-        public async Task<ScanFileResponse> ScanFileWithOptionsAsync(ScanFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ScanFile",
-                Version = "2024-11-11",
-                Protocol = "HTTPS",
-                Pathname = "/linked-retrieval/linked-retrieval-entry/v1/iqs/domain/scan/file",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ScanFileResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>扫描文件</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ScanFileRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// ScanFileResponse
-        /// </returns>
-        public ScanFileResponse ScanFile(ScanFileRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ScanFileWithOptions(request, headers, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>扫描文件</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ScanFileRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// ScanFileResponse
-        /// </returns>
-        public async Task<ScanFileResponse> ScanFileAsync(ScanFileRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ScanFileWithOptionsAsync(request, headers, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Provides access to the Tongxiao unified search API, enabling quick and easy integration of web-wide general search capabilities.</para>
+        /// <para>Provides the Tongxiao unified search API to quickly and easily integrate web-wide general search capabilities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2050,7 +1913,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides access to the Tongxiao unified search API, enabling quick and easy integration of web-wide general search capabilities.</para>
+        /// <para>Provides the Tongxiao unified search API to quickly and easily integrate web-wide general search capabilities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2091,7 +1954,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides access to the Tongxiao unified search API, enabling quick and easy integration of web-wide general search capabilities.</para>
+        /// <para>Provides the Tongxiao unified search API to quickly and easily integrate web-wide general search capabilities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2110,7 +1973,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides access to the Tongxiao unified search API, enabling quick and easy integration of web-wide general search capabilities.</para>
+        /// <para>Provides the Tongxiao unified search API to quickly and easily integrate web-wide general search capabilities.</para>
         /// </summary>
         /// 
         /// <param name="request">

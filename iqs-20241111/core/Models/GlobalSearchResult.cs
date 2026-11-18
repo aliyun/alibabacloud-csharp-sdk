@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class GlobalSearchResult : TeaModel {
         /// <summary>
-        /// <para>The list of web page content.</para>
+        /// <para>The web page content list.</para>
         /// </summary>
         [NameInMap("pageItems")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public GlobalQueryContext QueryContext { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>requestId</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The scenario-specific vertical API recall results.</para>
+        /// <para>The scenario-specific vertical API recall.</para>
         /// </summary>
         [NameInMap("sceneItems")]
         [Validation(Required=false)]

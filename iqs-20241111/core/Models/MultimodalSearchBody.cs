@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class MultimodalSearchBody : TeaModel {
         /// <summary>
-        /// <para>Additional query parameters, such as blocked sites</para>
+        /// <para>The additional query items, such as blocked sites.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -21,15 +21,21 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         [Validation(Required=false)]
         public Dictionary<string, object> AdvancedParams { get; set; }
 
+        /// <summary>
+        /// <para>The search engine type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Generic</para>
+        /// </summary>
         [NameInMap("engineType")]
         [Validation(Required=false)]
         public string EngineType { get; set; }
 
         /// <summary>
-        /// <para>Query content</para>
+        /// <para>The query content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>阿里巴巴</para>
+        /// <para>Alibaba</para>
         /// </summary>
         [NameInMap("query")]
         [Validation(Required=false)]

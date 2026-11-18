@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class ReadPageBasicResponseBody : TeaModel {
         /// <summary>
-        /// <para>Parsing result of the target URL</para>
+        /// <para>The parsing result of the destination URL.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ReadPageItem Data { get; set; }
 
         /// <summary>
-        /// <para>Error code</para>
+        /// <para>The error code.</para>
         /// </summary>
         [NameInMap("errorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Error message</para>
+        /// <para>The error message.</para>
         /// </summary>
         [NameInMap("errorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>Request ID. Provide this information when troubleshooting issues.</para>
+        /// <para>The request ID. Provide this ID for troubleshooting.</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

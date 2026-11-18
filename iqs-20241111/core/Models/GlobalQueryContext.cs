@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public GlobalQueryContextOriginalQuery OriginalQuery { get; set; }
         public class GlobalQueryContextOriginalQuery : TeaModel {
             /// <summary>
-            /// <para>页码</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,17 +27,17 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
             public string Page { get; set; }
 
             /// <summary>
-            /// <para>查询关键字</para>
+            /// <para>The query keyword.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>特朗普关税最新消息</para>
+            /// <para>Latest news on Trump tariffs</para>
             /// </summary>
             [NameInMap("query")]
             [Validation(Required=false)]
             public string Query { get; set; }
 
             /// <summary>
-            /// <para>时间范围</para>
+            /// <para>The time range.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NoLimit</para>

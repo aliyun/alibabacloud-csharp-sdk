@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class SearchCredits : TeaModel {
         /// <summary>
-        /// <para>The number of basic edition text search requests.</para>
+        /// <para>The number of basic edition text searches.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,10 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public int? GenericTextSearch { get; set; }
 
         /// <summary>
-        /// <para>The number of LiteAdvanced search requests.</para>
+        /// <para>The number of LiteAdvanced searches.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("liteAdvancedTextSearch")]
         [Validation(Required=false)]

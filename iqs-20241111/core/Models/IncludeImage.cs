@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class IncludeImage : TeaModel {
         /// <summary>
+        /// <para>The image height in pixels.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>324</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public int? Height { get; set; }
 
         /// <summary>
+        /// <para>The image link.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="http://k.sinaimg.cn/n/sinakd20121/594/w2048h946/20240328/74cf-32c0d62e843df76567d760b4459d57c1.jpg/w700d1q75cms.jpg">http://k.sinaimg.cn/n/sinakd20121/594/w2048h946/20240328/74cf-32c0d62e843df76567d760b4459d57c1.jpg/w700d1q75cms.jpg</a></para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public string ImageLink { get; set; }
 
         /// <summary>
+        /// <para>The image width in pixels.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>700</para>
         /// </summary>
