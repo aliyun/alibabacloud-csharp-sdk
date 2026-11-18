@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitDigitalWatermarkExtractJobRequest : TeaModel {
         /// <summary>
-        /// <para>The type of watermark extraction. Valid values:</para>
+        /// <para>The type of the watermark to extract. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>TraceMark</b>: tracing watermark.</description></item>
         /// <item><description><b>CopyrightMark</b>: copyright watermark.</description></item>
@@ -25,10 +25,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ExtractType { get; set; }
 
         /// <summary>
-        /// <para>The video ID of the video from which you want to extract the watermark. Only a single video ID is supported. You can obtain the video ID by using the following methods:</para>
+        /// <para>The ID of the video from which you want to extract the watermark. You can specify only one video ID. You can obtain the video ID by using one of the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Media Files</b> &gt; <b>Audio/Video</b> to view the video ID.</description></item>
-        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/436559.html">SearchMedia</a> operation. The video ID (VideoId) is returned in the response.</description></item>
+        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Media Assets</b> &gt; <b>Audio and Video</b> to view the video ID.</description></item>
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/436559.html">SearchMedia</a> operation and obtain the video ID from the VideoId parameter in the response.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class CreateAuditRequest : TeaModel {
         /// <summary>
-        /// <para>The array of review content.</para>
-        /// <para>A maximum of <b>100</b> audio or video entries can be reviewed at a time. Convert the array to a string before passing it as the parameter value.</para>
-        /// <para>For the specific parameter structure, see the <b>AuditContent</b> table below.</para>
+        /// <para>The array of review content. A maximum of <b>100</b> audio or video review items are supported at a time. You must convert the array to a string before passing it as a parameter value. For the specific parameter structure definition, see the <b>AuditContent</b> table below.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

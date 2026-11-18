@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class CreateUploadImageRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID. Default value: <b>app-1000000</b>. If you have activated the multi-application service, specify the application ID to upload the image to the specified application. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application</a>.</para>
+        /// <para>The application ID. Default value: <b>app-1000000</b>. If you have enabled the multi-application system, you can specify an application ID to upload the image to a specified application. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application system</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app-1000000</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The category ID. You can obtain the category ID by using the following methods:</para>
+        /// <para>The category ID. You can obtain the category ID by using one of the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Configuration Management</b> &gt; <b>Media Management</b> &gt; <b>Categories</b> to view the category ID.</description></item>
-        /// <item><description>Obtain the value of CateId from the response when you call the <a href="~~AddCategory~~">AddCategory</a> operation to create a category.</description></item>
-        /// <item><description>Obtain the value of CateId from the response when you call the <a href="~~GetCategories~~">GetCategories</a> operation to query categories.</description></item>
+        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Configuration Management</b> &gt; <b>Media Asset Management Configuration</b> &gt; <b>Category Management</b> to view the category ID.</description></item>
+        /// <item><description>Call the <a href="~~AddCategory~~">AddCategory</a> operation to create a category. The category ID is the value of the CateId response parameter.</description></item>
+        /// <item><description>Call the <a href="~~GetCategories~~">GetCategories</a> operation to query categories. The category ID is the value of the CateId response parameter.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The description of the image.</para>
         /// <list type="bullet">
-        /// <item><description>The description can be up to 1024 characters in length.</description></item>
+        /// <item><description>The description can be up to 1,024 characters in length.</description></item>
         /// <item><description>The description must be encoded in UTF-8.</description></item>
         /// </list>
         /// 
@@ -49,9 +49,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The file name extension of the image source file to upload. Valid values:</para>
+        /// <para>The file name extension of the source image file to be uploaded. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>png</b> (default)</description></item>
+        /// <item><description><b>png</b>: default value.</description></item>
         /// <item><description><b>jpg</b></description></item>
         /// <item><description><b>jpeg</b></description></item>
         /// <item><description><b>gif</b></description></item>
@@ -69,11 +69,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The type of the image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>default</b> (default): a common image.</description></item>
-        /// <item><description><b>cover</b>: a video thumbnail.</description></item>
+        /// <item><description><b>default</b>: regular image. This is the default value.</description></item>
+        /// <item><description><b>cover</b>: video thumbnail.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The ApsaraVideo VOD console supports viewing and managing only images of the <b>default</b> type.</para>
+        /// <para>The ApsaraVideo VOD console currently supports viewing and managing only images of the <b>default</b> type.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -85,9 +85,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ImageType { get; set; }
 
         /// <summary>
-        /// <para>The address of the image source file to upload.</para>
+        /// <para>The address of the source image file to be uploaded.</para>
         /// <remarks>
-        /// <para>The file name extension is optional. If a file name extension is included here and is different from the value specified in <c>ImageExt</c>, the value of <c>ImageExt</c> takes precedence.</para>
+        /// <para>The address can exclude the file name extension. If the address includes a file name extension that is different from the one specified by <c>ImageExt</c>, the value of <c>ImageExt</c> prevails.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// <para>The storage address. You can obtain the storage address by using the following method:
-        /// Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Configuration Management</b> &gt; <b>Media Management</b> &gt; <b>Storage</b> to view the storage address.</para>
+        /// Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Configuration Management</b> &gt; <b>Media Asset Management Configuration</b> &gt; <b>Storage Management</b> to view the storage address.</para>
         /// <remarks>
         /// <para>If you do not specify this parameter, the image is uploaded to the default storage address. If you specify this parameter, the image is uploaded to the specified storage address.</para>
         /// </remarks>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The tags of the image. Rules:</para>
         /// <list type="bullet">
-        /// <item><description>Each tag can be up to 32 characters in length.</description></item>
+        /// <item><description>A single tag can be up to 32 characters in length.</description></item>
         /// <item><description>You can specify up to 16 tags.</description></item>
         /// <item><description>Separate multiple tags with commas (,).</description></item>
         /// <item><description>The tags must be encoded in UTF-8.</description></item>
@@ -142,11 +142,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>The custom settings in a JSON string. The settings support message callbacks, upload acceleration, and other configurations. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</para>
+        /// <para>The custom settings. The value is a JSON string that supports settings such as message callbacks and upload acceleration. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>To use message callbacks in this parameter, you must configure an HTTP callback URL and select the corresponding callback event types in the console. Otherwise, the callback settings do not take effect. For information about how to configure HTTP callbacks in the console, see <a href="https://help.aliyun.com/document_detail/86071.html">Callback settings</a>.</description></item>
-        /// <item><description>To use the upload acceleration feature, submit a ticket to activate it. For more information, see <a href="https://help.aliyun.com/document_detail/55396.html">Upload instructions</a>. For information about how to submit a ticket, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</description></item>
+        /// <item><description>To use message callbacks in this parameter, you must configure an HTTP callback URL and select the corresponding callback event types in the console. Otherwise, the callback settings do not take effect. For more information about how to configure HTTP callbacks in the console, see <a href="https://help.aliyun.com/document_detail/86071.html">Callback settings</a>.</description></item>
+        /// <item><description>To use the upload acceleration feature, submit a ticket to apply for activation. For more information, see <a href="https://help.aliyun.com/document_detail/55396.html">Upload instructions</a>. For more information about how to submit a ticket, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</description></item>
         /// </list>
         /// </remarks>
         /// 

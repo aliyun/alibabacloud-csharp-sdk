@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListJobInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The historical task list within the last 6 months.</para>
+        /// <para>The list of historical tasks within the last 6 months.</para>
         /// </summary>
         [NameInMap("JobInfoList")]
         [Validation(Required=false)]
         public List<ListJobInfoResponseBodyJobInfoList> JobInfoList { get; set; }
         public class ListJobInfoResponseBodyJobInfoList : TeaModel {
             /// <summary>
-            /// <para>The time when the task was completed.</para>
+            /// <para>The time when the task was completed. The time is displayed in UTC in the YYYY-MM-DDTHH:MM:SSZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-14T07:39:34Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CompleteTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was created, in UTC. Format: YYYY-MM-DDTHH:MM:SSZ.</para>
+            /// <para>The time when the task was created. The time is displayed in UTC in the YYYY-MM-DDTHH:MM:SSZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-14T07:39:25Z</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string MediaId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6708D849-F109-1A6C-AC91-************</para>

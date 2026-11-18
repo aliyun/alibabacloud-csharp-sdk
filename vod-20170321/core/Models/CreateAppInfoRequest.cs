@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The application name. The name must be unique.</para>
         /// <list type="bullet">
-        /// <item><description>The name can be up to 128 characters in length and can contain Chinese characters, letters, digits, periods (.), hyphens (-), and at signs (@).</description></item>
-        /// <item><description>UTF-8 encoding.</description></item>
+        /// <item><description>The name can be up to 128 characters in length and can contain only Chinese characters, uppercase and lowercase letters, digits, periods (.), hyphens (-), and at signs (@).</description></item>
+        /// <item><description>The name must be encoded in UTF-8.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <para>The application description.</para>
         /// <list type="bullet">
         /// <item><description>The description can be up to 512 characters in length.</description></item>
-        /// <item><description>UTF-8 encoding.</description></item>
+        /// <item><description>The description must be encoded in UTF-8.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

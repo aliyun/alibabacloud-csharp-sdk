@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SetVodDomainSSLCertificateRequest : TeaModel {
         /// <summary>
-        /// <para>The certificate ID.</para>
+        /// <para>The ID of the certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12342707</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? CertId { get; set; }
 
         /// <summary>
-        /// <para>The certificate name.</para>
+        /// <para>The name of the certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cert_name</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string CertName { get; set; }
 
         /// <summary>
-        /// <para>The certificate region. Valid values:</para>
+        /// <para>The region of the certificate. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>ap-southeast-1</b> (Singapore)</description></item>
-        /// <item><description><b>cn-hangzhou</b> (Hangzhou)</description></item>
+        /// <item><description><b>cn-hangzhou</b> (China (Hangzhou))</description></item>
         /// </list>
         /// <para>Default value: <b>cn-hangzhou</b>.</para>
         /// 
@@ -45,10 +45,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string CertRegion { get; set; }
 
         /// <summary>
-        /// <para>The certificate type. Valid values:</para>
+        /// <para>The type of the certificate. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>upload</b>: an uploaded certificate.</description></item>
-        /// <item><description><b>cas</b>: a certificate from SSL Certificates Service.</description></item>
+        /// <item><description><b>upload</b>: Uploaded certificate.</description></item>
+        /// <item><description><b>cas</b>: Certificate from SSL Certificates Service.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,11 +70,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to distribute the certificate in a canary release environment. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>staging</b>: distributes the certificate in a canary release environment.</description></item>
-        /// </list>
-        /// <para>If this parameter is not specified or set to any other value, the certificate is formally distributed.</para>
+        /// <para>Specifies whether to deliver the certificate in a canary release. Valid values: <b>staging</b>: Delivers the certificate in a canary release. If this parameter is not specified or is set to any other value, the certificate is delivered in the production environment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>staging</para>
@@ -88,7 +84,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The content of the private key. If you do not enable the certificate, you do not need to specify this parameter. If you configure a certificate, enter the private key content.</para>
+        /// <para>The content of the private key. This parameter is not required if the certificate is disabled. If you configure a certificate, enter the private key content.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -113,7 +109,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string SSLProtocol { get; set; }
 
         /// <summary>
-        /// <para>The content of the security certificate. If you do not enable the certificate, you do not need to specify this parameter. If you configure a certificate, enter the certificate content.</para>
+        /// <para>The content of the security certificate. This parameter is not required if the certificate is disabled. If you configure a certificate, enter the certificate content.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>

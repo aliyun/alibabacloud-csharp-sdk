@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The time when the watermark template was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+            /// <para>The creation time of the watermark template. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-11-07T09:05:52Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The URL of the watermark file (OSS URL or CDN URL).</para>
+            /// <para>The URL of the watermark file, which is an OSS URL or a CDN URL.</para>
             /// <remarks>
             /// <para>This parameter is returned only for image watermark templates.</para>
             /// </remarks>
@@ -60,10 +60,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string FileUrl { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the watermark template is the default template. Valid values:</para>
+            /// <para>Indicates whether the watermark template is the default image and text watermark template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Default</b>: the default watermark template.</description></item>
-            /// <item><description><b>NotDefault</b>: not the default watermark template.</description></item>
+            /// <item><description><b>Default</b>: default image and text watermark template</description></item>
+            /// <item><description><b>NotDefault</b>: non-default image and text watermark template</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -86,8 +86,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <summary>
             /// <para>The type of the watermark template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Image</b>: image watermark template.</description></item>
-            /// <item><description><b>Text</b>: text watermark template.</description></item>
+            /// <item><description><b>Image</b>: image watermark template</description></item>
+            /// <item><description><b>Text</b>: text watermark template</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -98,17 +98,17 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The configuration information of the watermark (JSON string), including the display position and effect of the watermark. The configuration parameters for image watermarks and text watermarks are different. For more information about the parameter structure, see <a href="~~98618#section-h01-44s-2lr~~">WatermarkConfig</a>.</para>
+            /// <para>The configuration information of the image and text watermark in JSON string format, including the display position and effect of the watermark. The configuration parameters for image watermarks and text watermarks are different. For more information about the parameter structure, see <a href="~~98618#section-h01-44s-2lr~~">WatermarkConfig</a>.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;FontColor&quot;: &quot;Blue&quot;,&quot;FontSize&quot;: 80,&quot;Content&quot;: &quot; watermark test&quot;}</para>
+            /// <para>{&quot;FontColor&quot;: &quot;Blue&quot;,&quot;FontSize&quot;: 80,&quot;Content&quot;: &quot;Watermark test&quot;}</para>
             /// </summary>
             [NameInMap("WatermarkConfig")]
             [Validation(Required=false)]
             public string WatermarkConfig { get; set; }
 
             /// <summary>
-            /// <para>The ID of the watermark template.</para>
+            /// <para>The watermark template ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9bcc8bfadb843*****109a2671d0df97</para>

@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The timeline of the online editing project. For more information about the structure, see <a href="https://help.aliyun.com/document_detail/52839.html">Timeline</a>.</para>
+        /// <para>The timeline of the online editing project. TimelineIn and TimelineOut indicate the in point and out point of a media clip on the timeline in seconds, accurate to four decimal places. For more information about the structure, see <a href="https://help.aliyun.com/document_detail/52839.html">Timeline</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;VideoTracks&quot;:[{&quot;VideoTrackClips&quot;:[{&quot;MediaId&quot;:&quot;cc3308ac500c<em><b><b>a54328bc3443&quot;},{&quot;MediaId&quot;:&quot;da87a9cff64</b></b></em>d88bc6d8326e4&quot;}]}]}</para>

@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The time interval between consecutive data entries, which is the time granularity of the data. Unit: seconds.</para>
+        /// <para>The time interval between each record, which is the time granularity of the data. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range for the returned data.</para>
+        /// <para>The end time of the data. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2015-12-10T14:00:00Z</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the ISP in English.</para>
+        /// <para>The English name of the ISP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>unicom</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string IspNameEn { get; set; }
 
         /// <summary>
-        /// <para>The name of the region in English.</para>
+        /// <para>The English name of the region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>shanghai</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range for the returned data.</para>
+        /// <para>The start time of the data. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2015-12-10T13:00:00Z</para>

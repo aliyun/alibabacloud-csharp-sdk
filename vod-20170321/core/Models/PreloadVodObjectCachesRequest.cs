@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class PreloadVodObjectCachesRequest : TeaModel {
         /// <summary>
-        /// <para>The prefetch region. Valid values: <b>domestic</b>, <b>overseas</b>.</para>
+        /// <para>The prefetch region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>domestic</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Area { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to directly prefetch content to L2 nodes. Valid values:</para>
+        /// <para>Specifies whether to prefetch content directly to L2 nodes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The prefetch node level must include L2 nodes.</para>
+        /// <item><description><para><b>true</b>: The prefetch node hierarchy must include L2 nodes.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: Only back-to-origin layer nodes are prefetched. This is the <b>default value</b>. The back-to-origin layer node may be an L2 node or an L3 node.</para>
+        /// <item><description><para><b>false</b>: Content is prefetched only to the origin-fetching layer nodes. This is the <b>default value</b>. The origin-fetching layer nodes can be L2 or L3 nodes.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public bool? L2Preload { get; set; }
 
         /// <summary>
-        /// <para>The URL of the file to prefetch. Separate multiple URLs with line breaks (
+        /// <para>The URLs of the files to be prefetched. Separate multiple URLs with line breaks (
         ///  or 
         /// ).</para>
         /// <para>This parameter is required.</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The default header carried in a prefetch request is Accept-Encoding:gzip. If you want the prefetch request to carry other headers or implement multi-copy prefetch, use this parameter to customize prefetch headers. Submit the value in JSON format.</para>
+        /// <para>By default, prefetch requests carry the Accept-Encoding: gzip header. If you want prefetch requests to carry other headers or implement multi-replica prefetching, you can use this parameter to specify custom prefetch headers. Submit the headers in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{

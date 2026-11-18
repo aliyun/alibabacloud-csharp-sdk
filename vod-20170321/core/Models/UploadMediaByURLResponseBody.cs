@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The source file URL of the upload job.</para>
+            /// <para>The source file URL corresponding to the upload job.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://example****.mp4">http://example****.mp4</a></para>

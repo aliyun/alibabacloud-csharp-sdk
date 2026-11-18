@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public AddCategoryResponseBodyCategory Category { get; set; }
         public class AddCategoryResponseBodyCategory : TeaModel {
             /// <summary>
-            /// <para>The category ID. This ID can be used as a request parameter for the <a href="~~UpdateCategory~~">UpdateCategory</a>, <a href="~~DeleteCategory~~">DeleteCategory</a>, and <a href="~~GetCategories~~">GetCategories</a> operations.</para>
+            /// <para>The category ID. You can use it as a request parameter for the <a href="~~UpdateCategory~~">UpdateCategory</a>, <a href="~~DeleteCategory~~">DeleteCategory</a>, and <a href="~~GetCategories~~">GetCategories</a> operations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10020</para>
@@ -39,9 +39,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <summary>
             /// <para>The category level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: level-0 category.</description></item>
-            /// <item><description><b>1</b>: level-1 category.</description></item>
-            /// <item><description><b>2</b>: level-2 category.</description></item>
+            /// <item><description><b>0</b>: level-1 category.</description></item>
+            /// <item><description><b>1</b>: level-2 category.</description></item>
+            /// <item><description><b>2</b>: level-3 category.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public long? Level { get; set; }
 
             /// <summary>
-            /// <para>The parent category ID.</para>
+            /// <para>The ID of the parent category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100012</para>
@@ -64,8 +64,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <summary>
             /// <para>The category type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>default</b>: audio/video/image category.</description></item>
-            /// <item><description><b>material</b>: short video material category.</description></item>
+            /// <item><description><b>default</b>: audio, video, and image categories.</description></item>
+            /// <item><description><b>material</b>: short video material categories.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

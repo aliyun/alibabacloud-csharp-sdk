@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetURLUploadInfosRequest : TeaModel {
         /// <summary>
-        /// <para>The list of upload task IDs (JobId). The list consists of one or more JobId values. A JobId is the value of the JobId parameter returned when you call the <a href="https://help.aliyun.com/document_detail/86311.html">UploadMediaByURL</a> operation.</para>
+        /// <para>The list of upload task IDs (JobIds). It consists of one or more JobIds. A JobId is the value of the JobId response parameter returned when you call the <a href="https://help.aliyun.com/document_detail/86311.html">UploadMediaByURL</a> operation.</para>
         /// <list type="bullet">
         /// <item><description>A maximum of 10 IDs are supported.</description></item>
         /// <item><description>Separate multiple IDs with commas (,).</description></item>
@@ -27,11 +27,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string JobIds { get; set; }
 
         /// <summary>
-        /// <para>The list of source video file URLs. Separate multiple URLs with commas (,). A maximum of 10 URLs are supported.</para>
+        /// <para>The list of URLs of the video source files to upload. Separate multiple URLs with commas (,). A maximum of 10 URLs are supported.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>URL-encode the URLs before use.</description></item>
-        /// <item><description>If the same URL video is uploaded multiple times, pass in a single URL for the query.</description></item>
+        /// <item><description>URL-encode the URLs before you use them.</description></item>
+        /// <item><description>If the same video URL is uploaded multiple times, specify a single URL for the query.</description></item>
         /// <item><description>You must specify either JobIds or UploadURLs. If both are specified, only JobIds is processed.</description></item>
         /// </list>
         /// </remarks>

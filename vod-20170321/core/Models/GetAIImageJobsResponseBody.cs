@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <summary>
             /// <para>The OSS URL of the AI image.</para>
             /// <remarks>
-            /// <para>This is the task result. The URL does not contain complete authentication information. To obtain authentication information, generate it yourself or call the <a href="https://help.aliyun.com/document_detail/186924.html">ListAIImage</a> operation to retrieve the media asset result.</para>
+            /// <para>This URL is returned as the task result and does not provide complete authentication information. To obtain authentication information, generate it or call the <a href="https://help.aliyun.com/document_detail/186924.html">ListAIImage</a> operation to retrieve the media asset result.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The time when the AI image processing task was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+            /// <para>The creation time of the AI image processing task. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-15T03:30:03Z</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <summary>
             /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>success</b>: The task is successful.</description></item>
+            /// <item><description><b>success</b>: The task succeeded.</description></item>
             /// <item><description><b>fail</b>: The task failed.</description></item>
             /// </list>
             /// 
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The snapshot of the configuration information of the specified template when the task was submitted.</para>
+            /// <para>The snapshot of the configuration of the specified template when the task was submitted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;Format&quot;:&quot;gif&quot;,&quot;SetDefaultCover&quot;:&quot;true&quot;}</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string TemplateConfig { get; set; }
 
             /// <summary>
-            /// <para>The AI template ID.</para>
+            /// <para>The ID of the AI template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5a86a00f15194*****d7fe7de1b4a173</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <item><description>The value must contain the MessageCallback or Extend parameter.</description></item>
             /// <item><description>The maximum length is 512 bytes.</description></item>
             /// </list>
-            /// <para>For more information about the parameter structure, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</para>
+            /// <para>For more information about how to construct the parameter, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;Extend&quot;:{&quot;localId&quot;:&quot;****&quot;,&quot;test&quot;:&quot;www&quot;}}</para>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The list of job IDs. You can obtain the JobId from the PlayInfo struct returned by the <a href="https://help.aliyun.com/document_detail/56124.html">GetPlayInfo</a> operation.</para>
         /// <remarks>
-        /// <para>Separate multiple IDs with commas (,). You can specify up to 10 job IDs at a time.</para>
+        /// <para>Separate multiple IDs with commas (,). You can query up to 10 job IDs at a time.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

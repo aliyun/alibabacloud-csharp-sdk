@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetTranscodeTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs of transcoding jobs that do not exist.</para>
+        /// <para>The IDs of the transcoding jobs that do not exist.</para>
         /// </summary>
         [NameInMap("NonExistJobIds")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public List<GetTranscodeTaskResponseBodyTranscodeJobInfoList> TranscodeJobInfoList { get; set; }
         public class GetTranscodeTaskResponseBodyTranscodeJobInfoList : TeaModel {
             /// <summary>
-            /// <para>The time when the transcoding job was completed. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+            /// <para>The time when the transcoding job was completed. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-02-26T08:30:16Z</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CompleteTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the transcoding job was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+            /// <para>The time when the transcoding job was created. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-02-26T08:27:16Z</para>
@@ -54,21 +54,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The video definition. Valid values:</para>
+            /// <para>The definition of the video. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>LD</b>: fluent.</description></item>
-            /// <item><description><b>SD</b>: standard definition.</description></item>
-            /// <item><description><b>HD</b>: high definition.</description></item>
-            /// <item><description><b>FHD</b>: ultra high definition.</description></item>
-            /// <item><description><b>OD</b>: original quality.</description></item>
-            /// <item><description><b>2K</b>: 2K.</description></item>
-            /// <item><description><b>4K</b>: 4K.</description></item>
-            /// <item><description><b>SQ</b>: standard sound quality.</description></item>
-            /// <item><description><b>HQ</b>: high sound quality.</description></item>
-            /// <item><description><b>AUTO</b>: adaptive bitrate streaming. This definition is available only when packaging is configured in the transcoding template. For more information, see <a href="https://help.aliyun.com/document_detail/52839.html">Transcoding template configuration - PackageSetting</a>.</description></item>
+            /// <item><description><b>LD</b>: smooth</description></item>
+            /// <item><description><b>SD</b>: standard definition</description></item>
+            /// <item><description><b>HD</b>: high definition</description></item>
+            /// <item><description><b>FHD</b>: ultra high definition</description></item>
+            /// <item><description><b>OD</b>: original quality</description></item>
+            /// <item><description><b>2K</b>: 2K</description></item>
+            /// <item><description><b>4K</b>: 4K</description></item>
+            /// <item><description><b>SQ</b>: standard audio quality</description></item>
+            /// <item><description><b>HQ</b>: high audio quality</description></item>
+            /// <item><description><b>AUTO</b>: Adaptive bitrate. This definition is output only when packaging is configured in the transcoding template. For more information, see <a href="https://help.aliyun.com/document_detail/52839.html">Transcoding template configuration - PackageSetting</a>.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>This value is the definition label configured in the transcoding template and does not indicate the actual resolution range of the transcoded output file.</para>
+            /// <para>This value is the definition tag configured in the transcoding template and does not indicate the actual resolution range of the transcoded output file.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Definition { get; set; }
 
             /// <summary>
-            /// <para>The error code returned when the transcoding job failed.</para>
+            /// <para>The error code returned when transcoding fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The error message returned when the transcoding job failed.</para>
+            /// <para>The error message returned when transcoding fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ErrorMessage</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The OSS URL of the transcoding source file.</para>
+            /// <para>The OSS URL of the source file for transcoding.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://outin-40564*****e1403e7.oss-cn-shanghai.aliyuncs.com/customerTrans/5b95e568f8e*****47f38e/31f1184c-*****b2a2-f94-c213f.wmv">http://outin-40564*****e1403e7.oss-cn-shanghai.aliyuncs.com/customerTrans/5b95e568f8e*****47f38e/31f1184c-*****b2a2-f94-c213f.wmv</a></para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string InputFileUrl { get; set; }
 
             /// <summary>
-            /// <para>The information about the transcoding output file.</para>
+            /// <para>The information about the transcoded output file.</para>
             /// </summary>
             [NameInMap("OutputFile")]
             [Validation(Required=false)]
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string AudioStreamList { get; set; }
 
                 /// <summary>
-                /// <para>The average bitrate of the transcoding output file. Unit: Kbps.</para>
+                /// <para>The average bitrate of the transcoded output file. Unit: Kbps.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>964</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Bitrate { get; set; }
 
                 /// <summary>
-                /// <para>The duration of the transcoding output file. Unit: seconds.</para>
+                /// <para>The duration of the transcoded output file. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Duration { get; set; }
 
                 /// <summary>
-                /// <para>The encryption configuration used for the transcoding output file. Valid values:</para>
+                /// <para>The encryption configuration used for the transcoded output file. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>AliyunVoDEncryption</b>: Alibaba Cloud video encryption (proprietary encryption).</description></item>
                 /// <item><description><b>HLSEncryption</b>: HLS encryption.</description></item>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Encryption { get; set; }
 
                 /// <summary>
-                /// <para>The size of the transcoding output file. Unit: bytes.</para>
+                /// <para>The size of the transcoded output file. Unit: bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>851076</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public long? Filesize { get; set; }
 
                 /// <summary>
-                /// <para>The container format of the transcoding output file.</para>
+                /// <para>The container format of the transcoded output file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>m3u8</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Format { get; set; }
 
                 /// <summary>
-                /// <para>The frame rate of the transcoding output file. Unit: frames per second.</para>
+                /// <para>The frame rate of the transcoded output file. Unit: frames per second.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>25</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Fps { get; set; }
 
                 /// <summary>
-                /// <para>The height of the transcoding output video. Unit: px.</para>
+                /// <para>The height of the video frame in the transcoded output file. Unit: px.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>360</para>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Height { get; set; }
 
                 /// <summary>
-                /// <para>The OSS URL of the transcoding output file.</para>
+                /// <para>The OSS URL of the transcoded output file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://outin-40564*****e1403e7.oss-cn-shanghai.aliyuncs.com/883f5d*****f20aaa352f/c3be4f073*****7d5193ec8-%7BDestMd5%7D-od-S00000001-200000.mp4">http://outin-40564*****e1403e7.oss-cn-shanghai.aliyuncs.com/883f5d*****f20aaa352f/c3be4f073*****7d5193ec8-{DestMd5}-od-S00000001-200000.mp4</a></para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public List<string> WatermarkIdList { get; set; }
 
                 /// <summary>
-                /// <para>The width of the transcoding output video. Unit: px.</para>
+                /// <para>The width of the video frame in the transcoded output file. Unit: px.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>640</para>
@@ -259,7 +259,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Priority { get; set; }
 
             /// <summary>
-            /// <para>The transcoding job ID.</para>
+            /// <para>The ID of the transcoding job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>38f0e513c88*****85515f9d50be188</para>
@@ -271,9 +271,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <summary>
             /// <para>The status of the transcoding job. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Transcoding</b>: transcoding in progress.</description></item>
-            /// <item><description><b>TranscodeSuccess</b>: transcoding succeeded.</description></item>
-            /// <item><description><b>TranscodeFail</b>: transcoding failed.</description></item>
+            /// <item><description><b>Transcoding</b>: transcoding</description></item>
+            /// <item><description><b>TranscodeSuccess</b>: transcoding succeeded</description></item>
+            /// <item><description><b>TranscodeFail</b>: transcoding failed</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -284,10 +284,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string TranscodeJobStatus { get; set; }
 
             /// <summary>
-            /// <para>The transcoding job progress. Value range: <c>[0,100]</c>.</para>
+            /// <para>The processing progress of the transcoding job. Valid values: <c>[0,100]</c>.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2019-02-26T08:30:16Z</para>
+            /// <para>50</para>
             /// </summary>
             [NameInMap("TranscodeProgress")]
             [Validation(Required=false)]
@@ -313,7 +313,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public GetTranscodeTaskResponseBodyTranscodeTask TranscodeTask { get; set; }
         public class GetTranscodeTaskResponseBodyTranscodeTask : TeaModel {
             /// <summary>
-            /// <para>The time when the transcoding task was completed. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+            /// <para>The time when the transcoding task was completed. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-01-23T12:40:12Z</para>
@@ -323,7 +323,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CompleteTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the transcoding task was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+            /// <para>The time when the transcoding task was created. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-01-23T12:35:12Z</para>
@@ -335,11 +335,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <summary>
             /// <para>The status of the transcoding task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Processing</b>: processing in progress.</description></item>
-            /// <item><description><b>Partial</b>: partially completed.</description></item>
-            /// <item><description><b>CompleteAllSucc</b>: all transcoding jobs are completed and succeeded.</description></item>
-            /// <item><description><b>CompleteAllFail</b>: all transcoding jobs are completed but failed. If the source file has issues, no transcoding jobs are initiated and the entire transcoding task fails.</description></item>
-            /// <item><description><b>CompletePartialSucc</b>: all transcoding jobs are completed but only some succeeded.</description></item>
+            /// <item><description><b>Processing</b>: processing</description></item>
+            /// <item><description><b>Partial</b>: partially transcoded</description></item>
+            /// <item><description><b>CompleteAllSucc</b>: All processing is completed and all transcoding jobs succeeded.</description></item>
+            /// <item><description><b>CompleteAllFail</b>: All processing is completed and all transcoding jobs failed. If the source file has issues, no transcoding jobs are initiated and the entire transcoding task fails.</description></item>
+            /// <item><description><b>CompletePartialSucc</b>: All transcoding is completed but only some transcoding jobs succeeded.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -357,7 +357,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public List<GetTranscodeTaskResponseBodyTranscodeTaskTranscodeJobInfoList> TranscodeJobInfoList { get; set; }
             public class GetTranscodeTaskResponseBodyTranscodeTaskTranscodeJobInfoList : TeaModel {
                 /// <summary>
-                /// <para>The time when the transcoding job was completed. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+                /// <para>The time when the transcoding job was completed. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2019-02-26T08:30:16Z</para>
@@ -367,7 +367,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string CompleteTime { get; set; }
 
                 /// <summary>
-                /// <para>The time when the transcoding job was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+                /// <para>The time when the transcoding job was created. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2019-02-26T08:27:16Z</para>
@@ -377,21 +377,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// <para>The video definition. Valid values:</para>
+                /// <para>The definition of the video. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>LD</b>: fluent.</description></item>
-                /// <item><description><b>SD</b>: standard definition.</description></item>
-                /// <item><description><b>HD</b>: high definition.</description></item>
-                /// <item><description><b>FHD</b>: ultra high definition.</description></item>
-                /// <item><description><b>OD</b>: original quality.</description></item>
-                /// <item><description><b>2K</b>: 2K.</description></item>
-                /// <item><description><b>4K</b>: 4K.</description></item>
-                /// <item><description><b>SQ</b>: standard sound quality.</description></item>
-                /// <item><description><b>HQ</b>: high sound quality.</description></item>
-                /// <item><description><b>AUTO</b>: adaptive bitrate streaming. This definition is available only when packaging is configured in the transcoding template. For more information, see <a href="https://help.aliyun.com/document_detail/52839.html">Transcoding template configuration - PackageSetting</a>.</description></item>
+                /// <item><description><b>LD</b>: smooth</description></item>
+                /// <item><description><b>SD</b>: standard definition</description></item>
+                /// <item><description><b>HD</b>: high definition</description></item>
+                /// <item><description><b>FHD</b>: ultra high definition</description></item>
+                /// <item><description><b>OD</b>: original quality</description></item>
+                /// <item><description><b>2K</b>: 2K</description></item>
+                /// <item><description><b>4K</b>: 4K</description></item>
+                /// <item><description><b>SQ</b>: standard audio quality</description></item>
+                /// <item><description><b>HQ</b>: high audio quality</description></item>
+                /// <item><description><b>AUTO</b>: Adaptive bitrate. This definition is output only when packaging is configured in the transcoding template. For more information, see <a href="https://help.aliyun.com/document_detail/52839.html">Transcoding template configuration - PackageSetting</a>.</description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>This value is the definition label configured in the transcoding template and does not indicate the actual resolution range of the transcoded output file.</para>
+                /// <para>This value is the definition tag configured in the transcoding template and does not indicate the actual resolution range of the transcoded output file.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -402,7 +402,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Definition { get; set; }
 
                 /// <summary>
-                /// <para>The error code returned when the transcoding job failed.</para>
+                /// <para>The error code returned when transcoding fails.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>200</para>
@@ -412,7 +412,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// <para>The error message returned when the transcoding job failed.</para>
+                /// <para>The error message returned when transcoding fails.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ErrorMessage</para>
@@ -422,7 +422,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// <para>The OSS URL of the transcoding source file.</para>
+                /// <para>The OSS URL of the source file for transcoding.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://outin-40564*****e1403e7.oss-cn-shanghai.aliyuncs.com/customerTrans/5b95e568f8e*****47f38e/31f1184c-*****b2a2-f94-c213f.wmv">http://outin-40564*****e1403e7.oss-cn-shanghai.aliyuncs.com/customerTrans/5b95e568f8e*****47f38e/31f1184c-*****b2a2-f94-c213f.wmv</a></para>
@@ -432,7 +432,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string InputFileUrl { get; set; }
 
                 /// <summary>
-                /// <para>The information about the transcoding output file.</para>
+                /// <para>The information about the transcoded output file.</para>
                 /// </summary>
                 [NameInMap("OutputFile")]
                 [Validation(Required=false)]
@@ -449,7 +449,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public string AudioStreamList { get; set; }
 
                     /// <summary>
-                    /// <para>The average bitrate of the transcoding output file. Unit: Kbps.</para>
+                    /// <para>The average bitrate of the transcoded output file. Unit: Kbps.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>964</para>
@@ -459,7 +459,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public string Bitrate { get; set; }
 
                     /// <summary>
-                    /// <para>The duration of the transcoding output file. Unit: seconds.</para>
+                    /// <para>The duration of the transcoded output file. Unit: seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>12</para>
@@ -469,7 +469,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public string Duration { get; set; }
 
                     /// <summary>
-                    /// <para>The encryption configuration used for the transcoding output file. Valid values:</para>
+                    /// <para>The encryption configuration used for the transcoded output file. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description><b>AliyunVoDEncryption</b>: Alibaba Cloud video encryption (proprietary encryption).</description></item>
                     /// <item><description><b>HLSEncryption</b>: HLS encryption.</description></item>
@@ -483,7 +483,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public string Encryption { get; set; }
 
                     /// <summary>
-                    /// <para>The size of the transcoding output file. Unit: bytes.</para>
+                    /// <para>The size of the transcoded output file. Unit: bytes.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>851076</para>
@@ -493,7 +493,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public long? Filesize { get; set; }
 
                     /// <summary>
-                    /// <para>The container format of the transcoding output file.</para>
+                    /// <para>The container format of the transcoded output file.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>m3u8</para>
@@ -503,7 +503,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public string Format { get; set; }
 
                     /// <summary>
-                    /// <para>The frame rate of the transcoding output file. Unit: frames per second.</para>
+                    /// <para>The frame rate of the transcoded output file. Unit: frames per second.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>25</para>
@@ -513,7 +513,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public string Fps { get; set; }
 
                     /// <summary>
-                    /// <para>The height of the transcoding output video. Unit: px.</para>
+                    /// <para>The height of the video frame in the transcoded output file. Unit: px.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>360</para>
@@ -523,7 +523,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public string Height { get; set; }
 
                     /// <summary>
-                    /// <para>The OSS URL of the transcoding output file.</para>
+                    /// <para>The OSS URL of the transcoded output file.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="http://outin-40564*****e1403e7.oss-cn-shanghai.aliyuncs.com/883f5d*****f20aaa352f/c3be4f073*****7d5193ec8-%7BDestMd5%7D-od-S00000001-200000.mp4">http://outin-40564*****e1403e7.oss-cn-shanghai.aliyuncs.com/883f5d*****f20aaa352f/c3be4f073*****7d5193ec8-{DestMd5}-od-S00000001-200000.mp4</a></para>
@@ -553,14 +553,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public string VideoStreamList { get; set; }
 
                     /// <summary>
-                    /// <para>The list of watermark IDs used for the transcoding output file.</para>
+                    /// <para>The list of watermark IDs used for the transcoded output file.</para>
                     /// </summary>
                     [NameInMap("WatermarkIdList")]
                     [Validation(Required=false)]
                     public List<string> WatermarkIdList { get; set; }
 
                     /// <summary>
-                    /// <para>The width of the transcoding output video. Unit: px.</para>
+                    /// <para>The width of the video frame in the transcoded output file. Unit: px.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>640</para>
@@ -582,7 +582,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Priority { get; set; }
 
                 /// <summary>
-                /// <para>The transcoding job ID.</para>
+                /// <para>The ID of the transcoding job.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>38f0e513c88*****85515f9d50be188</para>
@@ -594,9 +594,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// <summary>
                 /// <para>The status of the transcoding job. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Transcoding</b>: transcoding in progress.</description></item>
-                /// <item><description><b>TranscodeSuccess</b>: transcoding succeeded.</description></item>
-                /// <item><description><b>TranscodeFail</b>: transcoding failed.</description></item>
+                /// <item><description><b>Transcoding</b>: transcoding</description></item>
+                /// <item><description><b>TranscodeSuccess</b>: transcoding succeeded</description></item>
+                /// <item><description><b>TranscodeFail</b>: transcoding failed</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -607,7 +607,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string TranscodeJobStatus { get; set; }
 
                 /// <summary>
-                /// <para>The transcoding job progress. Value range: <c>[0,100]</c>.</para>
+                /// <para>The processing progress of the transcoding job. Valid values: <c>[0,100]</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -629,7 +629,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// <para>The transcoding task ID.</para>
+            /// <para>The ID of the transcoding task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>b1b65ab107e14*****3dbb900f6c1fe0</para>
@@ -651,8 +651,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <summary>
             /// <para>The trigger type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Auto</b>: automatically triggered after a video is uploaded.</description></item>
-            /// <item><description><b>Manual</b>: triggered by calling the SubmitTranscodeJobs operation.</description></item>
+            /// <item><description><b>Auto</b>: Automatically triggered when a video is uploaded.</description></item>
+            /// <item><description><b>Manual</b>: Triggered by the SubmitTranscodeJobs operation.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -663,7 +663,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Trigger { get; set; }
 
             /// <summary>
-            /// <para>The audio or video ID.</para>
+            /// <para>The ID of the audio or video.</para>
             /// 
             /// <b>Example:</b>
             /// <para>883f5d98107*****b7f20aaa352f</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The watermark template information.</para>
+        /// <para>The image or text watermark template information.</para>
         /// </summary>
         [NameInMap("WatermarkInfo")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The time when the watermark template was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+            /// <para>The creation time of the watermark template. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format and is in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-11-06T08:03:17Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The URL of the watermark file (OSS URL or CDN URL).</para>
+            /// <para>The URL of the watermark file, which is an OSS URL or a CDN URL.</para>
             /// <remarks>
             /// <para>This parameter is returned only for image watermark templates.</para>
             /// </remarks>
@@ -60,10 +60,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string FileUrl { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the watermark template is the default template. Valid values:</para>
+            /// <para>Specifies whether the watermark template is the default image or text watermark template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Default</b>: the default watermark template.</description></item>
-            /// <item><description><b>NotDefault</b>: not the default watermark template.</description></item>
+            /// <item><description><b>Default</b>: default image or text watermark template.</description></item>
+            /// <item><description><b>NotDefault</b>: non-default image or text watermark template.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The configuration information of the watermark (JSON string), including the display position and effect of the watermark. The configuration parameters differ between image watermarks and text watermarks. For more information about the parameter structure, see <a href="~~98618#section-h01-44s-2lr~~">WatermarkConfig</a>.</para>
+            /// <para>The configuration information of the image or text watermark in JSON string format, including the display position and effect of the watermark. The configuration parameters for image watermarks and text watermarks are different. For more information about the parameter structure, see <a href="~~98618#section-h01-44s-2lr~~">WatermarkConfig</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;ReferPos&quot;: &quot;BottomRight&quot;,&quot;Height&quot;: &quot;55&quot;,&quot;Width&quot;: &quot;55&quot;,&quot;Dx&quot;: &quot;8&quot;,&quot;Dy&quot;: &quot;8&quot; }</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string WatermarkConfig { get; set; }
 
             /// <summary>
-            /// <para>The watermark template ID.</para>
+            /// <para>The ID of the watermark template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>505e2e287ea*****ecfddd386d384</para>

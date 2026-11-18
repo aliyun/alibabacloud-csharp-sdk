@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public List<GetDigitalWatermarkExtractResultResponseBodyAiExtractResultList> AiExtractResultList { get; set; }
         public class GetDigitalWatermarkExtractResultResponseBodyAiExtractResultList : TeaModel {
             /// <summary>
-            /// <para>The time when the watermark extraction job was created.</para>
+            /// <para>The time when the watermark extraction job was created. The time is displayed in UTC and formatted in accordance with ISO 8601 in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-09-16T02:49:04Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The error message. This parameter is returned only when the watermark extraction job fails (the value of <c>Status</c> is <c>Failed</c>).</para>
+            /// <para>The error message. This parameter is returned only when the watermark extraction job fails (the Status parameter is Failed).</para>
             /// 
             /// <b>Example:</b>
             /// <para>query copyright info err</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The time when the watermark extraction job was last updated.</para>
+            /// <para>The time when the watermark extraction job was last updated. The time is displayed in UTC and formatted in accordance with ISO 8601 in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-09-17T06:20:45Z</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <list type="bullet">
             /// <item><description><b>Success</b>: The job succeeded.	</description></item>
             /// <item><description><b>Failed</b>: The job failed.</description></item>
-            /// <item><description><b>Processing</b>: The job is being processed.</description></item>
+            /// <item><description><b>Processing</b>: The job is in progress.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>42E0554B-80F4-4921-****-ACFB22CAAAD0</para>

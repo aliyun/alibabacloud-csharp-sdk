@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DomesticMax95Bps { get; set; }
 
         /// <summary>
-        /// <para>The end time of the data.</para>
+        /// <para>The end time of the data. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2017-01-11T13:00:00Z</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the data.</para>
+        /// <para>The start time of the data. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2017-01-11T12:00:00Z</para>

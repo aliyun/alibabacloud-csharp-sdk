@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GenerateDownloadSecretKeyRequest : TeaModel {
         /// <summary>
-        /// <para>The custom encryption private key string. The string is 16 to 32 characters in length and consists of letters and digits. The string must contain uppercase letters, lowercase letters, and digits.</para>
+        /// <para>The custom encryption private key string. The string must be 16 to 32 characters in length, consist of letters and digits, and contain uppercase letters, lowercase letters, and digits.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string AppDecryptKey { get; set; }
 
         /// <summary>
-        /// <para>The unique identity of the app.</para>
+        /// <para>The unique app identifier.</para>
         /// <list type="bullet">
-        /// <item><description>Android: the SHA-1 value of the keystore file. The obtained SHA-1 value is a character string with colons.</description></item>
-        /// <item><description>iOS: the App Bundle ID value.</description></item>
-        /// <item><description>Windows: the serial number of the digital signing certificate.</description></item>
+        /// <item><description>Android: the SHA-1 value of the keystore file. The obtained SHA-1 value must be a string that contains colons.</description></item>
+        /// <item><description>iOS: the app bundle ID.</description></item>
+        /// <item><description>Windows: the serial number of the digital signature certificate.</description></item>
         /// </list>
-        /// <para>For information about how to obtain the unique identity of the app, see <a href="~~86107#section-wtj-9d7-lg2~~">Obtain the unique identity of the app</a>.</para>
+        /// <para>For more information about how to obtain the unique app identifier, see <a href="~~86107#section-wtj-9d7-lg2~~">Obtain the unique app identifier</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

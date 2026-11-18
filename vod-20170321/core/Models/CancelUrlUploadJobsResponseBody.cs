@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class CancelUrlUploadJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of tasks that were successfully canceled.</para>
+        /// <para>The list of successfully canceled tasks.</para>
         /// </summary>
         [NameInMap("CanceledJobs")]
         [Validation(Required=false)]

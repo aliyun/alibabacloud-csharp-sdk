@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainHitRateDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time interval between data entries, which is the time granularity of the data. Unit: seconds.</para>
+        /// <para>The time interval between each data entry, which indicates the time granularity of the data. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range for the returned data.</para>
+        /// <para>The end time of the data. The time is displayed in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-20T14:59:58Z</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range for the returned data.</para>
+        /// <para>The start time of the data. The time is displayed in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-20T13:59:58Z</para>

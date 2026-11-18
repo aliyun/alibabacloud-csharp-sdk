@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class UpdateVideoInfosRequest : TeaModel {
         /// <summary>
-        /// <para>The update content. You can modify the information about up to 20 audio and video files at a time. Separate multiple audio and video object information entries with commas (,). If you specify more than 20 objects, the update is failed and the <c>CountExceededMax</c> error is returned.
-        /// The value is a JSON character string. For more details about the parameters, see the <b>UpdateContent</b> table below.</para>
+        /// <para>The update content. You can modify object information of up to 20 audio or video files at a time. Separate object information of multiple audio or video files with commas (,). If you attempt to update more than 20 files at a time, the update fails and the <c>CountExceededMax</c> error is returned.
+        /// The value must be a JSON string. For more information about how to construct the parameters, see the <b>UpdateContent</b> table below.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

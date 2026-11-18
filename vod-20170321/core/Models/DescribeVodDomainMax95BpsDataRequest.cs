@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The cycle for the 95th percentile bandwidth. Default value: day. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>day: queries the 95th percentile bandwidth by day.</para>
+        /// <item><description><para>day: Queries the 95th percentile bandwidth by day.</para>
         /// </description></item>
-        /// <item><description><para>month: queries the 95th percentile bandwidth by month.</para>
+        /// <item><description><para>month: Queries the 95th percentile bandwidth by month.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -26,9 +26,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Cycle { get; set; }
 
         /// <summary>
-        /// <para>The accelerated domain name to query. If this parameter is left empty, the merged data of all accelerated domain names is returned by default.</para>
+        /// <para>The accelerated domain name to query. If this parameter is left empty, the aggregated data of all accelerated domain names is returned by default.</para>
         /// <remarks>
-        /// <para>Batch domain name queries are not supported.</para>
+        /// <para>Batch query for domain names is not supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The end time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// <remarks>
         /// <para>The end time must be later than the start time.</para>
         /// </remarks>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2017-01-11T12:00:00Z</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The start time point for data retrieval. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The start time of the data. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2017-12-21T10:00:00Z</para>

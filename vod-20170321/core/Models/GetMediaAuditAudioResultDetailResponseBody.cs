@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetail MediaAuditAudioResultDetail { get; set; }
         public class GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetail : TeaModel {
             /// <summary>
-            /// <para>The result list.</para>
+            /// <para>The list of results.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetailList> List { get; set; }
             public class GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetailList : TeaModel {
                 /// <summary>
-                /// <para>The end time of the problematic audio segment. Unit: seconds.</para>
+                /// <para>The end time of the flagged audio segment, in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -37,15 +37,15 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// <para>The category of the audio review result. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>normal</b>: Normal.</description></item>
-                /// <item><description><b>spam</b>: Contains spam.</description></item>
-                /// <item><description><b>ad</b>: Advertisement.</description></item>
+                /// <item><description><b>spam</b>: Spam.</description></item>
+                /// <item><description><b>ad</b>: Ad.</description></item>
                 /// <item><description><b>politics</b>: Political content.</description></item>
-                /// <item><description><b>terrorism</b>: Terrorist content.</description></item>
-                /// <item><description><b>abuse</b>: Abusive content.</description></item>
-                /// <item><description><b>porn</b>: Pornographic content.</description></item>
-                /// <item><description><b>flood</b>: Junk content.</description></item>
-                /// <item><description><b>contraband</b>: Prohibited content.</description></item>
-                /// <item><description><b>meaningless</b>: Meaningless content.</description></item>
+                /// <item><description><b>terrorism</b>: Terrorism.</description></item>
+                /// <item><description><b>abuse</b>: Abuse.</description></item>
+                /// <item><description><b>porn</b>: Pornography.</description></item>
+                /// <item><description><b>flood</b>: Flooding.</description></item>
+                /// <item><description><b>contraband</b>: Contraband.</description></item>
+                /// <item><description><b>meaningless</b>: Meaningless.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Label { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the problematic audio segment. Unit: seconds.</para>
+                /// <para>The start time of the flagged audio segment, in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// <para>The text content corresponding to the audio.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Tiananmen</para>
+                /// <para>Tian\&quot;anmen</para>
                 /// </summary>
                 [NameInMap("Text")]
                 [Validation(Required=false)]

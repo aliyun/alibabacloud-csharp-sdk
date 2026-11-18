@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class CreateUploadAttachedMediaRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID. Default value: <b>app-1000000</b>. If you have activated the multi-application service, specify the application ID to upload the auxiliary media asset to the specified application. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application</a>.</para>
+        /// <para>The application ID. Default value: <b>app-1000000</b>. If the multi-application system is enabled, you can specify an application ID to upload the auxiliary media asset to the specified application. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app-****</para>
@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The type of the auxiliary media asset. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>watermark</b>: watermark.</description></item>
-        /// <item><description><b>subtitle</b>: subtitle.</description></item>
-        /// <item><description><b>material</b>: material.</description></item>
+        /// <item><description><b>watermark</b>: watermark</description></item>
+        /// <item><description><b>subtitle</b>: subtitle</description></item>
+        /// <item><description><b>material</b>: material</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,11 +36,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string BusinessType { get; set; }
 
         /// <summary>
-        /// <para>The category IDs. Separate multiple IDs with commas (,). A maximum of 5 IDs are supported. You can obtain category IDs by using the following methods:</para>
+        /// <para>The category IDs. Separate multiple IDs with commas (,). A maximum of five IDs are supported. You can obtain the IDs by using the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Configuration Management</b> &gt; <b>Media Management Configuration</b> &gt; <b>Category Management</b> to view category IDs.</description></item>
-        /// <item><description>The category ID is returned when you call the <a href="~~AddCategory~~">AddCategory</a> operation to create a category.</description></item>
-        /// <item><description>The category ID is returned when you call the <a href="~~GetCategories~~">GetCategories</a> operation to query categories.</description></item>
+        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Configuration Management</b> &gt; <b>Media Asset Management Configuration</b> &gt; <b>Category Management</b> to view the category IDs.</description></item>
+        /// <item><description>Call the <a href="~~AddCategory~~">AddCategory</a> operation to create a category. The category ID is returned in the response.</description></item>
+        /// <item><description>Call the <a href="~~GetCategories~~">GetCategories</a> operation to query categories. The category IDs are returned in the response.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,9 +51,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string CateIds { get; set; }
 
         /// <summary>
-        /// <para>The description of the media asset. Rules:</para>
+        /// <para>The media asset description. Rules:</para>
         /// <list type="bullet">
-        /// <item><description>The description can be up to 1024 bytes in length.</description></item>
+        /// <item><description>The length cannot exceed 1,024 bytes.</description></item>
         /// <item><description>The description must be encoded in UTF-8.</description></item>
         /// </list>
         /// 
@@ -65,9 +65,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The source file address of the auxiliary media asset to be uploaded.</para>
+        /// <para>The source file URL of the auxiliary media asset to be uploaded.</para>
         /// <remarks>
-        /// <para>The file name extension is optional. If a file name extension is specified here and is different from the extension specified in MediaExt, the value of MediaExt takes precedence.</para>
+        /// <para>The file name extension is optional. If a file name extension is included and it is different from the file name extension specified in MediaExt, the value of MediaExt prevails.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -88,11 +88,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string FileSize { get; set; }
 
         /// <summary>
-        /// <para>The file name extension of the auxiliary media asset source file to be uploaded. Valid values:</para>
+        /// <para>The file name extension of the resource file of the auxiliary media asset to be uploaded. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Watermark: <b>png, gif, apng, mov</b>.</description></item>
-        /// <item><description>Subtitle: <b>srt, ass, stl, ttml, vtt</b>.</description></item>
-        /// <item><description>Material: <b>jpg, gif, png, mp4, mat, zip, apk</b>.</description></item>
+        /// <item><description>Watermark: <b>png, gif, apng, and mov</b></description></item>
+        /// <item><description>Subtitle: <b>srt, ass, stl, ttml, and vtt</b></description></item>
+        /// <item><description>Material: <b>jpg, gif, png, mp4, mat, zip, and apk</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -103,8 +103,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string MediaExt { get; set; }
 
         /// <summary>
-        /// <para>The storage address. You can obtain the storage address by using the following method:</para>
-        /// <para>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Configuration Management</b> &gt; <b>Media Management Configuration</b> &gt; <b>Storage Management</b> to view the storage address.</para>
+        /// <para>The storage address. You can obtain it by using the following method:</para>
+        /// <para>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Configuration Management</b> &gt; <b>Media Asset Management Configuration</b> &gt; <b>Storage Management</b> to view the storage address.</para>
         /// <remarks>
         /// <para>If you do not specify this parameter, the auxiliary media asset is uploaded to the default storage address. If you specify this parameter, the auxiliary media asset is uploaded to the specified storage address.</para>
         /// </remarks>
@@ -119,9 +119,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The tags. Rules:</para>
         /// <list type="bullet">
-        /// <item><description>A maximum of 16 tags are supported.</description></item>
+        /// <item><description>A maximum of 16 tags can be set.</description></item>
         /// <item><description>Separate multiple tags with commas (,).</description></item>
-        /// <item><description>Each tag can be up to 32 characters or Chinese characters in length.</description></item>
+        /// <item><description>A single tag cannot exceed 32 characters.</description></item>
         /// <item><description>The tags must be encoded in UTF-8.</description></item>
         /// </list>
         /// 
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The title of the auxiliary media asset. Rules:</para>
         /// <list type="bullet">
-        /// <item><description>The title can be up to 128 bytes in length.</description></item>
+        /// <item><description>The length cannot exceed 128 bytes.</description></item>
         /// <item><description>The title must be encoded in UTF-8.</description></item>
         /// </list>
         /// 
@@ -147,11 +147,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>The custom settings, which is a JSON string. The settings support message callbacks, upload acceleration, and other configurations. For more information, see <a href="~~86952#section-6fg-qll-v3w~~">UserData</a>.</para>
+        /// <para>The custom settings. The value is a JSON string that supports settings such as message callback and upload acceleration. For more information, see <a href="~~86952#section-6fg-qll-v3w~~">UserData</a>.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>To use message callbacks in this parameter, you must configure an HTTP callback URL and select the corresponding callback event types in the console. Otherwise, the callback settings do not take effect. For information about how to configure HTTP callbacks in the console, see <a href="https://help.aliyun.com/document_detail/86071.html">Callback settings</a>.</description></item>
-        /// <item><description>To use the upload acceleration feature, submit a ticket to activate it. For more information, see <a href="https://help.aliyun.com/document_detail/55396.html">Upload instructions</a>. For information about how to submit a ticket, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</description></item>
+        /// <item><description>To use the message callback feature in this parameter, you must configure an HTTP callback URL in the console and select the corresponding callback event type. Otherwise, the callback settings do not take effect. For more information about how to configure HTTP callbacks in the console, see <a href="https://help.aliyun.com/document_detail/86071.html">Callback settings</a>.</description></item>
+        /// <item><description>To use the upload acceleration feature, submit a ticket to apply for activation. For more information, see <a href="https://help.aliyun.com/document_detail/55396.html">Upload instructions</a>. For more information about how to submit a ticket, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</description></item>
         /// </list>
         /// </remarks>
         /// 

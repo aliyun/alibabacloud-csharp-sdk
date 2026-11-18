@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainRealTimeHttpCodeDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time interval between data entries. Unit: seconds.</para>
-        /// <para>Based on the time range per query, this parameter returns a fixed value of 60 (1 minute), 300 (5 minutes), or 3600 (1 hour). For more information, see <b>Time granularity of returned data</b> in the <b>operation description</b>.</para>
+        /// <para>The time interval between two consecutive data points. Unit: seconds.</para>
+        /// <para>Based on the time range for a single query, this parameter returns a fixed value of 60 (1 minute), 300 (5 minutes), or 3600 (1 hour). For more information, see the <b>Time granularity of returned data</b> section in the <b>Operation description</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range for the returned data.</para>
+        /// <para>The end time of the data. The time is displayed in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-11-30T05:40:00Z</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range for the returned data.</para>
+        /// <para>The start time of the data. The time is displayed in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-11-30T05:39:00Z</para>

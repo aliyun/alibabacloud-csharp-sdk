@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The playback key.</para>
         /// <list type="bullet">
-        /// <item><description>Only uppercase letters, lowercase letters, and digits are supported. The length must be 8 to 20 characters.</description></item>
-        /// <item><description>UTF-8 encoding.</description></item>
+        /// <item><description>The value must be 8 to 20 characters in length and can contain only uppercase and lowercase letters and digits.</description></item>
+        /// <item><description>The value must be encoded in UTF-8.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public GetAIVideoTagResultResponseBodyVideoTagResult VideoTagResult { get; set; }
         public class GetAIVideoTagResultResponseBodyVideoTagResult : TeaModel {
             /// <summary>
-            /// <para>The collection of video categories.</para>
+            /// <para>The video categories.</para>
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
             public List<GetAIVideoTagResultResponseBodyVideoTagResultCategory> Category { get; set; }
             public class GetAIVideoTagResultResponseBodyVideoTagResultCategory : TeaModel {
                 /// <summary>
-                /// <para>The label.</para>
+                /// <para>The tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Beauty</para>
@@ -46,14 +46,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// <para>The collection of keyword tags.</para>
+            /// <para>The keyword tags.</para>
             /// </summary>
             [NameInMap("Keyword")]
             [Validation(Required=false)]
             public List<GetAIVideoTagResultResponseBodyVideoTagResultKeyword> Keyword { get; set; }
             public class GetAIVideoTagResultResponseBodyVideoTagResultKeyword : TeaModel {
                 /// <summary>
-                /// <para>The label.</para>
+                /// <para>The tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Cushion</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Tag { get; set; }
 
                 /// <summary>
-                /// <para>The collection of time points. Unit: milliseconds.</para>
+                /// <para>The time points. Unit: milliseconds.</para>
                 /// </summary>
                 [NameInMap("Times")]
                 [Validation(Required=false)]
@@ -72,14 +72,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// <para>The collection of location tags.</para>
+            /// <para>The location tags.</para>
             /// </summary>
             [NameInMap("Location")]
             [Validation(Required=false)]
             public List<GetAIVideoTagResultResponseBodyVideoTagResultLocation> Location { get; set; }
             public class GetAIVideoTagResultResponseBodyVideoTagResultLocation : TeaModel {
                 /// <summary>
-                /// <para>The label.</para>
+                /// <para>The tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Asia</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Tag { get; set; }
 
                 /// <summary>
-                /// <para>The collection of time points. Unit: milliseconds.</para>
+                /// <para>The time points. Unit: milliseconds.</para>
                 /// </summary>
                 [NameInMap("Times")]
                 [Validation(Required=false)]
@@ -98,16 +98,16 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// <para>The collection of person tags.</para>
+            /// <para>The person tags.</para>
             /// </summary>
             [NameInMap("Person")]
             [Validation(Required=false)]
             public List<GetAIVideoTagResultResponseBodyVideoTagResultPerson> Person { get; set; }
             public class GetAIVideoTagResultResponseBodyVideoTagResultPerson : TeaModel {
                 /// <summary>
-                /// <para>The face URL.</para>
+                /// <para>The URL of the face.</para>
                 /// <remarks>
-                /// <para>This field is returned only for person tag results.</para>
+                /// <para>This field is returned only for person tags.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string FaceUrl { get; set; }
 
                 /// <summary>
-                /// <para>The label.</para>
+                /// <para>The tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Xiao Wang</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Tag { get; set; }
 
                 /// <summary>
-                /// <para>The collection of time points. Unit: milliseconds.</para>
+                /// <para>The time points. Unit: milliseconds.</para>
                 /// </summary>
                 [NameInMap("Times")]
                 [Validation(Required=false)]
@@ -137,24 +137,24 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// <para>The collection of time tags.</para>
+            /// <para>The time tags.</para>
             /// </summary>
             [NameInMap("Time")]
             [Validation(Required=false)]
             public List<GetAIVideoTagResultResponseBodyVideoTagResultTime> Time { get; set; }
             public class GetAIVideoTagResultResponseBodyVideoTagResultTime : TeaModel {
                 /// <summary>
-                /// <para>The label.</para>
+                /// <para>The tag.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Millisecond</para>
+                /// <para>Milliseconds</para>
                 /// </summary>
                 [NameInMap("Tag")]
                 [Validation(Required=false)]
                 public string Tag { get; set; }
 
                 /// <summary>
-                /// <para>The collection of time points. Unit: milliseconds.</para>
+                /// <para>The time points. Unit: milliseconds.</para>
                 /// </summary>
                 [NameInMap("Times")]
                 [Validation(Required=false)]

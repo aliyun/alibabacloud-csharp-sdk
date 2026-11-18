@@ -52,8 +52,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Processing</b>: Processing.</description></item>
-        /// <item><description><b>Failed</b>: Failed.</description></item>
+        /// <item><description><b>Processing</b>: The task is being processed.</description></item>
+        /// <item><description><b>Failed</b>: The task failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

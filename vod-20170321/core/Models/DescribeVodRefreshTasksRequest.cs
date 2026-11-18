@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+        /// <para>The end time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2017-01-01T12:30:20Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The path used to query. Exact match is used.</para>
+        /// <para>The object path. Exact match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://example.com/***.txt">http://example.com/***.txt</a></para>
@@ -42,12 +42,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The task type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>file</b>: file purge.</description></item>
-        /// <item><description><b>directory</b>: directory purge.</description></item>
-        /// <item><description><b>preload</b>: file prefetch.</description></item>
+        /// <item><description><b>file</b>: file refresh</description></item>
+        /// <item><description><b>directory</b>: directory refresh</description></item>
+        /// <item><description><b>preload</b>: file prefetch</description></item>
         /// </list>
         /// <remarks>
-        /// <para>When DomainName or Status is specified, ObjectType is required.</para>
+        /// <para>If you specify DomainName or Status, ObjectType is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -86,9 +86,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+        /// <para>The start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para>Only data within the last 3 days can be queried.</para>
+        /// <para>You can query only the data generated within the last three days.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -101,9 +101,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Complete</b>: completed.</description></item>
-        /// <item><description><b>Refreshing</b>: in progress.</description></item>
-        /// <item><description><b>Failed</b>: failed.</description></item>
+        /// <item><description><b>Complete</b>: The task is complete.</description></item>
+        /// <item><description><b>Refreshing</b>: The task is in progress.</description></item>
+        /// <item><description><b>Failed</b>: The task failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The task ID used to query the purge status.</para>
+        /// <para>The task ID used to query the refresh status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>70422****</para>

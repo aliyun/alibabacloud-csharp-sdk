@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AddEditingProjectMaterialsRequest : TeaModel {
         /// <summary>
-        /// <para>The material IDs. Separate multiple IDs with commas (,). A maximum of 10 material IDs are supported.</para>
+        /// <para>The IDs of the media assets. Separate multiple IDs with commas (,). You can specify up to 10 media asset IDs.</para>
         /// <remarks>
-        /// <para> When you associate multiple materials, ensure that all materials are of the same type and correspond to the MaterialType value.</para>
+        /// <para>When you associate multiple media assets, make sure that they are of the same type and the type matches the value of MaterialType.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string MaterialIds { get; set; }
 
         /// <summary>
-        /// <para>The material type. Valid values:</para>
+        /// <para>The type of the media asset. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>video</b>: video.</description></item>
         /// <item><description><b>audio</b>: audio-only.</description></item>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The online editing project ID.</para>
+        /// <para>The ID of the online editing project.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

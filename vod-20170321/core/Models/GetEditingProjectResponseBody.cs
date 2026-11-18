@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CoverURL { get; set; }
 
             /// <summary>
-            /// <para>The time when the online editing project was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+            /// <para>The time when the online editing project was created. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-10-23T13:33:40Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The time when the online editing project was last modified. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+            /// <para>The time when the online editing project was last modified. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-10-23T14:27:26Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The online editing project ID.</para>
+            /// <para>The ID of the online editing project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fb2101bf24b27*****54cb318787dc</para>
@@ -77,12 +77,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The status of the online editing project. Multiple statuses are separated by commas (,). By default, all online editing projects are returned. Valid values:</para>
+            /// <para>The status of the online editing project. Multiple statuses are separated by commas (,). By default, all online editing projects are retrieved. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Normal</b>: draft.</description></item>
-            /// <item><description><b>Producing</b>: being produced.</description></item>
-            /// <item><description><b>Produced</b>: produced.</description></item>
-            /// <item><description><b>ProduceFailed</b>: failed to be produced.</description></item>
+            /// <item><description><b>Normal</b>: Draft.</description></item>
+            /// <item><description><b>Producing</b>: Being produced.</description></item>
+            /// <item><description><b>Produced</b>: Produced successfully.</description></item>
+            /// <item><description><b>ProduceFailed</b>: Production failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string StorageLocation { get; set; }
 
             /// <summary>
-            /// <para>The timeline of the online editing project.</para>
+            /// <para>The timeline of the online editing project. TimelineIn and TimelineOut indicate the in-point and out-point of a media clip on the timeline, in seconds, accurate to four decimal places.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;TimelineIn\&quot;:0,\&quot;TimelineOut\&quot;:9.42}</para>

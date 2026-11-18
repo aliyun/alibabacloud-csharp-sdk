@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class PreloadVodObjectCachesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The task ID returned for the prefetch operation. Multiple task IDs are separated by commas (,).</para>
+        /// <para>The ID of the prefetch task. Multiple task IDs are separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>9524****</para>

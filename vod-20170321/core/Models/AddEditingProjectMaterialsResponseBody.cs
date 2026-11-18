@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AddEditingProjectMaterialsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of materials.</para>
+        /// <para>The list of media assets.</para>
         /// </summary>
         [NameInMap("MaterialList")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public int? CateId { get; set; }
 
             /// <summary>
-            /// <para>The material category name.</para>
+            /// <para>The name of the media asset category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Category 1</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CateName { get; set; }
 
             /// <summary>
-            /// <para>The thumbnail URL of the material.</para>
+            /// <para>The URL of the media asset thumbnail.</para>
             /// </summary>
             [NameInMap("CoverURL")]
             [Validation(Required=false)]
             public string CoverURL { get; set; }
 
             /// <summary>
-            /// <para>The time when the material was created. The time follows the format: <i>yyyy-mm-dd</i>t<i>hh:mm:ss</i>z (UTC).</para>
+            /// <para>The time when the media asset was created. The time follows the <i>yyyy-mm-dd</i>T<i>hh:mm:ss</i>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-10-02T08:26Z</para>
@@ -64,17 +64,17 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public long? CustomerId { get; set; }
 
             /// <summary>
-            /// <para>The material description.</para>
+            /// <para>The description of the media asset.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Material description</para>
+            /// <para>Media asset description</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The material duration. Unit: seconds. The value is accurate to four decimal places.</para>
+            /// <para>The duration of the media asset. Unit: seconds. The value is accurate to four decimal places.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3690.2332</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public float? Duration { get; set; }
 
             /// <summary>
-            /// <para>The material ID.</para>
+            /// <para>The ID of the media asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>85befc4118b84c6723e53b80b1****</para>
@@ -94,11 +94,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string MaterialId { get; set; }
 
             /// <summary>
-            /// <para>The material type. Valid values:</para>
+            /// <para>The type of the media asset. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>video</b>: video.</description></item>
-            /// <item><description><b>audio</b>: audio-only.</description></item>
-            /// <item><description><b>image</b>: image.</description></item>
+            /// <item><description><b>video</b>: video</description></item>
+            /// <item><description><b>audio</b>: audio-only</description></item>
+            /// <item><description><b>image</b>: image</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string MaterialType { get; set; }
 
             /// <summary>
-            /// <para>The time when the material was last modified. The time follows the format: <i>yyyy-mm-dd</i>t<i>hh:mm:ss</i>z (UTC).</para>
+            /// <para>The time when the media asset was updated. The time follows the <i>yyyy-mm-dd</i>T<i>hh:mm:ss</i>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-11-25T07:28:34Z</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>The array of snapshot URLs for the material.</para>
+            /// <para>The array of snapshot URLs for the media asset.</para>
             /// </summary>
             [NameInMap("Snapshots")]
             [Validation(Required=false)]
@@ -146,14 +146,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string SpriteConfig { get; set; }
 
             /// <summary>
-            /// <para>The array of sprite URLs for the material.</para>
+            /// <para>The array of sprite URLs for the media asset.</para>
             /// </summary>
             [NameInMap("Sprites")]
             [Validation(Required=false)]
             public List<string> Sprites { get; set; }
 
             /// <summary>
-            /// <para>The material status. Valid values:</para>
+            /// <para>The status of the media asset. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Normal</b>: Normal.</description></item>
             /// <item><description><b>Uploading</b>: Uploading.</description></item>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The material tags. Multiple tags are separated by commas (,).</para>
+            /// <para>The tags of the media asset. Separate multiple tags with commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>tag1,tag2</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Tags { get; set; }
 
             /// <summary>
-            /// <para>The material title.</para>
+            /// <para>The title of the media asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>

@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class UpdateVideoInfosResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs of the audio and video files that cannot be operated on. This is typically caused by insufficient <a href="https://help.aliyun.com/document_detail/113600.html">permissions</a>.</para>
+        /// <para>The IDs of the audio or video files on which operations are forbidden. This is usually caused by a lack of <a href="https://help.aliyun.com/document_detail/113600.html">permissions</a>.</para>
         /// </summary>
         [NameInMap("ForbiddenVideoIds")]
         [Validation(Required=false)]
         public List<string> ForbiddenVideoIds { get; set; }
 
         /// <summary>
-        /// <para>The list of custom IDs that do not exist.</para>
+        /// <para>The custom IDs that do not exist.</para>
         /// </summary>
         [NameInMap("NonExistReferenceIds")]
         [Validation(Required=false)]
         public List<string> NonExistReferenceIds { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the audio and video files that do not exist.</para>
+        /// <para>The IDs of the audio or video files that do not exist.</para>
         /// </summary>
         [NameInMap("NonExistVideoIds")]
         [Validation(Required=false)]

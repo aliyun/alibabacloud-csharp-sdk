@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string MediaId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the video content review results. Default value: <b>1</b>. A maximum of <b>20</b> records are returned per page.</para>
+        /// <para>The page number of the video content review results. Default value: <b>1</b>. Maximum number of entries per page: <b>20</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

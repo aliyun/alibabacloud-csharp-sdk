@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Available { get; set; }
 
         /// <summary>
-        /// <para>The accelerated domain name for ApsaraVideo VOD. Only a single domain name can be queried.</para>
+        /// <para>The ApsaraVideo VOD accelerated domain name. You can specify only one domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

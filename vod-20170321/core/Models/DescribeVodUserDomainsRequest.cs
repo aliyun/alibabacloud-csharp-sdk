@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodUserDomainsRequest : TeaModel {
         /// <summary>
-        /// <para>The accelerated domain name for ApsaraVideo VOD. Fuzzy match filtering is supported.</para>
+        /// <para>The ApsaraVideo VOD accelerated domain name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.aliyundoc.com</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The domain name query type. Valid values:</para>
+        /// <para>The domain name search type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>fuzzy_match</b> (default): fuzzy match.</description></item>
         /// <item><description><b>pre_match</b>: prefix match.</description></item>
@@ -36,14 +36,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DomainSearchType { get; set; }
 
         /// <summary>
-        /// <para>The domain name status filter. Valid values:</para>
+        /// <para>The domain name status used for filtering. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>online</b>: Enabled.</description></item>
-        /// <item><description><b>offline</b>: Disabled.</description></item>
-        /// <item><description><b>configuring</b>: Being configured.</description></item>
-        /// <item><description><b>configure_failed</b>: Configuration failed.</description></item>
-        /// <item><description><b>checking</b>: Being reviewed.</description></item>
-        /// <item><description><b>check_failed</b>: Review failed.</description></item>
+        /// <item><description><b>online</b>: The domain name is enabled.</description></item>
+        /// <item><description><b>offline</b>: The domain name is disabled.</description></item>
+        /// <item><description><b>configuring</b>: The domain name is being configured.</description></item>
+        /// <item><description><b>configure_failed</b>: The domain name failed to be configured.</description></item>
+        /// <item><description><b>checking</b>: The domain name is being reviewed.</description></item>
+        /// <item><description><b>check_failed</b>: The domain name failed the review.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number of the returned page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

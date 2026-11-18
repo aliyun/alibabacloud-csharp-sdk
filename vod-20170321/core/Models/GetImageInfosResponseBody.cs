@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetImageInfosResponseBody : TeaModel {
         /// <summary>
-        /// <para>The image information list.</para>
+        /// <para>The list of image information.</para>
         /// </summary>
         [NameInMap("ImageInfo")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CateName { get; set; }
 
             /// <summary>
-            /// <para>The time when the image was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+            /// <para>The time when the image was created. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-11-21T02:37:23Z</para>
@@ -91,14 +91,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string ImageType { get; set; }
 
             /// <summary>
-            /// <para>The mezzanine information of the image.</para>
+            /// <para>The source information of the image.</para>
             /// </summary>
             [NameInMap("Mezzanine")]
             [Validation(Required=false)]
             public GetImageInfosResponseBodyImageInfoMezzanine Mezzanine { get; set; }
             public class GetImageInfosResponseBodyImageInfoMezzanine : TeaModel {
                 /// <summary>
-                /// <para>The file size. Unit: byte.</para>
+                /// <para>The file size. Unit: bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8932</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string FileURL { get; set; }
 
                 /// <summary>
-                /// <para>The image height. Unit: pixel.</para>
+                /// <para>The height of the image. Unit: pixels.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>200</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public int? Height { get; set; }
 
                 /// <summary>
-                /// <para>The address of the uploaded source image file.</para>
+                /// <para>The name of the uploaded source image file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>****.gif</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string OriginalFileName { get; set; }
 
                 /// <summary>
-                /// <para>The image width. Unit: pixel.</para>
+                /// <para>The width of the image. Unit: pixels.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>200</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <summary>
             /// <para>The image status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Uploading</b>: The image is being uploaded. This is the initial status.</description></item>
+            /// <item><description><b>Uploading</b>: The initial status, which indicates that the image is being uploaded.</description></item>
             /// <item><description><b>Normal</b>: The image is uploaded.</description></item>
             /// <item><description><b>UploadFail</b>: The image failed to be uploaded.</description></item>
             /// </list>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string StorageLocation { get; set; }
 
             /// <summary>
-            /// <para>The image tags. Multiple tags are separated by commas (,).</para>
+            /// <para>The image tags. Separate multiple tags with commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>tag1,tag2,tag3</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>The image access URL. If a CDN domain name is configured, the CDN URL is returned. Otherwise, the OSS URL is returned.</para>
+            /// <para>The image access URL. If a CDN domain name is configured, the value is a CDN URL. Otherwise, the value is an OSS URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://example.aliyundoc.com/image/default/****.gif?auth_key=">http://example.aliyundoc.com/image/default/****.gif?auth_key=</a>****</para>

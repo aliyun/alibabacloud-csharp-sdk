@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AddVodTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID. Default value: <b>app-1000000</b>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application</a>.</para>
+        /// <para>The ID of the application. Default value: <b>app-1000000</b>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app-****</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The template name.</para>
+        /// <para>The name of the template.</para>
         /// <list type="bullet">
         /// <item><description>The name can be up to 128 bytes in length.</description></item>
-        /// <item><description>UTF-8 encoded.</description></item>
+        /// <item><description>The name must be encoded in UTF-8.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The template configuration data in JSON format. For more information about the data structure, see <a href="https://help.aliyun.com/document_detail/98618.html">Snapshot template configuration</a> or <a href="https://help.aliyun.com/document_detail/98618.html">Animated image template configuration</a>.</para>
+        /// <para>The configuration data of the template in JSON format. For more information about the data structure, see <a href="https://help.aliyun.com/document_detail/98618.html">Snapshot template configuration</a> or <a href="https://help.aliyun.com/document_detail/98618.html">Animated image template configuration</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

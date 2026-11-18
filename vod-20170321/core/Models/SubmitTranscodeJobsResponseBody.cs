@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The ID of the submitted transcoding task.</para>
+        /// <para>The ID of the submitted transcoding job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9f4a0df7da2c8a81c8c0408c84****</para>

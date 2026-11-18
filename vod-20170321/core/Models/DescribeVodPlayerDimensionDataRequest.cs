@@ -23,19 +23,19 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The dimension type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Os: operating system.</description></item>
-        /// <item><description>AppVersion: application version.</description></item>
+        /// <item><description>Os: Operating system.</description></item>
+        /// <item><description>AppVersion: App version.</description></item>
         /// <item><description>SdkVersion: SDK version.</description></item>
-        /// <item><description>Codec: codec.</description></item>
-        /// <item><description>VideoType: video format.</description></item>
-        /// <item><description>Network: network type.</description></item>
-        /// <item><description>Isp: Internet service provider.</description></item>
-        /// <item><description>VideoDefinition: resolution.</description></item>
-        /// <item><description>Domain: domain name.</description></item>
-        /// <item><description>Country: country.</description></item>
-        /// <item><description>Province: province.</description></item>
-        /// <item><description>ErrorCode: error code.</description></item>
-        /// <item><description>IsHw: whether hardware decoding is used.</description></item>
+        /// <item><description>Codec: Codec.</description></item>
+        /// <item><description>VideoType: Video format.</description></item>
+        /// <item><description>Network: Network type.</description></item>
+        /// <item><description>Isp: ISP.</description></item>
+        /// <item><description>VideoDefinition: Resolution.</description></item>
+        /// <item><description>Domain: Domain name.</description></item>
+        /// <item><description>Country: Country.</description></item>
+        /// <item><description>Province: Province.</description></item>
+        /// <item><description>ErrorCode: Error code.</description></item>
+        /// <item><description>IsHw: Hardware decoding.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Dimension { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. Specify the time in the yyyy-mm-ddthh:mm:ssz format (UTC).</para>
+        /// <para>The end time of the query. Format: yyyy-mm-ddThh:mm:ssZ (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-06-05T15:59:59Z</para>
@@ -57,11 +57,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The region filter used when querying the Province or Isp dimension metadata. Valid values:</para>
+        /// <para>The region used to limit the query scope when querying the metadata for the Province and ISP dimensions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ALL (default): all regions.</description></item>
+        /// <item><description>ALL (default): All regions.</description></item>
         /// <item><description>CN: China.</description></item>
-        /// <item><description>OVERSEAS: outside China.</description></item>
+        /// <item><description>OVERSEAS: Outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,10 +72,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Specify the time in the <i>yyyy-mm-dd</i>t<i>hh:mm:ss</i>z format (UTC).</para>
+        /// <para>The start time of the query. Format: <i>yyyy-mm-dd</i>T<i>hh:mm:ss</i>Z (UTC).</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Playback data from the last year is supported.</description></item>
+        /// <item><description>You can query playback data history for the past year.</description></item>
         /// <item><description>The time range for a single query cannot exceed 31 days.</description></item>
         /// <item><description>The time interval is left-closed and right-open [StartTime, EndTime).</description></item>
         /// </list>

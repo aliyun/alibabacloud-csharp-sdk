@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetAttachedMediaInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the auxiliary media assets.</para>
+        /// <para>The list of auxiliary media assets.</para>
         /// </summary>
         [NameInMap("AttachedMediaList")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public List<GetAttachedMediaInfoResponseBodyAttachedMediaListCategories> Categories { get; set; }
             public class GetAttachedMediaInfoResponseBodyAttachedMediaListCategories : TeaModel {
                 /// <summary>
-                /// <para>The category ID.</para>
+                /// <para>The ID of the category.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000224338</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public long? CateId { get; set; }
 
                 /// <summary>
-                /// <para>The category name.</para>
+                /// <para>The name of the category.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Test</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string CateName { get; set; }
 
                 /// <summary>
-                /// <para>The category level.</para>
+                /// <para>The level of the category.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// <para>The time when the auxiliary media asset was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+            /// <para>The time when the auxiliary media asset was created. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-01-01T10:00:00Z</para>
@@ -92,14 +92,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>Description test</para>
+            /// <para>Test description</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The auxiliary media asset ID.</para>
+            /// <para>The ID of the auxiliary media asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0222e203cf80f9c22870a4d2c****</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string MediaId { get; set; }
 
             /// <summary>
-            /// <para>The time when the auxiliary media asset was last updated. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+            /// <para>The time when the auxiliary media asset was last updated. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-05-31T11:42:20Z</para>
@@ -121,9 +121,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <summary>
             /// <para>The status of the auxiliary media asset. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Uploading</b>: uploading.</description></item>
+            /// <item><description><b>Uploading</b>: The auxiliary media asset is being uploaded.</description></item>
             /// <item><description><b>Normal</b>: Normal.</description></item>
-            /// <item><description><b>UploadFail</b>: upload failed.</description></item>
+            /// <item><description><b>UploadFail</b>: The auxiliary media asset failed to be uploaded.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <summary>
             /// <para>The tags.</para>
             /// <remarks>
-            /// <para>This parameter is returned only if the auxiliary media asset has tag information.</para>
+            /// <para>This parameter is returned only if the auxiliary media asset has tags.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <para>The title.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Subtitle test</para>
+            /// <para>Test subtitle</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <summary>
             /// <para>The access URL of the auxiliary media asset.</para>
             /// <remarks>
-            /// <para>If a CDN domain name is configured in ApsaraVideo VOD, the CDN URL is returned. Otherwise, the OSS URL is returned.</para>
+            /// <para>If a CDN domain name is configured for ApsaraVideo VOD, the CDN URL is returned. Otherwise, the OSS URL is returned.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

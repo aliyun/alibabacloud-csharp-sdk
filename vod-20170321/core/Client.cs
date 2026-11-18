@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "vod";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -65,17 +68,6 @@ namespace AlibabaCloud.SDK.Vod20170321
                 {"me-east-1", "vod.aliyuncs.com"},
                 {"rus-west-1-pop", "vod.aliyuncs.com"},
                 {"us-east-1", "vod.aliyuncs.com"},
-                {"cn-shenzhen", "vod.cn-shenzhen.aliyuncs.com"},
-                {"cn-beijing", "vod.cn-beijing.aliyuncs.com"},
-                {"cn-shanghai", "vod.cn-shanghai.aliyuncs.com"},
-                {"cn-hongkong", "vod.cn-hongkong.aliyuncs.com"},
-                {"ap-southeast-1", "vod.ap-southeast-1.aliyuncs.com"},
-                {"ap-northeast-1", "vod.ap-northeast-1.aliyuncs.com"},
-                {"ap-southeast-5", "vod.ap-southeast-5.aliyuncs.com"},
-                {"us-west-1", "vod.us-west-1.aliyuncs.com"},
-                {"eu-central-1", "vod.eu-central-1.aliyuncs.com"},
-                {"me-central-1", "vod.me-central-1.aliyuncs.com"},
-                {"cn-north-2-gov-1", "vod.cn-north-2-gov-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("vod", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -269,14 +261,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a category to classify audio, video, image, and short video materials stored in ApsaraVideo VOD, making resource discovery and management more efficient.</para>
+        /// <para>Creates a category to classify audio, video, image, and short video materials stored in ApsaraVideo VOD, making resource search and management more efficient.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Audio/video/image categories (<c>Type</c> set to <c>default</c>) support up to three levels, with a maximum of 100 subcategories per level. Short video material categories (<c>Type</c> set to <c>material</c>) support up to two levels, with a maximum of 100 subcategories per level.</description></item>
-        /// <item><description>After creating a category, you can assign it to media assets during upload or to already uploaded media assets. For more information, see <a href="https://help.aliyun.com/document_detail/86070.html">Media asset categories</a>.</description></item>
+        /// <item><description>Audio and video/image categories (<c>Type</c> set to <c>default</c>) support up to three levels of categories, with a maximum of 100 subcategories per level. Short video material categories (<c>Type</c> set to <c>material</c>) support up to two levels of categories, with a maximum of 100 subcategories per level.</description></item>
+        /// <item><description>After creating a category, you can classify media assets during or after upload. For more information, see <a href="https://help.aliyun.com/document_detail/86070.html">Media asset categories</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -327,14 +319,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a category to classify audio, video, image, and short video materials stored in ApsaraVideo VOD, making resource discovery and management more efficient.</para>
+        /// <para>Creates a category to classify audio, video, image, and short video materials stored in ApsaraVideo VOD, making resource search and management more efficient.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Audio/video/image categories (<c>Type</c> set to <c>default</c>) support up to three levels, with a maximum of 100 subcategories per level. Short video material categories (<c>Type</c> set to <c>material</c>) support up to two levels, with a maximum of 100 subcategories per level.</description></item>
-        /// <item><description>After creating a category, you can assign it to media assets during upload or to already uploaded media assets. For more information, see <a href="https://help.aliyun.com/document_detail/86070.html">Media asset categories</a>.</description></item>
+        /// <item><description>Audio and video/image categories (<c>Type</c> set to <c>default</c>) support up to three levels of categories, with a maximum of 100 subcategories per level. Short video material categories (<c>Type</c> set to <c>material</c>) support up to two levels of categories, with a maximum of 100 subcategories per level.</description></item>
+        /// <item><description>After creating a category, you can classify media assets during or after upload. For more information, see <a href="https://help.aliyun.com/document_detail/86070.html">Media asset categories</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -385,14 +377,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a category to classify audio, video, image, and short video materials stored in ApsaraVideo VOD, making resource discovery and management more efficient.</para>
+        /// <para>Creates a category to classify audio, video, image, and short video materials stored in ApsaraVideo VOD, making resource search and management more efficient.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Audio/video/image categories (<c>Type</c> set to <c>default</c>) support up to three levels, with a maximum of 100 subcategories per level. Short video material categories (<c>Type</c> set to <c>material</c>) support up to two levels, with a maximum of 100 subcategories per level.</description></item>
-        /// <item><description>After creating a category, you can assign it to media assets during upload or to already uploaded media assets. For more information, see <a href="https://help.aliyun.com/document_detail/86070.html">Media asset categories</a>.</description></item>
+        /// <item><description>Audio and video/image categories (<c>Type</c> set to <c>default</c>) support up to three levels of categories, with a maximum of 100 subcategories per level. Short video material categories (<c>Type</c> set to <c>material</c>) support up to two levels of categories, with a maximum of 100 subcategories per level.</description></item>
+        /// <item><description>After creating a category, you can classify media assets during or after upload. For more information, see <a href="https://help.aliyun.com/document_detail/86070.html">Media asset categories</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -411,14 +403,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a category to classify audio, video, image, and short video materials stored in ApsaraVideo VOD, making resource discovery and management more efficient.</para>
+        /// <para>Creates a category to classify audio, video, image, and short video materials stored in ApsaraVideo VOD, making resource search and management more efficient.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Audio/video/image categories (<c>Type</c> set to <c>default</c>) support up to three levels, with a maximum of 100 subcategories per level. Short video material categories (<c>Type</c> set to <c>material</c>) support up to two levels, with a maximum of 100 subcategories per level.</description></item>
-        /// <item><description>After creating a category, you can assign it to media assets during upload or to already uploaded media assets. For more information, see <a href="https://help.aliyun.com/document_detail/86070.html">Media asset categories</a>.</description></item>
+        /// <item><description>Audio and video/image categories (<c>Type</c> set to <c>default</c>) support up to three levels of categories, with a maximum of 100 subcategories per level. Short video material categories (<c>Type</c> set to <c>material</c>) support up to two levels of categories, with a maximum of 100 subcategories per level.</description></item>
+        /// <item><description>After creating a category, you can classify media assets during or after upload. For more information, see <a href="https://help.aliyun.com/document_detail/86070.html">Media asset categories</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -649,7 +641,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more materials to an online editing project.</para>
+        /// <para>Adds one or more media assets to an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -715,7 +707,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more materials to an online editing project.</para>
+        /// <para>Adds one or more media assets to an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -781,7 +773,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more materials to an online editing project.</para>
+        /// <para>Adds one or more media assets to an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -799,7 +791,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more materials to an online editing project.</para>
+        /// <para>Adds one or more media assets to an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1021,15 +1013,16 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a domain name for CDN acceleration in ApsaraVideo VOD.</para>
+        /// <para>Adds an accelerated domain name for ApsaraVideo VOD.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, the only supported service address is <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>Before creating an accelerated domain name, you must activate <a href="https://help.aliyun.com/document_detail/51512.html">ApsaraVideo VOD</a>, and the accelerated domain name must have a completed ICP filing. </description></item>
-        /// <item><description>Origin content that is not hosted on Alibaba Cloud requires review, which will be completed before the next business day.</description></item>
+        /// <item><description>Currently, the service endpoint supports only <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Before you create an accelerated domain name, you must activate <a href="https://help.aliyun.com/document_detail/51512.html">ApsaraVideo VOD</a> and complete the ICP filing for the accelerated domain name. </description></item>
+        /// <item><description>When you add a new domain name for the first time, you must verify the ownership of the domain name. To verify the ownership by using DNS records, call the DescribeVodVerifyContent operation to obtain the record value, add a TXT record in the DNS settings of the domain name, and wait for the DNS record to take effect. Then, call this operation to add the domain name. You can also verify the ownership by using a verification file. For more information, see the domain name ownership verification documentation.</description></item>
+        /// <item><description>Origin server content. If the content is not hosted on Alibaba Cloud, it must be reviewed. The review will be completed by the next business day.</description></item>
         /// <item><description>You can submit only one accelerated domain name at a time. Each user can add up to 20 domain names.</description></item>
         /// </list>
         /// </description>
@@ -1101,15 +1094,16 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a domain name for CDN acceleration in ApsaraVideo VOD.</para>
+        /// <para>Adds an accelerated domain name for ApsaraVideo VOD.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, the only supported service address is <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>Before creating an accelerated domain name, you must activate <a href="https://help.aliyun.com/document_detail/51512.html">ApsaraVideo VOD</a>, and the accelerated domain name must have a completed ICP filing. </description></item>
-        /// <item><description>Origin content that is not hosted on Alibaba Cloud requires review, which will be completed before the next business day.</description></item>
+        /// <item><description>Currently, the service endpoint supports only <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Before you create an accelerated domain name, you must activate <a href="https://help.aliyun.com/document_detail/51512.html">ApsaraVideo VOD</a> and complete the ICP filing for the accelerated domain name. </description></item>
+        /// <item><description>When you add a new domain name for the first time, you must verify the ownership of the domain name. To verify the ownership by using DNS records, call the DescribeVodVerifyContent operation to obtain the record value, add a TXT record in the DNS settings of the domain name, and wait for the DNS record to take effect. Then, call this operation to add the domain name. You can also verify the ownership by using a verification file. For more information, see the domain name ownership verification documentation.</description></item>
+        /// <item><description>Origin server content. If the content is not hosted on Alibaba Cloud, it must be reviewed. The review will be completed by the next business day.</description></item>
         /// <item><description>You can submit only one accelerated domain name at a time. Each user can add up to 20 domain names.</description></item>
         /// </list>
         /// </description>
@@ -1181,15 +1175,16 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a domain name for CDN acceleration in ApsaraVideo VOD.</para>
+        /// <para>Adds an accelerated domain name for ApsaraVideo VOD.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, the only supported service address is <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>Before creating an accelerated domain name, you must activate <a href="https://help.aliyun.com/document_detail/51512.html">ApsaraVideo VOD</a>, and the accelerated domain name must have a completed ICP filing. </description></item>
-        /// <item><description>Origin content that is not hosted on Alibaba Cloud requires review, which will be completed before the next business day.</description></item>
+        /// <item><description>Currently, the service endpoint supports only <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Before you create an accelerated domain name, you must activate <a href="https://help.aliyun.com/document_detail/51512.html">ApsaraVideo VOD</a> and complete the ICP filing for the accelerated domain name. </description></item>
+        /// <item><description>When you add a new domain name for the first time, you must verify the ownership of the domain name. To verify the ownership by using DNS records, call the DescribeVodVerifyContent operation to obtain the record value, add a TXT record in the DNS settings of the domain name, and wait for the DNS record to take effect. Then, call this operation to add the domain name. You can also verify the ownership by using a verification file. For more information, see the domain name ownership verification documentation.</description></item>
+        /// <item><description>Origin server content. If the content is not hosted on Alibaba Cloud, it must be reviewed. The review will be completed by the next business day.</description></item>
         /// <item><description>You can submit only one accelerated domain name at a time. Each user can add up to 20 domain names.</description></item>
         /// </list>
         /// </description>
@@ -1209,15 +1204,16 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a domain name for CDN acceleration in ApsaraVideo VOD.</para>
+        /// <para>Adds an accelerated domain name for ApsaraVideo VOD.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, the only supported service address is <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>Before creating an accelerated domain name, you must activate <a href="https://help.aliyun.com/document_detail/51512.html">ApsaraVideo VOD</a>, and the accelerated domain name must have a completed ICP filing. </description></item>
-        /// <item><description>Origin content that is not hosted on Alibaba Cloud requires review, which will be completed before the next business day.</description></item>
+        /// <item><description>Currently, the service endpoint supports only <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Before you create an accelerated domain name, you must activate <a href="https://help.aliyun.com/document_detail/51512.html">ApsaraVideo VOD</a> and complete the ICP filing for the accelerated domain name. </description></item>
+        /// <item><description>When you add a new domain name for the first time, you must verify the ownership of the domain name. To verify the ownership by using DNS records, call the DescribeVodVerifyContent operation to obtain the record value, add a TXT record in the DNS settings of the domain name, and wait for the DNS record to take effect. Then, call this operation to add the domain name. You can also verify the ownership by using a verification file. For more information, see the domain name ownership verification documentation.</description></item>
+        /// <item><description>Origin server content. If the content is not hosted on Alibaba Cloud, it must be reviewed. The review will be completed by the next business day.</description></item>
         /// <item><description>You can submit only one accelerated domain name at a time. Each user can add up to 20 domain names.</description></item>
         /// </list>
         /// </description>
@@ -1237,14 +1233,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a storage bucket to a sub-application of ApsaraVideo VOD.</para>
+        /// <para>Associates a storage bucket with a sub-application of ApsaraVideo VOD.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls AddVodStorageForApp to enable a VOD system bucket for an ApsaraVideo VOD sub-application.
-        ///  <notice>Each sub-application can have at most one VOD system bucket enabled. If you specify an AppId that does not exist or an AppId that already has a VOD system bucket enabled, an error is returned.</notice>
-        /// <notice>To call this operation, the caller must have application administrator permissions (VODAppAdministratorAccess). The Alibaba Cloud account has application administrator permissions by default. An application administrator can call AttachAppPolicyToIdentity to grant application permissions to a RAM user or role.</notice></para>
+        /// <para>Calls AddVodStorageForApp to enable a VOD system bucket for a sub-application of ApsaraVideo VOD.
+        /// <notice>Each sub-application can have at most one VOD system bucket enabled. If the specified AppId does not exist or already has a VOD system bucket enabled, the request fails.</notice>
+        /// <notice>To call this operation, the caller must have the application administrator permissions (VODAppAdministratorAccess). An Alibaba Cloud account has these permissions by default. An application administrator can call AttachAppPolicyToIdentity to grant application permissions to a RAM user or role.</notice></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1294,14 +1290,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a storage bucket to a sub-application of ApsaraVideo VOD.</para>
+        /// <para>Associates a storage bucket with a sub-application of ApsaraVideo VOD.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls AddVodStorageForApp to enable a VOD system bucket for an ApsaraVideo VOD sub-application.
-        ///  <notice>Each sub-application can have at most one VOD system bucket enabled. If you specify an AppId that does not exist or an AppId that already has a VOD system bucket enabled, an error is returned.</notice>
-        /// <notice>To call this operation, the caller must have application administrator permissions (VODAppAdministratorAccess). The Alibaba Cloud account has application administrator permissions by default. An application administrator can call AttachAppPolicyToIdentity to grant application permissions to a RAM user or role.</notice></para>
+        /// <para>Calls AddVodStorageForApp to enable a VOD system bucket for a sub-application of ApsaraVideo VOD.
+        /// <notice>Each sub-application can have at most one VOD system bucket enabled. If the specified AppId does not exist or already has a VOD system bucket enabled, the request fails.</notice>
+        /// <notice>To call this operation, the caller must have the application administrator permissions (VODAppAdministratorAccess). An Alibaba Cloud account has these permissions by default. An application administrator can call AttachAppPolicyToIdentity to grant application permissions to a RAM user or role.</notice></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1351,14 +1347,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a storage bucket to a sub-application of ApsaraVideo VOD.</para>
+        /// <para>Associates a storage bucket with a sub-application of ApsaraVideo VOD.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls AddVodStorageForApp to enable a VOD system bucket for an ApsaraVideo VOD sub-application.
-        ///  <notice>Each sub-application can have at most one VOD system bucket enabled. If you specify an AppId that does not exist or an AppId that already has a VOD system bucket enabled, an error is returned.</notice>
-        /// <notice>To call this operation, the caller must have application administrator permissions (VODAppAdministratorAccess). The Alibaba Cloud account has application administrator permissions by default. An application administrator can call AttachAppPolicyToIdentity to grant application permissions to a RAM user or role.</notice></para>
+        /// <para>Calls AddVodStorageForApp to enable a VOD system bucket for a sub-application of ApsaraVideo VOD.
+        /// <notice>Each sub-application can have at most one VOD system bucket enabled. If the specified AppId does not exist or already has a VOD system bucket enabled, the request fails.</notice>
+        /// <notice>To call this operation, the caller must have the application administrator permissions (VODAppAdministratorAccess). An Alibaba Cloud account has these permissions by default. An application administrator can call AttachAppPolicyToIdentity to grant application permissions to a RAM user or role.</notice></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1376,14 +1372,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a storage bucket to a sub-application of ApsaraVideo VOD.</para>
+        /// <para>Associates a storage bucket with a sub-application of ApsaraVideo VOD.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls AddVodStorageForApp to enable a VOD system bucket for an ApsaraVideo VOD sub-application.
-        ///  <notice>Each sub-application can have at most one VOD system bucket enabled. If you specify an AppId that does not exist or an AppId that already has a VOD system bucket enabled, an error is returned.</notice>
-        /// <notice>To call this operation, the caller must have application administrator permissions (VODAppAdministratorAccess). The Alibaba Cloud account has application administrator permissions by default. An application administrator can call AttachAppPolicyToIdentity to grant application permissions to a RAM user or role.</notice></para>
+        /// <para>Calls AddVodStorageForApp to enable a VOD system bucket for a sub-application of ApsaraVideo VOD.
+        /// <notice>Each sub-application can have at most one VOD system bucket enabled. If the specified AppId does not exist or already has a VOD system bucket enabled, the request fails.</notice>
+        /// <notice>To call this operation, the caller must have the application administrator permissions (VODAppAdministratorAccess). An Alibaba Cloud account has these permissions by default. An application administrator can call AttachAppPolicyToIdentity to grant application permissions to a RAM user or role.</notice></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1401,14 +1397,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a snapshot or animated image template.</para>
+        /// <para>Creates a snapshot or animated image template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>After adding a template, you can pass the snapshot or animated image template ID through the <a href="~~SubmitSnapshotJob~~">SubmitSnapshotJob</a> or <a href="~~SubmitDynamicImageJob~~">SubmitDynamicImageJob</a> operation to initiate a snapshot or animated image job.</description></item>
-        /// <item><description>You can receive <a href="https://help.aliyun.com/document_detail/57337.html">video snapshot completed</a> and <a href="https://help.aliyun.com/document_detail/143490.html">video animated image completed</a> callback messages through HTTP callbacks (compatible with HTTPS) or MNS callbacks. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Callback methods</a>.</description></item>
+        /// <item><description>After you create a template, you can pass the ID of the snapshot or animated image template to the <a href="~~SubmitSnapshotJob~~">SubmitSnapshotJob</a> or <a href="~~SubmitDynamicImageJob~~">SubmitDynamicImageJob</a> operation to initiate a snapshot or animated image job.</description></item>
+        /// <item><description>You can receive <a href="https://help.aliyun.com/document_detail/57337.html">video snapshot completion</a> and <a href="https://help.aliyun.com/document_detail/143490.html">video animated image completion</a> callback messages by using HTTP callbacks (HTTPS-compatible) or MNS callbacks. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Callback methods</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1463,14 +1459,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a snapshot or animated image template.</para>
+        /// <para>Creates a snapshot or animated image template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>After adding a template, you can pass the snapshot or animated image template ID through the <a href="~~SubmitSnapshotJob~~">SubmitSnapshotJob</a> or <a href="~~SubmitDynamicImageJob~~">SubmitDynamicImageJob</a> operation to initiate a snapshot or animated image job.</description></item>
-        /// <item><description>You can receive <a href="https://help.aliyun.com/document_detail/57337.html">video snapshot completed</a> and <a href="https://help.aliyun.com/document_detail/143490.html">video animated image completed</a> callback messages through HTTP callbacks (compatible with HTTPS) or MNS callbacks. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Callback methods</a>.</description></item>
+        /// <item><description>After you create a template, you can pass the ID of the snapshot or animated image template to the <a href="~~SubmitSnapshotJob~~">SubmitSnapshotJob</a> or <a href="~~SubmitDynamicImageJob~~">SubmitDynamicImageJob</a> operation to initiate a snapshot or animated image job.</description></item>
+        /// <item><description>You can receive <a href="https://help.aliyun.com/document_detail/57337.html">video snapshot completion</a> and <a href="https://help.aliyun.com/document_detail/143490.html">video animated image completion</a> callback messages by using HTTP callbacks (HTTPS-compatible) or MNS callbacks. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Callback methods</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1525,14 +1521,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a snapshot or animated image template.</para>
+        /// <para>Creates a snapshot or animated image template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>After adding a template, you can pass the snapshot or animated image template ID through the <a href="~~SubmitSnapshotJob~~">SubmitSnapshotJob</a> or <a href="~~SubmitDynamicImageJob~~">SubmitDynamicImageJob</a> operation to initiate a snapshot or animated image job.</description></item>
-        /// <item><description>You can receive <a href="https://help.aliyun.com/document_detail/57337.html">video snapshot completed</a> and <a href="https://help.aliyun.com/document_detail/143490.html">video animated image completed</a> callback messages through HTTP callbacks (compatible with HTTPS) or MNS callbacks. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Callback methods</a>.</description></item>
+        /// <item><description>After you create a template, you can pass the ID of the snapshot or animated image template to the <a href="~~SubmitSnapshotJob~~">SubmitSnapshotJob</a> or <a href="~~SubmitDynamicImageJob~~">SubmitDynamicImageJob</a> operation to initiate a snapshot or animated image job.</description></item>
+        /// <item><description>You can receive <a href="https://help.aliyun.com/document_detail/57337.html">video snapshot completion</a> and <a href="https://help.aliyun.com/document_detail/143490.html">video animated image completion</a> callback messages by using HTTP callbacks (HTTPS-compatible) or MNS callbacks. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Callback methods</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1551,14 +1547,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a snapshot or animated image template.</para>
+        /// <para>Creates a snapshot or animated image template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>After adding a template, you can pass the snapshot or animated image template ID through the <a href="~~SubmitSnapshotJob~~">SubmitSnapshotJob</a> or <a href="~~SubmitDynamicImageJob~~">SubmitDynamicImageJob</a> operation to initiate a snapshot or animated image job.</description></item>
-        /// <item><description>You can receive <a href="https://help.aliyun.com/document_detail/57337.html">video snapshot completed</a> and <a href="https://help.aliyun.com/document_detail/143490.html">video animated image completed</a> callback messages through HTTP callbacks (compatible with HTTPS) or MNS callbacks. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Callback methods</a>.</description></item>
+        /// <item><description>After you create a template, you can pass the ID of the snapshot or animated image template to the <a href="~~SubmitSnapshotJob~~">SubmitSnapshotJob</a> or <a href="~~SubmitDynamicImageJob~~">SubmitDynamicImageJob</a> operation to initiate a snapshot or animated image job.</description></item>
+        /// <item><description>You can receive <a href="https://help.aliyun.com/document_detail/57337.html">video snapshot completion</a> and <a href="https://help.aliyun.com/document_detail/143490.html">video animated image completion</a> callback messages by using HTTP callbacks (HTTPS-compatible) or MNS callbacks. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Callback methods</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1577,15 +1573,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>To simplify watermark task processing, ApsaraVideo VOD consolidates complex watermark parameters such as position, size, font, and color into templates, each identified by a unique watermark template ID. Calls this operation to add an image or text watermark template.</para>
+        /// <para>Adds an image or text watermark template. To simplify watermark processing, ApsaraVideo VOD consolidates complex watermark parameters, such as position, size, font, and color, into templates identified by unique watermark template IDs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Call this operation to add an image watermark template (<c>Image</c>) or a text watermark template (<c>Text</c>). Image watermark templates support the following formats: static images (PNG) and animated images (GIF, APNG, MOV).</description></item>
-        /// <item><description>After adding a watermark template by calling this operation, call <a href="~~AddTranscodeTemplateGroup~~">AddTranscodeTemplateGroup</a> or <a href="~~UpdateTranscodeTemplateGroup~~">UpdateTranscodeTemplateGroup</a> to associate the watermark template with a transcoding template group for subsequent watermark transcoding.</description></item>
-        /// <item><description>For more information about adding image and text watermarks to videos, see <a href="https://help.aliyun.com/document_detail/99369.html">Video watermarks</a>.</description></item>
+        /// <item><description>You can call this operation to add an image watermark template (<c>Image</c>) or a text watermark template (<c>Text</c>). Image watermark templates support the following formats: static images (PNG) and animated images (GIF, APNG, and MOV).</description></item>
+        /// <item><description>After you add an image or text watermark template, you must call the <a href="~~AddTranscodeTemplateGroup~~">AddTranscodeTemplateGroup</a> or <a href="~~UpdateTranscodeTemplateGroup~~">UpdateTranscodeTemplateGroup</a> operation to associate the watermark template with a transcoding template group for subsequent watermark transcoding.</description></item>
+        /// <item><description>For more information about adding image and text watermarks to videos, see <a href="https://help.aliyun.com/document_detail/99369.html">Image and text watermarks</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1644,15 +1640,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>To simplify watermark task processing, ApsaraVideo VOD consolidates complex watermark parameters such as position, size, font, and color into templates, each identified by a unique watermark template ID. Calls this operation to add an image or text watermark template.</para>
+        /// <para>Adds an image or text watermark template. To simplify watermark processing, ApsaraVideo VOD consolidates complex watermark parameters, such as position, size, font, and color, into templates identified by unique watermark template IDs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Call this operation to add an image watermark template (<c>Image</c>) or a text watermark template (<c>Text</c>). Image watermark templates support the following formats: static images (PNG) and animated images (GIF, APNG, MOV).</description></item>
-        /// <item><description>After adding a watermark template by calling this operation, call <a href="~~AddTranscodeTemplateGroup~~">AddTranscodeTemplateGroup</a> or <a href="~~UpdateTranscodeTemplateGroup~~">UpdateTranscodeTemplateGroup</a> to associate the watermark template with a transcoding template group for subsequent watermark transcoding.</description></item>
-        /// <item><description>For more information about adding image and text watermarks to videos, see <a href="https://help.aliyun.com/document_detail/99369.html">Video watermarks</a>.</description></item>
+        /// <item><description>You can call this operation to add an image watermark template (<c>Image</c>) or a text watermark template (<c>Text</c>). Image watermark templates support the following formats: static images (PNG) and animated images (GIF, APNG, and MOV).</description></item>
+        /// <item><description>After you add an image or text watermark template, you must call the <a href="~~AddTranscodeTemplateGroup~~">AddTranscodeTemplateGroup</a> or <a href="~~UpdateTranscodeTemplateGroup~~">UpdateTranscodeTemplateGroup</a> operation to associate the watermark template with a transcoding template group for subsequent watermark transcoding.</description></item>
+        /// <item><description>For more information about adding image and text watermarks to videos, see <a href="https://help.aliyun.com/document_detail/99369.html">Image and text watermarks</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1711,15 +1707,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>To simplify watermark task processing, ApsaraVideo VOD consolidates complex watermark parameters such as position, size, font, and color into templates, each identified by a unique watermark template ID. Calls this operation to add an image or text watermark template.</para>
+        /// <para>Adds an image or text watermark template. To simplify watermark processing, ApsaraVideo VOD consolidates complex watermark parameters, such as position, size, font, and color, into templates identified by unique watermark template IDs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Call this operation to add an image watermark template (<c>Image</c>) or a text watermark template (<c>Text</c>). Image watermark templates support the following formats: static images (PNG) and animated images (GIF, APNG, MOV).</description></item>
-        /// <item><description>After adding a watermark template by calling this operation, call <a href="~~AddTranscodeTemplateGroup~~">AddTranscodeTemplateGroup</a> or <a href="~~UpdateTranscodeTemplateGroup~~">UpdateTranscodeTemplateGroup</a> to associate the watermark template with a transcoding template group for subsequent watermark transcoding.</description></item>
-        /// <item><description>For more information about adding image and text watermarks to videos, see <a href="https://help.aliyun.com/document_detail/99369.html">Video watermarks</a>.</description></item>
+        /// <item><description>You can call this operation to add an image watermark template (<c>Image</c>) or a text watermark template (<c>Text</c>). Image watermark templates support the following formats: static images (PNG) and animated images (GIF, APNG, and MOV).</description></item>
+        /// <item><description>After you add an image or text watermark template, you must call the <a href="~~AddTranscodeTemplateGroup~~">AddTranscodeTemplateGroup</a> or <a href="~~UpdateTranscodeTemplateGroup~~">UpdateTranscodeTemplateGroup</a> operation to associate the watermark template with a transcoding template group for subsequent watermark transcoding.</description></item>
+        /// <item><description>For more information about adding image and text watermarks to videos, see <a href="https://help.aliyun.com/document_detail/99369.html">Image and text watermarks</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1738,15 +1734,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>To simplify watermark task processing, ApsaraVideo VOD consolidates complex watermark parameters such as position, size, font, and color into templates, each identified by a unique watermark template ID. Calls this operation to add an image or text watermark template.</para>
+        /// <para>Adds an image or text watermark template. To simplify watermark processing, ApsaraVideo VOD consolidates complex watermark parameters, such as position, size, font, and color, into templates identified by unique watermark template IDs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Call this operation to add an image watermark template (<c>Image</c>) or a text watermark template (<c>Text</c>). Image watermark templates support the following formats: static images (PNG) and animated images (GIF, APNG, MOV).</description></item>
-        /// <item><description>After adding a watermark template by calling this operation, call <a href="~~AddTranscodeTemplateGroup~~">AddTranscodeTemplateGroup</a> or <a href="~~UpdateTranscodeTemplateGroup~~">UpdateTranscodeTemplateGroup</a> to associate the watermark template with a transcoding template group for subsequent watermark transcoding.</description></item>
-        /// <item><description>For more information about adding image and text watermarks to videos, see <a href="https://help.aliyun.com/document_detail/99369.html">Video watermarks</a>.</description></item>
+        /// <item><description>You can call this operation to add an image watermark template (<c>Image</c>) or a text watermark template (<c>Text</c>). Image watermark templates support the following formats: static images (PNG) and animated images (GIF, APNG, and MOV).</description></item>
+        /// <item><description>After you add an image or text watermark template, you must call the <a href="~~AddTranscodeTemplateGroup~~">AddTranscodeTemplateGroup</a> or <a href="~~UpdateTranscodeTemplateGroup~~">UpdateTranscodeTemplateGroup</a> operation to associate the watermark template with a transcoding template group for subsequent watermark transcoding.</description></item>
+        /// <item><description>For more information about adding image and text watermarks to videos, see <a href="https://help.aliyun.com/document_detail/99369.html">Image and text watermarks</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1765,14 +1761,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to attach access permissions of an ApsaraVideo VOD application to a specified identity (Resource Access Management (RAM) user or RAM role).</para>
+        /// <para>Invokes this operation to grant access permissions for ApsaraVideo VOD applications to a specified identity, such as a Resource Access Management (RAM) user or a RAM role.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice:  Each Resource Access Management (RAM) user or RAM role can be granted permissions on up to 10 applications.
-        /// Notice: You must have application administrator permissions to invoke this operation. For the first invocation, use your Alibaba Cloud account.</para>
+        /// <para>Notice:  You can grant a maximum of 10 application permissions to each Resource Access Management (RAM) user or RAM role.
+        /// Notice:  You must have application administrator permissions to invoke this operation. We recommend that you use your Alibaba Cloud account to invoke this operation for the first time.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>If the policy name is VODAppAdministratorAccess, AppId is optional. For other policies, AppId is required.</description></item>
@@ -1830,14 +1826,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to attach access permissions of an ApsaraVideo VOD application to a specified identity (Resource Access Management (RAM) user or RAM role).</para>
+        /// <para>Invokes this operation to grant access permissions for ApsaraVideo VOD applications to a specified identity, such as a Resource Access Management (RAM) user or a RAM role.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice:  Each Resource Access Management (RAM) user or RAM role can be granted permissions on up to 10 applications.
-        /// Notice: You must have application administrator permissions to invoke this operation. For the first invocation, use your Alibaba Cloud account.</para>
+        /// <para>Notice:  You can grant a maximum of 10 application permissions to each Resource Access Management (RAM) user or RAM role.
+        /// Notice:  You must have application administrator permissions to invoke this operation. We recommend that you use your Alibaba Cloud account to invoke this operation for the first time.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>If the policy name is VODAppAdministratorAccess, AppId is optional. For other policies, AppId is required.</description></item>
@@ -1895,14 +1891,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to attach access permissions of an ApsaraVideo VOD application to a specified identity (Resource Access Management (RAM) user or RAM role).</para>
+        /// <para>Invokes this operation to grant access permissions for ApsaraVideo VOD applications to a specified identity, such as a Resource Access Management (RAM) user or a RAM role.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice:  Each Resource Access Management (RAM) user or RAM role can be granted permissions on up to 10 applications.
-        /// Notice: You must have application administrator permissions to invoke this operation. For the first invocation, use your Alibaba Cloud account.</para>
+        /// <para>Notice:  You can grant a maximum of 10 application permissions to each Resource Access Management (RAM) user or RAM role.
+        /// Notice:  You must have application administrator permissions to invoke this operation. We recommend that you use your Alibaba Cloud account to invoke this operation for the first time.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>If the policy name is VODAppAdministratorAccess, AppId is optional. For other policies, AppId is required.</description></item>
@@ -1924,14 +1920,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to attach access permissions of an ApsaraVideo VOD application to a specified identity (Resource Access Management (RAM) user or RAM role).</para>
+        /// <para>Invokes this operation to grant access permissions for ApsaraVideo VOD applications to a specified identity, such as a Resource Access Management (RAM) user or a RAM role.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice:  Each Resource Access Management (RAM) user or RAM role can be granted permissions on up to 10 applications.
-        /// Notice: You must have application administrator permissions to invoke this operation. For the first invocation, use your Alibaba Cloud account.</para>
+        /// <para>Notice:  You can grant a maximum of 10 application permissions to each Resource Access Management (RAM) user or RAM role.
+        /// Notice:  You must have application administrator permissions to invoke this operation. We recommend that you use your Alibaba Cloud account to invoke this operation for the first time.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>If the policy name is VODAppAdministratorAccess, AppId is optional. For other policies, AppId is required.</description></item>
@@ -1953,14 +1949,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the basic information and source file information of multiple media assets in a batch.</para>
+        /// <para>Retrieves the basic information and source file information of media assets in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can retrieve information about up to 20 audio or video files at a time.</description></item>
-        /// <item><description>After an audio or video file is uploaded, ApsaraVideo VOD analyzes the uploaded source file. Therefore, media asset information is generated asynchronously. You can configure an <a href="https://help.aliyun.com/document_detail/55627.html">event notification</a> for the <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a> event. After you receive the <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a> event notification, call this operation to retrieve the audio or video information.</description></item>
+        /// <item><description>You can retrieve the information of up to 20 audio and video files at a time.</description></item>
+        /// <item><description>After an audio or video file is uploaded, ApsaraVideo VOD analyzes the uploaded source file. Therefore, media asset information is generated asynchronously. You can configure <a href="https://help.aliyun.com/document_detail/55627.html">event notifications</a> for <a href="https://help.aliyun.com/document_detail/99935.html">Audio and Video Analysis Completed</a>. After receiving the <a href="https://help.aliyun.com/document_detail/99935.html">Audio and Video Analysis Completed</a> event notification, call this operation to retrieve the audio and video information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2007,14 +2003,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the basic information and source file information of multiple media assets in a batch.</para>
+        /// <para>Retrieves the basic information and source file information of media assets in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can retrieve information about up to 20 audio or video files at a time.</description></item>
-        /// <item><description>After an audio or video file is uploaded, ApsaraVideo VOD analyzes the uploaded source file. Therefore, media asset information is generated asynchronously. You can configure an <a href="https://help.aliyun.com/document_detail/55627.html">event notification</a> for the <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a> event. After you receive the <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a> event notification, call this operation to retrieve the audio or video information.</description></item>
+        /// <item><description>You can retrieve the information of up to 20 audio and video files at a time.</description></item>
+        /// <item><description>After an audio or video file is uploaded, ApsaraVideo VOD analyzes the uploaded source file. Therefore, media asset information is generated asynchronously. You can configure <a href="https://help.aliyun.com/document_detail/55627.html">event notifications</a> for <a href="https://help.aliyun.com/document_detail/99935.html">Audio and Video Analysis Completed</a>. After receiving the <a href="https://help.aliyun.com/document_detail/99935.html">Audio and Video Analysis Completed</a> event notification, call this operation to retrieve the audio and video information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2061,14 +2057,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the basic information and source file information of multiple media assets in a batch.</para>
+        /// <para>Retrieves the basic information and source file information of media assets in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can retrieve information about up to 20 audio or video files at a time.</description></item>
-        /// <item><description>After an audio or video file is uploaded, ApsaraVideo VOD analyzes the uploaded source file. Therefore, media asset information is generated asynchronously. You can configure an <a href="https://help.aliyun.com/document_detail/55627.html">event notification</a> for the <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a> event. After you receive the <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a> event notification, call this operation to retrieve the audio or video information.</description></item>
+        /// <item><description>You can retrieve the information of up to 20 audio and video files at a time.</description></item>
+        /// <item><description>After an audio or video file is uploaded, ApsaraVideo VOD analyzes the uploaded source file. Therefore, media asset information is generated asynchronously. You can configure <a href="https://help.aliyun.com/document_detail/55627.html">event notifications</a> for <a href="https://help.aliyun.com/document_detail/99935.html">Audio and Video Analysis Completed</a>. After receiving the <a href="https://help.aliyun.com/document_detail/99935.html">Audio and Video Analysis Completed</a> event notification, call this operation to retrieve the audio and video information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2087,14 +2083,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the basic information and source file information of multiple media assets in a batch.</para>
+        /// <para>Retrieves the basic information and source file information of media assets in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can retrieve information about up to 20 audio or video files at a time.</description></item>
-        /// <item><description>After an audio or video file is uploaded, ApsaraVideo VOD analyzes the uploaded source file. Therefore, media asset information is generated asynchronously. You can configure an <a href="https://help.aliyun.com/document_detail/55627.html">event notification</a> for the <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a> event. After you receive the <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a> event notification, call this operation to retrieve the audio or video information.</description></item>
+        /// <item><description>You can retrieve the information of up to 20 audio and video files at a time.</description></item>
+        /// <item><description>After an audio or video file is uploaded, ApsaraVideo VOD analyzes the uploaded source file. Therefore, media asset information is generated asynchronously. You can configure <a href="https://help.aliyun.com/document_detail/55627.html">event notifications</a> for <a href="https://help.aliyun.com/document_detail/99935.html">Audio and Video Analysis Completed</a>. After receiving the <a href="https://help.aliyun.com/document_detail/99935.html">Audio and Video Analysis Completed</a> event notification, call this operation to retrieve the audio and video information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2301,14 +2297,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables an accelerated domain name that is in the Disabled state.</para>
+        /// <para>Enables accelerated domain names that are in the Disabled state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, the only supported endpoint is <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>If the account associated with the domain name has an overdue payment or the domain name is in an illegal state, you cannot call this operation to enable the ApsaraVideo VOD domain name.</description></item>
+        /// <item><description>Currently, only the following endpoint is supported: <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>If the account to which the domain name belongs has an overdue payment or the domain name is in an invalid state, you cannot call this operation to enable the ApsaraVideo VOD domain name.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2359,14 +2355,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables an accelerated domain name that is in the Disabled state.</para>
+        /// <para>Enables accelerated domain names that are in the Disabled state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, the only supported endpoint is <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>If the account associated with the domain name has an overdue payment or the domain name is in an illegal state, you cannot call this operation to enable the ApsaraVideo VOD domain name.</description></item>
+        /// <item><description>Currently, only the following endpoint is supported: <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>If the account to which the domain name belongs has an overdue payment or the domain name is in an invalid state, you cannot call this operation to enable the ApsaraVideo VOD domain name.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2417,14 +2413,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables an accelerated domain name that is in the Disabled state.</para>
+        /// <para>Enables accelerated domain names that are in the Disabled state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, the only supported endpoint is <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>If the account associated with the domain name has an overdue payment or the domain name is in an illegal state, you cannot call this operation to enable the ApsaraVideo VOD domain name.</description></item>
+        /// <item><description>Currently, only the following endpoint is supported: <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>If the account to which the domain name belongs has an overdue payment or the domain name is in an invalid state, you cannot call this operation to enable the ApsaraVideo VOD domain name.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2443,14 +2439,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables an accelerated domain name that is in the Disabled state.</para>
+        /// <para>Enables accelerated domain names that are in the Disabled state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, the only supported endpoint is <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>If the account associated with the domain name has an overdue payment or the domain name is in an illegal state, you cannot call this operation to enable the ApsaraVideo VOD domain name.</description></item>
+        /// <item><description>Currently, only the following endpoint is supported: <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>If the account to which the domain name belongs has an overdue payment or the domain name is in an invalid state, you cannot call this operation to enable the ApsaraVideo VOD domain name.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2469,14 +2465,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pauses domain name acceleration.</para>
+        /// <para>Suspends acceleration for a domain name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, the only supported service address is <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>After you pause the accelerated domain name, the domain name information is retained. Requests to the accelerated domain name are automatically redirected to the origin server.</description></item>
+        /// <item><description>The service endpoint is supported only in <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>After the accelerated domain name is disabled, the domain name information is retained. The system automatically routes requests for the accelerated domain name back to the origin.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2527,14 +2523,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pauses domain name acceleration.</para>
+        /// <para>Suspends acceleration for a domain name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, the only supported service address is <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>After you pause the accelerated domain name, the domain name information is retained. Requests to the accelerated domain name are automatically redirected to the origin server.</description></item>
+        /// <item><description>The service endpoint is supported only in <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>After the accelerated domain name is disabled, the domain name information is retained. The system automatically routes requests for the accelerated domain name back to the origin.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2585,14 +2581,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pauses domain name acceleration.</para>
+        /// <para>Suspends acceleration for a domain name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, the only supported service address is <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>After you pause the accelerated domain name, the domain name information is retained. Requests to the accelerated domain name are automatically redirected to the origin server.</description></item>
+        /// <item><description>The service endpoint is supported only in <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>After the accelerated domain name is disabled, the domain name information is retained. The system automatically routes requests for the accelerated domain name back to the origin.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2611,14 +2607,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pauses domain name acceleration.</para>
+        /// <para>Suspends acceleration for a domain name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, the only supported service address is <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>After you pause the accelerated domain name, the domain name information is retained. Requests to the accelerated domain name are automatically redirected to the origin server.</description></item>
+        /// <item><description>The service endpoint is supported only in <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>After the accelerated domain name is disabled, the domain name information is retained. The system automatically routes requests for the accelerated domain name back to the origin.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2637,15 +2633,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels URL upload tasks that are in the queue.</para>
+        /// <para>Cancels queued URL upload tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can cancel only URL upload nodes whose status is <b>Pending</b>. You can call the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation to query the node status.</description></item>
-        /// <item><description>Upload nodes that have already started to execute cannot be canceled.</description></item>
-        /// <item><description>The request parameters JobIds and UploadUrls must have one specified. If both are specified, only JobIds is processed.</description></item>
+        /// <item><description>Only URL upload nodes in the <b>Pending</b> state can be canceled. You can query the node status by calling the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation.</description></item>
+        /// <item><description>You cannot cancel upload nodes that have already started to execute.</description></item>
+        /// <item><description>You must specify either the JobIds or UploadUrls request parameter. If both are specified, only JobIds is processed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2692,15 +2688,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels URL upload tasks that are in the queue.</para>
+        /// <para>Cancels queued URL upload tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can cancel only URL upload nodes whose status is <b>Pending</b>. You can call the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation to query the node status.</description></item>
-        /// <item><description>Upload nodes that have already started to execute cannot be canceled.</description></item>
-        /// <item><description>The request parameters JobIds and UploadUrls must have one specified. If both are specified, only JobIds is processed.</description></item>
+        /// <item><description>Only URL upload nodes in the <b>Pending</b> state can be canceled. You can query the node status by calling the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation.</description></item>
+        /// <item><description>You cannot cancel upload nodes that have already started to execute.</description></item>
+        /// <item><description>You must specify either the JobIds or UploadUrls request parameter. If both are specified, only JobIds is processed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2747,15 +2743,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels URL upload tasks that are in the queue.</para>
+        /// <para>Cancels queued URL upload tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can cancel only URL upload nodes whose status is <b>Pending</b>. You can call the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation to query the node status.</description></item>
-        /// <item><description>Upload nodes that have already started to execute cannot be canceled.</description></item>
-        /// <item><description>The request parameters JobIds and UploadUrls must have one specified. If both are specified, only JobIds is processed.</description></item>
+        /// <item><description>Only URL upload nodes in the <b>Pending</b> state can be canceled. You can query the node status by calling the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation.</description></item>
+        /// <item><description>You cannot cancel upload nodes that have already started to execute.</description></item>
+        /// <item><description>You must specify either the JobIds or UploadUrls request parameter. If both are specified, only JobIds is processed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2774,15 +2770,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels URL upload tasks that are in the queue.</para>
+        /// <para>Cancels queued URL upload tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can cancel only URL upload nodes whose status is <b>Pending</b>. You can call the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation to query the node status.</description></item>
-        /// <item><description>Upload nodes that have already started to execute cannot be canceled.</description></item>
-        /// <item><description>The request parameters JobIds and UploadUrls must have one specified. If both are specified, only JobIds is processed.</description></item>
+        /// <item><description>Only URL upload nodes in the <b>Pending</b> state can be canceled. You can query the node status by calling the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation.</description></item>
+        /// <item><description>You cannot cancel upload nodes that have already started to execute.</description></item>
+        /// <item><description>You must specify either the JobIds or UploadUrls request parameter. If both are specified, only JobIds is processed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2801,12 +2797,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transfers a resource to a different resource group.</para>
+        /// <para>Transfers resources to another resource group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Transfers a resource to another resource group.</para>
+        /// <para>Transfers resources to another resource group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2860,12 +2856,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transfers a resource to a different resource group.</para>
+        /// <para>Transfers resources to another resource group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Transfers a resource to another resource group.</para>
+        /// <para>Transfers resources to another resource group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2919,12 +2915,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transfers a resource to a different resource group.</para>
+        /// <para>Transfers resources to another resource group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Transfers a resource to another resource group.</para>
+        /// <para>Transfers resources to another resource group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2942,12 +2938,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transfers a resource to a different resource group.</para>
+        /// <para>Transfers resources to another resource group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Transfers a resource to another resource group.</para>
+        /// <para>Transfers resources to another resource group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2971,8 +2967,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Each account can create up to 10 applications. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application development guide</a>.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 50 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user for this API operation is 50 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3028,8 +3024,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Each account can create up to 10 applications. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application development guide</a>.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 50 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user for this API operation is 50 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3085,8 +3081,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Each account can create up to 10 applications. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application development guide</a>.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 50 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user for this API operation is 50 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3110,8 +3106,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Each account can create up to 10 applications. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application development guide</a>.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 50 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user for this API operation is 50 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3129,7 +3125,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a manual review request to review media information such as videos and audio files.</para>
+        /// <para>Submits media content such as videos and audio for manual review.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3171,7 +3167,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a manual review request to review media information such as videos and audio files.</para>
+        /// <para>Submits media content such as videos and audio for manual review.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3213,7 +3209,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a manual review request to review media information such as videos and audio files.</para>
+        /// <para>Submits media content such as videos and audio for manual review.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3231,7 +3227,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a manual review request to review media information such as videos and audio files.</para>
+        /// <para>Submits media content such as videos and audio for manual review.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3249,17 +3245,17 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The upload URL and credential are provided by ApsaraVideo VOD to address authorization and security concerns, prevent malicious uploads, and enable automatic creation of a media asset ID (MediaId) for management and processing. For auxiliary media assets such as watermarks and subtitles, invoke this operation to obtain the upload credential and create the corresponding media asset information.</para>
+        /// <para>Retrieves the upload URL and credential for auxiliary media assets. The upload URL and credential are provided by ApsaraVideo VOD to resolve authorization and security issues, prevent malicious uploads, and enable automatic creation of a media asset ID for management and processing. For auxiliary media assets such as watermarks and subtitles, invoke this operation to obtain the upload credential and create the corresponding media asset information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this operation, make sure that you understand the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transfer acceleration, uploading media files to ApsaraVideo VOD also incurs upload acceleration fees. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</b></description></item>
-        /// <item><description>This operation only obtains the upload URL and credential and creates basic media asset information. It does not upload files. For a complete example of uploading files by using the API, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media files by using the ApsaraVideo VOD API</a>.</description></item>
-        /// <item><description>If the upload credential expires (valid for 3000 seconds), call this operation again to obtain a new upload URL and credential.</description></item>
-        /// <item><description>You can configure callbacks to receive event notifications for <a href="https://help.aliyun.com/document_detail/103250.html">auxiliary media asset upload complete</a> to determine whether the upload is successful.</description></item>
-        /// <item><description>Obtaining the upload URL and credential is a core fundamental of ApsaraVideo VOD and a required step for every upload operation. ApsaraVideo VOD provides various upload methods, each with different requirements for obtaining the upload URL and credential. For more information, see the instructions in <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</description></item>
+        /// <item><description><b>Before calling this operation, ensure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Uploading media asset files to ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transfer acceleration, uploading media asset files to ApsaraVideo VOD also incurs upload acceleration fees. For billing details, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</b></description></item>
+        /// <item><description>This operation is only used to obtain the upload URL and credential and create basic media asset information. It does not upload files. For a complete example of uploading files by calling the operation, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media asset files by using the ApsaraVideo VOD API</a>.</description></item>
+        /// <item><description>If the upload credential expires (valid for 3,000 seconds), call this operation again to obtain the upload URL and credential.</description></item>
+        /// <item><description>You can configure a callback to receive the <a href="https://help.aliyun.com/document_detail/103250.html">Auxiliary media asset upload completion</a> event notification to determine whether the upload is successful.</description></item>
+        /// <item><description>Obtaining the upload URL and credential is the core foundation of ApsaraVideo VOD and a required process for every upload operation. ApsaraVideo VOD provides various upload methods, and each method has different requirements for obtaining the upload URL and credential. For details, see the usage instructions in <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3342,17 +3338,17 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The upload URL and credential are provided by ApsaraVideo VOD to address authorization and security concerns, prevent malicious uploads, and enable automatic creation of a media asset ID (MediaId) for management and processing. For auxiliary media assets such as watermarks and subtitles, invoke this operation to obtain the upload credential and create the corresponding media asset information.</para>
+        /// <para>Retrieves the upload URL and credential for auxiliary media assets. The upload URL and credential are provided by ApsaraVideo VOD to resolve authorization and security issues, prevent malicious uploads, and enable automatic creation of a media asset ID for management and processing. For auxiliary media assets such as watermarks and subtitles, invoke this operation to obtain the upload credential and create the corresponding media asset information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this operation, make sure that you understand the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transfer acceleration, uploading media files to ApsaraVideo VOD also incurs upload acceleration fees. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</b></description></item>
-        /// <item><description>This operation only obtains the upload URL and credential and creates basic media asset information. It does not upload files. For a complete example of uploading files by using the API, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media files by using the ApsaraVideo VOD API</a>.</description></item>
-        /// <item><description>If the upload credential expires (valid for 3000 seconds), call this operation again to obtain a new upload URL and credential.</description></item>
-        /// <item><description>You can configure callbacks to receive event notifications for <a href="https://help.aliyun.com/document_detail/103250.html">auxiliary media asset upload complete</a> to determine whether the upload is successful.</description></item>
-        /// <item><description>Obtaining the upload URL and credential is a core fundamental of ApsaraVideo VOD and a required step for every upload operation. ApsaraVideo VOD provides various upload methods, each with different requirements for obtaining the upload URL and credential. For more information, see the instructions in <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</description></item>
+        /// <item><description><b>Before calling this operation, ensure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Uploading media asset files to ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transfer acceleration, uploading media asset files to ApsaraVideo VOD also incurs upload acceleration fees. For billing details, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</b></description></item>
+        /// <item><description>This operation is only used to obtain the upload URL and credential and create basic media asset information. It does not upload files. For a complete example of uploading files by calling the operation, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media asset files by using the ApsaraVideo VOD API</a>.</description></item>
+        /// <item><description>If the upload credential expires (valid for 3,000 seconds), call this operation again to obtain the upload URL and credential.</description></item>
+        /// <item><description>You can configure a callback to receive the <a href="https://help.aliyun.com/document_detail/103250.html">Auxiliary media asset upload completion</a> event notification to determine whether the upload is successful.</description></item>
+        /// <item><description>Obtaining the upload URL and credential is the core foundation of ApsaraVideo VOD and a required process for every upload operation. ApsaraVideo VOD provides various upload methods, and each method has different requirements for obtaining the upload URL and credential. For details, see the usage instructions in <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3435,17 +3431,17 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The upload URL and credential are provided by ApsaraVideo VOD to address authorization and security concerns, prevent malicious uploads, and enable automatic creation of a media asset ID (MediaId) for management and processing. For auxiliary media assets such as watermarks and subtitles, invoke this operation to obtain the upload credential and create the corresponding media asset information.</para>
+        /// <para>Retrieves the upload URL and credential for auxiliary media assets. The upload URL and credential are provided by ApsaraVideo VOD to resolve authorization and security issues, prevent malicious uploads, and enable automatic creation of a media asset ID for management and processing. For auxiliary media assets such as watermarks and subtitles, invoke this operation to obtain the upload credential and create the corresponding media asset information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this operation, make sure that you understand the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transfer acceleration, uploading media files to ApsaraVideo VOD also incurs upload acceleration fees. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</b></description></item>
-        /// <item><description>This operation only obtains the upload URL and credential and creates basic media asset information. It does not upload files. For a complete example of uploading files by using the API, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media files by using the ApsaraVideo VOD API</a>.</description></item>
-        /// <item><description>If the upload credential expires (valid for 3000 seconds), call this operation again to obtain a new upload URL and credential.</description></item>
-        /// <item><description>You can configure callbacks to receive event notifications for <a href="https://help.aliyun.com/document_detail/103250.html">auxiliary media asset upload complete</a> to determine whether the upload is successful.</description></item>
-        /// <item><description>Obtaining the upload URL and credential is a core fundamental of ApsaraVideo VOD and a required step for every upload operation. ApsaraVideo VOD provides various upload methods, each with different requirements for obtaining the upload URL and credential. For more information, see the instructions in <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</description></item>
+        /// <item><description><b>Before calling this operation, ensure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Uploading media asset files to ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transfer acceleration, uploading media asset files to ApsaraVideo VOD also incurs upload acceleration fees. For billing details, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</b></description></item>
+        /// <item><description>This operation is only used to obtain the upload URL and credential and create basic media asset information. It does not upload files. For a complete example of uploading files by calling the operation, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media asset files by using the ApsaraVideo VOD API</a>.</description></item>
+        /// <item><description>If the upload credential expires (valid for 3,000 seconds), call this operation again to obtain the upload URL and credential.</description></item>
+        /// <item><description>You can configure a callback to receive the <a href="https://help.aliyun.com/document_detail/103250.html">Auxiliary media asset upload completion</a> event notification to determine whether the upload is successful.</description></item>
+        /// <item><description>Obtaining the upload URL and credential is the core foundation of ApsaraVideo VOD and a required process for every upload operation. ApsaraVideo VOD provides various upload methods, and each method has different requirements for obtaining the upload URL and credential. For details, see the usage instructions in <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3464,17 +3460,17 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The upload URL and credential are provided by ApsaraVideo VOD to address authorization and security concerns, prevent malicious uploads, and enable automatic creation of a media asset ID (MediaId) for management and processing. For auxiliary media assets such as watermarks and subtitles, invoke this operation to obtain the upload credential and create the corresponding media asset information.</para>
+        /// <para>Retrieves the upload URL and credential for auxiliary media assets. The upload URL and credential are provided by ApsaraVideo VOD to resolve authorization and security issues, prevent malicious uploads, and enable automatic creation of a media asset ID for management and processing. For auxiliary media assets such as watermarks and subtitles, invoke this operation to obtain the upload credential and create the corresponding media asset information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this operation, make sure that you understand the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transfer acceleration, uploading media files to ApsaraVideo VOD also incurs upload acceleration fees. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</b></description></item>
-        /// <item><description>This operation only obtains the upload URL and credential and creates basic media asset information. It does not upload files. For a complete example of uploading files by using the API, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media files by using the ApsaraVideo VOD API</a>.</description></item>
-        /// <item><description>If the upload credential expires (valid for 3000 seconds), call this operation again to obtain a new upload URL and credential.</description></item>
-        /// <item><description>You can configure callbacks to receive event notifications for <a href="https://help.aliyun.com/document_detail/103250.html">auxiliary media asset upload complete</a> to determine whether the upload is successful.</description></item>
-        /// <item><description>Obtaining the upload URL and credential is a core fundamental of ApsaraVideo VOD and a required step for every upload operation. ApsaraVideo VOD provides various upload methods, each with different requirements for obtaining the upload URL and credential. For more information, see the instructions in <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</description></item>
+        /// <item><description><b>Before calling this operation, ensure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Uploading media asset files to ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transfer acceleration, uploading media asset files to ApsaraVideo VOD also incurs upload acceleration fees. For billing details, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</b></description></item>
+        /// <item><description>This operation is only used to obtain the upload URL and credential and create basic media asset information. It does not upload files. For a complete example of uploading files by calling the operation, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media asset files by using the ApsaraVideo VOD API</a>.</description></item>
+        /// <item><description>If the upload credential expires (valid for 3,000 seconds), call this operation again to obtain the upload URL and credential.</description></item>
+        /// <item><description>You can configure a callback to receive the <a href="https://help.aliyun.com/document_detail/103250.html">Auxiliary media asset upload completion</a> event notification to determine whether the upload is successful.</description></item>
+        /// <item><description>Obtaining the upload URL and credential is the core foundation of ApsaraVideo VOD and a required process for every upload operation. ApsaraVideo VOD provides various upload methods, and each method has different requirements for obtaining the upload URL and credential. For details, see the usage instructions in <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3493,17 +3489,17 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the upload URL and upload credential for uploading an image to ApsaraVideo VOD, and creates image information. ApsaraVideo VOD issues upload URLs and credentials to ensure authorization and security, prevent malicious uploads, and supports automatic creation of an image ID (ImageId) for management. You can invoke this operation to obtain the upload URL and credential and create image information.</para>
+        /// <para>Issues an upload URL and an upload credential to ensure authorization and security, prevent malicious uploads, and enable automatic creation of an image ID (ImageId) for management in ApsaraVideo VOD. You can invoke this operation to obtain the required upload URL and credential, and create image information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this operation, make sure that you understand the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage and transfer acceleration, uploading media files to ApsaraVideo VOD also incurs upload acceleration fees. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Storage and transfer acceleration billing</a>.</b></description></item>
-        /// <item><description>This operation only retrieves the upload URL and credential and creates basic media asset information. It does not upload files. For a complete example of uploading files by calling API operations, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media files by using the ApsaraVideo VOD API</a>.</description></item>
-        /// <item><description>Refreshing the upload URL and credential is not supported for image uploads. If the image upload credential expires (the default validity period is 3000 seconds), call this operation again to obtain a new upload URL and credential.</description></item>
-        /// <item><description>You can configure callbacks to receive event notifications for <a href="https://help.aliyun.com/document_detail/91968.html">image upload completion</a> to determine whether the upload is successful.</description></item>
-        /// <item><description>Retrieving the upload URL and credential is a core operation of ApsaraVideo VOD and is required for every upload. ApsaraVideo VOD provides multiple upload methods, each with different requirements for retrieving the upload URL and credential. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</description></item>
+        /// <item><description><b>Make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD before calling this operation. Uploading media assets to ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transfer acceleration, uploading media assets to ApsaraVideo VOD also incurs upload acceleration fees. For billing details, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</b></description></item>
+        /// <item><description>This operation is only used to obtain the upload URL and credential and create basic media asset information. It does not upload files. For a complete example of uploading files by calling API operations, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media assets by using the ApsaraVideo VOD API</a>.</description></item>
+        /// <item><description>Refreshing the upload URL and credential is not supported for image uploads. If the upload credential for an image expires (the default validity period is 3,000 seconds), call this operation again to obtain the upload URL and credential.</description></item>
+        /// <item><description>You can configure callbacks to receive the event notification for <a href="https://help.aliyun.com/document_detail/91968.html">image upload complete</a> to determine whether the upload is successful.</description></item>
+        /// <item><description>Obtaining the upload URL and credential is the core foundation of ApsaraVideo VOD and a required step for every upload operation. ApsaraVideo VOD provides various upload methods, each with different requirements for obtaining the upload URL and credential. For details, see the usage notes in <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3582,17 +3578,17 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the upload URL and upload credential for uploading an image to ApsaraVideo VOD, and creates image information. ApsaraVideo VOD issues upload URLs and credentials to ensure authorization and security, prevent malicious uploads, and supports automatic creation of an image ID (ImageId) for management. You can invoke this operation to obtain the upload URL and credential and create image information.</para>
+        /// <para>Issues an upload URL and an upload credential to ensure authorization and security, prevent malicious uploads, and enable automatic creation of an image ID (ImageId) for management in ApsaraVideo VOD. You can invoke this operation to obtain the required upload URL and credential, and create image information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this operation, make sure that you understand the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage and transfer acceleration, uploading media files to ApsaraVideo VOD also incurs upload acceleration fees. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Storage and transfer acceleration billing</a>.</b></description></item>
-        /// <item><description>This operation only retrieves the upload URL and credential and creates basic media asset information. It does not upload files. For a complete example of uploading files by calling API operations, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media files by using the ApsaraVideo VOD API</a>.</description></item>
-        /// <item><description>Refreshing the upload URL and credential is not supported for image uploads. If the image upload credential expires (the default validity period is 3000 seconds), call this operation again to obtain a new upload URL and credential.</description></item>
-        /// <item><description>You can configure callbacks to receive event notifications for <a href="https://help.aliyun.com/document_detail/91968.html">image upload completion</a> to determine whether the upload is successful.</description></item>
-        /// <item><description>Retrieving the upload URL and credential is a core operation of ApsaraVideo VOD and is required for every upload. ApsaraVideo VOD provides multiple upload methods, each with different requirements for retrieving the upload URL and credential. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</description></item>
+        /// <item><description><b>Make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD before calling this operation. Uploading media assets to ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transfer acceleration, uploading media assets to ApsaraVideo VOD also incurs upload acceleration fees. For billing details, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</b></description></item>
+        /// <item><description>This operation is only used to obtain the upload URL and credential and create basic media asset information. It does not upload files. For a complete example of uploading files by calling API operations, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media assets by using the ApsaraVideo VOD API</a>.</description></item>
+        /// <item><description>Refreshing the upload URL and credential is not supported for image uploads. If the upload credential for an image expires (the default validity period is 3,000 seconds), call this operation again to obtain the upload URL and credential.</description></item>
+        /// <item><description>You can configure callbacks to receive the event notification for <a href="https://help.aliyun.com/document_detail/91968.html">image upload complete</a> to determine whether the upload is successful.</description></item>
+        /// <item><description>Obtaining the upload URL and credential is the core foundation of ApsaraVideo VOD and a required step for every upload operation. ApsaraVideo VOD provides various upload methods, each with different requirements for obtaining the upload URL and credential. For details, see the usage notes in <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3671,17 +3667,17 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the upload URL and upload credential for uploading an image to ApsaraVideo VOD, and creates image information. ApsaraVideo VOD issues upload URLs and credentials to ensure authorization and security, prevent malicious uploads, and supports automatic creation of an image ID (ImageId) for management. You can invoke this operation to obtain the upload URL and credential and create image information.</para>
+        /// <para>Issues an upload URL and an upload credential to ensure authorization and security, prevent malicious uploads, and enable automatic creation of an image ID (ImageId) for management in ApsaraVideo VOD. You can invoke this operation to obtain the required upload URL and credential, and create image information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this operation, make sure that you understand the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage and transfer acceleration, uploading media files to ApsaraVideo VOD also incurs upload acceleration fees. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Storage and transfer acceleration billing</a>.</b></description></item>
-        /// <item><description>This operation only retrieves the upload URL and credential and creates basic media asset information. It does not upload files. For a complete example of uploading files by calling API operations, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media files by using the ApsaraVideo VOD API</a>.</description></item>
-        /// <item><description>Refreshing the upload URL and credential is not supported for image uploads. If the image upload credential expires (the default validity period is 3000 seconds), call this operation again to obtain a new upload URL and credential.</description></item>
-        /// <item><description>You can configure callbacks to receive event notifications for <a href="https://help.aliyun.com/document_detail/91968.html">image upload completion</a> to determine whether the upload is successful.</description></item>
-        /// <item><description>Retrieving the upload URL and credential is a core operation of ApsaraVideo VOD and is required for every upload. ApsaraVideo VOD provides multiple upload methods, each with different requirements for retrieving the upload URL and credential. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</description></item>
+        /// <item><description><b>Make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD before calling this operation. Uploading media assets to ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transfer acceleration, uploading media assets to ApsaraVideo VOD also incurs upload acceleration fees. For billing details, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</b></description></item>
+        /// <item><description>This operation is only used to obtain the upload URL and credential and create basic media asset information. It does not upload files. For a complete example of uploading files by calling API operations, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media assets by using the ApsaraVideo VOD API</a>.</description></item>
+        /// <item><description>Refreshing the upload URL and credential is not supported for image uploads. If the upload credential for an image expires (the default validity period is 3,000 seconds), call this operation again to obtain the upload URL and credential.</description></item>
+        /// <item><description>You can configure callbacks to receive the event notification for <a href="https://help.aliyun.com/document_detail/91968.html">image upload complete</a> to determine whether the upload is successful.</description></item>
+        /// <item><description>Obtaining the upload URL and credential is the core foundation of ApsaraVideo VOD and a required step for every upload operation. ApsaraVideo VOD provides various upload methods, each with different requirements for obtaining the upload URL and credential. For details, see the usage notes in <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3700,17 +3696,17 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the upload URL and upload credential for uploading an image to ApsaraVideo VOD, and creates image information. ApsaraVideo VOD issues upload URLs and credentials to ensure authorization and security, prevent malicious uploads, and supports automatic creation of an image ID (ImageId) for management. You can invoke this operation to obtain the upload URL and credential and create image information.</para>
+        /// <para>Issues an upload URL and an upload credential to ensure authorization and security, prevent malicious uploads, and enable automatic creation of an image ID (ImageId) for management in ApsaraVideo VOD. You can invoke this operation to obtain the required upload URL and credential, and create image information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this operation, make sure that you understand the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage and transfer acceleration, uploading media files to ApsaraVideo VOD also incurs upload acceleration fees. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Storage and transfer acceleration billing</a>.</b></description></item>
-        /// <item><description>This operation only retrieves the upload URL and credential and creates basic media asset information. It does not upload files. For a complete example of uploading files by calling API operations, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media files by using the ApsaraVideo VOD API</a>.</description></item>
-        /// <item><description>Refreshing the upload URL and credential is not supported for image uploads. If the image upload credential expires (the default validity period is 3000 seconds), call this operation again to obtain a new upload URL and credential.</description></item>
-        /// <item><description>You can configure callbacks to receive event notifications for <a href="https://help.aliyun.com/document_detail/91968.html">image upload completion</a> to determine whether the upload is successful.</description></item>
-        /// <item><description>Retrieving the upload URL and credential is a core operation of ApsaraVideo VOD and is required for every upload. ApsaraVideo VOD provides multiple upload methods, each with different requirements for retrieving the upload URL and credential. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</description></item>
+        /// <item><description><b>Make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD before calling this operation. Uploading media assets to ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transfer acceleration, uploading media assets to ApsaraVideo VOD also incurs upload acceleration fees. For billing details, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</b></description></item>
+        /// <item><description>This operation is only used to obtain the upload URL and credential and create basic media asset information. It does not upload files. For a complete example of uploading files by calling API operations, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media assets by using the ApsaraVideo VOD API</a>.</description></item>
+        /// <item><description>Refreshing the upload URL and credential is not supported for image uploads. If the upload credential for an image expires (the default validity period is 3,000 seconds), call this operation again to obtain the upload URL and credential.</description></item>
+        /// <item><description>You can configure callbacks to receive the event notification for <a href="https://help.aliyun.com/document_detail/91968.html">image upload complete</a> to determine whether the upload is successful.</description></item>
+        /// <item><description>Obtaining the upload URL and credential is the core foundation of ApsaraVideo VOD and a required step for every upload operation. ApsaraVideo VOD provides various upload methods, each with different requirements for obtaining the upload URL and credential. For details, see the usage notes in <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3729,18 +3725,18 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ApsaraVideo VOD issues the upload URL and upload credential to ensure authorization and security and prevent malicious uploads. During issuance, a media ID (MediaId), also called a video ID (VideoId), undergoes automatic creation for management. Invoke this operation to obtain the upload URL and upload credential, and create audio or video information.</para>
+        /// <para>Obtains the upload URL and credential for an audio or video file, and creates the media information. ApsaraVideo VOD issues the upload URL and credential to ensure authorization and security, prevent malicious uploads, and automatically create a media ID (MediaId), also known as a video ID (VideoId), for management. You can invoke this operation to obtain the required upload URL and credential, and create the audio and video information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you use this operation, make sure that you are familiar with the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage and transfer acceleration, uploading media files to ApsaraVideo VOD also incurs upload acceleration fees. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Storage and transfer acceleration billing</a>. Storage fees are calculated from the time when the file is uploaded. Acceleration fees are calculated when you perform upload operations after the feature is enabled. Simply calling this operation does not incur fees.</b></description></item>
-        /// <item><description>Obtaining the upload URL and credential is the core foundation of ApsaraVideo VOD and is a required step for every upload operation. ApsaraVideo VOD provides multiple upload methods, each with different requirements for obtaining the upload URL and credential. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</description></item>
-        /// <item><description>This operation is used only to obtain the upload URL and credential and create basic media asset information. It does not upload files. For a complete example of uploading files by using API operations, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media files by using the ApsaraVideo VOD API</a>.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Uploading media assets to ApsaraVideo VOD incurs storage fees. For more information about billing, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage and transmission acceleration, uploading media assets to ApsaraVideo VOD also incurs upload acceleration fees. For more information about billing, see <a href="~~188310#section_sta_zm2_tsv~~">Storage and transmission acceleration billing</a>. Storage fees are calculated from the time when the file is uploaded. Acceleration fees are calculated when you upload files after enabling the feature. Calling this operation alone does not incur fees.</b></description></item>
+        /// <item><description>Obtaining the upload URL and credential is the core foundation of ApsaraVideo VOD and a required step for every upload operation. ApsaraVideo VOD provides various upload methods, each with different requirements for obtaining the upload URL and credential. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</description></item>
+        /// <item><description>This operation is used only to obtain the upload URL and credential and create basic media asset information. It does not upload files. For a complete example of uploading files by calling API operations, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media asset files by using the ApsaraVideo VOD API</a>.</description></item>
         /// <item><description>This operation supports obtaining the upload URL and credential for both video and audio files. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</description></item>
-        /// <item><description>If the upload credential expires (the default validity period is 3000 seconds), call the <a href="~~RefreshUploadVideo~~">RefreshUploadVideo</a> operation to obtain a new upload credential.</description></item>
-        /// <item><description>After the upload is complete, you can configure callbacks to receive <a href="https://help.aliyun.com/document_detail/55396.html">upload event notifications</a> or call the <a href="https://help.aliyun.com/document_detail/59624.html">GetMezzanineInfo</a> operation to check the file status and determine whether the upload is successful.</description></item>
+        /// <item><description>If the video upload credential expires (the default validity period is 3,000 seconds), call the <a href="~~RefreshUploadVideo~~">RefreshUploadVideo</a> operation to obtain a new upload credential.</description></item>
+        /// <item><description>After the upload, you can configure a callback to receive <a href="https://help.aliyun.com/document_detail/55396.html">upload event notifications</a> or call the <a href="https://help.aliyun.com/document_detail/59624.html">GetMezzanineInfo</a> operation to check the file status in the response to determine whether the upload is successful.</description></item>
         /// <item><description>The VideoId parameter returned by this operation can be used for media asset lifecycle management or media processing.</description></item>
         /// </list>
         /// </description>
@@ -3840,18 +3836,18 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ApsaraVideo VOD issues the upload URL and upload credential to ensure authorization and security and prevent malicious uploads. During issuance, a media ID (MediaId), also called a video ID (VideoId), undergoes automatic creation for management. Invoke this operation to obtain the upload URL and upload credential, and create audio or video information.</para>
+        /// <para>Obtains the upload URL and credential for an audio or video file, and creates the media information. ApsaraVideo VOD issues the upload URL and credential to ensure authorization and security, prevent malicious uploads, and automatically create a media ID (MediaId), also known as a video ID (VideoId), for management. You can invoke this operation to obtain the required upload URL and credential, and create the audio and video information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you use this operation, make sure that you are familiar with the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage and transfer acceleration, uploading media files to ApsaraVideo VOD also incurs upload acceleration fees. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Storage and transfer acceleration billing</a>. Storage fees are calculated from the time when the file is uploaded. Acceleration fees are calculated when you perform upload operations after the feature is enabled. Simply calling this operation does not incur fees.</b></description></item>
-        /// <item><description>Obtaining the upload URL and credential is the core foundation of ApsaraVideo VOD and is a required step for every upload operation. ApsaraVideo VOD provides multiple upload methods, each with different requirements for obtaining the upload URL and credential. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</description></item>
-        /// <item><description>This operation is used only to obtain the upload URL and credential and create basic media asset information. It does not upload files. For a complete example of uploading files by using API operations, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media files by using the ApsaraVideo VOD API</a>.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Uploading media assets to ApsaraVideo VOD incurs storage fees. For more information about billing, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage and transmission acceleration, uploading media assets to ApsaraVideo VOD also incurs upload acceleration fees. For more information about billing, see <a href="~~188310#section_sta_zm2_tsv~~">Storage and transmission acceleration billing</a>. Storage fees are calculated from the time when the file is uploaded. Acceleration fees are calculated when you upload files after enabling the feature. Calling this operation alone does not incur fees.</b></description></item>
+        /// <item><description>Obtaining the upload URL and credential is the core foundation of ApsaraVideo VOD and a required step for every upload operation. ApsaraVideo VOD provides various upload methods, each with different requirements for obtaining the upload URL and credential. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</description></item>
+        /// <item><description>This operation is used only to obtain the upload URL and credential and create basic media asset information. It does not upload files. For a complete example of uploading files by calling API operations, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media asset files by using the ApsaraVideo VOD API</a>.</description></item>
         /// <item><description>This operation supports obtaining the upload URL and credential for both video and audio files. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</description></item>
-        /// <item><description>If the upload credential expires (the default validity period is 3000 seconds), call the <a href="~~RefreshUploadVideo~~">RefreshUploadVideo</a> operation to obtain a new upload credential.</description></item>
-        /// <item><description>After the upload is complete, you can configure callbacks to receive <a href="https://help.aliyun.com/document_detail/55396.html">upload event notifications</a> or call the <a href="https://help.aliyun.com/document_detail/59624.html">GetMezzanineInfo</a> operation to check the file status and determine whether the upload is successful.</description></item>
+        /// <item><description>If the video upload credential expires (the default validity period is 3,000 seconds), call the <a href="~~RefreshUploadVideo~~">RefreshUploadVideo</a> operation to obtain a new upload credential.</description></item>
+        /// <item><description>After the upload, you can configure a callback to receive <a href="https://help.aliyun.com/document_detail/55396.html">upload event notifications</a> or call the <a href="https://help.aliyun.com/document_detail/59624.html">GetMezzanineInfo</a> operation to check the file status in the response to determine whether the upload is successful.</description></item>
         /// <item><description>The VideoId parameter returned by this operation can be used for media asset lifecycle management or media processing.</description></item>
         /// </list>
         /// </description>
@@ -3951,18 +3947,18 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ApsaraVideo VOD issues the upload URL and upload credential to ensure authorization and security and prevent malicious uploads. During issuance, a media ID (MediaId), also called a video ID (VideoId), undergoes automatic creation for management. Invoke this operation to obtain the upload URL and upload credential, and create audio or video information.</para>
+        /// <para>Obtains the upload URL and credential for an audio or video file, and creates the media information. ApsaraVideo VOD issues the upload URL and credential to ensure authorization and security, prevent malicious uploads, and automatically create a media ID (MediaId), also known as a video ID (VideoId), for management. You can invoke this operation to obtain the required upload URL and credential, and create the audio and video information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you use this operation, make sure that you are familiar with the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage and transfer acceleration, uploading media files to ApsaraVideo VOD also incurs upload acceleration fees. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Storage and transfer acceleration billing</a>. Storage fees are calculated from the time when the file is uploaded. Acceleration fees are calculated when you perform upload operations after the feature is enabled. Simply calling this operation does not incur fees.</b></description></item>
-        /// <item><description>Obtaining the upload URL and credential is the core foundation of ApsaraVideo VOD and is a required step for every upload operation. ApsaraVideo VOD provides multiple upload methods, each with different requirements for obtaining the upload URL and credential. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</description></item>
-        /// <item><description>This operation is used only to obtain the upload URL and credential and create basic media asset information. It does not upload files. For a complete example of uploading files by using API operations, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media files by using the ApsaraVideo VOD API</a>.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Uploading media assets to ApsaraVideo VOD incurs storage fees. For more information about billing, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage and transmission acceleration, uploading media assets to ApsaraVideo VOD also incurs upload acceleration fees. For more information about billing, see <a href="~~188310#section_sta_zm2_tsv~~">Storage and transmission acceleration billing</a>. Storage fees are calculated from the time when the file is uploaded. Acceleration fees are calculated when you upload files after enabling the feature. Calling this operation alone does not incur fees.</b></description></item>
+        /// <item><description>Obtaining the upload URL and credential is the core foundation of ApsaraVideo VOD and a required step for every upload operation. ApsaraVideo VOD provides various upload methods, each with different requirements for obtaining the upload URL and credential. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</description></item>
+        /// <item><description>This operation is used only to obtain the upload URL and credential and create basic media asset information. It does not upload files. For a complete example of uploading files by calling API operations, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media asset files by using the ApsaraVideo VOD API</a>.</description></item>
         /// <item><description>This operation supports obtaining the upload URL and credential for both video and audio files. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</description></item>
-        /// <item><description>If the upload credential expires (the default validity period is 3000 seconds), call the <a href="~~RefreshUploadVideo~~">RefreshUploadVideo</a> operation to obtain a new upload credential.</description></item>
-        /// <item><description>After the upload is complete, you can configure callbacks to receive <a href="https://help.aliyun.com/document_detail/55396.html">upload event notifications</a> or call the <a href="https://help.aliyun.com/document_detail/59624.html">GetMezzanineInfo</a> operation to check the file status and determine whether the upload is successful.</description></item>
+        /// <item><description>If the video upload credential expires (the default validity period is 3,000 seconds), call the <a href="~~RefreshUploadVideo~~">RefreshUploadVideo</a> operation to obtain a new upload credential.</description></item>
+        /// <item><description>After the upload, you can configure a callback to receive <a href="https://help.aliyun.com/document_detail/55396.html">upload event notifications</a> or call the <a href="https://help.aliyun.com/document_detail/59624.html">GetMezzanineInfo</a> operation to check the file status in the response to determine whether the upload is successful.</description></item>
         /// <item><description>The VideoId parameter returned by this operation can be used for media asset lifecycle management or media processing.</description></item>
         /// </list>
         /// </description>
@@ -3982,18 +3978,18 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ApsaraVideo VOD issues the upload URL and upload credential to ensure authorization and security and prevent malicious uploads. During issuance, a media ID (MediaId), also called a video ID (VideoId), undergoes automatic creation for management. Invoke this operation to obtain the upload URL and upload credential, and create audio or video information.</para>
+        /// <para>Obtains the upload URL and credential for an audio or video file, and creates the media information. ApsaraVideo VOD issues the upload URL and credential to ensure authorization and security, prevent malicious uploads, and automatically create a media ID (MediaId), also known as a video ID (VideoId), for management. You can invoke this operation to obtain the required upload URL and credential, and create the audio and video information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you use this operation, make sure that you are familiar with the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage and transfer acceleration, uploading media files to ApsaraVideo VOD also incurs upload acceleration fees. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Storage and transfer acceleration billing</a>. Storage fees are calculated from the time when the file is uploaded. Acceleration fees are calculated when you perform upload operations after the feature is enabled. Simply calling this operation does not incur fees.</b></description></item>
-        /// <item><description>Obtaining the upload URL and credential is the core foundation of ApsaraVideo VOD and is a required step for every upload operation. ApsaraVideo VOD provides multiple upload methods, each with different requirements for obtaining the upload URL and credential. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</description></item>
-        /// <item><description>This operation is used only to obtain the upload URL and credential and create basic media asset information. It does not upload files. For a complete example of uploading files by using API operations, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media files by using the ApsaraVideo VOD API</a>.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Uploading media assets to ApsaraVideo VOD incurs storage fees. For more information about billing, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage and transmission acceleration, uploading media assets to ApsaraVideo VOD also incurs upload acceleration fees. For more information about billing, see <a href="~~188310#section_sta_zm2_tsv~~">Storage and transmission acceleration billing</a>. Storage fees are calculated from the time when the file is uploaded. Acceleration fees are calculated when you upload files after enabling the feature. Calling this operation alone does not incur fees.</b></description></item>
+        /// <item><description>Obtaining the upload URL and credential is the core foundation of ApsaraVideo VOD and a required step for every upload operation. ApsaraVideo VOD provides various upload methods, each with different requirements for obtaining the upload URL and credential. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</description></item>
+        /// <item><description>This operation is used only to obtain the upload URL and credential and create basic media asset information. It does not upload files. For a complete example of uploading files by calling API operations, see <a href="https://help.aliyun.com/document_detail/476208.html">Upload media asset files by using the ApsaraVideo VOD API</a>.</description></item>
         /// <item><description>This operation supports obtaining the upload URL and credential for both video and audio files. For more information, see <a href="https://help.aliyun.com/document_detail/55397.html">Upload URLs and credentials</a>.</description></item>
-        /// <item><description>If the upload credential expires (the default validity period is 3000 seconds), call the <a href="~~RefreshUploadVideo~~">RefreshUploadVideo</a> operation to obtain a new upload credential.</description></item>
-        /// <item><description>After the upload is complete, you can configure callbacks to receive <a href="https://help.aliyun.com/document_detail/55396.html">upload event notifications</a> or call the <a href="https://help.aliyun.com/document_detail/59624.html">GetMezzanineInfo</a> operation to check the file status and determine whether the upload is successful.</description></item>
+        /// <item><description>If the video upload credential expires (the default validity period is 3,000 seconds), call the <a href="~~RefreshUploadVideo~~">RefreshUploadVideo</a> operation to obtain a new upload credential.</description></item>
+        /// <item><description>After the upload, you can configure a callback to receive <a href="https://help.aliyun.com/document_detail/55396.html">upload event notifications</a> or call the <a href="https://help.aliyun.com/document_detail/59624.html">GetMezzanineInfo</a> operation to check the file status in the response to determine whether the upload is successful.</description></item>
         /// <item><description>The VideoId parameter returned by this operation can be used for media asset lifecycle management or media processing.</description></item>
         /// </list>
         /// </description>
@@ -4013,7 +4009,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to perform decryption on the CiphertextBlob in a KMS data key (DK).</para>
+        /// <para>Invokes this operation for decryption of the CiphertextBlob ciphertext of a KMS data key (DK).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4071,7 +4067,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to perform decryption on the CiphertextBlob in a KMS data key (DK).</para>
+        /// <para>Invokes this operation for decryption of the CiphertextBlob ciphertext of a KMS data key (DK).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4129,7 +4125,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to perform decryption on the CiphertextBlob in a KMS data key (DK).</para>
+        /// <para>Invokes this operation for decryption of the CiphertextBlob ciphertext of a KMS data key (DK).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4147,7 +4143,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to perform decryption on the CiphertextBlob in a KMS data key (DK).</para>
+        /// <para>Invokes this operation for decryption of the CiphertextBlob ciphertext of a KMS data key (DK).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4473,14 +4469,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes application information.</para>
+        /// <para>Deletes an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>An application cannot be deleted if it contains resources.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this API is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this API appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4522,14 +4518,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes application information.</para>
+        /// <para>Deletes an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>An application cannot be deleted if it contains resources.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this API is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this API appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4571,14 +4567,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes application information.</para>
+        /// <para>Deletes an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>An application cannot be deleted if it contains resources.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this API is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this API appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4596,14 +4592,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes application information.</para>
+        /// <para>Deletes an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>An application cannot be deleted if it contains resources.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this API is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this API appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4779,8 +4775,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>This operation deletes a category and all its subcategories (including second-level and third-level categories). Proceed with caution.</b></description></item>
-        /// <item><description>If a category has been assigned to media assets, deleting the category also removes the category assignment from those media assets.</description></item>
+        /// <item><description><b>This operation deletes the category and its subcategories, including level-2 and level-3 subcategories. Proceed with caution.</b></description></item>
+        /// <item><description>If a category is assigned to media assets, deleting the category also removes the category from these media assets.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4829,8 +4825,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>This operation deletes a category and all its subcategories (including second-level and third-level categories). Proceed with caution.</b></description></item>
-        /// <item><description>If a category has been assigned to media assets, deleting the category also removes the category assignment from those media assets.</description></item>
+        /// <item><description><b>This operation deletes the category and its subcategories, including level-2 and level-3 subcategories. Proceed with caution.</b></description></item>
+        /// <item><description>If a category is assigned to media assets, deleting the category also removes the category from these media assets.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4879,8 +4875,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>This operation deletes a category and all its subcategories (including second-level and third-level categories). Proceed with caution.</b></description></item>
-        /// <item><description>If a category has been assigned to media assets, deleting the category also removes the category assignment from those media assets.</description></item>
+        /// <item><description><b>This operation deletes the category and its subcategories, including level-2 and level-3 subcategories. Proceed with caution.</b></description></item>
+        /// <item><description>If a category is assigned to media assets, deleting the category also removes the category from these media assets.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4905,8 +4901,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>This operation deletes a category and all its subcategories (including second-level and third-level categories). Proceed with caution.</b></description></item>
-        /// <item><description>If a category has been assigned to media assets, deleting the category also removes the category assignment from those media assets.</description></item>
+        /// <item><description><b>This operation deletes the category and its subcategories, including level-2 and level-3 subcategories. Proceed with caution.</b></description></item>
+        /// <item><description>If a category is assigned to media assets, deleting the category also removes the category from these media assets.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8369,13 +8365,13 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the certificate list information.</para>
+        /// <para>Retrieves the certificate list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, the service address is supported only in the <b>China (Shanghai)</b> region.</description></item>
+        /// <item><description>The service endpoint currently supports only <b>China (Shanghai)</b>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8426,13 +8422,13 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the certificate list information.</para>
+        /// <para>Retrieves the certificate list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, the service address is supported only in the <b>China (Shanghai)</b> region.</description></item>
+        /// <item><description>The service endpoint currently supports only <b>China (Shanghai)</b>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8483,13 +8479,13 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the certificate list information.</para>
+        /// <para>Retrieves the certificate list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, the service address is supported only in the <b>China (Shanghai)</b> region.</description></item>
+        /// <item><description>The service endpoint currently supports only <b>China (Shanghai)</b>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8508,13 +8504,13 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the certificate list information.</para>
+        /// <para>Retrieves the certificate list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, the service address is supported only in the <b>China (Shanghai)</b> region.</description></item>
+        /// <item><description>The service endpoint currently supports only <b>China (Shanghai)</b>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8533,42 +8529,42 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to query the bandwidth data of an accelerated domain name. Compared with the DescribeVodDomainRealTimeBpsData operation, this operation supports a longer time range for historical data queries (up to 366 days) but provides a larger data time granularity (minimum of 5 minutes) and higher data latency.</para>
+        /// <para>Queries the bandwidth data of accelerated domain names. Compared with the DescribeVodDomainRealTimeBpsData operation, this operation supports a longer time range for querying historical data (up to the last 366 days), but has a larger time granularity (minimum of 5 minutes) and higher data latency.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is available only in the <b>China (Shanghai)</b> region.</description></item>
+        /// <item><description>The service endpoint for this operation supports only <b>China East 2 (Shanghai)</b>.</description></item>
         /// <item><description>Batch queries are supported. You can query data for up to 500 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the past 24 hours by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the specified time range.
+        /// <item><description>If you do not specify StartTime and EndTime, the operation returns data for the last 24 hours by default. If you specify StartTime and EndTime, the operation returns data for the specified time range.
         /// <b>Time granularity of returned data</b>
-        /// If you specify <c>StartTime</c> and <c>EndTime</c> without Settings for <c>Interval</c>, the default time granularity of returned data, the queryable historical data time range, and the data latency are as follows:<table>
+        /// Based on the time span specified by <c>StartTime</c> and <c>EndTime</c>, if <c>Interval</c> is not specified at the same time, the default time granularity of the returned data, the corresponding time range for querying historical data, and the data latency are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
-        /// <th>Time span per query</th>
-        /// <th>Queryable historical data time range</th>
+        /// <th>Time range for a single query</th>
+        /// <th>Time range for querying historical data</th>
         /// <th>Data latency</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td>5 minutes</td>
-        /// <td>Time span per query &lt; 3 days</td>
+        /// <td>Time range for a single query &lt; 3 days</td>
         /// <td>93 days</td>
         /// <td>15 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>1 hour</td>
-        /// <td>3 days ≤ Time span per query &lt; 31 days</td>
+        /// <td>3 days ≤ Time range for a single query &lt; 31 days</td>
         /// <td>186 days</td>
-        /// <td>Generally 3-4 hours</td>
+        /// <td>Generally 3 to 4 hours</td>
         /// </tr>
         /// <tr>
         /// <td>1 day</td>
-        /// <td>31 days ≤ Time span per query ≤ 90 days</td>
+        /// <td>31 days ≤ Time range for a single query ≤ 90 days</td>
         /// <td>366 days</td>
-        /// <td>Generally 4 hours, no more than 24 hours</td>
+        /// <td>Generally 4 hours, up to 24 hours</td>
         /// </tr>
         /// </tbody></table>
         /// </description></item>
@@ -8638,42 +8634,42 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to query the bandwidth data of an accelerated domain name. Compared with the DescribeVodDomainRealTimeBpsData operation, this operation supports a longer time range for historical data queries (up to 366 days) but provides a larger data time granularity (minimum of 5 minutes) and higher data latency.</para>
+        /// <para>Queries the bandwidth data of accelerated domain names. Compared with the DescribeVodDomainRealTimeBpsData operation, this operation supports a longer time range for querying historical data (up to the last 366 days), but has a larger time granularity (minimum of 5 minutes) and higher data latency.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is available only in the <b>China (Shanghai)</b> region.</description></item>
+        /// <item><description>The service endpoint for this operation supports only <b>China East 2 (Shanghai)</b>.</description></item>
         /// <item><description>Batch queries are supported. You can query data for up to 500 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the past 24 hours by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the specified time range.
+        /// <item><description>If you do not specify StartTime and EndTime, the operation returns data for the last 24 hours by default. If you specify StartTime and EndTime, the operation returns data for the specified time range.
         /// <b>Time granularity of returned data</b>
-        /// If you specify <c>StartTime</c> and <c>EndTime</c> without Settings for <c>Interval</c>, the default time granularity of returned data, the queryable historical data time range, and the data latency are as follows:<table>
+        /// Based on the time span specified by <c>StartTime</c> and <c>EndTime</c>, if <c>Interval</c> is not specified at the same time, the default time granularity of the returned data, the corresponding time range for querying historical data, and the data latency are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
-        /// <th>Time span per query</th>
-        /// <th>Queryable historical data time range</th>
+        /// <th>Time range for a single query</th>
+        /// <th>Time range for querying historical data</th>
         /// <th>Data latency</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td>5 minutes</td>
-        /// <td>Time span per query &lt; 3 days</td>
+        /// <td>Time range for a single query &lt; 3 days</td>
         /// <td>93 days</td>
         /// <td>15 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>1 hour</td>
-        /// <td>3 days ≤ Time span per query &lt; 31 days</td>
+        /// <td>3 days ≤ Time range for a single query &lt; 31 days</td>
         /// <td>186 days</td>
-        /// <td>Generally 3-4 hours</td>
+        /// <td>Generally 3 to 4 hours</td>
         /// </tr>
         /// <tr>
         /// <td>1 day</td>
-        /// <td>31 days ≤ Time span per query ≤ 90 days</td>
+        /// <td>31 days ≤ Time range for a single query ≤ 90 days</td>
         /// <td>366 days</td>
-        /// <td>Generally 4 hours, no more than 24 hours</td>
+        /// <td>Generally 4 hours, up to 24 hours</td>
         /// </tr>
         /// </tbody></table>
         /// </description></item>
@@ -8743,42 +8739,42 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to query the bandwidth data of an accelerated domain name. Compared with the DescribeVodDomainRealTimeBpsData operation, this operation supports a longer time range for historical data queries (up to 366 days) but provides a larger data time granularity (minimum of 5 minutes) and higher data latency.</para>
+        /// <para>Queries the bandwidth data of accelerated domain names. Compared with the DescribeVodDomainRealTimeBpsData operation, this operation supports a longer time range for querying historical data (up to the last 366 days), but has a larger time granularity (minimum of 5 minutes) and higher data latency.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is available only in the <b>China (Shanghai)</b> region.</description></item>
+        /// <item><description>The service endpoint for this operation supports only <b>China East 2 (Shanghai)</b>.</description></item>
         /// <item><description>Batch queries are supported. You can query data for up to 500 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the past 24 hours by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the specified time range.
+        /// <item><description>If you do not specify StartTime and EndTime, the operation returns data for the last 24 hours by default. If you specify StartTime and EndTime, the operation returns data for the specified time range.
         /// <b>Time granularity of returned data</b>
-        /// If you specify <c>StartTime</c> and <c>EndTime</c> without Settings for <c>Interval</c>, the default time granularity of returned data, the queryable historical data time range, and the data latency are as follows:<table>
+        /// Based on the time span specified by <c>StartTime</c> and <c>EndTime</c>, if <c>Interval</c> is not specified at the same time, the default time granularity of the returned data, the corresponding time range for querying historical data, and the data latency are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
-        /// <th>Time span per query</th>
-        /// <th>Queryable historical data time range</th>
+        /// <th>Time range for a single query</th>
+        /// <th>Time range for querying historical data</th>
         /// <th>Data latency</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td>5 minutes</td>
-        /// <td>Time span per query &lt; 3 days</td>
+        /// <td>Time range for a single query &lt; 3 days</td>
         /// <td>93 days</td>
         /// <td>15 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>1 hour</td>
-        /// <td>3 days ≤ Time span per query &lt; 31 days</td>
+        /// <td>3 days ≤ Time range for a single query &lt; 31 days</td>
         /// <td>186 days</td>
-        /// <td>Generally 3-4 hours</td>
+        /// <td>Generally 3 to 4 hours</td>
         /// </tr>
         /// <tr>
         /// <td>1 day</td>
-        /// <td>31 days ≤ Time span per query ≤ 90 days</td>
+        /// <td>31 days ≤ Time range for a single query ≤ 90 days</td>
         /// <td>366 days</td>
-        /// <td>Generally 4 hours, no more than 24 hours</td>
+        /// <td>Generally 4 hours, up to 24 hours</td>
         /// </tr>
         /// </tbody></table>
         /// </description></item>
@@ -8800,42 +8796,42 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to query the bandwidth data of an accelerated domain name. Compared with the DescribeVodDomainRealTimeBpsData operation, this operation supports a longer time range for historical data queries (up to 366 days) but provides a larger data time granularity (minimum of 5 minutes) and higher data latency.</para>
+        /// <para>Queries the bandwidth data of accelerated domain names. Compared with the DescribeVodDomainRealTimeBpsData operation, this operation supports a longer time range for querying historical data (up to the last 366 days), but has a larger time granularity (minimum of 5 minutes) and higher data latency.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is available only in the <b>China (Shanghai)</b> region.</description></item>
+        /// <item><description>The service endpoint for this operation supports only <b>China East 2 (Shanghai)</b>.</description></item>
         /// <item><description>Batch queries are supported. You can query data for up to 500 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the past 24 hours by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the specified time range.
+        /// <item><description>If you do not specify StartTime and EndTime, the operation returns data for the last 24 hours by default. If you specify StartTime and EndTime, the operation returns data for the specified time range.
         /// <b>Time granularity of returned data</b>
-        /// If you specify <c>StartTime</c> and <c>EndTime</c> without Settings for <c>Interval</c>, the default time granularity of returned data, the queryable historical data time range, and the data latency are as follows:<table>
+        /// Based on the time span specified by <c>StartTime</c> and <c>EndTime</c>, if <c>Interval</c> is not specified at the same time, the default time granularity of the returned data, the corresponding time range for querying historical data, and the data latency are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
-        /// <th>Time span per query</th>
-        /// <th>Queryable historical data time range</th>
+        /// <th>Time range for a single query</th>
+        /// <th>Time range for querying historical data</th>
         /// <th>Data latency</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td>5 minutes</td>
-        /// <td>Time span per query &lt; 3 days</td>
+        /// <td>Time range for a single query &lt; 3 days</td>
         /// <td>93 days</td>
         /// <td>15 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>1 hour</td>
-        /// <td>3 days ≤ Time span per query &lt; 31 days</td>
+        /// <td>3 days ≤ Time range for a single query &lt; 31 days</td>
         /// <td>186 days</td>
-        /// <td>Generally 3-4 hours</td>
+        /// <td>Generally 3 to 4 hours</td>
         /// </tr>
         /// <tr>
         /// <td>1 day</td>
-        /// <td>31 days ≤ Time span per query ≤ 90 days</td>
+        /// <td>31 days ≤ Time range for a single query ≤ 90 days</td>
         /// <td>366 days</td>
-        /// <td>Generally 4 hours, no more than 24 hours</td>
+        /// <td>Generally 4 hours, up to 24 hours</td>
         /// </tr>
         /// </tbody></table>
         /// </description></item>
@@ -9194,7 +9190,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, the only supported service region is <b>China (Shanghai)</b>.</para>
+        /// <para>Currently, the only supported region is <b>China (Shanghai)</b>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9249,7 +9245,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, the only supported service region is <b>China (Shanghai)</b>.</para>
+        /// <para>Currently, the only supported region is <b>China (Shanghai)</b>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9304,7 +9300,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, the only supported service region is <b>China (Shanghai)</b>.</para>
+        /// <para>Currently, the only supported region is <b>China (Shanghai)</b>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9327,7 +9323,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, the only supported service region is <b>China (Shanghai)</b>.</para>
+        /// <para>Currently, the only supported region is <b>China (Shanghai)</b>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9517,12 +9513,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the basic configuration information of a specified China domain name for video-on-demand (VOD) acceleration.</para>
+        /// <para>Queries the basic configuration information of a specified ApsaraVideo VOD domain name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, the China service address supports only <b>China (Shanghai)</b>.</para>
+        /// <list type="bullet">
+        /// <item><description>Currently, the service endpoint supports only <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>DomainName must be an ApsaraVideo VOD accelerated domain name added to the current account. You can call DescribeVodUserDomains to query the accelerated domain names under the current account. When you add a new domain name for the first time, you must complete DNS or file verification based on the domain ownership verification documentation, and then call AddVodDomain to add the domain name. After the domain name is added, you can call this operation to query the domain name configuration.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -9572,12 +9571,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the basic configuration information of a specified China domain name for video-on-demand (VOD) acceleration.</para>
+        /// <para>Queries the basic configuration information of a specified ApsaraVideo VOD domain name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, the China service address supports only <b>China (Shanghai)</b>.</para>
+        /// <list type="bullet">
+        /// <item><description>Currently, the service endpoint supports only <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>DomainName must be an ApsaraVideo VOD accelerated domain name added to the current account. You can call DescribeVodUserDomains to query the accelerated domain names under the current account. When you add a new domain name for the first time, you must complete DNS or file verification based on the domain ownership verification documentation, and then call AddVodDomain to add the domain name. After the domain name is added, you can call this operation to query the domain name configuration.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -9627,12 +9629,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the basic configuration information of a specified China domain name for video-on-demand (VOD) acceleration.</para>
+        /// <para>Queries the basic configuration information of a specified ApsaraVideo VOD domain name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, the China service address supports only <b>China (Shanghai)</b>.</para>
+        /// <list type="bullet">
+        /// <item><description>Currently, the service endpoint supports only <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>DomainName must be an ApsaraVideo VOD accelerated domain name added to the current account. You can call DescribeVodUserDomains to query the accelerated domain names under the current account. When you add a new domain name for the first time, you must complete DNS or file verification based on the domain ownership verification documentation, and then call AddVodDomain to add the domain name. After the domain name is added, you can call this operation to query the domain name configuration.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -9650,12 +9655,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the basic configuration information of a specified China domain name for video-on-demand (VOD) acceleration.</para>
+        /// <para>Queries the basic configuration information of a specified ApsaraVideo VOD domain name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, the China service address supports only <b>China (Shanghai)</b>.</para>
+        /// <list type="bullet">
+        /// <item><description>Currently, the service endpoint supports only <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>DomainName must be an ApsaraVideo VOD accelerated domain name added to the current account. You can call DescribeVodUserDomains to query the accelerated domain names under the current account. When you add a new domain name for the first time, you must complete DNS or file verification based on the domain ownership verification documentation, and then call AddVodDomain to add the domain name. After the domain name is added, you can call this operation to query the domain name configuration.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -9673,40 +9681,40 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the byte hit ratio (percentage of hit bytes) of an accelerated domain name.</para>
+        /// <para>Queries the byte hit ratio (percentage of hit bytes) of accelerated domain names.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is supported only in the <b>China (Shanghai)</b> region.</description></item>
+        /// <item><description>Currently, the endpoint for this API operation supports only <b>China (Shanghai)</b>.</description></item>
         /// <item><description>Batch queries are supported. You can query data for up to 500 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, data from the past 24 hours is returned by default. If you specify <c>StartTime</c> and <c>EndTime</c>, data for the specified time range is returned.
+        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, the API operation returns data for the last 24 hours by default. If you specify <c>StartTime</c> and <c>EndTime</c>, the API operation returns data for the specified time range.
         /// <b>Time granularity of returned data</b>
-        /// If you specify <c>StartTime</c> and <c>EndTime</c> without setting <c>Interval</c>, the default time granularity, the maximum time range for historical data queries, and the data delay are as follows:<table>
+        /// Based on the time range specified by <c>StartTime</c> and <c>EndTime</c>, if <c>Interval</c> is not specified, the default time granularity of the returned data, the corresponding time range of historical data that can be queried, and the data delay are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
-        /// <th>Time span per query</th>
-        /// <th>Maximum time range for historical data queries</th>
+        /// <th>Time range for a single query</th>
+        /// <th>Time range of historical data that can be queried</th>
         /// <th>Data delay</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td>5 minutes</td>
-        /// <td>Time span per query &lt; 3 days</td>
+        /// <td>Time range for a single query &lt; 3 days</td>
         /// <td>93 days</td>
         /// <td>15 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>1 hour</td>
-        /// <td>3 days ≤ Time span per query &lt; 31 days</td>
+        /// <td>3 days ≤ Time range for a single query &lt; 31 days</td>
         /// <td>186 days</td>
         /// <td>Generally 3 to 4 hours</td>
         /// </tr>
         /// <tr>
         /// <td>1 day</td>
-        /// <td>31 days ≤ Time span per query ≤ 366 days</td>
+        /// <td>31 days ≤ Time range for a single query ≤ 366 days</td>
         /// <td>366 days</td>
         /// <td>Generally 4 hours, up to 24 hours</td>
         /// </tr>
@@ -9770,40 +9778,40 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the byte hit ratio (percentage of hit bytes) of an accelerated domain name.</para>
+        /// <para>Queries the byte hit ratio (percentage of hit bytes) of accelerated domain names.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is supported only in the <b>China (Shanghai)</b> region.</description></item>
+        /// <item><description>Currently, the endpoint for this API operation supports only <b>China (Shanghai)</b>.</description></item>
         /// <item><description>Batch queries are supported. You can query data for up to 500 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, data from the past 24 hours is returned by default. If you specify <c>StartTime</c> and <c>EndTime</c>, data for the specified time range is returned.
+        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, the API operation returns data for the last 24 hours by default. If you specify <c>StartTime</c> and <c>EndTime</c>, the API operation returns data for the specified time range.
         /// <b>Time granularity of returned data</b>
-        /// If you specify <c>StartTime</c> and <c>EndTime</c> without setting <c>Interval</c>, the default time granularity, the maximum time range for historical data queries, and the data delay are as follows:<table>
+        /// Based on the time range specified by <c>StartTime</c> and <c>EndTime</c>, if <c>Interval</c> is not specified, the default time granularity of the returned data, the corresponding time range of historical data that can be queried, and the data delay are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
-        /// <th>Time span per query</th>
-        /// <th>Maximum time range for historical data queries</th>
+        /// <th>Time range for a single query</th>
+        /// <th>Time range of historical data that can be queried</th>
         /// <th>Data delay</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td>5 minutes</td>
-        /// <td>Time span per query &lt; 3 days</td>
+        /// <td>Time range for a single query &lt; 3 days</td>
         /// <td>93 days</td>
         /// <td>15 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>1 hour</td>
-        /// <td>3 days ≤ Time span per query &lt; 31 days</td>
+        /// <td>3 days ≤ Time range for a single query &lt; 31 days</td>
         /// <td>186 days</td>
         /// <td>Generally 3 to 4 hours</td>
         /// </tr>
         /// <tr>
         /// <td>1 day</td>
-        /// <td>31 days ≤ Time span per query ≤ 366 days</td>
+        /// <td>31 days ≤ Time range for a single query ≤ 366 days</td>
         /// <td>366 days</td>
         /// <td>Generally 4 hours, up to 24 hours</td>
         /// </tr>
@@ -9867,40 +9875,40 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the byte hit ratio (percentage of hit bytes) of an accelerated domain name.</para>
+        /// <para>Queries the byte hit ratio (percentage of hit bytes) of accelerated domain names.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is supported only in the <b>China (Shanghai)</b> region.</description></item>
+        /// <item><description>Currently, the endpoint for this API operation supports only <b>China (Shanghai)</b>.</description></item>
         /// <item><description>Batch queries are supported. You can query data for up to 500 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, data from the past 24 hours is returned by default. If you specify <c>StartTime</c> and <c>EndTime</c>, data for the specified time range is returned.
+        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, the API operation returns data for the last 24 hours by default. If you specify <c>StartTime</c> and <c>EndTime</c>, the API operation returns data for the specified time range.
         /// <b>Time granularity of returned data</b>
-        /// If you specify <c>StartTime</c> and <c>EndTime</c> without setting <c>Interval</c>, the default time granularity, the maximum time range for historical data queries, and the data delay are as follows:<table>
+        /// Based on the time range specified by <c>StartTime</c> and <c>EndTime</c>, if <c>Interval</c> is not specified, the default time granularity of the returned data, the corresponding time range of historical data that can be queried, and the data delay are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
-        /// <th>Time span per query</th>
-        /// <th>Maximum time range for historical data queries</th>
+        /// <th>Time range for a single query</th>
+        /// <th>Time range of historical data that can be queried</th>
         /// <th>Data delay</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td>5 minutes</td>
-        /// <td>Time span per query &lt; 3 days</td>
+        /// <td>Time range for a single query &lt; 3 days</td>
         /// <td>93 days</td>
         /// <td>15 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>1 hour</td>
-        /// <td>3 days ≤ Time span per query &lt; 31 days</td>
+        /// <td>3 days ≤ Time range for a single query &lt; 31 days</td>
         /// <td>186 days</td>
         /// <td>Generally 3 to 4 hours</td>
         /// </tr>
         /// <tr>
         /// <td>1 day</td>
-        /// <td>31 days ≤ Time span per query ≤ 366 days</td>
+        /// <td>31 days ≤ Time range for a single query ≤ 366 days</td>
         /// <td>366 days</td>
         /// <td>Generally 4 hours, up to 24 hours</td>
         /// </tr>
@@ -9924,40 +9932,40 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the byte hit ratio (percentage of hit bytes) of an accelerated domain name.</para>
+        /// <para>Queries the byte hit ratio (percentage of hit bytes) of accelerated domain names.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is supported only in the <b>China (Shanghai)</b> region.</description></item>
+        /// <item><description>Currently, the endpoint for this API operation supports only <b>China (Shanghai)</b>.</description></item>
         /// <item><description>Batch queries are supported. You can query data for up to 500 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, data from the past 24 hours is returned by default. If you specify <c>StartTime</c> and <c>EndTime</c>, data for the specified time range is returned.
+        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, the API operation returns data for the last 24 hours by default. If you specify <c>StartTime</c> and <c>EndTime</c>, the API operation returns data for the specified time range.
         /// <b>Time granularity of returned data</b>
-        /// If you specify <c>StartTime</c> and <c>EndTime</c> without setting <c>Interval</c>, the default time granularity, the maximum time range for historical data queries, and the data delay are as follows:<table>
+        /// Based on the time range specified by <c>StartTime</c> and <c>EndTime</c>, if <c>Interval</c> is not specified, the default time granularity of the returned data, the corresponding time range of historical data that can be queried, and the data delay are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
-        /// <th>Time span per query</th>
-        /// <th>Maximum time range for historical data queries</th>
+        /// <th>Time range for a single query</th>
+        /// <th>Time range of historical data that can be queried</th>
         /// <th>Data delay</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td>5 minutes</td>
-        /// <td>Time span per query &lt; 3 days</td>
+        /// <td>Time range for a single query &lt; 3 days</td>
         /// <td>93 days</td>
         /// <td>15 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>1 hour</td>
-        /// <td>3 days ≤ Time span per query &lt; 31 days</td>
+        /// <td>3 days ≤ Time range for a single query &lt; 31 days</td>
         /// <td>186 days</td>
         /// <td>Generally 3 to 4 hours</td>
         /// </tr>
         /// <tr>
         /// <td>1 day</td>
-        /// <td>31 days ≤ Time span per query ≤ 366 days</td>
+        /// <td>31 days ≤ Time range for a single query ≤ 366 days</td>
         /// <td>366 days</td>
         /// <td>Generally 4 hours, up to 24 hours</td>
         /// </tr>
@@ -10181,21 +10189,21 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the 95th percentile bandwidth monitoring data for accelerated domain names.</para>
+        /// <para>Queries the monitoring data of the 95th percentile bandwidth for accelerated domain names.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Three query methods are available:</em>*</para>
+        /// <para><em>Three query methods:</em>*</para>
         /// <list type="bullet">
-        /// <item><description>When both StartTime and EndTime are specified: if the difference between EndTime and StartTime is within 24 hours, the 95th percentile bandwidth of the day that contains StartTime is returned. Otherwise, the 95th percentile bandwidth of the month that contains StartTime is returned.</description></item>
-        /// <item><description>When both TimePoint and Cycle are specified, the 95th percentile bandwidth of the cycle that contains TimePoint is returned.</description></item>
-        /// <item><description>When StartTime and EndTime are specified with an additional Cycle parameter, the 95th percentile bandwidth for all specified cycles within the query range is returned.
-        /// If none of these three methods are specified, the 95th percentile bandwidth of the past 24 hours is returned by default.</description></item>
-        /// <item><description>Maximum query span: 90 days.</description></item>
+        /// <item><description>If both StartTime and EndTime are specified and the difference between EndTime and StartTime is within 24 hours, the 95th percentile bandwidth for the day of StartTime is queried. Otherwise, the 95th percentile bandwidth for the month of StartTime is queried.</description></item>
+        /// <item><description>If both TimePoint and Cycle are specified, the 95th percentile bandwidth for the cycle of TimePoint is returned.</description></item>
+        /// <item><description>If StartTime and EndTime are specified along with Cycle, the 95th percentile bandwidth for all specified cycles within the query range is returned.
+        /// If none of these three methods are specified, the 95th percentile bandwidth for the past 24 hours is returned by default.</description></item>
+        /// <item><description>Maximum query time span: 90 days.</description></item>
         /// <item><description>Minimum query granularity: 1 day.</description></item>
-        /// <item><description>Maximum query range: 90 days.</description></item>
-        /// <item><description>Maximum number of calls per user per second: 100.</description></item>
+        /// <item><description>Maximum query time range: 90 days.</description></item>
+        /// <item><description>Rate limit per user: 100 calls per second.</description></item>
         /// <item><description>Data unit: bit/s.</description></item>
         /// </list>
         /// </description>
@@ -10235,21 +10243,21 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the 95th percentile bandwidth monitoring data for accelerated domain names.</para>
+        /// <para>Queries the monitoring data of the 95th percentile bandwidth for accelerated domain names.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Three query methods are available:</em>*</para>
+        /// <para><em>Three query methods:</em>*</para>
         /// <list type="bullet">
-        /// <item><description>When both StartTime and EndTime are specified: if the difference between EndTime and StartTime is within 24 hours, the 95th percentile bandwidth of the day that contains StartTime is returned. Otherwise, the 95th percentile bandwidth of the month that contains StartTime is returned.</description></item>
-        /// <item><description>When both TimePoint and Cycle are specified, the 95th percentile bandwidth of the cycle that contains TimePoint is returned.</description></item>
-        /// <item><description>When StartTime and EndTime are specified with an additional Cycle parameter, the 95th percentile bandwidth for all specified cycles within the query range is returned.
-        /// If none of these three methods are specified, the 95th percentile bandwidth of the past 24 hours is returned by default.</description></item>
-        /// <item><description>Maximum query span: 90 days.</description></item>
+        /// <item><description>If both StartTime and EndTime are specified and the difference between EndTime and StartTime is within 24 hours, the 95th percentile bandwidth for the day of StartTime is queried. Otherwise, the 95th percentile bandwidth for the month of StartTime is queried.</description></item>
+        /// <item><description>If both TimePoint and Cycle are specified, the 95th percentile bandwidth for the cycle of TimePoint is returned.</description></item>
+        /// <item><description>If StartTime and EndTime are specified along with Cycle, the 95th percentile bandwidth for all specified cycles within the query range is returned.
+        /// If none of these three methods are specified, the 95th percentile bandwidth for the past 24 hours is returned by default.</description></item>
+        /// <item><description>Maximum query time span: 90 days.</description></item>
         /// <item><description>Minimum query granularity: 1 day.</description></item>
-        /// <item><description>Maximum query range: 90 days.</description></item>
-        /// <item><description>Maximum number of calls per user per second: 100.</description></item>
+        /// <item><description>Maximum query time range: 90 days.</description></item>
+        /// <item><description>Rate limit per user: 100 calls per second.</description></item>
         /// <item><description>Data unit: bit/s.</description></item>
         /// </list>
         /// </description>
@@ -10289,21 +10297,21 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the 95th percentile bandwidth monitoring data for accelerated domain names.</para>
+        /// <para>Queries the monitoring data of the 95th percentile bandwidth for accelerated domain names.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Three query methods are available:</em>*</para>
+        /// <para><em>Three query methods:</em>*</para>
         /// <list type="bullet">
-        /// <item><description>When both StartTime and EndTime are specified: if the difference between EndTime and StartTime is within 24 hours, the 95th percentile bandwidth of the day that contains StartTime is returned. Otherwise, the 95th percentile bandwidth of the month that contains StartTime is returned.</description></item>
-        /// <item><description>When both TimePoint and Cycle are specified, the 95th percentile bandwidth of the cycle that contains TimePoint is returned.</description></item>
-        /// <item><description>When StartTime and EndTime are specified with an additional Cycle parameter, the 95th percentile bandwidth for all specified cycles within the query range is returned.
-        /// If none of these three methods are specified, the 95th percentile bandwidth of the past 24 hours is returned by default.</description></item>
-        /// <item><description>Maximum query span: 90 days.</description></item>
+        /// <item><description>If both StartTime and EndTime are specified and the difference between EndTime and StartTime is within 24 hours, the 95th percentile bandwidth for the day of StartTime is queried. Otherwise, the 95th percentile bandwidth for the month of StartTime is queried.</description></item>
+        /// <item><description>If both TimePoint and Cycle are specified, the 95th percentile bandwidth for the cycle of TimePoint is returned.</description></item>
+        /// <item><description>If StartTime and EndTime are specified along with Cycle, the 95th percentile bandwidth for all specified cycles within the query range is returned.
+        /// If none of these three methods are specified, the 95th percentile bandwidth for the past 24 hours is returned by default.</description></item>
+        /// <item><description>Maximum query time span: 90 days.</description></item>
         /// <item><description>Minimum query granularity: 1 day.</description></item>
-        /// <item><description>Maximum query range: 90 days.</description></item>
-        /// <item><description>Maximum number of calls per user per second: 100.</description></item>
+        /// <item><description>Maximum query time range: 90 days.</description></item>
+        /// <item><description>Rate limit per user: 100 calls per second.</description></item>
         /// <item><description>Data unit: bit/s.</description></item>
         /// </list>
         /// </description>
@@ -10323,21 +10331,21 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the 95th percentile bandwidth monitoring data for accelerated domain names.</para>
+        /// <para>Queries the monitoring data of the 95th percentile bandwidth for accelerated domain names.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Three query methods are available:</em>*</para>
+        /// <para><em>Three query methods:</em>*</para>
         /// <list type="bullet">
-        /// <item><description>When both StartTime and EndTime are specified: if the difference between EndTime and StartTime is within 24 hours, the 95th percentile bandwidth of the day that contains StartTime is returned. Otherwise, the 95th percentile bandwidth of the month that contains StartTime is returned.</description></item>
-        /// <item><description>When both TimePoint and Cycle are specified, the 95th percentile bandwidth of the cycle that contains TimePoint is returned.</description></item>
-        /// <item><description>When StartTime and EndTime are specified with an additional Cycle parameter, the 95th percentile bandwidth for all specified cycles within the query range is returned.
-        /// If none of these three methods are specified, the 95th percentile bandwidth of the past 24 hours is returned by default.</description></item>
-        /// <item><description>Maximum query span: 90 days.</description></item>
+        /// <item><description>If both StartTime and EndTime are specified and the difference between EndTime and StartTime is within 24 hours, the 95th percentile bandwidth for the day of StartTime is queried. Otherwise, the 95th percentile bandwidth for the month of StartTime is queried.</description></item>
+        /// <item><description>If both TimePoint and Cycle are specified, the 95th percentile bandwidth for the cycle of TimePoint is returned.</description></item>
+        /// <item><description>If StartTime and EndTime are specified along with Cycle, the 95th percentile bandwidth for all specified cycles within the query range is returned.
+        /// If none of these three methods are specified, the 95th percentile bandwidth for the past 24 hours is returned by default.</description></item>
+        /// <item><description>Maximum query time span: 90 days.</description></item>
         /// <item><description>Minimum query granularity: 1 day.</description></item>
-        /// <item><description>Maximum query range: 90 days.</description></item>
-        /// <item><description>Maximum number of calls per user per second: 100.</description></item>
+        /// <item><description>Maximum query time range: 90 days.</description></item>
+        /// <item><description>Rate limit per user: 100 calls per second.</description></item>
         /// <item><description>Data unit: bit/s.</description></item>
         /// </list>
         /// </description>
@@ -11373,42 +11381,42 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the total number and proportion of HTTP status codes for an accelerated domain name. This operation supports a minimum data time granularity of 1 minute, with a data delay of at least 5 minutes, and allows you to query data from the last 186 days.</para>
+        /// <para>Queries the total count and proportion of HTTP status codes for accelerated domain names. This operation supports a minimum time granularity of 1 minute, a minimum data latency of 5 minutes, and a maximum query range of the last 186 days.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is available only in the <b>China (Shanghai)</b> region.</description></item>
+        /// <item><description>The endpoint for this operation currently supports only <b>China (Shanghai)</b>.</description></item>
         /// <item><description>Batch queries are supported. You can query data for up to 100 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data from the last hour by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the specified time range.
+        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the last hour by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the specified time range.
         /// <b>Time granularity of returned data</b>
-        /// The time granularity of returned data varies based on the time range specified by <c>StartTime</c> and <c>EndTime</c>. The following table describes the queryable historical data range and data delay for each time granularity:<table>
+        /// The time granularity of the returned data varies based on the time range specified by <c>StartTime</c> and <c>EndTime</c>. The corresponding queryable historical data range and data latency are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
-        /// <th>Time range per query</th>
+        /// <th>Time range for a single query</th>
         /// <th>Queryable historical data range</th>
-        /// <th>Data delay</th>
+        /// <th>Data latency</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td>1 minute</td>
-        /// <td>Time range per query ≤ 1 hour</td>
+        /// <td>Time range for a single query ≤ 1 hour</td>
         /// <td>7 days</td>
         /// <td>5 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>5 minutes</td>
-        /// <td>1 hour &lt; Time range per query &lt; 3 days</td>
+        /// <td>1 hour &lt; Time range for a single query &lt; 3 days</td>
         /// <td>93 days</td>
         /// <td>15 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>1 hour</td>
-        /// <td>3 days ≤ Time range per query &lt; 31 days</td>
+        /// <td>3 days ≤ Time range for a single query &lt; 31 days</td>
         /// <td>186 days</td>
-        /// <td>Typically 3 to 4 hours</td>
+        /// <td>Generally 3 to 4 hours</td>
         /// </tr>
         /// </tbody></table>
         /// </description></item>
@@ -11474,42 +11482,42 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the total number and proportion of HTTP status codes for an accelerated domain name. This operation supports a minimum data time granularity of 1 minute, with a data delay of at least 5 minutes, and allows you to query data from the last 186 days.</para>
+        /// <para>Queries the total count and proportion of HTTP status codes for accelerated domain names. This operation supports a minimum time granularity of 1 minute, a minimum data latency of 5 minutes, and a maximum query range of the last 186 days.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is available only in the <b>China (Shanghai)</b> region.</description></item>
+        /// <item><description>The endpoint for this operation currently supports only <b>China (Shanghai)</b>.</description></item>
         /// <item><description>Batch queries are supported. You can query data for up to 100 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data from the last hour by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the specified time range.
+        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the last hour by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the specified time range.
         /// <b>Time granularity of returned data</b>
-        /// The time granularity of returned data varies based on the time range specified by <c>StartTime</c> and <c>EndTime</c>. The following table describes the queryable historical data range and data delay for each time granularity:<table>
+        /// The time granularity of the returned data varies based on the time range specified by <c>StartTime</c> and <c>EndTime</c>. The corresponding queryable historical data range and data latency are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
-        /// <th>Time range per query</th>
+        /// <th>Time range for a single query</th>
         /// <th>Queryable historical data range</th>
-        /// <th>Data delay</th>
+        /// <th>Data latency</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td>1 minute</td>
-        /// <td>Time range per query ≤ 1 hour</td>
+        /// <td>Time range for a single query ≤ 1 hour</td>
         /// <td>7 days</td>
         /// <td>5 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>5 minutes</td>
-        /// <td>1 hour &lt; Time range per query &lt; 3 days</td>
+        /// <td>1 hour &lt; Time range for a single query &lt; 3 days</td>
         /// <td>93 days</td>
         /// <td>15 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>1 hour</td>
-        /// <td>3 days ≤ Time range per query &lt; 31 days</td>
+        /// <td>3 days ≤ Time range for a single query &lt; 31 days</td>
         /// <td>186 days</td>
-        /// <td>Typically 3 to 4 hours</td>
+        /// <td>Generally 3 to 4 hours</td>
         /// </tr>
         /// </tbody></table>
         /// </description></item>
@@ -11575,42 +11583,42 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the total number and proportion of HTTP status codes for an accelerated domain name. This operation supports a minimum data time granularity of 1 minute, with a data delay of at least 5 minutes, and allows you to query data from the last 186 days.</para>
+        /// <para>Queries the total count and proportion of HTTP status codes for accelerated domain names. This operation supports a minimum time granularity of 1 minute, a minimum data latency of 5 minutes, and a maximum query range of the last 186 days.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is available only in the <b>China (Shanghai)</b> region.</description></item>
+        /// <item><description>The endpoint for this operation currently supports only <b>China (Shanghai)</b>.</description></item>
         /// <item><description>Batch queries are supported. You can query data for up to 100 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data from the last hour by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the specified time range.
+        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the last hour by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the specified time range.
         /// <b>Time granularity of returned data</b>
-        /// The time granularity of returned data varies based on the time range specified by <c>StartTime</c> and <c>EndTime</c>. The following table describes the queryable historical data range and data delay for each time granularity:<table>
+        /// The time granularity of the returned data varies based on the time range specified by <c>StartTime</c> and <c>EndTime</c>. The corresponding queryable historical data range and data latency are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
-        /// <th>Time range per query</th>
+        /// <th>Time range for a single query</th>
         /// <th>Queryable historical data range</th>
-        /// <th>Data delay</th>
+        /// <th>Data latency</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td>1 minute</td>
-        /// <td>Time range per query ≤ 1 hour</td>
+        /// <td>Time range for a single query ≤ 1 hour</td>
         /// <td>7 days</td>
         /// <td>5 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>5 minutes</td>
-        /// <td>1 hour &lt; Time range per query &lt; 3 days</td>
+        /// <td>1 hour &lt; Time range for a single query &lt; 3 days</td>
         /// <td>93 days</td>
         /// <td>15 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>1 hour</td>
-        /// <td>3 days ≤ Time range per query &lt; 31 days</td>
+        /// <td>3 days ≤ Time range for a single query &lt; 31 days</td>
         /// <td>186 days</td>
-        /// <td>Typically 3 to 4 hours</td>
+        /// <td>Generally 3 to 4 hours</td>
         /// </tr>
         /// </tbody></table>
         /// </description></item>
@@ -11632,42 +11640,42 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the total number and proportion of HTTP status codes for an accelerated domain name. This operation supports a minimum data time granularity of 1 minute, with a data delay of at least 5 minutes, and allows you to query data from the last 186 days.</para>
+        /// <para>Queries the total count and proportion of HTTP status codes for accelerated domain names. This operation supports a minimum time granularity of 1 minute, a minimum data latency of 5 minutes, and a maximum query range of the last 186 days.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is available only in the <b>China (Shanghai)</b> region.</description></item>
+        /// <item><description>The endpoint for this operation currently supports only <b>China (Shanghai)</b>.</description></item>
         /// <item><description>Batch queries are supported. You can query data for up to 100 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data from the last hour by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the specified time range.
+        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the last hour by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the specified time range.
         /// <b>Time granularity of returned data</b>
-        /// The time granularity of returned data varies based on the time range specified by <c>StartTime</c> and <c>EndTime</c>. The following table describes the queryable historical data range and data delay for each time granularity:<table>
+        /// The time granularity of the returned data varies based on the time range specified by <c>StartTime</c> and <c>EndTime</c>. The corresponding queryable historical data range and data latency are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
-        /// <th>Time range per query</th>
+        /// <th>Time range for a single query</th>
         /// <th>Queryable historical data range</th>
-        /// <th>Data delay</th>
+        /// <th>Data latency</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td>1 minute</td>
-        /// <td>Time range per query ≤ 1 hour</td>
+        /// <td>Time range for a single query ≤ 1 hour</td>
         /// <td>7 days</td>
         /// <td>5 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>5 minutes</td>
-        /// <td>1 hour &lt; Time range per query &lt; 3 days</td>
+        /// <td>1 hour &lt; Time range for a single query &lt; 3 days</td>
         /// <td>93 days</td>
         /// <td>15 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>1 hour</td>
-        /// <td>3 days ≤ Time range per query &lt; 31 days</td>
+        /// <td>3 days ≤ Time range for a single query &lt; 31 days</td>
         /// <td>186 days</td>
-        /// <td>Typically 3 to 4 hours</td>
+        /// <td>Generally 3 to 4 hours</td>
         /// </tr>
         /// </tbody></table>
         /// </description></item>
@@ -12229,40 +12237,40 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to query the traffic data of an accelerated domain name. Compared with the DescribeVodDomainTrafficData operation, this operation supports a smaller time granularity (minimum of 1 minute), lower data latency (minimum of 5 minutes), but a shorter historical data range (up to 186 days).</para>
+        /// <para>Queries the traffic data of accelerated domain names. Compared with the DescribeVodDomainTrafficData operation, this operation supports a finer time granularity (as fine as 1 minute) and lower data latency (as low as 5 minutes), but covers a shorter historical data time range (up to the last 186 days).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The service address of this operation supports only <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>Batch queries are supported. You can query data for up to 100 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the last hour by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the specified time range.
+        /// <item><description>Currently, the endpoint for this operation only supports <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Supports batch queries. You can query the data of up to 100 domain names at a time.</description></item>
+        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns the data of the last hour by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns the data within the specified time range.
         /// <b>Time granularity of returned data</b>
-        /// The time granularity of returned data varies based on the time range specified by <c>StartTime</c> and <c>EndTime</c>. The following table describes the queryable historical data range and data latency for each time granularity:<table>
+        /// The time granularity of the returned data varies based on the time range specified by <c>StartTime</c> and <c>EndTime</c>. The corresponding historical data time range and data latency are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
-        /// <th>Time range per query</th>
-        /// <th>Queryable historical data range</th>
+        /// <th>Time range for a single query</th>
+        /// <th>Historical data time range</th>
         /// <th>Data latency</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td>1 minute</td>
-        /// <td>Time range per query ≤ 1 hour</td>
+        /// <td>Time range for a single query ≤ 1 hour</td>
         /// <td>7 days</td>
         /// <td>5 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>5 minutes</td>
-        /// <td>1 hour &lt; Time range per query &lt; 3 days</td>
+        /// <td>1 hour &lt; Time range for a single query &lt; 3 days</td>
         /// <td>93 days</td>
         /// <td>15 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>1 hour</td>
-        /// <td>3 days ≤ Time range per query &lt; 31 days</td>
+        /// <td>3 days ≤ Time range for a single query &lt; 31 days</td>
         /// <td>186 days</td>
         /// <td>Generally 3 to 4 hours</td>
         /// </tr>
@@ -12330,40 +12338,40 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to query the traffic data of an accelerated domain name. Compared with the DescribeVodDomainTrafficData operation, this operation supports a smaller time granularity (minimum of 1 minute), lower data latency (minimum of 5 minutes), but a shorter historical data range (up to 186 days).</para>
+        /// <para>Queries the traffic data of accelerated domain names. Compared with the DescribeVodDomainTrafficData operation, this operation supports a finer time granularity (as fine as 1 minute) and lower data latency (as low as 5 minutes), but covers a shorter historical data time range (up to the last 186 days).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The service address of this operation supports only <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>Batch queries are supported. You can query data for up to 100 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the last hour by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the specified time range.
+        /// <item><description>Currently, the endpoint for this operation only supports <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Supports batch queries. You can query the data of up to 100 domain names at a time.</description></item>
+        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns the data of the last hour by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns the data within the specified time range.
         /// <b>Time granularity of returned data</b>
-        /// The time granularity of returned data varies based on the time range specified by <c>StartTime</c> and <c>EndTime</c>. The following table describes the queryable historical data range and data latency for each time granularity:<table>
+        /// The time granularity of the returned data varies based on the time range specified by <c>StartTime</c> and <c>EndTime</c>. The corresponding historical data time range and data latency are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
-        /// <th>Time range per query</th>
-        /// <th>Queryable historical data range</th>
+        /// <th>Time range for a single query</th>
+        /// <th>Historical data time range</th>
         /// <th>Data latency</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td>1 minute</td>
-        /// <td>Time range per query ≤ 1 hour</td>
+        /// <td>Time range for a single query ≤ 1 hour</td>
         /// <td>7 days</td>
         /// <td>5 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>5 minutes</td>
-        /// <td>1 hour &lt; Time range per query &lt; 3 days</td>
+        /// <td>1 hour &lt; Time range for a single query &lt; 3 days</td>
         /// <td>93 days</td>
         /// <td>15 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>1 hour</td>
-        /// <td>3 days ≤ Time range per query &lt; 31 days</td>
+        /// <td>3 days ≤ Time range for a single query &lt; 31 days</td>
         /// <td>186 days</td>
         /// <td>Generally 3 to 4 hours</td>
         /// </tr>
@@ -12431,40 +12439,40 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to query the traffic data of an accelerated domain name. Compared with the DescribeVodDomainTrafficData operation, this operation supports a smaller time granularity (minimum of 1 minute), lower data latency (minimum of 5 minutes), but a shorter historical data range (up to 186 days).</para>
+        /// <para>Queries the traffic data of accelerated domain names. Compared with the DescribeVodDomainTrafficData operation, this operation supports a finer time granularity (as fine as 1 minute) and lower data latency (as low as 5 minutes), but covers a shorter historical data time range (up to the last 186 days).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The service address of this operation supports only <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>Batch queries are supported. You can query data for up to 100 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the last hour by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the specified time range.
+        /// <item><description>Currently, the endpoint for this operation only supports <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Supports batch queries. You can query the data of up to 100 domain names at a time.</description></item>
+        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns the data of the last hour by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns the data within the specified time range.
         /// <b>Time granularity of returned data</b>
-        /// The time granularity of returned data varies based on the time range specified by <c>StartTime</c> and <c>EndTime</c>. The following table describes the queryable historical data range and data latency for each time granularity:<table>
+        /// The time granularity of the returned data varies based on the time range specified by <c>StartTime</c> and <c>EndTime</c>. The corresponding historical data time range and data latency are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
-        /// <th>Time range per query</th>
-        /// <th>Queryable historical data range</th>
+        /// <th>Time range for a single query</th>
+        /// <th>Historical data time range</th>
         /// <th>Data latency</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td>1 minute</td>
-        /// <td>Time range per query ≤ 1 hour</td>
+        /// <td>Time range for a single query ≤ 1 hour</td>
         /// <td>7 days</td>
         /// <td>5 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>5 minutes</td>
-        /// <td>1 hour &lt; Time range per query &lt; 3 days</td>
+        /// <td>1 hour &lt; Time range for a single query &lt; 3 days</td>
         /// <td>93 days</td>
         /// <td>15 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>1 hour</td>
-        /// <td>3 days ≤ Time range per query &lt; 31 days</td>
+        /// <td>3 days ≤ Time range for a single query &lt; 31 days</td>
         /// <td>186 days</td>
         /// <td>Generally 3 to 4 hours</td>
         /// </tr>
@@ -12488,40 +12496,40 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to query the traffic data of an accelerated domain name. Compared with the DescribeVodDomainTrafficData operation, this operation supports a smaller time granularity (minimum of 1 minute), lower data latency (minimum of 5 minutes), but a shorter historical data range (up to 186 days).</para>
+        /// <para>Queries the traffic data of accelerated domain names. Compared with the DescribeVodDomainTrafficData operation, this operation supports a finer time granularity (as fine as 1 minute) and lower data latency (as low as 5 minutes), but covers a shorter historical data time range (up to the last 186 days).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The service address of this operation supports only <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>Batch queries are supported. You can query data for up to 100 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the last hour by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the specified time range.
+        /// <item><description>Currently, the endpoint for this operation only supports <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Supports batch queries. You can query the data of up to 100 domain names at a time.</description></item>
+        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns the data of the last hour by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns the data within the specified time range.
         /// <b>Time granularity of returned data</b>
-        /// The time granularity of returned data varies based on the time range specified by <c>StartTime</c> and <c>EndTime</c>. The following table describes the queryable historical data range and data latency for each time granularity:<table>
+        /// The time granularity of the returned data varies based on the time range specified by <c>StartTime</c> and <c>EndTime</c>. The corresponding historical data time range and data latency are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
-        /// <th>Time range per query</th>
-        /// <th>Queryable historical data range</th>
+        /// <th>Time range for a single query</th>
+        /// <th>Historical data time range</th>
         /// <th>Data latency</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td>1 minute</td>
-        /// <td>Time range per query ≤ 1 hour</td>
+        /// <td>Time range for a single query ≤ 1 hour</td>
         /// <td>7 days</td>
         /// <td>5 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>5 minutes</td>
-        /// <td>1 hour &lt; Time range per query &lt; 3 days</td>
+        /// <td>1 hour &lt; Time range for a single query &lt; 3 days</td>
         /// <td>93 days</td>
         /// <td>15 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>1 hour</td>
-        /// <td>3 days ≤ Time range per query &lt; 31 days</td>
+        /// <td>3 days ≤ Time range for a single query &lt; 31 days</td>
         /// <td>186 days</td>
         /// <td>Generally 3 to 4 hours</td>
         /// </tr>
@@ -12545,42 +12553,42 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the request hit ratio (percentage of hit requests) of an accelerated domain name.</para>
+        /// <para>Queries the request hit ratio (percentage of hit requests) of accelerated domain names.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation supports only the following service address: <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>Batch query is supported. You can query data of up to 500 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data of the last 24 hours by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data of the specified time range.
-        /// <b>Time granularity of returned data</b>
-        /// Based on the time span specified by <c>StartTime</c> and <c>EndTime</c>, and when <c>Interval</c> is not set, the default time granularity of returned data, the queryable historical data time range, and data latency are as follows:<table>
+        /// <item><description>Currently, the endpoint for this API operation supports only <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Batch queries are supported. You can query data for up to 500 domain names at a time.</description></item>
+        /// <item><description>If you do not specify StartTime and EndTime, this API operation returns data for the last 24 hours by default. If you specify StartTime and EndTime, this API operation returns data for the specified time range.
+        /// <b>Returned data time granularity</b>
+        /// Based on the time span specified by <c>StartTime</c> and <c>EndTime</c>, if <c>Interval</c> is not specified, the default data time granularity, the corresponding time range of historical data that can be queried, and the data delay are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
-        /// <th>Time span per query</th>
-        /// <th>Queryable historical data time range</th>
-        /// <th>Data latency</th>
+        /// <th>Time span for a single query</th>
+        /// <th>Time range of historical data that can be queried</th>
+        /// <th>Data delay</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td>5 minutes</td>
-        /// <td>Time span per query &lt; 3 days</td>
+        /// <td>Time span for a single query &lt; 3 days</td>
         /// <td>93 days</td>
         /// <td>15 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>1 hour</td>
-        /// <td>3 days ≤ Time span per query &lt; 31 days</td>
+        /// <td>3 days ≤ Time span for a single query &lt; 31 days</td>
         /// <td>186 days</td>
         /// <td>Generally 3 to 4 hours</td>
         /// </tr>
         /// <tr>
         /// <td>1 day</td>
-        /// <td>31 days ≤ Time span per query ≤ 90 days</td>
+        /// <td>31 days ≤ Time span for a single query ≤ 90 days</td>
         /// <td>366 days</td>
-        /// <td>Generally 4 hours, no more than 24 hours</td>
+        /// <td>Generally 4 hours, up to 24 hours</td>
         /// </tr>
         /// </tbody></table>
         /// </description></item>
@@ -12638,42 +12646,42 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the request hit ratio (percentage of hit requests) of an accelerated domain name.</para>
+        /// <para>Queries the request hit ratio (percentage of hit requests) of accelerated domain names.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation supports only the following service address: <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>Batch query is supported. You can query data of up to 500 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data of the last 24 hours by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data of the specified time range.
-        /// <b>Time granularity of returned data</b>
-        /// Based on the time span specified by <c>StartTime</c> and <c>EndTime</c>, and when <c>Interval</c> is not set, the default time granularity of returned data, the queryable historical data time range, and data latency are as follows:<table>
+        /// <item><description>Currently, the endpoint for this API operation supports only <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Batch queries are supported. You can query data for up to 500 domain names at a time.</description></item>
+        /// <item><description>If you do not specify StartTime and EndTime, this API operation returns data for the last 24 hours by default. If you specify StartTime and EndTime, this API operation returns data for the specified time range.
+        /// <b>Returned data time granularity</b>
+        /// Based on the time span specified by <c>StartTime</c> and <c>EndTime</c>, if <c>Interval</c> is not specified, the default data time granularity, the corresponding time range of historical data that can be queried, and the data delay are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
-        /// <th>Time span per query</th>
-        /// <th>Queryable historical data time range</th>
-        /// <th>Data latency</th>
+        /// <th>Time span for a single query</th>
+        /// <th>Time range of historical data that can be queried</th>
+        /// <th>Data delay</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td>5 minutes</td>
-        /// <td>Time span per query &lt; 3 days</td>
+        /// <td>Time span for a single query &lt; 3 days</td>
         /// <td>93 days</td>
         /// <td>15 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>1 hour</td>
-        /// <td>3 days ≤ Time span per query &lt; 31 days</td>
+        /// <td>3 days ≤ Time span for a single query &lt; 31 days</td>
         /// <td>186 days</td>
         /// <td>Generally 3 to 4 hours</td>
         /// </tr>
         /// <tr>
         /// <td>1 day</td>
-        /// <td>31 days ≤ Time span per query ≤ 90 days</td>
+        /// <td>31 days ≤ Time span for a single query ≤ 90 days</td>
         /// <td>366 days</td>
-        /// <td>Generally 4 hours, no more than 24 hours</td>
+        /// <td>Generally 4 hours, up to 24 hours</td>
         /// </tr>
         /// </tbody></table>
         /// </description></item>
@@ -12731,42 +12739,42 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the request hit ratio (percentage of hit requests) of an accelerated domain name.</para>
+        /// <para>Queries the request hit ratio (percentage of hit requests) of accelerated domain names.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation supports only the following service address: <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>Batch query is supported. You can query data of up to 500 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data of the last 24 hours by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data of the specified time range.
-        /// <b>Time granularity of returned data</b>
-        /// Based on the time span specified by <c>StartTime</c> and <c>EndTime</c>, and when <c>Interval</c> is not set, the default time granularity of returned data, the queryable historical data time range, and data latency are as follows:<table>
+        /// <item><description>Currently, the endpoint for this API operation supports only <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Batch queries are supported. You can query data for up to 500 domain names at a time.</description></item>
+        /// <item><description>If you do not specify StartTime and EndTime, this API operation returns data for the last 24 hours by default. If you specify StartTime and EndTime, this API operation returns data for the specified time range.
+        /// <b>Returned data time granularity</b>
+        /// Based on the time span specified by <c>StartTime</c> and <c>EndTime</c>, if <c>Interval</c> is not specified, the default data time granularity, the corresponding time range of historical data that can be queried, and the data delay are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
-        /// <th>Time span per query</th>
-        /// <th>Queryable historical data time range</th>
-        /// <th>Data latency</th>
+        /// <th>Time span for a single query</th>
+        /// <th>Time range of historical data that can be queried</th>
+        /// <th>Data delay</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td>5 minutes</td>
-        /// <td>Time span per query &lt; 3 days</td>
+        /// <td>Time span for a single query &lt; 3 days</td>
         /// <td>93 days</td>
         /// <td>15 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>1 hour</td>
-        /// <td>3 days ≤ Time span per query &lt; 31 days</td>
+        /// <td>3 days ≤ Time span for a single query &lt; 31 days</td>
         /// <td>186 days</td>
         /// <td>Generally 3 to 4 hours</td>
         /// </tr>
         /// <tr>
         /// <td>1 day</td>
-        /// <td>31 days ≤ Time span per query ≤ 90 days</td>
+        /// <td>31 days ≤ Time span for a single query ≤ 90 days</td>
         /// <td>366 days</td>
-        /// <td>Generally 4 hours, no more than 24 hours</td>
+        /// <td>Generally 4 hours, up to 24 hours</td>
         /// </tr>
         /// </tbody></table>
         /// </description></item>
@@ -12788,42 +12796,42 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the request hit ratio (percentage of hit requests) of an accelerated domain name.</para>
+        /// <para>Queries the request hit ratio (percentage of hit requests) of accelerated domain names.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation supports only the following service address: <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>Batch query is supported. You can query data of up to 500 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data of the last 24 hours by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data of the specified time range.
-        /// <b>Time granularity of returned data</b>
-        /// Based on the time span specified by <c>StartTime</c> and <c>EndTime</c>, and when <c>Interval</c> is not set, the default time granularity of returned data, the queryable historical data time range, and data latency are as follows:<table>
+        /// <item><description>Currently, the endpoint for this API operation supports only <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Batch queries are supported. You can query data for up to 500 domain names at a time.</description></item>
+        /// <item><description>If you do not specify StartTime and EndTime, this API operation returns data for the last 24 hours by default. If you specify StartTime and EndTime, this API operation returns data for the specified time range.
+        /// <b>Returned data time granularity</b>
+        /// Based on the time span specified by <c>StartTime</c> and <c>EndTime</c>, if <c>Interval</c> is not specified, the default data time granularity, the corresponding time range of historical data that can be queried, and the data delay are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
-        /// <th>Time span per query</th>
-        /// <th>Queryable historical data time range</th>
-        /// <th>Data latency</th>
+        /// <th>Time span for a single query</th>
+        /// <th>Time range of historical data that can be queried</th>
+        /// <th>Data delay</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td>5 minutes</td>
-        /// <td>Time span per query &lt; 3 days</td>
+        /// <td>Time span for a single query &lt; 3 days</td>
         /// <td>93 days</td>
         /// <td>15 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>1 hour</td>
-        /// <td>3 days ≤ Time span per query &lt; 31 days</td>
+        /// <td>3 days ≤ Time span for a single query &lt; 31 days</td>
         /// <td>186 days</td>
         /// <td>Generally 3 to 4 hours</td>
         /// </tr>
         /// <tr>
         /// <td>1 day</td>
-        /// <td>31 days ≤ Time span per query ≤ 90 days</td>
+        /// <td>31 days ≤ Time span for a single query ≤ 90 days</td>
         /// <td>366 days</td>
-        /// <td>Generally 4 hours, no more than 24 hours</td>
+        /// <td>Generally 4 hours, up to 24 hours</td>
         /// </tr>
         /// </tbody></table>
         /// </description></item>
@@ -12851,34 +12859,34 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation supports only the following service address: <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>Batch queries are supported. You can query data for up to 500 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data from the past 24 hours by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the specified time range.
-        /// <b>Time granularity of returned data</b>
-        /// Based on the time span specified by <c>StartTime</c> and <c>EndTime</c>, and when <c>Interval</c> is not set, the default time granularity of returned data, the queryable historical data range, and data latency are as follows:<table>
+        /// <item><description>Currently, the endpoint for this API operation only supports <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Supports batch queries. You can query data for up to 500 domain names at a time.</description></item>
+        /// <item><description>If you do not specify StartTime and EndTime, this API operation returns data for the last 24 hours by default. If you specify StartTime and EndTime, this API operation returns data for the specified time period.
+        /// <b>Time granularity of the returned data timestamp</b>
+        /// If you do not specify the Interval Settings, the default time granularity of the returned data timestamp, the queryable time range of historical data, and the data delay vary based on the time span specified by StartTime and EndTime. The details are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
-        /// <th>Time span per query</th>
-        /// <th>Queryable historical data range</th>
-        /// <th>Data latency</th>
+        /// <th>Time span for a single query</th>
+        /// <th>Time range of queryable historical data</th>
+        /// <th>Data delay</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td>5 minutes</td>
-        /// <td>Time span per query &lt; 3 days</td>
+        /// <td>Time span for a single query &lt; 3 days</td>
         /// <td>93 days</td>
         /// <td>15 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>1 hour</td>
-        /// <td>3 days ≤ Time span per query &lt; 31 days</td>
+        /// <td>3 days ≤ Time span for a single query &lt; 31 days</td>
         /// <td>186 days</td>
         /// <td>Generally 3 to 4 hours</td>
         /// </tr>
         /// <tr>
         /// <td>1 day</td>
-        /// <td>31 days ≤ Time span per query ≤ 366 days</td>
+        /// <td>31 days ≤ Time span for a single query ≤ 366 days</td>
         /// <td>366 days</td>
         /// <td>Generally 4 hours, up to 24 hours</td>
         /// </tr>
@@ -12948,34 +12956,34 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation supports only the following service address: <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>Batch queries are supported. You can query data for up to 500 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data from the past 24 hours by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the specified time range.
-        /// <b>Time granularity of returned data</b>
-        /// Based on the time span specified by <c>StartTime</c> and <c>EndTime</c>, and when <c>Interval</c> is not set, the default time granularity of returned data, the queryable historical data range, and data latency are as follows:<table>
+        /// <item><description>Currently, the endpoint for this API operation only supports <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Supports batch queries. You can query data for up to 500 domain names at a time.</description></item>
+        /// <item><description>If you do not specify StartTime and EndTime, this API operation returns data for the last 24 hours by default. If you specify StartTime and EndTime, this API operation returns data for the specified time period.
+        /// <b>Time granularity of the returned data timestamp</b>
+        /// If you do not specify the Interval Settings, the default time granularity of the returned data timestamp, the queryable time range of historical data, and the data delay vary based on the time span specified by StartTime and EndTime. The details are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
-        /// <th>Time span per query</th>
-        /// <th>Queryable historical data range</th>
-        /// <th>Data latency</th>
+        /// <th>Time span for a single query</th>
+        /// <th>Time range of queryable historical data</th>
+        /// <th>Data delay</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td>5 minutes</td>
-        /// <td>Time span per query &lt; 3 days</td>
+        /// <td>Time span for a single query &lt; 3 days</td>
         /// <td>93 days</td>
         /// <td>15 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>1 hour</td>
-        /// <td>3 days ≤ Time span per query &lt; 31 days</td>
+        /// <td>3 days ≤ Time span for a single query &lt; 31 days</td>
         /// <td>186 days</td>
         /// <td>Generally 3 to 4 hours</td>
         /// </tr>
         /// <tr>
         /// <td>1 day</td>
-        /// <td>31 days ≤ Time span per query ≤ 366 days</td>
+        /// <td>31 days ≤ Time span for a single query ≤ 366 days</td>
         /// <td>366 days</td>
         /// <td>Generally 4 hours, up to 24 hours</td>
         /// </tr>
@@ -13045,34 +13053,34 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation supports only the following service address: <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>Batch queries are supported. You can query data for up to 500 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data from the past 24 hours by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the specified time range.
-        /// <b>Time granularity of returned data</b>
-        /// Based on the time span specified by <c>StartTime</c> and <c>EndTime</c>, and when <c>Interval</c> is not set, the default time granularity of returned data, the queryable historical data range, and data latency are as follows:<table>
+        /// <item><description>Currently, the endpoint for this API operation only supports <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Supports batch queries. You can query data for up to 500 domain names at a time.</description></item>
+        /// <item><description>If you do not specify StartTime and EndTime, this API operation returns data for the last 24 hours by default. If you specify StartTime and EndTime, this API operation returns data for the specified time period.
+        /// <b>Time granularity of the returned data timestamp</b>
+        /// If you do not specify the Interval Settings, the default time granularity of the returned data timestamp, the queryable time range of historical data, and the data delay vary based on the time span specified by StartTime and EndTime. The details are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
-        /// <th>Time span per query</th>
-        /// <th>Queryable historical data range</th>
-        /// <th>Data latency</th>
+        /// <th>Time span for a single query</th>
+        /// <th>Time range of queryable historical data</th>
+        /// <th>Data delay</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td>5 minutes</td>
-        /// <td>Time span per query &lt; 3 days</td>
+        /// <td>Time span for a single query &lt; 3 days</td>
         /// <td>93 days</td>
         /// <td>15 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>1 hour</td>
-        /// <td>3 days ≤ Time span per query &lt; 31 days</td>
+        /// <td>3 days ≤ Time span for a single query &lt; 31 days</td>
         /// <td>186 days</td>
         /// <td>Generally 3 to 4 hours</td>
         /// </tr>
         /// <tr>
         /// <td>1 day</td>
-        /// <td>31 days ≤ Time span per query ≤ 366 days</td>
+        /// <td>31 days ≤ Time span for a single query ≤ 366 days</td>
         /// <td>366 days</td>
         /// <td>Generally 4 hours, up to 24 hours</td>
         /// </tr>
@@ -13102,34 +13110,34 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation supports only the following service address: <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>Batch queries are supported. You can query data for up to 500 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data from the past 24 hours by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the specified time range.
-        /// <b>Time granularity of returned data</b>
-        /// Based on the time span specified by <c>StartTime</c> and <c>EndTime</c>, and when <c>Interval</c> is not set, the default time granularity of returned data, the queryable historical data range, and data latency are as follows:<table>
+        /// <item><description>Currently, the endpoint for this API operation only supports <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Supports batch queries. You can query data for up to 500 domain names at a time.</description></item>
+        /// <item><description>If you do not specify StartTime and EndTime, this API operation returns data for the last 24 hours by default. If you specify StartTime and EndTime, this API operation returns data for the specified time period.
+        /// <b>Time granularity of the returned data timestamp</b>
+        /// If you do not specify the Interval Settings, the default time granularity of the returned data timestamp, the queryable time range of historical data, and the data delay vary based on the time span specified by StartTime and EndTime. The details are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
-        /// <th>Time span per query</th>
-        /// <th>Queryable historical data range</th>
-        /// <th>Data latency</th>
+        /// <th>Time span for a single query</th>
+        /// <th>Time range of queryable historical data</th>
+        /// <th>Data delay</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td>5 minutes</td>
-        /// <td>Time span per query &lt; 3 days</td>
+        /// <td>Time span for a single query &lt; 3 days</td>
         /// <td>93 days</td>
         /// <td>15 minutes</td>
         /// </tr>
         /// <tr>
         /// <td>1 hour</td>
-        /// <td>3 days ≤ Time span per query &lt; 31 days</td>
+        /// <td>3 days ≤ Time span for a single query &lt; 31 days</td>
         /// <td>186 days</td>
         /// <td>Generally 3 to 4 hours</td>
         /// </tr>
         /// <tr>
         /// <td>1 day</td>
-        /// <td>31 days ≤ Time span per query ≤ 366 days</td>
+        /// <td>31 days ≤ Time span for a single query ≤ 366 days</td>
         /// <td>366 days</td>
         /// <td>Generally 4 hours, up to 24 hours</td>
         /// </tr>
@@ -13159,16 +13167,16 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation supports only the following service address: <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Currently, the endpoint for this API operation supports only <b>China (Shanghai)</b>.</description></item>
         /// <item><description>Batch queries are supported. You can query data for up to 500 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data from the past 24 hours by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the specified time range.
-        /// <b>Time granularity of returned data</b>
-        /// Based on the time span specified by <c>StartTime</c> and <c>EndTime</c>, and when <c>Interval</c> is not set at the same time, the default time granularity, the queryable historical data range, and data delay are as follows:<table>
+        /// <item><description>If you do not specify StartTime and EndTime, this API operation returns data for the last 24 hours by default. If you specify StartTime and EndTime, this API operation returns data for the specified time range.
+        /// <b>Time granularity of returned data timestamps</b>
+        /// If you do not specify the Interval Settings, the default time granularity of the returned data timestamps, the time range of historical data that can be queried, and the data delay vary based on the time span between StartTime and EndTime. The details are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
         /// <th>Time span per query</th>
-        /// <th>Queryable historical data range</th>
+        /// <th>Time range of queryable historical data</th>
         /// <th>Data delay</th>
         /// </tr>
         /// </thead>
@@ -13182,13 +13190,13 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <td>1 hour</td>
         /// <td>3 days ≤ Time span per query &lt; 31 days</td>
         /// <td>186 days</td>
-        /// <td>Generally 3 to 4 hours</td>
+        /// <td>Typically 3 to 4 hours</td>
         /// </tr>
         /// <tr>
         /// <td>1 day</td>
         /// <td>31 days ≤ Time span per query ≤ 366 days</td>
         /// <td>366 days</td>
-        /// <td>Generally 4 hours, up to 24 hours</td>
+        /// <td>Typically 4 hours, up to 24 hours</td>
         /// </tr>
         /// </tbody></table>
         /// </description></item>
@@ -13256,16 +13264,16 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation supports only the following service address: <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Currently, the endpoint for this API operation supports only <b>China (Shanghai)</b>.</description></item>
         /// <item><description>Batch queries are supported. You can query data for up to 500 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data from the past 24 hours by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the specified time range.
-        /// <b>Time granularity of returned data</b>
-        /// Based on the time span specified by <c>StartTime</c> and <c>EndTime</c>, and when <c>Interval</c> is not set at the same time, the default time granularity, the queryable historical data range, and data delay are as follows:<table>
+        /// <item><description>If you do not specify StartTime and EndTime, this API operation returns data for the last 24 hours by default. If you specify StartTime and EndTime, this API operation returns data for the specified time range.
+        /// <b>Time granularity of returned data timestamps</b>
+        /// If you do not specify the Interval Settings, the default time granularity of the returned data timestamps, the time range of historical data that can be queried, and the data delay vary based on the time span between StartTime and EndTime. The details are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
         /// <th>Time span per query</th>
-        /// <th>Queryable historical data range</th>
+        /// <th>Time range of queryable historical data</th>
         /// <th>Data delay</th>
         /// </tr>
         /// </thead>
@@ -13279,13 +13287,13 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <td>1 hour</td>
         /// <td>3 days ≤ Time span per query &lt; 31 days</td>
         /// <td>186 days</td>
-        /// <td>Generally 3 to 4 hours</td>
+        /// <td>Typically 3 to 4 hours</td>
         /// </tr>
         /// <tr>
         /// <td>1 day</td>
         /// <td>31 days ≤ Time span per query ≤ 366 days</td>
         /// <td>366 days</td>
-        /// <td>Generally 4 hours, up to 24 hours</td>
+        /// <td>Typically 4 hours, up to 24 hours</td>
         /// </tr>
         /// </tbody></table>
         /// </description></item>
@@ -13353,16 +13361,16 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation supports only the following service address: <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Currently, the endpoint for this API operation supports only <b>China (Shanghai)</b>.</description></item>
         /// <item><description>Batch queries are supported. You can query data for up to 500 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data from the past 24 hours by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the specified time range.
-        /// <b>Time granularity of returned data</b>
-        /// Based on the time span specified by <c>StartTime</c> and <c>EndTime</c>, and when <c>Interval</c> is not set at the same time, the default time granularity, the queryable historical data range, and data delay are as follows:<table>
+        /// <item><description>If you do not specify StartTime and EndTime, this API operation returns data for the last 24 hours by default. If you specify StartTime and EndTime, this API operation returns data for the specified time range.
+        /// <b>Time granularity of returned data timestamps</b>
+        /// If you do not specify the Interval Settings, the default time granularity of the returned data timestamps, the time range of historical data that can be queried, and the data delay vary based on the time span between StartTime and EndTime. The details are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
         /// <th>Time span per query</th>
-        /// <th>Queryable historical data range</th>
+        /// <th>Time range of queryable historical data</th>
         /// <th>Data delay</th>
         /// </tr>
         /// </thead>
@@ -13376,13 +13384,13 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <td>1 hour</td>
         /// <td>3 days ≤ Time span per query &lt; 31 days</td>
         /// <td>186 days</td>
-        /// <td>Generally 3 to 4 hours</td>
+        /// <td>Typically 3 to 4 hours</td>
         /// </tr>
         /// <tr>
         /// <td>1 day</td>
         /// <td>31 days ≤ Time span per query ≤ 366 days</td>
         /// <td>366 days</td>
-        /// <td>Generally 4 hours, up to 24 hours</td>
+        /// <td>Typically 4 hours, up to 24 hours</td>
         /// </tr>
         /// </tbody></table>
         /// </description></item>
@@ -13410,16 +13418,16 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation supports only the following service address: <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Currently, the endpoint for this API operation supports only <b>China (Shanghai)</b>.</description></item>
         /// <item><description>Batch queries are supported. You can query data for up to 500 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data from the past 24 hours by default. If you specify <c>StartTime</c> and <c>EndTime</c>, this operation returns data for the specified time range.
-        /// <b>Time granularity of returned data</b>
-        /// Based on the time span specified by <c>StartTime</c> and <c>EndTime</c>, and when <c>Interval</c> is not set at the same time, the default time granularity, the queryable historical data range, and data delay are as follows:<table>
+        /// <item><description>If you do not specify StartTime and EndTime, this API operation returns data for the last 24 hours by default. If you specify StartTime and EndTime, this API operation returns data for the specified time range.
+        /// <b>Time granularity of returned data timestamps</b>
+        /// If you do not specify the Interval Settings, the default time granularity of the returned data timestamps, the time range of historical data that can be queried, and the data delay vary based on the time span between StartTime and EndTime. The details are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
         /// <th>Time span per query</th>
-        /// <th>Queryable historical data range</th>
+        /// <th>Time range of queryable historical data</th>
         /// <th>Data delay</th>
         /// </tr>
         /// </thead>
@@ -13433,13 +13441,13 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <td>1 hour</td>
         /// <td>3 days ≤ Time span per query &lt; 31 days</td>
         /// <td>186 days</td>
-        /// <td>Generally 3 to 4 hours</td>
+        /// <td>Typically 3 to 4 hours</td>
         /// </tr>
         /// <tr>
         /// <td>1 day</td>
         /// <td>31 days ≤ Time span per query ≤ 366 days</td>
         /// <td>366 days</td>
-        /// <td>Generally 4 hours, up to 24 hours</td>
+        /// <td>Typically 4 hours, up to 24 hours</td>
         /// </tr>
         /// </tbody></table>
         /// </description></item>
@@ -13461,22 +13469,22 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to query the traffic data of an accelerated domain name. Compared with the DescribeVodDomainRealTimeTrafficData operation, this operation supports a longer historical data query range (up to 366 days) but provides a larger data time granularity (minimum of 5 minutes) and higher data latency.</para>
+        /// <para>Queries the traffic data of accelerated domain names. Compared with the DescribeVodDomainRealTimeTrafficData operation, this operation supports a longer time range for querying historical data (up to the last 366 days), but has a larger time granularity (minimum of 5 minutes) and higher data latency.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The service address of this operation supports only <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Currently, the endpoint for this operation is supported only in <b>China (Shanghai)</b>.</description></item>
         /// <item><description>Batch queries are supported. You can query data for up to 500 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, data of the last 24 hours is returned by default. If you specify <c>StartTime</c> and <c>EndTime</c>, data of the specified time range is returned.
-        /// <b>Data time granularity of returned data</b>
-        /// The following table describes the default data time granularity of returned data, the queryable historical data range, and the data latency based on the time span specified by <c>StartTime</c> and <c>EndTime</c> when <c>Interval</c> is not set:<table>
+        /// <item><description>If you do not specify StartTime and EndTime, this operation returns data for the last 24 hours by default. If you specify StartTime and EndTime, this operation returns data for the specified time range.
+        /// <b>Time granularity of returned data</b>
+        /// Based on the time span between the specified <c>StartTime</c> and <c>EndTime</c>, and when <c>Interval</c> is not specified, the default time granularity of the returned data, the corresponding time range for querying historical data, and the data latency are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
         /// <th>Time span per query</th>
-        /// <th>Queryable historical data range</th>
+        /// <th>Time range for querying historical data</th>
         /// <th>Data latency</th>
         /// </tr>
         /// </thead>
@@ -13566,22 +13574,22 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to query the traffic data of an accelerated domain name. Compared with the DescribeVodDomainRealTimeTrafficData operation, this operation supports a longer historical data query range (up to 366 days) but provides a larger data time granularity (minimum of 5 minutes) and higher data latency.</para>
+        /// <para>Queries the traffic data of accelerated domain names. Compared with the DescribeVodDomainRealTimeTrafficData operation, this operation supports a longer time range for querying historical data (up to the last 366 days), but has a larger time granularity (minimum of 5 minutes) and higher data latency.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The service address of this operation supports only <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Currently, the endpoint for this operation is supported only in <b>China (Shanghai)</b>.</description></item>
         /// <item><description>Batch queries are supported. You can query data for up to 500 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, data of the last 24 hours is returned by default. If you specify <c>StartTime</c> and <c>EndTime</c>, data of the specified time range is returned.
-        /// <b>Data time granularity of returned data</b>
-        /// The following table describes the default data time granularity of returned data, the queryable historical data range, and the data latency based on the time span specified by <c>StartTime</c> and <c>EndTime</c> when <c>Interval</c> is not set:<table>
+        /// <item><description>If you do not specify StartTime and EndTime, this operation returns data for the last 24 hours by default. If you specify StartTime and EndTime, this operation returns data for the specified time range.
+        /// <b>Time granularity of returned data</b>
+        /// Based on the time span between the specified <c>StartTime</c> and <c>EndTime</c>, and when <c>Interval</c> is not specified, the default time granularity of the returned data, the corresponding time range for querying historical data, and the data latency are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
         /// <th>Time span per query</th>
-        /// <th>Queryable historical data range</th>
+        /// <th>Time range for querying historical data</th>
         /// <th>Data latency</th>
         /// </tr>
         /// </thead>
@@ -13671,22 +13679,22 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to query the traffic data of an accelerated domain name. Compared with the DescribeVodDomainRealTimeTrafficData operation, this operation supports a longer historical data query range (up to 366 days) but provides a larger data time granularity (minimum of 5 minutes) and higher data latency.</para>
+        /// <para>Queries the traffic data of accelerated domain names. Compared with the DescribeVodDomainRealTimeTrafficData operation, this operation supports a longer time range for querying historical data (up to the last 366 days), but has a larger time granularity (minimum of 5 minutes) and higher data latency.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The service address of this operation supports only <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Currently, the endpoint for this operation is supported only in <b>China (Shanghai)</b>.</description></item>
         /// <item><description>Batch queries are supported. You can query data for up to 500 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, data of the last 24 hours is returned by default. If you specify <c>StartTime</c> and <c>EndTime</c>, data of the specified time range is returned.
-        /// <b>Data time granularity of returned data</b>
-        /// The following table describes the default data time granularity of returned data, the queryable historical data range, and the data latency based on the time span specified by <c>StartTime</c> and <c>EndTime</c> when <c>Interval</c> is not set:<table>
+        /// <item><description>If you do not specify StartTime and EndTime, this operation returns data for the last 24 hours by default. If you specify StartTime and EndTime, this operation returns data for the specified time range.
+        /// <b>Time granularity of returned data</b>
+        /// Based on the time span between the specified <c>StartTime</c> and <c>EndTime</c>, and when <c>Interval</c> is not specified, the default time granularity of the returned data, the corresponding time range for querying historical data, and the data latency are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
         /// <th>Time span per query</th>
-        /// <th>Queryable historical data range</th>
+        /// <th>Time range for querying historical data</th>
         /// <th>Data latency</th>
         /// </tr>
         /// </thead>
@@ -13728,22 +13736,22 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to query the traffic data of an accelerated domain name. Compared with the DescribeVodDomainRealTimeTrafficData operation, this operation supports a longer historical data query range (up to 366 days) but provides a larger data time granularity (minimum of 5 minutes) and higher data latency.</para>
+        /// <para>Queries the traffic data of accelerated domain names. Compared with the DescribeVodDomainRealTimeTrafficData operation, this operation supports a longer time range for querying historical data (up to the last 366 days), but has a larger time granularity (minimum of 5 minutes) and higher data latency.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The service address of this operation supports only <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Currently, the endpoint for this operation is supported only in <b>China (Shanghai)</b>.</description></item>
         /// <item><description>Batch queries are supported. You can query data for up to 500 domain names at a time.</description></item>
-        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, data of the last 24 hours is returned by default. If you specify <c>StartTime</c> and <c>EndTime</c>, data of the specified time range is returned.
-        /// <b>Data time granularity of returned data</b>
-        /// The following table describes the default data time granularity of returned data, the queryable historical data range, and the data latency based on the time span specified by <c>StartTime</c> and <c>EndTime</c> when <c>Interval</c> is not set:<table>
+        /// <item><description>If you do not specify StartTime and EndTime, this operation returns data for the last 24 hours by default. If you specify StartTime and EndTime, this operation returns data for the specified time range.
+        /// <b>Time granularity of returned data</b>
+        /// Based on the time span between the specified <c>StartTime</c> and <c>EndTime</c>, and when <c>Interval</c> is not specified, the default time granularity of the returned data, the corresponding time range for querying historical data, and the data latency are as follows:<table>
         /// <thead>
         /// <tr>
         /// <th>Time granularity</th>
         /// <th>Time span per query</th>
-        /// <th>Queryable historical data range</th>
+        /// <th>Time range for querying historical data</th>
         /// <th>Data latency</th>
         /// </tr>
         /// </thead>
@@ -14557,7 +14565,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries aggregated playback data of the player.</para>
+        /// <para>Queries the aggregated playback data of the player.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14627,7 +14635,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries aggregated playback data of the player.</para>
+        /// <para>Queries the aggregated playback data of the player.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14697,7 +14705,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries aggregated playback data of the player.</para>
+        /// <para>Queries the aggregated playback data of the player.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14715,7 +14723,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries aggregated playback data of the player.</para>
+        /// <para>Queries the aggregated playback data of the player.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14733,7 +14741,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the dimension metadata of the player.</para>
+        /// <para>Queries the metadata of player dimensions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14791,7 +14799,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the dimension metadata of the player.</para>
+        /// <para>Queries the metadata of player dimensions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14849,7 +14857,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the dimension metadata of the player.</para>
+        /// <para>Queries the metadata of player dimensions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14867,7 +14875,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the dimension metadata of the player.</para>
+        /// <para>Queries the metadata of player dimensions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15517,15 +15525,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether purge and prefetch tasks have taken effect.</para>
+        /// <para>Queries whether refresh and prefetch tasks have taken effect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, the service address supports only <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>If neither Taskid nor Objectpath is specified, the first page of data (20 entries) within the last 3 days is returned by default. Taskid and Objectpath can be specified at the same time.</description></item>
-        /// <item><description>When DomainName or Status is specified, ObjectType is required.</description></item>
+        /// <item><description>Currently, the service endpoint supports only <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>If neither TaskId nor ObjectPath is specified, the system queries the first page of data (20 entries) generated within the last three days by default. You can specify both TaskId and ObjectPath at the same time.</description></item>
+        /// <item><description>If you specify DomainName or Status, ObjectType is required.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15608,15 +15616,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether purge and prefetch tasks have taken effect.</para>
+        /// <para>Queries whether refresh and prefetch tasks have taken effect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, the service address supports only <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>If neither Taskid nor Objectpath is specified, the first page of data (20 entries) within the last 3 days is returned by default. Taskid and Objectpath can be specified at the same time.</description></item>
-        /// <item><description>When DomainName or Status is specified, ObjectType is required.</description></item>
+        /// <item><description>Currently, the service endpoint supports only <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>If neither TaskId nor ObjectPath is specified, the system queries the first page of data (20 entries) generated within the last three days by default. You can specify both TaskId and ObjectPath at the same time.</description></item>
+        /// <item><description>If you specify DomainName or Status, ObjectType is required.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15699,15 +15707,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether purge and prefetch tasks have taken effect.</para>
+        /// <para>Queries whether refresh and prefetch tasks have taken effect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, the service address supports only <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>If neither Taskid nor Objectpath is specified, the first page of data (20 entries) within the last 3 days is returned by default. Taskid and Objectpath can be specified at the same time.</description></item>
-        /// <item><description>When DomainName or Status is specified, ObjectType is required.</description></item>
+        /// <item><description>Currently, the service endpoint supports only <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>If neither TaskId nor ObjectPath is specified, the system queries the first page of data (20 entries) generated within the last three days by default. You can specify both TaskId and ObjectPath at the same time.</description></item>
+        /// <item><description>If you specify DomainName or Status, ObjectType is required.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15726,15 +15734,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether purge and prefetch tasks have taken effect.</para>
+        /// <para>Queries whether refresh and prefetch tasks have taken effect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, the service address supports only <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>If neither Taskid nor Objectpath is specified, the first page of data (20 entries) within the last 3 days is returned by default. Taskid and Objectpath can be specified at the same time.</description></item>
-        /// <item><description>When DomainName or Status is specified, ObjectType is required.</description></item>
+        /// <item><description>Currently, the service endpoint supports only <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>If neither TaskId nor ObjectPath is specified, the system queries the first page of data (20 entries) generated within the last three days by default. You can specify both TaskId and ObjectPath at the same time.</description></item>
+        /// <item><description>If you specify DomainName or Status, ObjectType is required.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16733,14 +16741,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of all acceleration domain names under your account for ApsaraVideo VOD.</para>
+        /// <para>Queries all ApsaraVideo VOD accelerated domain names under your account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Supports fuzzy match filtering by domain name and filtering by domain name status.</description></item>
-        /// <item><description>This operation currently supports only the following region: <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Supports fuzzy match filtering and domain name status filtering.</description></item>
+        /// <item><description>This operation is currently available only in the following region: <b>China (Shanghai)</b>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16811,14 +16819,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of all acceleration domain names under your account for ApsaraVideo VOD.</para>
+        /// <para>Queries all ApsaraVideo VOD accelerated domain names under your account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Supports fuzzy match filtering by domain name and filtering by domain name status.</description></item>
-        /// <item><description>This operation currently supports only the following region: <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Supports fuzzy match filtering and domain name status filtering.</description></item>
+        /// <item><description>This operation is currently available only in the following region: <b>China (Shanghai)</b>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16889,14 +16897,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of all acceleration domain names under your account for ApsaraVideo VOD.</para>
+        /// <para>Queries all ApsaraVideo VOD accelerated domain names under your account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Supports fuzzy match filtering by domain name and filtering by domain name status.</description></item>
-        /// <item><description>This operation currently supports only the following region: <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Supports fuzzy match filtering and domain name status filtering.</description></item>
+        /// <item><description>This operation is currently available only in the following region: <b>China (Shanghai)</b>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16915,14 +16923,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of all acceleration domain names under your account for ApsaraVideo VOD.</para>
+        /// <para>Queries all ApsaraVideo VOD accelerated domain names under your account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Supports fuzzy match filtering by domain name and filtering by domain name status.</description></item>
-        /// <item><description>This operation currently supports only the following region: <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Supports fuzzy match filtering and domain name status filtering.</description></item>
+        /// <item><description>This operation is currently available only in the following region: <b>China (Shanghai)</b>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16941,7 +16949,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP list of a domain name.</para>
+        /// <para>Queries the IP address list of a domain name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16996,7 +17004,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP list of a domain name.</para>
+        /// <para>Queries the IP address list of a domain name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17051,7 +17059,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP list of a domain name.</para>
+        /// <para>Queries the IP address list of a domain name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17074,7 +17082,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP list of a domain name.</para>
+        /// <para>Queries the IP address list of a domain name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17437,14 +17445,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a key for secure download. The secure download feature of ApsaraVideo Player SDK encrypts videos downloaded to local devices by using a key file. The encrypted videos can only be decrypted and played by using the key file generated by the unique app that is bindable in advance. This effectively protects video content and prevents downloaded videos from being maliciously played or distributed.</para>
+        /// <para>Generates a key for secure download. The secure download feature of ApsaraVideo Player SDK encrypts videos with a key file when they are downloaded to a local device. This ensures that the videos can only be decrypted and played by using the key file generated by a pre-bound unique app, which effectively protects video content and prevents downloaded videos from being maliciously played or distributed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>To use the secure download feature, first enable the download feature in the ApsaraVideo VOD console and set the download method to secure download. For more information, see <a href="https://help.aliyun.com/document_detail/86107.html">Download settings</a>.</description></item>
-        /// <item><description>After generating a key for secure download, configure the key in ApsaraVideo Player SDK. For more information, see <a href="https://help.aliyun.com/document_detail/124735.html">Secure download</a>.</description></item>
+        /// <item><description>To use the secure download feature, you must first enable the download feature and set the download method to secure download in the ApsaraVideo VOD console. For more information, see <a href="https://help.aliyun.com/document_detail/86107.html">Download settings</a>.</description></item>
+        /// <item><description>After generating a key for secure download, you must configure the key in ApsaraVideo Player SDK. For more information, see <a href="https://help.aliyun.com/document_detail/124735.html">Secure download</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17503,14 +17511,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a key for secure download. The secure download feature of ApsaraVideo Player SDK encrypts videos downloaded to local devices by using a key file. The encrypted videos can only be decrypted and played by using the key file generated by the unique app that is bindable in advance. This effectively protects video content and prevents downloaded videos from being maliciously played or distributed.</para>
+        /// <para>Generates a key for secure download. The secure download feature of ApsaraVideo Player SDK encrypts videos with a key file when they are downloaded to a local device. This ensures that the videos can only be decrypted and played by using the key file generated by a pre-bound unique app, which effectively protects video content and prevents downloaded videos from being maliciously played or distributed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>To use the secure download feature, first enable the download feature in the ApsaraVideo VOD console and set the download method to secure download. For more information, see <a href="https://help.aliyun.com/document_detail/86107.html">Download settings</a>.</description></item>
-        /// <item><description>After generating a key for secure download, configure the key in ApsaraVideo Player SDK. For more information, see <a href="https://help.aliyun.com/document_detail/124735.html">Secure download</a>.</description></item>
+        /// <item><description>To use the secure download feature, you must first enable the download feature and set the download method to secure download in the ApsaraVideo VOD console. For more information, see <a href="https://help.aliyun.com/document_detail/86107.html">Download settings</a>.</description></item>
+        /// <item><description>After generating a key for secure download, you must configure the key in ApsaraVideo Player SDK. For more information, see <a href="https://help.aliyun.com/document_detail/124735.html">Secure download</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17569,14 +17577,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a key for secure download. The secure download feature of ApsaraVideo Player SDK encrypts videos downloaded to local devices by using a key file. The encrypted videos can only be decrypted and played by using the key file generated by the unique app that is bindable in advance. This effectively protects video content and prevents downloaded videos from being maliciously played or distributed.</para>
+        /// <para>Generates a key for secure download. The secure download feature of ApsaraVideo Player SDK encrypts videos with a key file when they are downloaded to a local device. This ensures that the videos can only be decrypted and played by using the key file generated by a pre-bound unique app, which effectively protects video content and prevents downloaded videos from being maliciously played or distributed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>To use the secure download feature, first enable the download feature in the ApsaraVideo VOD console and set the download method to secure download. For more information, see <a href="https://help.aliyun.com/document_detail/86107.html">Download settings</a>.</description></item>
-        /// <item><description>After generating a key for secure download, configure the key in ApsaraVideo Player SDK. For more information, see <a href="https://help.aliyun.com/document_detail/124735.html">Secure download</a>.</description></item>
+        /// <item><description>To use the secure download feature, you must first enable the download feature and set the download method to secure download in the ApsaraVideo VOD console. For more information, see <a href="https://help.aliyun.com/document_detail/86107.html">Download settings</a>.</description></item>
+        /// <item><description>After generating a key for secure download, you must configure the key in ApsaraVideo Player SDK. For more information, see <a href="https://help.aliyun.com/document_detail/124735.html">Secure download</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17595,14 +17603,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a key for secure download. The secure download feature of ApsaraVideo Player SDK encrypts videos downloaded to local devices by using a key file. The encrypted videos can only be decrypted and played by using the key file generated by the unique app that is bindable in advance. This effectively protects video content and prevents downloaded videos from being maliciously played or distributed.</para>
+        /// <para>Generates a key for secure download. The secure download feature of ApsaraVideo Player SDK encrypts videos with a key file when they are downloaded to a local device. This ensures that the videos can only be decrypted and played by using the key file generated by a pre-bound unique app, which effectively protects video content and prevents downloaded videos from being maliciously played or distributed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>To use the secure download feature, first enable the download feature in the ApsaraVideo VOD console and set the download method to secure download. For more information, see <a href="https://help.aliyun.com/document_detail/86107.html">Download settings</a>.</description></item>
-        /// <item><description>After generating a key for secure download, configure the key in ApsaraVideo Player SDK. For more information, see <a href="https://help.aliyun.com/document_detail/124735.html">Secure download</a>.</description></item>
+        /// <item><description>To use the secure download feature, you must first enable the download feature and set the download method to secure download in the ApsaraVideo VOD console. For more information, see <a href="https://help.aliyun.com/document_detail/86107.html">Download settings</a>.</description></item>
+        /// <item><description>After generating a key for secure download, you must configure the key in ApsaraVideo Player SDK. For more information, see <a href="https://help.aliyun.com/document_detail/124735.html">Secure download</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17765,14 +17773,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of AI image processing tasks.</para>
+        /// <para>Queries the list of AI image tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is supported in the following regions: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>Call the <a href="~~SubmitAIImageJob~~">SubmitAIImageJob</a> operation to submit an AI image processing task before you call this operation to query the list of AI image tasks.</description></item>
+        /// <item><description>This operation is supported in the following regions: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Submit an AI image processing task by calling the <a href="~~SubmitAIImageJob~~">SubmitAIImageJob</a> operation, and then call this operation to query the list of AI image tasks.</description></item>
         /// <item><description>You can query up to 10 AI image processing tasks at a time.</description></item>
         /// </list>
         /// </description>
@@ -17832,14 +17840,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of AI image processing tasks.</para>
+        /// <para>Queries the list of AI image tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is supported in the following regions: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>Call the <a href="~~SubmitAIImageJob~~">SubmitAIImageJob</a> operation to submit an AI image processing task before you call this operation to query the list of AI image tasks.</description></item>
+        /// <item><description>This operation is supported in the following regions: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Submit an AI image processing task by calling the <a href="~~SubmitAIImageJob~~">SubmitAIImageJob</a> operation, and then call this operation to query the list of AI image tasks.</description></item>
         /// <item><description>You can query up to 10 AI image processing tasks at a time.</description></item>
         /// </list>
         /// </description>
@@ -17899,14 +17907,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of AI image processing tasks.</para>
+        /// <para>Queries the list of AI image tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is supported in the following regions: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>Call the <a href="~~SubmitAIImageJob~~">SubmitAIImageJob</a> operation to submit an AI image processing task before you call this operation to query the list of AI image tasks.</description></item>
+        /// <item><description>This operation is supported in the following regions: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Submit an AI image processing task by calling the <a href="~~SubmitAIImageJob~~">SubmitAIImageJob</a> operation, and then call this operation to query the list of AI image tasks.</description></item>
         /// <item><description>You can query up to 10 AI image processing tasks at a time.</description></item>
         /// </list>
         /// </description>
@@ -17926,14 +17934,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of AI image processing tasks.</para>
+        /// <para>Queries the list of AI image tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is supported in the following regions: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>Call the <a href="~~SubmitAIImageJob~~">SubmitAIImageJob</a> operation to submit an AI image processing task before you call this operation to query the list of AI image tasks.</description></item>
+        /// <item><description>This operation is supported in the following regions: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Submit an AI image processing task by calling the <a href="~~SubmitAIImageJob~~">SubmitAIImageJob</a> operation, and then call this operation to query the list of AI image tasks.</description></item>
         /// <item><description>You can query up to 10 AI image processing tasks at a time.</description></item>
         /// </list>
         /// </description>
@@ -17953,7 +17961,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an automated review job. After you submit an AI job, the job is processed asynchronously. You can call this operation to query job information in real time.</para>
+        /// <para>Queries automated review jobs. After an AI job is submitted, it is processed asynchronously. You can call this operation to query the job information in real time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17961,7 +17969,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <list type="bullet">
         /// <item><description>This operation is supported only in the Singapore region.</description></item>
-        /// <item><description>Image resources in automated review job results are retained in the free storage provided by ApsaraVideo VOD for only two weeks. After two weeks, the images are automatically deleted.</description></item>
+        /// <item><description>Image resources in the results of automated review jobs are retained in the free storage provided by ApsaraVideo VOD for only two weeks. They are automatically deleted after two weeks.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18004,7 +18012,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an automated review job. After you submit an AI job, the job is processed asynchronously. You can call this operation to query job information in real time.</para>
+        /// <para>Queries automated review jobs. After an AI job is submitted, it is processed asynchronously. You can call this operation to query the job information in real time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -18012,7 +18020,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <list type="bullet">
         /// <item><description>This operation is supported only in the Singapore region.</description></item>
-        /// <item><description>Image resources in automated review job results are retained in the free storage provided by ApsaraVideo VOD for only two weeks. After two weeks, the images are automatically deleted.</description></item>
+        /// <item><description>Image resources in the results of automated review jobs are retained in the free storage provided by ApsaraVideo VOD for only two weeks. They are automatically deleted after two weeks.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18055,7 +18063,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an automated review job. After you submit an AI job, the job is processed asynchronously. You can call this operation to query job information in real time.</para>
+        /// <para>Queries automated review jobs. After an AI job is submitted, it is processed asynchronously. You can call this operation to query the job information in real time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -18063,7 +18071,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <list type="bullet">
         /// <item><description>This operation is supported only in the Singapore region.</description></item>
-        /// <item><description>Image resources in automated review job results are retained in the free storage provided by ApsaraVideo VOD for only two weeks. After two weeks, the images are automatically deleted.</description></item>
+        /// <item><description>Image resources in the results of automated review jobs are retained in the free storage provided by ApsaraVideo VOD for only two weeks. They are automatically deleted after two weeks.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18082,7 +18090,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an automated review job. After you submit an AI job, the job is processed asynchronously. You can call this operation to query job information in real time.</para>
+        /// <para>Queries automated review jobs. After an AI job is submitted, it is processed asynchronously. You can call this operation to query the job information in real time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -18090,7 +18098,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <list type="bullet">
         /// <item><description>This operation is supported only in the Singapore region.</description></item>
-        /// <item><description>Image resources in automated review job results are retained in the free storage provided by ApsaraVideo VOD for only two weeks. After two weeks, the images are automatically deleted.</description></item>
+        /// <item><description>Image resources in the results of automated review jobs are retained in the free storage provided by ApsaraVideo VOD for only two weeks. They are automatically deleted after two weeks.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18261,13 +18269,13 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the results of smart tagging for a video.</para>
+        /// <para>Retrieves the smart tagging results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is supported in the following regions: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>This operation is supported in the following regions: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
         /// <item><description>Retrieves smart tagging results by video ID.</description></item>
         /// </list>
         /// </description>
@@ -18327,13 +18335,13 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the results of smart tagging for a video.</para>
+        /// <para>Retrieves the smart tagging results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is supported in the following regions: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>This operation is supported in the following regions: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
         /// <item><description>Retrieves smart tagging results by video ID.</description></item>
         /// </list>
         /// </description>
@@ -18393,13 +18401,13 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the results of smart tagging for a video.</para>
+        /// <para>Retrieves the smart tagging results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is supported in the following regions: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>This operation is supported in the following regions: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
         /// <item><description>Retrieves smart tagging results by video ID.</description></item>
         /// </list>
         /// </description>
@@ -18419,13 +18427,13 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the results of smart tagging for a video.</para>
+        /// <para>Retrieves the smart tagging results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is supported in the following regions: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>This operation is supported in the following regions: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
         /// <item><description>Retrieves smart tagging results by video ID.</description></item>
         /// </list>
         /// </description>
@@ -18605,7 +18613,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the playback key of an application.</para>
+        /// <para>Retrieves the application playback key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18659,7 +18667,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the playback key of an application.</para>
+        /// <para>Retrieves the application playback key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18713,7 +18721,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the playback key of an application.</para>
+        /// <para>Retrieves the application playback key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18731,7 +18739,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the playback key of an application.</para>
+        /// <para>Retrieves the application playback key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18749,12 +18757,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the basic information and access URLs of multiple auxiliary media assets in a batch by specifying their IDs after the assets such as watermark images, subtitle files, and materials are uploaded to ApsaraVideo VOD.</para>
+        /// <para>Queries the basic information and access URLs of multiple auxiliary media assets, such as watermark images, subtitle files, and materials, that are uploaded to ApsaraVideo VOD.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can retrieve information about up to 20 auxiliary media assets at a time.</para>
+        /// <para>You can retrieve the information of up to 20 auxiliary media assets at a time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18804,12 +18812,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the basic information and access URLs of multiple auxiliary media assets in a batch by specifying their IDs after the assets such as watermark images, subtitle files, and materials are uploaded to ApsaraVideo VOD.</para>
+        /// <para>Queries the basic information and access URLs of multiple auxiliary media assets, such as watermark images, subtitle files, and materials, that are uploaded to ApsaraVideo VOD.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can retrieve information about up to 20 auxiliary media assets at a time.</para>
+        /// <para>You can retrieve the information of up to 20 auxiliary media assets at a time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18859,12 +18867,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the basic information and access URLs of multiple auxiliary media assets in a batch by specifying their IDs after the assets such as watermark images, subtitle files, and materials are uploaded to ApsaraVideo VOD.</para>
+        /// <para>Queries the basic information and access URLs of multiple auxiliary media assets, such as watermark images, subtitle files, and materials, that are uploaded to ApsaraVideo VOD.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can retrieve information about up to 20 auxiliary media assets at a time.</para>
+        /// <para>You can retrieve the information of up to 20 auxiliary media assets at a time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18882,12 +18890,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the basic information and access URLs of multiple auxiliary media assets in a batch by specifying their IDs after the assets such as watermark images, subtitle files, and materials are uploaded to ApsaraVideo VOD.</para>
+        /// <para>Queries the basic information and access URLs of multiple auxiliary media assets, such as watermark images, subtitle files, and materials, that are uploaded to ApsaraVideo VOD.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can retrieve information about up to 20 auxiliary media assets at a time.</para>
+        /// <para>You can retrieve the information of up to 20 auxiliary media assets at a time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19049,7 +19057,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to perform a filtered query for specified categorization information by ID or type, and retrieves the list of its subcategories (next-level categories).</para>
+        /// <para>Invokes this operation to perform a filtered query for specified categorization information and the list of its sub-categorizations by ID or type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19107,7 +19115,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to perform a filtered query for specified categorization information by ID or type, and retrieves the list of its subcategories (next-level categories).</para>
+        /// <para>Invokes this operation to perform a filtered query for specified categorization information and the list of its sub-categorizations by ID or type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19165,7 +19173,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to perform a filtered query for specified categorization information by ID or type, and retrieves the list of its subcategories (next-level categories).</para>
+        /// <para>Invokes this operation to perform a filtered query for specified categorization information and the list of its sub-categorizations by ID or type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19183,7 +19191,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to perform a filtered query for specified categorization information by ID or type, and retrieves the list of its subcategories (next-level categories).</para>
+        /// <para>Invokes this operation to perform a filtered query for specified categorization information and the list of its sub-categorizations by ID or type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19371,8 +19379,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is supported in the following regions: <b>China (Beijing)</b>, <b>China (Shanghai)</b>, and <b>Singapore</b>.</description></item>
-        /// <item><description>Currently, only the default AI template for automated review can be queried.</description></item>
+        /// <item><description>This API operation is supported in the following regions: <b>China (Beijing)</b>, <b>China (Shanghai)</b>, and <b>Singapore</b>.</description></item>
+        /// <item><description>Currently, you can only query the default AI template for automated review.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19421,8 +19429,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is supported in the following regions: <b>China (Beijing)</b>, <b>China (Shanghai)</b>, and <b>Singapore</b>.</description></item>
-        /// <item><description>Currently, only the default AI template for automated review can be queried.</description></item>
+        /// <item><description>This API operation is supported in the following regions: <b>China (Beijing)</b>, <b>China (Shanghai)</b>, and <b>Singapore</b>.</description></item>
+        /// <item><description>Currently, you can only query the default AI template for automated review.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19471,8 +19479,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is supported in the following regions: <b>China (Beijing)</b>, <b>China (Shanghai)</b>, and <b>Singapore</b>.</description></item>
-        /// <item><description>Currently, only the default AI template for automated review can be queried.</description></item>
+        /// <item><description>This API operation is supported in the following regions: <b>China (Beijing)</b>, <b>China (Shanghai)</b>, and <b>Singapore</b>.</description></item>
+        /// <item><description>Currently, you can only query the default AI template for automated review.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19497,8 +19505,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is supported in the following regions: <b>China (Beijing)</b>, <b>China (Shanghai)</b>, and <b>Singapore</b>.</description></item>
-        /// <item><description>Currently, only the default AI template for automated review can be queried.</description></item>
+        /// <item><description>This API operation is supported in the following regions: <b>China (Beijing)</b>, <b>China (Shanghai)</b>, and <b>Singapore</b>.</description></item>
+        /// <item><description>Currently, you can only query the default AI template for automated review.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19517,15 +19525,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the results of a digital watermarking (copyright watermark or tracing watermark) extraction job, including the job status and the successfully extracted watermark text.</para>
+        /// <para>Queries the results of digital watermark extraction jobs (copyright watermarks or tracing watermarks) after you invoke this operation, including the job status and the successfully extracted watermark text.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is available only in the China (Shanghai) and China (Beijing) regions.</description></item>
-        /// <item><description>After you call the <a href="~~SubmitDigitalWatermarkExtractJob~~">SubmitDigitalWatermarkExtractJob</a> operation to extract the copyright watermark or tracing watermark from a video, call this operation to query the extracted watermark text.</description></item>
-        /// <item><description>Only watermark extraction jobs from the last 2 years can be queried.</description></item>
+        /// <item><description>This API operation is available only in the China (Shanghai) and China (Beijing) regions.</description></item>
+        /// <item><description>After you invoke the <a href="~~SubmitDigitalWatermarkExtractJob~~">SubmitDigitalWatermarkExtractJob</a> operation to extract the copyright watermark or tracing watermark from a video, invoke this operation to query the extracted watermark text.</description></item>
+        /// <item><description>You can query only the watermark extraction jobs created within the last two years.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19592,15 +19600,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the results of a digital watermarking (copyright watermark or tracing watermark) extraction job, including the job status and the successfully extracted watermark text.</para>
+        /// <para>Queries the results of digital watermark extraction jobs (copyright watermarks or tracing watermarks) after you invoke this operation, including the job status and the successfully extracted watermark text.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is available only in the China (Shanghai) and China (Beijing) regions.</description></item>
-        /// <item><description>After you call the <a href="~~SubmitDigitalWatermarkExtractJob~~">SubmitDigitalWatermarkExtractJob</a> operation to extract the copyright watermark or tracing watermark from a video, call this operation to query the extracted watermark text.</description></item>
-        /// <item><description>Only watermark extraction jobs from the last 2 years can be queried.</description></item>
+        /// <item><description>This API operation is available only in the China (Shanghai) and China (Beijing) regions.</description></item>
+        /// <item><description>After you invoke the <a href="~~SubmitDigitalWatermarkExtractJob~~">SubmitDigitalWatermarkExtractJob</a> operation to extract the copyright watermark or tracing watermark from a video, invoke this operation to query the extracted watermark text.</description></item>
+        /// <item><description>You can query only the watermark extraction jobs created within the last two years.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19667,15 +19675,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the results of a digital watermarking (copyright watermark or tracing watermark) extraction job, including the job status and the successfully extracted watermark text.</para>
+        /// <para>Queries the results of digital watermark extraction jobs (copyright watermarks or tracing watermarks) after you invoke this operation, including the job status and the successfully extracted watermark text.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is available only in the China (Shanghai) and China (Beijing) regions.</description></item>
-        /// <item><description>After you call the <a href="~~SubmitDigitalWatermarkExtractJob~~">SubmitDigitalWatermarkExtractJob</a> operation to extract the copyright watermark or tracing watermark from a video, call this operation to query the extracted watermark text.</description></item>
-        /// <item><description>Only watermark extraction jobs from the last 2 years can be queried.</description></item>
+        /// <item><description>This API operation is available only in the China (Shanghai) and China (Beijing) regions.</description></item>
+        /// <item><description>After you invoke the <a href="~~SubmitDigitalWatermarkExtractJob~~">SubmitDigitalWatermarkExtractJob</a> operation to extract the copyright watermark or tracing watermark from a video, invoke this operation to query the extracted watermark text.</description></item>
+        /// <item><description>You can query only the watermark extraction jobs created within the last two years.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19694,15 +19702,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the results of a digital watermarking (copyright watermark or tracing watermark) extraction job, including the job status and the successfully extracted watermark text.</para>
+        /// <para>Queries the results of digital watermark extraction jobs (copyright watermarks or tracing watermarks) after you invoke this operation, including the job status and the successfully extracted watermark text.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is available only in the China (Shanghai) and China (Beijing) regions.</description></item>
-        /// <item><description>After you call the <a href="~~SubmitDigitalWatermarkExtractJob~~">SubmitDigitalWatermarkExtractJob</a> operation to extract the copyright watermark or tracing watermark from a video, call this operation to query the extracted watermark text.</description></item>
-        /// <item><description>Only watermark extraction jobs from the last 2 years can be queried.</description></item>
+        /// <item><description>This API operation is available only in the China (Shanghai) and China (Beijing) regions.</description></item>
+        /// <item><description>After you invoke the <a href="~~SubmitDigitalWatermarkExtractJob~~">SubmitDigitalWatermarkExtractJob</a> operation to extract the copyright watermark or tracing watermark from a video, invoke this operation to query the extracted watermark text.</description></item>
+        /// <item><description>You can query only the watermark extraction jobs created within the last two years.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19721,7 +19729,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an online editing project (video editing task).</para>
+        /// <para>Queries the details of an online editing project (video editing task).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19779,7 +19787,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an online editing project (video editing task).</para>
+        /// <para>Queries the details of an online editing project (video editing task).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19837,7 +19845,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an online editing project (video editing task).</para>
+        /// <para>Queries the details of an online editing project (video editing task).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19855,7 +19863,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an online editing project (video editing task).</para>
+        /// <para>Queries the details of an online editing project (video editing task).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19873,12 +19881,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of materials to be edited in an online editing project.</para>
+        /// <para>Queries the list of materials to be edited in an online editing project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>During the editing process, materials can be added to the timeline but are not necessarily fully used.</para>
+        /// <para>During the editing process, materials can be added to the timeline, but they are not necessarily fully used.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19944,12 +19952,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of materials to be edited in an online editing project.</para>
+        /// <para>Queries the list of materials to be edited in an online editing project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>During the editing process, materials can be added to the timeline but are not necessarily fully used.</para>
+        /// <para>During the editing process, materials can be added to the timeline, but they are not necessarily fully used.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20015,12 +20023,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of materials to be edited in an online editing project.</para>
+        /// <para>Queries the list of materials to be edited in an online editing project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>During the editing process, materials can be added to the timeline but are not necessarily fully used.</para>
+        /// <para>During the editing process, materials can be added to the timeline, but they are not necessarily fully used.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20038,12 +20046,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of materials to be edited in an online editing project.</para>
+        /// <para>Queries the list of materials to be edited in an online editing project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>During the editing process, materials can be added to the timeline but are not necessarily fully used.</para>
+        /// <para>During the editing process, materials can be added to the timeline, but they are not necessarily fully used.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20061,12 +20069,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the basic information and access URL of an image by image ID after the image is uploaded to ApsaraVideo VOD.</para>
+        /// <para>Queries the basic information and access URL of an image by image ID after the image is uploaded to ApsaraVideo VOD.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation only supports querying information about images uploaded to ApsaraVideo VOD. To query information about snapshots generated from video snapshots, call the <a href="~~ListSnapshots~~">ListSnapshots</a> operation.</para>
+        /// <para>This operation only supports querying image information for images uploaded to ApsaraVideo VOD. To query snapshot information generated from video snapshots, call the <a href="~~ListSnapshots~~">ListSnapshots</a> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20116,12 +20124,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the basic information and access URL of an image by image ID after the image is uploaded to ApsaraVideo VOD.</para>
+        /// <para>Queries the basic information and access URL of an image by image ID after the image is uploaded to ApsaraVideo VOD.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation only supports querying information about images uploaded to ApsaraVideo VOD. To query information about snapshots generated from video snapshots, call the <a href="~~ListSnapshots~~">ListSnapshots</a> operation.</para>
+        /// <para>This operation only supports querying image information for images uploaded to ApsaraVideo VOD. To query snapshot information generated from video snapshots, call the <a href="~~ListSnapshots~~">ListSnapshots</a> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20171,12 +20179,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the basic information and access URL of an image by image ID after the image is uploaded to ApsaraVideo VOD.</para>
+        /// <para>Queries the basic information and access URL of an image by image ID after the image is uploaded to ApsaraVideo VOD.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation only supports querying information about images uploaded to ApsaraVideo VOD. To query information about snapshots generated from video snapshots, call the <a href="~~ListSnapshots~~">ListSnapshots</a> operation.</para>
+        /// <para>This operation only supports querying image information for images uploaded to ApsaraVideo VOD. To query snapshot information generated from video snapshots, call the <a href="~~ListSnapshots~~">ListSnapshots</a> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20194,12 +20202,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the basic information and access URL of an image by image ID after the image is uploaded to ApsaraVideo VOD.</para>
+        /// <para>Queries the basic information and access URL of an image by image ID after the image is uploaded to ApsaraVideo VOD.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation only supports querying information about images uploaded to ApsaraVideo VOD. To query information about snapshots generated from video snapshots, call the <a href="~~ListSnapshots~~">ListSnapshots</a> operation.</para>
+        /// <para>This operation only supports querying image information for images uploaded to ApsaraVideo VOD. To query snapshot information generated from video snapshots, call the <a href="~~ListSnapshots~~">ListSnapshots</a> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20217,13 +20225,13 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information and access URLs of multiple images by image ID after the images are uploaded to ApsaraVideo VOD.</para>
+        /// <para>Retrieves the basic information and access URLs of multiple images uploaded to ApsaraVideo VOD by specifying image IDs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation only supports querying information about images uploaded to ApsaraVideo VOD. To query information about snapshots generated from video snapshots, call the <a href="~~ListSnapshots~~">ListSnapshots</a> operation.</description></item>
+        /// <item><description>This operation only supports querying image information for images uploaded to ApsaraVideo VOD. To query snapshot information generated from video snapshots, call the <a href="~~ListSnapshots~~">ListSnapshots</a> operation.</description></item>
         /// <item><description>You can query information about up to 20 images at a time.</description></item>
         /// </list>
         /// </description>
@@ -20275,13 +20283,13 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information and access URLs of multiple images by image ID after the images are uploaded to ApsaraVideo VOD.</para>
+        /// <para>Retrieves the basic information and access URLs of multiple images uploaded to ApsaraVideo VOD by specifying image IDs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation only supports querying information about images uploaded to ApsaraVideo VOD. To query information about snapshots generated from video snapshots, call the <a href="~~ListSnapshots~~">ListSnapshots</a> operation.</description></item>
+        /// <item><description>This operation only supports querying image information for images uploaded to ApsaraVideo VOD. To query snapshot information generated from video snapshots, call the <a href="~~ListSnapshots~~">ListSnapshots</a> operation.</description></item>
         /// <item><description>You can query information about up to 20 images at a time.</description></item>
         /// </list>
         /// </description>
@@ -20333,13 +20341,13 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information and access URLs of multiple images by image ID after the images are uploaded to ApsaraVideo VOD.</para>
+        /// <para>Retrieves the basic information and access URLs of multiple images uploaded to ApsaraVideo VOD by specifying image IDs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation only supports querying information about images uploaded to ApsaraVideo VOD. To query information about snapshots generated from video snapshots, call the <a href="~~ListSnapshots~~">ListSnapshots</a> operation.</description></item>
+        /// <item><description>This operation only supports querying image information for images uploaded to ApsaraVideo VOD. To query snapshot information generated from video snapshots, call the <a href="~~ListSnapshots~~">ListSnapshots</a> operation.</description></item>
         /// <item><description>You can query information about up to 20 images at a time.</description></item>
         /// </list>
         /// </description>
@@ -20359,13 +20367,13 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information and access URLs of multiple images by image ID after the images are uploaded to ApsaraVideo VOD.</para>
+        /// <para>Retrieves the basic information and access URLs of multiple images uploaded to ApsaraVideo VOD by specifying image IDs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation only supports querying information about images uploaded to ApsaraVideo VOD. To query information about snapshots generated from video snapshots, call the <a href="~~ListSnapshots~~">ListSnapshots</a> operation.</description></item>
+        /// <item><description>This operation only supports querying image information for images uploaded to ApsaraVideo VOD. To query snapshot information generated from video snapshots, call the <a href="~~ListSnapshots~~">ListSnapshots</a> operation.</description></item>
         /// <item><description>You can query information about up to 20 images at a time.</description></item>
         /// </list>
         /// </description>
@@ -20385,15 +20393,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an asynchronous task by job ID.</para>
+        /// <para>Queries the details of an asynchronous task based on the job ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para><em>Usage notes</em>*
-        /// This operation supports querying asynchronous task data from the last 6 months. Supported task types: transcoding tasks, snapshot tasks, AI tasks, and workflow tasks.
+        /// This operation only supports querying asynchronous task data within the last 6 months. Queryable task types include transcoding tasks, snapshot tasks, AI tasks, and workflow tasks.
         /// <b>QPS limit</b>
-        /// The single-user QPS limit for this operation is 15 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
+        /// The QPS limit for a single user calling this operation is 15 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20439,15 +20447,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an asynchronous task by job ID.</para>
+        /// <para>Queries the details of an asynchronous task based on the job ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para><em>Usage notes</em>*
-        /// This operation supports querying asynchronous task data from the last 6 months. Supported task types: transcoding tasks, snapshot tasks, AI tasks, and workflow tasks.
+        /// This operation only supports querying asynchronous task data within the last 6 months. Queryable task types include transcoding tasks, snapshot tasks, AI tasks, and workflow tasks.
         /// <b>QPS limit</b>
-        /// The single-user QPS limit for this operation is 15 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
+        /// The QPS limit for a single user calling this operation is 15 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20493,15 +20501,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an asynchronous task by job ID.</para>
+        /// <para>Queries the details of an asynchronous task based on the job ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para><em>Usage notes</em>*
-        /// This operation supports querying asynchronous task data from the last 6 months. Supported task types: transcoding tasks, snapshot tasks, AI tasks, and workflow tasks.
+        /// This operation only supports querying asynchronous task data within the last 6 months. Queryable task types include transcoding tasks, snapshot tasks, AI tasks, and workflow tasks.
         /// <b>QPS limit</b>
-        /// The single-user QPS limit for this operation is 15 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
+        /// The QPS limit for a single user calling this operation is 15 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20519,15 +20527,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an asynchronous task by job ID.</para>
+        /// <para>Queries the details of an asynchronous task based on the job ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para><em>Usage notes</em>*
-        /// This operation supports querying asynchronous task data from the last 6 months. Supported task types: transcoding tasks, snapshot tasks, AI tasks, and workflow tasks.
+        /// This operation only supports querying asynchronous task data within the last 6 months. Queryable task types include transcoding tasks, snapshot tasks, AI tasks, and workflow tasks.
         /// <b>QPS limit</b>
-        /// The single-user QPS limit for this operation is 15 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
+        /// The QPS limit for a single user calling this operation is 15 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20689,17 +20697,17 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of audio automated review results.</para>
+        /// <para>Retrieves the details of the automated audio review.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Usage notes</h3>
-        /// <para>&lt;props=&quot;china&quot;&gt;After automated review is complete, if you have configured the <a href="https://help.aliyun.com/document_detail/89576.html">Automated review complete</a> event notification, the callback URL is notified through a message callback. You can call this operation to query the details of audio review results.
+        /// <para>&lt;props=&quot;china&quot;&gt;After the automated review is completed, if you have configured the <a href="https://help.aliyun.com/document_detail/89576.html">Automated review completed</a> event notification, the system sends a callback notification to the callback URL. You can call this operation to query the details of the audio review results.
         /// &lt;props=&quot;intl&quot;&gt;</para>
         /// <list type="bullet">
         /// <item><description>This operation is supported only in the Singapore region.</description></item>
-        /// <item><description>After automated review is complete, if you have configured the <a href="https://help.aliyun.com/document_detail/89576.html">Automated review complete</a> event notification, the callback URL is notified through a message callback. You can call this operation to query the details of audio review results.</description></item>
+        /// <item><description>After the automated review is completed, if you have configured the <a href="https://help.aliyun.com/document_detail/89576.html">Automated review completed</a> event notification, the system sends a callback notification to the callback URL. You can call this operation to query the details of the audio review results.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20762,17 +20770,17 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of audio automated review results.</para>
+        /// <para>Retrieves the details of the automated audio review.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Usage notes</h3>
-        /// <para>&lt;props=&quot;china&quot;&gt;After automated review is complete, if you have configured the <a href="https://help.aliyun.com/document_detail/89576.html">Automated review complete</a> event notification, the callback URL is notified through a message callback. You can call this operation to query the details of audio review results.
+        /// <para>&lt;props=&quot;china&quot;&gt;After the automated review is completed, if you have configured the <a href="https://help.aliyun.com/document_detail/89576.html">Automated review completed</a> event notification, the system sends a callback notification to the callback URL. You can call this operation to query the details of the audio review results.
         /// &lt;props=&quot;intl&quot;&gt;</para>
         /// <list type="bullet">
         /// <item><description>This operation is supported only in the Singapore region.</description></item>
-        /// <item><description>After automated review is complete, if you have configured the <a href="https://help.aliyun.com/document_detail/89576.html">Automated review complete</a> event notification, the callback URL is notified through a message callback. You can call this operation to query the details of audio review results.</description></item>
+        /// <item><description>After the automated review is completed, if you have configured the <a href="https://help.aliyun.com/document_detail/89576.html">Automated review completed</a> event notification, the system sends a callback notification to the callback URL. You can call this operation to query the details of the audio review results.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20835,17 +20843,17 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of audio automated review results.</para>
+        /// <para>Retrieves the details of the automated audio review.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Usage notes</h3>
-        /// <para>&lt;props=&quot;china&quot;&gt;After automated review is complete, if you have configured the <a href="https://help.aliyun.com/document_detail/89576.html">Automated review complete</a> event notification, the callback URL is notified through a message callback. You can call this operation to query the details of audio review results.
+        /// <para>&lt;props=&quot;china&quot;&gt;After the automated review is completed, if you have configured the <a href="https://help.aliyun.com/document_detail/89576.html">Automated review completed</a> event notification, the system sends a callback notification to the callback URL. You can call this operation to query the details of the audio review results.
         /// &lt;props=&quot;intl&quot;&gt;</para>
         /// <list type="bullet">
         /// <item><description>This operation is supported only in the Singapore region.</description></item>
-        /// <item><description>After automated review is complete, if you have configured the <a href="https://help.aliyun.com/document_detail/89576.html">Automated review complete</a> event notification, the callback URL is notified through a message callback. You can call this operation to query the details of audio review results.</description></item>
+        /// <item><description>After the automated review is completed, if you have configured the <a href="https://help.aliyun.com/document_detail/89576.html">Automated review completed</a> event notification, the system sends a callback notification to the callback URL. You can call this operation to query the details of the audio review results.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20864,17 +20872,17 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of audio automated review results.</para>
+        /// <para>Retrieves the details of the automated audio review.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Usage notes</h3>
-        /// <para>&lt;props=&quot;china&quot;&gt;After automated review is complete, if you have configured the <a href="https://help.aliyun.com/document_detail/89576.html">Automated review complete</a> event notification, the callback URL is notified through a message callback. You can call this operation to query the details of audio review results.
+        /// <para>&lt;props=&quot;china&quot;&gt;After the automated review is completed, if you have configured the <a href="https://help.aliyun.com/document_detail/89576.html">Automated review completed</a> event notification, the system sends a callback notification to the callback URL. You can call this operation to query the details of the audio review results.
         /// &lt;props=&quot;intl&quot;&gt;</para>
         /// <list type="bullet">
         /// <item><description>This operation is supported only in the Singapore region.</description></item>
-        /// <item><description>After automated review is complete, if you have configured the <a href="https://help.aliyun.com/document_detail/89576.html">Automated review complete</a> event notification, the callback URL is notified through a message callback. You can call this operation to query the details of audio review results.</description></item>
+        /// <item><description>After the automated review is completed, if you have configured the <a href="https://help.aliyun.com/document_detail/89576.html">Automated review completed</a> event notification, the system sends a callback notification to the callback URL. You can call this operation to query the details of the audio review results.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20902,7 +20910,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <h3>Usage notes</h3>
         /// <para>This operation is supported only in the Singapore region.</para>
         /// <h3>QPS limit</h3>
-        /// <para>You can call this operation up to 20 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <para>The queries per second (QPS) limit per user for this operation is 20. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20953,7 +20961,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <h3>Usage notes</h3>
         /// <para>This operation is supported only in the Singapore region.</para>
         /// <h3>QPS limit</h3>
-        /// <para>You can call this operation up to 20 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <para>The queries per second (QPS) limit per user for this operation is 20. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21004,7 +21012,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <h3>Usage notes</h3>
         /// <para>This operation is supported only in the Singapore region.</para>
         /// <h3>QPS limit</h3>
-        /// <para>You can call this operation up to 20 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <para>The queries per second (QPS) limit per user for this operation is 20. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21031,7 +21039,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <h3>Usage notes</h3>
         /// <para>This operation is supported only in the Singapore region.</para>
         /// <h3>QPS limit</h3>
-        /// <para>You can call this operation up to 20 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <para>The queries per second (QPS) limit per user for this operation is 20. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21049,14 +21057,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of automated review results. You can call this operation to query the details of review results in real time.</para>
+        /// <para>Retrieves the details of automated review results in real time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>By default, only the review screenshot details of violating and suspected violating content are returned. No results are returned for compliant videos and images.</description></item>
-        /// <item><description>The image resources of review results are retained in the free storage provided by ApsaraVideo VOD for only 2 weeks. After 2 weeks, the images are automatically deleted.
+        /// <item><description>By default, only the details of snapshots that are flagged as violations or suspected violations are returned. Results cannot be queried for videos and images that do not contain violations.</description></item>
+        /// <item><description>Image resources in review results are retained in the free storage provided by ApsaraVideo VOD for only two weeks. They are automatically deleted after two weeks.
         /// &lt;props=&quot;intl&quot;&gt;</description></item>
         /// <item><description>This operation is supported only in the Singapore region.</description></item>
         /// </list>
@@ -21105,14 +21113,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of automated review results. You can call this operation to query the details of review results in real time.</para>
+        /// <para>Retrieves the details of automated review results in real time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>By default, only the review screenshot details of violating and suspected violating content are returned. No results are returned for compliant videos and images.</description></item>
-        /// <item><description>The image resources of review results are retained in the free storage provided by ApsaraVideo VOD for only 2 weeks. After 2 weeks, the images are automatically deleted.
+        /// <item><description>By default, only the details of snapshots that are flagged as violations or suspected violations are returned. Results cannot be queried for videos and images that do not contain violations.</description></item>
+        /// <item><description>Image resources in review results are retained in the free storage provided by ApsaraVideo VOD for only two weeks. They are automatically deleted after two weeks.
         /// &lt;props=&quot;intl&quot;&gt;</description></item>
         /// <item><description>This operation is supported only in the Singapore region.</description></item>
         /// </list>
@@ -21161,14 +21169,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of automated review results. You can call this operation to query the details of review results in real time.</para>
+        /// <para>Retrieves the details of automated review results in real time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>By default, only the review screenshot details of violating and suspected violating content are returned. No results are returned for compliant videos and images.</description></item>
-        /// <item><description>The image resources of review results are retained in the free storage provided by ApsaraVideo VOD for only 2 weeks. After 2 weeks, the images are automatically deleted.
+        /// <item><description>By default, only the details of snapshots that are flagged as violations or suspected violations are returned. Results cannot be queried for videos and images that do not contain violations.</description></item>
+        /// <item><description>Image resources in review results are retained in the free storage provided by ApsaraVideo VOD for only two weeks. They are automatically deleted after two weeks.
         /// &lt;props=&quot;intl&quot;&gt;</description></item>
         /// <item><description>This operation is supported only in the Singapore region.</description></item>
         /// </list>
@@ -21189,14 +21197,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of automated review results. You can call this operation to query the details of review results in real time.</para>
+        /// <para>Retrieves the details of automated review results in real time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>By default, only the review screenshot details of violating and suspected violating content are returned. No results are returned for compliant videos and images.</description></item>
-        /// <item><description>The image resources of review results are retained in the free storage provided by ApsaraVideo VOD for only 2 weeks. After 2 weeks, the images are automatically deleted.
+        /// <item><description>By default, only the details of snapshots that are flagged as violations or suspected violations are returned. Results cannot be queried for videos and images that do not contain violations.</description></item>
+        /// <item><description>Image resources in review results are retained in the free storage provided by ApsaraVideo VOD for only two weeks. They are automatically deleted after two weeks.
         /// &lt;props=&quot;intl&quot;&gt;</description></item>
         /// <item><description>This operation is supported only in the Singapore region.</description></item>
         /// </list>
@@ -22017,18 +22025,18 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the playback URL of an audio or video file by providing the audio or video ID, which can then be played using ApsaraVideo Player or a third-party player such as a system-native, open-source, or custom-built player.</para>
+        /// <para>Retrieves the playback URL of an audio or video file. You can use ApsaraVideo Player or a third-party player, such as a native, open-source, or custom player, to play the media content.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this operation, make sure you fully understand the billing methods and pricing of ApsaraVideo VOD. Directly downloading or playing videos from ApsaraVideo VOD playback URLs incurs outbound traffic fees. If no accelerated domain name is configured, refer to <a href="~~188308#section-rwh-e88-f7j~~">Storage outbound traffic billing</a>. If an accelerated domain name is configured, refer to <a href="~~188308#section-c5t-oq9-15e~~">Acceleration service billing</a>. If you have enabled storage transfer acceleration, directly downloading or playing videos from ApsaraVideo VOD playback URLs also incurs download acceleration fees. For billing details, refer to <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</b></description></item>
-        /// <item><description>Only videos in the Normal state (the Status field value is Normal) can be played. For more information about playback URL descriptions and usage limits, refer to <a href="https://help.aliyun.com/document_detail/57290.html">Audio and video playback</a>.</description></item>
-        /// <item><description>When the <a href="https://help.aliyun.com/document_detail/2392368.html">media storage</a> type is non-standard storage, set the StorageClass field of the PlayConfig parameter accordingly. For details, refer to <a href="~~86952#section-9g7-s9b-v7z~~">PlayConfig</a>.</description></item>
-        /// <item><description>If video playback is abnormal, call the <a href="~~GetMezzanineInfo~~">GetMezzanineInfo</a> operation to check whether the video source file information is correct.
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Downloading or playing videos directly from the VOD playback URL incurs outbound traffic fees. If no accelerated domain name is configured, refer to <a href="~~188308#section-rwh-e88-f7j~~">Billing of outbound traffic</a>. If an accelerated domain name is configured, refer to <a href="~~188308#section-c5t-oq9-15e~~">Billing of acceleration services</a>. If you have enabled storage transfer acceleration, downloading or playing videos directly from the VOD playback URL also incurs download acceleration fees. For more information about billing, refer to <a href="~~188310#section_sta_zm2_tsv~~">Billing of storage transfer acceleration</a>.</b></description></item>
+        /// <item><description>Only videos in the Normal state (the Status field is set to Normal) can be played. For more information about playback instructions and limits for playback URLs, refer to <a href="https://help.aliyun.com/document_detail/57290.html">Media playback</a>.</description></item>
+        /// <item><description>When the <a href="https://help.aliyun.com/document_detail/2392368.html">media asset storage</a> type is non-standard storage, you must configure the StorageClass field in the PlayConfig parameter accordingly. For more information, refer to <a href="~~86952#section-9g7-s9b-v7z~~">PlayConfig</a>.</description></item>
+        /// <item><description>If video playback is abnormal, you can call the <a href="~~GetMezzanineInfo~~">GetMezzanineInfo</a> operation to check whether the video source file information is correct.
         /// &lt;props=&quot;china&quot;&gt;</description></item>
-        /// <item><description>To generate m3u8 tracing watermark video streams by calling this operation, submit a ticket to apply for activation. For information about how to submit a ticket, refer to <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>. For more information about tracing watermarks, refer to <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarking</a>.</description></item>
+        /// <item><description>To call this operation to generate an m3u8 tracing watermark video stream, submit a ticket to apply for activation. For more information about how to submit a ticket, refer to <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>. For more information about tracing watermarks, refer to <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarking</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22123,18 +22131,18 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the playback URL of an audio or video file by providing the audio or video ID, which can then be played using ApsaraVideo Player or a third-party player such as a system-native, open-source, or custom-built player.</para>
+        /// <para>Retrieves the playback URL of an audio or video file. You can use ApsaraVideo Player or a third-party player, such as a native, open-source, or custom player, to play the media content.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this operation, make sure you fully understand the billing methods and pricing of ApsaraVideo VOD. Directly downloading or playing videos from ApsaraVideo VOD playback URLs incurs outbound traffic fees. If no accelerated domain name is configured, refer to <a href="~~188308#section-rwh-e88-f7j~~">Storage outbound traffic billing</a>. If an accelerated domain name is configured, refer to <a href="~~188308#section-c5t-oq9-15e~~">Acceleration service billing</a>. If you have enabled storage transfer acceleration, directly downloading or playing videos from ApsaraVideo VOD playback URLs also incurs download acceleration fees. For billing details, refer to <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</b></description></item>
-        /// <item><description>Only videos in the Normal state (the Status field value is Normal) can be played. For more information about playback URL descriptions and usage limits, refer to <a href="https://help.aliyun.com/document_detail/57290.html">Audio and video playback</a>.</description></item>
-        /// <item><description>When the <a href="https://help.aliyun.com/document_detail/2392368.html">media storage</a> type is non-standard storage, set the StorageClass field of the PlayConfig parameter accordingly. For details, refer to <a href="~~86952#section-9g7-s9b-v7z~~">PlayConfig</a>.</description></item>
-        /// <item><description>If video playback is abnormal, call the <a href="~~GetMezzanineInfo~~">GetMezzanineInfo</a> operation to check whether the video source file information is correct.
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Downloading or playing videos directly from the VOD playback URL incurs outbound traffic fees. If no accelerated domain name is configured, refer to <a href="~~188308#section-rwh-e88-f7j~~">Billing of outbound traffic</a>. If an accelerated domain name is configured, refer to <a href="~~188308#section-c5t-oq9-15e~~">Billing of acceleration services</a>. If you have enabled storage transfer acceleration, downloading or playing videos directly from the VOD playback URL also incurs download acceleration fees. For more information about billing, refer to <a href="~~188310#section_sta_zm2_tsv~~">Billing of storage transfer acceleration</a>.</b></description></item>
+        /// <item><description>Only videos in the Normal state (the Status field is set to Normal) can be played. For more information about playback instructions and limits for playback URLs, refer to <a href="https://help.aliyun.com/document_detail/57290.html">Media playback</a>.</description></item>
+        /// <item><description>When the <a href="https://help.aliyun.com/document_detail/2392368.html">media asset storage</a> type is non-standard storage, you must configure the StorageClass field in the PlayConfig parameter accordingly. For more information, refer to <a href="~~86952#section-9g7-s9b-v7z~~">PlayConfig</a>.</description></item>
+        /// <item><description>If video playback is abnormal, you can call the <a href="~~GetMezzanineInfo~~">GetMezzanineInfo</a> operation to check whether the video source file information is correct.
         /// &lt;props=&quot;china&quot;&gt;</description></item>
-        /// <item><description>To generate m3u8 tracing watermark video streams by calling this operation, submit a ticket to apply for activation. For information about how to submit a ticket, refer to <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>. For more information about tracing watermarks, refer to <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarking</a>.</description></item>
+        /// <item><description>To call this operation to generate an m3u8 tracing watermark video stream, submit a ticket to apply for activation. For more information about how to submit a ticket, refer to <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>. For more information about tracing watermarks, refer to <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarking</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22229,18 +22237,18 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the playback URL of an audio or video file by providing the audio or video ID, which can then be played using ApsaraVideo Player or a third-party player such as a system-native, open-source, or custom-built player.</para>
+        /// <para>Retrieves the playback URL of an audio or video file. You can use ApsaraVideo Player or a third-party player, such as a native, open-source, or custom player, to play the media content.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this operation, make sure you fully understand the billing methods and pricing of ApsaraVideo VOD. Directly downloading or playing videos from ApsaraVideo VOD playback URLs incurs outbound traffic fees. If no accelerated domain name is configured, refer to <a href="~~188308#section-rwh-e88-f7j~~">Storage outbound traffic billing</a>. If an accelerated domain name is configured, refer to <a href="~~188308#section-c5t-oq9-15e~~">Acceleration service billing</a>. If you have enabled storage transfer acceleration, directly downloading or playing videos from ApsaraVideo VOD playback URLs also incurs download acceleration fees. For billing details, refer to <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</b></description></item>
-        /// <item><description>Only videos in the Normal state (the Status field value is Normal) can be played. For more information about playback URL descriptions and usage limits, refer to <a href="https://help.aliyun.com/document_detail/57290.html">Audio and video playback</a>.</description></item>
-        /// <item><description>When the <a href="https://help.aliyun.com/document_detail/2392368.html">media storage</a> type is non-standard storage, set the StorageClass field of the PlayConfig parameter accordingly. For details, refer to <a href="~~86952#section-9g7-s9b-v7z~~">PlayConfig</a>.</description></item>
-        /// <item><description>If video playback is abnormal, call the <a href="~~GetMezzanineInfo~~">GetMezzanineInfo</a> operation to check whether the video source file information is correct.
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Downloading or playing videos directly from the VOD playback URL incurs outbound traffic fees. If no accelerated domain name is configured, refer to <a href="~~188308#section-rwh-e88-f7j~~">Billing of outbound traffic</a>. If an accelerated domain name is configured, refer to <a href="~~188308#section-c5t-oq9-15e~~">Billing of acceleration services</a>. If you have enabled storage transfer acceleration, downloading or playing videos directly from the VOD playback URL also incurs download acceleration fees. For more information about billing, refer to <a href="~~188310#section_sta_zm2_tsv~~">Billing of storage transfer acceleration</a>.</b></description></item>
+        /// <item><description>Only videos in the Normal state (the Status field is set to Normal) can be played. For more information about playback instructions and limits for playback URLs, refer to <a href="https://help.aliyun.com/document_detail/57290.html">Media playback</a>.</description></item>
+        /// <item><description>When the <a href="https://help.aliyun.com/document_detail/2392368.html">media asset storage</a> type is non-standard storage, you must configure the StorageClass field in the PlayConfig parameter accordingly. For more information, refer to <a href="~~86952#section-9g7-s9b-v7z~~">PlayConfig</a>.</description></item>
+        /// <item><description>If video playback is abnormal, you can call the <a href="~~GetMezzanineInfo~~">GetMezzanineInfo</a> operation to check whether the video source file information is correct.
         /// &lt;props=&quot;china&quot;&gt;</description></item>
-        /// <item><description>To generate m3u8 tracing watermark video streams by calling this operation, submit a ticket to apply for activation. For information about how to submit a ticket, refer to <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>. For more information about tracing watermarks, refer to <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarking</a>.</description></item>
+        /// <item><description>To call this operation to generate an m3u8 tracing watermark video stream, submit a ticket to apply for activation. For more information about how to submit a ticket, refer to <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>. For more information about tracing watermarks, refer to <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarking</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22259,18 +22267,18 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the playback URL of an audio or video file by providing the audio or video ID, which can then be played using ApsaraVideo Player or a third-party player such as a system-native, open-source, or custom-built player.</para>
+        /// <para>Retrieves the playback URL of an audio or video file. You can use ApsaraVideo Player or a third-party player, such as a native, open-source, or custom player, to play the media content.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this operation, make sure you fully understand the billing methods and pricing of ApsaraVideo VOD. Directly downloading or playing videos from ApsaraVideo VOD playback URLs incurs outbound traffic fees. If no accelerated domain name is configured, refer to <a href="~~188308#section-rwh-e88-f7j~~">Storage outbound traffic billing</a>. If an accelerated domain name is configured, refer to <a href="~~188308#section-c5t-oq9-15e~~">Acceleration service billing</a>. If you have enabled storage transfer acceleration, directly downloading or playing videos from ApsaraVideo VOD playback URLs also incurs download acceleration fees. For billing details, refer to <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</b></description></item>
-        /// <item><description>Only videos in the Normal state (the Status field value is Normal) can be played. For more information about playback URL descriptions and usage limits, refer to <a href="https://help.aliyun.com/document_detail/57290.html">Audio and video playback</a>.</description></item>
-        /// <item><description>When the <a href="https://help.aliyun.com/document_detail/2392368.html">media storage</a> type is non-standard storage, set the StorageClass field of the PlayConfig parameter accordingly. For details, refer to <a href="~~86952#section-9g7-s9b-v7z~~">PlayConfig</a>.</description></item>
-        /// <item><description>If video playback is abnormal, call the <a href="~~GetMezzanineInfo~~">GetMezzanineInfo</a> operation to check whether the video source file information is correct.
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Downloading or playing videos directly from the VOD playback URL incurs outbound traffic fees. If no accelerated domain name is configured, refer to <a href="~~188308#section-rwh-e88-f7j~~">Billing of outbound traffic</a>. If an accelerated domain name is configured, refer to <a href="~~188308#section-c5t-oq9-15e~~">Billing of acceleration services</a>. If you have enabled storage transfer acceleration, downloading or playing videos directly from the VOD playback URL also incurs download acceleration fees. For more information about billing, refer to <a href="~~188310#section_sta_zm2_tsv~~">Billing of storage transfer acceleration</a>.</b></description></item>
+        /// <item><description>Only videos in the Normal state (the Status field is set to Normal) can be played. For more information about playback instructions and limits for playback URLs, refer to <a href="https://help.aliyun.com/document_detail/57290.html">Media playback</a>.</description></item>
+        /// <item><description>When the <a href="https://help.aliyun.com/document_detail/2392368.html">media asset storage</a> type is non-standard storage, you must configure the StorageClass field in the PlayConfig parameter accordingly. For more information, refer to <a href="~~86952#section-9g7-s9b-v7z~~">PlayConfig</a>.</description></item>
+        /// <item><description>If video playback is abnormal, you can call the <a href="~~GetMezzanineInfo~~">GetMezzanineInfo</a> operation to check whether the video source file information is correct.
         /// &lt;props=&quot;china&quot;&gt;</description></item>
-        /// <item><description>To generate m3u8 tracing watermark video streams by calling this operation, submit a ticket to apply for activation. For information about how to submit a ticket, refer to <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>. For more information about tracing watermarks, refer to <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarking</a>.</description></item>
+        /// <item><description>To call this operation to generate an m3u8 tracing watermark video stream, submit a ticket to apply for activation. For more information about how to submit a ticket, refer to <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>. For more information about tracing watermarks, refer to <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarking</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22449,15 +22457,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of transcoding jobs based on a transcoding task ID.</para>
+        /// <para>Queries the details of transcoding jobs based on the transcoding task ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Usage notes</h3>
-        /// <para><b>This operation only supports querying transcoding task data from the last year.</b></para>
+        /// <para><b>This operation only supports querying transcoding task data within the last year.</b></para>
         /// <h3>QPS limit</h3>
-        /// <para>A single user can perform a maximum of 15 queries per second (QPS). Throttling is triggered if this limit is exceeded, which may affect your business. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
+        /// <para>The queries per second (QPS) limit for a single user calling this operation is 15. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22503,15 +22511,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of transcoding jobs based on a transcoding task ID.</para>
+        /// <para>Queries the details of transcoding jobs based on the transcoding task ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Usage notes</h3>
-        /// <para><b>This operation only supports querying transcoding task data from the last year.</b></para>
+        /// <para><b>This operation only supports querying transcoding task data within the last year.</b></para>
         /// <h3>QPS limit</h3>
-        /// <para>A single user can perform a maximum of 15 queries per second (QPS). Throttling is triggered if this limit is exceeded, which may affect your business. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
+        /// <para>The queries per second (QPS) limit for a single user calling this operation is 15. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22557,15 +22565,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of transcoding jobs based on a transcoding task ID.</para>
+        /// <para>Queries the details of transcoding jobs based on the transcoding task ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Usage notes</h3>
-        /// <para><b>This operation only supports querying transcoding task data from the last year.</b></para>
+        /// <para><b>This operation only supports querying transcoding task data within the last year.</b></para>
         /// <h3>QPS limit</h3>
-        /// <para>A single user can perform a maximum of 15 queries per second (QPS). Throttling is triggered if this limit is exceeded, which may affect your business. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
+        /// <para>The queries per second (QPS) limit for a single user calling this operation is 15. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22583,15 +22591,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of transcoding jobs based on a transcoding task ID.</para>
+        /// <para>Queries the details of transcoding jobs based on the transcoding task ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Usage notes</h3>
-        /// <para><b>This operation only supports querying transcoding task data from the last year.</b></para>
+        /// <para><b>This operation only supports querying transcoding task data within the last year.</b></para>
         /// <h3>QPS limit</h3>
-        /// <para>A single user can perform a maximum of 15 queries per second (QPS). Throttling is triggered if this limit is exceeded, which may affect your business. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
+        /// <para>The queries per second (QPS) limit for a single user calling this operation is 15. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22609,12 +22617,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a transcoding configuration by transcoding template group ID.</para>
+        /// <para>Queries the details of the transcoding configuration based on the ID of the transcoding template group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves information about a single template group, including the configuration information of all transcoding templates in the group.</para>
+        /// <para>Retrieves the information about a single template group and returns the configuration information of all transcoding templates in the template group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22656,12 +22664,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a transcoding configuration by transcoding template group ID.</para>
+        /// <para>Queries the details of the transcoding configuration based on the ID of the transcoding template group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves information about a single template group, including the configuration information of all transcoding templates in the group.</para>
+        /// <para>Retrieves the information about a single template group and returns the configuration information of all transcoding templates in the template group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22703,12 +22711,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a transcoding configuration by transcoding template group ID.</para>
+        /// <para>Queries the details of the transcoding configuration based on the ID of the transcoding template group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves information about a single template group, including the configuration information of all transcoding templates in the group.</para>
+        /// <para>Retrieves the information about a single template group and returns the configuration information of all transcoding templates in the template group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22726,12 +22734,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a transcoding configuration by transcoding template group ID.</para>
+        /// <para>Queries the details of the transcoding configuration based on the ID of the transcoding template group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves information about a single template group, including the configuration information of all transcoding templates in the group.</para>
+        /// <para>Retrieves the information about a single template group and returns the configuration information of all transcoding templates in the template group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22749,18 +22757,18 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves URL upload information.</para>
+        /// <para>Queries URL upload information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Retrieves URL upload information by using the JobId returned during URL-based upload or the URL used for upload. The information includes the URL upload status, UserData, creation time, and completion time.</description></item>
+        /// <item><description>Retrieves URL upload information by using the JobId returned during URL upload or the URL used for upload. The information includes the URL upload status, UserData, creation time, and completion time.</description></item>
         /// <item><description><b>This operation only supports querying upload task data within the last year.</b></description></item>
-        /// <item><description>This operation currently supports only the following service regions: <b>China (Shanghai)</b> and <b>Singapore</b>.</description></item>
-        /// <item><description>After you call the <a href="~~UploadMediaByURL~~">UploadMediaByURL</a> operation to upload a media file to ApsaraVideo VOD, you can call this operation to query the upload information of a specified media file by using the upload task IDs (<c>JobIds</c>) or the source file URLs (<c>UploadURLs</c>).</description></item>
-        /// <item><description>When calling this operation, you must specify either <c>JobIds</c> or <c>UploadURLs</c>. If both are specified, only <c>JobIds</c> is processed.</description></item>
-        /// <item><description>If the media upload fails, you can call this operation to view the error code and error message. If the media upload succeeds, you can call this operation to view the corresponding media ID.</description></item>
+        /// <item><description>This operation is currently available only in the following regions: <b>China (Shanghai)</b> and <b>Singapore</b>.</description></item>
+        /// <item><description>After you call the <a href="~~UploadMediaByURL~~">UploadMediaByURL</a> operation to upload media files to ApsaraVideo VOD, you can call this operation to query the upload information of specified media files by using the URL pull upload task IDs (JobIds) or the media source file URLs (UploadURLs).</description></item>
+        /// <item><description>When you call this operation, you must specify either JobIds or UploadURLs. If both are specified, only JobIds is processed.</description></item>
+        /// <item><description>If a media file fails to be uploaded, you can call this operation to view the error code and error message. If a media file is uploaded, you can call this operation to view the corresponding media ID.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22807,18 +22815,18 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves URL upload information.</para>
+        /// <para>Queries URL upload information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Retrieves URL upload information by using the JobId returned during URL-based upload or the URL used for upload. The information includes the URL upload status, UserData, creation time, and completion time.</description></item>
+        /// <item><description>Retrieves URL upload information by using the JobId returned during URL upload or the URL used for upload. The information includes the URL upload status, UserData, creation time, and completion time.</description></item>
         /// <item><description><b>This operation only supports querying upload task data within the last year.</b></description></item>
-        /// <item><description>This operation currently supports only the following service regions: <b>China (Shanghai)</b> and <b>Singapore</b>.</description></item>
-        /// <item><description>After you call the <a href="~~UploadMediaByURL~~">UploadMediaByURL</a> operation to upload a media file to ApsaraVideo VOD, you can call this operation to query the upload information of a specified media file by using the upload task IDs (<c>JobIds</c>) or the source file URLs (<c>UploadURLs</c>).</description></item>
-        /// <item><description>When calling this operation, you must specify either <c>JobIds</c> or <c>UploadURLs</c>. If both are specified, only <c>JobIds</c> is processed.</description></item>
-        /// <item><description>If the media upload fails, you can call this operation to view the error code and error message. If the media upload succeeds, you can call this operation to view the corresponding media ID.</description></item>
+        /// <item><description>This operation is currently available only in the following regions: <b>China (Shanghai)</b> and <b>Singapore</b>.</description></item>
+        /// <item><description>After you call the <a href="~~UploadMediaByURL~~">UploadMediaByURL</a> operation to upload media files to ApsaraVideo VOD, you can call this operation to query the upload information of specified media files by using the URL pull upload task IDs (JobIds) or the media source file URLs (UploadURLs).</description></item>
+        /// <item><description>When you call this operation, you must specify either JobIds or UploadURLs. If both are specified, only JobIds is processed.</description></item>
+        /// <item><description>If a media file fails to be uploaded, you can call this operation to view the error code and error message. If a media file is uploaded, you can call this operation to view the corresponding media ID.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22865,18 +22873,18 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves URL upload information.</para>
+        /// <para>Queries URL upload information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Retrieves URL upload information by using the JobId returned during URL-based upload or the URL used for upload. The information includes the URL upload status, UserData, creation time, and completion time.</description></item>
+        /// <item><description>Retrieves URL upload information by using the JobId returned during URL upload or the URL used for upload. The information includes the URL upload status, UserData, creation time, and completion time.</description></item>
         /// <item><description><b>This operation only supports querying upload task data within the last year.</b></description></item>
-        /// <item><description>This operation currently supports only the following service regions: <b>China (Shanghai)</b> and <b>Singapore</b>.</description></item>
-        /// <item><description>After you call the <a href="~~UploadMediaByURL~~">UploadMediaByURL</a> operation to upload a media file to ApsaraVideo VOD, you can call this operation to query the upload information of a specified media file by using the upload task IDs (<c>JobIds</c>) or the source file URLs (<c>UploadURLs</c>).</description></item>
-        /// <item><description>When calling this operation, you must specify either <c>JobIds</c> or <c>UploadURLs</c>. If both are specified, only <c>JobIds</c> is processed.</description></item>
-        /// <item><description>If the media upload fails, you can call this operation to view the error code and error message. If the media upload succeeds, you can call this operation to view the corresponding media ID.</description></item>
+        /// <item><description>This operation is currently available only in the following regions: <b>China (Shanghai)</b> and <b>Singapore</b>.</description></item>
+        /// <item><description>After you call the <a href="~~UploadMediaByURL~~">UploadMediaByURL</a> operation to upload media files to ApsaraVideo VOD, you can call this operation to query the upload information of specified media files by using the URL pull upload task IDs (JobIds) or the media source file URLs (UploadURLs).</description></item>
+        /// <item><description>When you call this operation, you must specify either JobIds or UploadURLs. If both are specified, only JobIds is processed.</description></item>
+        /// <item><description>If a media file fails to be uploaded, you can call this operation to view the error code and error message. If a media file is uploaded, you can call this operation to view the corresponding media ID.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22895,18 +22903,18 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves URL upload information.</para>
+        /// <para>Queries URL upload information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Retrieves URL upload information by using the JobId returned during URL-based upload or the URL used for upload. The information includes the URL upload status, UserData, creation time, and completion time.</description></item>
+        /// <item><description>Retrieves URL upload information by using the JobId returned during URL upload or the URL used for upload. The information includes the URL upload status, UserData, creation time, and completion time.</description></item>
         /// <item><description><b>This operation only supports querying upload task data within the last year.</b></description></item>
-        /// <item><description>This operation currently supports only the following service regions: <b>China (Shanghai)</b> and <b>Singapore</b>.</description></item>
-        /// <item><description>After you call the <a href="~~UploadMediaByURL~~">UploadMediaByURL</a> operation to upload a media file to ApsaraVideo VOD, you can call this operation to query the upload information of a specified media file by using the upload task IDs (<c>JobIds</c>) or the source file URLs (<c>UploadURLs</c>).</description></item>
-        /// <item><description>When calling this operation, you must specify either <c>JobIds</c> or <c>UploadURLs</c>. If both are specified, only <c>JobIds</c> is processed.</description></item>
-        /// <item><description>If the media upload fails, you can call this operation to view the error code and error message. If the media upload succeeds, you can call this operation to view the corresponding media ID.</description></item>
+        /// <item><description>This operation is currently available only in the following regions: <b>China (Shanghai)</b> and <b>Singapore</b>.</description></item>
+        /// <item><description>After you call the <a href="~~UploadMediaByURL~~">UploadMediaByURL</a> operation to upload media files to ApsaraVideo VOD, you can call this operation to query the upload information of specified media files by using the URL pull upload task IDs (JobIds) or the media source file URLs (UploadURLs).</description></item>
+        /// <item><description>When you call this operation, you must specify either JobIds or UploadURLs. If both are specified, only JobIds is processed.</description></item>
+        /// <item><description>If a media file fails to be uploaded, you can call this operation to view the error code and error message. If a media file is uploaded, you can call this operation to view the corresponding media ID.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22925,26 +22933,26 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves media upload details by media ID, such as upload time, upload ratio, and upload source. Batch retrieval is supported.</para>
+        /// <para>Queries the upload details of one or more media assets by media ID, such as the upload time, upload ratio, and upload source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation only supports retrieving upload details of audio and video files.</description></item>
-        /// <item><description>If audio or video files are uploaded through the ApsaraVideo VOD console, you can use this operation to retrieve information such as the upload ratio. If audio or video files are uploaded by using the upload SDK, only the following versions of the <a href="https://help.aliyun.com/document_detail/52200.html">upload SDK</a> support this operation.<remarks>
-        /// <para>Only the server upload SDK supports this operation. The client upload SDK does not support this operation. The server upload SDK version requirements are as follows:</para>
+        /// <item><description>This operation only supports querying the upload details of audio and video files.</description></item>
+        /// <item><description>If the audio or video file is uploaded through the ApsaraVideo VOD console, you can obtain information such as the upload ratio by calling this operation. If the audio or video file is uploaded by using an SDK, you can obtain the upload details only if the <a href="https://help.aliyun.com/document_detail/52200.html">upload SDK</a> meets the following requirements.<remarks>
+        /// <para>Only server-the upload SDKs support this operation. Client-the upload SDKs do not support this operation. The server-the upload SDK versions that support this operation are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>Java upload SDK: version ≥ 1.4.4</description></item>
-        /// <item><description>C++ upload SDK: version ≥ 1.0.0</description></item>
-        /// <item><description>PHP upload SDK: version ≥ 1.0.2</description></item>
-        /// <item><description>Python upload SDK: version ≥ 1.3.0</description></item>
+        /// <item><description>Java upload SDK: 1.4.4 or later</description></item>
+        /// <item><description>C++ upload SDK: 1.0.0 or later</description></item>
+        /// <item><description>PHP upload SDK: 1.0.2 or later</description></item>
+        /// <item><description>Python upload SDK: 1.3.0 or later</description></item>
         /// </list>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 100 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <para>The QPS limit for a single user is 100 calls per second. If the number of calls per second exceeds the limit, throttling is triggered, which may affect your business. Call this operation at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22990,26 +22998,26 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves media upload details by media ID, such as upload time, upload ratio, and upload source. Batch retrieval is supported.</para>
+        /// <para>Queries the upload details of one or more media assets by media ID, such as the upload time, upload ratio, and upload source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation only supports retrieving upload details of audio and video files.</description></item>
-        /// <item><description>If audio or video files are uploaded through the ApsaraVideo VOD console, you can use this operation to retrieve information such as the upload ratio. If audio or video files are uploaded by using the upload SDK, only the following versions of the <a href="https://help.aliyun.com/document_detail/52200.html">upload SDK</a> support this operation.<remarks>
-        /// <para>Only the server upload SDK supports this operation. The client upload SDK does not support this operation. The server upload SDK version requirements are as follows:</para>
+        /// <item><description>This operation only supports querying the upload details of audio and video files.</description></item>
+        /// <item><description>If the audio or video file is uploaded through the ApsaraVideo VOD console, you can obtain information such as the upload ratio by calling this operation. If the audio or video file is uploaded by using an SDK, you can obtain the upload details only if the <a href="https://help.aliyun.com/document_detail/52200.html">upload SDK</a> meets the following requirements.<remarks>
+        /// <para>Only server-the upload SDKs support this operation. Client-the upload SDKs do not support this operation. The server-the upload SDK versions that support this operation are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>Java upload SDK: version ≥ 1.4.4</description></item>
-        /// <item><description>C++ upload SDK: version ≥ 1.0.0</description></item>
-        /// <item><description>PHP upload SDK: version ≥ 1.0.2</description></item>
-        /// <item><description>Python upload SDK: version ≥ 1.3.0</description></item>
+        /// <item><description>Java upload SDK: 1.4.4 or later</description></item>
+        /// <item><description>C++ upload SDK: 1.0.0 or later</description></item>
+        /// <item><description>PHP upload SDK: 1.0.2 or later</description></item>
+        /// <item><description>Python upload SDK: 1.3.0 or later</description></item>
         /// </list>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 100 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <para>The QPS limit for a single user is 100 calls per second. If the number of calls per second exceeds the limit, throttling is triggered, which may affect your business. Call this operation at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23055,26 +23063,26 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves media upload details by media ID, such as upload time, upload ratio, and upload source. Batch retrieval is supported.</para>
+        /// <para>Queries the upload details of one or more media assets by media ID, such as the upload time, upload ratio, and upload source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation only supports retrieving upload details of audio and video files.</description></item>
-        /// <item><description>If audio or video files are uploaded through the ApsaraVideo VOD console, you can use this operation to retrieve information such as the upload ratio. If audio or video files are uploaded by using the upload SDK, only the following versions of the <a href="https://help.aliyun.com/document_detail/52200.html">upload SDK</a> support this operation.<remarks>
-        /// <para>Only the server upload SDK supports this operation. The client upload SDK does not support this operation. The server upload SDK version requirements are as follows:</para>
+        /// <item><description>This operation only supports querying the upload details of audio and video files.</description></item>
+        /// <item><description>If the audio or video file is uploaded through the ApsaraVideo VOD console, you can obtain information such as the upload ratio by calling this operation. If the audio or video file is uploaded by using an SDK, you can obtain the upload details only if the <a href="https://help.aliyun.com/document_detail/52200.html">upload SDK</a> meets the following requirements.<remarks>
+        /// <para>Only server-the upload SDKs support this operation. Client-the upload SDKs do not support this operation. The server-the upload SDK versions that support this operation are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>Java upload SDK: version ≥ 1.4.4</description></item>
-        /// <item><description>C++ upload SDK: version ≥ 1.0.0</description></item>
-        /// <item><description>PHP upload SDK: version ≥ 1.0.2</description></item>
-        /// <item><description>Python upload SDK: version ≥ 1.3.0</description></item>
+        /// <item><description>Java upload SDK: 1.4.4 or later</description></item>
+        /// <item><description>C++ upload SDK: 1.0.0 or later</description></item>
+        /// <item><description>PHP upload SDK: 1.0.2 or later</description></item>
+        /// <item><description>Python upload SDK: 1.3.0 or later</description></item>
         /// </list>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 100 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <para>The QPS limit for a single user is 100 calls per second. If the number of calls per second exceeds the limit, throttling is triggered, which may affect your business. Call this operation at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23092,26 +23100,26 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves media upload details by media ID, such as upload time, upload ratio, and upload source. Batch retrieval is supported.</para>
+        /// <para>Queries the upload details of one or more media assets by media ID, such as the upload time, upload ratio, and upload source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation only supports retrieving upload details of audio and video files.</description></item>
-        /// <item><description>If audio or video files are uploaded through the ApsaraVideo VOD console, you can use this operation to retrieve information such as the upload ratio. If audio or video files are uploaded by using the upload SDK, only the following versions of the <a href="https://help.aliyun.com/document_detail/52200.html">upload SDK</a> support this operation.<remarks>
-        /// <para>Only the server upload SDK supports this operation. The client upload SDK does not support this operation. The server upload SDK version requirements are as follows:</para>
+        /// <item><description>This operation only supports querying the upload details of audio and video files.</description></item>
+        /// <item><description>If the audio or video file is uploaded through the ApsaraVideo VOD console, you can obtain information such as the upload ratio by calling this operation. If the audio or video file is uploaded by using an SDK, you can obtain the upload details only if the <a href="https://help.aliyun.com/document_detail/52200.html">upload SDK</a> meets the following requirements.<remarks>
+        /// <para>Only server-the upload SDKs support this operation. Client-the upload SDKs do not support this operation. The server-the upload SDK versions that support this operation are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>Java upload SDK: version ≥ 1.4.4</description></item>
-        /// <item><description>C++ upload SDK: version ≥ 1.0.0</description></item>
-        /// <item><description>PHP upload SDK: version ≥ 1.0.2</description></item>
-        /// <item><description>Python upload SDK: version ≥ 1.3.0</description></item>
+        /// <item><description>Java upload SDK: 1.4.4 or later</description></item>
+        /// <item><description>C++ upload SDK: 1.0.0 or later</description></item>
+        /// <item><description>PHP upload SDK: 1.0.2 or later</description></item>
+        /// <item><description>Python upload SDK: 1.3.0 or later</description></item>
         /// </list>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 100 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <para>The QPS limit for a single user is 100 calls per second. If the number of calls per second exceeds the limit, throttling is triggered, which may affect your business. Call this operation at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23937,7 +23945,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to query the parameter settings of a single image watermark template or text watermark template by watermark template ID, including the position, size, and display time of image watermarks, and the content, font, color, and position of text watermarks.</para>
+        /// <para>Invokes this operation to query the configuration information of a single image watermark template or text watermark template by watermark template ID. The configuration information includes the position, size, and display time of an image watermark, as well as the parameter settings such as the content, font, color, and position of a text watermark.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23979,7 +23987,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to query the parameter settings of a single image watermark template or text watermark template by watermark template ID, including the position, size, and display time of image watermarks, and the content, font, color, and position of text watermarks.</para>
+        /// <para>Invokes this operation to query the configuration information of a single image watermark template or text watermark template by watermark template ID. The configuration information includes the position, size, and display time of an image watermark, as well as the parameter settings such as the content, font, color, and position of a text watermark.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24021,7 +24029,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to query the parameter settings of a single image watermark template or text watermark template by watermark template ID, including the position, size, and display time of image watermarks, and the content, font, color, and position of text watermarks.</para>
+        /// <para>Invokes this operation to query the configuration information of a single image watermark template or text watermark template by watermark template ID. The configuration information includes the position, size, and display time of an image watermark, as well as the parameter settings such as the content, font, color, and position of a text watermark.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24039,7 +24047,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to query the parameter settings of a single image watermark template or text watermark template by watermark template ID, including the position, size, and display time of image watermarks, and the content, font, color, and position of text watermarks.</para>
+        /// <para>Invokes this operation to query the configuration information of a single image watermark template or text watermark template by watermark template ID. The configuration information includes the position, size, and display time of an image watermark, as well as the parameter settings such as the content, font, color, and position of a text watermark.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24063,8 +24071,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you use this operation, make sure that you are familiar with the billing methods and pricing of ApsaraVideo VOD. Using workflows may incur fees for transcoding, encryption, automated review, and other services. For billing details, see <a href="https://help.aliyun.com/document_detail/188307.html">Billing overview</a>.</b></description></item>
-        /// <item><description>You can call this operation to query workflow processing tasks. This operation currently supports only video understanding workflow task queries. Workflow tasks of other versions are not supported.</description></item>
+        /// <item><description><b>Before calling this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Using workflows may incur fees for transcoding, encryption, and automated review. For more information, see <a href="https://help.aliyun.com/document_detail/188307.html">ApsaraVideo VOD billing overview</a>.</b></description></item>
+        /// <item><description>After you call the SubmitWorkflowJob operation to submit a workflow task, you can pass the returned task ID to this operation to query the execution status and result of the task.</description></item>
+        /// <item><description>This operation currently supports only querying video understanding workflow tasks. Querying tasks of other workflow versions is not supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24109,8 +24118,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you use this operation, make sure that you are familiar with the billing methods and pricing of ApsaraVideo VOD. Using workflows may incur fees for transcoding, encryption, automated review, and other services. For billing details, see <a href="https://help.aliyun.com/document_detail/188307.html">Billing overview</a>.</b></description></item>
-        /// <item><description>You can call this operation to query workflow processing tasks. This operation currently supports only video understanding workflow task queries. Workflow tasks of other versions are not supported.</description></item>
+        /// <item><description><b>Before calling this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Using workflows may incur fees for transcoding, encryption, and automated review. For more information, see <a href="https://help.aliyun.com/document_detail/188307.html">ApsaraVideo VOD billing overview</a>.</b></description></item>
+        /// <item><description>After you call the SubmitWorkflowJob operation to submit a workflow task, you can pass the returned task ID to this operation to query the execution status and result of the task.</description></item>
+        /// <item><description>This operation currently supports only querying video understanding workflow tasks. Querying tasks of other workflow versions is not supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24155,8 +24165,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you use this operation, make sure that you are familiar with the billing methods and pricing of ApsaraVideo VOD. Using workflows may incur fees for transcoding, encryption, automated review, and other services. For billing details, see <a href="https://help.aliyun.com/document_detail/188307.html">Billing overview</a>.</b></description></item>
-        /// <item><description>You can call this operation to query workflow processing tasks. This operation currently supports only video understanding workflow task queries. Workflow tasks of other versions are not supported.</description></item>
+        /// <item><description><b>Before calling this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Using workflows may incur fees for transcoding, encryption, and automated review. For more information, see <a href="https://help.aliyun.com/document_detail/188307.html">ApsaraVideo VOD billing overview</a>.</b></description></item>
+        /// <item><description>After you call the SubmitWorkflowJob operation to submit a workflow task, you can pass the returned task ID to this operation to query the execution status and result of the task.</description></item>
+        /// <item><description>This operation currently supports only querying video understanding workflow tasks. Querying tasks of other workflow versions is not supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24181,8 +24192,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you use this operation, make sure that you are familiar with the billing methods and pricing of ApsaraVideo VOD. Using workflows may incur fees for transcoding, encryption, automated review, and other services. For billing details, see <a href="https://help.aliyun.com/document_detail/188307.html">Billing overview</a>.</b></description></item>
-        /// <item><description>You can call this operation to query workflow processing tasks. This operation currently supports only video understanding workflow task queries. Workflow tasks of other versions are not supported.</description></item>
+        /// <item><description><b>Before calling this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Using workflows may incur fees for transcoding, encryption, and automated review. For more information, see <a href="https://help.aliyun.com/document_detail/188307.html">ApsaraVideo VOD billing overview</a>.</b></description></item>
+        /// <item><description>After you call the SubmitWorkflowJob operation to submit a workflow task, you can pass the returned task ID to this operation to query the execution status and result of the task.</description></item>
+        /// <item><description>This operation currently supports only querying video understanding workflow tasks. Querying tasks of other workflow versions is not supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24353,14 +24365,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries intelligent tagging or media fingerprint jobs. After you submit an intelligent tagging or media fingerprint job, the job is processed asynchronously. You can call this operation to query job information in real time.</para>
+        /// <para>Queries smart tagging or media fingerprint jobs. After a smart tagging or media fingerprint job is submitted, it is processed asynchronously. You can use this operation to query job information in real time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Regions that support media fingerprint: <b>China (Beijing)</b>, <b>China (Shanghai)</b>, and <b>Singapore</b>.</description></item>
-        /// <item><description>Regions that support intelligent tagging: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Regions supported by media fingerprint: <b>China (Beijing)</b>, <b>China (Shanghai)</b>, and <b>Singapore</b>.</description></item>
+        /// <item><description>Regions supported by smart tagging: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24419,14 +24431,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries intelligent tagging or media fingerprint jobs. After you submit an intelligent tagging or media fingerprint job, the job is processed asynchronously. You can call this operation to query job information in real time.</para>
+        /// <para>Queries smart tagging or media fingerprint jobs. After a smart tagging or media fingerprint job is submitted, it is processed asynchronously. You can use this operation to query job information in real time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Regions that support media fingerprint: <b>China (Beijing)</b>, <b>China (Shanghai)</b>, and <b>Singapore</b>.</description></item>
-        /// <item><description>Regions that support intelligent tagging: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Regions supported by media fingerprint: <b>China (Beijing)</b>, <b>China (Shanghai)</b>, and <b>Singapore</b>.</description></item>
+        /// <item><description>Regions supported by smart tagging: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24485,14 +24497,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries intelligent tagging or media fingerprint jobs. After you submit an intelligent tagging or media fingerprint job, the job is processed asynchronously. You can call this operation to query job information in real time.</para>
+        /// <para>Queries smart tagging or media fingerprint jobs. After a smart tagging or media fingerprint job is submitted, it is processed asynchronously. You can use this operation to query job information in real time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Regions that support media fingerprint: <b>China (Beijing)</b>, <b>China (Shanghai)</b>, and <b>Singapore</b>.</description></item>
-        /// <item><description>Regions that support intelligent tagging: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Regions supported by media fingerprint: <b>China (Beijing)</b>, <b>China (Shanghai)</b>, and <b>Singapore</b>.</description></item>
+        /// <item><description>Regions supported by smart tagging: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24511,14 +24523,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries intelligent tagging or media fingerprint jobs. After you submit an intelligent tagging or media fingerprint job, the job is processed asynchronously. You can call this operation to query job information in real time.</para>
+        /// <para>Queries smart tagging or media fingerprint jobs. After a smart tagging or media fingerprint job is submitted, it is processed asynchronously. You can use this operation to query job information in real time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Regions that support media fingerprint: <b>China (Beijing)</b>, <b>China (Shanghai)</b>, and <b>Singapore</b>.</description></item>
-        /// <item><description>Regions that support intelligent tagging: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Regions supported by media fingerprint: <b>China (Beijing)</b>, <b>China (Shanghai)</b>, and <b>Singapore</b>.</description></item>
+        /// <item><description>Regions supported by smart tagging: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25313,7 +25325,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical task list based on a media asset ID.</para>
+        /// <para>Queries the list of historical tasks by media asset ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -25321,9 +25333,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <para><em>Usage notes</em>*</para>
         /// <list type="bullet">
         /// <item><description>To query detailed task information, call the <a href="https://help.aliyun.com/document_detail/2861326.html">GetJobDetail</a> operation.</description></item>
-        /// <item><description>This operation only supports querying asynchronous task data within the last 6 months. Supported task types: transcoding tasks, snapshot tasks, and AI tasks.
+        /// <item><description>This operation only supports querying asynchronous task data within the last 6 months. Queryable task types include transcoding tasks, snapshot tasks, and AI tasks.
         /// <b>QPS limit</b>
-        /// The single-user QPS limit for this operation is 15 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</description></item>
+        /// The QPS limit for a single user calling this operation is 15 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25370,7 +25382,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical task list based on a media asset ID.</para>
+        /// <para>Queries the list of historical tasks by media asset ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -25378,9 +25390,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <para><em>Usage notes</em>*</para>
         /// <list type="bullet">
         /// <item><description>To query detailed task information, call the <a href="https://help.aliyun.com/document_detail/2861326.html">GetJobDetail</a> operation.</description></item>
-        /// <item><description>This operation only supports querying asynchronous task data within the last 6 months. Supported task types: transcoding tasks, snapshot tasks, and AI tasks.
+        /// <item><description>This operation only supports querying asynchronous task data within the last 6 months. Queryable task types include transcoding tasks, snapshot tasks, and AI tasks.
         /// <b>QPS limit</b>
-        /// The single-user QPS limit for this operation is 15 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</description></item>
+        /// The QPS limit for a single user calling this operation is 15 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25427,7 +25439,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical task list based on a media asset ID.</para>
+        /// <para>Queries the list of historical tasks by media asset ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -25435,9 +25447,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <para><em>Usage notes</em>*</para>
         /// <list type="bullet">
         /// <item><description>To query detailed task information, call the <a href="https://help.aliyun.com/document_detail/2861326.html">GetJobDetail</a> operation.</description></item>
-        /// <item><description>This operation only supports querying asynchronous task data within the last 6 months. Supported task types: transcoding tasks, snapshot tasks, and AI tasks.
+        /// <item><description>This operation only supports querying asynchronous task data within the last 6 months. Queryable task types include transcoding tasks, snapshot tasks, and AI tasks.
         /// <b>QPS limit</b>
-        /// The single-user QPS limit for this operation is 15 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</description></item>
+        /// The QPS limit for a single user calling this operation is 15 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25456,7 +25468,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical task list based on a media asset ID.</para>
+        /// <para>Queries the list of historical tasks by media asset ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -25464,9 +25476,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <para><em>Usage notes</em>*</para>
         /// <list type="bullet">
         /// <item><description>To query detailed task information, call the <a href="https://help.aliyun.com/document_detail/2861326.html">GetJobDetail</a> operation.</description></item>
-        /// <item><description>This operation only supports querying asynchronous task data within the last 6 months. Supported task types: transcoding tasks, snapshot tasks, and AI tasks.
+        /// <item><description>This operation only supports querying asynchronous task data within the last 6 months. Queryable task types include transcoding tasks, snapshot tasks, and AI tasks.
         /// <b>QPS limit</b>
-        /// The single-user QPS limit for this operation is 15 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</description></item>
+        /// The QPS limit for a single user calling this operation is 15 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26325,7 +26337,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to query the parameter settings of all image watermark templates and text watermark templates that have been added in the current service region, including the position, size, and display time of image watermarks, and the content, font, color, position, and other parameter settings of text watermarks.</para>
+        /// <para>Invokes this operation to query the configuration information of all image and text watermark templates added in the current service region. The information includes the position, size, and display duration of image watermarks, as well as the parameter settings such as the content, font, color, and position of text watermarks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26367,7 +26379,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to query the parameter settings of all image watermark templates and text watermark templates that have been added in the current service region, including the position, size, and display time of image watermarks, and the content, font, color, position, and other parameter settings of text watermarks.</para>
+        /// <para>Invokes this operation to query the configuration information of all image and text watermark templates added in the current service region. The information includes the position, size, and display duration of image watermarks, as well as the parameter settings such as the content, font, color, and position of text watermarks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26409,7 +26421,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to query the parameter settings of all image watermark templates and text watermark templates that have been added in the current service region, including the position, size, and display time of image watermarks, and the content, font, color, position, and other parameter settings of text watermarks.</para>
+        /// <para>Invokes this operation to query the configuration information of all image and text watermark templates added in the current service region. The information includes the position, size, and display duration of image watermarks, as well as the parameter settings such as the content, font, color, and position of text watermarks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26427,7 +26439,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes this operation to query the parameter settings of all image watermark templates and text watermark templates that have been added in the current service region, including the position, size, and display time of image watermarks, and the content, font, color, position, and other parameter settings of text watermarks.</para>
+        /// <para>Invokes this operation to query the configuration information of all image and text watermark templates added in the current service region. The information includes the position, size, and display duration of image watermarks, as well as the parameter settings such as the content, font, color, and position of text watermarks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26581,14 +26593,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prefetches content from the origin server to L2 Cache nodes so that the first access directly hits the cache, reducing the load on the origin server.</para>
+        /// <para>Prefetches content from the origin server to L2 cache nodes so that first-time requests can directly hit the cache, reducing the load on the origin server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, the only supported service region is <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>A maximum of 500 prefetch URL requests can be submitted per account per day. Directory-level prefetch is not supported.</description></item>
+        /// <item><description>Currently, the service endpoint only supports <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Each account can submit up to 500 prefetch URL requests per day. Directory-level prefetching is not supported.</description></item>
         /// <item><description>The purge and prefetch operations include the <a href="~~RefreshVodObjectCaches~~">RefreshVodObjectCaches</a> purge operation and the <a href="~~PreloadVodObjectCaches~~">PreloadVodObjectCaches</a> prefetch operation.</description></item>
         /// </list>
         /// </description>
@@ -26652,14 +26664,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prefetches content from the origin server to L2 Cache nodes so that the first access directly hits the cache, reducing the load on the origin server.</para>
+        /// <para>Prefetches content from the origin server to L2 cache nodes so that first-time requests can directly hit the cache, reducing the load on the origin server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, the only supported service region is <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>A maximum of 500 prefetch URL requests can be submitted per account per day. Directory-level prefetch is not supported.</description></item>
+        /// <item><description>Currently, the service endpoint only supports <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Each account can submit up to 500 prefetch URL requests per day. Directory-level prefetching is not supported.</description></item>
         /// <item><description>The purge and prefetch operations include the <a href="~~RefreshVodObjectCaches~~">RefreshVodObjectCaches</a> purge operation and the <a href="~~PreloadVodObjectCaches~~">PreloadVodObjectCaches</a> prefetch operation.</description></item>
         /// </list>
         /// </description>
@@ -26723,14 +26735,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prefetches content from the origin server to L2 Cache nodes so that the first access directly hits the cache, reducing the load on the origin server.</para>
+        /// <para>Prefetches content from the origin server to L2 cache nodes so that first-time requests can directly hit the cache, reducing the load on the origin server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, the only supported service region is <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>A maximum of 500 prefetch URL requests can be submitted per account per day. Directory-level prefetch is not supported.</description></item>
+        /// <item><description>Currently, the service endpoint only supports <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Each account can submit up to 500 prefetch URL requests per day. Directory-level prefetching is not supported.</description></item>
         /// <item><description>The purge and prefetch operations include the <a href="~~RefreshVodObjectCaches~~">RefreshVodObjectCaches</a> purge operation and the <a href="~~PreloadVodObjectCaches~~">PreloadVodObjectCaches</a> prefetch operation.</description></item>
         /// </list>
         /// </description>
@@ -26750,14 +26762,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prefetches content from the origin server to L2 Cache nodes so that the first access directly hits the cache, reducing the load on the origin server.</para>
+        /// <para>Prefetches content from the origin server to L2 cache nodes so that first-time requests can directly hit the cache, reducing the load on the origin server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, the only supported service region is <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>A maximum of 500 prefetch URL requests can be submitted per account per day. Directory-level prefetch is not supported.</description></item>
+        /// <item><description>Currently, the service endpoint only supports <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>Each account can submit up to 500 prefetch URL requests per day. Directory-level prefetching is not supported.</description></item>
         /// <item><description>The purge and prefetch operations include the <a href="~~RefreshVodObjectCaches~~">RefreshVodObjectCaches</a> purge operation and the <a href="~~PreloadVodObjectCaches~~">PreloadVodObjectCaches</a> prefetch operation.</description></item>
         /// </list>
         /// </description>
@@ -27681,17 +27693,17 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers media assets. Existing media files stored in your own OSS bucket that is connected to ApsaraVideo VOD must be registered to generate the associated data required by VOD before you can use VOD features such as transcoding and snapshotting.</para>
+        /// <para>Registers media assets. If you have existing media asset files stored in your own OSS buckets integrated with ApsaraVideo VOD, you must register the media assets to generate the associated data required by ApsaraVideo VOD before you can use features such as transcoding and snapshot generation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For audio and video files already stored in an OSS bucket connected to ApsaraVideo VOD, you must call this operation to generate the associated data required by VOD before you can initiate transcoding, snapshotting, AI processing, and other operations on these files by media ID.</description></item>
-        /// <item><description>You can register up to <b>10 OSS media files</b> at a time, and all media files submitted in a single request must correspond to the same storage address.</description></item>
-        /// <item><description>For media files uploaded through VOD, if no transcoding template group ID is specified, the default template group is used for transcoding. In contrast, after media asset registration, transcoding is not automatically triggered if no transcoding template group ID is specified. If a transcoding template group ID is specified, transcoding is performed based on the specified template group.</description></item>
-        /// <item><description>If a media file is registered repeatedly, only the <b>unique media ID associated with it</b> is returned, and no other processing is performed.</description></item>
-        /// <item><description>Make sure that the media file you want to register has a valid file name extension. Otherwise, the registration fails.</description></item>
+        /// <item><description>For audio and video media files already stored in OSS buckets integrated with ApsaraVideo VOD, you must call the media asset registration operation to generate the associated data required by ApsaraVideo VOD. Then, you can initiate transcoding, snapshot generation, and AI processing for these media files by using their media IDs in ApsaraVideo VOD.</description></item>
+        /// <item><description>You can register up to <b>10 OSS media files</b> at a time, and the storage addresses of the media files submitted at a time must be the same.</description></item>
+        /// <item><description>For media files uploaded to ApsaraVideo VOD, if no transcoding template group ID is specified, the default template group is used for transcoding. In contrast, after you register media assets, if no transcoding template group ID is specified, transcoding is not automatically triggered. If a transcoding template group ID is specified, the specified template group is used for transcoding.</description></item>
+        /// <item><description>For repeatedly registered media files, only the <b>unique media ID associated</b> with the file is returned, and no other processing is performed.</description></item>
+        /// <item><description>Make sure that the media asset files you want to register have valid file name extensions. Otherwise, the registration fails.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27754,17 +27766,17 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers media assets. Existing media files stored in your own OSS bucket that is connected to ApsaraVideo VOD must be registered to generate the associated data required by VOD before you can use VOD features such as transcoding and snapshotting.</para>
+        /// <para>Registers media assets. If you have existing media asset files stored in your own OSS buckets integrated with ApsaraVideo VOD, you must register the media assets to generate the associated data required by ApsaraVideo VOD before you can use features such as transcoding and snapshot generation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For audio and video files already stored in an OSS bucket connected to ApsaraVideo VOD, you must call this operation to generate the associated data required by VOD before you can initiate transcoding, snapshotting, AI processing, and other operations on these files by media ID.</description></item>
-        /// <item><description>You can register up to <b>10 OSS media files</b> at a time, and all media files submitted in a single request must correspond to the same storage address.</description></item>
-        /// <item><description>For media files uploaded through VOD, if no transcoding template group ID is specified, the default template group is used for transcoding. In contrast, after media asset registration, transcoding is not automatically triggered if no transcoding template group ID is specified. If a transcoding template group ID is specified, transcoding is performed based on the specified template group.</description></item>
-        /// <item><description>If a media file is registered repeatedly, only the <b>unique media ID associated with it</b> is returned, and no other processing is performed.</description></item>
-        /// <item><description>Make sure that the media file you want to register has a valid file name extension. Otherwise, the registration fails.</description></item>
+        /// <item><description>For audio and video media files already stored in OSS buckets integrated with ApsaraVideo VOD, you must call the media asset registration operation to generate the associated data required by ApsaraVideo VOD. Then, you can initiate transcoding, snapshot generation, and AI processing for these media files by using their media IDs in ApsaraVideo VOD.</description></item>
+        /// <item><description>You can register up to <b>10 OSS media files</b> at a time, and the storage addresses of the media files submitted at a time must be the same.</description></item>
+        /// <item><description>For media files uploaded to ApsaraVideo VOD, if no transcoding template group ID is specified, the default template group is used for transcoding. In contrast, after you register media assets, if no transcoding template group ID is specified, transcoding is not automatically triggered. If a transcoding template group ID is specified, the specified template group is used for transcoding.</description></item>
+        /// <item><description>For repeatedly registered media files, only the <b>unique media ID associated</b> with the file is returned, and no other processing is performed.</description></item>
+        /// <item><description>Make sure that the media asset files you want to register have valid file name extensions. Otherwise, the registration fails.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27827,17 +27839,17 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers media assets. Existing media files stored in your own OSS bucket that is connected to ApsaraVideo VOD must be registered to generate the associated data required by VOD before you can use VOD features such as transcoding and snapshotting.</para>
+        /// <para>Registers media assets. If you have existing media asset files stored in your own OSS buckets integrated with ApsaraVideo VOD, you must register the media assets to generate the associated data required by ApsaraVideo VOD before you can use features such as transcoding and snapshot generation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For audio and video files already stored in an OSS bucket connected to ApsaraVideo VOD, you must call this operation to generate the associated data required by VOD before you can initiate transcoding, snapshotting, AI processing, and other operations on these files by media ID.</description></item>
-        /// <item><description>You can register up to <b>10 OSS media files</b> at a time, and all media files submitted in a single request must correspond to the same storage address.</description></item>
-        /// <item><description>For media files uploaded through VOD, if no transcoding template group ID is specified, the default template group is used for transcoding. In contrast, after media asset registration, transcoding is not automatically triggered if no transcoding template group ID is specified. If a transcoding template group ID is specified, transcoding is performed based on the specified template group.</description></item>
-        /// <item><description>If a media file is registered repeatedly, only the <b>unique media ID associated with it</b> is returned, and no other processing is performed.</description></item>
-        /// <item><description>Make sure that the media file you want to register has a valid file name extension. Otherwise, the registration fails.</description></item>
+        /// <item><description>For audio and video media files already stored in OSS buckets integrated with ApsaraVideo VOD, you must call the media asset registration operation to generate the associated data required by ApsaraVideo VOD. Then, you can initiate transcoding, snapshot generation, and AI processing for these media files by using their media IDs in ApsaraVideo VOD.</description></item>
+        /// <item><description>You can register up to <b>10 OSS media files</b> at a time, and the storage addresses of the media files submitted at a time must be the same.</description></item>
+        /// <item><description>For media files uploaded to ApsaraVideo VOD, if no transcoding template group ID is specified, the default template group is used for transcoding. In contrast, after you register media assets, if no transcoding template group ID is specified, transcoding is not automatically triggered. If a transcoding template group ID is specified, the specified template group is used for transcoding.</description></item>
+        /// <item><description>For repeatedly registered media files, only the <b>unique media ID associated</b> with the file is returned, and no other processing is performed.</description></item>
+        /// <item><description>Make sure that the media asset files you want to register have valid file name extensions. Otherwise, the registration fails.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27856,17 +27868,17 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers media assets. Existing media files stored in your own OSS bucket that is connected to ApsaraVideo VOD must be registered to generate the associated data required by VOD before you can use VOD features such as transcoding and snapshotting.</para>
+        /// <para>Registers media assets. If you have existing media asset files stored in your own OSS buckets integrated with ApsaraVideo VOD, you must register the media assets to generate the associated data required by ApsaraVideo VOD before you can use features such as transcoding and snapshot generation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For audio and video files already stored in an OSS bucket connected to ApsaraVideo VOD, you must call this operation to generate the associated data required by VOD before you can initiate transcoding, snapshotting, AI processing, and other operations on these files by media ID.</description></item>
-        /// <item><description>You can register up to <b>10 OSS media files</b> at a time, and all media files submitted in a single request must correspond to the same storage address.</description></item>
-        /// <item><description>For media files uploaded through VOD, if no transcoding template group ID is specified, the default template group is used for transcoding. In contrast, after media asset registration, transcoding is not automatically triggered if no transcoding template group ID is specified. If a transcoding template group ID is specified, transcoding is performed based on the specified template group.</description></item>
-        /// <item><description>If a media file is registered repeatedly, only the <b>unique media ID associated with it</b> is returned, and no other processing is performed.</description></item>
-        /// <item><description>Make sure that the media file you want to register has a valid file name extension. Otherwise, the registration fails.</description></item>
+        /// <item><description>For audio and video media files already stored in OSS buckets integrated with ApsaraVideo VOD, you must call the media asset registration operation to generate the associated data required by ApsaraVideo VOD. Then, you can initiate transcoding, snapshot generation, and AI processing for these media files by using their media IDs in ApsaraVideo VOD.</description></item>
+        /// <item><description>You can register up to <b>10 OSS media files</b> at a time, and the storage addresses of the media files submitted at a time must be the same.</description></item>
+        /// <item><description>For media files uploaded to ApsaraVideo VOD, if no transcoding template group ID is specified, the default template group is used for transcoding. In contrast, after you register media assets, if no transcoding template group ID is specified, transcoding is not automatically triggered. If a transcoding template group ID is specified, the specified template group is used for transcoding.</description></item>
+        /// <item><description>For repeatedly registered media files, only the <b>unique media ID associated</b> with the file is returned, and no other processing is performed.</description></item>
+        /// <item><description>Make sure that the media asset files you want to register have valid file name extensions. Otherwise, the registration fails.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28065,7 +28077,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Searches for online editing projects (video editing lists).</para>
+        /// <para>Queries online editing projects (video editing list).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28147,7 +28159,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Searches for online editing projects (video editing lists).</para>
+        /// <para>Queries online editing projects (video editing list).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28229,7 +28241,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Searches for online editing projects (video editing lists).</para>
+        /// <para>Queries online editing projects (video editing list).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28247,7 +28259,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Searches for online editing projects (video editing lists).</para>
+        /// <para>Queries online editing projects (video editing list).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28505,7 +28517,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the playback key for an application.</para>
+        /// <para>Sets the application playback key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28563,7 +28575,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the playback key for an application.</para>
+        /// <para>Sets the application playback key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28621,7 +28633,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the playback key for an application.</para>
+        /// <para>Sets the application playback key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28639,7 +28651,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the playback key for an application.</para>
+        /// <para>Sets the application playback key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29561,14 +29573,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the callback method, callback URL, and event types for event notifications.</para>
+        /// <para>Configures the callback method, callback URL, and event types for event notifications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>HTTP callbacks and Simple Message Queue (formerly MNS) callbacks are supported. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Event notifications</a>.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 15 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <para>Supports HTTP callbacks and Simple Message Queue (formerly MNS) callbacks. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Event notifications</a>.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user calling this API operation is 15 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the API operation at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29642,14 +29654,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the callback method, callback URL, and event types for event notifications.</para>
+        /// <para>Configures the callback method, callback URL, and event types for event notifications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>HTTP callbacks and Simple Message Queue (formerly MNS) callbacks are supported. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Event notifications</a>.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 15 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <para>Supports HTTP callbacks and Simple Message Queue (formerly MNS) callbacks. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Event notifications</a>.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user calling this API operation is 15 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the API operation at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29723,14 +29735,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the callback method, callback URL, and event types for event notifications.</para>
+        /// <para>Configures the callback method, callback URL, and event types for event notifications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>HTTP callbacks and Simple Message Queue (formerly MNS) callbacks are supported. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Event notifications</a>.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 15 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <para>Supports HTTP callbacks and Simple Message Queue (formerly MNS) callbacks. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Event notifications</a>.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user calling this API operation is 15 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the API operation at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29748,14 +29760,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the callback method, callback URL, and event types for event notifications.</para>
+        /// <para>Configures the callback method, callback URL, and event types for event notifications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>HTTP callbacks and Simple Message Queue (formerly MNS) callbacks are supported. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Event notifications</a>.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 15 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <para>Supports HTTP callbacks and Simple Message Queue (formerly MNS) callbacks. For more information, see <a href="https://help.aliyun.com/document_detail/55627.html">Event notifications</a>.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user calling this API operation is 15 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the API operation at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29969,14 +29981,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets whether the certificate feature is enabled for a specified domain name and updates the certificate information.</para>
+        /// <para>Enables or disables the certificate feature for a domain name and updates the certificate information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation currently supports only the <b>China East 2 (Shanghai)</b> region.</description></item>
-        /// <item><description>Maximum calls per user: 30 calls per second.</description></item>
+        /// <item><description>This operation is currently supported only in the <b>China (Shanghai)</b> region.</description></item>
+        /// <item><description>Rate limit per user: 30 calls per second.</description></item>
         /// <item><description>Request method: POST.</description></item>
         /// </list>
         /// </description>
@@ -30060,14 +30072,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets whether the certificate feature is enabled for a specified domain name and updates the certificate information.</para>
+        /// <para>Enables or disables the certificate feature for a domain name and updates the certificate information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation currently supports only the <b>China East 2 (Shanghai)</b> region.</description></item>
-        /// <item><description>Maximum calls per user: 30 calls per second.</description></item>
+        /// <item><description>This operation is currently supported only in the <b>China (Shanghai)</b> region.</description></item>
+        /// <item><description>Rate limit per user: 30 calls per second.</description></item>
         /// <item><description>Request method: POST.</description></item>
         /// </list>
         /// </description>
@@ -30151,14 +30163,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets whether the certificate feature is enabled for a specified domain name and updates the certificate information.</para>
+        /// <para>Enables or disables the certificate feature for a domain name and updates the certificate information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation currently supports only the <b>China East 2 (Shanghai)</b> region.</description></item>
-        /// <item><description>Maximum calls per user: 30 calls per second.</description></item>
+        /// <item><description>This operation is currently supported only in the <b>China (Shanghai)</b> region.</description></item>
+        /// <item><description>Rate limit per user: 30 calls per second.</description></item>
         /// <item><description>Request method: POST.</description></item>
         /// </list>
         /// </description>
@@ -30178,14 +30190,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets whether the certificate feature is enabled for a specified domain name and updates the certificate information.</para>
+        /// <para>Enables or disables the certificate feature for a domain name and updates the certificate information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation currently supports only the <b>China East 2 (Shanghai)</b> region.</description></item>
-        /// <item><description>Maximum calls per user: 30 calls per second.</description></item>
+        /// <item><description>This operation is currently supported only in the <b>China (Shanghai)</b> region.</description></item>
+        /// <item><description>Rate limit per user: 30 calls per second.</description></item>
         /// <item><description>Request method: POST.</description></item>
         /// </list>
         /// </description>
@@ -30447,8 +30459,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is supported in the following regions: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. The task is not yet complete at this point and enters a background queue for asynchronous execution. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/186923.html">GetAIImageJobs</a> to query the task execution result.</description></item>
+        /// <item><description>This operation is supported in the following regions: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not completed at this time and enters the background queue for asynchronous execution. The final result is notified through a callback. You can also call <a href="https://help.aliyun.com/document_detail/186923.html">GetAIImageJobs</a> to query the task execution result.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30525,8 +30537,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is supported in the following regions: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. The task is not yet complete at this point and enters a background queue for asynchronous execution. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/186923.html">GetAIImageJobs</a> to query the task execution result.</description></item>
+        /// <item><description>This operation is supported in the following regions: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not completed at this time and enters the background queue for asynchronous execution. The final result is notified through a callback. You can also call <a href="https://help.aliyun.com/document_detail/186923.html">GetAIImageJobs</a> to query the task execution result.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30603,8 +30615,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is supported in the following regions: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. The task is not yet complete at this point and enters a background queue for asynchronous execution. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/186923.html">GetAIImageJobs</a> to query the task execution result.</description></item>
+        /// <item><description>This operation is supported in the following regions: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not completed at this time and enters the background queue for asynchronous execution. The final result is notified through a callback. You can also call <a href="https://help.aliyun.com/document_detail/186923.html">GetAIImageJobs</a> to query the task execution result.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30629,8 +30641,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is supported in the following regions: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
-        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. The task is not yet complete at this point and enters a background queue for asynchronous execution. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/186923.html">GetAIImageJobs</a> to query the task execution result.</description></item>
+        /// <item><description>This operation is supported in the following regions: <b>China (Beijing)</b> and <b>China (Shanghai)</b>.</description></item>
+        /// <item><description>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not completed at this time and enters the background queue for asynchronous execution. The final result is notified through a callback. You can also call <a href="https://help.aliyun.com/document_detail/186923.html">GetAIImageJobs</a> to query the task execution result.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31097,20 +31109,20 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a digital watermarking (copyright watermark or tracing watermark) extraction job to asynchronously extract a copyright watermark or tracing watermark.</para>
+        /// <para>Submits a digital watermark extraction job by invoking this operation to asynchronously extract a copyright watermark or a tracing watermark.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Digital watermarking is a paid feature. Both the generation and extraction of digital watermarks incur fees. For billing details, see <a href="~~188310#62b9c940403se~~">Digital watermarking billing</a>.</b></description></item>
-        /// <item><description>Currently, this operation is available only in the following regions: <b>China (Shanghai)</b> and <b>China (Beijing)</b>.</description></item>
-        /// <item><description>&lt;props=&quot;china&quot;&gt;For more information about the generation and extraction of digital watermarks, see <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarking</a>.Before you submit a digital watermark extraction job, make sure that the following conditions are met:<list type="bullet">
-        /// <item><description>The video from which you want to extract the watermark has been uploaded to ApsaraVideo VOD.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Digital watermarking is a paid feature. Both the generation and extraction of digital watermarks incur fees. For more information, see <a href="~~188310#62b9c940403se~~">Billing of digital watermarks</a>.</b></description></item>
+        /// <item><description>Currently, this operation is supported only in the <b>China (Shanghai)</b> and <b>China (Beijing)</b> regions.</description></item>
+        /// <item><description>&lt;props=&quot;china&quot;&gt;For more information about the generation and extraction of digital watermarks, see <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarks</a>. Before you submit a digital watermark extraction job, make sure that the following conditions are met:<list type="bullet">
+        /// <item><description>The video from which you want to extract the watermark is uploaded to ApsaraVideo VOD.</description></item>
         /// <item><description>The duration of the video from which you want to extract the watermark exceeds 6 minutes.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>After you submit a digital watermark extraction job, call the <a href="https://help.aliyun.com/document_detail/2587769.html">GetDigitalWatermarkExtractResult</a> operation to query the job result.</description></item>
+        /// <item><description>After the digital watermark extraction job is submitted, call the <a href="https://help.aliyun.com/document_detail/2587769.html">GetDigitalWatermarkExtractResult</a> operation to query the job result.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31173,20 +31185,20 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a digital watermarking (copyright watermark or tracing watermark) extraction job to asynchronously extract a copyright watermark or tracing watermark.</para>
+        /// <para>Submits a digital watermark extraction job by invoking this operation to asynchronously extract a copyright watermark or a tracing watermark.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Digital watermarking is a paid feature. Both the generation and extraction of digital watermarks incur fees. For billing details, see <a href="~~188310#62b9c940403se~~">Digital watermarking billing</a>.</b></description></item>
-        /// <item><description>Currently, this operation is available only in the following regions: <b>China (Shanghai)</b> and <b>China (Beijing)</b>.</description></item>
-        /// <item><description>&lt;props=&quot;china&quot;&gt;For more information about the generation and extraction of digital watermarks, see <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarking</a>.Before you submit a digital watermark extraction job, make sure that the following conditions are met:<list type="bullet">
-        /// <item><description>The video from which you want to extract the watermark has been uploaded to ApsaraVideo VOD.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Digital watermarking is a paid feature. Both the generation and extraction of digital watermarks incur fees. For more information, see <a href="~~188310#62b9c940403se~~">Billing of digital watermarks</a>.</b></description></item>
+        /// <item><description>Currently, this operation is supported only in the <b>China (Shanghai)</b> and <b>China (Beijing)</b> regions.</description></item>
+        /// <item><description>&lt;props=&quot;china&quot;&gt;For more information about the generation and extraction of digital watermarks, see <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarks</a>. Before you submit a digital watermark extraction job, make sure that the following conditions are met:<list type="bullet">
+        /// <item><description>The video from which you want to extract the watermark is uploaded to ApsaraVideo VOD.</description></item>
         /// <item><description>The duration of the video from which you want to extract the watermark exceeds 6 minutes.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>After you submit a digital watermark extraction job, call the <a href="https://help.aliyun.com/document_detail/2587769.html">GetDigitalWatermarkExtractResult</a> operation to query the job result.</description></item>
+        /// <item><description>After the digital watermark extraction job is submitted, call the <a href="https://help.aliyun.com/document_detail/2587769.html">GetDigitalWatermarkExtractResult</a> operation to query the job result.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31249,20 +31261,20 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a digital watermarking (copyright watermark or tracing watermark) extraction job to asynchronously extract a copyright watermark or tracing watermark.</para>
+        /// <para>Submits a digital watermark extraction job by invoking this operation to asynchronously extract a copyright watermark or a tracing watermark.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Digital watermarking is a paid feature. Both the generation and extraction of digital watermarks incur fees. For billing details, see <a href="~~188310#62b9c940403se~~">Digital watermarking billing</a>.</b></description></item>
-        /// <item><description>Currently, this operation is available only in the following regions: <b>China (Shanghai)</b> and <b>China (Beijing)</b>.</description></item>
-        /// <item><description>&lt;props=&quot;china&quot;&gt;For more information about the generation and extraction of digital watermarks, see <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarking</a>.Before you submit a digital watermark extraction job, make sure that the following conditions are met:<list type="bullet">
-        /// <item><description>The video from which you want to extract the watermark has been uploaded to ApsaraVideo VOD.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Digital watermarking is a paid feature. Both the generation and extraction of digital watermarks incur fees. For more information, see <a href="~~188310#62b9c940403se~~">Billing of digital watermarks</a>.</b></description></item>
+        /// <item><description>Currently, this operation is supported only in the <b>China (Shanghai)</b> and <b>China (Beijing)</b> regions.</description></item>
+        /// <item><description>&lt;props=&quot;china&quot;&gt;For more information about the generation and extraction of digital watermarks, see <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarks</a>. Before you submit a digital watermark extraction job, make sure that the following conditions are met:<list type="bullet">
+        /// <item><description>The video from which you want to extract the watermark is uploaded to ApsaraVideo VOD.</description></item>
         /// <item><description>The duration of the video from which you want to extract the watermark exceeds 6 minutes.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>After you submit a digital watermark extraction job, call the <a href="https://help.aliyun.com/document_detail/2587769.html">GetDigitalWatermarkExtractResult</a> operation to query the job result.</description></item>
+        /// <item><description>After the digital watermark extraction job is submitted, call the <a href="https://help.aliyun.com/document_detail/2587769.html">GetDigitalWatermarkExtractResult</a> operation to query the job result.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31281,20 +31293,20 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a digital watermarking (copyright watermark or tracing watermark) extraction job to asynchronously extract a copyright watermark or tracing watermark.</para>
+        /// <para>Submits a digital watermark extraction job by invoking this operation to asynchronously extract a copyright watermark or a tracing watermark.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Digital watermarking is a paid feature. Both the generation and extraction of digital watermarks incur fees. For billing details, see <a href="~~188310#62b9c940403se~~">Digital watermarking billing</a>.</b></description></item>
-        /// <item><description>Currently, this operation is available only in the following regions: <b>China (Shanghai)</b> and <b>China (Beijing)</b>.</description></item>
-        /// <item><description>&lt;props=&quot;china&quot;&gt;For more information about the generation and extraction of digital watermarks, see <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarking</a>.Before you submit a digital watermark extraction job, make sure that the following conditions are met:<list type="bullet">
-        /// <item><description>The video from which you want to extract the watermark has been uploaded to ApsaraVideo VOD.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Digital watermarking is a paid feature. Both the generation and extraction of digital watermarks incur fees. For more information, see <a href="~~188310#62b9c940403se~~">Billing of digital watermarks</a>.</b></description></item>
+        /// <item><description>Currently, this operation is supported only in the <b>China (Shanghai)</b> and <b>China (Beijing)</b> regions.</description></item>
+        /// <item><description>&lt;props=&quot;china&quot;&gt;For more information about the generation and extraction of digital watermarks, see <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarks</a>. Before you submit a digital watermark extraction job, make sure that the following conditions are met:<list type="bullet">
+        /// <item><description>The video from which you want to extract the watermark is uploaded to ApsaraVideo VOD.</description></item>
         /// <item><description>The duration of the video from which you want to extract the watermark exceeds 6 minutes.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>After you submit a digital watermark extraction job, call the <a href="https://help.aliyun.com/document_detail/2587769.html">GetDigitalWatermarkExtractResult</a> operation to query the job result.</description></item>
+        /// <item><description>After the digital watermark extraction job is submitted, call the <a href="https://help.aliyun.com/document_detail/2587769.html">GetDigitalWatermarkExtractResult</a> operation to query the job result.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31320,12 +31332,12 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <description>
         /// <h3>Usage notes</h3>
         /// <list type="bullet">
-        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. The task is queued for asynchronous execution in the background. You can receive the final result through a callback notification or proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/2861326.html">Get task details</a>.</description></item>
-        /// <item><description>You can submit an animated image job only for videos in the <b>UploadSucc</b>, <b>Transcoding</b>, <b>Normal</b>, <b>Checking</b>, or <b>Blocked</b> state.</description></item>
-        /// <item><description>Animated image production is billed as video transcoding at the same rate, based on resolution and duration. For more information, see <a href="https://help.aliyun.com/document_detail/188308.html">Media transcoding billing</a>.</description></item>
+        /// <item><description>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not completed at this time and enters the background queue for asynchronous execution. The final result is notified through a callback. You can also call the <a href="https://help.aliyun.com/document_detail/2861326.html">Get task details</a> operation to actively query the task status.</description></item>
+        /// <item><description>You can initiate an animated image job only for videos whose status is <b>Upload Complete</b>, <b>Transcoding</b>, <b>Normal</b>, <b>Under Review</b>, or <b>Blocked</b>.</description></item>
+        /// <item><description>Animated image production is billed as video transcoding and follows the same billing standards, which are based on resolution and duration. For more information about billing, see <a href="https://help.aliyun.com/document_detail/188308.html">Billing of media asset transcoding</a>.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
-        /// <para>The QPS limit for a single user on this operation is 30 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 30 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31382,12 +31394,12 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <description>
         /// <h3>Usage notes</h3>
         /// <list type="bullet">
-        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. The task is queued for asynchronous execution in the background. You can receive the final result through a callback notification or proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/2861326.html">Get task details</a>.</description></item>
-        /// <item><description>You can submit an animated image job only for videos in the <b>UploadSucc</b>, <b>Transcoding</b>, <b>Normal</b>, <b>Checking</b>, or <b>Blocked</b> state.</description></item>
-        /// <item><description>Animated image production is billed as video transcoding at the same rate, based on resolution and duration. For more information, see <a href="https://help.aliyun.com/document_detail/188308.html">Media transcoding billing</a>.</description></item>
+        /// <item><description>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not completed at this time and enters the background queue for asynchronous execution. The final result is notified through a callback. You can also call the <a href="https://help.aliyun.com/document_detail/2861326.html">Get task details</a> operation to actively query the task status.</description></item>
+        /// <item><description>You can initiate an animated image job only for videos whose status is <b>Upload Complete</b>, <b>Transcoding</b>, <b>Normal</b>, <b>Under Review</b>, or <b>Blocked</b>.</description></item>
+        /// <item><description>Animated image production is billed as video transcoding and follows the same billing standards, which are based on resolution and duration. For more information about billing, see <a href="https://help.aliyun.com/document_detail/188308.html">Billing of media asset transcoding</a>.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
-        /// <para>The QPS limit for a single user on this operation is 30 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 30 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31444,12 +31456,12 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <description>
         /// <h3>Usage notes</h3>
         /// <list type="bullet">
-        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. The task is queued for asynchronous execution in the background. You can receive the final result through a callback notification or proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/2861326.html">Get task details</a>.</description></item>
-        /// <item><description>You can submit an animated image job only for videos in the <b>UploadSucc</b>, <b>Transcoding</b>, <b>Normal</b>, <b>Checking</b>, or <b>Blocked</b> state.</description></item>
-        /// <item><description>Animated image production is billed as video transcoding at the same rate, based on resolution and duration. For more information, see <a href="https://help.aliyun.com/document_detail/188308.html">Media transcoding billing</a>.</description></item>
+        /// <item><description>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not completed at this time and enters the background queue for asynchronous execution. The final result is notified through a callback. You can also call the <a href="https://help.aliyun.com/document_detail/2861326.html">Get task details</a> operation to actively query the task status.</description></item>
+        /// <item><description>You can initiate an animated image job only for videos whose status is <b>Upload Complete</b>, <b>Transcoding</b>, <b>Normal</b>, <b>Under Review</b>, or <b>Blocked</b>.</description></item>
+        /// <item><description>Animated image production is billed as video transcoding and follows the same billing standards, which are based on resolution and duration. For more information about billing, see <a href="https://help.aliyun.com/document_detail/188308.html">Billing of media asset transcoding</a>.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
-        /// <para>The QPS limit for a single user on this operation is 30 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 30 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31474,12 +31486,12 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <description>
         /// <h3>Usage notes</h3>
         /// <list type="bullet">
-        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. The task is queued for asynchronous execution in the background. You can receive the final result through a callback notification or proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/2861326.html">Get task details</a>.</description></item>
-        /// <item><description>You can submit an animated image job only for videos in the <b>UploadSucc</b>, <b>Transcoding</b>, <b>Normal</b>, <b>Checking</b>, or <b>Blocked</b> state.</description></item>
-        /// <item><description>Animated image production is billed as video transcoding at the same rate, based on resolution and duration. For more information, see <a href="https://help.aliyun.com/document_detail/188308.html">Media transcoding billing</a>.</description></item>
+        /// <item><description>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not completed at this time and enters the background queue for asynchronous execution. The final result is notified through a callback. You can also call the <a href="https://help.aliyun.com/document_detail/2861326.html">Get task details</a> operation to actively query the task status.</description></item>
+        /// <item><description>You can initiate an animated image job only for videos whose status is <b>Upload Complete</b>, <b>Transcoding</b>, <b>Normal</b>, <b>Under Review</b>, or <b>Blocked</b>.</description></item>
+        /// <item><description>Animated image production is billed as video transcoding and follows the same billing standards, which are based on resolution and duration. For more information about billing, see <a href="https://help.aliyun.com/document_detail/188308.html">Billing of media asset transcoding</a>.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
-        /// <para>The QPS limit for a single user on this operation is 30 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 30 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32100,11 +32112,11 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <description>
         /// <h3>Usage notes</h3>
         /// <list type="bullet">
-        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Transcoding is a paid feature. For more information about billing, see <a href="~~188308#section-ejb-nii-nqa~~">Transcoding billing</a>.</b></description></item>
-        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. The task is not yet complete at this point and enters a queue for asynchronous execution. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/454946.html">GetTranscodeTask</a> to query the task status.</description></item>
-        /// <item><description>Only videos in the <b>UploadSucc</b>, <b>Normal</b>, or <b>Checking</b> state can be transcoded.</description></item>
-        /// <item><description>To obtain transcoding results, configure callback messages: <a href="https://help.aliyun.com/document_detail/55636.html">SingleCompleteEvent</a> and <a href="https://help.aliyun.com/document_detail/55638.html">AllCompleteEvent</a>.</description></item>
-        /// <item><description>This operation supports dynamic replacement of subtitle URLs in HLS adaptive bitrate streaming packaging tasks. If the packaging task does not involve subtitle packaging, do not use this operation to initiate the task. Instead, specify the corresponding transcoding template group ID during video upload to automatically trigger the packaging process.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Transcoding is a paid feature. For billing details, see <a href="~~188308#section-ejb-nii-nqa~~">Billing of media asset transcoding</a>.</b></description></item>
+        /// <item><description>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a job, a job ID is returned. The job is not completed at this time and enters the background queue for asynchronous execution. The final result is notified through a callback. You can also call the <a href="https://help.aliyun.com/document_detail/454946.html">Get job details</a> operation to actively query the job status.</description></item>
+        /// <item><description>Only videos in the <b>Upload Completed</b>, <b>Normal</b>, or <b>Under Review</b> state can be transcoded.</description></item>
+        /// <item><description>To obtain the transcoding result, you can receive callback messages: <a href="https://help.aliyun.com/document_detail/55636.html">Transcoding completed for a single definition</a> and <a href="https://help.aliyun.com/document_detail/55638.html">All transcoding completed</a>.</description></item>
+        /// <item><description>This operation supports dynamic replacement of subtitle URLs in HLS adaptive bitrate streaming packaging jobs. If the packaging job does not involve subtitle packaging, we do not recommend using this operation to initiate the job. Instead, we recommend setting the corresponding packaging template group ID when uploading the video to automatically initiate the packaging process.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32186,11 +32198,11 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <description>
         /// <h3>Usage notes</h3>
         /// <list type="bullet">
-        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Transcoding is a paid feature. For more information about billing, see <a href="~~188308#section-ejb-nii-nqa~~">Transcoding billing</a>.</b></description></item>
-        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. The task is not yet complete at this point and enters a queue for asynchronous execution. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/454946.html">GetTranscodeTask</a> to query the task status.</description></item>
-        /// <item><description>Only videos in the <b>UploadSucc</b>, <b>Normal</b>, or <b>Checking</b> state can be transcoded.</description></item>
-        /// <item><description>To obtain transcoding results, configure callback messages: <a href="https://help.aliyun.com/document_detail/55636.html">SingleCompleteEvent</a> and <a href="https://help.aliyun.com/document_detail/55638.html">AllCompleteEvent</a>.</description></item>
-        /// <item><description>This operation supports dynamic replacement of subtitle URLs in HLS adaptive bitrate streaming packaging tasks. If the packaging task does not involve subtitle packaging, do not use this operation to initiate the task. Instead, specify the corresponding transcoding template group ID during video upload to automatically trigger the packaging process.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Transcoding is a paid feature. For billing details, see <a href="~~188308#section-ejb-nii-nqa~~">Billing of media asset transcoding</a>.</b></description></item>
+        /// <item><description>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a job, a job ID is returned. The job is not completed at this time and enters the background queue for asynchronous execution. The final result is notified through a callback. You can also call the <a href="https://help.aliyun.com/document_detail/454946.html">Get job details</a> operation to actively query the job status.</description></item>
+        /// <item><description>Only videos in the <b>Upload Completed</b>, <b>Normal</b>, or <b>Under Review</b> state can be transcoded.</description></item>
+        /// <item><description>To obtain the transcoding result, you can receive callback messages: <a href="https://help.aliyun.com/document_detail/55636.html">Transcoding completed for a single definition</a> and <a href="https://help.aliyun.com/document_detail/55638.html">All transcoding completed</a>.</description></item>
+        /// <item><description>This operation supports dynamic replacement of subtitle URLs in HLS adaptive bitrate streaming packaging jobs. If the packaging job does not involve subtitle packaging, we do not recommend using this operation to initiate the job. Instead, we recommend setting the corresponding packaging template group ID when uploading the video to automatically initiate the packaging process.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32272,11 +32284,11 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <description>
         /// <h3>Usage notes</h3>
         /// <list type="bullet">
-        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Transcoding is a paid feature. For more information about billing, see <a href="~~188308#section-ejb-nii-nqa~~">Transcoding billing</a>.</b></description></item>
-        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. The task is not yet complete at this point and enters a queue for asynchronous execution. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/454946.html">GetTranscodeTask</a> to query the task status.</description></item>
-        /// <item><description>Only videos in the <b>UploadSucc</b>, <b>Normal</b>, or <b>Checking</b> state can be transcoded.</description></item>
-        /// <item><description>To obtain transcoding results, configure callback messages: <a href="https://help.aliyun.com/document_detail/55636.html">SingleCompleteEvent</a> and <a href="https://help.aliyun.com/document_detail/55638.html">AllCompleteEvent</a>.</description></item>
-        /// <item><description>This operation supports dynamic replacement of subtitle URLs in HLS adaptive bitrate streaming packaging tasks. If the packaging task does not involve subtitle packaging, do not use this operation to initiate the task. Instead, specify the corresponding transcoding template group ID during video upload to automatically trigger the packaging process.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Transcoding is a paid feature. For billing details, see <a href="~~188308#section-ejb-nii-nqa~~">Billing of media asset transcoding</a>.</b></description></item>
+        /// <item><description>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a job, a job ID is returned. The job is not completed at this time and enters the background queue for asynchronous execution. The final result is notified through a callback. You can also call the <a href="https://help.aliyun.com/document_detail/454946.html">Get job details</a> operation to actively query the job status.</description></item>
+        /// <item><description>Only videos in the <b>Upload Completed</b>, <b>Normal</b>, or <b>Under Review</b> state can be transcoded.</description></item>
+        /// <item><description>To obtain the transcoding result, you can receive callback messages: <a href="https://help.aliyun.com/document_detail/55636.html">Transcoding completed for a single definition</a> and <a href="https://help.aliyun.com/document_detail/55638.html">All transcoding completed</a>.</description></item>
+        /// <item><description>This operation supports dynamic replacement of subtitle URLs in HLS adaptive bitrate streaming packaging jobs. If the packaging job does not involve subtitle packaging, we do not recommend using this operation to initiate the job. Instead, we recommend setting the corresponding packaging template group ID when uploading the video to automatically initiate the packaging process.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32302,11 +32314,11 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <description>
         /// <h3>Usage notes</h3>
         /// <list type="bullet">
-        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Transcoding is a paid feature. For more information about billing, see <a href="~~188308#section-ejb-nii-nqa~~">Transcoding billing</a>.</b></description></item>
-        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. The task is not yet complete at this point and enters a queue for asynchronous execution. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/454946.html">GetTranscodeTask</a> to query the task status.</description></item>
-        /// <item><description>Only videos in the <b>UploadSucc</b>, <b>Normal</b>, or <b>Checking</b> state can be transcoded.</description></item>
-        /// <item><description>To obtain transcoding results, configure callback messages: <a href="https://help.aliyun.com/document_detail/55636.html">SingleCompleteEvent</a> and <a href="https://help.aliyun.com/document_detail/55638.html">AllCompleteEvent</a>.</description></item>
-        /// <item><description>This operation supports dynamic replacement of subtitle URLs in HLS adaptive bitrate streaming packaging tasks. If the packaging task does not involve subtitle packaging, do not use this operation to initiate the task. Instead, specify the corresponding transcoding template group ID during video upload to automatically trigger the packaging process.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Transcoding is a paid feature. For billing details, see <a href="~~188308#section-ejb-nii-nqa~~">Billing of media asset transcoding</a>.</b></description></item>
+        /// <item><description>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a job, a job ID is returned. The job is not completed at this time and enters the background queue for asynchronous execution. The final result is notified through a callback. You can also call the <a href="https://help.aliyun.com/document_detail/454946.html">Get job details</a> operation to actively query the job status.</description></item>
+        /// <item><description>Only videos in the <b>Upload Completed</b>, <b>Normal</b>, or <b>Under Review</b> state can be transcoded.</description></item>
+        /// <item><description>To obtain the transcoding result, you can receive callback messages: <a href="https://help.aliyun.com/document_detail/55636.html">Transcoding completed for a single definition</a> and <a href="https://help.aliyun.com/document_detail/55638.html">All transcoding completed</a>.</description></item>
+        /// <item><description>This operation supports dynamic replacement of subtitle URLs in HLS adaptive bitrate streaming packaging jobs. If the packaging job does not involve subtitle packaging, we do not recommend using this operation to initiate the job. Instead, we recommend setting the corresponding packaging template group ID when uploading the video to automatically initiate the packaging process.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32331,9 +32343,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Using workflows may incur fees for transcoding, encryption, automated review, and other services. For more information, see <a href="https://help.aliyun.com/document_detail/188307.html">Billing overview</a>.</b></description></item>
-        /// <item><description>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, a task ID is returned (the task is not yet complete and enters a background queue for asynchronous execution). The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/2861326.html">GetTask</a> to query the task status.</description></item>
-        /// <item><description>Call this operation to initiate a workflow processing task for a video. For more information about workflows, see <a href="https://help.aliyun.com/document_detail/115347.html">Workflow</a>.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Using a workflow may incur fees for transcoding, encryption, automated review, and other services. For more information about billing, see <a href="https://help.aliyun.com/document_detail/188307.html">Billing overview of ApsaraVideo VOD</a>.</b></description></item>
+        /// <item><description>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a job, a job ID is returned. The job is not completed at this time and enters the background queue for asynchronous execution. The final result is notified by a callback. You can also call the <a href="https://help.aliyun.com/document_detail/2861326.html">Get job details</a> operation to query the job status.</description></item>
+        /// <item><description>You can call this operation to initiate a workflow processing job for a video. For more information about workflows, see <a href="https://help.aliyun.com/document_detail/115347.html">Workflows</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32351,6 +32363,10 @@ namespace AlibabaCloud.SDK.Vod20170321
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraInputs))
+            {
+                query["ExtraInputs"] = request.ExtraInputs;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaId))
             {
                 query["MediaId"] = request.MediaId;
@@ -32386,9 +32402,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Using workflows may incur fees for transcoding, encryption, automated review, and other services. For more information, see <a href="https://help.aliyun.com/document_detail/188307.html">Billing overview</a>.</b></description></item>
-        /// <item><description>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, a task ID is returned (the task is not yet complete and enters a background queue for asynchronous execution). The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/2861326.html">GetTask</a> to query the task status.</description></item>
-        /// <item><description>Call this operation to initiate a workflow processing task for a video. For more information about workflows, see <a href="https://help.aliyun.com/document_detail/115347.html">Workflow</a>.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Using a workflow may incur fees for transcoding, encryption, automated review, and other services. For more information about billing, see <a href="https://help.aliyun.com/document_detail/188307.html">Billing overview of ApsaraVideo VOD</a>.</b></description></item>
+        /// <item><description>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a job, a job ID is returned. The job is not completed at this time and enters the background queue for asynchronous execution. The final result is notified by a callback. You can also call the <a href="https://help.aliyun.com/document_detail/2861326.html">Get job details</a> operation to query the job status.</description></item>
+        /// <item><description>You can call this operation to initiate a workflow processing job for a video. For more information about workflows, see <a href="https://help.aliyun.com/document_detail/115347.html">Workflows</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32406,6 +32422,10 @@ namespace AlibabaCloud.SDK.Vod20170321
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraInputs))
+            {
+                query["ExtraInputs"] = request.ExtraInputs;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaId))
             {
                 query["MediaId"] = request.MediaId;
@@ -32441,9 +32461,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Using workflows may incur fees for transcoding, encryption, automated review, and other services. For more information, see <a href="https://help.aliyun.com/document_detail/188307.html">Billing overview</a>.</b></description></item>
-        /// <item><description>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, a task ID is returned (the task is not yet complete and enters a background queue for asynchronous execution). The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/2861326.html">GetTask</a> to query the task status.</description></item>
-        /// <item><description>Call this operation to initiate a workflow processing task for a video. For more information about workflows, see <a href="https://help.aliyun.com/document_detail/115347.html">Workflow</a>.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Using a workflow may incur fees for transcoding, encryption, automated review, and other services. For more information about billing, see <a href="https://help.aliyun.com/document_detail/188307.html">Billing overview of ApsaraVideo VOD</a>.</b></description></item>
+        /// <item><description>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a job, a job ID is returned. The job is not completed at this time and enters the background queue for asynchronous execution. The final result is notified by a callback. You can also call the <a href="https://help.aliyun.com/document_detail/2861326.html">Get job details</a> operation to query the job status.</description></item>
+        /// <item><description>You can call this operation to initiate a workflow processing job for a video. For more information about workflows, see <a href="https://help.aliyun.com/document_detail/115347.html">Workflows</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32468,9 +32488,9 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Using workflows may incur fees for transcoding, encryption, automated review, and other services. For more information, see <a href="https://help.aliyun.com/document_detail/188307.html">Billing overview</a>.</b></description></item>
-        /// <item><description>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, a task ID is returned (the task is not yet complete and enters a background queue for asynchronous execution). The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/2861326.html">GetTask</a> to query the task status.</description></item>
-        /// <item><description>Call this operation to initiate a workflow processing task for a video. For more information about workflows, see <a href="https://help.aliyun.com/document_detail/115347.html">Workflow</a>.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Using a workflow may incur fees for transcoding, encryption, automated review, and other services. For more information about billing, see <a href="https://help.aliyun.com/document_detail/188307.html">Billing overview of ApsaraVideo VOD</a>.</b></description></item>
+        /// <item><description>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a job, a job ID is returned. The job is not completed at this time and enters the background queue for asynchronous execution. The final result is notified by a callback. You can also call the <a href="https://help.aliyun.com/document_detail/2861326.html">Get job details</a> operation to query the job status.</description></item>
+        /// <item><description>You can call this operation to initiate a workflow processing job for a video. For more information about workflows, see <a href="https://help.aliyun.com/document_detail/115347.html">Workflows</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32657,14 +32677,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates application information.</para>
+        /// <para>Updates the application information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After an application is created, you can call this operation to locate an application by its application ID and modify the name, description, and status of the application.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 30 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <para>After you create an application, you can call this operation to locate the application by its ID and modify the name, description, and status of the application.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 30 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32718,14 +32738,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates application information.</para>
+        /// <para>Updates the application information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After an application is created, you can call this operation to locate an application by its application ID and modify the name, description, and status of the application.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 30 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <para>After you create an application, you can call this operation to locate the application by its ID and modify the name, description, and status of the application.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 30 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32779,14 +32799,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates application information.</para>
+        /// <para>Updates the application information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After an application is created, you can call this operation to locate an application by its application ID and modify the name, description, and status of the application.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 30 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <para>After you create an application, you can call this operation to locate the application by its ID and modify the name, description, and status of the application.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 30 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32804,14 +32824,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates application information.</para>
+        /// <para>Updates the application information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After an application is created, you can call this operation to locate an application by its application ID and modify the name, description, and status of the application.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 30 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <para>After you create an application, you can call this operation to locate the application by its ID and modify the name, description, and status of the application.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 30 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32829,7 +32849,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch updates the information of auxiliary media assets, such as title, description, tags, and category, by specifying the unique identifiers (IDs) of the auxiliary media assets that have been uploaded to ApsaraVideo VOD, including watermarked images, subtitle files, and other materials.</para>
+        /// <para>Updates the titles, descriptions, tags, and categories of multiple auxiliary media assets in ApsaraVideo VOD based on their IDs. Auxiliary media assets include watermarked images, subtitle files, and other materials.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32876,7 +32896,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch updates the information of auxiliary media assets, such as title, description, tags, and category, by specifying the unique identifiers (IDs) of the auxiliary media assets that have been uploaded to ApsaraVideo VOD, including watermarked images, subtitle files, and other materials.</para>
+        /// <para>Updates the titles, descriptions, tags, and categories of multiple auxiliary media assets in ApsaraVideo VOD based on their IDs. Auxiliary media assets include watermarked images, subtitle files, and other materials.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32923,7 +32943,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch updates the information of auxiliary media assets, such as title, description, tags, and category, by specifying the unique identifiers (IDs) of the auxiliary media assets that have been uploaded to ApsaraVideo VOD, including watermarked images, subtitle files, and other materials.</para>
+        /// <para>Updates the titles, descriptions, tags, and categories of multiple auxiliary media assets in ApsaraVideo VOD based on their IDs. Auxiliary media assets include watermarked images, subtitle files, and other materials.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32946,7 +32966,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch updates the information of auxiliary media assets, such as title, description, tags, and category, by specifying the unique identifiers (IDs) of the auxiliary media assets that have been uploaded to ApsaraVideo VOD, including watermarked images, subtitle files, and other materials.</para>
+        /// <para>Updates the titles, descriptions, tags, and categories of multiple auxiliary media assets in ApsaraVideo VOD based on their IDs. Auxiliary media assets include watermarked images, subtitle files, and other materials.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -33301,13 +33321,13 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch modifies the title, description, tags, and category information of images by image ID after the images are uploaded to ApsaraVideo VOD.</para>
+        /// <para>Updates the titles, descriptions, tags, and categories of multiple images by image ID after the images are uploaded to ApsaraVideo VOD.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation only supports modifying uploaded images. Modifying images generated from video snapshots is not supported.</description></item>
+        /// <item><description>This operation only supports modifying uploaded images and does not support modifying images generated from video snapshots.</description></item>
         /// <item><description>You can modify the information of up to 20 images at a time.</description></item>
         /// </list>
         /// </description>
@@ -33351,13 +33371,13 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch modifies the title, description, tags, and category information of images by image ID after the images are uploaded to ApsaraVideo VOD.</para>
+        /// <para>Updates the titles, descriptions, tags, and categories of multiple images by image ID after the images are uploaded to ApsaraVideo VOD.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation only supports modifying uploaded images. Modifying images generated from video snapshots is not supported.</description></item>
+        /// <item><description>This operation only supports modifying uploaded images and does not support modifying images generated from video snapshots.</description></item>
         /// <item><description>You can modify the information of up to 20 images at a time.</description></item>
         /// </list>
         /// </description>
@@ -33401,13 +33421,13 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch modifies the title, description, tags, and category information of images by image ID after the images are uploaded to ApsaraVideo VOD.</para>
+        /// <para>Updates the titles, descriptions, tags, and categories of multiple images by image ID after the images are uploaded to ApsaraVideo VOD.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation only supports modifying uploaded images. Modifying images generated from video snapshots is not supported.</description></item>
+        /// <item><description>This operation only supports modifying uploaded images and does not support modifying images generated from video snapshots.</description></item>
         /// <item><description>You can modify the information of up to 20 images at a time.</description></item>
         /// </list>
         /// </description>
@@ -33427,13 +33447,13 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch modifies the title, description, tags, and category information of images by image ID after the images are uploaded to ApsaraVideo VOD.</para>
+        /// <para>Updates the titles, descriptions, tags, and categories of multiple images by image ID after the images are uploaded to ApsaraVideo VOD.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation only supports modifying uploaded images. Modifying images generated from video snapshots is not supported.</description></item>
+        /// <item><description>This operation only supports modifying uploaded images and does not support modifying images generated from video snapshots.</description></item>
         /// <item><description>You can modify the information of up to 20 images at a time.</description></item>
         /// </list>
         /// </description>
@@ -33453,18 +33473,18 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the storage class of a media asset.</para>
+        /// <para>Modifies the storage class of media assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Modifying the storage class of a media asset incurs storage fees. For billing details, see <a href="~~188308#section-e97-xrp-mzz~~">Media asset storage billing</a>.</description></item>
-        /// <item><description>Modifying the storage class is an <b>asynchronous operation</b>. A callback is sent to you after the entire operation is complete.</description></item>
-        /// <item><description>If the current storage class of a media asset is Archive or ColdArchive, calling this operation automatically triggers a restore. After the restore is complete, the storage class is modified. You do not need to manually call the RestoreMedia operation to restore the media asset. For ColdArchive media assets, you need to specify the restore priority. The default value is RestoreTier=Standard.</description></item>
-        /// <item><description>A media asset that is being modified cannot be modified again or be used for production or processing.</description></item>
-        /// <item><description>Media assets in non-Standard storage classes have minimum storage duration requirements: Infrequent Access/source file Infrequent Access requires at least 30 days. Archive/source file Archive requires at least 60 days. ColdArchive/source file ColdArchive requires at least 180 days. If the storage duration is insufficient, modifying the storage class incurs storage fees for the remaining days. For example, if you modify the storage class from Infrequent Access to Standard after 10 days of storage, you are charged for the remaining 20 days of Infrequent Access storage, totaling 30 days of Infrequent Access storage fees.</description></item>
-        /// <item><description><b>Modifying the storage class of a self-managed bucket is not supported</b>.</description></item>
+        /// <item><description>Make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD before you call this operation. Modifying the storage class of media assets in ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section-e97-xrp-mzz~~">Media asset storage billing</a>.</description></item>
+        /// <item><description>Modifying the storage class of media assets is an <b>asynchronous operation</b>. A callback is sent to you after the operation is complete.</description></item>
+        /// <item><description>If the current storage class of a media asset is Archive or Cold Archive, calling this operation automatically triggers restoration. The storage class is modified after the restoration is complete. You do not need to manually call the RestoreMedia operation to restore the media asset. For Cold Archive media assets, you must specify the restoration priority. The default value is RestoreTier=Standard.</description></item>
+        /// <item><description>Media assets that are being modified cannot be submitted for another modification task, production, or processing.</description></item>
+        /// <item><description>Media assets in non-standard storage classes have minimum storage duration requirements. Infrequent Access (IA) and Source File IA require a minimum of 30 days. Archive and Source File Archive require a minimum of 60 days. Cold Archive and Source File Cold Archive require a minimum of 180 days. If the storage duration does not meet the requirement when you modify the storage class, you are charged for the remaining days. For example, if you modify the storage class of a media asset from IA to Standard after 10 days of IA storage, you are charged for the remaining 20 days of IA storage at a time, resulting in a total charge for 30 days of IA storage.</description></item>
+        /// <item><description><b>Modifying the storage class of media assets in custom buckets is not supported.</b></description></item>
         /// </list>
         /// </description>
         /// 
@@ -33523,18 +33543,18 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the storage class of a media asset.</para>
+        /// <para>Modifies the storage class of media assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Modifying the storage class of a media asset incurs storage fees. For billing details, see <a href="~~188308#section-e97-xrp-mzz~~">Media asset storage billing</a>.</description></item>
-        /// <item><description>Modifying the storage class is an <b>asynchronous operation</b>. A callback is sent to you after the entire operation is complete.</description></item>
-        /// <item><description>If the current storage class of a media asset is Archive or ColdArchive, calling this operation automatically triggers a restore. After the restore is complete, the storage class is modified. You do not need to manually call the RestoreMedia operation to restore the media asset. For ColdArchive media assets, you need to specify the restore priority. The default value is RestoreTier=Standard.</description></item>
-        /// <item><description>A media asset that is being modified cannot be modified again or be used for production or processing.</description></item>
-        /// <item><description>Media assets in non-Standard storage classes have minimum storage duration requirements: Infrequent Access/source file Infrequent Access requires at least 30 days. Archive/source file Archive requires at least 60 days. ColdArchive/source file ColdArchive requires at least 180 days. If the storage duration is insufficient, modifying the storage class incurs storage fees for the remaining days. For example, if you modify the storage class from Infrequent Access to Standard after 10 days of storage, you are charged for the remaining 20 days of Infrequent Access storage, totaling 30 days of Infrequent Access storage fees.</description></item>
-        /// <item><description><b>Modifying the storage class of a self-managed bucket is not supported</b>.</description></item>
+        /// <item><description>Make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD before you call this operation. Modifying the storage class of media assets in ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section-e97-xrp-mzz~~">Media asset storage billing</a>.</description></item>
+        /// <item><description>Modifying the storage class of media assets is an <b>asynchronous operation</b>. A callback is sent to you after the operation is complete.</description></item>
+        /// <item><description>If the current storage class of a media asset is Archive or Cold Archive, calling this operation automatically triggers restoration. The storage class is modified after the restoration is complete. You do not need to manually call the RestoreMedia operation to restore the media asset. For Cold Archive media assets, you must specify the restoration priority. The default value is RestoreTier=Standard.</description></item>
+        /// <item><description>Media assets that are being modified cannot be submitted for another modification task, production, or processing.</description></item>
+        /// <item><description>Media assets in non-standard storage classes have minimum storage duration requirements. Infrequent Access (IA) and Source File IA require a minimum of 30 days. Archive and Source File Archive require a minimum of 60 days. Cold Archive and Source File Cold Archive require a minimum of 180 days. If the storage duration does not meet the requirement when you modify the storage class, you are charged for the remaining days. For example, if you modify the storage class of a media asset from IA to Standard after 10 days of IA storage, you are charged for the remaining 20 days of IA storage at a time, resulting in a total charge for 30 days of IA storage.</description></item>
+        /// <item><description><b>Modifying the storage class of media assets in custom buckets is not supported.</b></description></item>
         /// </list>
         /// </description>
         /// 
@@ -33593,18 +33613,18 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the storage class of a media asset.</para>
+        /// <para>Modifies the storage class of media assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Modifying the storage class of a media asset incurs storage fees. For billing details, see <a href="~~188308#section-e97-xrp-mzz~~">Media asset storage billing</a>.</description></item>
-        /// <item><description>Modifying the storage class is an <b>asynchronous operation</b>. A callback is sent to you after the entire operation is complete.</description></item>
-        /// <item><description>If the current storage class of a media asset is Archive or ColdArchive, calling this operation automatically triggers a restore. After the restore is complete, the storage class is modified. You do not need to manually call the RestoreMedia operation to restore the media asset. For ColdArchive media assets, you need to specify the restore priority. The default value is RestoreTier=Standard.</description></item>
-        /// <item><description>A media asset that is being modified cannot be modified again or be used for production or processing.</description></item>
-        /// <item><description>Media assets in non-Standard storage classes have minimum storage duration requirements: Infrequent Access/source file Infrequent Access requires at least 30 days. Archive/source file Archive requires at least 60 days. ColdArchive/source file ColdArchive requires at least 180 days. If the storage duration is insufficient, modifying the storage class incurs storage fees for the remaining days. For example, if you modify the storage class from Infrequent Access to Standard after 10 days of storage, you are charged for the remaining 20 days of Infrequent Access storage, totaling 30 days of Infrequent Access storage fees.</description></item>
-        /// <item><description><b>Modifying the storage class of a self-managed bucket is not supported</b>.</description></item>
+        /// <item><description>Make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD before you call this operation. Modifying the storage class of media assets in ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section-e97-xrp-mzz~~">Media asset storage billing</a>.</description></item>
+        /// <item><description>Modifying the storage class of media assets is an <b>asynchronous operation</b>. A callback is sent to you after the operation is complete.</description></item>
+        /// <item><description>If the current storage class of a media asset is Archive or Cold Archive, calling this operation automatically triggers restoration. The storage class is modified after the restoration is complete. You do not need to manually call the RestoreMedia operation to restore the media asset. For Cold Archive media assets, you must specify the restoration priority. The default value is RestoreTier=Standard.</description></item>
+        /// <item><description>Media assets that are being modified cannot be submitted for another modification task, production, or processing.</description></item>
+        /// <item><description>Media assets in non-standard storage classes have minimum storage duration requirements. Infrequent Access (IA) and Source File IA require a minimum of 30 days. Archive and Source File Archive require a minimum of 60 days. Cold Archive and Source File Cold Archive require a minimum of 180 days. If the storage duration does not meet the requirement when you modify the storage class, you are charged for the remaining days. For example, if you modify the storage class of a media asset from IA to Standard after 10 days of IA storage, you are charged for the remaining 20 days of IA storage at a time, resulting in a total charge for 30 days of IA storage.</description></item>
+        /// <item><description><b>Modifying the storage class of media assets in custom buckets is not supported.</b></description></item>
         /// </list>
         /// </description>
         /// 
@@ -33623,18 +33643,18 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the storage class of a media asset.</para>
+        /// <para>Modifies the storage class of media assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Modifying the storage class of a media asset incurs storage fees. For billing details, see <a href="~~188308#section-e97-xrp-mzz~~">Media asset storage billing</a>.</description></item>
-        /// <item><description>Modifying the storage class is an <b>asynchronous operation</b>. A callback is sent to you after the entire operation is complete.</description></item>
-        /// <item><description>If the current storage class of a media asset is Archive or ColdArchive, calling this operation automatically triggers a restore. After the restore is complete, the storage class is modified. You do not need to manually call the RestoreMedia operation to restore the media asset. For ColdArchive media assets, you need to specify the restore priority. The default value is RestoreTier=Standard.</description></item>
-        /// <item><description>A media asset that is being modified cannot be modified again or be used for production or processing.</description></item>
-        /// <item><description>Media assets in non-Standard storage classes have minimum storage duration requirements: Infrequent Access/source file Infrequent Access requires at least 30 days. Archive/source file Archive requires at least 60 days. ColdArchive/source file ColdArchive requires at least 180 days. If the storage duration is insufficient, modifying the storage class incurs storage fees for the remaining days. For example, if you modify the storage class from Infrequent Access to Standard after 10 days of storage, you are charged for the remaining 20 days of Infrequent Access storage, totaling 30 days of Infrequent Access storage fees.</description></item>
-        /// <item><description><b>Modifying the storage class of a self-managed bucket is not supported</b>.</description></item>
+        /// <item><description>Make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD before you call this operation. Modifying the storage class of media assets in ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section-e97-xrp-mzz~~">Media asset storage billing</a>.</description></item>
+        /// <item><description>Modifying the storage class of media assets is an <b>asynchronous operation</b>. A callback is sent to you after the operation is complete.</description></item>
+        /// <item><description>If the current storage class of a media asset is Archive or Cold Archive, calling this operation automatically triggers restoration. The storage class is modified after the restoration is complete. You do not need to manually call the RestoreMedia operation to restore the media asset. For Cold Archive media assets, you must specify the restoration priority. The default value is RestoreTier=Standard.</description></item>
+        /// <item><description>Media assets that are being modified cannot be submitted for another modification task, production, or processing.</description></item>
+        /// <item><description>Media assets in non-standard storage classes have minimum storage duration requirements. Infrequent Access (IA) and Source File IA require a minimum of 30 days. Archive and Source File Archive require a minimum of 60 days. Cold Archive and Source File Cold Archive require a minimum of 180 days. If the storage duration does not meet the requirement when you modify the storage class, you are charged for the remaining days. For example, if you modify the storage class of a media asset from IA to Standard after 10 days of IA storage, you are charged for the remaining 20 days of IA storage at a time, resulting in a total charge for 30 days of IA storage.</description></item>
+        /// <item><description><b>Modifying the storage class of media assets in custom buckets is not supported.</b></description></item>
         /// </list>
         /// </description>
         /// 
@@ -33817,15 +33837,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a single audio or video file.</para>
+        /// <para>Modifies the information of a single audio or video file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Operation description</h3>
-        /// <para>This operation locates an audio or video file by video ID and supports modifying the title, tags, description, and other information of the file. If a parameter is specified, the corresponding field is updated. Otherwise, the field is not overwritten or updated.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>A single user can perform a maximum of 100 queries per second (QPS). Throttling is triggered when the QPS limit is exceeded, which may affect your business. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>Locates an audio or video file by video ID. You can modify the title, tags, description, and other information of the audio or video file. If a parameter is passed, the corresponding field is updated. Otherwise, the field is not overwritten or updated.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 100. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33895,15 +33915,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a single audio or video file.</para>
+        /// <para>Modifies the information of a single audio or video file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Operation description</h3>
-        /// <para>This operation locates an audio or video file by video ID and supports modifying the title, tags, description, and other information of the file. If a parameter is specified, the corresponding field is updated. Otherwise, the field is not overwritten or updated.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>A single user can perform a maximum of 100 queries per second (QPS). Throttling is triggered when the QPS limit is exceeded, which may affect your business. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>Locates an audio or video file by video ID. You can modify the title, tags, description, and other information of the audio or video file. If a parameter is passed, the corresponding field is updated. Otherwise, the field is not overwritten or updated.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 100. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33973,15 +33993,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a single audio or video file.</para>
+        /// <para>Modifies the information of a single audio or video file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Operation description</h3>
-        /// <para>This operation locates an audio or video file by video ID and supports modifying the title, tags, description, and other information of the file. If a parameter is specified, the corresponding field is updated. Otherwise, the field is not overwritten or updated.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>A single user can perform a maximum of 100 queries per second (QPS). Throttling is triggered when the QPS limit is exceeded, which may affect your business. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>Locates an audio or video file by video ID. You can modify the title, tags, description, and other information of the audio or video file. If a parameter is passed, the corresponding field is updated. Otherwise, the field is not overwritten or updated.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 100. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33999,15 +34019,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a single audio or video file.</para>
+        /// <para>Modifies the information of a single audio or video file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Operation description</h3>
-        /// <para>This operation locates an audio or video file by video ID and supports modifying the title, tags, description, and other information of the file. If a parameter is specified, the corresponding field is updated. Otherwise, the field is not overwritten or updated.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>A single user can perform a maximum of 100 queries per second (QPS). Throttling is triggered when the QPS limit is exceeded, which may affect your business. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>Locates an audio or video file by video ID. You can modify the title, tags, description, and other information of the audio or video file. If a parameter is passed, the corresponding field is updated. Otherwise, the field is not overwritten or updated.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 100. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34025,18 +34045,18 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about multiple audio and video files at a time.</para>
+        /// <para>Modifies the information of multiple audio and video files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Usage notes</h3>
         /// <list type="bullet">
-        /// <item><description>Audio and video files are identified by their IDs. You can modify the title, tags, and description of audio and video files. If a parameter is specified, the corresponding field is updated. Otherwise, the field is not overwritten or updated.</description></item>
-        /// <item><description>You can modify the information about up to 20 audio and video files at a time.</description></item>
+        /// <item><description>You can locate an audio or video file by its ID. You can modify the title, tags, description, and other information of the audio or video file. If a parameter is passed, the corresponding field is updated. Otherwise, the field is not overwritten or updated.</description></item>
+        /// <item><description>You can modify the information of up to 20 audio or video files at a time.</description></item>
         /// </list>
         /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 30 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <para>The queries per second (QPS) limit on a single user for this API operation is 30. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Call this operation at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34078,18 +34098,18 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about multiple audio and video files at a time.</para>
+        /// <para>Modifies the information of multiple audio and video files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Usage notes</h3>
         /// <list type="bullet">
-        /// <item><description>Audio and video files are identified by their IDs. You can modify the title, tags, and description of audio and video files. If a parameter is specified, the corresponding field is updated. Otherwise, the field is not overwritten or updated.</description></item>
-        /// <item><description>You can modify the information about up to 20 audio and video files at a time.</description></item>
+        /// <item><description>You can locate an audio or video file by its ID. You can modify the title, tags, description, and other information of the audio or video file. If a parameter is passed, the corresponding field is updated. Otherwise, the field is not overwritten or updated.</description></item>
+        /// <item><description>You can modify the information of up to 20 audio or video files at a time.</description></item>
         /// </list>
         /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 30 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <para>The queries per second (QPS) limit on a single user for this API operation is 30. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Call this operation at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34131,18 +34151,18 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about multiple audio and video files at a time.</para>
+        /// <para>Modifies the information of multiple audio and video files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Usage notes</h3>
         /// <list type="bullet">
-        /// <item><description>Audio and video files are identified by their IDs. You can modify the title, tags, and description of audio and video files. If a parameter is specified, the corresponding field is updated. Otherwise, the field is not overwritten or updated.</description></item>
-        /// <item><description>You can modify the information about up to 20 audio and video files at a time.</description></item>
+        /// <item><description>You can locate an audio or video file by its ID. You can modify the title, tags, description, and other information of the audio or video file. If a parameter is passed, the corresponding field is updated. Otherwise, the field is not overwritten or updated.</description></item>
+        /// <item><description>You can modify the information of up to 20 audio or video files at a time.</description></item>
         /// </list>
         /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 30 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <para>The queries per second (QPS) limit on a single user for this API operation is 30. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Call this operation at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34160,18 +34180,18 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about multiple audio and video files at a time.</para>
+        /// <para>Modifies the information of multiple audio and video files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Usage notes</h3>
         /// <list type="bullet">
-        /// <item><description>Audio and video files are identified by their IDs. You can modify the title, tags, and description of audio and video files. If a parameter is specified, the corresponding field is updated. Otherwise, the field is not overwritten or updated.</description></item>
-        /// <item><description>You can modify the information about up to 20 audio and video files at a time.</description></item>
+        /// <item><description>You can locate an audio or video file by its ID. You can modify the title, tags, description, and other information of the audio or video file. If a parameter is passed, the corresponding field is updated. Otherwise, the field is not overwritten or updated.</description></item>
+        /// <item><description>You can modify the information of up to 20 audio or video files at a time.</description></item>
         /// </list>
         /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 30 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <para>The queries per second (QPS) limit on a single user for this API operation is 30. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Call this operation at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34673,21 +34693,21 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pulls audio and video media files for upload based on source file URLs. Batch upload is supported.</para>
+        /// <para>Pulls and uploads audio and video media files from source URLs. Supports batch uploads.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transfer acceleration, uploading media files to ApsaraVideo VOD also incurs upload acceleration fees. For billing details, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</b></description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Uploading media assets to ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transfer acceleration, uploading media assets to ApsaraVideo VOD also incurs upload acceleration fees. For billing details, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</b></description></item>
         /// <item><description>For the media file formats supported by this operation, see <a href="~~55396#section-e27-2rj-mde~~">Media formats</a>.</description></item>
-        /// <item><description>This operation is mainly applicable to scenarios where files are not stored on a local server or terminal and need to be uploaded through a URL with public network access.</description></item>
-        /// <item><description>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous upload operation</a>. It is not real-time and does not guarantee timeliness. Generally, the migration upload is completed within hours or even days after the node is submitted. If you have high timeliness requirements, use the upload SDK instead.</description></item>
-        /// <item><description>If a callback is configured, you will receive the <a href="https://help.aliyun.com/document_detail/86326.html">URL upload video complete</a> event notification after the upload is completed. You can call the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation to query the upload status.</description></item>
-        /// <item><description>After an upload node is submitted, an asynchronous node is generated in the cloud for execute. All URL upload nodes committed by users in the corresponding service region are queued for execute. The completion time is affected by the number of existing nodes. After the upload is completed, you can associate the URL with the video ID based on the information returned in the event notification (message callback).</description></item>
-        /// <item><description>This operation currently supports only the <b>China (Shanghai)</b>, <b>China (Beijing)</b>, <b>China (Shenzhen)</b>, <b>Singapore</b>, and <b>US (Silicon Valley)</b> regions.</description></item>
-        /// <item><description>Each time you commit an upload node for the same media file URL, a new media resource is generated in ApsaraVideo VOD (that is, a new media ID is generated).</description></item>
-        /// <item><description>If a single file exceeds 20 GB, the upload is failed. If you need to upload a single file larger than 20 GB, use the upload SDK. For more information, see <a href="https://help.aliyun.com/document_detail/52200.html">Overview of the upload SDK</a>.</description></item>
+        /// <item><description>This operation is mainly applicable to scenarios where files are not stored on local servers or terminals and need to be uploaded through URLs with public network access.</description></item>
+        /// <item><description>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous upload operation</a>. It is not real-time and does not guarantee timeliness. Generally, the migration and upload are completed within hours or even days after submission. If you have high requirements for timeliness, use the upload SDK.</description></item>
+        /// <item><description>If a callback is configured, you will receive a <a href="https://help.aliyun.com/document_detail/86326.html">URL-based video upload complete</a> event notification after the upload is complete. You can query the upload status by calling the <a href="https://help.aliyun.com/document_detail/106830.html">Get URL upload information</a> operation.</description></item>
+        /// <item><description>After an upload task is submitted, an asynchronously executed task is generated in the cloud. URL upload tasks submitted by all users in the corresponding service region are queued for execution. The completion time is affected by the number of existing tasks. After the upload is complete, you can associate the task based on the URL and video ID returned in the event notification (message callback).</description></item>
+        /// <item><description>This operation is currently supported only in the <b>China (Shanghai)</b>, <b>China (Beijing)</b>, <b>China (Shenzhen)</b>, <b>Singapore</b>, and <b>US</b> (<b>Silicon Valley</b>) regions.</description></item>
+        /// <item><description>For the same media file URL, each submitted upload task generates a new media asset in ApsaraVideo VOD (that is, a new media ID is generated).</description></item>
+        /// <item><description>If a single file exceeds 20 GB, it will result in a failed upload. If you need to upload a single file larger than 20 GB, use the upload SDK. For more information, see <a href="https://help.aliyun.com/document_detail/52200.html">Overview of the upload SDK</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -34766,21 +34786,21 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pulls audio and video media files for upload based on source file URLs. Batch upload is supported.</para>
+        /// <para>Pulls and uploads audio and video media files from source URLs. Supports batch uploads.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transfer acceleration, uploading media files to ApsaraVideo VOD also incurs upload acceleration fees. For billing details, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</b></description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Uploading media assets to ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transfer acceleration, uploading media assets to ApsaraVideo VOD also incurs upload acceleration fees. For billing details, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</b></description></item>
         /// <item><description>For the media file formats supported by this operation, see <a href="~~55396#section-e27-2rj-mde~~">Media formats</a>.</description></item>
-        /// <item><description>This operation is mainly applicable to scenarios where files are not stored on a local server or terminal and need to be uploaded through a URL with public network access.</description></item>
-        /// <item><description>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous upload operation</a>. It is not real-time and does not guarantee timeliness. Generally, the migration upload is completed within hours or even days after the node is submitted. If you have high timeliness requirements, use the upload SDK instead.</description></item>
-        /// <item><description>If a callback is configured, you will receive the <a href="https://help.aliyun.com/document_detail/86326.html">URL upload video complete</a> event notification after the upload is completed. You can call the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation to query the upload status.</description></item>
-        /// <item><description>After an upload node is submitted, an asynchronous node is generated in the cloud for execute. All URL upload nodes committed by users in the corresponding service region are queued for execute. The completion time is affected by the number of existing nodes. After the upload is completed, you can associate the URL with the video ID based on the information returned in the event notification (message callback).</description></item>
-        /// <item><description>This operation currently supports only the <b>China (Shanghai)</b>, <b>China (Beijing)</b>, <b>China (Shenzhen)</b>, <b>Singapore</b>, and <b>US (Silicon Valley)</b> regions.</description></item>
-        /// <item><description>Each time you commit an upload node for the same media file URL, a new media resource is generated in ApsaraVideo VOD (that is, a new media ID is generated).</description></item>
-        /// <item><description>If a single file exceeds 20 GB, the upload is failed. If you need to upload a single file larger than 20 GB, use the upload SDK. For more information, see <a href="https://help.aliyun.com/document_detail/52200.html">Overview of the upload SDK</a>.</description></item>
+        /// <item><description>This operation is mainly applicable to scenarios where files are not stored on local servers or terminals and need to be uploaded through URLs with public network access.</description></item>
+        /// <item><description>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous upload operation</a>. It is not real-time and does not guarantee timeliness. Generally, the migration and upload are completed within hours or even days after submission. If you have high requirements for timeliness, use the upload SDK.</description></item>
+        /// <item><description>If a callback is configured, you will receive a <a href="https://help.aliyun.com/document_detail/86326.html">URL-based video upload complete</a> event notification after the upload is complete. You can query the upload status by calling the <a href="https://help.aliyun.com/document_detail/106830.html">Get URL upload information</a> operation.</description></item>
+        /// <item><description>After an upload task is submitted, an asynchronously executed task is generated in the cloud. URL upload tasks submitted by all users in the corresponding service region are queued for execution. The completion time is affected by the number of existing tasks. After the upload is complete, you can associate the task based on the URL and video ID returned in the event notification (message callback).</description></item>
+        /// <item><description>This operation is currently supported only in the <b>China (Shanghai)</b>, <b>China (Beijing)</b>, <b>China (Shenzhen)</b>, <b>Singapore</b>, and <b>US</b> (<b>Silicon Valley</b>) regions.</description></item>
+        /// <item><description>For the same media file URL, each submitted upload task generates a new media asset in ApsaraVideo VOD (that is, a new media ID is generated).</description></item>
+        /// <item><description>If a single file exceeds 20 GB, it will result in a failed upload. If you need to upload a single file larger than 20 GB, use the upload SDK. For more information, see <a href="https://help.aliyun.com/document_detail/52200.html">Overview of the upload SDK</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -34859,21 +34879,21 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pulls audio and video media files for upload based on source file URLs. Batch upload is supported.</para>
+        /// <para>Pulls and uploads audio and video media files from source URLs. Supports batch uploads.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transfer acceleration, uploading media files to ApsaraVideo VOD also incurs upload acceleration fees. For billing details, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</b></description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Uploading media assets to ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transfer acceleration, uploading media assets to ApsaraVideo VOD also incurs upload acceleration fees. For billing details, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</b></description></item>
         /// <item><description>For the media file formats supported by this operation, see <a href="~~55396#section-e27-2rj-mde~~">Media formats</a>.</description></item>
-        /// <item><description>This operation is mainly applicable to scenarios where files are not stored on a local server or terminal and need to be uploaded through a URL with public network access.</description></item>
-        /// <item><description>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous upload operation</a>. It is not real-time and does not guarantee timeliness. Generally, the migration upload is completed within hours or even days after the node is submitted. If you have high timeliness requirements, use the upload SDK instead.</description></item>
-        /// <item><description>If a callback is configured, you will receive the <a href="https://help.aliyun.com/document_detail/86326.html">URL upload video complete</a> event notification after the upload is completed. You can call the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation to query the upload status.</description></item>
-        /// <item><description>After an upload node is submitted, an asynchronous node is generated in the cloud for execute. All URL upload nodes committed by users in the corresponding service region are queued for execute. The completion time is affected by the number of existing nodes. After the upload is completed, you can associate the URL with the video ID based on the information returned in the event notification (message callback).</description></item>
-        /// <item><description>This operation currently supports only the <b>China (Shanghai)</b>, <b>China (Beijing)</b>, <b>China (Shenzhen)</b>, <b>Singapore</b>, and <b>US (Silicon Valley)</b> regions.</description></item>
-        /// <item><description>Each time you commit an upload node for the same media file URL, a new media resource is generated in ApsaraVideo VOD (that is, a new media ID is generated).</description></item>
-        /// <item><description>If a single file exceeds 20 GB, the upload is failed. If you need to upload a single file larger than 20 GB, use the upload SDK. For more information, see <a href="https://help.aliyun.com/document_detail/52200.html">Overview of the upload SDK</a>.</description></item>
+        /// <item><description>This operation is mainly applicable to scenarios where files are not stored on local servers or terminals and need to be uploaded through URLs with public network access.</description></item>
+        /// <item><description>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous upload operation</a>. It is not real-time and does not guarantee timeliness. Generally, the migration and upload are completed within hours or even days after submission. If you have high requirements for timeliness, use the upload SDK.</description></item>
+        /// <item><description>If a callback is configured, you will receive a <a href="https://help.aliyun.com/document_detail/86326.html">URL-based video upload complete</a> event notification after the upload is complete. You can query the upload status by calling the <a href="https://help.aliyun.com/document_detail/106830.html">Get URL upload information</a> operation.</description></item>
+        /// <item><description>After an upload task is submitted, an asynchronously executed task is generated in the cloud. URL upload tasks submitted by all users in the corresponding service region are queued for execution. The completion time is affected by the number of existing tasks. After the upload is complete, you can associate the task based on the URL and video ID returned in the event notification (message callback).</description></item>
+        /// <item><description>This operation is currently supported only in the <b>China (Shanghai)</b>, <b>China (Beijing)</b>, <b>China (Shenzhen)</b>, <b>Singapore</b>, and <b>US</b> (<b>Silicon Valley</b>) regions.</description></item>
+        /// <item><description>For the same media file URL, each submitted upload task generates a new media asset in ApsaraVideo VOD (that is, a new media ID is generated).</description></item>
+        /// <item><description>If a single file exceeds 20 GB, it will result in a failed upload. If you need to upload a single file larger than 20 GB, use the upload SDK. For more information, see <a href="https://help.aliyun.com/document_detail/52200.html">Overview of the upload SDK</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -34892,21 +34912,21 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pulls audio and video media files for upload based on source file URLs. Batch upload is supported.</para>
+        /// <para>Pulls and uploads audio and video media files from source URLs. Supports batch uploads.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transfer acceleration, uploading media files to ApsaraVideo VOD also incurs upload acceleration fees. For billing details, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</b></description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Uploading media assets to ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transfer acceleration, uploading media assets to ApsaraVideo VOD also incurs upload acceleration fees. For billing details, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transfer acceleration billing</a>.</b></description></item>
         /// <item><description>For the media file formats supported by this operation, see <a href="~~55396#section-e27-2rj-mde~~">Media formats</a>.</description></item>
-        /// <item><description>This operation is mainly applicable to scenarios where files are not stored on a local server or terminal and need to be uploaded through a URL with public network access.</description></item>
-        /// <item><description>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous upload operation</a>. It is not real-time and does not guarantee timeliness. Generally, the migration upload is completed within hours or even days after the node is submitted. If you have high timeliness requirements, use the upload SDK instead.</description></item>
-        /// <item><description>If a callback is configured, you will receive the <a href="https://help.aliyun.com/document_detail/86326.html">URL upload video complete</a> event notification after the upload is completed. You can call the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation to query the upload status.</description></item>
-        /// <item><description>After an upload node is submitted, an asynchronous node is generated in the cloud for execute. All URL upload nodes committed by users in the corresponding service region are queued for execute. The completion time is affected by the number of existing nodes. After the upload is completed, you can associate the URL with the video ID based on the information returned in the event notification (message callback).</description></item>
-        /// <item><description>This operation currently supports only the <b>China (Shanghai)</b>, <b>China (Beijing)</b>, <b>China (Shenzhen)</b>, <b>Singapore</b>, and <b>US (Silicon Valley)</b> regions.</description></item>
-        /// <item><description>Each time you commit an upload node for the same media file URL, a new media resource is generated in ApsaraVideo VOD (that is, a new media ID is generated).</description></item>
-        /// <item><description>If a single file exceeds 20 GB, the upload is failed. If you need to upload a single file larger than 20 GB, use the upload SDK. For more information, see <a href="https://help.aliyun.com/document_detail/52200.html">Overview of the upload SDK</a>.</description></item>
+        /// <item><description>This operation is mainly applicable to scenarios where files are not stored on local servers or terminals and need to be uploaded through URLs with public network access.</description></item>
+        /// <item><description>This operation is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous upload operation</a>. It is not real-time and does not guarantee timeliness. Generally, the migration and upload are completed within hours or even days after submission. If you have high requirements for timeliness, use the upload SDK.</description></item>
+        /// <item><description>If a callback is configured, you will receive a <a href="https://help.aliyun.com/document_detail/86326.html">URL-based video upload complete</a> event notification after the upload is complete. You can query the upload status by calling the <a href="https://help.aliyun.com/document_detail/106830.html">Get URL upload information</a> operation.</description></item>
+        /// <item><description>After an upload task is submitted, an asynchronously executed task is generated in the cloud. URL upload tasks submitted by all users in the corresponding service region are queued for execution. The completion time is affected by the number of existing tasks. After the upload is complete, you can associate the task based on the URL and video ID returned in the event notification (message callback).</description></item>
+        /// <item><description>This operation is currently supported only in the <b>China (Shanghai)</b>, <b>China (Beijing)</b>, <b>China (Shenzhen)</b>, <b>Singapore</b>, and <b>US</b> (<b>Silicon Valley</b>) regions.</description></item>
+        /// <item><description>For the same media file URL, each submitted upload task generates a new media asset in ApsaraVideo VOD (that is, a new media ID is generated).</description></item>
+        /// <item><description>If a single file exceeds 20 GB, it will result in a failed upload. If you need to upload a single file larger than 20 GB, use the upload SDK. For more information, see <a href="https://help.aliyun.com/document_detail/52200.html">Overview of the upload SDK</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -34925,16 +34945,16 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a transcoded stream file from external storage and mounts it to the corresponding ApsaraVideo VOD media asset.</para>
+        /// <para>Uploads a transcoded stream file from external storage and attaches it to the corresponding ApsaraVideo VOD media asset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transmission acceleration, upload acceleration fees also apply. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transmission acceleration billing</a>.</b></description></item>
-        /// <item><description>This operation is currently supported only in the <b>Shanghai</b> and <b>Singapore</b> regions.</description></item>
-        /// <item><description>Call this operation to upload a transcoded stream file from external storage and mount it to the corresponding ApsaraVideo VOD media asset. The supported HDR types for transcoded streams are HDR, HDR10, HLG, DolbyVision, HDRVivid, and SDR+.</description></item>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation to query the upload status. After the upload is complete, you will receive the <a href="https://help.aliyun.com/document_detail/376427.html">URL upload transcoded stream complete</a> event notification.</description></item>
+        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage and transfer acceleration, uploading media files to ApsaraVideo VOD also incurs upload acceleration fees. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Storage and transfer acceleration billing</a>.</b></description></item>
+        /// <item><description>This operation is currently supported only in the China (Shanghai), China (Beijing), China (Shenzhen), Singapore, and US (Silicon Valley) regions.</description></item>
+        /// <item><description>Call this operation to upload a transcoded stream file from external storage and attach it to the corresponding ApsaraVideo VOD media asset. The supported HDR types for transcoded streams are HDR, HDR10, HLG, DolbyVision, HDRVivid, and SDR+.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation to query the upload status. After the upload is complete, you receive the <a href="https://help.aliyun.com/document_detail/376427.html">URL Upload Transcoded Stream Complete</a> event notification.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -35001,16 +35021,16 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a transcoded stream file from external storage and mounts it to the corresponding ApsaraVideo VOD media asset.</para>
+        /// <para>Uploads a transcoded stream file from external storage and attaches it to the corresponding ApsaraVideo VOD media asset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transmission acceleration, upload acceleration fees also apply. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transmission acceleration billing</a>.</b></description></item>
-        /// <item><description>This operation is currently supported only in the <b>Shanghai</b> and <b>Singapore</b> regions.</description></item>
-        /// <item><description>Call this operation to upload a transcoded stream file from external storage and mount it to the corresponding ApsaraVideo VOD media asset. The supported HDR types for transcoded streams are HDR, HDR10, HLG, DolbyVision, HDRVivid, and SDR+.</description></item>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation to query the upload status. After the upload is complete, you will receive the <a href="https://help.aliyun.com/document_detail/376427.html">URL upload transcoded stream complete</a> event notification.</description></item>
+        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage and transfer acceleration, uploading media files to ApsaraVideo VOD also incurs upload acceleration fees. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Storage and transfer acceleration billing</a>.</b></description></item>
+        /// <item><description>This operation is currently supported only in the China (Shanghai), China (Beijing), China (Shenzhen), Singapore, and US (Silicon Valley) regions.</description></item>
+        /// <item><description>Call this operation to upload a transcoded stream file from external storage and attach it to the corresponding ApsaraVideo VOD media asset. The supported HDR types for transcoded streams are HDR, HDR10, HLG, DolbyVision, HDRVivid, and SDR+.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation to query the upload status. After the upload is complete, you receive the <a href="https://help.aliyun.com/document_detail/376427.html">URL Upload Transcoded Stream Complete</a> event notification.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -35077,16 +35097,16 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a transcoded stream file from external storage and mounts it to the corresponding ApsaraVideo VOD media asset.</para>
+        /// <para>Uploads a transcoded stream file from external storage and attaches it to the corresponding ApsaraVideo VOD media asset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transmission acceleration, upload acceleration fees also apply. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transmission acceleration billing</a>.</b></description></item>
-        /// <item><description>This operation is currently supported only in the <b>Shanghai</b> and <b>Singapore</b> regions.</description></item>
-        /// <item><description>Call this operation to upload a transcoded stream file from external storage and mount it to the corresponding ApsaraVideo VOD media asset. The supported HDR types for transcoded streams are HDR, HDR10, HLG, DolbyVision, HDRVivid, and SDR+.</description></item>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation to query the upload status. After the upload is complete, you will receive the <a href="https://help.aliyun.com/document_detail/376427.html">URL upload transcoded stream complete</a> event notification.</description></item>
+        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage and transfer acceleration, uploading media files to ApsaraVideo VOD also incurs upload acceleration fees. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Storage and transfer acceleration billing</a>.</b></description></item>
+        /// <item><description>This operation is currently supported only in the China (Shanghai), China (Beijing), China (Shenzhen), Singapore, and US (Silicon Valley) regions.</description></item>
+        /// <item><description>Call this operation to upload a transcoded stream file from external storage and attach it to the corresponding ApsaraVideo VOD media asset. The supported HDR types for transcoded streams are HDR, HDR10, HLG, DolbyVision, HDRVivid, and SDR+.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation to query the upload status. After the upload is complete, you receive the <a href="https://help.aliyun.com/document_detail/376427.html">URL Upload Transcoded Stream Complete</a> event notification.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -35105,16 +35125,16 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a transcoded stream file from external storage and mounts it to the corresponding ApsaraVideo VOD media asset.</para>
+        /// <para>Uploads a transcoded stream file from external storage and attaches it to the corresponding ApsaraVideo VOD media asset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage transmission acceleration, upload acceleration fees also apply. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Storage transmission acceleration billing</a>.</b></description></item>
-        /// <item><description>This operation is currently supported only in the <b>Shanghai</b> and <b>Singapore</b> regions.</description></item>
-        /// <item><description>Call this operation to upload a transcoded stream file from external storage and mount it to the corresponding ApsaraVideo VOD media asset. The supported HDR types for transcoded streams are HDR, HDR10, HLG, DolbyVision, HDRVivid, and SDR+.</description></item>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation to query the upload status. After the upload is complete, you will receive the <a href="https://help.aliyun.com/document_detail/376427.html">URL upload transcoded stream complete</a> event notification.</description></item>
+        /// <item><description><b>Before you use this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Uploading media files to ApsaraVideo VOD incurs storage fees. For more information, see <a href="~~188308#section_e97_xrp_mzz~~">Media asset storage billing</a>. If you have enabled storage and transfer acceleration, uploading media files to ApsaraVideo VOD also incurs upload acceleration fees. For more information, see <a href="~~188310#section_sta_zm2_tsv~~">Storage and transfer acceleration billing</a>.</b></description></item>
+        /// <item><description>This operation is currently supported only in the China (Shanghai), China (Beijing), China (Shenzhen), Singapore, and US (Silicon Valley) regions.</description></item>
+        /// <item><description>Call this operation to upload a transcoded stream file from external storage and attach it to the corresponding ApsaraVideo VOD media asset. The supported HDR types for transcoded streams are HDR, HDR10, HLG, DolbyVision, HDRVivid, and SDR+.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation to query the upload status. After the upload is complete, you receive the <a href="https://help.aliyun.com/document_detail/376427.html">URL Upload Transcoded Stream Complete</a> event notification.</description></item>
         /// </list>
         /// </description>
         /// 

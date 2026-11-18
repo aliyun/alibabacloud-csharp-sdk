@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitDynamicImageJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the animated image job.</para>
+        /// <para>The animated image job information.</para>
         /// </summary>
         [NameInMap("DynamicImageJob")]
         [Validation(Required=false)]

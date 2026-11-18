@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The time when the task was completed. The time is in the yyyy-MM-ddTHH:mm:ssZ format.</para>
+        /// <para>The time when the task was completed. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-08-19T02:28:22Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string FinishTimeUtc { get; set; }
 
         /// <summary>
-        /// <para>The time when the task was created. The time is in the yyyy-MM-ddTHH:mm:ssZ format.</para>
+        /// <para>The time when the task was created. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-07-28T02:17:26Z</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result of this review. This indicates the current manual review result. Valid values:</para>
+        /// <para>The review result. Indicates the current manual review result. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>running</b>: Running.</description></item>
         /// <item><description><b>stopped</b>: Stopped.</description></item>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string UserData { get; set; }
 
         /// <summary>
-        /// <para>The workflow ID. You can log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Configuration Management</b> &gt; <b>Media Processing</b> &gt; <b>Workflow Management</b> to view the ID.</para>
+        /// <para>The workflow ID. You can log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Configuration management</b> &gt; <b>Media processing configuration</b> &gt; <b>Workflow management</b> to view the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>613efff3887ec34af685714cc461****</para>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The input URL of the transcoded stream. This value can be used as a request parameter of the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation.</para>
+        /// <para>The input URL of the transcoded stream. You can use this value as a request parameter of the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/lesson-01.mp4">https://example.com/lesson-01.mp4</a></para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string SourceURL { get; set; }
 
         /// <summary>
-        /// <para>The job ID of the transcoded stream. This value can be used as a request parameter of the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation.</para>
+        /// <para>The job ID of the transcoded stream. You can use this value as a request parameter of the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation.</para>
         /// <para>ApsaraVideo VOD uses the job ID to uniquely identify a transcoded stream file. For more information, see <a href="https://help.aliyun.com/document_detail/52839.html">Basic data types - PlayInfo</a>.</para>
         /// 
         /// <b>Example:</b>

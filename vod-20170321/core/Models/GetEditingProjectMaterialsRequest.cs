@@ -33,10 +33,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The online editing project ID. You can obtain the ID by using one of the following methods:</para>
+        /// <para>The ID of the online editing project. You can obtain the ID by using one of the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>, and choose <b>Production Center</b> &gt; <b>Video Editing</b> to view the ID.</description></item>
-        /// <item><description>Obtain the value of the ProjectId response parameter when you create a project by calling the <b>CreateEditingProject</b> operation.</description></item>
+        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>, choose <b>Production center</b> &gt; <b>Video editing</b>, and view the ID.</description></item>
+        /// <item><description>The value of the ProjectId response parameter returned when you create a project by calling the <b>Create an online editing project</b> operation.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

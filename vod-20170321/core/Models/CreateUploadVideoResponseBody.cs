@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The upload URL.</para>
         /// <remarks>
-        /// <para>The upload URL returned by this operation is a Base64-encoded value. When you use an SDK or API to upload media assets, you must Base64-decode the value before use. Only uploads by using the native OSS SDK or OSS API require you to parse UploadAddress.</para>
+        /// <para>The upload URL returned by the operation is Base64-encoded. When you call an SDK or API operation to upload the media asset, you must decode the URL before use. You only need to parse UploadAddress when you use the native OSS SDK or OSS API for upload.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The upload credential.</para>
         /// <remarks>
-        /// <para>The upload credential returned by this operation is a Base64-encoded value. When you use an SDK or API to upload media assets, you must Base64-decode the value before use. Only uploads by using the native OSS SDK or OSS API require you to parse UploadAuth.</para>
+        /// <para>The upload credential returned by the operation is Base64-encoded. When you call an SDK or API operation to upload the media asset, you must decode the credential before use. You only need to parse UploadAuth when you use the native OSS SDK or OSS API for upload.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string UploadAuth { get; set; }
 
         /// <summary>
-        /// <para>The audio or video ID. This ID can be used as a request parameter for media asset management, media processing, and content moderation operations.</para>
+        /// <para>The audio or video ID. You can use this ID as a request parameter for media asset management, media processing, and media review operations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>93ab850b4f6f54b6e91d24d81d44****</para>

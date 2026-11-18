@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetURLUploadInfosResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of upload task IDs or URLs that do not exist.</para>
+        /// <para>The list of URL upload task IDs or URLs that do not exist.</para>
         /// </summary>
         [NameInMap("NonExists")]
         [Validation(Required=false)]
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of URL upload information. For more information about the fields and descriptions, see <a href="https://help.aliyun.com/document_detail/52839.html">URLUploadInfo</a>.</para>
+        /// <para>The list of URL upload information. For more information about the specific upload names and descriptions, see <a href="https://help.aliyun.com/document_detail/52839.html">URLUploadInfo: URL upload information</a>.</para>
         /// </summary>
         [NameInMap("URLUploadInfoList")]
         [Validation(Required=false)]
         public List<GetURLUploadInfosResponseBodyURLUploadInfoList> URLUploadInfoList { get; set; }
         public class GetURLUploadInfosResponseBodyURLUploadInfoList : TeaModel {
             /// <summary>
-            /// <para>The completion time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+            /// <para>The completion time. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-01-01T01:11:01Z</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CompleteTime { get; set; }
 
             /// <summary>
-            /// <para>The creation time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+            /// <para>The creation time. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-01-01T01:01:01Z</para>
@@ -104,6 +104,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string MediaId { get; set; }
 
             /// <summary>
+            /// <para>The registered media asset ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>93ab850b4f654b6e91d24d81d44****</para>
             /// </summary>
@@ -112,7 +114,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string RegisteredMediaId { get; set; }
 
             /// <summary>
-            /// <para>The status of the URL-based upload task. For more information about the status values and descriptions, see <a href="https://help.aliyun.com/document_detail/52839.html">Status</a>.</para>
+            /// <para>The status of the URL pull task. For more information about the specific values and descriptions of the pull status, see <a href="https://help.aliyun.com/document_detail/52839.html">Status: URL upload task status</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>
@@ -122,7 +124,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The URL of the source video file.</para>
+            /// <para>The URL of the video source file to upload.</para>
             /// <remarks>
             /// <para>A maximum of 100 records can be returned.</para>
             /// </remarks>

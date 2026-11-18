@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DeleteAppInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID. Set this parameter to the value of AppId returned by the <a href="https://help.aliyun.com/document_detail/113266.html">CreateApp</a> or <a href="https://help.aliyun.com/document_detail/114000.html">ListApps</a> operation.</para>
+        /// <para>The application ID. You can obtain the value from the AppId response parameter returned by the <a href="https://help.aliyun.com/document_detail/113266.html">Create an application</a> or <a href="https://help.aliyun.com/document_detail/114000.html">List applications</a> API operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

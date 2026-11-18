@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AttachAppPolicyToIdentityRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID. Default value: <b>app-1000000</b>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application</a>.</para>
+        /// <para>The application ID. Default value: <b>app-1000000</b>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multiple applications</a>.</para>
         /// <remarks>
         /// <para>If the policy name is VODAppAdministratorAccess, this parameter is optional. For other policies, this parameter is required.</para>
         /// </remarks>
@@ -53,11 +53,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string IdentityType { get; set; }
 
         /// <summary>
-        /// <para>The policy names. Separate multiple names with commas (,). Only system policies are supported. Valid values:</para>
+        /// <para>The policy names. Separate multiple names with commas (,). Currently, only system policies are supported. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VODAppFullAccess</b>: permissions to manage and operate all resources in the application.</description></item>
-        /// <item><description><b>VODAppReadOnlyAccess</b>: read-only permissions on all resources in the application.</description></item>
-        /// <item><description><b>VODAppAdministratorAccess</b>: application administrator permissions.</description></item>
+        /// <item><description><b>VODAppFullAccess</b>: the permissions to manage and operate all resources under the application.</description></item>
+        /// <item><description><b>VODAppReadOnlyAccess</b>: the read-only permissions on all resources under the application.</description></item>
+        /// <item><description><b>VODAppAdministratorAccess</b>: the application administrator permissions.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

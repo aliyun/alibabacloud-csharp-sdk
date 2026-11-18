@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetUploadDetailsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs of media files that cannot be accessed.</para>
+        /// <para>The IDs of the media assets that you are not authorized to access.</para>
         /// </summary>
         [NameInMap("ForbiddenMediaIds")]
         [Validation(Required=false)]
         public List<string> ForbiddenMediaIds { get; set; }
 
         /// <summary>
-        /// <para>The IDs of media files that do not exist.</para>
+        /// <para>The IDs of the media assets that do not exist.</para>
         /// </summary>
         [NameInMap("NonExistMediaIds")]
         [Validation(Required=false)]
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The upload details.</para>
+        /// <para>The list of upload details.</para>
         /// </summary>
         [NameInMap("UploadDetails")]
         [Validation(Required=false)]
         public List<GetUploadDetailsResponseBodyUploadDetails> UploadDetails { get; set; }
         public class GetUploadDetailsResponseBodyUploadDetails : TeaModel {
             /// <summary>
-            /// <para>The completion time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+            /// <para>The completion time. The time is displayed in UTC and follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-04-28T09:45:07Z</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CompletionTime { get; set; }
 
             /// <summary>
-            /// <para>The creation time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+            /// <para>The creation time. The time is displayed in UTC and follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-04-28T09:42:07Z</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string MediaId { get; set; }
 
             /// <summary>
-            /// <para>The modification time. The time is in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format (UTC).</para>
+            /// <para>The update time. The time is displayed in UTC and follows the <em>yyyy-MM-ddTHH:mm:ssZ</em> format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-04-28T09:43:12Z</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string ModificationTime { get; set; }
 
             /// <summary>
-            /// <para>The video status. For the valid values and descriptions of video statuses, see the value list in <a href="https://help.aliyun.com/document_detail/52839.html">Status: video status</a>.</para>
+            /// <para>The video status. For more information about the valid values and descriptions of the video status, see the valid values of <a href="https://help.aliyun.com/document_detail/52839.html">Status: Video status</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Uploading</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string UploadSource { get; set; }
 
             /// <summary>
-            /// <para>The upload task status. For the valid values and descriptions of upload statuses, see the value list in <a href="https://help.aliyun.com/document_detail/52839.html">Status: URL upload task status</a>.</para>
+            /// <para>The status of the upload task. For more information about the valid values and descriptions of the upload status, see the valid values of <a href="https://help.aliyun.com/document_detail/52839.html">Status: URL upload task status</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Uploading</para>

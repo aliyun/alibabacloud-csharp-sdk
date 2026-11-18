@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AddVodDomainRequest : TeaModel {
         /// <summary>
-        /// <para>The health check URL.</para>
+        /// <para>The URL for health checks.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.example.com/test.html">www.example.com/test.html</a></para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string CheckUrl { get; set; }
 
         /// <summary>
-        /// <para>The accelerated domain name to be added to ApsaraVideo VOD. Wildcard domain names are supported, starting with a period (.), such as .example.com.</para>
+        /// <para>The accelerated domain name that you want to add to ApsaraVideo VOD. Wildcard domain names are supported. A wildcard domain name must start with a period (.), such as .example.com.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is valid for international users and Chinese mainland users of L3 or higher. Valid values:</para>
+        /// <para>The acceleration region. This parameter is valid for users outside the Chinese mainland and users in the Chinese mainland at level 3 or above. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>domestic</b> (default): the Chinese mainland.</description></item>
         /// <item><description><b>overseas</b>: Hong Kong (China), Macao (China), Taiwan (China), and regions outside China.</description></item>

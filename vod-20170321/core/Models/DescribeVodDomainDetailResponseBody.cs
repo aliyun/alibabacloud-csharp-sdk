@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public DescribeVodDomainDetailResponseBodyDomainDetail DomainDetail { get; set; }
         public class DescribeVodDomainDetailResponseBodyDomainDetail : TeaModel {
             /// <summary>
-            /// <para>The name of the HTTPS certificate. This parameter is returned only if HTTPS secure acceleration is enabled.</para>
+            /// <para>The name of the HTTPS certificate if HTTPS secure acceleration is enabled. This parameter is not returned if HTTPS secure acceleration is disabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testCertName</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CertName { get; set; }
 
             /// <summary>
-            /// <para>The CNAME assigned to the accelerated domain name. You must add a CNAME record with your DNS provider to map the accelerated domain name to this CNAME. For more information, see <a href="https://help.aliyun.com/document_detail/86075.html">Configure a CNAME record</a>.</para>
+            /// <para>The CNAME domain name generated for the accelerated domain name. You must add a CNAME record at your DNS provider to resolve the accelerated domain name to this CNAME domain name. For more information, see <a href="https://help.aliyun.com/document_detail/86075.html">Configure CNAME</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com.w.alikunlun.net</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Cname { get; set; }
 
             /// <summary>
-            /// <para>The description of the VOD acceleration domain name.</para>
+            /// <para>The description of the ApsaraVideo VOD accelerated domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testDescription</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The VOD acceleration domain name.</para>
+            /// <para>The ApsaraVideo VOD accelerated domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string DomainName { get; set; }
 
             /// <summary>
-            /// <para>The status of the accelerated domain name. Valid values:</para>
+            /// <para>The running status of the accelerated domain name. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>online</b>: enabled.</description></item>
-            /// <item><description><b>offline</b>: disabled.</description></item>
-            /// <item><description><b>configuring</b>: being configured.</description></item>
-            /// <item><description><b>configure_failed</b>: configuration failed.</description></item>
-            /// <item><description><b>checking</b>: being reviewed.</description></item>
-            /// <item><description><b>check_failed</b>: review failed.</description></item>
+            /// <item><description><b>online</b>: Enabled.</description></item>
+            /// <item><description><b>offline</b>: Disabled.</description></item>
+            /// <item><description><b>configuring</b>: Configuring.</description></item>
+            /// <item><description><b>configure_failed</b>: Configuration failed.</description></item>
+            /// <item><description><b>checking</b>: Under review.</description></item>
+            /// <item><description><b>check_failed</b>: Review failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string DomainStatus { get; set; }
 
             /// <summary>
-            /// <para>The time when the domain name was created. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
+            /// <para>The creation time. The format is <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-11-27T06:51:26Z</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The time when the domain name was last modified. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
+            /// <para>The last modification time. The format is <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-11-27T06:55:26Z</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the SSL certificate is enabled. Valid values:</para>
+            /// <para>Specifies whether the SSL certificate is enabled. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>on</b>: Enabled.</description></item>
             /// <item><description><b>off</b>: Disabled.</description></item>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string SSLProtocol { get; set; }
 
             /// <summary>
-            /// <para>The public key of the HTTPS certificate. This parameter is returned only if HTTPS secure acceleration is enabled.</para>
+            /// <para>The public key of the HTTPS certificate if HTTPS secure acceleration is enabled. This parameter is not returned if HTTPS secure acceleration is disabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>yourSSLPub</para>
@@ -119,11 +119,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string SSLPub { get; set; }
 
             /// <summary>
-            /// <para>The acceleration region. Valid values:</para>
+            /// <para>The accelerated region. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>domestic</b> (default): the Chinese mainland only.</description></item>
-            /// <item><description><b>overseas</b>: global (excluding the Chinese mainland).</description></item>
-            /// <item><description><b>global</b>: global.</description></item>
+            /// <item><description><b>domestic</b> (default): The Chinese mainland.</description></item>
+            /// <item><description><b>overseas</b>: Global (excluding the Chinese mainland).</description></item>
+            /// <item><description><b>global</b>: Global.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AddWatermarkRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID. Default value: <b>app-1000000</b>. If you have activated the multi-application service, specify the application ID to add the watermark template to the specified application. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application service</a>.</para>
+        /// <para>The application ID. Default value: <b>app-1000000</b>. If the multi-application system is activated, you can specify an application ID to add the watermark template to a specific application. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application system</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app-****</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The Object Storage Service (OSS) URL of the watermark image file (without authentication).</para>
+        /// <para>The OSS URL of the watermark image file without authentication.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Request parameter is required when you set an image watermark template (<c>Type</c> is <c>Image</c>).</description></item>
-        /// <item><description>You can call <a href="~~CreateUploadAttachedMedia~~">CreateUploadAttachedMedia</a> to upload the watermark image to ApsaraVideo VOD. The value of the <c>FileURL</c> parameter returned after the upload can be used as the value of request parameter.</description></item>
+        /// <item><description>Request parameter is required when you create an image watermark template by setting <c>Type</c> to <c>Image</c>.</description></item>
+        /// <item><description>You can call the <a href="~~CreateUploadAttachedMedia~~">CreateUploadAttachedMedia</a> operation to upload the watermark image to ApsaraVideo VOD. The value of the <c>FileURL</c> parameter returned after the upload can be used as the value of request parameter.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -38,9 +38,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The name of the watermark template.</para>
         /// <list type="bullet">
-        /// <item><description>Only Chinese characters, letters, and digits are supported.</description></item>
+        /// <item><description>Only Chinese characters, English letters, and digits are supported.</description></item>
         /// <item><description>The name can be up to 128 bytes in length.</description></item>
-        /// <item><description>UTF-8 encoding.</description></item>
+        /// <item><description>The name must be encoded in UTF-8.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The templatetype of the watermark. Valid values:</para>
+        /// <para>The watermark templatetype. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Image</b> (default): image watermark template.</description></item>
         /// <item><description><b>Text</b>: text watermark template.</description></item>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The configuration information of the watermark (JSON string), including the display position and effect of the watermark. The configuration parameters differ between image watermarks and text watermarks. For more information about the parameter structure, see <a href="~~98618#section-h01-44s-2lr~~">WatermarkConfig</a>.</para>
+        /// <para>The configuration information of the image or text watermark in JSON format, including the display position and effects of the watermark. The configuration parameters for image watermarks and text watermarks are different. For more information about the parameter structure, see <a href="~~98618#section-h01-44s-2lr~~">WatermarkConfig</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

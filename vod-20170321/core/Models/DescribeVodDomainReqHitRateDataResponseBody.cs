@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The time interval between data entries, which is the time granularity of the data. Unit: seconds.</para>
+        /// <para>The time interval of each data entry, which is the time granularity of the data. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range for the returned data.</para>
+        /// <para>The end time of the returned data. The time is displayed in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-12-22T08:00:00Z</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range for the returned data.</para>
+        /// <para>The start time of the returned data. The time is displayed in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-12-21T08:00:00Z</para>

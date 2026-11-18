@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
     public class UploadStreamByURLRequest : TeaModel {
         /// <summary>
         /// <para>The definition of the video stream.</para>
-        /// <para>For valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/124671.html">Media asset parameter description - Definition</a>.</para>
+        /// <para>For details, see <a href="https://help.aliyun.com/document_detail/124671.html">Media asset parameter description - Definition</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <item><description>HDRVivid</description></item>
         /// <item><description>SDR+<remarks>
         /// <list type="bullet">
-        /// <item><description>Case-insensitive.</description></item>
+        /// <item><description>This parameter is case-insensitive.</description></item>
         /// <item><description>Leave this parameter empty for non-HDR videos.</description></item>
         /// </list>
         /// </remarks>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// <para>The URL of the transcoded stream file.</para>
-        /// <para>If the URL of the transcoded stream requires authentication, include the authentication parameters in StreamURL and make sure the URL is accessible through public network access.</para>
+        /// <para>If the URL of the transcoded stream requires authentication, include the authentication parameters in StreamURL and make sure that the URL is accessible over public network access.</para>
         /// <remarks>
         /// <para>You can obtain the audio or video URL from the console or by invoking the GetPlayInfo operation.</para>
         /// </remarks>

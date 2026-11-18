@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SearchEditingProjectRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query based on CreationTime. Specify the time in the format of <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
+        /// <para>The end time of the creation time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2017-01-11T13:00:00Z</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The current page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>10</b>. Maximum value: <b>100</b>.</para>
+        /// <para>The number of entries per page. Default value: <b>10</b>. Maximum value: <b>100</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -58,8 +58,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The sorting method of the results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>desc</b> (default): sorts the results in reverse chronological order based on creation time.</description></item>
-        /// <item><description><b>asc</b>: sorts the results in chronological order based on creation time.</description></item>
+        /// <item><description><b>desc</b> (default): Sorts the results by creation time in descending order.</description></item>
+        /// <item><description><b>asc</b>: Sorts the results by creation time in ascending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range to query based on CreationTime. Specify the time in the format of <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
+        /// <para>The start time of the creation time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2017-01-11T12:00:00Z</para>
@@ -80,12 +80,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The status of the online editing project. Separate multiple statuses with commas (,). By default, all online editing projects are returned. Valid values:</para>
+        /// <para>The status of the online editing project. Separate multiple values with commas (,). By default, all online editing projects are retrieved. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Normal</b>: Draft.</description></item>
-        /// <item><description><b>Producing</b>: Being produced.</description></item>
+        /// <item><description><b>Producing</b>: Producing.</description></item>
         /// <item><description><b>Produced</b>: Produced.</description></item>
-        /// <item><description><b>ProduceFailed</b>: Failed to be produced.</description></item>
+        /// <item><description><b>ProduceFailed</b>: Production failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

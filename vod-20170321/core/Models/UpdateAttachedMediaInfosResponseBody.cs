@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class UpdateAttachedMediaInfosResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs of the auxiliary media assets that do not exist.</para>
+        /// <para>The list of IDs of non-existent auxiliary media assets.</para>
         /// </summary>
         [NameInMap("NonExistMediaIds")]
         [Validation(Required=false)]

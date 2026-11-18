@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
     public class CreateUploadAttachedMediaResponseBody : TeaModel {
         /// <summary>
         /// <para>The OSS URL of the auxiliary media asset file (without authentication).</para>
-        /// <para>When you add an image watermark template, this URL can be used as the request parameter <c>FileUrl</c> of the <a href="~~AddWatermark~~">AddWatermark</a> operation.</para>
+        /// <para>When you add an image watermark template, this URL can be used as the FileUrl request parameter of the <a href="~~AddWatermark~~">AddWatermark</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>https://<b><b>.oss-cn-shanghai.aliyuncs.com/watermark/</b></b>.mov</para>
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// <para>The access URL of the media asset.</para>
-        /// <para>If a CDN domain name is configured, a CDN URL is returned. Otherwise, an OSS URL is returned.</para>
+        /// <para>If a CDN domain name is configured, the CDN URL is returned. Otherwise, the OSS URL is returned.</para>
         /// <remarks>
-        /// <para>If the returned MediaURL is inaccessible in a browser (403), you have enabled URL authentication for the VOD domain name. You can disable <a href="https://help.aliyun.com/document_detail/86090.html">URL authentication</a> or <a href="https://help.aliyun.com/document_detail/57007.html">generate an authentication signature</a> yourself.</para>
+        /// <para>If the returned MediaURL cannot be accessed in a browser (403 error), it is because you have enabled the authentication feature for the VOD domain name. You can disable <a href="https://help.aliyun.com/document_detail/86090.html">URL authentication</a> or <a href="https://help.aliyun.com/document_detail/57007.html">generate an authentication signature</a> by yourself.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The upload URL.</para>
         /// <remarks>
-        /// <para>The upload URL returned by the operation is a Base64-encoded value. When you use the SDK or API to upload media assets, you must Base64-decode the value before use. Only uploads by using the OSS native SDK or OSS API require you to parse UploadAddress yourself.</para>
+        /// <para>The upload URL returned by the operation is Base64-encoded. When you call the SDK or API to upload the media asset, you must Base64-decode the URL before use. You only need to parse UploadAddress when you use the native OSS SDK or OSS API to upload the media asset.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The upload credential.</para>
         /// <remarks>
-        /// <para>The upload credential returned by the operation is a Base64-encoded value. When you use the SDK or API to upload media assets, you must Base64-decode the value before use. Only uploads by using the OSS native SDK or OSS API require you to parse UploadAuth yourself.</para>
+        /// <para>The upload credential returned by the operation is Base64-encoded. When you call the SDK or API to upload the media asset, you must Base64-decode the credential before use. You only need to parse UploadAuth when you use the native OSS SDK or OSS API to upload the media asset.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

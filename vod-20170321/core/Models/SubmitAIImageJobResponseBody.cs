@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitAIImageJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The AI image processing task ID.</para>
+        /// <para>The ID of the AI image processing task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cf08a2c6e11e*****de1711b738b9067</para>

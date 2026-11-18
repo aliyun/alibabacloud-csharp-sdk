@@ -10,20 +10,20 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetAttachedMediaInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The validity period of the auxiliary media asset URL. Unit: seconds.</para>
+        /// <para>The expiration time of the auxiliary media asset URLs. Unit: seconds.</para>
         /// <list type="bullet">
         /// <item><description>If OutputType is set to <b>cdn</b>:<list type="bullet">
-        /// <item><description>The URL expires only if URL authentication is enabled. Otherwise, the URL is permanently valid.</description></item>
+        /// <item><description>The URLs expire only if URL authentication is enabled. Otherwise, the URLs are permanently valid.</description></item>
         /// <item><description>Minimum value: <b>1</b>.</description></item>
         /// <item><description>Maximum value: unlimited.</description></item>
-        /// <item><description>Default value: If you do not specify this parameter, the default validity period specified in URL authentication is used.</description></item>
+        /// <item><description>Default value: If this parameter is not specified, the default validity period configured for URL authentication is used.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>If OutputType is set to <b>oss</b>:<list type="bullet">
-        /// <item><description>The URL expires only if the storage permission is set to private. Otherwise, the URL is permanently valid.</description></item>
+        /// <item><description>The URLs expire only if the storage permission is set to private. Otherwise, the URLs are permanently valid.</description></item>
         /// <item><description>Minimum value: <b>1</b>.</description></item>
-        /// <item><description>Maximum value: To reduce security risks to the origin server, the maximum value is <b>2592000</b> (30 days) if the auxiliary media asset is stored in a bucket managed by ApsaraVideo VOD, and <b>129600</b> (36 hours) if the auxiliary media asset is stored in your own OSS bucket.</description></item>
-        /// <item><description>Default value: If you do not specify this parameter, the value is <b>3600</b>.</description></item>
+        /// <item><description>Maximum value: To reduce security risks to the origin server, the maximum value is <b>2592000</b> (30 days) if the auxiliary media assets are stored in an ApsaraVideo VOD bucket, and <b>129600</b> (36 hours) if the auxiliary media assets are stored in a user-owned OSS bucket.</description></item>
+        /// <item><description>Default value: If this parameter is not specified, the value is <b>3600</b>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -36,10 +36,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? AuthTimeout { get; set; }
 
         /// <summary>
-        /// <para>The auxiliary media asset IDs.</para>
+        /// <para>The IDs of the auxiliary media assets.</para>
         /// <list type="bullet">
         /// <item><description>Separate multiple IDs with commas (,). You can specify up to 20 IDs.</description></item>
-        /// <item><description>The IDs are returned after you call the <a href="~~CreateUploadAttachedMedia~~">CreateUploadAttachedMedia</a> operation to obtain the upload URL and credential for the auxiliary media asset.</description></item>
+        /// <item><description>The IDs are returned after you call the <a href="~~CreateUploadAttachedMedia~~">CreateUploadAttachedMedia</a> operation to obtain the upload URLs and credentials for the auxiliary media assets.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -53,8 +53,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The type of the output URL. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>oss</b>: the back-to-origin URL.</description></item>
-        /// <item><description><b>cdn</b> (default): the CDN-accelerated URL.</description></item>
+        /// <item><description><b>oss</b>: back-to-origin URL.</description></item>
+        /// <item><description><b>cdn</b> (default): accelerated URL.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
