@@ -1,3 +1,8 @@
+2026-11-18 Version: 11.10.0
+- Support API GetGatewayWebsocketUsage.
+- Support API ListGatewayWebsocketEvents.
+
+
 2026-11-17 Version: 11.9.2
 - Update API CreateConsumer: add request parameters body.expireAt.
 - Update API CreateMcpServer: add request parameters body.instructions.

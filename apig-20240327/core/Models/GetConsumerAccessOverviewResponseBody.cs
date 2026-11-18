@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetConsumerAccessOverviewResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response status code. Ok is returned for a successful request, and a specific business error code is returned for a failed request.</para>
+        /// <para>The response status code. The value is Ok for successful requests, or a specific business error code for failed requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The business result returned for the consumer operation.</para>
+        /// <para>The business result returned by the consumer operation.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetConsumerAccessOverviewResponseBodyData Data { get; set; }
         public class GetConsumerAccessOverviewResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the query result is complete. A successful response returns a complete projection.</para>
+            /// <para>Specifies whether the query result is complete. A successful response returns a complete projection.</para>
             /// </summary>
             [NameInMap("complete")]
             [Validation(Required=false)]
             public bool? Complete { get; set; }
 
             /// <summary>
-            /// <para>The identifier and name of the gateway in the current context.</para>
+            /// <para>The gateway identifier and name in the current view.</para>
             /// </summary>
             [NameInMap("gateway")]
             [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The description of the consumer.</para>
+            /// <para>The description text of the consumer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Consumer for business applications</para>
@@ -73,21 +73,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string IdentityDescription { get; set; }
 
             /// <summary>
-            /// <para>The impact of the authorization configuration of this consumer on readable gateways in the local region.</para>
+            /// <para>The impact of authorization configurations for this consumer in readable gateways within the local region.</para>
             /// </summary>
             [NameInMap("impacts")]
             [Validation(Required=false)]
             public List<GetConsumerAccessOverviewResponseBodyDataImpacts> Impacts { get; set; }
             public class GetConsumerAccessOverviewResponseBodyDataImpacts : TeaModel {
                 /// <summary>
-                /// <para>The number of authorization configurations categorized by resource type.</para>
+                /// <para>The number of authorization configurations counted by resource type.</para>
                 /// </summary>
                 [NameInMap("authorizationCounts")]
                 [Validation(Required=false)]
                 public GetConsumerAccessOverviewResponseBodyDataImpactsAuthorizationCounts AuthorizationCounts { get; set; }
                 public class GetConsumerAccessOverviewResponseBodyDataImpactsAuthorizationCounts : TeaModel {
                     /// <summary>
-                    /// <para>The number of agent APIs for which authorization is configured.</para>
+                    /// <para>The number of agent APIs with configured authorization.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public int? AgentApis { get; set; }
 
                     /// <summary>
-                    /// <para>The number of MCP servers for which authorization is configured.</para>
+                    /// <para>The number of MCP servers with configured authorization.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public int? McpServers { get; set; }
 
                     /// <summary>
-                    /// <para>The number of model APIs for which authorization is configured.</para>
+                    /// <para>The number of model APIs with configured authorization.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The identifier and name of the gateway in the current context.</para>
+                /// <para>The gateway identifier and name in the current view.</para>
                 /// </summary>
                 [NameInMap("gateway")]
                 [Validation(Required=false)]
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The set of resources authorized for the consumer.</para>
+                /// <para>The collection of resources for which the consumer has been granted authorization.</para>
                 /// </summary>
                 [NameInMap("resources")]
                 [Validation(Required=false)]
@@ -157,14 +157,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The quota rules and usage of the consumer and the consumer group to which it belongs.</para>
+            /// <para>The quota rules and usage for the consumer and its associated consumer group.</para>
             /// </summary>
             [NameInMap("quotas")]
             [Validation(Required=false)]
             public List<GetConsumerAccessOverviewResponseBodyDataQuotas> Quotas { get; set; }
             public class GetConsumerAccessOverviewResponseBodyDataQuotas : TeaModel {
                 /// <summary>
-                /// <para>The quota limit for the current rule. This value uses the same unit of measurement as the unit field.</para>
+                /// <para>The quota limit for the current rule, measured in the same unit as the unit field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000000</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? PeriodMultiplier { get; set; }
 
                 /// <summary>
-                /// <para>The type of the quota period. Valid values: day, week, and month.</para>
+                /// <para>The quota period type. Valid values: day, week, and month.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>day</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string PeriodType { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the quota rule.</para>
+                /// <para>The quota rule ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qr-d00000000000000000000</para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string SubjectName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the quota subject. Valid values: consumer and consumer_group.</para>
+                /// <para>The quota subject type. Valid values: consumer and consumer_group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>consumer</para>
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string SubjectType { get; set; }
 
                 /// <summary>
-                /// <para>The unit of measurement for the quota.</para>
+                /// <para>The quota measurement unit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>token</para>
@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Unit { get; set; }
 
                 /// <summary>
-                /// <para>The used quota within the period corresponding to the current rule. This value uses the same unit of measurement as the unit field.</para>
+                /// <para>The used quota within the period corresponding to the current rule, measured in the same unit as the unit field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -276,14 +276,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The set of resources authorized for the consumer.</para>
+            /// <para>The collection of resources for which the consumer has been granted authorization.</para>
             /// </summary>
             [NameInMap("resources")]
             [Validation(Required=false)]
             public List<GetConsumerAccessOverviewResponseBodyDataResources> Resources { get; set; }
             public class GetConsumerAccessOverviewResponseBodyDataResources : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the authorization scope of this resource includes all models.</para>
+                /// <para>Specifies whether the authorization scope of this resource includes all models.</para>
                 /// 
                 /// <b>if can be null:</b>
                 /// <c>true</c>
@@ -293,7 +293,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public bool? AllModels { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the authorization scope of this MCP resource includes all tools.</para>
+                /// <para>Specifies whether the authorization scope of this MCP resource includes all tools.</para>
                 /// 
                 /// <b>if can be null:</b>
                 /// <c>true</c>
@@ -313,7 +313,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ConsumerGroupName { get; set; }
 
                 /// <summary>
-                /// <para>The existing desired or applied state of the model entitlement projection. This field is omitted when no state row exists.</para>
+                /// <para>The existing desired or applied state of the model entitlement projection. This field is omitted if no state row exists.</para>
                 /// </summary>
                 [NameInMap("entitlementState")]
                 [Validation(Required=false)]
@@ -330,7 +330,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public long? AppliedRevision { get; set; }
 
                     /// <summary>
-                    /// <para>The desired authorization revision number to be distributed.</para>
+                    /// <para>The expected authorization revision number to be delivered.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -340,7 +340,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public long? DesiredRevision { get; set; }
 
                     /// <summary>
-                    /// <para>The error description when processing fails. This field is empty when no error occurs.</para>
+                    /// <para>The error description when processing fails. This field is empty if no error occurs.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Configuration delivery failed</para>
@@ -362,7 +362,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The expiration time. The value is null for long-term authorization, an RFC 3339 formatted string for short-term authorization that can be losslessly projected, and omitted when unknown.</para>
+                /// <para>The expiration time. The value is null for long-term authorization, an RFC 3339 formatted string for short-term authorization that can be losslessly projected, or omitted if unknown.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-12-31T23:59:59Z</para>
@@ -375,7 +375,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ExpireTime { get; set; }
 
                 /// <summary>
-                /// <para>The model groups and their model collections that are accessible.</para>
+                /// <para>The accessible model groups and their model collections.</para>
                 /// </summary>
                 [NameInMap("modelGroups")]
                 [Validation(Required=false)]
@@ -392,7 +392,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ConsumerGroupName { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the model group. Use the modelGroupId returned by CreateModelGroup.</para>
+                    /// <para>The model group ID. Use the modelGroupId returned by CreateModelGroup.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>mg-d00000000000000000000</para>
@@ -402,7 +402,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ModelGroupId { get; set; }
 
                     /// <summary>
-                    /// <para>The list of model endpoints accessible within the current resource scope.</para>
+                    /// <para>The list of accessible model endpoints within the current resource scope.</para>
                     /// </summary>
                     [NameInMap("models")]
                     [Validation(Required=false)]
@@ -419,7 +419,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                         public string ConsumerGroupName { get; set; }
 
                         /// <summary>
-                        /// <para>The identifier of the model. Standard models use the source model card ID, and logical model endpoints use an identifier prefixed with vm-.</para>
+                        /// <para>The model identifier. Standard models use the source model card ID, while logical model endpoints use the vm- prefix.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>msc-d00000000000000000000</para>
@@ -429,7 +429,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                         public string ModelCardId { get; set; }
 
                         /// <summary>
-                        /// <para>The ID of the model source. Use the modelSourceId returned by CreateAiModelSource.</para>
+                        /// <para>The model source ID. Use the modelSourceId returned by CreateAiModelSource.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>ms-d00000000000000000000</para>
@@ -449,7 +449,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                         public string ModelSourceName { get; set; }
 
                         /// <summary>
-                        /// <para>The type of the model. Valid values: Model and LogicalModel.</para>
+                        /// <para>The model type. Valid values: Model and LogicalModel.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Model</para>
@@ -483,7 +483,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The list of model endpoints accessible within the current resource scope.</para>
+                /// <para>The list of accessible model endpoints within the current resource scope.</para>
                 /// </summary>
                 [NameInMap("models")]
                 [Validation(Required=false)]
@@ -500,7 +500,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ConsumerGroupName { get; set; }
 
                     /// <summary>
-                    /// <para>The identifier of the model. Standard models use the source model card ID, and logical model endpoints use an identifier prefixed with vm-.</para>
+                    /// <para>The model identifier. Standard models use the source model card ID, while logical model endpoints use the vm- prefix.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>msc-d00000000000000000000</para>
@@ -510,7 +510,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ModelCardId { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the model source. Use the modelSourceId returned by CreateAiModelSource.</para>
+                    /// <para>The model source ID. Use the modelSourceId returned by CreateAiModelSource.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ms-d00000000000000000000</para>
@@ -530,7 +530,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ModelSourceName { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the model. Valid values: Model and LogicalModel.</para>
+                    /// <para>The model type. Valid values: Model and LogicalModel.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Model</para>
@@ -572,7 +572,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the resource. Valid values: ModelApi, MCP, and Agent.</para>
+                /// <para>The resource type. Valid values: ModelApi, MCP, and Agent.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ModelApi</para>
@@ -582,7 +582,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// <para>The list of MCP tool names that can be called within the resource scope.</para>
+                /// <para>The list of names of MCP tools that are allowed to be called within this resource scope.</para>
                 /// </summary>
                 [NameInMap("tools")]
                 [Validation(Required=false)]
@@ -593,7 +593,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The response message that describes the processing result of the request.</para>
+        /// <para>The response message that describes the request processing result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -603,7 +603,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. This ID is generated by the system to trace the call.</para>
+        /// <para>The request ID generated by the system to trace the current call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>

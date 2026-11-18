@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListConsumerConsoleSummariesRequest : TeaModel {
         /// <summary>
-        /// <para>The filter condition. Valid values: all, granted, and disabled. Default value: all.</para>
+        /// <para>The filter condition. Valid values: all, granted, and disabled. If you do not specify this parameter, all is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>all</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>The target AI gateway instance ID. Consumer identities are shared across the region, while authorizations are isolated by instance.</para>
+        /// <para>The target AI gateway instance ID. Consumer identities are shared across the region, and authorizations are isolated by instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The keyword for fuzzy search by consumer name. This parameter does not affect the total count.</para>
+        /// <para>The keyword for fuzzy search by consumer name. This parameter does not affect the total counts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>beta</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string NameLike { get; set; }
 
         /// <summary>
-        /// <para>The pagination token returned from the previous page. Omit this parameter when querying the first page. An empty or omitted value indicates the last page.</para>
+        /// <para>The pagination token returned from the previous page. Omit this parameter when you query the first page. If the value is empty or omitted, it indicates the last page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJvZmZzZXQiOjIwfQ==</para>
