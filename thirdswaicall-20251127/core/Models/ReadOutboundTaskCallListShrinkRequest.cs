@@ -59,6 +59,14 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>1ab92c</para>
+        /// </summary>
+        [NameInMap("CurrentWorkspaceCode")]
+        [Validation(Required=false)]
+        public string CurrentWorkspaceCode { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>abc123***</para>
         /// </summary>
         [NameInMap("CurrentWorkspaceId")]
@@ -120,6 +128,10 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127.Models
         [NameInMap("Size")]
         [Validation(Required=false)]
         public int? Size { get; set; }
+
+        [NameInMap("StructuredLabelTags")]
+        [Validation(Required=false)]
+        public string StructuredLabelTagsShrink { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

@@ -59,6 +59,14 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>1ab92c</para>
+        /// </summary>
+        [NameInMap("CurrentWorkspaceCode")]
+        [Validation(Required=false)]
+        public string CurrentWorkspaceCode { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>abc123***</para>
         /// </summary>
         [NameInMap("CurrentWorkspaceId")]
@@ -120,6 +128,24 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127.Models
         [NameInMap("Size")]
         [Validation(Required=false)]
         public int? Size { get; set; }
+
+        [NameInMap("StructuredLabelTags")]
+        [Validation(Required=false)]
+        public List<ReadOutboundTaskCallListRequestStructuredLabelTags> StructuredLabelTags { get; set; }
+        public class ReadOutboundTaskCallListRequestStructuredLabelTags : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>是否有意向</para>
+            /// </summary>
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public List<string> Value { get; set; }
+
+        }
 
         /// <summary>
         /// <b>Example:</b>

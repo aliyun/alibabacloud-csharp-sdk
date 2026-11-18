@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "ThirdswAicall";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "";
             CheckConfig(config);
             this._endpoint = GetEndpoint("thirdswaicall", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -67,6 +70,10 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerUacAccountId))
             {
                 body["CallerUacAccountId"] = request.CallerUacAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentWorkspaceCode))
+            {
+                body["CurrentWorkspaceCode"] = request.CurrentWorkspaceCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentWorkspaceId))
             {
@@ -141,6 +148,10 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerUacAccountId))
             {
                 body["CallerUacAccountId"] = request.CallerUacAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentWorkspaceCode))
+            {
+                body["CurrentWorkspaceCode"] = request.CurrentWorkspaceCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentWorkspaceId))
             {
@@ -248,6 +259,10 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
             {
                 body["CallerUacAccountId"] = request.CallerUacAccountId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentWorkspaceCode))
+            {
+                body["CurrentWorkspaceCode"] = request.CurrentWorkspaceCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentWorkspaceId))
             {
                 body["CurrentWorkspaceId"] = request.CurrentWorkspaceId;
@@ -301,6 +316,10 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerUacAccountId))
             {
                 body["CallerUacAccountId"] = request.CallerUacAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentWorkspaceCode))
+            {
+                body["CurrentWorkspaceCode"] = request.CurrentWorkspaceCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentWorkspaceId))
             {
@@ -397,6 +416,10 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
             {
                 request.LabelTagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LabelTags, "LabelTags", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StructuredLabelTags))
+            {
+                request.StructuredLabelTagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StructuredLabelTags, "StructuredLabelTags", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallEndTimeBegin))
             {
@@ -421,6 +444,10 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
             {
                 body["Current"] = request.Current;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentWorkspaceCode))
+            {
+                body["CurrentWorkspaceCode"] = request.CurrentWorkspaceCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentWorkspaceId))
             {
@@ -453,6 +480,10 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
             {
                 body["Size"] = request.Size;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StructuredLabelTagsShrink))
+            {
+                body["StructuredLabelTags"] = request.StructuredLabelTagsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
@@ -513,6 +544,10 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
             {
                 request.LabelTagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LabelTags, "LabelTags", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StructuredLabelTags))
+            {
+                request.StructuredLabelTagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StructuredLabelTags, "StructuredLabelTags", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallEndTimeBegin))
             {
@@ -537,6 +572,10 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
             {
                 body["Current"] = request.Current;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentWorkspaceCode))
+            {
+                body["CurrentWorkspaceCode"] = request.CurrentWorkspaceCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentWorkspaceId))
             {
@@ -569,6 +608,10 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
             {
                 body["Size"] = request.Size;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StructuredLabelTagsShrink))
+            {
+                body["StructuredLabelTags"] = request.StructuredLabelTagsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {

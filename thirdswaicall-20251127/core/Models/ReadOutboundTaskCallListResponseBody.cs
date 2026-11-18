@@ -175,6 +175,10 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127.Models
             [Validation(Required=false)]
             public string GmtModified { get; set; }
 
+            [NameInMap("HangupDirection")]
+            [Validation(Required=false)]
+            public string HangupDirection { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1</para>
@@ -246,6 +250,24 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            [NameInMap("StructuredLabelTags")]
+            [Validation(Required=false)]
+            public List<ReadOutboundTaskCallListResponseBodyRecordsStructuredLabelTags> StructuredLabelTags { get; set; }
+            public class ReadOutboundTaskCallListResponseBodyRecordsStructuredLabelTags : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>是否有意向</para>
+                /// </summary>
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public List<string> Value { get; set; }
+
+            }
 
             /// <summary>
             /// <b>Example:</b>

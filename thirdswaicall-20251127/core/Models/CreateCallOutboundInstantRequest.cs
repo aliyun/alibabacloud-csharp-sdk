@@ -35,6 +35,14 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>1ab92c</para>
+        /// </summary>
+        [NameInMap("CurrentWorkspaceCode")]
+        [Validation(Required=false)]
+        public string CurrentWorkspaceCode { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>abc123***</para>
         /// </summary>
         [NameInMap("CurrentWorkspaceId")]
