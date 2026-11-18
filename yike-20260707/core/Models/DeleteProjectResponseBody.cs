@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate and troubleshoot the request.</para>
+        /// <para>The request ID used to locate and troubleshoot the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>63E8B7C7-4812-46AD-0FA56029AC86</b></b></para>

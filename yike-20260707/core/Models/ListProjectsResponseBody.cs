@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class ListProjectsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A response field retained for compatibility. It is not used for current pagination and can be ignored.</para>
+        /// <para>A response field retained for backward compatibility. This field is not used for pagination. Do not rely on this field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A response field retained for compatibility. It is not used for current pagination and can be ignored.</para>
+        /// <para>A response field retained for backward compatibility. This field is not used for pagination. Do not rely on this field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Token</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public List<ListProjectsResponseBodyProjectList> ProjectList { get; set; }
         public class ListProjectsResponseBodyProjectList : TeaModel {
             /// <summary>
-            /// <para>The permissions of the current caller in the project, such as Manage for management permissions.</para>
+            /// <para>The permissions of the current caller in the project. For example, Manage indicates management permissions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Manage</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string CoverUrl { get; set; }
 
             /// <summary>
-            /// <para>The creation time in UTC format following the ISO 8601 standard, ending with Z.</para>
+            /// <para>The creation time. The time is in UTC and follows the ISO 8601 standard, ending with Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-07T02:21:36Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string CreateUserName { get; set; }
 
             /// <summary>
-            /// <para>The project description.</para>
+            /// <para>The description of the project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Product demo project</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The project ID.</para>
+            /// <para>The ID of the project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pd_061716****</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The project name.</para>
+            /// <para>The name of the project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Product Demo</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>The workspace ID.</para>
+            /// <para>The ID of the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ws_zna577pdximv***</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate and troubleshoot the request.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>63E8B7C7-4812-46AD-0FA56029AC86</b></b></para>

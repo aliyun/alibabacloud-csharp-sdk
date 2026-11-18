@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The application input parameters as a JSON-serialized string. The field names and material requirements are subject to the input definition of the corresponding AppId.</para>
+        /// <para>The input parameters of the application, serialized as a JSON string. The field names and material requirements are subject to the input definition of the corresponding AppId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;LoadImage.1.TargetImage&quot;:&quot;1a7852b032c371f0b64fe6f6c74b****&quot;}</para>

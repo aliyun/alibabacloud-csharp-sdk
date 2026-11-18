@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public GetProjectResponseBodyProject Project { get; set; }
         public class GetProjectResponseBodyProject : TeaModel {
             /// <summary>
-            /// <para>The permissions of the current caller in the project. For example, Manage indicates management permissions.</para>
+            /// <para>The permissions of the current caller on the project. For example, Manage indicates management permissions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Manage</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string CoverUrl { get; set; }
 
             /// <summary>
-            /// <para>The creation time, in ISO 8601 UTC format ending with Z.</para>
+            /// <para>The time when the project was created, in UTC and ISO 8601 format, ending with Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-07T02:21:36Z</para>
@@ -57,17 +57,17 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string CreateUserName { get; set; }
 
             /// <summary>
-            /// <para>The project description.</para>
+            /// <para>The description of the project.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Product Demo Project</para>
+            /// <para>Product demo project</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The project ID.</para>
+            /// <para>The ID of the project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pd_061716****</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The project name.</para>
+            /// <para>The name of the project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Product Demo</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>The workspace ID.</para>
+            /// <para>The ID of the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ws_zna577pdximv***</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         }
 
         /// <summary>
-        /// <para>The request ID, used to trace and troubleshoot the request.</para>
+        /// <para>The request ID used to locate and troubleshoot the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>63E8B7C7-4812-46AD-0FA56029AC86</b></b></para>

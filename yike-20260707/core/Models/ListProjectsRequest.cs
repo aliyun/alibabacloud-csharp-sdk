@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class ListProjectsRequest : TeaModel {
         /// <summary>
-        /// <para>The page number, starting from 1. Specify a valid positive integer along with PageSize. Otherwise, the query defaults to page 1 with 10 entries per page.</para>
+        /// <para>The page number. Pages start from 1. Specify a valid positive integer for both this parameter and PageSize. Otherwise, the query defaults to page 1 with 10 entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Specify a valid positive integer along with PageNo. Otherwise, the query defaults to page 1 with 10 entries per page.</para>
+        /// <para>The number of entries to return on each page. Specify a valid positive integer for both this parameter and PageNo. Otherwise, the query defaults to page 1 with 10 entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

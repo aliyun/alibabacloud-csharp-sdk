@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class GetProjectRequest : TeaModel {
         /// <summary>
-        /// <para>The project ID.</para>
+        /// <para>The ID of the project.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

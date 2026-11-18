@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public GetRemakeScriptJobResponseBodyJob Job { get; set; }
         public class GetRemakeScriptJobResponseBodyJob : TeaModel {
             /// <summary>
-            /// <para>The error code. This parameter is returned when the status is Failed.</para>
+            /// <para>The error code. This parameter is returned when the task status is Failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The error message. This parameter is of the String type and is returned when the status is Failed.</para>
+            /// <para>The error message. This parameter is of the String type and is returned when the task status is Failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The specified product does not exist.</para>
@@ -57,14 +57,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string Result { get; set; }
 
             /// <summary>
-            /// <para>The file status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Created: Created.</description></item>
-            /// <item><description>Executing: Executing.</description></item>
-            /// <item><description>Finished: Finished.</description></item>
-            /// <item><description>Failed: Failed.</description></item>
-            /// <item><description>Deleted: Deleted.</description></item>
-            /// </list>
+            /// <para>The task status. Valid values: Created, Executing, Finished, and Failed. RecordNotFound is returned if the queried task is deleted, does not exist, or does not belong to the current account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Executing</para>
@@ -77,7 +70,9 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             /// <para>The user-defined parameter, which is a string in JSON format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;NotifyAddress&quot;: &quot;<a href="http://xxx.callback.url%22%7D">http://xxx.callback.url&quot;}</a></para>
+            /// <para>{
+            ///   &quot;NotifyAddress&quot;: &quot;<a href="https://example.com/callback">https://example.com/callback</a>&quot;
+            /// }</para>
             /// </summary>
             [NameInMap("UserData")]
             [Validation(Required=false)]

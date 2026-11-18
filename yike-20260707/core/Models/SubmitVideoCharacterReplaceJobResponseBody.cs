@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class SubmitVideoCharacterReplaceJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The task ID returned by SubmitVideoCharacterReplaceJob.</para>
+        /// <para>The job ID returned by SubmitVideoCharacterReplaceJob.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ag_83baeea38b534ee1937b8a4acd08****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate and troubleshoot the request.</para>
+        /// <para>The request ID used to locate and troubleshoot the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>63E8B7C7-4812-46AD-0FA56029AC86</b></b></para>

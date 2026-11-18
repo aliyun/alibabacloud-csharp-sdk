@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class CreateWorkspaceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the default project generated through automatic creation when the studio is created.</para>
+        /// <para>The ID of the default project created through automatic creation when the studio is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pd_061716****</para>

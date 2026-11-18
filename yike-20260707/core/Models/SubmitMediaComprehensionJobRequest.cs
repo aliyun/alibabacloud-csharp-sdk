@@ -10,28 +10,50 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class SubmitMediaComprehensionJobRequest : TeaModel {
         /// <summary>
-        /// <para>The input media assets. The value is a JSON string with the following structure:</para>
+        /// <para>The input media. The value is a JSON string with the following structure:</para>
         /// <list type="bullet">
-        /// <item><description>Medias (Array<Object>, required): The list of media assets. Valid values: 1 to 10 elements. Each element contains the following fields:<list type="bullet">
-        /// <item><description>Type (String, required): The type of the media asset. Valid values: video and image. The value is not case-sensitive.</description></item>
-        /// <item><description>Url (String, mutually exclusive with MediaId): The URL of the media asset. The URL must start with http:// or https:// and be up to 2,048 characters in length. Unregistered URLs are automatically registered as media assets.</description></item>
-        /// <item><description>MediaId (String, mutually exclusive with Url): The ID of the registered media asset. If both Url and MediaId are specified, MediaId takes precedence.</description></item>
+        /// <item><description>Medias (Array<Object>, required): The list of media files. The array must contain 1 to 10 elements. Each element contains the following fields:<list type="bullet">
+        /// <item><description>Type (String, required): The media type. Valid values: video and image. The value is not case-sensitive.</description></item>
+        /// <item><description>Url (String, mutually exclusive with MediaId): The URL of the media file. The URL must start with http:// or https:// and be up to 2,048 characters in length. Unregistered URLs are automatically registered as media files.</description></item>
+        /// <item><description>MediaId (String, mutually exclusive with Url): The ID of the registered media file. If both Url and MediaId are specified, MediaId takes precedence.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;Medias&quot;:[{&quot;Type&quot;:&quot;video&quot;,&quot;Url&quot;:&quot;<a href="https://xxx.mp4%22%7D%5D%7D">https://xxx.mp4&quot;}]}</a></para>
+        /// <para>{
+        ///   &quot;Medias&quot;: [
+        ///     {
+        ///       &quot;Type&quot;: &quot;video&quot;,
+        ///       &quot;Url&quot;: &quot;<a href="https://example.com/source.mp4">https://example.com/source.mp4</a>&quot;
+        ///     }
+        ///   ]
+        /// }</para>
         /// </summary>
         [NameInMap("Input")]
         [Validation(Required=false)]
         public string Input { get; set; }
 
         /// <summary>
-        /// <para>The analysis parameters. The value is a JSON string up to 65,536 characters in length and contains a maximum of 20 fields.</para>
+        /// <para>The analysis parameters. The value is a JSON string up to 65,536 characters in length.</para>
+        /// <list type="bullet">
+        /// <item><description>VideoBreakdown: Supports the ResultType parameter (String, optional). Valid value: Standard (default).</description></item>
+        /// <item><description>ProductRecognition: Uses parameters such as product information and prompts. The total number of fields cannot exceed 20. Example fields for product parameters include ProductName, BrandName, and SellingPoints.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;ProductName&quot;:&quot;Quiet Blender Soymilk Maker&quot;,&quot;BrandName&quot;:&quot;LiangChu&quot;,&quot;SellingPoints&quot;:[&quot;Low-noise blending&quot;,&quot;One-touch self-cleaning&quot;]}</para>
+        /// <para>{
+        ///   &quot;ResultType&quot;: &quot;Standard&quot;
+        /// }
+        /// or
+        /// {
+        ///   &quot;ProductName&quot;: &quot;Quiet Blender Soymilk Maker&quot;,
+        ///   &quot;BrandName&quot;: &quot;LiangChu&quot;,
+        ///   &quot;SellingPoints&quot;: [
+        ///     &quot;Low-noise blending&quot;,
+        ///     &quot;One-touch self-cleaning&quot;
+        ///   ]
+        /// }</para>
         /// </summary>
         [NameInMap("JobParams")]
         [Validation(Required=false)]
@@ -52,10 +74,12 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string JobType { get; set; }
 
         /// <summary>
-        /// <para>The custom parameters. The value is a JSON string that is returned as-is in the callback result, such as newsKey. NotifyAddress is a system-reserved field that specifies the callback URL. The system sends a callback to this URL after the job is completed.</para>
+        /// <para>The custom parameters. The value is a JSON string. The custom parameters are returned as-is in the callback result (for example, newsKey). NotifyAddress is a system-reserved field for the callback URL. A callback is triggered after the job is completed.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;NotifyAddress&quot;: &quot;<a href="http://xxx.callback.url%22%7D">http://xxx.callback.url&quot;}</a></para>
+        /// <para>{
+        ///   &quot;NotifyAddress&quot;: &quot;<a href="https://example.com/callback">https://example.com/callback</a>&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class ListWorkspacesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID, which is used to locate and troubleshoot requests.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>63E8B7C7-4812-46AD-0FA56029AC86</b></b></para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The creation time. The time is in UTC and follows the ISO 8601 standard, ending with Z.</para>
+            /// <para>The creation time. The time follows the ISO 8601 standard and is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-07T02:21:36Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string DefaultProjectId { get; set; }
 
             /// <summary>
-            /// <para>The workspace status. Valid values: Online (enabled) and Offline (disabled).</para>
+            /// <para>The workspace status. Valid values: Online: enabled. Offline: disabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Online</para>

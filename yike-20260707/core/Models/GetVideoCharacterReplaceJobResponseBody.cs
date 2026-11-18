@@ -90,21 +90,21 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task output results, which are categorized by image, video, and audio.</para>
+        /// <para>The task output results, categorized by image, video, and audio.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public GetVideoCharacterReplaceJobResponseBodyResult Result { get; set; }
         public class GetVideoCharacterReplaceJobResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The list of output audio.</para>
+            /// <para>The list of output audio files.</para>
             /// </summary>
             [NameInMap("AudioResult")]
             [Validation(Required=false)]
             public List<GetVideoCharacterReplaceJobResponseBodyResultAudioResult> AudioResult { get; set; }
             public class GetVideoCharacterReplaceJobResponseBodyResultAudioResult : TeaModel {
                 /// <summary>
-                /// <para>The output media asset ID.</para>
+                /// <para>The ID of the output media asset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1a7852b032c371f0b64fe6f6c74b****</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public List<GetVideoCharacterReplaceJobResponseBodyResultImageResult> ImageResult { get; set; }
             public class GetVideoCharacterReplaceJobResponseBodyResultImageResult : TeaModel {
                 /// <summary>
-                /// <para>The output media asset ID.</para>
+                /// <para>The ID of the output media asset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1a7852b032c371f0b64fe6f6c74b****</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public List<GetVideoCharacterReplaceJobResponseBodyResultVideoResult> VideoResult { get; set; }
             public class GetVideoCharacterReplaceJobResponseBodyResultVideoResult : TeaModel {
                 /// <summary>
-                /// <para>The output media asset ID.</para>
+                /// <para>The ID of the output media asset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1a7852b032c371f0b64fe6f6c74b****</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         /// <list type="bullet">
         /// <item><description>Created: The task is created.</description></item>
         /// <item><description>Queuing: The task is queuing.</description></item>
-        /// <item><description>Executing: The task is executing.</description></item>
+        /// <item><description>Executing: The task is being executed.</description></item>
         /// <item><description>Finished: The task is finished.</description></item>
         /// <item><description>Failed: The task failed.</description></item>
         /// </list>

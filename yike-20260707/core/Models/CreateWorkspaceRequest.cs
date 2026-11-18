@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class CreateWorkspaceRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the studio. The name can be up to 50 characters in length and cannot contain single quotation marks, semicolons, less than signs, greater than signs, equal signs, vertical lines, or parentheses.</para>
+        /// <para>The name of the studio. The name can be up to 50 characters in length and cannot contain single quotation marks, semicolons, less-than signs, greater-than signs, equal signs, vertical lines, or parentheses.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

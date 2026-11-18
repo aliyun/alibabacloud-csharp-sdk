@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class BatchGetVideoCharacterReplaceJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of job query results.</para>
+        /// <para>The list of queried jobs.</para>
         /// </summary>
         [NameInMap("JobList")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The application input parameters specified when the job was submitted. The value is a JSON serialized string. This corresponds to the AppParams parameter in the submit operation.</para>
+            /// <para>The application input parameters specified when the job was submitted. The value is a JSON-serialized string. This corresponds to the AppParams parameter in the submit operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;LoadImage.1.TargetImage&quot;:&quot;1a7852b032c371f0b64fe6f6c74b****&quot;}</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             /// <para>The job status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Created: The job is created.</description></item>
-            /// <item><description>Queuing: The job is queuing.</description></item>
+            /// <item><description>Queuing: The job is in the queue.</description></item>
             /// <item><description>Executing: The job is being executed.</description></item>
             /// <item><description>Finished: The job is finished.</description></item>
             /// <item><description>Failed: The job failed.</description></item>
