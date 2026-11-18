@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     /// <summary>
                     /// <para>The statistical method for critical-level alerts.</para>
                     /// <para>Valid values of N: 1 to 200.</para>
-                    /// <para>The valid values of this parameter are determined by the <c>Statistics</c> column that corresponds to the <c>MetricName</c> parameter of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For more information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</para>
+                    /// <para>The valid values of this parameter are determined by the Statistics column that corresponds to the MetricName parameter of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For more information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">cloud service monitoring metrics</a>.</para>
                     /// <remarks>
                     /// <para>You must specify at least one of the following alert levels: Critical, Warn, and Info. For the specified alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
                     /// </remarks>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string Statistics { get; set; }
 
                     /// <summary>
-                    /// <para>The threshold for triggering critical-level alert notifications.</para>
+                    /// <para>The threshold that triggers the critical-level alert notification.</para>
                     /// <para>Valid values of N: 1 to 200.</para>
                     /// <remarks>
                     /// <para>You must specify at least one of the following alert levels: Critical, Warn, and Info. For the specified alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string Threshold { get; set; }
 
                     /// <summary>
-                    /// <para>The number of times that the metric must reach the alert threshold to send a critical-level alert notification.</para>
+                    /// <para>The number of times the monitoring metrics must reach the alert threshold to send a critical-level alert notification.</para>
                     /// <para>Valid values of N: 1 to 200.</para>
                     /// <remarks>
                     /// <para>You must specify at least one of the following alert levels: Critical, Warn, and Info. For the specified alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     /// <summary>
                     /// <para>The statistical method for info-level alerts.</para>
                     /// <para>Valid values of N: 1 to 200.</para>
-                    /// <para>The valid values of this parameter are determined by the <c>Statistics</c> column that corresponds to the <c>MetricName</c> parameter of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For more information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</para>
+                    /// <para>The valid values of this parameter are determined by the Statistics column that corresponds to the MetricName parameter of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For more information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">cloud service monitoring metrics</a>.</para>
                     /// <remarks>
                     /// <para>You must specify at least one of the following alert levels: Critical, Warn, and Info. For the specified alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
                     /// </remarks>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string Threshold { get; set; }
 
                     /// <summary>
-                    /// <para>The number of times that the metric must reach the alert threshold to send an info-level alert notification.</para>
+                    /// <para>The number of times the monitoring metrics must reach the alert threshold to send an info-level alert notification.</para>
                     /// <para>Valid values of N: 1 to 200.</para>
                     /// <remarks>
                     /// <para>You must specify at least one of the following alert levels: Critical, Warn, and Info. For the specified alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     /// <summary>
                     /// <para>The statistical method for warning-level alerts.</para>
                     /// <para>Valid values of N: 1 to 200.</para>
-                    /// <para>The valid values of this parameter are determined by the <c>Statistics</c> column that corresponds to the <c>MetricName</c> parameter of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For more information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</para>
+                    /// <para>The valid values of this parameter are determined by the Statistics column that corresponds to the MetricName parameter of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For more information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">cloud service monitoring metrics</a>.</para>
                     /// <remarks>
                     /// <para>You must specify at least one of the following alert levels: Critical, Warn, and Info. For the specified alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
                     /// </remarks>
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string Threshold { get; set; }
 
                     /// <summary>
-                    /// <para>The number of times that the metric must reach the alert threshold to send a warning-level alert notification.</para>
+                    /// <para>The number of times the monitoring metrics must reach the alert threshold to send a warning-level alert notification.</para>
                     /// <para>Valid values of N: 1 to 200.</para>
                     /// <remarks>
                     /// <para>You must specify at least one of the following alert levels: Critical, Warn, and Info. For the specified alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
@@ -289,7 +289,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The abbreviation of the cloud service name.</para>
             /// <para>Valid values of N: 1 to 200.</para>
-            /// <para>For more information about how to obtain the abbreviation of a cloud service name, see the <c>metricCategory</c> field in the <c>Labels</c> response parameter of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</para>
+            /// <para>For more information about how to obtain the abbreviation of a cloud service name, see the metricCategory field in the Labels response parameter of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The alert contact group.</para>
             /// <para>Valid values of N: 1 to 200.</para>
-            /// <para>For more information about how to obtain alert contact groups, see <a href="https://help.aliyun.com/document_detail/114922.html">DescribeContactGroupList</a>.</para>
+            /// <para>For more information about how to obtain an alert contact group, see <a href="https://help.aliyun.com/document_detail/114922.html">DescribeContactGroupList</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ECS_Group</para>
@@ -346,9 +346,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The detection period of the alert rule.</para>
             /// <para>Valid values of N: 1 to 200.</para>
-            /// <para>Unit: seconds. The default value is the minimum frequency of the metric.</para>
+            /// <para>Unit: seconds. The default value is the minimum reporting frequency of the metric.</para>
             /// <remarks>
-            /// <para>Set the detection period of the alert rule to the same value as the data reporting period. If the detection period is shorter than the data reporting period, alerts may not be triggered due to insufficient data.</para>
+            /// <para>Set the detection period of the alert rule to the same value as the reporting period of monitoring data. If the detection period is shorter than the reporting period, alerts cannot be triggered due to insufficient data.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -390,9 +390,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The name of the metric.</para>
+            /// <para>The name of the monitoring metric.</para>
             /// <para>Valid values of N: 1 to 200.</para>
-            /// <para>For more information about how to obtain the name of a metric, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</para>
+            /// <para>For more information about how to obtain the name of a monitoring metric, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">cloud service monitoring metrics</a>.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -405,7 +405,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The data namespace of the Alibaba Cloud service.</para>
             /// <para>Valid values of N: 1 to 200.</para>
-            /// <para>For more information about how to obtain the data namespace of an Alibaba Cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</para>
+            /// <para>For more information about how to obtain the data namespace of an Alibaba Cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">cloud service monitoring metrics</a>.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -416,11 +416,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The handling method when no monitoring data is available. Valid values:</para>
+            /// <para>The processing method when no monitoring data is available. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>KEEP_LAST_STATE: No action is taken. This is the default value.</description></item>
-            /// <item><description>INSUFFICIENT_DATA: The alert content indicates that no data is available.</description></item>
-            /// <item><description>OK: The status is normal.</description></item>
+            /// <item><description>KEEP_LAST_STATE: takes no action. This is the default value.</description></item>
+            /// <item><description>INSUFFICIENT_DATA: reports an alert indicating that no data is available.</description></item>
+            /// <item><description>OK: reports a normal status.</description></item>
             /// </list>
             /// <para>Valid values of N: 1 to 200.</para>
             /// 
@@ -432,7 +432,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string NoDataPolicy { get; set; }
 
             /// <summary>
-            /// <para>The time range during which the alert rule is inactive. Valid values of N: 1 to 200.</para>
+            /// <para>The time period during which the alert rule is ineffective. Valid values of N: 1 to 200.</para>
             /// 
             /// <b>Example:</b>
             /// <para>00:00-05:30</para>
@@ -457,7 +457,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The reporting period of monitoring data.</para>
             /// <para>Valid values of N: 1 to 200. </para>
-            /// <para>The value of <c>Period</c> must be 60 or an integer multiple of 60. Unit: seconds. Default value: 300.</para>
+            /// <para>The value of Period must be 60 or a multiple of 60. Unit: seconds. Default value: 300.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>

@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <para>The description of the Logstore group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Logstore group of Alibaba Cloud products.</para>
+            /// <para>阿里云产品归属的Logstore组。</para>
             /// </summary>
             [NameInMap("SLSGroupDescription")]
             [Validation(Required=false)]
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>无。</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

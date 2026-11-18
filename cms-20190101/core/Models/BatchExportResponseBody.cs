@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class BatchExportResponseBody : TeaModel {
         /// <summary>
-        /// <para>The timestamp when the backend requested the data. A larger timestamp indicates that the exported data is closer to the current time.</para>
+        /// <para>The timestamp when the backend requests data. A larger timestamp indicates that the exported data is closer to the current time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1678781819000</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The HTTP status code.</para>
         /// <remarks>
-        /// <para>A status code of 200 indicates success.</para>
+        /// <para>A status code of 200 indicates that the call was successful.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The cursor used for the next call to this operation.</para>
         /// <remarks>
-        /// <para>If the return value is <c>null</c>, the monitoring data export is complete.</para>
+        /// <para>If the value is null, the monitoring data export is complete.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Indicates whether the data export is complete. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The data export is incomplete.</para>
+        /// <item><description><para>true: The data export is not complete.</para>
         /// </description></item>
         /// <item><description><para>false: The data export is complete.</para>
         /// </description></item>
@@ -99,11 +99,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The operation was successful.</para>
+        /// <item><description><para>true: The call was successful.</para>
         /// </description></item>
-        /// <item><description><para>false: The operation failed.</para>
+        /// <item><description><para>false: The call failed.</para>
         /// </description></item>
         /// </list>
         /// 

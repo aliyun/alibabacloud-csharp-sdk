@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the Logstore group.</para>
+        /// <para>The configuration information of the Logstore group.</para>
         /// <para>Valid values of N: 1 to 25.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -59,11 +59,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string SLSRegion { get; set; }
 
             /// <summary>
-            /// <para>The member ID.</para>
+            /// <para>The ID of the member.</para>
             /// <para>Valid values of N: 1 to 25.</para>
-            /// <para>If you invoke this operation by using a management account, you can associate the Alibaba Cloud services of any member in the resource folder with Hybrid Cloud Monitoring through cloud native mode. You can use the resource folder to monitor the Alibaba Cloud services of multiple accounts.</para>
+            /// <para>When you invoke this API operation by using a management account, you can use the cloud native mode for the Alibaba Cloud services of any member in the resource folder for Hybrid Cloud Monitoring. This allows you to monitor the Alibaba Cloud services across accounts in an enterprise by using the resource folder.</para>
             /// <remarks>
-            /// <para>If a member uses CloudMonitor for the first time, make sure that the member has been granted the authorization for the CloudMonitor service-linked role (AliyunServiceRoleForCloudMonitor). For more information, see <a href="https://help.aliyun.com/document_detail/170423.html">CloudMonitor service-linked role</a>.</para>
+            /// <para>If the member uses CloudMonitor for the first time, make sure that the member has completed the authorization to associate the CloudMonitor service-linked role (AliyunServiceRoleForCloudMonitor). For more information, see <a href="https://help.aliyun.com/document_detail/170423.html">CloudMonitor service-linked role</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>The description of the Logstore group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Logstore group of Alibaba Cloud products.</para>
+        /// <para>The Logstore group to which Alibaba Cloud services belong</para>
         /// </summary>
         [NameInMap("SLSGroupDescription")]
         [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The name of the Logstore group.</para>
-        /// <para>The name must be 2 to 32 characters in length and can contain uppercase letters, lowercase letters, digits, and underscores (_). The name must start with a letter.</para>
+        /// <para>The name must be 2 to 32 characters in length, and can contain uppercase letters, lowercase letters, digits, and underscores (_). It must start with a letter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

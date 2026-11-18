@@ -14,11 +14,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the export rules.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>myRuleName</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]

@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Browser { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated. You do not need to specify this parameter.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated. You can ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("BrowserInfo")]
         [Validation(Required=false)]
         public string BrowserInfo { get; set; }
 
         /// <summary>
-        /// <para>The city ID.</para>
+        /// <para>The identifier of the city.</para>
         /// 
         /// <b>Example:</b>
         /// <para>546</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string City { get; set; }
 
         /// <summary>
-        /// <para>The type of the device. This parameter specifies the screen size for impersonation.</para>
+        /// <para>The device type, which indicates the simulated screen size type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>laptop</para>
@@ -50,15 +50,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Device { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The following formats are supported:</para>
+        /// <para>The end time. Supported formats:</para>
         /// <list type="bullet">
-        /// <item><description><para>UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970.</para>
-        /// </description></item>
-        /// <item><description><para>UTC format: YYYY-MM-DDThh:mm:ssZ.</para>
-        /// </description></item>
+        /// <item><description>UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970.</description></item>
+        /// <item><description>UTC format: YYYY-MM-DDThh:mm:ssZ.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Use UNIX timestamps to prevent time zone-related issues.</para>
+        /// <para>Use UNIX timestamps to avoid time zone issues.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -69,8 +67,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The filter expression for detection results.</para>
-        /// <para>Simple expressions are supported. For example, you can use the <c>TotalTime&gt;100</c> expression to query the detection data whose total response time exceeds 100 milliseconds.</para>
+        /// <para>The filter condition for detection values.</para>
+        /// <para>Simple expressions are supported. For example, <c>TotalTime&gt;100</c> filters the detection data whose total response time exceeds 100 milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TotalTime&gt;100</para>
@@ -80,7 +78,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>The carrier ID.</para>
+        /// <para>The identifier of the carrier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>465</para>
@@ -90,7 +88,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Isp { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page for a paged query. Valid values: 1 to 1440.</para>
+        /// <para>The number of records to return on each page for paging. Valid values: 1 to 1440.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -111,7 +109,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>If the response is truncated, use the <c>NextToken</c> parameter to retrieve the next page of results.</para>
+        /// <para>The pagination token. If the response is truncated, you can use <c>NextToken</c> to send another request and retrieve the remaining results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IWBjqMYSy0is7zSMGu16****</para>
@@ -125,16 +123,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The following formats are supported:</para>
+        /// <para>The start time. Supported formats:</para>
         /// <list type="bullet">
-        /// <item><description><para>UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970.</para>
-        /// </description></item>
-        /// <item><description><para>UTC format: YYYY-MM-DDThh:mm:ssZ.</para>
-        /// </description></item>
+        /// <item><description>UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970.</description></item>
+        /// <item><description>UTC format: YYYY-MM-DDThh:mm:ssZ.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The start time and end time follow the (StartTime, EndTime] pattern. The value of StartTime cannot be the same as or later than the value of EndTime.<br> - Use UNIX timestamps to prevent time zone-related issues.<br></description></item>
+        /// <item><description>The start time and end time follow the left-open and right-closed interval pattern. The value of StartTime cannot be equal to or greater than the value of EndTime.                                                                                                                   <list type="bullet">
+        /// <item><description>Use UNIX timestamps to avoid time zone issues.</description></item>
+        /// </list>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -146,7 +145,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the detection task. You can specify multiple task IDs. Separate them with commas (,).</para>
+        /// <para>The IDs of the detection tasks. Separate multiple IDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

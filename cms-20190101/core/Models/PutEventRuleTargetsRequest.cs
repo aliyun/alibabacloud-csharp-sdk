@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <para>The name of the alert contact group. Valid values of N: 1 to 5.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Default alert contact group</para>
+            /// <para>默认报警联系组</para>
             /// </summary>
             [NameInMap("ContactGroupName")]
             [Validation(Required=false)]

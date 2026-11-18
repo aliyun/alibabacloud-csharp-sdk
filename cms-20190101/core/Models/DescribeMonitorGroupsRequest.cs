@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMonitorGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the dynamic rule matching.</para>
+        /// <para>The ID of the intelligent tag rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6b882d9a-5117-42e2-9d0c-4749a0c6****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string DynamicTagRuleId { get; set; }
 
         /// <summary>
-        /// <para>The tag key used to create the application group by using dynamic rule matching.</para>
+        /// <para>The tag key used to create the application group by using intelligent tags.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GroupKey1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string GroupFounderTagKey { get; set; }
 
         /// <summary>
-        /// <para>The tag value used to create the application group by using dynamic rule matching.</para>
+        /// <para>The tag value used to create the application group by using intelligent tags.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GroupValue1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string GroupFounderTagValue { get; set; }
 
         /// <summary>
-        /// <para>The application group ID. Separate multiple application group IDs with commas (,).</para>
+        /// <para>The ID of the application group. Separate multiple application group IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>92****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The application group name.</para>
+        /// <para>The name of the application group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testGroup124</para>
@@ -60,10 +60,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include the history of alert templates that have been applied to the application group in the response. Valid values:</para>
+        /// <para>Specifies whether to include the history of alert templates applied to the application group in the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Include the history.</description></item>
-        /// <item><description>false: Do not include the history.</description></item>
+        /// <item><description>true: Yes.</description></item>
+        /// <item><description>false: No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public bool? IncludeTemplateHistory { get; set; }
 
         /// <summary>
-        /// <para>The resource instance ID. This parameter is used to query the application group to which the specified instance belongs.</para>
+        /// <para>The instance ID. This parameter is used to query the application group to which the specified instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-abcdefgh12****</para>
@@ -122,8 +122,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Specifies whether to include alert contact groups in the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Include alert contact groups.</description></item>
-        /// <item><description>false: Do not include alert contact groups.</description></item>
+        /// <item><description>true: Yes.</description></item>
+        /// <item><description>false: No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -165,13 +165,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The type of the application group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>custom: a custom application group.</description></item>
-        /// <item><description>ehpc_cluster: an application group synchronized from an EHPC cluster.</description></item>
-        /// <item><description>kubernetes: an application group synchronized from Container Service for Kubernetes.</description></item>
-        /// <item><description>tag: an application group automatically created by using tags.</description></item>
-        /// <item><description>resMgr: an application group created from a resource group.</description></item>
-        /// <item><description>ess: an application group synchronized from Auto Scaling (ESS).</description></item>
-        /// <item><description>aone_group: an application group synchronized from or associated with an Aone application.</description></item>
+        /// <item><description>custom: custom application group</description></item>
+        /// <item><description>ehpc_cluster: application group from EHPC cluster synchronization</description></item>
+        /// <item><description>kubernetes: application group from Container Service for Kubernetes synchronization</description></item>
+        /// <item><description>tag: application group from automatic creation by using labels</description></item>
+        /// <item><description>resMgr: application group created by using resource groups</description></item>
+        /// <item><description>ess: application group from elastic scaling synchronization</description></item>
+        /// <item><description>aone_group: application group synchronized from or associated with an Aone application</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -182,15 +182,15 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The type of the application group. Valid values:</para>
+        /// <para>The types of the application groups. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>custom: a custom application group.</description></item>
-        /// <item><description>ehpc_cluster: an application group synchronized from an EHPC cluster.</description></item>
-        /// <item><description>kubernetes: an application group synchronized from Container Service for Kubernetes.</description></item>
-        /// <item><description>tag: an application group automatically created by using tags.</description></item>
-        /// <item><description>resMgr: an application group created from a resource group.</description></item>
-        /// <item><description>ess: an application group synchronized from Auto Scaling (ESS).</description></item>
-        /// <item><description>aone_group: an application group synchronized from or associated with an Aone application.</description></item>
+        /// <item><description>custom: custom application group</description></item>
+        /// <item><description>ehpc_cluster: application group from EHPC cluster synchronization</description></item>
+        /// <item><description>kubernetes: application group from Container Service for Kubernetes synchronization</description></item>
+        /// <item><description>tag: application group from automatic creation by using labels</description></item>
+        /// <item><description>resMgr: application group created by using resource groups</description></item>
+        /// <item><description>ess: application group from elastic scaling synchronization</description></item>
+        /// <item><description>aone_group: application group synchronized from or associated with an Aone application</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -366,7 +366,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <para>The name of the alert rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>CPU utilization</para>
+            /// <para>CPU使用率</para>
             /// </summary>
             [NameInMap("RuleName")]
             [Validation(Required=false)]

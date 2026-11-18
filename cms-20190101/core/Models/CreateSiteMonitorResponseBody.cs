@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateSiteMonitorResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
-        /// <remarks>
-        /// <para>200 indicates success.</para>
-        /// </remarks>
+        /// <para>The status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

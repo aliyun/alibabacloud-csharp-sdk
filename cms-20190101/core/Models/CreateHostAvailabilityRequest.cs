@@ -14,8 +14,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public CreateHostAvailabilityRequestAlertConfig AlertConfig { get; set; }
         public class CreateHostAvailabilityRequestAlertConfig : TeaModel {
             /// <summary>
-            /// <para>The end time of the effective period for alerting.</para>
-            /// <para>The value is an integer ranging from 0 to 23. Unit: hours. The value indicates the hour when the effective period ends. The actual end time is 00:00:00 of the specified hour. For example, if you set this parameter to 22, the effective period ends at 22:00:00. The time zone is UTC+8.</para>
+            /// <para>The end time of the effective period for alerts.</para>
+            /// <para>The value must be an integer ranging from 0 to 23. Unit: hours. The value specifies the hour when the effective period ends. The actual end time is 00:00:00 of the specified hour. For example, if you set this parameter to 22, the effective period ends at 22:00:00. The time zone is UTC+8 (Beijing time).</para>
             /// <remarks>
             /// <para>Note: If the current time is not within the effective time window, the system does not send alert notifications even if the threshold is exceeded.</para>
             /// </remarks>
@@ -28,12 +28,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public int? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The alert notification method. Valid values:</para>
-            /// <para>&lt;props=&quot;china&quot;&gt;- 2: phone call, text message, email, and DingTalk chatbot.</para>
-            /// <para>&lt;props=&quot;china&quot;&gt;- 1: text message, email, and DingTalk chatbot.</para>
-            /// <para>&lt;props=&quot;china&quot;&gt;- 0: email and DingTalk chatbot.</para>
-            /// <para>&lt;props=&quot;intl&quot;&gt;0: email and DingTalk chatbot.</para>
-            /// <para>&lt;props=&quot;partner&quot;&gt;0: email and DingTalk chatbot.</para>
+            /// <para>The alert notification type. Valid values:</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;- 2: Phone call, text message, email, and DingTalk chatbot.</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;- 1: Text message, email, and DingTalk chatbot.</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;- 0: Email and DingTalk chatbot.</para>
+            /// <para>&lt;props=&quot;intl&quot;&gt;0: Email and DingTalk chatbot.</para>
+            /// <para>&lt;props=&quot;partner&quot;&gt;0: Email and DingTalk chatbot.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -54,8 +54,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public int? SilenceTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the effective period for alerting.</para>
-            /// <para>The value is an integer ranging from 0 to 23. Unit: hours. The value indicates the hour when the effective period starts. The actual start time is 00:00:00 of the specified hour. For example, if you set this parameter to 0, the effective period starts at 00:00:00. The time zone is UTC+8.</para>
+            /// <para>The start time of the effective period for alerts.</para>
+            /// <para>The value must be an integer ranging from 0 to 23. Unit: hours. The value specifies the hour when the effective period starts. The actual start time is 00:00:00 of the specified hour. For example, if you set this parameter to 0, the effective period starts at 00:00:00. The time zone is UTC+8 (Beijing time).</para>
             /// <remarks>
             /// <para>Note: If the current time is not within the effective time window, the system does not send alert notifications even if the threshold is exceeded.</para>
             /// </remarks>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public List<CreateHostAvailabilityRequestAlertConfigEscalationList> AlertConfigEscalationList { get; set; }
         public class CreateHostAvailabilityRequestAlertConfigEscalationList : TeaModel {
             /// <summary>
-            /// <para>The statistical method for the alert. Valid values of N: 1 to 21. Valid values vary based on the metric:</para>
+            /// <para>The aggregation method for the alert. Valid values of N: 1 to 21. Valid values vary based on the metric:</para>
             /// <list type="bullet">
             /// <item><description>HttpStatus: Value.</description></item>
             /// <item><description>HttpLatency: Average.</description></item>
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <item><description>PingLostRate: Average.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>The statistical method for status codes is the original value (Value), and the statistical method for response time or packet loss rate is the average value (Average).</para>
+            /// <para>The aggregation method for status codes is the original value (Value). The aggregation method for response time or packet loss rate is the average value (Average).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -290,14 +290,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>The alert targets.</para>
+        /// <para>The alert trigger targets.</para>
         /// </summary>
         [NameInMap("AlertConfigTargetList")]
         [Validation(Required=false)]
         public List<CreateHostAvailabilityRequestAlertConfigTargetList> AlertConfigTargetList { get; set; }
         public class CreateHostAvailabilityRequestAlertConfigTargetList : TeaModel {
             /// <summary>
-            /// <para>The Alibaba Cloud Resource Name (ARN) of the resource. Format: <c>acs:{service abbreviation}:{regionId}:{userId}:/{resource type}/{resource name}/message</c>. Example: <c>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</c>. Parameter description:</para>
+            /// <para>The ARN of the resource. Format: <c>acs:{service abbreviation}:{regionId}:{userId}:/{resource type}/{resource name}/message</c>. Example: <c>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</c>. Parameter descriptions:</para>
             /// <list type="bullet">
             /// <item><description><para>{service abbreviation}: The abbreviation of the cloud service. Only Simple Message Queue (formerly MNS) is supported.</para>
             /// </description></item>
@@ -305,7 +305,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// </description></item>
             /// <item><description><para>{regionId}: The region where the Simple Message Queue (formerly MNS) queue or topic resides.</para>
             /// </description></item>
-            /// <item><description><para>{resource type}: The type of the resource that receives alerts. Valid values:</para>
+            /// <item><description><para>{resource type}: The type of the resource that accepts alert notifications. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>queues</b>: queue.</description></item>
             /// <item><description><b>topics</b>: topic.</description></item>
@@ -327,7 +327,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Arn { get; set; }
 
             /// <summary>
-            /// <para>The ID of the alert target.</para>
+            /// <para>The ID of the alert trigger target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -349,9 +349,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The alert level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>INFO: information.</description></item>
-            /// <item><description>WARN: warning.</description></item>
-            /// <item><description>CRITICAL: critical.</description></item>
+            /// <item><description>INFO: Information.</description></item>
+            /// <item><description>WARN: Warning.</description></item>
+            /// <item><description>CRITICAL: Critical.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -377,7 +377,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The list of ECS instances that initiate the probes. Valid values of N: 1 to 21.</para>
         /// <remarks>
-        /// <para>You must set this parameter when <c>TaskScope</c> is set to <c>GROUP_SPEC_INSTANCE</c>.</para>
+        /// <para>You must set this parameter when TaskScope is set to GROUP_SPEC_INSTANCE.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -405,8 +405,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The probe scope of the availability monitoring task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>GROUP: All ECS instances in the current application group are used as probes for the task.</description></item>
-        /// <item><description>GROUP_SPEC_INSTANCE: Specified ECS instances in the current application group are used as probes for the task. If you set this parameter to GROUP_SPEC_INSTANCE, you must also set the InstanceList parameter, which specifies the list of ECS instances that initiate the probes.</description></item>
+        /// <item><description>GROUP: All ECS instances in the current application group are used as probes for the monitoring task.</description></item>
+        /// <item><description>GROUP_SPEC_INSTANCE: Specified ECS instances in the current application group are used as probes for the monitoring task. If you set this parameter to GROUP_SPEC_INSTANCE, you must also set the InstanceList parameter, which specifies the list of ECS instances that initiate the probes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

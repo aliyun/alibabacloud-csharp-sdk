@@ -31,8 +31,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string AgentGroup { get; set; }
 
         /// <summary>
-        /// <para>The ID of the alert rule.</para>
-        /// <para>For more information about how to obtain the ID of an existing alert rule in CloudMonitor, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</para>
+        /// <para>The ID of the alert rule. For more information about how to obtain the ID of an existing alert rule in CloudMonitor, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SystemDefault_acs_ecs_dashboard_InternetOutRate_Percent</para>
@@ -52,9 +51,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string CustomSchedule { get; set; }
 
         /// <summary>
-        /// <para>The monitoring frequency.</para>
-        /// <para>Valid values: 1 minute, 5 minutes, 15 minutes, 30 minutes, and 60 minutes.</para>
-        /// <para>Default value: 1 minute.</para>
+        /// <para>The monitoring frequency. Valid values: 1 minute, 5 minutes, 15 minutes, 30 minutes, and 60 minutes. Default value: 1 minute.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -64,9 +61,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Interval { get; set; }
 
         /// <summary>
-        /// <para>The probe information. If this parameter is left empty, the system randomly selects three detection points.</para>
-        /// <para>The value is a JSON array. Example: <c>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</c>, which correspond to Beijing, Hangzhou, and Qingdao.</para>
-        /// <para>For more information about how to obtain detection point information, see <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a>.</para>
+        /// <para>The probe information. If this parameter is left empty, the system randomly selects three detection points. The value is a JSON array. Example: <c>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</c>, which correspond to Beijing, Hangzhou, and Qingdao. For more information about how to obtain detection point information, see <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</para>
@@ -90,8 +85,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the monitoring task.</para>
-        /// <para>The name must be 4 to 100 characters in length and can contain letters, digits, underscores (_), and Chinese characters.</para>
+        /// <para>The name of the monitoring task. The name must be 4 to 100 characters in length and can contain letters, digits, underscores (_), and Chinese characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -102,8 +96,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string TaskName { get; set; }
 
         /// <summary>
-        /// <para>Site monitoring type of site monitoring task.</para>
-        /// <para>Valid values: HTTP(S), PING, TCP, UDP, DNS, SMTP, POP3, FTP, and WEBSOCKET.</para>
+        /// <para>The monitoring type of the site monitoring node. Currently, site monitoring nodes support the following types: HTTP(S), PING, TCP, UDP, DNS, SMTP, POP3, FTP, and WEBSOCKET.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

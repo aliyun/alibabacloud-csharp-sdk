@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutCustomEventRequest : TeaModel {
         /// <summary>
-        /// <para>The event details.</para>
+        /// <para>The list of event information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("EventInfo")]
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string EventName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the application group. Valid values of N: 1 to 50.</para>
-            /// <para>Default value: 0. This value indicates that the event to be reported does not belong to any application group.</para>
+            /// <para>The ID of the application group. Valid values of N: 0 to 50.</para>
+            /// <para>Default value: 0. A value of 0 indicates that the reported event does not belong to any application group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -51,12 +51,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string GroupId { get; set; }
 
             /// <summary>
-            /// <para>The time when the event occurred.</para>
-            /// <para>Format: <c>yyyyMMddTHHmmss.SSSZ</c>.</para>
-            /// <para>Valid values of N: 1 to 50.</para>
-            /// <remarks>
-            /// <para>You can also specify a UNIX timestamp. Example: 1552199984000. Unit: milliseconds.</para>
-            /// </remarks>
+            /// <para>The time when the event occurred. Valid values of N: 1 to 50.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20171013T170923.456+0800</para>

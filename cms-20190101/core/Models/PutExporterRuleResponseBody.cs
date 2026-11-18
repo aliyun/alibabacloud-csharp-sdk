@@ -9,51 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutExporterRuleResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The status code.</para>
-        /// <remarks>
-        /// <para>200 indicates success.</para>
-        /// </remarks>
-        /// 
-        /// <b>Example:</b>
-        /// <para>200</para>
-        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// <para>The returned message.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>The specified resource is not found.</para>
-        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>461CF2CD-2FC3-4B26-8645-7BD27E7D0F1D</para>
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>Indicates whether the operation is successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>true: Successful.</para>
-        /// </description></item>
-        /// <item><description><para>false: Failed.</para>
-        /// </description></item>
-        /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

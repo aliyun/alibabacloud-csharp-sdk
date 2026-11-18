@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the request, which is used to query logs.</para>
+        /// <para>The UUID of the request, which can be used to query logs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>45231A42-5A09-5AFF-953C-A5B3D4ED8925</para>
@@ -40,11 +40,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is successful. Valid values:</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Successful.</para>
+        /// <item><description><para>true: The operation was successful.</para>
         /// </description></item>
-        /// <item><description><para>false: Failed.</para>
+        /// <item><description><para>false: The operation failed.</para>
         /// </description></item>
         /// </list>
         /// 

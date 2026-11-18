@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public bool? IdcProbe { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to show only IPv4 nodes.</para>
+        /// <para>Specifies whether to display only IPv4 nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public bool? Ipv4 { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to show only IPv6 nodes.</para>
+        /// <para>Specifies whether to display only IPv6 nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Specifies whether to return all detection points. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false: Returns only the detection points available to the user. This is the default value.</description></item>
+        /// <item><description>false: Returns the detection points available to you. This is the default value.</description></item>
         /// <item><description>true: Returns all detection points.</description></item>
         /// </list>
         /// 

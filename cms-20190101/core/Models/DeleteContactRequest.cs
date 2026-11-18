@@ -20,6 +20,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string ContactName { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to perform only a dry run for this request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
     }
 
 }

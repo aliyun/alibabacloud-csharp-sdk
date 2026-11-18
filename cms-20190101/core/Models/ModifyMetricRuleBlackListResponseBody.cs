@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class ModifyMetricRuleBlackListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The HTTP status code.</para>
         /// <remarks>
         /// <para>200 indicates success.</para>
         /// </remarks>

@@ -14,12 +14,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>Unit: milliseconds.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970. The format YYYY-MM-DDThh:mm:ssZ is supported. Example: 2023-01-01T00:00:00Z, which specifies 00:00:00 on January 1, 2023 (GMT).</description></item>
+        /// <item><description>UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970. The ISO 8601 format (YYYY-MM-DDThh:mm:ssZ) is also supported. Example: 2023-01-01T00:00:00Z, which specifies 00:00:00 on January 1, 2023 (UTC).</description></item>
         /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>If you do not specify the end time, the end time is considered infinite. In real-time export scenarios, you can leave this parameter empty.</description></item>
-        /// <item><description>The TTL of monitoring data in CloudMonitor varies with the time granularity. Refer to the data TTL corresponding to the Period request parameter to set a reasonable time interval.</description></item>
+        /// <item><description>If you do not specify the end time, the end time is infinite. In real-time export scenarios, you can leave this parameter empty.</description></item>
+        /// <item><description>The TTL of monitoring data in CloudMonitor varies with the time granularity. Refer to the data TTL corresponding to the <c>Period</c> request parameter to set a reasonable time interval.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public List<Matcher> Matchers { get; set; }
 
         /// <summary>
-        /// <para>The name of the metric for the cloud service.</para>
-        /// <para>For more information about how to obtain the metric name of a cloud service, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</para>
+        /// <para>The name of the metric for cloud service monitoring.</para>
+        /// <para>For more information about how to obtain the metric name for cloud service monitoring, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>The time interval of the metric.</para>
         /// <para>Unit: seconds.</para>
         /// <remarks>
-        /// <para>The time interval of a metric is typically 60 seconds. For special values, see the Period parameter in <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</para>
+        /// <para>The time interval of a metric is typically 60 seconds. For special values, see the <c>Period</c> parameter in <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -77,9 +77,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The start timestamp.</para>
-        /// <para>The format YYYY-MM-DDThh:mm:ssZ is supported. Example: 2023-01-01T00:00:00Z, which specifies 00:00:00 on January 1, 2023 (GMT).</para>
+        /// <para>The ISO 8601 format (YYYY-MM-DDThh:mm:ssZ) is supported. Example: 2023-01-01T00:00:00Z, which specifies 00:00:00 on January 1, 2023 (UTC).</para>
         /// <remarks>
-        /// <para>The time-to-live (TTL) of monitoring data in CloudMonitor varies with the time granularity. Refer to the data TTL corresponding to the Period request parameter to set a reasonable time interval.</para>
+        /// <para>The time-to-live (TTL) of monitoring data in CloudMonitor varies with the time granularity. Refer to the data TTL corresponding to the <c>Period</c> request parameter to set a reasonable time interval.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

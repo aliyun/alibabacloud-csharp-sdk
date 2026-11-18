@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateMonitorGroupInstancesRequest : TeaModel {
+        /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see How to ensure idempotence.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6868E9A1-56E6-5FD7-9684-E2963BBAFB5F</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -16,8 +22,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Specifies whether to only perform a dry run on the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run. A check request is sent, and no security group is bound to the instance. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the check, the corresponding error is returned. If the request passes the check, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): sends a normal request. If the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>true</b>: sends a check request and does not bind security groups to instances. The check items include whether required parameters are specified, the request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a regular request. If the check succeeds, an HTTP 2xx status code is returned and the operation is directly performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

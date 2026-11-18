@@ -12,9 +12,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The task ID.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>123456</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

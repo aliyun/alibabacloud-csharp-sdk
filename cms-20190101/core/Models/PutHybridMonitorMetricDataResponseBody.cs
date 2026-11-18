@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutHybridMonitorMetricDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The HTTP status code.</para>
         /// <remarks>
-        /// <para>The value 200 indicates that the request was successful.</para>
+        /// <para>A status code of 200 indicates a successful call.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The details of the invalid parameters.</para>
-        /// <para>If the request parameters that you specify do not meet the requirements, the details of the invalid parameters are displayed.</para>
+        /// <para>If the request parameters that you specify do not meet the requirements, the details of the invalid parameters are returned.</para>
         /// </summary>
         [NameInMap("ErrorDetail")]
         [Validation(Required=false)]
         public List<PutHybridMonitorMetricDataResponseBodyErrorDetail> ErrorDetail { get; set; }
         public class PutHybridMonitorMetricDataResponseBodyErrorDetail : TeaModel {
             /// <summary>
-            /// <para>The error message that is returned for the invalid parameter.</para>
+            /// <para>The error message of the invalid parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>label name :123 not match [a-zA-Z_][a-zA-Z0-9_]*</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The position of the error information in the array.</para>
+            /// <para>The position of the error message in the array.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5DB1CBCA-D14A-55FA-814F-B4DBD9735F68</para>

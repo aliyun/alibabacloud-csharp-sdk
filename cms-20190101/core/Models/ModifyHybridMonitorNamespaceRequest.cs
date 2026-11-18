@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>The description of the metric store.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Alibaba Cloud product metric repository.</para>
+        /// <para>阿里云产品指标仓库。</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
             /// <summary>
             /// <para>The detection point information. If this parameter is left empty, the system randomly selects three detection points.</para>
-            /// <para>The value is a JSON array. Example: <c>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</c>. The values correspond to Beijing, Hangzhou, and Qingdao.</para>
+            /// <para>The format is <c>JSONArray</c>. Example: <c>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</c>, which correspond to Beijing, Hangzhou, and Qingdao.</para>
             /// <para>For more information about how to obtain detection point information, see <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a>.</para>
             /// 
             /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string IspCities { get; set; }
 
             /// <summary>
-            /// <para>The advanced extension options for the protocol type of the site monitoring task. Different protocol types correspond to different extension options.</para>
+            /// <para>The advanced extension options for the protocol type of the site monitoring task. Different protocol types for detection tasks correspond to different extension options.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;time_out&quot;:5000}</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
             /// <summary>
             /// <para>The monitoring type of the site monitoring task.</para>
-            /// <para>Valid values: HTTP, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</para>
+            /// <para>The supported monitoring types include HTTP, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</para>
             /// <remarks>
             /// <para>You must create at least one site monitoring task, and you must specify <c>Address</c>, <c>TaskName</c>, and <c>TaskType</c>.</para>
             /// </remarks>

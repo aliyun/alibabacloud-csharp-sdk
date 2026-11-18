@@ -10,11 +10,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteEventRuleTargetsRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of event-triggered alert rules.</para>
+        /// <para>The list of event-triggered alert rule IDs.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
@@ -26,7 +23,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The name of the event-triggered alert rule.</para>
-        /// <para>For information about how to obtain the name of an event-triggered alert rule, see <a href="https://help.aliyun.com/document_detail/114996.html">DescribeEventRuleList</a>.</para>
+        /// <para>For more information about how to obtain the name of an event-triggered alert rule, see <a href="https://help.aliyun.com/document_detail/114996.html">DescribeEventRuleList</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

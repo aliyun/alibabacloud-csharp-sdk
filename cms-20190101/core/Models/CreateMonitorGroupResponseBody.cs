@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <remarks>
-        /// <para>200 indicates success.</para>
+        /// <para>A value of 200 indicates success.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -55,9 +55,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Indicates whether the operation is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The operation is successful.</para>
+        /// <item><description><para>true: Success.</para>
         /// </description></item>
-        /// <item><description><para>false: The operation fails.</para>
+        /// <item><description><para>false: Failure.</para>
         /// </description></item>
         /// </list>
         /// 

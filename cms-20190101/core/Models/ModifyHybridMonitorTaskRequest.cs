@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public List<ModifyHybridMonitorTaskRequestAttachLabels> AttachLabels { get; set; }
         public class ModifyHybridMonitorTaskRequestAttachLabels : TeaModel {
             /// <summary>
-            /// <para>The label key of the metric.</para>
+            /// <para>The key of the metric label.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app_service</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The label value of the metric.</para>
+            /// <para>The value of the metric label.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testValue</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>The description of the monitoring task.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SLS log monitoring data</para>
+        /// <para>SLS Log Monitoring data.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public ModifyHybridMonitorTaskRequestSLSProcessConfig SLSProcessConfig { get; set; }
         public class ModifyHybridMonitorTaskRequestSLSProcessConfig : TeaModel {
             /// <summary>
-            /// <para>The arithmetic result of the extended fields for the SLS log statistics result.</para>
+            /// <para>The result of arithmetic operations on the extended fields of the SLS log statistics.</para>
             /// </summary>
             [NameInMap("Express")]
             [Validation(Required=false)]
             public List<ModifyHybridMonitorTaskRequestSLSProcessConfigExpress> Express { get; set; }
             public class ModifyHybridMonitorTaskRequestSLSProcessConfigExpress : TeaModel {
                 /// <summary>
-                /// <para>The alias of the arithmetic result of the extended fields for the SLS log statistics result.</para>
+                /// <para>The alias for the result of arithmetic operations on the extended fields of the SLS log statistics.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SuccRate</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Alias { get; set; }
 
                 /// <summary>
-                /// <para>The arithmetic result of the extended fields for the SLS log statistics result.</para>
+                /// <para>The result of arithmetic operations on the extended fields of the SLS log statistics.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>success_count</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The filter conditions for parameters in the SLS log.</para>
+            /// <para>The filter conditions for parameters in SLS logs.</para>
             /// </summary>
             [NameInMap("Filter")]
             [Validation(Required=false)]
@@ -120,16 +120,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public List<ModifyHybridMonitorTaskRequestSLSProcessConfigFilterFilters> Filters { get; set; }
                 public class ModifyHybridMonitorTaskRequestSLSProcessConfigFilterFilters : TeaModel {
                     /// <summary>
-                    /// <para>The method used to filter parameter values in the SLS log. Valid values:</para>
+                    /// <para>The filter method for parameter values in SLS logs. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><c>contain</c>: contains.</description></item>
-                    /// <item><description><c>notContain</c>: does not contain.</description></item>
-                    /// <item><description><c>&gt;</c>: greater than.</description></item>
-                    /// <item><description><c>&lt;</c>: less than.</description></item>
-                    /// <item><description><c>=</c>: equal to.</description></item>
-                    /// <item><description><c>!=</c>: not equal to.</description></item>
-                    /// <item><description><c>&gt;=</c>: greater than or equal to.</description></item>
-                    /// <item><description><c>&lt;=</c>: less than or equal to.</description></item>
+                    /// <item><description><c>contain</c>: includes</description></item>
+                    /// <item><description><c>notContain</c>: does not include</description></item>
+                    /// <item><description><c>&gt;</c>: greater than</description></item>
+                    /// <item><description><c>&lt;</c>: less than</description></item>
+                    /// <item><description><c>=</c>: equal to</description></item>
+                    /// <item><description><c>!=</c>: not equal to</description></item>
+                    /// <item><description><c>&gt;=</c>: greater than or equal to</description></item>
+                    /// <item><description><c>&lt;=</c>: less than or equal to</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string Operator { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the parameter to filter in the SLS log.</para>
+                    /// <para>The name of the parameter to be filtered in SLS logs.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>code</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string SLSKeyName { get; set; }
 
                     /// <summary>
-                    /// <para>The filter value of the parameter in the SLS log.</para>
+                    /// <para>The filter value of the parameter in SLS logs.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>200</para>
@@ -162,10 +162,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// <para>The relationship between multiple filter conditions. Valid values:</para>
+                /// <para>The relationship between multiple filter conditions for parameters. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>and (default): The log is processed only when all filter conditions are met.</description></item>
-                /// <item><description>or: The log is processed when any filter condition is met.</description></item>
+                /// <item><description>and: logs are processed only when all filter conditions are met. This is the default value.</description></item>
+                /// <item><description>or: logs are processed when any filter condition is met.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -178,14 +178,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The spatial dimension used to aggregate data, which is equivalent to the GROUP BY clause in SQL.</para>
+            /// <para>The spatial dimension for data aggregation, equivalent to the GROUP BY clause in SQL.</para>
             /// </summary>
             [NameInMap("GroupBy")]
             [Validation(Required=false)]
             public List<ModifyHybridMonitorTaskRequestSLSProcessConfigGroupBy> GroupBy { get; set; }
             public class ModifyHybridMonitorTaskRequestSLSProcessConfigGroupBy : TeaModel {
                 /// <summary>
-                /// <para>The alias of the SLS log statistics result.</para>
+                /// <para>The alias for the SLS log statistics result.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ApiResult</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<ModifyHybridMonitorTaskRequestSLSProcessConfigStatistics> Statistics { get; set; }
             public class ModifyHybridMonitorTaskRequestSLSProcessConfigStatistics : TeaModel {
                 /// <summary>
-                /// <para>The alias of the SLS log statistics result.</para>
+                /// <para>The alias for the SLS log statistics result.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>level_count</para>
@@ -224,19 +224,19 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Alias { get; set; }
 
                 /// <summary>
-                /// <para>The statistical method used to aggregate log data within a statistical period. Valid values:</para>
+                /// <para>The aggregation method used to process log data within the calculation period. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>count: counts the number of entries.</description></item>
-                /// <item><description>sum: calculates the sum.</description></item>
-                /// <item><description>avg: calculates the average.</description></item>
-                /// <item><description>max: returns the maximum value.</description></item>
-                /// <item><description>min: returns the minimum value.</description></item>
-                /// <item><description>value: samples within the period.</description></item>
-                /// <item><description>countps: calculates the average count per second for the specified field within the statistical period.</description></item>
-                /// <item><description>sumps: calculates the average sum per second for the specified field within the statistical period.</description></item>
-                /// <item><description>distinct: calculates the number of occurrences of the specified field after deduplication within the statistical period.</description></item>
-                /// <item><description>distribution: calculates the number of occurrences of field values within a specified range.</description></item>
-                /// <item><description>percentile: calculates the distribution value of field values, for example, P50.</description></item>
+                /// <item><description>count: count</description></item>
+                /// <item><description>sum: sum</description></item>
+                /// <item><description>avg: average value</description></item>
+                /// <item><description>max: maximum value</description></item>
+                /// <item><description>min: minimum value</description></item>
+                /// <item><description>value: sampling within the period</description></item>
+                /// <item><description>countps: average count per second of the specified field within the statistical period</description></item>
+                /// <item><description>sumps: average sum per second of the specified field within the statistical period</description></item>
+                /// <item><description>distinct: count of occurrences of the specified field after deduplication within the statistical period</description></item>
+                /// <item><description>distribution: count of occurrences of field values within a specified range</description></item>
+                /// <item><description>percentile: percentile of field values, such as P50</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -247,9 +247,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Function { get; set; }
 
                 /// <summary>
-                /// <para>The statistical value of the SLS log.</para>
+                /// <para>The statistical value of SLS logs.</para>
                 /// <list type="bullet">
-                /// <item><description><para>If <c>Function</c> is set to <c>distribution</c>, this parameter specifies the lower limit of the statistical range. For example, to count the number of 2XX HTTP status codes, set this parameter to 200.</para>
+                /// <item><description><para>If <c>Function</c> is set to <c>distribution</c>, this parameter specifies the lower limit of the statistical range. For example, to count the number of 2XX <c>HttpCode</c> status codes, enter 200.</para>
                 /// </description></item>
                 /// <item><description><para>If <c>Function</c> is set to <c>percentile</c>, this parameter specifies the percentile of the statistical distribution. For example, 0.5 indicates P50.</para>
                 /// </description></item>
@@ -263,9 +263,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Parameter1 { get; set; }
 
                 /// <summary>
-                /// <para>The statistical value of the SLS log.</para>
+                /// <para>The statistical value of SLS logs.</para>
                 /// <remarks>
-                /// <para>This parameter is required only when <c>Function</c> is set to <c>distribution</c>. This parameter specifies the upper limit of the statistical range. For example, to count the number of 2XX HTTP status codes, set this parameter to 299.</para>
+                /// <para>This parameter is required only when <c>Function</c> is set to <c>distribution</c>. It specifies the upper limit of the statistical range. For example, to count the number of 2XX <c>HttpCode</c> status codes, enter 299.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -290,7 +290,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>The monitoring task ID.</para>
+        /// <para>The ID of the monitoring task.</para>
         /// <para>For information about how to obtain the monitoring task ID, see <a href="https://help.aliyun.com/document_detail/428624.html">DescribeHybridMonitorTaskList</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The monitoring task name.</para>
+        /// <para>The name of the monitoring task.</para>
         /// <para>For information about how to obtain the monitoring task ID, see <a href="https://help.aliyun.com/document_detail/428624.html">DescribeHybridMonitorTaskList</a>.</para>
         /// 
         /// <b>Example:</b>

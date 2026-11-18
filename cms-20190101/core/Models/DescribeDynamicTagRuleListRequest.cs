@@ -67,9 +67,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>For more information about how to obtain a tag value, see <a href="https://help.aliyun.com/document_detail/145557.html">DescribeTagValueList</a>.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>production</para>
         /// </summary>
         [NameInMap("TagValue")]
         [Validation(Required=false)]

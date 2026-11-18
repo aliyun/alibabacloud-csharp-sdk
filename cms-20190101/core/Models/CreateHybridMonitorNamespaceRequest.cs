@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>The description of the metric namespace.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Alibaba Cloud product metric repository.</para>
+        /// <para>Metric namespace for Alibaba Cloud services</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The storage solution for monitoring data. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>aliyun_prometheus: Stores monitoring data in Prometheus.</description></item>
+        /// <item><description>aliyun_prometheus: Monitoring data is stored in Prometheus.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>For more information about storage solutions for monitoring data, see <a href="https://help.aliyun.com/document_detail/2594921.html">Storage solutions for monitoring data in Hybrid Cloud Monitoring</a>.</para>
+        /// <para>For more information about the storage solutions for monitoring data, see <a href="https://help.aliyun.com/document_detail/2594921.html">Storage solutions for monitoring data in Hybrid Cloud Monitoring</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -64,14 +64,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The data storage duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cms.s1.large: Stores data for 15 days.</description></item>
-        /// <item><description>cms.s1.xlarge: Stores data for 32 days.</description></item>
-        /// <item><description>cms.s1.2xlarge: Stores data for 63 days.</description></item>
-        /// <item><description>cms.s1.3xlarge (default): Stores data for 93 days.</description></item>
-        /// <item><description>cms.s1.6xlarge: Stores data for 185 days.</description></item>
-        /// <item><description>cms.s1.12xlarge: Stores data for 376 days.</description></item>
+        /// <item><description>cms.s1.large: 15 days</description></item>
+        /// <item><description>cms.s1.xlarge: 32 days</description></item>
+        /// <item><description>cms.s1.2xlarge: 63 days</description></item>
+        /// <item><description>cms.s1.3xlarge (default value): 93 days</description></item>
+        /// <item><description>cms.s1.6xlarge: 185 days</description></item>
+        /// <item><description>cms.s1.12xlarge: 376 days</description></item>
         /// </list>
-        /// <para>For more information about the pricing of different storage durations, see the <b>Pricing</b> table in <a href="https://help.aliyun.com/document_detail/223532.html">Dashboard</a>.</para>
+        /// <para>For the prices of different storage duration specifications, see <b>Pricing</b> in <a href="https://help.aliyun.com/document_detail/223532.html">dashboard</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cms.s1.3xlarge</para>

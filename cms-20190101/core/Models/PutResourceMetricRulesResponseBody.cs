@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutResourceMetricRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The HTTP status code.</para>
         /// <remarks>
-        /// <para>200 indicates success.</para>
+        /// <para>A status code of 200 indicates that the call was successful.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15D1440E-BF24-5A41-93E4-36864635179E</para>
@@ -79,9 +79,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Successful.</para>
+        /// <item><description><para>true: The operation was successful.</para>
         /// </description></item>
-        /// <item><description><para>false: Failed.</para>
+        /// <item><description><para>false: The operation failed.</para>
         /// </description></item>
         /// </list>
         /// 

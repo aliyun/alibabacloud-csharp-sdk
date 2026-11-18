@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Address { get; set; }
 
         /// <summary>
-        /// <para>The ID of the alert rule. The ID of an existing alert rule in CloudMonitor. You can call the DescribeMetricRuleList operation to query alert rule IDs. For more information, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</para>
+        /// <para>The ID of the alert rule. The alert rule must already exist in CloudMonitor. You can call the <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a> operation to query the alert rule ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>49f7c317-7645-4cc9-94fd-ea42e122****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string AlertIds { get; set; }
 
         /// <summary>
-        /// <para>The custom monitoring schedule. You can select a specific time period from Monday to Sunday for monitoring.</para>
+        /// <para>The custom probing schedule. You can select a specific time period from Monday to Sunday for probing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;start_hour&quot;:0,&quot;end_hour&quot;:24, &quot;days&quot;:[0], &quot;time_zone&quot;:&quot;Local&quot;}</para>
@@ -61,9 +61,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string IntervalUnit { get; set; }
 
         /// <summary>
-        /// <para>The detection point information. The value is in JSONArray format, for example: <c>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</c>, where <c>city</c> corresponds to Beijing, Hangzhou, and Qingdao respectively.</para>
+        /// <para>The probe information. The value is a JSON array. Example: <c>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</c>. The <c>city</c> values correspond to Beijing, Hangzhou, and Qingdao.</para>
         /// <remarks>
-        /// <para>You can call the DescribeSiteMonitorISPCityList operation to query detection point information. For more information, see <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a>. If this parameter is left empty, the system randomly selects three detection points.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a> operation to obtain the detection point information. If this parameter is left empty, the system randomly selects three detection points.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string IspCities { get; set; }
 
         /// <summary>
-        /// <para>The advanced extended options for the protocol type of the monitoring task. Different protocol types correspond to different extended options.</para>
+        /// <para>The advanced extension options for the protocol type of the monitoring task. Different protocol types correspond to different extension options.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;time_out&quot;:5000}</para>

@@ -23,14 +23,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The result list of the one-time synthetic monitoring task creation.</para>
+        /// <para>The list of results for creating the one-time detection task.</para>
         /// </summary>
         [NameInMap("CreateResultList")]
         [Validation(Required=false)]
         public List<CreateInstantSiteMonitorResponseBodyCreateResultList> CreateResultList { get; set; }
         public class CreateInstantSiteMonitorResponseBodyCreateResultList : TeaModel {
             /// <summary>
-            /// <para>The ID of the synthetic monitoring task.</para>
+            /// <para>The ID of the detection task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2c8dbdf9-a3ab-46a1-85a4-f094965e****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The name of the synthetic monitoring task.</para>
+            /// <para>The name of the detection task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>task1</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. Valid values:</para>
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: Successful.</description></item>
         /// <item><description>false: Failed.</description></item>

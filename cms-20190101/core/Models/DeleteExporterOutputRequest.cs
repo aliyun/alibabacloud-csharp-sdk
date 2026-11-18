@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteExporterOutputRequest : TeaModel {
         /// <summary>
-        /// <para>The destination name of the configuration.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>testName</para>
         /// </summary>
         [NameInMap("DestName")]
         [Validation(Required=false)]

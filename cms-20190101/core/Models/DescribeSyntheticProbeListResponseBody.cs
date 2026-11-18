@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string CountryEn { get; set; }
 
             /// <summary>
-            /// <para>The number of IPv4 nodes in the IDC.</para>
+            /// <para>The number of IDC IPv4 nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public int? IdcV4ProbeCount { get; set; }
 
             /// <summary>
-            /// <para>The number of IPv6 nodes in the IDC.</para>
+            /// <para>The number of IDC IPv6 nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public int? IdcV6ProbeCount { get; set; }
 
             /// <summary>
-            /// <para>The list of node IP addresses.</para>
+            /// <para>The list of IP addresses of the node.</para>
             /// </summary>
             [NameInMap("IpPool")]
             [Validation(Required=false)]
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <para>The Chinese name of the province.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Jiangxi</para>
+            /// <para>Jiangxi Province</para>
             /// </summary>
             [NameInMap("RegionCn")]
             [Validation(Required=false)]
@@ -238,8 +238,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Indicates whether the operation is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The operation is successful.</description></item>
-        /// <item><description>false: The operation fails.</description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

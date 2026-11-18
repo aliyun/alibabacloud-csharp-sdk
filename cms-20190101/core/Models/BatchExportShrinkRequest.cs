@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class BatchExportShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The cursor value. This parameter is required when you repeatedly call this operation to export data. You can obtain the Cursor value by using one of the following methods:</para>
+        /// <para>The value of Cursor. This parameter is required when you repeatedly call this operation to export data. You can obtain the value of Cursor by using one of the following methods:</para>
         /// <list type="bullet">
-        /// <item><description><para>When you call this operation for the first time, you must call the Cursor operation to obtain the Cursor value. For more information, see <a href="https://help.aliyun.com/document_detail/2330730.html">Cursor</a>.</para>
+        /// <item><description><para>When you call this operation for the first time, you must call the Cursor operation to obtain the value of Cursor. For more information, see <a href="https://help.aliyun.com/document_detail/2330730.html">Cursor</a>.</para>
         /// </description></item>
-        /// <item><description><para>When you call this operation again, you can obtain the Cursor value from the response of the previous call.</para>
+        /// <item><description><para>When you call this operation again, you can obtain the value of Cursor from the response of the previous call.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -40,16 +40,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The measurements used to customize the returned data. By default, all measurements are returned.</para>
-        /// <para>For example, the <c>cpu_idle</c> monitoring metrics for the <c>acs_ecs_dashboard</c> cloud service have three measurement columns: <c>Average</c>, <c>Maximum</c>, and <c>Minimum</c>. If you want to return only the <c>Average</c> and <c>Maximum</c> columns, set the Settings of this parameter to the <c>[&quot;Average&quot;, &quot;Maximum&quot;]</c> array.</para>
-        /// <para>For more information about how to obtain the measurements of the monitoring metrics for a cloud service, see the <c>statistics</c> column in <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</para>
+        /// <para>For example, the cpu_idle monitoring metric of the acs_ecs_dashboard cloud service has three measurement columns: Average, Maximum, and Minimum. If you want to return only the Average and Maximum columns, you can apply the following Settings to this parameter: [&quot;Average&quot;, &quot;Maximum&quot;].</para>
+        /// <para>For more information about how to obtain the measurements of a cloud service monitoring metric, see the statistics column in <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</para>
         /// </summary>
         [NameInMap("Measurements")]
         [Validation(Required=false)]
         public string MeasurementsShrink { get; set; }
 
         /// <summary>
-        /// <para>The name of the monitoring metric for the cloud service.</para>
-        /// <para>For more information about how to obtain the monitoring metric name of a cloud service, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</para>
+        /// <para>The name of the cloud service monitoring metric.</para>
+        /// <para>For more information about how to obtain the name of a cloud service monitoring metric, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</para>
         /// <remarks>
         /// <para>This parameter must be the same as the Metric request parameter in the Cursor operation.</para>
         /// </remarks>

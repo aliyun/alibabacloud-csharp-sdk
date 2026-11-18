@@ -18,19 +18,19 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public PutGroupMetricRuleRequestEscalationsCritical Critical { get; set; }
             public class PutGroupMetricRuleRequestEscalationsCritical : TeaModel {
                 /// <summary>
-                /// <para>The threshold comparison operator for Critical-level alerts. Valid values:</para>
+                /// <para>The threshold comparison operator for Critical alerts. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>GreaterThanOrEqualToThreshold: Greater than or equal to the threshold.</description></item>
-                /// <item><description>GreaterThanThreshold: Greater than the threshold.</description></item>
-                /// <item><description>LessThanOrEqualToThreshold: Less than or equal to the threshold.</description></item>
-                /// <item><description>LessThanThreshold: Less than the threshold.</description></item>
-                /// <item><description>NotEqualToThreshold: Not equal to the threshold.</description></item>
-                /// <item><description>GreaterThanYesterday: Greater than the value at the same time yesterday.</description></item>
-                /// <item><description>LessThanYesterday: Less than the value at the same time yesterday.</description></item>
-                /// <item><description>GreaterThanLastWeek: Greater than the value at the same time last week.</description></item>
-                /// <item><description>LessThanLastWeek: Less than the value at the same time last week.</description></item>
-                /// <item><description>GreaterThanLastPeriod: Greater than the value in the last period.</description></item>
-                /// <item><description>LessThanLastPeriod: Less than the value in the last period.</description></item>
+                /// <item><description>GreaterThanOrEqualToThreshold: greater than or equal to the threshold.</description></item>
+                /// <item><description>GreaterThanThreshold: greater than the threshold.</description></item>
+                /// <item><description>LessThanOrEqualToThreshold: less than or equal to the threshold.</description></item>
+                /// <item><description>LessThanThreshold: less than the threshold.</description></item>
+                /// <item><description>NotEqualToThreshold: not equal to the threshold.</description></item>
+                /// <item><description>GreaterThanYesterday: greater than the metric value at the same time yesterday.</description></item>
+                /// <item><description>LessThanYesterday: less than the metric value at the same time yesterday.</description></item>
+                /// <item><description>GreaterThanLastWeek: greater than the metric value at the same time last week.</description></item>
+                /// <item><description>LessThanLastWeek: less than the metric value at the same time last week.</description></item>
+                /// <item><description>GreaterThanLastPeriod: greater than the metric value in the last period.</description></item>
+                /// <item><description>LessThanLastPeriod: less than the metric value in the last period.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -41,8 +41,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string ComparisonOperator { get; set; }
 
                 /// <summary>
-                /// <para>The statistical method for Critical-level alerts. Separate multiple statistical methods with commas (,).</para>
-                /// <para>The valid values of this parameter are determined by the Statistics column corresponding to the MetricName of the specified Alibaba Cloud service, such as Maximum, Minimum, and Average. For information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</para>
+                /// <para>The statistical method for Critical alerts. Separate multiple statistical methods with commas (,).</para>
+                /// <para>The valid values of this parameter are determined by the <c>Statistics</c> column corresponding to the <c>MetricName</c> of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Average</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Statistics { get; set; }
 
                 /// <summary>
-                /// <para>The threshold for Critical-level alerts.</para>
+                /// <para>The threshold for Critical alerts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>90</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Threshold { get; set; }
 
                 /// <summary>
-                /// <para>The number of retries for Critical-level alerts.</para>
+                /// <para>The number of retries for Critical alerts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -78,19 +78,19 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public PutGroupMetricRuleRequestEscalationsInfo Info { get; set; }
             public class PutGroupMetricRuleRequestEscalationsInfo : TeaModel {
                 /// <summary>
-                /// <para>The threshold comparison operator for Info-level alerts. Valid values:</para>
+                /// <para>The threshold comparison operator for Info alerts. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>GreaterThanOrEqualToThreshold: Greater than or equal to the threshold.</description></item>
-                /// <item><description>GreaterThanThreshold: Greater than the threshold.</description></item>
-                /// <item><description>LessThanOrEqualToThreshold: Less than or equal to the threshold.</description></item>
-                /// <item><description>LessThanThreshold: Less than the threshold.</description></item>
-                /// <item><description>NotEqualToThreshold: Not equal to the threshold.</description></item>
-                /// <item><description>GreaterThanYesterday: Greater than the value at the same time yesterday.</description></item>
-                /// <item><description>LessThanYesterday: Less than the value at the same time yesterday.</description></item>
-                /// <item><description>GreaterThanLastWeek: Greater than the value at the same time last week.</description></item>
-                /// <item><description>LessThanLastWeek: Less than the value at the same time last week.</description></item>
-                /// <item><description>GreaterThanLastPeriod: Greater than the value in the last period.</description></item>
-                /// <item><description>LessThanLastPeriod: Less than the value in the last period.</description></item>
+                /// <item><description>GreaterThanOrEqualToThreshold: greater than or equal to the threshold.</description></item>
+                /// <item><description>GreaterThanThreshold: greater than the threshold.</description></item>
+                /// <item><description>LessThanOrEqualToThreshold: less than or equal to the threshold.</description></item>
+                /// <item><description>LessThanThreshold: less than the threshold.</description></item>
+                /// <item><description>NotEqualToThreshold: not equal to the threshold.</description></item>
+                /// <item><description>GreaterThanYesterday: greater than the metric value at the same time yesterday.</description></item>
+                /// <item><description>LessThanYesterday: less than the metric value at the same time yesterday.</description></item>
+                /// <item><description>GreaterThanLastWeek: greater than the metric value at the same time last week.</description></item>
+                /// <item><description>LessThanLastWeek: less than the metric value at the same time last week.</description></item>
+                /// <item><description>GreaterThanLastPeriod: greater than the metric value in the last period.</description></item>
+                /// <item><description>LessThanLastPeriod: less than the metric value in the last period.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -101,8 +101,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string ComparisonOperator { get; set; }
 
                 /// <summary>
-                /// <para>The statistical method for Info-level alerts. Separate multiple statistical methods with commas (,).</para>
-                /// <para>The valid values of this parameter are determined by the Statistics column corresponding to the MetricName of the specified Alibaba Cloud service, such as Maximum, Minimum, and Average. For information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</para>
+                /// <para>The statistical method for Info alerts. Separate multiple statistical methods with commas (,).</para>
+                /// <para>The valid values of this parameter are determined by the <c>Statistics</c> column corresponding to the <c>MetricName</c> of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Average</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Statistics { get; set; }
 
                 /// <summary>
-                /// <para>The threshold for Info-level alerts.</para>
+                /// <para>The threshold for Info alerts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>90</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Threshold { get; set; }
 
                 /// <summary>
-                /// <para>The number of retries for Info-level alerts.</para>
+                /// <para>The number of retries for Info alerts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -138,19 +138,19 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public PutGroupMetricRuleRequestEscalationsWarn Warn { get; set; }
             public class PutGroupMetricRuleRequestEscalationsWarn : TeaModel {
                 /// <summary>
-                /// <para>The threshold comparison operator for Warn-level alerts. Valid values:</para>
+                /// <para>The threshold comparison operator for Warn alerts. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>GreaterThanOrEqualToThreshold: Greater than or equal to the threshold.</description></item>
-                /// <item><description>GreaterThanThreshold: Greater than the threshold.</description></item>
-                /// <item><description>LessThanOrEqualToThreshold: Less than or equal to the threshold.</description></item>
-                /// <item><description>LessThanThreshold: Less than the threshold.</description></item>
-                /// <item><description>NotEqualToThreshold: Not equal to the threshold.</description></item>
-                /// <item><description>GreaterThanYesterday: Greater than the value at the same time yesterday.</description></item>
-                /// <item><description>LessThanYesterday: Less than the value at the same time yesterday.</description></item>
-                /// <item><description>GreaterThanLastWeek: Greater than the value at the same time last week.</description></item>
-                /// <item><description>LessThanLastWeek: Less than the value at the same time last week.</description></item>
-                /// <item><description>GreaterThanLastPeriod: Greater than the value in the last period.</description></item>
-                /// <item><description>LessThanLastPeriod: Less than the value in the last period.</description></item>
+                /// <item><description>GreaterThanOrEqualToThreshold: greater than or equal to the threshold.</description></item>
+                /// <item><description>GreaterThanThreshold: greater than the threshold.</description></item>
+                /// <item><description>LessThanOrEqualToThreshold: less than or equal to the threshold.</description></item>
+                /// <item><description>LessThanThreshold: less than the threshold.</description></item>
+                /// <item><description>NotEqualToThreshold: not equal to the threshold.</description></item>
+                /// <item><description>GreaterThanYesterday: greater than the metric value at the same time yesterday.</description></item>
+                /// <item><description>LessThanYesterday: less than the metric value at the same time yesterday.</description></item>
+                /// <item><description>GreaterThanLastWeek: greater than the metric value at the same time last week.</description></item>
+                /// <item><description>LessThanLastWeek: less than the metric value at the same time last week.</description></item>
+                /// <item><description>GreaterThanLastPeriod: greater than the metric value in the last period.</description></item>
+                /// <item><description>LessThanLastPeriod: less than the metric value in the last period.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -161,8 +161,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string ComparisonOperator { get; set; }
 
                 /// <summary>
-                /// <para>The statistical method for Warn-level alerts. Separate multiple statistical methods with commas (,).</para>
-                /// <para>The valid values of this parameter are determined by the Statistics column corresponding to the MetricName of the specified Alibaba Cloud service, such as Maximum, Minimum, and Average. For information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</para>
+                /// <para>The statistical method for Warn alerts. Separate multiple statistical methods with commas (,).</para>
+                /// <para>The valid values of this parameter are determined by the <c>Statistics</c> column corresponding to the <c>MetricName</c> of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Average</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Statistics { get; set; }
 
                 /// <summary>
-                /// <para>The threshold for Warn-level alerts.</para>
+                /// <para>The threshold for Warn alerts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>90</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Threshold { get; set; }
 
                 /// <summary>
-                /// <para>The number of retries for Warn-level alerts.</para>
+                /// <para>The number of retries for Warn alerts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The abbreviation of the Alibaba Cloud service name.</para>
-        /// <para>For information about how to obtain the abbreviation, see the metricCategory field in the Labels response parameter of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</para>
+        /// <para>For information about how to obtain the abbreviation of the Alibaba Cloud service name, see <c>metricCategory</c> in the <c>Labels</c> response parameter of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ECS</para>
@@ -206,6 +206,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Category { get; set; }
 
+        /// <summary>
+        /// <para>Ensures the idempotence of the request. You can generate a unique value for this parameter from your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and cannot exceed 64 characters in length. For more information, see How to ensure idempotence.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxxx</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -222,7 +228,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The first-level dimension of the alert rule in the application group.</para>
-        /// <para>Format: a collection of key:value pairs, such as <c>{&quot;userId&quot;:&quot;120886317861****&quot;}</c> and <c>{&quot;instanceId&quot;:&quot;i-m5e1qg6uo38rztr4****&quot;}</c>.</para>
+        /// <para>Format: a collection of <c>key:value</c> pairs. Examples: <c>{&quot;userId&quot;:&quot;120886317861****&quot;}</c> and <c>{&quot;instanceId&quot;:&quot;i-m5e1qg6uo38rztr4****&quot;}</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;instanceId&quot;:&quot;i-m5e1qg6uo38rztr4****&quot;}]</para>
@@ -234,8 +240,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Specifies whether to only precheck the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: A check request is sent, and no security group is associated with the instance. The check items include whether required parameters are specified, the request format, and service limits. If the check fails, an error is returned. If the check succeeds, the error code DryRunOperation is returned.</description></item>
-        /// <item><description><b>false</b>: A normal request is sent. If the check succeeds, an HTTP 2xx status code is returned and the operation is performed. This is the default value.</description></item>
+        /// <item><description><b>true</b>: sends a precheck request. The system does not bind the security group to the instance. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the precheck, the system returns an error. If the request passes the precheck, the system returns the <c>DryRunOperation</c> error code.</description></item>
+        /// <item><description><b>false</b>: sends a normal request. If the request passes the precheck, the system returns an HTTP 2xx status code and performs the operation. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -267,7 +273,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The second-level or third-level dimension of the alert rule in the application group.</para>
-        /// <para>Format: a collection of key:value pairs, such as <c>port:80</c> and <c>/dev/xvda:d-m5e6yphgzn3aprwu****</c>.</para>
+        /// <para>Format: a collection of <c>key:value</c> pairs. Examples: <c>port:80</c> and <c>/dev/xvda:d-m5e6yphgzn3aprwu****</c>.</para>
         /// <para>If the first-level dimension of the alert rule is <c>{&quot;instanceId&quot;:&quot;i-m5e1qg6uo38rztr4****&quot;}</c>, the second-level dimension is the cloud disk in the instance, such as <c>{&quot;/dev/xvda&quot;:&quot;d-m5e6yphgzn3aprwu****&quot;}</c>.</para>
         /// 
         /// <b>Example:</b>
@@ -292,7 +298,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The detection period of the alert rule. Unit: seconds.</para>
         /// <remarks>
-        /// <para>Set the detection period of the alert rule to the same as the data reporting period. If the detection period is shorter than the data reporting period, alerts cannot be triggered due to insufficient data.</para>
+        /// <para>Set the detection period of the alert rule to the same value as the data reporting period. If the detection period is shorter than the data reporting period, alerts cannot be triggered due to insufficient data.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -346,7 +352,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The namespace of the Alibaba Cloud service.</para>
-        /// <para>For information about how to obtain the namespace, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</para>
+        /// <para>For information about how to obtain the namespace of the Alibaba Cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -357,11 +363,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The processing method when no monitoring data is available. Valid values:</para>
+        /// <para>The action to take when no monitoring data is available. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>KEEP_LAST_STATE: No action is taken. This is the default value.</description></item>
-        /// <item><description>INSUFFICIENT_DATA: An alert indicating insufficient data is triggered.</description></item>
-        /// <item><description>OK: The status is normal.</description></item>
+        /// <item><description>KEEP_LAST_STATE: no action is taken. This is the default value.</description></item>
+        /// <item><description>INSUFFICIENT_DATA: an alert indicating no data is triggered.</description></item>
+        /// <item><description>OK: normal.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -383,7 +389,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The advanced settings.</para>
-        /// <para>Format: <c>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;}</c>. Example: <c>{&quot;NotSendOK&quot;:true}</c>, which specifies whether to send alert recovery notifications. The key is NotSendOK, and the value is true (do not send) or false (send, which is the default value).</para>
+        /// <para>Format: <c>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;}</c>. Example: <c>{&quot;NotSendOK&quot;:true}</c>, which specifies whether to send alert recovery notifications. The key is <c>NotSendOK</c>, and the value is <c>true</c> (do not send) or <c>false</c> (send, default).</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;NotSendOK&quot;:true}</para>
@@ -394,7 +400,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The reporting period of monitoring data.</para>
-        /// <para>The value of Period must be 60 or an integer multiple of 60. Unit: seconds. Default value: 300.</para>
+        /// <para>The value of <c>Period</c> must be 60 or an integer multiple of 60. Unit: seconds. Default value: 300.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -449,7 +455,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public int? SilenceTime { get; set; }
 
         /// <summary>
-        /// <para>The webhook URL that is called when an alert is triggered.</para>
+        /// <para>The alert callback URL.</para>
         /// <para>Enter a publicly accessible URL. CloudMonitor pushes alert notifications to this URL by sending POST requests. Only HTTP is supported.</para>
         /// 
         /// <b>Example:</b>

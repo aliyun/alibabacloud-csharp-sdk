@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The HTTP status code.</para>
         /// <remarks>
-        /// <para>A status code of 200 indicates that the request was successful.</para>
+        /// <para>200 indicates success.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resources affected by the alert rule.</para>
+        /// <para>The resources affected by the alert rules.</para>
         /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// <para>The HTTP status code.</para>
                 /// <remarks>
-                /// <para>A status code of 200 indicates that the request was successful.</para>
+                /// <para>200 indicates success.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>

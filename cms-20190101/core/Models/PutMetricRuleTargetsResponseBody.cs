@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutMetricRuleTargetsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code.</para>
         /// <remarks>
-        /// <para>The value 200 indicates success.</para>
+        /// <para>200 indicates success.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The list of failures.</para>
+        /// <para>The list of failed items.</para>
         /// </summary>
         [NameInMap("FailData")]
         [Validation(Required=false)]
@@ -78,9 +78,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: successful.</para>
+        /// <item><description><para>true: successful</para>
         /// </description></item>
-        /// <item><description><para>false: failed.</para>
+        /// <item><description><para>false: failed</para>
         /// </description></item>
         /// </list>
         /// 

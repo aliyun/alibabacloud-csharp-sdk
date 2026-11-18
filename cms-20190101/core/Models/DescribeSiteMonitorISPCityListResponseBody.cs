@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSiteMonitorISPCityListResponseBody : TeaModel {
         /// <summary>
-        /// <para>状态码。</para>
+        /// <para>The status code.</para>
         /// <remarks>
-        /// <para>200表示成功。</para>
+        /// <para>200 indicates success.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>返回信息。</para>
+        /// <para>The message returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求ID。</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B35D7D84-547B-4E61-B909-48A1F8A0C756</para>
@@ -129,11 +129,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>操作是否成功。取值：</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true：成功。</para>
+        /// <item><description><para>true: successful.</para>
         /// </description></item>
-        /// <item><description><para>false：失败。</para>
+        /// <item><description><para>false: failed.</para>
         /// </description></item>
         /// </list>
         /// 

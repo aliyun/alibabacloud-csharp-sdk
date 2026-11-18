@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <para>The description of the alert template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ECS template</para>
+            /// <para>ECS模板</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]

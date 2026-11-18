@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RuleId { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs.</para>
+        /// <para>The target IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

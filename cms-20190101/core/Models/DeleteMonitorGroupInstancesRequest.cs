@@ -23,15 +23,21 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Category { get; set; }
 
+        /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6868E9A1-56E6-5FD7-9684-E2963BBAFB5F</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run on the request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run on the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run and does not delete the VPN connection. The system checks whether required parameters are specified, the request format is valid, and the service limits are met. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): sends a normal request. If the request passes the dry run, the VPN connection is deleted.</description></item>
+        /// <item><description><b>true</b>: performs a dry run and does not delete the resource instances. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the dry run, an error is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a regular request and deletes the resource instances if the request passes the dry run.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,7 +59,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// <para>The instances to delete. Separate multiple instance IDs with commas (,). You can delete up to 20 instances at a time.</para>
+        /// <para>The IDs of the instances to delete. Separate multiple IDs with commas. You can delete up to 20 instances at a time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

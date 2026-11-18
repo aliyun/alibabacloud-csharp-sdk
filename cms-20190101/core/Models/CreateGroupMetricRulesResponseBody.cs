@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateGroupMetricRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code.</para>
         /// <remarks>
         /// <para>200 indicates success.</para>
         /// </remarks>
@@ -75,12 +75,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. Valid values:</para>
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The operation was successful.</para>
-        /// </description></item>
-        /// <item><description><para>false: The operation failed.</para>
-        /// </description></item>
+        /// <item><description>true: The operation is successful.</description></item>
+        /// <item><description>false: The operation fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -9,15 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteMonitorGroupRequest : TeaModel {
+        /// <summary>
+        /// <para>Ensures the idempotence of the request. You can generate a parameter value on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and can be up to 64 characters in length. For more information, see How to ensure idempotence.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6868E9A1-56E6-5FD7-9684-E2963BBAFB5F</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run on the request. The dry run checks permissions and instance status. Valid values:</para>
+        /// <para>Specifies whether to execute a dry run on the request, including checks on permissions and instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): sends a normal request. If the request passes the check, the name and description of the route table are modified.</description></item>
-        /// <item><description><b>true</b>: sends a dry run request. Only the check is performed, and the name and description of the route table are not modified. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): Sends a normal request. If the check succeeds, the name and description of the routing table are directly modified.</description></item>
+        /// <item><description><b>true</b>: Sends a check request to only perform the check, and the name and description of the routing table are not modified. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
