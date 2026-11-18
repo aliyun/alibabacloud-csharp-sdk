@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? AutoUseCoupon { get; set; }
 
         /// <summary>
-        /// <para>The extended information, such as the campaign ID and business information.</para>
+        /// <para>The extended information such as the campaign ID and business information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>000000000</para>
@@ -71,9 +71,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Valid values:</para>
+        /// <para>The billing method to switch to. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PrePaid</b>: subscription. If you set this parameter to PrePaid, you must also specify the <b>Period</b> parameter.</description></item>
+        /// <item><description><b>PrePaid</b>: Subscription. If you specify this value, you must also specify the <b>Period</b> parameter.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must ensure that the token is unique among different requests. The token is case-sensitive and can be up to 64 ASCII characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must ensure that it is unique among different requests. The token is case-sensitive and can be up to 64 ASCII characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The name of the new instance. The name must be 2 to 80 characters in length and start with a letter or a Chinese character. It cannot contain spaces or the following special characters: <c>@/:=”&lt;&gt;{[]}</c>.</para>
+        /// <para>The name of the new instance. The name must be 2 to 80 characters in length and start with a letter or a Chinese character. It cannot contain spaces or the following special characters: <c>@/:=&quot;&lt;&gt;{[]}</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vnodetest</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration. Unit: months. Valid values: <b>1</b> to <b>9</b>, <b>12</b>, <b>24</b>, and <b>36</b>.</para>
+        /// <para>The subscription period. Unit: months. Valid values: <b>1</b> to <b>9</b>, <b>12</b>, <b>24</b>, and <b>36</b>.</para>
         /// <remarks>
         /// <para>This parameter is required when the <b>ChargeType</b> parameter is set to <b>PrePaid</b>.</para>
         /// </remarks>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>The ID of the destination resource group.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can invoke the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation or go to the console to obtain the resource group ID list. For related operations, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</description></item>
+        /// <item><description>You can invoke the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation or go to the console to obtain the resource group ID list. Related operations: see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</description></item>
         /// <item><description>Before you change the resource group to which the instance belongs, you can invoke the <a href="https://help.aliyun.com/document_detail/158866.html">ListResources</a> operation to view the current resource group of the instance.</description></item>
         /// </list>
         /// </remarks>
@@ -249,6 +249,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
+        /// <para>The virtual node type. Valid values: fixed and elastic.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>fixed</para>
         /// </summary>
@@ -257,9 +259,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string VNodeType { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID of the instance. The vSwitch must belong to the VPC associated with the specified VCluster virtual cluster. You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation of the VPC API to query the vSwitch ID.</para>
+        /// <para>The vSwitch ID of the instance. The vSwitch must belong to the VPC of the specified VCluster virtual cluster. You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation of the VPC API to query the vSwitch ID.</para>
         /// <remarks>
-        /// <para>The zone of the vSwitch must be the same as the zone of the instance.</para>
+        /// <para>The zone of the vSwitch must be the same as that of the instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

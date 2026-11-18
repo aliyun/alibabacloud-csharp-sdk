@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyInstanceTDERequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the custom key. You can call <a href="https://help.aliyun.com/document_detail/473860.html">DescribeEncryptionKeyList</a> to query the key ID.</para>
+        /// <para>The ID of the custom key. You can call the <a href="https://help.aliyun.com/document_detail/473860.html">DescribeEncryptionKeyList</a> operation to obtain the key ID.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If you do not specify this parameter, <a href="https://help.aliyun.com/document_detail/28935.html">Key Management Service</a> automatically generates a key.</description></item>
-        /// <item><description>To create a custom key, call the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation of Key Management Service.</description></item>
+        /// <item><description>If you do not specify this parameter, <a href="https://help.aliyun.com/document_detail/28935.html">Key Management Service (KMS)</a> automatically generates a key.</description></item>
+        /// <item><description>To create a custom key, you can call the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation of Key Management Service (KMS).</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The encryption algorithm. Default value: AES-CTR-256.</para>
         /// <remarks>
-        /// <para>This parameter is available only when <b>TDEStatus</b> is set to <b>Enabled</b>.</para>
+        /// <para>This parameter is available only when the <b>TDEStatus</b> parameter is set to <b>Enabled</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EncryptionName { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> to query the instance ID.</para>
+        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,11 +66,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The global resource descriptor Alibaba Cloud Resource Name (ARN) of the role to be authorized. After the authorization is complete, the related Key Management Service can be used. Format: <c>acs:ram::$accountID:role/$roleName</c>.</para>
+        /// <para>The global resource descriptor ARN (Alibaba Cloud Resource Name) of the RAM role to authorize. After authorization, you can use the related Key Management Service (KMS) features. Format: <c>acs:ram::$accountID:role/$roleName</c>.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><c>$accountID</c>: the Alibaba Cloud account ID. Log on to the Alibaba Cloud Management Console, move the mouse over the profile picture in the upper-right corner, and then click <b>Security Settings</b> to view the account ID.</description></item>
-        /// <item><description><c>$roleName</c>: the RAM role name. Set this value to <b>AliyunRdsInstanceEncryptionDefaultRole</b>.</description></item>
+        /// <item><description><c>$accountID</c>: the Alibaba Cloud account ID. You can logon to the Alibaba Cloud Management Console, move the mouse over the profile picture in the upper-right corner, and click <b>Security Settings</b> to view the account ID.</description></item>
+        /// <item><description><c>$roleName</c>: the name of the RAM role. Set the value to <b>AliyunRdsInstanceEncryptionDefaultRole</b>.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -86,9 +86,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>Enables the transparent data encryption feature. Set the value to <b>Enabled</b>.</para>
+        /// <para>The TDE status. Valid value: <b>Enabled</b>.</para>
         /// <remarks>
-        /// <para>The TDE feature cannot be disabled after it is enabled. Before enabling TDE, evaluate whether it affects your business. For more information, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable transparent data encryption TDE</a>.</para>
+        /// <para>After TDE is enabled, it cannot be disabled. Evaluate the impact on your business before you enable TDE. For more information, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable Transparent Data Encryption (TDE)</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

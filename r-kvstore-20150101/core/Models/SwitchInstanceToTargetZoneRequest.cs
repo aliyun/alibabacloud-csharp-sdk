@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the child node in a cluster instance.</para>
+        /// <para>The ID of the child node of a Cluster Edition instance.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, all shards are switched to the destination zone.</para>
+        /// <para>If this parameter is not specified, all shards are switched to the target zone.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -34,13 +34,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>The switch mode. Valid values:</para>
+        /// <para>The switchover mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ReliabilityPriority</b> (default): Reliability priority. A primary/secondary switchover is performed only when data synchronization between the primary and secondary nodes has no latency. This ensures that no data is lost. However, in scenarios with a large write volume and continuous synchronization latency, the switchover may fail.</description></item>
-        /// <item><description><b>AvailablePriority</b>: Availability priority. A primary/secondary switchover is performed immediately regardless of the synchronization latency between the primary and secondary nodes. A small amount of data may be lost.</description></item>
+        /// <item><description><b>ReliabilityPriority</b> (default): Reliability priority. A primary/secondary switchover is performed only when there is no replication lag between the primary and secondary nodes to ensure zero data loss. In scenarios with heavy write traffic and continuous replication lag, the switchover may fail.</description></item>
+        /// <item><description><b>AvailablePriority</b>: Availability priority. A primary/secondary switchover is performed immediately regardless of the replication lag between the primary and secondary nodes. A small amount of data may be lost.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Select a switch mode based on your business requirements for data and services.</para>
+        /// <para>Select a switchover mode based on your business requirements for data and services.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SwitchType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination zone.</para>
+        /// <para>The ID of the target zone.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

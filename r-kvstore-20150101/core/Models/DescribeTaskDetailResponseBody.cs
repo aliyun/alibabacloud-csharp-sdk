@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeTaskDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the node started. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+        /// <para>The start time of the task, in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC time).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-05-12T07:18:57Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The node status.</para>
+        /// <para>The task status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>

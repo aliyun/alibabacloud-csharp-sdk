@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string CheckingCode { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the parameter has taken effect. Valid values:</para>
+            /// <para>Specifies whether the parameter takes effect. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: No.</description></item>
             /// <item><description><b>1</b>: Yes.</description></item>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public long? Effective { get; set; }
 
             /// <summary>
-            /// <para>The divisor factor. For integer and byte type parameters, the parameter value must not only fall within the valid range but also be a multiple of Factor (when Factor is not 0).</para>
+            /// <para>The divisibility factor. For integer and byte parameters, the parameter value must not only fall within the valid value range but also be a multiple of the factor (which cannot be 0).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -61,17 +61,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public long? Factor { get; set; }
 
             /// <summary>
-            /// <para>The parameter description.</para>
+            /// <para>The description of the parameter.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Enable AOF persistence mode</para>
+            /// <para>Enable the AOF persistence mode</para>
             /// </summary>
             [NameInMap("ParameterDescription")]
             [Validation(Required=false)]
             public string ParameterDescription { get; set; }
 
             /// <summary>
-            /// <para>The parameter name.</para>
+            /// <para>The name of the parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>appendonly</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string ParameterValue { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the parameter can be modified. Valid values:</para>
+            /// <para>Specifies whether the parameter can be modified. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: The parameter cannot be modified.</description></item>
             /// <item><description><b>1</b>: The parameter can be modified.</description></item>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public long? Revisable { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether modification for minor versions is supported. Valid values:</para>
+            /// <para>Specifies whether the minor version can be modified. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>true</b>: Supported.</description></item>
             /// <item><description><b>false</b>: Not supported.</description></item>
@@ -121,9 +121,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <summary>
             /// <para>The unit of the parameter value. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>INT</b>: a common integer.</description></item>
-            /// <item><description><b>STRING</b>: a fixed string.</description></item>
-            /// <item><description><b>B</b>: bytes.</description></item>
+            /// <item><description><b>INT</b>: Standard integer.</description></item>
+            /// <item><description><b>STRING</b>: Fixed string.</description></item>
+            /// <item><description><b>B</b>: Byte.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

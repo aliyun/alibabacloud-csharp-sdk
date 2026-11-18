@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
     public class DescribeAuditRecordsResponseBody : TeaModel {
         /// <summary>
         /// <para>The end time of the query.</para>
-        /// <para>The time is in the YYYY-MM-DDTHH:mm:ssZ format and displayed in UTC.</para>
+        /// <para>The time is in the YYYY-MM-DDTHH:mm:ssZ format and is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-03-25T12:10:00Z</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// <para>The start time of the query.</para>
-        /// <para>The time is in the YYYY-MM-DDTHH:mm:ssZ format and displayed in UTC.</para>
+        /// <para>The time is in the YYYY-MM-DDTHH:mm:ssZ format and is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-03-24T12:10:00Z</para>

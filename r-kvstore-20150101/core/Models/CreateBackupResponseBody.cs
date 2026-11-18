@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateBackupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The backup task ID. For cluster instances created before December 5, 2023, the return value consists of the job IDs of individual child DB nodes. For example, for a cluster instance with two shards, the BackupJobID value is returned in the format of &quot;10000,10001&quot;. For cluster instances created on or after December 5, 2023, all DB nodes in a cluster are described by a single job ID. You only need to use this single job ID.</para>
+        /// <para>The backup job ID.<br>For cluster instances created before December 5, 2023, the return value consists of the job IDs of all child database nodes. For example, for a cluster instance with two shards, the return value is similar to &quot;10000,10001&quot;.<br>For cluster instances created on or after December 5, 2023, the jobs of all database nodes in a cluster are described by a single job ID. You only need to focus on this job ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;1022,2480&quot;</para>

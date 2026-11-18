@@ -42,10 +42,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to display the details of the backup sets for cluster nodes. Valid values:</para>
+        /// <para>Specifies whether to display the backup set details of cluster nodes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): displays the backup set information of cluster nodes.</description></item>
-        /// <item><description><b>true</b>: does not display the backup set information of cluster nodes.</description></item>
+        /// <item><description><b>false</b> (default): Displays the backup set information of cluster nodes.</description></item>
+        /// <item><description><b>true</b>: Does not display the backup set information of cluster nodes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The current page number.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

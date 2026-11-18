@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>Specifies whether the event can be canceled. Default value: -1. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>-1</b>: all events.</description></item>
-        /// <item><description><b>0</b>: returns only O&amp;M events that cannot be canceled.</description></item>
-        /// <item><description><b>1</b>: returns only O&amp;M events that can be canceled.</description></item>
+        /// <item><description><b>-1</b>: All events.</description></item>
+        /// <item><description><b>0</b>: Only O&amp;M events that cannot be canceled are returned.</description></item>
+        /// <item><description><b>1</b>: Only O&amp;M events that can be canceled are returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,11 +25,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? AllowCancel { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the event time can be modified. Default value: -1. Valid values:</para>
+        /// <para>Specifies whether the execution time can be modified. Default value: -1. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>-1</b>: all events.</description></item>
-        /// <item><description><b>0</b>: returns only O&amp;M events whose time cannot be modified.</description></item>
-        /// <item><description><b>1</b>: returns only O&amp;M events whose time can be modified.</description></item>
+        /// <item><description><b>-1</b>: All events.</description></item>
+        /// <item><description><b>0</b>: Only O&amp;M events whose execution time cannot be modified are returned.</description></item>
+        /// <item><description><b>1</b>: Only O&amp;M events whose execution time can be modified are returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,9 +42,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The change level. Default value: all. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>all</b>: all levels including exception recovery and system O&amp;M.</description></item>
-        /// <item><description><b>S0</b>: exception recovery.</description></item>
-        /// <item><description><b>S1</b>: system O&amp;M.</description></item>
+        /// <item><description><b>all</b>: All exception repair and system O&amp;M levels.</description></item>
+        /// <item><description><b>S0</b>: Exception repair.</description></item>
+        /// <item><description><b>S1</b>: System O&amp;M.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ChangeLevel { get; set; }
 
         /// <summary>
-        /// <para>The database type. Set this parameter to <b>redis</b>.</para>
+        /// <para>The database engine. Set the value to <b>redis</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>redis</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string DbType { get; set; }
 
         /// <summary>
-        /// <para>The instance name. This parameter is optional. If specified, only one instance name is allowed.</para>
+        /// <para>The name of the instance. This parameter is optional. If you specify this parameter, you can specify only one instance name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-wz96fzmpvpr2qnqnlb</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The product name. Valid values: RDS, POLARDB, MongoDB, and Redis. For Redis instances, set this parameter to Redis.</para>
+        /// <para>The name of the service. Valid values: RDS, POLARDB, MongoDB, and Redis. For Redis instances, set the value to Redis.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Redis</para>
@@ -113,9 +113,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ProductId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the pending event. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query available region IDs.</para>
+        /// <para>The region ID of the pending events. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <remarks>
-        /// <para>Set this parameter to <b>all</b> to query events in all regions.</para>
+        /// <para>A value of <b>all</b> specifies all region IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -138,14 +138,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The status of the O&amp;M event. This parameter is used to filter the returned events. Valid values:</para>
+        /// <para>The status of the O&amp;M event, which is used to filter the returned tasks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>-1</b>: all events.</description></item>
-        /// <item><description><b>3</b>: pending events.</description></item>
-        /// <item><description><b>4</b>: events being processed.</description></item>
-        /// <item><description><b>5</b>: events that ended successfully.</description></item>
-        /// <item><description><b>6</b>: events that ended with failures.</description></item>
-        /// <item><description><b>7</b>: canceled events.</description></item>
+        /// <item><description><b>-1</b>: All events.</description></item>
+        /// <item><description><b>3</b>: Pending events.</description></item>
+        /// <item><description><b>4</b>: Processing events.</description></item>
+        /// <item><description><b>5</b>: Successfully completed events.</description></item>
+        /// <item><description><b>6</b>: Failed events.</description></item>
+        /// <item><description><b>7</b>: Canceled events.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>The event type of the O&amp;M event. If this parameter is left empty, all types are queried.</para>
+        /// <para>The event type. If this parameter is left empty, all event types are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds_apsradb_transfer</para>

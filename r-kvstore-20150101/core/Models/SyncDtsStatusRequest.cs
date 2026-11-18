@@ -51,10 +51,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to restrict specification changes on the instance. Valid values:</para>
+        /// <para>Specifies whether to restrict specification changes for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Unrestricted.</description></item>
-        /// <item><description><b>1</b>: Restricted. Users are prompted when they perform a specification change.</description></item>
+        /// <item><description><b>0</b>: No restriction.</description></item>
+        /// <item><description><b>1</b>: Restricted. Users receive a prompt when performing a specification change.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>Instance ID of the DTS instance. You can log on to the <a href="https://dts.console.aliyun.com/">DTS console</a> to view instance ID.</para>
         /// <remarks>
-        /// <para>An instance may be involved in multiple DTS migration or synchronization tasks simultaneously. To remove the specification change restrictions on the instance, pass this parameter to avoid calling this operation multiple times.</para>
+        /// <para>An instance may be involved in multiple DTS migration or synchronization tasks. When you need to remove the specification change restriction for the instance, you can pass this parameter to avoid calling this operation multiple times.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeRoleZoneInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to obtain the instance ID.</para>
+        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <list type="bullet">
         /// <item><description><para><b>0</b>: proxy node.</para>
         /// <remarks>
-        /// <para>This parameter is supported only by instances that use the cluster or read/write splitting architecture.</para>
+        /// <para>This value is supported only for instances of the cluster or read/write splitting architecture.</para>
         /// </remarks>
         /// </description></item>
         /// <item><description><para><b>1</b>: data node. This is the default value.</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyActiveOperationTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The O&amp;M event IDs. Separate multiple IDs with commas (,).</para>
+        /// <para>The IDs of the O&amp;M events. Separate multiple IDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string Ids { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to immediately start execution scheduling.</para>
+        /// <para>Specifies whether to immediately enter execution scheduling.</para>
         /// <list type="bullet">
-        /// <item><description>0: No. (Default)</description></item>
-        /// <item><description>1: Yes.</description></item>
+        /// <item><description>0: no (default)</description></item>
+        /// <item><description>1: yes</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If the value is 0, SwitchTime takes effect. If the value is 1, SwitchTime does not take effect. The event start time is set to the current time, and the switchover time is automatically calculated based on the new start time.
-        /// The event immediately enters execution scheduling (not an immediate switchover). Pre-switchover preparations begin, and the switchover is performed after the preparations are complete. Call DescribeActiveOperationTasks and check the value of the PrepareInterval response parameter to obtain the preparation time.</para>
+        /// <para>If the value is 0, SwitchTime takes effect. If the value is 1, SwitchTime does not take effect, the event start time is set to the current time, and the switchover time is automatically calculated based on the new start time.
+        /// The event immediately enters execution scheduling but is not immediately switched over. Preparations for the switchover are performed, and the switchover is executed after the preparations are completed. You can call the DescribeActiveOperationTasks operation to obtain the preparation time from the value of the PrepareInterval response parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -59,9 +59,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The planned switchover time to set. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</para>
+        /// <para>The scheduled switchover time to set. The time must be in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</para>
         /// <remarks>
-        /// <para> The time cannot be later than the deadline. Call DescribeActiveOperationTasks and check the value of the Deadline response parameter to obtain the deadline.</para>
+        /// <para>The time cannot be later than the deadline.
+        /// You can call the DescribeActiveOperationTasks operation to obtain the deadline from the value of the Deadline response parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

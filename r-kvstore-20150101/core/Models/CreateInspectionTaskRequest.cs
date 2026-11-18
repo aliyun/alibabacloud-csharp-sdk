@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
     public class CreateInspectionTaskRequest : TeaModel {
         /// <summary>
         /// <para>The end time of the inspection time range.</para>
-        /// <para>The time is in the YYYY-MM-DDTHH:mm:ssZ format and in UTC.</para>
+        /// <para>The time is in the YYYY-MM-DDTHH:mm:ssZ format and must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-07-29T06:59:26Z</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InspectionItems { get; set; }
 
         /// <summary>
-        /// <para>The ID of the assistant instance.</para>
+        /// <para>The assistant instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The language of the report.</para>
+        /// <para>The report language.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// <para>The start time of the inspection time range.</para>
-        /// <para>The time is in the YYYY-MM-DDTHH:mm:ssZ format and in UTC.</para>
+        /// <para>The time is in the YYYY-MM-DDTHH:mm:ssZ format and must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-07-29T05:59:26Z</para>

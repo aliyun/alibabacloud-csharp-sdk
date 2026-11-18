@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyBackupExpireTimeRequest : TeaModel {
         /// <summary>
-        /// <para>The backup file ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a> to query the ID.</para>
+        /// <para>The ID of the backup file for the instance. You can call the <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a> operation to query the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>521****66</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string BackupId { get; set; }
 
         /// <summary>
-        /// <para>The point in time to which you want to extend the expiration. Specify the time in the yyyy-MM-ddTHH:mmZ format in UTC. The specified point in time cannot be earlier than the current expiration time.</para>
+        /// <para>Specifies the new expiration time. The time must be in the yyyy-MM-ddTHH:mmZ format (UTC time) and cannot be earlier than the current expiration time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

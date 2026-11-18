@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>The Markdown text of the report details.</para>
             /// 
             /// <b>Example:</b>
-            /// <h1>Tair Intelligent Inspection Report\n\n## Overview..</h1>
+            /// <h1>Tair intelligent inspection report\n\n## Overview..</h1>
             /// </summary>
             [NameInMap("MarkdownText")]
             [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public DescribeInspectionTaskReportResponseBodyDataSummary Summary { get; set; }
             public class DescribeInspectionTaskReportResponseBodyDataSummary : TeaModel {
                 /// <summary>
-                /// <para>The number of high-risk items.</para>
+                /// <para>The high-risk count.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public long? Error { get; set; }
 
                 /// <summary>
-                /// <para>The number of failed items.</para>
+                /// <para>The failed count.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public long? Failed { get; set; }
 
                 /// <summary>
-                /// <para>The number of normal items.</para>
+                /// <para>The normal count.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public long? Normal { get; set; }
 
                 /// <summary>
-                /// <para>The number of warning items.</para>
+                /// <para>The warning count.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>

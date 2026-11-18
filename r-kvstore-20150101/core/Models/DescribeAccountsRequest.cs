@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The fuzzy match string for the account name.</para>
+        /// <para>The keyword for fuzzy search of the account name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

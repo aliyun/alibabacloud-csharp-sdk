@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateInspectionScheduleRequest : TeaModel {
         /// <summary>
-        /// <para>The cron expression for the periodic scheduling.</para>
+        /// <para>The cron expression for the periodic schedule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0 0 2 * * ?</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string CronExpression { get; set; }
 
         /// <summary>
-        /// <para>The specified inspection items. The following inspection items are supported:</para>
+        /// <para>The specified inspection items. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>RESOURCE_USAGE</description></item>
         /// <item><description>BIGKEY</description></item>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InspectionWindow { get; set; }
 
         /// <summary>
-        /// <para>The O&amp;M Assistant instance ID.</para>
+        /// <para>The ID of the assistant instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>The list of associated instance IDs.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Separate multiple instances with commas (,).</description></item>
+        /// <item><description>Separate multiple instance IDs with commas (,).</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The report language.</para>
+        /// <para>The language of the report.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>

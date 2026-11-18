@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
     public class DescribeCacheAnalysisReportResponseBody : TeaModel {
         /// <summary>
         /// <para>The list of big keys.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;db&quot;:&quot;0&quot;,&quot;qps&quot;:0,&quot;keyType&quot;:&quot;list&quot;,&quot;isExpired&quot;:&quot;no&quot;,&quot;analysisType&quot;:&quot;BIGKEY&quot;,&quot;key&quot;:&quot;mylist&quot;,&quot;memory&quot;:1005377,&quot;size&quot;:200000}]</para>
         /// </summary>
         [NameInMap("BigKeys")]
         [Validation(Required=false)]

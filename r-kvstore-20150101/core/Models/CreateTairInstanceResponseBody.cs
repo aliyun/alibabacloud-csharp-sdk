@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The detailed configurations of the instance, in the format of a JSON character string. For more information about the parameters, see Parameter settings description.</para>
+        /// <para>The detailed configuration of the instance, in the format of a JSON character string. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/43885.html">Description of parameter settings</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;EvictionPolicy\&quot;:\&quot;volatile-lru\&quot;,\&quot;hash-max-ziplist-entries\&quot;:512,\&quot;zset-max-ziplist-entries\&quot;:128,\&quot;list-max-ziplist-entries\&quot;:512,\&quot;list-max-ziplist-value\&quot;:64,\&quot;zset-max-ziplist-value\&quot;:64,\&quot;set-max-intset-entries\&quot;:512,\&quot;hash-max-ziplist-value\&quot;:64}</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ConnectionDomain { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of connections supported by the instance.</para>
+        /// <para>The maximum number of connections to the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The current status of the instance. The value is fixed as <b>Creating</b>.</para>
+        /// <para>The current status of the instance. The return value is fixed to <b>Creating</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Creating</para>

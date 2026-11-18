@@ -24,8 +24,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public List<DescribeInspectionSchedulesResponseBodyDataItems> Items { get; set; }
             public class DescribeInspectionSchedulesResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The time when the scheduled task configuration was created.</para>
-                /// <para>The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</para>
+                /// <para>The time when the scheduled task configuration was created. The time is in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-04-21T02:26:18Z</para>
@@ -58,7 +57,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <para>The inspection items.</para>
                 /// <remarks>
                 /// <list type="bullet">
-                /// <item><description>Supported inspection items include RESOURCE_USAGE, BIGKEY, HOTKEY, PERFORMANCE_METRICS, and SLOWLOG.</description></item>
+                /// <item><description>Currently, the supported inspection items are RESOURCE_USAGE, BIGKEY, HOTKEY, PERFORMANCE_METRICS, and SLOWLOG.</description></item>
                 /// </list>
                 /// </remarks>
                 /// 
@@ -90,8 +89,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string InstanceIds { get; set; }
 
                 /// <summary>
-                /// <para>The next time the task is scheduled to run.</para>
-                /// <para>The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</para>
+                /// <para>The next time the task is scheduled to run. The time is in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-07-29T10:00:00Z</para>
@@ -151,8 +149,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string Timezone { get; set; }
 
                 /// <summary>
-                /// <para>The update time.</para>
-                /// <para>The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</para>
+                /// <para>The update time. The time is in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-07-29T06:50:04Z</para>
@@ -174,7 +171,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public long? PageNum { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>

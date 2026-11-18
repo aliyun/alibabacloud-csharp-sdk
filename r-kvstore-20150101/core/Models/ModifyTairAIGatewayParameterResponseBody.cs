@@ -1,0 +1,44 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.R_kvstore20150101.Models
+{
+    public class ModifyTairAIGatewayParameterResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tg-2zeb1ce76fee****</para>
+        /// </summary>
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        /// <summary>
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5D622714-AEDD-4609-9167-F5DDD3D1****</para>
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the created task flow.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>578678678</para>
+        /// </summary>
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public long? TaskId { get; set; }
+
+    }
+
+}

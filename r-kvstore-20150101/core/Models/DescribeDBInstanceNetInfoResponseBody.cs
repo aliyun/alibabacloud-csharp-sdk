@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The network type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CLASSIC</b>: classic network.</description></item>
-        /// <item><description><b>VPC</b>: virtual private cloud (VPC).</description></item>
+        /// <item><description><b>CLASSIC</b>: Classic network.</description></item>
+        /// <item><description><b>VPC</b>: VPC.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

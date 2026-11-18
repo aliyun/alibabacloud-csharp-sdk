@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// <para>The page number of the current page.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries on the current page.</para>
+        /// <para>The number of entries returned on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

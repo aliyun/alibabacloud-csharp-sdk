@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeGlobalSecurityIPGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IP whitelist template information.</para>
+        /// <para>The information about the IP whitelist templates.</para>
         /// </summary>
         [NameInMap("GlobalSecurityIPGroup")]
         [Validation(Required=false)]

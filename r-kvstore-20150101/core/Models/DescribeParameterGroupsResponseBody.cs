@@ -43,9 +43,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <summary>
             /// <para>The engine type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>redis</b>: open-source Redis or Tair (Memory-optimized).</description></item>
-            /// <item><description><b>tair_pena</b>: Tair (Persistent Memory-optimized).</description></item>
-            /// <item><description><b>tair_pdb</b>: Tair (Disk-optimized).</description></item>
+            /// <item><description><b>redis</b>: open-source Redis or Tair (memory-optimized).</description></item>
+            /// <item><description><b>tair_pena</b>: Tair (persistent memory-optimized).</description></item>
+            /// <item><description><b>tair_pdb</b>: Tair (disk-optimized).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

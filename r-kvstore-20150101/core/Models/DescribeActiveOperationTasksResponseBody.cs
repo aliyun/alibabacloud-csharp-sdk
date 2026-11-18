@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public List<DescribeActiveOperationTasksResponseBodyItems> Items { get; set; }
         public class DescribeActiveOperationTasksResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the event can be canceled. A value of 1 indicates that the event can be canceled. A value of 0 indicates that the event cannot be canceled.</para>
+            /// <para>Indicates whether the event can be canceled. A value of 1 indicates that users are allowed to cancel the event. A value of 0 indicates that users are not allowed to cancel the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string AllowCancel { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the event time can be modified. A value of 1 indicates that the time can be modified. A value of 0 indicates that the time cannot be modified.</para>
+            /// <para>Indicates whether the execution time can be modified. A value of 1 indicates that users are allowed to modify the execution time. A value of 0 indicates that users are not allowed to modify the execution time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string AllowChange { get; set; }
 
             /// <summary>
-            /// <para>The event level code. S1 indicates system O&amp;M. S0 indicates risk recovery.</para>
+            /// <para>The code of the event level. S1 indicates system O&amp;M, and S0 indicates exception repair.</para>
             /// 
             /// <b>Example:</b>
             /// <para>S1</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <para>The event level in Chinese.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>系统运维</para>
+            /// <para>System O&amp;M</para>
             /// </summary>
             [NameInMap("ChangeLevelZh")]
             [Validation(Required=false)]
             public string ChangeLevelZh { get; set; }
 
             /// <summary>
-            /// <para>The creation time in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</para>
+            /// <para>The time when the event was created. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-05-30T14:30:00Z</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string CurrentAVZ { get; set; }
 
             /// <summary>
-            /// <para>The database type. Return value: <b>redis</b>.</para>
+            /// <para>The database engine. Valid value: <b>redis</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>redis</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string DbType { get; set; }
 
             /// <summary>
-            /// <para>The Milvus version number of the kernel.</para>
+            /// <para>The Milvus version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5.0</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string DbVersion { get; set; }
 
             /// <summary>
-            /// <para>The latest deadline by which the task execution time can be adjusted, in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</para>
+            /// <para>The latest time within the adjustable range for the task execution time. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-05-30T23:59:59Z</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Deadline { get; set; }
 
             /// <summary>
-            /// <para>The O&amp;M event ID.</para>
+            /// <para>The ID of the O&amp;M event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11111</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public int? Id { get; set; }
 
             /// <summary>
-            /// <para>The event impact.</para>
+            /// <para>The impact of the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TransientDisconnection</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Impact { get; set; }
 
             /// <summary>
-            /// <para>The event impact in English.</para>
+            /// <para>The impact of the event in English.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Transient instance disconnection</para>
@@ -147,17 +147,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string ImpactEn { get; set; }
 
             /// <summary>
-            /// <para>The event impact in Chinese.</para>
+            /// <para>The impact of the event in Chinese.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>实例闪断</para>
+            /// <para>Transient disconnection of the instance</para>
             /// </summary>
             [NameInMap("ImpactZh")]
             [Validation(Required=false)]
             public string ImpactZh { get; set; }
 
             /// <summary>
-            /// <para>The instance alias or description.</para>
+            /// <para>The alias or description of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string InsName { get; set; }
 
             /// <summary>
-            /// <para>The modification time in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</para>
+            /// <para>The time when the event was modified. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-05-30T14:30:00Z</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The preparation time required between the start time and the switchover time. Format: HH:mm:ss.</para>
+            /// <para>The preparation time required between the start time and the switchover time. The time is in the HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>04:00:00</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string ResultInfo { get; set; }
 
             /// <summary>
-            /// <para>The time when the backend starts executing the event, in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</para>
+            /// <para>The time when the backend executes the event. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-05-30T00:00:00Z</para>
@@ -229,11 +229,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <summary>
             /// <para>The status of the O&amp;M event. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>3</b>: pending.</description></item>
-            /// <item><description><b>4</b>: being processed.</description></item>
-            /// <item><description><b>5</b>: ended successfully.</description></item>
-            /// <item><description><b>6</b>: ended with failure.</description></item>
-            /// <item><description><b>7</b>: canceled.</description></item>
+            /// <item><description><b>3</b>: Pending events.</description></item>
+            /// <item><description><b>4</b>: Processing events.</description></item>
+            /// <item><description><b>5</b>: Successfully completed events.</description></item>
+            /// <item><description><b>6</b>: Failed events.</description></item>
+            /// <item><description><b>7</b>: Canceled events.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public List<string> SubInsNames { get; set; }
 
             /// <summary>
-            /// <para>The time when the backend initiates the switchover operation, in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</para>
+            /// <para>The time when the backend initiates the switchover operation. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-05-30T14:30:00Z</para>
@@ -261,7 +261,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string SwitchTime { get; set; }
 
             /// <summary>
-            /// <para>The O&amp;M event parameters.</para>
+            /// <para>The parameters of the O&amp;M event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -283,7 +283,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string TaskType { get; set; }
 
             /// <summary>
-            /// <para>The reason for the O&amp;M event in English.</para>
+            /// <para>The cause of the O&amp;M event in English.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Minor version update</para>
@@ -293,10 +293,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string TaskTypeEn { get; set; }
 
             /// <summary>
-            /// <para>The task reason in Chinese.</para>
+            /// <para>The cause of the task in Chinese.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>小版本升级</para>
+            /// <para>Minor version update</para>
             /// </summary>
             [NameInMap("TaskTypeZh")]
             [Validation(Required=false)]
@@ -335,7 +335,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of O&amp;M event records returned.</para>
+        /// <para>The total number of returned O&amp;M event records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to remove all tags from the instance. Valid values:</para>
+        /// <para>Specifies whether to remove all tags from the instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: removes all tags from the instance.</description></item>
-        /// <item><description><b>false</b>: does not remove all tags from the instance. This is the default value.</description></item>
+        /// <item><description><b>true</b>: Removes all tags from the instances.</description></item>
+        /// <item><description><b>false</b>: Does not remove all tags from the instances. This is the default value.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If both <b>TagKey.N</b> and this parameter are specified, this parameter does not take effect.</para>
+        /// <para>If you specify both <b>TagKey.N</b> and this parameter, this parameter does not take effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> to query the region ID.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,11 +46,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of instance IDs.</para>
+        /// <para>The instance IDs.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -76,10 +73,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of tag keys.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>demokey</para>
+        /// <para>The tag keys.</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

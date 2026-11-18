@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeHistoryEventsStatResponseBody : TeaModel {
         /// <summary>
-        /// <para>The event list.</para>
+        /// <para>The list of events.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeHistoryEventsStatResponseBodyItems> Items { get; set; }
         public class DescribeHistoryEventsStatResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The system event categorization. Valid values:</para>
+            /// <para>The category of the system event. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Exception</b>: Exception event.</description></item>
+            /// <item><description><b>Exception</b>: Exception events.</description></item>
             /// <item><description><b>Optimize</b>: Optimization events.</description></item>
-            /// <item><description><b>Notification</b>: Notification event.</description></item>
-            /// <item><description><b>Maintenance</b>: Scheduled maintenance event.</description></item>
+            /// <item><description><b>Notification</b>: Notification events.</description></item>
+            /// <item><description><b>Maintenance</b>: Scheduled O&amp;M events.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

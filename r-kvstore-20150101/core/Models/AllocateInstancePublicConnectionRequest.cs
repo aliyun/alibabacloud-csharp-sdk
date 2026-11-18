@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class AllocateInstancePublicConnectionRequest : TeaModel {
         /// <summary>
-        /// <para>The prefix of the public endpoint. The prefix must start with a lowercase letter and can contain lowercase letters and digits. The prefix must be 8 to 40 characters in length.</para>
+        /// <para>The prefix of the public endpoint. The prefix must be 8 to 40 characters in length, start with a lowercase letter, and contain only lowercase letters and digits.</para>
         /// <remarks>
-        /// <para>The public endpoint is in the format of <c>&lt;prefix&gt;.redis.rds.aliyuncs.com</c>.</para>
+        /// <para>The public endpoint is in the following format: <c>&lt;prefix&gt;.redis.rds.aliyuncs.com</c>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

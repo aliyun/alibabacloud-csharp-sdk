@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeClusterBackupListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of cluster backup sets. A cluster backup set contains the backup sets of all nodes in the cluster.</para>
+        /// <para>The list of cluster backup sets. A cluster backup contains the backup sets of all nodes in the cluster.</para>
         /// </summary>
         [NameInMap("ClusterBackups")]
         [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// <para>The internal download URL of the backup file.</para>
                 /// <remarks>
-                /// <para>You can use this URL to download the backup file from an ECS instance that is connected to the current instance. Both instances must reside in the same VPC.</para>
+                /// <para>You can use this URL to download the backup file from an ECS instance that is connected to the current instance. Both instances must belong to the same VPC.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -99,8 +99,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// <para>The backup status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>OK</b>: The backup is successful.</description></item>
-                /// <item><description><b>ERROR</b>: The backup failed.</description></item>
+                /// <item><description><b>OK</b>: Successful.</description></item>
+                /// <item><description><b>ERROR</b>: Failed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public DescribeClusterBackupListResponseBodyClusterBackupsBackupsExtraInfo ExtraInfo { get; set; }
                 public class DescribeClusterBackupListResponseBodyClusterBackupsBackupsExtraInfo : TeaModel {
                     /// <summary>
-                    /// <para>The database engine version.</para>
+                    /// <para>The database version.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5.0</para>
@@ -152,8 +152,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// <para>Indicates whether the backup set is available. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: unavailable.</description></item>
-                /// <item><description><b>1</b>: available.</description></item>
+                /// <item><description><b>0</b>: Unavailable.</description></item>
+                /// <item><description><b>1</b>: Available.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -228,9 +228,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <summary>
             /// <para>The status of the cluster backup set. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>OK: The backup is successful.</description></item>
-            /// <item><description>RUNNING: The backup is in progress.</description></item>
-            /// <item><description>Other values: The backup failed.</description></item>
+            /// <item><description>OK: Successful.</description></item>
+            /// <item><description>RUNNING: Running.</description></item>
+            /// <item><description>Other values: Failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -271,7 +271,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Progress { get; set; }
 
             /// <summary>
-            /// <para>The memory size of a single DB node when the full backup is created. Unit: MB.</para>
+            /// <para>The memory size of a single database node when the full backup was created. Unit: MB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>
@@ -283,7 +283,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;The free backup quota of the instance. Unit: bytes. The free quota is equal to the default memory capacity of the instance type. For more information, see the notice on backup commercialization. Full backups and log backups share this free quota. When you change the instance type, the free quota of the instance changes accordingly.
+        /// <para>&lt;props=&quot;china&quot;&gt;The free backup quota of the instance. Unit: bytes. The free quota is equal to the default memory capacity of the instance type. For more information, see the notice on the commercialization of backups. Full backups and log backups share this free quota. When you change the instance type, the free quota of the instance changes accordingly.
         /// &lt;props=&quot;intl&quot;&gt;This parameter is not in effect. Ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
@@ -307,9 +307,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? FullStorageSize { get; set; }
 
         /// <summary>
-        /// <para>The size of the instance log backup files for the current instance. Unit: bytes. This value is valid only when the flashback feature is enabled.</para>
+        /// <para>The size of instance log backup files for the current instance. Unit: bytes. This value is valid only when the flashback feature is enabled.</para>
         /// <remarks>
-        /// <para>This value is independent of the number and size of backup sets in the current response. It represents the total size of all valid instance log backups for the current instance.</para>
+        /// <para>This value is independent of the number and size of backup sets in the response to the current request. It represents the total size of all valid instance log backups for the instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -320,7 +320,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? LogStorageSize { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records returned by the current request.</para>
+        /// <para>The maximum number of entries returned for the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -340,7 +340,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records per page, which is the same as the request parameter.</para>
+        /// <para>The maximum number of entries per page, which is the same as the request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

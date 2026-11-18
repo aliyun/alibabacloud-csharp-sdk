@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeInspectionTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the assistant instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,6 +19,22 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        /// <summary>
+        /// <para>The summary of risk levels for inspection results. You can specify multiple values. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Normal: Normal.</description></item>
+        /// <item><description>Warning: Warning.</description></item>
+        /// <item><description>Error: High-risk.</description></item>
+        /// <item><description>Failed: Failed.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Error</para>
+        /// </summary>
+        [NameInMap("LevelSummary")]
+        [Validation(Required=false)]
+        public string LevelSummary { get; set; }
 
         /// <summary>
         /// <para>The page number.</para>
@@ -45,10 +61,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The task type.</para>
+        /// <para>The task type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: manual task</description></item>
-        /// <item><description>2: scheduled task</description></item>
+        /// <item><description>1: Manual task.</description></item>
+        /// <item><description>2: Scheduled task.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

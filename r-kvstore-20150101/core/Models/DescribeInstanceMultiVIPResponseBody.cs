@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string MasterDns { get; set; }
 
         /// <summary>
-        /// <para>The list of IP addresses corresponding to all LBs of the current instance.</para>
+        /// <para>The list of IP addresses for all load balancers of the instance.</para>
         /// </summary>
         [NameInMap("MasterDnsRecord")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? MaxQuota { get; set; }
 
         /// <summary>
-        /// <para>The list of multiple LB VIPs.</para>
+        /// <para>The list of virtual IP addresses (VIPs) for multiple load balancers.</para>
         /// </summary>
         [NameInMap("MultiVIPList")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class RestoreInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup file for the instance. You can call the <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a> operation to query the ID.</para>
+        /// <para>The ID of the backup file for the instance. You can call <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a> to query the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>78241****</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>The keys to restore. Regular expressions are supported. Separate multiple values with commas (,).</para>
         /// <list type="bullet">
         /// <item><description>If you do not specify this parameter, the entire instance is restored.</description></item>
-        /// <item><description>If you specify this parameter, only the specified keys are restored. This feature is supported only by classic architecture instances.<remarks>
+        /// <item><description>If you specify this parameter, only the specified keys are restored. This feature is supported only by classic edition instances.<remarks>
         /// <para>For example, in a regular expression, an asterisk (<c>*</c>) matches the preceding subexpression zero or more times. If you set this parameter to <c>h.*llo</c>, the system matches strings such as <c>hllo</c> and <c>heeeello</c>.</para>
         /// </remarks>
         /// </description></item>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The restoration type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b> (default): This value is deprecated.</description></item>
+        /// <item><description><b>0</b> (default): This value is no longer valid.</description></item>
         /// <item><description><b>1</b>: Restores data to a specified point in time. You can specify this value only when the <a href="https://help.aliyun.com/document_detail/148479.html">data flashback</a> feature is enabled for the instance. If you specify this value, you must also specify the <b>RestoreTime</b> parameter.</description></item>
         /// </list>
         /// 
@@ -95,11 +95,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>When you restore a classic architecture instance, you can apply an offset to the expiration time of keys regardless of whether you choose to restore full data or specified keys. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC. The instance calculates the remaining expiration duration of the keys at the specified flashback point in time, starting from the specified expiration offset point in time.</para>
+        /// <para>When you restore a classic edition instance, you can shift the expiration time of keys regardless of whether you choose to restore full data or specified keys. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC. The instance takes the remaining time to live (TTL) of the keys at the specified flashback point in time and shifts the expiration calculation to start from the specified shift point in time.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This feature supports offsetting the expiration time only at the key level. It does not support offsetting the internal expiration time of keys in Tair-developed data structures, such as the fields in exHash and the skeys in TS.</description></item>
-        /// <item><description>The point in time cannot be earlier than the specified flashback point in time or later than the time when the restoration task is submitted.</description></item>
+        /// <item><description>This feature supports shifting the expiration time only at the key level. It does not support shifting the expiration time inside keys in Tair-developed data structures, such as the fields in exHash and the skeys in TS.</description></item>
+        /// <item><description>The shift point in time cannot be earlier than the specified flashback point in time or later than the time when the restoration task is submitted.</description></item>
         /// </list>
         /// </remarks>
         /// 

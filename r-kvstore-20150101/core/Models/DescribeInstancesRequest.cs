@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The architecture type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cluster</b>: cluster edition</description></item>
-        /// <item><description><b>standard</b>: standard edition</description></item>
-        /// <item><description><b>rwsplit</b>: read/write splitting edition</description></item>
+        /// <item><description><b>cluster</b>: Cluster Edition</description></item>
+        /// <item><description><b>standard</b>: Standard Edition</description></item>
+        /// <item><description><b>rwsplit</b>: Read/Write Splitting Edition</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The edition type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Community</b>: open-source Redis</description></item>
+        /// <item><description><b>Community</b>: Redis Community Edition</description></item>
         /// <item><description><b>Enterprise</b>: Tair Enterprise Edition</description></item>
         /// </list>
         /// 
@@ -65,8 +65,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The expiration status of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The instance has expired.</description></item>
-        /// <item><description><b>false</b>: The instance has not expired.</description></item>
+        /// <item><description><b>true</b>: The instance is expired.</description></item>
+        /// <item><description><b>false</b>: The instance is not expired.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -77,10 +77,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string Expired { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to filter child instances of distributed instances in the returned instance list. Valid values:</para>
+        /// <para>Specifies whether to filter out child instances of distributed instances in the returned instance list. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Only child instance information is returned.</description></item>
-        /// <item><description><b>false</b>: Child instance information is not returned.</description></item>
+        /// <item><description><b>true</b>: Only child instances are returned.</description></item>
+        /// <item><description><b>false</b>: Child instances are not returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? GlobalInstance { get; set; }
 
         /// <summary>
-        /// <para>The instance specifications. For more information, see <a href="https://help.aliyun.com/document_detail/107984.html">Instance specifications</a>.</para>
+        /// <para>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/107984.html">Instance types</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>redis.master.small.default</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the instances to be queried.</para>
+        /// <para>The IDs of the instances to query.</para>
         /// <remarks>
         /// <para>To specify multiple instance IDs, separate the IDs with commas (,). You can specify up to 30 instance IDs in a single request.</para>
         /// </remarks>
@@ -124,11 +124,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <item><description><b>Released</b>: released</description></item>
         /// <item><description><b>Transforming</b>: transforming</description></item>
         /// <item><description><b>Migrating</b>: migrating</description></item>
-        /// <item><description><b>BackupRecovering</b>: recovering from backup</description></item>
+        /// <item><description><b>BackupRecovering</b>: recovering from a backup</description></item>
         /// <item><description><b>MinorVersionUpgrading</b>: minor version upgrade in progress</description></item>
         /// <item><description><b>NetworkModifying</b>: changing the network type</description></item>
-        /// <item><description><b>SSLModifying</b>: changing SSL configurations</description></item>
-        /// <item><description><b>MajorVersionUpgrading</b>: major engine version upgrade in progress, during which the instance remains accessible</description></item>
+        /// <item><description><b>SSLModifying</b>: changing SSL settings</description></item>
+        /// <item><description><b>MajorVersionUpgrading</b>: major engine version upgrade in progress. The instance remains accessible.</description></item>
         /// </list>
         /// <remarks>
         /// <para>For more information about instance statuses, see <a href="https://help.aliyun.com/document_detail/200740.html">Instance statuses and impacts</a>.</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <item><description><b>STAND_ALONE</b>: single-replica</description></item>
         /// <item><description><b>double</b>: dual-replica</description></item>
         /// <item><description><b>single</b>: single-replica<remarks>
-        /// <para>For cloud-native instances, select <b>MASTER_SLAVE</b> or <b>STAND_ALONE</b>. For classic instances, select <b>double</b> or <b>single</b>.</para>
+        /// <para>Select <b>MASTER_SLAVE</b> or <b>STAND_ALONE</b> for Cloud-native Edition instances, and select <b>double</b> or <b>single</b> for Classic Edition instances.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The region ID of the instance.</para>
         /// <remarks>
-        /// <para>When you call this operation, if the <b>Tag</b> parameter is specified, this parameter is required.</para>
+        /// <para>If you specify the <b>Tag</b> parameter when you call this operation, you must also specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The resource group ID.</para>
         /// <remarks>
-        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation or use the console to obtain the list of resource group IDs. For related operations, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation or use the console to obtain the resource group ID list. Related operations: <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The search keyword. Fuzzy match is supported for instance names and instance IDs.</para>
+        /// <para>The keyword used for fuzzy search by instance name or instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apitest</para>
@@ -283,20 +283,20 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public List<DescribeInstancesRequestTag> Tag { get; set; }
         public class DescribeInstancesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. It forms a key-value pair with the tag value.</para>
+            /// <para>The tag key. The tag key and value form a key-value pair.</para>
             /// <remarks>
             /// <para>You can specify up to 5 tag key-value pairs in a single request.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>Storage type</para>
+            /// <para>StorageType</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. It forms a key-value pair with the tag key.</para>
+            /// <para>The value of the tag key. The tag key and value form a key-value pair.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Development</para>

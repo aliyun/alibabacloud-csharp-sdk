@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// <para>The ID of the task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>62****07</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

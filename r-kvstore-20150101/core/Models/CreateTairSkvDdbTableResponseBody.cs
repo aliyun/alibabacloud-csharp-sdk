@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PrePaid: subscription.</description></item>
-        /// <item><description>PostPaid: pay-as-you-go.</description></item>
+        /// <item><description><c>PrePaid</c>: subscription.</description></item>
+        /// <item><description><c>PostPaid</c>: pay-as-you-go.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The detailed configuration of the instance in JSON format. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/43885.html">Parameter settings</a>.</para>
+        /// <para>The detailed configurations of the instance. The value is a JSON string. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/43885.html">Parameter settings</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;EvictionPolicy\&quot;:\&quot;volatile-lru\&quot;,\&quot;hash-max-ziplist-entries\&quot;:512,\&quot;zset-max-ziplist-entries\&quot;:128,\&quot;zset-max-ziplist-value\&quot;:64,\&quot;set-max-intset-entries\&quot;:512,\&quot;hash-max-ziplist-value\&quot;:64}</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The internal endpoint of the Redis instance.</para>
+        /// <para>The internal network connection endpoint of the ApsaraDB for Redis instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-bp1zxszhcgatnx**.redis.rds.aliyuncs.com</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ConnectionDomain { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of connections supported by the instance.</para>
+        /// <para>The maximum number of connections to the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? Connections { get; set; }
 
         /// <summary>
-        /// <para>The globally unique instance ID.</para>
+        /// <para>The instance ID. The ID is globally unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-bp1zxszhcgatnx*</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// <para>The Redis service port.</para>
+        /// <para>The ApsaraDB for Redis service port.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6379</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? Port { get; set; }
 
         /// <summary>
-        /// <para>The queries per second (QPS). This value is the theoretical value for the current instance specification.</para>
+        /// <para>The queries per second (QPS). This value is the theoretical QPS of the current instance specifications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100000</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string TableName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task flow that is executed for the creation.</para>
+        /// <para>The ID of the task flow created and executed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11111****</para>

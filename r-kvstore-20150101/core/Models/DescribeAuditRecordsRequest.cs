@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeAuditRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the account. If you do not specify this parameter, the audit logs of all accounts are queried.</para>
+        /// <para>The name of the account. If you leave this parameter empty, the audit logs of all accounts are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The database in the instance. If you do not specify this parameter, the audit logs of all databases are queried. Valid values: 0 to 255. For example, 0 indicates database 0.</para>
+        /// <para>The database in the instance. If you leave this parameter empty, the audit logs of all databases are queried. Valid values: 0 to 255. For example, 0 indicates database 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para>Because audit logs contain a large number of entries, specify a time range of up to 10 minutes and a maximum of 1 day.</para>
+        /// <para>Because audit logs contain a large number of entries, specify a time range of up to 10 minutes and a maximum of 1 day for a query.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the client. If you do not specify this parameter, the audit logs of all IP addresses are queried.</para>
+        /// <para>The IP address of the client. If you leave this parameter empty, the audit logs from all IP addresses are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1</para>
@@ -109,9 +109,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The keyword used to query audit logs based on a specific command. By default, the audit logs of all executed commands are queried.</para>
+        /// <para>The keyword used to query audit logs based on a specific command. By default, all executed commands are queried.</para>
         /// <remarks>
-        /// <para>You can specify only one keyword.</para>
+        /// <para>Only a single keyword can be specified.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The engine type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Redis</b>: Redis engine</description></item>
-        /// <item><description><b>Memcache</b>: Memcache engine</description></item>
+        /// <item><description><b>Redis</b>.</description></item>
+        /// <item><description><b>Memcache</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PrePaid</b> (default): subscription</description></item>
-        /// <item><description><b>PostPaid</b>: pay-as-you-go</description></item>
+        /// <item><description><b>PrePaid</b> (default): subscription.</description></item>
+        /// <item><description><b>PostPaid</b>: pay-as-you-go.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,9 +67,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The product series. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>professional</b>: Professional Edition. This edition supports the standalone, primary/secondary, read/write splitting, and cluster architectures, and provides high scalability.
+        /// <item><description><b>professional</b>: Standard Edition. This edition supports the single-replica, primary/secondary, read/write splitting, and cluster architectures, and provides high scalability.
         ///  &lt;props=&quot;china&quot;&gt;</description></item>
-        /// <item><description><b>economical</b>: Economical Edition. This edition supports only the primary/secondary architecture and is cost-effective. For more information, see <a href="https://help.aliyun.com/document_detail/2489678.html">YiTian RDS instances</a>.</description></item>
+        /// <item><description><b>economical</b>: This edition supports only the primary/secondary architecture and is cost-effective. For more information, see <a href="https://help.aliyun.com/document_detail/2489678.html">YiTian RDS instance</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceScene { get; set; }
 
         /// <summary>
-        /// <para>The data node ID. You can call the <a href="https://help.aliyun.com/document_detail/473786.html">DescribeLogicInstanceTopology</a> operation to obtain the data node ID. For the obtained data node ID, you must remove the number sign (<c>#</c>) and the content that follows it. For example, retain only r-bp10noxlhcoim2****-db-0.</para>
+        /// <para>The data node ID. You can call the <a href="https://help.aliyun.com/document_detail/473786.html">DescribeLogicInstanceTopology</a> operation to obtain the data node ID. For the obtained data node ID, you must remove the number sign (<c>#</c>) and the content after it. For example, retain only r-bp10noxlhcoim2****-db-0.</para>
         /// <remarks>
         /// <para>Before you specify this parameter, you must also specify the <b>InstanceId</b> parameter, and the instance must use the cluster or read/write splitting architecture.</para>
         /// </remarks>
@@ -95,9 +95,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The order type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BUY</b> (default): new purchase</description></item>
-        /// <item><description><b>UPGRADE</b>: upgrade instance type</description></item>
-        /// <item><description><b>DOWNGRADE</b>: downgrade instance type</description></item>
+        /// <item><description><b>BUY</b> (default): new purchase.</description></item>
+        /// <item><description><b>UPGRADE</b>: upgrade the instance type.</description></item>
+        /// <item><description><b>DOWNGRADE</b>: downgrade the instance type.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -116,14 +116,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The product type. Valid values:</para>
+        /// <para>The product type. Default value: Local. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Local</b> (default): Redis Community Edition instance (classic architecture) or memory-optimized instance (classic architecture).</description></item>
-        /// <item><description><b>Tair_rdb</b>: memory-optimized instance (cloud-native architecture).</description></item>
+        /// <item><description><b>Local</b>: Redis Community Edition instance (Classic Edition) or memory-optimized instance (Classic Edition).</description></item>
+        /// <item><description><b>Tair_rdb</b>: memory-optimized instance (Cloud-native Edition).</description></item>
         /// <item><description><b>Tair_scm</b>: persistent memory-optimized instance.</description></item>
         /// <item><description><b>Tair_essd</b>: disk-optimized instance.</description></item>
-        /// <item><description><b>OnECS</b>: Redis Community Edition instance (cloud-native architecture).<remarks>
-        /// <para>The default value is Local. If you want to query cloud disk resources, you must specify the product type that corresponds to the required cloud disk resources.</para>
+        /// <item><description><b>OnECS</b>: Redis Community Edition instance (Cloud-native Edition).<remarks>
+        /// <para>The default value of this parameter is Local. If you want to query cloud disk resources, you must specify the product type corresponding to the required cloud disk resources.</para>
         /// </remarks>
         /// </description></item>
         /// </list>

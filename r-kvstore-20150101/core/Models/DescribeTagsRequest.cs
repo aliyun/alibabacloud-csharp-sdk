@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The token used to start the next query to return more results.</para>
         /// <remarks>
-        /// <para>You do not need to provide this parameter for the first query. If a single query does not return all results, you can pass the <b>NextToken</b> value returned in the previous response to continue the query.</para>
+        /// <para>You do not need to specify this parameter for the first query. If a query does not return all results, you can pass the <b>NextToken</b> value returned in the previous response to continue the query.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

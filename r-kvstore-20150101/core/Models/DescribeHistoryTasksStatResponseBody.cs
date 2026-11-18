@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeHistoryTasksStatResponseBody : TeaModel {
         /// <summary>
-        /// <para>The task list.</para>
+        /// <para>The list of tasks.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -19,12 +19,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <summary>
             /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Scheduled</b>: Waiting to be executed.</description></item>
+            /// <item><description><b>Scheduled</b>: Pending execution.</description></item>
             /// <item><description><b>Running</b>: Running.</description></item>
             /// <item><description><b>Succeed</b>: Succeeded.</description></item>
             /// <item><description><b>Failed</b>: Failed.</description></item>
-            /// <item><description><b>Cancelling</b>: Being stopped.</description></item>
-            /// <item><description><b>Canceled</b>: Stopped.</description></item>
+            /// <item><description><b>Cancelling</b>: Cancelling.</description></item>
+            /// <item><description><b>Canceled</b>: Canceled.</description></item>
             /// <item><description><b>Waiting</b>: Waiting for the scheduled time.</description></item>
             /// </list>
             /// 

@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the proxy nodes to upgrade, separated by commas (,). This parameter is valid only for Classic Edition instances.</para>
+        /// <para>The IDs of the proxy nodes to be upgraded. Separate multiple IDs with commas. This parameter is valid only for classic instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-bp1vgja77wl7pb****-proxy-0</para>
@@ -51,17 +51,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The time when the upgrade is performed. Valid values:</para>
+        /// <para>The execution time for the proxy node upgrade. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediately</b>: The upgrade is immediately performed. This is the default value.</description></item>
-        /// <item><description><b>MaintainTime</b>: The upgrade is performed within the O&amp;M window of the instance.</description></item>
+        /// <item><description><b>0</b>: Default value. The upgrade is executed immediately.</description></item>
+        /// <item><description><b>1</b>: The upgrade is executed within the maintenance window of the instance.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> to modify the O&amp;M window of a Redis instance.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> to modify the maintenance window of the Redis instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>Immediately</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("SwitchTimeMode")]
         [Validation(Required=false)]

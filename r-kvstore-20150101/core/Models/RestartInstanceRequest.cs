@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The time when the instance is restarted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediately</b>: The instance is restarted immediately. This is the default value.</description></item>
-        /// <item><description><b>MaintainTime</b>: The instance is restarted during the maintenance window.</description></item>
+        /// <item><description><b>Immediately</b>: Restarts the instance immediately. This is the default value.</description></item>
+        /// <item><description><b>MaintainTime</b>: Restarts the instance during the maintenance window.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

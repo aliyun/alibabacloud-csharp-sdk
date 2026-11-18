@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? AuthorizationState { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A501A191-BD70-5E50-98A9-C2A486A82****</para>

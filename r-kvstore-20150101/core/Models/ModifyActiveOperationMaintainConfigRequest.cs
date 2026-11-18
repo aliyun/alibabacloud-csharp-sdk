@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The cycle time.</para>
         /// <list type="bullet">
-        /// <item><description>If CycleType is set to Month, the value is a number from 1 to 28, which indicates the day of the month. Multiple values are separated by commas (,). If the configuration does not take effect, the value is 0.</description></item>
-        /// <item><description>If CycleType is set to Week, the value is a number from 1 to 7, which indicates the day of the week. Multiple values are separated by commas (,). If the configuration does not take effect, the value is 0.</description></item>
+        /// <item><description>If CycleType is set to Month, the value is a number from 1 to 28 that indicates the day of the month. Multiple values are separated by commas (,). The value is 0 when the configuration does not take effect.</description></item>
+        /// <item><description>If CycleType is set to Week, the value is a number from 1 to 7 that indicates the day of the week. Multiple values are separated by commas (,). The value is 0 when the configuration does not take effect.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The cycle type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Month: Monthly.</description></item>
-        /// <item><description>Week: Weekly.</description></item>
+        /// <item><description>Month: monthly</description></item>
+        /// <item><description>Week: weekly</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string CycleType { get; set; }
 
         /// <summary>
-        /// <para>The end time of the O&amp;M time window. The time is in the HH:mm:ssZ format (UTC time).</para>
+        /// <para>The end time of the O&amp;M time window. The time is in the HH:mm:ssZ format (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>20:00:00Z</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string MaintainEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the O&amp;M time window. The time is in the <i>HH:mm:ss</i>Z format (UTC time).</para>
+        /// <para>The start time of the O&amp;M time window. The time is in the <i>HH:mm:ss</i>Z format (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>16:00:00Z</para>
@@ -80,8 +80,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>Specifies whether the configuration takes effect. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: Effective.</description></item>
-        /// <item><description>2: Ineffective.</description></item>
+        /// <item><description>1: The configuration takes effect.</description></item>
+        /// <item><description>2: The configuration does not take effect.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

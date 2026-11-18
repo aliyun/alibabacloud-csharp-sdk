@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CheckCloudResourceAuthorizedRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> to query the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,11 +37,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The global resource descriptor Alibaba Cloud Resource Name (ARN) of the role to be authorized. After the role is granted authorization, the related KMS can be used. Format: <c>acs:ram::$accountID:role/$roleName</c>.</para>
+        /// <para>Specifies the global resource descriptor ARN (Alibaba Cloud Resource Name) of the role to be granted authorization. After the role authorization is completed, you can use the related Key Management Service (KMS). Format: <c>acs:ram::$accountID:role/$roleName</c>.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><c>$accountID</c>: the ID of the Alibaba Cloud account. Log on to the Alibaba Cloud Management Console, move the mouse pointer over the profile picture in the upper-right corner, and then click <b>Security Settings</b> to view the account ID.</description></item>
-        /// <item><description><c>$roleName</c>: the name of the RAM role. Set this value to <b>AliyunRdsInstanceEncryptionDefaultRole</b>.</description></item>
+        /// <item><description><c>$accountID</c>: the Alibaba Cloud account ID. You can logon to the Alibaba Cloud Management Console, move the mouse over the profile picture in the upper-right corner, and click <b>Security Settings</b> to view the ID.</description></item>
+        /// <item><description><c>$roleName</c>: the name of the RAM role. Set the value to <b>AliyunRdsInstanceEncryptionDefaultRole</b>.</description></item>
         /// </list>
         /// </remarks>
         /// 

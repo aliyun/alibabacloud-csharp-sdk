@@ -26,9 +26,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The name of the IP whitelist template. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The name can contain lowercase letters, digits, and underscores (_).</description></item>
-        /// <item><description>The name must start with a letter and end with a letter or digit.</description></item>
-        /// <item><description>The name must be 2 to 120 characters in length.<remarks>
+        /// <item><description>Consist of lowercase letters, digits, and underscores (_).</description></item>
+        /// <item><description>Start with a letter and end with a letter or a digit.</description></item>
+        /// <item><description>Be 2 to 120 characters in length.<remarks>
         /// <para>This parameter overwrites the original value.</para>
         /// </remarks>
         /// </description></item>

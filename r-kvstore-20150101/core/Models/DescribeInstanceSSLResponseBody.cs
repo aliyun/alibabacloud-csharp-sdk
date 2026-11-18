@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// <para>The expiration time of the CA certificate.</para>
-        /// <para>The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</para>
+        /// <para>The time follows the YYYY-MM-DDTHH:mm:ssZ format and is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-08-05T09:05:53Z</para>

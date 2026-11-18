@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The execution time. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediately</b>: Executes the operation immediately. This is the default value.</description></item>
+        /// <item><description><b>Immediately</b>: Executes the operation immediately. Default value.</description></item>
         /// <item><description><b>MaintainTime</b>: Executes the operation during the maintenance window.</description></item>
         /// </list>
         /// <remarks>

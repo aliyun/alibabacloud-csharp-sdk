@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string CronExpression { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to start the scheduled task. Default value: true.</para>
+        /// <para>Specifies whether to enable the scheduled task. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? Enabled { get; set; }
 
         /// <summary>
-        /// <para>The specified inspection items. The following inspection items are supported:</para>
+        /// <para>The specified inspection items. Supported inspection items:</para>
         /// <list type="bullet">
         /// <item><description>RESOURCE_USAGE</description></item>
         /// <item><description>BIGKEY</description></item>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The report language.</para>
+        /// <para>The language of the report.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>

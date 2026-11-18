@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeHistoryTasksStatRequest : TeaModel {
         /// <summary>
-        /// <para>The minimum execution duration used to filter tasks whose execution duration is greater than this value. Unit: seconds. Default value: 0, which indicates no restriction.</para>
+        /// <para>The minimum execution duration of a task. This parameter is used to filter tasks whose execution duration is greater than the specified value. Unit: seconds. Default value: 0. A value of 0 indicates that no limit is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? FromExecTime { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the query time range. Specify the time in the <i>yyyy-mm-dd</i>t<i>hh:mm</i>z format (UTC).</para>
+        /// <para>The start time of the query period. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the pending event. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The ID of the region to which the pending events belong. You can call the DescribeRegions operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,16 +62,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The task status. This parameter is used to filter tasks by status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Scheduled</b>: Waiting to be executed.</description></item>
+        /// <item><description><b>Scheduled</b>: Pending execution.</description></item>
         /// <item><description><b>Running</b>: Running.</description></item>
         /// <item><description><b>Succeed</b>: Succeeded.</description></item>
         /// <item><description><b>Failed</b>: Failed.</description></item>
-        /// <item><description><b>Cancelling</b>: Being stopped.</description></item>
-        /// <item><description><b>Canceled</b>: Stopped.</description></item>
-        /// <item><description><b>Waiting</b>: Waiting for the scheduled time.<remarks>
-        /// <para>By default, this parameter is empty, which indicates that tasks in all statuses are queried. To specify multiple statuses, separate them with commas (,).</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description><b>Cancelling</b>: Cancelling.</description></item>
+        /// <item><description><b>Canceled</b>: Canceled.</description></item>
+        /// <item><description><b>Waiting</b>: Waiting for the scheduled time.
+        /// Default value: empty. An empty value indicates that all statuses are selected. Separate multiple statuses with commas (,).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,7 +80,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The task ID. This parameter is used to query a task with a known ID. By default, this parameter is empty, which indicates no restriction. To specify multiple task IDs, separate them with commas (,). A maximum of 30 task IDs are supported.</para>
+        /// <para>The task ID. This parameter is used to query tasks with known IDs. Default value: empty. An empty value indicates that no limit is applied. Separate multiple task IDs with commas (,). You can specify up to 30 task IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-0mq1yyhm3ffl2bxxxx</para>
@@ -102,7 +100,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string TaskType { get; set; }
 
         /// <summary>
-        /// <para>The maximum execution duration used to filter tasks whose execution duration is not less than this value. Unit: seconds. Default value: 0, which indicates no restriction.</para>
+        /// <para>The maximum execution duration of a task. This parameter is used to filter tasks whose execution duration is less than or equal to the specified value. Unit: seconds. Default value: 0. A value of 0 indicates that no limit is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -112,7 +110,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? ToExecTime { get; set; }
 
         /// <summary>
-        /// <para>The end of the query time range. Specify the time in the <i>yyyy-mm-dd</i>t<i>hh:mm</i>z format (UTC).</para>
+        /// <para>The end time of the query period. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// <para>The database type.</para>
+        /// <para>The database engine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>redis</para>

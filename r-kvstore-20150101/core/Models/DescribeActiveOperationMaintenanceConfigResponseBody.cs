@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public DescribeActiveOperationMaintenanceConfigResponseBodyConfig Config { get; set; }
         public class DescribeActiveOperationMaintenanceConfigResponseBodyConfig : TeaModel {
             /// <summary>
-            /// <para>The time when the O&amp;M task configuration was created. The time is in the <i>yyyy-mm-dd</i>T<i>hh:mm:ss</i>Z format (UTC).</para>
+            /// <para>The time when the O&amp;M task configuration was created. The time follows the <i>yyyy-mm-dd</i>T<i>hh:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-05-30T14:30:00Z</para>
@@ -29,8 +29,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <summary>
             /// <para>The cycle time.</para>
             /// <list type="bullet">
-            /// <item><description>If CycleType is set to Month, a number from 1 to 28 is returned, indicating the day of the month. Multiple values are separated by commas (,). The value is 0 if the configuration is inactive.</description></item>
-            /// <item><description>If CycleType is set to Week, a number from 1 to 7 is returned, indicating the day of the week. Multiple values are separated by commas (,). The value is 0 if the configuration is inactive.</description></item>
+            /// <item><description>If CycleType is set to Month, a number from 1 to 28 is returned, indicating the day of the month. Multiple days are separated by commas (,). If the configuration does not take effect, 0 is returned.</description></item>
+            /// <item><description>If CycleType is set to Week, a number from 1 to 7 is returned, indicating the day of the week. Multiple days are separated by commas (,). If the configuration does not take effect, 0 is returned.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,8 +43,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <summary>
             /// <para>The cycle type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Month: monthly</description></item>
-            /// <item><description>Week: weekly</description></item>
+            /// <item><description>Month: Monthly.</description></item>
+            /// <item><description>Week: Weekly.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string CycleType { get; set; }
 
             /// <summary>
-            /// <para>The end time of the O&amp;M time window. The time is in the <i>hh:mm:ss</i>Z format (UTC).</para>
+            /// <para>The end time of the O&amp;M time window. The time follows the <i>hh:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>20:00:00Z</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string MaintainEndTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the O&amp;M time window. The time is in the <i>hh:mm:ss</i>Z format (UTC).</para>
+            /// <para>The start time of the O&amp;M time window. The time follows the <i>hh:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>18:00:00Z</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string MaintainStartTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the O&amp;M task configuration was last modified. The time is in the <i>yyyy-mm-dd</i>T<i>hh:mm:ss</i>Z format (UTC).</para>
+            /// <para>The time when the O&amp;M task configuration was last modified. The time follows the <i>yyyy-mm-dd</i>T<i>hh:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-05-30T14:30:00Z</para>
@@ -85,10 +85,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the configuration is active. Valid values:</para>
+            /// <para>Indicates whether the configuration takes effect. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: Active.</description></item>
-            /// <item><description>2: Inactive.</description></item>
+            /// <item><description>1: Effective.</description></item>
+            /// <item><description>2: Invalid.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the configuration exists. Valid values:</para>
+        /// <para>Indicates whether the O&amp;M task is configured. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>1: Configured.</description></item>
         /// <item><description>0: Not configured.</description></item>

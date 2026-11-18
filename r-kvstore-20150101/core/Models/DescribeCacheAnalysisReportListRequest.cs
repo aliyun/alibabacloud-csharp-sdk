@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeCacheAnalysisReportListRequest : TeaModel {
         /// <summary>
-        /// <para>The number of days within which analysis results are queried. By default, analysis results of the last 7 days are queried.</para>
+        /// <para>Specifies the number of recent days for which to query analysis results. By default, the analysis results of the last 7 days are queried.</para>
         /// <remarks>
-        /// <para>If the automatic analysis for the current day has not started when you query and no manual analysis task has been initiated, no records exist for the current day.</para>
+        /// <para>If the automatic analysis for the current day has not started and no manual analysis task has been initiated, no records are available for the current day.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The child node ID of a cluster instance.</para>
+        /// <para>The ID of the child node in a cluster instance.</para>
         /// <remarks>
         /// <para>If you do not specify this parameter, the analysis results of all child nodes are returned.</para>
         /// </remarks>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number to return.</para>
+        /// <para>The number of the page to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

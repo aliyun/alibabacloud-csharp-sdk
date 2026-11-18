@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> to query available regions. Use this parameter to specify the region of the instance.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query available regions. Use this parameter to specify the region where you want to create the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

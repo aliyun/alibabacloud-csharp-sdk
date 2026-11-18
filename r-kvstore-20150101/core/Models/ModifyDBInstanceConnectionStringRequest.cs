@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The network type of the endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Private</b>: virtual private cloud (VPC).</description></item>
+        /// <item><description><b>Private</b>: VPC.</description></item>
         /// <item><description><b>Public</b>: Internet.</description></item>
         /// </list>
         /// 
@@ -46,9 +46,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string IPType { get; set; }
 
         /// <summary>
-        /// <para>The prefix of the new endpoint. The endpoint of the instance is in the format of <c>&lt;prefix&gt;.redis.rds.aliyuncs.com</c>. The prefix must start with a lowercase letter and can contain lowercase letters and digits. The prefix must be 8 to 40 characters in length.</para>
+        /// <para>The prefix of the new endpoint. The endpoint format is <c>&lt;prefix&gt;.redis.rds.aliyuncs.com</c>. The prefix must be 8 to 40 characters in length and can contain lowercase letters and digits. It must start with a lowercase letter.</para>
         /// <remarks>
-        /// <para>You must specify at least one of the request parameters <b>NewConnectionString</b> and <b>Port</b>.</para>
+        /// <para>You must specify at least one of the <b>NewConnectionString</b> and <b>Port</b> request parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The service port number of the instance. Valid values: <b>1</b> to <b>65535</b>.</para>
         /// <remarks>
-        /// <para>You must specify at least one of the request parameters <b>NewConnectionString</b> and <b>Port</b>.</para>
+        /// <para>You must specify at least one of the <b>NewConnectionString</b> and <b>Port</b> request parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

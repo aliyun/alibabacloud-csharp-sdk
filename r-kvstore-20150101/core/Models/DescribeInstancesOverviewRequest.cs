@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The architecture type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cluster</b>: Cluster Edition.</description></item>
-        /// <item><description><b>standard</b>: Standard Edition.</description></item>
-        /// <item><description><b>rwsplit</b>: read/write splitting Edition.</description></item>
+        /// <item><description><b>cluster</b>: Cluster.</description></item>
+        /// <item><description><b>standard</b>: Standard.</description></item>
+        /// <item><description><b>rwsplit</b>: Read/write splitting.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,8 +27,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PrePaid</b>: subscription.</description></item>
-        /// <item><description><b>PostPaid</b>: pay-as-you-go.</description></item>
+        /// <item><description><b>PrePaid</b>: Subscription.</description></item>
+        /// <item><description><b>PostPaid</b>: Pay-as-you-go.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The edition type. Valid values:</para>
+        /// <para>The edition. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Community</b>: Community Edition.</description></item>
         /// <item><description><b>Enterprise</b>: Enterprise Edition.</description></item>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/107984.html">Instance types</a>.</para>
+        /// <para>The instance specifications. For more information, see <a href="https://help.aliyun.com/document_detail/107984.html">Instance specifications</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>redis.master.small.default</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The IDs of the instances that you want to query.</para>
         /// <remarks>
-        /// <para>By default, all instances under the current account are queried. To specify multiple instance IDs, separate them with commas (,).</para>
+        /// <para>By default, all instances under the account are queried. To specify multiple instance IDs, separate the IDs with commas (,).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -88,22 +88,22 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Normal</b>: The instance is running.</description></item>
-        /// <item><description><b>Creating</b>: The instance is being created.</description></item>
-        /// <item><description><b>Changing</b>: The instance is being modified.</description></item>
-        /// <item><description><b>Inactive</b>: The instance is disabled.</description></item>
-        /// <item><description><b>Flushing</b>: The instance is being purged.</description></item>
-        /// <item><description><b>Released</b>: The instance is released.</description></item>
-        /// <item><description><b>Transforming</b>: The instance is being transformed.</description></item>
-        /// <item><description><b>Migrating</b>: The instance is being migrated.</description></item>
-        /// <item><description><b>BackupRecovering</b>: The instance is being restored from a backup.</description></item>
-        /// <item><description><b>MinorVersionUpgrading</b>: A minor version upgrade is in progress.</description></item>
-        /// <item><description><b>NetworkModifying</b>: The network configuration is being modified.</description></item>
-        /// <item><description><b>SSLModifying</b>: The SSL configuration is being modified.</description></item>
-        /// <item><description><b>MajorVersionUpgrading</b>: A major engine version upgrade is in progress. The instance can be accessed normally.</description></item>
+        /// <item><description><b>Normal</b>: Running.</description></item>
+        /// <item><description><b>Creating</b>: Being created.</description></item>
+        /// <item><description><b>Changing</b>: Being modified.</description></item>
+        /// <item><description><b>Inactive</b>: Disabled.</description></item>
+        /// <item><description><b>Flushing</b>: Being purged.</description></item>
+        /// <item><description><b>Released</b>: Released.</description></item>
+        /// <item><description><b>Transforming</b>: Being transformed.</description></item>
+        /// <item><description><b>Migrating</b>: Being migrated.</description></item>
+        /// <item><description><b>BackupRecovering</b>: Recovering from a backup.</description></item>
+        /// <item><description><b>MinorVersionUpgrading</b>: Minor version upgrade in progress.</description></item>
+        /// <item><description><b>NetworkModifying</b>: Modifying the network.</description></item>
+        /// <item><description><b>SSLModifying</b>: Modifying SSL configurations.</description></item>
+        /// <item><description><b>MajorVersionUpgrading</b>: Major engine version upgrade in progress. The instance remains accessible.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>For more information about instance statuses, see <a href="https://help.aliyun.com/document_detail/200740.html">Instance states and impacts</a>.</para>
+        /// <para>For more information about instance statuses, see <a href="https://help.aliyun.com/document_detail/200740.html">Instance statuses and impacts</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -131,8 +131,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The network type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CLASSIC</b>: classic network.</description></item>
-        /// <item><description><b>VPC</b>: virtual private cloud (VPC).</description></item>
+        /// <item><description><b>CLASSIC</b>: Classic network.</description></item>
+        /// <item><description><b>VPC</b>: VPC.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The private IP address.</para>
+        /// <para>The VPC IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.16.49.***</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The resource group ID.</para>
         /// <remarks>
-        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation or use the console to obtain the resource group ID. Related operations: see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation or go to the console to obtain the resource group ID. Related operations: <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The keyword used for fuzzy search by instance ID or instance description.</para>
+        /// <para>The keyword used for fuzzy search based on the instance ID or description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apitest</para>

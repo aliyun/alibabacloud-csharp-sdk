@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The engine type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>redis</b>: open-source Redis or Tair (Memory-optimized).</description></item>
-        /// <item><description><b>tair_pena</b>: Tair (Persistent Memory-optimized).</description></item>
-        /// <item><description><b>tair_pdb</b>: Tair (Disk-optimized, ESSD/SSD).</description></item>
+        /// <item><description><b>redis</b>: open-source Redis or Tair (memory-optimized).</description></item>
+        /// <item><description><b>tair_pena</b>: Tair (persistent memory-optimized).</description></item>
+        /// <item><description><b>tair_pdb</b>: Tair (disk-optimized, ESSD/SSD).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,6 +26,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// <para>The compatible engine version.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6.0</para>
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]

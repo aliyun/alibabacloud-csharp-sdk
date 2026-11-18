@@ -31,9 +31,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -59,7 +56,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags of the instances.</para>
+        /// <para>The tag information of the instances.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -67,11 +64,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the label.</para>
+            /// <para>The label key.</para>
             /// <remarks>
             /// <list type="bullet">
             /// <item><description><b>N</b> specifies the sequence number of the label key. For example, <b>Tag.1.Key</b> specifies the key of the first label, and <b>Tag.2.Key</b> specifies the key of the second label.</description></item>
-            /// <item><description>If the label key does not exist, automatic creation of the key is performed.</description></item>
+            /// <item><description>If the label key does not exist, automatic creation is performed.</description></item>
             /// </list>
             /// </remarks>
             /// <para>This parameter is required.</para>
@@ -84,7 +81,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value.</para>
             /// <remarks>
             /// <para><b>N</b> specifies the sequence number of the tag value. For example, <b>Tag.1.Value</b> specifies the value of the first tag, and <b>Tag.2.Value</b> specifies the value of the second tag.</para>
             /// </remarks>

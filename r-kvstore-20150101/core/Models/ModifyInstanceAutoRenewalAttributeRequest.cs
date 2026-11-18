@@ -41,9 +41,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The auto-renewal cycle. Valid values: <b>1</b> to <b>12</b>. Unit: months. When the instance is about to expire, the system automatically renews the instance for the specified duration.</para>
+        /// <para>The auto-renewal period. Valid values: <b>1</b> to <b>12</b>. Unit: months. When the instance is about to expire, the system automatically renews the instance for the specified duration.</para>
         /// <remarks>
-        /// <para>This parameter is available and required only when <b>AutoRenew</b> is set to <b>true</b>.</para>
+        /// <para>This parameter is valid and required only when the <b>AutoRenew</b> parameter is set to <b>true</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The product. Set the value to kvstore.</para>
+        /// <para>The product type. Set the value to kvstore.</para>
         /// 
         /// <b>Example:</b>
         /// <para>kvstore</para>

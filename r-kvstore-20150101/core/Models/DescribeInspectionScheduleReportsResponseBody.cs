@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public class DescribeInspectionScheduleReportsResponseBodyDataItems : TeaModel {
                 /// <summary>
                 /// <para>The creation time of the task.</para>
-                /// <para>The value is a UNIX timestamp in milliseconds.</para>
+                /// <para>The time is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1773211755000</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
                 /// <summary>
                 /// <para>The end time of the task.</para>
-                /// <para>The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</para>
+                /// <para>The time is in the YYYY-MM-DDTHH:mm:ssZ format and displayed in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-06-29T02:12:02Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
                 /// <summary>
                 /// <para>The completion time of the task.</para>
-                /// <para>The time is displayed in the ISO 8601 format with an explicit time zone offset.</para>
+                /// <para>The time is in the ISO 8601 format and includes a specific time zone offset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-06-16T13:52:35+08:00</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
                 /// <summary>
                 /// <para>The start time of the task.</para>
-                /// <para>The time is displayed in the YYYY-MM-DDTHH:mmZ format in UTC.</para>
+                /// <para>The time is in the YYYY-MM-DDTHH:mmZ format and displayed in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-09-26T21:10Z</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public long? PageNum { get; set; }
 
             /// <summary>
-            /// <para>The page size. Default value: 25.</para>
+            /// <para>The number of entries per page. Default value: 25.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

@@ -98,7 +98,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. The time is in the YYYY-MM-DDTHH:mmZ format and is in UTC.</para>
+        /// <para>The start time of the query.</para>
+        /// <para>The time is in the YYYY-MM-DDTHH:mmZ format and is in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2018-12-03T07:01Z</para>

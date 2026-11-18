@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeDedicatedClusterInstanceListRequest : TeaModel {
         /// <summary>
-        /// <para>The dedicated cluster ID. You can obtain the ID on the dedicated cluster information page in the ApsaraDB for MyBase console.</para>
+        /// <para>The dedicated cluster ID. You can obtain the ID on the Dedicated Cluster Information page in the ApsaraDB MyBase console.</para>
         /// <remarks>
         /// <para>To specify multiple IDs, separate them with commas (,).</para>
         /// </remarks>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string DedicatedHostName { get; set; }
 
         /// <summary>
-        /// <para>The database engine. Set the value to <b>Redis</b>.</para>
+        /// <para>The database engine type. Set the value to <b>Redis</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Redis</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>The instance must be created in a dedicated cluster. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">ApsaraDB for MyBase</a>.</para>
+        /// <para>The instance must be created in a dedicated cluster. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">ApsaraDB MyBase</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <list type="bullet">
         /// <item><description><b>0</b>: Internet.</description></item>
         /// <item><description><b>1</b>: Classic network.</description></item>
-        /// <item><description><b>2</b>: Virtual Private Cloud (VPC).</description></item>
+        /// <item><description><b>2</b>: VPC.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be greater than <b>0</b> and less than or equal to the maximum value of the Integer data type. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be greater than <b>0</b> and cannot exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> to query region IDs.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> to query available regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The zone ID. You can call <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> to query zone IDs.</para>
+        /// <para>The zone ID. You can call <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> to query available zones.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-e</para>

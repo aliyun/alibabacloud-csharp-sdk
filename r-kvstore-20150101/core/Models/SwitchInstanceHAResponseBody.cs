@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class SwitchInstanceHAResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5D622714-AEDD-4609-9167-F5DDD3D1****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The ID of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>674546459</para>

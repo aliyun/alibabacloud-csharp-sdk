@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The expiration status of the instance. Valid values:</para>
+        /// <para>Specifies whether the instance has expired. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Expired.</description></item>
-        /// <item><description><b>false</b>: Not expired.</description></item>
+        /// <item><description><b>true</b>: The instance has expired.</description></item>
+        /// <item><description><b>false</b>: The instance has not expired.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The IDs of the instances to query.</para>
         /// <remarks>
-        /// <para>If you specify multiple instance IDs, separate them with commas (,). You can specify up to 30 instance IDs in a single request.</para>
+        /// <para>Separate multiple instance IDs with commas (,). You can specify up to 30 instance IDs in a single request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The instance status. Valid values:</para>
+        /// <para>The status of the instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Normal</b>: Normal.</description></item>
         /// <item><description><b>Creating</b>: Creating.</description></item>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The network type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b>: Virtual Private Cloud (VPC). This is the default value.</description></item>
+        /// <item><description><b>VPC</b>: VPC. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para><b>[Deprecated]</b> The private IP address of the VPC.</para>
+        /// <para>The private IP address in the VPC. <b>[Deprecated]</b> This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.16.49.***</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The search keyword. You can use this parameter to perform a fuzzy search by instance name or instance ID.</para>
+        /// <para>The keyword for fuzzy search by instance name or instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apitest</para>

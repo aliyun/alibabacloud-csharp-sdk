@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The attribute of the IP whitelist group. This parameter is empty by default. The console does not display the whitelist group if the value is set to <b>hidden</b>.</para>
+        /// <para>The attribute of the IP whitelist group. Default value: empty. This parameter is used to distinguish different attribute values. The console does not display whitelist groups whose attribute value is <b>hidden</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hidden</para>
@@ -62,8 +62,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityIpGroupAttribute { get; set; }
 
         /// <summary>
-        /// <para>The name of the IP whitelist group.
-        /// <warning>You cannot modify a system-generated whitelist group. If you do not specify this parameter, the whitelist of the default group is modified.</warning></para>
+        /// <para>The name of the IP whitelist group. <warning>You cannot modify a system-generated whitelist group. If you do not specify this parameter, the whitelist of the default group is modified by default.</warning></para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -73,7 +72,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityIpGroupName { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses in the IP whitelist group. You can add up to 1,000 IP addresses. Separate multiple IP addresses with commas (,). The following formats are supported: 0.0.0.0/0,10.23.12.24 or 10.23.12.24/24 (CIDR notation, where /24 specifies the prefix length, which ranges from 1 to 32).</para>
+        /// <para>The list of IP addresses in the IP whitelist group. A maximum of 1,000 IP addresses can be added. Separate multiple IP addresses with commas (,). Valid formats: 0.0.0.0/0, 10.23.12.24, or 10.23.12.24/24 (CIDR format, where /24 specifies the prefix length of the address, ranging from 1 to 32).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

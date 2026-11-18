@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeActiveOperationTaskCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether there are O&amp;M tasks that require a pop-up notification for user action. Valid values:</para>
+        /// <para>Indicates whether there are O&amp;M tasks that require a pop-up notification for user operations. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: No pop-up notification.</description></item>
-        /// <item><description><b>1</b>: A pop-up notification exists.</description></item>
+        /// <item><description><b>0</b>: No pop-up window.</description></item>
+        /// <item><description><b>1</b>: Pop-up window.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

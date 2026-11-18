@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The parameter template ID.</para>
+        /// <para>The ID of the parameter template.</para>
         /// <remarks>
-        /// <para>You can call the DescribeParameterGroups operation to query the list of parameter templates in the target region, including parameter template IDs.</para>
+        /// <para>You can call the DescribeParameterGroups operation to query the parameter templates in the target region, including the parameter template IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

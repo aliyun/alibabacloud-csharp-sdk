@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token used to start the next query. If a query does not return all results, you can pass the token returned from the previous query in subsequent queries to continue the query.</para>
+        /// <para>The token used to start the next query. If a query does not return all results, you can pass this token in subsequent queries to continue the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>212db86sca4384811e0b5e8707ec2****</para>

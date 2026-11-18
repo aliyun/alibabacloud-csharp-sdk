@@ -11,16 +11,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
     public class ModifyTaskInfoRequest : TeaModel {
         /// <summary>
         /// <para>The parameters related to the action, in JSON format.
-        /// If <b>TaskAction</b> is set to <b>modifySwitchTime</b>, the ActionParams value is <c>{&quot;recoverMode&quot;: &quot;xxx&quot;, &quot;recoverTime&quot;: &quot;xxx&quot;}</c>.</para>
+        /// If <b>TaskAction</b> is set to <b>modifySwitchTime</b>, set this parameter to <c>{&quot;recoverMode&quot;: &quot;xxx&quot;, &quot;recoverTime&quot;: &quot;xxx&quot;}</c>.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>recoverMode</b> specifies the task recovery mode. Valid values:</para>
+        /// <item><description><para><b>recoverMode</b>: the recovery mode of the task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>imePoint</b>: Execute at a specified point in time.</description></item>
-        /// <item><description><b>immediate</b>: Execute immediately.</description></item>
-        /// <item><description><b>maintainTime</b>: Execute during the O&amp;M window.</description></item>
+        /// <item><description><b>imePoint</b>: executes the task at a specified point in time.</description></item>
+        /// <item><description><b>immediate</b>: executes the task immediately.</description></item>
+        /// <item><description><b>maintainTime</b>: executes the task during the O&amp;M window.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>recoverTime</b> specifies the point in time, in UTC+0, in the yyyy-MM-ddTHH:mm:ssZ format. This parameter is required when <b>recoverMode</b> is set to <b>timePoint</b>.</para>
+        /// <item><description><para><b>recoverTime</b>: the specified point in time. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. This parameter is required when <b>recoverMode</b> is set to <b>timePoint</b>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The name of the current execution step. You can call <a href="https://help.aliyun.com/document_detail/2400077.html">DescribeHistoryTasks</a> to query the current execution step of a specified node ID. A common value is <b>do_pause</b>, which indicates waiting for the preset time to execute.</para>
+        /// <para>The name of the current execution step. You can call the <a href="https://help.aliyun.com/document_detail/2400077.html">DescribeHistoryTasks</a> operation to query the current execution step of a specified task. A common value is <b>do_pause</b>, which indicates that the task is waiting to be executed at a preset time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>do_pause</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string StepName { get; set; }
 
         /// <summary>
-        /// <para>The operation name. Currently, the valid value is <b>modifySwitchTime</b>, which indicates modifying the switchover time or recovery time.</para>
+        /// <para>The operation name. Valid value: <b>modifySwitchTime</b>, which indicates modifying the switchover time or recovery time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>modifySwitchTime</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string TaskAction { get; set; }
 
         /// <summary>
-        /// <para>The node ID. To specify multiple IDs, separate them with commas (,). You can specify up to 30 IDs.</para>
+        /// <para>The task ID. Separate multiple task IDs with commas (,). A maximum of 30 task IDs are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

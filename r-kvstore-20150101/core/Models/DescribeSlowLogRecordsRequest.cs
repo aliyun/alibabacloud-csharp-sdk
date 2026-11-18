@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. The end time must be later than the start time, and the time range cannot exceed 1 day. The recommended time range is 1 hour. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</para>
+        /// <para>The end time of the query. The end time must be later than the start time, and the time range cannot exceed one day. Set the time range to one hour. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The node ID in the instance. Specify this parameter to query the slow query logs of a specific node.</para>
+        /// <para>The node ID in the instance. Specify this parameter to query the slow logs of a specific node.</para>
         /// <remarks>
         /// <para>This parameter is available only when the instance uses the read/write splitting or cluster architecture.</para>
         /// </remarks>
@@ -55,10 +55,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>The field based on which the returned results are sorted. Valid values:</para>
+        /// <para>The sort criterion of the returned results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>execution_time</b>: sorts the results based on the start time of request execution. This is the default value.</description></item>
-        /// <item><description><b>latency</b>: sorts the results based on the execution duration of requests.</description></item>
+        /// <item><description><b>execution_time</b>: execution start time of the request (default)</description></item>
+        /// <item><description><b>latency</b>: execution duration of the request</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,8 +71,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The sort order of the returned results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ASC</b>: ascending order.</description></item>
-        /// <item><description><b>DESC</b>: descending order. This is the default value.</description></item>
+        /// <item><description><b>ASC</b>: ascending order</description></item>
+        /// <item><description><b>DESC</b>: descending order (default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be greater than <b>0</b> and cannot exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The keyword used to search the returned results.</para>
+        /// <para>The keyword used to search the returned results. Specify a string value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>keyword1</para>
@@ -135,8 +135,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The slow log type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>proxy</b>: Slow query logs on proxy nodes.</description></item>
-        /// <item><description><b>db</b>: Slow query logs on data nodes. This is the default value.</description></item>
+        /// <item><description><b>proxy</b>: slow logs of proxy nodes</description></item>
+        /// <item><description><b>db</b>: slow logs of data nodes (default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

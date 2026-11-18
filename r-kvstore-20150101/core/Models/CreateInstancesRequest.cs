@@ -13,10 +13,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: enables automatic payment. This is the default value.</description></item>
-        /// <item><description><b>false</b>: disables automatic payment. You must manually pay for the order. In the top navigation bar of the console, choose <b>Billing</b> &gt; <b>Renewal Management</b>. In the left-side navigation pane, choose <b>Order Management</b> &gt; <b>My Orders</b>, find the order, and then complete the payment.</description></item>
+        /// <item><description><b>false</b>: disables automatic payment. You must manually pay for the order. To pay for the order, log on to the console, choose <b>Expenses and Costs</b> &gt; <b>Renewal Management</b> in the top navigation bar, and then choose <b>Order Management</b> &gt; <b>My Orders</b> in the left-side navigation pane to find the order.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is available only when the <b>ChargeType</b> parameter in the <b>Instances</b> array is set to <b>PrePaid</b>.</para>
+        /// <para>This parameter is available only when the <b>ChargeType</b> parameter in the <b>Instances</b> field is set to <b>PrePaid</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <item><description><b>false</b>: disables auto-renewal. This is the default value.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is available only when the <b>ChargeType</b> parameter in the <b>Instances</b> array is set to <b>PrePaid</b>.</para>
+        /// <para>This parameter is available only when the <b>ChargeType</b> parameter in the <b>Instances</b> field is set to <b>PrePaid</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The configuration information of the new instances. The value must be in JSON format. For more information, see the supplementary description of the Instances parameter.</para>
+        /// <para>The configuration information of the new instances. The value is in JSON format. For more information, see the supplementary description of the Instances parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <item><description><b>false</b>: no. This is the default value.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is available only when the <b>SrcDBInstanceId</b> parameter is specified in the <b>Instances</b> array.</para>
+        /// <para>This parameter is available only when the <b>SrcDBInstanceId</b> parameter is specified in the <b>Instances</b> field.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

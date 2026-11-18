@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyBackupPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The number of days for which data backups are retained. Default value: 7. Valid values: 7 to 730.</para>
+        /// <para>The retention period of data backups in days. Valid values: 7 to 730. Default value: 7.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>Specifies whether to enable the data flashback feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: Enabled. Make sure that append-only file (AOF) persistence is enabled in the parameter settings of the instance (<c>appendonly</c> is set to <c>yes</c>). The data flashback feature is available only after AOF persistence is enabled.</description></item>
-        /// <item><description><b>0</b>: Disabled. This is the default value.<remarks>
+        /// <item><description><b>1</b>: enables the feature. You must also enable AOF persistence by setting the <c>appendonly</c> parameter to <c>yes</c> in the parameter settings of the instance before you can use the data flashback feature.</description></item>
+        /// <item><description><b>0</b>: disables the feature. This is the default value.<remarks>
         /// <para>This parameter is supported only by Tair (Enterprise Edition) memory-optimized and persistent memory-optimized instances. For more information, see <a href="https://help.aliyun.com/document_detail/148479.html">Data flashback</a>.</para>
         /// </remarks>
         /// </description></item>
@@ -58,16 +58,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The backup cycle. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Monday</b></description></item>
-        /// <item><description><b>Tuesday</b></description></item>
-        /// <item><description><b>Wednesday</b></description></item>
-        /// <item><description><b>Thursday</b></description></item>
-        /// <item><description><b>Friday</b></description></item>
-        /// <item><description><b>Saturday</b></description></item>
-        /// <item><description><b>Sunday</b></description></item>
+        /// <item><description><b>Monday</b>: Monday.</description></item>
+        /// <item><description><b>Tuesday</b>: Tuesday.</description></item>
+        /// <item><description><b>Wednesday</b>: Wednesday.</description></item>
+        /// <item><description><b>Thursday</b>: Thursday.</description></item>
+        /// <item><description><b>Friday</b>: Friday.</description></item>
+        /// <item><description><b>Saturday</b>: Saturday.</description></item>
+        /// <item><description><b>Sunday</b>: Sunday.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can specify multiple values. Separate them with commas (,).</para>
+        /// <para>You can specify multiple values. Separate multiple values with commas (,).</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -79,10 +79,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string PreferredBackupPeriod { get; set; }
 
         /// <summary>
-        /// <para>The backup time. Specify the time in the <i>HH:mm</i>Z-<i>HH:mm</i>Z format (UTC).</para>
-        /// <remarks>
-        /// <para>The time must be on the hour, and the interval must be 1 hour.</para>
-        /// </remarks>
+        /// <para>The backup time in the <i>HH:mm</i>Z-<i>HH:mm</i>Z format (UTC). The time must be on the hour, and the interval must be 1 hour.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

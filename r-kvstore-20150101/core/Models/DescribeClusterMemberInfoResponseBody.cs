@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public long? BandWidth { get; set; }
 
             /// <summary>
-            /// <para>The number of days for which binary logs are retained.</para>
+            /// <para>The binary log retention period in days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <summary>
             /// <para>The storage space of the <a href="https://help.aliyun.com/document_detail/122389.html">ESSD cloud disk</a> for the data node. Unit: MB.</para>
             /// <remarks>
-            /// <para>The ESSD cloud disk is used only for system operations, such as data persistence, and is not used as a medium for data access.</para>
+            /// <para>The ESSD cloud disk is used only for system operations, such as data persistence, and is not used as a medium for data storage and access.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -149,8 +149,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <summary>
             /// <para>The node type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>redis</b>: data node.</description></item>
-            /// <item><description><b>redis_cs</b>: configuration server node.</description></item>
+            /// <item><description><b>redis</b>: data node</description></item>
+            /// <item><description><b>redis_cs</b>: configuration server node</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Service { get; set; }
 
             /// <summary>
-            /// <para>The major version of the node.</para>
+            /// <para>The major engine version of the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5.0</para>

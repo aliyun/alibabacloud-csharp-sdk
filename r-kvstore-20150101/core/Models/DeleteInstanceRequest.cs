@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DeleteInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the distributed instance to which the instance that you want to release belongs. This parameter is applicable only to Chinese site (aliyun.com).</para>
+        /// <para>The distributed instance ID to which the instance ID to be released belongs. This parameter is applicable only to the China site.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gr-bp14rkqrhac****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string GlobalInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the instance that you want to release.</para>
+        /// <para>The instance ID of the instance to be released.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

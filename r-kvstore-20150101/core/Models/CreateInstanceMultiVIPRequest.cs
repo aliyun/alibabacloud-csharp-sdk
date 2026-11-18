@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateInstanceMultiVIPRequest : TeaModel {
         /// <summary>
-        /// <para>The number of LBs to add.</para>
+        /// <para>The number of load balancers to add.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

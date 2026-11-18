@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string CustomId { get; set; }
 
             /// <summary>
-            /// <para>The database engine. The value is fixed as <b>redis</b>.</para>
+            /// <para>The database engine type. The value is fixed as <b>redis</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>redis</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <list type="bullet">
                 /// <item><description><b>db</b>: Data node.</description></item>
                 /// <item><description><b>proxy</b>: Proxy node.</description></item>
-                /// <item><description><b>normal</b>: Regular node. This value is returned for instances that use the standard architecture.</description></item>
+                /// <item><description><b>normal</b>: Regular node. This value is returned for instances of the standard architecture.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <list type="bullet">
             /// <item><description><b>Normal</b>: Normal.</description></item>
             /// <item><description><b>Creating</b>: Creating.</description></item>
-            /// <item><description><b>Changing</b>: Changing.</description></item>
+            /// <item><description><b>Changing</b>: Modifying.</description></item>
             /// <item><description><b>Inactive</b>: Disabled.</description></item>
             /// <item><description><b>Flushing</b>: Purge in progress.</description></item>
             /// <item><description><b>Released</b>: Released.</description></item>
@@ -262,9 +262,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <item><description><b>Error</b>: Creation failed.</description></item>
             /// <item><description><b>Migrating</b>: Migrating.</description></item>
             /// <item><description><b>BackupRecovering</b>: Restoring from backup.</description></item>
-            /// <item><description><b>MinorVersionUpgrading</b>: Minor version upgrade in progress.</description></item>
-            /// <item><description><b>NetworkModifying</b>: Changing the network.</description></item>
-            /// <item><description><b>SSLModifying</b>: Changing SSL configurations.</description></item>
+            /// <item><description><b>MinorVersionUpgrading</b>: Upgrading the minor engine version.</description></item>
+            /// <item><description><b>NetworkModifying</b>: Modifying the network.</description></item>
+            /// <item><description><b>SSLModifying</b>: Modifying SSL settings.</description></item>
             /// <item><description><b>MajorVersionUpgrading</b>: Major engine version upgrade in progress. The instance remains accessible.</description></item>
             /// </list>
             /// 
@@ -335,7 +335,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public int? ShardCount { get; set; }
 
             /// <summary>
-            /// <para>The storage type. The value is fixed as LOCAL_SSD (<a href="https://help.aliyun.com/document_detail/122389.html">ESSD cloud disk (standard SSD)</a>).</para>
+            /// <para>The storage type. The value is fixed as LOCAL_SSD (<a href="https://help.aliyun.com/document_detail/122389.html">ESSD standard SSD</a>).</para>
             /// 
             /// <b>Example:</b>
             /// <para>LOCAL_SSD</para>

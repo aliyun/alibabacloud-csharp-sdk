@@ -20,17 +20,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The information about the associated global IP whitelist templates.</para>
+        /// <para>The global IP whitelist templates associated with the instance.</para>
         /// </summary>
         [NameInMap("GlobalSecurityIPGroupRel")]
         [Validation(Required=false)]
         public List<DescribeGlobalSecurityIPGroupRelationResponseBodyGlobalSecurityIPGroupRel> GlobalSecurityIPGroupRel { get; set; }
         public class DescribeGlobalSecurityIPGroupRelationResponseBodyGlobalSecurityIPGroupRel : TeaModel {
             /// <summary>
-            /// <para>The IP addresses in the whitelist template.</para>
-            /// <remarks>
-            /// <para>Separate multiple IP addresses with commas (,).</para>
-            /// </remarks>
+            /// <para>The IP addresses in the whitelist template. Separate multiple IP addresses with commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.0.1,10.10.10.10</para>

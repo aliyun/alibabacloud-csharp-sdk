@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>The time when the database switchover is performed after data migration. Valid values: </para>
         /// <list type="bullet">
         /// <item><description><b>Immediately</b>: The switchover is performed immediately after the migration.</description></item>
-        /// <item><description><b>MaintainTime</b>: The switchover is performed within the maintenance window.</description></item>
+        /// <item><description><b>MaintainTime</b>: The switchover is performed during the maintenance window.</description></item>
         /// </list>
         /// <remarks>
         /// <para>Default value: <b>Immediately</b>.</para>
@@ -49,9 +49,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>The number of read-only nodes in the primary zone.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The ReadOnlyCount and SlaveReadOnlyCount parameters apply only to cloud-native instances with read/write splitting enabled. When you migrate an instance to multiple zones, you can use these parameters to adjust the distribution of read-only nodes across the primary and secondary zones. This operation does not support adding or removing nodes. Therefore, the total number of read-only nodes calculated by ReadOnlyCount + SlaveReadOnlyCount must remain the same as that before the migration.</description></item>
-        /// <item><description>When you migrate an instance from a single zone to multiple zones and do not specify these parameters, one read-only node is migrated to the secondary zone by default, and the remaining read-only nodes stay in the primary zone.</description></item>
-        /// <item><description>If the instance uses the cluster architecture, these parameters specify the number of read-only nodes per shard in the primary and secondary zones.</description></item>
+        /// <item><description>The ReadOnlyCount and SlaveReadOnlyCount parameters apply only to cloud-native instances with read/write splitting enabled. When you migrate an instance to multiple zones, you can use these parameters to adjust the distribution of read-only nodes in the primary and secondary zones. This operation does not support adding or removing nodes. Therefore, the total number of read-only nodes calculated by ReadOnlyCount + SlaveReadOnlyCount must remain the same as that before the migration.</description></item>
+        /// <item><description>When you migrate an instance from a single zone to multiple zones, if you do not specify these parameters, one read-only node is migrated to the secondary zone by default, and the remaining read-only nodes stay in the primary zone.</description></item>
+        /// <item><description>If the instance uses the cluster architecture, these parameters specify the number of read-only nodes in the primary and secondary zones for a single shard.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -66,9 +66,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>The number of secondary nodes in the primary zone.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The ReplicaCount and SlaveReplicaCount parameters apply only to cloud-native instances. When you migrate an instance to multiple zones, you can use these parameters to adjust the distribution of secondary nodes across the primary and secondary zones. This operation does not support adding or removing nodes. Therefore, the total number of secondary nodes calculated by ReplicaCount + SlaveReplicaCount must remain the same as that before the migration.</description></item>
-        /// <item><description>When you migrate an instance from a single zone to multiple zones and do not specify these parameters, one secondary node is migrated to the secondary zone by default, and the remaining secondary nodes stay in the primary zone.</description></item>
-        /// <item><description>If the instance uses the cluster architecture, these parameters specify the number of secondary nodes per shard in the primary and secondary zones.</description></item>
+        /// <item><description>The ReplicaCount and SlaveReplicaCount parameters apply only to cloud-native instances. When you migrate an instance to multiple zones, you can use these parameters to adjust the distribution of secondary nodes in the primary and secondary zones. This operation does not support adding or removing nodes. Therefore, the total number of secondary nodes calculated by ReplicaCount + SlaveReplicaCount must remain the same as that before the migration.</description></item>
+        /// <item><description>When you migrate an instance from a single zone to multiple zones, if you do not specify these parameters, one secondary node is migrated to the secondary zone by default, and the remaining secondary nodes stay in the primary zone.</description></item>
+        /// <item><description>If the instance uses the cluster architecture, these parameters specify the number of secondary nodes in the primary and secondary zones for a single shard.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The ID of the destination secondary zone. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query the zone ID.</para>
         /// <remarks>
-        /// <para>If you specify this parameter, the primary and secondary data nodes are distributed across different zones. This implements cross-zone disaster recovery and tolerates data center-level failures.</para>
+        /// <para>Specifying this parameter allows you to distribute primary and secondary data nodes across different zones to implement cross-zone disaster recovery and tolerate data center-level failures.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

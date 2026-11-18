@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the security groups that you want to set. You can specify up to 10 security group IDs, separated by commas (,).</para>
+        /// <para>The IDs of the security groups to be configured. You can specify up to 10 security group IDs. Separate multiple IDs with commas (,).</para>
         /// <remarks>
-        /// <para>This operation overwrites the existing settings. For valid values, query the basic information about the security groups that you created by calling <a href="https://next.api.aliyun.com/api/Ecs/2014-05-26/DescribeSecurityGroups">DescribeSecurityGroups</a>.</para>
+        /// <para>This overwrites the existing settings. For valid values, call <a href="https://next.api.aliyun.com/api/Ecs/2014-05-26/DescribeSecurityGroups">DescribeSecurityGroups</a> to query the basic information of the security groups you created.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

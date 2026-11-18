@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyInstanceConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The instance parameters to modify, in JSON format. The new values overwrite the existing values. For example, if you want to set only the <b>maxmemory-policy</b> parameter to <b>noeviction</b>, pass in <c>{&quot;maxmemory-policy&quot;:&quot;noeviction&quot;}</c>.</para>
+        /// <para>The instance parameters to be modified in JSON format. The modified values overwrite the original values. For example, to modify only the <b>maxmemory-policy</b> parameter to <b>noeviction</b>, you can pass <c>{&quot;maxmemory-policy&quot;:&quot;noeviction&quot;}</c>.</para>
         /// <remarks>
-        /// <para>For more information about each parameter, see <a href="https://help.aliyun.com/document_detail/259681.html">Metric description</a>.</para>
+        /// <para>For more information about each parameter, see <a href="https://help.aliyun.com/document_detail/259681.html">Parameter description</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The Sentinel compatibility mode, which applies to non-cluster instances. Valid values:</para>
+        /// <para>Specifies whether to enable Sentinel compatibility mode for non-cluster instances. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>no</b> (default): disabled.</description></item>
         /// <item><description><b>yes</b>: enabled.<remarks>
@@ -62,21 +62,21 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>Specifies whether to allow password-free execution of Sentinel-related commands when Sentinel mode is enabled. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>no</b> (default): disabled.</description></item>
-        /// <item><description><b>yes</b>: enabled. After this parameter is enabled, you can run Sentinel commands without a password on any connection and use the SENTINEL command to listen on the +switch-master channel.</description></item>
+        /// <item><description><b>yes</b>: enabled. After this feature is enabled, you can execute Sentinel commands without a password on any connection and use the SENTINEL command to monitor the +switch-master channel.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>no</para>
         /// </summary>
         [NameInMap("ParamNoLooseSentinelPasswordFreeAccess")]
         [Validation(Required=false)]
         public string ParamNoLooseSentinelPasswordFreeAccess { get; set; }
 
         /// <summary>
-        /// <para>After Sentinel mode and the ParamNoLooseSentinelPasswordFreeAccess parameter are enabled, you can use this parameter to add additional password-free commands (empty by default).</para>
+        /// <para>The list of additional password-free commands. This parameter takes effect only after Sentinel mode and the ParamNoLooseSentinelPasswordFreeAccess parameter are enabled. Default value: empty.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>After this parameter is set, the specified commands can be run without a password on any connection. Proceed with caution.</description></item>
+        /// <item><description>After this parameter is set, the specified commands can be executed without a password on any connection. Proceed with caution.</description></item>
         /// <item><description>Commands must be in lowercase letters. Separate multiple commands with commas (,).</description></item>
         /// </list>
         /// </remarks>
@@ -91,8 +91,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The synchronization mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>async</b> (default): asynchronous</description></item>
-        /// <item><description><b>semisync</b>: semi-synchronous</description></item>
+        /// <item><description><b>async</b> (default): asynchronous.</description></item>
+        /// <item><description><b>semisync</b>: semi-synchronous.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -103,11 +103,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ParamReplMode { get; set; }
 
         /// <summary>
-        /// <para>The degradation threshold for semi-synchronous mode. This parameter can be configured only for semi-synchronous mode. Unit: ms. Valid values: 10 to 60000. Default value: 500.</para>
+        /// <para>The degradation threshold for the semi-synchronous mode. This parameter is supported only in the semi-synchronous mode. Unit: milliseconds. Valid values: 10 to 60000. Default value: 500.</para>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>When the synchronization latency exceeds this threshold, the synchronization mode automatically switches to asynchronous. When the synchronization latency is eliminated, the synchronization mode automatically switches back to semi-synchronous.</description></item>
-        /// <item><description>Only Tair Enterprise instances are supported. This feature is in public preview.</description></item>
+        /// <item><description>This feature is supported only by Tair Enterprise instances and is in public preview.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ParamSemisyncReplTimeout { get; set; }
 
         /// <summary>
-        /// <para>The Sentinel compatibility mode, which applies to instances in cluster architecture with proxy connection mode or read/write splitting architecture. Valid values:</para>
+        /// <para>Specifies whether to enable Sentinel compatibility mode for instances in cluster architecture proxy connection mode or read/write splitting architecture. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b> (default): disabled.</description></item>
         /// <item><description><b>1</b>: enabled.<remarks>

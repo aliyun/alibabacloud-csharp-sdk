@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the proxy nodes to operate. Separate multiple IDs with commas.</para>
+        /// <para>The IDs of the proxy nodes to be operated on. Separate multiple IDs with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90310144,90310144</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ProxyList { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the hosts on which the proxy nodes to operate reside. Separate multiple IDs with commas.</para>
+        /// <para>The IDs of the hosts where the proxy nodes to be operated on reside. Separate multiple IDs with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36912280,36912282</para>

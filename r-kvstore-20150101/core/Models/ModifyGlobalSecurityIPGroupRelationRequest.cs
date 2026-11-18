@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The IP whitelist template ID.</para>
+        /// <para>The ID of the IP whitelist template.</para>
         /// <remarks>
-        /// <para>To dissociate a template, delete the corresponding IP whitelist template ID. This parameter overwrites the original value. To dissociate all templates, pass in an empty string.</para>
+        /// <para>To disassociate a template, remove the corresponding IP whitelist template ID. This parameter overwrites the original value. To disassociate all associated templates, pass an empty string.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmyiu4ekp****</para>

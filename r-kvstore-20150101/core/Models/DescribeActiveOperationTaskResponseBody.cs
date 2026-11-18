@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public List<DescribeActiveOperationTaskResponseBodyItems> Items { get; set; }
         public class DescribeActiveOperationTaskResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The time when the O&amp;M task was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+            /// <para>The time when the O&amp;M task was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-02-24T06:00:11Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>The database type. Return value: <b>redis</b>.</para>
+            /// <para>The database type. Valid value: <b>redis</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>redis</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string DbType { get; set; }
 
             /// <summary>
-            /// <para>The latest time within the adjustable range for the O&amp;M task execution time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+            /// <para>The latest time to which the execution time of the O&amp;M task can be adjusted. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-03-29T13:59:59Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string InsName { get; set; }
 
             /// <summary>
-            /// <para>The time when the O&amp;M task was modified. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+            /// <para>The time when the O&amp;M task was modified. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-02-24T08:18:53Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The preparation time required between the O&amp;M task start time and the switchover time. The time is in the <i>HH:mm:ss</i> format.</para>
+            /// <para>The preparation time required between the start time and the switchover time of the O&amp;M task. The time is in the <i>HH:mm:ss</i> format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>14:00:00</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The execution time of the O&amp;M task. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+            /// <para>The execution time of the O&amp;M task. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-03-20T02:40:00Z</para>
@@ -109,12 +109,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <summary>
             /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>2</b>: Waiting for the user to specify a time.</description></item>
-            /// <item><description><b>3</b>: Waiting to be processed.</description></item>
-            /// <item><description><b>4</b>: Being processed. After the task enters this state, you cannot call <b>ModifyActiveOperationTask</b> to modify the scheduled switchover time.</description></item>
-            /// <item><description><b>5</b>: Succeeded.</description></item>
-            /// <item><description><b>6</b>: Failed.</description></item>
-            /// <item><description><b>7</b>: Canceled.</description></item>
+            /// <item><description><b>2</b>: waiting for the user to specify a time.</description></item>
+            /// <item><description><b>3</b>: waiting to be processed.</description></item>
+            /// <item><description><b>4</b>: processing. After the task enters this state, you cannot call <b>ModifyActiveOperationTask</b> to modify the scheduled switchover time.</description></item>
+            /// <item><description><b>5</b>: successful.</description></item>
+            /// <item><description><b>6</b>: failed.</description></item>
+            /// <item><description><b>7</b>: canceled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the system-initiated switchover operation is performed. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+            /// <para>The time when the system initiates the switchover. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-03-20T03:10:00Z</para>
@@ -137,9 +137,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <summary>
             /// <para>The task type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>rds_apsaradb_ha</b>: node failover.</description></item>
+            /// <item><description><b>rds_apsaradb_ha</b>: switch of primary and secondary nodes.</description></item>
             /// <item><description><b>rds_apsaradb_transfer</b>: instance migration.</description></item>
-            /// <item><description><b>rds_apsaradb_upgrade</b>: minor engine version update.</description></item>
+            /// <item><description><b>rds_apsaradb_upgrade</b>: minor version update.</description></item>
             /// <item><description><b>all</b>: all task types.</description></item>
             /// </list>
             /// 
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page.</para>
+        /// <para>The maximum number of entries returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

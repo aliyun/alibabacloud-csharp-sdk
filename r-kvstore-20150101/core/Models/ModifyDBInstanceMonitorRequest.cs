@@ -21,8 +21,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para><b>[Deprecated]</b> This parameter is deprecated and uses a fixed value of 60.</para>
-        /// <para>The collection granularity of monitoring data. Unit: seconds. Default value: 60.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated and uses a fixed value of 60. The collection granularity of monitoring data. Unit: seconds. Default value: 60.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

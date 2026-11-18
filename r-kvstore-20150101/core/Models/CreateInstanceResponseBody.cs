@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The internal network connection endpoint of the ApsaraDB for Redis instance.</para>
+        /// <para>The internal network endpoint of the Redis instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-bp1zxszhcgatnx****.redis.rds.aliyuncs.com</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ConnectionDomain { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of connections supported by the instance.</para>
+        /// <para>The maximum number of connections to the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? Connections { get; set; }
 
         /// <summary>
-        /// <para>The time when the subscription instance expires. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
+        /// <para>The time when the subscription instance expires. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-01-18T16:00:00Z</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The globally unique instance ID.</para>
+        /// <para>Instance ID of the instance. Instance ID is globally unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-bp1zxszhcgatnx****</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The current status of the instance. The return value is fixed to Creating.</para>
+        /// <para>The current status of the instance. The value is fixed to Creating.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Creating</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// <para>The service port of ApsaraDB for Redis.</para>
+        /// <para>The Redis service port.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6379</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? QPS { get; set; }
 
         /// <summary>
-        /// <para>The region where the instance resides.</para>
+        /// <para>The region where the instance is deployed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hongkong</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The username used to connect to ApsaraDB for Redis. By default, an account named after the instance ID is included.</para>
+        /// <para>The username used to connect to the Redis instance. By default, an account named after the instance ID is included.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-bp1zxszhcgatnx****</para>
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC.</para>
+        /// <para>The ID of the virtual private cloud (VPC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1nme44gek34slfc****</para>

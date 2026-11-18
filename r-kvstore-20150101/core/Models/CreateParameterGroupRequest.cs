@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The product category. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>standard</b>: Redis Community Edition.</description></item>
+        /// <item><description><b>standard</b>: Open-source Redis.</description></item>
         /// <item><description><b>enterprise</b>: Tair (Enterprise Edition).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -27,9 +27,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The engine type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>redis</b>: Redis Community Edition or Tair memory-optimized.</description></item>
-        /// <item><description><b>tair_pena</b>: Tair persistent memory-optimized.</description></item>
-        /// <item><description><b>tair_pdb</b>: Tair disk-optimized (ESSD/SSD).</description></item>
+        /// <item><description><b>redis</b>: Open-source Redis or Tair memory-based.</description></item>
+        /// <item><description><b>tair_pena</b>: Tair persistent memory-based.</description></item>
+        /// <item><description><b>tair_pdb</b>: Tair disk-based (ESSD/SSD).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -43,10 +43,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The compatible version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Redis Community Edition supports <b>5.0</b>, <b>6.0</b>, and <b>7.0</b>.</description></item>
-        /// <item><description>Tair memory-optimized is compatible with Redis 5.0, 6.0, and 7.0 protocols. Set this parameter to <b>5.0</b>, <b>6.0</b>, or <b>7.0</b>.</description></item>
-        /// <item><description>Tair persistent memory-optimized is compatible with the Redis 6.0 protocol. Set this parameter to <b>1.0</b>.</description></item>
-        /// <item><description>Tair disk-optimized (ESSD/SSD) is compatible with the Redis 6.0 protocol. To create a parameter template for the ESSD type, set this parameter to <b>1.0</b>. To create a parameter template for the SSD type, set this parameter to <b>2.0</b>.</description></item>
+        /// <item><description>Open-source Redis supports <b>5.0</b>, <b>6.0</b>, and <b>7.0</b>.</description></item>
+        /// <item><description>Tair memory-based instances are compatible with the Redis 5.0, 6.0, and 7.0 protocols. Set the value to <b>5.0</b>, <b>6.0</b>, or <b>7.0</b>.</description></item>
+        /// <item><description>Tair persistent memory-based instances are compatible with the Redis 6.0 protocol. Set the value to <b>1.0</b>.</description></item>
+        /// <item><description>Tair disk-based (ESSD/SSD) instances are compatible with the Redis 6.0 protocol. To create a parameter template for ESSD-based instances, set the value to <b>1.0</b>. To create a parameter template for SSD-based instances, set the value to <b>2.0</b>.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The description of the parameter template. The description can be 0 to 200 characters in length.</para>
+        /// <para>The description of the parameter template. The description must be 0 to 200 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -78,8 +78,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The name of the parameter template. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The name can contain letters, digits, and underscores (_). It must start with a letter and cannot contain Chinese characters.</description></item>
-        /// <item><description>The name must be 8 to 64 characters in length.</description></item>
+        /// <item><description>It must contain only letters, digits, and underscores (_). It must start with a letter and cannot contain Chinese characters.</description></item>
+        /// <item><description>It must be 8 to 64 characters in length.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ParameterGroupName { get; set; }
 
         /// <summary>
-        /// <para>A JSON string that consists of parameters and their values, in the following format: {&quot;Parameter 1&quot;:&quot;Value of Parameter 1&quot;,&quot;Parameter 2&quot;:&quot;Value of Parameter 2&quot;...}.</para>
+        /// <para>The parameters and their corresponding values in JSON format. Format: {&quot;Parameter1&quot;:&quot;Value1&quot;,&quot;Parameter2&quot;:&quot;Value2&quot;...}.</para>
         /// <remarks>
         /// <para>The parameters that can be added vary by version. Refer to the console for details.</para>
         /// </remarks>

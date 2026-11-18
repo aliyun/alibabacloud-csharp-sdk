@@ -34,6 +34,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 [Validation(Required=false)]
                 public List<DescribePriceResponseBodyOrderCouponsCoupon> Coupon { get; set; }
                 public class DescribePriceResponseBodyOrderCouponsCoupon : TeaModel {
+                    [NameInMap("ActivityExtInfo")]
+                    [Validation(Required=false)]
+                    public Dictionary<string, object> ActivityExtInfo { get; set; }
+
                     [NameInMap("CouponNo")]
                     [Validation(Required=false)]
                     public string CouponNo { get; set; }
@@ -41,6 +45,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
+
+                    [NameInMap("Effective")]
+                    [Validation(Required=false)]
+                    public bool? Effective { get; set; }
 
                     [NameInMap("IsSelected")]
                     [Validation(Required=false)]
@@ -55,7 +63,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             }
 
             /// <summary>
-            /// <para>The currency. The value is CNY (Chinese Yuan) for the China site and USD (US Dollar) for the international site.</para>
+            /// <para>The currency. CNY for the China site and USD for the international site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CNY</para>
@@ -72,7 +80,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public DescribePriceResponseBodyOrderDepreciateInfo DepreciateInfo { get; set; }
             public class DescribePriceResponseBodyOrderDepreciateInfo : TeaModel {
                 /// <summary>
-                /// <para>The price reduction ratio.</para>
+                /// <para>The price reduction rate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30%</para>
@@ -112,14 +120,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                     /// <para>The promotion name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Contract_Discount_Order_xxxOff</para>
+                    /// <para>Contract discount_Entire order_xxx% off</para>
                     /// </summary>
                     [NameInMap("ActivityName")]
                     [Validation(Required=false)]
                     public string ActivityName { get; set; }
 
                     /// <summary>
-                    /// <para>The price after the discount.</para>
+                    /// <para>The final price after the discount.</para>
                     /// </summary>
                     [NameInMap("FinalFee")]
                     [Validation(Required=false)]
@@ -165,7 +173,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 }
 
                 /// <summary>
-                /// <para>The price difference discount, displayed in the order total.</para>
+                /// <para>The price difference discount (displayed in the total order price).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>**</para>
@@ -185,7 +193,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string DifferentialName { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether a contract-based discount is applied.</para>
+                /// <para>Indicates whether a contract discount is applied.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -195,7 +203,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public bool? IsContractActivity { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the price reduction is displayed.</para>
+                /// <para>Indicates whether to display the price reduction extent.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -257,7 +265,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string HandlingFeeAmount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a contract-based discount is applied.</para>
+            /// <para>Indicates whether a contract discount is applied.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -297,7 +305,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether discount information is displayed.</para>
+            /// <para>Indicates whether to display the discount information.</para>
             /// </summary>
             [NameInMap("ShowDiscountInfo")]
             [Validation(Required=false)]
@@ -336,7 +344,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// <para>The order parameters. This parameter is returned when OrderParamOut is set to <c>true</c>.</para>
+        /// <para>The order parameters. Returned when OrderParamOut is set to <c>true</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>String</para>
@@ -634,6 +642,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                         [NameInMap("Description")]
                         [Validation(Required=false)]
                         public string Description { get; set; }
+
+                        [NameInMap("Effective")]
+                        [Validation(Required=false)]
+                        public bool? Effective { get; set; }
 
                         [NameInMap("Name")]
                         [Validation(Required=false)]

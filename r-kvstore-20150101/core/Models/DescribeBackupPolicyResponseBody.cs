@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeBackupPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>This parameter is deprecated. Ignore this parameter.</para>
+        /// <para><b>[Deprecated]</b> This group of parameters is deprecated. Ignore it.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public DescribeBackupPolicyResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class DescribeBackupPolicyResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
-            /// <para>Same as above.</para>
+            /// <para>The description is the same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>Same as above.</para>
+            /// <para>The description is the same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>Same as above.</para>
+            /// <para>The description is the same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>Same as above.</para>
+            /// <para>The description is the same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>Same as above.</para>
+            /// <para>The description is the same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>Same as above.</para>
+            /// <para>The description is the same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string NoPermissionType { get; set; }
 
             /// <summary>
-            /// <para>Same as above.</para>
+            /// <para>The description is the same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -102,12 +102,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         }
 
+        /// <summary>
+        /// <para>The earliest point in time for data flashback, in the yyyy-MM-ddTHH:mm:ssZ format (UTC). This parameter is returned only when the data flashback feature is enabled for the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2021-07-06T05:49:55Z</para>
+        /// </summary>
         [NameInMap("BackupLogStartTime")]
         [Validation(Required=false)]
         public string BackupLogStartTime { get; set; }
 
         /// <summary>
-        /// <para>The number of days for which backup data is retained.</para>
+        /// <para>The backup retention period in days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -147,13 +153,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The backup cycle. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Monday</b></description></item>
-        /// <item><description><b>Tuesday</b></description></item>
-        /// <item><description><b>Wednesday</b></description></item>
-        /// <item><description><b>Thursday</b></description></item>
-        /// <item><description><b>Friday</b></description></item>
-        /// <item><description><b>Saturday</b></description></item>
-        /// <item><description><b>Sunday</b></description></item>
+        /// <item><description><b>Monday</b>: Monday.</description></item>
+        /// <item><description><b>Tuesday</b>: Tuesday.</description></item>
+        /// <item><description><b>Wednesday</b>: Wednesday.</description></item>
+        /// <item><description><b>Thursday</b>: Thursday.</description></item>
+        /// <item><description><b>Friday</b>: Friday.</description></item>
+        /// <item><description><b>Saturday</b>: Saturday.</description></item>
+        /// <item><description><b>Sunday</b>: Sunday.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -164,7 +170,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string PreferredBackupPeriod { get; set; }
 
         /// <summary>
-        /// <para>The backup time. The time is in the <i>HH:mm</i>Z-<i>HH:mm</i>Z format (UTC).</para>
+        /// <para>The backup time, in the <i>HH:mm</i>Z-<i>HH:mm</i>Z format (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>05:00Z-06:00Z</para>
@@ -174,7 +180,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string PreferredBackupTime { get; set; }
 
         /// <summary>
-        /// <para>The next backup time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</para>
+        /// <para>The time of the next backup, in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-03-14T05:28Z</para>

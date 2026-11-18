@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error event IDs.</para>
+        /// <para>The error event ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12343</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? SuccessCount { get; set; }
 
         /// <summary>
-        /// <para>The success event IDs.</para>
+        /// <para>The success event ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>234221</para>

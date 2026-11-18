@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeSlowLogRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The database engine.</para>
+        /// <para>The database type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Redis</para>
@@ -118,8 +118,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query.</para>
-        /// <para>The time is in the YYYY-MM-DDTHH:mmZ format and displayed in UTC.</para>
+        /// <para>The start time of the query. The time is in the YYYY-MM-DDTHH:mmZ format and displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-03-10T14:00Z</para>

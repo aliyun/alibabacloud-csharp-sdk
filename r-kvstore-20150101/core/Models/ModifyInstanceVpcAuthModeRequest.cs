@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The authentication mode in a VPC. Valid values:</para>
+        /// <para>The authentication mode in the VPC. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Open</b>: Uses password authentication.</description></item>
         /// <item><description><b>Close</b>: Disables password authentication and enables password-free access.</description></item>

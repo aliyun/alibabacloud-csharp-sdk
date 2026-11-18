@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The shard type of the cluster instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>proxy</b>: proxy node</description></item>
-        /// <item><description><b>db</b>: data node</description></item>
-        /// <item><description><b>cs</b>: config server node</description></item>
+        /// <item><description><b>proxy</b>: proxy node.</description></item>
+        /// <item><description><b>db</b>: data node.</description></item>
+        /// <item><description><b>cs</b>: config server node.</description></item>
         /// </list>
         /// <remarks>
         /// <para>If you specify this parameter, you must also specify the <b>NodeId</b> parameter.</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. The end time must be later than the start time, and the time span between the start time and end time cannot exceed one day. We recommend that you set the time span to one hour. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</para>
+        /// <para>The end time of the query. The end time must be later than the start time. The time range between the start time and the end time cannot exceed one day. We recommend that you set the time range to one hour. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,8 +78,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The sort order of the query results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>asc</b>: ascending order</description></item>
-        /// <item><description><b>desc</b>: descending order</description></item>
+        /// <item><description><b>asc</b>: ascending order.</description></item>
+        /// <item><description><b>desc</b>: descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be greater than <b>0</b> and cannot exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be greater than <b>0</b> and cannot exceed the maximum value of the INTEGER data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -148,8 +148,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The role type of the data shard. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>master</b> (default): primary node</description></item>
-        /// <item><description><b>slave</b>: secondary node</description></item>
+        /// <item><description><b>master</b> (default): primary node.</description></item>
+        /// <item><description><b>slave</b>: secondary node.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

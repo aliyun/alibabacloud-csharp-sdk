@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyInstanceMajorVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The time when the upgrade is performed. Valid values:</para>
+        /// <para>The time when the upgrade is executed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediately</b>: The upgrade is performed immediately. This is the default value.</description></item>
-        /// <item><description><b>MaintainTime</b>: The upgrade is performed during the maintenance window.</description></item>
+        /// <item><description><b>Immediately</b>: The upgrade is executed immediately. This is the default value.</description></item>
+        /// <item><description><b>MaintainTime</b>: The upgrade is executed during the maintenance window.</description></item>
         /// </list>
         /// <remarks>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of the instance.</para>
@@ -38,10 +38,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The major version to which the instance is upgraded.</para>
+        /// <para>The target major version for the instance upgrade.</para>
         /// <list type="bullet">
-        /// <item><description>Valid values for cloud-native instances: 6.0 or 7.0.</description></item>
-        /// <item><description>Valid values for classic instances: 4.0 (not recommended) or 5.0.<remarks>
+        /// <item><description>For cloud-native instances, valid values are 6.0 and 7.0.</description></item>
+        /// <item><description>For classic instances, valid values are 4.0 (not recommended) and 5.0.<remarks>
         /// <para>Only upgrades to the same deployment mode are supported.</para>
         /// </remarks>
         /// </description></item>

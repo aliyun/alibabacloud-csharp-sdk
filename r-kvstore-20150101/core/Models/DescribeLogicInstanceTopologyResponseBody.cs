@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeLogicInstanceTopologyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-bp1zxszhcgatnx****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribePriceRequest : TeaModel {
         /// <summary>
-        /// <para>The extended information such as the promotional event ID and business information.</para>
+        /// <para>The extended information, such as the promotion ID and business information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>000000000000</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity used to specify the instance type, in MB. This parameter is used only to query Redis Community Edition instances in classic deployment mode. We recommend that you use the <b>InstanceClass</b> parameter to specify an exact instance type.</para>
+        /// <para>Specifies the instance type by using the storage capacity of the instance. Unit: MB. This parameter applies only to instances of ApsaraDB for Redis Community Edition in the classic deployment mode. We recommend that you use the <b>InstanceClass</b> parameter to specify an exact instance type.</para>
         /// <remarks>
-        /// <para>After you specify the <b>InstanceClass</b> parameter, you do not need to specify this parameter.</para>
+        /// <para>If you specify the <b>InstanceClass</b> parameter, you do not need to specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -69,10 +69,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcibly change the configuration. Valid values:</para>
+        /// <para>Specifies whether to forcibly upgrade or downgrade the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b>: yes.</description></item>
-        /// <item><description><b>true</b> (default): no.</description></item>
+        /// <item><description><b>false</b>: Yes.</description></item>
+        /// <item><description><b>true</b> (default): No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -83,19 +83,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? ForceUpgrade { get; set; }
 
         /// <summary>
-        /// <para>The instance type specified by using the <b>InstanceClass</b> code. To find the <b>InstanceClass</b> code:</para>
+        /// <para>Specifies the instance type by using the <b>InstanceClass</b> code. To query the <b>InstanceClass</b> code, perform the following steps:</para>
         /// <ol>
-        /// <item><description>In the <a href="https://help.aliyun.com/document_detail/26350.html">instance type navigation</a>, select the desired instance type and click the value in the <b>Architecture</b> column to open the specification document.</description></item>
-        /// <item><description>In the instance type table of the specification document, find the desired instance type and locate the code in the <b>InstanceClass</b> column.</description></item>
+        /// <item><description>On the <a href="https://help.aliyun.com/document_detail/26350.html">Instance type query</a> page, select the instance type as needed and click the value in the <b>Architecture Type</b> column to open the instance type documentation.</description></item>
+        /// <item><description>In the instance type table of the documentation, select the required instance type and find the code in the <b>InstanceClass</b> column.</description></item>
         /// </ol>
         /// <remarks>
-        /// <para>The following example describes the parameters required for querying the price of a new instance. In addition to other key parameters, specify at least the following parameters:</para>
+        /// <para>For example, to query pricing for a new purchase, you must specify at least the following parameters in addition to other key parameters:</para>
         /// <list type="bullet">
-        /// <item><description>Classic Edition instance: specify this parameter.</description></item>
-        /// <item><description>Cloud-native Edition standard architecture instance: specify this parameter.</description></item>
-        /// <item><description>Cloud-native Edition cluster architecture instance: specify this parameter and the <b>ShardCount</b> parameter.</description></item>
-        /// <item><description>Cloud-native Edition read/write splitting architecture instance: specify this parameter and the <b>Instances</b> parameter.</description></item>
-        /// <item><description>Multiple instances of different types, or Tair ESSD-based instances (custom storage type and storage capacity): specify the Instances parameter (this parameter is not required).</description></item>
+        /// <item><description>To query a classic instance: specify this parameter.</description></item>
+        /// <item><description>To query a cloud-native standard architecture instance: specify this parameter.</description></item>
+        /// <item><description>To query a cloud-native cluster architecture instance: specify this parameter and the <b>ShardCount</b> parameter.</description></item>
+        /// <item><description>To query a cloud-native read/write splitting architecture instance: specify this parameter and the <b>Instances</b> parameter.</description></item>
+        /// <item><description>To query multiple instances of different types, or to query Tair ESSD instances (with custom storage types and storage space): specify the Instances parameter. You do not need to specify this parameter.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>If you want to query the price of cloud-native read/write splitting architecture instances, Tair ESSD-based instances, or multiple instances of different types, specify this parameter. The value is a JSON-formatted string. For more information, see <b>Additional description of the Instances parameter</b> below.</para>
+        /// <para>The instances to query. This parameter is required when you query cloud-native read/write splitting architecture instances, Tair ESSD instances, or multiple instances of different types. The value is a JSON string. For more information, see <b>Supplementary description of the Instances parameter</b> below.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;RegionId&quot;: &quot;cn-hangzhou&quot;,&quot;ZoneId&quot;: &quot;cn-hangzhou-b&quot;,&quot;ShardClass&quot;: &quot;tair.scm.with.proxy.standard.2m.8d&quot;,&quot;ShardCount&quot;: &quot;3&quot;,&quot;Period&quot;: &quot;1&quot;,&quot;Quantity&quot;: &quot;1&quot;}]</para>
@@ -130,10 +130,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string Instances { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to return unavailable coupons.</para>
+        /// </summary>
+        [NameInMap("NeedUnavailableCoupon")]
+        [Validation(Required=false)]
+        public bool? NeedUnavailableCoupon { get; set; }
+
+        /// <summary>
         /// <para>The node type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>STAND_ALONE</b>: standalone (single replica).</description></item>
-        /// <item><description><b>MASTER_SLAVE</b> (default): high availability (dual replicas).</description></item>
+        /// <item><description><b>STAND_ALONE</b>: Single-replica.</description></item>
+        /// <item><description><b>MASTER_SLAVE</b> (default): High-availability (dual-replica).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -144,10 +151,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string NodeType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return order parameters. Valid values:</para>
+        /// <para>Specifies whether to return the order parameters. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): does not return order parameters.</description></item>
-        /// <item><description><b>true</b>: returns order parameters.</description></item>
+        /// <item><description><b>false</b> (default): Not returned.</description></item>
+        /// <item><description><b>true</b>: Returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -160,10 +167,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The order type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BUY</b>: new purchase.</description></item>
-        /// <item><description><b>UPGRADE</b>: configuration change.</description></item>
-        /// <item><description><b>RENEW</b>: renewal.</description></item>
-        /// <item><description><b>CONVERT</b>: billing method conversion.</description></item>
+        /// <item><description><b>BUY</b>: New purchase.</description></item>
+        /// <item><description><b>UPGRADE</b>: Upgrade or downgrade.</description></item>
+        /// <item><description><b>RENEW</b>: Renewal.</description></item>
+        /// <item><description><b>CONVERT</b>: Billing method conversion.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -183,7 +190,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration, in months. Valid values: <b>1</b> to <b>9</b>, <b>12</b>, <b>24</b>, and <b>36</b>.</para>
+        /// <para>The subscription duration. Unit: months. Valid values: <b>1</b> to <b>9</b>, <b>12</b>, <b>24</b>, and <b>36</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -203,7 +210,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? Quantity { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> to query available regions.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query available regions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -221,9 +228,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The secondary zone ID. You can call <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> to query available zones.</para>
+        /// <para>The secondary zone ID. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query available zones.</para>
         /// <remarks>
-        /// <para>The value of this parameter must be different from the value of the ZoneId parameter.</para>
+        /// <para>The value of this parameter cannot be the same as the value of the ZoneId parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -238,7 +245,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The number of data shard nodes in a cloud-native cluster instance.</para>
+        /// <para>The number of data shard nodes in the cloud-native cluster instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -248,7 +255,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? ShardCount { get; set; }
 
         /// <summary>
-        /// <para>The zone ID. You can call <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> to query available zones.</para>
+        /// <para>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query available zones.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-e</para>

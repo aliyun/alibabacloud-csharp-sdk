@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Automatic payment is enabled. This is the default value.</description></item>
-        /// <item><description><b>false</b>: Automatic payment is disabled. You must manually pay for the order. On the top menu bar of the console, choose <b>Expenses</b> &gt; <b>Renewal Management</b>. In the left-side navigation pane, choose <b>Order Management</b> &gt; <b>My Orders</b>. Find the order and complete the payment.</description></item>
+        /// <item><description><b>true</b>: Automatic payment. This is the default value.</description></item>
+        /// <item><description><b>false</b>: Manual payment. You must choose <b>Expenses and Costs</b> &gt; <b>Renewals</b> in the top navigation bar of the console, and then choose <b>Order Management</b> &gt; <b>My Orders</b> in the left-side navigation pane to find and pay for the order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> to query the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The request source. This parameter is used only for internal maintenance and does not need to be specified.</para>
+        /// <para>The source of the API call. This parameter is used only for internal maintenance and does not need to be specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SDK</para>

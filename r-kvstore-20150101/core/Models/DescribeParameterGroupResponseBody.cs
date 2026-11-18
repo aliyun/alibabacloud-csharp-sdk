@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <summary>
             /// <para>The product category. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Redis Community Edition.</description></item>
-            /// <item><description><b>1</b>: Tair (Enterprise Edition).</description></item>
+            /// <item><description><b>0</b>: open-source Redis</description></item>
+            /// <item><description><b>1</b>: Tair (Enterprise Edition)</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// <para>The engine-compatible version.</para>
+            /// <para>The compatible engine version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5.0</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public List<DescribeParameterGroupResponseBodyParameterGroupParamGroupsDetails> ParamGroupsDetails { get; set; }
             public class DescribeParameterGroupResponseBodyParameterGroupParamGroupsDetails : TeaModel {
                 /// <summary>
-                /// <para>The parameter name.</para>
+                /// <para>The name of the parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>timeout</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string ParamName { get; set; }
 
                 /// <summary>
-                /// <para>The parameter value.</para>
+                /// <para>The value of the parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>

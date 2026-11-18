@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeServiceLinkedRoleExistsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the service-linked role has been authorized for the current account. Valid values:</para>
+        /// <para>Indicates whether the service-linked role is activated for the current account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Authorized.</para>
+        /// <item><description><para><b>true</b>: The role is activated.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: Not authorized.</para>
+        /// <item><description><para><b>false</b>: The role is not activated.</para>
         /// </description></item>
         /// </list>
         /// 

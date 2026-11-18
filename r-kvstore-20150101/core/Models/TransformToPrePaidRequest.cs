@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: enables automatic payment.</description></item>
-        /// <item><description><b>false</b>: disables automatic payment (default). You must manually renew the instance in the console. For more information, see <a href="https://help.aliyun.com/document_detail/26352.html">Manual renewal</a>.</description></item>
+        /// <item><description><b>false</b>: disables automatic payment (default). You must manually renew the instance in the console. For more information, refer to <a href="https://help.aliyun.com/document_detail/26352.html">Manually renew an instance</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The auto-renewal epoch. Unit: months. Valid values: <b>1</b>, <b>2</b>, <b>3</b>, <b>6</b>, and <b>12</b>.</para>
+        /// <para>The Unified Auto Renewal Cycle. Unit: months. Valid values: <b>1</b>, <b>2</b>, <b>3</b>, <b>6</b>, and <b>12</b>.</para>
         /// <remarks>
         /// <para>This parameter is required when <b>AutoRenew</b> is set to <b>true</b>.</para>
         /// </remarks>
@@ -50,12 +50,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public long? AutoRenewPeriod { get; set; }
 
+        /// <summary>
+        /// <para>The coupon code. Default value: default.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
+        /// </summary>
         [NameInMap("CouponNo")]
         [Validation(Required=false)]
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// <para>Instance ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query instance ID.</para>
+        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

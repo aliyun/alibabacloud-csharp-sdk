@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? BackupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the backup job. This ID is returned by the CreateBackup operation. If CreateBackup returns multiple BackupJobIds, you must call this operation to query each of them separately.</para>
+        /// <para>The ID of the backup task. This ID is returned by the CreateBackup operation. If the CreateBackup operation returns multiple BackupJobIds, you must call this operation to query each of them separately.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10001</para>
@@ -54,8 +54,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>Specifies whether to enable AOF persistence. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Disabled.</description></item>
-        /// <item><description><b>1</b>: Enabled.</description></item>
+        /// <item><description><b>0</b>: disabled.</description></item>
+        /// <item><description><b>1</b>: enabled.</description></item>
         /// </list>
         /// <remarks>
         /// <para>Default value: <b>0</b>.</para>

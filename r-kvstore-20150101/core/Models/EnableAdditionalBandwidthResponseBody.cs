@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class EnableAdditionalBandwidthResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the order.</para>
+        /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2084452111111</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D622714-AEDD-4609-9167-F5DDD3D1****</para>

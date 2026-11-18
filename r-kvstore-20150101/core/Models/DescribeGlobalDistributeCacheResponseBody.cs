@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeGlobalDistributeCacheResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the distributed instance.</para>
+        /// <para>The list of distributed instances.</para>
         /// </summary>
         [NameInMap("GlobalDistributeCaches")]
         [Validation(Required=false)]
         public List<DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCaches> GlobalDistributeCaches { get; set; }
         public class DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCaches : TeaModel {
             /// <summary>
-            /// <para>The distributed instance ID.</para>
+            /// <para>The instance ID of the distributed instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gr-bp14rkqrhac****</para>
@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <summary>
             /// <para>The instance status of the distributed instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Normal</b>: Running.</description></item>
-            /// <item><description><b>Changing</b>: Being modified.</description></item>
-            /// <item><description><b>Creating</b>: Being created.</description></item>
+            /// <item><description><b>Normal</b>: The instance is running.</description></item>
+            /// <item><description><b>Changing</b>: The instance is being modified.</description></item>
+            /// <item><description><b>Creating</b>: The instance is being created.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -42,14 +42,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The details of the child instances.</para>
+            /// <para>The list of child instances.</para>
             /// </summary>
             [NameInMap("SubInstances")]
             [Validation(Required=false)]
             public List<DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCachesSubInstances> SubInstances { get; set; }
             public class DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCachesSubInstances : TeaModel {
                 /// <summary>
-                /// <para>The distributed instance ID.</para>
+                /// <para>The instance ID of the distributed instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>gr-bp14rkqrhac****</para>
@@ -61,9 +61,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// <para>The instance type of the child instance. For more information, see:</para>
                 /// <list type="bullet">
-                /// <item><description><a href="https://help.aliyun.com/document_detail/145228.html">Memory-optimized Standard Edition instance types</a>.</description></item>
-                /// <item><description><a href="https://help.aliyun.com/document_detail/150458.html">Memory-optimized Cluster Edition instance types</a>.</description></item>
-                /// <item><description><a href="https://help.aliyun.com/document_detail/150459.html">Memory-optimized read/write splitting instance types</a>.</description></item>
+                /// <item><description><a href="https://help.aliyun.com/document_detail/145228.html">Standard memory-optimized instance types</a>.</description></item>
+                /// <item><description><a href="https://help.aliyun.com/document_detail/150458.html">Cluster memory-optimized instance types</a>.</description></item>
+                /// <item><description><a href="https://help.aliyun.com/document_detail/150459.html">Read/write splitting memory-optimized instance types</a>.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string InstanceClass { get; set; }
 
                 /// <summary>
-                /// <para>The child instance ID.</para>
+                /// <para>The instance ID of the child instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>r-bp1zxszhcgatnx****</para>
@@ -86,24 +86,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// <para>The instance status of the child instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Normal</b>: Normal.</description></item>
-                /// <item><description><b>Creating</b>: Being created.</description></item>
-                /// <item><description><b>Changing</b>: Being modified.</description></item>
-                /// <item><description><b>Inactive</b>: Disabled.</description></item>
-                /// <item><description><b>Flushing</b>: Being purged.</description></item>
-                /// <item><description><b>Released</b>: Released.</description></item>
-                /// <item><description><b>Transforming</b>: Being transformed.</description></item>
-                /// <item><description><b>Unavailable</b>: Service stopped.</description></item>
-                /// <item><description><b>Error</b>: Failed to create.</description></item>
-                /// <item><description><b>Migrating</b>: Being migrated.</description></item>
-                /// <item><description><b>BackupRecovering</b>: Being restored from a backup.</description></item>
-                /// <item><description><b>MinorVersionUpgrading</b>: Minor version being upgraded.</description></item>
-                /// <item><description><b>NetworkModifying</b>: Network being modified.</description></item>
-                /// <item><description><b>SSLModifying</b>: SSL being modified.</description></item>
-                /// <item><description><b>MajorVersionUpgrading</b>: Major engine version upgrade in progress. The instance can be accessed normally.</description></item>
+                /// <item><description><b>Normal</b>: The instance is in a normal state.</description></item>
+                /// <item><description><b>Creating</b>: The instance is being created.</description></item>
+                /// <item><description><b>Changing</b>: The instance is being modified.</description></item>
+                /// <item><description><b>Inactive</b>: The instance is disabled.</description></item>
+                /// <item><description><b>Flushing</b>: The instance is being purged.</description></item>
+                /// <item><description><b>Released</b>: The instance is released.</description></item>
+                /// <item><description><b>Transforming</b>: The instance is being transformed.</description></item>
+                /// <item><description><b>Unavailable</b>: The service is stopped.</description></item>
+                /// <item><description><b>Error</b>: The instance failed to be created.</description></item>
+                /// <item><description><b>Migrating</b>: The instance is being migrated.</description></item>
+                /// <item><description><b>BackupRecovering</b>: The instance is recovering from a backup.</description></item>
+                /// <item><description><b>MinorVersionUpgrading</b>: The minor version of the instance is being upgraded.</description></item>
+                /// <item><description><b>NetworkModifying</b>: The network of the instance is being modified.</description></item>
+                /// <item><description><b>SSLModifying</b>: The SSL certificate of the instance is being modified.</description></item>
+                /// <item><description><b>MajorVersionUpgrading</b>: A major engine version upgrade is in progress. The instance remains accessible.</description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>For more information about instance status and details, see <a href="https://help.aliyun.com/document_detail/200740.html">Instance states and impacts</a>.</para>
+                /// <para>For more information about instance statuses and their impacts, see <a href="https://help.aliyun.com/document_detail/200740.html">Instance statuses and impacts</a>.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries that can be displayed per page.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

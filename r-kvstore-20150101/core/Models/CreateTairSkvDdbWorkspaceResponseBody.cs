@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The internal network connection endpoint of the Redis instance.</para>
+        /// <para>The internal endpoint of the Redis instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-bp1zxszhcgatnx**.redis.rds.aliyuncs.com</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? QPS { get; set; }
 
         /// <summary>
-        /// <para>The region where the instance is deployed.</para>
+        /// <para>The region ID of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hongkong</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task flow executed for creation.</para>
+        /// <para>The ID of the creation task flow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1111</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the zone where the instance is deployed.</para>
+        /// <para>The zone ID of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-b</para>

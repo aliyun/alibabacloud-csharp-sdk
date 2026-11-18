@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyAuditLogConfigRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable audit logging. Valid values:</para>
+        /// <para>Specifies whether to enable the audit log feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b> (default): Enabled.</description></item>
-        /// <item><description><b>false</b>: Disabled.</description></item>
+        /// <item><description><b>true</b>: enables the feature. This is the default value.</description></item>
+        /// <item><description><b>false</b>: disables the feature.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If the instance uses the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a> or <a href="https://help.aliyun.com/document_detail/62870.html">read/write splitting architecture</a>, audit logs for data nodes and proxy nodes are enabled or disabled at the same time. You cannot enable them separately.</para>
+        /// <para>If the instance uses the <a href="https://help.aliyun.com/document_detail/52228.html">cluster</a> or <a href="https://help.aliyun.com/document_detail/62870.html">read/write splitting</a> architecture, the audit logs of data nodes and proxy nodes are enabled or disabled at the same time. You cannot enable the audit logs for data nodes or proxy nodes separately.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? DbAudit { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> to query the instance ID.</para>
+        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This parameter is required when <b>DbAudit</b> is set to <b>true</b>.</description></item>
-        /// <item><description>This parameter takes effect on all instances in the current region.</description></item>
+        /// <item><description>The setting of this parameter takes effect on all instances in the current region.</description></item>
         /// </list>
         /// </remarks>
         /// 

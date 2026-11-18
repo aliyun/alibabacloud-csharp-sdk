@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeServiceLinkedRoleExistsRequest : TeaModel {
         /// <summary>
-        /// <para>The database type. You can only set this parameter to &quot;Redis&quot; or leave it empty.</para>
+        /// <para>The database engine. Only Redis is supported, or you can leave this parameter empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Redis</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The region ID of the instance.</para>
         /// <remarks>
-        /// <para>This parameter does not affect the query result. You can specify any region.</para>
+        /// <para>This parameter does not affect the query results. You can specify any region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

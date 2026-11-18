@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DeleteShardingNodeRequest : TeaModel {
         /// <summary>
-        /// <para>The time when the proxy deletion takes effect if proxy nodes are deleted when you delete shards from a cluster instance in proxy mode. Valid values:</para>
+        /// <para>The time when the proxy deletion operation is performed if proxy nodes are deleted when you delete shards from a cluster instance in proxy mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0 or Immediately</b>: Takes effect immediately. This is the default value.</description></item>
-        /// <item><description><b>1 or MaintainTime</b>: Takes effect during the maintenance window.</description></item>
+        /// <item><description><b>0 or Immediately</b>: The operation is immediately performed. This is the default value.</description></item>
+        /// <item><description><b>1 or MaintainTime</b>: The operation is performed during the maintenance window.</description></item>
         /// </list>
         /// <remarks>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of the instance.</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable forced migration. Valid values:</para>
+        /// <para>Specifies whether to enable forced transfer. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): Before the upgrade/downgrade, the system checks the current minor engine version of the instance. If the kernel version is too low, an error is reported. You must upgrade the minor engine version and retry.</description></item>
-        /// <item><description><b>true</b>: Skips the checks and directly executes the upgrade/downgrade operation.</description></item>
+        /// <item><description><b>false</b> (default): Before the Upgrade/Downgrade, the system checks the current minor engine version of the instance. If the minor engine version is too low, an error is reported. You must upgrade the minor engine version and retry.</description></item>
+        /// <item><description><b>true</b>: Skips the check and directly executes the Upgrade/Downgrade operation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The ID of the data shard node to be deleted. To specify multiple shard node IDs, separate them with commas (,).</para>
+        /// <para>The ID of the data shard node to be deleted. To specify multiple shard node IDs at a time, separate the IDs with commas (,).</para>
         /// <remarks>
         /// <para>If both the NodeId and ShardCount parameters are specified, the NodeId parameter takes precedence.</para>
         /// </remarks>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The number of shards to be deleted. The system deletes the specified number of shard nodes starting from the end.</para>
+        /// <para>The number of shards to be deleted. The system counts from the tail and deletes the specified number of shard nodes.</para>
         /// <remarks>
         /// <para>For example, if an instance has five shard nodes: db-0, db-1, db-2, db-3, and db-4, and you set this parameter to 2, the db-3 and db-4 nodes are deleted.</para>
         /// </remarks>

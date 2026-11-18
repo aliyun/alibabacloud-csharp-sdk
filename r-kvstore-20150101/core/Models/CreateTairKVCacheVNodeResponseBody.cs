@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateTairKVCacheVNodeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the virtual node.</para>
+        /// <para>The virtual node instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tv-2zeb1ce76fee****</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string VClusterId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the virtual cluster.</para>
+        /// <para>The virtual cluster instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tk-2ze4bba3c8fe****</para>
