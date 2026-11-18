@@ -1,3 +1,6 @@
+2026-11-18 Version: 1.4.5
+- Generated csharp 2026-04-28 for STAROps.
+
 2026-11-17 Version: 1.4.4
 - Generated csharp 2026-04-28 for STAROps.
 

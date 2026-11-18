@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The resource property field that represents the region ID.</para>
+        /// <para>The region ID of the resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         }
 
         /// <summary>
-        /// <para>The status of the digital employee. Valid values: 0: Normal. 1: Disabled.</para>
+        /// <para>The status of the digital employee. Valid values: 0 (normal) and 1 (disabled).</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -276,7 +276,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 public List<string> AutoPassPolicy { get; set; }
 
                 /// <summary>
-                /// <para>The explicit deny policy, which has the highest priority. Each entry is a RAM action string in the format of product:ApiName, product:Prefix*, or product:*. If this parameter is empty or not configured, no operations are actively denied. If a STAROps operation matches the policy, it is directly denied. The POP side provides a secondary fallback.</para>
+                /// <para>The explicit deny policy, which has the highest priority. Each entry is a RAM action string in the format of product:ApiName, product:Prefix*, or product:*. If this parameter is empty or not configured, no operations are explicitly denied. If a STAROps operation matches the policy, it is directly denied. The POP side provides a secondary fallback.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;]</para>

@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         /// <para>The pagination cursor.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxxxxxxxx</para>
+        /// <para>XStO-ooc0Y-_8IoNRmC-3YFgg8ITG5****tOSoocIYrcmio15m653yfgGCITgz7T</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
