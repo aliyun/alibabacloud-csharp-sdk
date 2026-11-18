@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public ListJobsRequestFilter Filter { get; set; }
         public class ListJobsRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The ID of the job.</para>
+            /// <para>The job ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>job-xxxx</para>
@@ -26,12 +26,15 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [Validation(Required=false)]
             public string JobId { get; set; }
 
+            /// <summary>
+            /// <para>Filters jobs by a list of job IDs. A maximum of 100 job IDs are supported.</para>
+            /// </summary>
             [NameInMap("JobIds")]
             [Validation(Required=false)]
             public List<string> JobIds { get; set; }
 
             /// <summary>
-            /// <para>The name of the job. Fuzzy search is supported.</para>
+            /// <para>The job name. Fuzzy match is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testJob</para>
@@ -41,6 +44,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string JobName { get; set; }
 
             /// <summary>
+            /// <para>The ID of the job template.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>jt-xxxx</para>
             /// </summary>
@@ -49,6 +54,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string JobTemplateId { get; set; }
 
             /// <summary>
+            /// <para>The name of the resource pool.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>MyPool</para>
             /// </summary>
@@ -57,30 +64,19 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string PoolName { get; set; }
 
             /// <summary>
-            /// <para>The status of the job. Valid values:</para>
+            /// <para>The job status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Pending: The job is in the queue.</para>
-            /// </description></item>
-            /// <item><description><para>Initing: The job is initializing.</para>
-            /// </description></item>
-            /// <item><description><para>Succeeded: The job was successful.</para>
-            /// </description></item>
-            /// <item><description><para>Failed: The job failed.</para>
-            /// </description></item>
-            /// <item><description><para>Running: The job is running.</para>
-            /// </description></item>
-            /// <item><description><para>Exception: A scheduling exception occurred.</para>
-            /// </description></item>
-            /// <item><description><para>Retrying: The job is being retried.</para>
-            /// </description></item>
-            /// <item><description><para>Expired: The job timed out.</para>
-            /// </description></item>
-            /// <item><description><para>Suspended: The job is in hibernation.</para>
-            /// </description></item>
-            /// <item><description><para>Restarting: The job is restarting.</para>
-            /// </description></item>
-            /// <item><description><para>Deleted: The job is deleted.</para>
-            /// </description></item>
+            /// <item><description>Pending: The job is queued.</description></item>
+            /// <item><description>Initing: The job is being initialized.</description></item>
+            /// <item><description>Succeeded: The job ran successfully.</description></item>
+            /// <item><description>Failed: The job failed to run.</description></item>
+            /// <item><description>Running: The job is running.</description></item>
+            /// <item><description>Exception: A scheduling exception occurred.</description></item>
+            /// <item><description>Retrying: The job is being retried.</description></item>
+            /// <item><description>Expired: The job timed out.</description></item>
+            /// <item><description>Suspended: The job is hibernated.</description></item>
+            /// <item><description>Restarting: The job is being restarted.</description></item>
+            /// <item><description>Deleted: The job is deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -90,11 +86,16 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>The list of job tags.</para>
+            /// </summary>
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public List<ListJobsRequestFilterTag> Tag { get; set; }
             public class ListJobsRequestFilterTag : TeaModel {
                 /// <summary>
+                /// <para>The key of the job tag.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>TestKey</para>
                 /// </summary>
@@ -103,6 +104,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 public string Key { get; set; }
 
                 /// <summary>
+                /// <para>The value of the job tag.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>TestValue</para>
                 /// </summary>
@@ -113,7 +116,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             }
 
             /// <summary>
-            /// <para>The time after which the jobs were submitted. This is a UNIX timestamp based on the local time of the region. For sites in the Chinese mainland, the time zone is UTC+8.</para>
+            /// <para>The time after which jobs were submitted. The time is converted to a UNIX timestamp based on the time zone of the region. For regions in the Chinese mainland, the time zone is UTC+8.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1703819914</para>
@@ -123,7 +126,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public int? TimeCreatedAfter { get; set; }
 
             /// <summary>
-            /// <para>The time before which the jobs were submitted. This is a UNIX timestamp based on the local time of the region. For sites in the Chinese mainland, the time zone is UTC+8.</para>
+            /// <para>The time before which jobs were submitted. The time is converted to a UNIX timestamp based on the time zone of the region. For regions in the Chinese mainland, the time zone is UTC+8.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1703820113</para>
@@ -135,9 +138,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         }
 
         /// <summary>
-        /// <para>The current page number.</para>
-        /// <para>Start value: 1</para>
-        /// <para>Default value: 1</para>
+        /// <para>The page number. Starting value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -147,7 +148,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. The default value is 50. The maximum value is 100.</para>
+        /// <para>The paging Settings for the number of entries per page in a paged query. Default value: 50. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -164,12 +165,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public ListJobsRequestSortBy SortBy { get; set; }
         public class ListJobsRequestSortBy : TeaModel {
             /// <summary>
-            /// <para>The field to sort by. Valid values:</para>
+            /// <para>The sorting label. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>time_start</para>
-            /// </description></item>
-            /// <item><description><para>job_name</para>
-            /// </description></item>
+            /// <item><description>time_start</description></item>
+            /// <item><description>job_name</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -180,12 +179,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string Label { get; set; }
 
             /// <summary>
-            /// <para>The sort order. Valid values:</para>
+            /// <para>The sorting order. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>ASC (default): Ascending</para>
-            /// </description></item>
-            /// <item><description><para>DESC: Descending</para>
-            /// </description></item>
+            /// <item><description>ASC: ascending order. This is the default value.</description></item>
+            /// <item><description>DESC: descending order.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

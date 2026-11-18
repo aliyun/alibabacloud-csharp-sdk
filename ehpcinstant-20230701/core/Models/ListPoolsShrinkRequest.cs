@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string FilterShrink { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The current page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 50. Default value: 10.</para>
+        /// <para>The number of entries per page in a paging query. Maximum value: 50. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

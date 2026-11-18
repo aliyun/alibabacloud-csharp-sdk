@@ -20,14 +20,11 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string ActionPlanName { get; set; }
 
         /// <summary>
-        /// <para>The resource type.</para>
+        /// <para>The resource allocation specification. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Standard: Standard.</para>
-        /// </description></item>
-        /// <item><description><para>Dedicated: Dedicated. This type is available only to users in the whitelist.</para>
-        /// </description></item>
-        /// <item><description><para>Economic: Economy. This type is available only to users in the whitelist.</para>
-        /// </description></item>
+        /// <item><description>Standard: standard</description></item>
+        /// <item><description>Dedicated: dedicated. To use this value, you must be added to the whitelist.</description></item>
+        /// <item><description>Economic: economy. To use this value, you must be added to the whitelist.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +45,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The desired size of the resource for the execution plan. For example, if you set ResourceType to VcpuCapacity, this parameter specifies the number of vCPUs that you want to maintain for the execution plan.</para>
+        /// <para>The desired resource capacity for the execution plan. If ResourceType is set to VCpuCapacity, this parameter specifies the expected number of vCPUs to maintain, such as 10000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -58,6 +55,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public double? DesiredCapacity { get; set; }
 
         /// <summary>
+        /// <para>The scheduling interval of the execution plan. Unit: minutes. Valid values: 10 to 10080. Default value: 60.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>60</para>
         /// </summary>
@@ -66,14 +65,12 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public int? IntervalMinutes { get; set; }
 
         /// <summary>
-        /// <para>The computing power level. This parameter is valid only when you set AllocationSpec to Economic. The following types are supported:</para>
+        /// <para>The computing power level. This parameter takes effect only when the resource type is set to Economic. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>General: General-purpose.</para>
-        /// </description></item>
-        /// <item><description><para>Performance: Compute-optimized.</para>
-        /// </description></item>
+        /// <item><description>General: general-purpose</description></item>
+        /// <item><description>Performance: performance-optimized</description></item>
         /// </list>
-        /// <para>Default value: General</para>
+        /// <para>Default value: General.</para>
         /// 
         /// <b>Example:</b>
         /// <para>General</para>
@@ -83,7 +80,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string Level { get; set; }
 
         /// <summary>
-        /// <para>The pre-execution script. The script must be Base64-encoded.</para>
+        /// <para>The prolog script. The script must be Base64-encoded.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bHMgLWFsCmxzIC1hbGggfCB3YyAtbA==</para>
@@ -93,18 +90,18 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string PrologScript { get; set; }
 
         /// <summary>
-        /// <para>A list of regional resource configurations for the runtime environment of the execution plan.</para>
+        /// <para>The list of region-specific resource configurations for the runtime environment of the execution plan.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public string RegionsShrink { get; set; }
 
         /// <summary>
-        /// <para>The type of resource for the execution target. The value can be the vCPU capacity or the number of executor nodes. Valid values:</para>
+        /// <para>The type of the target resource for the execution plan. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>VCpuCapacity: vCPU capacity</para>
         /// </description></item>
-        /// <item><description><para>ExecutorCapacity: number of executor nodes</para>
+        /// <item><description><para>ExecutorCapacity: number of execution nodes</para>
         /// </description></item>
         /// </list>
         /// 
@@ -116,17 +113,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>A list of resource configurations for the runtime environment of the execution plan. You can specify 1 to 10 resource configurations.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1000</para>
+        /// <para>The list of resource configurations for the runtime environment of the execution plan. You can specify 1 to 10 resource configurations.</para>
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
         public string ResourcesShrink { get; set; }
 
         /// <summary>
-        /// <para>The script to run the job. The script must be Base64-encoded.</para>
+        /// <para>The script used to run the job. The script must be Base64-encoded.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bHMgLWFsCmxzIC1hbGggfCB3YyAtbA==</para>

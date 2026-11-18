@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class ListJobTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of job templates.</para>
+        /// <para>The job templates.</para>
         /// </summary>
         [NameInMap("JobTemplates")]
         [Validation(Required=false)]
         public List<ListJobTemplatesResponseBodyJobTemplates> JobTemplates { get; set; }
         public class ListJobTemplatesResponseBodyJobTemplates : TeaModel {
             /// <summary>
-            /// <para>The time when the job template was created.</para>
+            /// <para>The creation time. The example uses the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-20 11:09:59</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the template.</para>
+            /// <para>The template description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Demo</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string JobTemplateDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the job template.</para>
+            /// <para>The job template ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>jt-xxxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string JobTemplateId { get; set; }
 
             /// <summary>
-            /// <para>The name of the template.</para>
+            /// <para>The template name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-template</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string JobTemplateName { get; set; }
 
             /// <summary>
-            /// <para>The status of the job template.</para>
+            /// <para>The job template status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Working</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tag information of the job.</para>
+            /// <para>The job tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListJobTemplatesResponseBodyJobTemplatesTags> Tags { get; set; }
             public class ListJobTemplatesResponseBodyJobTemplatesTags : TeaModel {
                 /// <summary>
-                /// <para>The key of the job tag.</para>
+                /// <para>The job tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestKey</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of the job tag.</para>
+                /// <para>The job tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestValue</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             }
 
             /// <summary>
-            /// <para>The time when the job template was last updated.</para>
+            /// <para>The update time. The example uses the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-20 11:09:59</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

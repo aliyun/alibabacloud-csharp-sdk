@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         /// <para>The exit code of the command.</para>
         /// <list type="bullet">
         /// <item><description>For Linux instances, this is the exit code of the shell command.</description></item>
-        /// <item><description>For Windows instances, this is the exit code of the Bat or PowerShell command.</description></item>
+        /// <item><description>For Windows instances, this is the exit code of the batch or PowerShell command.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public long? ExitCode { get; set; }
 
         /// <summary>
-        /// <para>The output of the command execution. If ContentEncoding is set to PlainText, the original output is returned. If ContentEncoding is set to Base64, the Base64-encoded output is returned.</para>
+        /// <para>The output generated after the command is executed. If ContentEncoding is set to PlainText, the original output is returned. If ContentEncoding is set to Base64, the Base64-encoded output is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTU6MzA6MDEK</para>

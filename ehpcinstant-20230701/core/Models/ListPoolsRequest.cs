@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public List<string> Status { get; set; }
 
             /// <summary>
-            /// <para>Returns only resource pools created after the specified time. The time must be a Unix timestamp in UTC+8.</para>
+            /// <para>The UNIX timestamp. Only resource pools created after the specified time are queried. The time is converted to a UNIX timestamp based on the time zone of the region where the resource pool resides. For regions in the Chinese mainland, the time zone is UTC+8.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1703819914</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public int? TimeCreatedAfter { get; set; }
 
             /// <summary>
-            /// <para>Returns only resource pools created before the specified time. The time must be a Unix timestamp in UTC+8.</para>
+            /// <para>The UNIX timestamp. Only resource pools created before the specified time are queried. The time is converted to a UNIX timestamp based on the time zone of the region where the resource pool resides. For regions in the Chinese mainland, the time zone is UTC+8.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1703820113</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The current page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 50. Default value: 10.</para>
+        /// <para>The number of entries per page in a paging query. Maximum value: 50. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

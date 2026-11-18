@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class ListExecutorEventsRequest : TeaModel {
         /// <summary>
-        /// <para>The filter conditions for querying Executors.</para>
+        /// <para>The filter conditions for querying executors.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public ListExecutorEventsRequestFilter Filter { get; set; }
         public class ListExecutorEventsRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The list of Executor IDs. A maximum of 100 entries are supported.</para>
+            /// <para>The list of executor IDs. You can specify up to 100 IDs.</para>
             /// </summary>
             [NameInMap("ExecutorIds")]
             [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The runtime event level. Valid values:</para>
+            /// <para>The level of the runtime event. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Normal</description></item>
             /// <item><description>Warning</description></item>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>Events that occurred after this time. The value is a UNIX timestamp converted from the local time of the region (UTC+8 for Chinese mainland regions).</para>
+            /// <para>The start time of the events. Events that occur after this time are returned. The time must be a UNIX timestamp based on the time zone of the region (UTC+8 for the Chinese site).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1703820113</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public long? TimeAfter { get; set; }
 
             /// <summary>
-            /// <para>Events that occurred before this time. The value is a UNIX timestamp converted from the local time of the region (UTC+8 for Chinese mainland regions).</para>
+            /// <para>The end time of the events. Events that occur before this time are returned. The time must be a UNIX timestamp based on the time zone of the region (UTC+8 for the Chinese site).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1703819914</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         }
 
         /// <summary>
-        /// <para>The page number.<br>Minimum value: 1.<br>Default value: 1.</para>
+        /// <para>The page number. Starting value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging. Default value: 50. Maximum value: 100.</para>
+        /// <para>The paging Settings for the number of entries per page in a paged query. Default value: 50. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

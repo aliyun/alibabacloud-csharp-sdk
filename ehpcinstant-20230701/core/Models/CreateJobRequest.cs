@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public CreateJobRequestDependencyPolicy DependencyPolicy { get; set; }
         public class CreateJobRequestDependencyPolicy : TeaModel {
             /// <summary>
-            /// <para>The job dependencies. A maximum of 10 groups are supported.</para>
+            /// <para>The job dependencies. A maximum of 10 dependencies are supported.</para>
             /// </summary>
             [NameInMap("JobDependency")]
             [Validation(Required=false)]
@@ -36,6 +36,13 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 
                 /// <summary>
                 /// <para>The dependency type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>AfterSucceeded: All child jobs of the dependent job or array job run successfully (the exit code is 0).</description></item>
+                /// <item><description>AfterFailed: Any child job of the dependent job or array job fails (the exit code is not 0).</description></item>
+                /// <item><description>AfterAny: The dependent job finishes running, regardless of success or failure.</description></item>
+                /// <item><description>AfterCorresponding: The corresponding child job of the dependent array job runs successfully (the exit code is 0).</description></item>
+                /// </list>
+                /// <para>Default value: AfterSucceeded.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AfterSucceeded</para>
@@ -56,7 +63,12 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public CreateJobRequestDeploymentPolicy DeploymentPolicy { get; set; }
         public class CreateJobRequestDeploymentPolicy : TeaModel {
             /// <summary>
-            /// <para>The resource type.</para>
+            /// <para>The resource type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Standard: standard.</description></item>
+            /// <item><description>Dedicated: dedicated. You must be added to the whitelist to use this type.</description></item>
+            /// <item><description>Economic: economic. You must be added to the whitelist to use this type.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Dedicated</para>
@@ -66,12 +78,12 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string AllocationSpec { get; set; }
 
             /// <summary>
-            /// <para>The computing power level. This parameter takes effect only when the resource type is economy. Valid values:</para>
+            /// <para>The computing power level. This parameter is valid only when the resource type is economy. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>General: general-purpose.</description></item>
-            /// <item><description>Performance: compute-optimized instance.</description></item>
+            /// <item><description>Performance: compute-optimized.</description></item>
             /// </list>
-            /// <para>Default value: General</para>
+            /// <para>Default value: General.</para>
             /// 
             /// <b>Example:</b>
             /// <para>General</para>
@@ -81,14 +93,29 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>The network configuration.</para>
+            /// <para>The network configuration information.</para>
             /// </summary>
             [NameInMap("Network")]
             [Validation(Required=false)]
             public CreateJobRequestDeploymentPolicyNetwork Network { get; set; }
             public class CreateJobRequestDeploymentPolicyNetwork : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to create a public IP address for the job.</para>
+                /// <para>Specifies whether resource scheduling is restricted to the specified vSwitch. Default value: false.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("EnableENIMapping")]
+                [Validation(Required=false)]
+                public bool? EnableENIMapping { get; set; }
+
+                /// <summary>
+                /// <para>Specifies whether to create a public IP address for the job. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true: A public IP address is created.</description></item>
+                /// <item><description>false: No public IP address is created.</description></item>
+                /// </list>
+                /// <para>Default value: false.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -107,7 +134,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             }
 
             /// <summary>
-            /// <para>The job resource pool.</para>
+            /// <para>The resource pool of the job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>compute</para>
@@ -117,7 +144,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string Pool { get; set; }
 
             /// <summary>
-            /// <para>The job priority. A larger value indicates a higher scheduling priority. Valid values: 1 to 100.</para>
+            /// <para>The priority of the job. A larger value indicates a higher scheduling priority. Valid values: 1 to 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -127,14 +154,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>The job tag information. A maximum of 20 tags are supported.</para>
+            /// <para>The tag information of the job. A maximum of 20 tags are supported.</para>
             /// </summary>
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public List<CreateJobRequestDeploymentPolicyTag> Tag { get; set; }
             public class CreateJobRequestDeploymentPolicyTag : TeaModel {
                 /// <summary>
-                /// <para>The tag key of the job. If you specify this parameter, the value cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</para>
+                /// <para>The tag key. If this parameter is specified, it cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -145,7 +172,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The tag value of the job. If you specify this parameter, the value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</para>
+                /// <para>The tag value. If this parameter is specified, it can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestValue</para>
@@ -169,7 +196,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string JobDescription { get; set; }
 
         /// <summary>
-        /// <para>The job name. The name must be 2 to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</para>
+        /// <para>The job name. The name must be 2 to 64 characters in length and can contain Chinese characters, English letters, and digits. It can also contain hyphens (-) and underscores (_).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -208,7 +235,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public CreateJobRequestSecurityPolicySecurityGroup SecurityGroup { get; set; }
             public class CreateJobRequestSecurityPolicySecurityGroup : TeaModel {
                 /// <summary>
-                /// <para>The security group ID array.</para>
+                /// <para>The array of security group IDs.</para>
                 /// </summary>
                 [NameInMap("SecurityGroupIds")]
                 [Validation(Required=false)]
@@ -219,7 +246,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         }
 
         /// <summary>
-        /// <para>The task list. Currently, only one task is supported.</para>
+        /// <para>The list of tasks. Only one task is supported.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tasks")]
@@ -234,17 +261,17 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public CreateJobRequestTasksExecutorPolicy ExecutorPolicy { get; set; }
             public class CreateJobRequestTasksExecutorPolicy : TeaModel {
                 /// <summary>
-                /// <para>The details of the array job. The sub-job index values are passed to the runtime environment through environment variables, which can be referenced by user applications. The environment variables include:</para>
+                /// <para>The array job details. The index values of sub-jobs are passed to the runtime environment through environment variables and can be referenced by user business programs. The environment variables include:</para>
                 /// <list type="bullet">
-                /// <item><description>EHPC_JOB_NAME: The job name, corresponding to the JobName parameter.</description></item>
-                /// <item><description>EHPC_JOB_ID: The job ID.</description></item>
-                /// <item><description>EHPC_TASK_NAME: The task name, corresponding to the TaskName parameter.</description></item>
-                /// <item><description>EHPC_EXECUTOR_ID: The executor ID.</description></item>
-                /// <item><description>EHPC_ARRAY_TASK_ID: The sub-job index value.</description></item>
-                /// <item><description>EHPC_ARRAY_TASK_COUNT: The total number of sub-jobs.</description></item>
-                /// <item><description>EHPC_ARRAY_TASK_MAX: The maximum sub-job index value, corresponding to the IndexStart parameter.</description></item>
-                /// <item><description>EHPC_ARRAY_TASK_MIN: The minimum sub-job index value, corresponding to the IndexEnd parameter.</description></item>
-                /// <item><description>EHPC_ARRAY_TASK_STEP: The sub-job index step, corresponding to the IndexStep parameter.</description></item>
+                /// <item><description>EHPC_JOB_NAME: the job name, which corresponds to the JobName parameter.</description></item>
+                /// <item><description>EHPC_JOB_ID: the job ID.</description></item>
+                /// <item><description>EHPC_TASK_NAME: the task name, which corresponds to the TaskName parameter.</description></item>
+                /// <item><description>EHPC_EXECUTOR_ID: the executor ID.</description></item>
+                /// <item><description>EHPC_ARRAY_TASK_ID: the index value of the sub-job.</description></item>
+                /// <item><description>EHPC_ARRAY_TASK_COUNT: the total number of sub-jobs.</description></item>
+                /// <item><description>EHPC_ARRAY_TASK_MAX: the maximum index value of the sub-job, which corresponds to the IndexStart parameter.</description></item>
+                /// <item><description>EHPC_ARRAY_TASK_MIN: the minimum index value of the sub-job, which corresponds to the IndexEnd parameter.</description></item>
+                /// <item><description>EHPC_ARRAY_TASK_STEP: the index step of the sub-job, which corresponds to the IndexStep parameter.</description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("ArraySpec")]
@@ -272,9 +299,9 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                     public int? IndexStart { get; set; }
 
                     /// <summary>
-                    /// <para>The step size of the array job index.</para>
+                    /// <para>The step of the array job index.</para>
                     /// <remarks>
-                    /// <para>If the array job properties are IndexStart=1, IndexEnd=5, and IndexStep=2, the array job contains three child jobs with index values of 1, 3, and 5. Your application can access these values through environment variables.</para>
+                    /// <para>If the array job attributes are IndexStart=1, IndexEnd=5, and IndexStep=2, the array job contains three sub-jobs with index values of 1, 3, and 5. User business programs can access these values through environment variables.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -287,7 +314,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 }
 
                 /// <summary>
-                /// <para>The maximum number of nodes for the job.</para>
+                /// <para>The maximum number of nodes for the job execution.</para>
+                /// <remarks>
+                /// <para>The value must follow the formula: <c>MaxCount = (IndexEnd - IndexStart) / IndexStep + 1</c>.</para>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -299,7 +329,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             }
 
             /// <summary>
-            /// <para>The task name. The name must be 2 to 32 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</para>
+            /// <para>The task name. The name must be 2 to 32 characters in length and can contain Chinese characters, English letters, and digits. It can also contain hyphens (-) and underscores (_).</para>
             /// 
             /// <b>Example:</b>
             /// <para>task0</para>
@@ -316,7 +346,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public CreateJobRequestTasksTaskSpec TaskSpec { get; set; }
             public class CreateJobRequestTasksTaskSpec : TeaModel {
                 /// <summary>
-                /// <para>The runtime environment resource information.</para>
+                /// <para>The resource information of the runtime environment.</para>
                 /// </summary>
                 [NameInMap("Resource")]
                 [Validation(Required=false)]
@@ -340,7 +370,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                     public List<CreateJobRequestTasksTaskSpecResourceDisks> Disks { get; set; }
                     public class CreateJobRequestTasksTaskSpecResourceDisks : TeaModel {
                         /// <summary>
-                        /// <para>The cloud disk size. Unit: GiB.</para>
+                        /// <para>The size of the cloud disk. Unit: GiB.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>40</para>
@@ -350,7 +380,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                         public int? Size { get; set; }
 
                         /// <summary>
-                        /// <para>The cloud disk type. Currently, only System is supported, which indicates a system cloud disk.</para>
+                        /// <para>The cloud disk type. Only System is supported, which indicates a system cloud disk.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>System</para>
@@ -362,7 +392,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                     }
 
                     /// <summary>
-                    /// <para>Specifies whether hyper-threading is enabled in the runtime environment. Default value: true.</para>
+                    /// <para>Specifies whether to enable hyper-threading in the runtime environment. Default value: true.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -372,7 +402,12 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                     public bool? EnableHT { get; set; }
 
                     /// <summary>
-                    /// <para>The hostname prefix of the runtime environment. The following limits apply:</para>
+                    /// <para>The hostname prefix of the runtime environment. Limits:</para>
+                    /// <list type="bullet">
+                    /// <item><description>The prefix cannot start or end with a period (.) or a hyphen (-), and cannot contain consecutive periods (.) or hyphens (-).</description></item>
+                    /// <item><description>Windows environment: The prefix can be up to 10 characters in length and cannot contain periods (.). It cannot contain only digits. It can contain uppercase and lowercase letters, digits, and hyphens (-).</description></item>
+                    /// <item><description>Linux environment: The prefix can be up to 32 characters in length and can contain multiple periods (.). The string between two periods is a segment, and each segment can contain uppercase and lowercase letters, digits, and hyphens (-).</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>compute</para>
@@ -408,14 +443,20 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 public CreateJobRequestTasksTaskSpecRetryPolicy RetryPolicy { get; set; }
                 public class CreateJobRequestTasksTaskSpecRetryPolicy : TeaModel {
                     /// <summary>
-                    /// <para>The retry rules. A maximum of 10 rules are supported.</para>
+                    /// <para>The retry rules. A maximum of 10 retry rules are supported.</para>
                     /// </summary>
                     [NameInMap("ExitCodeActions")]
                     [Validation(Required=false)]
                     public List<CreateJobRequestTasksTaskSpecRetryPolicyExitCodeActions> ExitCodeActions { get; set; }
                     public class CreateJobRequestTasksTaskSpecRetryPolicyExitCodeActions : TeaModel {
                         /// <summary>
-                        /// <para>The next action for the task.</para>
+                        /// <para>The next action of the task. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><para>Retry: The job starts a new retry when the specified exit code is matched.</para>
+                        /// </description></item>
+                        /// <item><description><para>Exit: The job exits when the specified exit code is matched.</para>
+                        /// </description></item>
+                        /// </list>
                         /// <para>This parameter is required.</para>
                         /// 
                         /// <b>Example:</b>
@@ -426,7 +467,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                         public string Action { get; set; }
 
                         /// <summary>
-                        /// <para>The task exit code, which is used together with Action to form a job retry rule. Valid values: 0 to 255.</para>
+                        /// <para>The task exit code, which is used together with Action to form the job retry rule. Valid values: 0 to 255.</para>
                         /// <para>This parameter is required.</para>
                         /// 
                         /// <b>Example:</b>
@@ -459,14 +500,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 public List<CreateJobRequestTasksTaskSpecTaskExecutor> TaskExecutor { get; set; }
                 public class CreateJobRequestTasksTaskSpecTaskExecutor : TeaModel {
                     /// <summary>
-                    /// <para>The container environment settings.</para>
+                    /// <para>The container environment.</para>
                     /// </summary>
                     [NameInMap("Container")]
                     [Validation(Required=false)]
                     public CreateJobRequestTasksTaskSpecTaskExecutorContainer Container { get; set; }
                     public class CreateJobRequestTasksTaskSpecTaskExecutorContainer : TeaModel {
                         /// <summary>
-                        /// <para>The container application ID.</para>
+                        /// <para>The ID of the container application.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>ci-vm-32k6LXAi3cOG</para>
@@ -483,7 +524,13 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                         public List<string> Arg { get; set; }
 
                         /// <summary>
-                        /// <para>The list of container startup commands. A maximum of 20 commands are supported, and each command can be up to 256 characters in length.</para>
+                        /// <para>The list of container startup commands. A maximum of 20 commands are supported, and each command can be up to 256 characters in length.    </para>
+                        /// <remarks>
+                        /// <ol>
+                        /// <item><description>If a startup command contains spaces (for example, <c>sleep 60s</c>), pass the parameter in JSON format as <c>[&quot;sleep&quot;, &quot;60s&quot;]</c>.</description></item>
+                        /// <item><description>If the startup command is complex, you can combine <c>Command: [&quot;/bin/bash&quot;]</c> and <c>Arg:[&quot;-c&quot;, &quot;&lt;customized command&gt;&quot;]</c>. <c>&lt;customized command&gt;</c> is a custom command combination defined by the user and can contain spaces and other characters.</description></item>
+                        /// </ol>
+                        /// </remarks>
                         /// </summary>
                         [NameInMap("Command")]
                         [Validation(Required=false)]
@@ -497,7 +544,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                         public List<CreateJobRequestTasksTaskSpecTaskExecutorContainerEnvironmentVars> EnvironmentVars { get; set; }
                         public class CreateJobRequestTasksTaskSpecTaskExecutorContainerEnvironmentVars : TeaModel {
                             /// <summary>
-                            /// <para>The environment variable name. The name must be 1 to 128 characters in length. The format is [0-9a-zA-Z] and underscores. The name cannot start with a digit.</para>
+                            /// <para>The name of the environment variable. The name must be 1 to 128 characters in length and can contain letters, digits, and underscores (_). It cannot start with a digit.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>PATH</para>
@@ -507,7 +554,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                             public string Name { get; set; }
 
                             /// <summary>
-                            /// <para>The environment variable value. The value can be 0 to 256 characters in length.</para>
+                            /// <para>The value of the environment variable. The value can be 0 to 256 characters in length.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>/usr/local/bin</para>
@@ -517,6 +564,16 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                             public string Value { get; set; }
 
                         }
+
+                        /// <summary>
+                        /// <para>Specifies the GPU driver version.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>tesla=535</para>
+                        /// </summary>
+                        [NameInMap("GpuDriverVersion")]
+                        [Validation(Required=false)]
+                        public string GpuDriverVersion { get; set; }
 
                         /// <summary>
                         /// <para>The container image.</para>
@@ -530,9 +587,9 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                         public string Image { get; set; }
 
                         /// <summary>
-                        /// <para>The list of mount parameters for a self-managed image registry. The parameters are in key-value format and passed as JSON.</para>
+                        /// <para>The list of mount parameters for the self-managed image registry. The parameters are passed in JSON format as key-value pairs.</para>
                         /// <list type="bullet">
-                        /// <item><description>Reference format: {&quot;ImageRegistryType&quot;:&quot;https&quot;,&quot;ImageRegistryServer&quot;:&quot;xxx&quot;,&quot;ImageRegistryUserName&quot;:&quot;xxx&quot;,&quot;ImageRegistryPassword&quot;:&quot;xxx&quot;}</description></item>
+                        /// <item><description>Sample format: {&quot;ImageRegistryType&quot;:&quot;https&quot;,&quot;ImageRegistryServer&quot;:&quot;xxx&quot;,&quot;ImageRegistryUserName&quot;:&quot;xxx&quot;,&quot;ImageRegistryPassword&quot;:&quot;xxx&quot;}</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -543,7 +600,17 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                         public string ImageRegistryOptions { get; set; }
 
                         /// <summary>
-                        /// <para>The container working directory.</para>
+                        /// <para>Specifies whether to run the container in privileged mode. Default value: false.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>true</para>
+                        /// </summary>
+                        [NameInMap("Privileged")]
+                        [Validation(Required=false)]
+                        public bool? Privileged { get; set; }
+
+                        /// <summary>
+                        /// <para>The working directory of the container.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>/usr/local/</para>
@@ -555,14 +622,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                     }
 
                     /// <summary>
-                    /// <para>The virtual machine environment settings.</para>
+                    /// <para>The virtual machine environment.</para>
                     /// </summary>
                     [NameInMap("VM")]
                     [Validation(Required=false)]
                     public CreateJobRequestTasksTaskSpecTaskExecutorVM VM { get; set; }
                     public class CreateJobRequestTasksTaskSpecTaskExecutorVM : TeaModel {
                         /// <summary>
-                        /// <para>The virtual machine application ID.</para>
+                        /// <para>The ID of the virtual machine application.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>ci-vm-9jc58Pm5Leky</para>
@@ -571,14 +638,29 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                         [Validation(Required=false)]
                         public string AppId { get; set; }
 
+                        /// <summary>
+                        /// <para>The environment variables of the virtual machine.</para>
+                        /// </summary>
                         [NameInMap("EnvironmentVars")]
                         [Validation(Required=false)]
                         public List<CreateJobRequestTasksTaskSpecTaskExecutorVMEnvironmentVars> EnvironmentVars { get; set; }
                         public class CreateJobRequestTasksTaskSpecTaskExecutorVMEnvironmentVars : TeaModel {
+                            /// <summary>
+                            /// <para>The name of the environment variable.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>PATH</para>
+                            /// </summary>
                             [NameInMap("Name")]
                             [Validation(Required=false)]
                             public string Name { get; set; }
 
+                            /// <summary>
+                            /// <para>The value of the environment variable.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>/usr/local/bin</para>
+                            /// </summary>
                             [NameInMap("Value")]
                             [Validation(Required=false)]
                             public string Value { get; set; }
@@ -597,11 +679,11 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                         public string Image { get; set; }
 
                         /// <summary>
-                        /// <para>The logon password for the virtual machine environment. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</para>
-                        /// <para>()`~!@#$%^&amp;*-_+=|{}[]:;\&quot;&lt;&gt;,.?/</para>
-                        /// <para>For Windows environments, the password cannot start with a forward slash (/).</para>
+                        /// <para>The logon password for the virtual machine environment. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:</para>
+                        /// <para>()`~!@#$%^&amp;*-_+=|{}[]:;\&quot;&lt;&gt;,.?/
+                        /// The password for a Windows environment cannot start with a forward slash (/).</para>
                         /// <remarks>
-                        /// <para>If you specify the Password parameter, use HTTPS to send the request to avoid password leaks.</para>
+                        /// <para>If you specify the Password parameter, use HTTPS to send the request to prevent password leaks.</para>
                         /// </remarks>
                         /// 
                         /// <b>Example:</b>
@@ -636,23 +718,23 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 }
 
                 /// <summary>
-                /// <para>The list of data volumes mounted to the task. A maximum of 10 volumes are supported.</para>
+                /// <para>The list of data volumes mounted to the task. A maximum of 10 data volumes are supported.</para>
                 /// </summary>
                 [NameInMap("VolumeMount")]
                 [Validation(Required=false)]
                 public List<CreateJobRequestTasksTaskSpecVolumeMount> VolumeMount { get; set; }
                 public class CreateJobRequestTasksTaskSpecVolumeMount : TeaModel {
                     /// <summary>
-                    /// <para>The list of volume mount parameters. Specified in key-value format and passed as JSON.</para>
+                    /// <para>The list of mount parameters for the data volume. The parameters are passed in JSON format as key-value pairs.</para>
                     /// <list type="bullet">
-                    /// <item><description><para>Reference format for mounting NAS: {&quot;server&quot;:&quot;xxxxx-xxxxx.cn-heyuan.nas.aliyuncs.com&quot;,&quot;vers&quot;:&quot;3&quot;,&quot;path&quot;:&quot;/data&quot;,&quot;options&quot;:&quot;nolock,tcp,noresvport&quot;}</para>
+                    /// <item><description><para>Sample format for mounting a NAS file system: {&quot;server&quot;:&quot;xxxxx-xxxxx.cn-heyuan.nas.aliyuncs.com&quot;,&quot;vers&quot;:&quot;3&quot;,&quot;path&quot;:&quot;/data&quot;,&quot;options&quot;:&quot;nolock,tcp,noresvport&quot;}</para>
                     /// <remarks>
-                    /// <para>server specifies the mount point address of the NAS file system. path specifies a subdirectory under the NAS path, which must start with / and the directory must already exist. vers specifies the NFS protocol version for mounting NAS. Version 3 is recommended. options specifies custom parameters for mounting NAS, in the format &quot;xxx,xxx,xxx&quot;.</para>
+                    /// <para>server indicates the mount target address of the NAS file system. path indicates the subdirectory under the NAS path, which must start with a forward slash (/) and already exist. vers indicates the NFS protocol version used to mount the NAS file system. We recommend that you use v3. options indicates the custom parameters for mounting the NAS file system, in the format of &quot;xxx,xxx,xxx&quot;.</para>
                     /// </remarks>
                     /// </description></item>
-                    /// <item><description><para>Reference format for mounting OSS: {&quot;bucket&quot;:&quot;xxxxx&quot;, &quot;url&quot;:&quot;oss-cn-heyuan-internal.aliyuncs.com&quot;,&quot;path&quot;:&quot;/data&quot;,&quot;akId&quot;:&quot;xxxxx&quot;,&quot;akSecret&quot;:&quot;xxxxx&quot;}</para>
+                    /// <item><description><para>Sample format for mounting an OSS bucket: {&quot;bucket&quot;:&quot;xxxxx&quot;, &quot;url&quot;:&quot;oss-cn-heyuan-internal.aliyuncs.com&quot;,&quot;path&quot;:&quot;/data&quot;,&quot;akId&quot;:&quot;xxxxx&quot;,&quot;akSecret&quot;:&quot;xxxxx&quot;}</para>
                     /// <remarks>
-                    /// <para>bucket specifies the name of the OSS bucket. url specifies the endpoint of the OSS bucket. You can obtain this value from the overview page of the target bucket in the OSS console. path specifies the directory structure relative to the bucket root for mounting. The default value is /. The directory must already exist. akId specifies the AccessKey ID used for direct AccessKey authorization. akSecret specifies the AccessKey Secret used for direct AccessKey authorization.</para>
+                    /// <para>bucket indicates the name of the OSS bucket. url indicates the endpoint of the OSS bucket. You can log on to the OSS console and obtain the endpoint on the Overview page of the bucket. path indicates the directory structure relative to the root directory of the bucket when the volume is mounted. The default value is /, and the directory must already exist. akId indicates the AccessKey ID used for direct authorization. akSecret indicates the AccessKey secret used for direct authorization.</para>
                     /// </remarks>
                     /// </description></item>
                     /// </list>
@@ -665,7 +747,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                     public string MountOptions { get; set; }
 
                     /// <summary>
-                    /// <para>The directory where the data volume is mounted to the task.</para>
+                    /// <para>The directory to which the data volume is mounted.</para>
+                    /// <remarks>
+                    /// <para>The content in the mount directory is directly overwritten by the content of the volume. Proceed with caution.</para>
+                    /// </remarks>
                     /// 
                     /// <b>Example:</b>
                     /// <para>/mnt</para>
@@ -685,7 +770,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                     public bool? ReadOnly { get; set; }
 
                     /// <summary>
-                    /// <para>The supported volume type. Valid values:</para>
+                    /// <para>The type of the data volume. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>alicloud/nas: mounts a NAS file system.</description></item>
                     /// <item><description>alicloud/oss: mounts an OSS bucket.</description></item>
@@ -703,9 +788,9 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether the job is long-running. Valid values:</para>
+            /// <para>Specifies whether the job runs for a long time. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: The job is a backend service job.</description></item>
+            /// <item><description>true: The job is a background service job.</description></item>
             /// <item><description>false: The job is a batch job.</description></item>
             /// </list>
             /// <para>Default value: false.</para>

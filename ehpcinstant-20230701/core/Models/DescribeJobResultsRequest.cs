@@ -13,17 +13,17 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         /// <para>The executor index.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0_1</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("ArrayIndex")]
         [Validation(Required=false)]
         public int? ArrayIndex { get; set; }
 
         /// <summary>
-        /// <para>The encoding method for the CommandContent and Output fields in the response. Valid values:</para>
+        /// <para>Specifies the encoding method for the CommandContent and Output fields in the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PlainText: returns the original script content and output.</description></item>
-        /// <item><description>Base64: returns Base64-encoded script content and output.</description></item>
+        /// <item><description>PlainText: Returns the original script content and output.</description></item>
+        /// <item><description>Base64: Returns the Base64-encoded script content and output.</description></item>
         /// </list>
         /// <para>Default value: Base64.</para>
         /// 
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The maximum size of the log. Unit: bytes. Valid values: 1 to 1048576 (1 MB).</para>
+        /// <para>The limit on the total size of the logs. Unit: bytes. Valid values: 1 to 1048576 (1 MB).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1048576</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class GetJobTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The creation time.</para>
+        /// <para>The creation time. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-04-20 11:09:59</para>
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 public string AllocationSpec { get; set; }
 
                 /// <summary>
-                /// <para>The computing power level. This parameter is valid only when the resource type is Economy. Valid values:</para>
+                /// <para>The computing power level. This parameter is valid only when the resource type is economy. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>General: General-purpose.</description></item>
-                /// <item><description>Performance: Performance.</description></item>
+                /// <item><description>General: general-purpose.</description></item>
+                /// <item><description>Performance: compute-optimized.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 public GetJobTemplateResponseBodyJobTemplateConfigDeploymentPolicyNetwork Network { get; set; }
                 public class GetJobTemplateResponseBodyJobTemplateConfigDeploymentPolicyNetwork : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether a public IP address is created for the job. Default value: false.</para>
+                    /// <para>Specifies whether to create a public IP address for the job. Default value: false.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                     public bool? EnableExternalIpAddress { get; set; }
 
                     /// <summary>
-                    /// <para>The vSwitch array.</para>
+                    /// <para>The vSwitches.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vsw-xxxx</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 public string Pool { get; set; }
 
                 /// <summary>
-                /// <para>The job priority. A larger value indicates a higher scheduling priority.</para>
+                /// <para>The job priority. A larger value indicates a higher scheduling priority for the job.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -107,14 +107,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 public int? Priority { get; set; }
 
                 /// <summary>
-                /// <para>The job tag information.</para>
+                /// <para>The tags of the job.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public List<GetJobTemplateResponseBodyJobTemplateConfigDeploymentPolicyTags> Tags { get; set; }
                 public class GetJobTemplateResponseBodyJobTemplateConfigDeploymentPolicyTags : TeaModel {
                     /// <summary>
-                    /// <para>The job tag key.</para>
+                    /// <para>The tag key.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>TestKey</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>The job tag value.</para>
+                    /// <para>The tag value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>TestValue</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 public GetJobTemplateResponseBodyJobTemplateConfigSecurityPolicySecurityGroup SecurityGroup { get; set; }
                 public class GetJobTemplateResponseBodyJobTemplateConfigSecurityPolicySecurityGroup : TeaModel {
                     /// <summary>
-                    /// <para>The array of security group IDs.</para>
+                    /// <para>The security group IDs.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>sg-xxxx</para>
@@ -196,28 +196,28 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             }
 
             /// <summary>
-            /// <para>The task list.</para>
+            /// <para>The tasks.</para>
             /// </summary>
             [NameInMap("Tasks")]
             [Validation(Required=false)]
             public List<GetJobTemplateResponseBodyJobTemplateConfigTasks> Tasks { get; set; }
             public class GetJobTemplateResponseBodyJobTemplateConfigTasks : TeaModel {
                 /// <summary>
-                /// <para>The task execution policy.</para>
+                /// <para>The execution policy of the task.</para>
                 /// </summary>
                 [NameInMap("ExecutorPolicy")]
                 [Validation(Required=false)]
                 public GetJobTemplateResponseBodyJobTemplateConfigTasksExecutorPolicy ExecutorPolicy { get; set; }
                 public class GetJobTemplateResponseBodyJobTemplateConfigTasksExecutorPolicy : TeaModel {
                     /// <summary>
-                    /// <para>The array job details.</para>
+                    /// <para>The details of the array job.</para>
                     /// </summary>
                     [NameInMap("ArraySpec")]
                     [Validation(Required=false)]
                     public GetJobTemplateResponseBodyJobTemplateConfigTasksExecutorPolicyArraySpec ArraySpec { get; set; }
                     public class GetJobTemplateResponseBodyJobTemplateConfigTasksExecutorPolicyArraySpec : TeaModel {
                         /// <summary>
-                        /// <para>The end value of the array job index. Valid values: 0 to 4999. The value must be greater than or equal to IndexStart.</para>
+                        /// <para>The end index of the array job. Valid values: 0 to 4999. The value must be greater than or equal to the value of IndexStart.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>9</para>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                         public int? IndexEnd { get; set; }
 
                         /// <summary>
-                        /// <para>The start value of the array job index. Valid values: 0 to 4999.</para>
+                        /// <para>The start index of the array job. Valid values: 0 to 4999.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0</para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                         public int? IndexStart { get; set; }
 
                         /// <summary>
-                        /// <para>The step of the array job index.</para>
+                        /// <para>The step size of the array job index.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -249,7 +249,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                     }
 
                     /// <summary>
-                    /// <para>The maximum number of nodes for running the job.</para>
+                    /// <para>The maximum number of nodes for the job execution.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -271,21 +271,21 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 public string TaskName { get; set; }
 
                 /// <summary>
-                /// <para>The task specification details.</para>
+                /// <para>The task specifications.</para>
                 /// </summary>
                 [NameInMap("TaskSpec")]
                 [Validation(Required=false)]
                 public GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpec TaskSpec { get; set; }
                 public class GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpec : TeaModel {
                     /// <summary>
-                    /// <para>The runtime environment resource information.</para>
+                    /// <para>The resource information of the runtime environment.</para>
                     /// </summary>
                     [NameInMap("Resource")]
                     [Validation(Required=false)]
                     public GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecResource Resource { get; set; }
                     public class GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecResource : TeaModel {
                         /// <summary>
-                        /// <para>The number of CPUs in the runtime environment.</para>
+                        /// <para>The number of CPU cores in the runtime environment.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2</para>
@@ -295,14 +295,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                         public float? Cores { get; set; }
 
                         /// <summary>
-                        /// <para>The cloud disk array.</para>
+                        /// <para>The array of cloud disks.</para>
                         /// </summary>
                         [NameInMap("Disks")]
                         [Validation(Required=false)]
                         public List<GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecResourceDisks> Disks { get; set; }
                         public class GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecResourceDisks : TeaModel {
                             /// <summary>
-                            /// <para>The cloud disk size. Unit: GiB.</para>
+                            /// <para>The size of the cloud disk. Unit: GiB.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>40</para>
@@ -312,7 +312,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                             public int? Size { get; set; }
 
                             /// <summary>
-                            /// <para>The cloud disk type.</para>
+                            /// <para>The type of the cloud disk.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>System</para>
@@ -366,7 +366,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                     }
 
                     /// <summary>
-                    /// <para>The task retry policy.</para>
+                    /// <para>The retry policy for the task.</para>
                     /// </summary>
                     [NameInMap("RetryPolicy")]
                     [Validation(Required=false)]
@@ -380,11 +380,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                         public List<GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecRetryPolicyExitCodeActions> ExitCodeActions { get; set; }
                         public class GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecRetryPolicyExitCodeActions : TeaModel {
                             /// <summary>
-                            /// <para>The next action for the task. Valid values:</para>
-                            /// <list type="bullet">
-                            /// <item><description>Retry: retries the task.</description></item>
-                            /// <item><description>Exit: exits the task.</description></item>
-                            /// </list>
+                            /// <para>The next action of the task. Valid values: Retry: retries the task. Exit: exits the task.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>Retry</para>
@@ -394,7 +390,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                             public string Action { get; set; }
 
                             /// <summary>
-                            /// <para>The task exit code, which is used together with Action to form a job retry rule. Valid values: 0 to 255.</para>
+                            /// <para>The exit code of the task. It is used together with the Action parameter to form the job retry rule. Valid values: 0 to 255.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>1</para>
@@ -425,14 +421,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                     public List<GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecTaskExecutor> TaskExecutor { get; set; }
                     public class GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecTaskExecutor : TeaModel {
                         /// <summary>
-                        /// <para>The container environment configuration.</para>
+                        /// <para>The container environment.</para>
                         /// </summary>
                         [NameInMap("Container")]
                         [Validation(Required=false)]
                         public GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecTaskExecutorContainer Container { get; set; }
                         public class GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecTaskExecutorContainer : TeaModel {
                             /// <summary>
-                            /// <para>The container application ID.</para>
+                            /// <para>The application ID of the container.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>ci-vm-32k6LXAi3cOG</para>
@@ -442,7 +438,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                             public string AppId { get; set; }
 
                             /// <summary>
-                            /// <para>The arguments for the container startup command.</para>
+                            /// <para>The arguments for the container startup commands.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>60s</para>
@@ -452,7 +448,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                             public List<string> Arg { get; set; }
 
                             /// <summary>
-                            /// <para>The list of container startup commands.</para>
+                            /// <para>The startup commands of the container.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>sleep</para>
@@ -491,6 +487,16 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                             }
 
                             /// <summary>
+                            /// <para>The GPU driver version.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>tesla=535</para>
+                            /// </summary>
+                            [NameInMap("GpuDriverVersion")]
+                            [Validation(Required=false)]
+                            public string GpuDriverVersion { get; set; }
+
+                            /// <summary>
                             /// <para>The container image.</para>
                             /// 
                             /// <b>Example:</b>
@@ -501,7 +507,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                             public string Image { get; set; }
 
                             /// <summary>
-                            /// <para>The list of self-managed image registry mount parameters. The parameters are in key-value format and passed as JSON.</para>
+                            /// <para>The mount parameters for the self-managed image registry. The parameters are in key-value pairs and passed in JSON format.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>{}</para>
@@ -509,6 +515,16 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                             [NameInMap("ImageRegistryOptions")]
                             [Validation(Required=false)]
                             public string ImageRegistryOptions { get; set; }
+
+                            /// <summary>
+                            /// <para>Specifies whether the container runs in privileged mode. Default value: false.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>true</para>
+                            /// </summary>
+                            [NameInMap("Privileged")]
+                            [Validation(Required=false)]
+                            public bool? Privileged { get; set; }
 
                             /// <summary>
                             /// <para>The working directory of the container.</para>
@@ -523,7 +539,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                         }
 
                         /// <summary>
-                        /// <para>The virtual machine (VM) environment configuration.</para>
+                        /// <para>The virtual machine environment.</para>
                         /// </summary>
                         [NameInMap("VM")]
                         [Validation(Required=false)]
@@ -550,7 +566,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                             public string Image { get; set; }
 
                             /// <summary>
-                            /// <para>The login password for the VM environment.</para>
+                            /// <para>The logon password for the VM environment.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>EHPC@1234</para>
@@ -560,7 +576,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                             public string Password { get; set; }
 
                             /// <summary>
-                            /// <para>The pre-processing script. The script must be Base64-encoded.</para>
+                            /// <para>The prolog script. It must be Base64-encoded.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>ZWNobyBoZWxsbyBlY3Mh</para>
@@ -570,7 +586,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                             public string PrologScript { get; set; }
 
                             /// <summary>
-                            /// <para>The job execution script. The script must be Base64-encoded.</para>
+                            /// <para>The job script. It must be Base64-encoded.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>ZWNobyBoZWxsbyBlY3Mh</para>
@@ -584,14 +600,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                     }
 
                     /// <summary>
-                    /// <para>The list of data volumes mounted to the task. A maximum of 10 volumes are supported.</para>
+                    /// <para>The list of data volumes mounted to the task. A maximum of 10 volumes can be mounted.</para>
                     /// </summary>
                     [NameInMap("VolumeMount")]
                     [Validation(Required=false)]
                     public List<GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecVolumeMount> VolumeMount { get; set; }
                     public class GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecVolumeMount : TeaModel {
                         /// <summary>
-                        /// <para>The list of data volume mount parameters. The parameters are in key-value format and passed as JSON.</para>
+                        /// <para>The list of mount options for the data volume. The options are passed in JSON format as key-value pairs.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>{&quot;server&quot;:&quot;xxxxx-xxxxx.cn-heyuan.nas.aliyuncs.com&quot;,&quot;vers&quot;:&quot;3&quot;,&quot;path&quot;:&quot;/data&quot;,&quot;options&quot;:&quot;nolock,tcp,noresvport&quot;}</para>
@@ -601,7 +617,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                         public string MountOptions { get; set; }
 
                         /// <summary>
-                        /// <para>The directory where the data volume is mounted to the task.</para>
+                        /// <para>The mount path of the data volume for the task.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>/mnt</para>
@@ -621,7 +637,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                         public bool? ReadOnly { get; set; }
 
                         /// <summary>
-                        /// <para>The currently supported data volume type.</para>
+                        /// <para>The type of the data volume.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>alicloud/nas</para>
@@ -635,12 +651,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 }
 
                 /// <summary>
-                /// <para>Specifies whether the job is long-running. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>true: The job is a background service job.</description></item>
-                /// <item><description>false: The job is a batch processing job.</description></item>
-                /// </list>
-                /// <para>Default value: false.</para>
+                /// <para>Indicates whether the job is a long-running job. Valid values: true: The job is a background service job. false: The job is a batch job. Default value: false.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -664,7 +675,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string JobTemplateDescription { get; set; }
 
         /// <summary>
-        /// <para>The ID of the job template.</para>
+        /// <para>The job template ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>jt-xxxx</para>
@@ -694,7 +705,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The job template status.</para>
+        /// <para>The status of the job template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Working</para>
@@ -704,7 +715,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The update time.</para>
+        /// <para>The update time. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-04-20 11:09:59</para>

@@ -9,17 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class GetImageShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The list of additional region IDs for which to query image information.</para>
+        /// </summary>
         [NameInMap("AdditionalRegionIds")]
         [Validation(Required=false)]
         public string AdditionalRegionIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>Image source. Valid values:</para>
+        /// <para>The image source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Public: public images provided by Alibaba Cloud.</para>
-        /// </description></item>
-        /// <item><description><para>Custom: custom images that you added.</para>
-        /// </description></item>
+        /// <item><description>Public: public images provided by Alibaba Cloud</description></item>
+        /// <item><description>Custom: custom images added by you</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -30,7 +31,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string ImageCategory { get; set; }
 
         /// <summary>
-        /// <para>Image ID.</para>
+        /// <para>The image ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>m-2ze74g5mvy4pjg*****</para>
@@ -40,14 +41,12 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>Image type. Valid values:</para>
+        /// <para>The image type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>VM: virtual machine image.</para>
-        /// </description></item>
-        /// <item><description><para>Container: container image.</para>
-        /// </description></item>
+        /// <item><description>VM: virtual machine image</description></item>
+        /// <item><description>Container: container image</description></item>
         /// </list>
-        /// <para>Default value: VM</para>
+        /// <para>Default value: VM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VM</para>

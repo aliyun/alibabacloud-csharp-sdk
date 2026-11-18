@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The list of arrays that are synchronized to the specified region. If \&quot;all\&quot; is included, it is synchronized to all other unsynchronized regions by default.</para>
+        /// <para>The list of target region IDs. If the list includes \&quot;all\&quot;, the application is synchronized to all other unsynchronized regions by default.</para>
         /// </summary>
         [NameInMap("TargetRegionIds")]
         [Validation(Required=false)]

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public List<ListJobsResponseBodyJobList> JobList { get; set; }
         public class ListJobsResponseBodyJobList : TeaModel {
             /// <summary>
-            /// <para>Additional information about the application.</para>
+            /// <para>The additional information about the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;xxx\&quot;: \&quot;xxxxx\&quot;}</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string AppExtraInfo { get; set; }
 
             /// <summary>
-            /// <para>The name of the application.</para>
+            /// <para>The application name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alphafold3</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// <para>The time when the job was submitted.</para>
+            /// <para>The time when the job was submitted. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-25 12:29:21</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the job ended.</para>
+            /// <para>The time when the job ended. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-25 12:35:23</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The number of running nodes.</para>
+            /// <para>The number of execution nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public int? ExecutorCount { get; set; }
 
             /// <summary>
-            /// <para>The description of the job.</para>
+            /// <para>The job description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Demo</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string JobDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the job.</para>
+            /// <para>The job ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>job-xxx</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The name of the job.</para>
+            /// <para>The job name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testJob</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string JobName { get; set; }
 
             /// <summary>
-            /// <para>The UID of the user who created the job.</para>
+            /// <para>The UID of the creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>129**********</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string OwnerUid { get; set; }
 
             /// <summary>
-            /// <para>The time when the job started.</para>
+            /// <para>The time when the job started. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-25 12:29:23</para>
@@ -117,30 +117,19 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the job. Possible values:</para>
+            /// <para>The job status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Pending: The job is in the queue.</para>
-            /// </description></item>
-            /// <item><description><para>Initing: The job is initializing.</para>
-            /// </description></item>
-            /// <item><description><para>Succeeded: The job was successful.</para>
-            /// </description></item>
-            /// <item><description><para>Failed: The job failed.</para>
-            /// </description></item>
-            /// <item><description><para>Running: The job is running.</para>
-            /// </description></item>
-            /// <item><description><para>Exception: A scheduling exception occurred.</para>
-            /// </description></item>
-            /// <item><description><para>Retrying: The job is being retried.</para>
-            /// </description></item>
-            /// <item><description><para>Expired: The job timed out.</para>
-            /// </description></item>
-            /// <item><description><para>Suspended: The job is in hibernation.</para>
-            /// </description></item>
-            /// <item><description><para>Restarting: The job is restarting.</para>
-            /// </description></item>
-            /// <item><description><para>Deleted: The job is deleted.</para>
-            /// </description></item>
+            /// <item><description>Pending: The job is queued.</description></item>
+            /// <item><description>Initing: The job is being initialized.</description></item>
+            /// <item><description>Succeeded: The job ran successfully.</description></item>
+            /// <item><description>Failed: The job failed to run.</description></item>
+            /// <item><description>Running: The job is running.</description></item>
+            /// <item><description>Exception: A scheduling exception occurred.</description></item>
+            /// <item><description>Retrying: The job is being retried.</description></item>
+            /// <item><description>Expired: The job timed out.</description></item>
+            /// <item><description>Suspended: The job is hibernated.</description></item>
+            /// <item><description>Restarting: The job is being restarted.</description></item>
+            /// <item><description>Deleted: The job is deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -190,7 +179,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public int? TaskCount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the job is a long-running job.</para>
+            /// <para>Specifies whether the job is a long-running job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -212,7 +201,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on the current page.</para>
+        /// <para>The paging Settings for the number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -222,7 +211,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>896D338C-E4F4-41EC-A154-D605E5DE****</para>
@@ -232,8 +221,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries that meet the filter conditions.
-        /// This parameter is optional and may not be returned.</para>
+        /// <para>The total number of entries that meet the request conditions. This parameter is optional and is not returned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

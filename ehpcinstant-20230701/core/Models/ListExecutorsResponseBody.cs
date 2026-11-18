@@ -17,14 +17,11 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public List<ListExecutorsResponseBodyExecutors> Executors { get; set; }
         public class ListExecutorsResponseBodyExecutors : TeaModel {
             /// <summary>
-            /// <para>The resource type.</para>
+            /// <para>The resource type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Standard: Standard.</para>
-            /// </description></item>
-            /// <item><description><para>Dedicated: Dedicated. This type requires whitelisting.</para>
-            /// </description></item>
-            /// <item><description><para>Economic: Economy. This type requires whitelisting.</para>
-            /// </description></item>
+            /// <item><description>Standard: Standard.</description></item>
+            /// <item><description>Dedicated: Dedicated. A whitelist is required.</description></item>
+            /// <item><description>Economic: Economic. A whitelist is required.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,7 +42,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// <para>The executor number.</para>
+            /// <para>The executor index.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -55,7 +52,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public int? ArrayIndex { get; set; }
 
             /// <summary>
-            /// <para>The duration for which the compute resources are reserved.</para>
+            /// <para>The retention period of compute resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>24</para>
@@ -65,7 +62,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public int? BlockDuration { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-02-20 10:04:10</para>
@@ -75,7 +72,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The end time.</para>
+            /// <para>The end time. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-02-20 10:04:18</para>
@@ -95,21 +92,24 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string ExecutorId { get; set; }
 
             /// <summary>
-            /// <para>The expiration time.</para>
+            /// <para>The expiration time. The time is returned in the YYYY-MM-DD HH:mm:ss format based on the UTC+8 time zone.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>202******:00</para>
             /// </summary>
             [NameInMap("ExpirationTime")]
             [Validation(Required=false)]
             public string ExpirationTime { get; set; }
 
             /// <summary>
-            /// <para>A list of public IP addresses of the node.</para>
+            /// <para>The list of public IP addresses of the node.</para>
             /// </summary>
             [NameInMap("ExternalIpAddress")]
             [Validation(Required=false)]
             public List<string> ExternalIpAddress { get; set; }
 
             /// <summary>
-            /// <para>A list of hostnames.</para>
+            /// <para>The list of hostnames.</para>
             /// </summary>
             [NameInMap("HostName")]
             [Validation(Required=false)]
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string Image { get; set; }
 
             /// <summary>
-            /// <para>A list of private IP addresses.</para>
+            /// <para>The list of internal IP addresses.</para>
             /// </summary>
             [NameInMap("IpAddress")]
             [Validation(Required=false)]
@@ -152,6 +152,9 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [Validation(Required=false)]
             public string JobName { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the execution instance is preemptible.</para>
+            /// </summary>
             [NameInMap("Preemptible")]
             [Validation(Required=false)]
             public bool? Preemptible { get; set; }
@@ -164,7 +167,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public ListExecutorsResponseBodyExecutorsResource Resource { get; set; }
             public class ListExecutorsResponseBodyExecutorsResource : TeaModel {
                 /// <summary>
-                /// <para>The number of CPU cores.</para>
+                /// <para>The number of CPUs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -174,14 +177,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 public float? Cores { get; set; }
 
                 /// <summary>
-                /// <para>An array of cloud disks.</para>
+                /// <para>The array of cloud disks.</para>
                 /// </summary>
                 [NameInMap("Disks")]
                 [Validation(Required=false)]
                 public List<ListExecutorsResponseBodyExecutorsResourceDisks> Disks { get; set; }
                 public class ListExecutorsResponseBodyExecutorsResourceDisks : TeaModel {
                     /// <summary>
-                    /// <para>The size of the cloud disk.</para>
+                    /// <para>The cloud disk size.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -191,12 +194,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                     public int? Size { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the cloud disk. The following types are supported:</para>
+                    /// <para>The cloud disk type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>System: The system disk.</para>
-                    /// </description></item>
-                    /// <item><description><para>Data: The data disk.</para>
-                    /// </description></item>
+                    /// <item><description>System: System cloud disk.</description></item>
+                    /// <item><description>Data: Data cloud disk.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -219,7 +220,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 public string InstanceType { get; set; }
 
                 /// <summary>
-                /// <para>The total amount of memory resources. Unit: GiB.</para>
+                /// <para>The total memory resources. Unit: GiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
@@ -241,7 +242,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The start time.</para>
+            /// <para>The start time. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-02-20 10:04:13</para>
@@ -251,30 +252,19 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the executor. Possible values:</para>
+            /// <para>The executor status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Pending: The executor is waiting in a queue.</para>
-            /// </description></item>
-            /// <item><description><para>Initing: The executor is being initialized.</para>
-            /// </description></item>
-            /// <item><description><para>Succeeded: The executor ran successfully.</para>
-            /// </description></item>
-            /// <item><description><para>Failed: The executor failed to run.</para>
-            /// </description></item>
-            /// <item><description><para>Running: The executor is running.</para>
-            /// </description></item>
-            /// <item><description><para>Exception: A scheduling error occurred.</para>
-            /// </description></item>
-            /// <item><description><para>Retrying: The system is retrying the executor.</para>
-            /// </description></item>
-            /// <item><description><para>Expired: The executor timed out.</para>
-            /// </description></item>
-            /// <item><description><para>Suspended: The job is in hibernation.</para>
-            /// </description></item>
-            /// <item><description><para>Restarting: The job is restarting.</para>
-            /// </description></item>
-            /// <item><description><para>Deleted: The executor is deleted.</para>
-            /// </description></item>
+            /// <item><description>Pending: Queued.</description></item>
+            /// <item><description>Initing: Initializing.</description></item>
+            /// <item><description>Succeeded: Succeeded.</description></item>
+            /// <item><description>Failed: Failed.</description></item>
+            /// <item><description>Running: Running.</description></item>
+            /// <item><description>Exception: Scheduling exception.</description></item>
+            /// <item><description>Retrying: Retrying.</description></item>
+            /// <item><description>Expired: Timed out.</description></item>
+            /// <item><description>Suspended: Job suspended.</description></item>
+            /// <item><description>Restarting: Job restarting.</description></item>
+            /// <item><description>Deleted: Deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -295,14 +285,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string StatusReason { get; set; }
 
             /// <summary>
-            /// <para>A list of executor tags.</para>
+            /// <para>The list of executor tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListExecutorsResponseBodyExecutorsTags> Tags { get; set; }
             public class ListExecutorsResponseBodyExecutorsTags : TeaModel {
                 /// <summary>
-                /// <para>The tag key of the executor.</para>
+                /// <para>The executor tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestKey</para>
@@ -312,7 +302,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// <para>The tag value of the executor.</para>
+                /// <para>The executor tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestValue</para>
@@ -344,7 +334,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public bool? TaskSustainable { get; set; }
 
             /// <summary>
-            /// <para>The virtual private cloud (VPC) ID.</para>
+            /// <para>The VPC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-xxx</para>
@@ -366,7 +356,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         }
 
         /// <summary>
-        /// <para>The current page number.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -376,7 +366,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page in the paging Settings for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -396,7 +386,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries in the list.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>40</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the paged query.</para>
+        /// <para>The page number for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The job name.</para>
+        /// <para>The task name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Task0</para>

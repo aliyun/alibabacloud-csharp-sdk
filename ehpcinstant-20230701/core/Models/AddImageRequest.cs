@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class AddImageRequest : TeaModel {
         /// <summary>
-        /// <para>The configurations of the container image.</para>
+        /// <para>The container image configuration.</para>
         /// </summary>
         [NameInMap("ContainerImageSpec")]
         [Validation(Required=false)]
         public AddImageRequestContainerImageSpec ContainerImageSpec { get; set; }
         public class AddImageRequestContainerImageSpec : TeaModel {
             /// <summary>
-            /// <para>Whether the instance is an Alibaba Cloud image repository Enterprise Edition.</para>
+            /// <para>Specifies whether the image is stored in Alibaba Cloud Container Registry Enterprise Edition. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>True</description></item>
-            /// <item><description>False</description></item>
+            /// <item><description>True: yes</description></item>
+            /// <item><description>False: no</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public bool? IsACREnterprise { get; set; }
 
             /// <summary>
-            /// <para>Whether it is an Alibaba Cloud image repository.</para>
+            /// <para>Specifies whether the image is stored in Alibaba Cloud Container Registry. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>True</description></item>
-            /// <item><description>False</description></item>
+            /// <item><description>True: yes</description></item>
+            /// <item><description>False: no</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,14 +45,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public bool? IsACRRegistry { get; set; }
 
             /// <summary>
-            /// <para>The authentication of the private image repository.</para>
+            /// <para>The authentication credentials for the private image repository.</para>
             /// </summary>
             [NameInMap("RegistryCredential")]
             [Validation(Required=false)]
             public AddImageRequestContainerImageSpecRegistryCredential RegistryCredential { get; set; }
             public class AddImageRequestContainerImageSpecRegistryCredential : TeaModel {
                 /// <summary>
-                /// <para>The password of the logon user.</para>
+                /// <para>The logon password.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>userpassword</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 public string Password { get; set; }
 
                 /// <summary>
-                /// <para>The registered address of the image repository.</para>
+                /// <para>The registry address of the image repository.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>registry-vpc.cn-hangzhou.aliyuncs.com</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 public string Server { get; set; }
 
                 /// <summary>
-                /// <para>The username of the logon user.</para>
+                /// <para>The logon username.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>username</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             }
 
             /// <summary>
-            /// <para>The ID of the Container Registry Enterprise Edition image repository.</para>
+            /// <para>The ID of the Container Registry Enterprise Edition instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cri-xyz795ygf8k9****</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string RegistryCriId { get; set; }
 
             /// <summary>
-            /// <para>The endpoint of the container image.</para>
+            /// <para>The access URL of the container image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>registry-vpc.cn-hangzhou.aliyuncs.com/ehpc_open/nginx:latest</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         }
 
         /// <summary>
-        /// <para>The description of the image.</para>
+        /// <para>The image description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test image</para>
@@ -116,10 +116,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The type of the images. Valid values:</para>
+        /// <para>The image type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>VM: virtual machine image.</description></item>
-        /// <item><description>Container: the container image.</description></item>
+        /// <item><description>VM: virtual machine image</description></item>
+        /// <item><description>Container: container image</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string ImageType { get; set; }
 
         /// <summary>
-        /// <para>The version of the image.</para>
+        /// <para>The image version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>V1.0</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string ImageVersion { get; set; }
 
         /// <summary>
-        /// <para>The name of the custom image.</para>
+        /// <para>The image name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The image configuration of the virtual machine.</para>
+        /// <para>The virtual machine image configuration.</para>
         /// </summary>
         [NameInMap("VMImageSpec")]
         [Validation(Required=false)]

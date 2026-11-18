@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class ListExecutorEventsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The filter conditions for querying Executors.</para>
+        /// <para>The filter conditions for querying executors.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public string FilterShrink { get; set; }
 
         /// <summary>
-        /// <para>The page number.<br>Minimum value: 1.<br>Default value: 1.</para>
+        /// <para>The page number. Starting value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging. Default value: 50. Maximum value: 100.</para>
+        /// <para>The paging Settings for the number of entries per page in a paged query. Default value: 50. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

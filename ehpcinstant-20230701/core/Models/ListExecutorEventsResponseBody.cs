@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The Executor ID. Format: JobId-TaskName-ArrayIndex.</para>
+            /// <para>The executor ID. Format: JobId-TaskName-ArrayIndex.</para>
             /// 
             /// <b>Example:</b>
             /// <para>job-xxxx-Task0-1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The runtime event level. Valid values:</para>
+            /// <para>The level of the runtime event. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Normal</description></item>
             /// <item><description>Warning</description></item>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging.</para>
+        /// <para>The paging Settings for the number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

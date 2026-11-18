@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class ListImagesRequest : TeaModel {
         /// <summary>
-        /// <para>The source of the image. Valid values:</para>
+        /// <para>The image source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Public: public images provided by Alibaba Cloud.</description></item>
-        /// <item><description>Custom: the custom image that you added.</description></item>
+        /// <item><description>Public: public images provided by Alibaba Cloud</description></item>
+        /// <item><description>Custom: custom images added by you</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,12 +38,12 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public List<string> ImageNames { get; set; }
 
         /// <summary>
-        /// <para>The type of the images. Valid values:</para>
+        /// <para>The image type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>VM: virtual machine image.</description></item>
-        /// <item><description>Container: the container image.</description></item>
+        /// <item><description>VM: virtual machine image</description></item>
+        /// <item><description>Container: container image</description></item>
         /// </list>
-        /// <para>Default value: VM</para>
+        /// <para>Default value: VM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VM</para>
@@ -55,8 +55,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         /// <summary>
         /// <para>The query mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>List: queries the list of all corresponding image versions.</description></item>
-        /// <item><description>Merge: merges images to query the latest version list.</description></item>
+        /// <item><description>List: Queries the list of all image versions.</description></item>
+        /// <item><description>Merge: Queries the list of the latest versions for each image.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,8 +67,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string Mode { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.\
-        /// Default value: 1.</para>
+        /// <para>The current page number.<br>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -78,8 +77,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of pieces per page.\
-        /// Default value: 20.</para>
+        /// <para>The number of entries per page.<br>Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

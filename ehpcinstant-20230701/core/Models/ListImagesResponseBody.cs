@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The time when the storage resource was created.</para>
+            /// <para>The creation time. The time is in the YYYY-MM-DDTHH:mm:ssZ format, where Z represents UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-12-09T07:06:34Z</para>
@@ -38,10 +38,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the image.</para>
+            /// <para>The image description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>应用测试镜像。</para>
+            /// <para>Application test image</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The type of the image.</para>
+            /// <para>The image type.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string ImageType { get; set; }
 
             /// <summary>
-            /// <para>The name of the image.</para>
+            /// <para>The image name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app-image</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the specific OS version.</para>
+            /// <para>The specific OS version identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Ubuntu  22.04 64 bit</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string OsTag { get; set; }
 
             /// <summary>
-            /// <para>The time when the image was updated.</para>
+            /// <para>The image update time. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-09-25 14:15:28</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The version of the image.</para>
+            /// <para>The image version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v1.0</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -162,10 +162,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the process of executing the command and obtaining the result was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of items that meet the request conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

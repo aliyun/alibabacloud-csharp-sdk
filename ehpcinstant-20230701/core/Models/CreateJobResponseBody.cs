@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task list.</para>
+        /// <para>The list of tasks.</para>
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public List<CreateJobResponseBodyTasks> Tasks { get; set; }
         public class CreateJobResponseBodyTasks : TeaModel {
             /// <summary>
-            /// <para>The list of executor IDs contained in the task.</para>
+            /// <para>The list of executor IDs included in the task.</para>
             /// </summary>
             [NameInMap("ExecutorIds")]
             [Validation(Required=false)]

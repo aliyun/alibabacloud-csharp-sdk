@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string JobDescription { get; set; }
 
         /// <summary>
-        /// <para>The job name. The name must be 2 to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</para>
+        /// <para>The job name. The name must be 2 to 64 characters in length and can contain Chinese characters, English letters, and digits. It can also contain hyphens (-) and underscores (_).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string SecurityPolicyShrink { get; set; }
 
         /// <summary>
-        /// <para>The task list. Currently, only one task is supported.</para>
+        /// <para>The list of tasks. Only one task is supported.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tasks")]

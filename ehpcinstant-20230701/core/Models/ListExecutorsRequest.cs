@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public ListExecutorsRequestFilter Filter { get; set; }
         public class ListExecutorsRequestFilter : TeaModel {
             /// <summary>
-            /// <para>A list of executor IDs. You can specify up to 100 IDs.</para>
+            /// <para>The list of executor IDs. A maximum of 100 IDs are supported.</para>
             /// </summary>
             [NameInMap("ExecutorIds")]
             [Validation(Required=false)]
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string Image { get; set; }
 
             /// <summary>
-            /// <para>A list of private IP addresses. You can specify up to 100 IP addresses.</para>
+            /// <para>The list of internal IP addresses. A maximum of 100 IP addresses are supported.</para>
             /// </summary>
             [NameInMap("IpAddresses")]
             [Validation(Required=false)]
             public List<string> IpAddresses { get; set; }
 
             /// <summary>
-            /// <para>The job name. Fuzzy queries are supported.</para>
+            /// <para>The job name. Fuzzy match is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testJob</para>
@@ -51,6 +51,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string JobName { get; set; }
 
             /// <summary>
+            /// <para>The job template ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>jt-xxxx</para>
             /// </summary>
@@ -59,6 +61,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string JobTemplateId { get; set; }
 
             /// <summary>
+            /// <para>The resource pool name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>MyPool</para>
             /// </summary>
@@ -67,14 +71,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string PoolName { get; set; }
 
             /// <summary>
-            /// <para>A list of executor statuses.</para>
+            /// <para>The list of executor statuses.</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public List<string> Status { get; set; }
 
             /// <summary>
-            /// <para>The jobs submitted after this time. This is a UNIX timestamp that is converted from the time in the region where the job is located. For sites in mainland China, the time is in the UTC+8 time zone.</para>
+            /// <para>The time after which the job was submitted. The time is converted to a UNIX timestamp based on the time zone of the region. For regions in the Chinese mainland, the time zone is UTC+8.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1703819914</para>
@@ -84,7 +88,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public int? TimeCreatedAfter { get; set; }
 
             /// <summary>
-            /// <para>The jobs submitted before this time. This is a UNIX timestamp that is converted from the time in the region where the job is located. For sites in mainland China, the time is in the UTC+8 time zone.</para>
+            /// <para>The time before which the job was submitted. The time is converted to a UNIX timestamp based on the time zone of the region. For regions in the Chinese mainland, the time zone is UTC+8.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1703820113</para>
@@ -94,7 +98,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public int? TimeCreatedBefore { get; set; }
 
             /// <summary>
-            /// <para>The virtual private cloud (VPC) ID.</para>
+            /// <para>The VPC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-xxx</para>
@@ -116,7 +120,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         }
 
         /// <summary>
-        /// <para>The current page number.<br>Start value: 1<br>Default value: 1<br><br></para>
+        /// <para>The page number. Starting value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -126,7 +130,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page for a paged query. Default value: 50. Maximum value: 100.</para>
+        /// <para>The number of entries per page in the paging Settings for a paged query. Default value: 50. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

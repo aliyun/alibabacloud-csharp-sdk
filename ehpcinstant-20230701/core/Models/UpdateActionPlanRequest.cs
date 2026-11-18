@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string ActionPlanId { get; set; }
 
         /// <summary>
-        /// <para>The expected scale of resources for the execution plan. If the ResourceType parameter is set to VcpuCapacity, the execution plan is expected to have 10000 vCPUs.</para>
+        /// <para>The expected resource scale of the execution plan. If ResourceType is set to VcpuCapacity, this field indicates that the execution plan expects to maintain 10,000 vCPUs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -30,13 +30,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public float? DesiredCapacity { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable the execution plan. Valid values:</para>
+        /// <para>Specifies whether to enable the execution plan. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: enables the execution plan.</para>
+        /// <item><description><para>true: Enables the execution plan.</para>
         /// </description></item>
-        /// <item><description><para>false: The execution plan is disabled.</para>
-        /// <para>**</para>
-        /// <para><b>Note:</b> After an execution plan is disabled, the created Instant jobs are not automatically managed by the execution plan.</para>
+        /// <item><description><para>false: Disables the execution plan.</para>
+        /// <remarks>
+        /// <para>Notice: After the execution plan is disabled, already created Instant jobs are no longer automatically managed by the execution plan.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
         /// 
@@ -48,6 +49,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string Enabled { get; set; }
 
         /// <summary>
+        /// <para>The scheduling interval of the execution plan. Unit: minutes. Valid values: 10 to 10080. Default value: 60.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>60</para>
         /// </summary>

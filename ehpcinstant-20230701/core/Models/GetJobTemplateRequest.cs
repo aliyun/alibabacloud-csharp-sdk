@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class GetJobTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the job template.</para>
+        /// <para>The job template ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

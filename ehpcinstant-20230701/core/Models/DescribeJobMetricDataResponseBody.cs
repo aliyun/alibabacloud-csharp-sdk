@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class DescribeJobMetricDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>Monitoring statistics points.</para>
+        /// <para>The monitoring statistics data points.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;timestamp&quot;:1709540685000,&quot;Minimum&quot;:28.45,&quot;Maximum&quot;:28.45,&quot;Average&quot;:28.45}]</para>

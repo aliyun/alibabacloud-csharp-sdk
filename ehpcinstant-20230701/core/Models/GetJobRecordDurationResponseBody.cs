@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class GetJobRecordDurationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The job record retention period, in days. Valid values: 1 to 30. Default value: 30.</para>
+        /// <para>The retention period of job records, in days. Valid values: 1 to 30. Default value: 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public long? JobRecordDuration { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>896D338C-E4F4-41EC-A154-D605E5DE****</para>

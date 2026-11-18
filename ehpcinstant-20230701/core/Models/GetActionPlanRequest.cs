@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class GetActionPlanRequest : TeaModel {
         /// <summary>
-        /// <para>ID of the execution plan.</para>
+        /// <para>The ID of the execution plan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ap-hz036ubmx2qmw93k****</para>

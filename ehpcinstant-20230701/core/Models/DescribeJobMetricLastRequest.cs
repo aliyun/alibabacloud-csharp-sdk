@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class DescribeJobMetricLastRequest : TeaModel {
         /// <summary>
-        /// <para>The list of array job indexes.</para>
+        /// <para>The list of job array indexes.</para>
         /// </summary>
         [NameInMap("ArrayIndex")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The name of the task.</para>
+        /// <para>The task name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Task0</para>
