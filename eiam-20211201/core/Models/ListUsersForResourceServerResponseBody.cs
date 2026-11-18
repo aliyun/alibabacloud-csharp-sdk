@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListUsersForResourceServerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page in a paged query.</para>
+        /// <para>The maximum number of entries to return per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page.</para>
+        /// <para>The token for the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries in the list.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The list of granted scope permissions.</para>
+            /// <para>The list of authorized scopes.</para>
             /// </summary>
             [NameInMap("ResourceServerScopes")]
             [Validation(Required=false)]
             public List<ListUsersForResourceServerResponseBodyUsersResourceServerScopes> ResourceServerScopes { get; set; }
             public class ListUsersForResourceServerResponseBodyUsersResourceServerScopes : TeaModel {
                 /// <summary>
-                /// <para>The scope permission ID.</para>
+                /// <para>The scope ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ress_nbte4bb3qqqnaq73rlmkqixxxx</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ResourceServerScopeId { get; set; }
 
                 /// <summary>
-                /// <para>The scope permission name.</para>
+                /// <para>The scope name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Read All User</para>

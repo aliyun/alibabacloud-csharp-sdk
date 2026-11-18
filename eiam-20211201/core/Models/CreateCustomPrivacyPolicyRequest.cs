@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateCustomPrivacyPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>A client token used to ensure the idempotence of the request. The client generates this value to make sure that it is unique among different requests. The value can be up to 64 ASCII characters in length and cannot contain non-ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-example</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<CreateCustomPrivacyPolicyRequestCustomPrivacyPolicyContents> CustomPrivacyPolicyContents { get; set; }
         public class CreateCustomPrivacyPolicyRequestCustomPrivacyPolicyContents : TeaModel {
             /// <summary>
-            /// <para>The items of the custom privacy policy.</para>
+            /// <para>The custom privacy policy items.</para>
             /// </summary>
             [NameInMap("CustomPrivacyPolicyItems")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string CustomPrivacyPolicyItemName { get; set; }
 
                 /// <summary>
-                /// <para>The endpoint of the custom privacy policy item.</para>
+                /// <para>The URL of the custom privacy policy item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://www.xxxx.com">http://www.xxxx.com</a></para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The prompt for the custom privacy policy.</para>
+            /// <para>The custom privacy policy tip.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Please read and agree：</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CustomPrivacyPolicyTip { get; set; }
 
             /// <summary>
-            /// <para>The language of the custom privacy policy. The value is the LanguageCode returned by the ListLanguages operation.</para>
+            /// <para>The language code of the custom privacy policy. The value is obtained from the LanguageCode parameter returned by the ListLanguages operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zh-Hans-CN</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string CustomPrivacyPolicyName { get; set; }
 
         /// <summary>
-        /// <para>The default language of the privacy policy.</para>
+        /// <para>The default language code of the custom privacy policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh-Hans-CN</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The consent type for the privacy policy.</para>
+        /// <para>The user consent type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>implied_consent</para>

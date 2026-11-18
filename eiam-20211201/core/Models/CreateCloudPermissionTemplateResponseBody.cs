@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateCloudPermissionTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the permission template.</para>
+        /// <para>The permission template ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cpt_01l8dagf2iablhigj75l1n99xxxxx</para>

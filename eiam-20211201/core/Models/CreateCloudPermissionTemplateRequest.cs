@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public bool? AllowRequest { get; set; }
 
         /// <summary>
-        /// <para>The applicable scope of the permission template, including the scope type and the specified users, groups, or organizational units.</para>
+        /// <para>The applicable scope of the permission template, including the scope type and specified users, groups, or organizational units.</para>
         /// </summary>
         [NameInMap("ApplicableScope")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The list of group IDs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>group_d6sbsusdfa4h66ec3il7yxxxx</para>
+            /// <para>[&quot;group_d6sbsusdfa4h66ec3il7yxxxx&quot;]</para>
             /// </summary>
             [NameInMap("GroupIds")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The list of organizational unit IDs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ou_d6sbsuudfgf4h66ec3il7yxxxx</para>
+            /// <para>[&quot;ou_d6sbsuudfgf4h66ec3il7yxxxx&quot;]</para>
             /// </summary>
             [NameInMap("OrganizationalUnitIds")]
             [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The list of user IDs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>user_d6sbsuumeta4h66ec3il7yxxxx</para>
+            /// <para>[&quot;user_d6sbsuumeta4h66ec3il7yxxxx&quot;]</para>
             /// </summary>
             [NameInMap("UserIds")]
             [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>Ensures the idempotence of the request. You can generate the value from your client to ensure that the value is unique across different requests. The client token supports only ASCII characters and can be up to 64 characters in length.</para>
+        /// <para>Ensures the idempotence of the request. You can generate a client token on your client to ensure that the value is unique across different requests. The client token can only contain ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-example</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListUsersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries per page in a paging query.</para>
+        /// <para>The maximum number of entries per page for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The description of the account.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxxx</para>
+            /// <para>Test account</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? PhoneNumberVerified { get; set; }
 
             /// <summary>
-            /// <para>The phone region code. Example: 86 for the Chinese mainland, without 00 or +.</para>
+            /// <para>The region code of the mobile phone number. Example: 86 for the Chinese mainland, without 00 or +.</para>
             /// 
             /// <b>Example:</b>
             /// <para>86</para>
@@ -199,8 +199,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The status of the account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>enabled: enabled</description></item>
-            /// <item><description>disabled: disabled</description></item>
+            /// <item><description>enabled: The account is enabled.</description></item>
+            /// <item><description>disabled: The account is disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -221,7 +221,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The external ID of the account. This ID is used to map external data to IDaaS accounts. The default value is the IDaaS account ID. Note: The external ID must be unique within the same source type and source ID.</para>
+            /// <para>The external ID of the account. This ID is used to map external data to IDaaS accounts. The default value is the IDaaS account ID.</para>
+            /// <para>Note: The external ID must be unique within the same source type and source ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user_d6sbsuumeta4h66ec3il7yxxxx</para>
@@ -242,7 +243,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
             /// <summary>
             /// <para>The source ID of the account.</para>
-            /// <para>For the build-in type, the default value is the instance ID. For other types, the value corresponds to the enterprise ID of the source. For example, for the DingTalk source, the value is the corpId of the DingTalk enterprise.</para>
+            /// <para>For the built-in type, the default value is the instance ID. For other types, the value corresponds to the enterprise ID of the source. For example, the DingTalk source corresponds to the corpId of the DingTalk enterprise.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -254,10 +255,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The source type of the account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>build_in: self-managed</description></item>
-            /// <item><description>ding_talk: imported from DingTalk</description></item>
-            /// <item><description>ad: imported from AD</description></item>
-            /// <item><description>ldap: imported from LDAP</description></item>
+            /// <item><description>build_in: The account is self-managed.</description></item>
+            /// <item><description>ding_talk: The account is imported from DingTalk.</description></item>
+            /// <item><description>ad: The account is imported from AD.</description></item>
+            /// <item><description>ldap: The account is imported from LDAP.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

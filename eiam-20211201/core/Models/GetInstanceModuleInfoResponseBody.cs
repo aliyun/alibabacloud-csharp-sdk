@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<GetInstanceModuleInfoResponseBodyModuleFeatures> Features { get; set; }
             public class GetInstanceModuleInfoResponseBodyModuleFeatures : TeaModel {
                 /// <summary>
-                /// <para>The level-2 module identifier.</para>
+                /// <para>The identifier of the level-2 module.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>urn:alibaba:idaas:license:module:application:standard:oidc</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string FeatureKey { get; set; }
 
                 /// <summary>
-                /// <para>The level-2 module status.</para>
+                /// <para>The status of the level-2 module.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>enabled</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The level-1 module identifier.</para>
+            /// <para>The identifier of the level-1 module.</para>
             /// 
             /// <b>Example:</b>
             /// <para>urn:alibaba:idaas:license:module:application</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ModuleKey { get; set; }
 
             /// <summary>
-            /// <para>The level-1 module status.</para>
+            /// <para>The status of the level-1 module.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>

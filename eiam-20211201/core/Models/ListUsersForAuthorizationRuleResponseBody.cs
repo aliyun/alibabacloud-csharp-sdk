@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListUsersForAuthorizationRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page in a paged query. This is the paging size.</para>
+        /// <para>The maximum number of entries per page for paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token returned for the next page of results. Use this token in the next request to retrieve the next page.</para>
+        /// <para>The token returned by this call for the next pagination query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The list of account data.</para>
+        /// <para>The list of accounts.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>The time range of the validity period. This parameter takes effect only when ValidityType is set to time_bound.</para>
+            /// <para>The time range of the validity period. This parameter takes effect only when <b>ValidityType</b> is set to <b>time_bound</b>.</para>
             /// </summary>
             [NameInMap("ValidityPeriod")]
             [Validation(Required=false)]
             public ListUsersForAuthorizationRuleResponseBodyUsersValidityPeriod ValidityPeriod { get; set; }
             public class ListUsersForAuthorizationRuleResponseBodyUsersValidityPeriod : TeaModel {
                 /// <summary>
-                /// <para>The end time of the validity period, in UNIX timestamp format. Unit: milliseconds.</para>
+                /// <para>The end time of the validity period. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1704042061000</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public long? EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the validity period, in UNIX timestamp format. Unit: milliseconds.</para>
+                /// <para>The start time of the validity period. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1704042061000</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The validity type of the relationship. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>permanent: permanent</description></item>
-            /// <item><description>time_bound: custom time range.</description></item>
+            /// <item><description>time_bound: custom time range</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

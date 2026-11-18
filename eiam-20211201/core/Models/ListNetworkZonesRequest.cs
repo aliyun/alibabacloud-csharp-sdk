@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per page for paging.</para>
+        /// <para>The maximum number of entries to return per page when paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The network zone IDs.</para>
+        /// <para>The IDs of the network zones.</para>
         /// </summary>
         [NameInMap("NetworkZoneIds")]
         [Validation(Required=false)]

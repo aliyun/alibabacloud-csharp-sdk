@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListResourceServersForUserResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of rows per page in a paged query.</para>
+        /// <para>The number of entries per page for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page.</para>
+        /// <para>The query token for the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -84,11 +84,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<ListResourceServersForUserResponseBodyResourceServersResourceServerScopes> ResourceServerScopes { get; set; }
             public class ListResourceServersForUserResponseBodyResourceServersResourceServerScopes : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether direct authorization exists. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>true: Yes.</description></item>
-                /// <item><description>false: No.</description></item>
-                /// </list>
+                /// <para>Indicates whether direct authorization exists.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -98,7 +94,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public bool? HasDirectAuthorization { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether inherited authorization exists.</para>
+                /// <para>Indicates whether inherited permissions exist.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>

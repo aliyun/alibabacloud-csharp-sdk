@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateNetworkZoneResponseBody : TeaModel {
         /// <summary>
-        /// <para>Network zone ID.</para>
+        /// <para>The network zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>network_m6a57vre4g3h7m725yrq6pxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NetworkZoneId { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>

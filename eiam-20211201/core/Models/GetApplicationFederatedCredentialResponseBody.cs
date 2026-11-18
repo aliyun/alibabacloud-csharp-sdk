@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigAzureVmConfig AzureVmConfig { get; set; }
                 public class GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigAzureVmConfig : TeaModel {
                     /// <summary>
-                    /// <para>The identity identifier.</para>
+                    /// <para>The principal ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5dee234a-1b4c-4ad7-a19f-fxxxxx</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string PrincipalId { get; set; }
 
                     /// <summary>
-                    /// <para>The Azure resource group name.</para>
+                    /// <para>The name of the Azure resource group.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>user_default</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public List<string> InstanceIds { get; set; }
 
                     /// <summary>
-                    /// <para>The GCP project ID to which the resource belongs.</para>
+                    /// <para>The GCP project ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>turnkey-axiom-475109-xx</para>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string ProjectId { get; set; }
 
                     /// <summary>
-                    /// <para>The sub claim that corresponds to the service account.</para>
+                    /// <para>The sub claim corresponding to the service account.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>123456789</para>
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigKubernetesConfig KubernetesConfig { get; set; }
                 public class GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigKubernetesConfig : TeaModel {
                     /// <summary>
-                    /// <para>The K8s namespace.</para>
+                    /// <para>The Kubernetes namespace.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>default</para>
@@ -271,7 +271,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string PodNamePrefix { get; set; }
 
                     /// <summary>
-                    /// <para>The K8s service account name.</para>
+                    /// <para>The Kubernetes service account name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>default</para>

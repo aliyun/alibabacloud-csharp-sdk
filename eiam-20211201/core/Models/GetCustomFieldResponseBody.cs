@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The permissions on the user portal side.</para>
+            /// <para>The user portal permissions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>read_only</para>

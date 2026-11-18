@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListOrganizationalUnitsResponseBodyOrganizationalUnits> OrganizationalUnits { get; set; }
         public class ListOrganizationalUnitsResponseBodyOrganizationalUnits : TeaModel {
             /// <summary>
-            /// <para>The time when the organizational unit was created. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The time when the organizational unit was created. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1652085686179</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The description of the organizational unit.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test organization</para>
+            /// <para>Test organizational unit</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -57,8 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? Leaf { get; set; }
 
             /// <summary>
-            /// <para>The external ID of the organizational unit. This ID is used to map the data of the organizational unit to the data of an external system. By default, the value of this parameter is the organizational unit ID.</para>
-            /// <para>Note: The external ID must be unique within the same source type and source ID.</para>
+            /// <para>The external ID of the organizational unit, which is used to map external data to IDaaS organizational units. Default value: the IDaaS organizational unit ID. Note: The external ID must be unique under the same source type and source ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ou_wovwffm62xifdziem7an7xxxxx</para>
@@ -68,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string OrganizationalUnitExternalId { get; set; }
 
             /// <summary>
-            /// <para>The organizational unit ID.</para>
+            /// <para>The ID of the organizational unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ou_wovwffm62xifdziem7an7xxxxx</para>
@@ -100,11 +99,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The source type of the organizational unit. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>build_in: The organizational unit is created in IDaaS.</description></item>
-            /// <item><description>ding_talk: The organizational unit is imported from DingTalk.</description></item>
-            /// <item><description>ad: The organizational unit is imported from Active Directory (AD).</description></item>
-            /// <item><description>ldap: The organizational unit is imported from a Lightweight Directory Access Protocol (LDAP) directory.</description></item>
-            /// <item><description>we_com: The organizational unit is imported from WeCom.</description></item>
+            /// <item><description>build_in: built-in.</description></item>
+            /// <item><description>ding_talk: imported from DingTalk.</description></item>
+            /// <item><description>ad: imported from AD.</description></item>
+            /// <item><description>ldap: imported from LDAP.</description></item>
+            /// <item><description>we_com: imported from WeCom.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -125,7 +124,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ParentId { get; set; }
 
             /// <summary>
-            /// <para>The time when the organizational unit was last updated. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The time when the organizational unit was last updated. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1652085686179</para>
@@ -147,7 +146,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries that are returned. This value is the total number of matched entries. The maximum number of entries that can be returned in a single request is specified by PageSize.</para>
+        /// <para>The total number of entries. This value indicates the total number of matched entries. The maximum number of entries returned per page is specified by the PageSize parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>

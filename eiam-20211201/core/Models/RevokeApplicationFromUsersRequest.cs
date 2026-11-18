@@ -42,11 +42,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The list of account IDs. You can specify up to 100 account IDs in a single request.</para>
+        /// <para>The list of account IDs. You can specify up to 100 account IDs in a single operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>user_d6sbsuumeta4h66ec3il7yxxxx</para>
+        /// <para>[&quot;user_d6sbsuumeta4h66ec3il7yxxxx&quot;]</para>
         /// </summary>
         [NameInMap("UserIds")]
         [Validation(Required=false)]

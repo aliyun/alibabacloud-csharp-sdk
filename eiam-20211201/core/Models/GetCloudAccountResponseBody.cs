@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The last check time. The value is a UNIX timestamp in milliseconds.</para>
+                /// <para>The last check time in UNIX timestamp format. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1649830226000</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountVendorType { get; set; }
 
             /// <summary>
-            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The creation time in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830225000</para>
@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public GetCloudAccountResponseBodyCloudAccountPrivilegeHostingError PrivilegeHostingError { get; set; }
             public class GetCloudAccountResponseBodyCloudAccountPrivilegeHostingError : TeaModel {
                 /// <summary>
-                /// <para>The failure error code.</para>
+                /// <para>The error code of the failure.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Error</para>
@@ -276,14 +276,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The cloud account hosting status. Default value: hosting_unmanaged. Valid values:</para>
+            /// <para>The cloud account hosting state. Default value: hosting_unmanaged. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>hosting_unmanaged: Unmanaged. The cloud account has not initiated hosting and is in the initial state.</description></item>
-            /// <item><description>hosting_pending: Hosting. The hosting task is submitted and executed asynchronously. You must wait for the hosting process to complete to enter the final state.</description></item>
-            /// <item><description>hosting_completed: Hosting completed. The hosting process is executed successfully, and the relevant permission templates and hosting bindings take effect.</description></item>
-            /// <item><description>hosting_failed: Hosting failed. An exception occurs during the hosting process. You can view the failure cause and initiate hosting again.</description></item>
-            /// <item><description>hosting_removing: Removing. The removal task is submitted and executed asynchronously. You must wait for the removal process to complete to enter the final state.</description></item>
-            /// <item><description>hosting_remove_failed: Removal failed. An exception occurs during the removal process. You can view the failure cause and initiate removal again.</description></item>
+            /// <item><description>hosting_pending: Hosting. The hosting task is submitted and being executed asynchronously. Wait for the hosting process to complete before entering the final state.</description></item>
+            /// <item><description>hosting_completed: Hosting completed. The cloud account hosting process is executed successfully, and the related permission templates and hosting bindings are in effect.</description></item>
+            /// <item><description>hosting_failed: Hosting failed. The hosting process encounters an exception. You can view the cause of the failure and initiate hosting again.</description></item>
+            /// <item><description>hosting_removing: Removing. The remove hosting task is submitted and being executed asynchronously. Wait for the removal process to complete before entering the final state.</description></item>
+            /// <item><description>hosting_remove_failed: Removal failed. The removal process encounters an exception. You can view the cause of the failure and initiate removal again.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -294,10 +294,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PrivilegeHostingState { get; set; }
 
             /// <summary>
-            /// <para>The privilege switch status. Valid values:</para>
+            /// <para>The privilege status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>enabled: Enabled. The resource is active and can be used normally.</description></item>
-            /// <item><description>disabled: Disabled. The resource is deactivated and no longer takes effect. You can re-enable it to restore the resource.</description></item>
+            /// <item><description>enabled: Enabled. The resource is in effect and can be used normally.</description></item>
+            /// <item><description>disabled: Disabled. The resource is deactivated and no longer in effect. You can re-enable it to restore it.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -308,7 +308,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PrivilegeStatus { get; set; }
 
             /// <summary>
-            /// <para>The last update time. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The last update time in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830227000</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListUserAuthnSourceMappingsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries to return per page in a paging query.</para>
+        /// <para>The maximum number of entries to return per page when paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token returned by the current call.</para>
+        /// <para>The next token returned in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The pagination token returned by the current call.</para>
+        /// <para>The next token returned in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxexample</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries in the list.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListUserAuthnSourceMappingsResponseBodyUserAuthnSourceMappings> UserAuthnSourceMappings { get; set; }
         public class ListUserAuthnSourceMappingsResponseBodyUserAuthnSourceMappings : TeaModel {
             /// <summary>
-            /// <para>The source IdP authentication source type.</para>
+            /// <para>The authentication source type of the source IdP.</para>
             /// 
             /// <b>Example:</b>
             /// <para>urn:alibaba:idaas:authntype:oidc</para>

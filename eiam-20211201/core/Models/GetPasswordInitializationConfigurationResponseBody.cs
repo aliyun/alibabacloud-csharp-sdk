@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public GetPasswordInitializationConfigurationResponseBodyPasswordInitializationConfiguration PasswordInitializationConfiguration { get; set; }
         public class GetPasswordInitializationConfigurationResponseBodyPasswordInitializationConfiguration : TeaModel {
             /// <summary>
-            /// <para>The status of forced password update. Valid values:</para>
+            /// <para>The password forced update status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>enabled: Enabled.</description></item>
             /// <item><description>disabled: Disabled.</description></item>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The list of password initialization notification channels.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>email</para>
+            /// <para>[&quot;email&quot;]</para>
             /// </summary>
             [NameInMap("PasswordInitializationNotificationChannels")]
             [Validation(Required=false)]
             public List<string> PasswordInitializationNotificationChannels { get; set; }
 
             /// <summary>
-            /// <para>The status of the password initialization configuration. Valid values:</para>
+            /// <para>The password initialization configuration status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>enabled: Enabled.</description></item>
             /// <item><description>disabled: Disabled.</description></item>

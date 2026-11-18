@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[ou_001]</para>
+        /// <para>[&quot;ou_001&quot;]</para>
         /// </summary>
         [NameInMap("UserIds")]
         [Validation(Required=false)]

@@ -24,17 +24,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<string> CredentialProviderTypes { get; set; }
 
         /// <summary>
-        /// <para>The list of filter conditions.</para>
+        /// <para>The list of filters.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<ListCredentialProvidersRequestFilter> Filter { get; set; }
         public class ListCredentialProvidersRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The filter condition name. Valid values:</para>
+            /// <para>The filter name. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CredentialProviderName: the credential provider name.</description></item>
-            /// <item><description>CredentialProviderIdentifier: the credential provider identifier.</description></item>
+            /// <item><description>CredentialProviderName: the credential provider name</description></item>
+            /// <item><description>CredentialProviderIdentifier: the credential provider identifier</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The list of filter condition values.</para>
+            /// <para>The list of filter values.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query.</para>
+        /// <para>The maximum number of rows per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token.</para>
+        /// <para>The next token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>

@@ -21,17 +21,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The list of organizational unit IDs. The number of IDs in the list cannot exceed 100.</para>
+        /// <para>The IDs of the organizational units. You can specify up to 100 IDs.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[ou_wovwffm62xifdziem7an7xxxxx]</para>
+        /// <para>[&quot;ou_wovwffm62xifdziem7an7xxxxx&quot;]</para>
         /// </summary>
         [NameInMap("OrganizationalUnitIds")]
         [Validation(Required=false)]
         public List<string> OrganizationalUnitIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the organizational unit. An exact match is used for the query.</para>
+        /// <para>The name of the organizational unit. The query uses exact match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>name_001</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string OrganizationalUnitName { get; set; }
 
         /// <summary>
-        /// <para>The prefix of the name of the organizational unit. A left-side match is used for the query.</para>
+        /// <para>The prefix of the organizational unit name. The query uses prefix match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>name</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string OrganizationalUnitNameStartsWith { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return. Default value: 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 20. Maximum value: 100.</para>
+        /// <para>The number of entries per page. Default value: 20. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

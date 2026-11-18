@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public ListCredentialsResponseBodyCredentialsCredentialContent CredentialContent { get; set; }
             public class ListCredentialsResponseBodyCredentialsCredentialContent : TeaModel {
                 /// <summary>
-                /// <para>The content of an OAuth client credential.</para>
+                /// <para>The content of an OAuth client authentication credential.</para>
                 /// </summary>
                 [NameInMap("OAuthClientContent")]
                 [Validation(Required=false)]
                 public ListCredentialsResponseBodyCredentialsCredentialContentOAuthClientContent OAuthClientContent { get; set; }
                 public class ListCredentialsResponseBodyCredentialsCredentialContentOAuthClientContent : TeaModel {
                     /// <summary>
-                    /// <para>The client ID of the OAuth protocol.</para>
+                    /// <para>The client ID in the OAuth protocol.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>dmvncmxersdxxxxxx</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The Scenarios label of the credential. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>llm: Large model.</description></item>
+            /// <item><description>llm: Large language model.</description></item>
             /// <item><description>saas: Third-party SaaS service.</description></item>
             /// </list>
             /// 
@@ -125,8 +125,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The credential sharing scope. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>common: General.</description></item>
-            /// <item><description>user_exclusive: Account-specific.</description></item>
+            /// <item><description>common: Common.</description></item>
+            /// <item><description>user_exclusive: Account-exclusive.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CredentialSubjectId { get; set; }
 
             /// <summary>
-            /// <para>The subject type to which the credential belongs. Valid values:</para>
+            /// <para>The subject type of the credential. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>authentication_token_provider: Authentication token provider.</description></item>
             /// </list>
@@ -162,8 +162,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The credential type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>api_key: API key credential.</description></item>
-            /// <item><description>oauth_client: OAuth client credential.</description></item>
+            /// <item><description>api_key: API key authentication credential.</description></item>
+            /// <item><description>oauth_client: OAuth client authentication credential.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the exclusive user for the credential.</para>
+            /// <para>The ID of the exclusive account for the credential.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user_d6sbsuumeta4h66ec3il7yxxxx</para>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page for paging in a paged query.</para>
+        /// <para>The maximum number of entries per page for paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

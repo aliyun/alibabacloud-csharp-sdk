@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GenerateFileImportTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether field selection mode is enabled.</para>
+        /// <para>Specifies whether the field selection mode is enabled.</para>
         /// </summary>
         [NameInMap("FieldSelectionEnabled")]
         [Validation(Required=false)]

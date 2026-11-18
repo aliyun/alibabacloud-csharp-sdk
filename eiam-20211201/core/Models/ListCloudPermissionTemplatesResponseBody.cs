@@ -10,42 +10,42 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListCloudPermissionTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of cloud permission templates.</para>
+        /// <para>The list of permission templates.</para>
         /// </summary>
         [NameInMap("CloudPermissionTemplates")]
         [Validation(Required=false)]
         public List<ListCloudPermissionTemplatesResponseBodyCloudPermissionTemplates> CloudPermissionTemplates { get; set; }
         public class ListCloudPermissionTemplatesResponseBodyCloudPermissionTemplates : TeaModel {
             /// <summary>
-            /// <para>Specifies whether users are allowed to apply for the permission template.</para>
+            /// <para>Specifies whether users are allowed to apply.</para>
             /// </summary>
             [NameInMap("AllowRequest")]
             [Validation(Required=false)]
             public bool? AllowRequest { get; set; }
 
             /// <summary>
-            /// <para>The applicable scope of the permission template.</para>
+            /// <para>The application scope of the permission template.</para>
             /// </summary>
             [NameInMap("ApplicableScope")]
             [Validation(Required=false)]
             public ListCloudPermissionTemplatesResponseBodyCloudPermissionTemplatesApplicableScope ApplicableScope { get; set; }
             public class ListCloudPermissionTemplatesResponseBodyCloudPermissionTemplatesApplicableScope : TeaModel {
                 /// <summary>
-                /// <para>The list of specified group IDs. This parameter has a value only when ScopeType is set to custom.</para>
+                /// <para>The list of specified group IDs. This parameter is returned only when ScopeType is set to custom.</para>
                 /// </summary>
                 [NameInMap("GroupIds")]
                 [Validation(Required=false)]
                 public List<string> GroupIds { get; set; }
 
                 /// <summary>
-                /// <para>The list of specified organizational unit IDs. This parameter has a value only when ScopeType is set to custom.</para>
+                /// <para>The list of specified organizational unit IDs. This parameter is returned only when ScopeType is set to custom.</para>
                 /// </summary>
                 [NameInMap("OrganizationalUnitIds")]
                 [Validation(Required=false)]
                 public List<string> OrganizationalUnitIds { get; set; }
 
                 /// <summary>
-                /// <para>The type of the applicable scope. Valid values: global and custom.</para>
+                /// <para>The type of the application scope. Valid values: global and custom.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>custom</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ScopeType { get; set; }
 
                 /// <summary>
-                /// <para>The list of specified user IDs. This parameter has a value only when ScopeType is set to custom.</para>
+                /// <para>The list of specified user IDs. This parameter is returned only when ScopeType is set to custom.</para>
                 /// </summary>
                 [NameInMap("UserIds")]
                 [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The ID of the cloud account to which the resource belongs.</para>
+            /// <para>The ID of the associated cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ca_01kmegjc11qa1txxxxx</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 /// <para>The name of the creator.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>John Doe</para>
+                /// <para>Zhang San</para>
                 /// </summary>
                 [NameInMap("CreatorName")]
                 [Validation(Required=false)]
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 /// <para>The error message returned when initialization fails.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Failed to initialize the permission template. Try again later</para>
+                /// <para>Permission template initialization failed. Try again later</para>
                 /// </summary>
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudPermissionTemplateSharingMode { get; set; }
 
             /// <summary>
-            /// <para>The usage type of the permission template. Valid values: user (privilege escalation for human users) and application (privilege escalation for M2M applications).</para>
+            /// <para>The usage type of the permission template. Valid values: user (privilege elevation for human users) and application (privilege elevation for M2M applications).</para>
             /// 
             /// <b>Example:</b>
             /// <para>user</para>
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PermissionEntityId { get; set; }
 
             /// <summary>
-            /// <para>The type of the permission entity. Fixed value: cloud_account_role.</para>
+            /// <para>The type of the permission entity. Valid value: cloud_account_role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_account_role</para>
@@ -294,7 +294,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries per page in a paging query.</para>
+        /// <para>The maximum number of entries per page during paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -304,7 +304,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token returned by the current call for subsequent queries.</para>
+        /// <para>The pagination token returned by the current request for subsequent queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -324,7 +324,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

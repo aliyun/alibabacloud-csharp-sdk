@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListCustomPrivacyPoliciesResponseBodyCustomPrivacyPolicies> CustomPrivacyPolicies { get; set; }
         public class ListCustomPrivacyPoliciesResponseBodyCustomPrivacyPolicies : TeaModel {
             /// <summary>
-            /// <para>The ID of the custom privacy policy.</para>
+            /// <para>The custom privacy policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pp_xxxxx</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CustomPrivacyPolicyId { get; set; }
 
             /// <summary>
-            /// <para>The name of the custom privacy policy.</para>
+            /// <para>The custom privacy policy name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Custom Privacy Policy Name</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CustomPrivacyPolicyName { get; set; }
 
             /// <summary>
-            /// <para>The default language code for the privacy policy. The valid values are the LanguageCode values returned by the ListLanguages operation.</para>
+            /// <para>The default language code. The valid values are the LanguageCode values returned by the ListLanguages operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zh-Hans-CN</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per page in a paging query.</para>
+        /// <para>The maximum number of entries per page for a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token returned by the current request.</para>
+        /// <para>The next token returned in the current call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The pagination token returned by the current request.</para>
+        /// <para>The next token returned in the current call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxexample</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationRuleId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can generate a parameter value on your client and ensure that the parameter value is unique across different requests. The client token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public CreateAuthorizationResourceRequestConditionCredentialCondition CredentialCondition { get; set; }
             public class CreateAuthorizationResourceRequestConditionCredentialCondition : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether same-name identity accounts are supported.</para>
+                /// <para>Specifies whether to allow identity accounts with the same name.</para>
                 /// </summary>
                 [NameInMap("AllowSameNameIdentity")]
                 [Validation(Required=false)]

@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CustomPrivacyPolicyId { get; set; }
 
             /// <summary>
-            /// <para>The custom privacy policy name.</para>
+            /// <para>The name of the custom privacy policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Custom Privacy Policy Name</para>

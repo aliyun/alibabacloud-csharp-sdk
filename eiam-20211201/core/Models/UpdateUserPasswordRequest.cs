@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The new password of the account. For more information about the password format, see the &quot;Password Policies&quot; topic.</para>
+        /// <para>The new password for the account. The password format must comply with the password policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,10 +32,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable forcible password change upon first logon. Default value: disabled. Valid values:</para>
+        /// <para>The forced password update status. This feature is disabled by default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>enabled</description></item>
-        /// <item><description>disabled</description></item>
+        /// <item><description>enabled: Enabled.</description></item>
+        /// <item><description>disabled: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,10 +57,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>The methods for receiving password notifications.</para>
+        /// <para>The list of password notification channels. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>email: Email.</description></item>
+        /// <item><description>sms: SMS.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>sms</para>
+        /// <para>[&quot;sms&quot;]</para>
         /// </summary>
         [NameInMap("UserNotificationChannels")]
         [Validation(Required=false)]

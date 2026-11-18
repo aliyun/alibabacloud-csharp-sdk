@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationName { get; set; }
 
         /// <summary>
-        /// <para>The application owner.</para>
+        /// <para>The owner of the application.</para>
         /// </summary>
         [NameInMap("ApplicationOwner")]
         [Validation(Required=false)]
         public UpdateApplicationInfoRequestApplicationOwner ApplicationOwner { get; set; }
         public class UpdateApplicationInfoRequestApplicationOwner : TeaModel {
             /// <summary>
-            /// <para>The list of group IDs.</para>
+            /// <para>The list of user group IDs.</para>
             /// </summary>
             [NameInMap("GroupIds")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The application visibility settings.</para>
+        /// <para>The application visibility collection.</para>
         /// </summary>
         [NameInMap("ApplicationVisibility")]
         [Validation(Required=false)]
@@ -71,14 +71,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The list of application extension fields.</para>
+        /// <para>The list of extended fields for the application.</para>
         /// </summary>
         [NameInMap("CustomFields")]
         [Validation(Required=false)]
         public List<UpdateApplicationInfoRequestCustomFields> CustomFields { get; set; }
         public class UpdateApplicationInfoRequestCustomFields : TeaModel {
             /// <summary>
-            /// <para>The name of the application extension field.</para>
+            /// <para>The name of the extended field for the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>agent_type</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string FieldName { get; set; }
 
             /// <summary>
-            /// <para>The value of the application extension field. If FieldName is set to agentType, valid values are bailian, pai, dify, and volcano. If FieldName is set to agentExternalId, enter the relevant value.</para>
+            /// <para>The value of the extended field for the application. If FieldName is set to agentType, valid values are bailian, pai, dify, and volcano. If FieldName is set to agentExternalId, enter the relevant value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bailian</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string FieldValue { get; set; }
 
             /// <summary>
-            /// <para>The operation type for the application extension field.</para>
+            /// <para>The operation type for the extended field of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>add</para>

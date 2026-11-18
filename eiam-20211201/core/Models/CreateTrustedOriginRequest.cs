@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateTrustedOriginRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. Generate a parameter value from your client to ensure that the value is unique among different requests. The value of ClientToken can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>Ensures the idempotence of the request. Generate a value on your client and make sure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and can be up to 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-example</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The browser origin in the format of scheme://host[:port]. This value cannot be modified after creation.</para>
+        /// <para>The browser origin in the format of scheme://host[:port]. It cannot be modified after creation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Origin { get; set; }
 
         /// <summary>
-        /// <para>The name of the trusted origin used for management, display, and auditing. If this parameter is not specified, the value is empty.</para>
+        /// <para>The name of the trusted origin used for management, display, and auditing. If you do not specify this parameter, it is left empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Qoder Production Console</para>
@@ -52,11 +52,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string TrustOriginName { get; set; }
 
         /// <summary>
-        /// <para>The trusted origin scenes. Only iframe_embed and cors are supported. At least one value is required.</para>
+        /// <para>The trusted origin scenarios. Only iframe_embed and cors are supported. Specify at least one value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>iframe_embed</para>
+        /// <para>[&quot;iframe_embed&quot;]</para>
         /// </summary>
         [NameInMap("TrustedOriginScene")]
         [Validation(Required=false)]

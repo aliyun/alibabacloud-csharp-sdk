@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string AppKey { get; set; }
 
                 /// <summary>
-                /// <para>The AppSecret of the DingTalk first-party application.</para>
+                /// <para>The app_secret of the DingTalk first-party application.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>REOQ6Cl55kriOd8NOBeqWYLKpHR4p6fdZxxxx</para>

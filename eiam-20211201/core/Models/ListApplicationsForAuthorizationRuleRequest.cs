@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The list of filter field values.</para>
+            /// <para>The list of values for the filter field.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -61,7 +61,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page. Default value: 20. Maximum value: 100.</para>
+        /// <para>The maximum number of records per page.</para>
+        /// <list type="bullet">
+        /// <item><description><para>If this parameter is not specified, the default value is 20.</para>
+        /// </description></item>
+        /// <item><description><para>The maximum value is 100.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -71,7 +77,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that specifies the starting position for the next page. If you do not specify this parameter, the query starts from the first page by default.</para>
+        /// <para>The token that specifies the starting position of the next page.</para>
+        /// <list type="bullet">
+        /// <item><description>If this parameter is not specified, the query starts from the first page by default.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>

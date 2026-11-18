@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<string> CredentialExternalIds { get; set; }
 
         /// <summary>
-        /// <para>The credential IDs.</para>
+        /// <para>The list of credential IDs.</para>
         /// </summary>
         [NameInMap("CredentialIds")]
         [Validation(Required=false)]
         public List<string> CredentialIds { get; set; }
 
         /// <summary>
-        /// <para>The credential sharing scopes.</para>
+        /// <para>The list of credential sharing scopes.</para>
         /// </summary>
         [NameInMap("CredentialSharingScopes")]
         [Validation(Required=false)]
         public List<string> CredentialSharingScopes { get; set; }
 
         /// <summary>
-        /// <para>The credential types.</para>
+        /// <para>The list of credential types.</para>
         /// </summary>
         [NameInMap("CredentialTypes")]
         [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The values for the filter field.</para>
+            /// <para>The list of filter field values.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -78,7 +78,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records per page. Default value: 20. Maximum value: 100.</para>
+        /// <para>The maximum number of records per page.</para>
+        /// <list type="bullet">
+        /// <item><description>Default value: 20.</description></item>
+        /// <item><description>Maximum value: 100.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -88,7 +92,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token.</para>
+        /// <para>The query token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>
@@ -98,7 +102,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The credential statuses.</para>
+        /// <para>The list of credential statuses.</para>
         /// </summary>
         [NameInMap("Statuses")]
         [Validation(Required=false)]

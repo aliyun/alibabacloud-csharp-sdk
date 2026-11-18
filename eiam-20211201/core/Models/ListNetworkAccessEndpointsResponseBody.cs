@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string BackupSecurityGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The IDs of the vSwitches for the backup network access endpoint.</para>
+                /// <para>The vSwitches for the backup network access endpoint.</para>
                 /// </summary>
                 [NameInMap("BackupVSwitchIds")]
                 [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The time when the network access endpoint was created. The time is displayed in the UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The time when the network access endpoint was created. The time is displayed as a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string NetworkAccessEndpointId { get; set; }
 
             /// <summary>
-            /// <para>The name of the network access endpoint, such as the xx business VPC access endpoint.</para>
+            /// <para>The name of the network access endpoint, such as xx business VPC access endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VPC access endpoint for xx service</para>
@@ -119,8 +119,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The type of the network access endpoint. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>shared: shared network access endpoint.</description></item>
-            /// <item><description>private: private network access endpoint.</description></item>
+            /// <item><description>shared: shared network access endpoint</description></item>
+            /// <item><description>private: private network access endpoint</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -143,10 +143,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The status of the network access endpoint. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>pending: pending initialization.</description></item>
-            /// <item><description>creating: being created.</description></item>
-            /// <item><description>running: running.</description></item>
-            /// <item><description>deleting: being deleted.</description></item>
+            /// <item><description>pending: pending initialization</description></item>
+            /// <item><description>creating: being created</description></item>
+            /// <item><description>running: running</description></item>
+            /// <item><description>deleting: being deleted</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the network access endpoint was last updated. The time is displayed in the UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The time when the network access endpoint was last updated. The time is displayed as a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -167,10 +167,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the vSwitches to which the private network access endpoint is connected.</para>
+            /// <para>The vSwitches to which the private network access endpoint is connected.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>vsw-examplexxx</para>
+            /// <para>[&quot;vsw-examplexxx&quot;]</para>
             /// </summary>
             [NameInMap("VSwitchIds")]
             [Validation(Required=false)]
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>

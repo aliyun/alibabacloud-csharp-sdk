@@ -42,11 +42,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The list of organizational unit IDs. A single operation supports up to 100 organizational unit IDs.</para>
+        /// <para>The list of organizational unit IDs. A maximum of 100 organizational unit IDs are supported in a single operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ou_wovwffm62xifdziem7an7xxxxx</para>
+        /// <para>[&quot;ou_wovwffm62xifdziem7an7xxxxx&quot;]</para>
         /// </summary>
         [NameInMap("OrganizationalUnitIds")]
         [Validation(Required=false)]

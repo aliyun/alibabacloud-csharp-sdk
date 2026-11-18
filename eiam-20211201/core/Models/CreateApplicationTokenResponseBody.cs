@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateApplicationTokenResponseBody : TeaModel {
         /// <summary>
-        /// <para>The application token.</para>
+        /// <para>The application tokens.</para>
         /// </summary>
         [NameInMap("ApplicationTokens")]
         [Validation(Required=false)]
         public CreateApplicationTokenResponseBodyApplicationTokens ApplicationTokens { get; set; }
         public class CreateApplicationTokenResponseBodyApplicationTokens : TeaModel {
             /// <summary>
-            /// <para>The application token.</para>
+            /// <para>The application tokens.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SATFwqX8zxGf83pJcJw78KFGjmrft4erWeZYBGS8oE7NN6qoE217yaJpUdMb1UuuGqhDiF43sCA4CF91CTL5iGntqwyLuaAcS9FJ9HfGadE5a7TjiwVafwrBYkt3XXX</para>

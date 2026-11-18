@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public GetCredentialResponseBodyCredential Credential { get; set; }
         public class GetCredentialResponseBodyCredential : TeaModel {
             /// <summary>
-            /// <para>The creation time, in UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830225000</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public GetCredentialResponseBodyCredentialCredentialContent CredentialContent { get; set; }
             public class GetCredentialResponseBodyCredentialCredentialContent : TeaModel {
                 /// <summary>
-                /// <para>The credential content of the OAuth client authentication credential type.</para>
+                /// <para>The credential content for the OAuth client authentication credential type.</para>
                 /// </summary>
                 [NameInMap("OAuthClientContent")]
                 [Validation(Required=false)]
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CredentialScenarioLabel { get; set; }
 
             /// <summary>
-            /// <para>The credential sharing scope.</para>
+            /// <para>The sharing scope of the credential.</para>
             /// 
             /// <b>Example:</b>
             /// <para>common</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CredentialSharingScope { get; set; }
 
             /// <summary>
-            /// <para>The subject ID to which the credential belongs.</para>
+            /// <para>The ID of the subject to which the credential belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>apt_werthgfdsasffxxxxx</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The exclusive account ID of the credential.</para>
+            /// <para>The ID of the exclusive user for the credential.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user_1234567890</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The update time, in UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830227000</para>

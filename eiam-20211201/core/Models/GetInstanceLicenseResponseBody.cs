@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Edition { get; set; }
 
             /// <summary>
-            /// <para>The end date of the license validity period, in timestamp format.</para>
+            /// <para>The end date of the license validity period. The value is a UNIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1723996800000</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public long? M2mApplicationQuota { get; set; }
 
                 /// <summary>
-                /// <para>The machine identity license status.</para>
+                /// <para>The machine identity status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>enabled</para>
@@ -94,7 +94,37 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public long? NetworkAccessEndpointQuota { get; set; }
 
                 /// <summary>
-                /// <para>The PAM privileged access management license status.</para>
+                /// <para>The base quota of monthly active PAM users included in the plan, excluding additional purchases. The value is 0 if PAM is not activated.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>50</para>
+                /// </summary>
+                [NameInMap("PamActiveUserBaseQuota")]
+                [Validation(Required=false)]
+                public long? PamActiveUserBaseQuota { get; set; }
+
+                /// <summary>
+                /// <para>The number of additionally purchased monthly active PAM users. The value is 0 if no additional users are purchased or PAM is not activated.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10</para>
+                /// </summary>
+                [NameInMap("PamActiveUserPurchasedQuota")]
+                [Validation(Required=false)]
+                public long? PamActiveUserPurchasedQuota { get; set; }
+
+                /// <summary>
+                /// <para>Specifies whether pay-as-you-go billing for monthly PAM overages is enabled. Returns false if PAM is not activated or elastic billing is disabled.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("PamElasticBillingEnabled")]
+                [Validation(Required=false)]
+                public bool? PamElasticBillingEnabled { get; set; }
+
+                /// <summary>
+                /// <para>The Privileged Access Management (PAM) license status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>enabled</para>
@@ -104,7 +134,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string PamLicenseStatus { get; set; }
 
                 /// <summary>
-                /// <para>The number of prepaid active users.</para>
+                /// <para>The number of active subscription users.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -126,7 +156,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The billing type of the license.</para>
+            /// <para>The billing method of the license.</para>
             /// 
             /// <b>Example:</b>
             /// <para>prepay</para>
@@ -136,7 +166,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string LicenseChargeType { get; set; }
 
             /// <summary>
-            /// <para>The detailed license configuration as a JSON string.</para>
+            /// <para>The JSON string of the detailed license configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;modules&quot;:[{&quot;features&quot;:[{&quot;name&quot;:&quot;urn:alibaba:idaas:license:module:ud:customField&quot;,&quot;status&quot;:&quot;enabled&quot;}]……{&quot;name&quot;:&quot;urn:alibaba:idaas:license:tag:enterprise&quot;,&quot;status&quot;:&quot;enabled&quot;}],&quot;version&quot;:&quot;1.0&quot;}</para>
@@ -146,7 +176,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string LicenseConfigJson { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the license, in timestamp format.</para>
+            /// <para>The creation time of the license. The value is a UNIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1720509699000</para>
@@ -166,7 +196,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string LicenseId { get; set; }
 
             /// <summary>
-            /// <para>The status of the license.</para>
+            /// <para>The license status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>valid</para>
@@ -186,7 +216,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PurchaseChannel { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the external commodity associated with the license.</para>
+            /// <para>The unique identifier of the external product corresponding to the license.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eiam-cn-xxxxx</para>
@@ -196,7 +226,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PurchaseInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The start date of the license validity period, in timestamp format.</para>
+            /// <para>The start date of the license validity period. The value is a UNIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1720509699000</para>

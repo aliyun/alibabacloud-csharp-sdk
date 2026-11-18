@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public ListAuthorizationRulesForGroupResponseBodyAuthorizationRulesValidityPeriod ValidityPeriod { get; set; }
             public class ListAuthorizationRulesForGroupResponseBodyAuthorizationRulesValidityPeriod : TeaModel {
                 /// <summary>
-                /// <para>The end time when the authorization expires. The value is a UNIX timestamp in milliseconds.</para>
+                /// <para>The end time of the validity period. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1704042061000</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public long? EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The start time when the authorization takes effect. The value is a UNIX timestamp in milliseconds.</para>
+                /// <para>The start time of the validity period. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1704042061000</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page for paging.</para>
+        /// <para>The maximum number of entries per page for paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token returned by the current call for the next query.</para>
+        /// <para>The token returned in the current response, which is used to query the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>

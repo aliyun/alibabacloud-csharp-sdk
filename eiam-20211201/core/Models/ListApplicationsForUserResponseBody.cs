@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>The list of application roles.</para>
+            /// <para>The list of application roles. No roles are returned for SAML applications.</para>
             /// </summary>
             [NameInMap("ApplicationRoles")]
             [Validation(Required=false)]
             public List<ListApplicationsForUserResponseBodyApplicationsApplicationRoles> ApplicationRoles { get; set; }
             public class ListApplicationsForUserResponseBodyApplicationsApplicationRoles : TeaModel {
                 /// <summary>
-                /// <para>The ID of the application role.</para>
+                /// <para>The application role ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ApplicationRoleId { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the role is directly assigned to the user.</para>
+                /// <para>Indicates whether direct authorization exists.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public bool? HasDirectAuthorization { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the role is inherited from an organization or a group to which the user belongs.</para>
+                /// <para>Indicates whether inherited authorization exists.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -66,12 +66,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether a direct authorization exists. Valid values:</para>
+            /// <para>Indicates whether direct authorization exists. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: A direct authorization record exists between the application and the account.</para>
-            /// </description></item>
-            /// <item><description><para>false: No direct authorization record exists between the application and the account.</para>
-            /// </description></item>
+            /// <item><description>true: A direct authorization record exists between the application and the account.</description></item>
+            /// <item><description>false: No direct authorization record exists between the application and the account.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -82,12 +80,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? HasDirectAuthorization { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether an inherited authorization exists. Valid values:</para>
+            /// <para>Indicates whether inherited authorization exists. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: A direct authorization record exists between the application and a parent organization or a group to which the account belongs.</para>
-            /// </description></item>
-            /// <item><description><para>false: No direct authorization record exists between the application and any of the parent organizations or groups to which the account belongs.</para>
-            /// </description></item>
+            /// <item><description>true: A direct authorization record exists between the application and at least one parent organization of the account or a group to which the account belongs.</description></item>
+            /// <item><description>false: No direct authorization record exists between the application and any parent organization of the account or any group to which the account belongs.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateUserRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but you must ensure that the parameter value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see the References: How to ensure idempotence.</para>
+        /// <para>Ensures the idempotence of the request. You can generate a parameter value from your client to ensure that the parameter value is unique among different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References: How to ensure idempotence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-example</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The list of extended fields.</para>
+        /// <para>The list of custom fields.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>description</para>
+        /// <para>[{&quot;FieldName&quot;:&quot;age&quot;,&quot;FieldValue&quot;:&quot;10&quot;}]</para>
         /// </summary>
         [NameInMap("CustomFields")]
         [Validation(Required=false)]
         public List<CreateUserRequestCustomFields> CustomFields { get; set; }
         public class CreateUserRequestCustomFields : TeaModel {
             /// <summary>
-            /// <para>The identifier of the extended field. You must create the extended field in advance. For more information, refer to the Extended Fields module in the console.</para>
+            /// <para>The identifier of the custom field. You must create the custom field in advance. For more information, see the Custom Fields module in the console.</para>
             /// 
             /// <b>Example:</b>
             /// <para>age</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string FieldName { get; set; }
 
             /// <summary>
-            /// <para>The value of the extended field. The value must comply with the attribute limits of the corresponding extended field.</para>
+            /// <para>The value of the custom field. The value must comply with the attribute limits of the corresponding custom field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The email address. The email prefix can contain uppercase letters, lowercase letters, digits, periods (.), underscores (_), and hyphens (-). The maximum length is 128 characters.</para>
+        /// <para>The email address. The prefix can contain uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-). The maximum length is 128 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:example@example.com">example@example.com</a></para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<string> OrganizationalUnitIds { get; set; }
 
         /// <summary>
-        /// <para>The password. For specific format requirements, refer to the password policy.</para>
+        /// <para>The password. For specific format requirements, see the password policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -127,10 +127,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public CreateUserRequestPasswordInitializationConfig PasswordInitializationConfig { get; set; }
         public class CreateUserRequestPasswordInitializationConfig : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to force the user to change the password. By default, this feature is disabled. Valid values:</para>
+            /// <para>Specifies whether to force the user to update the password. By default, this feature is disabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>enabled: Enables the feature.</description></item>
-            /// <item><description>disabled: Disables the feature.</description></item>
+            /// <item><description>enabled: enables the feature.</description></item>
+            /// <item><description>disabled: disables the feature.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -143,8 +143,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The password initialization policy priority. By default, this parameter does not take effect. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>global: Global priority. The instance-level password initialization policy is used. The password initialization policy specified in the Settings is invalid. For more information, refer to the password initialization policy in the password-related policies.</description></item>
-            /// <item><description>custom: Custom priority. The password initialization policy defined in the Settings is used, including whether to force password changes, the password initialization method, and the notification channels.</description></item>
+            /// <item><description>global: global priority. The instance-level password initialization policy is used, and the password initialization Settings in this request are all invalid. For more information, see the password initialization Settings in the password policies.</description></item>
+            /// <item><description>custom: custom priority. The currently defined password initialization Settings prevail, including whether to force password updates, the password initialization method, and the notification channels.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The password initialization method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>random: Generates a random password.</description></item>
+            /// <item><description>random: generates a random password.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The list of password notification channels.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>sms</para>
+            /// <para>[&quot;sms&quot;]</para>
             /// </summary>
             [NameInMap("UserNotificationChannels")]
             [Validation(Required=false)]
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public bool? PhoneNumberVerified { get; set; }
 
         /// <summary>
-        /// <para>The country code for the mobile phone number. It must be 1 to 6 digits in length and cannot contain a plus sign (+).</para>
+        /// <para>The region code of the mobile phone number. It must be 1 to 6 digits in length and cannot contain a plus sign (+). For example, the region code for the Chinese mainland is 86, without 00 or +. This parameter is required if the mobile phone number is specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>86</para>

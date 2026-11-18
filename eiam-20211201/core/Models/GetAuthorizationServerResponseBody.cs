@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationServerName { get; set; }
 
             /// <summary>
-            /// <para>The time when the authorization server was created. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The creation time of the authorization server. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1754620108295</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CreationType { get; set; }
 
             /// <summary>
-            /// <para>The authorization server description.</para>
+            /// <para>The description of the authorization server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>description of authorization server</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The authorization token issuer.</para>
+            /// <para>The issuer of the authorization token.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2">https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2</a></para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string IssuerMode { get; set; }
 
             /// <summary>
-            /// <para>The time when the authorization server was last updated. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The last update time of the authorization server. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1781608572164</para>
@@ -117,14 +117,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? LastUpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The authorization server endpoint configuration.</para>
+            /// <para>The protocol endpoint configuration of the authorization server.</para>
             /// </summary>
             [NameInMap("ProtocolEndpoint")]
             [Validation(Required=false)]
             public GetAuthorizationServerResponseBodyAuthorizationServerProtocolEndpoint ProtocolEndpoint { get; set; }
             public class GetAuthorizationServerResponseBodyAuthorizationServerProtocolEndpoint : TeaModel {
                 /// <summary>
-                /// <para>The token endpoint of the authorization server.</para>
+                /// <para>The OAuth2 token endpoint of the authorization server.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/token">https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/token</a></para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string Oauth2TokenEndpoint { get; set; }
 
                 /// <summary>
-                /// <para>The JWKS endpoint of the authorization server.</para>
+                /// <para>The OIDC JWKS endpoint of the authorization server.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/jwks">https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/jwks</a></para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The authorization server status.</para>
+            /// <para>The status of the authorization server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ENABLE</para>

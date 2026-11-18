@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The name of the filter field. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>GroupId: the group ID</description></item>
+            /// <item><description>GroupId: the group ID.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,11 +61,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records to return per page.</para>
+        /// <para>The maximum number of entries to return per page.</para>
         /// <list type="bullet">
-        /// <item><description><para>If this parameter is not specified, the default value is 20.</para>
+        /// <item><description><para>Default value: 20.</para>
         /// </description></item>
-        /// <item><description><para>The maximum value is 100.</para>
+        /// <item><description><para>Maximum value: 100.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -77,9 +77,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to identify the starting position of the next page.</para>
+        /// <para>The token that indicates the starting position for the next page.</para>
         /// <list type="bullet">
-        /// <item><description>If this parameter is not specified, the query starts from the first page by default.</description></item>
+        /// <item><description>If this parameter is not specified, the query starts from the first page.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

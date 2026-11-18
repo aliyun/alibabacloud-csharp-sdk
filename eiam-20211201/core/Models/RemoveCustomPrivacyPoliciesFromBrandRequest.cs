@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string BrandId { get; set; }
 
         /// <summary>
-        /// <para>The list of term IDs.</para>
+        /// <para>The IDs of the custom privacy policies.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CustomPrivacyPolicyIds")]

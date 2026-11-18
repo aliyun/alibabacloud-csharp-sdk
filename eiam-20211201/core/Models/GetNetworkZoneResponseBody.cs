@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The IPv4 CIDR blocks of the network zone.</para>
+            /// <para>The IPv4 network zone.</para>
             /// </summary>
             [NameInMap("Ipv4Cidrs")]
             [Validation(Required=false)]
             public List<string> Ipv4Cidrs { get; set; }
 
             /// <summary>
-            /// <para>The IPv6 CIDR blocks of the network zone.</para>
+            /// <para>The IPv6 network zone.</para>
             /// </summary>
             [NameInMap("Ipv6Cidrs")]
             [Validation(Required=false)]

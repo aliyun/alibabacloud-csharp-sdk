@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class SetIdentityProviderUdPushConfigurationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the identity provider.</para>
+        /// <para>The identity provider ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,14 +43,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The configurations for LDAP push synchronization.</para>
+        /// <para>The configuration for LDAP synchronization.</para>
         /// </summary>
         [NameInMap("LdapUdPushConfig")]
         [Validation(Required=false)]
         public SetIdentityProviderUdPushConfigurationRequestLdapUdPushConfig LdapUdPushConfig { get; set; }
         public class SetIdentityProviderUdPushConfigurationRequestLdapUdPushConfig : TeaModel {
             /// <summary>
-            /// <para>The object class for organizations.</para>
+            /// <para>The organization object class.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ou,top</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string OrganizationUnitObjectClass { get; set; }
 
             /// <summary>
-            /// <para>The RDN for organizations.</para>
+            /// <para>The organization RDN.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ou</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PasswordSyncStatus { get; set; }
 
             /// <summary>
-            /// <para>The object class for users.</para>
+            /// <para>The user object class.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user,top</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string UserObjectClass { get; set; }
 
             /// <summary>
-            /// <para>The Relative Distinguished Name (RDN) for users.</para>
+            /// <para>The user RDN.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The configuration for periodic synchronization.</para>
+        /// <para>The periodic check configuration.</para>
         /// </summary>
         [NameInMap("PeriodicSyncConfig")]
         [Validation(Required=false)]
@@ -119,14 +119,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PeriodicSyncCron { get; set; }
 
             /// <summary>
-            /// <para>A collection of time points.</para>
+            /// <para>The collection of time points.</para>
             /// </summary>
             [NameInMap("PeriodicSyncTimes")]
             [Validation(Required=false)]
             public List<int?> PeriodicSyncTimes { get; set; }
 
             /// <summary>
-            /// <para>The type of periodic synchronization.</para>
+            /// <para>The type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cron</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The status of periodic synchronization.</para>
+        /// <para>The periodic check status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>disabled</para>
@@ -148,14 +148,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string PeriodicSyncStatus { get; set; }
 
         /// <summary>
-        /// <para>The push synchronization configurations.</para>
+        /// <para>The outbound synchronization configuration.</para>
         /// </summary>
         [NameInMap("UdSyncScopeConfigs")]
         [Validation(Required=false)]
         public List<SetIdentityProviderUdPushConfigurationRequestUdSyncScopeConfigs> UdSyncScopeConfigs { get; set; }
         public class SetIdentityProviderUdPushConfigurationRequestUdSyncScopeConfigs : TeaModel {
             /// <summary>
-            /// <para>The source nodes for synchronization.</para>
+            /// <para>The source node for synchronization.</para>
             /// </summary>
             [NameInMap("SourceScopes")]
             [Validation(Required=false)]

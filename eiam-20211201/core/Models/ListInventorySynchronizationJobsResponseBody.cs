@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListInventorySynchronizationJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The inventory synchronization jobs.</para>
+        /// <para>The synchronization jobs.</para>
         /// </summary>
         [NameInMap("InventorySynchronizationJobs")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The end time of the synchronization job.</para>
+            /// <para>The end time of the synchronization. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1761533214</para>
@@ -64,14 +64,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public ListInventorySynchronizationJobsResponseBodyInventorySynchronizationJobsResult Result { get; set; }
             public class ListInventorySynchronizationJobsResponseBodyInventorySynchronizationJobsResult : TeaModel {
                 /// <summary>
-                /// <para>The statistics of the agent synchronization result.</para>
+                /// <para>The statistics on the agent synchronization results.</para>
                 /// </summary>
                 [NameInMap("AgentStatistics")]
                 [Validation(Required=false)]
                 public ListInventorySynchronizationJobsResponseBodyInventorySynchronizationJobsResultAgentStatistics AgentStatistics { get; set; }
                 public class ListInventorySynchronizationJobsResponseBodyInventorySynchronizationJobsResultAgentStatistics : TeaModel {
                     /// <summary>
-                    /// <para>The statistics of the creation result.</para>
+                    /// <para>The statistics on the creation results.</para>
                     /// </summary>
                     [NameInMap("Created")]
                     [Validation(Required=false)]
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     }
 
                     /// <summary>
-                    /// <para>The statistics of the deletion result.</para>
+                    /// <para>The statistics on the deletion results.</para>
                     /// </summary>
                     [NameInMap("Deleted")]
                     [Validation(Required=false)]
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     }
 
                     /// <summary>
-                    /// <para>The statistics of unchanged items.</para>
+                    /// <para>The statistics on the unchanged results.</para>
                     /// </summary>
                     [NameInMap("Same")]
                     [Validation(Required=false)]
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     }
 
                     /// <summary>
-                    /// <para>The statistics of the update result.</para>
+                    /// <para>The statistics on the update results.</para>
                     /// </summary>
                     [NameInMap("Updated")]
                     [Validation(Required=false)]
@@ -269,14 +269,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The statistics of the asset synchronization result.</para>
+                /// <para>The statistics on the asset synchronization results.</para>
                 /// </summary>
                 [NameInMap("AssetStatistics")]
                 [Validation(Required=false)]
                 public ListInventorySynchronizationJobsResponseBodyInventorySynchronizationJobsResultAssetStatistics AssetStatistics { get; set; }
                 public class ListInventorySynchronizationJobsResponseBodyInventorySynchronizationJobsResultAssetStatistics : TeaModel {
                     /// <summary>
-                    /// <para>The statistics of the creation result.</para>
+                    /// <para>The statistics on the creation results.</para>
                     /// </summary>
                     [NameInMap("Created")]
                     [Validation(Required=false)]
@@ -325,7 +325,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     }
 
                     /// <summary>
-                    /// <para>The statistics of the deletion result.</para>
+                    /// <para>The statistics on the deletion results.</para>
                     /// </summary>
                     [NameInMap("Deleted")]
                     [Validation(Required=false)]
@@ -374,7 +374,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     }
 
                     /// <summary>
-                    /// <para>The statistics of unchanged items.</para>
+                    /// <para>The statistics on the unchanged results.</para>
                     /// </summary>
                     [NameInMap("Same")]
                     [Validation(Required=false)]
@@ -423,7 +423,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     }
 
                     /// <summary>
-                    /// <para>The statistics of the update result.</para>
+                    /// <para>The statistics on the update results.</para>
                     /// </summary>
                     [NameInMap("Updated")]
                     [Validation(Required=false)]
@@ -496,7 +496,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The start time of the synchronization job.</para>
+            /// <para>The start time of the synchronization. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1761531256</para>
@@ -516,7 +516,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The trigger type of the synchronization job.</para>
+            /// <para>The trigger type of the synchronization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>manual</para>
@@ -538,7 +538,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token returned by the current call for subsequent paged queries.</para>
+        /// <para>The pagination token returned by the current call for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -558,7 +558,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListCloudPermissionTemplatesRequest : TeaModel {
         /// <summary>
-        /// <para>The cloud account ID.</para>
+        /// <para>The ID of the cloud account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string CloudPermissionTemplateNamePrefix { get; set; }
 
         /// <summary>
-        /// <para>Filters the results by permission template sharing mode. Valid values: shared and exclusive. If this parameter is not specified, no filtering is applied.</para>
+        /// <para>Filters the results by permission template sharing mode. Valid values: shared and exclusive. If you do not specify this parameter, no filtering is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>shared</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging. Default value: 20. Maximum value: 100.</para>
+        /// <para>The maximum number of entries to return per page in a paged query. This parameter is used for paging. Default value: 20. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the NextToken value returned from the previous API call.</para>
+        /// <para>The query token, which is the value of the NextToken parameter returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>

@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string PrincipalId { get; set; }
 
                 /// <summary>
-                /// <para>The Azure resource group name.</para>
+                /// <para>The name of the Azure resource group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user_default</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The sub claim corresponding to the service account.</para>
+                /// <para>The sub corresponding to the service account.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123456789</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public UpdateApplicationFederatedCredentialRequestOidcVerificationConfigKubernetesConfig KubernetesConfig { get; set; }
             public class UpdateApplicationFederatedCredentialRequestOidcVerificationConfigKubernetesConfig : TeaModel {
                 /// <summary>
-                /// <para>The K8s namespace.</para>
+                /// <para>The Kubernetes namespace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>default</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string PodNamePrefix { get; set; }
 
                 /// <summary>
-                /// <para>The K8s service account name.</para>
+                /// <para>The Kubernetes service account name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my-sa</para>

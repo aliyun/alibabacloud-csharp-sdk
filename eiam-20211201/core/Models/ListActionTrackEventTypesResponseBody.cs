@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of entries per page for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results.</para>
+        /// <para>The next token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the previous page of results.</para>
+        /// <para>The previous token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxexample</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

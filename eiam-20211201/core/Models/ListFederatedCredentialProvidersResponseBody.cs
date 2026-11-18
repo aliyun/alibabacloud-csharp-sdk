@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string DynamicJwks { get; set; }
 
                 /// <summary>
-                /// <para>The token issuer identifier (Issuer).</para>
+                /// <para>The token issuer identifier.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example.com">https://example.com</a></para>
@@ -289,7 +289,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string CmsVerificationMode { get; set; }
 
                 /// <summary>
-                /// <para>The signature effective time. The value indicates the duration for which the signature is valid, in seconds.</para>
+                /// <para>The signature validity period. The value indicates the duration for which the signature is valid, in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3600</para>
@@ -338,7 +338,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersPrivateCaProviderConfig PrivateCaProviderConfig { get; set; }
             public class ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersPrivateCaProviderConfig : TeaModel {
                 /// <summary>
-                /// <para>The root certificates.</para>
+                /// <para>The root certificate.</para>
                 /// </summary>
                 [NameInMap("Certificates")]
                 [Validation(Required=false)]
@@ -398,7 +398,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The method used to retrieve the root certificate.</para>
+                /// <para>The method used to obtain the root certificate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>custom</para>
@@ -442,7 +442,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paged query.</para>
+        /// <para>The number of rows per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -452,7 +452,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The query token (Token) value returned by this call.</para>
+        /// <para>The pagination token returned by the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -462,7 +462,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The query token (Token) value returned by this call.</para>
+        /// <para>The pagination token returned by the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxexample</para>
@@ -482,7 +482,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries in the list.</para>
+        /// <para>The total number of items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

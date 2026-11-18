@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AccessToken { get; set; }
 
             /// <summary>
-            /// <para>The expiration time, in UNIX timestamp format, in seconds.</para>
+            /// <para>The expiration time as a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1770186372</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? ExpiresAt { get; set; }
 
             /// <summary>
-            /// <para>The validity period, in seconds.</para>
+            /// <para>The validity period in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1200</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string IssuedTokenType { get; set; }
 
             /// <summary>
-            /// <para>The token type. Currently, only Bearer is supported.</para>
+            /// <para>The token type. Only Bearer is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Bearer</para>

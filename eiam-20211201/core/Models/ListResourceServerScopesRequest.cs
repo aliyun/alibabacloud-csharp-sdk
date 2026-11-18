@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query.</para>
+        /// <para>The maximum number of entries to return per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token (NextToken) used to retrieve the next page of results. Set this parameter to the NextToken value returned in the previous API call. Leave this parameter empty for the first query.</para>
+        /// <para>The pagination token for the next page. Set this parameter to the value of the NextToken parameter returned from the previous API call. Leave this parameter empty for the first query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the previous page. Set this parameter to the PreviousToken value returned in the previous API call.</para>
+        /// <para>The pagination token for the previous page. Set this parameter to the value of the PreviousToken parameter returned from the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxxxexample</para>
@@ -79,17 +79,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<string> ResourceServerScopeIds { get; set; }
 
         /// <summary>
-        /// <para>The scope permission name.</para>
+        /// <para>The name of the scope permission.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>读取全部用户</para>
+        /// <para>Read all users</para>
         /// </summary>
         [NameInMap("ResourceServerScopeName")]
         [Validation(Required=false)]
         public string ResourceServerScopeName { get; set; }
 
         /// <summary>
-        /// <para>The scope permission type.</para>
+        /// <para>The type of the scope permission.</para>
         /// 
         /// <b>Example:</b>
         /// <para>urn:alibaba:idaas:resourceserver:scope:delegated</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ResourceServerScopeType { get; set; }
 
         /// <summary>
-        /// <para>The scope permission value.</para>
+        /// <para>The value of the scope permission.</para>
         /// 
         /// <b>Example:</b>
         /// <para>User:Write:ALL</para>

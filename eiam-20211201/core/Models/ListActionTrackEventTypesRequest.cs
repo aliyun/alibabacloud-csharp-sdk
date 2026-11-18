@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of entries per page for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>You can use this parameter to specify the query token.</para>
+        /// <para>The next token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to retrieve the previous page of results.</para>
+        /// <para>The previous token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxxxexample</para>

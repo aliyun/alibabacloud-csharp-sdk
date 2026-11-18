@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class DeactivateCloudAccountPrivilegeRequest : TeaModel {
         /// <summary>
-        /// <para>Ensures the idempotence of the request. You can generate a parameter value on your client to ensure that the value is unique across different requests. ClientToken supports only ASCII characters and can be up to 64 characters in length.</para>
+        /// <para>Ensures the idempotence of the request. Generate a parameter value on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and can be up to 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-example</para>

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <para>The list of application IDs. You can specify up to 100 application IDs in a single request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>app_mkv7rgt4d7i4u7zqtzev2mxxxx</para>
+        /// <para>[&quot;app_mkv7rgt4d7i4u7zqtzev2mxxxx&quot;]</para>
         /// </summary>
         [NameInMap("ApplicationIds")]
         [Validation(Required=false)]

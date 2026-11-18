@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class DeleteApplicationFederatedCredentialRequest : TeaModel {
         /// <summary>
-        /// <para>The application federated identity credential ID.</para>
+        /// <para>The ID of the federated identity credential.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

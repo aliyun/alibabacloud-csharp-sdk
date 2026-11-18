@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GenerateDownloadUrlForSynchronizationJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The download URL of the template.</para>
+        /// <para>The template download URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://test.oss.aliyuncs.com/idaas_ly77wa2oexrciw5v672vxxxx/tmp/eiam_user_export_1766469463365.csv">https://test.oss.aliyuncs.com/idaas_ly77wa2oexrciw5v672vxxxx/tmp/eiam_user_export_1766469463365.csv</a></para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>email</para>
+        /// <para>[&quot;email&quot;]</para>
         /// </summary>
         [NameInMap("AuthenticationChannels")]
         [Validation(Required=false)]

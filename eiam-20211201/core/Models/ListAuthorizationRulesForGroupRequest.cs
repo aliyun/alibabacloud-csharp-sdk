@@ -48,9 +48,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to identify the starting position of the next page.</para>
+        /// <para>The token that specifies the starting position of the next page.</para>
         /// <list type="bullet">
-        /// <item><description>If this parameter is not specified, the query starts from the first page by default.</description></item>
+        /// <item><description>If you do not specify this parameter, the query starts from the first page by default.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

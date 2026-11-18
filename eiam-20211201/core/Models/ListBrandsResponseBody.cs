@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The enabling status of system notifications.</para>
+            /// <para>The system notification status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries per page in a paging query.</para>
+        /// <para>The maximum number of results per page during paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

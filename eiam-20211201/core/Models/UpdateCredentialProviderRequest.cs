@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateCredentialProviderRequest : TeaModel {
         /// <summary>
-        /// <para>The idempotency token that ensures the idempotence of the request.</para>
-        /// <para>Generate a unique parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can generate the parameter value on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and can be up to 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,14 +22,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The credential provider configuration.</para>
+        /// <para>The configuration of the credential provider.</para>
         /// </summary>
         [NameInMap("CredentialProviderConfig")]
         [Validation(Required=false)]
         public UpdateCredentialProviderRequestCredentialProviderConfig CredentialProviderConfig { get; set; }
         public class UpdateCredentialProviderRequestCredentialProviderConfig : TeaModel {
             /// <summary>
-            /// <para>The configuration of the JWT credential provider.</para>
+            /// <para>The configuration of the JSON Web Token (JWT) credential provider.</para>
             /// </summary>
             [NameInMap("JwtProviderConfig")]
             [Validation(Required=false)]
@@ -38,10 +38,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 /// <summary>
                 /// <para>The list of allowed JWT issuers.</para>
                 /// <remarks>
-                /// <para>The list cannot contain more than 200 entries.</para>
+                /// <para>The list can contain up to 200 issuers.</para>
                 /// </remarks>
                 /// <remarks>
-                /// <para>Notice: To clear the issuer list, pass an empty list or an empty string when calling the API.</para>
+                /// <para>Notice: To clear the issuer list, pass an empty list or an empty string when you call the operation.</notice></para>
                 /// </remarks>
                 /// </summary>
                 [NameInMap("AllowedTokenIssuers")]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public List<string> AllowedTokenIssuers { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the JWT derived short token feature is enabled.</para>
+                /// <para>Specifies whether to enable the JWT derived short token capability.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public bool? DerivedShortTokenEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The validity period of the JWT, in seconds.</para>
+                /// <para>The validity period of the JWT. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>900</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public int? Expiration { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether JWT expiration cleanup is enabled.</para>
+                /// <para>Specifies whether to enable JWT expiration cleanup.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -112,9 +112,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string AuthorizationFlow { get; set; }
 
                 /// <summary>
-                /// <para>The client_secret in the OAuth protocol.</para>
+                /// <para>The client secret in the OAuth protocol.</para>
                 /// <remarks>
-                /// <para>The value cannot exceed 1024 characters in length.</para>
+                /// <para>The client secret can be up to 1,024 characters in length.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ClientSecret { get; set; }
 
                 /// <summary>
-                /// <para>The auto-discovery URL.</para>
+                /// <para>The URL of the discovery document.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example.com/.well-known/openid-configuration">https://example.com/.well-known/openid-configuration</a></para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string DiscoveryUrl { get; set; }
 
                 /// <summary>
-                /// <para>The authorization server identifier URL.</para>
+                /// <para>The URL of the authorization server identifier.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example.com/issuer">https://example.com/issuer</a></para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string PkceChallengeMethod { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether PKCE is enabled.</para>
+                /// <para>Specifies whether to enable Proof Key for Code Exchange (PKCE).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -187,19 +187,19 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ProviderVendor { get; set; }
 
                 /// <summary>
-                /// <para>The scope in the OAuth protocol, which specifies the permission scope.</para>
+                /// <para>The scope in the OAuth protocol.</para>
                 /// <remarks>
-                /// <para>The Scope configuration on the credential provider serves as the fallback value. If the scope parameter is not specified when calling the DeveloperAPI to obtain an OAuth Access Token, the Scope configuration on the credential provider is used for issuance.</para>
+                /// <para>The scope configuration of the OAuth credential provider serves as a fallback value. If the scope parameter is not specified when you call the Developer API to obtain an OAuth access token, the access token is issued based on the scope configuration of the credential provider.</para>
                 /// </remarks>
                 /// <remarks>
-                /// <para>Notice: Separate multiple Scope values with spaces. To clear the Scope configuration, pass an empty string.</para>
+                /// <para>Notice: Separate multiple scope values with spaces. To clear the scope configuration, enter an empty string.</notice></para>
                 /// </remarks>
-                /// <para>Restrictions on each individual Scope value:</para>
+                /// <para>The limits on a single scope value are as follows:</para>
                 /// <ol>
-                /// <item><description>Allowed characters: lowercase letters, digits, and special characters <c>|/:_-.</c></description></item>
-                /// <item><description>Must contain at least one lowercase letter or digit.</description></item>
-                /// <item><description>Must start with a special character <c>.</c>, a lowercase letter, or a digit.</description></item>
-                /// <item><description>Cannot exceed 1024 characters in length.</description></item>
+                /// <item><description>Allowed characters: lowercase letters, digits, and the following special characters: <c>|/:_-.</c></description></item>
+                /// <item><description>The value must contain at least one lowercase letter or digit.</description></item>
+                /// <item><description>The value must start with a period (<c>.</c>), a lowercase letter, or a digit.</description></item>
+                /// <item><description>The value can be up to 1,024 characters in length.</description></item>
                 /// </ol>
                 /// 
                 /// <b>Example:</b>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 /// <summary>
                 /// <para>The token endpoint of the OAuth protocol.</para>
                 /// <remarks>
-                /// <para>The value must start with <c>http://</c> or <c>https://</c> and cannot exceed 1024 characters in length.</para>
+                /// <para>The endpoint must start with <c>http://</c> or <c>https://</c> and can be up to 1,024 characters in length.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -238,9 +238,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string CredentialProviderId { get; set; }
 
         /// <summary>
-        /// <para>The credential provider name.</para>
+        /// <para>The name of the credential provider.</para>
         /// <remarks>
-        /// <para>The name cannot exceed 64 characters in length.</para>
+        /// <para>The name can be up to 64 characters in length.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

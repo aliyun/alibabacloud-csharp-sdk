@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListCustomPrivacyPoliciesRequest : TeaModel {
         /// <summary>
-        /// <para>The prefix of the custom privacy policy name for fuzzy matching.</para>
+        /// <para>The custom privacy policy name. Left fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Custom</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per page in a paging query.</para>
+        /// <para>The maximum number of entries per page for a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token.</para>
+        /// <para>The next token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the previous page.</para>
+        /// <para>The previous token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxxxexample</para>

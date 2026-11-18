@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public List<string> InstanceIds { get; set; }
 
                 /// <summary>
-                /// <para>The GCP project ID to which the resource belongs.</para>
+                /// <para>The GCP project ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>turnkey-axiom-475109-xx</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The sub claim corresponding to the service account.</para>
+                /// <para>The sub corresponding to the service account.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123456789</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public CreateApplicationFederatedCredentialRequestOidcVerificationConfigKubernetesConfig KubernetesConfig { get; set; }
             public class CreateApplicationFederatedCredentialRequestOidcVerificationConfigKubernetesConfig : TeaModel {
                 /// <summary>
-                /// <para>The K8s namespace.</para>
+                /// <para>The Kubernetes namespace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>default</para>
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string PodNamePrefix { get; set; }
 
                 /// <summary>
-                /// <para>The K8s service account name.</para>
+                /// <para>The Kubernetes service account name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my-sa</para>
@@ -276,7 +276,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public CreateApplicationFederatedCredentialRequestPkcs7VerificationConfig Pkcs7VerificationConfig { get; set; }
         public class CreateApplicationFederatedCredentialRequestPkcs7VerificationConfig : TeaModel {
             /// <summary>
-            /// <para>The list of instance IDs.</para>
+            /// <para>The list of instances.</para>
             /// </summary>
             [NameInMap("InstanceIds")]
             [Validation(Required=false)]

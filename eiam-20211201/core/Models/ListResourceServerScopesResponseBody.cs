@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListResourceServerScopesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page in a paged query.</para>
+        /// <para>The maximum number of entries to return per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of scope permissions under the ResourceServer.</para>
+        /// <para>The list of scope permissions under the resource server.</para>
         /// </summary>
         [NameInMap("ResourceServerScopes")]
         [Validation(Required=false)]
@@ -97,17 +97,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ResourceServerScopeId { get; set; }
 
             /// <summary>
-            /// <para>The scope permission name.</para>
+            /// <para>The name of the scope permission.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>读取全部用户</para>
+            /// <para>Read all users</para>
             /// </summary>
             [NameInMap("ResourceServerScopeName")]
             [Validation(Required=false)]
             public string ResourceServerScopeName { get; set; }
 
             /// <summary>
-            /// <para>The scope permission type.</para>
+            /// <para>The type of the scope permission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>urn:alibaba:idaas:resourceserver:scope:delegated</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ResourceServerScopeType { get; set; }
 
             /// <summary>
-            /// <para>The scope permission value.</para>
+            /// <para>The value of the scope permission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>User:Write:ALL</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries in the list.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

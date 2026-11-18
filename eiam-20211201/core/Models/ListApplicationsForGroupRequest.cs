@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListApplicationsForGroupRequest : TeaModel {
         /// <summary>
-        /// <para>Application ID list. A maximum of 100 application IDs are supported.</para>
+        /// <para>The list of application IDs. You can specify up to 100 application IDs.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>app_mkv7rgt4d7i4u7zqtzev2mxxxx</para>
+        /// <para>[&quot;app_mkv7rgt4d7i4u7zqtzev2mxxxx&quot;]</para>
         /// </summary>
         [NameInMap("ApplicationIds")]
         [Validation(Required=false)]
         public List<string> ApplicationIds { get; set; }
 
         /// <summary>
-        /// <para>Group ID.</para>
+        /// <para>The group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Page number.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Page size.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

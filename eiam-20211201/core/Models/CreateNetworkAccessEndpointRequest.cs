@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateNetworkAccessEndpointRequest : TeaModel {
         /// <summary>
-        /// <para>Ensures the idempotency of the request. Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
+        /// <para>Ensures the idempotence of the request. You can generate a parameter value on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-example</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,28 +31,28 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Network access endpoint name.</para>
+        /// <para>The name of the dedicated network endpoint.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xx业务VPC访问端点</para>
+        /// <para>XX business VPC access endpoint</para>
         /// </summary>
         [NameInMap("NetworkAccessEndpointName")]
         [Validation(Required=false)]
         public string NetworkAccessEndpointName { get; set; }
 
         /// <summary>
-        /// <para>List of specified vSwitches connected to the network access endpoint.</para>
+        /// <para>The list of specified vSwitches to which the dedicated network endpoint is connected.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vsw-examplexxx</para>
+        /// <para>[&quot;vsw-examplexxx&quot;]</para>
         /// </summary>
         [NameInMap("VSwitchIds")]
         [Validation(Required=false)]
         public List<string> VSwitchIds { get; set; }
 
         /// <summary>
-        /// <para>VPC ID connected to the network access endpoint.</para>
+        /// <para>The ID of the VPC to which the dedicated network endpoint is connected.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>Region of the VPC ID connected to the network access endpoint.</para>
+        /// <para>The region of the VPC to which the dedicated network endpoint is connected.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

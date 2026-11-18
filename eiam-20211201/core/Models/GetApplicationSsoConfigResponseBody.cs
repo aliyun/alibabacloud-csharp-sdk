@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public GetApplicationSsoConfigResponseBodyApplicationSsoConfig ApplicationSsoConfig { get; set; }
         public class GetApplicationSsoConfigResponseBodyApplicationSsoConfig : TeaModel {
             /// <summary>
-            /// <para>The initial single sign-on (SSO) method. Valid values:</para>
+            /// <para>The initial single sign-on (SSO) logon method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>only_app_init_sso: SSO is initiated only by the application. This is the default value for OIDC applications. If this method is specified for a SAML application, InitLoginUrl must be specified.</description></item>
-            /// <item><description>idaas_or_app_init_sso: SSO can be initiated by the IDaaS portal or the application. This is the default value for SAML applications. If this method is specified for an OIDC application, InitLoginUrl must be specified.</description></item>
+            /// <item><description>only_app_init_sso: SSO is initiated only by the application. This is the default value for applications using the OIDC protocol. If this value is specified for a SAML application, InitLoginUrl must be specified.</description></item>
+            /// <item><description>idaas_or_app_init_sso: SSO can be initiated by the IDaaS portal or the application. This is the default value for applications using the SAML protocol. If this value is specified for an application using the OIDC protocol, InitLoginUrl must be specified.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InitLoginType { get; set; }
 
             /// <summary>
-            /// <para>The URL used to initiate single sign-on (SSO). This parameter is required when the InitLoginType of an OIDC application is set to idaas_or_app_init_sso, or when the InitLoginType of a SAML application is set to only_app_init_sso.</para>
+            /// <para>The trigger URL for the initial single sign-on (SSO) logon. This parameter is required when the InitLoginType of an application using the OIDC protocol is set to idaas_or_app_init_sso, or when the InitLoginType of an application using the SAML protocol is set to only_app_init_sso.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://127.0.0.1:8000/start_login?enterprise_code=ABCDEF">http://127.0.0.1:8000/start_login?enterprise_code=ABCDEF</a></para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InitLoginUrl { get; set; }
 
             /// <summary>
-            /// <para>The application SSO attribute configuration parameters for the OpenID Connect (OIDC) protocol. This parameter is returned only when the application SSO protocol is OIDC.</para>
+            /// <para>The SSO attribute configuration parameters for the OIDC protocol. Returned only when the application SSO protocol is OIDC.</para>
             /// </summary>
             [NameInMap("OidcSsoConfig")]
             [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public long? AccessTokenEffectiveTime { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the application is allowed to act as a public client to request the IDaaS EIAM authorization server. This is supported only when the authorization code mode and device mode are enabled. Default value: false.</para>
+                /// <para>Specifies whether the application is allowed to act as a public client when requesting the IDaaS EIAM authorization server. This is supported only when the authorization code mode and device authorization mode are enabled. Default value: false.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -107,20 +107,20 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The standard scope parameter for the OIDC protocol, which specifies the range of user attributes that the userinfo endpoint or ID token can return.</para>
+                /// <para>The standard OIDC scope parameter. It specifies the range of user attributes that the userinfo endpoint or ID token can return.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>profile，email</para>
+                /// <para>[&quot;profile&quot;,&quot;email&quot;]</para>
                 /// </summary>
                 [NameInMap("GrantScopes")]
                 [Validation(Required=false)]
                 public List<string> GrantScopes { get; set; }
 
                 /// <summary>
-                /// <para>The list of supported OIDC protocol grant types.</para>
+                /// <para>The list of supported OIDC grant types.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>authorization_code</para>
+                /// <para>[&quot;authorization_code&quot;]</para>
                 /// </summary>
                 [NameInMap("GrantTypes")]
                 [Validation(Required=false)]
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 /// <para>The algorithm used to calculate the code challenge in PKCE.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>S256</para>
+                /// <para>[&quot;S256&quot;]</para>
                 /// </summary>
                 [NameInMap("PkceChallengeMethods")]
                 [Validation(Required=false)]
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 /// <para>The response types supported by the application when OidcSsoConfig.GrantTypes includes the implicit mode.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>token id_token</para>
+                /// <para>[&quot;token id_token&quot;]</para>
                 /// </summary>
                 [NameInMap("ResponseTypes")]
                 [Validation(Required=false)]
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public GetApplicationSsoConfigResponseBodyApplicationSsoConfigProtocolEndpointDomain ProtocolEndpointDomain { get; set; }
             public class GetApplicationSsoConfigResponseBodyApplicationSsoConfigProtocolEndpointDomain : TeaModel {
                 /// <summary>
-                /// <para>The OAuth 2.0 authorization endpoint. Returned only when the application SSO protocol is OIDC.</para>
+                /// <para>The OAuth 2.0 authorization endpoint. This parameter is returned only when the SSO protocol of the application is OIDC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://l1seshcn.aliyunidaas.com/login/app/app_mltta64q65enci54slingvvsgq/oauth2/authorize">https://l1seshcn.aliyunidaas.com/login/app/app_mltta64q65enci54slingvvsgq/oauth2/authorize</a></para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string Oauth2AuthorizationEndpoint { get; set; }
 
                 /// <summary>
-                /// <para>The OAuth 2.0 device authorization endpoint. Returned only when the application SSO protocol is OIDC.</para>
+                /// <para>The OAuth 2.0 device authorization endpoint. This parameter is returned only when the SSO protocol of the application is OIDC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oauth2/device/code">https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oauth2/device/code</a></para>
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string Oauth2DeviceAuthorizationEndpoint { get; set; }
 
                 /// <summary>
-                /// <para>The OAuth 2.0 token revocation endpoint. Returned only when the application SSO protocol is OIDC.</para>
+                /// <para>The OAuth 2.0 token revocation endpoint. This parameter is returned only when the SSO protocol of the application is OIDC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oauth2/revoke">https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oauth2/revoke</a></para>
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string Oauth2RevokeEndpoint { get; set; }
 
                 /// <summary>
-                /// <para>The OAuth 2.0 token endpoint. Returned only when the application SSO protocol is OIDC.</para>
+                /// <para>The OAuth 2.0 token endpoint. This parameter is returned only when the SSO protocol of the application is OIDC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oauth2/token">https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oauth2/token</a></para>
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string Oauth2TokenEndpoint { get; set; }
 
                 /// <summary>
-                /// <para>The OIDC userinfo endpoint. Returned only when the application SSO protocol is OIDC.</para>
+                /// <para>The OIDC userinfo endpoint. This parameter is returned only when the SSO protocol of the application is OIDC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oauth2/userinfo">https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oauth2/userinfo</a></para>
@@ -280,7 +280,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string Oauth2UserinfoEndpoint { get; set; }
 
                 /// <summary>
-                /// <para>The OIDC issuer information. Returned only when the application SSO protocol is OIDC.</para>
+                /// <para>The OIDC issuer information. This parameter is returned only when the SSO protocol of the application is OIDC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oidc">https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oidc</a></para>
@@ -290,7 +290,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string OidcIssuer { get; set; }
 
                 /// <summary>
-                /// <para>The OIDC JWKS URL. Returned only when the application SSO protocol is OIDC.</para>
+                /// <para>The OIDC JSON Web Key Set (JWKS) URL. This parameter is returned only when the SSO protocol of the application is OIDC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oidc/jwks">https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oidc/jwks</a></para>
@@ -300,7 +300,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string OidcJwksEndpoint { get; set; }
 
                 /// <summary>
-                /// <para>The OIDC RP-initiated logout endpoint. Returned only when the application SSO protocol is OIDC.</para>
+                /// <para>The OIDC RP-initiated logout endpoint. This parameter is returned only when the SSO protocol of the application is OIDC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://l1seshcn.aliyunidaas.com/login/app/app_mltta64q65enci54slingvvsgq/oauth2/logout">https://l1seshcn.aliyunidaas.com/login/app/app_mltta64q65enci54slingvvsgq/oauth2/logout</a></para>
@@ -310,7 +310,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string OidcLogoutEndpoint { get; set; }
 
                 /// <summary>
-                /// <para>The metadata URL for the SAML protocol. Returned only when the application SSO protocol is SAML 2.0.</para>
+                /// <para>The metadata URL for the SAML protocol. This parameter is returned only when the SSO protocol of the application is SAML 2.0.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://l1seshcn.aliyunidaas.com/api/v2/app_mltuxdwd4lq4eer6tmtlmaxm5e/saml2/meta">https://l1seshcn.aliyunidaas.com/api/v2/app_mltuxdwd4lq4eer6tmtlmaxm5e/saml2/meta</a></para>
@@ -330,7 +330,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string SamlSloEndpoint { get; set; }
 
                 /// <summary>
-                /// <para>The endpoint that accepts SAML AuthnRequest requests. Returned only when the application SSO protocol is SAML 2.0.</para>
+                /// <para>The endpoint that receives SAML AuthnRequest requests. This parameter is returned only when the SSO protocol of the application is SAML 2.0.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://l1seshcn.aliyunidaas.com/login/app/app_mltuxdwd4lq4eer6tmtlmaxm5e/saml2/sso">https://l1seshcn.aliyunidaas.com/login/app/app_mltuxdwd4lq4eer6tmtlmaxm5e/saml2/sso</a></para>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The application SSO attribute configuration parameters for the SAML protocol. This parameter is returned only when the application SSO protocol is SAML 2.0.</para>
+            /// <para>The SSO attribute configuration parameters for the SAML protocol. Returned only when the application SSO protocol is SAML 2.0.</para>
             /// </summary>
             [NameInMap("SamlSsoConfig")]
             [Validation(Required=false)]
@@ -392,7 +392,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The default RelayState value. When a user\&quot;s single sign-on (SSO) request is initiated by EIAM, the SAML response provided by EIAM sets the RelayState to this value.</para>
+                /// <para>The default RelayState value. When a user\&quot;s single sign-on logon request is initiated by EIAM, the SAML response provided by EIAM specifies the RelayState as this value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://home.console.aliyun.com">https://home.console.aliyun.com</a></para>
@@ -438,7 +438,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string NameIdValueExpression { get; set; }
 
                 /// <summary>
-                /// <para>The optional RelayState values. On the application card in the application portal, display names for multiple optional redirect URLs are shown. After a user clicks an option and completes SSO, the user is automatically redirected to the corresponding URL. You must specify a default redirect URL before you can specify optional redirect URLs.</para>
+                /// <para>The optional RelayState values. On the application card in the application portal, display names for multiple optional redirect URLs are shown. After the user clicks and completes SSO, they are automatically redirected to the corresponding URL. You must specify a default redirect URL before specifying optional ones.</para>
                 /// </summary>
                 [NameInMap("OptionalRelayStates")]
                 [Validation(Required=false)]
@@ -455,7 +455,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string DisplayName { get; set; }
 
                     /// <summary>
-                    /// <para>The optional RelayState value. On the application card in the application portal, display names for multiple optional redirect URLs are shown. After a user clicks an option and completes SSO, the user is automatically redirected to the corresponding URL.</para>
+                    /// <para>The optional RelayState value. On the application card in the application portal, display names for multiple optional redirect URLs are shown. After the user clicks and completes SSO, they are automatically redirected to the corresponding URL.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="https://home.console.aliyun.com">https://home.console.aliyun.com</a></para>
@@ -501,7 +501,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string SignatureAlgorithm { get; set; }
 
                 /// <summary>
-                /// <para>The SAML entity ID of the application, which acts as the SP.</para>
+                /// <para>The SAML entity ID of the application (service provider).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>urn:alibaba:cloudcomputing</para>
@@ -514,14 +514,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 /// <para>The array of configured SP signature verification certificates in PEM format. A maximum of two certificates can be returned for the console or API caller to read and display.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>-----BEGIN CERTIFICATE----- MIIC0jCCAbqgAwIBAgIQXXXXX -----END CERTIFICATE-----</para>
+                /// <para>[&quot;-----BEGIN CERTIFICATE----- MIIC0jCCAbqgAwIBAgIQXXXXX -----END CERTIFICATE-----&quot;]</para>
                 /// </summary>
                 [NameInMap("SpSigningCertificates")]
                 [Validation(Required=false)]
                 public List<string> SpSigningCertificates { get; set; }
 
                 /// <summary>
-                /// <para>The configured single logout (SLO) response URL of the SP.</para>
+                /// <para>The configured single logout (SLO) response URL for the service provider.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example.com/api/slo/response">https://example.com/api/slo/response</a></para>
@@ -531,7 +531,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string SpSloResponseUrl { get; set; }
 
                 /// <summary>
-                /// <para>The SAML assertion consumer service (ACS) URL of the application, which acts as the service provider (SP).</para>
+                /// <para>The SAML assertion consumer service (ACS) URL of the application (service provider).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://signin.aliyun.com/saml-role/sso">https://signin.aliyun.com/saml-role/sso</a></para>
@@ -543,10 +543,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The enabling status of the application SSO feature. Valid values:</para>
+            /// <para>The status of the SSO feature for the application. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>enabled: Enabled.</description></item>
-            /// <item><description>disabled: Disabled.</description></item>
+            /// <item><description>enabled: The feature is enabled.</description></item>
+            /// <item><description>disabled: The feature is disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

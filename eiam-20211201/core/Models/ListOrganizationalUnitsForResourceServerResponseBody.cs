@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListOrganizationalUnitsForResourceServerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of rows per page in a paged query.</para>
+        /// <para>The number of entries to return per page for paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page.</para>
+        /// <para>The query token for the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The list of organizational units.</para>
+        /// <para>The list of organizations.</para>
         /// </summary>
         [NameInMap("OrganizationalUnits")]
         [Validation(Required=false)]
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string OrganizationalUnitId { get; set; }
 
             /// <summary>
-            /// <para>The list of scope permissions.</para>
+            /// <para>The list of scopes.</para>
             /// </summary>
             [NameInMap("ResourceServerScopes")]
             [Validation(Required=false)]
             public List<ListOrganizationalUnitsForResourceServerResponseBodyOrganizationalUnitsResourceServerScopes> ResourceServerScopes { get; set; }
             public class ListOrganizationalUnitsForResourceServerResponseBodyOrganizationalUnitsResourceServerScopes : TeaModel {
                 /// <summary>
-                /// <para>The scope permission ID.</para>
+                /// <para>The scope ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ress_nbte4bb3qqqnaq73rlmkqixxxx</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ResourceServerScopeId { get; set; }
 
                 /// <summary>
-                /// <para>The scope permission name.</para>
+                /// <para>The scope name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Read User Info</para>

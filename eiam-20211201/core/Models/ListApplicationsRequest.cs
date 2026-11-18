@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationIdentityType { get; set; }
 
         /// <summary>
-        /// <para>The list of application IDs.</para>
+        /// <para>The application IDs.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Ram Account SSO</para>
+        /// <para>[&quot;Ram Account SSO&quot;]</para>
         /// </summary>
         [NameInMap("ApplicationIds")]
         [Validation(Required=false)]
         public List<string> ApplicationIds { get; set; }
 
         /// <summary>
-        /// <para>The application name. Only left fuzzy match is supported.</para>
+        /// <para>The application name. Only left-fuzzy matching is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ram Account SSO</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationTemplateId { get; set; }
 
         /// <summary>
-        /// <para>The application access authorization type. Valid values:</para>
+        /// <para>The access authorization type of the application. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>authorize_required: Explicit authorization is required for access.</description></item>
         /// <item><description>default_all: All members have access permissions by default.</description></item>
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationType { get; set; }
 
         /// <summary>
-        /// <para>The list of custom fields.</para>
+        /// <para>The extended fields.</para>
         /// </summary>
         [NameInMap("CustomFields")]
         [Validation(Required=false)]
         public List<ListApplicationsRequestCustomFields> CustomFields { get; set; }
         public class ListApplicationsRequestCustomFields : TeaModel {
             /// <summary>
-            /// <para>The custom field identifier. Valid values:</para>
+            /// <para>The extended field identifier. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>agent_type: The agent type.</description></item>
             /// </list>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string FieldName { get; set; }
 
             /// <summary>
-            /// <para>The custom field value.</para>
+            /// <para>The extended field value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>x-claw</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the M2M Client identity is enabled.</para>
+        /// <para>Specifies whether the M2M client identity is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>enabled</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string M2MClientStatus { get; set; }
 
         /// <summary>
-        /// <para>The ServiceCode of the cloud service that manages the application template.</para>
+        /// <para>The service code of the cloud service that manages the application template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>waf</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the ResourceServer capability is enabled.</para>
+        /// <para>Specifies whether the resource server capability is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>enabled</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public bool? ServiceManaged { get; set; }
 
         /// <summary>
-        /// <para>The SSO type filter condition. Multiple types can be separated by commas. Example: oauth2/m2m,oidc+oauth2/m2m.</para>
+        /// <para>The SSO type search condition. You can specify multiple types separated by commas (,). Example: oauth2/m2m,oidc+oauth2/m2m.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oauth2/m2m</para>

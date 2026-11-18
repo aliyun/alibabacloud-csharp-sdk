@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<string> Audiences { get; set; }
 
             /// <summary>
-            /// <para>The token issuer identifier (Issuer).</para>
+            /// <para>The identifier of the token issuer.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com">https://example.com</a></para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Issuer { get; set; }
 
             /// <summary>
-            /// <para>The source of the JWKS.</para>
+            /// <para>The JWKS source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>static</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string StaticJwks { get; set; }
 
             /// <summary>
-            /// <para>The trust condition.</para>
+            /// <para>The trust conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IsNullOrEmpty(&quot;jwt.issuer&quot;)</para>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string TrustAnchorSource { get; set; }
 
             /// <summary>
-            /// <para>The trust condition.</para>
+            /// <para>The trust conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IsNullOrEmpty(&quot;jwt.issuer&quot;)</para>
@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The method used to retrieve the root certificate.</para>
+            /// <para>The method to retrieve the root certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>custom</para>
@@ -276,7 +276,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string TrustAnchorSource { get; set; }
 
             /// <summary>
-            /// <para>The trust condition of the root certificate.</para>
+            /// <para>The trust conditions for the root certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IsNullOrEmpty(&quot;jwt.issuer&quot;)</para>

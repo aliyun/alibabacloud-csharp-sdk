@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The type of the resource entity associated with the authorization resource. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cloud_account_role: cloud role.</description></item>
+            /// <item><description>cloud_account_role: cloud role</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationRuleId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud account to which the resource entity associated with the authorization resource belongs.</para>
+            /// <para>The ID of the Alibaba Cloud account to which the resource entity associated with the authorization resource belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ca_01kmegjc11qa1txxxxx</para>
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public ListAuthorizationResourcesResponseBodyAuthorizationResourcesCondition Condition { get; set; }
             public class ListAuthorizationResourcesResponseBodyAuthorizationResourcesCondition : TeaModel {
                 /// <summary>
-                /// <para>The effective condition when used as a credential.</para>
+                /// <para>The effective conditions when the authorization resource is used as a credential.</para>
                 /// </summary>
                 [NameInMap("CredentialCondition")]
                 [Validation(Required=false)]
                 public ListAuthorizationResourcesResponseBodyAuthorizationResourcesConditionCredentialCondition CredentialCondition { get; set; }
                 public class ListAuthorizationResourcesResponseBodyAuthorizationResourcesConditionCredentialCondition : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether same-name identity accounts are supported.</para>
+                    /// <para>Specifies whether identity accounts with the same name are supported.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned per page for paging in a paged query.</para>
+        /// <para>The maximum number of entries per page for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token returned in the current response for the next paged query.</para>
+        /// <para>The next token returned in the current response for the next paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>

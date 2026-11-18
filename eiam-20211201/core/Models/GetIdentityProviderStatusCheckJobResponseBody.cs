@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetIdentityProviderStatusCheckJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IdP status check job information.</para>
+        /// <para>The IdP status check information.</para>
         /// </summary>
         [NameInMap("IdentityProviderStatusCheckJob")]
         [Validation(Required=false)]
         public GetIdentityProviderStatusCheckJobResponseBodyIdentityProviderStatusCheckJob IdentityProviderStatusCheckJob { get; set; }
         public class GetIdentityProviderStatusCheckJobResponseBodyIdentityProviderStatusCheckJob : TeaModel {
             /// <summary>
-            /// <para>The job check result.</para>
+            /// <para>The check result of the job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The status check sub-item task result information.</para>
+            /// <para>The status check subkey node task result information.</para>
             /// </summary>
             [NameInMap("JobCheckItems")]
             [Validation(Required=false)]
             public List<GetIdentityProviderStatusCheckJobResponseBodyIdentityProviderStatusCheckJobJobCheckItems> JobCheckItems { get; set; }
             public class GetIdentityProviderStatusCheckJobResponseBodyIdentityProviderStatusCheckJobJobCheckItems : TeaModel {
                 /// <summary>
-                /// <para>The error reason.</para>
+                /// <para>The error cause.</para>
                 /// </summary>
                 [NameInMap("ErrorReason")]
                 [Validation(Required=false)]
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The job check status.</para>
+            /// <para>The check status of the job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>

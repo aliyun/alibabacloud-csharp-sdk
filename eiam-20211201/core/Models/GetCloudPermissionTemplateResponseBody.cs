@@ -27,31 +27,31 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? AllowRequest { get; set; }
 
             /// <summary>
-            /// <para>The applicable scope for applying for the permission template.</para>
+            /// <para>The applicable scope of the permission template.</para>
             /// </summary>
             [NameInMap("ApplicableScope")]
             [Validation(Required=false)]
             public GetCloudPermissionTemplateResponseBodyCloudPermissionTemplateApplicableScope ApplicableScope { get; set; }
             public class GetCloudPermissionTemplateResponseBodyCloudPermissionTemplateApplicableScope : TeaModel {
                 /// <summary>
-                /// <para>The list of specified group IDs. This field is returned only when ScopeType is set to custom.</para>
+                /// <para>The list of specified group IDs. This parameter has a value only when ScopeType is set to custom.</para>
                 /// </summary>
                 [NameInMap("GroupIds")]
                 [Validation(Required=false)]
                 public List<string> GroupIds { get; set; }
 
                 /// <summary>
-                /// <para>The list of specified organizational unit IDs. This field is returned only when ScopeType is set to custom.</para>
+                /// <para>The list of specified organizational unit IDs. This parameter has a value only when ScopeType is set to custom.</para>
                 /// </summary>
                 [NameInMap("OrganizationalUnitIds")]
                 [Validation(Required=false)]
                 public List<string> OrganizationalUnitIds { get; set; }
 
                 /// <summary>
-                /// <para>The type of the applicable scope. Valid values:</para>
+                /// <para>The scope type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>global: Global.</description></item>
-                /// <item><description>custom: Custom.</description></item>
+                /// <item><description>global</description></item>
+                /// <item><description>custom</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ScopeType { get; set; }
 
                 /// <summary>
-                /// <para>The list of specified user IDs. This field is returned only when ScopeType is set to custom.</para>
+                /// <para>The list of specified user IDs. This parameter has a value only when ScopeType is set to custom.</para>
                 /// </summary>
                 [NameInMap("UserIds")]
                 [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The ID of the cloud account to which the permission template belongs.</para>
+            /// <para>The cloud account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ca_01kq1us6frlbo3rr8m216vj3bkak2</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountId { get; set; }
 
             /// <summary>
-            /// <para>The information about the creator of the permission template.</para>
+            /// <para>The creator information of the permission template.</para>
             /// </summary>
             [NameInMap("CloudPermissionTemplateCreator")]
             [Validation(Required=false)]
@@ -108,10 +108,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string CreatorName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the creator. Valid values:</para>
+                /// <para>The creator type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>idaas_admin: IDaaS administrator.</description></item>
-                /// <item><description>idaas_user: IDaaS user.</description></item>
+                /// <item><description>idaas_admin: Created by an administrator.</description></item>
+                /// <item><description>idaas_user: Created by a user.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -134,14 +134,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudPermissionTemplateId { get; set; }
 
             /// <summary>
-            /// <para>The initialization result. This field is returned only when the status is init_failed.</para>
+            /// <para>The initialization result. This parameter is returned only when the status is init_failed.</para>
             /// </summary>
             [NameInMap("CloudPermissionTemplateInitResult")]
             [Validation(Required=false)]
             public GetCloudPermissionTemplateResponseBodyCloudPermissionTemplateCloudPermissionTemplateInitResult CloudPermissionTemplateInitResult { get; set; }
             public class GetCloudPermissionTemplateResponseBodyCloudPermissionTemplateCloudPermissionTemplateInitResult : TeaModel {
                 /// <summary>
-                /// <para>The error code returned when the initialization fails.</para>
+                /// <para>The error code returned when initialization fails.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CloudPermissionTemplate.AsyncInitError</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// <para>The error message returned when the initialization fails.</para>
+                /// <para>The error message returned when initialization fails.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>server error</para>
@@ -163,8 +163,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 /// <summary>
                 /// <para>The initialization result. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>success: The initialization succeeded.</description></item>
-                /// <item><description>failed: The initialization failed.</description></item>
+                /// <item><description>success</description></item>
+                /// <item><description>failed</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudPermissionTemplateName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the application that owns the exclusive template. This field is empty for shared templates.</para>
+            /// <para>The ID of the application to which the exclusive template belongs. This parameter is empty for shared templates.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user_01kexamplexxxx</para>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <list type="bullet">
             /// <item><description>application: M2M application.</description></item>
             /// <item><description>user: Human user.
-            /// This field is empty for shared templates.</description></item>
+            /// This parameter is empty for shared templates.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The usage type of the permission template. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>user: Privilege escalation for human users.</description></item>
-            /// <item><description>application: Privilege escalation for machine-to-machine (M2M) applications.</description></item>
+            /// <item><description>application: Privilege escalation for M2M applications.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudPermissionTemplateUsageType { get; set; }
 
             /// <summary>
-            /// <para>The time when the permission template was created. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1776239357000</para>
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The external unique identifier of the associated cloud role, which is the ARN of the role on the cloud provider side.</para>
+            /// <para>The external unique identifier of the associated cloud role, which is the role ARN on the cloud provider side.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:ram::123456:role/idaas-test</para>
@@ -290,7 +290,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PermissionEntityId { get; set; }
 
             /// <summary>
-            /// <para>The type of the permission entity. Fixed value: cloud_account_role.</para>
+            /// <para>The permission entity type. Fixed value: cloud_account_role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_account_role</para>
@@ -302,10 +302,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The status of the permission template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>initializing: The template is being initialized.</description></item>
-            /// <item><description>init_failed: The template initialization failed.</description></item>
-            /// <item><description>enabled: The template is enabled.</description></item>
-            /// <item><description>disabled: The template is disabled.</description></item>
+            /// <item><description>initializing</description></item>
+            /// <item><description>init_failed</description></item>
+            /// <item><description>enabled</description></item>
+            /// <item><description>disabled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -316,7 +316,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the permission template was last updated. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The last update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1776239357000</para>
@@ -328,7 +328,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>

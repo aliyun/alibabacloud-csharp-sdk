@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateApplicationSsoFormParamsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application.</para>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The parameters for creating the application template.</para>
+        /// <para>The application template creation parameters.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ApplicationTemplateParams")]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<UpdateApplicationSsoFormParamsRequestApplicationTemplateParams> ApplicationTemplateParams { get; set; }
         public class UpdateApplicationSsoFormParamsRequestApplicationTemplateParams : TeaModel {
             /// <summary>
-            /// <para>The name of a parameter for creating the application template.</para>
+            /// <para>The name of the application template creation parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aliyunUid</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string TemplateParamName { get; set; }
 
             /// <summary>
-            /// <para>The value of the parameter for creating the application template.</para>
+            /// <para>The value of the application template creation parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456789</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

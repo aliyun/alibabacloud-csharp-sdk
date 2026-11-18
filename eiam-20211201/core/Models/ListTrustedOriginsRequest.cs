@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token.</para>
+        /// <para>The next token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NT_example</para>
@@ -51,11 +51,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Origin { get; set; }
 
         /// <summary>
-        /// <para>The status filter. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Enabled: Enabled.</description></item>
-        /// <item><description>Disabled: Disabled.</description></item>
-        /// </list>
+        /// <para>The status filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Enabled</para>
@@ -68,7 +64,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <para>The name filter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Qoder Production Console</para>
+        /// <para>Qoder production console</para>
         /// </summary>
         [NameInMap("TrustOriginName")]
         [Validation(Required=false)]
@@ -78,7 +74,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <para>The trusted origin scene filter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>iframe_embed</para>
+        /// <para>[&quot;iframe_embed&quot;]</para>
         /// </summary>
         [NameInMap("TrustedOriginScene")]
         [Validation(Required=false)]

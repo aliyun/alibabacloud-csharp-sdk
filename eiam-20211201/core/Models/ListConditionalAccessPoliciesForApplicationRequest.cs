@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListConditionalAccessPoliciesForApplicationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application associated with the conditional access policies.</para>
+        /// <para>The ID of the application associated with the conditional access policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

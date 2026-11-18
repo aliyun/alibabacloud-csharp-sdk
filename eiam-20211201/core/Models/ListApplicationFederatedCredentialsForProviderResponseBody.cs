@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public ListApplicationFederatedCredentialsForProviderResponseBodyApplicationFederatedCredentialsOidcVerificationConfigKubernetesConfig KubernetesConfig { get; set; }
                 public class ListApplicationFederatedCredentialsForProviderResponseBodyApplicationFederatedCredentialsOidcVerificationConfigKubernetesConfig : TeaModel {
                     /// <summary>
-                    /// <para>The K8s namespace.</para>
+                    /// <para>The Kubernetes namespace.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>default</para>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string PodNamePrefix { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the K8s service account.</para>
+                    /// <para>The name of the Kubernetes service account.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>default</para>
@@ -334,7 +334,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of rows per page in a paging query.</para>
+        /// <para>The number of entries per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -344,7 +344,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token returned by the current call.</para>
+        /// <para>The query token returned by the current call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -354,7 +354,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The pagination token returned by the current call.</para>
+        /// <para>The query token returned by the current call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxexample</para>
@@ -374,7 +374,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of items.</para>
+        /// <para>The total number of entries in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

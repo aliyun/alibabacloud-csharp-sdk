@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <para>The trusted origin name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Qoder Production Console</para>
+        /// <para>Qoder production console</para>
         /// </summary>
         [NameInMap("TrustOriginName")]
         [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <para>The trusted origin scenario.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>iframe_embed</para>
+        /// <para>[&quot;iframe_embed&quot;]</para>
         /// </summary>
         [NameInMap("TrustedOriginScene")]
         [Validation(Required=false)]

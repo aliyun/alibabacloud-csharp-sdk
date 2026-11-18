@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public GetAuthorizationResourceResponseBodyAuthorizationResource AuthorizationResource { get; set; }
         public class GetAuthorizationResourceResponseBodyAuthorizationResource : TeaModel {
             /// <summary>
-            /// <para>The resource entity ID associated with the authorization resource.</para>
+            /// <para>The ID of the resource entity associated with the authorization resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>carole_01kmek49aqxxxx</para>
@@ -27,9 +27,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationResourceEntityId { get; set; }
 
             /// <summary>
-            /// <para>The resource entity type associated with the authorization resource. Valid values:</para>
+            /// <para>The type of the resource entity associated with the authorization resource. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cloud_account_role: cloud role.</description></item>
+            /// <item><description>cloud_account_role: Cloud role.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationRuleId { get; set; }
 
             /// <summary>
-            /// <para>The cloud account ID to which the resource entity associated with the authorization resource belongs.</para>
+            /// <para>The ID of the cloud account to which the resource entity associated with the authorization resource belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ca_01kmegjc11qa1txxxxx</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountId { get; set; }
 
             /// <summary>
-            /// <para>The condition restriction.</para>
+            /// <para>The condition restrictions.</para>
             /// </summary>
             [NameInMap("Condition")]
             [Validation(Required=false)]
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The creation time, in UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1787023451494</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The update time, in UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1787023451494</para>

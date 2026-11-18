@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<string> OrganizationalUnitIds { get; set; }
 
             /// <summary>
-            /// <para>The application scope type. Valid values: global, custom.</para>
+            /// <para>The type of the application scope. Valid values: global and custom.</para>
             /// 
             /// <b>Example:</b>
             /// <para>global</para>

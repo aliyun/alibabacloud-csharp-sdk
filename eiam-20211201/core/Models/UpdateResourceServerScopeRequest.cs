@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateResourceServerScopeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the ResourceServer application.</para>
+        /// <para>The application ID of the resource server.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scope permission for the resource server.</para>
+        /// <para>The scope permission ID of the resource server.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

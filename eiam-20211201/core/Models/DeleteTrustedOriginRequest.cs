@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class DeleteTrustedOriginRequest : TeaModel {
         /// <summary>
-        /// <para>The idempotence token.</para>
+        /// <para>The client token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-example</para>

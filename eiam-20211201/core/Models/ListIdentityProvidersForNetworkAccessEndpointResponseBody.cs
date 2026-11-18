@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListIdentityProvidersForNetworkAccessEndpointResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IdPs under the network access endpoint.</para>
+        /// <para>The collection of identity providers (IdPs) for the network access endpoint.</para>
         /// </summary>
         [NameInMap("IdentityProvidersForNetworkAccessEndpoint")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The pagination token returned by this call.</para>
+        /// <para>The next token returned in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

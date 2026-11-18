@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetNetworkAccessEndpointResponseBody : TeaModel {
         /// <summary>
-        /// <para>The network access endpoint information.</para>
+        /// <para>The network access endpoint details.</para>
         /// </summary>
         [NameInMap("NetworkAccessEndpoint")]
         [Validation(Required=false)]
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public GetNetworkAccessEndpointResponseBodyNetworkAccessEndpointBackupVpcEndpoint BackupVpcEndpoint { get; set; }
             public class GetNetworkAccessEndpointResponseBodyNetworkAccessEndpointBackupVpcEndpoint : TeaModel {
                 /// <summary>
-                /// <para>The list of private egress IP addresses of the backup network access endpoint.</para>
+                /// <para>The egress private IP addresses of the backup network access endpoint.</para>
                 /// </summary>
                 [NameInMap("BackupEgressPrivateIpAddresses")]
                 [Validation(Required=false)]
                 public List<string> BackupEgressPrivateIpAddresses { get; set; }
 
                 /// <summary>
-                /// <para>The public egress IP address ranges of the backup network access endpoint.</para>
+                /// <para>The egress public IP CIDR blocks of the backup network access endpoint.</para>
                 /// </summary>
                 [NameInMap("BackupEgressPublicIpAddresses")]
                 [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string BackupSecurityGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The list of backup vSwitches.</para>
+                /// <para>The backup vSwitches.</para>
                 /// </summary>
                 [NameInMap("BackupVSwitchIds")]
                 [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string BackupVpcId { get; set; }
 
                 /// <summary>
-                /// <para>The region of the backup VPC.</para>
+                /// <para>The region ID of the backup VPC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The time when the network access endpoint was created. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The time when the network access endpoint was created. The time is displayed as a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -87,20 +87,20 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The private egress IP address ranges of the dedicated network access endpoint. A value is returned only when NetworkEndpointType is set to private.</para>
+            /// <para>The egress private IP CIDR blocks of the private network access endpoint. This parameter is returned only when the network access endpoint type is private.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>172.168.x.x</para>
+            /// <para>[&quot;172.168.x.x&quot;]</para>
             /// </summary>
             [NameInMap("EgressPrivateIpAddresses")]
             [Validation(Required=false)]
             public List<string> EgressPrivateIpAddresses { get; set; }
 
             /// <summary>
-            /// <para>The public egress IP address ranges of the shared network access endpoint. A value is returned only when NetworkEndpointType is set to shared.</para>
+            /// <para>The egress public IP CIDR blocks of the shared network access endpoint. This parameter is returned only when the network access endpoint type is shared.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>8.xx.xx.xxx/27</para>
+            /// <para>[&quot;8.xx.xx.xxx/27&quot;]</para>
             /// </summary>
             [NameInMap("EgressPublicIpAddresses")]
             [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The dedicated network access endpoint ID.</para>
+            /// <para>The network access endpoint ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nae_examplexxx</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The type of the network access endpoint. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>shared: Shared network access endpoint.</description></item>
-            /// <item><description>private: Dedicated network access endpoint.</description></item>
+            /// <item><description>private: Private network access endpoint.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the network access endpoint was last updated. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The time when the network access endpoint was last updated. The time is displayed as a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -187,10 +187,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The list of specified vSwitches to which the network access endpoint is connected.</para>
+            /// <para>The specified vSwitches to which the network access endpoint is connected.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>vsw-examplexxx</para>
+            /// <para>[&quot;vsw-examplexxx&quot;]</para>
             /// </summary>
             [NameInMap("VSwitchIds")]
             [Validation(Required=false)]
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The region of the VPC to which the network access endpoint is connected.</para>
+            /// <para>The region ID of the VPC to which the network access endpoint is connected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>

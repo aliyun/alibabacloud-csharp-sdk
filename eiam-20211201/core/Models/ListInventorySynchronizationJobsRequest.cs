@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListInventorySynchronizationJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The end time.</para>
+        /// <para>The end time. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<string> InventorySourceIds { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page in paging. Default value: 20. Maximum value: 100.</para>
+        /// <para>The number of entries to return per page during paging in a paged query. Default value: 20. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The query token. Set the value to the NextToken value returned in the previous API call.</para>
+        /// <para>The query token. Set the value to the NextToken value returned from the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The start time.</para>
+        /// <para>The start time. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>

@@ -32,11 +32,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The list of account IDs. The list can contain up to 100 elements.</para>
+        /// <para>The list of account IDs. The list can contain a maximum of 100 elements.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[ou_001]</para>
+        /// <para>[&quot;ou_001&quot;]</para>
         /// </summary>
         [NameInMap("UserIds")]
         [Validation(Required=false)]

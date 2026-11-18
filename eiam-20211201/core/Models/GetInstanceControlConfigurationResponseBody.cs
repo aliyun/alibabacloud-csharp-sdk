@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetInstanceControlConfigurationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance control configuration.</para>
+        /// <para>The instance control configuration items.</para>
         /// </summary>
         [NameInMap("InstanceControlConfiguration")]
         [Validation(Required=false)]
         public GetInstanceControlConfigurationResponseBodyInstanceControlConfiguration InstanceControlConfiguration { get; set; }
         public class GetInstanceControlConfigurationResponseBodyInstanceControlConfiguration : TeaModel {
             /// <summary>
-            /// <para>The instance control configuration.</para>
+            /// <para>The instance control configuration items.</para>
             /// </summary>
             [NameInMap("ControlElements")]
             [Validation(Required=false)]
             public List<GetInstanceControlConfigurationResponseBodyInstanceControlConfigurationControlElements> ControlElements { get; set; }
             public class GetInstanceControlConfigurationResponseBodyInstanceControlConfigurationControlElements : TeaModel {
                 /// <summary>
-                /// <para>The name of the instance control item.</para>
+                /// <para>The name of the instance control element.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>human_verification</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ElementName { get; set; }
 
                 /// <summary>
-                /// <para>The Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) authentication configuration.</para>
+                /// <para>The human-machine authentication configuration.</para>
                 /// </summary>
                 [NameInMap("HumanVerificationConfig")]
                 [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The status of the instance control item.</para>
+                /// <para>The status of the instance control element.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>enabled</para>

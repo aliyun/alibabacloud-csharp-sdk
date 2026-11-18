@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetClientPublicKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The application ClientPublicKey information.</para>
+        /// <para>The client public key information of the application.</para>
         /// </summary>
         [NameInMap("ClientPublicKey")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the application ClientPublicKey.</para>
+            /// <para>The ID of the client public key for the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>KEYEqDnDJhztiEAwSin7MZoxGcihzCAuxxxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ClientPublicKeyId { get; set; }
 
             /// <summary>
-            /// <para>The creation time. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1731305755000</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The last used time. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The last used time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1771305755000</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? LastUsedTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the key pair is used with priority.</para>
+            /// <para>Indicates whether the key pair is the primary key pair.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

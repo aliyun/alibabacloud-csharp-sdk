@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListApplicationsForGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>List of applications authorized for access.</para>
+        /// <para>The list of applications that the group is authorized to access.</para>
         /// </summary>
         [NameInMap("Applications")]
         [Validation(Required=false)]
         public List<ListApplicationsForGroupResponseBodyApplications> Applications { get; set; }
         public class ListApplicationsForGroupResponseBodyApplications : TeaModel {
             /// <summary>
-            /// <para>Application ID.</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app_mkv7rgt4d7i4u7zqtzev2mxxxx</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>Application role list.</para>
+            /// <para>The list of application roles. No roles are returned for SAML applications.</para>
             /// </summary>
             [NameInMap("ApplicationRoles")]
             [Validation(Required=false)]
             public List<ListApplicationsForGroupResponseBodyApplicationsApplicationRoles> ApplicationRoles { get; set; }
             public class ListApplicationsForGroupResponseBodyApplicationsApplicationRoles : TeaModel {
                 /// <summary>
-                /// <para>Application role ID.</para>
+                /// <para>The application role ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</para>
@@ -46,10 +46,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>Whether direct authorization exists. Valid values:</para>
+            /// <para>Indicates whether direct authorization exists. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: A direct authorization relationship record exists between the application and the group.</description></item>
-            /// <item><description>false: No direct authorization relationship record exists between the application and the group.</description></item>
+            /// <item><description>true: A direct authorization record exists between the application and the group.</description></item>
+            /// <item><description>false: No direct authorization record exists between the application and the group.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? HasDirectAuthorization { get; set; }
 
             /// <summary>
-            /// <para>Whether inherited authorization exists.</para>
+            /// <para>Indicates whether inherited authorization exists.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of entries.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

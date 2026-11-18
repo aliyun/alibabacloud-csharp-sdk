@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetInstanceControlConfigurationRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the instance control item.</para>
+        /// <para>The name of the instance control element.</para>
         /// 
         /// <b>Example:</b>
         /// <para>representative-value-2026</para>

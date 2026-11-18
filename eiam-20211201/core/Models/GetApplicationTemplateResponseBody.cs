@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The help document URL of the application template.</para>
+            /// <para>The URL of the help document for the application template.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/document_detail/409xxx.html">https://example.com/document_detail/409xxx.html</a></para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string HelpDocumentUrl { get; set; }
 
             /// <summary>
-            /// <para>The logo URL of the application template.</para>
+            /// <para>The URL of the application template logo.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/imgextra/i4/O1CN01xTLxLb1WtyKksHW1H_!!6000000002847-2-tps-xxx-xxx.png">https://example.com/imgextra/i4/O1CN01xTLxLb1WtyKksHW1H_!!6000000002847-2-tps-xxx-xxx.png</a></para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ManagedServiceCode { get; set; }
 
             /// <summary>
-            /// <para>The sale information of the application template.</para>
+            /// <para>The sales information of the application template.</para>
             /// </summary>
             [NameInMap("SaleInfo")]
             [Validation(Required=false)]
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The console URL of the cloud service that manages the application template.</para>
+            /// <para>The URL of the console for the cloud service that manages the application template.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/?p=bastion">https://example.com/?p=bastion</a></para>

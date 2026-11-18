@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListApplicationsResponseBodyApplications> Applications { get; set; }
         public class ListApplicationsResponseBodyApplications : TeaModel {
             /// <summary>
-            /// <para>The application creation type.</para>
+            /// <para>The creation type of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user_custom</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>The application identity type.</para>
+            /// <para>The identity type of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>application</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationIdentityType { get; set; }
 
             /// <summary>
-            /// <para>The application name.</para>
+            /// <para>The name of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SAML Application</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationName { get; set; }
 
             /// <summary>
-            /// <para>The application creation source. Valid values:</para>
+            /// <para>The source from which the application is created. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>urn:alibaba:idaas:app:source:template: Application template.</description></item>
-            /// <item><description>urn:alibaba:idaas:app:source:standard: Standard protocol.</description></item>
+            /// <item><description>urn:alibaba:idaas:app:source:template: application template</description></item>
+            /// <item><description>urn:alibaba:idaas:app:source:standard: standard protocol</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationSourceType { get; set; }
 
             /// <summary>
-            /// <para>The application template ID.</para>
+            /// <para>The ID of the application template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>apt_xxx_xxx</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ClientId { get; set; }
 
             /// <summary>
-            /// <para>The application creation time, in UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The time when the application was created. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The application description.</para>
+            /// <para>The description of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>A test application</para>
@@ -113,13 +113,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The features supported by the application, returned as a JSON array string. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>sso: Single sign-on.</description></item>
-            /// <item><description>slo: Single logout.</description></item>
-            /// <item><description>provision: Account synchronization.</description></item>
-            /// <item><description>api_invoke: API access. </description></item>
-            /// <item><description>m2m_client: M2M Client capability.</description></item>
-            /// <item><description>resource_server: API service capability.</description></item>
-            /// <item><description>other: Fallback.</description></item>
+            /// <item><description>sso: single sign-on</description></item>
+            /// <item><description>slo: single logout</description></item>
+            /// <item><description>provision: account synchronization</description></item>
+            /// <item><description>api_invoke: API publication </description></item>
+            /// <item><description>m2m_client: M2M client</description></item>
+            /// <item><description>resource_server: resource server</description></item>
+            /// <item><description>other: other</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string LogoUrl { get; set; }
 
             /// <summary>
-            /// <para>The ServiceCode of the cloud service that manages the application template.</para>
+            /// <para>The service code of the cloud service that manages the application template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rpa</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ManagedServiceCode { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the ResourceServer.</para>
+            /// <para>The unique identifier of the resource server.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com">https://example.com</a></para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ResourceServerIdentifier { get; set; }
 
             /// <summary>
-            /// <para>The resource server source type.</para>
+            /// <para>The source type of the resource server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>urn:cloud:idaas:resourceserver:source:custom</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ResourceServerSourceType { get; set; }
 
             /// <summary>
-            /// <para>The resource server status.</para>
+            /// <para>The status of the resource server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -200,12 +200,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? ServiceManaged { get; set; }
 
             /// <summary>
-            /// <para>The single sign-on protocol. Valid values:</para>
+            /// <para>The single sign-on (SSO) protocol. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>saml2: SAML 2.0 protocol.</description></item>
-            /// <item><description>oidc: OpenID Connect protocol.</description></item>
-            /// <item><description>oauth2/m2m: OAuth 2.0 protocol.</description></item>
-            /// <item><description>oidc+oauth2/m2m: OpenID Connect and OAuth 2.0 protocols.</description></item>
+            /// <item><description>saml2: SAML 2.0 protocol</description></item>
+            /// <item><description>oidc: OpenID Connect protocol</description></item>
+            /// <item><description>oauth2/m2m: OAuth 2.0 protocol</description></item>
+            /// <item><description>oidc+oauth2/m2m: OpenID Connect and OAuth 2.0 protocols</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -216,11 +216,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string SsoType { get; set; }
 
             /// <summary>
-            /// <para>The application status. Valid values:</para>
+            /// <para>The status of the application. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>enabled: Enabled.</description></item>
-            /// <item><description>disabled: Disabled.</description></item>
-            /// <item><description>deleted: Soft deleted.</description></item>
+            /// <item><description>enabled: enabled</description></item>
+            /// <item><description>disabled: disabled</description></item>
+            /// <item><description>deleted: soft deleted</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the application was last updated, in UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The time when the application was last updated. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of items in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

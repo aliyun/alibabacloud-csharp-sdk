@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GenerateUploadAuthResponseBody : TeaModel {
         /// <summary>
-        /// <para>The Access ID for authentication.</para>
+        /// <para>The access ID for authentication.</para>
         /// 
         /// <b>Example:</b>
         /// <para>STS.NYgAmE3cyPoMDxtWgtwG3xxxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string DownLoadUrl { get; set; }
 
         /// <summary>
-        /// <para>The encrypted file encryption configuration key for the instance.</para>
+        /// <para>The encrypted key for the file encryption configuration of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIiwia2lkIjoia2V5X3Z1ZWhjbmh2NWppcGhmZGJwcWpqd3dsemFhIn0..YetpxsPdqdLvAy6G.0Zy5meoTzvCuNfA_0w7E9ItY2uGu1v1BxR9i98KeHXv_P-sm9w1q0XPf5Fw.55V_jFq2t2ZHdjg5c7uxxxx</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Host { get; set; }
 
         /// <summary>
-        /// <para>The key for authentication.</para>
+        /// <para>The authentication key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>idaas-csv://idaas_ly77wa2oexrciw5v672vizxxxx
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string PlaintextKey { get; set; }
 
         /// <summary>
-        /// <para>The policy for authentication.</para>
+        /// <para>The authentication policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJleHBpcmF0aW9uIjoiMjAyNS0xMi0yM1QwNjoxODozNi4zNTZaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMTA0ODU3NjBdLHsiYnVja2V0IjoidGVtcC1pZGFhcy1laWFtLWNuLWhhbmd6aG91In0seyJrZXkiOiJpZGFhc19seTc3d2Eyb2V4cmNpdzV2Njcydml6eG12ZS9maWxlX2ltcG9ydC82ODg2NmQyMS0wYWI3LTQ1MGQtYjllNi01YjFlYWZlMDYzZTEifSx7Ingtb3NzLWZvcmJpZC1vdmVyd3JpdGUiOiJ0cnVlIn0seyJ4LW9zcy1vYmplY3QtYWNsIjoicHJpdmF0ZSJxxxx</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The signature for authentication.</para>
+        /// <para>The authentication signature.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t3JyykEKg3kHQuUrhaXYxtboUxxxxx</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountId { get; set; }
 
             /// <summary>
-            /// <para>The resource entity identifier, which is a unique remote identifier.</para>
+            /// <para>The unique remote identifier of the resource entity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>System:AliyunIntelligentcockpitReadOnlyAccessexample</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountResourceEntityId { get; set; }
 
             /// <summary>
-            /// <para>The resource entity type. Valid values: ram_role.</para>
+            /// <para>The type of the resource entity. Valid values: ram_role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ram_role</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountResourceEntityType { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the cloud account resource.</para>
+            /// <para>The ID of the cloud account resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>car_xxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountResourceId { get; set; }
 
             /// <summary>
-            /// <para>The resource metadata.</para>
+            /// <para>The metadata of the resource.</para>
             /// </summary>
             [NameInMap("CloudAccountResourceMeta")]
             [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string CamPolicyDocument { get; set; }
 
                 /// <summary>
-                /// <para>The Tencent Cloud CAM policy type. Valid values: qcs and local. This parameter is returned only for Tencent Cloud accounts.</para>
+                /// <para>The type of the Tencent Cloud Access Management (CAM) policy. Valid values: qcs and local. This parameter is returned only for Tencent Cloud accounts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qcs</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string IamPolicyDocument { get; set; }
 
                 /// <summary>
-                /// <para>The AWS IAM policy type. Valid values: aws and local. This parameter is returned only for AWS cloud accounts.</para>
+                /// <para>The type of the AWS Identity and Access Management (IAM) policy. Valid values: aws and local. This parameter is returned only for AWS cloud accounts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aws</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string IamPolicyType { get; set; }
 
                 /// <summary>
-                /// <para>The JSON string of the RAM policy document. This parameter is returned only by the get operation.</para>
+                /// <para>The JSON string of the RAM policy document. This parameter is returned only by the Get operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;Version&quot;:&quot;1&quot;,&quot;Statement&quot;:[]}</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string RamPolicyDocument { get; set; }
 
                 /// <summary>
-                /// <para>The RAM policy type. Valid values: system and custom.</para>
+                /// <para>The type of the Resource Access Management (RAM) policy. Valid values: system and custom.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>custom</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountResourceName { get; set; }
 
             /// <summary>
-            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The time when the resource was created. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830225000</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The last update time. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The time when the resource was last updated. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649916625000</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page in a paging query.</para>
+        /// <para>The number of entries returned per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The query token returned by the current call. Use this token for the next paginated query.</para>
+        /// <para>The pagination token returned in the current response. You can use this token to query the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries in the list.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

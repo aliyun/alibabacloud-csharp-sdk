@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetApplicationAdvancedConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The advanced configuration of the application.</para>
+        /// <para>The advanced application configurations.</para>
         /// </summary>
         [NameInMap("ApplicationAdvancedConfig")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the IDaaS EIAM instance.</para>
+            /// <para>The IDaaS EIAM instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -37,21 +37,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The advanced configuration of the SCIM server.</para>
+            /// <para>The SCIM server advanced configurations.</para>
             /// </summary>
             [NameInMap("ScimServerAdvancedConfig")]
             [Validation(Required=false)]
             public GetApplicationAdvancedConfigResponseBodyApplicationAdvancedConfigScimServerAdvancedConfig ScimServerAdvancedConfig { get; set; }
             public class GetApplicationAdvancedConfigResponseBodyApplicationAdvancedConfigScimServerAdvancedConfig : TeaModel {
                 /// <summary>
-                /// <para>A list of IDs of the supported custom user fields.</para>
+                /// <para>The list of supported user-defined field IDs.</para>
                 /// </summary>
                 [NameInMap("SupportedUserCustomFieldIds")]
                 [Validation(Required=false)]
                 public List<string> SupportedUserCustomFieldIds { get; set; }
 
                 /// <summary>
-                /// <para>The namespace of the user extension fields.</para>
+                /// <para>The namespace for user extension fields.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>urn:ietf:params:scim:schemas:extension:customfield:2.0:User</para>

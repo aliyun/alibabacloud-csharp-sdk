@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The health status of the cloud account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>healthy: Healthy.</description></item>
-            /// <item><description>unhealthy: Unhealthy.</description></item>
-            /// <item><description>unknown: Unknown.</description></item>
+            /// <item><description>healthy: healthy</description></item>
+            /// <item><description>unhealthy: unhealthy</description></item>
+            /// <item><description>unknown: unknown</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public ListCloudAccountsResponseBodyCloudAccountsCloudAccountHealthCheckResult CloudAccountHealthCheckResult { get; set; }
             public class ListCloudAccountsResponseBodyCloudAccountsCloudAccountHealthCheckResult : TeaModel {
                 /// <summary>
-                /// <para>The error reason. This field is returned when the health check status is unhealthy.</para>
+                /// <para>The error cause. This field is returned only when the health check status is unhealthy.</para>
                 /// </summary>
                 [NameInMap("ErrorReason")]
                 [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string ErrorCode { get; set; }
 
                     /// <summary>
-                    /// <para>The error description.</para>
+                    /// <para>The error message.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>There is no permission.</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The last check time, in UNIX timestamp format, measured in milliseconds.</para>
+                /// <para>The time of the last health check. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1649830226000</para>
@@ -90,8 +90,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 /// <summary>
                 /// <para>The health check result of the cloud account. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>success: Succeeded.</description></item>
-                /// <item><description>failed: Failed.</description></item>
+                /// <item><description>success: success</description></item>
+                /// <item><description>failed: failed</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The cloud account ID.</para>
+            /// <para>The ID of the cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ca_01kmegjc11qa1txxxxx</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountId { get; set; }
 
             /// <summary>
-            /// <para>The cloud account name.</para>
+            /// <para>The name of the cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_accout_xxxx</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountName { get; set; }
 
             /// <summary>
-            /// <para>The identity provider name.</para>
+            /// <para>The name of the identity provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas-eiam-oidc-provider</para>
@@ -134,10 +134,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountProviderName { get; set; }
 
             /// <summary>
-            /// <para>The cloud account site. Valid values:</para>
+            /// <para>The site of the cloud account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>china_mainland: The Chinese mainland.</description></item>
-            /// <item><description>global: Global.</description></item>
+            /// <item><description>china_mainland: the Chinese mainland</description></item>
+            /// <item><description>global: global</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountSite { get; set; }
 
             /// <summary>
-            /// <para>The cloud account type. Valid values:</para>
+            /// <para>The type of the cloud account. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>alibaba_cloud: Alibaba Cloud.</description></item>
             /// </list>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountVendorType { get; set; }
 
             /// <summary>
-            /// <para>The creation time, in UNIX timestamp format, measured in milliseconds.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830225000</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The cloud account description.</para>
+            /// <para>The description of the cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_accout_description</para>
@@ -191,21 +191,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The list of associated privilege application IDs.</para>
+            /// <para>The list of IDs of the associated privilege applications.</para>
             /// </summary>
             [NameInMap("PrivilegeApplicationIds")]
             [Validation(Required=false)]
             public List<string> PrivilegeApplicationIds { get; set; }
 
             /// <summary>
-            /// <para>The reason for the privilege hosting or removal failure.</para>
+            /// <para>The cause of the privilege hosting or removal failure.</para>
             /// </summary>
             [NameInMap("PrivilegeHostingError")]
             [Validation(Required=false)]
             public ListCloudAccountsResponseBodyCloudAccountsPrivilegeHostingError PrivilegeHostingError { get; set; }
             public class ListCloudAccountsResponseBodyCloudAccountsPrivilegeHostingError : TeaModel {
                 /// <summary>
-                /// <para>The error code.</para>
+                /// <para>The error code of the failure.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Error</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// <para>The error message.</para>
+                /// <para>The error message of the failure.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test message</para>
@@ -227,14 +227,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The hosting state of the cloud account. The default value is unmanaged. Valid values:</para>
+            /// <para>The hosting status of the cloud account. Default value: hosting_unmanaged. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>hosting_unmanaged: Unmanaged. The cloud account has not initiated hosting and is in the initial state.</description></item>
-            /// <item><description>hosting_pending: Hosting in progress. The hosting task has been submitted and is being executed asynchronously. Wait for the hosting process to complete before the final state is reached.</description></item>
-            /// <item><description>hosting_completed: Hosting completed. The cloud account hosting process was executed successfully, and the related permission templates and hosting bindings have taken effect.</description></item>
-            /// <item><description>hosting_failed: Hosting failed. The hosting process encountered an exception. View the failure reason and re-initiate hosting.</description></item>
-            /// <item><description>hosting_removing: Removal in progress. The removal task has been submitted and is being executed asynchronously. Wait for the removal process to complete before the final state is reached.</description></item>
-            /// <item><description>hosting_remove_failed: Removal failed. The removal process encountered an exception. View the failure reason and re-initiate removal.</description></item>
+            /// <item><description>hosting_pending: Hosting. The hosting task has been submitted and is being executed asynchronously. Wait for the hosting process to complete before it enters the final state.</description></item>
+            /// <item><description>hosting_completed: Hosting completed. The hosting process of the cloud account is executed successfully, and the relevant permission templates and hosting bindings have taken effect.</description></item>
+            /// <item><description>hosting_failed: Hosting failed. The hosting process encounters an exception. You can view the cause of the failure and initiate hosting again.</description></item>
+            /// <item><description>hosting_removing: Removing. The task to remove hosting has been submitted and is being executed asynchronously. Wait for the removal process to complete before it enters the final state.</description></item>
+            /// <item><description>hosting_remove_failed: Removal failed. The removal process encounters an exception. You can view the cause of the failure and initiate removal again.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -245,10 +245,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PrivilegeHostingState { get; set; }
 
             /// <summary>
-            /// <para>The privilege switch status. Valid values:</para>
+            /// <para>The status of the privilege switch. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>enabled: Enabled. The resource is active and can be used normally.</description></item>
-            /// <item><description>disabled: Disabled. The resource is deactivated and no longer takes effect. You can re-enable it to restore functionality.</description></item>
+            /// <item><description>enabled: Enabled. The resource is in effect and can be used normally.</description></item>
+            /// <item><description>disabled: Disabled. The resource is deactivated and no longer takes effect. You can re-enable it to restore the resource.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -259,7 +259,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PrivilegeStatus { get; set; }
 
             /// <summary>
-            /// <para>The last update time, in UNIX timestamp format, measured in milliseconds.</para>
+            /// <para>The last update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830227000</para>
@@ -271,7 +271,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The number of rows per page for paging.</para>
+        /// <para>The number of entries per page in paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -281,7 +281,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token returned for this request.</para>
+        /// <para>The token returned for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -301,7 +301,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

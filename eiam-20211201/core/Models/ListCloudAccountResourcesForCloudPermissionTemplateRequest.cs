@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string CloudAccountId { get; set; }
 
         /// <summary>
-        /// <para>The resource entity type used for filtering. Valid values: ram_policy.</para>
+        /// <para>Filters results by resource entity type. Valid values: ram_policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ram_policy</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paging query. Default value: 20. Maximum value: 100.</para>
+        /// <para>The number of entries to return per page in a paging query. Default value: 20. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The query token. Set the value to the NextToken value returned from the previous API call.</para>
+        /// <para>The pagination token. Set the value to the NextToken value returned from the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>

@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the dynamic parameter.</para>
+            /// <para>The values of the dynamic parameter.</para>
             /// </summary>
             [NameInMap("Values")]
             [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query. Maximum value: 100.</para>
+        /// <para>The maximum number of entries per page during paging in a paged query. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to query the next page. If no more pages exist, this parameter is not returned.</para>
+        /// <para>The token used to query the next page. If no next page exists, this parameter is not returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 100.</para>
+        /// <para>The page size. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -148,14 +148,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <para>The list of synchronization target IDs. Example: [idp_111XXXX,idp_222XXXX].</para>
         /// 
         /// <b>Example:</b>
-        /// <para>target_001</para>
+        /// <para>[&quot;target_001&quot;]</para>
         /// </summary>
         [NameInMap("TargetIds")]
         [Validation(Required=false)]
         public List<string> TargetIds { get; set; }
 
         /// <summary>
-        /// <para>The type of the synchronization target. Valid values:</para>
+        /// <para>The synchronization target type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>identity_provider: identity provider</para>
         /// </description></item>

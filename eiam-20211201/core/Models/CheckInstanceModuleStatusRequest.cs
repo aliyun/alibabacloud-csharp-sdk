@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ResourceLabelKey { get; set; }
 
         /// <summary>
-        /// <para>The name of the resource label.</para>
+        /// <para>The resource label name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apt_ram_user_sso</para>

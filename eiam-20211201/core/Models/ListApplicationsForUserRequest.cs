@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListApplicationsForUserRequest : TeaModel {
         /// <summary>
-        /// <para>The list of application IDs. You can specify up to 100 application IDs in a single request.</para>
+        /// <para>The list of application IDs. A single request supports up to 100 application IDs.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>app_mkv7rgt4d7i4u7zqtzev2mxxxx</para>
+        /// <para>[&quot;app_mkv7rgt4d7i4u7zqtzev2mxxxx&quot;]</para>
         /// </summary>
         [NameInMap("ApplicationIds")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -53,10 +53,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <summary>
         /// <para>The query mode. Default value: <b>OnlyDirect</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>OnlyDirect: Queries only the direct permissions of the account. Direct permissions are granted for applications that are directly assigned to the account.</para>
-        /// </description></item>
-        /// <item><description><para>IncludeInherit: Queries both the direct and inherited permissions of the account. Inherited permissions are granted from the parent organizations or groups to which the account belongs.</para>
-        /// </description></item>
+        /// <item><description>OnlyDirect: Queries only the direct permissions of the account, which are the applications directly assigned to the account.</description></item>
+        /// <item><description>IncludeInherit: Queries both the direct permissions and inherited permissions of the account. Inherited permissions refer to the permissions that the account inherits from its parent organizations or the groups to which it belongs.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

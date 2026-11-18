@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <para>The list of password initialization notification channels.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>email</para>
+        /// <para>[&quot;email&quot;]</para>
         /// </summary>
         [NameInMap("PasswordInitializationNotificationChannels")]
         [Validation(Required=false)]

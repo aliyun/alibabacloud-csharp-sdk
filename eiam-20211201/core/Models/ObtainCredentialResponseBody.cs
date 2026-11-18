@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public ObtainCredentialResponseBodyCredential Credential { get; set; }
         public class ObtainCredentialResponseBodyCredential : TeaModel {
             /// <summary>
-            /// <para>The creation time, in UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830225000</para>
@@ -27,21 +27,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The content of the credential.</para>
+            /// <para>The credential content.</para>
             /// </summary>
             [NameInMap("CredentialContent")]
             [Validation(Required=false)]
             public ObtainCredentialResponseBodyCredentialCredentialContent CredentialContent { get; set; }
             public class ObtainCredentialResponseBodyCredentialCredentialContent : TeaModel {
                 /// <summary>
-                /// <para>The content of the API key credential.</para>
+                /// <para>The credential content for the API key credential type.</para>
                 /// </summary>
                 [NameInMap("ApiKeyContent")]
                 [Validation(Required=false)]
                 public ObtainCredentialResponseBodyCredentialCredentialContentApiKeyContent ApiKeyContent { get; set; }
                 public class ObtainCredentialResponseBodyCredentialCredentialContentApiKeyContent : TeaModel {
                     /// <summary>
-                    /// <para>The API key value.</para>
+                    /// <para>The content of the API key.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>nsklncmwizncxxxx</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The content of the OAuth client credential.</para>
+                /// <para>The credential content for the OAuth client authentication credential type.</para>
                 /// </summary>
                 [NameInMap("OAuthClientContent")]
                 [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The creation type of the credential. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>system_init: Created by the system.</description></item>
-            /// <item><description>user_custom: Created by the user.</description></item>
+            /// <item><description>user_custom: Created by a user.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CredentialSubjectId { get; set; }
 
             /// <summary>
-            /// <para>The type of the subject to which the credential belongs. Valid values:</para>
+            /// <para>The subject type to which the credential belongs. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>authentication_token_provider: Authentication token provider.</description></item>
             /// </list>
@@ -187,8 +187,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The credential type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>api_key: API key credential.</description></item>
-            /// <item><description>oauth_client: OAuth client credential.</description></item>
+            /// <item><description>api_key: API key authentication credential.</description></item>
+            /// <item><description>oauth_client: OAuth client authentication credential.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the account to which the credential is exclusively assigned.</para>
+            /// <para>The ID of the exclusive user for the credential.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user_1234567890</para>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The update time, in UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830227000</para>

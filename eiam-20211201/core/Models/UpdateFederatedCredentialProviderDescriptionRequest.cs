@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The federated trust source ID.</para>
+        /// <para>The ID of the federated trust source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
+        /// <para>Ensures the idempotence of the request. You can generate the value on the client side and ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The public key in PEM format. The key must be of the SPKI type, starting with &quot;-----BEGIN PUBLIC KEY-----&quot; and ending with &quot;-----END PUBLIC KEY-----&quot;.</para>
+        /// <para>The public key. The key must be in the PEM format of the SPKI type, starting with &quot;-----BEGIN PUBLIC KEY-----&quot; and ending with &quot;-----END PUBLIC KEY-----&quot;.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

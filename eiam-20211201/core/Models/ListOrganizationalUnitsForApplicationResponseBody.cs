@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListOrganizationalUnitsForApplicationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of organizational unit IDs.</para>
+        /// <para>The organizational units.</para>
         /// </summary>
         [NameInMap("OrganizationalUnits")]
         [Validation(Required=false)]
         public List<ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnits> OrganizationalUnits { get; set; }
         public class ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnits : TeaModel {
             /// <summary>
-            /// <para>The application roles.</para>
+            /// <para>The application roles. No roles are returned for SAML applications.</para>
             /// </summary>
             [NameInMap("ApplicationRoles")]
             [Validation(Required=false)]

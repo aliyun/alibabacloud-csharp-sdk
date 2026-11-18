@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfiguration SamlMetadataConfiguration { get; set; }
             public class ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfiguration : TeaModel {
                 /// <summary>
-                /// <para>The IdP certificate list.</para>
+                /// <para>The list of IdP certificates.</para>
                 /// </summary>
                 [NameInMap("Certificates")]
                 [Validation(Required=false)]
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string IdPEntityId { get; set; }
 
                 /// <summary>
-                /// <para>The IdP logon URL.</para>
+                /// <para>The IdP SSO URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://dc.test.com/adfs/ls/">https://dc.test.com/adfs/ls/</a></para>

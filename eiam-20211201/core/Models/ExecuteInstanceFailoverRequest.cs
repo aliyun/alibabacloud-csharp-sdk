@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ExecuteInstanceFailoverRequest : TeaModel {
         /// <summary>
-        /// <para>The failover status. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>inactive: The primary instance is active.</description></item>
-        /// <item><description>active: The replica instance is active.</description></item>
-        /// </list>
+        /// <para>The failover status.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

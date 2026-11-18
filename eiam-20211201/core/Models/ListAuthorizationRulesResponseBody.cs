@@ -17,14 +17,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListAuthorizationRulesResponseBodyAuthorizationRules> AuthorizationRules { get; set; }
         public class ListAuthorizationRulesResponseBodyAuthorizationRules : TeaModel {
             /// <summary>
-            /// <para>The authorization resource scope. Valid values:</para>
+            /// <para>The scope of authorized resources. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>global: all resources under the project.</description></item>
-            /// <item><description>custom: specified resources under the project.</description></item>
+            /// <item><description>custom: Resources within the specified project scope.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>global</para>
+            /// <para>custom</para>
             /// </summary>
             [NameInMap("AuthorizationResourceScope")]
             [Validation(Required=false)]
@@ -33,8 +32,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The creation type of the authorization rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>system_init: created by the system.</description></item>
-            /// <item><description>user_custom: created by the user.</description></item>
+            /// <item><description>system_init: Created by the system.</description></item>
+            /// <item><description>user_custom: Created by a user.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,7 +44,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationRuleCreationType { get; set; }
 
             /// <summary>
-            /// <para>The authorization rule ID.</para>
+            /// <para>The ID of the authorization rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>arrule_01kf143ug06fg7m9f43u7vahxxxx</para>
@@ -55,7 +54,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationRuleId { get; set; }
 
             /// <summary>
-            /// <para>The authorization rule name.</para>
+            /// <para>The name of the authorization rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-name</para>
@@ -67,19 +66,19 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The scenario label of the authorization rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>privileged_cloud_account: privileged cloud account scenario.</description></item>
-            /// <item><description>asset: asset scenario.</description></item>
+            /// <item><description>privileged_cloud_account: Privileged cloud account scenario.</description></item>
+            /// <item><description>asset: Asset scenario.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>Asset</para>
+            /// <para>privileged_cloud_account</para>
             /// </summary>
             [NameInMap("AuthorizationRuleScenarioLabel")]
             [Validation(Required=false)]
             public string AuthorizationRuleScenarioLabel { get; set; }
 
             /// <summary>
-            /// <para>The subject ID associated with the authorization rule.</para>
+            /// <para>The ID of the subject associated with the authorization rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user_d6sbsuumeta4h66ec3il7yxxxx</para>
@@ -91,8 +90,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The subject scope of the authorization rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>shared: supports all subjects, including accounts and applications.</description></item>
-            /// <item><description>exclusive: exclusive type.</description></item>
+            /// <item><description>shared: Shared. A single rule can be used by multiple subjects that meet the rule constraints.</description></item>
+            /// <item><description>exclusive: Exclusive. A single rule can only be used by the specified subject.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -103,10 +102,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationRuleSubjectScope { get; set; }
 
             /// <summary>
-            /// <para>The subject type associated with the authorization rule. This parameter takes effect only when the subject scope is exclusive. Valid values:</para>
+            /// <para>The subject type applicable to the authorization rule. For an exclusive rule, this field indicates the type of the specified subject. For a shared rule with a specified subject type, this field indicates the subject types that the rule can be associated with. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>application: application.</description></item>
-            /// <item><description>user: account.</description></item>
+            /// <item><description>application: Application.</description></item>
+            /// <item><description>user: Account. For a shared privileged cloud account rule, this value indicates the human user type and can be associated with accounts, user groups, and organizational units.<remarks>
+            /// <para>If the subject type is not specified for the rule, this field may be empty. The actual subjects associated with a shared rule are subject to the query results of subject associations.</para>
+            /// </remarks>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -117,7 +119,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationRuleSubjectType { get; set; }
 
             /// <summary>
-            /// <para>The creation time, in UNIX timestamp format, measured in milliseconds.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1652085686179</para>
@@ -147,7 +149,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The project ID associated with the authorization rule.</para>
+            /// <para>The ID of the project associated with the authorization rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>iprj_system_default</para>
@@ -157,10 +159,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The authorization rule status. Valid values:</para>
+            /// <para>The status of the authorization rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>enabled: Enabled.</description></item>
-            /// <item><description>disabled: Disabled.</description></item>
+            /// <item><description>enabled: The rule is enabled.</description></item>
+            /// <item><description>disabled: The rule is disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -171,7 +173,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The last update time, in UNIX timestamp format, measured in milliseconds.</para>
+            /// <para>The last update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1652085686179</para>
@@ -183,7 +185,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page in a paging query.</para>
+        /// <para>The maximum number of entries per page for paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -193,7 +195,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token returned for the next page query.</para>
+        /// <para>The token returned in the current response for querying the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -213,7 +215,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

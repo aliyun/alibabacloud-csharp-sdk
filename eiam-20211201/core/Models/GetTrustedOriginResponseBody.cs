@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetTrustedOriginResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0441BD79-example</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public GetTrustedOriginResponseBodyTrustedOrigin TrustedOrigin { get; set; }
         public class GetTrustedOriginResponseBodyTrustedOrigin : TeaModel {
             /// <summary>
-            /// <para>The creation time. The time is in RFC 3339 format and in the UTC time zone.</para>
+            /// <para>The creation time. The time is in the RFC 3339 format and the UTC time zone.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>
@@ -88,14 +88,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string TrustedOriginId { get; set; }
 
             /// <summary>
-            /// <para>The trusted origin scenes.</para>
+            /// <para>The trusted origin scenario.</para>
             /// </summary>
             [NameInMap("TrustedOriginScene")]
             [Validation(Required=false)]
             public List<string> TrustedOriginScene { get; set; }
 
             /// <summary>
-            /// <para>The update time. The time is in RFC 3339 format and in the UTC time zone.</para>
+            /// <para>The update time. The time is in the RFC 3339 format and the UTC time zone.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>

@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestedTokenType { get; set; }
 
         /// <summary>
-        /// <para>The permission scope.</para>
+        /// <para>The permission scopes.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ScopeValues")]

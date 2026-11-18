@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateCustomPrivacyPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The details of the custom privacy policy content.</para>
+        /// <para>The details of the custom terms.</para>
         /// </summary>
         [NameInMap("CustomPrivacyPolicyContents")]
         [Validation(Required=false)]
         public List<UpdateCustomPrivacyPolicyRequestCustomPrivacyPolicyContents> CustomPrivacyPolicyContents { get; set; }
         public class UpdateCustomPrivacyPolicyRequestCustomPrivacyPolicyContents : TeaModel {
             /// <summary>
-            /// <para>The items of the custom privacy policy.</para>
+            /// <para>The items of the custom terms.</para>
             /// </summary>
             [NameInMap("CustomPrivacyPolicyItems")]
             [Validation(Required=false)]
             public List<UpdateCustomPrivacyPolicyRequestCustomPrivacyPolicyContentsCustomPrivacyPolicyItems> CustomPrivacyPolicyItems { get; set; }
             public class UpdateCustomPrivacyPolicyRequestCustomPrivacyPolicyContentsCustomPrivacyPolicyItems : TeaModel {
                 /// <summary>
-                /// <para>The name of the custom privacy policy item.</para>
+                /// <para>The name of the custom terms item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Item Name</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string CustomPrivacyPolicyItemName { get; set; }
 
                 /// <summary>
-                /// <para>The access URL of the custom privacy policy item. The URL must start with https://.</para>
+                /// <para>The URL of the custom terms item. The URL must start with https://.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example.com">https://example.com</a></para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The tip for the custom privacy policy content.</para>
+            /// <para>The prompt for the custom terms.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Please read and agree：</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CustomPrivacyPolicyTip { get; set; }
 
             /// <summary>
-            /// <para>The language of the custom privacy policy. The value is the LanguageCode returned by the ListLanguages API operation.</para>
+            /// <para>The language of the custom terms. The value is returned by the LanguageCode parameter in the response of the ListLanguages operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zh-Hans-CN</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The ID of the custom privacy policy.</para>
+        /// <para>The ID of the custom terms.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string CustomPrivacyPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The name of the custom privacy policy.</para>
+        /// <para>The name of the custom terms.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Custom Privacy Policy Name</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string CustomPrivacyPolicyName { get; set; }
 
         /// <summary>
-        /// <para>The default language code for the privacy policy items. The value is the LanguageCode returned by the ListLanguages API operation.</para>
+        /// <para>The default language code for the terms. The value is returned by the LanguageCode parameter in the response of the ListLanguages operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh-Hans-CN</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The consent type for the custom privacy policy.</para>
+        /// <para>The consent type for the custom terms.</para>
         /// 
         /// <b>Example:</b>
         /// <para>implied_consent</para>

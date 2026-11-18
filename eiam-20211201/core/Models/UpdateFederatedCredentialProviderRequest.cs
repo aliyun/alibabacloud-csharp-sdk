@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateFederatedCredentialProviderRequest : TeaModel {
         /// <summary>
-        /// <para>The federated trust source ID.</para>
+        /// <para>The ID of the federated trust source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string FederatedCredentialProviderId { get; set; }
 
         /// <summary>
-        /// <para>The federated trust source name.</para>
+        /// <para>The name of the federated trust source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The network access endpoint ID.</para>
+        /// <para>The ID of the network access endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nae_public</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<string> Audiences { get; set; }
 
             /// <summary>
-            /// <para>The JWKS source.</para>
+            /// <para>The source of the JWKS.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string JwksUri { get; set; }
 
             /// <summary>
-            /// <para>The statically retrieved JWKS.</para>
+            /// <para>The statically obtained JWKS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string StaticJwks { get; set; }
 
             /// <summary>
-            /// <para>The trust condition.</para>
+            /// <para>The trust conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IsNullOrEmpty(&quot;jwt.issuer&quot;)</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? SignatureEffectiveTime { get; set; }
 
             /// <summary>
-            /// <para>The expression used to retrieve the signing time.</para>
+            /// <para>The expression used to obtain the signing time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pkcs7.signingTime</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string TrustAnchorSource { get; set; }
 
             /// <summary>
-            /// <para>The trust condition.</para>
+            /// <para>The trust conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IsNullOrEmpty(&quot;jwt.issuer&quot;)</para>
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The method used to retrieve the root certificate.</para>
+            /// <para>The method used to obtain the root certificate.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string TrustAnchorSource { get; set; }
 
             /// <summary>
-            /// <para>The trust condition of the root certificate.</para>
+            /// <para>The trust conditions for the root certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IsNullOrEmpty(&quot;jwt.issuer&quot;)</para>

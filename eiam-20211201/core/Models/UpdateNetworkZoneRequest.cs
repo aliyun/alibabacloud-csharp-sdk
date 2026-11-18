@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateNetworkZoneRequest : TeaModel {
         /// <summary>
-        /// <para>The idempotence token.</para>
+        /// <para>The client token used to ensure idempotence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-examplexxxx</para>

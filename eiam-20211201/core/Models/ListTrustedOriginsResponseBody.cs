@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListTrustedOriginsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of results per page that takes effect for this request.</para>
+        /// <para>The actual maximum number of results per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page.</para>
+        /// <para>The next token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NT_example</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListTrustedOriginsResponseBodyTrustedOrigins> TrustedOrigins { get; set; }
         public class ListTrustedOriginsResponseBodyTrustedOrigins : TeaModel {
             /// <summary>
-            /// <para>The creation time. The time is in RFC 3339 format and in the UTC time zone.</para>
+            /// <para>The creation time. The time follows the RFC 3339 standard and is in the UTC time zone.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The trusted origin name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Qoder Production Console</para>
+            /// <para>Qoder production console</para>
             /// </summary>
             [NameInMap("TrustOriginName")]
             [Validation(Required=false)]
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<string> TrustedOriginScene { get; set; }
 
             /// <summary>
-            /// <para>The update time. The time is in RFC 3339 format and in the UTC time zone.</para>
+            /// <para>The update time. The time follows the RFC 3339 standard and is in the UTC time zone.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>

@@ -19,12 +19,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The authorization resource scope. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>global: Global resources under the project.</description></item>
-            /// <item><description>custom: Resources under a specified project scope.</description></item>
+            /// <item><description>custom: Resources within the specified project scope.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>global</para>
+            /// <para>custom</para>
             /// </summary>
             [NameInMap("AuthorizationResourceScope")]
             [Validation(Required=false)]
@@ -34,7 +33,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The creation type of the authorization rule. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>system_init: Created by the system.</description></item>
-            /// <item><description>user_custom: Created by a user.</description></item>
+            /// <item><description>user_custom: Created by the user.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -67,12 +66,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The scenario label of the authorization rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>privileged_cloud_account: Privileged cloud account scenario.</description></item>
-            /// <item><description>asset: Asset scenario.</description></item>
+            /// <item><description>privileged_cloud_account (Privileged cloud account scenario)</description></item>
+            /// <item><description>asset (Asset scenario)</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>Asset</para>
+            /// <para>privileged_cloud_account</para>
             /// </summary>
             [NameInMap("AuthorizationRuleScenarioLabel")]
             [Validation(Required=false)]
@@ -91,8 +90,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The subject scope of the authorization rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>shared: Shared type, which supports all subjects, including accounts and applications.</description></item>
-            /// <item><description>exclusive: Exclusive type.</description></item>
+            /// <item><description>shared: Shared. A single rule can be used by multiple subjects that meet the rule constraints.</description></item>
+            /// <item><description>exclusive: Exclusive. A single rule can only be used by the specified subject.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -103,10 +102,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationRuleSubjectScope { get; set; }
 
             /// <summary>
-            /// <para>The subject type associated with the authorization rule. This parameter is valid only when the subject scope of the authorization rule is exclusive. Valid values:</para>
+            /// <para>The subject category to which the authorization rule applies. For an exclusive rule, this field indicates the type of the specified subject. For a shared rule with a configured subject category, this field indicates the subject category that the rule allows to be associated with. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>application: Application.</description></item>
-            /// <item><description>user: Account.</description></item>
+            /// <item><description>user: Account. For a shared privileged cloud account rule, this value indicates the human user category, which can be associated with accounts, user groups, and organizations.
+            /// If no subject category is configured for the rule, this field may be empty. The actual subjects associated with a shared rule are determined by the subject association query results.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The status of the authorization rule. Valid values:</para>
+            /// <para>The authorization rule status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>enabled: Enabled.</description></item>
             /// <item><description>disabled: Disabled.</description></item>

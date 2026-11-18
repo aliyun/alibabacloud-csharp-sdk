@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public GetFederatedCredentialProviderResponseBodyFederatedCredentialProviderCloudIdPProviderConfig CloudIdPProviderConfig { get; set; }
             public class GetFederatedCredentialProviderResponseBodyFederatedCredentialProviderCloudIdPProviderConfig : TeaModel {
                 /// <summary>
-                /// <para>The identity provider ID.</para>
+                /// <para>The ID of the identity provider.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>idp_1234567890</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The federated trust source ID.</para>
+            /// <para>The ID of the federated trust source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fcp_asd123XXX</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public GetFederatedCredentialProviderResponseBodyFederatedCredentialProviderOidcProviderConfig OidcProviderConfig { get; set; }
             public class GetFederatedCredentialProviderResponseBodyFederatedCredentialProviderOidcProviderConfig : TeaModel {
                 /// <summary>
-                /// <para>The audience list of the OIDC credential.</para>
+                /// <para>The list of audiences for the OIDC credential.</para>
                 /// </summary>
                 [NameInMap("Audiences")]
                 [Validation(Required=false)]
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string DynamicJwks { get; set; }
 
                 /// <summary>
-                /// <para>The token issuer identifier (Issuer).</para>
+                /// <para>The issuer identifier of the token.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://test.idaas.com/v2/oauth">http://test.idaas.com/v2/oauth</a></para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public GetFederatedCredentialProviderResponseBodyFederatedCredentialProviderPkcs7ProviderConfig Pkcs7ProviderConfig { get; set; }
             public class GetFederatedCredentialProviderResponseBodyFederatedCredentialProviderPkcs7ProviderConfig : TeaModel {
                 /// <summary>
-                /// <para>The PKCS7 certificate list.</para>
+                /// <para>The list of PKCS7 certificates.</para>
                 /// </summary>
                 [NameInMap("Certificates")]
                 [Validation(Required=false)]
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     }
 
                     /// <summary>
-                    /// <para>The root certificate content.</para>
+                    /// <para>The content of the root certificate.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>-----BEGIN CERTIFICATE-----
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string Content { get; set; }
 
                     /// <summary>
-                    /// <para>The root certificate fingerprint.</para>
+                    /// <para>The fingerprint of the root certificate.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2b18947a6a9fc7764fd8b5fb18a863b0c6daxxx</para>
@@ -279,7 +279,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string CmsVerificationMode { get; set; }
 
                 /// <summary>
-                /// <para>The signature effective time. The value indicates the duration for which the signature is valid. Unit: seconds.</para>
+                /// <para>The signature validity period. The value indicates the validity duration of the signature in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3600</para>
@@ -299,7 +299,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string SigningTimeValueExpression { get; set; }
 
                 /// <summary>
-                /// <para>The certificate trust anchor source.</para>
+                /// <para>The source of the certificate trust anchor.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>alibaba_cloud</para>
@@ -364,7 +364,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     }
 
                     /// <summary>
-                    /// <para>The root certificate content.</para>
+                    /// <para>The content of the root certificate.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>-----BEGIN CERTIFICATE-----
@@ -376,7 +376,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string Content { get; set; }
 
                     /// <summary>
-                    /// <para>The root certificate fingerprint.</para>
+                    /// <para>The fingerprint of the root certificate.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2b18947a6a9fc7764fd8b5fb18a863b0c6daxxx</para>
@@ -388,7 +388,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The method used to retrieve the root certificate.</para>
+                /// <para>The method to obtain the root certificate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>custom</para>
@@ -398,7 +398,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string TrustAnchorSource { get; set; }
 
                 /// <summary>
-                /// <para>The trust condition of the root certificate.</para>
+                /// <para>The trust conditions for the root certificate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>IsNullOrEmpty(&quot;certNo&quot;)</para>

@@ -19,11 +19,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The list of effective authentication source IDs. Default value: [&quot;ia_all&quot;].</para>
             /// <list type="bullet">
-            /// <item><description>ia_all: All authentication sources. If this value is specified, no other values can be specified.</description></item>
+            /// <item><description>ia_all: All. If you specify this value, you cannot specify other values.</description></item>
             /// <item><description>ia_password: Account password logon.</description></item>
             /// <item><description>ia_otp_sms: SMS verification code logon.</description></item>
             /// <item><description>ia_webauthn: WebAuthn authenticator logon.</description></item>
-            /// <item><description>idp_xxx: Authentication method of a specific identity provider.</description></item>
+            /// <item><description>idp_xxx: A specific identity provider (IdP) authentication method.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("EffectiveAuthenticationSourceIds")]
@@ -31,11 +31,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<string> EffectiveAuthenticationSourceIds { get; set; }
 
             /// <summary>
-            /// <para>The action to take when a password expires. Valid values:</para>
+            /// <para>The password expiration action. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>forbid_login: Forbid logon.</description></item>
-            /// <item><description>force_update_password: Force password change.</description></item>
-            /// <item><description>remind_update_password: Remind password change.</description></item>
+            /// <item><description>forbid_login: Prohibits logon.</description></item>
+            /// <item><description>force_update_password: Forces a password change.</description></item>
+            /// <item><description>remind_update_password: Reminds the user to change the password.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The list of password expiration notification channels.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>login</para>
+            /// <para>[&quot;login&quot;]</para>
             /// </summary>
             [NameInMap("PasswordExpirationNotificationChannels")]
             [Validation(Required=false)]
             public List<string> PasswordExpirationNotificationChannels { get; set; }
 
             /// <summary>
-            /// <para>The advance notice period before password expiration. Unit: days.</para>
+            /// <para>The password expiration notification period, in days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public int? PasswordExpirationNotificationDuration { get; set; }
 
             /// <summary>
-            /// <para>The status of password expiration notification. Valid values:</para>
+            /// <para>The password expiration notification status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>enabled: Enabled.</description></item>
             /// <item><description>disabled: Disabled.</description></item>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PasswordExpirationNotificationStatus { get; set; }
 
             /// <summary>
-            /// <para>The status of the password expiration configuration. Valid values:</para>
+            /// <para>The password expiration status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>enabled: Enabled.</description></item>
             /// <item><description>disabled: Disabled.</description></item>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PasswordExpirationStatus { get; set; }
 
             /// <summary>
-            /// <para>The grace period for forced password change after expiration. Unit: days.</para>
+            /// <para>The forced password change period, in days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public int? PasswordForcedUpdateDuration { get; set; }
 
             /// <summary>
-            /// <para>The maximum validity period of a password. Unit: days.</para>
+            /// <para>The password validity period, in days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>180</para>
