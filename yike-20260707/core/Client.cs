@@ -942,6 +942,198 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Generates OSS upload credentials for client-side direct upload without registering media assets or creating media asset records.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation generates temporary OSS upload credentials so that clients can directly upload files to a specified OSS bucket.</description></item>
+        /// <item><description>The <c>FileExt</c> parameter is required and specifies the file name extension of the file to be uploaded, such as mp4 or wav. Do not include the dot.</description></item>
+        /// <item><description>The <c>FileType</c> parameter is optional and defaults to <c>Media</c>. It affects the path segment in the returned <c>ObjectKey</c>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateOssUploadRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOssUploadResponse
+        /// </returns>
+        public CreateOssUploadResponse CreateOssUploadWithOptions(CreateOssUploadRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizConfig))
+            {
+                query["BizConfig"] = request.BizConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialType))
+            {
+                query["CredentialType"] = request.CredentialType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileExt))
+            {
+                query["FileExt"] = request.FileExt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileType))
+            {
+                query["FileType"] = request.FileType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetBucket))
+            {
+                query["TargetBucket"] = request.TargetBucket;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOssUpload",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateOssUploadResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates OSS upload credentials for client-side direct upload without registering media assets or creating media asset records.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation generates temporary OSS upload credentials so that clients can directly upload files to a specified OSS bucket.</description></item>
+        /// <item><description>The <c>FileExt</c> parameter is required and specifies the file name extension of the file to be uploaded, such as mp4 or wav. Do not include the dot.</description></item>
+        /// <item><description>The <c>FileType</c> parameter is optional and defaults to <c>Media</c>. It affects the path segment in the returned <c>ObjectKey</c>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateOssUploadRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOssUploadResponse
+        /// </returns>
+        public async Task<CreateOssUploadResponse> CreateOssUploadWithOptionsAsync(CreateOssUploadRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizConfig))
+            {
+                query["BizConfig"] = request.BizConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialType))
+            {
+                query["CredentialType"] = request.CredentialType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileExt))
+            {
+                query["FileExt"] = request.FileExt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileType))
+            {
+                query["FileType"] = request.FileType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetBucket))
+            {
+                query["TargetBucket"] = request.TargetBucket;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOssUpload",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateOssUploadResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates OSS upload credentials for client-side direct upload without registering media assets or creating media asset records.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation generates temporary OSS upload credentials so that clients can directly upload files to a specified OSS bucket.</description></item>
+        /// <item><description>The <c>FileExt</c> parameter is required and specifies the file name extension of the file to be uploaded, such as mp4 or wav. Do not include the dot.</description></item>
+        /// <item><description>The <c>FileType</c> parameter is optional and defaults to <c>Media</c>. It affects the path segment in the returned <c>ObjectKey</c>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateOssUploadRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOssUploadResponse
+        /// </returns>
+        public CreateOssUploadResponse CreateOssUpload(CreateOssUploadRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateOssUploadWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates OSS upload credentials for client-side direct upload without registering media assets or creating media asset records.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation generates temporary OSS upload credentials so that clients can directly upload files to a specified OSS bucket.</description></item>
+        /// <item><description>The <c>FileExt</c> parameter is required and specifies the file name extension of the file to be uploaded, such as mp4 or wav. Do not include the dot.</description></item>
+        /// <item><description>The <c>FileType</c> parameter is optional and defaults to <c>Media</c>. It affects the path segment in the returned <c>ObjectKey</c>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateOssUploadRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOssUploadResponse
+        /// </returns>
+        public async Task<CreateOssUploadResponse> CreateOssUploadAsync(CreateOssUploadRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateOssUploadWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a project.</para>
         /// </summary>
         /// 
@@ -1086,6 +1278,234 @@ namespace AlibabaCloud.SDK.Yike20260707
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateProjectWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or overwrites a media asset for upload and obtains upload credentials.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation supports two modes: creating a new media asset and overwriting an existing media asset.</description></item>
+        /// <item><description>When creating a new media asset, the <c>FileInfo</c> and <c>MediaMetaData</c> parameters are required.</description></item>
+        /// <item><description>When overwriting an existing media asset, you must set <c>Overwrite</c> to true and provide <c>MediaId</c>.</description></item>
+        /// <item><description>You can specify the credential type by using <c>CredentialType</c>. The default value is STS_TOKEN.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUploadMediaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUploadMediaResponse
+        /// </returns>
+        public CreateUploadMediaResponse CreateUploadMediaWithOptions(CreateUploadMediaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialType))
+            {
+                query["CredentialType"] = request.CredentialType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityId))
+            {
+                query["EntityId"] = request.EntityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileInfo))
+            {
+                query["FileInfo"] = request.FileInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaId))
+            {
+                query["MediaId"] = request.MediaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaMetaData))
+            {
+                query["MediaMetaData"] = request.MediaMetaData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Overwrite))
+            {
+                query["Overwrite"] = request.Overwrite;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageLocation))
+            {
+                query["StorageLocation"] = request.StorageLocation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateUploadMedia",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateUploadMediaResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or overwrites a media asset for upload and obtains upload credentials.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation supports two modes: creating a new media asset and overwriting an existing media asset.</description></item>
+        /// <item><description>When creating a new media asset, the <c>FileInfo</c> and <c>MediaMetaData</c> parameters are required.</description></item>
+        /// <item><description>When overwriting an existing media asset, you must set <c>Overwrite</c> to true and provide <c>MediaId</c>.</description></item>
+        /// <item><description>You can specify the credential type by using <c>CredentialType</c>. The default value is STS_TOKEN.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUploadMediaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUploadMediaResponse
+        /// </returns>
+        public async Task<CreateUploadMediaResponse> CreateUploadMediaWithOptionsAsync(CreateUploadMediaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialType))
+            {
+                query["CredentialType"] = request.CredentialType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityId))
+            {
+                query["EntityId"] = request.EntityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileInfo))
+            {
+                query["FileInfo"] = request.FileInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaId))
+            {
+                query["MediaId"] = request.MediaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaMetaData))
+            {
+                query["MediaMetaData"] = request.MediaMetaData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Overwrite))
+            {
+                query["Overwrite"] = request.Overwrite;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageLocation))
+            {
+                query["StorageLocation"] = request.StorageLocation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateUploadMedia",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateUploadMediaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or overwrites a media asset for upload and obtains upload credentials.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation supports two modes: creating a new media asset and overwriting an existing media asset.</description></item>
+        /// <item><description>When creating a new media asset, the <c>FileInfo</c> and <c>MediaMetaData</c> parameters are required.</description></item>
+        /// <item><description>When overwriting an existing media asset, you must set <c>Overwrite</c> to true and provide <c>MediaId</c>.</description></item>
+        /// <item><description>You can specify the credential type by using <c>CredentialType</c>. The default value is STS_TOKEN.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUploadMediaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUploadMediaResponse
+        /// </returns>
+        public CreateUploadMediaResponse CreateUploadMedia(CreateUploadMediaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateUploadMediaWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or overwrites a media asset for upload and obtains upload credentials.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation supports two modes: creating a new media asset and overwriting an existing media asset.</description></item>
+        /// <item><description>When creating a new media asset, the <c>FileInfo</c> and <c>MediaMetaData</c> parameters are required.</description></item>
+        /// <item><description>When overwriting an existing media asset, you must set <c>Overwrite</c> to true and provide <c>MediaId</c>.</description></item>
+        /// <item><description>You can specify the credential type by using <c>CredentialType</c>. The default value is STS_TOKEN.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUploadMediaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUploadMediaResponse
+        /// </returns>
+        public async Task<CreateUploadMediaResponse> CreateUploadMediaAsync(CreateUploadMediaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateUploadMediaWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4826,6 +5246,178 @@ namespace AlibabaCloud.SDK.Yike20260707
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListInfiniteCanvasesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a paginated list of media folders in a specified project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation retrieves a list of all media folders in a specified project (<c>ProductionId</c>). Pagination is supported by using the <c>PageNo</c> and <c>PageSize</c> parameters.</description></item>
+        /// <item><description>If <c>ProductionId</c> is not provided, the default project of the current account is used.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMediaFoldersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMediaFoldersResponse
+        /// </returns>
+        public ListMediaFoldersResponse ListMediaFoldersWithOptions(ListMediaFoldersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductionId))
+            {
+                query["ProductionId"] = request.ProductionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMediaFolders",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMediaFoldersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a paginated list of media folders in a specified project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation retrieves a list of all media folders in a specified project (<c>ProductionId</c>). Pagination is supported by using the <c>PageNo</c> and <c>PageSize</c> parameters.</description></item>
+        /// <item><description>If <c>ProductionId</c> is not provided, the default project of the current account is used.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMediaFoldersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMediaFoldersResponse
+        /// </returns>
+        public async Task<ListMediaFoldersResponse> ListMediaFoldersWithOptionsAsync(ListMediaFoldersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductionId))
+            {
+                query["ProductionId"] = request.ProductionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMediaFolders",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMediaFoldersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a paginated list of media folders in a specified project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation retrieves a list of all media folders in a specified project (<c>ProductionId</c>). Pagination is supported by using the <c>PageNo</c> and <c>PageSize</c> parameters.</description></item>
+        /// <item><description>If <c>ProductionId</c> is not provided, the default project of the current account is used.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMediaFoldersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMediaFoldersResponse
+        /// </returns>
+        public ListMediaFoldersResponse ListMediaFolders(ListMediaFoldersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListMediaFoldersWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a paginated list of media folders in a specified project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation retrieves a list of all media folders in a specified project (<c>ProductionId</c>). Pagination is supported by using the <c>PageNo</c> and <c>PageSize</c> parameters.</description></item>
+        /// <item><description>If <c>ProductionId</c> is not provided, the default project of the current account is used.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMediaFoldersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMediaFoldersResponse
+        /// </returns>
+        public async Task<ListMediaFoldersResponse> ListMediaFoldersAsync(ListMediaFoldersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListMediaFoldersWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

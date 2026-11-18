@@ -1,3 +1,9 @@
+2026-11-18 Version: 2.9.0
+- Support API CreateOssUpload.
+- Support API CreateUploadMedia.
+- Support API ListMediaFolders.
+
+
 2026-11-18 Version: 2.8.2
 - Generated csharp 2026-07-07 for Yike.
 
