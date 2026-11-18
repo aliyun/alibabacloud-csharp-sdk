@@ -1,3 +1,6 @@
+2026-11-18 Version: 9.5.2
+- Generated csharp 2017-12-07 for Cloudfw.
+
 2026-11-17 Version: 9.5.1
 - Update API CreateSecurityProxy: add request parameters BasicDefenseEnabled.
 - Update API CreateSecurityProxy: add request parameters MasterVSwitchCidr.
