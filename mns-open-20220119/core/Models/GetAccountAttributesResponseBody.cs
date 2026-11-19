@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             public string LogStoreName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the message trace feature is enabled.</para>
+            /// <para>Indicates whether the message tracing feature is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>06273500-249F-5863-121D-74D51123****</para>

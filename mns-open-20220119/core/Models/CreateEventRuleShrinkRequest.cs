@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class CreateEventRuleShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>A client token to ensure the idempotence of the request.</para>
-        /// <para>Generate a unique value for this parameter from your client for each request.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can generate a value for this parameter on the client side and ensure that the value is unique across different requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>06273500-249F-5863-121D-74D51123****</para>
@@ -21,7 +20,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated.</para>
+        /// <para><b>[Deprecated]</b> This field is deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>--</para>
@@ -38,14 +37,14 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string EndpointShrink { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated. Use Endpoint instead.</para>
+        /// <para><b>[Deprecated]</b> This field is deprecated. Use the Endpoint parameter instead.</para>
         /// </summary>
         [NameInMap("Endpoints")]
         [Validation(Required=false)]
         public string EndpointsShrink { get; set; }
 
         /// <summary>
-        /// <para>A list of event types.</para>
+        /// <para>The list of event types. Valid values depend on the selected cloud service. For example, if OSS is selected, common values include ObjectCreated:PutObject and ObjectRemoved:DeleteObject. For more information, see the event notification documentation for each cloud service.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("EventTypes")]
@@ -53,7 +52,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string EventTypesShrink { get; set; }
 
         /// <summary>
-        /// <para>A list of matching rules. The logical relationship between the rules is OR.</para>
+        /// <para>The list of matching rules. A maximum of 10 rules can be specified at the outer level. The rules are connected by the OR operator.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MatchRules")]
@@ -61,7 +60,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string MatchRulesShrink { get; set; }
 
         /// <summary>
-        /// <para>The name of the Alibaba Cloud product for which you want to receive event notifications.</para>
+        /// <para>The name of the cloud service for event notification. Currently, only OSS is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +71,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string ProductName { get; set; }
 
         /// <summary>
-        /// <para>The name of the event rule.</para>
+        /// <para>The name of the event notification rule. This parameter is required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

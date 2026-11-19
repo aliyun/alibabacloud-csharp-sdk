@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 
         /// <summary>
         /// <para>The response data.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;code&quot;:200,&quot;success&quot;:true}</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,7 +40,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>06273500-249F-5863-121D-74D51123****</para>
@@ -57,7 +60,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

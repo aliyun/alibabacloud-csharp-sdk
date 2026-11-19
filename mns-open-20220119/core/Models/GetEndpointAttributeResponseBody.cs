@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 /// <summary>
                 /// <para>The ACL policy. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>allow</b>: The endpoint allows access from the corresponding CIDR block. Currently, only allow is supported.</description></item>
+                /// <item><description><b>allow</b>: allows access from the corresponding CIDR block to the current endpoint. Currently, only allow is supported.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class ListEventRulesRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is deprecated. Use PageSize for paged queries.</para>
+        /// <para><b>[Deprecated]</b> Use PageSize for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated. Use PageNum for paged queries.</para>
+        /// <para><b>[Deprecated]</b> Use PageNum for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cd7NlPlX4kgKCdsCWMiMR/+HnVzPLQ4/XLvjR64jZ7F9AQ+Mr3T59J6IVkuXeV3w</para>
@@ -30,9 +30,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number of the results to return.
-        /// Valid values: 1 to 100000.
-        /// If you set this parameter to a value less than 1, the system uses 1. If you set this parameter to a value greater than 100000, the system uses 100000.</para>
+        /// <para>The page number of the returned results. Valid values: 1 to 100000. If the specified value is less than 1, the system defaults to 1. If the specified value is greater than 100000, the system defaults to 100000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -42,9 +40,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public long? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.
-        /// Valid values: 10 to 50.
-        /// If you set this parameter to a value less than 10, the system uses 10. If you set this parameter to a value greater than 50, the system uses 50.</para>
+        /// <para>The number of entries to return on each page. Valid values: 10 to 50. If the specified value is less than 10, the system defaults to 10. If the specified value is greater than 50, the system defaults to 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -54,7 +50,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the Alibaba Cloud service for which event notifications are configured.</para>
+        /// <para>The name of the cloud service for event notifications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss</para>
@@ -64,7 +60,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string ProductName { get; set; }
 
         /// <summary>
-        /// <para>The resource name in the matching rule. This parameter is used to filter rules. For example, for Object Storage Service (OSS), this is the bucket name.</para>
+        /// <para>The resource name in the matching rules, used to filter rules. For example, in OSS, this is the OSS bucket name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-bucket</para>
@@ -74,7 +70,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string ResourceName { get; set; }
 
         /// <summary>
-        /// <para>The name of the rule.</para>
+        /// <para>The filter condition for the rule name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rule-xsXDW</para>
@@ -84,7 +80,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The subscriber.</para>
+        /// <para>The subscription endpoint.</para>
         /// </summary>
         [NameInMap("Subscription")]
         [Validation(Required=false)]
@@ -93,10 +89,8 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             /// <summary>
             /// <para>The endpoint type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>topic</b>: A topic can deliver messages to multiple subscribers. You can add or remove subscribers later.</para>
-            /// </description></item>
-            /// <item><description><para><b>queue</b>: Messages are delivered directly to a queue. This simplifies the delivery path, but you cannot add new subscribers later.</para>
-            /// </description></item>
+            /// <item><description><b>topic</b>: The topic type. A topic supports delivery to multiple subscription endpoints. You can add or remove subscription endpoints later.</description></item>
+            /// <item><description><b>queue</b>: The queue type. Messages are delivered directly to a queue. This reduces the link path, but you cannot add new subscription endpoints later.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -107,7 +101,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             public string EndpointType { get; set; }
 
             /// <summary>
-            /// <para>The actual value of the endpoint.</para>
+            /// <para>The actual value of the receiving endpoint. When EndpointType is set to topic, this is the topic name. When EndpointType is set to queue, this is the queue name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-topic</para>

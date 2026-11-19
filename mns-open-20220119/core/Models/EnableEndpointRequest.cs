@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class EnableEndpointRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the endpoint. Valid value:</para>
+        /// <para>The type of the access point. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>public</b>: The Internet endpoint. Only public is supported.</description></item>
+        /// <item><description><b>public</b>: the public access point. Currently, only public is supported.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

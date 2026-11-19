@@ -17,11 +17,11 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string DlqPolicyShrink { get; set; }
 
         /// <summary>
-        /// <para>The retry policy for message delivery failures to the endpoint. Valid values:</para>
+        /// <para>The retry policy used when an error occurs while pushing messages to the endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>BACKOFF_RETRY: backoff retry.</para>
+        /// <item><description><para>BACKOFF_RETRY: backoff retry</para>
         /// </description></item>
-        /// <item><description><para>EXPONENTIAL_DECAY_RETRY: exponential decay retry.</para>
+        /// <item><description><para>EXPONENTIAL_DECAY_RETRY: exponential decay retry</para>
         /// </description></item>
         /// </list>
         /// 
@@ -33,6 +33,8 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string NotifyStrategy { get; set; }
 
         /// <summary>
+        /// <para>The STS role ARN.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acs:ram::1234567890:role/roleName</para>
         /// </summary>

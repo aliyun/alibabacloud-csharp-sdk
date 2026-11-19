@@ -1,3 +1,7 @@
+2026-11-19 Version: 1.4.2
+- Update API CreateEventRule: add request parameters Endpoint.EndpointRoleName.
+
+
 2026-10-19 Version: 1.4.1
 - Generated csharp 2022-01-19 for Mns-open.
 

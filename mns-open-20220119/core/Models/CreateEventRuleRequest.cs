@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class CreateEventRuleRequest : TeaModel {
         /// <summary>
-        /// <para>A client token to ensure the idempotence of the request.</para>
-        /// <para>Generate a unique value for this parameter from your client for each request.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can generate a value for this parameter on the client side and ensure that the value is unique across different requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>06273500-249F-5863-121D-74D51123****</para>
@@ -21,7 +20,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated.</para>
+        /// <para><b>[Deprecated]</b> This field is deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>--</para>
@@ -38,12 +37,20 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public CreateEventRuleRequestEndpoint Endpoint { get; set; }
         public class CreateEventRuleRequestEndpoint : TeaModel {
             /// <summary>
+            /// <para>The ARN of the role for cross-account delivery. This parameter is required when EndpointType is set to queue and EndpointValue is set to the ARN of a cross-account queue, which means the account that owns the queue is different from the current account. Format: acs:ram::<UID of the account that owns the queue>:role/<Role name>. The role must be created by the account that owns the queue. The trust policy must allow the delivery account to assume the role, and the role must be granted permissions to send messages to the destination queue.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>acs:ram:1234567890:role/CrossAccountQueueRole</para>
+            /// </summary>
+            [NameInMap("EndpointRoleName")]
+            [Validation(Required=false)]
+            public string EndpointRoleName { get; set; }
+
+            /// <summary>
             /// <para>The endpoint type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>topic</b>: The endpoint is a topic. A topic can deliver messages to multiple subscribers. You can add or remove subscribers later.</para>
-            /// </description></item>
-            /// <item><description><para><b>queue</b>: The endpoint is a queue. Messages are delivered directly to the queue. This simplifies the delivery path, but you cannot add new subscribers later.</para>
-            /// </description></item>
+            /// <item><description><b>topic</b>: Topic type. Topics support delivery to multiple subscription endpoints. You can add or remove subscription endpoints later.</description></item>
+            /// <item><description><b>queue</b>: Queue type. Messages are delivered directly to the queue. This reduces the routing path, but you cannot add new subscription endpoints later.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -54,7 +61,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             public string EndpointType { get; set; }
 
             /// <summary>
-            /// <para>The value of the endpoint.</para>
+            /// <para>The actual value of the endpoint. If EndpointType is set to topic, this parameter specifies the topic name. If EndpointType is set to queue, this parameter specifies the queue name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-topic</para>
@@ -66,14 +73,14 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         }
 
         /// <summary>
-        /// <para>This parameter is deprecated. Use Endpoint instead.</para>
+        /// <para><b>[Deprecated]</b> This field is deprecated. Use the Endpoint parameter instead.</para>
         /// </summary>
         [NameInMap("Endpoints")]
         [Validation(Required=false)]
         public List<CreateEventRuleRequestEndpoints> Endpoints { get; set; }
         public class CreateEventRuleRequestEndpoints : TeaModel {
             /// <summary>
-            /// <para>Deprecated. Use Endpoint.EndpointType instead.</para>
+            /// <para><b>[Deprecated]</b> This field is deprecated. Use Endpoint.EndpointType instead.</para>
             /// 
             /// <b>Example:</b>
             /// <para>http</para>
@@ -83,7 +90,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             public string EndpointType { get; set; }
 
             /// <summary>
-            /// <para>Deprecated. Use Endpoint.EndpointValue instead.</para>
+            /// <para><b>[Deprecated]</b> This field is deprecated. Use Endpoint.EndpointValue instead.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-xxx-queue</para>
@@ -95,7 +102,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         }
 
         /// <summary>
-        /// <para>A list of event types.</para>
+        /// <para>The list of event types. Valid values depend on the selected cloud service. For example, if OSS is selected, common values include ObjectCreated:PutObject and ObjectRemoved:DeleteObject. For more information, see the event notification documentation for each cloud service.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("EventTypes")]
@@ -103,7 +110,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public List<string> EventTypes { get; set; }
 
         /// <summary>
-        /// <para>A list of matching rules. The logical relationship between the rules is OR.</para>
+        /// <para>The list of matching rules. A maximum of 10 rules can be specified at the outer level. The rules are connected by the OR operator.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MatchRules")]
@@ -111,7 +118,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public List<List<EventMatchRule>> MatchRules { get; set; }
 
         /// <summary>
-        /// <para>The name of the Alibaba Cloud product for which you want to receive event notifications.</para>
+        /// <para>The name of the cloud service for event notification. Currently, only OSS is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -122,7 +129,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string ProductName { get; set; }
 
         /// <summary>
-        /// <para>The name of the event rule.</para>
+        /// <para>The name of the event notification rule. This parameter is required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

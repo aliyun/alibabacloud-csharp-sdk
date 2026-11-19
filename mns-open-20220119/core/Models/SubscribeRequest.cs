@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public SubscribeRequestDlqPolicy DlqPolicy { get; set; }
         public class SubscribeRequestDlqPolicy : TeaModel {
             /// <summary>
-            /// <para>The destination queue for dead-letter message delivery.</para>
+            /// <para>The destination queue for dead-letter message delivery. The queue must already exist in the current region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>deadLetterTargetQueue</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             public string DeadLetterTargetQueue { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable dead-letter message delivery.</para>
+            /// <para>Specifies whether to enable dead-letter message delivery. Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -39,10 +39,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         }
 
         /// <summary>
-        /// <para>The email push attributes. This parameter is required when PushType is set to dm. The value is in JSON format and contains the following fields:</para>
+        /// <para>The attributes for Direct Mail push. This parameter is required when the PushType parameter is set to dm. The value is in JSON format and contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description>AccountName: The sender address configured in DirectMail (such as <a href="mailto:notify@example.com">notify@example.com</a>).</description></item>
-        /// <item><description>Subject: The email subject.</description></item>
+        /// <item><description>AccountName: the sender address, which is the sender address configured in Direct Mail, such as <a href="mailto:notify@example.com">notify@example.com</a>.</description></item>
+        /// <item><description>Subject: the email subject.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("DmAttributes")]
@@ -72,10 +72,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         }
 
         /// <summary>
-        /// <para>The SMS push attributes. This parameter is required when PushType is set to alisms. The value is in JSON format and contains the following fields:</para>
+        /// <para>The attributes for SMS push. This parameter is required when the PushType parameter is set to alisms. The value is in JSON format and contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description>TemplateCode: The SMS template code, which can be obtained from the Short Message Service console.</description></item>
-        /// <item><description>SignName: The SMS signature name.</description></item>
+        /// <item><description>TemplateCode: the code of the SMS template, which can be obtained from the SMS console.</description></item>
+        /// <item><description>SignName: the name of the SMS signature.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("DysmsAttributes")]
@@ -83,17 +83,17 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public SubscribeRequestDysmsAttributes DysmsAttributes { get; set; }
         public class SubscribeRequestDysmsAttributes : TeaModel {
             /// <summary>
-            /// <para>The SMS signature name.</para>
+            /// <para>The name of the SMS signature.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>阿里云短信测试专用</para>
+            /// <para>Alibaba Cloud SMS test</para>
             /// </summary>
             [NameInMap("SignName")]
             [Validation(Required=false)]
             public string SignName { get; set; }
 
             /// <summary>
-            /// <para>The SMS template code.</para>
+            /// <para>The code of the SMS template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -105,16 +105,16 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         }
 
         /// <summary>
-        /// <h2>Endpoint address for receiving messages</h2>
-        /// <para>The format varies depending on the value of <c>PushType</c>:</para>
+        /// <h2>Endpoint for receiving messages</h2>
+        /// <para>The format varies based on the <c>PushType</c> parameter:</para>
         /// <list type="bullet">
-        /// <item><description><c>PushType=http</c>: An HTTP/HTTPS callback URL, such as <c>http://example.com/callback</c> or <c>https://example.com/callback</c>.</description></item>
-        /// <item><description><c>PushType=queue</c>: The ARN of the destination queue, in the format <c>acs:mns:{RegionId}:{Alibaba Cloud account ID}:queues/{QueueName}</c>.</description></item>
-        /// <item><description><c>PushType=dm</c>: The email push endpoint, in the fixed format <c>smq-ep:dm:{Alibaba Cloud account ID}:__dynamic</c>. Replace <c>{Alibaba Cloud account ID}</c> with your Alibaba Cloud account ID.</description></item>
-        /// <item><description><c>PushType=dysms</c>: The SMS push endpoint, in the format <c>smq-ep:dysms:{Alibaba Cloud account ID}:{PhoneNumber}</c>.</description></item>
+        /// <item><description><c>PushType=http</c>: The HTTP or HTTPS callback URL, such as <c>http://example.com/callback</c> or <c>https://example.com/callback</c>.</description></item>
+        /// <item><description><c>PushType=queue</c>: The ARN of the destination queue, in the format of <c>acs:mns:{RegionId}:{Alibaba Cloud account ID}:/queues/{QueueName}</c>.</description></item>
+        /// <item><description><c>PushType=dm</c>: The Direct Mail push endpoint, in the fixed format of <c>smq-ep:dm:{Alibaba Cloud account ID}:__dynamic</c>. Replace <c>{Alibaba Cloud account ID}</c> with the ID of your Alibaba Cloud account.</description></item>
+        /// <item><description><c>PushType=dysms</c>: The SMS push endpoint, in the format of <c>smq-ep:dysms:{Alibaba Cloud account ID}:{Phone number}</c>.</description></item>
         /// <item><description><c>PushType=kafka</c>: The Kafka push endpoint. The Kafka push type is deprecated.</description></item>
-        /// <item><description><c>PushType=fc</c>: The Function Compute endpoint, in the format <c>acs:fc:{RegionId}:{Alibaba Cloud account ID}:services/{ServiceName}/functions/{FunctionName}</c>.</description></item>
-        /// <item><description><c>PushType=eventbus</c>: The EventBridge endpoint, in the format <c>acs:eventbridge:{RegionId}:{Alibaba Cloud account ID}:eventbus/{EventBusName}</c>.</description></item>
+        /// <item><description><c>PushType=fc</c>: The Function Compute endpoint, in the format of <c>acs:fc:{RegionId}:{Alibaba Cloud account ID}:services/{ServiceName}/functions/{FunctionName}</c>.</description></item>
+        /// <item><description><c>PushType=eventbus</c>: The EventBridge endpoint, in the format of <c>acs:eventbridge:{RegionId}:{Alibaba Cloud account ID}:eventbus/{EventBusName}</c>.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -145,8 +145,9 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         }
 
         /// <summary>
-        /// <para>The tag used for message filtering in this subscription. Only messages with a matching tag are pushed. The value is a string of up to 16 characters.</para>
-        /// <para>By default, no message filtering is applied.</para>
+        /// <para>The tag used for message filtering in the subscription. Only messages with a matching tag are pushed.
+        /// The value must be a string up to 16 characters in length.</para>
+        /// <para>By default, message filtering is not performed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>important</para>
@@ -159,9 +160,9 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         /// <h2>Format of the pushed message content</h2>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>XML</c>: The message body is pushed in XML format. This is the default value.</description></item>
-        /// <item><description><c>JSON</c>: The message body is pushed in JSON format.</description></item>
-        /// <item><description><c>SIMPLIFIED</c>: Only the raw message body content is pushed, without SMQ metadata wrapping.</description></item>
+        /// <item><description><c>XML</c>: XML format (default)</description></item>
+        /// <item><description><c>JSON</c>: JSON format</description></item>
+        /// <item><description><c>SIMPLIFIED</c>: original message body content without the SMQ metadata wrapper</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -172,12 +173,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string NotifyContentFormat { get; set; }
 
         /// <summary>
-        /// <para>The retry strategy when an error occurs while pushing messages to the endpoint. Valid values:</para>
+        /// <para>The retry strategy that is used when an error occurs during message pushing to the endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>BACKOFF_RETRY: backoff retry.</para>
-        /// </description></item>
-        /// <item><description><para>EXPONENTIAL_DECAY_RETRY: exponential decay retry.</para>
-        /// </description></item>
+        /// <item><description>BACKOFF_RETRY: backoff retry (default)</description></item>
+        /// <item><description>EXPONENTIAL_DECAY_RETRY: exponential decay retry</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -188,29 +187,23 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string NotifyStrategy { get; set; }
 
         /// <summary>
-        /// <h2>Push type of the subscription</h2>
+        /// <h2>Push types for subscriptions</h2>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>http</c>: HTTP/HTTPS push. Pushes messages to a specified HTTP or HTTPS callback URL.</para>
-        /// </description></item>
-        /// <item><description><para><c>queue</c>: Queue push. Pushes messages to a specified SMQ queue.</para>
-        /// </description></item>
-        /// <item><description><para><c>dm</c>: Email push. Sends notifications through DirectMail. You must also set the <c>DmAttributes</c> and <c>StsRoleArn</c> parameters.</para>
-        /// </description></item>
-        /// <item><description><para><c>dysms</c>: SMS push. Sends notifications through Alibaba Cloud Short Message Service. You must also set the <c>DysmsAttributes</c> parameter.</para>
-        /// </description></item>
-        /// <item><description><para><c>fc</c>: Function Compute push. Pushes messages to Alibaba Cloud Function Compute (FC).</para>
-        /// </description></item>
-        /// <item><description><para><c>eventbus</c>: EventBridge push. Pushes messages to an EventBridge event bus.</para>
-        /// </description></item>
+        /// <item><description><c>http</c>: Pushes messages to the specified HTTP or HTTPS callback URL.</description></item>
+        /// <item><description><c>queue</c>: Pushes messages to the specified Simple Message Queue (SMQ) queue.</description></item>
+        /// <item><description><c>dm</c>: Sends notifications by using the Direct Mail service. You must also set the <c>DmAttributes</c> and <c>StsRoleArn</c> parameters.</description></item>
+        /// <item><description><c>dysms</c>: Sends notifications by using the Alibaba Cloud SMS service. You must also set the <c>DysmsAttributes</c> parameter.</description></item>
+        /// <item><description><c>fc</c>: Pushes messages to Alibaba Cloud Function Compute (FC).</description></item>
+        /// <item><description><c>eventbus</c>: Pushes messages to an EventBridge event bus.</description></item>
         /// </list>
         /// <para><b>Note:</b>
-        /// The following values are deprecated and are only used for compatibility with legacy subscriptions:</para>
+        /// The following values are deprecated and are retained only for compatibility with legacy subscriptions:</para>
         /// <list type="bullet">
-        /// <item><description><c>mpush</c>: Mobile push.</description></item>
-        /// <item><description><c>alisms</c>: Legacy SMS.</description></item>
-        /// <item><description><c>email</c>: Legacy email. Use <c>dm</c> instead.</description></item>
-        /// <item><description><c>kafka</c>: Kafka push type is deprecated.</description></item>
+        /// <item><description><c>mpush</c>: mobile push</description></item>
+        /// <item><description><c>alisms</c>: legacy SMS</description></item>
+        /// <item><description><c>email</c>: legacy email, use <c>dm</c> instead</description></item>
+        /// <item><description><c>kafka</c>: deprecated Kafka push type</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -222,7 +215,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string PushType { get; set; }
 
         /// <summary>
-        /// <para>The ARN of the RAM role assumed by the service. The format is acs:ram::{Alibaba Cloud account ID}:role/{RoleName}. Replace {Alibaba Cloud account ID} with the Alibaba Cloud account ID that calls the API operation.</para>
+        /// <para>The ARN of the RAM role assumed by the service. The format is acs:ram::{Alibaba Cloud account ID}:role/{RoleName}. Replace {Alibaba Cloud account ID} with the ID of the Alibaba Cloud account that calls the API operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::1234567890:role/AliyunMNSNotificationRole</para>
@@ -232,7 +225,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string StsRoleArn { get; set; }
 
         /// <summary>
-        /// <para>The name of the subscription.</para>
+        /// <para>The name of the subscription. The name must be 1 to 255 characters in length. It must start with a letter or a digit, and can contain only letters, digits, and hyphens (-). The name cannot start with mns-reserved-.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -250,14 +243,18 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public SubscribeRequestTenantRateLimitPolicy TenantRateLimitPolicy { get; set; }
         public class SubscribeRequestTenantRateLimitPolicy : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable the throttling policy. Valid values: true and false.</para>
+            /// <para>Specifies whether to enable the throttling policy. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: enabled</description></item>
+            /// <item><description>false: disabled (default)</description></item>
+            /// </list>
             /// </summary>
             [NameInMap("Enabled")]
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of pushes or consumptions per second.</para>
+            /// <para>The maximum number of pushes or consumptions per second. The value must be a positive integer and is valid only when the PushType parameter is set to http or https. The specific minimum value varies by region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -269,7 +266,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         }
 
         /// <summary>
-        /// <para>The name of the topic.</para>
+        /// <para>The name of the topic. The name must be 1 to 255 characters in length. It must start with a letter or a digit, and can contain only letters, digits, and hyphens (-). The name cannot start with mns-reserved-.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

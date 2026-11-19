@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public ListSubscriptionByTopicResponseBodyData Data { get; set; }
         public class ListSubscriptionByTopicResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The entries on the current page.</para>
+            /// <para>The results returned on the current page.</para>
             /// </summary>
             [NameInMap("PageData")]
             [Validation(Required=false)]
             public List<ListSubscriptionByTopicResponseBodyDataPageData> PageData { get; set; }
             public class ListSubscriptionByTopicResponseBodyDataPageData : TeaModel {
                 /// <summary>
-                /// <para>The time when the subscription was created, in Unix time format.</para>
+                /// <para>The time when the subscription was created. The value is a UNIX timestamp representing the number of seconds that have elapsed since 00:00:00 on January 1, 1970.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1449554806</para>
@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The dead-letter queue policy.</para>
+                /// <para>The dead-letter policy.</para>
                 /// </summary>
                 [NameInMap("DlqPolicy")]
                 [Validation(Required=false)]
                 public ListSubscriptionByTopicResponseBodyDataPageDataDlqPolicy DlqPolicy { get; set; }
                 public class ListSubscriptionByTopicResponseBodyDataPageDataDlqPolicy : TeaModel {
                     /// <summary>
-                    /// <para>The destination queue for dead-letter messages.</para>
+                    /// <para>The destination queue for dead-letter message delivery.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>dead-letter-queue</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 }
 
                 /// <summary>
-                /// <para>The endpoint of the subscription.</para>
+                /// <para>The endpoint address of the subscription.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://example.com">http://example.com</a></para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 public string Endpoint { get; set; }
 
                 /// <summary>
-                /// <para>The tag for message filtering in the subscription. Only messages with the same tag are pushed.</para>
+                /// <para>The tag used to filter messages in the subscription. Only messages with matching tags are pushed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>important</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 public string FilterTag { get; set; }
 
                 /// <summary>
-                /// <para>The time when the subscription properties were last modified. This value is a UNIX timestamp.</para>
+                /// <para>The time when the subscription attributes were last modified. The value is a UNIX timestamp representing the number of seconds that have elapsed since 00:00:00 on January 1, 1970.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1449554806</para>
@@ -103,8 +103,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 public long? LastModifyTime { get; set; }
 
                 /// <summary>
-                /// <para>The format of the message content pushed to the endpoint.
-                /// Valid values:</para>
+                /// <para>The format of the message content pushed to the endpoint. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><para>XML</para>
                 /// </description></item>
@@ -122,11 +121,11 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 public string NotifyContentFormat { get; set; }
 
                 /// <summary>
-                /// <para>The retry policy for message push failures to the endpoint. Valid values:</para>
+                /// <para>The retry strategy used when a message fails to be pushed to the endpoint. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>BACKOFF_RETRY: backoff retry.</para>
+                /// <item><description><para>BACKOFF_RETRY: backoff retry</para>
                 /// </description></item>
-                /// <item><description><para>EXPONENTIAL_DECAY_RETRY: exponential decay retry.</para>
+                /// <item><description><para>EXPONENTIAL_DECAY_RETRY: exponential decay retry</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -138,7 +137,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 public string NotifyStrategy { get; set; }
 
                 /// <summary>
-                /// <para>The subscription name.</para>
+                /// <para>The name of the subscription.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MySubscription</para>
@@ -158,7 +157,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 public string TopicName { get; set; }
 
                 /// <summary>
-                /// <para>The AccountId of the owner of the topic to which the subscription belongs.</para>
+                /// <para>The account ID of the topic owner to which the subscription belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123456789098****</para>
@@ -170,7 +169,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the returned results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -200,7 +199,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             public long? Pages { get; set; }
 
             /// <summary>
-            /// <para>The number of entries on the current page.</para>
+            /// <para>The number of entries returned on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -232,7 +231,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>06273500-249F-5863-121D-74D51123****</para>
@@ -252,7 +251,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

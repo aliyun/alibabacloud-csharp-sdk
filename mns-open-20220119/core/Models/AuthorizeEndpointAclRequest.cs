@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class AuthorizeEndpointAclRequest : TeaModel {
         /// <summary>
-        /// <para>The access control list (ACL) policy. Valid value:</para>
+        /// <para>The ACL policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>allow</b>: A CIDR whitelist. Only allow is supported.</description></item>
+        /// <item><description><b>allow</b>: CIDR whitelist. Currently, only allow is supported.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string AclStrategy { get; set; }
 
         /// <summary>
-        /// <para>A list of CIDR blocks.</para>
+        /// <para>The list of CIDR blocks. You must specify at least one CIDR block. Example: 192.168.1.0/24.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CidrList")]
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public List<string> CidrList { get; set; }
 
         /// <summary>
-        /// <para>The type of the endpoint. Valid value:</para>
+        /// <para>The access point type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>public</b>: An internet endpoint. Only public is supported.</description></item>
+        /// <item><description><b>public</b>: Internet-facing access point. Currently, only public is supported.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

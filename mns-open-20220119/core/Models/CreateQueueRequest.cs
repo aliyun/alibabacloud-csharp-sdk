@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class CreateQueueRequest : TeaModel {
         /// <summary>
-        /// <para>The delay period for all messages sent to the queue. A message sent to the queue can be consumed only after the delay period specified by this parameter elapses.
-        /// Valid values: 0 to 604800. Unit: seconds.
-        /// Default value: 0.</para>
+        /// <para>The delay time for all messages sent to the queue. A message can be consumed only after the specified delay time elapses from the time it is sent to the queue. Valid values: 0 to 604800. Unit: seconds. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -29,7 +27,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public CreateQueueRequestDlqPolicy DlqPolicy { get; set; }
         public class CreateQueueRequestDlqPolicy : TeaModel {
             /// <summary>
-            /// <para>The target queue to which dead-letter messages are delivered.</para>
+            /// <para>The destination queue for dead-letter messages.</para>
             /// 
             /// <b>Example:</b>
             /// <para>deadLetterQueue</para>
@@ -49,7 +47,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of times a message can be delivered.</para>
+            /// <para>The maximum number of receive attempts for a message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -77,18 +75,25 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         [Validation(Required=false)]
         public bool? EnableLogging { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether log broker encryption is enabled. Valid values: true and false.</para>
+        /// </summary>
         [NameInMap("EnableSSE")]
         [Validation(Required=false)]
         public bool? EnableSSE { get; set; }
 
+        /// <summary>
+        /// <para>The KMS key ID. This parameter is required only when SseType is set to KMS.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>key-xxx</para>
+        /// </summary>
         [NameInMap("KmsKeyId")]
         [Validation(Required=false)]
         public string KmsKeyId { get; set; }
 
         /// <summary>
-        /// <para>The maximum size of a message body that can be sent to the queue.
-        /// Valid values: 1024 to 65536. Unit: bytes.
-        /// Default value: 65536.</para>
+        /// <para>The maximum size of a message body that can be sent to the queue. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.</para>
         /// 
         /// <b>Example:</b>
         /// <para>65536</para>
@@ -98,9 +103,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public long? MaximumMessageSize { get; set; }
 
         /// <summary>
-        /// <para>The maximum duration for which a message is retained in the queue. After the specified duration elapses since a message is sent to the queue, the message is deleted regardless of whether it has been consumed.
-        /// Valid values: 60 to 604800. Unit: seconds.
-        /// Default value: 345600.</para>
+        /// <para>The maximum retention period of a message in the queue. After the specified period elapses from the time the message is sent to the queue, the message is deleted regardless of whether it has been received. Valid values: 60 to 604800. Unit: seconds. Default value: 345600.</para>
         /// 
         /// <b>Example:</b>
         /// <para>345600</para>
@@ -110,9 +113,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public long? MessageRetentionPeriod { get; set; }
 
         /// <summary>
-        /// <para>The maximum duration for which a ReceiveMessage request waits when the queue has no messages.
-        /// Valid values: 0 to 30. Unit: seconds.
-        /// Default value: 0.</para>
+        /// <para>The maximum wait time for a ReceiveMessage request when no messages are available in the queue. Valid values: 0 to 30. Unit: seconds. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -135,7 +136,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         /// <summary>
         /// <para>The type of the queue. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>normal: standard queue.</description></item>
+        /// <item><description>normal: Standard queue.</description></item>
         /// <item><description>fifo: FIFO queue.</description></item>
         /// </list>
         /// 
@@ -146,10 +147,22 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         [Validation(Required=false)]
         public string QueueType { get; set; }
 
+        /// <summary>
+        /// <para>The storage encryption algorithm. AES-256-GCM is supported. If you do not specify this parameter, the default algorithm is used.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AES-256-GCM</para>
+        /// </summary>
         [NameInMap("SseAlgorithm")]
         [Validation(Required=false)]
         public string SseAlgorithm { get; set; }
 
+        /// <summary>
+        /// <para>The storage encryption method. Valid values: SMQ and KMS.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>KMS</para>
+        /// </summary>
         [NameInMap("SseType")]
         [Validation(Required=false)]
         public string SseType { get; set; }
@@ -162,7 +175,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public List<CreateQueueRequestTag> Tag { get; set; }
         public class CreateQueueRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tag1</para>
@@ -172,7 +185,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -217,9 +230,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         }
 
         /// <summary>
-        /// <para>The duration for which a message stays in the Inactive state after it is consumed from the queue and changes from the Active state to the Inactive state.
-        /// Valid values: 1 to 43200. Unit: seconds.
-        /// Default value: 30.</para>
+        /// <para>The duration for which a message remains in the inactive state after it is received from the queue. Valid values: 1 to 43200. Unit: seconds. Default value: 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>

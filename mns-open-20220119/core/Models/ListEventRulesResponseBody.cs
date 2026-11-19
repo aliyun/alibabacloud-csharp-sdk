@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public ListEventRulesResponseBodyData Data { get; set; }
         public class ListEventRulesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>This parameter is deprecated. The maximum number of entries is based on Total.</para>
+            /// <para><b>[Deprecated]</b> Use Total for the maximum number of entries in paged queries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated. Paged queries are based on PageNum.</para>
+            /// <para><b>[Deprecated]</b> Use PageNum for paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a88f58d504b8b4c4e0b5e8707e68181f</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             public List<ListEventRulesResponseBodyDataPageData> PageData { get; set; }
             public class ListEventRulesResponseBodyDataPageData : TeaModel {
                 /// <summary>
-                /// <para>This parameter is deprecated.</para>
+                /// <para><b>[Deprecated]</b></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>--</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 public string DeliveryMode { get; set; }
 
                 /// <summary>
-                /// <para>The endpoint of the subscription.</para>
+                /// <para>The endpoint address of the subscription.</para>
                 /// </summary>
                 [NameInMap("Endpoint")]
                 [Validation(Required=false)]
@@ -73,10 +73,8 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                     /// <summary>
                     /// <para>The endpoint type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para><b>topic</b>: A topic can deliver messages to multiple subscribers. You can add or remove subscribers later.</para>
-                    /// </description></item>
-                    /// <item><description><para><b>queue</b>: Messages are delivered directly to a queue. This simplifies the delivery path, but you cannot add new subscribers later.</para>
-                    /// </description></item>
+                    /// <item><description><b>topic</b>: The topic type. A topic supports delivery to multiple subscription endpoints. You can add or remove subscription endpoints later.</description></item>
+                    /// <item><description><b>queue</b>: The queue type. Messages are delivered directly to a queue. This reduces the link path, but you cannot add new subscription endpoints later.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -87,7 +85,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                     public string EndpointType { get; set; }
 
                     /// <summary>
-                    /// <para>The actual value of the endpoint.</para>
+                    /// <para>The actual value of the receiving endpoint.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test-topic</para>
@@ -106,7 +104,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 public List<string> EventTypes { get; set; }
 
                 /// <summary>
-                /// <para>The event matching rules. The rules have an OR relationship.</para>
+                /// <para>The event matching rules with an OR relationship.</para>
                 /// </summary>
                 [NameInMap("MatchRules")]
                 [Validation(Required=false)]
@@ -123,7 +121,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>The subscribers. A maximum of 20 entries are returned. If there are more subscribers, see <a href="https://help.aliyun.com/document_detail/2804757.html">List Subscriptions</a>.</para>
+                /// <para>The subscription endpoints. A maximum of 20 entries are returned. If the number exceeds 20, use the <a href="https://help.aliyun.com/document_detail/2804757.html">subscription list</a> to query.</para>
                 /// </summary>
                 [NameInMap("Subscriptions")]
                 [Validation(Required=false)]
@@ -140,7 +138,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                     public string EndpointType { get; set; }
 
                     /// <summary>
-                    /// <para>The actual value of the endpoint.</para>
+                    /// <para>The actual value of the receiving endpoint.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>wyx-vp-complete-queue</para>
@@ -174,7 +172,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             public long? PageNum { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of entries returned on each page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -194,7 +192,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             public long? Pages { get; set; }
 
             /// <summary>
-            /// <para>The number of entries on the current page.</para>
+            /// <para>The number of entries returned on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -226,7 +224,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>06273500-249F-5863-121D-74D51123E62C</para>
@@ -236,7 +234,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the response.</para>
+        /// <para>The response status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -246,7 +244,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class CreateTopicResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The HTTP status code of the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public CreateTopicResponseBodyData Data { get; set; }
         public class CreateTopicResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The response code.</para>
+            /// <para>The HTTP status code of the response.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             /// <para>The response message.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>N/A</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>06273500-249F-5863-121D-74D51123E62C</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The response status.</para>
+        /// <para>The status of the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>

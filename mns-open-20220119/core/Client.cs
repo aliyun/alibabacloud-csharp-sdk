@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "Mns-open";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("mns-open", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -39,7 +42,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more Access Control List (ACL) rules to an endpoint of a specified type.</para>
+        /// <para>Creates one or more ACL rules for an access point of a specified type.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -95,7 +98,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more Access Control List (ACL) rules to an endpoint of a specified type.</para>
+        /// <para>Creates one or more ACL rules for an access point of a specified type.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -151,7 +154,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more Access Control List (ACL) rules to an endpoint of a specified type.</para>
+        /// <para>Creates one or more ACL rules for an access point of a specified type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -169,7 +172,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more Access Control List (ACL) rules to an endpoint of a specified type.</para>
+        /// <para>Creates one or more ACL rules for an access point of a specified type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -399,7 +402,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the CreateQueue operation to create a queue.</para>
+        /// <para>Creates a queue.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -507,7 +510,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the CreateQueue operation to create a queue.</para>
+        /// <para>Creates a queue.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -615,7 +618,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the CreateQueue operation to create a queue.</para>
+        /// <para>Creates a queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -633,7 +636,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the CreateQueue operation to create a queue.</para>
+        /// <para>Creates a queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -651,7 +654,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the CreateTopic operation to create a topic.</para>
+        /// <para>Creates a topic by calling the CreateTopic operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -727,7 +730,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the CreateTopic operation to create a topic.</para>
+        /// <para>Creates a topic by calling the CreateTopic operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -803,7 +806,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the CreateTopic operation to create a topic.</para>
+        /// <para>Creates a topic by calling the CreateTopic operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -821,7 +824,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the CreateTopic operation to create a topic.</para>
+        /// <para>Creates a topic by calling the CreateTopic operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -967,7 +970,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the DeleteQueue operation to delete a created queue.</para>
+        /// <para>Deletes a queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1009,7 +1012,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the DeleteQueue operation to delete a created queue.</para>
+        /// <para>Deletes a queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1051,7 +1054,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the DeleteQueue operation to delete a created queue.</para>
+        /// <para>Deletes a queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1069,7 +1072,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the DeleteQueue operation to delete a created queue.</para>
+        /// <para>Deletes a queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1087,7 +1090,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the DeleteTopic operation to delete a topic.</para>
+        /// <para>Deletes a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1129,7 +1132,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the DeleteTopic operation to delete a topic.</para>
+        /// <para>Deletes a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1171,7 +1174,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the DeleteTopic operation to delete a topic.</para>
+        /// <para>Deletes a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1189,7 +1192,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the DeleteTopic operation to delete a topic.</para>
+        /// <para>Deletes a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1207,7 +1210,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation disables an endpoint of a specified type, blocking all subsequent requests from the endpoint and returning an error.</para>
+        /// <para>Disables access points of a specified type. After the access points are disabled, all requests originating from the corresponding access points are intercepted and an error is returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1249,7 +1252,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation disables an endpoint of a specified type, blocking all subsequent requests from the endpoint and returning an error.</para>
+        /// <para>Disables access points of a specified type. After the access points are disabled, all requests originating from the corresponding access points are intercepted and an error is returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1291,7 +1294,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation disables an endpoint of a specified type, blocking all subsequent requests from the endpoint and returning an error.</para>
+        /// <para>Disables access points of a specified type. After the access points are disabled, all requests originating from the corresponding access points are intercepted and an error is returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1309,7 +1312,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation disables an endpoint of a specified type, blocking all subsequent requests from the endpoint and returning an error.</para>
+        /// <para>Disables access points of a specified type. After the access points are disabled, all requests originating from the corresponding access points are intercepted and an error is returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1327,7 +1330,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation enables an endpoint of a specified type. After the endpoint is enabled, requests that originate from the endpoint and are on the Access Control List (ACL) whitelist are not blocked.</para>
+        /// <para>Enables an access point of a specified type. After the access point is enabled, requests from the corresponding access point that are in the ACL whitelist are not blocked.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1369,7 +1372,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation enables an endpoint of a specified type. After the endpoint is enabled, requests that originate from the endpoint and are on the Access Control List (ACL) whitelist are not blocked.</para>
+        /// <para>Enables an access point of a specified type. After the access point is enabled, requests from the corresponding access point that are in the ACL whitelist are not blocked.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1411,7 +1414,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation enables an endpoint of a specified type. After the endpoint is enabled, requests that originate from the endpoint and are on the Access Control List (ACL) whitelist are not blocked.</para>
+        /// <para>Enables an access point of a specified type. After the access point is enabled, requests from the corresponding access point that are in the ACL whitelist are not blocked.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1429,7 +1432,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation enables an endpoint of a specified type. After the endpoint is enabled, requests that originate from the endpoint and are on the Access Control List (ACL) whitelist are not blocked.</para>
+        /// <para>Enables an access point of a specified type. After the access point is enabled, requests from the corresponding access point that are in the ACL whitelist are not blocked.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1447,7 +1450,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the log configuration of a user.</para>
+        /// <para>Retrieves the user log configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1481,7 +1484,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the log configuration of a user.</para>
+        /// <para>Retrieves the user log configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1515,7 +1518,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the log configuration of a user.</para>
+        /// <para>Retrieves the user log configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1533,7 +1536,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the log configuration of a user.</para>
+        /// <para>Retrieves the user log configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1671,7 +1674,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves an event notification rule.</para>
+        /// <para>Retrieves event notification rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1717,7 +1720,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves an event notification rule.</para>
+        /// <para>Retrieves event notification rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1763,7 +1766,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves an event notification rule.</para>
+        /// <para>Retrieves event notification rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1781,7 +1784,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves an event notification rule.</para>
+        /// <para>Retrieves event notification rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2279,7 +2282,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of event notification rules.</para>
+        /// <para>Queries the list of event notifications.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2359,7 +2362,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of event notification rules.</para>
+        /// <para>Queries the list of event notifications.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2439,7 +2442,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of event notification rules.</para>
+        /// <para>Queries the list of event notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2457,7 +2460,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of event notification rules.</para>
+        /// <para>Queries the list of event notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2627,7 +2630,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ListSubscriptionByTopic operation to retrieve a paginated list of subscriptions for a topic.</para>
+        /// <para>Queries a paginated list of subscriptions under a specific topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2689,7 +2692,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ListSubscriptionByTopic operation to retrieve a paginated list of subscriptions for a topic.</para>
+        /// <para>Queries a paginated list of subscriptions under a specific topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2751,7 +2754,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ListSubscriptionByTopic operation to retrieve a paginated list of subscriptions for a topic.</para>
+        /// <para>Queries a paginated list of subscriptions under a specific topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2769,7 +2772,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ListSubscriptionByTopic operation to retrieve a paginated list of subscriptions for a topic.</para>
+        /// <para>Queries a paginated list of subscriptions under a specific topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2939,7 +2942,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes one or more Access Control List (ACL) rules for a specified endpoint type.</para>
+        /// <para>Deletes one or more ACL rules for an endpoint of a specified type.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2995,7 +2998,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes one or more Access Control List (ACL) rules for a specified endpoint type.</para>
+        /// <para>Deletes one or more ACL rules for an endpoint of a specified type.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3051,7 +3054,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes one or more Access Control List (ACL) rules for a specified endpoint type.</para>
+        /// <para>Deletes one or more ACL rules for an endpoint of a specified type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3069,7 +3072,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes one or more Access Control List (ACL) rules for a specified endpoint type.</para>
+        /// <para>Deletes one or more ACL rules for an endpoint of a specified type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3087,7 +3090,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the user log configuration.</para>
+        /// <para>Configures user log settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3145,7 +3148,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the user log configuration.</para>
+        /// <para>Configures user log settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3203,7 +3206,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the user log configuration.</para>
+        /// <para>Configures user log settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3221,7 +3224,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the user log configuration.</para>
+        /// <para>Configures user log settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3475,7 +3478,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the SetSubscriptionAttributes operation to modify a subscription\&quot;s attributes.</para>
+        /// <para>Modifies the attributes of a subscription.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3547,7 +3550,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the SetSubscriptionAttributes operation to modify a subscription\&quot;s attributes.</para>
+        /// <para>Modifies the attributes of a subscription.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3619,7 +3622,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the SetSubscriptionAttributes operation to modify a subscription\&quot;s attributes.</para>
+        /// <para>Modifies the attributes of a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3637,7 +3640,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the SetSubscriptionAttributes operation to modify a subscription\&quot;s attributes.</para>
+        /// <para>Modifies the attributes of a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3655,7 +3658,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the SetTopicAttributes operation to modify the attributes of a topic.</para>
+        /// <para>Modifies the attributes of a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3721,7 +3724,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the SetTopicAttributes operation to modify the attributes of a topic.</para>
+        /// <para>Modifies the attributes of a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3787,7 +3790,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the SetTopicAttributes operation to modify the attributes of a topic.</para>
+        /// <para>Modifies the attributes of a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3805,7 +3808,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the SetTopicAttributes operation to modify the attributes of a topic.</para>
+        /// <para>Modifies the attributes of a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3823,7 +3826,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the Subscribe operation to create a subscription for a topic.</para>
+        /// <para>Creates a subscription for a topic.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3935,7 +3938,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the Subscribe operation to create a subscription for a topic.</para>
+        /// <para>Creates a subscription for a topic.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4047,7 +4050,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the Subscribe operation to create a subscription for a topic.</para>
+        /// <para>Creates a subscription for a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4065,7 +4068,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the Subscribe operation to create a subscription for a topic.</para>
+        /// <para>Creates a subscription for a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4083,7 +4086,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call Unsubscribe to cancel an existing subscription.</para>
+        /// <para>Cancels an existing subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4129,7 +4132,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call Unsubscribe to cancel an existing subscription.</para>
+        /// <para>Cancels an existing subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4175,7 +4178,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call Unsubscribe to cancel an existing subscription.</para>
+        /// <para>Cancels an existing subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4193,7 +4196,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call Unsubscribe to cancel an existing subscription.</para>
+        /// <para>Cancels an existing subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">

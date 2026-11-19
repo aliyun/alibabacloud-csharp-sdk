@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class GetEventRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the Alibaba Cloud product that triggers the event notification.</para>
+        /// <para>The name of the cloud service for event notifications.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
