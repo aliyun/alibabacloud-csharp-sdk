@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.MPaaS20200710
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "mPaaS";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -7646,6 +7649,10 @@ namespace AlibabaCloud.SDK.MPaaS20200710
             {
                 body["TargetMsgkey"] = request.TargetMsgkey;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetVendorTemplate))
+            {
+                body["TargetVendorTemplate"] = request.TargetVendorTemplate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
             {
                 body["TaskName"] = request.TaskName;
@@ -7674,9 +7681,17 @@ namespace AlibabaCloud.SDK.MPaaS20200710
             {
                 body["Uri"] = request.Uri;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseVoip))
+            {
+                body["UseVoip"] = request.UseVoip;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VendorTemplate))
             {
                 body["VendorTemplate"] = request.VendorTemplate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoipMap))
+            {
+                body["VoipMap"] = request.VoipMap;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
@@ -7809,6 +7824,10 @@ namespace AlibabaCloud.SDK.MPaaS20200710
             {
                 body["TargetMsgkey"] = request.TargetMsgkey;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetVendorTemplate))
+            {
+                body["TargetVendorTemplate"] = request.TargetVendorTemplate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
             {
                 body["TaskName"] = request.TaskName;
@@ -7837,9 +7856,17 @@ namespace AlibabaCloud.SDK.MPaaS20200710
             {
                 body["Uri"] = request.Uri;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseVoip))
+            {
+                body["UseVoip"] = request.UseVoip;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VendorTemplate))
             {
                 body["VendorTemplate"] = request.VendorTemplate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoipMap))
+            {
+                body["VoipMap"] = request.VoipMap;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
@@ -7982,6 +8009,10 @@ namespace AlibabaCloud.SDK.MPaaS20200710
             {
                 body["TargetMsgkey"] = request.TargetMsgkey;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetVendorTemplate))
+            {
+                body["TargetVendorTemplate"] = request.TargetVendorTemplate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
             {
                 body["TaskName"] = request.TaskName;
@@ -8010,9 +8041,17 @@ namespace AlibabaCloud.SDK.MPaaS20200710
             {
                 body["TransparentMessageUrgency"] = request.TransparentMessageUrgency;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseVoip))
+            {
+                body["UseVoip"] = request.UseVoip;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VendorTemplate))
             {
                 body["VendorTemplate"] = request.VendorTemplate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoipMap))
+            {
+                body["VoipMap"] = request.VoipMap;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
@@ -8129,6 +8168,10 @@ namespace AlibabaCloud.SDK.MPaaS20200710
             {
                 body["TargetMsgkey"] = request.TargetMsgkey;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetVendorTemplate))
+            {
+                body["TargetVendorTemplate"] = request.TargetVendorTemplate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
             {
                 body["TaskName"] = request.TaskName;
@@ -8157,9 +8200,17 @@ namespace AlibabaCloud.SDK.MPaaS20200710
             {
                 body["TransparentMessageUrgency"] = request.TransparentMessageUrgency;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseVoip))
+            {
+                body["UseVoip"] = request.UseVoip;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VendorTemplate))
             {
                 body["VendorTemplate"] = request.VendorTemplate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoipMap))
+            {
+                body["VoipMap"] = request.VoipMap;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {

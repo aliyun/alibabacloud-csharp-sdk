@@ -108,6 +108,10 @@ namespace AlibabaCloud.SDK.MPaaS20200710.Models
         [Validation(Required=false)]
         public string TargetMsgkey { get; set; }
 
+        [NameInMap("TargetVendorTemplate")]
+        [Validation(Required=false)]
+        public string TargetVendorTemplate { get; set; }
+
         [NameInMap("TaskName")]
         [Validation(Required=false)]
         public string TaskName { get; set; }
@@ -139,9 +143,17 @@ namespace AlibabaCloud.SDK.MPaaS20200710.Models
         [Validation(Required=false)]
         public string Uri { get; set; }
 
+        [NameInMap("UseVoip")]
+        [Validation(Required=false)]
+        public bool? UseVoip { get; set; }
+
         [NameInMap("VendorTemplate")]
         [Validation(Required=false)]
         public string VendorTemplate { get; set; }
+
+        [NameInMap("VoipMap")]
+        [Validation(Required=false)]
+        public string VoipMap { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

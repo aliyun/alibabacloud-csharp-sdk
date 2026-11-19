@@ -111,6 +111,10 @@ namespace AlibabaCloud.SDK.MPaaS20200710.Models
             [Validation(Required=false)]
             public string TemplateKeyValue { get; set; }
 
+            [NameInMap("VendorTemplate")]
+            [Validation(Required=false)]
+            public string VendorTemplate { get; set; }
+
         }
 
         [NameInMap("TaskName")]
