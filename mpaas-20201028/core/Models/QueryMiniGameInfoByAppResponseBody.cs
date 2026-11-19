@@ -69,6 +69,56 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
             [Validation(Required=false)]
             public string Slogan { get; set; }
 
+            [NameInMap("UserProfileData")]
+            [Validation(Required=false)]
+            public QueryMiniGameInfoByAppResponseBodyContentUserProfileData UserProfileData { get; set; }
+            public class QueryMiniGameInfoByAppResponseBodyContentUserProfileData : TeaModel {
+                [NameInMap("ActiveRegionCodes")]
+                [Validation(Required=false)]
+                public string ActiveRegionCodes { get; set; }
+
+                [NameInMap("ActiveRegions")]
+                [Validation(Required=false)]
+                public string ActiveRegions { get; set; }
+
+                [NameInMap("AgeSegment")]
+                [Validation(Required=false)]
+                public string AgeSegment { get; set; }
+
+                [NameInMap("AndroidActiveModels")]
+                [Validation(Required=false)]
+                public string AndroidActiveModels { get; set; }
+
+                [NameInMap("AndroidRatio")]
+                [Validation(Required=false)]
+                public int? AndroidRatio { get; set; }
+
+                [NameInMap("FemaleRatio")]
+                [Validation(Required=false)]
+                public int? FemaleRatio { get; set; }
+
+                [NameInMap("HarmonyRatio")]
+                [Validation(Required=false)]
+                public int? HarmonyRatio { get; set; }
+
+                [NameInMap("IosActiveModels")]
+                [Validation(Required=false)]
+                public string IosActiveModels { get; set; }
+
+                [NameInMap("IosRatio")]
+                [Validation(Required=false)]
+                public int? IosRatio { get; set; }
+
+                [NameInMap("MaleRatio")]
+                [Validation(Required=false)]
+                public int? MaleRatio { get; set; }
+
+                [NameInMap("ProfileRemark")]
+                [Validation(Required=false)]
+                public string ProfileRemark { get; set; }
+
+            }
+
             [NameInMap("Version")]
             [Validation(Required=false)]
             public string Version { get; set; }

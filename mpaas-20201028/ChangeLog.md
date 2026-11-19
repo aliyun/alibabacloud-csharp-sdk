@@ -1,3 +1,28 @@
+2026-11-19 Version: 3.5.0
+- Support API CreateGatewayApi.
+- Support API CreateGatewayApiGroup.
+- Support API DeleteGatewayApi.
+- Support API DeleteGatewayApiGroup.
+- Support API ExportGatewayApis.
+- Support API GetGatewayApi.
+- Support API GetGatewayApiGroup.
+- Support API ImportGatewayApis.
+- Support API ListGatewayApiGroups.
+- Support API ListGatewayApis.
+- Support API QueryMiniGameQualificationByApp.
+- Support API SyncMiniGameOnlineStatusByApp.
+- Support API UpdateGatewayApi.
+- Support API UpdateGatewayApiGroup.
+- Update API PushMultiple: add request parameters TargetMsg.$.VendorTemplate.
+- Update API PushSimple: add request parameters TargetVendorTemplate.
+- Update API PushSimple: add request parameters UseVoip.
+- Update API PushSimple: add request parameters VoipMap.
+- Update API PushTemplate: add request parameters TargetVendorTemplate.
+- Update API PushTemplate: add request parameters UseVoip.
+- Update API PushTemplate: add request parameters VoipMap.
+- Update API QueryMiniGameInfoByApp: add response parameters Body.Content.$.UserProfileData.
+
+
 2026-07-28 Version: 3.4.1
 - Update API CreateMdsCubeResource: add request parameters HarmonyMaxVersion.
 - Update API CreateMdsCubeResource: add request parameters HarmonyMinVersion.
