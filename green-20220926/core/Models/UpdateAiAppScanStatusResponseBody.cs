@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class UpdateAiAppScanStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of application IDs that failed.</para>
+        /// <para>The list of failed application IDs.</para>
         /// </summary>
         [NameInMap("FailedAppIds")]
         [Validation(Required=false)]
@@ -29,12 +29,9 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <summary>
         /// <para>The status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>SUCCESS: Succeeded.</para>
-        /// </description></item>
-        /// <item><description><para>PARTIAL_SUCCESS: Partially succeeded.</para>
-        /// </description></item>
-        /// <item><description><para>FAILED: Failed.</para>
-        /// </description></item>
+        /// <item><description>SUCCESS: Success.</description></item>
+        /// <item><description>PARTIAL_SUCCESS: Partial success.</description></item>
+        /// <item><description>FAILED: Failure.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,7 +42,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The list of application IDs that succeeded.</para>
+        /// <para>The list of successful application IDs.</para>
         /// </summary>
         [NameInMap("SuccessAppIds")]
         [Validation(Required=false)]

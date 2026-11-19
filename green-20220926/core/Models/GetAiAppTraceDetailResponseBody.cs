@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The AI analysis result.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxx</para>
+        /// <para>This request triggered a politically sensitive content risk. The model confidence is high. Manual review is recommended</para>
         /// </summary>
         [NameInMap("Analysis")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The application name.</para>
+        /// <para>The name of the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>appxxx</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The application channel.</para>
+        /// <para>The channel of the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bailian</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public long? Count { get; set; }
 
             /// <summary>
-            /// <para>The label name.</para>
+            /// <para>The name of the label.</para>
             /// 
             /// <b>Example:</b>
             /// <para>porn</para>
@@ -77,10 +77,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Label { get; set; }
 
             /// <summary>
-            /// <para>The label description.</para>
+            /// <para>The description of the label.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Politically sensitive content</para>
             /// </summary>
             [NameInMap("LabelDesc")]
             [Validation(Required=false)]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The trace ID, which is used to correlate and track alert events.</para>
+        /// <para>The trace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0abb7ee117615311812886711e0a15</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string TraceId { get; set; }
 
         /// <summary>
-        /// <para>The alert time. Format: YYYY-MM-DD HH:mm:ss.</para>
+        /// <para>The time when the alert was triggered. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-01-01 16:08:38</para>

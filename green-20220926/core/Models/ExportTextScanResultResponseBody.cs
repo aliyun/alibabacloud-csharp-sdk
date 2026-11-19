@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The export result.</para>
+        /// <para>The export results.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com/portal_data/production/scanResult/text/textScanResult_aliow2MAdWXCakCxlitVY8Lnn-1A9KEw.xlsx">https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com/portal_data/production/scanResult/text/textScanResult_aliow2MAdWXCakCxlitVY8Lnn-1A9KEw.xlsx</a></para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The description of the error code.</para>
+        /// <para>The detailed description of the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>The success indicator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

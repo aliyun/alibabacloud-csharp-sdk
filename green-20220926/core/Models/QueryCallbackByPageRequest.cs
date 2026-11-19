@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

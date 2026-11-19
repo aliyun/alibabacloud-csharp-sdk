@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class AddImageLibRequest : TeaModel {
         /// <summary>
-        /// <para>The remarks of the image library.</para>
+        /// <para>The remarks for the image library.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>色情内容黑名单图库</para>
+        /// <para>Pornographic content blacklist image library</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The name of the image library.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试图库</para>
+        /// <para>Test image library</para>
         /// </summary>
         [NameInMap("LibName")]
         [Validation(Required=false)]

@@ -20,20 +20,20 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The description of the label.</para>
+        /// <para>The tag description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>标签2</para>
+        /// <para>Tag 2</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The label value. This value is user-defined.</para>
+        /// <para>The custom tag value. Valid values for Field must be obtained by calling the GetFeatureConfig API, such as labels and <b>option</b>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><b>config</b></para>
+        /// <para>labels</para>
         /// </summary>
         [NameInMap("Field")]
         [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ServiceCode { get; set; }
 
         /// <summary>
-        /// <para>The type.</para>
+        /// <para>The type. This parameter is actually required. If it is not provided, the API returns the error \&quot;type may not be empty\&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>custom_llm_template</para>

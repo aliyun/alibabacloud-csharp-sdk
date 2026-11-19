@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The details data.</para>
+        /// <para>The detailed data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetOssCheckResultDetailResponseBodyData Data { get; set; }
         public class GetOssCheckResultDetailResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The storage bucket.</para>
+            /// <para>The bucket.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss-tmp</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public bool? IsCopy { get; set; }
 
             /// <summary>
-            /// <para>The task name.</para>
+            /// <para>The job name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dhT20X2310</para>
@@ -117,14 +117,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string JobName { get; set; }
 
             /// <summary>
-            /// <para>The labels.</para>
+            /// <para>The label details.</para>
             /// </summary>
             [NameInMap("LabelDetails")]
             [Validation(Required=false)]
             public List<GetOssCheckResultDetailResponseBodyDataLabelDetails> LabelDetails { get; set; }
             public class GetOssCheckResultDetailResponseBodyDataLabelDetails : TeaModel {
                 /// <summary>
-                /// <para>The confidence score, ranging from 0 to 100, rounded to two decimal places.</para>
+                /// <para>The confidence score, which ranges from 0 to 100 and is rounded to two decimal places.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50</para>
@@ -137,14 +137,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 /// <para>The label description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>涉政</para>
+                /// <para>Political content</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The labels.</para>
+                /// <para>The label details.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>politics</para>
@@ -156,14 +156,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             }
 
             /// <summary>
-            /// <para>The labels.</para>
+            /// <para>The label details.</para>
             /// </summary>
             [NameInMap("LabelDetails2")]
             [Validation(Required=false)]
             public List<GetOssCheckResultDetailResponseBodyDataLabelDetails2> LabelDetails2 { get; set; }
             public class GetOssCheckResultDetailResponseBodyDataLabelDetails2 : TeaModel {
                 /// <summary>
-                /// <para>The confidence score, ranging from 0 to 100, rounded to two decimal places.</para>
+                /// <para>The confidence score, which ranges from 0 to 100 and is rounded to two decimal places.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50</para>
@@ -176,14 +176,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 /// <para>The label description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>涉政</para>
+                /// <para>Political content</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The labels.</para>
+                /// <para>The label details.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>politics</para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public List<string> Labels2 { get; set; }
 
             /// <summary>
-            /// <para>The manual disposition status.</para>
+            /// <para>The manual action status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FREEZE</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ManualFreezeAction { get; set; }
 
             /// <summary>
-            /// <para>The disposition time. The format is YYYY-MM-DD HH:mm:ss.</para>
+            /// <para>The action time. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-08-09 12:00:00</para>
@@ -229,10 +229,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ManualOperateTime { get; set; }
 
             /// <summary>
-            /// <para>The operator who performed the disposition.</para>
+            /// <para>The operator.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx</para>
+            /// <para>ops_admin_01</para>
             /// </summary>
             [NameInMap("ManualOperator")]
             [Validation(Required=false)]
@@ -249,7 +249,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Md5 { get; set; }
 
             /// <summary>
-            /// <para>The further description of the error code.</para>
+            /// <para>The detailed description of the error code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -349,7 +349,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 /// <para>The service name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>服务名称</para>
+                /// <para>Service name</para>
                 /// </summary>
                 [NameInMap("ServiceName")]
                 [Validation(Required=false)]
@@ -371,7 +371,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             /// <para>The service name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>服务名称</para>
+            /// <para>Service name</para>
             /// </summary>
             [NameInMap("ServiceName")]
             [Validation(Required=false)]
@@ -400,7 +400,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>The further description of the error code.</para>
+        /// <para>The detailed description of the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -410,7 +410,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify a request. This ID can be used to troubleshoot issues.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>62E97001-1255-50A9-8E1E-4FD05473D952</para>
@@ -420,7 +420,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>The success flag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

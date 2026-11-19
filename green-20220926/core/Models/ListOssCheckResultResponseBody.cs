@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public List<ListOssCheckResultResponseBodyItems> Items { get; set; }
         public class ListOssCheckResultResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The OSS bucket.</para>
+            /// <para>The bucket.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tmp</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The audio and video detection type.</para>
+            /// <para>The audio and video moderation type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>audio</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string FreezeType { get; set; }
 
             /// <summary>
-            /// <para>The URL of the image.</para>
+            /// <para>The image URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.aliyuncs.com/test.jpg">http://www.aliyuncs.com/test.jpg</a></para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ImageUrl { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the task is copied.</para>
+            /// <para>Indicates whether the item is copied.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string JobName { get; set; }
 
             /// <summary>
-            /// <para>The list of labels hit by video frames.</para>
+            /// <para>The list of matched labels for video frames.</para>
             /// </summary>
             [NameInMap("LabelDetails")]
             [Validation(Required=false)]
@@ -127,14 +127,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 /// <para>The description of the label.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>影音娱乐类</para>
+                /// <para>Audio and video entertainment</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The label hit by the video frame.</para>
+                /// <para>The matched label for video frames.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>logo_streaming</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             }
 
             /// <summary>
-            /// <para>The list of labels hit by video audio.</para>
+            /// <para>The list of matched labels for video audio.</para>
             /// </summary>
             [NameInMap("LabelDetails2")]
             [Validation(Required=false)]
@@ -156,14 +156,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 /// <para>The description of the label.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>辱骂内容</para>
+                /// <para>Abusive content</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The label hit by the audio.</para>
+                /// <para>The matched label for audio.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abuse</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Md5 { get; set; }
 
             /// <summary>
-            /// <para>The description of the error code.</para>
+            /// <para>The detailed description of the error code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OK</para>
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             /// <para>The service name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>服务名称</para>
+            /// <para>Service name</para>
             /// </summary>
             [NameInMap("ServiceName")]
             [Validation(Required=false)]
@@ -311,7 +311,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>

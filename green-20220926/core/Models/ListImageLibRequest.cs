@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The selected service identifier.</para>
+        /// <para>The service identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>response_security_check</para>

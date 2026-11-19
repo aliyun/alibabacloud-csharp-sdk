@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end time. Format: YYYY-MM-DD HH:mm:ss.</para>
+        /// <para>The end time. Specify the time in the YYYY-MM-DD HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-05-19 10:05:11</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The number of completed tasks.</para>
+        /// <para>The number of completed items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The query condition.</para>
+        /// <para>The query conditions. Note: This parameter is actually required. You must provide a JSON string that contains the TaskId field, such as {&quot;TaskId&quot;:&quot;P_XXX&quot;}. If this parameter is not provided, the API returns a 400 error (oss.check.task.not.exists).</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;TaskId\&quot;:\&quot;P_O3SI0I\&quot;}</para>
@@ -71,13 +71,16 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
         /// <summary>
         /// <para>The sort field.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;GmtCreate&quot;:&quot;desc&quot;}</para>
         /// </summary>
         [NameInMap("Sort")]
         [Validation(Required=false)]
         public string SortShrink { get; set; }
 
         /// <summary>
-        /// <para>The start time. Format: YYYY-MM-DD HH:mm:ss.</para>
+        /// <para>The start time. Specify the time in the YYYY-MM-DD HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-09 10:28:54</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class DescribeOssV2ResultRequest : TeaModel {
         /// <summary>
-        /// <para>The OSS bucket.</para>
+        /// <para>The OSS bucket of the file server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>buckect_test</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The task name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Image batch task 20240914100517757</para>
+        /// <para>Image inventory task 20240914100517757</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]

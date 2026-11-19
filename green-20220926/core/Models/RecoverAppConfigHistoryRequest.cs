@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class RecoverAppConfigHistoryRequest : TeaModel {
         /// <summary>
-        /// <para>App ID。</para>
+        /// <para>The app ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>txt_check_agent_01</para>

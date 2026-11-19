@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>The further description of the error code.</para>
+        /// <para>The detailed description of the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The backend-assigned ID that uniquely identifies a request. This ID can be used for troubleshooting.</para>
+        /// <para>The request ID, which uniquely identifies the request and can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The success flag.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             /// <para>The content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试文本</para>
+            /// <para>Test text</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 /// <para>The label description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>暴恐</para>
+                /// <para>Terrorism</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -64,10 +64,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string Label { get; set; }
 
                 /// <summary>
-                /// <para>The reason why the model determined this risk level for the text.</para>
+                /// <para>The reason why the model determines this risk level for the text.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>该文本涉及暴力恐怖信息</para>
+                /// <para>The text contains violent and terrorist content</para>
                 /// </summary>
                 [NameInMap("Reason")]
                 [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             }
 
             /// <summary>
-            /// <para>The risk level, which is returned based on the configured high and low risk scores. Valid values:</para>
+            /// <para>The risk level. The value is returned based on the configured high and low risk scores. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>high: High risk.</para>
             /// </description></item>

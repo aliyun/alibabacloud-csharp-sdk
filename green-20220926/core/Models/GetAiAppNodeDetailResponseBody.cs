@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Channel { get; set; }
 
         /// <summary>
-        /// <para>The list of event data.</para>
+        /// <para>The event data list.</para>
         /// </summary>
         [NameInMap("EventData")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Channel { get; set; }
 
             /// <summary>
-            /// <para>The list of labels.</para>
+            /// <para>The label list.</para>
             /// </summary>
             [NameInMap("Labels")]
             [Validation(Required=false)]
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>The time when the event occurred. Format: yyyy-MM-dd HH:mm:ss.</para>
+            /// <para>The time when the event occurred. Specify the time in the yyyy-MM-dd HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-01 16:08:38</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Time { get; set; }
 
             /// <summary>
-            /// <para>The trace ID, which is used to query the exact call information.</para>
+            /// <para>The trace ID, which is used to precisely query trace information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxxx</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string NodeType { get; set; }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The request ID, which is assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>

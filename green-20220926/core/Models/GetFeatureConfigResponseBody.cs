@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>UID。</para>
+            /// <para>The user UID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1643953****74290</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message for this request.</para>
+        /// <para>The response message for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

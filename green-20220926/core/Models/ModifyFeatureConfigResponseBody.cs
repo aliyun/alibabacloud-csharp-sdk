@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The response message for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can use this ID to locate issues.</para>
+        /// <para>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>

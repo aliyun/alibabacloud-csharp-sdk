@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetQpsStatsRequest : TeaModel {
         /// <summary>
-        /// <para>The query condition. The value is a string in JSON format.</para>
+        /// <para>The query conditions in JSON format.</para>
         /// <remarks>
-        /// <para>Different query conditions return different protected objects. For more information, see <b>Query parameter description</b>.</para>
+        /// <para>The protected objects returned vary based on the query conditions. For more information, see <b>Query parameter description</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

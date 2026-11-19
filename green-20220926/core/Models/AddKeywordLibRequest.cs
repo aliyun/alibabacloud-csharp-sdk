@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// .</para>
         /// 
         /// <b>Example:</b>
-        /// <para>keyword1\nkeyword2</para>
+        /// <para>Keyword1\nKeyword2</para>
         /// </summary>
         [NameInMap("Keywords")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The name of the keyword library.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>TestLibrary.</para>
+        /// <para>Test keyword library</para>
         /// </summary>
         [NameInMap("LibName")]
         [Validation(Required=false)]
@@ -61,9 +61,9 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The library code.</para>
+        /// <para>The code of the keyword library.</para>
         /// <list type="bullet">
-        /// <item><description>desensitize: desensitization library</description></item>
+        /// <item><description>desensitize: desensitization keyword library.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

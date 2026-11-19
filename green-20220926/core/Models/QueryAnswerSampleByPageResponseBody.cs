@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             /// <para>The answer.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>答案</para>
+            /// <para>Answer</para>
             /// </summary>
             [NameInMap("Answer")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The ID of the proxy answer library.</para>
+            /// <para>The ID of the fallback answer library.</para>
             /// 
             /// <b>Example:</b>
             /// <para>custom_xxxx</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string LibId { get; set; }
 
             /// <summary>
-            /// <para>UID。</para>
+            /// <para>The UID of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>104813*****2399</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetFeatureConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The query condition.</para>
+        /// <para>The query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;Lang\&quot;:\&quot;zh\&quot;,\&quot;CategoryType\&quot;:1,\&quot;Default\&quot;:false,\&quot;ParentCategoryId\&quot;:1720}</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ServiceCode { get; set; }
 
         /// <summary>
-        /// <para>The type.</para>
+        /// <para>The type. Note: This parameter is actually required. If it is not provided, the API returns a 400 error (type may not be empty).</para>
         /// 
         /// <b>Example:</b>
         /// <para>custom_llm_template</para>

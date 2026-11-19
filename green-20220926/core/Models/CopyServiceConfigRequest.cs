@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The service description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>服务备注</para>
+        /// <para>Service remarks</para>
         /// </summary>
         [NameInMap("ServiceDesc")]
         [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The service name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>用户昵称检测</para>
+        /// <para>User nickname detection</para>
         /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]

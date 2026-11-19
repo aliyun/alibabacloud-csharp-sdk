@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Green20220926
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "Green";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -65,7 +68,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a proxy answer.</para>
+        /// <para>Adds fallback answers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -119,7 +122,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a proxy answer.</para>
+        /// <para>Adds fallback answers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -173,7 +176,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a proxy answer.</para>
+        /// <para>Adds fallback answers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -191,7 +194,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a proxy answer.</para>
+        /// <para>Adds fallback answers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -209,7 +212,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an agent configuration to an app.</para>
+        /// <para>Adds agent configurations to an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -271,7 +274,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an agent configuration to an app.</para>
+        /// <para>Adds agent configurations to an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -333,7 +336,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an agent configuration to an app.</para>
+        /// <para>Adds agent configurations to an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -351,7 +354,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an agent configuration to an app.</para>
+        /// <para>Adds agent configurations to an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -369,7 +372,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an app configuration.</para>
+        /// <para>Creates an application configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -431,7 +434,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an app configuration.</para>
+        /// <para>Creates an application configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -493,7 +496,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an app configuration.</para>
+        /// <para>Creates an application configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -511,7 +514,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an app configuration.</para>
+        /// <para>Creates an application configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -669,8 +672,13 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds images in batches.</para>
+        /// <para>Adds multiple images to an image library.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Adds multiple images to an image library. Before calling this operation, call GetUploadInfo to obtain the Object Storage Service (OSS) upload credentials (Host, Policy, Signature, SecurityToken, and Key). Use the credentials to upload images to the returned Host. Finally, pass the Key value returned by GetUploadInfo as the ImgUrl parameter to this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddImages2LibRequest
@@ -721,8 +729,13 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds images in batches.</para>
+        /// <para>Adds multiple images to an image library.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Adds multiple images to an image library. Before calling this operation, call GetUploadInfo to obtain the Object Storage Service (OSS) upload credentials (Host, Policy, Signature, SecurityToken, and Key). Use the credentials to upload images to the returned Host. Finally, pass the Key value returned by GetUploadInfo as the ImgUrl parameter to this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddImages2LibRequest
@@ -773,8 +786,13 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds images in batches.</para>
+        /// <para>Adds multiple images to an image library.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Adds multiple images to an image library. Before calling this operation, call GetUploadInfo to obtain the Object Storage Service (OSS) upload credentials (Host, Policy, Signature, SecurityToken, and Key). Use the credentials to upload images to the returned Host. Finally, pass the Key value returned by GetUploadInfo as the ImgUrl parameter to this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddImages2LibRequest
@@ -791,8 +809,13 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds images in batches.</para>
+        /// <para>Adds multiple images to an image library.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Adds multiple images to an image library. Before calling this operation, call GetUploadInfo to obtain the Object Storage Service (OSS) upload credentials (Host, Policy, Signature, SecurityToken, and Key). Use the credentials to upload images to the returned Host. Finally, pass the Key value returned by GetUploadInfo as the ImgUrl parameter to this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddImages2LibRequest
@@ -1549,7 +1572,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies an App configuration.</para>
+        /// <para>Copies the app configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1603,7 +1626,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies an App configuration.</para>
+        /// <para>Copies the app configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1657,7 +1680,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies an App configuration.</para>
+        /// <para>Copies the app configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1675,7 +1698,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies an App configuration.</para>
+        /// <para>Copies the app configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2193,7 +2216,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a proxy answer library.</para>
+        /// <para>Creates a fallback answer library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2253,7 +2276,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a proxy answer library.</para>
+        /// <para>Creates a fallback answer library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2313,7 +2336,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a proxy answer library.</para>
+        /// <para>Creates a fallback answer library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2331,7 +2354,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a proxy answer library.</para>
+        /// <para>Creates a fallback answer library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2662,11 +2685,11 @@ namespace AlibabaCloud.SDK.Green20220926
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before using this operation, complete the following steps:</para>
+        /// <para>Before you call this operation, make sure that the following conditions are met:</para>
         /// <ol>
-        /// <item><description><a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Activate Content Moderation Enhanced Edition</a>.</description></item>
-        /// <item><description>Understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of Image Moderation Enhanced Edition.</description></item>
-        /// <item><description>For more information about API operations and parameters, see <a href="https://help.aliyun.com/document_detail/467829.html">API reference</a>.</description></item>
+        /// <item><description>You have activated <a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Content Moderation Enhanced Edition</a>.</description></item>
+        /// <item><description>You fully understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of Image Moderation Enhanced Edition.</description></item>
+        /// <item><description>For more information about how to use the API operation and its parameters, refer to the <a href="https://help.aliyun.com/document_detail/467829.html">API reference</a>.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -2724,11 +2747,11 @@ namespace AlibabaCloud.SDK.Green20220926
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before using this operation, complete the following steps:</para>
+        /// <para>Before you call this operation, make sure that the following conditions are met:</para>
         /// <ol>
-        /// <item><description><a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Activate Content Moderation Enhanced Edition</a>.</description></item>
-        /// <item><description>Understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of Image Moderation Enhanced Edition.</description></item>
-        /// <item><description>For more information about API operations and parameters, see <a href="https://help.aliyun.com/document_detail/467829.html">API reference</a>.</description></item>
+        /// <item><description>You have activated <a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Content Moderation Enhanced Edition</a>.</description></item>
+        /// <item><description>You fully understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of Image Moderation Enhanced Edition.</description></item>
+        /// <item><description>For more information about how to use the API operation and its parameters, refer to the <a href="https://help.aliyun.com/document_detail/467829.html">API reference</a>.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -2786,11 +2809,11 @@ namespace AlibabaCloud.SDK.Green20220926
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before using this operation, complete the following steps:</para>
+        /// <para>Before you call this operation, make sure that the following conditions are met:</para>
         /// <ol>
-        /// <item><description><a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Activate Content Moderation Enhanced Edition</a>.</description></item>
-        /// <item><description>Understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of Image Moderation Enhanced Edition.</description></item>
-        /// <item><description>For more information about API operations and parameters, see <a href="https://help.aliyun.com/document_detail/467829.html">API reference</a>.</description></item>
+        /// <item><description>You have activated <a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Content Moderation Enhanced Edition</a>.</description></item>
+        /// <item><description>You fully understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of Image Moderation Enhanced Edition.</description></item>
+        /// <item><description>For more information about how to use the API operation and its parameters, refer to the <a href="https://help.aliyun.com/document_detail/467829.html">API reference</a>.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -2814,11 +2837,11 @@ namespace AlibabaCloud.SDK.Green20220926
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before using this operation, complete the following steps:</para>
+        /// <para>Before you call this operation, make sure that the following conditions are met:</para>
         /// <ol>
-        /// <item><description><a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Activate Content Moderation Enhanced Edition</a>.</description></item>
-        /// <item><description>Understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of Image Moderation Enhanced Edition.</description></item>
-        /// <item><description>For more information about API operations and parameters, see <a href="https://help.aliyun.com/document_detail/467829.html">API reference</a>.</description></item>
+        /// <item><description>You have activated <a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Content Moderation Enhanced Edition</a>.</description></item>
+        /// <item><description>You fully understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of Image Moderation Enhanced Edition.</description></item>
+        /// <item><description>For more information about how to use the API operation and its parameters, refer to the <a href="https://help.aliyun.com/document_detail/467829.html">API reference</a>.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -2981,7 +3004,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a pre-check before creating an OSS scan task.</para>
+        /// <para>Performs pre-checks before creating an OSS scan task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3081,7 +3104,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a pre-check before creating an OSS scan task.</para>
+        /// <para>Performs pre-checks before creating an OSS scan task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3181,7 +3204,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a pre-check before creating an OSS scan task.</para>
+        /// <para>Performs pre-checks before creating an OSS scan task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3199,7 +3222,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a pre-check before creating an OSS scan task.</para>
+        /// <para>Performs pre-checks before creating an OSS scan task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3485,7 +3508,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an agent configuration.</para>
+        /// <para>Deletes the agent configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3539,7 +3562,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an agent configuration.</para>
+        /// <para>Deletes the agent configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3593,7 +3616,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an agent configuration.</para>
+        /// <para>Deletes the agent configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3611,7 +3634,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an agent configuration.</para>
+        /// <para>Deletes the agent configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4481,7 +4504,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detection results of online moderation.</para>
+        /// <para>Queries the online detection results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4531,7 +4554,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detection results of online moderation.</para>
+        /// <para>Queries the online detection results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4581,7 +4604,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detection results of online moderation.</para>
+        /// <para>Queries the online detection results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4599,7 +4622,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detection results of online moderation.</para>
+        /// <para>Queries the online detection results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4617,12 +4640,12 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves OSS moderation results v2.</para>
+        /// <para>Retrieves OSS results v2.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>API operation is used together with the Image Moderation Enhanced API. After you call the Image Moderation Enhanced API, you can call API operation to obtain more moderation details. API operation is free of charge.</para>
+        /// <para>This API operation must be used in conjunction with the Image Moderation Enhanced Edition API. After calling the Image Moderation Enhanced Edition API, you can call this operation to obtain more detection information. This API operation is free of charge.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4688,12 +4711,12 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves OSS moderation results v2.</para>
+        /// <para>Retrieves OSS results v2.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>API operation is used together with the Image Moderation Enhanced API. After you call the Image Moderation Enhanced API, you can call API operation to obtain more moderation details. API operation is free of charge.</para>
+        /// <para>This API operation must be used in conjunction with the Image Moderation Enhanced Edition API. After calling the Image Moderation Enhanced Edition API, you can call this operation to obtain more detection information. This API operation is free of charge.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4759,12 +4782,12 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves OSS moderation results v2.</para>
+        /// <para>Retrieves OSS results v2.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>API operation is used together with the Image Moderation Enhanced API. After you call the Image Moderation Enhanced API, you can call API operation to obtain more moderation details. API operation is free of charge.</para>
+        /// <para>This API operation must be used in conjunction with the Image Moderation Enhanced Edition API. After calling the Image Moderation Enhanced Edition API, you can call this operation to obtain more detection information. This API operation is free of charge.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4782,12 +4805,12 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves OSS moderation results v2.</para>
+        /// <para>Retrieves OSS results v2.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>API operation is used together with the Image Moderation Enhanced API. After you call the Image Moderation Enhanced API, you can call API operation to obtain more moderation details. API operation is free of charge.</para>
+        /// <para>This API operation must be used in conjunction with the Image Moderation Enhanced Edition API. After calling the Image Moderation Enhanced Edition API, you can call this operation to obtain more detection information. This API operation is free of charge.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4937,7 +4960,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports call volume.</para>
+        /// <para>Exports the usage data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5021,7 +5044,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports call volume.</para>
+        /// <para>Exports the usage data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5105,7 +5128,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports call volume.</para>
+        /// <para>Exports the usage data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5123,7 +5146,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports call volume.</para>
+        /// <para>Exports the usage data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5437,7 +5460,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports OSS scan results.</para>
+        /// <para>Exports the OSS scan results.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5515,7 +5538,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports OSS scan results.</para>
+        /// <para>Exports the OSS scan results.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5593,7 +5616,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports OSS scan results.</para>
+        /// <para>Exports the OSS scan results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5611,7 +5634,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports OSS scan results.</para>
+        /// <para>Exports the OSS scan results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5629,7 +5652,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports call results as an Excel file.</para>
+        /// <para>Exports the call results to an Excel file.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5711,7 +5734,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports call results as an Excel file.</para>
+        /// <para>Exports the call results to an Excel file.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5793,7 +5816,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports call results as an Excel file.</para>
+        /// <para>Exports the call results to an Excel file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5811,7 +5834,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports call results as an Excel file.</para>
+        /// <para>Exports the call results to an Excel file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5829,7 +5852,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports call results as an Excel file.</para>
+        /// <para>Exports call results to an Excel file.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5891,7 +5914,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports call results as an Excel file.</para>
+        /// <para>Exports call results to an Excel file.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5953,7 +5976,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports call results as an Excel file.</para>
+        /// <para>Exports call results to an Excel file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5971,7 +5994,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports call results as an Excel file.</para>
+        /// <para>Exports call results to an Excel file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6010,9 +6033,17 @@ namespace AlibabaCloud.SDK.Green20220926
             {
                 query["AppId"] = request.AppId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6056,9 +6087,17 @@ namespace AlibabaCloud.SDK.Green20220926
             {
                 query["AppId"] = request.AppId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6117,7 +6156,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves statistics for the details of an AI application.</para>
+        /// <para>Retrieves the statistics of an AI application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6171,7 +6210,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves statistics for the details of an AI application.</para>
+        /// <para>Retrieves the statistics of an AI application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6225,7 +6264,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves statistics for the details of an AI application.</para>
+        /// <para>Retrieves the statistics of an AI application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6243,7 +6282,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves statistics for the details of an AI application.</para>
+        /// <para>Retrieves the statistics of an AI application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6409,8 +6448,13 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an application node in the agent topology.</para>
+        /// <para>Retrieves the details of an app node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>AI applications must be created through the Model Studio or Dify platform. Call chain: ListAiAppByPage (to obtain the AppId) → GetAiAppDetailTopo (to obtain the NodeId, NodeName, and NodeType) → GetAiAppNodeDetail.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAiAppNodeDetailRequest
@@ -6475,8 +6519,13 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an application node in the agent topology.</para>
+        /// <para>Retrieves the details of an app node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>AI applications must be created through the Model Studio or Dify platform. Call chain: ListAiAppByPage (to obtain the AppId) → GetAiAppDetailTopo (to obtain the NodeId, NodeName, and NodeType) → GetAiAppNodeDetail.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAiAppNodeDetailRequest
@@ -6541,8 +6590,13 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an application node in the agent topology.</para>
+        /// <para>Retrieves the details of an app node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>AI applications must be created through the Model Studio or Dify platform. Call chain: ListAiAppByPage (to obtain the AppId) → GetAiAppDetailTopo (to obtain the NodeId, NodeName, and NodeType) → GetAiAppNodeDetail.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAiAppNodeDetailRequest
@@ -6559,8 +6613,13 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an application node in the agent topology.</para>
+        /// <para>Retrieves the details of an app node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>AI applications must be created through the Model Studio or Dify platform. Call chain: ListAiAppByPage (to obtain the AppId) → GetAiAppDetailTopo (to obtain the NodeId, NodeName, and NodeType) → GetAiAppNodeDetail.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAiAppNodeDetailRequest
@@ -6577,7 +6636,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the overview information of AI applications.</para>
+        /// <para>Retrieves the overview of AI applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6627,7 +6686,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the overview information of AI applications.</para>
+        /// <para>Retrieves the overview of AI applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6677,7 +6736,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the overview information of AI applications.</para>
+        /// <para>Retrieves the overview of AI applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6695,7 +6754,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the overview information of AI applications.</para>
+        /// <para>Retrieves the overview of AI applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6713,7 +6772,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves statistics for AI application risk reports.</para>
+        /// <para>Retrieves statistical data for AI applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6775,7 +6834,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves statistics for AI application risk reports.</para>
+        /// <para>Retrieves statistical data for AI applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6837,7 +6896,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves statistics for AI application risk reports.</para>
+        /// <para>Retrieves statistical data for AI applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6855,7 +6914,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves statistics for AI application risk reports.</para>
+        /// <para>Retrieves statistical data for AI applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6873,7 +6932,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an app alert.</para>
+        /// <para>Retrieves the details of an application alert.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6931,7 +6990,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an app alert.</para>
+        /// <para>Retrieves the details of an application alert.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6989,7 +7048,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an app alert.</para>
+        /// <para>Retrieves the details of an application alert.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7007,7 +7066,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an app alert.</para>
+        /// <para>Retrieves the details of an application alert.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7025,7 +7084,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the import progress of proxy answer samples.</para>
+        /// <para>Retrieves the import progress of fallback answer samples.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7071,7 +7130,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the import progress of proxy answer samples.</para>
+        /// <para>Retrieves the import progress of fallback answer samples.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7117,7 +7176,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the import progress of proxy answer samples.</para>
+        /// <para>Retrieves the import progress of fallback answer samples.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7135,7 +7194,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the import progress of proxy answer samples.</para>
+        /// <para>Retrieves the import progress of fallback answer samples.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7153,7 +7212,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an App configuration.</para>
+        /// <para>Queries the details of an application configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7211,7 +7270,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an App configuration.</para>
+        /// <para>Queries the details of an application configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7269,7 +7328,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an App configuration.</para>
+        /// <para>Queries the details of an application configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7287,7 +7346,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an App configuration.</para>
+        /// <para>Queries the details of an application configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7801,7 +7860,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the call volume statistics.</para>
+        /// <para>Queries the call volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7881,7 +7940,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the call volume statistics.</para>
+        /// <para>Queries the call volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7961,7 +8020,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the call volume statistics.</para>
+        /// <para>Queries the call volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7979,7 +8038,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the call volume statistics.</para>
+        /// <para>Queries the call volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8273,7 +8332,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves log statistics for AI security guardrails.</para>
+        /// <para>Retrieves the statistics of AI security guardrail logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8315,7 +8374,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves log statistics for AI security guardrails.</para>
+        /// <para>Retrieves the statistics of AI security guardrail logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8357,7 +8416,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves log statistics for AI security guardrails.</para>
+        /// <para>Retrieves the statistics of AI security guardrail logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8375,7 +8434,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves log statistics for AI security guardrails.</para>
+        /// <para>Retrieves the statistics of AI security guardrail logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8393,7 +8452,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves statistics information on AI application protection data.</para>
+        /// <para>Retrieves the statistics information on AI application protection data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8439,7 +8498,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves statistics information on AI application protection data.</para>
+        /// <para>Retrieves the statistics information on AI application protection data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8485,7 +8544,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves statistics information on AI application protection data.</para>
+        /// <para>Retrieves the statistics information on AI application protection data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8503,7 +8562,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves statistics information on AI application protection data.</para>
+        /// <para>Retrieves the statistics information on AI application protection data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8933,7 +8992,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of a keyword import task.</para>
+        /// <para>Queries the keyword import results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8981,7 +9040,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of a keyword import task.</para>
+        /// <para>Queries the keyword import results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9029,7 +9088,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of a keyword import task.</para>
+        /// <para>Queries the keyword import results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9047,7 +9106,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of a keyword import task.</para>
+        /// <para>Queries the keyword import results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9213,8 +9272,14 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the results of OSS scan and freeze operations.</para>
+        /// <para>Queries the freezing results of OSS detection.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the freezing disposal results of OSS detection tasks.
+        /// Prerequisites: Before calling this operation, you must call CreatStockOssCheckTask to create an OSS inventory detection task and generate freezing results. Then, call GetStockOssCheckTasksList to obtain an available TaskId and pass it as a query parameter to this operation.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetOssCheckFreezeResultRequest
@@ -9293,8 +9358,14 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the results of OSS scan and freeze operations.</para>
+        /// <para>Queries the freezing results of OSS detection.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the freezing disposal results of OSS detection tasks.
+        /// Prerequisites: Before calling this operation, you must call CreatStockOssCheckTask to create an OSS inventory detection task and generate freezing results. Then, call GetStockOssCheckTasksList to obtain an available TaskId and pass it as a query parameter to this operation.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetOssCheckFreezeResultRequest
@@ -9373,8 +9444,14 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the results of OSS scan and freeze operations.</para>
+        /// <para>Queries the freezing results of OSS detection.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the freezing disposal results of OSS detection tasks.
+        /// Prerequisites: Before calling this operation, you must call CreatStockOssCheckTask to create an OSS inventory detection task and generate freezing results. Then, call GetStockOssCheckTasksList to obtain an available TaskId and pass it as a query parameter to this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetOssCheckFreezeResultRequest
@@ -9391,8 +9468,14 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the results of OSS scan and freeze operations.</para>
+        /// <para>Queries the freezing results of OSS detection.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the freezing disposal results of OSS detection tasks.
+        /// Prerequisites: Before calling this operation, you must call CreatStockOssCheckTask to create an OSS inventory detection task and generate freezing results. Then, call GetStockOssCheckTasksList to obtain an available TaskId and pass it as a query parameter to this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetOssCheckFreezeResultRequest
@@ -9409,7 +9492,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed information of OSS check results.</para>
+        /// <para>Retrieves the details of OSS inspection results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9475,7 +9558,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed information of OSS check results.</para>
+        /// <para>Retrieves the details of OSS inspection results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9541,7 +9624,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed information of OSS check results.</para>
+        /// <para>Retrieves the details of OSS inspection results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9559,7 +9642,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed information of OSS check results.</para>
+        /// <para>Retrieves the details of OSS inspection results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9577,7 +9660,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries OSS usage statistics.</para>
+        /// <para>Queries the usage statistics of OSS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9637,7 +9720,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries OSS usage statistics.</para>
+        /// <para>Queries the usage statistics of OSS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9697,7 +9780,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries OSS usage statistics.</para>
+        /// <para>Queries the usage statistics of OSS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9715,7 +9798,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries OSS usage statistics.</para>
+        /// <para>Queries the usage statistics of OSS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9973,7 +10056,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tests the attribute configuration.</para>
+        /// <para>Tests the feature configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10031,7 +10114,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tests the attribute configuration.</para>
+        /// <para>Tests the feature configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10089,7 +10172,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tests the attribute configuration.</para>
+        /// <para>Tests the feature configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10107,7 +10190,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tests the attribute configuration.</para>
+        /// <para>Tests the feature configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10125,7 +10208,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries QPS statistics information.</para>
+        /// <para>Queries the queries per second (QPS) statistics information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10171,7 +10254,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries QPS statistics information.</para>
+        /// <para>Queries the queries per second (QPS) statistics information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10217,7 +10300,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries QPS statistics information.</para>
+        /// <para>Queries the queries per second (QPS) statistics information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10235,7 +10318,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries QPS statistics information.</para>
+        /// <para>Queries the queries per second (QPS) statistics information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10253,7 +10336,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries risk posture statistics.</para>
+        /// <para>Retrieves risk posture statistics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10270,6 +10353,10 @@ namespace AlibabaCloud.SDK.Green20220926
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
+            {
+                query["Channel"] = request.Channel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Classify))
             {
                 query["Classify"] = request.Classify;
@@ -10311,7 +10398,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries risk posture statistics.</para>
+        /// <para>Retrieves risk posture statistics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10328,6 +10415,10 @@ namespace AlibabaCloud.SDK.Green20220926
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
+            {
+                query["Channel"] = request.Channel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Classify))
             {
                 query["Classify"] = request.Classify;
@@ -10369,7 +10460,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries risk posture statistics.</para>
+        /// <para>Retrieves risk posture statistics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10387,7 +10478,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries risk posture statistics.</para>
+        /// <para>Retrieves risk posture statistics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10405,7 +10496,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about files pending detection for a user.</para>
+        /// <para>Retrieves the pending detection information of the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10455,7 +10546,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about files pending detection for a user.</para>
+        /// <para>Retrieves the pending detection information of the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10505,7 +10596,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about files pending detection for a user.</para>
+        /// <para>Retrieves the pending detection information of the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10523,7 +10614,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about files pending detection for a user.</para>
+        /// <para>Retrieves the pending detection information of the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10541,7 +10632,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detection results.</para>
+        /// <para>Queries the call results.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10623,7 +10714,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detection results.</para>
+        /// <para>Queries the call results.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10705,7 +10796,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detection results.</para>
+        /// <para>Queries the call results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10723,7 +10814,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detection results.</para>
+        /// <para>Queries the call results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11377,7 +11468,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the call results.</para>
+        /// <para>Queries the invocation results.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11455,7 +11546,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the call results.</para>
+        /// <para>Queries the invocation results.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11533,7 +11624,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the call results.</para>
+        /// <para>Queries the invocation results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11551,7 +11642,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the call results.</para>
+        /// <para>Queries the invocation results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11569,12 +11660,12 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves tuning suggestions for switch configurations.</para>
+        /// <para>Retrieves tuning recommendations for switch configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>API operation is used together with the enhanced image moderation API. After you call the enhanced image moderation API, call API operation to retrieve additional detection information. API operation is free of charge.</para>
+        /// <para>API operation must be used in conjunction with the enhanced image moderation API. After you call the enhanced image moderation API, you can call API operation to retrieve additional detection information. API operation is free of charge.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11616,12 +11707,12 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves tuning suggestions for switch configurations.</para>
+        /// <para>Retrieves tuning recommendations for switch configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>API operation is used together with the enhanced image moderation API. After you call the enhanced image moderation API, call API operation to retrieve additional detection information. API operation is free of charge.</para>
+        /// <para>API operation must be used in conjunction with the enhanced image moderation API. After you call the enhanced image moderation API, you can call API operation to retrieve additional detection information. API operation is free of charge.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11663,12 +11754,12 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves tuning suggestions for switch configurations.</para>
+        /// <para>Retrieves tuning recommendations for switch configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>API operation is used together with the enhanced image moderation API. After you call the enhanced image moderation API, call API operation to retrieve additional detection information. API operation is free of charge.</para>
+        /// <para>API operation must be used in conjunction with the enhanced image moderation API. After you call the enhanced image moderation API, you can call API operation to retrieve additional detection information. API operation is free of charge.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11686,12 +11777,12 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves tuning suggestions for switch configurations.</para>
+        /// <para>Retrieves tuning recommendations for switch configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>API operation is used together with the enhanced image moderation API. After you call the enhanced image moderation API, call API operation to retrieve additional detection information. API operation is free of charge.</para>
+        /// <para>API operation must be used in conjunction with the enhanced image moderation API. After you call the enhanced image moderation API, you can call API operation to retrieve additional detection information. API operation is free of charge.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11829,7 +11920,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the relevant information for file upload.</para>
+        /// <para>Retrieves the information required for file upload.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11881,7 +11972,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the relevant information for file upload.</para>
+        /// <para>Retrieves the information required for file upload.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11933,7 +12024,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the relevant information for file upload.</para>
+        /// <para>Retrieves the information required for file upload.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11951,7 +12042,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the relevant information for file upload.</para>
+        /// <para>Retrieves the information required for file upload.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12357,7 +12448,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of AI applications.</para>
+        /// <para>Queries a paginated list of AI applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12411,7 +12502,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of AI applications.</para>
+        /// <para>Queries a paginated list of AI applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12465,7 +12556,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of AI applications.</para>
+        /// <para>Queries a paginated list of AI applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12483,7 +12574,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of AI applications.</para>
+        /// <para>Queries a paginated list of AI applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12501,7 +12592,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of risk events for an AI application.</para>
+        /// <para>Retrieves a list of risk events for AI applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12555,7 +12646,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of risk events for an AI application.</para>
+        /// <para>Retrieves a list of risk events for AI applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12609,7 +12700,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of risk events for an AI application.</para>
+        /// <para>Retrieves a list of risk events for AI applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12627,7 +12718,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of risk events for an AI application.</para>
+        /// <para>Retrieves a list of risk events for AI applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12645,7 +12736,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of risk events for AI applications.</para>
+        /// <para>Queries a paginated list of risk events for AI applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12707,7 +12798,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of risk events for AI applications.</para>
+        /// <para>Queries a paginated list of risk events for AI applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12769,7 +12860,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of risk events for AI applications.</para>
+        /// <para>Queries a paginated list of risk events for AI applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12787,7 +12878,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of risk events for AI applications.</para>
+        /// <para>Queries a paginated list of risk events for AI applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12805,7 +12896,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert list of an application with pagination.</para>
+        /// <para>Retrieves a paginated list of application alerts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12863,7 +12954,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert list of an application with pagination.</para>
+        /// <para>Retrieves a paginated list of application alerts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12921,7 +13012,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert list of an application with pagination.</para>
+        /// <para>Retrieves a paginated list of application alerts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12939,7 +13030,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert list of an application with pagination.</para>
+        /// <para>Retrieves a paginated list of application alerts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13213,7 +13304,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of app configurations.</para>
+        /// <para>Retrieves a list of application configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13263,7 +13354,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of app configurations.</para>
+        /// <para>Retrieves a list of application configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13313,7 +13404,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of app configurations.</para>
+        /// <para>Retrieves a list of application configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13331,7 +13422,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of app configurations.</para>
+        /// <para>Retrieves a list of application configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13469,7 +13560,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of image libraries.</para>
+        /// <para>Queries a list of image libraries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13517,7 +13608,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of image libraries.</para>
+        /// <para>Queries a list of image libraries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13565,7 +13656,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of image libraries.</para>
+        /// <para>Queries a list of image libraries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13583,7 +13674,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of image libraries.</para>
+        /// <para>Queries a list of image libraries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14113,7 +14204,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries OSS scan results.</para>
+        /// <para>Queries the OSS scan results.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14193,7 +14284,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries OSS scan results.</para>
+        /// <para>Queries the OSS scan results.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14273,7 +14364,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries OSS scan results.</para>
+        /// <para>Queries the OSS scan results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14291,7 +14382,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries OSS scan results.</para>
+        /// <para>Queries the OSS scan results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14309,7 +14400,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the service list.</para>
+        /// <para>Retrieves a list of services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14369,7 +14460,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the service list.</para>
+        /// <para>Retrieves a list of services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14429,7 +14520,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the service list.</para>
+        /// <para>Retrieves a list of services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14447,7 +14538,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the service list.</para>
+        /// <para>Retrieves a list of services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14465,7 +14556,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls a large language model in streaming mode using the SSE interface.</para>
+        /// <para>Invokes a large language model in streaming mode by using the Server-Sent Events (SSE) API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14523,7 +14614,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls a large language model in streaming mode using the SSE interface.</para>
+        /// <para>Invokes a large language model in streaming mode by using the Server-Sent Events (SSE) API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14581,7 +14672,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls a large language model in streaming mode using the SSE interface.</para>
+        /// <para>Invokes a large language model in streaming mode by using the Server-Sent Events (SSE) API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14599,7 +14690,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls a large language model in streaming mode using the SSE interface.</para>
+        /// <para>Invokes a large language model in streaming mode by using the Server-Sent Events (SSE) API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14622,7 +14713,7 @@ namespace AlibabaCloud.SDK.Green20220926
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is free of charge. Set the query interval to 30 seconds (that is, query results 30 seconds after you submit an asynchronous detection task). The maximum interval cannot exceed 24 hours. Otherwise, the results are automatically deleted.</para>
+        /// <para>This API operation is free of charge. Set the query interval to 30 seconds (that is, query the results 30 seconds after submitting the asynchronous detection task). The maximum interval must not exceed 24 hours. Otherwise, the results are automatically deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14689,7 +14780,7 @@ namespace AlibabaCloud.SDK.Green20220926
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is free of charge. Set the query interval to 30 seconds (that is, query results 30 seconds after you submit an asynchronous detection task). The maximum interval cannot exceed 24 hours. Otherwise, the results are automatically deleted.</para>
+        /// <para>This API operation is free of charge. Set the query interval to 30 seconds (that is, query the results 30 seconds after submitting the asynchronous detection task). The maximum interval must not exceed 24 hours. Otherwise, the results are automatically deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14756,7 +14847,7 @@ namespace AlibabaCloud.SDK.Green20220926
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is free of charge. Set the query interval to 30 seconds (that is, query results 30 seconds after you submit an asynchronous detection task). The maximum interval cannot exceed 24 hours. Otherwise, the results are automatically deleted.</para>
+        /// <para>This API operation is free of charge. Set the query interval to 30 seconds (that is, query the results 30 seconds after submitting the asynchronous detection task). The maximum interval must not exceed 24 hours. Otherwise, the results are automatically deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14779,7 +14870,7 @@ namespace AlibabaCloud.SDK.Green20220926
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is free of charge. Set the query interval to 30 seconds (that is, query results 30 seconds after you submit an asynchronous detection task). The maximum interval cannot exceed 24 hours. Otherwise, the results are automatically deleted.</para>
+        /// <para>This API operation is free of charge. Set the query interval to 30 seconds (that is, query the results 30 seconds after submitting the asynchronous detection task). The maximum interval must not exceed 24 hours. Otherwise, the results are automatically deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14797,7 +14888,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a proxy response library.</para>
+        /// <para>Updates a fallback library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14847,7 +14938,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a proxy response library.</para>
+        /// <para>Updates a fallback library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14897,7 +14988,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a proxy response library.</para>
+        /// <para>Updates a fallback library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14915,7 +15006,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a proxy response library.</para>
+        /// <para>Updates a fallback library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14933,7 +15024,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the agent configuration.</para>
+        /// <para>Modifies the configuration of an agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14999,7 +15090,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the agent configuration.</para>
+        /// <para>Modifies the configuration of an agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15065,7 +15156,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the agent configuration.</para>
+        /// <para>Modifies the configuration of an agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15083,7 +15174,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the agent configuration.</para>
+        /// <para>Modifies the configuration of an agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15101,7 +15192,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies app information.</para>
+        /// <para>Modifies the information of an app.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15159,7 +15250,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies app information.</para>
+        /// <para>Modifies the information of an app.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15217,7 +15308,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies app information.</para>
+        /// <para>Modifies the information of an app.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15235,7 +15326,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies app information.</para>
+        /// <para>Modifies the information of an app.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15253,7 +15344,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a message notification.</para>
+        /// <para>Updates message notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15317,7 +15408,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a message notification.</para>
+        /// <para>Updates message notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15381,7 +15472,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a message notification.</para>
+        /// <para>Updates message notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15399,7 +15490,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a message notification.</para>
+        /// <para>Updates message notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15417,8 +15508,13 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves an attribute configuration.</para>
+        /// <para>Saves the feature configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Prerequisites: Before calling ModifyFeatureConfig, call GetFeatureConfig to query valid Type/Field combinations and their corresponding Config structures. Submit modifications based on the query results to avoid configuration update failures caused by invalid combinations.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyFeatureConfigRequest
@@ -15485,8 +15581,13 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves an attribute configuration.</para>
+        /// <para>Saves the feature configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Prerequisites: Before calling ModifyFeatureConfig, call GetFeatureConfig to query valid Type/Field combinations and their corresponding Config structures. Submit modifications based on the query results to avoid configuration update failures caused by invalid combinations.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyFeatureConfigRequest
@@ -15553,8 +15654,13 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves an attribute configuration.</para>
+        /// <para>Saves the feature configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Prerequisites: Before calling ModifyFeatureConfig, call GetFeatureConfig to query valid Type/Field combinations and their corresponding Config structures. Submit modifications based on the query results to avoid configuration update failures caused by invalid combinations.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyFeatureConfigRequest
@@ -15571,8 +15677,13 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves an attribute configuration.</para>
+        /// <para>Saves the feature configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Prerequisites: Before calling ModifyFeatureConfig, call GetFeatureConfig to query valid Type/Field combinations and their corresponding Config structures. Submit modifications based on the query results to avoid configuration update failures caused by invalid combinations.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyFeatureConfigRequest
@@ -15589,7 +15700,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a service.</para>
+        /// <para>Modifies a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15649,7 +15760,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a service.</para>
+        /// <para>Modifies a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15709,7 +15820,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a service.</para>
+        /// <para>Modifies a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15727,7 +15838,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a service.</para>
+        /// <para>Modifies a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15745,7 +15856,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of OSS detection results.</para>
+        /// <para>Retrieves a list of OSS scan results.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15825,7 +15936,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of OSS detection results.</para>
+        /// <para>Retrieves a list of OSS scan results.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15905,7 +16016,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of OSS detection results.</para>
+        /// <para>Retrieves a list of OSS scan results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15923,7 +16034,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of OSS detection results.</para>
+        /// <para>Retrieves a list of OSS scan results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15941,7 +16052,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves and publishes app configurations.</para>
+        /// <para>Saves and publishes the application configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16007,7 +16118,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves and publishes app configurations.</para>
+        /// <para>Saves and publishes the application configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16073,7 +16184,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves and publishes app configurations.</para>
+        /// <para>Saves and publishes the application configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16091,7 +16202,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves and publishes app configurations.</para>
+        /// <para>Saves and publishes the application configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16109,7 +16220,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries proxy answer samples by paging.</para>
+        /// <para>Performs a paged query for fallback answer samples with paging.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -16177,7 +16288,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries proxy answer samples by paging.</para>
+        /// <para>Performs a paged query for fallback answer samples with paging.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -16245,7 +16356,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries proxy answer samples by paging.</para>
+        /// <para>Performs a paged query for fallback answer samples with paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16263,7 +16374,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries proxy answer samples by paging.</para>
+        /// <para>Performs a paged query for fallback answer samples with paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16281,7 +16392,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a single callback configuration.</para>
+        /// <para>Queries a callback configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16333,7 +16444,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a single callback configuration.</para>
+        /// <para>Queries a callback configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16385,7 +16496,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a single callback configuration.</para>
+        /// <para>Queries a callback configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16403,7 +16514,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a single callback configuration.</para>
+        /// <para>Queries a callback configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16421,7 +16532,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of message notifications by paging.</para>
+        /// <para>Queries the message notification list with paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16473,7 +16584,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of message notifications by paging.</para>
+        /// <para>Queries the message notification list with paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16525,7 +16636,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of message notifications by paging.</para>
+        /// <para>Queries the message notification list with paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16543,7 +16654,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of message notifications by paging.</para>
+        /// <para>Queries the message notification list with paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16561,7 +16672,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries label configurations.</para>
+        /// <para>Queries the tag configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16619,7 +16730,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries label configurations.</para>
+        /// <para>Queries the tag configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16677,7 +16788,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries label configurations.</para>
+        /// <para>Queries the tag configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16695,7 +16806,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries label configurations.</para>
+        /// <para>Queries the tag configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16713,7 +16824,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reverts an app to a historical version.</para>
+        /// <para>Restores an app to a historical version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16767,7 +16878,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reverts an app to a historical version.</para>
+        /// <para>Restores an app to a historical version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16821,7 +16932,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reverts an app to a historical version.</para>
+        /// <para>Restores an app to a historical version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16839,7 +16950,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reverts an app to a historical version.</para>
+        /// <para>Restores an app to a historical version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16993,7 +17104,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the scan status of AI applications.</para>
+        /// <para>Updates the scan status of an AI application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17043,7 +17154,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the scan status of AI applications.</para>
+        /// <para>Updates the scan status of an AI application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17093,7 +17204,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the scan status of AI applications.</para>
+        /// <para>Updates the scan status of an AI application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17111,7 +17222,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the scan status of AI applications.</para>
+        /// <para>Updates the scan status of an AI application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17273,7 +17384,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the status of risk events.</para>
+        /// <para>Updates the handling status of risk events for a specified application.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17341,7 +17452,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the status of risk events.</para>
+        /// <para>Updates the handling status of risk events for a specified application.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17409,7 +17520,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the status of risk events.</para>
+        /// <para>Updates the handling status of risk events for a specified application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17427,7 +17538,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the status of risk events.</para>
+        /// <para>Updates the handling status of risk events for a specified application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17445,7 +17556,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits an image library.</para>
+        /// <para>Modifies an image library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17505,7 +17616,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits an image library.</para>
+        /// <para>Modifies an image library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17565,7 +17676,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits an image library.</para>
+        /// <para>Modifies an image library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17583,7 +17694,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits an image library.</para>
+        /// <para>Modifies an image library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17601,7 +17712,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits the inspection-exempt configuration of an image library.</para>
+        /// <para>Modifies the inspection exemption configuration for an image library.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17659,7 +17770,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits the inspection-exempt configuration of an image library.</para>
+        /// <para>Modifies the inspection exemption configuration for an image library.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17717,7 +17828,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits the inspection-exempt configuration of an image library.</para>
+        /// <para>Modifies the inspection exemption configuration for an image library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17735,7 +17846,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits the inspection-exempt configuration of an image library.</para>
+        /// <para>Modifies the inspection exemption configuration for an image library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17901,7 +18012,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates Meta log information.</para>
+        /// <para>Updates the metadata log information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17955,7 +18066,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates Meta log information.</para>
+        /// <para>Updates the metadata log information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18009,7 +18120,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates Meta log information.</para>
+        /// <para>Updates the metadata log information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18027,7 +18138,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates Meta log information.</para>
+        /// <para>Updates the metadata log information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18045,7 +18156,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates OSS detection result feedback in batches.</para>
+        /// <para>Updates feedback for OSS detection results in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18095,7 +18206,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates OSS detection result feedback in batches.</para>
+        /// <para>Updates feedback for OSS detection results in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18145,7 +18256,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates OSS detection result feedback in batches.</para>
+        /// <para>Updates feedback for OSS detection results in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18163,7 +18274,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates OSS detection result feedback in batches.</para>
+        /// <para>Updates feedback for OSS detection results in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">

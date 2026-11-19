@@ -31,6 +31,9 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
         /// <summary>
         /// <para>The distribution of risk events by level.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;high&quot;:2,&quot;medium&quot;:5,&quot;low&quot;:8,&quot;none&quot;:85}</para>
         /// </summary>
         [NameInMap("RiskEventLevelDistribution")]
         [Validation(Required=false)]

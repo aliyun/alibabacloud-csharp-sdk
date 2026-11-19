@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The service code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>VideoModeration</para>
+        /// <para>videoDetection</para>
         /// </summary>
         [NameInMap("ServiceCode")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string TaskStatus { get; set; }
 
         /// <summary>
-        /// <para>The URL to be detected.</para>
+        /// <para>The detection URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://xxxxxxxxxx.com/data/data.png">https://xxxxxxxxxx.com/data/data.png</a></para>

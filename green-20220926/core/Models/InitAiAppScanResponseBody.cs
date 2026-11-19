@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class InitAiAppScanResponseBody : TeaModel {
         /// <summary>
-        /// <para>The access entry information.</para>
+        /// <para>The access endpoint information.</para>
         /// </summary>
         [NameInMap("AuthInfo")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string PrivateDomain { get; set; }
 
             /// <summary>
-            /// <para>The project space.</para>
+            /// <para>The project workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>proj-xxx</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ReadyStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID for troubleshooting.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request. You can use it to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>

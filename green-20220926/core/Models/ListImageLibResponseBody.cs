@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             /// <para>The remarks.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>备注</para>
+            /// <para>Remarks</para>
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The review-free configuration.</para>
+            /// <para>The moderation exemption configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-06-03 15:20:14</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The number of images in the library.</para>
+            /// <para>The number of images in the image library.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public long? ImageNum { get; set; }
 
             /// <summary>
-            /// <para>The image library ID.</para>
+            /// <para>The ID of the image library.</para>
             /// 
             /// <b>Example:</b>
             /// <para>custom_xxxx</para>
@@ -97,10 +97,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string LibId { get; set; }
 
             /// <summary>
-            /// <para>The image library name.</para>
+            /// <para>The name of the image library.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试</para>
+            /// <para>Test</para>
             /// </summary>
             [NameInMap("LibName")]
             [Validation(Required=false)]
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of libraries supported.</para>
+        /// <para>The maximum number of supported image libraries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? MaxLibCount { get; set; }
 
         /// <summary>
-        /// <para>The further description of the error code.</para>
+        /// <para>The detailed description of the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>The backend-assigned ID that uniquely identifies a request. This ID can be used for troubleshooting.</para>
+        /// <para>The request ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>

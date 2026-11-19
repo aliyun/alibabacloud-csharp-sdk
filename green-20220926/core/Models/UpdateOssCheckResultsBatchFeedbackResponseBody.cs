@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? RepeatCount { get; set; }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request. This ID can be used to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? SuccessCount { get; set; }
 
         /// <summary>
-        /// <para>The prompt information.</para>
+        /// <para>The prompt message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxxx</para>
+        /// <para>Feedback failed for some records: duplicate feedback was provided or the corresponding detection records do not exist. Verify the task and resources, and then resubmit</para>
         /// </summary>
         [NameInMap("Tips")]
         [Validation(Required=false)]

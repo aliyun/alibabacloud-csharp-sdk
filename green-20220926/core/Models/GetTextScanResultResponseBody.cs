@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public List<GetTextScanResultResponseBodyDataItems> Items { get; set; }
             public class GetTextScanResultResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The AccountId passed in by the customer.</para>
+                /// <para>The AccountId parameter passed by the customer.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>accountIdtest123</para>
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string AccountId { get; set; }
 
                 /// <summary>
-                /// <para>The Bailian request ID.</para>
+                /// <para>The Model Studio request ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxx</para>
+                /// <para>e1063275-a239-4f0c-8b7b-9c6f0d5e4a21</para>
                 /// </summary>
                 [NameInMap("BailianRequestId")]
                 [Validation(Required=false)]
@@ -67,17 +67,17 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 /// <para>The content.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试内容</para>
+                /// <para>Test content</para>
                 /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]
                 public string Content { get; set; }
 
                 /// <summary>
-                /// <para>The DataId passed in by the customer.</para>
+                /// <para>The DataId parameter passed by the customer.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxxx</para>
+                /// <para>data_id_001</para>
                 /// </summary>
                 [NameInMap("DataId")]
                 [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string ExtFeedback { get; set; }
 
                 /// <summary>
-                /// <para>The reserved parameter.</para>
+                /// <para>The extra parameters.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string RequestId { get; set; }
 
                 /// <summary>
-                /// <para>The request time. Format: YYYY-MM-DD HH:mm:ss.</para>
+                /// <para>The request time. The format is YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-07-11 14:21:36</para>
@@ -144,14 +144,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string RequestTime { get; set; }
 
                 /// <summary>
-                /// <para>The detection results.</para>
+                /// <para>The moderation result.</para>
                 /// </summary>
                 [NameInMap("Result")]
                 [Validation(Required=false)]
                 public List<GetTextScanResultResponseBodyDataItemsResult> Result { get; set; }
                 public class GetTextScanResultResponseBodyDataItemsResult : TeaModel {
                     /// <summary>
-                    /// <para>The confidence score, ranging from 0 to 100 and rounded to two decimal places.</para>
+                    /// <para>The confidence score. Valid values: 0 to 100. The score is accurate to two decimal places.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>25.0</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                     /// <para>The description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>疑似色情内容</para>
+                    /// <para>Suspected pornographic content</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -183,16 +183,12 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 }
 
                 /// <summary>
-                /// <para>The risk level, which is returned based on the configured high and low risk score thresholds. Valid values:</para>
+                /// <para>The risk level. The value is returned based on the configured high and low risk scores. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>high: high risk.</para>
-                /// </description></item>
-                /// <item><description><para>medium: medium risk.</para>
-                /// </description></item>
-                /// <item><description><para>low: low risk.</para>
-                /// </description></item>
-                /// <item><description><para>none: no risk detected.</para>
-                /// </description></item>
+                /// <item><description>high: High risk.</description></item>
+                /// <item><description>medium: Medium risk.</description></item>
+                /// <item><description>low: Low risk.</description></item>
+                /// <item><description>none: No risk detected.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -233,7 +229,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string ServiceCode { get; set; }
 
                 /// <summary>
-                /// <para>The suggested action.</para>
+                /// <para>The suggestion.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>review</para>
@@ -277,7 +273,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>The description of the error code.</para>
+        /// <para>The detailed description of the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -297,7 +293,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

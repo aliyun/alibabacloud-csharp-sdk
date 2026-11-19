@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The remarks of the image library.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>备注</para>
+        /// <para>Remarks</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The review-free configuration.</para>
+        /// <para>The moderation-free configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The name of the image library.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试图库</para>
+        /// <para>Test image library</para>
         /// </summary>
         [NameInMap("LibName")]
         [Validation(Required=false)]

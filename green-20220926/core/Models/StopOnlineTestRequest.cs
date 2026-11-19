@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class StopOnlineTestRequest : TeaModel {
         /// <summary>
-        /// <para>The resource type.</para>
+        /// <para>The resource type. Note: This parameter is required. If it is not provided, the service returns a 400 error with the message \&quot;resourceType may not be empty\&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>image</para>

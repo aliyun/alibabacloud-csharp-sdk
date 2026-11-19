@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetUploadContentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>text</para>

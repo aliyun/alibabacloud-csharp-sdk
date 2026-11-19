@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetJobNameListRequest : TeaModel {
         /// <summary>
-        /// <para>The end time. Format: <c>YYYY-MM-DD HH:mm:ss</c>.</para>
+        /// <para>The end time in the <c>YYYY-MM-DD HH:mm:ss</c> format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-08-24 10:01:55</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The query condition.</para>
+        /// <para>The query conditions. This parameter is required and must be a valid JSON query condition, such as {&quot;TaskId&quot;:&quot;P_11TL5T&quot;}. Before calling this operation, call GetStockOssCheckTasksList to obtain an available TaskId. If this parameter is not provided, the API returns a 400 error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;TaskId&quot;:&quot;P_11TL5T&quot;}</para>
@@ -41,13 +41,16 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
         /// <summary>
         /// <para>The sort field.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;StartTime&quot;:&quot;desc&quot;}</para>
         /// </summary>
         [NameInMap("Sort")]
         [Validation(Required=false)]
         public Dictionary<string, string> Sort { get; set; }
 
         /// <summary>
-        /// <para>The start time. Format: <c>YYYY-MM-DD HH:mm:ss</c>.</para>
+        /// <para>The start time in the <c>YYYY-MM-DD HH:mm:ss</c> format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-08-11 09:00:19</para>

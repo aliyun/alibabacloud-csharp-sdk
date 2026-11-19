@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The query condition.</para>
+        /// <para>The query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

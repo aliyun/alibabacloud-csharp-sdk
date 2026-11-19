@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. Format: yyyy-MM-dd HH:mm:ss.</para>
+        /// <para>The end time of the query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-03-11 10:00:00</para>
@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
         /// <summary>
         /// <para>The query content.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;RequestId&quot;:&quot;D83A46FF-9EA6-1477-A0C3-C8FD57C6F572&quot;}</para>
         /// </summary>
         [NameInMap("Query")]
         [Validation(Required=false)]
@@ -68,13 +71,16 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
         /// <summary>
         /// <para>The sort field.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;RequestTime&quot;:&quot;desc&quot;}</para>
         /// </summary>
         [NameInMap("Sort")]
         [Validation(Required=false)]
         public Dictionary<string, string> Sort { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Format: yyyy-MM-dd HH:mm:ss.</para>
+        /// <para>The start time of the query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-03-10 10:00:00</para>

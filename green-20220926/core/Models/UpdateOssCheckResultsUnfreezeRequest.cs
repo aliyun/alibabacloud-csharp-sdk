@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class UpdateOssCheckResultsUnfreezeRequest : TeaModel {
         /// <summary>
-        /// <para>The end time. Format: YYYY-MM-DD HH:mm:ss.</para>
+        /// <para>The end time. The format is YYYY-MM-DD HH:mm:ss. Note: This parameter is actually required. If it is not provided, the service returns a 400 error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-10-21 16:08:38</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The frozen items.</para>
+        /// <para>The freeze items. Note: This parameter is actually required. If it is not provided, the service returns a 400 error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The start time. Format: YYYY-MM-DD HH:mm:ss.</para>
+        /// <para>The start time. The format is YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-08-21 16:08:38</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string StartDate { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The task ID. Note: This parameter is actually required. If it is not provided, the service returns a 400 error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>P_B6YRVD</para>

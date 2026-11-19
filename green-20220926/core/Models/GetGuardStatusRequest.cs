@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The commodity code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>lvwang_guardrail_public_cn</para>
         /// </summary>
         [NameInMap("CommodityCode")]
         [Validation(Required=false)]

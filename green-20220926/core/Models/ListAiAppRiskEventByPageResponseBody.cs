@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// <para>The channel source.</para>
+            /// <para>The source channel.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bailian</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Channel { get; set; }
 
             /// <summary>
-            /// <para>The time when the event was resolved. Format: YYYY-MM-DD HH:mm:ss.</para>
+            /// <para>The time when the event processing was completed. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-10 11:42:31</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The event code that identifies the type or category of the event.</para>
+            /// <para>The code of the event, which identifies the type or category of the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>de_aamexg3015</para>
@@ -77,27 +77,27 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string EventCode { get; set; }
 
             /// <summary>
-            /// <para>The detailed description of the risk event.</para>
+            /// <para>The description of the event, which details the content of the risk event.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sensitive information detected in model output</para>
             /// </summary>
             [NameInMap("EventDesc")]
             [Validation(Required=false)]
             public string EventDesc { get; set; }
 
             /// <summary>
-            /// <para>The detailed description of the risk event in English.</para>
+            /// <para>The English description of the event, which details the content of the risk event.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sensitive information detected in model output</para>
             /// </summary>
             [NameInMap("EventDescEn")]
             [Validation(Required=false)]
             public string EventDescEn { get; set; }
 
             /// <summary>
-            /// <para>The event ID that uniquely identifies a risk event.</para>
+            /// <para>The ID of the event, which uniquely identifies a risk event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>e-a7gvnv3vid536dfxj</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string EventId { get; set; }
 
             /// <summary>
-            /// <para>The name that briefly describes the risk event.</para>
+            /// <para>The name of the event, which provides a brief description of the risk event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALL</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string EventName { get; set; }
 
             /// <summary>
-            /// <para>The time when the event was handled. Format: YYYY-MM-DD HH:mm:ss.</para>
+            /// <para>The time when the event was processed. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-10 11:42:31</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string HandleTime { get; set; }
 
             /// <summary>
-            /// <para>The label used to tag or categorize the event.</para>
+            /// <para>The label used to mark or classify the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>label-03</para>
@@ -137,17 +137,17 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Label { get; set; }
 
             /// <summary>
-            /// <para>The detailed description of the label.</para>
+            /// <para>The description of the label, which provides detailed information about the label.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxxx</para>
+            /// <para>Sensitive data label</para>
             /// </summary>
             [NameInMap("LabelDesc")]
             [Validation(Required=false)]
             public string LabelDesc { get; set; }
 
             /// <summary>
-            /// <para>The risk level that indicates the severity of the event, such as high, medium, or low.</para>
+            /// <para>The risk level, which indicates the severity of the event, such as high, medium, or low.</para>
             /// 
             /// <b>Example:</b>
             /// <para>normal</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>The time when the event occurred. Format: YYYY-MM-DD HH:mm:ss.</para>
+            /// <para>The time when the event started. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-12-21 15:30:19</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The event status that indicates the current processing state, such as pending or resolved.</para>
+            /// <para>The status of the event, which indicates the processing status of the current event, such as pending or processed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>resolved</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The event type that indicates the category of the risk event, such as security or performance.</para>
+            /// <para>The event type, which indicates the category of the risk event, such as security or performance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page. An empty value indicates that no more pages exist.</para>
+        /// <para>The token for the next page. An empty value indicates that there are no more pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1a320d468c75e987f297484532c16e34d0ab6e7e43f8b73d</para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

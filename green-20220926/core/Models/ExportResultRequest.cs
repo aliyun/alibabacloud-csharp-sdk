@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class ExportResultRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the paginated query results. Default value: 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end time. Format: YYYY-MM-DD HH:mm:ss.</para>
+        /// <para>The end time. The format is YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-08-24 10:01:55</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in the paginated query results.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The query condition.</para>
+        /// <para>The query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;TaskId&quot;:&quot;P_11TL5T&quot;}</para>
@@ -61,13 +61,16 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
         /// <summary>
         /// <para>The sort field.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;GmtCreate&quot;:&quot;desc&quot;}</para>
         /// </summary>
         [NameInMap("Sort")]
         [Validation(Required=false)]
         public Dictionary<string, string> Sort { get; set; }
 
         /// <summary>
-        /// <para>The operation source.</para>
+        /// <para>The source of the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>disposal</para>
@@ -77,7 +80,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The start time. Format: YYYY-MM-DD HH:mm:ss.</para>
+        /// <para>The start time. The format is YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-08-11 09:00:19</para>

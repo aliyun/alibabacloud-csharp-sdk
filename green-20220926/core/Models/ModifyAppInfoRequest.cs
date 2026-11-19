@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class ModifyAppInfoRequest : TeaModel {
         /// <summary>
-        /// <para>App ID。</para>
+        /// <para>The app ID. Note: This parameter is actually required. If it is not provided, the service returns a 400 error (appId may not be empty).</para>
         /// 
         /// <b>Example:</b>
         /// <para>txt_check_agent_01</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The sort number.</para>
+        /// <para>The custom order number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? CustomOrderNum { get; set; }
 
         /// <summary>
-        /// <para>The app name.</para>
+        /// <para>The name of the app.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Custom text moderation</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource type.</para>
+        /// <para>The resource type. Note: This parameter is actually required. If it is not provided, the service returns a 400 error (resourceType may not be empty).</para>
         /// 
         /// <b>Example:</b>
         /// <para>agent_text</para>

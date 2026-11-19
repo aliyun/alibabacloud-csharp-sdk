@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-06-03 15:20:14</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>回调通知</para>
+            /// <para>Callback notification</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Scope { get; set; }
 
             /// <summary>
-            /// <para>Seed。</para>
+            /// <para>The seed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cbupVnpBjkgjFxfINMHKkrHS-1zZPUm</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Seed { get; set; }
 
             /// <summary>
-            /// <para>UID。</para>
+            /// <para>The UID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16537*****831937</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>

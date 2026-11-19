@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The configuration.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;2833014490001\&quot;:0}</para>
+        /// <para>{&quot;2833014490001&quot;:0}</para>
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The selected service identifier.</para>
+        /// <para>The identifier of the selected service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>response_security_check</para>

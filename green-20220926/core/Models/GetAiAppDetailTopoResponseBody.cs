@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public List<GetAiAppDetailTopoResponseBodyData> Data { get; set; }
         public class GetAiAppDetailTopoResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The node category.</para>
+            /// <para>The node category. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>LLM</para>
             /// </description></item>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string NodeCategory { get; set; }
 
             /// <summary>
-            /// <para>The node ID.</para>
+            /// <para>The ID of the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idxxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>The node name.</para>
+            /// <para>The name of the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>namexxx</para>
@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             /// <summary>
             /// <para>The node type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>APP</b>: end-to-end agent.</description></item>
-            /// <item><description><b>MODEL</b>: large language model.</description></item>
-            /// <item><description><b>TOOL</b>: tool.</description></item>
+            /// <item><description><b>APP</b>: The full agent trace.</description></item>
+            /// <item><description><b>MODEL</b>: The large language model.</description></item>
+            /// <item><description><b>TOOL</b>: The tool.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string NodeType { get; set; }
 
             /// <summary>
-            /// <para>The request count.</para>
+            /// <para>The number of requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>The alert count.</para>
+            /// <para>The number of alerts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>

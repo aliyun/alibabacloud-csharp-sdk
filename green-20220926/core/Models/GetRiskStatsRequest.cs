@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetRiskStatsRequest : TeaModel {
         /// <summary>
-        /// <para>The classification.</para>
+        /// <para>The channel identifier.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>qoder</para>
+        /// </summary>
+        [NameInMap("Channel")]
+        [Validation(Required=false)]
+        public string Channel { get; set; }
+
+        /// <summary>
+        /// <para>The category.</para>
         /// 
         /// <b>Example:</b>
         /// <para>guard-scene</para>

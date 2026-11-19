@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetScanNumResponseBody : TeaModel {
         /// <summary>
-        /// <para>The upper limit on the number.</para>
+        /// <para>The upper limit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

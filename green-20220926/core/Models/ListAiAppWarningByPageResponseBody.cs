@@ -20,14 +20,17 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The extension field.</para>
+        /// <para>The extended fields.</para>
         /// </summary>
         [NameInMap("Ext")]
         [Validation(Required=false)]
         public ListAiAppWarningByPageResponseBodyExt Ext { get; set; }
         public class ListAiAppWarningByPageResponseBodyExt : TeaModel {
             /// <summary>
-            /// <para>The option.</para>
+            /// <para>The options.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;warningLevel&quot;:&quot;high&quot;}</para>
             /// </summary>
             [NameInMap("Option")]
             [Validation(Required=false)]
@@ -36,14 +39,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>The data on the current page.</para>
+        /// <para>The entries on the current page.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<ListAiAppWarningByPageResponseBodyItems> Items { get; set; }
         public class ListAiAppWarningByPageResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>appId。</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>id-xxx</para>
@@ -53,7 +56,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The application name.</para>
+            /// <para>The name of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name-xxx</para>
@@ -80,7 +83,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>The label name.</para>
+                /// <para>The name of the label.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>porn</para>
@@ -90,7 +93,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string Label { get; set; }
 
                 /// <summary>
-                /// <para>The label description.</para>
+                /// <para>The description of the label.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>desc-xxx</para>
@@ -122,7 +125,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ServiceCode { get; set; }
 
             /// <summary>
-            /// <para>The trace ID used to correlate and trace alert events.</para>
+            /// <para>The trace ID used to associate and trace alert events.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0bc3b4b0********516098843e19bc</para>
@@ -142,7 +145,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public long? WarningCount { get; set; }
 
             /// <summary>
-            /// <para>The alert time in the format of YYYY-MM-DD HH:mm:ss.</para>
+            /// <para>The time when the alert was triggered. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-01 00:00:00</para>
@@ -164,7 +167,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID of the request. You can use the request ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -174,7 +177,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

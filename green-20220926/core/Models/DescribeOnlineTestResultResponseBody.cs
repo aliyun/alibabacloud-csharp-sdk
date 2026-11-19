@@ -126,13 +126,16 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
             /// <summary>
             /// <para>The risk level summary.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;high&quot;:1,&quot;medium&quot;:2,&quot;low&quot;:20}</para>
             /// </summary>
             [NameInMap("RiskLevelSummary")]
             [Validation(Required=false)]
             public Dictionary<string, long?> RiskLevelSummary { get; set; }
 
             /// <summary>
-            /// <para>The number of shards.</para>
+            /// <para>The number of slices.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

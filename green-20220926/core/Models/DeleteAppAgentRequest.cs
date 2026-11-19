@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class DeleteAppAgentRequest : TeaModel {
         /// <summary>
-        /// <para>Agent ID。</para>
+        /// <para>The agent ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ag.abcxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>App ID。</para>
+        /// <para>The app ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>txt_check_agent_01</para>

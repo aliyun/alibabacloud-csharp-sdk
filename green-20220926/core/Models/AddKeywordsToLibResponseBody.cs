@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 /// <para>The internationalization key.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxx</para>
+                /// <para>common.success</para>
                 /// </summary>
                 [NameInMap("I18nKey")]
                 [Validation(Required=false)]
                 public string I18nKey { get; set; }
 
                 /// <summary>
-                /// <para>The list of keywords with illegal length (too long or too short).</para>
+                /// <para>The list of keywords that are too long or too short.</para>
                 /// </summary>
                 [NameInMap("IllegalLengthKeywords")]
                 [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public List<string> InvalidKeywords { get; set; }
 
                 /// <summary>
-                /// <para>The keyword library ID.</para>
+                /// <para>The ID of the keyword library.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>customxx_xxxx</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             }
 
             /// <summary>
-            /// <para>The keyword library ID.</para>
+            /// <para>The ID of the keyword library.</para>
             /// 
             /// <b>Example:</b>
             /// <para>customxx_xxxx</para>

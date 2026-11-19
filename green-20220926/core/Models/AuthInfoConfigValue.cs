@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string PrivateDomain { get; set; }
 
         /// <summary>
-        /// <para>The project space.</para>
+        /// <para>The project workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>proj-xxx</para>

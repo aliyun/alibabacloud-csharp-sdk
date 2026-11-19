@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public List<GetOssCheckFreezeResultResponseBodyItems> Items { get; set; }
         public class GetOssCheckFreezeResultResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The OSS bucket.</para>
+            /// <para>The bucket.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tmp</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The audio or video scan type.</para>
+            /// <para>The audio and video detection type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>audio</para>
@@ -67,11 +67,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string CopyFrom { get; set; }
 
             /// <summary>
-            /// <para>The feedback. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>misreport: False positive (not a violation).</description></item>
-            /// <item><description>missOut: Missed violation.</description></item>
-            /// </list>
+            /// <para>The feedback.</para>
             /// 
             /// <b>Example:</b>
             /// <para>misreport</para>
@@ -81,7 +77,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Feedback { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the object is frozen.</para>
+            /// <para>Indicates whether the item is frozen.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -91,7 +87,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public bool? Freeze { get; set; }
 
             /// <summary>
-            /// <para>The freeze status.</para>
+            /// <para>The freezing status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FREEZED</para>
@@ -101,7 +97,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string FreezeStatus { get; set; }
 
             /// <summary>
-            /// <para>The freeze type.</para>
+            /// <para>The freezing type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ACL</para>
@@ -121,7 +117,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ImageUrl { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the task is copied.</para>
+            /// <para>Indicates whether the item is copied.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -161,7 +157,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 /// <para>The label description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>涉政</para>
+                /// <para>Political content</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -194,11 +190,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public List<string> Labels2 { get; set; }
 
             /// <summary>
-            /// <para>The manual action status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>FREEZE: Frozen.</description></item>
-            /// <item><description>UNFREEZE: Unfrozen.</description></item>
-            /// </list>
+            /// <para>The manual disposal status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FREEZE</para>
@@ -208,7 +200,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ManualFreezeAction { get; set; }
 
             /// <summary>
-            /// <para>The action time. Format: YYYY-MM-DD HH:mm:ss.</para>
+            /// <para>The disposal time. Specify the time in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-08-09 12:00:00</para>
@@ -218,10 +210,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ManualOperateTime { get; set; }
 
             /// <summary>
-            /// <para>The operator who performed the action.</para>
+            /// <para>The operator.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx</para>
+            /// <para>John Doe</para>
             /// </summary>
             [NameInMap("ManualOperator")]
             [Validation(Required=false)]
@@ -298,7 +290,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string RiskLevel2 { get; set; }
 
             /// <summary>
-            /// <para>The scan result details.</para>
+            /// <para>The result details.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -321,21 +313,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             /// <para>The service name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>服务名称</para>
+            /// <para>Service name</para>
             /// </summary>
             [NameInMap("ServiceName")]
             [Validation(Required=false)]
             public string ServiceName { get; set; }
 
             /// <summary>
-            /// <para>The system action status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>FREEZING: Freezing in progress.</description></item>
-            /// <item><description>FREEZED: Frozen.</description></item>
-            /// <item><description>UNFREEZED: Unfrozen.</description></item>
-            /// <item><description>NONE: No action taken.</description></item>
-            /// <item><description>UNFREEZING: Unfreezing in progress.</description></item>
-            /// </list>
+            /// <para>The system disposal status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FREEZED</para>
@@ -355,7 +340,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The task URL.</para>
+            /// <para>The URL of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.aliyuncs.com/test.mp3">http://www.aliyuncs.com/test.mp3</a></para>
@@ -377,7 +362,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID of the request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F0A594BB-FA7A-580F-AE9E-A4188E092823</para>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Keywords { get; set; }
 
         /// <summary>
-        /// <para>The keyword file name.</para>
+        /// <para>The name of the keyword file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>upload/1e5353c0-0d91-40ba-9d41-ae7abd3fe561.txt</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string KeywordsObject { get; set; }
 
         /// <summary>
-        /// <para>The keyword library ID.</para>
+        /// <para>The ID of the keyword library.</para>
         /// 
         /// <b>Example:</b>
         /// <para>customxx_xxxx</para>
@@ -61,9 +61,9 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The library code.</para>
+        /// <para>The code of the keyword library.</para>
         /// <list type="bullet">
-        /// <item><description>desensitize: masking library</description></item>
+        /// <item><description>desensitize: desensitization keyword library</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

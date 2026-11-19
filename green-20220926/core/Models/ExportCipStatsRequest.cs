@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public bool? ByMonth { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. Format: yyyy-MM-dd HH:mm:ss.</para>
+        /// <para>The end time of the query, in the yyyy-MM-dd HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-04-16 09:00:00</para>
@@ -51,14 +51,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The task label to export.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xx</para>
+        /// <para>politics</para>
         /// </summary>
         [NameInMap("Label")]
         [Validation(Required=false)]
         public string Label { get; set; }
 
         /// <summary>
-        /// <para>The query condition.</para>
+        /// <para>The query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;Classify&quot;:&quot;guard-scene&quot;}</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ServiceCode { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Format: yyyy-MM-dd HH:mm:ss.</para>
+        /// <para>The start time of the query, in the yyyy-MM-dd HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-04-15 09:00:00</para>
@@ -120,11 +120,11 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <summary>
         /// <para>The type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cip</b>: Content Moderation invoke volume statistics.</description></item>
+        /// <item><description><b>cip</b>: Content Moderation usage statistics.</description></item>
         /// <item><description><b>risk_level</b>: Content Moderation security risk level statistics.</description></item>
-        /// <item><description><b>content_moderation</b>: AI Safety Guardrail content compliance risk level and tag statistics.</description></item>
-        /// <item><description><b>sensitive_data</b>: AI Safety Guardrail sensitive data risk level and tag statistics.</description></item>
-        /// <item><description><b>prompt_attack</b>: AI Safety Guardrail prompt risk level and tag statistics.</description></item>
+        /// <item><description><b>content_moderation</b>: AI security guardrail content compliance risk level and tag statistics.</description></item>
+        /// <item><description><b>sensitive_data</b>: AI security guardrail sensitive data risk level and tag statistics.</description></item>
+        /// <item><description><b>prompt_attack</b>: AI security guardrail prompt risk level and tag statistics.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

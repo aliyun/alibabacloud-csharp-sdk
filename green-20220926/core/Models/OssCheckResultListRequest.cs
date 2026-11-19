@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end time. Format: YYYY-MM-DD HH:mm:ss.</para>
+        /// <para>The end time. The format is YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-10-21 16:08:38</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The number of completed items.</para>
+        /// <para>The number of completed tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>55</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The query condition.</para>
+        /// <para>The query conditions. Note: This parameter is required. You must specify a valid JSON string that contains at least one key-value pair, such as {&quot;Labels&quot;:&quot;porn&quot;}. The scan results cannot be filtered properly without query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -71,13 +71,16 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
         /// <summary>
         /// <para>The sort field.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;GmtCreate&quot;:&quot;desc&quot;}</para>
         /// </summary>
         [NameInMap("Sort")]
         [Validation(Required=false)]
         public Dictionary<string, string> Sort { get; set; }
 
         /// <summary>
-        /// <para>The start time. Format: YYYY-MM-DD HH:mm:ss.</para>
+        /// <para>The start time. The format is YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-08-21 16:08:38</para>

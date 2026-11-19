@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetOssCheckTaskInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The parent task ID.</para>
+        /// <para>The ID of the parent task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>P_AAA**</para>

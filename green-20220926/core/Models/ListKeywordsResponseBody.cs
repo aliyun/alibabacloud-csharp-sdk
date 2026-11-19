@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The keyword library ID.</para>
+                /// <para>The ID of the keyword library.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>custom_xxxx</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string KeywordLibId { get; set; }
 
                 /// <summary>
-                /// <para>The keyword data ID.</para>
+                /// <para>The ID of the keyword data.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4205334</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                     /// <para>The properties.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>xxx</para>
+                    /// <para>politics</para>
                     /// </summary>
                     [NameInMap("Attribute")]
                     [Validation(Required=false)]
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 /// <para>The keyword.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试词</para>
+                /// <para>Test word</para>
                 /// </summary>
                 [NameInMap("Word")]
                 [Validation(Required=false)]
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>The description of the error code.</para>
+        /// <para>The detailed description of the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>The success flag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

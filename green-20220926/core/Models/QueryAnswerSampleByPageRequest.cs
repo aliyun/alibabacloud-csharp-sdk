@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The answer.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>答案</para>
+        /// <para>Answer</para>
         /// </summary>
         [NameInMap("Answer")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the proxy answer library.</para>
+        /// <para>The ID of the fallback answer library. Note: This parameter is required. If you do not specify this parameter, the API returns a 400 error with the message &quot;libId may not be empty&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>custom_xxxx</para>
@@ -61,6 +61,9 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
         /// <summary>
         /// <para>The sort field.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;field&quot;:&quot;GmtCreate&quot;,&quot;order&quot;:&quot;desc&quot;}</para>
         /// </summary>
         [NameInMap("Sort")]
         [Validation(Required=false)]

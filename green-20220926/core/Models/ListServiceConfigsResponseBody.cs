@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public List<ListServiceConfigsResponseBodyData> Data { get; set; }
         public class ListServiceConfigsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The classification.</para>
+            /// <para>The category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>guard-scene</para>
@@ -71,14 +71,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public List<string> ImageService { get; set; }
 
                 /// <summary>
-                /// <para>The ignored keyword library.</para>
+                /// <para>The ignored keyword libraries.</para>
                 /// </summary>
                 [NameInMap("KeywordFilterLibs")]
                 [Validation(Required=false)]
                 public List<string> KeywordFilterLibs { get; set; }
 
                 /// <summary>
-                /// <para>The hit keyword library.</para>
+                /// <para>The matched keyword libraries.</para>
                 /// </summary>
                 [NameInMap("KeywordHitLibs")]
                 [Validation(Required=false)]
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                     }
 
                     /// <summary>
-                    /// <para>The ordinal number.</para>
+                    /// <para>The sequence number.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 }
 
                 /// <summary>
-                /// <para>The hit similar text library.</para>
+                /// <para>The matched similar text libraries.</para>
                 /// </summary>
                 [NameInMap("SimilarTextHitLibs")]
                 [Validation(Required=false)]
@@ -177,10 +177,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             /// <summary>
             /// <para>The scene type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>recommended_scene: recommended scenario.</para>
-            /// </description></item>
-            /// <item><description><para>all_scene: all scenarios.</para>
-            /// </description></item>
+            /// <item><description>recommended_scene: recommended scene</description></item>
+            /// <item><description>all_scene: all scenes</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -204,7 +202,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             /// <para>The service description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>服务描述</para>
+            /// <para>Service description</para>
             /// </summary>
             [NameInMap("ServiceDesc")]
             [Validation(Required=false)]
@@ -214,7 +212,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             /// <para>The service name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>服务名称</para>
+            /// <para>Service name</para>
             /// </summary>
             [NameInMap("ServiceName")]
             [Validation(Required=false)]
@@ -231,7 +229,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ServiceType { get; set; }
 
             /// <summary>
-            /// <para>UID。</para>
+            /// <para>The user UID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1674*****0071291</para>
@@ -253,7 +251,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>The description of the error code.</para>
+        /// <para>The detailed description of the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -263,7 +261,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>The request ID assigned by the backend, which uniquely identifies the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -273,7 +271,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

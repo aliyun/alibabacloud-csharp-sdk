@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The QPS at the point in time.</para>
+            /// <para>The QPS at each time point.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]

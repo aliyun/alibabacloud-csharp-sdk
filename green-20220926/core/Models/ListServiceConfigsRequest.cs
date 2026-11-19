@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class ListServiceConfigsRequest : TeaModel {
         /// <summary>
-        /// <para>The classification.</para>
+        /// <para>The category.</para>
         /// 
         /// <b>Example:</b>
         /// <para>guard-scene</para>
@@ -22,12 +22,9 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <summary>
         /// <para>The protection type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>modelProtection: model protection.</para>
-        /// </description></item>
-        /// <item><description><para>agentRealtimeProtection: agent real-time protection.</para>
-        /// </description></item>
-        /// <item><description><para>agentBehaviorAudit: agent behavior audit.</para>
-        /// </description></item>
+        /// <item><description>modelProtection: model protection</description></item>
+        /// <item><description>agentRealtimeProtection: real-time agent protection</description></item>
+        /// <item><description>agentBehaviorAudit: agent behavior audit</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +45,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource type.</para>
+        /// <para>The resource type. This parameter is required. If you do not specify this parameter, the service returns a 400 error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>text</para>

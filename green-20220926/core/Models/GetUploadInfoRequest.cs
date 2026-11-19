@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The upload name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test.</para>
+        /// <para>Test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

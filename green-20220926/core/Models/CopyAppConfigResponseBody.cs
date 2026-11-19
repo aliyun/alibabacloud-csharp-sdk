@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify the request. This ID can be used for troubleshooting.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetOssCheckStatResponseBody : TeaModel {
         /// <summary>
-        /// <para>The bar chart data.</para>
+        /// <para>The bar chart.</para>
         /// </summary>
         [NameInMap("BarChart")]
         [Validation(Required=false)]

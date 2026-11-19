@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class QueryLabelConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The classification. Separate multiple values with commas.</para>
+        /// <para>The category. Separate multiple values with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>guard-scene</para>

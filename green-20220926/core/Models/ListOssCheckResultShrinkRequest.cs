@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The number of completed tasks.</para>
+        /// <para>The number of completed items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The search condition.</para>
+        /// <para>The search conditions. This parameter is required. You must pass a JSON string that contains a valid TaskId, such as {&quot;TaskId&quot;:&quot;P_11TL5T&quot;}. You can obtain the TaskId by calling the GetStockOssCheckTasksList operation. If this parameter is not provided, the API returns a 400 error with the error code oss.check.task.not.exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;TaskId&quot;:&quot;P_11TL5T&quot;}</para>
@@ -71,6 +71,9 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
         /// <summary>
         /// <para>The sort field.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;StartTime&quot;:&quot;desc&quot;}</para>
         /// </summary>
         [NameInMap("Sort")]
         [Validation(Required=false)]

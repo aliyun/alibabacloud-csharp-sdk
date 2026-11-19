@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public AddAppConfigResponseBodyData Data { get; set; }
         public class AddAppConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>App ID。</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>txt_check_pro_agent_01</para>

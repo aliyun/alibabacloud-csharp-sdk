@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetAiAppDetailTopoShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID that identifies a specific AI application.</para>
+        /// <para>The ID of the AI application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

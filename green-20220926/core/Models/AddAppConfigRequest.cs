@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>appId</para>
+        /// <para>The system application ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>txt_check_pro_agent_01</para>
         /// </summary>
         [NameInMap("SysAppId")]
         [Validation(Required=false)]

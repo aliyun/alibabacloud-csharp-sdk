@@ -65,7 +65,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             }
 
             /// <summary>
-            /// <para>The total count categorized statistics.</para>
+            /// <para>The total count statistics by category.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;porn&quot;:{&quot;Total&quot;:&quot;100&quot;,&quot;Share&quot;:&quot;12.50%&quot;}}</para>
             /// </summary>
             [NameInMap("TotalStat")]
             [Validation(Required=false)]

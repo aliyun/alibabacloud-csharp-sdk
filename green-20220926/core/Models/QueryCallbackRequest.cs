@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class QueryCallbackRequest : TeaModel {
         /// <summary>
-        /// <para>Queries data under the OSS detection task.</para>
+        /// <para>Specifies whether to query data for OSS check tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

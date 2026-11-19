@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetScanNumRequest : TeaModel {
         /// <summary>
-        /// <para>The storage space.</para>
+        /// <para>The buckets. Note: This parameter is required. If it is not provided, the service returns a 400 error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tmpsample</para>

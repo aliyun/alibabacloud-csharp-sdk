@@ -10,20 +10,20 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class AddImages2LibRequest : TeaModel {
         /// <summary>
-        /// <para>The image URL.</para>
+        /// <para>The URL of the image. This value must be the Key field returned by GetUploadInfo, in the format of image/upload/<hash>. Passing an external image URL returns a 400 image.url.invalid error.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>upload/ea7a98f9-f8bd-4905-a79b-963c9da419c5.jpg</para>
+        /// <para>image/upload/755c31906fc0b0b5007ecead9660c2ab</para>
         /// </summary>
         [NameInMap("ImgUrl")]
         [Validation(Required=false)]
         public string ImgUrl { get; set; }
 
         /// <summary>
-        /// <para>The image library ID.</para>
+        /// <para>The ID of the image library.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>custom_imglib_001</para>
         /// </summary>
         [NameInMap("LibId")]
         [Validation(Required=false)]

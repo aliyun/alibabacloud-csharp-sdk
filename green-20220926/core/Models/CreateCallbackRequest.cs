@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string CryptType { get; set; }
 
         /// <summary>
-        /// <para>The name of the scheme.</para>
+        /// <para>The scheme name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>消息通知1</para>
+        /// <para>MessageNotification1</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The moderation result.</para>
+        /// <para>The moderation results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>all</para>

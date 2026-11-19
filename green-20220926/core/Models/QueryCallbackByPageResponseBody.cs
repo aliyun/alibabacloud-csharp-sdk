@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The data on the current page.</para>
+        /// <para>The entries on the current page.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>callback_name</para>
+            /// <para>callback_xxx</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Scope { get; set; }
 
             /// <summary>
-            /// <para>Seed。</para>
+            /// <para>The seed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cb6gYS*******x46Mq</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Seed { get; set; }
 
             /// <summary>
-            /// <para>UID。</para>
+            /// <para>The UID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12*****00</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -139,10 +139,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

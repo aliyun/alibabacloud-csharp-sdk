@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class ModifyAppAgentRequest : TeaModel {
         /// <summary>
-        /// <para>Agent ID。</para>
+        /// <para>The agent ID, which is the unique identifier of the agent and is returned in the response of the AddAppAgent operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ag.abcxxx</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>The agent name.</para>
+        /// <para>The name of the agent.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Agent1</para>
+        /// <para>Agent 1</para>
         /// </summary>
         [NameInMap("AgentName")]
         [Validation(Required=false)]
         public string AgentName { get; set; }
 
         /// <summary>
-        /// <para>App ID。</para>
+        /// <para>The app ID, which is the unique identifier of the application and is returned in the response of the AddAppConfig operation. Note: This parameter is actually required. If it is not provided, the API returns a 400 error with the message &quot;appId may not be empty&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>txt_check_agent_01</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The configuration details.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;model&quot;:&quot;default&quot;,&quot;scene&quot;:&quot;0swLgojx&quot;,&quot;labelConfig&quot;:[{&quot;label&quot;:&quot;Abuse&quot;,&quot;labelDefinition&quot;:&quot;Text content in the reviewed text that contains abusive language&quot;}]}</para>
+        /// <para>{&quot;model&quot;:&quot;default&quot;,&quot;scene&quot;:&quot;0swLgojx&quot;,&quot;labelConfig&quot;:[{&quot;label&quot;:&quot;Abuse&quot;,&quot;labelDefinition&quot;:&quot;The moderated text contains abusive content.&quot;}]}</para>
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource type.</para>
+        /// <para>The resource type. Note: This parameter is actually required. If it is not provided, the API returns a 400 error with the message &quot;resourceType may not be empty&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>agent_text</para>

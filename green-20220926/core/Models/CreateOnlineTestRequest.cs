@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The data ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxxxxx</para>
+        /// <para>4f27b8cc7c4544cb90b41882a5b36326</para>
         /// </summary>
         [NameInMap("DataId")]
         [Validation(Required=false)]
         public string DataId { get; set; }
 
         /// <summary>
-        /// <para>The resource type.</para>
+        /// <para>The resource type. Valid values: voice (audio), image (image), file (document), text (text), and video (video).</para>
         /// 
         /// <b>Example:</b>
         /// <para>video</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The service code.</para>
+        /// <para>The service code. Specify a valid service code. The valid service code for online video testing is videoDetection. VideoModeration is not a valid value and returns a 406 online.test.failed error.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>VideoModeration</para>
+        /// <para>videoDetection</para>
         /// </summary>
         [NameInMap("ServiceCode")]
         [Validation(Required=false)]
         public string ServiceCode { get; set; }
 
         /// <summary>
-        /// <para>The URL to be detected.</para>
+        /// <para>The detection URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://xxxxxxxxxx.com/data/data.png">https://xxxxxxxxxx.com/data/data.png</a></para>

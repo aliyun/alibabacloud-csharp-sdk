@@ -14,14 +14,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>lvwang_guardrail_public_cn</para>
         /// </summary>
         [NameInMap("CommodityCode")]
         [Validation(Required=false)]
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the application resides.</para>
+        /// <para>The ID of the region to which the application belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>

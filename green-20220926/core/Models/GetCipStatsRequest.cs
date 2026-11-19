@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetCipStatsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether monthly indexing is supported. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: Supported.</description></item>
-        /// <item><description>false: Not supported.</description></item>
-        /// </list>
+        /// <para>Specifies whether monthly indexing is supported. Valid values: true: Supported. false: Not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -24,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public bool? ByMonth { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. Format: yyyy-MM-dd HH:mm:ss.</para>
+        /// <para>The end time of the query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-03-11 10:00:00</para>
@@ -37,14 +33,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The label.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xx</para>
+        /// <para>porn</para>
         /// </summary>
         [NameInMap("Label")]
         [Validation(Required=false)]
         public string Label { get; set; }
 
         /// <summary>
-        /// <para>The query condition.</para>
+        /// <para>The query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -84,7 +80,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ServiceCode { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Format: yyyy-MM-dd HH:mm:ss.</para>
+        /// <para>The start time of the query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-03-10 10:00:00</para>
@@ -104,7 +100,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string SubUid { get; set; }
 
         /// <summary>
-        /// <para>The type. Valid values: <b>cip</b>: Content Moderation invoke volume statistics. <b>risk_level</b>: Content Moderation risk level statistics. <b>content_moderation</b>: AI security guardrail content compliance risk level and tag statistics. <b>sensitive_data</b>: AI security guardrail sensitive data risk level and tag statistics. <b>prompt_attack</b>: AI security guardrail prompt risk level and tag statistics.</para>
+        /// <para>The type. Valid values: <b>cip</b>: Content Moderation invoke usage statistics. <b>risk_level</b>: Content Moderation security risk level statistics. <b>content_moderation</b>: content compliance risk level and label statistics for AI security guardrails. <b>sensitive_data</b>: sensitive data risk level and label statistics for AI security guardrails. <b>prompt_attack</b>: prompt risk level and label statistics for AI security guardrails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>risk_level</para>

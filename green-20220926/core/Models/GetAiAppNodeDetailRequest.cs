@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. Format: yyyy-MM-dd HH:mm:ss.</para>
+        /// <para>The end time of the query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-01-02 16:08:38</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>node-nanexxx</para>
         /// </summary>
         [NameInMap("NodeName")]
         [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Format: yyyy-MM-dd HH:mm:ss.</para>
+        /// <para>The start time of the query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-01-01 16:08:38</para>

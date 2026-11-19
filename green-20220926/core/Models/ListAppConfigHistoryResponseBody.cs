@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public List<ListAppConfigHistoryResponseBodyHistory> History { get; set; }
         public class ListAppConfigHistoryResponseBodyHistory : TeaModel {
             /// <summary>
-            /// <para>App ID。</para>
+            /// <para>The app ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>txt_check_agent_01</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para><b>[Deprecated]</b> The categorization.</para>
+            /// <para><b>[Deprecated]</b> The category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>guard-scene</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public List<ListAppConfigHistoryResponseBodyPublish> Publish { get; set; }
         public class ListAppConfigHistoryResponseBodyPublish : TeaModel {
             /// <summary>
-            /// <para>App ID。</para>
+            /// <para>The app ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>txt_check_agent_01</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para><b>[Deprecated]</b> The categorization.</para>
+            /// <para><b>[Deprecated]</b> The category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>guard-scene</para>
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify a request. It can be used to troubleshoot issues.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>

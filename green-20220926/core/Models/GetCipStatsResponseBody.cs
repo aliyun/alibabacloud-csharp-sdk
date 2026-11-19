@@ -210,14 +210,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 }
 
                 /// <summary>
-                /// <para>The X value of the coordinate point.</para>
+                /// <para>The X-axis value of the coordinate point.</para>
                 /// </summary>
                 [NameInMap("X")]
                 [Validation(Required=false)]
                 public List<string> X { get; set; }
 
                 /// <summary>
-                /// <para>The Y value of the coordinate point.</para>
+                /// <para>The Y-axis value of the coordinate point.</para>
                 /// </summary>
                 [NameInMap("Y")]
                 [Validation(Required=false)]
@@ -245,7 +245,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             }
 
             /// <summary>
-            /// <para>The total count by category.</para>
+            /// <para>The categorized statistics of the total count.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;porn&quot;:{&quot;totalCount&quot;:10},&quot;ad&quot;:{&quot;totalCount&quot;:2}}</para>
             /// </summary>
             [NameInMap("TotalStat")]
             [Validation(Required=false)]
@@ -259,14 +262,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public List<string> Uids { get; set; }
 
             /// <summary>
-            /// <para>The X value of the coordinate point.</para>
+            /// <para>The X-axis value of the coordinate point.</para>
             /// </summary>
             [NameInMap("X")]
             [Validation(Required=false)]
             public List<string> X { get; set; }
 
             /// <summary>
-            /// <para>The Y value of the coordinate point.</para>
+            /// <para>The Y-axis value of the coordinate point.</para>
             /// </summary>
             [NameInMap("Y")]
             [Validation(Required=false)]
@@ -330,7 +333,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The further description of the error code.</para>
+        /// <para>The detailed description of the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -340,7 +343,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -350,7 +353,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>The success flag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetGuardStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of log scan statistics.</para>
+        /// <para>The list of statistics related to log scanning.</para>
         /// </summary>
         [NameInMap("LogScanStatus")]
         [Validation(Required=false)]
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             /// <para>The status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>enabled: Running.</description></item>
-            /// <item><description>disabled: Not accessed.</description></item>
+            /// <item><description>disabled: Not connected.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>The list of protection status statistics.</para>
+        /// <para>The list of statistics related to protection status.</para>
         /// </summary>
         [NameInMap("ProtectionStatus")]
         [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             /// <para>The status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>enabled: Running.</description></item>
-            /// <item><description>disabled: Not accessed.</description></item>
+            /// <item><description>disabled: Not connected.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>The list of real-time protection statistics.</para>
+        /// <para>The list of statistics related to real-time protection.</para>
         /// </summary>
         [NameInMap("RealTimeStatus")]
         [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             /// <para>The status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>enabled: Running.</description></item>
-            /// <item><description>disabled: Not accessed.</description></item>
+            /// <item><description>disabled: Not connected.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify a request. This ID can be used to troubleshoot issues.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>

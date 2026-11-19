@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class MarkOssV2ResultRequest : TeaModel {
         /// <summary>
-        /// <para>The end time. The time format is YYYY-MM-DD HH:mm:ss.</para>
+        /// <para>The end time. Specify the time in the YYYY-MM-DD HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-10-21 16:08:38 +0800</para>
@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <summary>
         /// <para>The freeze type. This parameter is required when Operation is set to freeze. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ACL: Modify file permissions.</description></item>
-        /// <item><description>COPY: Move the file directory. Description of the destination directory: 1. The file directory selected when the task was created takes priority. 2. If automatic freezing was not enabled during creation, or ACL freezing was configured, the directory selected during freezing in the console is used. 3. The default directory is alicip_riskfile_backup/.</description></item>
+        /// <item><description>ACL: Modifies file permissions.</description></item>
+        /// <item><description>COPY: Moves the file directory. Destination directory rules: 1. The file directory selected during task creation takes precedence. 2. If automatic freezing is not enabled during creation, or if ACL freezing is configured, the directory selected in the console during freezing is used. 3. The default directory is alicip_riskfile_backup/.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,12 +34,12 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string FreezeType { get; set; }
 
         /// <summary>
-        /// <para>The processing operation. Valid values:</para>
+        /// <para>The handling operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>freeze: Freeze.</description></item>
-        /// <item><description>unfreeze: Unfreeze.</description></item>
-        /// <item><description>misreport: Non-violation false positive.</description></item>
-        /// <item><description>missOut: Violation missed.</description></item>
+        /// <item><description>freeze: Freezes the object.</description></item>
+        /// <item><description>unfreeze: Unfreezes the object.</description></item>
+        /// <item><description>misreport: Reports a false positive.</description></item>
+        /// <item><description>missOut: Reports a missed violation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Operation { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestIds { get; set; }
 
         /// <summary>
-        /// <para>The start time. The time format is YYYY-MM-DD HH:mm:ss.</para>
+        /// <para>The start time. Specify the time in the YYYY-MM-DD HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-08-21 16:08:38 +0800</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The task name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Image stock task 20240914100517757</para>
+        /// <para>Image inventory task 20240914100517757</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]

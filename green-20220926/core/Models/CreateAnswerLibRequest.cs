@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class CreateAnswerLibRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the proxy answer library.</para>
+        /// <para>The name of the fallback answer library.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试代答库</para>
+        /// <para>Test fallback answer library</para>
         /// </summary>
         [NameInMap("LibName")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the storage space.</para>
+        /// <para>The name of the bucket.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss-cip-shanghai</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string SampleBucket { get; set; }
 
         /// <summary>
-        /// <para>The file name of the proxy answer sample to be added.</para>
+        /// <para>The name of the file that contains the fallback answer samples to be added.</para>
         /// 
         /// <b>Example:</b>
         /// <para>data/xxx.xlsx</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The samples to be added.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>代答答案1\n代答答案2</para>
+        /// <para>Fallback answer 1\nFallback answer 2</para>
         /// </summary>
         [NameInMap("Samples")]
         [Validation(Required=false)]

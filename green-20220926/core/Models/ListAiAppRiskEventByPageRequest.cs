@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The query parameter.</para>
+        /// <para>The query parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;Lang\&quot;:\&quot;zh\&quot;}</para>

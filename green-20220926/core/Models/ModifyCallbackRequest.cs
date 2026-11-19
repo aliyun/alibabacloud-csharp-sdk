@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>回调通知</para>
+        /// <para>Callback notification</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

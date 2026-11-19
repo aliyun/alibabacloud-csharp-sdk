@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class ModifyAnswerLibRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the proxy response library.</para>
+        /// <para>The ID of the fallback library.</para>
         /// 
         /// <b>Example:</b>
         /// <para>custom_xxxx</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The name of the library.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试库</para>
+        /// <para>Test library</para>
         /// </summary>
         [NameInMap("LibName")]
         [Validation(Required=false)]

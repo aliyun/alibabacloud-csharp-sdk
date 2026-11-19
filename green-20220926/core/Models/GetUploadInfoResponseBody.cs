@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The expiration time. Unit: seconds.</para>
+        /// <para>The expiration time in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>900</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The key used for uploading the file.</para>
+        /// <para>The key used for the uploaded file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>image/upload/xxx</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The further description of the error code.</para>
+        /// <para>The detailed description of the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -90,27 +90,27 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>Used by the frontend for image upload.</para>
+        /// <para>The name used for frontend image uploads.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test.</para>
+        /// <para>Test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The policy for uploading files to OSS.</para>
+        /// <para>The policy for uploading files to Object Storage Service (OSS).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxx</para>
+        /// <para>eyJleHBpcmF0aW9uIjoiMjAyNC0xMi0zMVQyMzo1OTo1OVoifQ==</para>
         /// </summary>
         [NameInMap("Policy")]
         [Validation(Required=false)]
         public string Policy { get; set; }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify a request. This ID can be used for troubleshooting.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request, which can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -120,10 +120,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>STS token</para>
+        /// <para>The temporary Security Token Service (STS) token.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>CAISrgJ1q6Ft5B2yfSjIr5fYeeqHjqrv8KqThGzTrTcwOMT3nbHGtjz2IHhPenvFBusd/i2AGFBS75gc6bAadVQQRoTlYJrRbpNsqbMQ</para>
         /// </summary>
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]

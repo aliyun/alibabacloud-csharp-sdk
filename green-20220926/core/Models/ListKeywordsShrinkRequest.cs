@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The keyword library ID.</para>
+        /// <para>The ID of the keyword library.</para>
         /// 
         /// <b>Example:</b>
         /// <para>custom_xxxx</para>
@@ -53,16 +53,16 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The sort field.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;GmtCreate\&quot;:\&quot;desc\&quot;}</para>
+        /// <para>{&quot;GmtCreate&quot;:&quot;desc&quot;}</para>
         /// </summary>
         [NameInMap("Sort")]
         [Validation(Required=false)]
         public string SortShrink { get; set; }
 
         /// <summary>
-        /// <para>The keyword library code. Valid values:</para>
+        /// <para>The library code.</para>
         /// <list type="bullet">
-        /// <item><description>desensitize: desensitization keyword library.</description></item>
+        /// <item><description>desensitize desensitization library</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The keyword.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试词</para>
+        /// <para>Test word</para>
         /// </summary>
         [NameInMap("Word")]
         [Validation(Required=false)]

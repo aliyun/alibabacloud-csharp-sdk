@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetAiAppDetailStatResponseBody : TeaModel {
         /// <summary>
-        /// <para>The application ID.</para>
+        /// <para>The ID of the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>id-xxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The average duration of model calls.</para>
+        /// <para>The average duration of model invocations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2.55</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public float? AvgModelDuration { get; set; }
 
         /// <summary>
-        /// <para>The day-over-day change ratio of average model call duration.</para>
+        /// <para>The day-over-day comparison of the average duration of model invocations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.05</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public float? AvgModelDurationDau { get; set; }
 
         /// <summary>
-        /// <para>The number of model calls.</para>
+        /// <para>The number of model invocations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public long? ModelCount { get; set; }
 
         /// <summary>
-        /// <para>The day-over-day change ratio of model call count.</para>
+        /// <para>The day-over-day comparison of the number of model invocations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.15</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public float? ModelCountDau { get; set; }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The request ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public long? TokenCount { get; set; }
 
         /// <summary>
-        /// <para>The day-over-day change ratio of token consumption count.</para>
+        /// <para>The day-over-day comparison of the number of tokens consumed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-0.15</para>

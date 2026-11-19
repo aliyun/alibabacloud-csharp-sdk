@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetAiAppOverviewRequest : TeaModel {
         /// <summary>
-        /// <para>The end time. Format: YYYY-MM-DD HH:mm:ss.</para>
+        /// <para>The end time. Specify the time in the YYYY-MM-DD HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-07-09 10:30:00</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The start time. Format: YYYY-MM-DD HH:mm:ss.</para>
+        /// <para>The start time. Specify the time in the YYYY-MM-DD HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-08-21 16:08:38</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class CopyAppConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the source App to copy from.</para>
+        /// <para>The ID of the source app.</para>
         /// 
         /// <b>Example:</b>
         /// <para>txt_check_agent_01</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The name of the new App to be created from the copy.</para>
+        /// <para>The name of the new app.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CustomTextModeration</para>
+        /// <para>Custom text moderation</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

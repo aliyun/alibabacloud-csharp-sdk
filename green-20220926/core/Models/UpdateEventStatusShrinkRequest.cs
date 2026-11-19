@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class UpdateEventStatusShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID that identifies the application to which the operation belongs.</para>
+        /// <para>The ID of the application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string OperationCode { get; set; }
 
         /// <summary>
-        /// <para>The operation parameters that contain additional parameter information required to execute the operation.</para>
+        /// <para>The operation parameters that contain additional information required to perform the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -59,10 +59,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The operation source that identifies the source system or module that triggered this status update request.</para>
+        /// <para>The source of the operation, which identifies the system or module that triggered this status update request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xx</para>
+        /// <para>disposal</para>
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]

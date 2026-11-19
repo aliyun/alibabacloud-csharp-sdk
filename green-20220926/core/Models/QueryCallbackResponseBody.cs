@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string CryptType { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether an OSS detection task exists.</para>
+        /// <para>Indicates whether an OSS check task exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -63,14 +63,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>回调通知</para>
+        /// <para>Callback notification</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify a request. This ID can be used to troubleshoot issues.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>Seed。</para>
+        /// <para>The seed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cb2MysbJTAAIf6gB3u4vpIEU-1ySnnf</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Seed { get; set; }
 
         /// <summary>
-        /// <para>UID。</para>
+        /// <para>The UID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>19964*****086772</para>

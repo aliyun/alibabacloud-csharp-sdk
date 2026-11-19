@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public AddKeywordLibResponseBodyData Data { get; set; }
         public class AddKeywordLibResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The result.</para>
+            /// <para>The results.</para>
             /// </summary>
             [NameInMap("KeywordsResult")]
             [Validation(Required=false)]
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 /// <para>The internationalization key.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxx</para>
+                /// <para>keyword.lib.create.success</para>
                 /// </summary>
                 [NameInMap("I18nKey")]
                 [Validation(Required=false)]
                 public string I18nKey { get; set; }
 
                 /// <summary>
-                /// <para>The list of keywords with invalid length.</para>
+                /// <para>The list of keywords that are too long or too short.</para>
                 /// </summary>
                 [NameInMap("IllegalLengthKeywords")]
                 [Validation(Required=false)]
@@ -105,10 +105,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public int? SuccessCount { get; set; }
 
                 /// <summary>
-                /// <para>The prompt information.</para>
+                /// <para>The prompt message.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxx</para>
+                /// <para>Keywords added. Duplicate and invalid keywords are automatically skipped</para>
                 /// </summary>
                 [NameInMap("Tips")]
                 [Validation(Required=false)]
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>The description of the error code.</para>
+        /// <para>The detailed description of the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>The success identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

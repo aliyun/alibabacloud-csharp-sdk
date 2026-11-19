@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetAiAppDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>appId。</para>
+        /// <para>The AI application ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>id-xxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The application name.</para>
+        /// <para>The name of the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app-xxx</para>
@@ -30,6 +30,16 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>The channel information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>qoder</para>
+        /// </summary>
+        [NameInMap("Channel")]
+        [Validation(Required=false)]
+        public string Channel { get; set; }
+
+        /// <summary>
         /// <para>The chart.</para>
         /// </summary>
         [NameInMap("Chart")]
@@ -37,14 +47,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public GetAiAppDetailResponseBodyChart Chart { get; set; }
         public class GetAiAppDetailResponseBodyChart : TeaModel {
             /// <summary>
-            /// <para>The X value of the coordinate point.</para>
+            /// <para>The X-coordinate of the data point.</para>
             /// </summary>
             [NameInMap("X")]
             [Validation(Required=false)]
             public List<string> X { get; set; }
 
             /// <summary>
-            /// <para>The Y value of the coordinate point.</para>
+            /// <para>The Y-coordinate of the data point.</para>
             /// </summary>
             [NameInMap("Y")]
             [Validation(Required=false)]
@@ -72,6 +82,55 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
+        /// <para>The properties.</para>
+        /// </summary>
+        [NameInMap("Property")]
+        [Validation(Required=false)]
+        public GetAiAppDetailResponseBodyProperty Property { get; set; }
+        public class GetAiAppDetailResponseBodyProperty : TeaModel {
+            /// <summary>
+            /// <para>The email address.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="mailto:xx@qoder.alibaba-inc.com">xx@qoder.alibaba-inc.com</a></para>
+            /// </summary>
+            [NameInMap("Email")]
+            [Validation(Required=false)]
+            public string Email { get; set; }
+
+            /// <summary>
+            /// <para>The hostname.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xx.local</para>
+            /// </summary>
+            [NameInMap("Hostname")]
+            [Validation(Required=false)]
+            public string Hostname { get; set; }
+
+            /// <summary>
+            /// <para>The IP address.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.xx.xx</para>
+            /// </summary>
+            [NameInMap("Ip")]
+            [Validation(Required=false)]
+            public string Ip { get; set; }
+
+            /// <summary>
+            /// <para>The MAC address.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xx.xx.xx</para>
+            /// </summary>
+            [NameInMap("Mac")]
+            [Validation(Required=false)]
+            public string Mac { get; set; }
+
+        }
+
+        /// <summary>
         /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
@@ -89,7 +148,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public List<GetAiAppDetailResponseBodyRiskEvents> RiskEvents { get; set; }
         public class GetAiAppDetailResponseBodyRiskEvents : TeaModel {
             /// <summary>
-            /// <para>The risk event code.</para>
+            /// <para>The code of the risk event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hit_xxx</para>
@@ -116,10 +175,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public List<string> EventIds { get; set; }
 
             /// <summary>
-            /// <para>The risk event name.</para>
+            /// <para>The name of the risk event.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Insults and personal attacks</para>
             /// </summary>
             [NameInMap("EventName")]
             [Validation(Required=false)]
@@ -128,8 +187,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             /// <summary>
             /// <para>The event status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>unhandled</b>: Not handled.</description></item>
-            /// <item><description><b>resolved</b>: Handled.</description></item>
+            /// <item><description><b>unhandled</b>: unhandled</description></item>
+            /// <item><description><b>resolved</b>: resolved</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -160,7 +219,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 /// <para>The label description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxx</para>
+                /// <para>The output content contains insulting or discriminatory remarks</para>
                 /// </summary>
                 [NameInMap("LabelDesc")]
                 [Validation(Required=false)]
@@ -181,6 +240,45 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
+        /// <para>The risk statistics information.</para>
+        /// </summary>
+        [NameInMap("RiskStats")]
+        [Validation(Required=false)]
+        public List<GetAiAppDetailResponseBodyRiskStats> RiskStats { get; set; }
+        public class GetAiAppDetailResponseBodyRiskStats : TeaModel {
+            /// <summary>
+            /// <para>The number of requests.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("RequestCount")]
+            [Validation(Required=false)]
+            public long? RequestCount { get; set; }
+
+            /// <summary>
+            /// <para>The number of risks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("RiskCount")]
+            [Validation(Required=false)]
+            public long? RiskCount { get; set; }
+
+            /// <summary>
+            /// <para>The risk statistics type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>content_moderation</para>
+            /// </summary>
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+        }
+
+        /// <summary>
         /// <para>The score.</para>
         /// 
         /// <b>Example:</b>
@@ -191,7 +289,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? Score { get; set; }
 
         /// <summary>
-        /// <para>UID。</para>
+        /// <para>The UID of the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17726*****370735</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetOssCheckResultDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The storage bucket.</para>
+        /// <para>The bucket. Note: This parameter is actually required. If it is not provided, the API returns a 400 error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss-tmp</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Bucket { get; set; }
 
         /// <summary>
-        /// <para>The media asset type.</para>
+        /// <para>The media asset type. Note: This parameter is actually required. If it is not provided, the API returns a 400 error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? MediaType { get; set; }
 
         /// <summary>
-        /// <para>The object name.</para>
+        /// <para>The object name. Note: This parameter is actually required. If it is not provided, the API returns a 400 error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1748396909030.jpg</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ParentTaskId { get; set; }
 
         /// <summary>
-        /// <para>The request ID of the query.</para>
+        /// <para>The request ID of the query. Note: This parameter is actually required. If it is not provided, the API returns a 400 error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>62E97001-1255-50A9-8E1E-4FD05473D952</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The service code.</para>
+        /// <para>The service code. Note: This parameter is actually required. If it is not provided, the API returns a 400 error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>audio_media_detection_01</para>

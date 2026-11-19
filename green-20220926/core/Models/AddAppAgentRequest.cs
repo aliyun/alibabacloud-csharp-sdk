@@ -23,14 +23,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The agent name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Agent1</para>
+        /// <para>Agent 1</para>
         /// </summary>
         [NameInMap("AgentName")]
         [Validation(Required=false)]
         public string AgentName { get; set; }
 
         /// <summary>
-        /// <para>App ID。</para>
+        /// <para>The app ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>txt_check_agent_01</para>

@@ -13,21 +13,21 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The internationalization key.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>common.success</para>
         /// </summary>
         [NameInMap("I18nKey")]
         [Validation(Required=false)]
         public string I18nKey { get; set; }
 
         /// <summary>
-        /// <para>The list of invalid proxy answers.</para>
+        /// <para>The list of invalid fallback answers.</para>
         /// </summary>
         [NameInMap("IllegalLengthSamples")]
         [Validation(Required=false)]
         public List<string> IllegalLengthSamples { get; set; }
 
         /// <summary>
-        /// <para>The number of invalid entries.</para>
+        /// <para>The invalid count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? InvalidCount { get; set; }
 
         /// <summary>
-        /// <para>The proxy answer library ID.</para>
+        /// <para>The fallback answer library ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alxxxx</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? Progress { get; set; }
 
         /// <summary>
-        /// <para>The number of duplicate entries.</para>
+        /// <para>The duplicate count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? RepeatCount { get; set; }
 
         /// <summary>
-        /// <para>The list of duplicate proxy answers.</para>
+        /// <para>The list of duplicate fallback answers.</para>
         /// </summary>
         [NameInMap("RepeatSamples")]
         [Validation(Required=false)]
         public List<string> RepeatSamples { get; set; }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request. This ID can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of successful imports.</para>
+        /// <para>The success count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The prompt message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxxx</para>
+        /// <para>A total of 10 fallback answers were imported: 8 successful, 1 duplicate, and 1 invalid</para>
         /// </summary>
         [NameInMap("Tips")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetAppConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>App ID。</para>
+        /// <para>The application ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>txt_check_pro_agent_01</para>
@@ -71,13 +71,16 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
         /// <summary>
         /// <para>The preset options.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;models&quot;:[&quot;qwen3.7-plus&quot;,&quot;max3.7&quot;,&quot;deepseek-v4-pro&quot;,&quot;glm-5.1&quot;,&quot;glm-5.2&quot;]}</para>
         /// </summary>
         [NameInMap("Option")]
         [Validation(Required=false)]
         public Dictionary<string, object> Option { get; set; }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify a request. This ID can be used to troubleshoot issues.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>

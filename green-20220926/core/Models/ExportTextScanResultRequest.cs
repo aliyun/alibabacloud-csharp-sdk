@@ -20,7 +20,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The query condition.</para>
+        /// <para>The query conditions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;RequestId&quot;:&quot;8488665D-32D3-5DD6-8BF1-B4DE21A7C3E9&quot;}</para>
         /// </summary>
         [NameInMap("Query")]
         [Validation(Required=false)]

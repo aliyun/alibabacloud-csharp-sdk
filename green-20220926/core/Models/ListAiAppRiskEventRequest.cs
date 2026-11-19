@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class ListAiAppRiskEventRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID. This parameter is required.</para>
+        /// <para>The ID of the application. This parameter is required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

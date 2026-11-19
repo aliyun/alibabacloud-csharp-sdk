@@ -42,13 +42,16 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
             /// <summary>
             /// <para>The log analysis configuration.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;sls.region&quot;:&quot;cn-shanghai&quot;,&quot;sls.project&quot;:&quot;aliyun-guardrail-log&quot;,&quot;sls.logstore&quot;:&quot;guard-analysis&quot;}</para>
             /// </summary>
             [NameInMap("LogAnalysisConfig")]
             [Validation(Required=false)]
             public Dictionary<string, object> LogAnalysisConfig { get; set; }
 
             /// <summary>
-            /// <para>The name of the Simple Log Service Logstore.</para>
+            /// <para>The name of the Logstore in Simple Log Service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test003x</para>
@@ -78,7 +81,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public long? PreserveStorage { get; set; }
 
             /// <summary>
-            /// <para>The project space.</para>
+            /// <para>The workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx_log</para>
@@ -98,7 +101,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public long? TotalStorage { get; set; }
 
             /// <summary>
-            /// <para>The number of days for which data is retained.</para>
+            /// <para>The data retention period in days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -118,7 +121,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>UID。</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1643953****74290</para>
@@ -140,7 +143,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>

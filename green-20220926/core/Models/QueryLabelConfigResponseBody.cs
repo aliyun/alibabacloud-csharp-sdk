@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class QueryLabelConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The content moderation configuration.</para>
+        /// <para>The content compliance.</para>
         /// </summary>
         [NameInMap("ContentModeration")]
         [Validation(Required=false)]

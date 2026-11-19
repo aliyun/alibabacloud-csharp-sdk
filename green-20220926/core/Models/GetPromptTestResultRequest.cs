@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetPromptTestResultRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration item.</para>
+        /// <para>The configuration item. Note: This parameter is actually required. If it is not provided, the service returns a 400 error (config may not be empty).</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;enable\&quot;:false}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The resource type.</para>
+        /// <para>The resource type. Note: This parameter is actually required. If it is not provided, the service returns a 400 error (resourceType may not be empty).</para>
         /// 
         /// <b>Example:</b>
         /// <para>image</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The service code.</para>
+        /// <para>The service code. Note: This parameter is actually required. If it is not provided, the service returns a 400 error (serviceCode may not be empty).</para>
         /// 
         /// <b>Example:</b>
         /// <para>baselineCheck</para>
@@ -40,17 +40,17 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ServiceCode { get; set; }
 
         /// <summary>
-        /// <para>The text content.</para>
+        /// <para>The text content. Note: This parameter is actually required. If it is not provided, the service returns a 400 error.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试文本</para>
+        /// <para>Test text</para>
         /// </summary>
         [NameInMap("Text")]
         [Validation(Required=false)]
         public string Text { get; set; }
 
         /// <summary>
-        /// <para>The business type.</para>
+        /// <para>The business type. Note: This parameter is actually required. If it is not provided, the service returns a 400 error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>custom_llm_template</para>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             /// <para>The internationalization key.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>keyword.import.success</para>
             /// </summary>
             [NameInMap("I18nKey")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public List<string> IllegalLengthKeywords { get; set; }
 
             /// <summary>
-            /// <para>The number of invalid keywords.</para>
+            /// <para>The invalid count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public int? Progress { get; set; }
 
             /// <summary>
-            /// <para>The number of duplicate keywords.</para>
+            /// <para>The duplicate count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public List<string> RepeatKeywords { get; set; }
 
             /// <summary>
-            /// <para>The number of successfully imported keywords.</para>
+            /// <para>The success count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -108,10 +108,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public int? SuccessCount { get; set; }
 
             /// <summary>
-            /// <para>The prompt information.</para>
+            /// <para>The prompt message.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Keyword import completed. Total: 10, Succeeded: 8, Duplicates: 1, Invalid: 1</para>
             /// </summary>
             [NameInMap("Tips")]
             [Validation(Required=false)]
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>The description of the error code.</para>
+        /// <para>The detailed description of the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The request ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>The success indicator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

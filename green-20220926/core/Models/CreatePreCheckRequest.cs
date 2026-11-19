@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class CreatePreCheckRequest : TeaModel {
         /// <summary>
-        /// <para>The filter configuration for each bucket. The value can be parsed as a JSON map. The key is the bucket name, and the value is the filter configuration, which includes prefix/suffix filters and a list of filter strings.</para>
+        /// <para>The filter configuration for each bucket. This parameter can be parsed as a JSON map. The key is the bucket name, and the value is the filter configuration, which includes prefix and suffix filters and a list of filter characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;{\&quot;test-bucket1\&quot;:{\&quot;prefixFilterType\&quot;:\&quot;include\&quot;,\&quot;prefixFilters\&quot;:[\&quot;test1\&quot;]},\&quot;test-bucket2\&quot;:{\&quot;prefixFilterType\&quot;:\&quot;exclude\&quot;,\&quot;prefixFilters\&quot;:[\&quot;test2\&quot;]}}&quot;</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string BucketPrefixFilterConfig { get; set; }
 
         /// <summary>
-        /// <para>The OSS buckets.</para>
+        /// <para>The buckets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{\&quot;Bucket\&quot;:\&quot;bucket01-test\&quot;,\&quot;Region\&quot;:\&quot;cn-beijing\&quot;}]</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Buckets { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to deduplicate against historically scanned tasks.</para>
+        /// <para>Specifies whether to deduplicate historical scan tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public bool? DistinctHistoryTasks { get; set; }
 
         /// <summary>
-        /// <para>The task end time. Format: YYYY-MM-DD HH:mm:ss.</para>
+        /// <para>The end time of the task. Format: YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-12-18 10:08:00</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of items to scan.</para>
+        /// <para>The scan limit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ScanService { get; set; }
 
         /// <summary>
-        /// <para>The task start time. Format: YYYY-MM-DD HH:mm:ss.</para>
+        /// <para>The start time of the task. Format: YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-12-17 10:08:00</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The task name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>图片任务 20240709101602004</para>
+        /// <para>Image task 20240709101602004</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]

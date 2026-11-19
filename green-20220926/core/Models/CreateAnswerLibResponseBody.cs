@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class CreateAnswerLibResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the proxy answer library.</para>
+        /// <para>The ID of the fallback answer library.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string LibId { get; set; }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             /// <para>The internationalization key.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>answer.lib.create.success</para>
             /// </summary>
             [NameInMap("I18nKey")]
             [Validation(Required=false)]
             public string I18nKey { get; set; }
 
             /// <summary>
-            /// <para>The list of invalid proxy answers.</para>
+            /// <para>The list of invalid fallback answers.</para>
             /// </summary>
             [NameInMap("IllegalLengthSamples")]
             [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public int? InvalidCount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the proxy answer library.</para>
+            /// <para>The ID of the fallback answer library.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alxxxx</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string LibId { get; set; }
 
             /// <summary>
-            /// <para>The task progress percentage.</para>
+            /// <para>The progress percentage of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public int? RepeatCount { get; set; }
 
             /// <summary>
-            /// <para>The list of duplicate proxy answers.</para>
+            /// <para>The list of duplicate fallback answers.</para>
             /// </summary>
             [NameInMap("RepeatSamples")]
             [Validation(Required=false)]

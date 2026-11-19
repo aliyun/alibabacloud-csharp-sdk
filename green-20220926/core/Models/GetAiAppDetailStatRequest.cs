@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. Format: YYYY-MM-DD HH:mm:ss.</para>
+        /// <para>The end time of the query. Specify the time in the YYYY-MM-DD HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-07-09 10:30:00</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Format: YYYY-MM-DD HH:mm:ss.</para>
+        /// <para>The start time of the query. Specify the time in the YYYY-MM-DD HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-09-10 14:48:01</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 /// <para>The text content generated in real time.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>I am Deepseek-V3. How can I help you?</para>
+                /// <para>I am DeepSeek-V3. How can I help you?</para>
                 /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             }
 
             /// <summary>
-            /// <para>During streaming output, this value is null while content is being generated. When generation is complete, the value is stop if the generation ended due to a stop token.</para>
+            /// <para>For streaming output, this parameter is null during generation. If the generation ends due to a stop token, the value is stop.</para>
             /// 
             /// <b>Example:</b>
             /// <para>stop</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public long? Created { get; set; }
 
         /// <summary>
-        /// <para>The fault information content in the streaming response.</para>
+        /// <para>The fault message content in the streaming response.</para>
         /// </summary>
         [NameInMap("Error")]
         [Validation(Required=false)]
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>The unique ID of this session.</para>
+        /// <para>The unique ID of the current session.</para>
         /// 
         /// <b>Example:</b>
         /// <para>chatcmpl-777bce52-93d3-9f8c-89c3-e99884f4f57f</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string SystemFingerprint { get; set; }
 
         /// <summary>
-        /// <para>The token usage information.</para>
+        /// <para>The token usage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>

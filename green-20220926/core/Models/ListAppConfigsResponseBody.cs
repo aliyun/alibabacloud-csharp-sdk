@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public List<ListAppConfigsResponseBodyData> Data { get; set; }
         public class ListAppConfigsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>App ID。</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>txt_check_pro_agent_01</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The classification.</para>
+            /// <para>The category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>guard-scene</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public Dictionary<string, object> CustomConfig { get; set; }
 
             /// <summary>
-            /// <para>The sort number.</para>
+            /// <para>The sort order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string DeployStatus { get; set; }
 
             /// <summary>
-            /// <para>The last modified time.</para>
+            /// <para>The last modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-15 10:17:49</para>
@@ -88,6 +88,9 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
             /// <summary>
             /// <para>The preset options.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;models&quot;:[&quot;qwen3.7-plus&quot;,&quot;max3.7&quot;,&quot;deepseek-v4-pro&quot;,&quot;glm-5.1&quot;,&quot;glm-5.2&quot;]}</para>
             /// </summary>
             [NameInMap("Option")]
             [Validation(Required=false)]
