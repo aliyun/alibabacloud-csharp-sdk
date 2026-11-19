@@ -28,10 +28,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <summary>
         /// <para>The bound mobile user ID.</para>
         /// <list type="bullet">
-        /// <item><description>DingTalk: The unionId of the DingTalk account.</description></item>
-        /// <item><description>WeCom: The userId of the WeCom account.</description></item>
-        /// <item><description>Lark: The userId of the Lark account.<remarks>
-        /// <para>Notice: The mobileUserId must be obtained by calling the relevant API operations of DingTalk, WeCom, or Lark.</para>
+        /// <item><description>DingTalk: the unionId of the DingTalk account.</description></item>
+        /// <item><description>WeCom: the userId of the WeCom account.</description></item>
+        /// <item><description>Lark: the userId of the Lark account.<remarks>
+        /// <para>Notice: Developers must call the relevant APIs of DingTalk, WeCom, or Lark to obtain the mobileUserId.</notice></para>
         /// </remarks>
         /// </description></item>
         /// </list>

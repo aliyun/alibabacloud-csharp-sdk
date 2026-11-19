@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryDataServiceRequest : TeaModel {
         /// <summary>
-        /// <para>The API ID in the data service. For more information, see <a href="https://help.aliyun.com/document_detail/144980.html">Data Service</a>.</para>
+        /// <para>The ID of the API in Data Service. For more information, see <a href="https://help.aliyun.com/document_detail/144980.html">Data Service</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,18 +21,18 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string ApiId { get; set; }
 
         /// <summary>
-        /// <para>The query conditions for the data service, passed in as Key-Value pairs. This is a map-type string. Here, Key is the name of the request parameter, and Value is the value of the request parameter. Keys and Values must appear in pairs.</para>
+        /// <para>The query conditions for Data Service, which are passed as key-value pairs. The value is a string of the map type. The key is the name of the request parameter, and the value is the value of the request parameter. Keys and values must appear in pairs.</para>
         /// <para><b>Note:</b></para>
         /// <list type="bullet">
-        /// <item><description><para>When the operator of the request parameter is set to <b>enumeration filter</b>, the value can contain multiple values. In this case, the format of the value is a JSON list. For example: <c>area=[&quot;East China&quot;,&quot;North China&quot;,&quot;South China&quot;]</c>     </para>
+        /// <item><description><para>When the operator of a request parameter is set to <b>Enum Filter</b>, the value can contain multiple values. In this case, the value must be a JSON-formatted list. Example: <c>area=[&quot;East China&quot;,&quot;North China&quot;,&quot;South China&quot;]</c>     </para>
         /// </description></item>
-        /// <item><description><para>For dates, different formats are provided based on the type:</para>
+        /// <item><description><para>For dates, different input formats are provided based on the type:</para>
         /// <list type="bullet">
         /// <item><description><para>Year: 2019</para>
         /// </description></item>
         /// <item><description><para>Quarter: 2019Q1</para>
         /// </description></item>
-        /// <item><description><para>Month: 201901 (with leading zero)</para>
+        /// <item><description><para>Month: 201901 (including the leading zero)</para>
         /// </description></item>
         /// <item><description><para>Week: 2019-52</para>
         /// </description></item>
@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>{ &quot;area&quot;: [&quot;asdf&quot;, &quot;west&quot;],  &quot;shopping_date&quot;: &quot;2019Q1&quot;,  }</para>
+        /// <para>{ &quot;area&quot;: [&quot;East China&quot;, &quot;North China&quot;],  &quot;shopping_date&quot;: &quot;2019Q1&quot;,  }</para>
         /// </summary>
         [NameInMap("Conditions")]
         [Validation(Required=false)]
         public string Conditions { get; set; }
 
         /// <summary>
-        /// <para>A list of parameter names to be returned, as a List-type string.</para>
+        /// <para>The list of names of the response parameters. The value is a string of the list type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;area&quot;, &quot;city&quot;, &quot;price&quot;, &quot;date&quot;]</para>

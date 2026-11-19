@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class CancelCollectionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the favorite user. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.</para>
+        /// <para>The ID of the user who favorited the work. The user ID here refers to the Quick BI user ID, not the Alibaba Cloud UID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the work to cancel the collection.</para>
+        /// <para>The ID of the work to remove from favorites.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

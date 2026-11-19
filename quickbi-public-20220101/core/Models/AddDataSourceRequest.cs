@@ -10,11 +10,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class AddDataSourceRequest : TeaModel {
         /// <summary>
-        /// <para>To construct the request payload, you can replicate the add data source process in the Quick BI console. On the Add Data Source page, when you click Test Connection, the restapi/datasource/detect API is called. Use this API call\&quot;s payload as a template, ensuring that the provided userId and workspaceId exist in your Quick BI environment.</para>
-        /// <remarks>
-        /// <para>Notice: A few data source types are not supported. If your parameters match the test API request payload but the request still fails, the data source type is likely not supported by this OpenAPI.
-        /// Notice: Do not include the <c>encode</c> field in your request. This API does not support creating data sources in encrypted mode or using authentication methods that require file uploads.</para>
-        /// </remarks>
+        /// <para>You can refer to the logic of adding a data source on the Quick BI data source page. When you click <b>Test Connection</b>, the <c>restapi/datasource/detect</c> API operation is triggered. Simulate the request payload of this API operation by passing a JSON object of the same model, along with a valid <c>userId</c> and workspace ID in Quick BI. In version 7.1, the <c>userAsOwner</c> parameter is added. If you set this parameter to true, the data source is created as the specified <c>userId</c>.
+        /// <notice>A small number of data sources are not supported. If the parameters are the same as the request payload of the test API operation but the data source still fails to be added, the current data source type does not support creation through this API operation.</notice>
+        /// <notice>Do not pass the <c>encode</c> parameter. Currently, this API operation does not support encryption mode for creating data sources, and authentication that involves uploading files is not supported.</notice></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

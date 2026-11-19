@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryUserTagMetaListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D787E1A3-A93C-424A-B626-C2B05DF8D885</para>
@@ -20,24 +20,24 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returns a list of user tags in an organization.</para>
+        /// <para>The list of user tags in the organization.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<QueryUserTagMetaListResponseBodyResult> Result { get; set; }
         public class QueryUserTagMetaListResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The description of the tag.</para>
+            /// <para>The tag description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Used to distinguish some positions</para>
+            /// <para>Used to distinguish certain positions</para>
             /// </summary>
             [NameInMap("TagDescription")]
             [Validation(Required=false)]
             public string TagDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the label.</para>
+            /// <para>The tag ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pop_001</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string TagId { get; set; }
 
             /// <summary>
-            /// <para>The name of the tag.</para>
+            /// <para>The tag name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Position</para>
@@ -61,8 +61,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <summary>
         /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

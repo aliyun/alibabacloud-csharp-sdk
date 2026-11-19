@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public List<ListAuthConfigByResourceResponseBodyResult> Result { get; set; }
         public class ListAuthConfigByResourceResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The array of permissions granted.</para>
+            /// <para>The array of owned permissions.</para>
             /// </summary>
             [NameInMap("Authorities")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string AuthorizedName { get; set; }
 
             /// <summary>
-            /// <para>The expiration time. This value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The expiration time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1788969600000</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string ExpireDate { get; set; }
 
             /// <summary>
-            /// <para>The time when the permission record was created, in the yyyy-MM-dd mm:hh:ss format.</para>
+            /// <para>The creation time of the permission record. The format is yyyy-MM-dd mm:hh:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-04-16 13:17:39</para>
@@ -86,14 +86,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <summary>
             /// <para>The resource type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>dashboard: dashboard</description></item>
-            /// <item><description>screen: data screen</description></item>
-            /// <item><description>report: electron</description></item>
-            /// <item><description>ANALYSIS: ad hoc analysis</description></item>
-            /// <item><description>dashboardOfflineQuery: self-service data retrieval</description></item>
-            /// <item><description>dataForm: data form</description></item>
-            /// <item><description>cube: dataset</description></item>
-            /// <item><description>datasource: data source</description></item>
+            /// <item><description>dashboard: Dashboard.</description></item>
+            /// <item><description>screen: Data screen.</description></item>
+            /// <item><description>report: Workbook.</description></item>
+            /// <item><description>ANALYSIS: Ad hoc analysis.</description></item>
+            /// <item><description>dashboardOfflineQuery: Self-service data retrieval.</description></item>
+            /// <item><description>dataForm: Data entry.</description></item>
+            /// <item><description>cube: Dataset.</description></item>
+            /// <item><description>datasource: Data source.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -106,10 +106,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <summary>
             /// <para>The authorization scope. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: user</description></item>
-            /// <item><description>1: user group</description></item>
-            /// <item><description>2: organization</description></item>
-            /// <item><description>3: workspace</description></item>
+            /// <item><description>0: User.</description></item>
+            /// <item><description>1: User group.</description></item>
+            /// <item><description>2: Organization.</description></item>
+            /// <item><description>3: Workspace.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

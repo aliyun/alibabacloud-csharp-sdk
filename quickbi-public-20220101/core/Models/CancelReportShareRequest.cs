@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class CancelReportShareRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the work. The works here include BI portal, dashboards, spreadsheets, and self-service access.</para>
+        /// <para>The ID of the data work. Data works include data portals, dashboards, workbooks, and ad hoc queries.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +21,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string ReportId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the person to be shared, which may be the user ID of the Quick BI or the user group ID.</para>
+        /// <para>The ID of the sharee. It can be a Quick BI user ID or a user group ID.</para>
         /// <list type="bullet">
-        /// <item><description>If ShareToType is 0 (user), ShareTo is the user ID.</description></item>
-        /// <item><description>When ShareToType is set to 1 (user group), ShareTo is the user group ID.</description></item>
-        /// <item><description>When ShareToType=2 (organization), ShareTo is the ID of the organization.</description></item>
+        /// <item><description>If ShareToType is set to 0 (user), the value is the user ID.</description></item>
+        /// <item><description>If ShareToType is set to 1 (user group), the value is the user group ID.</description></item>
+        /// <item><description>If ShareToType is set to 2 (organization), the value is the organization ID.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,9 +39,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <summary>
         /// <para>The deletion method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: Delete by user</description></item>
-        /// <item><description>1: Delete by user group</description></item>
-        /// <item><description>2: Delete by organization</description></item>
+        /// <item><description>0: Delete by user.</description></item>
+        /// <item><description>1: Delete by user group.</description></item>
+        /// <item><description>2: Delete by organization.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

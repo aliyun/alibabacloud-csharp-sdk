@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryDatasetInfoRequest : TeaModel {
         /// <summary>
-        /// <para>Queries information about a specified dataset.</para>
+        /// <para>The unique ID of the dataset.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,11 +10,13 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class AddWorksAuthorizationRequest : TeaModel {
         /// <summary>
-        /// <para>The permissions to grant. Valid values:</para>
-        /// <para><c>1</c>: View</para>
-        /// <para><c>3</c>: View and Export</para>
-        /// <para><c>11</c>: Edit, View, and Export</para>
-        /// <para><b>Note</b>: If AuthPoints is set to 11, the authorization is permanent and the ExpireDay parameter is ignored.</para>
+        /// <para>The type of granted permissions. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: View.</description></item>
+        /// <item><description>3: View and export.</description></item>
+        /// <item><description>11: Edit, view, and export.
+        /// Note: When the value is set to 11, the authorization does not expire.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,16 +27,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? AuthPoints { get; set; }
 
         /// <summary>
-        /// <para>The type of the principal. Valid values:</para>
+        /// <para>The authorization scope. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>0</c>: User. Set AuthorizedId to the user ID.</para>
-        /// </description></item>
-        /// <item><description><para><c>1</c>: User group. Set AuthorizedId to the user group ID.</para>
-        /// </description></item>
-        /// <item><description><para><c>2</c>: All members of an organization. Set AuthorizedId to the organization ID.</para>
-        /// </description></item>
-        /// <item><description><para><c>3</c>: All members of a workspace. Set AuthorizedId to the workspace ID.</para>
-        /// </description></item>
+        /// <item><description>0: User. The AuthorizedId parameter corresponds to the user ID in Quick BI.</description></item>
+        /// <item><description>1: User group. The AuthorizedId parameter corresponds to the user group ID in Quick BI.</description></item>
+        /// <item><description>2: All organization members. The AuthorizedId parameter corresponds to the organization ID in Quick BI.</description></item>
+        /// <item><description>3: All workspace members. The AuthorizedId parameter corresponds to the workspace ID in Quick BI.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -46,7 +44,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? AuthorizeScope { get; set; }
 
         /// <summary>
-        /// <para>The ID of the principal to be authorized. The AuthorizeScope parameter specifies the type of principal.</para>
+        /// <para>The ID of the authorized object. For more information, see the description of AuthorizeScope.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,9 +55,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string AuthorizedId { get; set; }
 
         /// <summary>
-        /// <para>The expiration date for the permissions.</para>
-        /// <para>Format: <c>YYYY-MM-DD</c>.</para>
-        /// <para><b>Note</b>: This parameter is required if AuthPoints is not 11. The authorization must be valid for at least one day after the authorization date.</para>
+        /// <para>The expiration date of the authorization. Format: yyyy-MM-dd. Example: 2022-02-16. Note: The authorization period must be at least N+1 days. This parameter is required when the AuthPoints parameter is not set to 11.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2099-12-31</para>
@@ -69,7 +65,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string ExpireDay { get; set; }
 
         /// <summary>
-        /// <para>The ID of the work.</para>
+        /// <para>The resource ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,24 +76,16 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the work. Valid values:</para>
+        /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>dashboard</c>: A dashboard.</para>
-        /// </description></item>
-        /// <item><description><para><c>report</c>: A report.</para>
-        /// </description></item>
-        /// <item><description><para><c>dashboardOfflineQuery</c>: An ad-hoc query.</para>
-        /// </description></item>
-        /// <item><description><para><c>cube</c>: A dataset.</para>
-        /// </description></item>
-        /// <item><description><para><c>datasource</c>: A data source.</para>
-        /// </description></item>
-        /// <item><description><para><c>screen</c>: A data screen.</para>
-        /// </description></item>
-        /// <item><description><para><c>ANALYSIS</c>: An ad-hoc analysis.</para>
-        /// </description></item>
-        /// <item><description><para><c>dataForm</c>: A data form.</para>
-        /// </description></item>
+        /// <item><description>dashboard: Dashboard.</description></item>
+        /// <item><description>report: Workbook.</description></item>
+        /// <item><description>dashboardOfflineQuery: Ad hoc query.</description></item>
+        /// <item><description>cube: Dataset.</description></item>
+        /// <item><description>datasource: Data source.</description></item>
+        /// <item><description>screen: Data screen.</description></item>
+        /// <item><description>ANALYSIS: Ad hoc analysis.</description></item>
+        /// <item><description>dataForm: Data entry.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

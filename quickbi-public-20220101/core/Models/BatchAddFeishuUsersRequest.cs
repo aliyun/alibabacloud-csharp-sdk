@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string FeishuUsers { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the user is an admin user. Valid values:</para>
+        /// <para>Specifies whether the user is an administrator. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: Yes.</description></item>
+        /// <item><description>false: No.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <summary>
         /// <para>Specifies whether the user is a permission management administrator. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: Yes.</description></item>
+        /// <item><description>false: No.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public bool? IsAuthAdmin { get; set; }
 
         /// <summary>
-        /// <para>The user groups to which the users belong.</para>
+        /// <para>The IDs of the user groups to which the users belong.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;0d5fb19b-5555-41f0-99da-1248fc27ca51,0f868dd6_68dd_4d13_8422_c5dca3bd4b61&quot;</para>
@@ -62,9 +62,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <summary>
         /// <para>The user type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: developer</description></item>
-        /// <item><description>2: visitor</description></item>
-        /// <item><description>3: analyst</description></item>
+        /// <item><description>1: Developer.</description></item>
+        /// <item><description>2: Visitor.</description></item>
+        /// <item><description>3: Analyst.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

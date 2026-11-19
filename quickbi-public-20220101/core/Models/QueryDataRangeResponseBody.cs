@@ -10,51 +10,51 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryDataRangeResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>D787E1A3-A93C-****-B626-C2B05DF8D885</para>
+        /// <para>D787E1A3-A93C-424A-B626-C2B05DF8D885</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Data range object.</para>
+        /// <para>The data scope object.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public QueryDataRangeResponseBodyResult Result { get; set; }
         public class QueryDataRangeResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Array of LlmCube resources.</para>
+            /// <para>The array of data query resources.</para>
             /// </summary>
             [NameInMap("ApiCopilotLlmCubeModels")]
             [Validation(Required=false)]
             public List<QueryDataRangeResponseBodyResultApiCopilotLlmCubeModels> ApiCopilotLlmCubeModels { get; set; }
             public class QueryDataRangeResponseBodyResultApiCopilotLlmCubeModels : TeaModel {
                 /// <summary>
-                /// <para>Alias of the LlmCube resource.</para>
+                /// <para>The alias of the data query resource.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test</para>
+                /// <para>Test</para>
                 /// </summary>
                 [NameInMap("Alias")]
                 [Validation(Required=false)]
                 public string Alias { get; set; }
 
                 /// <summary>
-                /// <para>Nickname of the creator.</para>
+                /// <para>The nickname of the creator.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>zhuge</para>
+                /// <para>Zhuge</para>
                 /// </summary>
                 [NameInMap("CreateUser")]
                 [Validation(Required=false)]
                 public string CreateUser { get; set; }
 
                 /// <summary>
-                /// <para>LlmCube resource ID.</para>
+                /// <para>The ID of the data query resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sdasdafas23342342342</para>
@@ -66,41 +66,41 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             }
 
             /// <summary>
-            /// <para>Array of analysis themes.</para>
+            /// <para>The array of analysis themes.</para>
             /// </summary>
             [NameInMap("ApiCopilotThemeModels")]
             [Validation(Required=false)]
             public List<QueryDataRangeResponseBodyResultApiCopilotThemeModels> ApiCopilotThemeModels { get; set; }
             public class QueryDataRangeResponseBodyResultApiCopilotThemeModels : TeaModel {
                 /// <summary>
-                /// <para>Array of LlmCube resources.</para>
+                /// <para>The array of data query resources.</para>
                 /// </summary>
                 [NameInMap("ApiCopilotLlmCubeModels")]
                 [Validation(Required=false)]
                 public List<QueryDataRangeResponseBodyResultApiCopilotThemeModelsApiCopilotLlmCubeModels> ApiCopilotLlmCubeModels { get; set; }
                 public class QueryDataRangeResponseBodyResultApiCopilotThemeModelsApiCopilotLlmCubeModels : TeaModel {
                     /// <summary>
-                    /// <para>Alias of the LLM cube resource.</para>
+                    /// <para>The alias of the data query resource.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>test</para>
+                    /// <para>TestHa</para>
                     /// </summary>
                     [NameInMap("Alias")]
                     [Validation(Required=false)]
                     public string Alias { get; set; }
 
                     /// <summary>
-                    /// <para>Nickname of the creator.</para>
+                    /// <para>The nickname of the creator.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>zhuge</para>
+                    /// <para>Zhuge</para>
                     /// </summary>
                     [NameInMap("CreateUser")]
                     [Validation(Required=false)]
                     public string CreateUser { get; set; }
 
                     /// <summary>
-                    /// <para>LlmCube resource ID.</para>
+                    /// <para>The ID of the data query resource.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1231242231asdasda</para>
@@ -112,17 +112,17 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 }
 
                 /// <summary>
-                /// <para>Nickname of the creator.</para>
+                /// <para>The nickname of the creator.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>zhuge</para>
+                /// <para>Zhuge</para>
                 /// </summary>
                 [NameInMap("CreateUser")]
                 [Validation(Required=false)]
                 public string CreateUser { get; set; }
 
                 /// <summary>
-                /// <para>Analysis theme ID.</para>
+                /// <para>The ID of the analysis theme.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>36631232342312312</para>
@@ -132,10 +132,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string ThemeId { get; set; }
 
                 /// <summary>
-                /// <para>Nickname of the analysis theme.</para>
+                /// <para>The nickname of the analysis theme.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test theme</para>
+                /// <para>Test theme</para>
                 /// </summary>
                 [NameInMap("ThemeName")]
                 [Validation(Required=false)]
@@ -146,10 +146,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Possible values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

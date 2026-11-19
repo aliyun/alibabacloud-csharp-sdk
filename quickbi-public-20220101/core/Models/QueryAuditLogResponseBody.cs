@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>An array of log objects.</para>
+        /// <para>The log array.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<QueryAuditLogResponseBodyResult> Result { get; set; }
         public class QueryAuditLogResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The time when the log was generated.</para>
+            /// <para>The log time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-04-16 13:17:39</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The account name of the operator.</para>
+            /// <para>The account of the operator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>wukaibis</para>
@@ -109,12 +109,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para>false: The request failed.</para>
-        /// </description></item>
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,23 +10,17 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class UpdateUserTagMetaRequest : TeaModel {
         /// <summary>
-        /// <para>The tag description.</para>
-        /// <list type="bullet">
-        /// <item><description>Format check: Maximum length is 255 characters.</description></item>
-        /// </list>
+        /// <para>The description of the tag. The maximum length is 255 characters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Job Positions within the Department</para>
+        /// <para>Job positions within the department</para>
         /// </summary>
         [NameInMap("TagDescription")]
         [Validation(Required=false)]
         public string TagDescription { get; set; }
 
         /// <summary>
-        /// <para>The specified TagID.</para>
-        /// <list type="bullet">
-        /// <item><description>Format check: Maximum length is 64 characters.</description></item>
-        /// </list>
+        /// <para>The specified tag ID. The maximum length is 64 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,15 +31,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string TagId { get; set; }
 
         /// <summary>
-        /// <para>The tag name.</para>
-        /// <list type="bullet">
-        /// <item><description>Format check: Maximum length is 50 characters.</description></item>
-        /// <item><description>Only Chinese, English, numbers, and /\|<a href=""></a> symbols are allowed.</description></item>
-        /// </list>
+        /// <para>The name of the tag. The maximum length is 50 characters. Only letters, digits, and the /, \, |, [, ], (, and ) symbols are allowed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Department</para>
+        /// <para>Position</para>
         /// </summary>
         [NameInMap("TagName")]
         [Validation(Required=false)]

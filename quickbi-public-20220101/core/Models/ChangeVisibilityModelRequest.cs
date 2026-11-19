@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class ChangeVisibilityModelRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the BI portal.</para>
+        /// <para>The ID of the data portal.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string DataPortalId { get; set; }
 
         /// <summary>
-        /// <para>The menu ID of the BI portal leaf node.</para>
+        /// <para>The IDs of the leaf node menus in the data portal.</para>
         /// <list type="bullet">
-        /// <item><description>The directory menu cannot be authorized.</description></item>
-        /// <item><description>You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 100.</description></item>
+        /// <item><description>You can specify multiple IDs. Separate multiple IDs with commas (,). A maximum of 100 IDs can be modified at a time.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,10 +35,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string MenuIds { get; set; }
 
         /// <summary>
-        /// <para>Whether only authorization is visible. Valid values:</para>
+        /// <para>Specifies whether the menus are visible only to authorized users. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Only the authorization is visible.</description></item>
-        /// <item><description>false: Both are visible.</description></item>
+        /// <item><description>true: The menus are visible only to authorized users.</description></item>
+        /// <item><description>false: The menus are visible to all users.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

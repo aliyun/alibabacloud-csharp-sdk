@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string UserGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Quick BI user. Separate multiple IDs with commas (,). Example: abc,efg. You can enter a maximum of 1000 entries.</para>
+        /// <para>The IDs of Quick BI users. Separate multiple IDs with commas (,). Example: abc,efg. You can specify up to 1,000 IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

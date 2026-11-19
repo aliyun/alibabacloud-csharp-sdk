@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class UpdateDataSourcePropertiesRequest : TeaModel {
         /// <summary>
+        /// <para>The description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ssss</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The data source ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string DsId { get; set; }
 
         /// <summary>
+        /// <para>The owner of the data source. Set this parameter to the user ID in Quick BI.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sss</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string QuickBIOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The display name of the data source.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>wls</para>
         /// </summary>

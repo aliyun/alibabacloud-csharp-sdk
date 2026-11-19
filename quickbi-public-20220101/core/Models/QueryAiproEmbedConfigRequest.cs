@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryAiproEmbedConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The keyword used for fuzzy search by showName.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryWorksBloodRelationshipResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D787E1A3-A93C-424A-B626-C2B05DF8D885</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>List of work blood information.</para>
+        /// <para>The list of data work lineage information.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<QueryWorksBloodRelationshipResponseBodyResult> Result { get; set; }
         public class QueryWorksBloodRelationshipResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The ID of the component that you want to modify.</para>
+            /// <para>The component ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0696083a-ca72-4d89-8e7a-c017910e0***</para>
@@ -37,17 +37,17 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string ComponentId { get; set; }
 
             /// <summary>
-            /// <para>The name of the component.</para>
+            /// <para>The component name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Line</para>
+            /// <para>Line chart</para>
             /// </summary>
             [NameInMap("ComponentName")]
             [Validation(Required=false)]
             public string ComponentName { get; set; }
 
             /// <summary>
-            /// <para>The type of the image component.</para>
+            /// <para>The component type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -57,17 +57,17 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? ComponentType { get; set; }
 
             /// <summary>
-            /// <para>Chinese name of the component type</para>
+            /// <para>The Chinese name of the component type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ddd</para>
+            /// <para>Cross table</para>
             /// </summary>
             [NameInMap("ComponentTypeCnName")]
             [Validation(Required=false)]
             public string ComponentTypeCnName { get; set; }
 
             /// <summary>
-            /// <para>The name of the component type.</para>
+            /// <para>The component type name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>LINE</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string ComponentTypeName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the training dataset that you want to remove from the specified custom linguistic model.</para>
+            /// <para>The dataset ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dc78a4ed-880d-452e-b017-90cfc10c83e5_company_sales_record</para>
@@ -87,14 +87,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string DatasetId { get; set; }
 
             /// <summary>
-            /// <para>A list of query parameter reference columns.</para>
+            /// <para>The list of columns referenced by query parameters.</para>
             /// </summary>
             [NameInMap("QueryParams")]
             [Validation(Required=false)]
             public List<QueryWorksBloodRelationshipResponseBodyResultQueryParams> QueryParams { get; set; }
             public class QueryWorksBloodRelationshipResponseBodyResultQueryParams : TeaModel {
                 /// <summary>
-                /// <para>The ID of the owning location.</para>
+                /// <para>The ID of the area.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>area_column</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string AreaId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the owning location.</para>
+                /// <para>The name of the area.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Column (Measure)</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string AreaName { get; set; }
 
                 /// <summary>
-                /// <para>The display name of the field.</para>
+                /// <para>The original name of the field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>order_number</para>
@@ -124,18 +124,18 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string Caption { get; set; }
 
                 /// <summary>
-                /// <para>The type of the field. Valid values:</para>
+                /// <para>The field type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>string: string type</description></item>
-                /// <item><description>date: a date type that contains only the year, month, and day parts</description></item>
-                /// <item><description>datetime: a common date type</description></item>
-                /// <item><description>time: a date type that contains only hours, minutes, and seconds.</description></item>
-                /// <item><description>number: numeric</description></item>
-                /// <item><description>boolean: Boolean type</description></item>
-                /// <item><description>geographical: geographical location</description></item>
-                /// <item><description>url: string type</description></item>
-                /// <item><description>imageUrl: the type of the image link.</description></item>
-                /// <item><description>multivalue: a multi-value column</description></item>
+                /// <item><description>string: String type.</description></item>
+                /// <item><description>date: Date type that includes only the year, month, and day.</description></item>
+                /// <item><description>datetime: General date type.</description></item>
+                /// <item><description>time: Time type that includes only the hour, minute, and second.</description></item>
+                /// <item><description>number: Numeric type.</description></item>
+                /// <item><description>boolean: Boolean type.</description></item>
+                /// <item><description>geographic: Geographic location.</description></item>
+                /// <item><description>url: URL string type.</description></item>
+                /// <item><description>imageUrl: Image URL type.</description></item>
+                /// <item><description>multivalue: Multi-value column.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -146,18 +146,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string DataType { get; set; }
 
                 /// <summary>
-                /// <para>Calculate field expression.</para>
+                /// <para>The expression of the calculated field.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>BI_DATEADD([date], 100, \&quot;day\&quot;)</para>
+                /// <para>BI_DATEADD([Time], 100, \&quot;day\&quot;)</para>
                 /// </summary>
                 [NameInMap("Expression")]
                 [Validation(Required=false)]
                 public string Expression { get; set; }
 
                 /// <summary>
-                /// <para>Indices whether the metric. Valid values:</para>
-                /// <para>true false</para>
+                /// <para>Indicates whether the field is a measure. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true: Yes.</description></item>
+                /// <item><description>false: No.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -193,8 +196,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <summary>
         /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

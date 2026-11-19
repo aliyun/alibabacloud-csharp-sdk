@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>The next page number. A value of null or 0 indicates that there is no next page.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>null</para>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("Next")]
             [Validation(Required=false)]
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>The previous page number. A value of null or 0 indicates that there is no previous page.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>null</para>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("Pre")]
             [Validation(Required=false)]

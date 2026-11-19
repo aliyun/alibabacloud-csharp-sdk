@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryDataRangeRequest : TeaModel {
         /// <summary>
-        /// <para>Name, for fuzzy search.</para>
+        /// <para>The name. Fuzzy search is supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>Test</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>Data range type:</para>
+        /// <para>The data scope type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>llmCube: LlmCube resource.</description></item>
+        /// <item><description>llmCube: Data query resource.</description></item>
         /// <item><description>llmCubeTheme: Analysis theme.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>

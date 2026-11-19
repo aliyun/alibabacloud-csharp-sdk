@@ -10,25 +10,25 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class AddUserTagMetaRequest : TeaModel {
         /// <summary>
-        /// <para>Tag description. Format check: maximum length of 255 characters.</para>
+        /// <para>The tag description. Format requirements: The maximum length is 255 characters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>Positions within the department</para>
         /// </summary>
         [NameInMap("TagDescription")]
         [Validation(Required=false)]
         public string TagDescription { get; set; }
 
         /// <summary>
-        /// <para>Tag name. Format check:</para>
+        /// <para>The tag name. Format requirements:</para>
         /// <list type="bullet">
-        /// <item><description>Maximum length of 50 characters.</description></item>
-        /// <item><description>Only Chinese, English, numbers, and /\|<a href=""></a> symbols are allowed.</description></item>
+        /// <item><description>The maximum length is 50 characters.</description></item>
+        /// <item><description>Only Chinese characters, English letters, digits, and the /\|<a href=""></a> symbols are allowed.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>Position</para>
         /// </summary>
         [NameInMap("TagName")]
         [Validation(Required=false)]

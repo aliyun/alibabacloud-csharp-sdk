@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class AuthorizeMenuRequest : TeaModel {
         /// <summary>
-        /// <para>Authorizes the permissions of the menu. Valid values:</para>
+        /// <para>The permissions to grant for the menus. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: view</description></item>
-        /// <item><description>3: View + Export (default)</description></item>
+        /// <item><description>1: View.</description></item>
+        /// <item><description>3: View and export. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? AuthPointsValue { get; set; }
 
         /// <summary>
-        /// <para>The ID of the BI portal.</para>
+        /// <para>The ID of the data portal.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,11 +35,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string DataPortalId { get; set; }
 
         /// <summary>
-        /// <para>The menu ID of the BI portal leaf node.</para>
-        /// <list type="bullet">
-        /// <item><description>The directory menu cannot be authorized.</description></item>
-        /// <item><description>You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 100.</description></item>
-        /// </list>
+        /// <para>The IDs of the leaf node menus in the data portal. You can specify multiple IDs. Separate multiple IDs with commas (,). You can specify up to 100 IDs at a time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,11 +46,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string MenuIds { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the user groups.</para>
-        /// <list type="bullet">
-        /// <item><description>You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 200.</description></item>
-        /// <item><description>UserGroupIds and UserIds cannot be empty at the same time</description></item>
-        /// </list>
+        /// <para>The IDs of the user groups. You can specify multiple IDs. Separate multiple IDs with commas (,). You can specify up to 200 IDs at a time. You must specify at least one of UserGroupIds and UserIds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>34fd141d-4598-4093-8c33-8e066dcb****,3d2c23d4-2b41-4af8-a1f5-f6390f32****</para>
@@ -64,10 +56,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string UserGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the end users. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.</para>
-        /// <list type="bullet">
-        /// <item><description>You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 200.</description></item>
-        /// </list>
+        /// <para>The IDs of the users. These are Quick BI user IDs, not Alibaba Cloud UIDs. You can specify multiple IDs. Separate multiple IDs with commas (,). You can specify up to 200 IDs at a time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>204627493484****,121344444790****</para>

@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the IP address whitelist is updated. Valid values:</para>
+        /// <para>The execution result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The task is triggered.</description></item>
+        /// <item><description>true: The task is triggered successfully.</description></item>
         /// <item><description>false: The task fails to be triggered.</description></item>
         /// </list>
         /// 
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public bool? Result { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,19 +10,15 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class AddUserToWorkspaceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the role in the workspace. Predefined roles:</para>
+        /// <para>The workspace role ID. Preset roles:</para>
         /// <list type="bullet">
-        /// <item><description><para>25: workspace administrator</para>
-        /// </description></item>
-        /// <item><description><para>26: workspace developer</para>
-        /// </description></item>
-        /// <item><description><para>27: workspace analyst</para>
-        /// </description></item>
-        /// <item><description><para>30: workspace viewer</para>
-        /// </description></item>
+        /// <item><description>25: Workspace administrator</description></item>
+        /// <item><description>26: Workspace developer</description></item>
+        /// <item><description>27: Workspace analyst</description></item>
+        /// <item><description>30: Workspace viewer</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Custom role IDs are supported in version 6.0.3 and later.</para>
+        /// <para>Custom role IDs are supported since 6.0.3.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,7 +30,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public long? RoleId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Quick BI user to be added.</para>
+        /// <para>The ID of the Quick BI user to add.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,7 +41,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace.</para>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryDatasetInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>Whether the operation is successfully returned. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The call is successful.</description></item>
-        /// <item><description>false: The call fails.</description></item>
-        /// </list>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a4d1a221d-41za1-****</para>
@@ -31,18 +27,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public QueryDatasetInfoResponseBodyResult Result { get; set; }
         public class QueryDatasetInfoResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The unique ID of the dataset.</para>
+            /// <para>The list of tables used by the dataset.</para>
             /// </summary>
             [NameInMap("CubeTableList")]
             [Validation(Required=false)]
             public List<QueryDatasetInfoResponseBodyResultCubeTableList> CubeTableList { get; set; }
             public class QueryDatasetInfoResponseBodyResultCubeTableList : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the data source table is valid. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>true: data source table</description></item>
-                /// <item><description>false: custom table</description></item>
-                /// </list>
+                /// <para>The display name of the table.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>odps_40</para>
@@ -51,11 +43,16 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 [Validation(Required=false)]
                 public string Caption { get; set; }
 
+                /// <summary>
+                /// <para>The actual physical tables used by the merged table.</para>
+                /// </summary>
                 [NameInMap("ChildTables")]
                 [Validation(Required=false)]
                 public List<QueryDatasetInfoResponseBodyResultCubeTableListChildTables> ChildTables { get; set; }
                 public class QueryDatasetInfoResponseBodyResultCubeTableListChildTables : TeaModel {
                     /// <summary>
+                    /// <para>The display name.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
                     /// </summary>
@@ -64,14 +61,18 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public string Caption { get; set; }
 
                     /// <summary>
+                    /// <para>Specifies whether the table is a custom dataset.</para>
+                    /// 
                     /// <b>Example:</b>
-                    /// <para>test</para>
+                    /// <para>true</para>
                     /// </summary>
                     [NameInMap("Customsql")]
                     [Validation(Required=false)]
                     public bool? Customsql { get; set; }
 
                     /// <summary>
+                    /// <para>The data source ID.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
                     /// </summary>
@@ -80,6 +81,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public string DatasourceId { get; set; }
 
                     /// <summary>
+                    /// <para>The data source type.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
                     /// </summary>
@@ -87,11 +90,16 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     [Validation(Required=false)]
                     public string DsType { get; set; }
 
+                    /// <summary>
+                    /// <para>Specifies whether the table is the primary table.</para>
+                    /// </summary>
                     [NameInMap("FactTable")]
                     [Validation(Required=false)]
                     public bool? FactTable { get; set; }
 
                     /// <summary>
+                    /// <para>The SQL statement for the custom SQL dataset.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
                     /// </summary>
@@ -100,6 +108,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public string Sql { get; set; }
 
                     /// <summary>
+                    /// <para>The physical table name.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
                     /// </summary>
@@ -108,6 +118,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public string TableName { get; set; }
 
                     /// <summary>
+                    /// <para>The unique ID.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
                     /// </summary>
@@ -118,7 +130,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 }
 
                 /// <summary>
-                /// <para>The display name of the table.</para>
+                /// <para>Specifies whether the table is a custom SQL table. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true: The table is a custom SQL table.</description></item>
+                /// <item><description>false: The table is not a custom SQL table.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -128,7 +144,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public bool? Customsql { get; set; }
 
                 /// <summary>
-                /// <para>The name of the table.</para>
+                /// <para>The data source ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dfefd7f4-fc6e-42c9-b4******</para>
@@ -138,7 +154,13 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string DatasourceId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the data source.</para>
+                /// <para>The data source type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>mysql</description></item>
+                /// <item><description>odps</description></item>
+                /// <item><description>oracle</description></item>
+                /// <item><description>Other data source types supported by Quick BI.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>maxcompute</para>
@@ -148,7 +170,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string DsType { get; set; }
 
                 /// <summary>
-                /// <para>The unique ID of the table.</para>
+                /// <para>Specifies whether the table is a data source table. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true: The table is a data source table.</description></item>
+                /// <item><description>false: The table is a custom table.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -158,11 +184,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public bool? FactTable { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the table is a custom SQL table. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>true: custom SQL table</description></item>
-                /// <item><description>false: non-custom SQL table</description></item>
-                /// </list>
+                /// <para>The specific SQL statement when the table is a custom SQL table.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>select * from ****</para>
@@ -172,7 +194,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string Sql { get; set; }
 
                 /// <summary>
-                /// <para>The list of tables used by the dataset.</para>
+                /// <para>The table name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>viewdasb8494aab2612473cb74992159fe****</para>
@@ -182,13 +204,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string TableName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the data source. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>mysql</description></item>
-                /// <item><description>odps</description></item>
-                /// <item><description>oracle</description></item>
-                /// <item><description>... and other data source types supported by Quick BI</description></item>
-                /// </list>
+                /// <para>The unique ID of the table.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>7a62530b36</para>
@@ -200,7 +216,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             }
 
             /// <summary>
-            /// <para>The unique ID of the workspace to which the dataset belongs.</para>
+            /// <para>Specifies whether custom SQL is used. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: Yes.</description></item>
+            /// <item><description>false: No.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -210,13 +230,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public bool? CustimzeSql { get; set; }
 
             /// <summary>
-            /// <para>The type of the data source. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>mysql</description></item>
-            /// <item><description>odps</description></item>
-            /// <item><description>oracle</description></item>
-            /// <item><description>... Data source types supported by Quick BI such as</description></item>
-            /// </list>
+            /// <para>The unique ID of the dataset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a201c85c-******</para>
@@ -226,7 +240,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string DatasetId { get; set; }
 
             /// <summary>
-            /// <para>The user ID of the dataset owner in the Quick BI.</para>
+            /// <para>The dataset name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>opds_40</para>
@@ -236,14 +250,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string DatasetName { get; set; }
 
             /// <summary>
-            /// <para>A list of all dimensions in the dataset.</para>
+            /// <para>The list of all dimensions in the dataset.</para>
             /// </summary>
             [NameInMap("DimensionList")]
             [Validation(Required=false)]
             public List<QueryDatasetInfoResponseBodyResultDimensionList> DimensionList { get; set; }
             public class QueryDatasetInfoResponseBodyResultDimensionList : TeaModel {
                 /// <summary>
-                /// <para>The unique ID of the field that is referenced by the group measure. Non-NULL if and only if the metric is a grouping metric.</para>
+                /// <para>The display name of the dimension.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>city</para>
@@ -253,7 +267,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string Caption { get; set; }
 
                 /// <summary>
-                /// <para>A list of all dimensions in the dataset.</para>
+                /// <para>The data type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>string: String.</description></item>
+                /// <item><description>number: Number.</description></item>
+                /// <item><description>datetime: Datetime.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string</para>
@@ -263,7 +282,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string DataType { get; set; }
 
                 /// <summary>
-                /// <para>The actual physical field.</para>
+                /// <para>The dimension type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>standard_dimension: Standard dimension.</description></item>
+                /// <item><description>calculate_dimension: Calculated dimension.</description></item>
+                /// <item><description>group_dimension: Grouped dimension.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>group_dimension</para>
@@ -273,12 +297,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string DimensionType { get; set; }
 
                 /// <summary>
-                /// <para>Data type; value:</para>
-                /// <list type="bullet">
-                /// <item><description>string: character</description></item>
-                /// <item><description>number: a number</description></item>
-                /// <item><description>datetime: time</description></item>
-                /// </list>
+                /// <para>The expression for the calculated dimension. This parameter is valid only for calculated dimensions.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example_expression</para>
@@ -288,7 +307,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string Expression { get; set; }
 
                 /// <summary>
-                /// <para>Expression for the flattened calculation dimensions.</para>
+                /// <para>The flattened expression for the calculated dimension.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example_expression</para>
@@ -301,7 +320,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string ExpressionV2 { get; set; }
 
                 /// <summary>
-                /// <para>Expression for a calculated dimension; valid only for calculated dimensions.</para>
+                /// <para>The actual physical field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>city</para>
@@ -311,7 +330,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string FactColumn { get; set; }
 
                 /// <summary>
-                /// <para>The description of the field.</para>
+                /// <para>The field description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hhhh</para>
@@ -321,12 +340,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string FieldDescription { get; set; }
 
                 /// <summary>
-                /// <para>The type of the dimension. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>standard_dimension: General Dimension</description></item>
-                /// <item><description>calculate_dimension: calculating dimensions</description></item>
-                /// <item><description>group_dimension: grouping dimensions</description></item>
-                /// </list>
+                /// <para>The granularity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example_granularity</para>
@@ -336,7 +350,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string Granularity { get; set; }
 
                 /// <summary>
-                /// <para>The granularity.</para>
+                /// <para>The unique ID of the referenced field for a grouped measure. This parameter is not null only when the measure is a grouped measure.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>308f7****</para>
@@ -346,7 +360,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string RefUid { get; set; }
 
                 /// <summary>
-                /// <para>The ARN.</para>
+                /// <para>The unique ID of the table to which the dimension belongs. This corresponds to the UniqueId in CubeTypeList.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>7a62530***</para>
@@ -356,7 +370,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string TableUniqueId { get; set; }
 
                 /// <summary>
-                /// <para>The display name of the dimension.</para>
+                /// <para>The unique ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>a69774***</para>
@@ -368,14 +382,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             }
 
             /// <summary>
-            /// <para>The unique ID of the metric.</para>
+            /// <para>The folder information of the dataset.</para>
             /// </summary>
             [NameInMap("Directory")]
             [Validation(Required=false)]
             public QueryDatasetInfoResponseBodyResultDirectory Directory { get; set; }
             public class QueryDatasetInfoResponseBodyResultDirectory : TeaModel {
                 /// <summary>
-                /// <para>Test directory</para>
+                /// <para>The folder ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>a3eecab7-618d-4f9f-*****</para>
@@ -385,17 +399,17 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>Test directory</para>
+                /// <para>The folder name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The name of the directory.</para>
+                /// <para>Test folder</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The information about the directory to which the dataset belongs.</para>
+                /// <para>The path of the folder ID, such as aa/bb/cc/dd.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>88b680****</para>
@@ -405,10 +419,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string PathId { get; set; }
 
                 /// <summary>
-                /// <para>The path of the directory ID, for example, aa/bb/cc/dd.</para>
+                /// <para>The path name of the folder ID, such as Level 1 folder/Level 2 folder.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The path name of the directory ID, for example, one-level directory /two-level directory.</para>
+                /// <para>Test folder</para>
                 /// </summary>
                 [NameInMap("PathName")]
                 [Validation(Required=false)]
@@ -417,7 +431,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             }
 
             /// <summary>
-            /// <para>The name of the data source.</para>
+            /// <para>The unique ID of the data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a201c85c-******</para>
@@ -427,7 +441,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string DsId { get; set; }
 
             /// <summary>
-            /// <para>The time when the dataset was last modified.</para>
+            /// <para>The data source name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>odps</para>
@@ -437,7 +451,13 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string DsName { get; set; }
 
             /// <summary>
-            /// <para>The point in time when the training dataset was created.</para>
+            /// <para>The data source type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>mysql</description></item>
+            /// <item><description>odps</description></item>
+            /// <item><description>oracle</description></item>
+            /// <item><description>Other data source types supported by Quick BI.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>odps</para>
@@ -447,11 +467,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string DsType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether to customize SQL statements. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
-            /// </list>
+            /// <para>The time when the dataset was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1629450382000</para>
@@ -461,7 +477,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The information about the dataset.</para>
+            /// <para>The time when the dataset was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1629450382000</para>
@@ -471,14 +487,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string GmtModify { get; set; }
 
             /// <summary>
-            /// <para>A list of all measures for the dataset.</para>
+            /// <para>The list of all measures in the dataset.</para>
             /// </summary>
             [NameInMap("MeasureList")]
             [Validation(Required=false)]
             public List<QueryDatasetInfoResponseBodyResultMeasureList> MeasureList { get; set; }
             public class QueryDatasetInfoResponseBodyResultMeasureList : TeaModel {
                 /// <summary>
-                /// <para>The actual physical field.</para>
+                /// <para>The display name of the measure.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>profit_amt</para>
@@ -488,7 +504,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string Caption { get; set; }
 
                 /// <summary>
-                /// <para>A list of all measures for the dataset.</para>
+                /// <para>The data type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>string: String.</description></item>
+                /// <item><description>number: Number.</description></item>
+                /// <item><description>datetime: Datetime.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string</para>
@@ -498,12 +519,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string DataType { get; set; }
 
                 /// <summary>
-                /// <para>Data type; value:</para>
-                /// <list type="bullet">
-                /// <item><description>string: character</description></item>
-                /// <item><description>number: a number</description></item>
-                /// <item><description>datetime: time</description></item>
-                /// </list>
+                /// <para>The expression for the calculated measure. This parameter is valid only for calculated measures.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example_expression</para>
@@ -513,7 +529,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string Expression { get; set; }
 
                 /// <summary>
-                /// <para>Expression for flattened computation metrics.</para>
+                /// <para>The flattened expression for the calculated measure.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example_expression</para>
@@ -526,11 +542,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string ExpressionV2 { get; set; }
 
                 /// <summary>
-                /// <para>The type of the measure. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>standard_measure: General Metrics</description></item>
-                /// <item><description>calculate_measure: Calculating Measures</description></item>
-                /// </list>
+                /// <para>The actual physical field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>profit_amt</para>
@@ -540,7 +552,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string FactColumn { get; set; }
 
                 /// <summary>
-                /// <para>The description of the field.</para>
+                /// <para>The field description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>asadsda</para>
@@ -550,7 +562,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string FieldDescription { get; set; }
 
                 /// <summary>
-                /// <para>An expression that calculates a measure; valid only for calculated measures.</para>
+                /// <para>The metric type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>standard_measure: Standard measure.</description></item>
+                /// <item><description>calculate_measure: Calculated measure.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>calculate_measure</para>
@@ -560,7 +576,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string MeasureType { get; set; }
 
                 /// <summary>
-                /// <para>The display name of the metric.</para>
+                /// <para>The unique ID of the table to which the dimension belongs. This corresponds to the UniqueId in CubeTypeList.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>7a62530b36</para>
@@ -570,7 +586,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string TableUniqueId { get; set; }
 
                 /// <summary>
-                /// <para>The unique ID of the table to which the table belongs, which corresponds to the UniqueId of the CubeTypeList.</para>
+                /// <para>The unique ID of the measure.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>88b680****</para>
@@ -582,10 +598,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             }
 
             /// <summary>
-            /// <para>Whether to enable extraction acceleration. Valid values:</para>
+            /// <para>Specifies whether extract acceleration is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description>true: Enabled.</description></item>
+            /// <item><description>false: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -596,7 +612,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public bool? OpenOfflineAcceleration { get; set; }
 
             /// <summary>
-            /// <para>Test Space</para>
+            /// <para>The user ID of the dataset owner in Quick BI.</para>
             /// 
             /// <b>Example:</b>
             /// <para>b8494aab26124*****</para>
@@ -606,17 +622,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string OwnerId { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the data source.</para>
+            /// <para>The name of the dataset owner.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The name of the dataset owner.</para>
+            /// <para>Dawa</para>
             /// </summary>
             [NameInMap("OwnerName")]
             [Validation(Required=false)]
             public string OwnerName { get; set; }
 
             /// <summary>
-            /// <para>The name of the training dataset.</para>
+            /// <para>Specifies whether row-level permissions are enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: Enabled.</description></item>
+            /// <item><description>false: Disabled.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -626,11 +646,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public bool? RowLevel { get; set; }
 
             /// <summary>
-            /// <para>Whether row-level permissions are enabled. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true: The VIP Netty channel is enabled.</description></item>
-            /// <item><description>false: The VIP Netty channel is disabled.</description></item>
-            /// </list>
+            /// <para>The unique ID of the workspace to which the dataset belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>420abef4-a79b-4289-b12****</para>
@@ -640,10 +656,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string WorkspaceId { get; set; }
 
             /// <summary>
-            /// <para>Big Baby</para>
+            /// <para>The name of the workspace to which the dataset belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The name of the workspace in which the dataset resides.</para>
+            /// <para>Test workspace</para>
             /// </summary>
             [NameInMap("WorkspaceName")]
             [Validation(Required=false)]
@@ -652,7 +668,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         }
 
         /// <summary>
-        /// <para>The unique ID of the dataset.</para>
+        /// <para>Specifies whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

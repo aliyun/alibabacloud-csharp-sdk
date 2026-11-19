@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryTicketInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D787E1A3-A93C-424A-B626-C2B05DF8D885</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public QueryTicketInfoResponseBodyResult Result { get; set; }
         public class QueryTicketInfoResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Notes.</para>
+            /// <para>The ticket.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a27a9aec-<b><b>-</b></b>-bd40-1a21ea41d7c5</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string AccessTicket { get; set; }
 
             /// <summary>
-            /// <para>The ID of the component in the report.</para>
+            /// <para>The component ID in the report.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sfdgsds-<b><b>-</b></b>-a608-mghdgd</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string CmptId { get; set; }
 
             /// <summary>
-            /// <para>Global parameters.</para>
+            /// <para>The global parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{&quot;paramKey&quot;:&quot;price&quot;,&quot;joinType&quot;:&quot;and&quot;,&quot;conditionList&quot;:[{&quot;operate&quot;:&quot;&gt;&quot;,&quot;value&quot;:&quot;0&quot;}]},{&quot;paramKey&quot;:&quot;product_type&quot;,&quot;joinType&quot;:&quot;and&quot;,&quot;conditionList&quot;:[{&quot;operate&quot;:&quot;in&quot;,&quot;value&quot;:[&quot;]}]}]\n</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string GlobalParam { get; set; }
 
             /// <summary>
-            /// <para>Expiration time of the note.</para>
+            /// <para>The expiration time of the ticket.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-01-30 03:03:49</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string InvalidTime { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of supported bills.</para>
+            /// <para>The maximum number of supported tickets.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9999</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? MaxTicketNum { get; set; }
 
             /// <summary>
-            /// <para>The ID of the organization.</para>
+            /// <para>The organization ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2fe4fbd8-<b><b>-</b></b>-b3e1-e92c7af083ea</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string RegisterTime { get; set; }
 
             /// <summary>
-            /// <para>The number of bills that have been consumed.</para>
+            /// <para>The number of consumed tickets.</para>
             /// 
             /// <b>Example:</b>
             /// <para>47</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? UsedTicketNum { get; set; }
 
             /// <summary>
-            /// <para>The user ID of the Quick BI.</para>
+            /// <para>The Quick BI user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>974e50**********9033f46</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>Set the watermarking parameters.</para>
+            /// <para>The watermark parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ticket</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string WatermarkParam { get; set; }
 
             /// <summary>
-            /// <para>The ID of the operations report.</para>
+            /// <para>The report ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ccd3428c-<b><b>-</b></b>-a608-26bae29dffee</para>
@@ -141,10 +141,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <summary>
         /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para>false: The request failed.</para>
-        /// </description></item>
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

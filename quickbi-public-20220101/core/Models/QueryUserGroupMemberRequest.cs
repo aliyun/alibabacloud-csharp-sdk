@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryUserGroupMemberRequest : TeaModel {
         /// <summary>
-        /// <para>Keyword for the username or nickname of the user group member.</para>
+        /// <para>The keyword used to search for the username or nickname of a user group member.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>Xiao Liu</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>User group ID.</para>
+        /// <para>The ID of the user group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

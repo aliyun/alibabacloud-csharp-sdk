@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryTicketInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The value of the bill.</para>
+        /// <para>The ticket value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

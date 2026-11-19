@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryDataServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>78C1AA2D-9201-599E-A0BA-6FC462E57A95</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returns the result of the interface query.</para>
+        /// <para>The query result returned by the API.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public QueryDataServiceResponseBodyResult Result { get; set; }
         public class QueryDataServiceResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Column headers.</para>
+            /// <para>The column headers.</para>
             /// </summary>
             [NameInMap("Headers")]
             [Validation(Required=false)]
             public List<QueryDataServiceResponseBodyResultHeaders> Headers { get; set; }
             public class QueryDataServiceResponseBodyResultHeaders : TeaModel {
                 /// <summary>
-                /// <para>Aggregation operator. Only present for measure fields, such as SUM, AVG, and MAX.</para>
+                /// <para>The aggregation operator. This parameter is returned only for measure fields, such as SUM, AVG, and MAX.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SUM</para>
@@ -44,17 +44,17 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string Aggregator { get; set; }
 
                 /// <summary>
-                /// <para>Field name, corresponding to the physical table field name.</para>
+                /// <para>The name of the field, which corresponds to the field name in the physical table.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The alias of the field. The key of the map data row in the result parameter values.</para>
+                /// <para>A specific physical field name</para>
                 /// </summary>
                 [NameInMap("Column")]
                 [Validation(Required=false)]
                 public string Column { get; set; }
 
                 /// <summary>
-                /// <para>The data type of the field. Common types include number, string, date, datetime, time, and geographic.</para>
+                /// <para>The data type of the field. Common values include number, string, date, datetime, time, and geographic.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string</para>
@@ -64,12 +64,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string DataType { get; set; }
 
                 /// <summary>
-                /// <para>The granularity of the dimension field.
-                /// This field is returned only when the requested field is a date or geographic dimension, with the following possible values:</para>
+                /// <para>The granularity of the dimension field. This parameter is returned only when the requested field is a date dimension or geographic dimension field. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Date granularity: yearRegion (year), monthRegion (month), weekRegion (week), dayRegion (day), hourRegion (hour), minRegion (minute), secRegion (second)</para>
+                /// <item><description><para>Date granularity: yearRegion (year), monthRegion (month), weekRegion (week), dayRegion (day), hourRegion (hour), minRegion (minute), and secRegion (second).</para>
                 /// </description></item>
-                /// <item><description><para>Geographic granularity: COUNTRY (country level), PROVINCE (province level), CITY (city level), XIAN (district/county level), REGION (region)</para>
+                /// <item><description><para>Geographic information granularity: COUNTRY (country level), PROVINCE (province level), CITY (city level), XIAN (district or county level), and REGION (region level).</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -81,7 +80,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string Granularity { get; set; }
 
                 /// <summary>
-                /// <para>Alias for the field, serving as the key in the map data row of the values parameter.</para>
+                /// <para>The alias of the field, which is the key of the map data row in the Values response parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>area</para>
@@ -91,7 +90,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string Label { get; set; }
 
                 /// <summary>
-                /// <para>Field type, used to distinguish between dimension and measure fields.</para>
+                /// <para>The type of the field, which is used to distinguish whether the field is a dimension or a measure.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>StandardDimension</para>
@@ -103,17 +102,20 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             }
 
             /// <summary>
-            /// <para>The SQL of the query request.</para>
+            /// <para>The SQL statement of the query request.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>SELECT COMPANY_T_1_.<c>area</c> AS D_AREA_2_, COMPANY_T_1_.<c>city</c> AS D_CITY_3_, SUM(COMPANY_T_1_.<c>profit_amt</c>) AS D_PROFIT_4_ FROM <c>quickbi_test</c>.<c>company_sales_record_copy</c> AS COMPANY_T_1_   LIMIT 0, 10</para>
+            /// <para>SELECT COMPANY_T_1_.<c>area</c> AS D_AREA_2_, COMPANY_T_1_.<c>city</c> AS D_CITY_3_, SUM(COMPANY_T_1_.<c>profit_amt</c>) AS D_PROFIT_4_ FROM <c>quickbi_test</c>.<c>company_sales_record_copy</c> AS COMPANY_T_1_ WHERE COMPANY_T_1_.<c>area</c> LIKE \&quot;%East China%\&quot; GROUP BY COMPANY_T_1_.<c>area</c>, COMPANY_T_1_.<c>city</c> HAVING SUM(COMPANY_T_1_.<c>order_amt</c>) &gt; 1 LIMIT 0, 10</para>
             /// </summary>
             [NameInMap("Sql")]
             [Validation(Required=false)]
             public string Sql { get; set; }
 
             /// <summary>
-            /// <para>The queried results returned.</para>
+            /// <para>The returned query results.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[{&quot;area&quot;:&quot;East China&quot;,&quot;city&quot;:&quot;Sanming&quot;},{&quot;area&quot;:&quot;East China&quot;,&quot;city&quot;:&quot;Shanghai&quot;}]</para>
             /// </summary>
             [NameInMap("Values")]
             [Validation(Required=false)]
@@ -122,11 +124,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Possible values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The request was successful</para>
+        /// <item><description><para>true: The request is successful.</para>
         /// </description></item>
-        /// <item><description><para>false: The request failed</para>
+        /// <item><description><para>false: The request fails.</para>
         /// </description></item>
         /// </list>
         /// 

@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string DataPortalId { get; set; }
 
         /// <summary>
-        /// <para>The leaf node menu IDs of the data portal.</para>
+        /// <para>The IDs of the leaf node menus in the data portal.</para>
         /// <list type="bullet">
-        /// <item><description>Supports batch parameters, with IDs separated by commas (,). The maximum number for batch modification is 100.</description></item>
+        /// <item><description>You can specify multiple IDs. Separate multiple IDs with commas (,). A maximum of 100 IDs can be specified at a time.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,10 +35,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string MenuIds { get; set; }
 
         /// <summary>
-        /// <para>List of user group IDs.</para>
+        /// <para>The IDs of the user groups.</para>
         /// <list type="bullet">
-        /// <item><description>Supports batch parameters, with IDs separated by commas (,). The maximum number for batch modification is 200.</description></item>
-        /// <item><description>UserGroupIds and UserIds cannot both be empty.</description></item>
+        /// <item><description>You can specify multiple IDs. Separate multiple IDs with commas (,). A maximum of 200 IDs can be specified at a time.</description></item>
+        /// <item><description>UserGroupIds and UserIds cannot be empty at the same time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,9 +49,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string UserGroupIds { get; set; }
 
         /// <summary>
-        /// <para>List of user IDs. These are Quick BI UserIDs, not Alibaba Cloud UIDs.</para>
+        /// <para>The IDs of the users. These are Quick BI user IDs, not Alibaba Cloud UIDs.</para>
         /// <list type="bullet">
-        /// <item><description>Supports batch parameters, with IDs separated by commas (,). The maximum number for batch modification is 200.</description></item>
+        /// <item><description>You can specify multiple IDs. Separate multiple IDs with commas (,). A maximum of 200 IDs can be specified at a time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

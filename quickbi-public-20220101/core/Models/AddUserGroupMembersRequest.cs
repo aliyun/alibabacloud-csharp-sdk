@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class AddUserGroupMembersRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the user groups. Separate the IDs with commas (,). Example: aGroupId,bGroupId,cGroupIds</para>
+        /// <para>The IDs of the user groups, separated by commas. Example: aGroupId,bGroupId,cGroupIds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string UserGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the Quick BI.</para>
+        /// <para>The user ID in Quick BI.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

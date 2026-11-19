@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryReadableResourcesListByUserIdRequest : TeaModel {
         /// <summary>
-        /// <para>Quick BI the user ID.</para>
+        /// <para>The Quick BI user ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

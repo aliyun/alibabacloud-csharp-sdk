@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryDataServiceListRequest : TeaModel {
         /// <summary>
-        /// <para>Data service name.</para>
+        /// <para>The service name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>Test SQL</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Page number. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>Number of items per page in a paginated query:</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// <list type="bullet">
         /// <item><description>Default value: 10</description></item>
         /// <item><description>Maximum value: 1000</description></item>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>User ID.</para>
+        /// <para>The user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dasdfdsa-csddf-dsadsa</para>

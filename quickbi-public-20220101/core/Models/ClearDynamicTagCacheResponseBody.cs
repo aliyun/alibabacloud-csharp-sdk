@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the cache is purged.</para>
+        /// <para>Indicates whether the cache is cleared successfully. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The cache is purged.</description></item>
+        /// <item><description>true: The cache is cleared successfully.</description></item>
         /// <item><description>false: No cache exists.</description></item>
         /// </list>
         /// 

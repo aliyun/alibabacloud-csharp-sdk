@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class ListAuthConfigByResourceRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to query only records that have permissions.</para>
+        /// <para>Specifies whether to query only the records that have permissions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource to authorize.</para>
+        /// <para>The ID of the resource to be authorized.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,11 +44,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <summary>
         /// <para>The query granularity. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: user</description></item>
-        /// <item><description>1: user group</description></item>
+        /// <item><description>0: User.</description></item>
+        /// <item><description>1: User group.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Notice: Authorization records for organizations and workspaces are returned at the user granularity. Datasets and data sources can only be authorized to users.</para>
+        /// <para>Notice: Authorization records for organizations and workspaces are returned at the user granularity. Datasets and data sources can only be authorized to users.</notice></para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -60,16 +60,16 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? ShareToType { get; set; }
 
         /// <summary>
-        /// <para>The type of the authorization resource. Valid values:</para>
+        /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>dashboard: dashboard</description></item>
-        /// <item><description>screen: data screen</description></item>
-        /// <item><description>report: electron</description></item>
-        /// <item><description>ANALYSIS: ad hoc analysis</description></item>
-        /// <item><description>dashboardOfflineQuery: self-service data retrieval</description></item>
-        /// <item><description>dataForm: data form</description></item>
-        /// <item><description>cube: dataset</description></item>
-        /// <item><description>datasource: data source</description></item>
+        /// <item><description>dashboard: Dashboard.</description></item>
+        /// <item><description>screen: Data screen.</description></item>
+        /// <item><description>report: Workbook.</description></item>
+        /// <item><description>ANALYSIS: Ad hoc analysis.</description></item>
+        /// <item><description>dashboardOfflineQuery: Self-service data retrieval.</description></item>
+        /// <item><description>dataForm: Data entry.</description></item>
+        /// <item><description>cube: Dataset.</description></item>
+        /// <item><description>datasource: Data source.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

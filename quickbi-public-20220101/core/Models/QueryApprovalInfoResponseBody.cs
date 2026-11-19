@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryApprovalInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D787E1A3-A93C-424A-B626-C2B05DF8D885</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return the result of the interface execution.</para>
+        /// <para>The result of the API operation.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public QueryApprovalInfoResponseBodyResult Result { get; set; }
         public class QueryApprovalInfoResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Array of approval flow information.</para>
+            /// <para>The array of approval flow information.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<QueryApprovalInfoResponseBodyResultData> Data { get; set; }
             public class QueryApprovalInfoResponseBodyResultData : TeaModel {
                 /// <summary>
-                /// <para>Applicant\&quot;s user ID, qbi user ID.</para>
+                /// <para>The QBI user ID of the applicant.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1359508</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string ApplicantId { get; set; }
 
                 /// <summary>
-                /// <para>Applicant\&quot;s nickname.</para>
+                /// <para>The nickname of the applicant.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Li Fei</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string ApplicantName { get; set; }
 
                 /// <summary>
-                /// <para>Application ID.</para>
+                /// <para>The ID of the application.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>64813ef6da58e80eef8ed2f9</para>
@@ -64,17 +64,17 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string ApplicationId { get; set; }
 
                 /// <summary>
-                /// <para>Application reason.</para>
+                /// <para>The reason for the application.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Development needs</para>
+                /// <para>Required for development</para>
                 /// </summary>
                 [NameInMap("ApplyReason")]
                 [Validation(Required=false)]
                 public string ApplyReason { get; set; }
 
                 /// <summary>
-                /// <para>Approver\&quot;s user ID, qbi user ID.</para>
+                /// <para>The QBI user ID of the approver.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sdasascasxasd</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string ApproverId { get; set; }
 
                 /// <summary>
-                /// <para>Approver\&quot;s nickname.</para>
+                /// <para>The nickname of the approver.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>data_fusion_002</para>
@@ -94,10 +94,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string ApproverName { get; set; }
 
                 /// <summary>
-                /// <para>Whether the resource has been deleted:</para>
+                /// <para>Indicates whether the resource has been deleted. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: Deleted</description></item>
-                /// <item><description>false: Not deleted</description></item>
+                /// <item><description>true: The resource has been deleted.</description></item>
+                /// <item><description>false: The resource has not been deleted.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public bool? DeleteFlag { get; set; }
 
                 /// <summary>
-                /// <para>Permission expiration date, timestamp.</para>
+                /// <para>The expiration time of the permission.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1708568097135</para>
@@ -118,11 +118,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public long? ExpireDate { get; set; }
 
                 /// <summary>
-                /// <para>Permission approval status:</para>
+                /// <para>The approval status of the permission. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: Under review, corresponding to 0 in the request parameters</description></item>
-                /// <item><description>1: Approved, corresponding to 1 in the request parameters</description></item>
-                /// <item><description>2: Rejected, corresponding to 1 in the request parameters</description></item>
+                /// <item><description>0: Pending approval, which corresponds to 0 in the request parameters.</description></item>
+                /// <item><description>1: Approved, which corresponds to 1 in the request parameters.</description></item>
+                /// <item><description>2: Rejected, which corresponds to 1 in the request parameters.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public int? FlagStatus { get; set; }
 
                 /// <summary>
-                /// <para>Application creation time, timestamp.</para>
+                /// <para>The time when the application was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1687315758</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public long? GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>Application modification time, timestamp.</para>
+                /// <para>The time when the application was modified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1640595729000</para>
@@ -153,17 +153,17 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public long? GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>Handling reason.</para>
+                /// <para>The reason for handling the application.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Development needs</para>
+                /// <para>Required for development</para>
                 /// </summary>
                 [NameInMap("HandleReason")]
                 [Validation(Required=false)]
                 public string HandleReason { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the resource for which permission is requested.</para>
+                /// <para>The ID of the resource for which permissions are requested.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>acl-ct4t2e4u2x4ej1bzur</para>
@@ -173,10 +173,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the resource for which permission is requested (e.g., report name, space name...).</para>
+                /// <para>The name of the resource for which permissions are requested, such as the report name or workspace name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Test Resources</para>
+                /// <para>Test resource</para>
                 /// </summary>
                 [NameInMap("ResourceName")]
                 [Validation(Required=false)]
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>The name of the workspace.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Test Workspace</para>
+                /// <para>Test workspace</para>
                 /// </summary>
                 [NameInMap("WorkspaceName")]
                 [Validation(Required=false)]
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? Page { get; set; }
 
             /// <summary>
-            /// <para>The number of records requested per page.</para>
+            /// <para>The number of records on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The starting position of the current page.</para>
+            /// <para>The start position of the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? Start { get; set; }
 
             /// <summary>
-            /// <para>The total number of items.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -257,10 +257,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the API call was successful. Possible values are:</para>
+        /// <para>Indicates whether the API operation is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: success</description></item>
-        /// <item><description>false: failure</description></item>
+        /// <item><description>true: The operation is successful.</description></item>
+        /// <item><description>false: The operation fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

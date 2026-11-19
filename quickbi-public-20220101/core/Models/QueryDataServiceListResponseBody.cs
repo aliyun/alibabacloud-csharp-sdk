@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryDataServiceListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>78C1AA2D-9201-599E-A0BA-6FC462E57A95</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return result.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public QueryDataServiceListResponseBodyResult Result { get; set; }
         public class QueryDataServiceListResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Data service information.</para>
+            /// <para>The data service information.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public QueryDataServiceListResponseBodyResultDataContent Content { get; set; }
                 public class QueryDataServiceListResponseBodyResultDataContent : TeaModel {
                     /// <summary>
-                    /// <para>Cube identifier ID.</para>
+                    /// <para>The cube ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>56f9f34a-bdba-496a-91a3-a18b1ff73a80</para>
@@ -51,17 +51,17 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public string CubeId { get; set; }
 
                     /// <summary>
-                    /// <para>Dataset name.</para>
+                    /// <para>The name of the dataset.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>test data source</para>
+                    /// <para>Test dataset</para>
                     /// </summary>
                     [NameInMap("CubeName")]
                     [Validation(Required=false)]
                     public string CubeName { get; set; }
 
                     /// <summary>
-                    /// <para>Detail or Summary</para>
+                    /// <para>The detail or aggregate type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -71,24 +71,41 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public bool? Detail { get; set; }
 
                     /// <summary>
-                    /// <para>Request parameter information.</para>
+                    /// <para>The request parameter information.</para>
                     /// </summary>
                     [NameInMap("Filter")]
                     [Validation(Required=false)]
                     public QueryDataServiceListResponseBodyResultDataContentFilter Filter { get; set; }
                     public class QueryDataServiceListResponseBodyResultDataContentFilter : TeaModel {
                         /// <summary>
-                        /// <para>Combined conditions.</para>
+                        /// <para>The combined conditions.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>[{
+                        ///     &quot;field&quot;: {
+                        ///         &quot;fid&quot;: &quot;1c1f88cb7d&quot;,
+                        ///         &quot;granularity&quot;: &quot;yearRegion&quot;,
+                        ///         &quot;dataType&quot;: &quot;datetime&quot;,
+                        ///         &quot;column&quot;: &quot;s_date&quot;,
+                        ///         &quot;caption&quot;: &quot;Date (year)&quot;,
+                        ///         &quot;type&quot;: &quot;dimension&quot;
+                        ///     },
+                        ///     &quot;defaultValue&quot;: [&quot;2024&quot;],
+                        ///     &quot;alias&quot;: &quot;s_date&quot;,
+                        ///     &quot;type&quot;: &quot;basic&quot;,
+                        ///     &quot;operator&quot;: &quot;equal-to&quot;,
+                        ///     &quot;essential&quot;: true
+                        /// }]</para>
                         /// </summary>
                         [NameInMap("Filters")]
                         [Validation(Required=false)]
                         public List<Dictionary<string, object>> Filters { get; set; }
 
                         /// <summary>
-                        /// <para>Logical relationship between multiple SQL text keywords.</para>
+                        /// <para>The logical relationship between multiple SQL text keywords.</para>
                         /// <list type="bullet">
-                        /// <item><description><b>or</b>: or</description></item>
-                        /// <item><description><b>and</b>: and</description></item>
+                        /// <item><description><b>or</b>: OR.</description></item>
+                        /// <item><description><b>and</b>: AND.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -99,10 +116,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                         public string LogicalOperator { get; set; }
 
                         /// <summary>
-                        /// <para>Type.</para>
+                        /// <para>The type.</para>
                         /// <list type="bullet">
-                        /// <item><description>basic: basic</description></item>
-                        /// <item><description>combined: complex</description></item>
+                        /// <item><description>basic: Basic.</description></item>
+                        /// <item><description>combined: Complex.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -115,14 +132,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     }
 
                     /// <summary>
-                    /// <para>Return information.</para>
+                    /// <para>The returned information.</para>
                     /// </summary>
                     [NameInMap("ReturnFields")]
                     [Validation(Required=false)]
                     public List<QueryDataServiceListResponseBodyResultDataContentReturnFields> ReturnFields { get; set; }
                     public class QueryDataServiceListResponseBodyResultDataContentReturnFields : TeaModel {
                         /// <summary>
-                        /// <para>Aggregation operator. For example, SUM, AVG, and MAX.</para>
+                        /// <para>The aggregate operation (aggregation), such as SUM, AVG, and MAX.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>SUM</para>
@@ -132,7 +149,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                         public string Aggregator { get; set; }
 
                         /// <summary>
-                        /// <para>Field parameter name.</para>
+                        /// <para>The field parameter name.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>s_number</para>
@@ -142,27 +159,27 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                         public string Alias { get; set; }
 
                         /// <summary>
-                        /// <para>Remark for the returned field.</para>
+                        /// <para>The description of the returned field.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>Theme Configuration already exists</para>
+                        /// <para>The theme configuration already exists</para>
                         /// </summary>
                         [NameInMap("Desc")]
                         [Validation(Required=false)]
                         public string Desc { get; set; }
 
                         /// <summary>
-                        /// <para>Corresponding cube field information.</para>
+                        /// <para>The corresponding cube field information.</para>
                         /// </summary>
                         [NameInMap("Field")]
                         [Validation(Required=false)]
                         public QueryDataServiceListResponseBodyResultDataContentReturnFieldsField Field { get; set; }
                         public class QueryDataServiceListResponseBodyResultDataContentReturnFieldsField : TeaModel {
                             /// <summary>
-                            /// <para>Display name in the cube model (can be in Chinese or English).</para>
+                            /// <para>The display name in the cube model, which can be in Chinese or English.</para>
                             /// 
                             /// <b>Example:</b>
-                            /// <para>date(year)</para>
+                            /// <para>Date (year)</para>
                             /// </summary>
                             [NameInMap("Caption")]
                             [Validation(Required=false)]
@@ -179,16 +196,16 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                             public string Column { get; set; }
 
                             /// <summary>
-                            /// <para>Data type.</para>
+                            /// <para>The data type.</para>
                             /// <list type="bullet">
-                            /// <item><description>number: numeric</description></item>
-                            /// <item><description>string: string</description></item>
-                            /// <item><description>date: date</description></item>
-                            /// <item><description>datetime: datetime</description></item>
-                            /// <item><description>time: time</description></item>
-                            /// <item><description>geographic: geographic</description></item>
-                            /// <item><description>boolean: boolean</description></item>
-                            /// <item><description>url: URL</description></item>
+                            /// <item><description>number: Number.</description></item>
+                            /// <item><description>string: String.</description></item>
+                            /// <item><description>date: Date.</description></item>
+                            /// <item><description>datetime: Datetime.</description></item>
+                            /// <item><description>time: Time.</description></item>
+                            /// <item><description>geographic: Geographic.</description></item>
+                            /// <item><description>boolean: Boolean.</description></item>
+                            /// <item><description>url: URL.</description></item>
                             /// </list>
                             /// 
                             /// <b>Example:</b>
@@ -199,7 +216,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                             public string DataType { get; set; }
 
                             /// <summary>
-                            /// <para>Unique identifier for the original field.</para>
+                            /// <para>The unique ID of the original field.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>1c1f88cb7d</para>
@@ -209,7 +226,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                             public string Fid { get; set; }
 
                             /// <summary>
-                            /// <para>This attribute is included for date and geographic dimensions, indicating the supported granularity.</para>
+                            /// <para>The supported granularity. This property is included in date and geographic dimensions.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>yearRegion</para>
@@ -219,7 +236,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                             public string Granularity { get; set; }
 
                             /// <summary>
-                            /// <para>Unique name of the cube field, mainly used for unique positioning in the returned result.</para>
+                            /// <para>The unique name of the cube field, which is primarily used to uniquely locate the returned result.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>sss</para>
@@ -229,10 +246,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                             public string Name { get; set; }
 
                             /// <summary>
-                            /// <para>Type.</para>
+                            /// <para>The type.</para>
                             /// <list type="bullet">
-                            /// <item><description>Dimension: Dimension</description></item>
-                            /// <item><description>Measure: Measure</description></item>
+                            /// <item><description>Dimension: Dimension.</description></item>
+                            /// <item><description>Measure: Measure.</description></item>
                             /// </list>
                             /// 
                             /// <b>Example:</b>
@@ -245,11 +262,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                         }
 
                         /// <summary>
-                        /// <para>Sorting.</para>
+                        /// <para>The sort order.</para>
                         /// <list type="bullet">
-                        /// <item><description>asc: Ascending</description></item>
-                        /// <item><description>desc: Descending</description></item>
-                        /// <item><description>no: No sorting</description></item>
+                        /// <item><description>asc: Ascending.</description></item>
+                        /// <item><description>desc: Descending.</description></item>
+                        /// <item><description>no: Unsorted.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -264,7 +281,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 }
 
                 /// <summary>
-                /// <para>Creator ID.</para>
+                /// <para>The ID of the creator.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>7cb94cd48701</para>
@@ -274,17 +291,17 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string CreatorId { get; set; }
 
                 /// <summary>
-                /// <para>Creator\&quot;s name.</para>
+                /// <para>The name of the creator.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>zhangsan</para>
+                /// <para>Zhang Zilong</para>
                 /// </summary>
                 [NameInMap("CreatorName")]
                 [Validation(Required=false)]
                 public string CreatorName { get; set; }
 
                 /// <summary>
-                /// <para>Cube identifier ID.</para>
+                /// <para>The cube ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>d14e7448-0eb3-40d3-9375-4afef8de29fd</para>
@@ -294,27 +311,27 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string CubeId { get; set; }
 
                 /// <summary>
-                /// <para>Dataset name.</para>
+                /// <para>The name of the dataset.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test data source</para>
+                /// <para>Test dataset</para>
                 /// </summary>
                 [NameInMap("CubeName")]
                 [Validation(Required=false)]
                 public string CubeName { get; set; }
 
                 /// <summary>
-                /// <para>Description</para>
+                /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test</para>
+                /// <para>For testing</para>
                 /// </summary>
                 [NameInMap("Desc")]
                 [Validation(Required=false)]
                 public string Desc { get; set; }
 
                 /// <summary>
-                /// <para>Creation time.</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-05-18 14:00:02.0</para>
@@ -324,7 +341,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>Modification time.</para>
+                /// <para>The modification time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-03-21 18:02:36</para>
@@ -334,7 +351,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>Modifier\&quot;s userId.</para>
+                /// <para>The user ID of the modifier.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>7cb94cd48701</para>
@@ -344,27 +361,27 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string ModifierId { get; set; }
 
                 /// <summary>
-                /// <para>Modifier\&quot;s name</para>
+                /// <para>The name of the modifier.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>zhangsan</para>
+                /// <para>Zhang Zilong</para>
                 /// </summary>
                 [NameInMap("ModifierName")]
                 [Validation(Required=false)]
                 public string ModifierName { get; set; }
 
                 /// <summary>
-                /// <para>Data service name.</para>
+                /// <para>The service name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test report</para>
+                /// <para>Test report</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Owner ID</para>
+                /// <para>The ID of the owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>862801339</para>
@@ -374,17 +391,17 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string OwnerId { get; set; }
 
                 /// <summary>
-                /// <para>Owner\&quot;s name</para>
+                /// <para>The name of the owner.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>lisi</para>
+                /// <para>Li Si</para>
                 /// </summary>
                 [NameInMap("OwnerName")]
                 [Validation(Required=false)]
                 public string OwnerName { get; set; }
 
                 /// <summary>
-                /// <para>Unique ID of the data service.</para>
+                /// <para>The unique ID of the data service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dtsuq3i31f5j8v848b</para>
@@ -394,7 +411,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string Sid { get; set; }
 
                 /// <summary>
-                /// <para>Workspace ID.</para>
+                /// <para>The workspace ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>7350a155-0e94-4c6c-8620-57bbec38****</para>
@@ -404,10 +421,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string WorkspaceId { get; set; }
 
                 /// <summary>
-                /// <para>Workspace name.</para>
+                /// <para>The name of the workspace.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test workspace</para>
+                /// <para>Test workspace</para>
                 /// </summary>
                 [NameInMap("WorkspaceName")]
                 [Validation(Required=false)]
@@ -416,7 +433,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             }
 
             /// <summary>
-            /// <para>Page number.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -426,7 +443,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? PageNum { get; set; }
 
             /// <summary>
-            /// <para>Number of records per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -436,7 +453,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Total number of rows.</para>
+            /// <para>The total number of rows.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -446,7 +463,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? TotalNum { get; set; }
 
             /// <summary>
-            /// <para>Total number of pages.</para>
+            /// <para>The total number of pages.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -458,10 +475,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Value range:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request was successful </description></item>
-        /// <item><description>false: The request failed</description></item>
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
