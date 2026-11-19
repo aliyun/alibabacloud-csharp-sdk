@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetCatalogAssetDetailsRequest : TeaModel {
         /// <summary>
-        /// <para>The paged query for the listed asset catalog.</para>
+        /// <para>The paging query for the list of listed asset catalogs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("GetCatalogAssetDetailsQuery")]
@@ -29,10 +29,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Guid { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to include the field list. Default value: false. Valid values:</para>
+            /// <para>Specifies whether to include the column list. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>false: Not included.</description></item>
             /// <item><description>true: Included.</description></item>
+            /// <item><description>false: Not included.
+            /// Default value: false.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("IncludeColumns")]
@@ -40,10 +41,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? IncludeColumns { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to include detailed data. Default value: false. Valid values:</para>
+            /// <para>Specifies whether to include detailed data. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>false: Not included.</description></item>
             /// <item><description>true: Included.</description></item>
+            /// <item><description>false: Not included.
+            /// Default value: false.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("IncludeDetailedAttributes")]
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the operator user.</para>
+        /// <para>The ID of the operator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30001011</para>

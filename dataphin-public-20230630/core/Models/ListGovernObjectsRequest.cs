@@ -18,15 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ListGovernObjectsRequestListQuery ListQuery { get; set; }
         public class ListGovernObjectsRequestListQuery : TeaModel {
             /// <summary>
-            /// <para>The governance item type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>TABLE</description></item>
-            /// <item><description>DATASOURCE_TABLE</description></item>
-            /// <item><description>DATASOURCE</description></item>
-            /// <item><description>INDEX</description></item>
-            /// <item><description>REALTIME_LOGICAL_TABLE</description></item>
-            /// <item><description>QD_FEATURE</description></item>
-            /// </list>
+            /// <para>The governance item type. Valid values: TABLE, DATASOURCE_TABLE, DATASOURCE, INDEX, REALTIME_LOGICAL_TABLE, and QD_FEATURE.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -77,32 +69,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The list of project names used to filter results.</para>
+            /// <para>The list of project names used for filtering.</para>
             /// </summary>
             [NameInMap("ProjectNames")]
             [Validation(Required=false)]
             public List<string> ProjectNames { get; set; }
 
             /// <summary>
-            /// <para>The list of governance object statuses. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>NEW</description></item>
-            /// <item><description>VERIFY</description></item>
-            /// <item><description>FINISHED</description></item>
-            /// <item><description>IGNORE</description></item>
-            /// </list>
+            /// <para>The list of governance object statuses. Valid values: NEW, VERIFY, FINISHED, and IGNORE.</para>
             /// </summary>
             [NameInMap("StatusList")]
             [Validation(Required=false)]
             public List<string> StatusList { get; set; }
 
             /// <summary>
-            /// <para>The view type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>ALL</description></item>
-            /// <item><description>OWNER</description></item>
-            /// <item><description>PROJECT</description></item>
-            /// </list>
+            /// <para>The view type. Valid values: ALL, OWNER, and PROJECT.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALL</para>
@@ -125,7 +106,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the operator user.</para>
+        /// <para>The ID of the operator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30001011</para>

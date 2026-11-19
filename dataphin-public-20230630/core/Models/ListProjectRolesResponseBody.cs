@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListProjectRolesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. OK indicates that the request is successful.</para>
+        /// <para>The error code. A value of OK indicates that the request is normal.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public List<ListProjectRolesResponseBodyRoleList> RoleList { get; set; }
         public class ListProjectRolesResponseBodyRoleList : TeaModel {
             /// <summary>
-            /// <para>The JSON string of the permission set.</para>
+            /// <para>The JSON string of permission points.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>

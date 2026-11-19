@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> CustomChannelIdList { get; set; }
 
             /// <summary>
-            /// <para>The keyword for the query.</para>
+            /// <para>The search keyword.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> MonitoredItemIdList { get; set; }
 
             /// <summary>
-            /// <para>The end time of the push.</para>
+            /// <para>The push end time.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string NotifyEndTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the push.</para>
+            /// <para>The push start time.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? Page { get; set; }
 
             /// <summary>
-            /// <para>The number of records per page.</para>
+            /// <para>The number of entries per page.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -101,16 +101,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The source system. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ALL: all.</description></item>
-            /// <item><description>DQE: data quality.</description></item>
-            /// <item><description>OS: data service.</description></item>
-            /// <item><description>STREAM: real-time computing.</description></item>
-            /// <item><description>VDM_BATCH: offline computing.</description></item>
+            /// <item><description>ALL: All.</description></item>
+            /// <item><description>DQE: Data quality.</description></item>
+            /// <item><description>OS: Data service.</description></item>
+            /// <item><description>STREAM: Real-time computing.</description></item>
+            /// <item><description>VDM_BATCH: Offline computing.</description></item>
             /// <item><description>SOP: O&amp;M platform.</description></item>
-            /// <item><description>REAL_TIME_PIPELINE: real-time integration.</description></item>
-            /// <item><description>KGB: baseline monitoring.</description></item>
+            /// <item><description>REAL_TIME_PIPELINE: Real-time integration.</description></item>
+            /// <item><description>KGB: Baseline monitoring.
+            /// etc.</description></item>
             /// </list>
-            /// <para>And more.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -148,6 +148,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

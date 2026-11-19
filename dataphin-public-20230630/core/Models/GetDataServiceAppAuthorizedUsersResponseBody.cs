@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error details of the backend response.</para>
+        /// <para>The details of the backend exception.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The user list.</para>
+        /// <para>The list of users.</para>
         /// </summary>
         [NameInMap("UserList")]
         [Validation(Required=false)]

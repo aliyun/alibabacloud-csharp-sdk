@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetSecurityIdentifyResultResponseBodySecurityIdentifyResultInfo SecurityIdentifyResultInfo { get; set; }
         public class GetSecurityIdentifyResultResponseBodySecurityIdentifyResultInfo : TeaModel {
             /// <summary>
-            /// <para>The business date. Format: YYYY-MM-DD.</para>
+            /// <para>The business date in the YYYY-MM-DD format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-30</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string BizDate { get; set; }
 
             /// <summary>
-            /// <para>The Chinese name of the business unit.</para>
+            /// <para>The Chinese display name of the business unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>LD_test</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string BizUnitName { get; set; }
 
             /// <summary>
-            /// <para>The classification abbreviation.</para>
+            /// <para>The abbreviation of the classification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ClassifyAbbreviation { get; set; }
 
             /// <summary>
-            /// <para>The classification ID.</para>
+            /// <para>The ID of the classification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>33</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ClassifyId { get; set; }
 
             /// <summary>
-            /// <para>The classification name.</para>
+            /// <para>The name of the classification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ClassifyName { get; set; }
 
             /// <summary>
-            /// <para>The creation time. Format: YYYY-MM-DD HH:mm:ss.</para>
+            /// <para>The creation time in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-30 10:30:30</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DatasourceName { get; set; }
 
             /// <summary>
-            /// <para>The field description.</para>
+            /// <para>The description of the field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -197,14 +197,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string FieldName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a better match is available.</para>
+            /// <para>Indicates whether a better matched result exists.</para>
             /// </summary>
             [NameInMap("HasBetterRule")]
             [Validation(Required=false)]
             public bool? HasBetterRule { get; set; }
 
             /// <summary>
-            /// <para>The recognition result ID.</para>
+            /// <para>The ID of the recognition result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? IdentifyRecordId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a custom identification rule is used.</para>
+            /// <para>Indicates whether a custom tagging rule is used.</para>
             /// </summary>
             [NameInMap("IsCustomIdentify")]
             [Validation(Required=false)]
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? IsLocked { get; set; }
 
             /// <summary>
-            /// <para>The abbreviation of the classification level.</para>
+            /// <para>The abbreviation of the level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string LevelAbbreviation { get; set; }
 
             /// <summary>
-            /// <para>The color of the classification level.</para>
+            /// <para>The color of the level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? LevelColor { get; set; }
 
             /// <summary>
-            /// <para>The classification level.</para>
+            /// <para>The grading level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? LevelIndex { get; set; }
 
             /// <summary>
-            /// <para>The name of the classification level.</para>
+            /// <para>The name of the level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The Chinese name of the project.</para>
+            /// <para>The Chinese display name of the project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -348,7 +348,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The table catalog.</para>
+            /// <para>The catalog of the table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testdb</para>
@@ -358,7 +358,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string TableCatalog { get; set; }
 
             /// <summary>
-            /// <para>The table description.</para>
+            /// <para>The description of the table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -368,7 +368,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string TableDescription { get; set; }
 
             /// <summary>
-            /// <para>The table environment.</para>
+            /// <para>The environment of the table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DEV</para>
@@ -408,17 +408,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? TableTaskId { get; set; }
 
             /// <summary>
-            /// <para>The table type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>LOGIC_TABLE: logical table</description></item>
-            /// <item><description>LOGIC_DIM_TABLE: logical dimension table</description></item>
-            /// <item><description>LOGIC_FACT_TABLE: logical fact table</description></item>
-            /// <item><description>LOGIC_SUM_TABLE: logical aggregate table</description></item>
-            /// <item><description>LOGIC_ODM_SOURCE: source table</description></item>
-            /// <item><description>LOGIC_LABEL_TABLE: logical label table</description></item>
-            /// <item><description>PHYSICAL_TABLE: physical table</description></item>
-            /// <item><description>REAL_TIME_LOGIC_TABLE: real-time configured logical table</description></item>
-            /// </list>
+            /// <para>The type of the table. Valid values: LOGIC_TABLE (logical table), LOGIC_DIM_TABLE (logical dimension table), LOGIC_FACT_TABLE (logical fact table), LOGIC_SUM_TABLE (logical aggregate table), LOGIC_ODM_SOURCE (source table), LOGIC_LABEL_TABLE (logical label table), PHYSICAL_TABLE (physical table), and REAL_TIME_LOGIC_TABLE (real-time configured logical table).</para>
             /// 
             /// <b>Example:</b>
             /// <para>LOGIC_TABLE</para>

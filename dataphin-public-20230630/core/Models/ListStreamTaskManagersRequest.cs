@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListStreamTaskManagersRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Flink deployment instance.</para>
+        /// <para>The deployment instance ID. You can obtain the value from the deploymentInstanceId returned in the operation record or historical run instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string DeploymentInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the operating tenant. After the gateway verifies that the current identity has access to the tenant, it injects the tenant ID into the backend.</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
-        /// <para>The optional ID of the operating user. This parameter follows the identity verification rules of the gateway and is not directly bound to the backend user ID.</para>
+        /// <para>The ID of the operator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>The project ID.</para>
+        /// <para>The ID of the Dataphin project to which the task belongs. This parameter is used for permission verification in the production environment.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

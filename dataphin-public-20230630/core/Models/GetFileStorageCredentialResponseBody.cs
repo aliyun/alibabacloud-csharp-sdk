@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string AccessKey { get; set; }
 
             /// <summary>
-            /// <para>The file storage bucket.</para>
+            /// <para>The bucket for file storage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dataphin</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The security token.</para>
+            /// <para>The temporary security token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>temp.token</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string SecurityToken { get; set; }
 
             /// <summary>
-            /// <para>The type of the storage cluster. Valid values: oss and ceph.</para>
+            /// <para>The type of the storage cluster, such as oss or ceph.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss</para>

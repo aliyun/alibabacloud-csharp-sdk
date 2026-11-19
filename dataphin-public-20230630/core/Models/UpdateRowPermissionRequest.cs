@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The mapping column description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Business ID.</para>
+                /// <para>Business ID</para>
                 /// </summary>
                 [NameInMap("ColumnDesc")]
                 [Validation(Required=false)]
@@ -82,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The row-level permission description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Control business data.</para>
+            /// <para>Control business data</para>
             /// </summary>
             [NameInMap("RowPermissionDesc")]
             [Validation(Required=false)]
@@ -104,7 +106,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>BusinessControl.</para>
+            /// <para>Business control</para>
             /// </summary>
             [NameInMap("RowPermissionName")]
             [Validation(Required=false)]
@@ -118,7 +120,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<UpdateRowPermissionRequestUpdateRowPermissionCommandRules> Rules { get; set; }
             public class UpdateRowPermissionRequestUpdateRowPermissionCommandRules : TeaModel {
                 /// <summary>
-                /// <para>The rule expressions.</para>
+                /// <para>The rule expression.</para>
                 /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("Expressions")]
@@ -167,7 +169,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The expression operation values.</para>
+                    /// <para>The expression operand value.</para>
                     /// </summary>
                     [NameInMap("Values")]
                     [Validation(Required=false)]
@@ -290,7 +292,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string MappingColumnName { get; set; }
 
                 /// <summary>
-                /// <para>The GUID of the table.</para>
+                /// <para>The table GUID.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>

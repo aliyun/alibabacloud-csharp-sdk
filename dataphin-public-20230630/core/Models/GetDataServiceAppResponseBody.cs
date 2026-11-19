@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string IpWhitelist { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the IP address whitelist is enabled. Valid values:</para>
+            /// <para>Specifies whether the IP address whitelist is enabled. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: Enabled.</description></item>
             /// <item><description>false: Disabled.</description></item>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend exception.</para>
+        /// <para>The backend exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>

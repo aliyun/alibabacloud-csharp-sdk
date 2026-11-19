@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DataSourceId { get; set; }
 
             /// <summary>
-            /// <para>The error message that provides a detailed description when a task fails.</para>
+            /// <para>The error message, which provides a detailed description when the task fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>notFoundIp</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The task type (application-level or cluster-level).</para>
+            /// <para>The task type, which can be application-level or cluster-level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>application/cluster</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string TenantId { get; set; }
 
             /// <summary>
-            /// <para>The Voldemort task ID used to associate the underlying execution task.</para>
+            /// <para>The Voldemort task ID, which is used to associate the underlying execution task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>t_7572319950395080706_20251225_7572319950395080707</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend response error.</para>
+        /// <para>The details of the backend response exception.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>

@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>The unbinding instruction.</para>
+        /// <para>The unbind command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RemoveCommand")]
@@ -56,11 +58,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<long?> ScheduleIdList { get; set; }
 
             /// <summary>
-            /// <para>The ID of the monitored object.</para>
+            /// <para>The monitored object ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>平均值</para>
+            /// <para>Average value</para>
             /// </summary>
             [NameInMap("WatchId")]
             [Validation(Required=false)]

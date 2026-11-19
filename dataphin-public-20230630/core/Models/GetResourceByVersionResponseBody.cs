@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend exception.</para>
+        /// <para>The backend exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the resource file.</para>
+        /// <para>The resource file details.</para>
         /// </summary>
         [NameInMap("ResourceInfo")]
         [Validation(Required=false)]
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Directory { get; set; }
 
             /// <summary>
-            /// <para>The creation time, in the yyyy-MM-dd HH:mm:ss format.</para>
+            /// <para>The time when the resource was created. Format: yyyy-MM-dd HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-10 10:01:01</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The update time, in the yyyy-MM-dd HH:mm:ss format.</para>
+            /// <para>The time when the resource was updated. Format: yyyy-MM-dd HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-10 10:01:01</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The size of the resource, in bytes.</para>
+            /// <para>The size of the resource. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>102400</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

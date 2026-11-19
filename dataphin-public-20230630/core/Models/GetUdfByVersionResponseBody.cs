@@ -57,26 +57,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The custom function details.</para>
+        /// <para>The details of the custom function.</para>
         /// </summary>
         [NameInMap("UdfInfo")]
         [Validation(Required=false)]
         public GetUdfByVersionResponseBodyUdfInfo UdfInfo { get; set; }
         public class GetUdfByVersionResponseBodyUdfInfo : TeaModel {
             /// <summary>
-            /// <para>The category. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>1: Window function.</description></item>
-            /// <item><description>2: Statistical function.</description></item>
-            /// <item><description>3: Numerical function.</description></item>
-            /// <item><description>4: String function.</description></item>
-            /// <item><description>5: Time function.</description></item>
-            /// <item><description>6: IP address helper function.</description></item>
-            /// <item><description>7: URL-related function.</description></item>
-            /// <item><description>8: Encoding and decoding function.</description></item>
-            /// <item><description>9: Business-related function.</description></item>
-            /// <item><description>10: Other.</description></item>
-            /// </list>
+            /// <para>The category of the function. Valid values: 1: Window function. 2: Aggregate function. 3: Numeric function. 4: String function. 5: Time function. 6: IP address helper function. 7: URL-related function. 8: Encoding and decoding function. 9: Business-related function. 10: Other.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -86,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? Category { get; set; }
 
             /// <summary>
-            /// <para>The registered class name.</para>
+            /// <para>The name of the registered class.</para>
             /// 
             /// <b>Example:</b>
             /// <para>com.lydaas.dataphin.UdfTest</para>
@@ -116,7 +104,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ComputeEngineType { get; set; }
 
             /// <summary>
-            /// <para>The creator.</para>
+            /// <para>The creator of the function.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30012110</para>
@@ -126,7 +114,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>The description.</para>
+            /// <para>The description of the function.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -136,7 +124,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The storage directory.</para>
+            /// <para>The directory where the function is stored.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/</para>
@@ -146,7 +134,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Directory { get; set; }
 
             /// <summary>
-            /// <para>The creation time. Format: yyyy-MM-d HH:mm:ss.</para>
+            /// <para>The time when the function was created. Format: yyyy-MM-d HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-10 10:01:01</para>
@@ -156,7 +144,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The update time. Format: yyyy-MM-d HH:mm:ss.</para>
+            /// <para>The time when the function was last updated. Format: yyyy-MM-d HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-10 10:01:01</para>
@@ -166,7 +154,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The custom function ID.</para>
+            /// <para>The ID of the custom function.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1030111021</para>
@@ -176,7 +164,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The last modifier.</para>
+            /// <para>The user who last modified the function.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30012110</para>
@@ -186,7 +174,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string LastModifier { get; set; }
 
             /// <summary>
-            /// <para>The function name.</para>
+            /// <para>The name of the function.</para>
             /// 
             /// <b>Example:</b>
             /// <para>udf_to_lower</para>

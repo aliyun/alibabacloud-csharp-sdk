@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateBizUnitRequest : TeaModel {
         /// <summary>
-        /// <para>The create request.</para>
+        /// <para>The creation request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CreateCommand")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public CreateBizUnitRequestCreateCommand CreateCommand { get; set; }
         public class CreateBizUnitRequestCreateCommand : TeaModel {
             /// <summary>
-            /// <para>The list of data domain architects.</para>
+            /// <para>The business unit architects.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("BizUnitAccountList")]
@@ -70,8 +70,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <item><description>icon-entertainment: Entertainment.</description></item>
             /// <item><description>icon-traffic: Travel.</description></item>
             /// <item><description>icon-health: Health.</description></item>
-            /// <item><description>icon-social-contact: Social and communication.</description></item>
-            /// <item><description>con-dining: Dining.</description></item>
+            /// <item><description>icon-social-contact: Social and communications.</description></item>
+            /// <item><description>con-dining: Catering.</description></item>
             /// <item><description>icon-education: Education.</description></item>
             /// <item><description>icon-environment: Environment.</description></item>
             /// </list>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The production mode. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>BASIC: single-environment mode.</description></item>
-            /// <item><description>DEV_PROD: development/production dual-environment mode.</description></item>
+            /// <item><description>DEV_PROD: development and production dual-environment mode.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Mode { get; set; }
 
             /// <summary>
-            /// <para>The code name of the business object. The name can be up to 64 characters in length and can contain only letters, digits, and underscores. For ADB_PG engines, the code name can be up to 40 characters in length.</para>
+            /// <para>The code name of the business object. The name can be up to 64 characters in length and can contain only letters, digits, and underscores. For the ADB_PG engine, the code name can be up to 40 characters in length.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -123,6 +123,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user who performs the operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

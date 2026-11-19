@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>The update instruction.</para>
+        /// <para>The update command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UpsertCommand")]
@@ -37,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpsertQualityWatchAlertRequestUpsertCommand UpsertCommand { get; set; }
         public class UpsertQualityWatchAlertRequestUpsertCommand : TeaModel {
             /// <summary>
-            /// <para>The alert configuration details.</para>
+            /// <para>The details of the alert settings.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("QualityAlertInfo")]
@@ -45,21 +47,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public UpsertQualityWatchAlertRequestUpsertCommandQualityAlertInfo QualityAlertInfo { get; set; }
             public class UpsertQualityWatchAlertRequestUpsertCommandQualityAlertInfo : TeaModel {
                 /// <summary>
-                /// <para>The alert channels for on-duty schedules.</para>
+                /// <para>The alert channels for on-call schedules.</para>
                 /// </summary>
                 [NameInMap("AlertDutyChannelList")]
                 [Validation(Required=false)]
                 public List<string> AlertDutyChannelList { get; set; }
 
                 /// <summary>
-                /// <para>The list of on-duty schedules for alerts.</para>
+                /// <para>The list of on-call schedules to be alerted.</para>
                 /// </summary>
                 [NameInMap("AlertDutyList")]
                 [Validation(Required=false)]
                 public List<UpsertQualityWatchAlertRequestUpsertCommandQualityAlertInfoAlertDutyList> AlertDutyList { get; set; }
                 public class UpsertQualityWatchAlertRequestUpsertCommandQualityAlertInfoAlertDutyList : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the on-duty alert schedule.</para>
+                    /// <para>The ID of the on-call schedule.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -69,7 +71,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Id { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the on-duty alert schedule.</para>
+                    /// <para>The name of the on-call schedule.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
@@ -95,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public List<string> AlertUserChannelList { get; set; }
 
                 /// <summary>
-                /// <para>The list of users to receive alerts.</para>
+                /// <para>The list of users to be alerted.</para>
                 /// </summary>
                 [NameInMap("AlertUserList")]
                 [Validation(Required=false)]
@@ -124,7 +126,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>Specifies whether to enable alerts for the quality owner.</para>
+                /// <para>Specifies whether to enable alerting for the quality owner.</para>
                 /// </summary>
                 [NameInMap("EnableAlertQualityOwner")]
                 [Validation(Required=false)]

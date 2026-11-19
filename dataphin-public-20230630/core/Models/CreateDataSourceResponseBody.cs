@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateDataSourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error code. OK indicates that the request is successful.</para>
+        /// <para>The error code. A value of OK indicates that the request is normal.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Data source creation result</para>
+        /// <para>The result of creating the data source.</para>
         /// </summary>
         [NameInMap("CreateResult")]
         [Validation(Required=false)]
         public CreateDataSourceResponseBodyCreateResult CreateResult { get; set; }
         public class CreateDataSourceResponseBodyCreateResult : TeaModel {
             /// <summary>
-            /// <para>Development environment data source ID</para>
+            /// <para>The ID of the development environment data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? DevDataSourceId { get; set; }
 
             /// <summary>
-            /// <para>Production environment data source ID</para>
+            /// <para>The ID of the production environment data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12345</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>HTTP status code returned by the backend</para>
+        /// <para>The HTTP status code returned by the backend.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Error message</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

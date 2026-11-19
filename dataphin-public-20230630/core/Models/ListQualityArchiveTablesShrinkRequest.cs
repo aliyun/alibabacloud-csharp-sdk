@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListQualityArchiveTablesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The input parameters for querying the anomaly archived table list.</para>
+        /// <para>The query parameters for the exception archived table list.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ListQuery")]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the operator user.</para>
+        /// <para>The ID of the operator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30001011</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListTablesRequest : TeaModel {
         /// <summary>
-        /// <para>The paged query conditions.</para>
+        /// <para>The paging query conditions.</para>
         /// </summary>
         [NameInMap("ListQuery")]
         [Validation(Required=false)]
         public ListTablesRequestListQuery ListQuery { get; set; }
         public class ListTablesRequestListQuery : TeaModel {
             /// <summary>
-            /// <para>The asset catalog: project name and business unit name.</para>
+            /// <para>The asset catalog: project name, business unit name, or data source ID. If this parameter is not specified, all table assets are queried.</para>
             /// 
             /// <b>Example:</b>
             /// <para>LD_test01_dev</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The table types. If you do not specify this parameter or pass an empty list, all table types are queried. Valid values:</para>
+            /// <para>The table types. If this parameter is not specified or an empty list is passed, all table types are queried. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>PHYSICAL_TABLE: Physical table of the compute source.</description></item>
             /// <item><description>PHYSICAL_VIEW: View of the compute source.</description></item>

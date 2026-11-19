@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string EntityType { get; set; }
 
         /// <summary>
-        /// <para>The paged query filter conditions.</para>
+        /// <para>The paged search filter conditions.</para>
         /// </summary>
         [NameInMap("ListQuery")]
         [Validation(Required=false)]
@@ -34,17 +34,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<ListKgEntityRequestListQueryFilterList> FilterList { get; set; }
             public class ListKgEntityRequestListQueryFilterList : TeaModel {
                 /// <summary>
-                /// <para>The operator. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>eq: equal to.</description></item>
-                /// <item><description>neq: not equal to.</description></item>
-                /// <item><description>contains: contains.</description></item>
-                /// <item><description>gt: greater than.</description></item>
-                /// <item><description>gte: greater than or equal to.</description></item>
-                /// <item><description>lt: less than.</description></item>
-                /// <item><description>lte: less than or equal to.</description></item>
-                /// <item><description>like: fuzzy match.</description></item>
-                /// </list>
+                /// <para>The operator. Valid values: eq (equal to), neq (not equal to), contains (contains), gt (greater than), gte (greater than or equal to), lt (less than), lte (less than or equal to), and like (fuzzy match).</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -66,7 +56,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string PropertyCode { get; set; }
 
                 /// <summary>
-                /// <para>The property match value.</para>
+                /// <para>The property value.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -79,7 +69,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The keyword for searching display properties.</para>
+            /// <para>The keyword search for displayed properties.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -122,6 +112,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

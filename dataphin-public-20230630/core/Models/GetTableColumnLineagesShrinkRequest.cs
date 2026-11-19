@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -36,7 +38,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>The GUID of the table, which is the unique identifier of the asset.</para>
+        /// <para>The GUID of the table, which uniquely identifies the asset.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

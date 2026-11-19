@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class DeleteRegisterLineageShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The command for deleting registered data lineage.</para>
+        /// <para>The command to delete registered lineage.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeleteRegisterLineageCommand")]
@@ -29,6 +29,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? Active { get; set; }
 
             /// <summary>
-            /// <para>The user IDs of the user group administrators.</para>
+            /// <para>The IDs of the administrator users in the user group.</para>
             /// </summary>
             [NameInMap("AdminUserIdList")]
             [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The description of the user group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx</para>
+            /// <para>Sample user group description</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The name of the user group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx用户组</para>
+            /// <para>xx user group</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -67,6 +67,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

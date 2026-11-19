@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string DataId { get; set; }
 
                 /// <summary>
-                /// <para>The list of relationship record properties.</para>
+                /// <para>The list of properties for the relationship record.</para>
                 /// </summary>
                 [NameInMap("Properties")]
                 [Validation(Required=false)]
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The transformed execution statement.</para>
+            /// <para>The converted execution statement.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MATCH p=()-[:Product]-&gt;() RETURN p, count(*) LIMIT 25</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string EntityType { get; set; }
 
                 /// <summary>
-                /// <para>The list of entity record properties.</para>
+                /// <para>The list of properties for the entity record.</para>
                 /// </summary>
                 [NameInMap("Properties")]
                 [Validation(Required=false)]
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<ExecKgCypherResponseBodyDataRowList> RowList { get; set; }
             public class ExecKgCypherResponseBodyDataRowList : TeaModel {
                 /// <summary>
-                /// <para>The list of columns in the row.</para>
+                /// <para>The list of columns.</para>
                 /// </summary>
                 [NameInMap("Columns")]
                 [Validation(Required=false)]
@@ -263,7 +263,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

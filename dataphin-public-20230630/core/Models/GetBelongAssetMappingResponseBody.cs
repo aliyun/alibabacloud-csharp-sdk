@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public List<GetBelongAssetMappingResponseBodyMappingRelationList> MappingRelationList { get; set; }
         public class GetBelongAssetMappingResponseBodyMappingRelationList : TeaModel {
             /// <summary>
-            /// <para>The asset type. Valid values: COLUMN (field) and INDEX (metric).</para>
+            /// <para>The asset type. Valid values: COLUMN for field, INDEX for metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>COLUMN</para>

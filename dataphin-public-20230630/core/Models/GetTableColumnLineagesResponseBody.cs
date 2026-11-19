@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The list of table column lineage records.</para>
+        /// <para>The list of table column lineage.</para>
         /// </summary>
         [NameInMap("TableColumnLineageList")]
         [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? InputBizUnitId { get; set; }
 
             /// <summary>
-            /// <para>The GUID of the input column. Format: TableGuid.ColumnName.</para>
+            /// <para>The GUID of the input column. Format: table GUID.column name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1121.col1</para>
@@ -124,14 +124,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? InputProjectId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the input table has been deleted.</para>
+            /// <para>Indicates whether the input table is deleted.</para>
             /// </summary>
             [NameInMap("InputTableDeleted")]
             [Validation(Required=false)]
             public bool? InputTableDeleted { get; set; }
 
             /// <summary>
-            /// <para>The environment of the input table. Valid values: dev and prod.</para>
+            /// <para>The environment to which the input table belongs. Valid values: dev and prod.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string InputTableEnv { get; set; }
 
             /// <summary>
-            /// <para>The GUID of the input table. Each asset has a unique identifier.</para>
+            /// <para>The GUID of the input table, which uniquely identifies the asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123211</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string InputTableName { get; set; }
 
             /// <summary>
-            /// <para>The environment of the node. Valid values: dev and prod.</para>
+            /// <para>The environment to which the node belongs. Valid values: dev and prod.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string NodeEnv { get; set; }
 
             /// <summary>
-            /// <para>The node ID associated with the lineage.</para>
+            /// <para>The ID of the node corresponding to the lineage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>110021</para>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? OutputBizUnitId { get; set; }
 
             /// <summary>
-            /// <para>The GUID of the output column. Format: TableId.ColumnName.</para>
+            /// <para>The GUID of the output column. Format: table ID.column name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2231.col2</para>
@@ -241,14 +241,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? OutputProjectId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the output table has been deleted.</para>
+            /// <para>Indicates whether the output table is deleted.</para>
             /// </summary>
             [NameInMap("OutputTableDeleted")]
             [Validation(Required=false)]
             public bool? OutputTableDeleted { get; set; }
 
             /// <summary>
-            /// <para>The environment of the output table. Valid values: dev and prod.</para>
+            /// <para>The environment to which the output table belongs. Valid values: dev and prod.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev</para>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string OutputTableEnv { get; set; }
 
             /// <summary>
-            /// <para>The GUID of the output table. Each asset has a unique identifier.</para>
+            /// <para>The GUID of the output table, which uniquely identifies the asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2231</para>

@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -40,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The revoke instruction.</para>
+        /// <para>The authorization command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RevokeCommand")]

@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The start and stop operation records of real-time tasks.</para>
+        /// <para>The start and stop operation records for real-time tasks. You can use the log storage identifiers in the list to query the log content by calling the GetStreamOpsRecord operation.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListStreamOpsRecordsResponseBodyData> Data { get; set; }
         public class ListStreamOpsRecordsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>deploymentId</para>
+            /// <para>The deployment ID of the task. This ID is used to identify the deployment and is different from the specific running instance ID deploymentInstanceId.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ac6e5a34bbd44d7f8b7851ef28c90d12</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DeploymentId { get; set; }
 
             /// <summary>
-            /// <para>deploymentInstanceId</para>
+            /// <para>The deployment instance ID associated with this operation. This ID corresponds to the DeploymentInstanceId request parameter in the log and TaskManager query operations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7db678957dc449aab0086b931c9f8218</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DeploymentInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The end time.</para>
+            /// <para>The end time of the operation. The time is in the yyyy-MM-dd HH:mm:ss format. If the operation has not ended, the value may be null.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-15 13:46:40</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The log content.</para>
+            /// <para>The operation logs. In the ListStreamOpsRecords response, this field may contain a log storage identity. After you invoke the GetStreamOpsRecord operation, the log content or operation information is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-15 13:46:26 INFO Starting Flink deployment</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string LogContent { get; set; }
 
             /// <summary>
-            /// <para>The instance status. Valid values: START, PAUSE, RESUME, and STOP. Displayed as Start, Pause, Recover, or Stop.</para>
+            /// <para>The type of the operation. Valid values: START, PAUSE, RESUME, and STOP. This field does not represent the running status of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>START</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Operate { get; set; }
 
             /// <summary>
-            /// <para>opsRecordId</para>
+            /// <para>The ID of the operation record. This ID corresponds to the OpsRecordId request parameter of the GetStreamOpsRecord operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>646</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string OpsRecordId { get; set; }
 
             /// <summary>
-            /// <para>The start time.</para>
+            /// <para>The start time of the operation. The time is in the yyyy-MM-dd HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-15 13:46:26</para>

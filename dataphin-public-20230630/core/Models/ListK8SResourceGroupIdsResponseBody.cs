@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The list of custom Kubernetes resource groups.</para>
+        /// <para>The custom K8s resource groups used for Flink tasks under the tenant. The ListK8SResourceGroupIds operation returns only available resource groups.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListK8SResourceGroupIdsResponseBodyData> Data { get; set; }
         public class ListK8SResourceGroupIdsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the custom Kubernetes resource group.</para>
+            /// <para>The ID of the custom K8s resource group, which can be used to select the compute queue for real-time tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1052061</para>
@@ -37,17 +37,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the custom Kubernetes resource group.</para>
+            /// <para>The name of the custom K8s resource group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Dedicated to real-time R&amp;D</para>
+            /// <para>Dedicated for real-time development</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The status of the resource group.</para>
+            /// <para>The status of the resource group. NORMAL indicates that the resource group is available.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NORMAL</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend response error.</para>
+        /// <para>The details of the backend response exception.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>

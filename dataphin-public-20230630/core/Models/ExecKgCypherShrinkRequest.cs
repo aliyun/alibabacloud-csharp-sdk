@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ExecKgCypherShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The custom Cypher query instruction.</para>
+        /// <para>The custom Cypher query command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ExecCommand")]
@@ -29,6 +29,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operating user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

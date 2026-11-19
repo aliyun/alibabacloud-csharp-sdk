@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class DeleteBizMetricResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// <para>The error code. A value of OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public DeleteBizMetricResponseBodyData Data { get; set; }
         public class DeleteBizMetricResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The exception information.</para>
+            /// <para>The exception message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -37,11 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the deletion was successful. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true: Succeeded.</description></item>
-            /// <item><description>false: Failed.</description></item>
-            /// </list>
+            /// <para>Indicates whether the deletion is successful. A value of true indicates that the deletion is successful. A value of false indicates that the deletion failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -83,7 +79,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

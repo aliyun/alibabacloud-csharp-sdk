@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user who performs the operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -37,14 +39,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public PublishStandardRequestPublishCommand PublishCommand { get; set; }
         public class PublishStandardRequestPublishCommand : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to automatically publish after approval. Default value: true.</para>
+            /// <para>Specifies whether to automatically publish the standard after the approval succeeds. Default value: true.</para>
             /// </summary>
             [NameInMap("AutoPublishAfterApproval")]
             [Validation(Required=false)]
             public bool? AutoPublishAfterApproval { get; set; }
 
             /// <summary>
-            /// <para>The review comment. Maximum length: 128 characters.</para>
+            /// <para>The review comment. The comment can be up to 128 characters in length.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -83,7 +85,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string StandardStage { get; set; }
 
             /// <summary>
-            /// <para>The version number. Default value: -1 (latest version).</para>
+            /// <para>The version number. Default value: -1, which indicates the latest version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

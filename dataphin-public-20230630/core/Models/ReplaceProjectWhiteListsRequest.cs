@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -59,7 +61,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试</para>
+                /// <para>Test</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]

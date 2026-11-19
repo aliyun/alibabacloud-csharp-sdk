@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetTransferInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// <para>The error code. A value of OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public GetTransferInfoResponseBodyDataCreator Creator { get; set; }
             public class GetTransferInfoResponseBodyDataCreator : TeaModel {
                 /// <summary>
-                /// <para>The username.</para>
+                /// <para>The display name of the user.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>zhangsan</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public GetTransferInfoResponseBodyDataLastModifier LastModifier { get; set; }
             public class GetTransferInfoResponseBodyDataLastModifier : TeaModel {
                 /// <summary>
-                /// <para>The username.</para>
+                /// <para>The display name of the user.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>zhangsan</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public GetTransferInfoResponseBodyDataNewOwner NewOwner { get; set; }
             public class GetTransferInfoResponseBodyDataNewOwner : TeaModel {
                 /// <summary>
-                /// <para>The username.</para>
+                /// <para>The display name of the user.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>zhangsan</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public GetTransferInfoResponseBodyDataOldOwner OldOwner { get; set; }
             public class GetTransferInfoResponseBodyDataOldOwner : TeaModel {
                 /// <summary>
-                /// <para>The username.</para>
+                /// <para>The display name of the user.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>zhangsan</para>
@@ -173,11 +173,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The transfer mode. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>ONE_STOP: one-click transfer.</description></item>
-            /// <item><description>FUNCTION_MODULE_BASED: transfer by function module.</description></item>
-            /// </list>
+            /// <para>The transfer mode. Valid values: ONE_STOP: one-click transfer. FUNCTION_MODULE_BASED: transfer by feature module.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ONE_STOP</para>
@@ -187,7 +183,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string PrivilegeTransferMode { get; set; }
 
             /// <summary>
-            /// <para>The transfer details of function modules.</para>
+            /// <para>The transfer details of feature modules.</para>
             /// </summary>
             [NameInMap("PrivilegeTransferResultEntries")]
             [Validation(Required=false)]
@@ -204,7 +200,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ErrMsg { get; set; }
 
                 /// <summary>
-                /// <para>The name of the transfer module.</para>
+                /// <para>The name of the transferred module.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>table owner</para>
@@ -214,7 +210,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string PrivilegeDisplayName { get; set; }
 
                 /// <summary>
-                /// <para>The status of the transfer module.</para>
+                /// <para>The status of the transferred module.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SUCCESS</para>
@@ -226,7 +222,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The approval ID.</para>
+            /// <para>The approval ticket ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -236,7 +232,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ProposalId { get; set; }
 
             /// <summary>
-            /// <para>The approval title.</para>
+            /// <para>The title of the approval ticket.</para>
             /// 
             /// <b>Example:</b>
             /// <para>transefer title</para>
@@ -298,7 +294,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

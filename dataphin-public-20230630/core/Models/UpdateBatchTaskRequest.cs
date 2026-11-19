@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the operator.</para>
+        /// <para>The operator ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpdateBatchTaskRequestUpdateCommand UpdateCommand { get; set; }
         public class UpdateBatchTaskRequestUpdateCommand : TeaModel {
             /// <summary>
-            /// <para>The base schedule template ID. This parameter takes effect when the configuration method is set to schedule template. If this parameter and all other schedule fields are not specified, the original binding is retained.</para>
+            /// <para>The base schedule template ID. This parameter applies when the configuration method is set to schedule template. If this parameter is not specified and no other scheduling fields are specified, the original binding is retained.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7305621095333696</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? ConditionScheduleEnable { get; set; }
 
             /// <summary>
-            /// <para>The conditional scheduling configuration details. This parameter overwrites the existing configurations. If this parameter is not specified, the original configurations are retained. This parameter is supported only for periodic tasks.</para>
+            /// <para>The conditional scheduling configuration details. This parameter fully overwrites the existing configuration. If this parameter is not specified, the original configuration remains unchanged. This parameter is supported only for periodic tasks.</para>
             /// </summary>
             [NameInMap("ConditionScheduleParamList")]
             [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public bool? Enable { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to follow the primary schedule parameter.</para>
+                /// <para>Specifies whether to follow the main scheduling parameters.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public bool? FollowScheduleParam { get; set; }
 
                 /// <summary>
-                /// <para>The node schedule status after the condition is met. Valid values:</para>
+                /// <para>The node scheduling status after the condition is met. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>1: Normal.</description></item>
                 /// <item><description>2: Paused.</description></item>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? NodeStatus { get; set; }
 
                 /// <summary>
-                /// <para>The JSON string of the conditional expression tree. The keys are in lower camel case characters and must be parsed by the invoker.</para>
+                /// <para>The JSON string of the conditional expression tree. The keys use lower camel case characters and must be parsed by the invoker.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;type&quot;:&quot;EXPRESSION&quot;,&quot;operator&quot;:&quot;or&quot;}</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The conditional schedule template ID.</para>
+            /// <para>The conditional scheduling template ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7305621095333697</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ConditionScheduleTemplateId { get; set; }
 
             /// <summary>
-            /// <para>The cross-node parameters. These are output parameters declared by the current node for downstream nodes to reference. This parameter overwrites the existing parameters. If this parameter is not specified, the original parameters are retained.</para>
+            /// <para>The cross-node parameters, which are the output parameters declared by the current node for downstream nodes to reference. This parameter fully overwrites the existing parameters. If this parameter is not specified, the original parameters remain unchanged.</para>
             /// </summary>
             [NameInMap("ContextParamList")]
             [Validation(Required=false)]
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>不传时保留任务当前配置。</para>
+            /// <para>The amount of CPU resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.5</para>
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string CronExpression { get; set; }
 
             /// <summary>
-            /// <para>The custom schedule interval configuration.</para>
+            /// <para>The custom scheduling interval configuration.</para>
             /// </summary>
             [NameInMap("CustomScheduleConfig")]
             [Validation(Required=false)]
@@ -254,8 +254,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <summary>
                 /// <para>The interval unit. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>MINUTE: Minutes.</description></item>
-                /// <item><description>HOUR: Hours.</description></item>
+                /// <item><description>MINUTE: Minute.</description></item>
+                /// <item><description>HOUR: Hour.</description></item>
                 /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -267,7 +267,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string IntervalUnit { get; set; }
 
                 /// <summary>
-                /// <para>The schedule period. Valid values:</para>
+                /// <para>The scheduling cycle. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>YEARLY: Yearly.</description></item>
                 /// <item><description>MONTHLY: Monthly.</description></item>
@@ -339,7 +339,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DevHttpPath { get; set; }
 
             /// <summary>
-            /// <para>The ID of the schedule resource group for development tasks.</para>
+            /// <para>The schedule resource group ID for development tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-def456</para>
@@ -349,7 +349,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DevResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The list of development owner IDs.</para>
+            /// <para>The list of lead developer IDs.</para>
             /// </summary>
             [NameInMap("DevelopOwnerIdList")]
             [Validation(Required=false)]
@@ -371,14 +371,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// <para>失败重试配置。不传时保留任务当前配置。传入时整体替换该配置对象。</para>
+            /// <para>The failure retry configuration. If not specified, the current configuration of the node is retained. If specified, the entire configuration object is replaced.</para>
             /// </summary>
             [NameInMap("ExecuteRerunConfig")]
             [Validation(Required=false)]
             public UpdateBatchTaskRequestUpdateCommandExecuteRerunConfig ExecuteRerunConfig { get; set; }
             public class UpdateBatchTaskRequestUpdateCommandExecuteRerunConfig : TeaModel {
                 /// <summary>
-                /// <para>自定义失败重试间隔。</para>
+                /// <para>The custom retry interval.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>60</para>
@@ -388,7 +388,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string CustomRerunInterval { get; set; }
 
                 /// <summary>
-                /// <para>自定义失败重试次数。</para>
+                /// <para>The custom retry count.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -398,7 +398,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string CustomRerunTimes { get; set; }
 
                 /// <summary>
-                /// <para>是否跟随系统配置。</para>
+                /// <para>Specifies whether to follow the system retry configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -410,14 +410,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>执行超时配置。不传时保留任务当前配置。传入时整体替换该配置对象。</para>
+            /// <para>The execution timeout configuration. If not specified, the current configuration of the node is retained. If specified, the entire configuration object is replaced.</para>
             /// </summary>
             [NameInMap("ExecuteTimeOutConfig")]
             [Validation(Required=false)]
             public UpdateBatchTaskRequestUpdateCommandExecuteTimeOutConfig ExecuteTimeOutConfig { get; set; }
             public class UpdateBatchTaskRequestUpdateCommandExecuteTimeOutConfig : TeaModel {
                 /// <summary>
-                /// <para>自定义超时时间。</para>
+                /// <para>The custom timeout period.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1800</para>
@@ -427,7 +427,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string CustomValues { get; set; }
 
                 /// <summary>
-                /// <para>是否跟随系统配置。</para>
+                /// <para>Specifies whether to follow the system timeout configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -439,7 +439,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The ID of the task directory tree node.</para>
+            /// <para>The ID of the node in the task directory tree.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -450,7 +450,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? FileId { get; set; }
 
             /// <summary>
-            /// <para>不传时保留任务当前配置。</para>
+            /// <para>The amount of memory resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>
@@ -503,7 +503,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? NodeStatus { get; set; }
 
             /// <summary>
-            /// <para>The list of O&amp;M owner IDs. If you do not specify this parameter, the O&amp;M owners are not modified.</para>
+            /// <para>The list of O&amp;M owner IDs. If not specified, the O&amp;M owners are not modified.</para>
             /// </summary>
             [NameInMap("OpsOwnerIdList")]
             [Validation(Required=false)]
@@ -528,7 +528,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of the parameter.</para>
+                /// <para>The parameter value.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -572,14 +572,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The list of third-party Python packages on which the node depends.</para>
+            /// <para>The third-party Python packages that the node depends on.</para>
             /// </summary>
             [NameInMap("PythonModuleList")]
             [Validation(Required=false)]
             public List<string> PythonModuleList { get; set; }
 
             /// <summary>
-            /// <para>The ID of the scheduling resource group for the production node.</para>
+            /// <para>The ID of the scheduling resource group for production nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-abc123</para>
@@ -588,12 +588,15 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
+            /// <summary>
+            /// <para>The list of referenced resources, specified by resource name.</para>
+            /// </summary>
             [NameInMap("ResourceReferenceList")]
             [Validation(Required=false)]
             public List<string> ResourceReferenceList { get; set; }
 
             /// <summary>
-            /// <para>超时重试开关。不传时保留任务当前配置。显式传入false时关闭。</para>
+            /// <para>Specifies whether to retry the node upon timeout.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -605,12 +608,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The scheduling cycle. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>YEARLY: Yearly.</description></item>
-            /// <item><description>MONTHLY: Monthly.</description></item>
-            /// <item><description>WEEKLY: Weekly.</description></item>
-            /// <item><description>DAILY: Daily.</description></item>
-            /// <item><description>HOURLY: Hourly.</description></item>
-            /// <item><description>MINUTELY: Minutely.</description></item>
+            /// <item><description>YEARLY</description></item>
+            /// <item><description>MONTHLY</description></item>
+            /// <item><description>WEEKLY</description></item>
+            /// <item><description>DAILY</description></item>
+            /// <item><description>HOURLY</description></item>
+            /// <item><description>MINUTELY</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -641,7 +644,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>不传时保留任务当前配置。显式传入false时关闭。</para>
+            /// <para>The switch for Spark dynamic resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -651,7 +654,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? SparkDynamicResourceSwitch { get; set; }
 
             /// <summary>
-            /// <para>ONLY_PROD表示仅生产环境，PROD_AND_DEV表示生产和开发环境。不传时保留任务当前配置。</para>
+            /// <para>The effective scope of the Spark resource configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ONLY_PROD</para>
@@ -661,7 +664,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string SparkResourceEffectScope { get; set; }
 
             /// <summary>
-            /// <para>Spark SQL资源配置，键为配置项名称，值为字符串。不传时保留任务当前配置；传入空JSON对象{}时清空配置。</para>
+            /// <para>The resource configuration for the Spark node. The value is a JSON string, such as {&quot;spark.executor.memory&quot;:&quot;2g&quot;}.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;spark.executor.memory&quot;:&quot;2g&quot;}</para>
@@ -671,7 +674,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string SparkSqlResourceConfigMap { get; set; }
 
             /// <summary>
-            /// <para>The list of node tags. This parameter overwrites all existing tags. If you do not specify this parameter, the original tags remain unchanged.</para>
+            /// <para>The list of node tag names. This parameter overwrites all existing tags. If not specified, the original tags remain unchanged.</para>
             /// </summary>
             [NameInMap("TaskTagList")]
             [Validation(Required=false)]
@@ -680,8 +683,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The type of the node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: Hive SQL.</description></item>
-            /// <item><description>5: MaxCompute SQL.</description></item>
+            /// <item><description>1: Hive_SQL.</description></item>
+            /// <item><description>5: MaxCompute_SQL.</description></item>
             /// <item><description>10: Shell.</description></item>
             /// <item><description>21: Python.</description></item>
             /// </list>
@@ -695,21 +698,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? TaskType { get; set; }
 
             /// <summary>
-            /// <para>The list of upstream dependencies.</para>
+            /// <para>The upstream dependencies.</para>
             /// </summary>
             [NameInMap("UpStreamList")]
             [Validation(Required=false)]
             public List<UpdateBatchTaskRequestUpdateCommandUpStreamList> UpStreamList { get; set; }
             public class UpdateBatchTaskRequestUpdateCommandUpStreamList : TeaModel {
                 /// <summary>
-                /// <para>The dependency cycle.</para>
+                /// <para>The dependency period.</para>
                 /// </summary>
                 [NameInMap("DependPeriod")]
                 [Validation(Required=false)]
                 public UpdateBatchTaskRequestUpdateCommandUpStreamListDependPeriod DependPeriod { get; set; }
                 public class UpdateBatchTaskRequestUpdateCommandUpStreamListDependPeriod : TeaModel {
                     /// <summary>
-                    /// <para>The cycle offset. This parameter is required when the PeriodType parameter is set to LAST_N_PERIOD.</para>
+                    /// <para>The period offset. This parameter is required when dependencyPeriodType is set to LAST_N_PERIOD.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -719,10 +722,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public int? PeriodOffset { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the dependency cycle. Valid values:</para>
+                    /// <para>The dependency period type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>CURRENT_PERIOD: Current cycle.</description></item>
-                    /// <item><description>LAST_PERIOD: Last cycle.</description></item>
+                    /// <item><description>CURRENT_PERIOD: Current period.</description></item>
+                    /// <item><description>LAST_PERIOD: Last period.</description></item>
                     /// <item><description>LAST_N_PERIOD: Last N days.</description></item>
                     /// <item><description>LAST_24_HOUR: Last 24 hours.</description></item>
                     /// </list>
@@ -754,14 +757,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string DependStrategy { get; set; }
 
                 /// <summary>
-                /// <para>The list of dependent logical table fields.</para>
+                /// <para>The dependent logical table fields.</para>
                 /// </summary>
                 [NameInMap("FieldList")]
                 [Validation(Required=false)]
                 public List<string> FieldList { get; set; }
 
                 /// <summary>
-                /// <para>The type of the upstream dependency node. Valid values:</para>
+                /// <para>The upstream dependency node type. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>PHYSICAL: Physical node.</description></item>
                 /// <item><description>LOGICAL: Logical table dependency.</description></item>
@@ -775,7 +778,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string NodeType { get; set; }
 
                 /// <summary>
-                /// <para>The cycle difference. A value of 0 indicates a dependency on the same cycle. A positive integer indicates a dependency on the previous N cycles.</para>
+                /// <para>The period difference. A value of 0 indicates a same-period dependency. A positive number indicates a dependency on the previous N periods.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -826,7 +829,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The end date of the validity period. Format: yyyy-MM-dd. This parameter must be specified together with the ValidStartDate parameter.</para>
+            /// <para>The end date of the validity period. Format: yyyy-MM-dd. This parameter must be specified together with ValidStartDate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9999-12-31</para>
@@ -836,7 +839,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ValidEndDate { get; set; }
 
             /// <summary>
-            /// <para>The start date of the validity period. Format: yyyy-MM-dd. This parameter must be specified together with the ValidEndDate parameter.</para>
+            /// <para>The start date of the validity period. Format: yyyy-MM-dd. This parameter must be specified together with ValidEndDate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-01</para>

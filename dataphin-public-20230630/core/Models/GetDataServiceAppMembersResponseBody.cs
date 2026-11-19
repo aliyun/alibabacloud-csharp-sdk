@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The member list of the data service application.</para>
+        /// <para>The members of the data service application.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<GetDataServiceAppMembersResponseBodyDataMemberList> MemberList { get; set; }
             public class GetDataServiceAppMembersResponseBodyDataMemberList : TeaModel {
                 /// <summary>
-                /// <para>The authorization expiration time.</para>
+                /// <para>The expiration time of the authorization.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-12-12</para>
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string EffectiveEnd { get; set; }
 
                 /// <summary>
-                /// <para>The role of the user. Valid values:</para>
+                /// <para>The user role. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>general: regular member.</description></item>
-                /// <item><description>owner: application owner.</description></item>
+                /// <item><description>general: regular member</description></item>
+                /// <item><description>owner: application owner</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned from the backend.</para>
+        /// <para>The details of the backend response exception.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

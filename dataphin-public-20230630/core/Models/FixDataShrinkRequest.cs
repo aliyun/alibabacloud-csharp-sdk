@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         /// <summary>
         /// <para>The environment identifier. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DEV: development environment. </description></item>
-        /// <item><description>PROD (default): production environment.</description></item>
+        /// <item><description>DEV: development environment </description></item>
+        /// <item><description>PROD: production environment (default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Env { get; set; }
 
         /// <summary>
-        /// <para>The command to rerun downstream nodes to fix data link issues. You can choose to force a rerun.</para>
+        /// <para>Reruns downstream nodes to repair pipeline data and allows you to force the rerun.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("FixDataCommand")]
@@ -43,6 +43,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The backend exception details.</para>
+        /// <para>The details of the backend exception.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The word root details.</para>
+        /// <para>The details of the word root.</para>
         /// </summary>
         [NameInMap("WordRootInfo")]
         [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The user ID of the creator.</para>
+            /// <para>The ID of the creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30012021</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string FullName { get; set; }
 
             /// <summary>
-            /// <para>The user ID of the last modifier.</para>
+            /// <para>The ID of the last modifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30012021</para>

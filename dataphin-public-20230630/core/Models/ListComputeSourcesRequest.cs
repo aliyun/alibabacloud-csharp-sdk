@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? BindProject { get; set; }
 
             /// <summary>
-            /// <para>The keyword used for filtering.</para>
+            /// <para>The keyword.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageNo { get; set; }
 
             /// <summary>
-            /// <para>The number of records per page. Default value: 20.</para>
+            /// <para>The number of entries per page. Default value: 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The type of the compute source.</para>
+            /// <para>The compute source type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MaxCompute</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>Tenant ID.</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,6 +78,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

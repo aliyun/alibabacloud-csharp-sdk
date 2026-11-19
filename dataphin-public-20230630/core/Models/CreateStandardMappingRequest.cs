@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateStandardMappingRequest : TeaModel {
         /// <summary>
-        /// <para>The create command.</para>
+        /// <para>The creation command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CreateCommand")]
@@ -28,10 +28,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The processing policy for invalid mappings when importing mapping relationships. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SET_INVALID_TO_VALID: sets invalid mappings to valid mappings.</description></item>
-            /// <item><description>KEEP_INVALID_AND_SKIP: retains invalid mappings and skips them.</description></item>
+            /// <item><description>SET_INVALID_TO_VALID: Changes invalid mappings to valid mappings.</description></item>
+            /// <item><description>KEEP_INVALID_AND_SKIP: Retains invalid mappings and skips them.
+            /// Default value: SET_INVALID_TO_VALID.</description></item>
             /// </list>
-            /// <para>Default value: SET_INVALID_TO_VALID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SET_INVALID_TO_VALID</para>
@@ -43,10 +43,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The mapping relationship type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>VALID: valid mapping.</description></item>
-            /// <item><description>INVALID: invalid mapping.</description></item>
+            /// <item><description>VALID: Valid mapping.</description></item>
+            /// <item><description>INVALID: Invalid mapping.
+            /// Default value: VALID.</description></item>
             /// </list>
-            /// <para>Default value: VALID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VALID</para>
@@ -80,6 +80,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

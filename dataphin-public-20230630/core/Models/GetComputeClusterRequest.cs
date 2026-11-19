@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the operator user.</para>
+        /// <para>The ID of the operating user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30001011</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetTableColumnLineageByTaskIdRequest : TeaModel {
         /// <summary>
-        /// <para>Tenant ID.</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>Data structure for querying table column lineage.</para>
+        /// <para>The data structure used to query table column lineage.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TableColumnLineageByTaskIdQuery")]
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? NeedNotExistObject { get; set; }
 
             /// <summary>
-            /// <para>Environment of the task to query: DEV or PROD.</para>
+            /// <para>The environment to which the node belongs, such as DEV or PROD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DEV</para>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string TaskEnv { get; set; }
 
             /// <summary>
-            /// <para>Task (node) ID used to filter the query.</para>
+            /// <para>The ID of the node used to filter the query.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

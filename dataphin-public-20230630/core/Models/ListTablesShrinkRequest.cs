@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListTablesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The paged query conditions.</para>
+        /// <para>The paging query conditions.</para>
         /// </summary>
         [NameInMap("ListQuery")]
         [Validation(Required=false)]

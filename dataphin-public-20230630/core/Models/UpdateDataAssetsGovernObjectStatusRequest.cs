@@ -48,6 +48,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The list of governance object IDs.</para>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[12345, 12346]</para>
             /// </summary>
             [NameInMap("GovernObjectIds")]
             [Validation(Required=false)]

@@ -40,21 +40,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The paged query result.</para>
+        /// <para>The paged query results.</para>
         /// </summary>
         [NameInMap("PageResult")]
         [Validation(Required=false)]
         public ListQualityRuleTasksResponseBodyPageResult PageResult { get; set; }
         public class ListQualityRuleTasksResponseBodyPageResult : TeaModel {
             /// <summary>
-            /// <para>The paged quality rule task list.</para>
+            /// <para>The paged list of quality rule tasks.</para>
             /// </summary>
             [NameInMap("QualityRuleTaskList")]
             [Validation(Required=false)]
             public List<ListQualityRuleTasksResponseBodyPageResultQualityRuleTaskList> QualityRuleTaskList { get; set; }
             public class ListQualityRuleTasksResponseBodyPageResultQualityRuleTaskList : TeaModel {
                 /// <summary>
-                /// <para>The business date.</para>
+                /// <para>The business date. Format: YYYY-MM-DD.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-30</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string BizDateFormat { get; set; }
 
                 /// <summary>
-                /// <para>The creation time.</para>
+                /// <para>The creation time. The format is YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-30 00:00:00</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Creator { get; set; }
 
                 /// <summary>
-                /// <para>The end time.</para>
+                /// <para>The end time. The format is YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-30 00:00:00</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The rule task ID.</para>
+                /// <para>The ID of the rule task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the user who last modified the task.</para>
+                /// <para>The ID of the user who last updated the task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30012011</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Modifier { get; set; }
 
                 /// <summary>
-                /// <para>The modification time.</para>
+                /// <para>The update time. The format is YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-30 00:00:00</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ModifyTime { get; set; }
 
                 /// <summary>
-                /// <para>The rule ID.</para>
+                /// <para>The ID of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>11</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? RuleId { get; set; }
 
                 /// <summary>
-                /// <para>The start time.</para>
+                /// <para>The start time. The format is YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-30 00:00:00</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The task status.</para>
+                /// <para>The status of the task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>running</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The template ID.</para>
+                /// <para>The ID of the template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>11</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public bool? ValidateSuccess { get; set; }
 
                 /// <summary>
-                /// <para>The watch ID.</para>
+                /// <para>The ID of the associated quality watchtask.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? WatchId { get; set; }
 
                 /// <summary>
-                /// <para>The watch task ID. This ID is empty for trial run tasks.</para>
+                /// <para>The ID of the watchtask. This ID is empty for trial rule tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>

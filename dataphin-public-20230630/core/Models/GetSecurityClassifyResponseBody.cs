@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend exception.</para>
+        /// <para>The backend exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The security level abbreviation.</para>
+            /// <para>The level abbreviation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lv_test</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string LevelAbbreviation { get; set; }
 
             /// <summary>
-            /// <para>The security level index.</para>
+            /// <para>The level index.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? LevelIndex { get; set; }
 
             /// <summary>
-            /// <para>The security level name.</para>
+            /// <para>The level name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lv_teat</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

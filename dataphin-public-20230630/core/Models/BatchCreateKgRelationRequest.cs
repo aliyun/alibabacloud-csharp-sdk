@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public BatchCreateKgRelationRequestCreateCommand CreateCommand { get; set; }
         public class BatchCreateKgRelationRequestCreateCommand : TeaModel {
             /// <summary>
-            /// <para>The relationship list.</para>
+            /// <para>The relation list.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("RelationList")]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<BatchCreateKgRelationRequestCreateCommandRelationList> RelationList { get; set; }
             public class BatchCreateKgRelationRequestCreateCommandRelationList : TeaModel {
                 /// <summary>
-                /// <para>The relationship record property list.</para>
+                /// <para>The property list of the relation record.</para>
                 /// </summary>
                 [NameInMap("PropertyList")]
                 [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The relationship type code.</para>
+                /// <para>The relation type code.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>

@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public CreateStandardRelationsResponseBodyData Data { get; set; }
         public class CreateStandardRelationsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of standard IDs that do not exist.</para>
+            /// <para>The list of non-existent standard IDs.</para>
             /// </summary>
             [NameInMap("NotExistStandardIdList")]
             [Validation(Required=false)]
             public List<long?> NotExistStandardIdList { get; set; }
 
             /// <summary>
-            /// <para>The number of successfully added associations.</para>
+            /// <para>The number of successful additions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

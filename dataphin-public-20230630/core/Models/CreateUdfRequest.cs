@@ -18,7 +18,19 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public CreateUdfRequestCreateCommand CreateCommand { get; set; }
         public class CreateUdfRequestCreateCommand : TeaModel {
             /// <summary>
-            /// <para>The UDF category identifier. Valid values: 1: window function. 2: statistical function. 3: numerical function. 4: string function. 5: time function. 6: IP address utility function. 7: URL-related function. 8: encoding and decoding function. 9: business-related function. 10: other.</para>
+            /// <para>The category identifier of the user-defined function (UDF). Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: window function</description></item>
+            /// <item><description>2: statistical function</description></item>
+            /// <item><description>3: numerical function</description></item>
+            /// <item><description>4: string function</description></item>
+            /// <item><description>5: time function</description></item>
+            /// <item><description>6: IP address helper function</description></item>
+            /// <item><description>7: URL-related function</description></item>
+            /// <item><description>8: encoding and decoding function</description></item>
+            /// <item><description>9: business-related function</description></item>
+            /// <item><description>10: other</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -29,7 +41,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? Category { get; set; }
 
             /// <summary>
-            /// <para>The class name that implements the function in the resource.</para>
+            /// <para>The name of the class that implements the function in the resource.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -40,7 +52,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ClassName { get; set; }
 
             /// <summary>
-            /// <para>The command format for function calling invoke.</para>
+            /// <para>The command format for function invocation.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -51,18 +63,18 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string CommandHelp { get; set; }
 
             /// <summary>
-            /// <para>The commit remarks.</para>
+            /// <para>The submission comment.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试</para>
+            /// <para>Test</para>
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The compute engine type. Valid values: MAX_COMPUTE, HADOOP.</para>
+            /// <para>The compute engine type. Valid values: MAX_COMPUTE and HADOOP.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -77,14 +89,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试</para>
+            /// <para>Test</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The directory in which the function is stored.</para>
+            /// <para>The storage directory. Default value: /.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/</para>
@@ -116,7 +128,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The IDs of referenced resources.</para>
+            /// <para>The IDs of the referenced resources.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("RefResourceIdList")]
@@ -137,6 +149,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

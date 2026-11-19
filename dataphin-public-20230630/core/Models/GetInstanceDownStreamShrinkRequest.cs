@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetInstanceDownStreamShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Number of levels to expand downstream in the DAG query. Valid values: 1 to 6.</para>
+        /// <para>The number of levels to expand the DAG downwards. Valid values: 1 to 6.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? DownStreamDepth { get; set; }
 
         /// <summary>
-        /// <para>Environment identifier.</para>
+        /// <para>The environment identifier. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DEV: Development environment.</description></item>
-        /// <item><description>PROD (default): Production environment.</description></item>
+        /// <item><description>DEV: development environment. </description></item>
+        /// <item><description>PROD: production environment. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Env { get; set; }
 
         /// <summary>
-        /// <para>The request body.</para>
+        /// <para>The get request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceGet")]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string InstanceGetShrink { get; set; }
 
         /// <summary>
-        /// <para>Tenant ID.</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +54,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -62,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>Run status of the instance.</para>
+        /// <para>The run status of the instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>INIT</description></item>
         /// <item><description>WATING</description></item>

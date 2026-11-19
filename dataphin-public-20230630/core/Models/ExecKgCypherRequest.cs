@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ExecKgCypherRequest : TeaModel {
         /// <summary>
-        /// <para>The custom Cypher query instruction.</para>
+        /// <para>The custom Cypher query command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ExecCommand")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ExecKgCypherRequestExecCommand ExecCommand { get; set; }
         public class ExecKgCypherRequestExecCommand : TeaModel {
             /// <summary>
-            /// <para>The maximum number of records to return.</para>
+            /// <para>The limit on the number of returned records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? Limit { get; set; }
 
             /// <summary>
-            /// <para>The input parameters of the query statement.</para>
+            /// <para>The input parameters for the query statement.</para>
             /// </summary>
             [NameInMap("Params")]
             [Validation(Required=false)]
@@ -90,6 +90,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operating user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

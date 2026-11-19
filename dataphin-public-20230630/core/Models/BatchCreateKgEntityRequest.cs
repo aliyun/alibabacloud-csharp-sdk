@@ -26,6 +26,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<BatchCreateKgEntityRequestCreateCommandEntityList> EntityList { get; set; }
             public class BatchCreateKgEntityRequestCreateCommandEntityList : TeaModel {
                 /// <summary>
+                /// <para>The business ID of the entity record.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>12345</para>
+                /// </summary>
+                [NameInMap("BizId")]
+                [Validation(Required=false)]
+                public string BizId { get; set; }
+
+                /// <summary>
                 /// <para>The entity type code.</para>
                 /// <para>This parameter is required.</para>
                 /// 

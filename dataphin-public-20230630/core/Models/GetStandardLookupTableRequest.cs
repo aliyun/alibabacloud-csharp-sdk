@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetStandardLookupTableRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the lookup table.</para>
+        /// <para>The lookup table ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to allow a null value to be returned if the lookup table does not exist. If this parameter is set to false, an exception is thrown. Default value: true.</para>
+        /// <para>Specifies whether to allow a null value to be returned when the lookup table does not exist. If this parameter is set to false, an exception is thrown. Default value: true.</para>
         /// </summary>
         [NameInMap("Nullable")]
         [Validation(Required=false)]

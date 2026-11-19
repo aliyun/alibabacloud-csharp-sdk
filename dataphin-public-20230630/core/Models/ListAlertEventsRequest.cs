@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ListAlertEventsRequestListQuery ListQuery { get; set; }
         public class ListAlertEventsRequestListQuery : TeaModel {
             /// <summary>
-            /// <para>The end date of the alert.</para>
+            /// <para>The alert end date.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -36,14 +36,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> AlertObjectTypeList { get; set; }
 
             /// <summary>
-            /// <para>The list of alert reasons.</para>
+            /// <para>The list of alert causes.</para>
             /// </summary>
             [NameInMap("AlertReasonList")]
             [Validation(Required=false)]
             public List<string> AlertReasonList { get; set; }
 
             /// <summary>
-            /// <para>The start date of the alert.</para>
+            /// <para>The alert start date.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string AlertStartTime { get; set; }
 
             /// <summary>
-            /// <para>The list of business units.</para>
+            /// <para>The list of business unit names.</para>
             /// </summary>
             [NameInMap("BizNameList")]
             [Validation(Required=false)]
             public List<string> BizNameList { get; set; }
 
             /// <summary>
-            /// <para>The keyword for the query.</para>
+            /// <para>The search keyword.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The list of projects.</para>
+            /// <para>The list of project names.</para>
             /// </summary>
             [NameInMap("ProjectNameList")]
             [Validation(Required=false)]
@@ -109,16 +109,15 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The source system. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ALL: all</description></item>
-            /// <item><description>DQE: data quality</description></item>
-            /// <item><description>OS: data service</description></item>
-            /// <item><description>STREAM: real-time computing</description></item>
-            /// <item><description>VDM_BATCH: offline computing</description></item>
-            /// <item><description>SOP: O&amp;M platform</description></item>
-            /// <item><description>REAL_TIME_PIPELINE: real-time integration</description></item>
-            /// <item><description>KGB: baseline monitoring</description></item>
+            /// <item><description>ALL: All.</description></item>
+            /// <item><description>DQE: Data quality.</description></item>
+            /// <item><description>OS: Data service.</description></item>
+            /// <item><description>STREAM: Real-time computing.</description></item>
+            /// <item><description>VDM_BATCH: Offline computing.</description></item>
+            /// <item><description>SOP: O&amp;M platform.</description></item>
+            /// <item><description>REAL_TIME_PIPELINE: Real-time integration.</description></item>
+            /// <item><description>KGB: Baseline monitoring.</description></item>
             /// </list>
-            /// <para>and more.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -156,6 +155,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

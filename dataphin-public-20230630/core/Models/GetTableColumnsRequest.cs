@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetTableColumnsRequest : TeaModel {
         /// <summary>
-        /// <para>The catalog of the asset table, which is the name of the business unit or project workspace.</para>
+        /// <para>The catalog of the asset table, which is the name of the business unit or project space.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LD_test01_dev</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the operator.</para>
+        /// <para>The ID of the operating user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>The GUID of the table. If this parameter is specified, it takes precedence in the query, and the Catalog and TableName parameters are ignored even if they are provided.</para>
+        /// <para>The GUID of the table. If this parameter is specified, it is used for priority query, and the Catalog and TableName parameters are not required and will be ignored even if specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dp_ds_table_xxx</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string TableGuid { get; set; }
 
         /// <summary>
-        /// <para>The name of the table.</para>
+        /// <para>The table name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t_test01</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ListBatchTemplatesRequestListQuery ListQuery { get; set; }
         public class ListBatchTemplatesRequestListQuery : TeaModel {
             /// <summary>
-            /// <para>The keyword in the template name.</para>
+            /// <para>The keyword for the template name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Data processing template</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageNum { get; set; }
 
             /// <summary>
-            /// <para>The number of records per page. Default value: 20.</para>
+            /// <para>The number of entries per page. Default value: 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>

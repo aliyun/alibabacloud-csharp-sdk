@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -37,24 +39,24 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public RevokeResourcePermissionRequestRevokeCommand RevokeCommand { get; set; }
         public class RevokeResourcePermissionRequestRevokeCommand : TeaModel {
             /// <summary>
-            /// <para>The list of operations.</para>
+            /// <para>The operation list.</para>
             /// </summary>
             [NameInMap("OperateList")]
             [Validation(Required=false)]
             public List<string> OperateList { get; set; }
 
             /// <summary>
-            /// <para>The reason for revoking the authorization.</para>
+            /// <para>The revocation reason.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx</para>
+            /// <para>The business authorization has expired</para>
             /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]
             public string Reason { get; set; }
 
             /// <summary>
-            /// <para>The list of resources.</para>
+            /// <para>The resources.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("ResourceList")]

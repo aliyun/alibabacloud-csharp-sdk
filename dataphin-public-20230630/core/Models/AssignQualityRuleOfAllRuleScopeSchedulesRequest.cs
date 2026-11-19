@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class AssignQualityRuleOfAllRuleScopeSchedulesRequest : TeaModel {
         /// <summary>
-        /// <para>The assignment binding command.</para>
+        /// <para>The binding assignment command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AssignCommand")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public AssignQualityRuleOfAllRuleScopeSchedulesRequestAssignCommand AssignCommand { get; set; }
         public class AssignQualityRuleOfAllRuleScopeSchedulesRequestAssignCommand : TeaModel {
             /// <summary>
-            /// <para>The rule ID.</para>
+            /// <para>The rule IDs.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("RuleIdList")]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<long?> RuleIdList { get; set; }
 
             /// <summary>
-            /// <para>The schedule ID.</para>
+            /// <para>The schedule IDs.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("ScheduleIdList")]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>平均值</para>
+            /// <para>Average</para>
             /// </summary>
             [NameInMap("WatchId")]
             [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the operator user.</para>
+        /// <para>The operator user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30001011</para>

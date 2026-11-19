@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateKgEntityRequest : TeaModel {
         /// <summary>
-        /// <para>The create command.</para>
+        /// <para>The creation command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CreateCommand")]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string EntityType { get; set; }
 
             /// <summary>
-            /// <para>The entity record property list.</para>
+            /// <para>The property list of the entity record.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("PropertyList")]
@@ -74,6 +74,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

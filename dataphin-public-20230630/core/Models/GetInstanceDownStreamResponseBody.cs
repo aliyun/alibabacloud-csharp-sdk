@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetInstanceDownStreamResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error code. OK indicates a successful request.</para>
+        /// <para>The error code. A value of OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code returned by the backend.</para>
+        /// <para>The HTTP status code of the backend response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Downstream instances and dependency relationships.</para>
+        /// <para>The downstream and dependency relationships.</para>
         /// </summary>
         [NameInMap("InstanceRelationList")]
         [Validation(Required=false)]
         public List<GetInstanceDownStreamResponseBodyInstanceRelationList> InstanceRelationList { get; set; }
         public class GetInstanceDownStreamResponseBodyInstanceRelationList : TeaModel {
             /// <summary>
-            /// <para>Depth level.</para>
+            /// <para>The level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? DownStreamDepth { get; set; }
 
             /// <summary>
-            /// <para>Extended information of the node instance.</para>
+            /// <para>The extended information of the node instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;a&quot;:&quot;x&quot;}</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ExtendInfo { get; set; }
 
             /// <summary>
-            /// <para>Field instance list.</para>
+            /// <para>The list of field instances.</para>
             /// </summary>
             [NameInMap("FieldInstanceList")]
             [Validation(Required=false)]
             public List<GetInstanceDownStreamResponseBodyInstanceRelationListFieldInstanceList> FieldInstanceList { get; set; }
             public class GetInstanceDownStreamResponseBodyInstanceRelationListFieldInstanceList : TeaModel {
                 /// <summary>
-                /// <para>Field instance ID.</para>
+                /// <para>The field instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>t_23211</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string FieldInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>Run status.</para>
+                /// <para>The run status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SUCCESS</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string RunStatus { get; set; }
 
                 /// <summary>
-                /// <para>Selection status of the instance.</para>
+                /// <para>The selection status of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>OPTIONAL</para>
@@ -96,14 +96,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>Instance information.</para>
+            /// <para>The instance information.</para>
             /// </summary>
             [NameInMap("InstanceInfo")]
             [Validation(Required=false)]
             public GetInstanceDownStreamResponseBodyInstanceRelationListInstanceInfo InstanceInfo { get; set; }
             public class GetInstanceDownStreamResponseBodyInstanceRelationListInstanceInfo : TeaModel {
                 /// <summary>
-                /// <para>Instance ID.</para>
+                /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>t_232411</para>
@@ -113,17 +113,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>Instance name.</para>
+                /// <para>The instance name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx测试</para>
+                /// <para>xx test</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Node type.</para>
+                /// <para>The node type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DATA_PROCESS</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>Run status of the instance.</para>
+            /// <para>The run status of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -145,12 +145,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string RunStatus { get; set; }
 
             /// <summary>
-            /// <para>Selection status of the instance, primarily used for logical fields.</para>
+            /// <para>The selection status of the instance. This is mainly used for logical fields. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>OPTIONAL: Optional.</description></item>
-            /// <item><description>SELECTED: Required.</description></item>
-            /// <item><description>DISABLE: Not selectable.</description></item>
-            /// <item><description>GROUP_SELECTED: Select all or deselect all.</description></item>
+            /// <item><description>OPTIONAL: optional.</description></item>
+            /// <item><description>SELECTED: required.</description></item>
+            /// <item><description>DISABLE: unavailable.</description></item>
+            /// <item><description>GROUP_SELECTED: all selected or all unselected.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string SelectStatus { get; set; }
 
             /// <summary>
-            /// <para>Reason why the instance is selected.</para>
+            /// <para>The reason why the instance is selected. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>PK_CHANGE</description></item>
             /// <item><description>LOGIC_CHANGE</description></item>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>Error message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

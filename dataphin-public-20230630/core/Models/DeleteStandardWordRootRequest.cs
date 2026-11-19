@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class DeleteStandardWordRootRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the root word.</para>
+        /// <para>The word root name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>平均值</para>
+        /// <para>Average</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

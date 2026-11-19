@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetCheckConnectivityJobByJobIdResponseBodyData Data { get; set; }
         public class GetCheckConnectivityJobByJobIdResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the data source. This parameter is empty if the check is performed before creation.</para>
+            /// <para>The ID of the data source. This field is empty when the check is performed before creation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The job type.</para>
+            /// <para>The type of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>application/cluster</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string JobType { get; set; }
 
             /// <summary>
-            /// <para>The job status. Valid values: NEW, IN_PROCESS, SUCCESS, and FAILED.</para>
+            /// <para>The status of the task. Valid values: NEW, IN_PROCESS, SUCCESS, and FAILED.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>

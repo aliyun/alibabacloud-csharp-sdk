@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the authorized account, which is the ID of the applicant.</para>
+                /// <para>The ID of the privilege account, which is the ID of the applicant.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30012101</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ApplyUserId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the authorized account, which is the name of the applicant.</para>
+                /// <para>The name of the privilege account, which is the name of the applicant.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Test</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ExpireDate { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the authorization request.</para>
+                /// <para>The ID of the application request.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1121</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string OwnerUserName { get; set; }
 
                 /// <summary>
-                /// <para>The authorized account type. Valid values:</para>
+                /// <para>The privilege account type. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>0: Individual account.</description></item>
                 /// </list>
@@ -156,8 +156,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <summary>
                 /// <para>The permission type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: Usage permissions.</description></item>
-                /// <item><description>1: Development permissions.</description></item>
+                /// <item><description>0: Usage permission.</description></item>
+                /// <item><description>1: Development permission.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -188,14 +188,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ProjectName { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the user actually has the owner permissions for the application. The user may not have the permissions due to expiration or other reasons.</para>
+                /// <para>Indicates whether the user actually has the owner permission for the application. The user may not have the permission due to expiration or other reasons.</para>
                 /// </summary>
                 [NameInMap("RealHasOwnerPrivilege")]
                 [Validation(Required=false)]
                 public bool? RealHasOwnerPrivilege { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the user actually has the permissions.</para>
+                /// <para>Indicates whether the user actually has the permission.</para>
                 /// </summary>
                 [NameInMap("RealHasPrivilege")]
                 [Validation(Required=false)]
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public List<ListDataServiceAuthorizedAppsResponseBodyPageResultAuthorizedAppListRemarkForDebugList> RemarkForDebugList { get; set; }
                 public class ListDataServiceAuthorizedAppsResponseBodyPageResultAuthorizedAppListRemarkForDebugList : TeaModel {
                     /// <summary>
-                    /// <para>The configuration item.</para>
+                    /// <para>The configuration key.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>k1</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the configuration item.</para>
+                    /// <para>The configuration value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>v1</para>
@@ -240,12 +240,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <summary>
                 /// <para>The detailed status of the revocation button. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>-1: Super administrators cannot relinquish the permission.</description></item>
-                /// <item><description>-2: Owners cannot relinquish the permission.</description></item>
-                /// <item><description>-3: Project managers without actual permissions (grayed out).</description></item>
-                /// <item><description>-4: Regular users without permissions cannot relinquish the permission.</description></item>
-                /// <item><description>1: Project managers with actual permissions can relinquish the permission.</description></item>
-                /// <item><description>2: Regular users with permissions can relinquish the permission.</description></item>
+                /// <item><description>-1: The super administrator cannot return the permission.</description></item>
+                /// <item><description>-2: The owner cannot return the permission.</description></item>
+                /// <item><description>-3: The project manager does not have actual permissions, and the button is grayed out.</description></item>
+                /// <item><description>-4: The regular user does not have permissions and cannot return the permission.</description></item>
+                /// <item><description>1: The project manager has actual permissions and can return the permission.</description></item>
+                /// <item><description>2: The regular user has permissions and can return the permission.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The total number of records.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>68</para>

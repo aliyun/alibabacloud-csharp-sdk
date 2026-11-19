@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetDataServiceAppGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of application groups.</para>
+        /// <para>The application group list.</para>
         /// </summary>
         [NameInMap("AppGroupList")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The HTTP response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend exception.</para>
+        /// <para>The backend error details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

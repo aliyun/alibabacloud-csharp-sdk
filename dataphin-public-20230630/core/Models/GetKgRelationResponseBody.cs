@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The property data type. Valid values: STRING (string), INTEGER (integer), FLOAT (floating-point number), BOOLEAN (Boolean), DATE (date), and LIST (list).</para>
+                /// <para>The property data type. Valid values include STRING, INTEGER, FLOAT, BOOLEAN, DATE, and LIST.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>STRING</para>

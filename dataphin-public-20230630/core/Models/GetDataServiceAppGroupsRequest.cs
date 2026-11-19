@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operating user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -33,7 +35,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         /// <summary>
         /// <para>The data service project ID.</para>
         /// <remarks>
-        /// <para>Notice: This field is deprecated.</notice>.</para>
+        /// <para>Notice: This field is deprecated.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

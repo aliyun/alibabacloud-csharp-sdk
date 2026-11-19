@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -37,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpdateKgEntityRequestUpdateCommand UpdateCommand { get; set; }
         public class UpdateKgEntityRequestUpdateCommand : TeaModel {
             /// <summary>
-            /// <para>The entity record ID.</para>
+            /// <para>The ID of the entity record.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string EntityId { get; set; }
 
             /// <summary>
-            /// <para>The entity type code.</para>
+            /// <para>The code of the entity type.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -59,7 +61,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string EntityType { get; set; }
 
             /// <summary>
-            /// <para>The entity record property list.</para>
+            /// <para>The property list of the entity record.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("PropertyList")]
@@ -67,7 +69,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<UpdateKgEntityRequestUpdateCommandPropertyList> PropertyList { get; set; }
             public class UpdateKgEntityRequestUpdateCommandPropertyList : TeaModel {
                 /// <summary>
-                /// <para>The property code.</para>
+                /// <para>The code of the property.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -78,7 +80,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The property value.</para>
+                /// <para>The value of the property.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>

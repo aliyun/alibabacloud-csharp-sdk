@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The list of TaskManagers for the real-time task.</para>
+        /// <para>The TaskManager information retrieved in real time. You can use the taskmanagerId to query the logs of the TaskManager.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListStreamTaskManagersResponseBodyData> Data { get; set; }
         public class ListStreamTaskManagersResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The communication address or machine information.</para>
+            /// <para>The communication address or host machine information of the TaskManager returned by the engine. This is not the log download URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>akka.tcp://<a href="mailto:flink@10.0.0.12">flink@10.0.0.12</a>:6122/user/rpc/taskmanager_0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// <para>taskmanagerId</para>
+            /// <para>The identifier of the TaskManager. This corresponds to the TaskmanagerId input parameter of ListStreamTaskManagerLogs and GetStreamLogContent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dataphin-session-7db678957dc449aab0086b931c9f8218-taskmanazjkxq</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend response exception.</para>
+        /// <para>The details of the backend exception.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>

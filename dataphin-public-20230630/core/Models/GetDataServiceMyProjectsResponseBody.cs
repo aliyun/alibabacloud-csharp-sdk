@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend exception.</para>
+        /// <para>The backend error details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public List<GetDataServiceMyProjectsResponseBodyProjectList> ProjectList { get; set; }
         public class GetDataServiceMyProjectsResponseBodyProjectList : TeaModel {
             /// <summary>
-            /// <para>The data service project ID.</para>
+            /// <para>The ID of the data service project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>102011</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The project name.</para>
+            /// <para>The name of the project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -67,14 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ProjectName { get; set; }
 
             /// <summary>
-            /// <para>The role. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>1: super administrator</description></item>
-            /// <item><description>2: developer</description></item>
-            /// <item><description>3: application member</description></item>
-            /// <item><description>4: service project administrator</description></item>
-            /// <item><description>5: O&amp;M engineer.</description></item>
-            /// </list>
+            /// <para>The role. Valid values: 1: Super administrator, 2: Developer, 3: Application member, 4: Service project administrator, 5: O&amp;M user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -96,7 +89,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

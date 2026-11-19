@@ -18,14 +18,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ListDataDomainsRequestListQuery ListQuery { get; set; }
         public class ListDataDomainsRequestListQuery : TeaModel {
             /// <summary>
-            /// <para>The IDs of the business units to which the data domains belong.</para>
+            /// <para>The IDs of the business units.</para>
             /// </summary>
             [NameInMap("BizUnitIdList")]
             [Validation(Required=false)]
             public List<long?> BizUnitIdList { get; set; }
 
             /// <summary>
-            /// <para>The search keyword. You can search by data domain name, code, or description.</para>
+            /// <para>The search keyword, which can be the data domain name, code, or description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -55,6 +55,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

@@ -27,21 +27,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetKgNeighborResponseBodyData Data { get; set; }
         public class GetKgNeighborResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The edge list.</para>
+            /// <para>The list of edges.</para>
             /// </summary>
             [NameInMap("EdgeList")]
             [Validation(Required=false)]
             public List<GetKgNeighborResponseBodyDataEdgeList> EdgeList { get; set; }
             public class GetKgNeighborResponseBodyDataEdgeList : TeaModel {
                 /// <summary>
-                /// <para>The relation record property list.</para>
+                /// <para>The list of properties for the relation record.</para>
                 /// </summary>
                 [NameInMap("PropertyList")]
                 [Validation(Required=false)]
                 public List<GetKgNeighborResponseBodyDataEdgeListPropertyList> PropertyList { get; set; }
                 public class GetKgNeighborResponseBodyDataEdgeListPropertyList : TeaModel {
                     /// <summary>
-                    /// <para>The property code.</para>
+                    /// <para>The code of the property.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>company_name</para>
@@ -51,7 +51,15 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Code { get; set; }
 
                     /// <summary>
-                    /// <para>The property data type. Valid values: STRING (string), INTEGER (integer), FLOAT (float), BOOLEAN (Boolean), DATE (date), LIST (list), and others.</para>
+                    /// <para>The data type of the property. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>STRING: String.</description></item>
+                    /// <item><description>INTEGER: Integer.</description></item>
+                    /// <item><description>FLOAT: Floating-point number.</description></item>
+                    /// <item><description>BOOLEAN: Boolean.</description></item>
+                    /// <item><description>DATE: Date.</description></item>
+                    /// <item><description>LIST: List.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>STRING</para>
@@ -61,7 +69,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string DataType { get; set; }
 
                     /// <summary>
-                    /// <para>The property value.</para>
+                    /// <para>The value of the property.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Alibaba</para>
@@ -73,7 +81,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The relation record ID.</para>
+                /// <para>The ID of the relation record.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abc-xxx</para>
@@ -83,7 +91,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string RelationId { get; set; }
 
                 /// <summary>
-                /// <para>The relation type code.</para>
+                /// <para>The code of the relation type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>BELONG_TO</para>
@@ -93,7 +101,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string RelationType { get; set; }
 
                 /// <summary>
-                /// <para>The source entity ID.</para>
+                /// <para>The ID of the source entity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abc-xxx</para>
@@ -103,7 +111,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string SourceEntityId { get; set; }
 
                 /// <summary>
-                /// <para>The target entity ID.</para>
+                /// <para>The ID of the target entity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abd-xxx</para>
@@ -115,14 +123,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The node list.</para>
+            /// <para>The list of nodes.</para>
             /// </summary>
             [NameInMap("NodeList")]
             [Validation(Required=false)]
             public List<GetKgNeighborResponseBodyDataNodeList> NodeList { get; set; }
             public class GetKgNeighborResponseBodyDataNodeList : TeaModel {
                 /// <summary>
-                /// <para>The entity record ID.</para>
+                /// <para>The ID of the entity record.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abc-xxx</para>
@@ -132,7 +140,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string EntityId { get; set; }
 
                 /// <summary>
-                /// <para>The entity type code.</para>
+                /// <para>The code of the entity type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Company</para>
@@ -142,14 +150,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string EntityType { get; set; }
 
                 /// <summary>
-                /// <para>The entity record property list.</para>
+                /// <para>The list of properties for the entity record.</para>
                 /// </summary>
                 [NameInMap("PropertyList")]
                 [Validation(Required=false)]
                 public List<GetKgNeighborResponseBodyDataNodeListPropertyList> PropertyList { get; set; }
                 public class GetKgNeighborResponseBodyDataNodeListPropertyList : TeaModel {
                     /// <summary>
-                    /// <para>The property code.</para>
+                    /// <para>The code of the property.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>company_name</para>
@@ -159,7 +167,15 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Code { get; set; }
 
                     /// <summary>
-                    /// <para>The property data type. Valid values: STRING (string), INTEGER (integer), FLOAT (float), BOOLEAN (Boolean), DATE (date), LIST (list), and others.</para>
+                    /// <para>The data type of the property. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>STRING: String.</description></item>
+                    /// <item><description>INTEGER: Integer.</description></item>
+                    /// <item><description>FLOAT: Floating-point number.</description></item>
+                    /// <item><description>BOOLEAN: Boolean.</description></item>
+                    /// <item><description>DATE: Date.</description></item>
+                    /// <item><description>LIST: List.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>STRING</para>
@@ -169,7 +185,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string DataType { get; set; }
 
                     /// <summary>
-                    /// <para>The property value.</para>
+                    /// <para>The value of the property.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Alibaba</para>
@@ -215,7 +231,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

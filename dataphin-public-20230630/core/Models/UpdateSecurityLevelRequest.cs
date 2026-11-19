@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>The update instruction.</para>
+        /// <para>The update command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UpdateCommand")]
@@ -37,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpdateSecurityLevelRequestUpdateCommand UpdateCommand { get; set; }
         public class UpdateSecurityLevelRequestUpdateCommand : TeaModel {
             /// <summary>
-            /// <para>The classification description.</para>
+            /// <para>The description of the classification level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -47,7 +49,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The classification order. If this parameter is not specified, the classification name is used for matching.</para>
+            /// <para>The order of the classification level. If this parameter is not specified, the classification level is matched by name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -57,7 +59,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Index { get; set; }
 
             /// <summary>
-            /// <para>The classification name.</para>
+            /// <para>The name of the classification level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>

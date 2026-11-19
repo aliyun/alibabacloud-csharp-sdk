@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The HTTP response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The backend exception details.</para>
+        /// <para>The backend response exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<ListGovernObjectsResponseBodyPageResultData> Data { get; set; }
             public class ListGovernObjectsResponseBodyPageResultData : TeaModel {
                 /// <summary>
-                /// <para>The time when the record was reported.</para>
+                /// <para>The submission time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-08-31 10:10:59</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <para>The display name of the user.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Yang Jing 2088252351182803</para>
+                    /// <para>Yang Jing2088252351182803</para>
                     /// </summary>
                     [NameInMap("DisplayName")]
                     [Validation(Required=false)]
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The governance issue object.</para>
+                /// <para>The governance problem object.</para>
                 /// </summary>
                 [NameInMap("Problem")]
                 [Validation(Required=false)]
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string ParentObjectId { get; set; }
 
                     /// <summary>
-                    /// <para>The contact email for the governance issue.</para>
+                    /// <para>The contact email for governance issues.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="mailto:126983612986391@gamail.com">126983612986391@gamail.com</a></para>
@@ -157,17 +157,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string ProblemContactMail { get; set; }
 
                     /// <summary>
-                    /// <para>The other contact information for the governance issue.</para>
+                    /// <para>Other contact information for the governance problem.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Jane</para>
+                    /// <para>Li Si</para>
                     /// </summary>
                     [NameInMap("ProblemContactOther")]
                     [Validation(Required=false)]
                     public string ProblemContactOther { get; set; }
 
                     /// <summary>
-                    /// <para>The contact phone number for the governance issue.</para>
+                    /// <para>The contact phone number for the governance problem.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>16278902467</para>
@@ -177,17 +177,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string ProblemContactPhone { get; set; }
 
                     /// <summary>
-                    /// <para>The description of the governance issue.</para>
+                    /// <para>The description of the governance problem.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Governance issue description</para>
+                    /// <para>Governance problem description</para>
                     /// </summary>
                     [NameInMap("ProblemDesc")]
                     [Validation(Required=false)]
                     public string ProblemDesc { get; set; }
 
                     /// <summary>
-                    /// <para>The submission type of the issue.</para>
+                    /// <para>The submission method of the problem.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>SYSTEM</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string ProblemSubmitType { get; set; }
 
                     /// <summary>
-                    /// <para>The user who submitted the issue.</para>
+                    /// <para>The user who submitted the problem.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>123456</para>
@@ -207,17 +207,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string ProblemSubmitter { get; set; }
 
                     /// <summary>
-                    /// <para>The username of the issue submitter.</para>
+                    /// <para>The username of the user who submitted the problem.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>John</para>
+                    /// <para>Zhang San</para>
                     /// </summary>
                     [NameInMap("ProblemSubmitterUserName")]
                     [Validation(Required=false)]
                     public string ProblemSubmitterUserName { get; set; }
 
                     /// <summary>
-                    /// <para>The types of the governance issue.</para>
+                    /// <para>The type of the governance problem.</para>
                     /// </summary>
                     [NameInMap("ProblemTypes")]
                     [Validation(Required=false)]
@@ -336,7 +336,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? RectifyId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the rectification.</para>
+                /// <para>The rectification name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Test rectification</para>
@@ -356,17 +356,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string RectifyStatus { get; set; }
 
                 /// <summary>
-                /// <para>The related knowledge base entries.</para>
+                /// <para>The related knowledge base.</para>
                 /// </summary>
                 [NameInMap("RelatedKnowledge")]
                 [Validation(Required=false)]
                 public List<ListGovernObjectsResponseBodyPageResultDataRelatedKnowledge> RelatedKnowledge { get; set; }
                 public class ListGovernObjectsResponseBodyPageResultDataRelatedKnowledge : TeaModel {
                     /// <summary>
-                    /// <para>The cause of the issue.</para>
+                    /// <para>The cause of the problem.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Host exception. The instance was migrated with data loss</para>
+                    /// <para>Host exception, lossy instance migration</para>
                     /// </summary>
                     [NameInMap("Cause")]
                     [Validation(Required=false)]
@@ -376,14 +376,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <para>The description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Store scheduled power on/off business domain canary list\n</para>
+                    /// <para>Canary release list for the scheduled startup and shutdown business domain of stores\n</para>
                     /// </summary>
                     [NameInMap("Desc")]
                     [Validation(Required=false)]
                     public string Desc { get; set; }
 
                     /// <summary>
-                    /// <para>The knowledge entry ID.</para>
+                    /// <para>The knowledge ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>-341426256859</para>
@@ -403,7 +403,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Owner { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the owner.</para>
+                    /// <para>The owner name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>buc_459782</para>
@@ -416,7 +416,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <para>The Solutions.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>{\&quot;Type\&quot;:\&quot;text\&quot;,\&quot;Value\&quot;:\&quot;OSS public network access\&quot;}</para>
+                    /// <para>{&quot;Type&quot;:&quot;text&quot;,&quot;Value&quot;:&quot;OSS public network access&quot;}</para>
                     /// </summary>
                     [NameInMap("Solution")]
                     [Validation(Required=false)]
@@ -469,7 +469,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

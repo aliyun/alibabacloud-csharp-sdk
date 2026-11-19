@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The list of log files for the specified TaskManager.</para>
+        /// <para>The log file entries for the JobManager or TaskManager. You can use the LogName field to retrieve the log content.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListStreamTaskManagerLogsResponseBodyData> Data { get; set; }
         public class ListStreamTaskManagerLogsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The log file name. This name can be used as the logName input parameter for the logContent operation.</para>
+            /// <para>The original name of the log file. This value corresponds to the LogName request parameter of the GetStreamLogContent operation. Pass this value as is.</para>
             /// 
             /// <b>Example:</b>
             /// <para>flink--standalonesession-0-dataphin-session-7db678957dc449aab0086b931c9f8218-jobmanager.log</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string LogName { get; set; }
 
             /// <summary>
-            /// <para>The last modified time in milliseconds.</para>
+            /// <para>The last modified time of the log file. The value is a timestamp in milliseconds since the UNIX epoch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1792033500000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Mtime { get; set; }
 
             /// <summary>
-            /// <para>The file size in bytes.</para>
+            /// <para>The size of the log file. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1048576</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The backend exception details.</para>
+        /// <para>The details of the backend exception.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

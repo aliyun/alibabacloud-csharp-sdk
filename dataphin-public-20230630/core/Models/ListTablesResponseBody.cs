@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP response code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The paged query result.</para>
+        /// <para>The paging query result.</para>
         /// </summary>
         [NameInMap("PageResult")]
         [Validation(Required=false)]
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string LastQueryTime { get; set; }
 
                 /// <summary>
-                /// <para>The lifecycle of the table, in days.</para>
+                /// <para>The lifecycle of the table in days.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30</para>
@@ -354,7 +354,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The total storage size of the table, in bytes.</para>
+                /// <para>The total storage size of the table in bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10241024</para>

@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -39,7 +41,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OutputFormat { get; set; }
 
         /// <summary>
-        /// <para>The version number. If this parameter is empty or set to -1, the model metadata in draft state is returned. If this parameter is set to 0, the model metadata of the latest version is returned.</para>
+        /// <para>The version ID. An empty value or -1 indicates the draft model metadata. 0 indicates the latest model metadata.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

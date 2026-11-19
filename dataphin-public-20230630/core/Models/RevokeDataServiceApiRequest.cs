@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -40,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The revoke instruction.</para>
+        /// <para>The authorization command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RevokeCommand")]
@@ -59,7 +61,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ApiId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the application.</para>
+            /// <para>The app ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1203</para>
@@ -72,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The permission type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>USE: use permission</description></item>
-            /// <item><description>DELEGATION: delegation permission.</description></item>
+            /// <item><description>DELEGATION: delegation permission</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -86,7 +88,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The API environment. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>DEV: development environment</description></item>
-            /// <item><description>PROD: production environment.</description></item>
+            /// <item><description>PROD: production environment</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -100,7 +102,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The authorization object type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>APP: application</description></item>
-            /// <item><description>USER: user.</description></item>
+            /// <item><description>USER: user</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -111,7 +113,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string GranteeType { get; set; }
 
             /// <summary>
-            /// <para>The reason for the request.</para>
+            /// <para>The reason for the application.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

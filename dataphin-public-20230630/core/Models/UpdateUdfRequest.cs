@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user who performs the operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -39,16 +41,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The category. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: window function</description></item>
-            /// <item><description>2: aggregate function</description></item>
-            /// <item><description>3: numerical function</description></item>
-            /// <item><description>4: string function</description></item>
-            /// <item><description>5: time function</description></item>
-            /// <item><description>6: IP address utility function</description></item>
-            /// <item><description>7: URL-related function</description></item>
-            /// <item><description>8: encoding and decoding function</description></item>
-            /// <item><description>9: business-related function</description></item>
-            /// <item><description>10: other.</description></item>
+            /// <item><description>1: Window function.</description></item>
+            /// <item><description>2: Aggregate function.</description></item>
+            /// <item><description>3: Numerical function.</description></item>
+            /// <item><description>4: String function.</description></item>
+            /// <item><description>5: Time function.</description></item>
+            /// <item><description>6: IP address helper function.</description></item>
+            /// <item><description>7: URL-related function.</description></item>
+            /// <item><description>8: Encoding and decoding function.</description></item>
+            /// <item><description>9: Business-related function.</description></item>
+            /// <item><description>10: Other.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -60,7 +62,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? Category { get; set; }
 
             /// <summary>
-            /// <para>The class name that implements the function in the resource.</para>
+            /// <para>The name of the class that implements the function in the resource.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -71,7 +73,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ClassName { get; set; }
 
             /// <summary>
-            /// <para>The command format for function calling to invoke.</para>
+            /// <para>The command format for function invocation.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -82,11 +84,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string CommandHelp { get; set; }
 
             /// <summary>
-            /// <para>The commit remarks.</para>
+            /// <para>The submission comment.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试</para>
+            /// <para>Test</para>
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
@@ -97,14 +99,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试</para>
+            /// <para>Test</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user-defined function.</para>
+            /// <para>The ID of the custom function.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -115,7 +117,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The project ID.</para>
+            /// <para>The ID of the project.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

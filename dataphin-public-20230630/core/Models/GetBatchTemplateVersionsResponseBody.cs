@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<GetBatchTemplateVersionsResponseBodyDataTemplateVersionList> TemplateVersionList { get; set; }
             public class GetBatchTemplateVersionsResponseBodyDataTemplateVersionList : TeaModel {
                 /// <summary>
-                /// <para>The template submission comment.</para>
+                /// <para>The comment for the template submission.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Initial submission</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Content { get; set; }
 
                 /// <summary>
-                /// <para>The data source configuration of the database SQL template.</para>
+                /// <para>The datasource config for the database SQL template.</para>
                 /// </summary>
                 [NameInMap("DataSourceConfig")]
                 [Validation(Required=false)]
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Schema { get; set; }
 
                     /// <summary>
-                    /// <para>The data source type of the database SQL template. Valid values: MYSQL, ORACLE, ADB_FOR_PG, OUSHUDB, PRESTO, POSTGRE_SQL, STARROCKS, CLICKHOUSE, ANALYTICDB, ADB_FOR_MYSQL_V3, GAUSSDB, SELECTDB, DORIS, SQL_SERVER, HOLOGRES, OPENGAUSS, DAMENG, OCEANBASE, TRINO, POLARDB_X2, LINDORM, EMR_SPARK_SERVERLESS, TDSQL_FOR_PG, TDSQL_FOR_MYSQL, GBASE_8A, and TDENGINE.</para>
+                    /// <para>The type of the data source for the database SQL template. Valid values: MYSQL, ORACLE, ADB_FOR_PG, OUSHUDB, PRESTO, POSTGRE_SQL, STARROCKS, CLICKHOUSE, ANALYTICDB, ADB_FOR_MYSQL_V3, GAUSSDB, SELECTDB, DORIS, SQL_SERVER, HOLOGRES, OPENGAUSS, DAMENG, OCEANBASE, TRINO, POLARDB_X2, LINDORM, EMR_SPARK_SERVERLESS, TDSQL_FOR_PG, TDSQL_FOR_MYSQL, GBASE_8A, and TDENGINE.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>MYSQL</para>
@@ -127,14 +127,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The name of the resource group in the development environment.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Default resource group for the project</para>
+                /// <para>Project default resource group</para>
                 /// </summary>
                 [NameInMap("DevResourceGroupName")]
                 [Validation(Required=false)]
                 public string DevResourceGroupName { get; set; }
 
                 /// <summary>
-                /// <para>The version of the compute engine. Valid values: Python 2.7 and Python 3.7.</para>
+                /// <para>The version of the compute engine. Currently, Python 2.7 and Python 3.7 are supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Python 3.7</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the template, which is the same as the menu tree node ID.</para>
+                /// <para>The template ID, which is the same as the menu tree node ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1001</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The last user who updated the template.</para>
+                /// <para>The user who last updated the template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Li Si</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Modifier { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the last user who updated the template.</para>
+                /// <para>The ID of the user who last updated the template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100002</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ModifierId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the template.</para>
+                /// <para>The template name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Data processing template</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? OperatorType { get; set; }
 
                 /// <summary>
-                /// <para>The owner of the template.</para>
+                /// <para>The template owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Zhang San</para>
@@ -251,14 +251,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether encryption is enabled for the parameter.</para>
+                    /// <para>Specifies whether encryption is enabled for the parameter.</para>
                     /// </summary>
                     [NameInMap("EncryptEnabled")]
                     [Validation(Required=false)]
                     public bool? EncryptEnabled { get; set; }
 
                     /// <summary>
-                    /// <para>The key of the parameter.</para>
+                    /// <para>The parameter key.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>param1</para>
@@ -280,7 +280,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The ID of the project.</para>
+                /// <para>The project ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123456</para>
@@ -290,14 +290,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The list of dependent Python third-party packages.</para>
+                /// <para>The list of dependent third-party Python packages.</para>
                 /// </summary>
                 [NameInMap("PythonModuleList")]
                 [Validation(Required=false)]
                 public List<GetBatchTemplateVersionsResponseBodyDataTemplateVersionListPythonModuleList> PythonModuleList { get; set; }
                 public class GetBatchTemplateVersionsResponseBodyDataTemplateVersionListPythonModuleList : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the Python third-party package.</para>
+                    /// <para>The ID of the third-party Python package.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1001</para>
@@ -317,7 +317,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string InstallTime { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the Python third-party package.</para>
+                    /// <para>The name of the third-party Python package.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>numpy</para>
@@ -337,7 +337,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string PythonVersion { get; set; }
 
                     /// <summary>
-                    /// <para>The status of the third-party package. Valid values: INSTALL_SUCCESS (installed), INSTALL_FAILED (installation failed), INSTALLING (installing), UPGRADE_SUCCESS (upgraded), UPGRADE_FAILED (upgrade failed), and UPGRADING (upgrading).</para>
+                    /// <para>The status of the third-party package. Valid values: INSTALL_SUCCESS (installation succeeded), INSTALL_FAILED (installation failed), INSTALLING (installing), UPGRADE_SUCCESS (upgrade succeeded), UPGRADE_FAILED (upgrade failed), and UPGRADING (upgrading).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>INSTALL_SUCCESS</para>
@@ -372,21 +372,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The name of the resource group in the production environment.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Default resource group for the project</para>
+                /// <para>Project default resource group</para>
                 /// </summary>
                 [NameInMap("ResourceGroupName")]
                 [Validation(Required=false)]
                 public string ResourceGroupName { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether runtime resources are shared.</para>
+                /// <para>Specifies whether runtime resources are shared.</para>
                 /// </summary>
                 [NameInMap("ShareRuntimeResource")]
                 [Validation(Required=false)]
                 public bool? ShareRuntimeResource { get; set; }
 
                 /// <summary>
-                /// <para>The status of the template. Valid values: 0 (draft), 2 (submitted), and 100 (in development).</para>
+                /// <para>The template status. Valid values: 0 (Draft), 2 (Submitted), and 100 (In development).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -420,7 +420,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend exception.</para>
+        /// <para>The backend exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>

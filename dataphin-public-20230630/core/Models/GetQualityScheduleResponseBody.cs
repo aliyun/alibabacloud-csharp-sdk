@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The details of the scheduling object.</para>
+        /// <para>The schedule object details.</para>
         /// </summary>
         [NameInMap("QualityScheduleInfo")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the creator.</para>
+            /// <para>The user ID of the creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30012011</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string CronExpression { get; set; }
 
             /// <summary>
-            /// <para>The ID of the scheduling object.</para>
+            /// <para>The ID of the schedule object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -92,14 +92,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the scheduling object is referenced by a rule.</para>
+            /// <para>Indicates whether the object is referenced by a rule.</para>
             /// </summary>
             [NameInMap("IsRefByRule")]
             [Validation(Required=false)]
             public bool? IsRefByRule { get; set; }
 
             /// <summary>
-            /// <para>The ID of the last modifier.</para>
+            /// <para>The user ID of the last modifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30012011</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Modifier { get; set; }
 
             /// <summary>
-            /// <para>The modification time. The format is YYYY-MM-DD HH:mm:ss.</para>
+            /// <para>The update time. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-30 00:00:00</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the scheduling object.</para>
+            /// <para>The name of the schedule object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -139,14 +139,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string PartitionExpression { get; set; }
 
             /// <summary>
-            /// <para>The partition type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>EVERY_DAY: Every day.</description></item>
-            /// <item><description>PRE_DAY: Previous day.</description></item>
-            /// <item><description>TODAY: Current day.</description></item>
-            /// <item><description>FIRST_DAY_OF_WEEK: First day of the week (Sunday).</description></item>
-            /// <item><description>CUSTOM: Custom.</description></item>
-            /// </list>
+            /// <para>The partition type. Valid values: EVERY_DAY for daily, PRE_DAY for previous day, TODAY for current day, FIRST_DAY_OF_WEEK for first day of the week (Sunday), and CUSTOM for custom.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CUSTOM</para>
@@ -156,14 +149,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string PartitionType { get; set; }
 
             /// <summary>
-            /// <para>The scheduling epoch type for timed scheduling. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>DAILY: Daily.</description></item>
-            /// <item><description>WEEKLY: Weekly.</description></item>
-            /// <item><description>MONTHLY: Monthly.</description></item>
-            /// <item><description>HOURLY: Hourly.</description></item>
-            /// <item><description>MINUTELY: Minutely.</description></item>
-            /// </list>
+            /// <para>The schedule cycle type for timed scheduling. Valid values: DAILY for day, WEEKLY for week, MONTHLY for month, HOURLY for hour, and MINUTELY for minute.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DAILY</para>
@@ -173,19 +159,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string PeriodScheduleIntervalType { get; set; }
 
             /// <summary>
-            /// <para>The scheduling epoch values for timed scheduling.</para>
+            /// <para>The schedule cycle values for timed scheduling.</para>
             /// </summary>
             [NameInMap("PeriodScheduleParamList")]
             [Validation(Required=false)]
             public List<string> PeriodScheduleParamList { get; set; }
 
             /// <summary>
-            /// <para>The trigger method for fixed task triggers. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>ALL_TASKS_FINISHED: All tasks finished.</description></item>
-            /// <item><description>ONE_TASKS_FINISHED: One task finished.</description></item>
-            /// <item><description>PRE_ONE_TASKS_START: Previous task started.</description></item>
-            /// </list>
+            /// <para>The trigger method for static task trigger. Valid values: ALL_TASKS_FINISHED, ONE_TASKS_FINISHED, and PRE_ONE_TASKS_START.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ONE_TASKS_FINISHED</para>
@@ -202,11 +183,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> TriggerNodeList { get; set; }
 
             /// <summary>
-            /// <para>The trigger method for trigger scheduling. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>STATIC_TASK_TRIGGER: Fixed task trigger.</description></item>
-            /// <item><description>CODE_CHECK_TRIGGER: Code check trigger.</description></item>
-            /// </list>
+            /// <para>The trigger method for trigger scheduling. Valid values: STATIC_TASK_TRIGGER for static task trigger and CODE_CHECK_TRIGGER for code check trigger.</para>
             /// 
             /// <b>Example:</b>
             /// <para>STATIC_TASK_TRIGGER</para>
@@ -216,14 +193,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string TriggerType { get; set; }
 
             /// <summary>
-            /// <para>The scheduling type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>PERIOD_SCHEDULE: Timed scheduling.</description></item>
-            /// <item><description>MANUAL_SCHEDULE: Manual trigger.</description></item>
-            /// <item><description>CODE_CHECK_TRIGGER: Code check trigger.</description></item>
-            /// <item><description>STATIC_TASK_TRIGGER: Fixed node trigger.</description></item>
-            /// <item><description>DEPENDENCY_SCHEDULE: Dependency scheduling.</description></item>
-            /// </list>
+            /// <para>The schedule type. Valid values: PERIOD_SCHEDULE for timed scheduling, MANUAL_SCHEDULE for manual trigger, CODE_CHECK_TRIGGER for code check trigger, STATIC_TASK_TRIGGER for static task trigger, and DEPENDENCY_SCHEDULE for dependency scheduling.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PERIOD_SCHEDULE</para>
@@ -233,11 +203,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The validation scope. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>TASK_REFERRED_PARTITION: Task updated partition.</description></item>
-            /// <item><description>USER_DEFINED_PARTITION: User-defined partition.</description></item>
-            /// </list>
+            /// <para>The validation scope. Valid values: TASK_REFERRED_PARTITION for task updated partition and USER_DEFINED_PARTITION for custom partition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TASK_REFERRED_PARTITION</para>

@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ItemTypeCode { get; set; }
 
                 /// <summary>
-                /// <para>The property code that matched the semantic search.</para>
+                /// <para>The code of the matched semantic search property.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>name</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The actual value of the matched property.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>张三</para>
+                /// <para>John Doe</para>
                 /// </summary>
                 [NameInMap("MatchedPropertyValue")]
                 [Validation(Required=false)]
                 public string MatchedPropertyValue { get; set; }
 
                 /// <summary>
-                /// <para>The similarity score ranging from 0.0 to 1.0, based on cosine similarity.</para>
+                /// <para>The similarity score based on cosine similarity. Valid values: 0.0 to 1.0.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.88</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

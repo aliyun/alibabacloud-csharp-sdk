@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ListQualityWatchTasksResponseBodyPageResult PageResult { get; set; }
         public class ListQualityWatchTasksResponseBodyPageResult : TeaModel {
             /// <summary>
-            /// <para>The list of quality watchtasks.</para>
+            /// <para>The paged quality template list.</para>
             /// </summary>
             [NameInMap("QualityWatchTaskList")]
             [Validation(Required=false)]
             public List<ListQualityWatchTasksResponseBodyPageResultQualityWatchTaskList> QualityWatchTaskList { get; set; }
             public class ListQualityWatchTasksResponseBodyPageResultQualityWatchTaskList : TeaModel {
                 /// <summary>
-                /// <para>The business date.</para>
+                /// <para>The business date. Format: YYYY-MM-DD.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-30</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string BizDateFormat { get; set; }
 
                 /// <summary>
-                /// <para>The creation time.</para>
+                /// <para>The creation time. Format: YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-30 00:00:00</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Modifier { get; set; }
 
                 /// <summary>
-                /// <para>The modification time.</para>
+                /// <para>The update time. Format: YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-30 00:00:00</para>
@@ -154,21 +154,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string QualityOwnerName { get; set; }
 
                 /// <summary>
-                /// <para>The quality rule count information.</para>
+                /// <para>The quality rule count.</para>
                 /// </summary>
                 [NameInMap("RuleCountInfo")]
                 [Validation(Required=false)]
                 public ListQualityWatchTasksResponseBodyPageResultQualityWatchTaskListRuleCountInfo RuleCountInfo { get; set; }
                 public class ListQualityWatchTasksResponseBodyPageResultQualityWatchTaskListRuleCountInfo : TeaModel {
                     /// <summary>
-                    /// <para>The strong rule count information.</para>
+                    /// <para>The strong rule count.</para>
                     /// </summary>
                     [NameInMap("StrongRuleCount")]
                     [Validation(Required=false)]
                     public ListQualityWatchTasksResponseBodyPageResultQualityWatchTaskListRuleCountInfoStrongRuleCount StrongRuleCount { get; set; }
                     public class ListQualityWatchTasksResponseBodyPageResultQualityWatchTaskListRuleCountInfoStrongRuleCount : TeaModel {
                         /// <summary>
-                        /// <para>The number of rules that failed to be executed.</para>
+                        /// <para>The number of failed rules.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public long? ErrorRuleCount { get; set; }
 
                         /// <summary>
-                        /// <para>The number of rules that have been executed.</para>
+                        /// <para>The number of completed rules.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public long? FinishedRuleCount { get; set; }
 
                         /// <summary>
-                        /// <para>The number of rules that were successfully executed.</para>
+                        /// <para>The number of successful rules.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -210,14 +210,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     }
 
                     /// <summary>
-                    /// <para>The validation rule count information.</para>
+                    /// <para>The validation rule count.</para>
                     /// </summary>
                     [NameInMap("ValidateRuleCount")]
                     [Validation(Required=false)]
                     public ListQualityWatchTasksResponseBodyPageResultQualityWatchTaskListRuleCountInfoValidateRuleCount ValidateRuleCount { get; set; }
                     public class ListQualityWatchTasksResponseBodyPageResultQualityWatchTaskListRuleCountInfoValidateRuleCount : TeaModel {
                         /// <summary>
-                        /// <para>The number of rules that failed to be executed.</para>
+                        /// <para>The number of failed rules.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0</para>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public long? ErrorRuleCount { get; set; }
 
                         /// <summary>
-                        /// <para>The number of rules that have been executed.</para>
+                        /// <para>The number of completed rules.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public long? FinishedRuleCount { get; set; }
 
                         /// <summary>
-                        /// <para>The number of rules that were successfully executed.</para>
+                        /// <para>The number of successful rules.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -259,14 +259,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     }
 
                     /// <summary>
-                    /// <para>The weak rule count information.</para>
+                    /// <para>The weak rule count.</para>
                     /// </summary>
                     [NameInMap("WeakRuleCount")]
                     [Validation(Required=false)]
                     public ListQualityWatchTasksResponseBodyPageResultQualityWatchTaskListRuleCountInfoWeakRuleCount WeakRuleCount { get; set; }
                     public class ListQualityWatchTasksResponseBodyPageResultQualityWatchTaskListRuleCountInfoWeakRuleCount : TeaModel {
                         /// <summary>
-                        /// <para>The number of rules that failed to be executed.</para>
+                        /// <para>The number of failed rules.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0</para>
@@ -276,7 +276,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public long? ErrorRuleCount { get; set; }
 
                         /// <summary>
-                        /// <para>The number of rules that have been executed.</para>
+                        /// <para>The number of completed rules.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -286,7 +286,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public long? FinishedRuleCount { get; set; }
 
                         /// <summary>
-                        /// <para>The number of rules that were successfully executed.</para>
+                        /// <para>The number of successful rules.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -310,7 +310,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The list of quality rule IDs.</para>
+                /// <para>The IDs of the quality rules.</para>
                 /// </summary>
                 [NameInMap("RuleIdList")]
                 [Validation(Required=false)]
@@ -327,17 +327,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The task status. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>NOT_RUN: not executed.</description></item>
-                /// <item><description>WAITING: waiting.</description></item>
-                /// <item><description>RUNNING: running.</description></item>
-                /// <item><description>SUCCESS: succeeded.</description></item>
-                /// <item><description>FAILED: failed.</description></item>
-                /// <item><description>CANCEL: canceled.</description></item>
-                /// <item><description>TIMEOUT: timed out.</description></item>
-                /// <item><description>OFFLINE: offline.</description></item>
-                /// </list>
+                /// <para>The task status. Valid values: NOT_RUN (not run), WAITING (waiting), RUNNING (running), SUCCESS (successful), FAILED (failed), CANCEL (canceled), TIMEOUT (timed out), and OFFLINE (offline).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>RUNNING</para>
@@ -381,7 +371,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

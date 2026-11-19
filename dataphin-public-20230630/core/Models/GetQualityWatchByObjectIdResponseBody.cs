@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetQualityWatchByObjectIdResponseBodyQualityWatchInfo QualityWatchInfo { get; set; }
         public class GetQualityWatchByObjectIdResponseBodyQualityWatchInfo : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-30 00:00:00</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public GetQualityWatchByObjectIdResponseBodyQualityWatchInfoDataSourceInfo DataSourceInfo { get; set; }
             public class GetQualityWatchByObjectIdResponseBodyQualityWatchInfoDataSourceInfo : TeaModel {
                 /// <summary>
-                /// <para>The creation time.</para>
+                /// <para>The creation time in the YYYY-MM-DD HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-30 00:00:00</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The update time.</para>
+                /// <para>The update time in the YYYY-MM-DD HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-30 00:00:00</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The user ID of the owner.</para>
+                /// <para>The owner ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30012011</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// <para>The username of the owner.</para>
+                /// <para>The owner name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Catalog { get; set; }
 
                 /// <summary>
-                /// <para>The name of the cell summary logical table.</para>
+                /// <para>The unit aggregate table name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dws_all</para>
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string CellSumLogicTableName { get; set; }
 
                 /// <summary>
-                /// <para>The compute type of the metric. Valid values: AUTO, CUSTOM, MOUNT, and COMBINE.</para>
+                /// <para>The metric computation type. Valid values: AUTO, CUSTOM, MOUNT, and COMBINE.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AUTO</para>
@@ -263,7 +263,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ComputeType { get; set; }
 
                 /// <summary>
-                /// <para>The data type of the metric.</para>
+                /// <para>The metric data type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bigint</para>
@@ -283,7 +283,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The display name of the metric.</para>
+                /// <para>The metric display name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>logic</para>
@@ -296,7 +296,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The statistical granularity name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Site-wide summary table</para>
+                /// <para>Global aggregate table</para>
                 /// </summary>
                 [NameInMap("GranularityDisplayName")]
                 [Validation(Required=false)]
@@ -343,7 +343,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The user ID of the owner.</para>
+                /// <para>The owner ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30012011</para>
@@ -353,7 +353,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// <para>The username of the owner.</para>
+                /// <para>The owner name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -425,7 +425,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Modifier { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The update time in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-30 00:00:00</para>
@@ -589,7 +589,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The user ID of the owner.</para>
+                /// <para>The owner ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30012011</para>
@@ -599,7 +599,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// <para>The username of the owner.</para>
+                /// <para>The owner name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -629,7 +629,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ProjectName { get; set; }
 
                 /// <summary>
-                /// <para>The type. Valid values: LOGIC_DIM_TABLE (logical dimension table), LOGIC_FACT_TABLE (logical fact table), LOGIC_SUM_TABLE (logical aggregate table), LOGIC_LABEL_TABLE (logical tag table), PHYSICAL_TABLE (physical table), and REALTIME_LOGICAL_TABLE (real-time metadata table).</para>
+                /// <para>The type. Valid values: LOGIC_DIM_TABLE (logical dimension table), LOGIC_FACT_TABLE (logical fact table), LOGIC_SUM_TABLE (logical aggregate table), LOGIC_LABEL_TABLE (logical tag table), PHYSICAL_TABLE (physical table), and REALTIME_LOGICAL_TABLE (real-time metatable).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>LOGIC_DIM_TABLE</para>
@@ -641,7 +641,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The monitored object type. Valid values: TABLE (Dataphin table), DATASOURCE_TABLE (global table), DATASOURCE (data source), INDEX (metric), and REALTIME_LOGICAL_TABLE (real-time metadata table).</para>
+            /// <para>The monitored object type. Valid values: TABLE (Dataphin table), DATASOURCE_TABLE (global table), DATASOURCE (data source), INDEX (metric), and REALTIME_LOGICAL_TABLE (real-time metatable).</para>
             /// 
             /// <b>Example:</b>
             /// <para>TABLE</para>

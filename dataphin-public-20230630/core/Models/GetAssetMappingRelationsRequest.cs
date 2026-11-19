@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetAssetMappingRelationsRequestAssetMappingQuery AssetMappingQuery { get; set; }
         public class GetAssetMappingRelationsRequestAssetMappingQuery : TeaModel {
             /// <summary>
-            /// <para>The asset object type. Valid values: COLUMN (field) and INDEX (metric).</para>
+            /// <para>The asset object type. Valid values: COLUMN: field. INDEX: metric.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Guid { get; set; }
 
             /// <summary>
-            /// <para>The mapping relationship type. Valid values: VALID (mapped) and INVALID (invalid mapping).</para>
+            /// <para>The mapping relationship type. Valid values: VALID: mapped. INVALID: invalid mapping.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

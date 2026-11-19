@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public BatchCreateKgEntityResponseBodyCreateResult CreateResult { get; set; }
         public class BatchCreateKgEntityResponseBodyCreateResult : TeaModel {
             /// <summary>
-            /// <para>The number of failed records.</para>
+            /// <para>The number of failed creations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? FailCount { get; set; }
 
             /// <summary>
-            /// <para>The number of successfully created records.</para>
+            /// <para>The number of successful creations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -47,12 +47,22 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? SuccessCount { get; set; }
 
             /// <summary>
-            /// <para>The list of IDs of successfully created entity records.</para>
+            /// <para>The list of IDs for successfully created entity records.</para>
             /// </summary>
             [NameInMap("SuccessEntityList")]
             [Validation(Required=false)]
             public List<BatchCreateKgEntityResponseBodyCreateResultSuccessEntityList> SuccessEntityList { get; set; }
             public class BatchCreateKgEntityResponseBodyCreateResultSuccessEntityList : TeaModel {
+                /// <summary>
+                /// <para>The business ID of the entity record.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>12345</para>
+                /// </summary>
+                [NameInMap("BizId")]
+                [Validation(Required=false)]
+                public string BizId { get; set; }
+
                 /// <summary>
                 /// <para>The ID of the entity record.</para>
                 /// 
@@ -88,7 +98,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend exception.</para>
+        /// <para>The backend exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -108,7 +118,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

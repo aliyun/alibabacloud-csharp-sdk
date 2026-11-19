@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resource file details.</para>
+        /// <para>The details of the resource file.</para>
         /// </summary>
         [NameInMap("ResourceInfo")]
         [Validation(Required=false)]
         public GetResourceResponseBodyResourceInfo ResourceInfo { get; set; }
         public class GetResourceResponseBodyResourceInfo : TeaModel {
             /// <summary>
-            /// <para>The compute engine type.</para>
+            /// <para>The compute engine source type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MAX_COMPUTE</para>
@@ -80,14 +80,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试</para>
+            /// <para>Test</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The directory where the resource is stored.</para>
+            /// <para>The storage directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Directory { get; set; }
 
             /// <summary>
-            /// <para>The creation time, in the yyyy-MM-dd HH:mm:ss format.</para>
+            /// <para>The time when the resource was created. Format: yyyy-MM-dd HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-10 10:01:01</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The last modification time, in the yyyy-MM-dd HH:mm:ss format.</para>
+            /// <para>The time when the resource was updated. Format: yyyy-MM-dd HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-10 10:01:01</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

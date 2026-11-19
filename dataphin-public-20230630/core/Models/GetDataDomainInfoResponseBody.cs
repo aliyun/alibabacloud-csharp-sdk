@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetDataDomainInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// <para>The error code. A value of OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The display name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试</para>
+            /// <para>Test</para>
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The name of the user who last modified the data domain.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>张三</para>
+            /// <para>Zhang San</para>
             /// </summary>
             [NameInMap("LastModifierName")]
             [Validation(Required=false)]
@@ -127,17 +127,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the business object owner.</para>
+            /// <para>The ID of the owner of the business object.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>张三</para>
+            /// <para>Zhang San</para>
             /// </summary>
             [NameInMap("OwnerName")]
             [Validation(Required=false)]
             public string OwnerName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the business object owner.</para>
+            /// <para>The ID of the owner of the business object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30010010</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

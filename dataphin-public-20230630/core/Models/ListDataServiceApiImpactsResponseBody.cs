@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? AppKey { get; set; }
 
                 /// <summary>
-                /// <para>The application name.</para>
+                /// <para>The name of the application.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? ClientFailCount { get; set; }
 
                 /// <summary>
-                /// <para>The source IP address of the access request.</para>
+                /// <para>The IP address of the client.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>192.168.1.1</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ClientIp { get; set; }
 
                 /// <summary>
-                /// <para>The number of abnormal API calls.</para>
+                /// <para>The number of API call exceptions.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? ErrorApiCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of errors.</para>
+                /// <para>The number of exceptions.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ErrorRate { get; set; }
 
                 /// <summary>
-                /// <para>The most recent call time. Format: yyyy-MM-dd HH:mm:ss.</para>
+                /// <para>The time of the last call. Format: yyyy-MM-dd HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-30 08:00:00</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string LastCallTime { get; set; }
 
                 /// <summary>
-                /// <para>The gateway statistics time. Format: yyyy_MMdd_HHmm.</para>
+                /// <para>The time when the gateway statistics are collected. Format: yyyy_MMdd_HHmm.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025_0611_1011</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Minute { get; set; }
 
                 /// <summary>
-                /// <para>The number of offline instances.</para>
+                /// <para>The offline count.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

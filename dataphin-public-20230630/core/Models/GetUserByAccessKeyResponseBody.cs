@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetUserByAccessKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// <para>The error code. A value of OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned for the request.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The email address of the user.</para>
+            /// <para>The email address.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:xx@aliyun.com">xx@aliyun.com</a></para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string NickName { get; set; }
 
             /// <summary>
-            /// <para>The account source type, such as ALIYUN_OAUTH2, PUBLICCLOUD_OAUTH2, BUC, or APSARA.</para>
+            /// <para>The source type of the account, such as ALIYUN_OAUTH2, PUBLICCLOUD_OAUTH2, BUC, or APSARA.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALIYUN_OAUTH2</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string SourceType { get; set; }
 
             /// <summary>
-            /// <para>The source account ID of the user during SSO integration.</para>
+            /// <para>The source account ID of the user when SSO is integrated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12345</para>
@@ -127,12 +127,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string SourceUserId { get; set; }
 
             /// <summary>
-            /// <para>The tenant member status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>NORMAL: Normal.</description></item>
-            /// <item><description>DEACTIVATE: Deactivated.</description></item>
-            /// <item><description>DELETE: Deleted.</description></item>
-            /// </list>
+            /// <para>The status of the tenant member. Valid values: NORMAL, DEACTIVATE, and DELETE.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NORMAL</para>
@@ -142,14 +137,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The list of tenant-level roles assigned to the AK/SK owner in the current tenant.</para>
+            /// <para>The list of tenant-level roles. These are the roles of the user to whom the AccessKey ID and AccessKey secret belong in the current tenant.</para>
             /// </summary>
             [NameInMap("TenantRoles")]
             [Validation(Required=false)]
             public List<GetUserByAccessKeyResponseBodyUserInfoTenantRoles> TenantRoles { get; set; }
             public class GetUserByAccessKeyResponseBodyUserInfoTenantRoles : TeaModel {
                 /// <summary>
-                /// <para>The role identifier, such as SUPER_ADMIN or COMMON_USER.</para>
+                /// <para>The role key, such as SUPER_ADMIN or COMMON_USER.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SUPER_ADMIN</para>
@@ -162,7 +157,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The role name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Tenant Administrator</para>
+                /// <para>Tenant administrator</para>
                 /// </summary>
                 [NameInMap("RoleName")]
                 [Validation(Required=false)]
@@ -171,7 +166,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The username of the account.</para>
+            /// <para>The username.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zhangsan</para>

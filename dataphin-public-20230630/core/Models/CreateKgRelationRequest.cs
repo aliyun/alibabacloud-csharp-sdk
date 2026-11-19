@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateKgRelationRequest : TeaModel {
         /// <summary>
-        /// <para>The create command.</para>
+        /// <para>The creation command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CreateCommand")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public CreateKgRelationRequestCreateCommand CreateCommand { get; set; }
         public class CreateKgRelationRequestCreateCommand : TeaModel {
             /// <summary>
-            /// <para>The relationship record property list.</para>
+            /// <para>The property list of the relationship record.</para>
             /// </summary>
             [NameInMap("PropertyList")]
             [Validation(Required=false)]
@@ -95,6 +95,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListFilesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request error code. OK indicates a normal request.</para>
+        /// <para>The error code. A value of OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>File list</para>
+        /// <para>The list of files.</para>
         /// </summary>
         [NameInMap("FileList")]
         [Validation(Required=false)]
         public List<ListFilesResponseBodyFileList> FileList { get; set; }
         public class ListFilesResponseBodyFileList : TeaModel {
             /// <summary>
-            /// <para>File category</para>
+            /// <para>The file category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tempCode</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>File content</para>
+            /// <para>The file content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>select 1;</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>Creator</para>
+            /// <para>The creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1212111</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>File directory</para>
+            /// <para>The file directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/xx/x</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Directory { get; set; }
 
             /// <summary>
-            /// <para>File type, such as directory</para>
+            /// <para>The file type, such as directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>directory</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string FileType { get; set; }
 
             /// <summary>
-            /// <para>Creation time</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1717483193830</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>Modification time</para>
+            /// <para>The last modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1717483193830</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>File ID</para>
+            /// <para>The file ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111231112</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Last modifier</para>
+            /// <para>The last modifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1212111</para>
@@ -117,17 +117,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string LastModifier { get; set; }
 
             /// <summary>
-            /// <para>File name</para>
+            /// <para>The file name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx测试</para>
+            /// <para>xxTest</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Project ID</para>
+            /// <para>The project ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>312112121</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>Backend response HTTP code</para>
+        /// <para>The HTTP status code returned by the backend.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Request error message</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the request was successful</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

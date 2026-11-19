@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ListKgRelationResponseBodyPageResult PageResult { get; set; }
         public class ListKgRelationResponseBodyPageResult : TeaModel {
             /// <summary>
-            /// <para>The list of paged relationship records.</para>
+            /// <para>The paged list of relation records.</para>
             /// </summary>
             [NameInMap("RelationList")]
             [Validation(Required=false)]
             public List<ListKgRelationResponseBodyPageResultRelationList> RelationList { get; set; }
             public class ListKgRelationResponseBodyPageResultRelationList : TeaModel {
                 /// <summary>
-                /// <para>The list of properties for the relationship record.</para>
+                /// <para>The list of properties for the relation record.</para>
                 /// </summary>
                 [NameInMap("PropertyList")]
                 [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Code { get; set; }
 
                     /// <summary>
-                    /// <para>The data type of the property. Valid values: STRING (string), INTEGER (integer), FLOAT (floating-point number), BOOLEAN (Boolean), DATE (date), and LIST (list).</para>
+                    /// <para>The data type of the property, such as STRING, INTEGER, FLOAT, BOOLEAN, DATE, or LIST.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>STRING</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The relationship record ID.</para>
+                /// <para>The relation record ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abc-xxx</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string RelationId { get; set; }
 
                 /// <summary>
-                /// <para>The relationship type code.</para>
+                /// <para>The relation type code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>BELONG_TO</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

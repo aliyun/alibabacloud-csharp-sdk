@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateDataServiceApiRequest : TeaModel {
         /// <summary>
-        /// <para>The request for creating an API.</para>
+        /// <para>The request to create an API.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CreateCommand")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public CreateDataServiceApiRequestCreateCommand CreateCommand { get; set; }
         public class CreateDataServiceApiRequestCreateCommand : TeaModel {
             /// <summary>
-            /// <para>The group ID of the API.</para>
+            /// <para>The ID of the API group.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -29,11 +29,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ApiGroupId { get; set; }
 
             /// <summary>
-            /// <para>The group name of the API.</para>
+            /// <para>The name of the API group.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>默认API分组</para>
+            /// <para>Default API group</para>
             /// </summary>
             [NameInMap("ApiGroupName")]
             [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The type of the API. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>3: datasource SQL mode.</description></item>
+            /// <item><description>3: data source SQL mode</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -65,9 +65,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? ApiType { get; set; }
 
             /// <summary>
-            /// <para>The protocol. Different gateway types support different protocols. For more information, see the documentation. Valid values:</para>
+            /// <para>The protocol. Different gateway types support different protocols. For more information, refer to the documentation. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: HTTP </description></item>
+            /// <item><description>0: HTTP. </description></item>
             /// <item><description>1: HTTPS.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The call mode of the API. Default value: 1. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>1: synchronous call</description></item>
-            /// <item><description>2: asynchronous call.</description></item>
+            /// <item><description>2: asynchronous call</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The custom update frequency. This parameter is required when the update frequency is set to custom.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>每天8点</para>
+            /// <para>Every day at 8:00 AM</para>
             /// </summary>
             [NameInMap("CustomUpdateRate")]
             [Validation(Required=false)]
@@ -121,18 +121,18 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The configuration of the operation-type API. This parameter is not required when creating a query-type API.</para>
+            /// <para>The configuration information for an operation API. This parameter is not required when you create a query API.</para>
             /// </summary>
             [NameInMap("DmlConfig")]
             [Validation(Required=false)]
             public CreateDataServiceApiRequestCreateCommandDmlConfig DmlConfig { get; set; }
             public class CreateDataServiceApiRequestCreateCommandDmlConfig : TeaModel {
                 /// <summary>
-                /// <para>The data volume per batch. Valid values:</para>
+                /// <para>The number of records processed in a single batch. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>When the data volume type is single record, this parameter cannot be set.</description></item>
-                /// <item><description>When the data volume type is batch:<list type="bullet">
-                /// <item><description>If the transaction processing mode is 1, this parameter cannot be set.</description></item>
+                /// <item><description>When the data volume is set to single record, this parameter cannot be specified.</description></item>
+                /// <item><description>When the data volume is set to batch:<list type="bullet">
+                /// <item><description>If the transaction processing mode is 1, this parameter cannot be specified.</description></item>
                 /// <item><description>If the transaction processing mode is 2, the value ranges from 1 to 1000000.</description></item>
                 /// </list>
                 /// </description></item>
@@ -146,10 +146,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? BatchInputDataSize { get; set; }
 
                 /// <summary>
-                /// <para>The data volume type. Valid values:</para>
+                /// <para>The data volume. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>1: single record</description></item>
-                /// <item><description>2: batch.</description></item>
+                /// <item><description>1: Single record.</description></item>
+                /// <item><description>2: Batch.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -162,13 +162,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <summary>
                 /// <para>The error handling method. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>1: partial success allowed</description></item>
-                /// <item><description>2: all must succeed</description></item>
+                /// <item><description>1: Allow partial success.</description></item>
+                /// <item><description>2: Require full success.</description></item>
                 /// </list>
-                /// <para>Parameter rules:</para>
+                /// <para>Parameter passing rules:</para>
                 /// <list type="bullet">
-                /// <item><description>When the data volume type is single record, this parameter cannot be set.</description></item>
-                /// <item><description>When the data volume type is batch, the value is 1 or 2.</description></item>
+                /// <item><description>When the data volume is set to single record, this parameter cannot be specified.</description></item>
+                /// <item><description>When the data volume is set to batch, the value can be 1 or 2.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -181,8 +181,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <summary>
                 /// <para>The maximum number of input records. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>When the data volume type is single record, this parameter cannot be set.</description></item>
-                /// <item><description>When the data volume type is batch, the value ranges from 1 to 1000000.</description></item>
+                /// <item><description>When the data volume is set to single record, this parameter cannot be specified.</description></item>
+                /// <item><description>When the data volume is set to batch, the value ranges from 1 to 1000000.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -195,9 +195,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <summary>
                 /// <para>The degree of parallelism. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>When the data volume type is single record, this parameter cannot be set.</description></item>
-                /// <item><description>When the data volume type is batch:<list type="bullet">
-                /// <item><description>If the transaction processing mode is 1, this parameter cannot be set.</description></item>
+                /// <item><description>When the data volume is set to single record, this parameter cannot be specified.</description></item>
+                /// <item><description>When the data volume is set to batch:<list type="bullet">
+                /// <item><description>If the transaction processing mode is 1, this parameter cannot be specified.</description></item>
                 /// <item><description>If the transaction processing mode is 2, the value ranges from 1 to 5.</description></item>
                 /// </list>
                 /// </description></item>
@@ -213,16 +213,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <summary>
                 /// <para>The transaction processing mode. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: no transaction</description></item>
-                /// <item><description>1: no batching</description></item>
-                /// <item><description>2: batch processing</description></item>
+                /// <item><description>0: No transaction.</description></item>
+                /// <item><description>1: No batching.</description></item>
+                /// <item><description>2: Batch processing.</description></item>
                 /// </list>
-                /// <para>Parameter rules:</para>
+                /// <para>Parameter passing rules:</para>
                 /// <list type="bullet">
-                /// <item><description>When the data volume type is single record, the transaction processing mode is 0.</description></item>
-                /// <item><description>When the data volume type is batch:<list type="bullet">
-                /// <item><description>If the error handling method is 1, the transaction processing mode is 1 or 2.</description></item>
-                /// <item><description>If the error handling method is 2, the transaction processing mode can only be 1.</description></item>
+                /// <item><description>When the data volume is set to single record, the value must be 0.</description></item>
+                /// <item><description>When the data volume is set to batch:<list type="bullet">
+                /// <item><description>If the error handling method is 1, the value can be 1 or 2.</description></item>
+                /// <item><description>If the error handling method is 2, the value must be 1.</description></item>
                 /// </list>
                 /// </description></item>
                 /// </list>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The execution timeout period for asynchronous API calls. This parameter takes effect only for asynchronous API calls and is required when the call mode is asynchronous.</para>
+            /// <para>The execution timeout period for asynchronous API calls. This parameter applies only to asynchronous API calls and is required when the call mode is set to asynchronous.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -249,8 +249,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The development mode of the API. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: Basic mode </description></item>
-            /// <item><description>1: Dev-Prod mode.</description></item>
+            /// <item><description>0: basic mode </description></item>
+            /// <item><description>1: dev-prod mode</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -275,11 +275,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The request method of the API. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0 (GET): Returns a single record. The query result is unique. </description></item>
+            /// <item><description>0 (GET): Returns a single record with a unique query result. </description></item>
             /// <item><description>1 (LIST): Returns multiple records.</description></item>
-            /// <item><description>2 (CREATE): Creates objects. Supports single or batch creation.</description></item>
-            /// <item><description>3 (UPDATE): Updates objects. Supports single or batch updates.</description></item>
-            /// <item><description>4 (DELETE): Deletes objects. Supports single or batch deletions.</description></item>
+            /// <item><description>2 (CREATE): Creates an object, supporting single or batch creation.</description></item>
+            /// <item><description>3 (UPDATE): Updates an object, supporting single or batch updates.</description></item>
+            /// <item><description>4 (DELETE): Deletes an object, supporting single or batch deletion.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -291,7 +291,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? RequestType { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to return the SQL in the result.</para>
+            /// <para>Specifies whether to return the SQL statement in the result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -316,10 +316,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public CreateDataServiceApiRequestCreateCommandScriptDetails ScriptDetails { get; set; }
             public class CreateDataServiceApiRequestCreateCommandScriptDetails : TeaModel {
                 /// <summary>
-                /// <para>The ID of the datasource. This parameter is required when the API mode is direct datasource connection.</para>
+                /// <para>The ID of the datasource. This parameter is required when the API mode is set to direct connection to a datasource.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>6668888888888812345L</para>
+                /// <para>6668888888888812345</para>
                 /// </summary>
                 [NameInMap("DatasourceID")]
                 [Validation(Required=false)]
@@ -328,7 +328,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <summary>
                 /// <para>The data type on which the API is based. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>1: datasource.</description></item>
+                /// <item><description>1: Datasource.</description></item>
                 /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -340,7 +340,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? DatasourceType { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to paginate the results. This parameter is required only when RequestType is set to List. Default value: false. Pagination is not supported in asynchronous call mode.</para>
+                /// <para>Specifies whether the results are paginated. This parameter is required only when the RequestType mode is set to List. Default value: false. This parameter is not supported in asynchronous call mode.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -368,7 +368,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public List<CreateDataServiceApiRequestCreateCommandScriptDetailsScriptRequestParameters> ScriptRequestParameters { get; set; }
                 public class CreateDataServiceApiRequestCreateCommandScriptDetailsScriptRequestParameters : TeaModel {
                     /// <summary>
-                    /// <para>The default value of the input parameter for operation-type APIs. This parameter takes effect when the parameter is not required. If not specified, the value is null.</para>
+                    /// <para>The default value of the input parameter for an operation API. This parameter takes effect only when the parameter is not required. If this parameter is not specified, the value is null.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
@@ -414,7 +414,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <item><description>&quot;BINARY&quot;</description></item>
                     /// <item><description>&quot;ARRAY&quot;</description></item>
                     /// <item><description>&quot;Array(int)&quot;</description></item>
-                    /// <item><description>&quot;Array(string)&quot;.</description></item>
+                    /// <item><description>&quot;Array(string)&quot;</description></item>
                     /// </list>
                     /// <para>This parameter is required.</para>
                     /// 
@@ -426,17 +426,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string ParameterDataType { get; set; }
 
                     /// <summary>
-                    /// <para>The parameter description.</para>
+                    /// <para>The description of the parameter.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>字段d</para>
+                    /// <para>Field d</para>
                     /// </summary>
                     [NameInMap("ParameterDescription")]
                     [Validation(Required=false)]
                     public string ParameterDescription { get; set; }
 
                     /// <summary>
-                    /// <para>The parameter name.</para>
+                    /// <para>The name of the parameter.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -447,10 +447,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string ParameterName { get; set; }
 
                     /// <summary>
-                    /// <para>The value type of the parameter. Valid values:</para>
+                    /// <para>The type of the parameter value. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>1 (single value): A fixed value used for operators such as =, &gt;=, &lt;=, &gt;, &lt;, !=, and between. </description></item>
-                    /// <item><description>2 (multiple values): The input parameter contains multiple values separated by commas (,). Used for In and Not In operators.</description></item>
+                    /// <item><description>1: Single value. A fixed value used for operators such as =, &gt;=, &lt;=, &gt;, &lt;, !=, and between.</description></item>
+                    /// <item><description>2: Multiple values. The input parameter contains multiple values separated by commas (,). Used for the In and Not In operators.</description></item>
                     /// </list>
                     /// <para>This parameter is required.</para>
                     /// 
@@ -496,7 +496,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <item><description>&quot;BINARY&quot;</description></item>
                     /// <item><description>&quot;ARRAY&quot;</description></item>
                     /// <item><description>&quot;Array(int)&quot;</description></item>
-                    /// <item><description>&quot;Array(string)&quot;.</description></item>
+                    /// <item><description>&quot;Array(string)&quot;</description></item>
                     /// </list>
                     /// <para>This parameter is required.</para>
                     /// 
@@ -508,20 +508,20 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string ParameterDataType { get; set; }
 
                     /// <summary>
-                    /// <para>The parameter description.</para>
+                    /// <para>The description of the parameter.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>字段a</para>
+                    /// <para>Field a</para>
                     /// </summary>
                     [NameInMap("ParameterDescription")]
                     [Validation(Required=false)]
                     public string ParameterDescription { get; set; }
 
                     /// <summary>
-                    /// <para>The location of the response parameter for operation-type APIs. This parameter must be set when the API is an operation-type API with batch data volume. Valid values:</para>
+                    /// <para>The location of the response parameter for an operation API. This parameter must be specified when the API is an operation API and the data volume is batch. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>success: the response data of a successful operation</description></item>
-                    /// <item><description>failed: the response data of a failed operation.</description></item>
+                    /// <item><description>success: The returned result data for a successful operation.</description></item>
+                    /// <item><description>failed: The returned result data for a failed operation.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -532,7 +532,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string ParameterLocation { get; set; }
 
                     /// <summary>
-                    /// <para>The parameter name.</para>
+                    /// <para>The name of the parameter.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -545,9 +545,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The sorting priority. This parameter takes effect only when the SQL mode is basic mode. Default value: 2. Valid values:</para>
+                /// <para>The sort priority. This parameter takes effect only when the SQL mode is set to Basic mode. Default value: 2. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>1: SQL script </description></item>
+                /// <item><description>1: SQL script.</description></item>
                 /// <item><description>2: OrderByList request parameter.</description></item>
                 /// </list>
                 /// 
@@ -561,8 +561,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <summary>
                 /// <para>The SQL mode. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>1: basic mode</description></item>
-                /// <item><description>2: advanced mode.</description></item>
+                /// <item><description>1: Basic mode.</description></item>
+                /// <item><description>2: Advanced mode.</description></item>
                 /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -592,7 +592,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <item><description>0: custom</description></item>
             /// <item><description>1: day</description></item>
             /// <item><description>2: hour</description></item>
-            /// <item><description>3: minute.</description></item>
+            /// <item><description>3: minute</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -627,6 +627,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operation user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

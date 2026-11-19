@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetDataAssetsGovernObjectRequest : TeaModel {
         /// <summary>
-        /// <para>The query instruction.</para>
+        /// <para>The query command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Command")]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the operation user.</para>
+        /// <para>The operator user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30001011</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetSupplementDagrunResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// <para>The error code. A value of OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The list of dagruns.</para>
+        /// <para>The dagrun list.</para>
         /// </summary>
         [NameInMap("DagrunList")]
         [Validation(Required=false)]
         public List<GetSupplementDagrunResponseBodyDagrunList> DagrunList { get; set; }
         public class GetSupplementDagrunResponseBodyDagrunList : TeaModel {
             /// <summary>
-            /// <para>The business date. The time format must conform to the partition format specified by the business unit.</para>
+            /// <para>The business date. The time format must comply with the partition format specified by the business unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-04-01</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Duration { get; set; }
 
             /// <summary>
-            /// <para>The execution end timestamp.</para>
+            /// <para>The end execution timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1717081789000</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The execution start timestamp.</para>
+            /// <para>The start execution timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1717081729000</para>
@@ -77,16 +77,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? StartExecuteTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the data backfill instance workflow. Valid values:</para>
+            /// <para>The status of the data backfill workflow. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>INIT: dagrun init.</description></item>
-            /// <item><description>CREATE_FAILED: dagrun creation failed.</description></item>
-            /// <item><description>CREATED: dagrun created.</description></item>
-            /// <item><description>READY: dagrun ready for exec.</description></item>
-            /// <item><description>RUNNING: dagrun running.</description></item>
-            /// <item><description>KILLED: dagrun stopped.</description></item>
-            /// <item><description>FAILED: dagrun failed.</description></item>
-            /// <item><description>SUCCESS: dagrun succeeded.</description></item>
+            /// <item><description>INIT: The dagrun is initialized.</description></item>
+            /// <item><description>CREATE_FAILED: The dagrun fails to be created.</description></item>
+            /// <item><description>CREATED: The dagrun is created.</description></item>
+            /// <item><description>READY: The dagrun is ready for execution.</description></item>
+            /// <item><description>RUNNING: The dagrun is running.</description></item>
+            /// <item><description>KILLED: The dagrun is stopped.</description></item>
+            /// <item><description>FAILED: The dagrun fails.</description></item>
+            /// <item><description>SUCCESS: The dagrun succeeds.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data backfill instance workflow.</para>
+            /// <para>The ID of the data backfill workflow.</para>
             /// 
             /// <b>Example:</b>
             /// <para>f_8241792_20201202_2099680</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

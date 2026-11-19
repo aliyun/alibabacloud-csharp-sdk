@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? NeedDownstream { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to return tables that do not exist in the asset list. Default value: false.</para>
+            /// <para>Specifies whether to return tables that do not exist in the asset inventory. Default value: false.</para>
             /// </summary>
             [NameInMap("NeedNotExistObject")]
             [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? NeedUpstream { get; set; }
 
             /// <summary>
-            /// <para>The environment to which the task belongs. This parameter is used for filtering. Valid values: dev and prod.</para>
+            /// <para>The environment of the node to be queried. Valid values: dev and prod.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string NodeEnv { get; set; }
 
             /// <summary>
-            /// <para>The list of task IDs used for filtering.</para>
+            /// <para>The list of node IDs to be queried.</para>
             /// </summary>
             [NameInMap("NodeIdList")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>Tenant ID.</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,6 +68,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

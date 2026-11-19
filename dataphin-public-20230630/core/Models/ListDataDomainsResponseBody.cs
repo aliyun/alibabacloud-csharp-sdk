@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListDataDomainsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// <para>The error code. A value of OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ListDataDomainsResponseBodyData Data { get; set; }
         public class ListDataDomainsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The details of the data domains.</para>
+            /// <para>The data domain details.</para>
             /// </summary>
             [NameInMap("DataDomainList")]
             [Validation(Required=false)]
@@ -64,10 +64,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The display name of the data domain.</para>
+                /// <para>The display name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试</para>
+                /// <para>Test</para>
                 /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the data domain.</para>
+                /// <para>The data domain ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1241844456</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the user who last modified the data domain.</para>
+                /// <para>The user ID of the last modifier.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30010010</para>
@@ -114,17 +114,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string LastModifier { get; set; }
 
                 /// <summary>
-                /// <para>The name of the user who last modified the data domain.</para>
+                /// <para>The name of the last modifier.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>张三</para>
+                /// <para>Zhang San</para>
                 /// </summary>
                 [NameInMap("LastModifierName")]
                 [Validation(Required=false)]
                 public string LastModifierName { get; set; }
 
                 /// <summary>
-                /// <para>The name of the data domain.</para>
+                /// <para>The name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dm_code_name</para>
@@ -134,17 +134,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the owner of the business object.</para>
+                /// <para>The user ID of the business object owner.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>张三</para>
+                /// <para>Zhang San</para>
                 /// </summary>
                 [NameInMap("OwnerName")]
                 [Validation(Required=false)]
                 public string OwnerName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the owner of the business object.</para>
+                /// <para>The user ID of the business object owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30010010</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

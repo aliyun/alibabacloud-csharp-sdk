@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetDataAssetsGovernObjectResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The backend response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetDataAssetsGovernObjectResponseBodyGovernObjectInfo GovernObjectInfo { get; set; }
         public class GetDataAssetsGovernObjectResponseBodyGovernObjectInfo : TeaModel {
             /// <summary>
-            /// <para>The time when the governance object was reported.</para>
+            /// <para>The submission time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-31 10:06:01</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The display name of the user.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>龚恒菊2088822037866701</para>
+                /// <para>Gong Hengju2088822037866701</para>
                 /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ObjectId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the parent object.</para>
+                /// <para>The parent object ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>913836</para>
@@ -130,10 +130,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ProblemContactMail { get; set; }
 
                 /// <summary>
-                /// <para>The other contact information for the governance issue.</para>
+                /// <para>Other contact information for the governance issue.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Jane</para>
+                /// <para>Li Si</para>
                 /// </summary>
                 [NameInMap("ProblemContactOther")]
                 [Validation(Required=false)]
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ProblemDesc { get; set; }
 
                 /// <summary>
-                /// <para>The submission method of the issue.</para>
+                /// <para>The submission method for the issue.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SYSTEM</para>
@@ -183,14 +183,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The username of the user who submitted the issue.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>John</para>
+                /// <para>Zhang San</para>
                 /// </summary>
                 [NameInMap("ProblemSubmitterUserName")]
                 [Validation(Required=false)]
                 public string ProblemSubmitterUserName { get; set; }
 
                 /// <summary>
-                /// <para>The types of the governance issue.</para>
+                /// <para>The type of the governance issue.</para>
                 /// </summary>
                 [NameInMap("ProblemTypes")]
                 [Validation(Required=false)]
@@ -299,7 +299,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public Dictionary<string, object> Properties { get; set; }
 
             /// <summary>
-            /// <para>The ID of the rectification.</para>
+            /// <para>The rectification ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>49169072991</para>
@@ -309,7 +309,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? RectifyId { get; set; }
 
             /// <summary>
-            /// <para>The name of the rectification.</para>
+            /// <para>The rectification name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Rectification process 1</para>
@@ -329,7 +329,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string RectifyStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user who performs the rectification.</para>
+            /// <para>The ID of the rectification user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>566777</para>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The display name of the rectification user.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>John</para>
+            /// <para>Zhang San</para>
             /// </summary>
             [NameInMap("RectifyUserName")]
             [Validation(Required=false)]
@@ -376,7 +376,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Desc { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the knowledge entry.</para>
+                /// <para>The knowledge ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>522072057231</para>
@@ -460,7 +460,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The HTTP response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -490,7 +490,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

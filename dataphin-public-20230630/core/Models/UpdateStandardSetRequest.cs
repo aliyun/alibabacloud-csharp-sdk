@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class UpdateStandardSetRequest : TeaModel {
         /// <summary>
-        /// <para>Tenant ID.</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>Update command.</para>
+        /// <para>The update command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UpdateCommand")]
@@ -37,14 +39,18 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpdateStandardSetRequestUpdateCommand UpdateCommand { get; set; }
         public class UpdateStandardSetRequestUpdateCommand : TeaModel {
             /// <summary>
-            /// <para>Publishing approval configuration.</para>
+            /// <para>The online approval configuration.</para>
             /// </summary>
             [NameInMap("ApprovalConfig")]
             [Validation(Required=false)]
             public UpdateStandardSetRequestUpdateCommandApprovalConfig ApprovalConfig { get; set; }
             public class UpdateStandardSetRequestUpdateCommandApprovalConfig : TeaModel {
                 /// <summary>
-                /// <para>Approval process type. Valid values: BY_DEFAULT (default approval type) and BY_TEMPLATE (template-based approval).</para>
+                /// <para>The approval process type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>BY_DEFAULT: Default approval type.</description></item>
+                /// <item><description>BY_TEMPLATE: Based on an approval template.</description></item>
+                /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -63,7 +69,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public bool? EnableApproval { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to submit approvals in batch.</para>
+                /// <para>Specifies whether to submit approvals in batches.</para>
                 /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("IsSubmitInBatch")]
@@ -71,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public bool? IsSubmitInBatch { get; set; }
 
                 /// <summary>
-                /// <para>Approval template ID. This parameter takes effect only when the approval process type is set to BY_TEMPLATE.</para>
+                /// <para>The ID of the approval template. This parameter takes effect only when the approval process type is set to BY_TEMPLATE.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1121</para>
@@ -83,7 +89,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>Standard set code.</para>
+            /// <para>The code of the standard set.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -94,7 +100,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>Default standard template ID.</para>
+            /// <para>The ID of the default standard template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1001</para>
@@ -104,7 +110,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? DefaultStandardTemplateId { get; set; }
 
             /// <summary>
-            /// <para>Standard set description.</para>
+            /// <para>The description of the standard set.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -114,14 +120,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Parent directory.</para>
+            /// <para>The parent folder.</para>
             /// </summary>
             [NameInMap("DirectoryReference")]
             [Validation(Required=false)]
             public UpdateStandardSetRequestUpdateCommandDirectoryReference DirectoryReference { get; set; }
             public class UpdateStandardSetRequestUpdateCommandDirectoryReference : TeaModel {
                 /// <summary>
-                /// <para>Directory.</para>
+                /// <para>The parent folder.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -134,28 +140,28 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>Maintainers.</para>
+            /// <para>The maintainers.</para>
             /// </summary>
             [NameInMap("MaintainerList")]
             [Validation(Required=false)]
             public List<string> MaintainerList { get; set; }
 
             /// <summary>
-            /// <para>Member group list.</para>
+            /// <para>The member group list.</para>
             /// </summary>
             [NameInMap("MemberGroupList")]
             [Validation(Required=false)]
             public List<string> MemberGroupList { get; set; }
 
             /// <summary>
-            /// <para>Member list.</para>
+            /// <para>The member list.</para>
             /// </summary>
             [NameInMap("MemberList")]
             [Validation(Required=false)]
             public List<string> MemberList { get; set; }
 
             /// <summary>
-            /// <para>Standard set name.</para>
+            /// <para>The name of the standard set.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -166,14 +172,18 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Unpublishing approval configuration.</para>
+            /// <para>The offline approval configuration.</para>
             /// </summary>
             [NameInMap("OfflineApprovalConfig")]
             [Validation(Required=false)]
             public UpdateStandardSetRequestUpdateCommandOfflineApprovalConfig OfflineApprovalConfig { get; set; }
             public class UpdateStandardSetRequestUpdateCommandOfflineApprovalConfig : TeaModel {
                 /// <summary>
-                /// <para>Approval process type. Valid values: BY_DEFAULT (default approval type) and BY_TEMPLATE (template-based approval).</para>
+                /// <para>The approval process type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>BY_DEFAULT: Default approval type.</description></item>
+                /// <item><description>BY_TEMPLATE: Based on an approval template.</description></item>
+                /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -192,7 +202,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public bool? EnableApproval { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to submit approvals in batch.</para>
+                /// <para>Specifies whether to submit approvals in batches.</para>
                 /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("IsSubmitInBatch")]
@@ -200,7 +210,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public bool? IsSubmitInBatch { get; set; }
 
                 /// <summary>
-                /// <para>Approval template ID. This parameter takes effect only when the approval process type is set to BY_TEMPLATE.</para>
+                /// <para>The ID of the approval template. This parameter takes effect only when the approval process type is set to BY_TEMPLATE.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1121</para>
@@ -212,7 +222,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>Standard set ID.</para>
+            /// <para>The ID of the standard set.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -223,21 +233,26 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? StandardSetId { get; set; }
 
             /// <summary>
-            /// <para>Visibility configuration.</para>
+            /// <para>The visibility configuration.</para>
             /// </summary>
             [NameInMap("VisibilityConfig")]
             [Validation(Required=false)]
             public UpdateStandardSetRequestUpdateCommandVisibilityConfig VisibilityConfig { get; set; }
             public class UpdateStandardSetRequestUpdateCommandVisibilityConfig : TeaModel {
                 /// <summary>
-                /// <para>List of specified visible users. This parameter takes effect only when the visibility type is set to SPECIFIED.</para>
+                /// <para>The list of specified users who have visibility. This parameter takes effect only when the visibility type is set to SPECIFIED.</para>
                 /// </summary>
                 [NameInMap("SpecifiedUserList")]
                 [Validation(Required=false)]
                 public List<string> SpecifiedUserList { get; set; }
 
                 /// <summary>
-                /// <para>Visibility type. Valid values: PUBLIC (public access), PRIVATE (private access, visible only to standard set members and administrators), and SPECIFIED (visible to specified users).</para>
+                /// <para>The visibility type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>PUBLIC: Public.</description></item>
+                /// <item><description>PRIVATE: Private. Visible only to standard set members and administrators.</description></item>
+                /// <item><description>SPECIFIED: Visible to specified users.</description></item>
+                /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>

@@ -29,14 +29,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public SearchKgBySemanticRequestSearchCommand SearchCommand { get; set; }
         public class SearchKgBySemanticRequestSearchCommand : TeaModel {
             /// <summary>
-            /// <para>The entity type codes used for filtering. If this parameter is not specified, all entity types are searched.</para>
+            /// <para>The entity type code filter. If this parameter is not specified, all entity types are searched.</para>
             /// </summary>
             [NameInMap("EntityTypeCodes")]
             [Validation(Required=false)]
             public List<string> EntityTypeCodes { get; set; }
 
             /// <summary>
-            /// <para>The minimum similarity threshold. Valid values: 0.0 to 1.0. Default value: 0.0 (no filtering). This parameter takes effect only for the semantic search path.</para>
+            /// <para>The minimum similarity threshold. Valid values: 0.0 to 1.0. Default value: 0.0, which indicates no filtering. This parameter takes effect only for semantic search paths.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.5</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string PropertyCode { get; set; }
 
             /// <summary>
-            /// <para>The natural language query text. The value can be 0 to 500 characters in length.</para>
+            /// <para>The natural language query text. The maximum length is 500 characters.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string QueryText { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of results to return. Default value: 20. Valid values: 1 to 100.</para>
+            /// <para>The maximum number of returned results. Default value: 20. Valid values: 1 to 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

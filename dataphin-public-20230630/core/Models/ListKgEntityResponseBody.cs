@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string EntityType { get; set; }
 
                 /// <summary>
-                /// <para>The entity record property list.</para>
+                /// <para>The property list of the entity record.</para>
                 /// </summary>
                 [NameInMap("PropertyList")]
                 [Validation(Required=false)]
@@ -91,15 +91,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Code { get; set; }
 
                     /// <summary>
-                    /// <para>The property data type. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>STRING: string.</description></item>
-                    /// <item><description>INTEGER: integer.</description></item>
-                    /// <item><description>FLOAT: floating-point number.</description></item>
-                    /// <item><description>BOOLEAN: Boolean.</description></item>
-                    /// <item><description>DATE: date.</description></item>
-                    /// <item><description>LIST: list.</description></item>
-                    /// </list>
+                    /// <para>The property data type. Valid values: STRING (string), INTEGER (integer), FLOAT (floating-point number), BOOLEAN (Boolean value), DATE (date), and LIST (list).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>STRING</para>
@@ -145,7 +137,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

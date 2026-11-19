@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The large language model service provider and available models.</para>
+        /// <para>The large model service provider and available models.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string BaseUrl { get; set; }
 
             /// <summary>
-            /// <para>The enabling status.</para>
+            /// <para>The enabled status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string CnName { get; set; }
 
                 /// <summary>
-                /// <para>The model description.</para>
+                /// <para>The description of the model.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>General text generation model</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The list of available dimension values for the embedding model. Only embedding models have this value.</para>
+                /// <para>The list of available dimension values for the embedding model. This value is available only for embedding models.</para>
                 /// </summary>
                 [NameInMap("EmbeddingDimensions")]
                 [Validation(Required=false)]
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public bool? Enabled { get; set; }
 
                 /// <summary>
-                /// <para>The model invocation method. Valid values:</para>
+                /// <para>The model invocation type. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>OPEN_AI</description></item>
                 /// <item><description>DASH_SCOPE</description></item>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string InvokeType { get; set; }
 
                 /// <summary>
-                /// <para>The model ID.</para>
+                /// <para>The ID of the model.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1001</para>
@@ -127,11 +127,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <summary>
                 /// <para>The list of model modality types. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>TEXT: text</description></item>
-                /// <item><description>IMAGE: image</description></item>
-                /// <item><description>AUDIO: audio</description></item>
-                /// <item><description>VIDEO: video</description></item>
-                /// <item><description>EMBEDDING: embedding</description></item>
+                /// <item><description>TEXT: Text.</description></item>
+                /// <item><description>IMAGE: Image.</description></item>
+                /// <item><description>AUDIO: Audio.</description></item>
+                /// <item><description>VIDEO: Video.</description></item>
+                /// <item><description>EMBEDDING: Embedding.</description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("ModelTypes")]
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public List<string> ModelTypes { get; set; }
 
                 /// <summary>
-                /// <para>The model name.</para>
+                /// <para>The name of the model.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qwen-max</para>
@@ -161,9 +161,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <summary>
                 /// <para>The list of model task capabilities. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ASR: speech recognition</description></item>
-                /// <item><description>TTS: speech synthesis</description></item>
-                /// <item><description>TRANSLATION: speech translation</description></item>
+                /// <item><description>ASR: Speech recognition.</description></item>
+                /// <item><description>TTS: Speech synthesis.</description></item>
+                /// <item><description>TRANSLATION: Speech translation.</description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("Tasks")]
@@ -175,8 +175,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The source of the model service provider. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>BUILTIN_MODEL: built-in</description></item>
-            /// <item><description>BYOM: user-provided</description></item>
+            /// <item><description>BUILTIN_MODEL: Built-in.</description></item>
+            /// <item><description>BYOM: Bring your own model.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ProviderSource { get; set; }
 
             /// <summary>
-            /// <para>The service provider type. Valid values:</para>
+            /// <para>The provider type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>BAILIAN</description></item>
             /// <item><description>DEEPSEEK</description></item>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend exception.</para>
+        /// <para>The details of the backend response exception.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

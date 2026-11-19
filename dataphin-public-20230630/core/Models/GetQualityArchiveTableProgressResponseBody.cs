@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The asynchronous task progress details.</para>
+        /// <para>The progress details of the asynchronous task.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetQualityArchiveTableProgressResponseBodyData Data { get; set; }
         public class GetQualityArchiveTableProgressResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The archived table ID. This parameter is returned after the task succeeds and can be used to switch the active table.</para>
+            /// <para>The ID of the archive table. This parameter is returned after the task succeeds and can be used to switch the active table later.</para>
             /// 
             /// <b>Example:</b>
             /// <para>88012</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ArchiveTableId { get; set; }
 
             /// <summary>
-            /// <para>The full name of the archived table. This parameter is returned after the task succeeds. When creating a table, the name includes the automatically appended _exception_data suffix.</para>
+            /// <para>The full name of the archive table. This parameter is returned after the task succeeds. When a table is created, the _exception_data suffix is automatically appended to the name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Train.a01_reanme3_exception_data</para>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ArchiveTableName { get; set; }
 
             /// <summary>
-            /// <para>The reason for the task failure. This parameter is returned only when Status is FAILED.</para>
+            /// <para>The cause of the task failure. This parameter is returned only when Status is FAILED.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The archived table name already exists!</para>
+            /// <para>The archive table name already exists!</para>
             /// </summary>
             [NameInMap("ErrorMessage")]
             [Validation(Required=false)]
@@ -59,10 +59,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PROGRESS: In progress.</description></item>
-            /// <item><description>SUCCESS: Succeeded.</description></item>
-            /// <item><description>FAILED: Failed.</description></item>
-            /// <item><description>CANCEL: Canceled.</description></item>
+            /// <item><description>PROGRESS: The task is in progress.</description></item>
+            /// <item><description>SUCCESS: The task is successful.</description></item>
+            /// <item><description>FAILED: The task failed.</description></item>
+            /// <item><description>CANCEL: The task is canceled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The backend exception details.</para>
+        /// <para>The details of the backend exception.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

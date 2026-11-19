@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListAlertEventsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// <para>The error code. A value of OK indicates that the request is normal.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ListAlertEventsResponseBodyListResult ListResult { get; set; }
         public class ListAlertEventsResponseBodyListResult : TeaModel {
             /// <summary>
-            /// <para>The alert event query results.</para>
+            /// <para>The alert event query result.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
@@ -46,8 +46,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <summary>
                 /// <para>The alert frequency. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ONCE: instant alert</description></item>
-                /// <item><description>PERIOD: periodic alert. Format: 1HOUR, 1MINUTE, 1SECOND.</description></item>
+                /// <item><description>ONCE: Immediate alert.</description></item>
+                /// <item><description>PERIOD: Periodic alert. Format: 1HOUR, 1MINUTE, 1SECOND.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -77,16 +77,15 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <summary>
                     /// <para>The source system. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>ALL: all</description></item>
-                    /// <item><description>DQE: data quality</description></item>
-                    /// <item><description>OS: data service</description></item>
-                    /// <item><description>STREAM: real-time computing</description></item>
-                    /// <item><description>VDM_BATCH: offline computing</description></item>
-                    /// <item><description>SOP: O&amp;M platform</description></item>
-                    /// <item><description>REAL_TIME_PIPELINE: real-time integration</description></item>
-                    /// <item><description>KGB: baseline monitoring</description></item>
+                    /// <item><description>ALL: All.</description></item>
+                    /// <item><description>DQE: Data quality.</description></item>
+                    /// <item><description>OS: Data service.</description></item>
+                    /// <item><description>STREAM: Real-time computing.</description></item>
+                    /// <item><description>VDM_BATCH: Offline computing.</description></item>
+                    /// <item><description>SOP: O&amp;M platform.</description></item>
+                    /// <item><description>REAL_TIME_PIPELINE: Real-time integration.</description></item>
+                    /// <item><description>KGB: Baseline monitoring.</description></item>
                     /// </list>
-                    /// <para>and more.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>VDM_BATCH</para>
@@ -98,34 +97,33 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <summary>
                     /// <para>The alert object type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>OS_API: API operation</description></item>
-                    /// <item><description>OS_APPLICATION_SERVICE: service application</description></item>
-                    /// <item><description>STREAM_TASK: real-time computing</description></item>
-                    /// <item><description>REAL_TIME_PIPELINE_TASK: real-time integration</description></item>
-                    /// <item><description>VDM_BATCH_SHELL: SHELL</description></item>
-                    /// <item><description>VDM_BATCH_PYTHON: PYTHON</description></item>
-                    /// <item><description>VDM_BATCH_DATAX: DATAX</description></item>
-                    /// <item><description>VDM_BATCH_DLINK: DLINK</description></item>
-                    /// <item><description>VDM_BATCH_VIRTUAL: VIRTUAL</description></item>
-                    /// <item><description>VDM_BATCH_PYTHON37: PYTHON37</description></item>
-                    /// <item><description>VDM_BATCH_PYTHON311: PYTHON311</description></item>
-                    /// <item><description>VDM_BATCH_MAX_COMPUTE_SQL: MAXCOMPUTE_SQL</description></item>
-                    /// <item><description>VDM_BATCH_MAX_COMPUTE_MR: MAXCOMPUTE_MR</description></item>
-                    /// <item><description>VDM_BATCH_SPARK_JAR_ON_MAX_COMPUTE: SPARK_JAR_ON_MAX_COMPUTE</description></item>
-                    /// <item><description>VDM_BATCH_HIVE_SQL: HIVE_SQL</description></item>
-                    /// <item><description>VDM_BATCH_HADOOP_MR: HADOOP_MR</description></item>
-                    /// <item><description>VDM_BATCH_SPARK_JAR_ON_HIVE: SPARK_JAR_ON_HIVE</description></item>
-                    /// <item><description>VDM_BATCH_SPARK_SQL_ON_HIVE: SPARK_SQL_ON_HIVE</description></item>
-                    /// <item><description>VDM_BATCH_SPARK_SQL: VDM_BATCH_SPARK_SQL</description></item>
-                    /// <item><description>DQE_LOGICAL_TABLE: logical table</description></item>
-                    /// <item><description>DQE_PHYSICAL_TABLE: physical table</description></item>
-                    /// <item><description>DQE_REALTIME_TABLE: real-time metadata table</description></item>
-                    /// <item><description>DQE_DATA_SOURCE: data source</description></item>
-                    /// <item><description>DQE_INDEX: metric</description></item>
-                    /// <item><description>QD_DECISION_INVOKE: QD decision invocation</description></item>
-                    /// <item><description>BASELINE: baseline</description></item>
+                    /// <item><description>OS_API: API operation.</description></item>
+                    /// <item><description>OS_APPLICATION_SERVICE: Service application.</description></item>
+                    /// <item><description>STREAM_TASK: Real-time computing.</description></item>
+                    /// <item><description>REAL_TIME_PIPELINE_TASK: Real-time integration.</description></item>
+                    /// <item><description>VDM_BATCH_SHELL: SHELL.</description></item>
+                    /// <item><description>VDM_BATCH_PYTHON: PYTHON.</description></item>
+                    /// <item><description>VDM_BATCH_DATAX: DATAX.</description></item>
+                    /// <item><description>VDM_BATCH_DLINK: DLINK.</description></item>
+                    /// <item><description>VDM_BATCH_VIRTUAL: VIRTUAL.</description></item>
+                    /// <item><description>VDM_BATCH_PYTHON37: PYTHON37.</description></item>
+                    /// <item><description>VDM_BATCH_PYTHON311: PYTHON311.</description></item>
+                    /// <item><description>VDM_BATCH_MAX_COMPUTE_SQL: MAXCOMPUTE_SQL.</description></item>
+                    /// <item><description>VDM_BATCH_MAX_COMPUTE_MR: MAXCOMPUTE_MR.</description></item>
+                    /// <item><description>VDM_BATCH_SPARK_JAR_ON_MAX_COMPUTE: SPARK_JAR_ON_MAX_COMPUTE.</description></item>
+                    /// <item><description>VDM_BATCH_HIVE_SQL: HIVE_SQL.</description></item>
+                    /// <item><description>VDM_BATCH_HADOOP_MR: HADOOP_MR.</description></item>
+                    /// <item><description>VDM_BATCH_SPARK_JAR_ON_HIVE: SPARK_JAR_ON_HIVE.</description></item>
+                    /// <item><description>VDM_BATCH_SPARK_SQL_ON_HIVE: SPARK_SQL_ON_HIVE.</description></item>
+                    /// <item><description>VDM_BATCH_SPARK_SQL: VDM_BATCH_SPARK_SQL.</description></item>
+                    /// <item><description>DQE_LOGICAL_TABLE: Logical table.</description></item>
+                    /// <item><description>DQE_PHYSICAL_TABLE: Physical table.</description></item>
+                    /// <item><description>DQE_REALTIME_TABLE: Real-time metadata table.</description></item>
+                    /// <item><description>DQE_DATA_SOURCE: Data source.</description></item>
+                    /// <item><description>DQE_INDEX: Metric.</description></item>
+                    /// <item><description>QD_DECISION_INVOKE: QD decision invocation.</description></item>
+                    /// <item><description>BASELINE: Baseline.</description></item>
                     /// </list>
-                    /// <para>and more.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>STREAM_TASK</para>
@@ -137,21 +135,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The alert reason.</para>
+                /// <para>The alert cause.</para>
                 /// </summary>
                 [NameInMap("AlertReason")]
                 [Validation(Required=false)]
                 public ListAlertEventsResponseBodyListResultDataAlertReason AlertReason { get; set; }
                 public class ListAlertEventsResponseBodyListResultDataAlertReason : TeaModel {
                     /// <summary>
-                    /// <para>The list of alert reason parameters.</para>
+                    /// <para>The list of alert cause parameters.</para>
                     /// </summary>
                     [NameInMap("AlertReasonParamList")]
                     [Validation(Required=false)]
                     public List<ListAlertEventsResponseBodyListResultDataAlertReasonAlertReasonParamList> AlertReasonParamList { get; set; }
                     public class ListAlertEventsResponseBodyListResultDataAlertReasonAlertReasonParamList : TeaModel {
                         /// <summary>
-                        /// <para>The name of the alert reason parameter.</para>
+                        /// <para>The name of the alert cause parameter.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>biz_date</para>
@@ -161,7 +159,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// <para>The value of the alert reason parameter.</para>
+                        /// <para>The value of the alert cause parameter.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2024-11-24 00:00:00</para>
@@ -183,44 +181,43 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string BizDate { get; set; }
 
                     /// <summary>
-                    /// <para>The alert reason type. Valid values:</para>
+                    /// <para>The alert cause. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>DQE_COLUMN: field rule exception</description></item>
-                    /// <item><description>DQE_DATA_SOURCE: data source rule exception</description></item>
-                    /// <item><description>DQE_CUSTOMIZE: custom rule exception</description></item>
-                    /// <item><description>DQE_TABLE: table rule exception</description></item>
-                    /// <item><description>DQE_REALTIME_TABLE: real-time table rule exception</description></item>
-                    /// <item><description>DQE_INDEX: metric rule exception</description></item>
-                    /// <item><description>OS_AVG_RESPONSE: average response time exception</description></item>
-                    /// <item><description>OS_CALL_TIMES: call count exception</description></item>
-                    /// <item><description>OS_ERROR_RATE: error rate exception</description></item>
-                    /// <item><description>OS_OFFLINE: Offline percentage exception</description></item>
-                    /// <item><description>STREAM_BIZ_DELAY: business delay too high</description></item>
-                    /// <item><description>STREAM_DATA_RETENTION: data retention exceeds configuration</description></item>
-                    /// <item><description>STREAM_MORE_THAN_FAILURE: failure frequency exceeds configuration</description></item>
-                    /// <item><description>STREAM_TPS_OUT_RANGE: TPS out of range</description></item>
-                    /// <item><description>STREAM_CHECKPOINT_FAILURE: checkpoint failures exceed configuration</description></item>
-                    /// <item><description>STREAM_BACKPRESSURE: backpressure duration exceeds configuration</description></item>
-                    /// <item><description>STREAM_JOB_FAILURE: job failure</description></item>
-                    /// <item><description>VDM_BATCH_ERROR: error</description></item>
-                    /// <item><description>VDM_BATCH_FINISH: completed</description></item>
-                    /// <item><description>VDM_BATCH_TIME_OUT: execution timeout</description></item>
-                    /// <item><description>VDM_BATCH_UNDONE: incomplete</description></item>
-                    /// <item><description>VDM_BATCH_LOGIC_DATA_DELAY: data delay</description></item>
-                    /// <item><description>QD_DECISION_CALL_TIMES: decision call count exception</description></item>
-                    /// <item><description>QD_DECISION_MAX_RESPONSE: maximum response time exception</description></item>
-                    /// <item><description>QD_DECISION_ERROR_RATE: error rate exception</description></item>
-                    /// <item><description>QD_DECISION_PARAM_COUNT: decision parameter count exception</description></item>
-                    /// <item><description>QD_DECISION_PARAM_PERCENTAGE: decision parameter percentage exception</description></item>
-                    /// <item><description>QD_DECISION_PARAM_SUM: decision parameter sum exception</description></item>
-                    /// <item><description>QD_DECISION_PARAM_AVG: decision parameter average exception</description></item>
-                    /// <item><description>LOGICAL_INSTANCE_GENERATION: logical instance generation monitoring</description></item>
-                    /// <item><description>KGB_TASK_ERROR: baseline task error</description></item>
-                    /// <item><description>KGB_TASK_SLOW_DOWN: baseline task slowdown</description></item>
-                    /// <item><description>KGB_EARLY_WARNING: baseline early warning</description></item>
-                    /// <item><description>KGB_BROKEN_LINE: baseline breach</description></item>
+                    /// <item><description>DQE_COLUMN: Field rule exception.</description></item>
+                    /// <item><description>DQE_DATA_SOURCE: Data source rule exception.</description></item>
+                    /// <item><description>DQE_CUSTOMIZE: Custom rule exception.</description></item>
+                    /// <item><description>DQE_TABLE: Table rule exception.</description></item>
+                    /// <item><description>DQE_REALTIME_TABLE: Real-time table rule exception.</description></item>
+                    /// <item><description>DQE_INDEX: Metric rule exception.</description></item>
+                    /// <item><description>OS_AVG_RESPONSE: Average response time exception.</description></item>
+                    /// <item><description>OS_CALL_TIMES: Call count exception.</description></item>
+                    /// <item><description>OS_ERROR_RATE: Error rate exception.</description></item>
+                    /// <item><description>OS_OFFLINE: Offline percentage exception.</description></item>
+                    /// <item><description>STREAM_BIZ_DELAY: High business delay.</description></item>
+                    /// <item><description>STREAM_DATA_RETENTION: Data retention exceeds configuration.</description></item>
+                    /// <item><description>STREAM_MORE_THAN_FAILURE: Failure frequency exceeds configuration.</description></item>
+                    /// <item><description>STREAM_TPS_OUT_RANGE: TPS out of range.</description></item>
+                    /// <item><description>STREAM_CHECKPOINT_FAILURE: Checkpoint failures exceed configuration.</description></item>
+                    /// <item><description>STREAM_BACKPRESSURE: Backpressure duration exceeds configuration.</description></item>
+                    /// <item><description>STREAM_JOB_FAILURE: Run failure.</description></item>
+                    /// <item><description>VDM_BATCH_ERROR: Error.</description></item>
+                    /// <item><description>VDM_BATCH_FINISH: Completed.</description></item>
+                    /// <item><description>VDM_BATCH_TIME_OUT: Run timeout.</description></item>
+                    /// <item><description>VDM_BATCH_UNDONE: Uncompleted.</description></item>
+                    /// <item><description>VDM_BATCH_LOGIC_DATA_DELAY: Data delay.</description></item>
+                    /// <item><description>QD_DECISION_CALL_TIMES: Decision call count exception.</description></item>
+                    /// <item><description>QD_DECISION_MAX_RESPONSE: Maximum response time exception.</description></item>
+                    /// <item><description>QD_DECISION_ERROR_RATE: Error rate exception.</description></item>
+                    /// <item><description>QD_DECISION_PARAM_COUNT: Decision parameter count exception.</description></item>
+                    /// <item><description>QD_DECISION_PARAM_PERCENTAGE: Decision parameter percentage exception.</description></item>
+                    /// <item><description>QD_DECISION_PARAM_SUM: Decision parameter sum exception.</description></item>
+                    /// <item><description>QD_DECISION_PARAM_AVG: Decision parameter average exception.</description></item>
+                    /// <item><description>LOGICAL_INSTANCE_GENERATION: Logical instance generation monitoring.</description></item>
+                    /// <item><description>KGB_TASK_ERROR: Baseline task error.</description></item>
+                    /// <item><description>KGB_TASK_SLOW_DOWN: Baseline task slowdown.</description></item>
+                    /// <item><description>KGB_EARLY_WARNING: Baseline early warning.</description></item>
+                    /// <item><description>KGB_BROKEN_LINE: Baseline breach.</description></item>
                     /// </list>
-                    /// <para>and more.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>VDM_BATCH_FINISH</para>
@@ -242,7 +239,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The list of alert receivers.</para>
+                /// <para>The list of alert recipients.</para>
                 /// </summary>
                 [NameInMap("AlertReceiverList")]
                 [Validation(Required=false)]
@@ -273,11 +270,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string OnCallTableName { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the alert receiver. Valid values:</para>
+                    /// <para>The type of the alert recipient. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>ON_CALL_TABLE: on-call schedule</description></item>
-                    /// <item><description>USER_DEFINED: custom user</description></item>
-                    /// <item><description>OWNER: owner.</description></item>
+                    /// <item><description>ON_CALL_TABLE: On-call schedule.</description></item>
+                    /// <item><description>USER_DEFINED: Custom user.</description></item>
+                    /// <item><description>OWNER: Owner.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -309,7 +306,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The project to which the alert belongs.</para>
+                /// <para>The project.</para>
                 /// </summary>
                 [NameInMap("BelongProject")]
                 [Validation(Required=false)]
@@ -338,7 +335,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The expiration time of the do-not-disturb period.</para>
+                /// <para>The expiration time of the do-not-disturb mode.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-11-25 00:00:00</para>
@@ -348,7 +345,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string DoNotDisturbEndTime { get; set; }
 
                 /// <summary>
-                /// <para>The time of the first alert.</para>
+                /// <para>The first alert time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-11-25 10:02:47</para>
@@ -368,7 +365,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The time of the latest alert.</para>
+                /// <para>The latest alert time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-11-25 10:02:47</para>
@@ -380,10 +377,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <summary>
                 /// <para>The alert status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ALERTING: alerting</description></item>
-                /// <item><description>DO_NOT_DISTURB: do not disturb</description></item>
-                /// <item><description>SILENCING: alerting (cool-down period)</description></item>
-                /// <item><description>FINISH: completed.</description></item>
+                /// <item><description>ALERTING: Alerting.</description></item>
+                /// <item><description>DO_NOT_DISTURB: Do not disturb.</description></item>
+                /// <item><description>SILENCING: Alerting (silenced).</description></item>
+                /// <item><description>FINISH: Completed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -394,7 +391,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The total number of alert occurrences.</para>
+                /// <para>The total number of alerts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -445,7 +442,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The total number of entries.</para>
+            /// <para>The total count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -477,7 +474,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

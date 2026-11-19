@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListStreamTaskManagerLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Flink deployment instance.</para>
+        /// <para>The deployment instance ID. Set this parameter to the deploymentInstanceId value returned in the operation record or historical running instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string DeploymentInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the operating tenant. The gateway verifies that the current identity has access to the tenant and then injects the TenantId into the backend.</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
-        /// <para>The optional ID of the operator. This parameter follows the gateway identity verification rules and is not directly bound to the backend UserId.</para>
+        /// <para>The user ID of the operator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>The project ID.</para>
+        /// <para>The ID of the Dataphin project to which the node belongs. This parameter is used for permission verification in the production environment.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The TaskManager ID. This parameter can be omitted when retrieving log content. If omitted, the JobManager logs are returned.</para>
+        /// <para>The identifier of the TaskManager. Set this parameter to the taskmanagerId value returned by the ListStreamTaskManagers operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The summary of call exception impacts.</para>
+        /// <para>The summary of API exception impacts.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDataServiceApiErrorImpactResponseBodyData Data { get; set; }
         public class GetDataServiceApiErrorImpactResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of APIs affected by exceptions.</para>
+            /// <para>The APIs affected by the exceptions.</para>
             /// </summary>
             [NameInMap("ErrorApiList")]
             [Validation(Required=false)]
             public List<GetDataServiceApiErrorImpactResponseBodyDataErrorApiList> ErrorApiList { get; set; }
             public class GetDataServiceApiErrorImpactResponseBodyDataErrorApiList : TeaModel {
                 /// <summary>
-                /// <para>The API name.</para>
+                /// <para>The name of the API.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ApiName { get; set; }
 
                 /// <summary>
-                /// <para>The API ID.</para>
+                /// <para>The ID of the API.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2012</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The list of apps affected by exceptions.</para>
+            /// <para>The applications affected by the exceptions.</para>
             /// </summary>
             [NameInMap("ErrorAppList")]
             [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? AppKey { get; set; }
 
                 /// <summary>
-                /// <para>The app name.</para>
+                /// <para>The name of the application.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>app1</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// <para>The number of exceptions for the app.</para>
+                /// <para>The number of exceptions for the application.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

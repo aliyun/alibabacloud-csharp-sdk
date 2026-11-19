@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The backend exception details.</para>
+        /// <para>The details of the backend exception.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The knowledge graph definition details.</para>
+        /// <para>The details of the knowledge graph definition.</para>
         /// </summary>
         [NameInMap("SchemaInfo")]
         [Validation(Required=false)]
         public ExportKgSchemaResponseBodySchemaInfo SchemaInfo { get; set; }
         public class ExportKgSchemaResponseBodySchemaInfo : TeaModel {
             /// <summary>
-            /// <para>The knowledge graph definition content converted based on the specified format.</para>
+            /// <para>The content of the knowledge graph definition converted based on the specified format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>workspaceId: f1d4559a4db044158305e2d89bccf81f
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

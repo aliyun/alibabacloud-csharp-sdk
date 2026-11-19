@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListTenantRolesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request error code. OK indicates that the request is successful.</para>
+        /// <para>The error code. A value of OK indicates that the request is normal.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code of the backend response.</para>
+        /// <para>The HTTP status code returned by the backend.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message of the request.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The role list.</para>
+        /// <para>The list of roles.</para>
         /// </summary>
         [NameInMap("RoleList")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string AuthJson { get; set; }
 
             /// <summary>
-            /// <para>The user ID of the creator.</para>
+            /// <para>The ID of the user who created the role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30121201</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the role was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-07 16:45:30</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The time when the role was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-07 16:45:30</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The user ID of the modifier.</para>
+            /// <para>The ID of the user who last modified the role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30121201</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Modifier { get; set; }
 
             /// <summary>
-            /// <para>The role description.</para>
+            /// <para>The description of the role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string RoleDesc { get; set; }
 
             /// <summary>
-            /// <para>The role key.</para>
+            /// <para>The key of the role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test::1212</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string RoleKey { get; set; }
 
             /// <summary>
-            /// <para>The role name.</para>
+            /// <para>The name of the role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -137,10 +137,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string RoleName { get; set; }
 
             /// <summary>
-            /// <para>The role type. Valid values:</para>
+            /// <para>The type of the role. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>BUILD_IN: built-in role</description></item>
-            /// <item><description>CUSTOM: custom role</description></item>
+            /// <item><description>BUILD_IN: built-in role.</description></item>
+            /// <item><description>CUSTOM: custom role.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -151,11 +151,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string RoleType { get; set; }
 
             /// <summary>
-            /// <para>The role status. Valid values:</para>
+            /// <para>The status of the role. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ON: enabled</description></item>
-            /// <item><description>OFF: disabled</description></item>
-            /// <item><description>DEL: deleted</description></item>
+            /// <item><description>ON: enabled.</description></item>
+            /// <item><description>OFF: disabled.</description></item>
+            /// <item><description>DEL: deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? TenantId { get; set; }
 
             /// <summary>
-            /// <para>The tenant type.</para>
+            /// <para>The type of the tenant.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CUSTOM</para>

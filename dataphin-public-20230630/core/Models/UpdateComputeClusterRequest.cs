@@ -42,14 +42,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ClusterSafetyAuthType { get; set; }
 
                 /// <summary>
-                /// <para>The list of whitelist user group IDs.</para>
+                /// <para>The list of whitelisted user group IDs.</para>
                 /// </summary>
                 [NameInMap("UserGroupIds")]
                 [Validation(Required=false)]
                 public List<string> UserGroupIds { get; set; }
 
                 /// <summary>
-                /// <para>The list of whitelist user IDs.</para>
+                /// <para>The list of whitelisted user IDs.</para>
                 /// </summary>
                 [NameInMap("UserIds")]
                 [Validation(Required=false)]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>时区名称，例如 Asia/Shanghai。更新时不传则保留原值。</para>
+            /// <para>The time zone name, such as Asia/Shanghai. If this parameter is not specified during an update, the original value is retained.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Asia/Shanghai</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the operator user.</para>
+        /// <para>The ID of the operator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30001011</para>

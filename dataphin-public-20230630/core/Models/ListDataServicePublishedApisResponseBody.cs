@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListDataServicePublishedApisResponseBody : TeaModel {
         /// <summary>
-        /// <para>Backend response code.</para>
+        /// <para>The backend response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code.</para>
+        /// <para>The HTTP response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Backend exception details.</para>
+        /// <para>The backend exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -40,21 +40,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Paginated query result.</para>
+        /// <para>The paged query results.</para>
         /// </summary>
         [NameInMap("PageResult")]
         [Validation(Required=false)]
         public ListDataServicePublishedApisResponseBodyPageResult PageResult { get; set; }
         public class ListDataServicePublishedApisResponseBodyPageResult : TeaModel {
             /// <summary>
-            /// <para>Paginated API list.</para>
+            /// <para>The paged API list.</para>
             /// </summary>
             [NameInMap("ApiList")]
             [Validation(Required=false)]
             public List<ListDataServicePublishedApisResponseBodyPageResultApiList> ApiList { get; set; }
             public class ListDataServicePublishedApisResponseBodyPageResultApiList : TeaModel {
                 /// <summary>
-                /// <para>API ID.</para>
+                /// <para>The API code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1022</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? ApiId { get; set; }
 
                 /// <summary>
-                /// <para>API name.</para>
+                /// <para>The API name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ApiName { get; set; }
 
                 /// <summary>
-                /// <para>Number of bound applications.</para>
+                /// <para>The number of bound applications.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -84,14 +84,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? AppCount { get; set; }
 
                 /// <summary>
-                /// <para>List of referenced application information.</para>
+                /// <para>The list of referenced applications.</para>
                 /// </summary>
                 [NameInMap("AppInfoList")]
                 [Validation(Required=false)]
                 public List<ListDataServicePublishedApisResponseBodyPageResultApiListAppInfoList> AppInfoList { get; set; }
                 public class ListDataServicePublishedApisResponseBodyPageResultApiListAppInfoList : TeaModel {
                     /// <summary>
-                    /// <para>Application ID.</para>
+                    /// <para>The application ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10211</para>
@@ -103,9 +103,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <term><b>Obsolete</b></term>
                     /// 
                     /// <summary>
-                    /// <para>Application key.</para>
+                    /// <para>The application key. <b>[Deprecated]</b> Use AppKeyStr instead.</para>
                     /// <remarks>
-                    /// <para>Notice: Deprecated. Use AppKeyStr instead.</para>
+                    /// <para>Notice: <b>[Deprecated]</b> Use AppKeyStr instead.</notice></para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public long? AppKey { get; set; }
 
                     /// <summary>
-                    /// <para>Application key.</para>
+                    /// <para>The application key.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>APP_200000000</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string AppKeyStr { get; set; }
 
                     /// <summary>
-                    /// <para>Application name.</para>
+                    /// <para>The application name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
@@ -139,7 +139,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>Application status. Valid values: 0 (not all applied), 1 (applied), 2 (no app, need to apply for an app first).</para>
+                /// <para>The application status. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: Not fully applied.</description></item>
+                /// <item><description>1: Applied.</description></item>
+                /// <item><description>2: No application. You must apply for an application first.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -149,7 +154,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? ApplyStatus { get; set; }
 
                 /// <summary>
-                /// <para>Number of calls.</para>
+                /// <para>The number of calls.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>21</para>
@@ -159,7 +164,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? CallCount { get; set; }
 
                 /// <summary>
-                /// <para>Creation type. Valid values: 0 (custom mode), 1 (wizard mode), 2 (direct connection API).</para>
+                /// <para>The creation type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: Custom mode.</description></item>
+                /// <item><description>1: Wizard mode.</description></item>
+                /// <item><description>2: Direct API connection.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -169,7 +179,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? CreateType { get; set; }
 
                 /// <summary>
-                /// <para>Custom update frequency content.</para>
+                /// <para>The custom content for the update frequency.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0 0 0/1 * * *</para>
@@ -179,7 +189,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string CustomUpdateRate { get; set; }
 
                 /// <summary>
-                /// <para>Publish time. Time format: yyyy-MM-dd HH:mm:ss.</para>
+                /// <para>The publish time. Format: yyyy-MM-dd HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-30 08:00:00</para>
@@ -189,7 +199,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string DeployTime { get; set; }
 
                 /// <summary>
-                /// <para>API description.</para>
+                /// <para>The API description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test xx</para>
@@ -199,7 +209,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Call type. Valid values: 1 (synchronous), 2 (asynchronous).</para>
+                /// <para>The execution mode. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>1: Synchronous.</description></item>
+                /// <item><description>2: Asynchronous.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -209,7 +223,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? ExecuteMode { get; set; }
 
                 /// <summary>
-                /// <para>Group ID.</para>
+                /// <para>The group ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>102131</para>
@@ -219,7 +233,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? GroupId { get; set; }
 
                 /// <summary>
-                /// <para>API group name.</para>
+                /// <para>The API group name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -229,7 +243,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// <para>Service unit number.</para>
+                /// <para>The service unit number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1022</para>
@@ -239,7 +253,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? LogicUnitNo { get; set; }
 
                 /// <summary>
-                /// <para>Mode. Valid values: 0 (basic), 1 (dev_prod).</para>
+                /// <para>The mode. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: basic.</description></item>
+                /// <item><description>1: dev_prod.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -249,7 +267,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? Mode { get; set; }
 
                 /// <summary>
-                /// <para>Owner ID.</para>
+                /// <para>The owner ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30012011</para>
@@ -259,17 +277,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// <para>Owner name.</para>
+                /// <para>The owner.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>张三</para>
+                /// <para>Zhang San</para>
                 /// </summary>
                 [NameInMap("OwnerUserName")]
                 [Validation(Required=false)]
                 public string OwnerUserName { get; set; }
 
                 /// <summary>
-                /// <para>Data service project ID.</para>
+                /// <para>The data service project ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>102101</para>
@@ -279,7 +297,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>Service project name.</para>
+                /// <para>The service project name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -289,7 +307,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ProjectName { get; set; }
 
                 /// <summary>
-                /// <para>Update frequency. Valid values: 0 (custom), 1 (daily), 2 (hourly), 3 (per minute).</para>
+                /// <para>The update frequency. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: Custom.</description></item>
+                /// <item><description>1: Daily.</description></item>
+                /// <item><description>2: Hourly.</description></item>
+                /// <item><description>3: Every minute.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -299,7 +323,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? UpdateRate { get; set; }
 
                 /// <summary>
-                /// <para>Modification time. Time format: yyyy-MM-dd HH:mm:ss.</para>
+                /// <para>The update time. Format: yyyy-MM-dd HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-30 08:00:00</para>
@@ -309,7 +333,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string UpdateTime { get; set; }
 
                 /// <summary>
-                /// <para>API version.</para>
+                /// <para>The API version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.0</para>
@@ -321,7 +345,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>Total number of records.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>68</para>
@@ -343,7 +367,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

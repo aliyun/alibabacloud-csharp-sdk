@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListComputeSourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The backend response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request failed.</para>
+        /// <para>The backend exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The paginated query result.</para>
+        /// <para>The paging query result.</para>
         /// </summary>
         [NameInMap("PageResult")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<ListComputeSourcesResponseBodyPageResultComputeSourceList> ComputeSourceList { get; set; }
             public class ListComputeSourcesResponseBodyPageResultComputeSourceList : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the compute source is bound to a project.</para>
+                /// <para>Specifies whether the compute source is bound to a project.</para>
                 /// </summary>
                 [NameInMap("BindProject")]
                 [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string BindProjectName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the creator.</para>
+                /// <para>The creator.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30012211</para>
@@ -91,17 +91,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Creator { get; set; }
 
                 /// <summary>
-                /// <para>The name of the creator.</para>
+                /// <para>The creator.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>张三</para>
+                /// <para>Zhang San</para>
                 /// </summary>
                 [NameInMap("CreatorName")]
                 [Validation(Required=false)]
                 public string CreatorName { get; set; }
 
                 /// <summary>
-                /// <para>The description of the compute source.</para>
+                /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The display name of the compute source.</para>
+                /// <para>The display name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test1011</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string DisplayName { get; set; }
 
                 /// <summary>
-                /// <para>The time when the compute source was created, in the yyyy-MM-dd HH:mm:ss format.</para>
+                /// <para>The creation time. Format: yyyy-MM-dd HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-30 08:00:00</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The time when the compute source was last modified, in the yyyy-MM-dd HH:mm:ss format.</para>
+                /// <para>The update time. Format: yyyy-MM-dd HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-30 08:00:00</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the compute source owner.</para>
+                /// <para>The owner of the compute source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30012211</para>
@@ -171,17 +171,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// <para>The name of the compute source owner.</para>
+                /// <para>The owner of the compute source.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>张三</para>
+                /// <para>Zhang San</para>
                 /// </summary>
                 [NameInMap("OwnerName")]
                 [Validation(Required=false)]
                 public string OwnerName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the compute source.</para>
+                /// <para>The compute source type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MaxCompute</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The total number of records.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>68</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>82E78D6B-AA8F-1FEF-8AA3-5C9DA2A79140</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

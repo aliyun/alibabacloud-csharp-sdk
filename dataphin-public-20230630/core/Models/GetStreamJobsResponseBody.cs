@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetStreamJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The backend response code.</para>
+        /// <para>The backend status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -27,11 +27,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public List<GetStreamJobsResponseBodyData> Data { get; set; }
         public class GetStreamJobsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The environment identifier. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>DEV: development.</description></item>
-            /// <item><description>PROD: production.</description></item>
-            /// </list>
+            /// <para>The environment identifier. Valid values: DEV for development and PROD for production.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DEV</para>
@@ -41,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Env { get; set; }
 
             /// <summary>
-            /// <para>The mapping ID of the real-time node.</para>
+            /// <para>The mapping ID of the real-time task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>716555</para>
@@ -51,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the real-time node.</para>
+            /// <para>The name of the real-time task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>flink_order_detail</para>
@@ -61,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string JobName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user who last modified the node.</para>
+            /// <para>The ID of the last modifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>300006788</para>
@@ -91,14 +87,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The node status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>0: draft.</description></item>
-            /// <item><description>1: submitting.</description></item>
-            /// <item><description>2: submitted.</description></item>
-            /// <item><description>3: published.</description></item>
-            /// <item><description>100: in development.</description></item>
-            /// </list>
+            /// <para>The task status. Valid values: 0 (Draft), 1 (Submitting), 2 (Submitted), 3 (Published), and 100 (Developing).</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -108,11 +97,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The node type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>FLINK_SQL</description></item>
-            /// <item><description>FLINK_DATASTREAM.</description></item>
-            /// </list>
+            /// <para>The task type. Valid values: FLINK_SQL and FLINK_DATASTREAM.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FLINK_SQL</para>
@@ -134,7 +119,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend exception.</para>
+        /// <para>The backend exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -154,7 +139,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>The version.</para>
+        /// <para>The version ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

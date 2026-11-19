@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateDataSourceRequest : TeaModel {
         /// <summary>
-        /// <para>Request object</para>
+        /// <para>The request object.</para>
         /// </summary>
         [NameInMap("CreateCommand")]
         [Validation(Required=false)]
         public CreateDataSourceRequestCreateCommand CreateCommand { get; set; }
         public class CreateDataSourceRequestCreateCommand : TeaModel {
             /// <summary>
-            /// <para>Development environment data source</para>
+            /// <para>The development environment data source.</para>
             /// </summary>
             [NameInMap("DevDataSourceCreate")]
             [Validation(Required=false)]
             public CreateDataSourceRequestCreateCommandDevDataSourceCreate DevDataSourceCreate { get; set; }
             public class CreateDataSourceRequestCreateCommandDevDataSourceCreate : TeaModel {
                 /// <summary>
-                /// <para>Development environment data source</para>
+                /// <para>The development environment data source.</para>
                 /// </summary>
                 [NameInMap("DataSourceCreate")]
                 [Validation(Required=false)]
                 public CreateDataSourceRequestCreateCommandDevDataSourceCreateDataSourceCreate DataSourceCreate { get; set; }
                 public class CreateDataSourceRequestCreateCommandDevDataSourceCreateDataSourceCreate : TeaModel {
                     /// <summary>
-                    /// <para>Whether to check connectivity</para>
+                    /// <para>Specifies whether to check the connectivity.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public bool? CheckActivity { get; set; }
 
                     /// <summary>
-                    /// <para>List of connection configuration items</para>
+                    /// <para>The list of connection configuration items.</para>
                     /// <para>This parameter is required.</para>
                     /// </summary>
                     [NameInMap("ConfigItemList")]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public List<CreateDataSourceRequestCreateCommandDevDataSourceCreateDataSourceCreateConfigItemList> ConfigItemList { get; set; }
                     public class CreateDataSourceRequestCreateCommandDevDataSourceCreateDataSourceCreateConfigItemList : TeaModel {
                         /// <summary>
-                        /// <para>Configuration item. For the key values required by different databases, see the supplementary description at the bottom of the document.</para>
+                        /// <para>The configuration item key. For the key values required by different databases, refer to the supplementary instructions below.</para>
                         /// <para>This parameter is required.</para>
                         /// 
                         /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// <para>Configuration item value</para>
+                        /// <para>The value of the configuration item.</para>
                         /// <para>This parameter is required.</para>
                         /// 
                         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     }
 
                     /// <summary>
-                    /// <para>Description</para>
+                    /// <para>The description.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>datasource for xxx in dev</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>Data source name</para>
+                    /// <para>The name of the data source.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>Data source type</para>
+                    /// <para>The data source type.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>Associated production environment data source ID. This parameter cannot be empty when only creating a development environment compute source.</para>
+                /// <para>The ID of the associated production environment data source. This parameter is required if you only create a compute source for the development environment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1011</para>
@@ -119,14 +119,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>Production environment data source</para>
+            /// <para>The production environment data source.</para>
             /// </summary>
             [NameInMap("ProdDataSourceCreate")]
             [Validation(Required=false)]
             public CreateDataSourceRequestCreateCommandProdDataSourceCreate ProdDataSourceCreate { get; set; }
             public class CreateDataSourceRequestCreateCommandProdDataSourceCreate : TeaModel {
                 /// <summary>
-                /// <para>Whether to check connectivity</para>
+                /// <para>Specifies whether to check the connectivity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public bool? CheckActivity { get; set; }
 
                 /// <summary>
-                /// <para>List of connection configuration items</para>
+                /// <para>The list of connection configuration items.</para>
                 /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("ConfigItemList")]
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public List<CreateDataSourceRequestCreateCommandProdDataSourceCreateConfigItemList> ConfigItemList { get; set; }
                 public class CreateDataSourceRequestCreateCommandProdDataSourceCreateConfigItemList : TeaModel {
                     /// <summary>
-                    /// <para>Configuration item. For the key values required by different databases, see the supplementary description at the bottom of the document.</para>
+                    /// <para>The configuration item key. For the key values required by different databases, refer to the supplementary instructions below.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>Configuration item value</para>
+                    /// <para>The value of the configuration item.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>Data source description</para>
+                /// <para>The description of the data source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>datasource for xx</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Data source name</para>
+                /// <para>The name of the data source.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Data source type:</para>
+                /// <para>The data source type. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>MAX_COMPUTE</description></item>
                 /// <item><description>HDFS</description></item>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <item><description>ORACLE</description></item>
                 /// <item><description>VERTICA</description></item>
                 /// <item><description>DB2</description></item>
-                /// <item><description>TERA_DATA, etc.</description></item>
+                /// <item><description>TERA_DATA</description></item>
                 /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>Tenant ID</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -240,6 +240,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

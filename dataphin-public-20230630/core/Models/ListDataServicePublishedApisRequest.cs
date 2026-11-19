@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListDataServicePublishedApisRequest : TeaModel {
         /// <summary>
-        /// <para>Search conditions.</para>
+        /// <para>The query conditions.</para>
         /// </summary>
         [NameInMap("ListQuery")]
         [Validation(Required=false)]
         public ListDataServicePublishedApisRequestListQuery ListQuery { get; set; }
         public class ListDataServicePublishedApisRequestListQuery : TeaModel {
             /// <summary>
-            /// <para>API name.</para>
+            /// <para>The API name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ApiName { get; set; }
 
             /// <summary>
-            /// <para>Group ID.</para>
+            /// <para>The group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>102113</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? GroupId { get; set; }
 
             /// <summary>
-            /// <para>Page number. Default value: 1.</para>
+            /// <para>The page number. Default value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageNo { get; set; }
 
             /// <summary>
-            /// <para>Number of records per page. Default value: 20.</para>
+            /// <para>The number of entries per page. Default value: 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>Tenant ID.</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,6 +70,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -78,7 +80,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>Data service project ID.</para>
+        /// <para>The ID of the Data Service project.</para>
         /// 
         /// <b>Example:</b>
         /// <para>102102</para>

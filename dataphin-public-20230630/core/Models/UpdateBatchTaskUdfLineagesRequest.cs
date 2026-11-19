@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>The update instruction.</para>
+        /// <para>The update command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UpdateCommand")]
@@ -37,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpdateBatchTaskUdfLineagesRequestUpdateCommand UpdateCommand { get; set; }
         public class UpdateBatchTaskUdfLineagesRequestUpdateCommand : TeaModel {
             /// <summary>
-            /// <para>The node ID in the logical definition subtree.</para>
+            /// <para>The node ID in the task directory tree.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -56,7 +58,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<UpdateBatchTaskUdfLineagesRequestUpdateCommandLineageGroupList> LineageGroupList { get; set; }
             public class UpdateBatchTaskUdfLineagesRequestUpdateCommandLineageGroupList : TeaModel {
                 /// <summary>
-                /// <para>The collection of lineage input tables.</para>
+                /// <para>The collection of input tables for lineage.</para>
                 /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("InputLineageList")]
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public List<UpdateBatchTaskUdfLineagesRequestUpdateCommandLineageGroupListInputLineageList> InputLineageList { get; set; }
                 public class UpdateBatchTaskUdfLineagesRequestUpdateCommandLineageGroupListInputLineageList : TeaModel {
                     /// <summary>
-                    /// <para>The list of lineage fields.</para>
+                    /// <para>The list of lineage columns.</para>
                     /// <para>This parameter is required.</para>
                     /// </summary>
                     [NameInMap("ColumnList")]
@@ -91,7 +93,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public bool? FullTable { get; set; }
 
                     /// <summary>
-                    /// <para>The table name.</para>
+                    /// <para>The name of the table.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -104,7 +106,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The collection of lineage output tables.</para>
+                /// <para>The collection of output tables for lineage.</para>
                 /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("OutputLineageList")]
@@ -112,7 +114,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public List<UpdateBatchTaskUdfLineagesRequestUpdateCommandLineageGroupListOutputLineageList> OutputLineageList { get; set; }
                 public class UpdateBatchTaskUdfLineagesRequestUpdateCommandLineageGroupListOutputLineageList : TeaModel {
                     /// <summary>
-                    /// <para>The list of lineage fields.</para>
+                    /// <para>The list of lineage columns.</para>
                     /// <para>This parameter is required.</para>
                     /// </summary>
                     [NameInMap("ColumnList")]
@@ -139,7 +141,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public bool? FullTable { get; set; }
 
                     /// <summary>
-                    /// <para>The table name.</para>
+                    /// <para>The name of the table.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -154,7 +156,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The project to which the node belongs.</para>
+            /// <para>The project to which the task belongs.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

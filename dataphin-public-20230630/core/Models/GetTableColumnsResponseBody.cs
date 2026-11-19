@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public List<GetTableColumnsResponseBodyColumnList> ColumnList { get; set; }
         public class GetTableColumnsResponseBodyColumnList : TeaModel {
             /// <summary>
-            /// <para>The ID of the data classification.</para>
+            /// <para>The data classification ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12345</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ClassifyId { get; set; }
 
             /// <summary>
-            /// <para>The name of the data classification.</para>
+            /// <para>The data classification name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ClassifyName { get; set; }
 
             /// <summary>
-            /// <para>The comment of the field.</para>
+            /// <para>The field comment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data source.</para>
+            /// <para>The data source ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3301</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? DataSourceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the data source.</para>
+            /// <para>The data source type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MAX_COMPUTE</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The environment to which the field belongs. Valid values: dev and prod.</para>
+            /// <para>The environment to which the table belongs. Valid values: dev and prod.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev</para>
@@ -147,28 +147,28 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Guid { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the field is a foreign key.</para>
+            /// <para>Specifies whether the column is a foreign key.</para>
             /// </summary>
             [NameInMap("IsForeignKey")]
             [Validation(Required=false)]
             public bool? IsForeignKey { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the field is a partition key.</para>
+            /// <para>Specifies whether the column is a partition key.</para>
             /// </summary>
             [NameInMap("IsPartitionColumn")]
             [Validation(Required=false)]
             public bool? IsPartitionColumn { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the field is a primary key.</para>
+            /// <para>Specifies whether the column is a primary key.</para>
             /// </summary>
             [NameInMap("IsPrimaryKey")]
             [Validation(Required=false)]
             public bool? IsPrimaryKey { get; set; }
 
             /// <summary>
-            /// <para>The user who last modified the field.</para>
+            /// <para>The last modifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30012011</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string LastModifier { get; set; }
 
             /// <summary>
-            /// <para>The abbreviation of the data security level.</para>
+            /// <para>The abbreviation of the data classification level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>L1</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the field.</para>
+            /// <para>The field name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>age</para>
@@ -208,14 +208,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the field can be null.</para>
+            /// <para>Specifies whether the column can be null.</para>
             /// </summary>
             [NameInMap("Nullable")]
             [Validation(Required=false)]
             public bool? Nullable { get; set; }
 
             /// <summary>
-            /// <para>The sequence number.</para>
+            /// <para>The ordinal number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string TableGuid { get; set; }
 
             /// <summary>
-            /// <para>The name of the table.</para>
+            /// <para>The table name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>t_test</para>
@@ -267,7 +267,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend exception.</para>
+        /// <para>The details of the backend response exception.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Specifies whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

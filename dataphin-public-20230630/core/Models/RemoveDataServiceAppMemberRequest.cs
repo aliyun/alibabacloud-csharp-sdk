@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class RemoveDataServiceAppMemberRequest : TeaModel {
         /// <summary>
-        /// <para>Tenant ID</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>Remove regular members from a data service application</para>
+        /// <para>Deletes a regular member from a data service application.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RemoveCommand")]
@@ -37,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public RemoveDataServiceAppMemberRequestRemoveCommand RemoveCommand { get; set; }
         public class RemoveDataServiceAppMemberRequestRemoveCommand : TeaModel {
             /// <summary>
-            /// <para>Application ID</para>
+            /// <para>The application ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? AppId { get; set; }
 
             /// <summary>
-            /// <para>List of application member IDs</para>
+            /// <para>The IDs of the application members.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("MemberIds")]

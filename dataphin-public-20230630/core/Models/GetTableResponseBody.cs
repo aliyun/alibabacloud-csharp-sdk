@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> AssetTags { get; set; }
 
             /// <summary>
-            /// <para>The business unit ID.</para>
+            /// <para>The ID of the business unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2011</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? BizUnitId { get; set; }
 
             /// <summary>
-            /// <para>The business unit name.</para>
+            /// <para>The name of the business unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>LD_test01</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string BizUnitName { get; set; }
 
             /// <summary>
-            /// <para>The table comment.</para>
+            /// <para>The comment of the table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The creator ID.</para>
+            /// <para>The ID of the creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30011211</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>The data domain ID.</para>
+            /// <para>The ID of the data domain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>211</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? DataDomainId { get; set; }
 
             /// <summary>
-            /// <para>The subject domain name.</para>
+            /// <para>The name of the subject domain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Course domain</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DataDomainName { get; set; }
 
             /// <summary>
-            /// <para>The data source ID.</para>
+            /// <para>The ID of the data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3301</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? DataSourceId { get; set; }
 
             /// <summary>
-            /// <para>The table display name.</para>
+            /// <para>The display name of the table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Student</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The environment. Valid values: dev and prod.</para>
+            /// <para>The environment to which the table belongs. Valid values: dev and prod.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Env { get; set; }
 
             /// <summary>
-            /// <para>The file ID, which is used to redirect to the ODM model.</para>
+            /// <para>The ID of the file, which is used to navigate to the ODM model.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string FileId { get; set; }
 
             /// <summary>
-            /// <para>The table GUID.</para>
+            /// <para>The GUID of the table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dp_ds_table.300023201.7311626611751680256.load_test.abc</para>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The creator ID.</para>
+                /// <para>The ID of the creator.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30011211</para>
@@ -201,10 +201,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string OwnerId { get; set; }
 
                 /// <summary>
-                /// <para>The creator nickname.</para>
+                /// <para>The nickname of the creator.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Zhang San</para>
+                /// <para>John Doe</para>
                 /// </summary>
                 [NameInMap("OwnerNickName")]
                 [Validation(Required=false)]
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? IsPartitionTable { get; set; }
 
             /// <summary>
-            /// <para>The time when the table DDL was last modified.</para>
+            /// <para>The time when the DDL of the table was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-30 00:00:00</para>
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string LastDmlTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the data was last viewed.</para>
+            /// <para>The time when the data was last queried.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-30 00:00:00</para>
@@ -277,7 +277,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? LifeCycle { get; set; }
 
             /// <summary>
-            /// <para>The table name.</para>
+            /// <para>The name of the table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>t_test01</para>
@@ -304,7 +304,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>The parent model ID, which is used to redirect to the ODM model.</para>
+            /// <para>The ID of the parent model, which is used to navigate to the ODM model.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -314,7 +314,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ParentModelId { get; set; }
 
             /// <summary>
-            /// <para>The logical project ID.</para>
+            /// <para>The ID of the logical project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1011</para>
@@ -324,7 +324,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The logical project name.</para>
+            /// <para>The name of the logical project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testPrj</para>
@@ -347,14 +347,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The abbreviation of the security classification name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>High</para>
+            /// <para>H</para>
             /// </summary>
             [NameInMap("SecurityLevelAbbreviation")]
             [Validation(Required=false)]
             public string SecurityLevelAbbreviation { get; set; }
 
             /// <summary>
-            /// <para>The name of the security classification.</para>
+            /// <para>The security classification name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>High</para>
@@ -364,7 +364,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string SecurityLevelName { get; set; }
 
             /// <summary>
-            /// <para>The list of output nodes.</para>
+            /// <para>The list of output node information.</para>
             /// </summary>
             [NameInMap("SimpleNodeInfos")]
             [Validation(Required=false)]
@@ -388,7 +388,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string BizUnitDisplayName { get; set; }
 
                     /// <summary>
-                    /// <para>The business unit ID.</para>
+                    /// <para>The ID of the business unit.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2011</para>
@@ -398,7 +398,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string BizUnitId { get; set; }
 
                     /// <summary>
-                    /// <para>The business unit name.</para>
+                    /// <para>The name of the business unit.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>LD_test01</para>
@@ -410,7 +410,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The environment to which the node belongs. Valid values: DEV and PROD.</para>
+                /// <para>The environment. Valid values: DEV and PROD.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DEV</para>
@@ -440,7 +440,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string NodeName { get; set; }
 
                 /// <summary>
-                /// <para>The scheduling type of the node. Valid values: NORMAL (periodic scheduling) and MANUAL (manual scheduling).</para>
+                /// <para>The scheduling type. Valid values: NORMAL (periodic scheduling) and MANUAL (manual scheduling).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>NORMAL</para>
@@ -450,7 +450,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string NodeScheduleType { get; set; }
 
                 /// <summary>
-                /// <para>The O&amp;M owners of the node.</para>
+                /// <para>The O&amp;M owners.</para>
                 /// </summary>
                 [NameInMap("Owners")]
                 [Validation(Required=false)]
@@ -460,7 +460,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <para>The display name of the user.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Zhang San</para>
+                    /// <para>John Doe</para>
                     /// </summary>
                     [NameInMap("DisplayName")]
                     [Validation(Required=false)]
@@ -518,7 +518,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The type of the node. Valid values: DLINK (offline integration) and PYTHON37 (Python computing node).</para>
+                /// <para>The node type. Valid values: DLINK (offline integration) and PYTHON37 (Python compute node).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DLINK</para>
@@ -540,7 +540,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string StorageType { get; set; }
 
             /// <summary>
-            /// <para>The dynamic properties of the real-time metatable.</para>
+            /// <para>The dynamic properties of the real-time metatable class.</para>
             /// </summary>
             [NameInMap("StreamTableConfig")]
             [Validation(Required=false)]
@@ -601,7 +601,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend response exception.</para>
+        /// <para>The backend exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>

@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -45,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public UpdateStandardTemplateRequestUpdateCommandAttributesConfig AttributesConfig { get; set; }
             public class UpdateStandardTemplateRequestUpdateCommandAttributesConfig : TeaModel {
                 /// <summary>
-                /// <para>The list of attributes.</para>
+                /// <para>The attribute list.</para>
                 /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("AttributeList")]
@@ -53,7 +55,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public List<UpdateStandardTemplateRequestUpdateCommandAttributesConfigAttributeList> AttributeList { get; set; }
                 public class UpdateStandardTemplateRequestUpdateCommandAttributesConfigAttributeList : TeaModel {
                     /// <summary>
-                    /// <para>The attribute code. This parameter is optional when a common attribute is referenced.</para>
+                    /// <para>The attribute code. This parameter is not required when a common attribute is referenced.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test_attr</para>
@@ -73,7 +75,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>The attribute name. This parameter is optional when a common attribute is referenced.</para>
+                    /// <para>The attribute name. This parameter is not required when a common attribute is referenced.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>attr1</para>
@@ -90,7 +92,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public UpdateStandardTemplateRequestUpdateCommandAttributesConfigAttributeListRefAttribute RefAttribute { get; set; }
                     public class UpdateStandardTemplateRequestUpdateCommandAttributesConfigAttributeListRefAttribute : TeaModel {
                         /// <summary>
-                        /// <para>The attribute source.</para>
+                        /// <para>The source of the attribute.</para>
                         /// <para>This parameter is required.</para>
                         /// </summary>
                         [NameInMap("AttributeFromInfo")]
@@ -98,11 +100,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public UpdateStandardTemplateRequestUpdateCommandAttributesConfigAttributeListRefAttributeAttributeFromInfo AttributeFromInfo { get; set; }
                         public class UpdateStandardTemplateRequestUpdateCommandAttributesConfigAttributeListRefAttributeAttributeFromInfo : TeaModel {
                             /// <summary>
-                            /// <para>The attribute source. Valid values:</para>
+                            /// <para>The source of the attribute. Valid values:</para>
                             /// <list type="bullet">
-                            /// <item><description>SYSTEM: system attribute.</description></item>
-                            /// <item><description>CUSTOM: custom attribute.</description></item>
-                            /// <item><description>STANDARD: standard.</description></item>
+                            /// <item><description>SYSTEM: System attribute.</description></item>
+                            /// <item><description>CUSTOM: Custom attribute.</description></item>
+                            /// <item><description>STANDARD: Standard.</description></item>
                             /// </list>
                             /// <para>This parameter is required.</para>
                             /// 
@@ -121,7 +123,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                             public UpdateStandardTemplateRequestUpdateCommandAttributesConfigAttributeListRefAttributeAttributeFromInfoStandardReference StandardReference { get; set; }
                             public class UpdateStandardTemplateRequestUpdateCommandAttributesConfigAttributeListRefAttributeAttributeFromInfoStandardReference : TeaModel {
                                 /// <summary>
-                                /// <para>The standard ID.</para>
+                                /// <para>The ID of the standard.</para>
                                 /// <para>This parameter is required.</para>
                                 /// 
                                 /// <b>Example:</b>
@@ -147,7 +149,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         }
 
                         /// <summary>
-                        /// <para>The attribute ID.</para>
+                        /// <para>The ID of the attribute.</para>
                         /// <para>This parameter is required.</para>
                         /// 
                         /// <b>Example:</b>
@@ -160,22 +162,22 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     }
 
                     /// <summary>
-                    /// <para>Specifies whether the attribute is required. This parameter is optional when a common attribute is referenced.</para>
+                    /// <para>Specifies whether the attribute is required. This parameter is not required when a common attribute is referenced.</para>
                     /// </summary>
                     [NameInMap("Required")]
                     [Validation(Required=false)]
                     public bool? Required { get; set; }
 
                     /// <summary>
-                    /// <para>The attribute type. This parameter is optional when a common attribute is referenced. Valid values:</para>
+                    /// <para>The attribute type. This parameter is not required when a common attribute is referenced. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>BIZ_ATTRIBUTE: business attribute.</description></item>
-                    /// <item><description>TECH_ATTRIBUTE: technical attribute.</description></item>
-                    /// <item><description>MANAGEMENT_ATTRIBUTE: management attribute.</description></item>
-                    /// <item><description>QUALITY_ATTRIBUTE: quality attribute.</description></item>
-                    /// <item><description>MASTER_DATA_ATTRIBUTE: master data attribute.</description></item>
-                    /// <item><description>LIFECYCLE_ATTRIBUTE: lifecycle attribute.</description></item>
-                    /// <item><description>SECURITY_ATTRIBUTE: security attribute.</description></item>
+                    /// <item><description>BIZ_ATTRIBUTE: Business attribute.</description></item>
+                    /// <item><description>TECH_ATTRIBUTE: Technical attribute.</description></item>
+                    /// <item><description>MANAGEMENT_ATTRIBUTE: Management attribute.</description></item>
+                    /// <item><description>QUALITY_ATTRIBUTE: Quality attribute.</description></item>
+                    /// <item><description>MASTER_DATA_ATTRIBUTE: Master data attribute.</description></item>
+                    /// <item><description>LIFECYCLE_ATTRIBUTE: Lifecycle attribute.</description></item>
+                    /// <item><description>SECURITY_ATTRIBUTE: Security attribute.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -186,7 +188,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The value configuration. This parameter is optional when a common attribute is referenced.</para>
+                    /// <para>The value configuration. This parameter is not required when a common attribute is referenced.</para>
                     /// </summary>
                     [NameInMap("ValueConfig")]
                     [Validation(Required=false)]
@@ -195,11 +197,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         /// <summary>
                         /// <para>The data type of the attribute value. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>STRING: string.</description></item>
-                        /// <item><description>BIGINT: numeric.</description></item>
-                        /// <item><description>DOUBLE: floating-point.</description></item>
-                        /// <item><description>DATE: date, accurate to the day.</description></item>
-                        /// <item><description>DATETIME: date, accurate to milliseconds.</description></item>
+                        /// <item><description>STRING: String.</description></item>
+                        /// <item><description>BIGINT: Numeric type.</description></item>
+                        /// <item><description>DOUBLE: Floating-point type.</description></item>
+                        /// <item><description>DATE: Date, accurate to the day.</description></item>
+                        /// <item><description>DATETIME: Date and time, accurate to the millisecond.</description></item>
                         /// <item><description>BOOLEAN: Boolean.</description></item>
                         /// </list>
                         /// <para>This parameter is required.</para>
@@ -222,7 +224,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public string DefaultValue { get; set; }
 
                         /// <summary>
-                        /// <para>The length of the attribute value. If this parameter is left empty or set to -1, the length is not limited. Typically, only string types have a length limit for attribute values.</para>
+                        /// <para>The length of the attribute value. An empty value or -1 indicates that the length is not limited. Typically, the length is limited only for string types.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -234,10 +236,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         /// <summary>
                         /// <para>The attribute value type. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>CUSTOMIZED: custom input.</description></item>
-                        /// <item><description>SINGLE_ENUM: single enumeration value.</description></item>
-                        /// <item><description>MULTIPLE_ENUMS: multiple enumeration values.</description></item>
-                        /// <item><description>RANGE: range value.</description></item>
+                        /// <item><description>CUSTOMIZED: Custom input.</description></item>
+                        /// <item><description>SINGLE_ENUM: Single enumeration value.</description></item>
+                        /// <item><description>MULTIPLE_ENUMS: Multiple enumeration values.</description></item>
+                        /// <item><description>RANGE: Range value.</description></item>
                         /// </list>
                         /// <para>This parameter is required.</para>
                         /// 
@@ -259,10 +261,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                             /// <summary>
                             /// <para>The value range. This parameter takes effect when the value source is set to DATAPHIN_ATTRIBUTE. Valid values:</para>
                             /// <list type="bullet">
-                            /// <item><description>BIZ_UNIT: data board.</description></item>
-                            /// <item><description>PROJECT: project.</description></item>
-                            /// <item><description>USER: user.</description></item>
-                            /// <item><description>USER_GROUP: user group.</description></item>
+                            /// <item><description>BIZ_UNIT: Business unit.</description></item>
+                            /// <item><description>PROJECT: Project.</description></item>
+                            /// <item><description>USER: User.</description></item>
+                            /// <item><description>USER_GROUP: User group.</description></item>
                             /// </list>
                             /// 
                             /// <b>Example:</b>
@@ -280,7 +282,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                             public UpdateStandardTemplateRequestUpdateCommandAttributesConfigAttributeListValueConfigValueRangeLookupTableReference LookupTableReference { get; set; }
                             public class UpdateStandardTemplateRequestUpdateCommandAttributesConfigAttributeListValueConfigValueRangeLookupTableReference : TeaModel {
                                 /// <summary>
-                                /// <para>The referenced lookup table field.</para>
+                                /// <para>The referenced field in the lookup table.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>col1</para>
@@ -310,7 +312,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                             public UpdateStandardTemplateRequestUpdateCommandAttributesConfigAttributeListValueConfigValueRangeMinMaxValueConfig MinMaxValueConfig { get; set; }
                             public class UpdateStandardTemplateRequestUpdateCommandAttributesConfigAttributeListValueConfigValueRangeMinMaxValueConfig : TeaModel {
                                 /// <summary>
-                                /// <para>Specifies whether the maximum value is included.</para>
+                                /// <para>Specifies whether to include the maximum value.</para>
                                 /// <para>This parameter is required.</para>
                                 /// </summary>
                                 [NameInMap("IncludeMaxValue")]
@@ -318,7 +320,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                                 public bool? IncludeMaxValue { get; set; }
 
                                 /// <summary>
-                                /// <para>Specifies whether the minimum value is included.</para>
+                                /// <para>Specifies whether to include the minimum value.</para>
                                 /// <para>This parameter is required.</para>
                                 /// </summary>
                                 [NameInMap("IncludeMinValue")]
@@ -352,14 +354,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                             /// <summary>
                             /// <para>The value source. Valid values:</para>
                             /// <list type="bullet">
-                            /// <item><description>NONE: no constraint.</description></item>
-                            /// <item><description>LIST: obtained from a list.</description></item>
-                            /// <item><description>LOOKUP_TABLE: lookup table.</description></item>
-                            /// <item><description>MIN_MAX: value between the minimum and maximum.</description></item>
+                            /// <item><description>NONE: No constraint.</description></item>
+                            /// <item><description>LIST: Obtained from a list.</description></item>
+                            /// <item><description>LOOKUP_TABLE: Lookup table.</description></item>
+                            /// <item><description>MIN_MAX: Value between the maximum and minimum values.</description></item>
                             /// <item><description>DATAPHIN_ATTRIBUTE: Dataphin system property.</description></item>
-                            /// <item><description>BUILT_IN_DATA_TYPES: built-in data types.</description></item>
-                            /// <item><description>BUILT_IN_DATA_CLASSIFICATION: built-in data categorization.</description></item>
-                            /// <item><description>BUILT_IN_DATA_LEVEL: built-in data security classification.</description></item>
+                            /// <item><description>BUILT_IN_DATA_TYPES: Built-in data type.</description></item>
+                            /// <item><description>BUILT_IN_DATA_CLASSIFICATION: Built-in data categorization.</description></item>
+                            /// <item><description>BUILT_IN_DATA_LEVEL: Built-in data security classification.</description></item>
                             /// </list>
                             /// <para>This parameter is required.</para>
                             /// 
@@ -386,7 +388,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The code of the standard template. The code must be globally unique. The code cannot be modified if the template is referenced.</para>
+            /// <para>The data standard template code. It must be globally unique and cannot be modified if it is referenced.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -397,14 +399,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The configuration for automatic generation of standard codes.</para>
+            /// <para>The standard code auto-generation rule configuration.</para>
             /// </summary>
             [NameInMap("CodeRuleConfig")]
             [Validation(Required=false)]
             public UpdateStandardTemplateRequestUpdateCommandCodeRuleConfig CodeRuleConfig { get; set; }
             public class UpdateStandardTemplateRequestUpdateCommandCodeRuleConfig : TeaModel {
                 /// <summary>
-                /// <para>The automatic generation configuration for standard code rules. This parameter takes effect when the generation method is set to AUTO_GENERATE.</para>
+                /// <para>The auto-generation configuration for standard code rules. This configuration takes effect when the generation method is set to AUTO_GENERATE.</para>
                 /// </summary>
                 [NameInMap("AutoConfig")]
                 [Validation(Required=false)]
@@ -437,7 +439,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                             public int? Digit { get; set; }
 
                             /// <summary>
-                            /// <para>Specifies whether to pad with zeros.</para>
+                            /// <para>Specifies whether zero padding is enabled.</para>
                             /// <para>This parameter is required.</para>
                             /// </summary>
                             [NameInMap("NeedPaddingZero")]
@@ -480,12 +482,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public int? Index { get; set; }
 
                         /// <summary>
-                        /// <para>The type of the code rule. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>FIXED_STRING: fixed string.</description></item>
-                        /// <item><description>AUTO_INCREMENT: auto-increment sequence.</description></item>
-                        /// <item><description>STANDARD_SET_CODE: standard set code.</description></item>
-                        /// </list>
+                        /// <para>The code rule type. Valid values: FIXED_STRING: Fixed string. AUTO_INCREMENT: Auto-increment sequence. STANDARD_SET_CODE: Standard set code.</para>
                         /// <para>This parameter is required.</para>
                         /// 
                         /// <b>Example:</b>
@@ -508,7 +505,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     }
 
                     /// <summary>
-                    /// <para>Specifies whether strict validation is required.</para>
+                    /// <para>Specifies whether strong validation is enabled.</para>
                     /// <para>This parameter is required.</para>
                     /// </summary>
                     [NameInMap("NeedStrongValidate")]
@@ -518,11 +515,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The standard code generation method. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>CUSTOMIZED: custom.</description></item>
-                /// <item><description>AUTO_GENERATE: automatically generated based on standard code rules.</description></item>
-                /// </list>
+                /// <para>The standard code generation method. Valid values: CUSTOMIZED: Custom. AUTO_GENERATE: Automatically generated based on standard code rules.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -535,7 +528,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The description of the standard template.</para>
+            /// <para>The data standard template description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -545,7 +538,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the standard template.</para>
+            /// <para>The data standard template ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -556,18 +549,18 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The list of maintainers.</para>
+            /// <para>The maintainers.</para>
             /// </summary>
             [NameInMap("MaintainerList")]
             [Validation(Required=false)]
             public List<string> MaintainerList { get; set; }
 
             /// <summary>
-            /// <para>The name of the standard template.</para>
+            /// <para>The data standard template name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试模板</para>
+            /// <para>Test template</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -593,7 +586,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The version number. If this parameter is left empty or set to -1, the latest version is used.</para>
+            /// <para>The version number. An empty value or -1 indicates the latest version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

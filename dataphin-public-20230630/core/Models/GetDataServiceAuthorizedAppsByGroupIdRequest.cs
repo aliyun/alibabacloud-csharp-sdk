@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetDataServiceAuthorizedAppsByGroupIdRequest : TeaModel {
         /// <summary>
-        /// <para>The app group ID.</para>
+        /// <para>The application group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>202102</para>
@@ -31,6 +31,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

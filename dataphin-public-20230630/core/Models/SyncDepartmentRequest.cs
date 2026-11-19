@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -45,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<SyncDepartmentRequestSyncDepartmentCommandDepartmentList> DepartmentList { get; set; }
             public class SyncDepartmentRequestSyncDepartmentCommandDepartmentList : TeaModel {
                 /// <summary>
-                /// <para>The department ID (unique identifier of the department).</para>
+                /// <para>The unique identifier of the department.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -60,14 +62,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>研发中心</para>
+                /// <para>R&amp;D Center</para>
                 /// </summary>
                 [NameInMap("DepartmentName")]
                 [Validation(Required=false)]
                 public string DepartmentName { get; set; }
 
                 /// <summary>
-                /// <para>The parent department ID (unique identifier of the parent department). Set to null if no parent department exists.</para>
+                /// <para>The unique identifier of the parent department. If the department has no parent, the value is null.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10001</para>

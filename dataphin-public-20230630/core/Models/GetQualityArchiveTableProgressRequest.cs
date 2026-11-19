@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the operator.</para>
+        /// <para>The operator ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>The asynchronous task progress ID returned by the UpsertQualityArchiveTable operation.</para>
+        /// <para>The progress ID of the asynchronous task, which is returned by the UpsertQualityArchiveTable operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

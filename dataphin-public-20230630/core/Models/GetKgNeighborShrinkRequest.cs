@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetKgNeighborShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The entity record data ID.</para>
+        /// <para>The data ID of the entity record.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string EntityType { get; set; }
 
         /// <summary>
-        /// <para>The entity record neighbor node query instruction.</para>
+        /// <para>The neighbor node query instruction for entity records.</para>
         /// </summary>
         [NameInMap("NeighborsQuery")]
         [Validation(Required=false)]
@@ -50,6 +50,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetCatalogAssetDetailsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The paged query for the listed asset catalog.</para>
+        /// <para>The paging query for the list of listed asset catalogs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("GetCatalogAssetDetailsQuery")]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the operator user.</para>
+        /// <para>The ID of the operator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30001011</para>

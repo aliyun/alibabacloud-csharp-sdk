@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetUsersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. OK indicates that the request is successful.</para>
+        /// <para>The error code of the request. A value of OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The error message of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The display name of the user without the status.</para>
+            /// <para>The display name of the user, excluding the status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xx test</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The Lark bot.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx</para>
+            /// <para><a href="https://example.com/webhook/feishu">https://example.com/webhook/feishu</a></para>
             /// </summary>
             [NameInMap("FeiShuRobot")]
             [Validation(Required=false)]
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The last modification time.</para>
+            /// <para>The time when the user was modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1717343597000</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string NickName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the user belongs.</para>
+            /// <para>The ID of the primary account to which the user belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>231231</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string RealName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user source.</para>
+            /// <para>The source ID of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:123@xx.com">123@xx.com</a></para>
@@ -240,19 +240,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The WeCom bot.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx</para>
+            /// <para><a href="https://example.com/webhook/wecom">https://example.com/webhook/wecom</a></para>
             /// </summary>
             [NameInMap("WeChatRobot")]
             [Validation(Required=false)]
             public string WeChatRobot { get; set; }
 
             /// <summary>
-            /// <para>The whitelist.</para>
+            /// <para>The IP address whitelist.</para>
             /// 
             /// <b>Example:</b>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>192.168.0.1</para>
             /// </summary>
             [NameInMap("WhiteIp")]
             [Validation(Required=false)]

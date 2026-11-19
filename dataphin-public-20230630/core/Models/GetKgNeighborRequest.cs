@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetKgNeighborRequest : TeaModel {
         /// <summary>
-        /// <para>The entity record data ID.</para>
+        /// <para>The data ID of the entity record.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string EntityType { get; set; }
 
         /// <summary>
-        /// <para>The entity record neighbor node query instruction.</para>
+        /// <para>The neighbor node query instruction for entity records.</para>
         /// </summary>
         [NameInMap("NeighborsQuery")]
         [Validation(Required=false)]
@@ -51,11 +51,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The direction type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>in: the current entity is the target node.</description></item>
-            /// <item><description>out: the current entity is the source node.</description></item>
-            /// <item><description>both: the current entity is both the source node and the target node.</description></item>
+            /// <item><description>in: Uses the current entity as the target node.</description></item>
+            /// <item><description>out: Uses the current entity as the source node.</description></item>
+            /// <item><description>both: Uses the current entity as both the source and target nodes.
+            /// Default value: both.</description></item>
             /// </list>
-            /// <para>Default value: both.</para>
             /// 
             /// <b>Example:</b>
             /// <para>both</para>
@@ -85,6 +85,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

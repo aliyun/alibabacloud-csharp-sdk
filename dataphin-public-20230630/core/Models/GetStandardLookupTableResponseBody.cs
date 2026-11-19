@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user who created the lookup table.</para>
+            /// <para>The ID of the creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30012021</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>The username of the user who created the lookup table.</para>
+            /// <para>The username of the creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The ID of the lookup table.</para>
+            /// <para>The lookup table ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user who last modified the lookup table.</para>
+            /// <para>The ID of the last modifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30012021</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string LastModifier { get; set; }
 
             /// <summary>
-            /// <para>The username of the user who last modified the lookup table.</para>
+            /// <para>The username of the last modifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>The details of the backend exception.</para>
+        /// <para>The backend exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>

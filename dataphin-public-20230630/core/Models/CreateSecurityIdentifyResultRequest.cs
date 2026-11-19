@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateSecurityIdentifyResultRequest : TeaModel {
         /// <summary>
-        /// <para>The create request.</para>
+        /// <para>The creation request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CreateCommand")]
@@ -29,11 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ClassifyId { get; set; }
 
             /// <summary>
-            /// <para>The deduplication strategy. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>COVER_ALL: overwrites all online tags.</description></item>
-            /// <item><description>COVER_UNLOCKED: overwrites only unlocked online tags.</description></item>
-            /// </list>
+            /// <para>The conflict strategy. Valid values: COVER_ALL (overwrites all online tags) and COVER_UNLOCKED (overwrites only unlocked online tags).</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -44,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ConflictStrategy { get; set; }
 
             /// <summary>
-            /// <para>The datasource environment identifier. This parameter is required only for datasource tables.</para>
+            /// <para>The environment identifier of the datasource. This parameter is required only for datasource tables.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DEV</para>
@@ -54,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DatasourceEnv { get; set; }
 
             /// <summary>
-            /// <para>The datasource name. This parameter is required only for datasource tables.</para>
+            /// <para>The name of the datasource. This parameter is required only for datasource tables.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -64,12 +60,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DatasourceName { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the result. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true: Enabled.</description></item>
-            /// <item><description>false: Disabled.
-            /// Default value: true.</description></item>
-            /// </list>
+            /// <para>The enabled status. Valid values: true (enabled) and false (disabled). Default value: true.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -79,7 +70,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>The field name.</para>
+            /// <para>The name of the field.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -100,7 +91,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? IsDatasourceTable { get; set; }
 
             /// <summary>
-            /// <para>The table catalog. For a datasource table, specify the database or schema name. For a Dataphin physical table, specify the project name in English. For a Dataphin logical table, specify the business unit name in English.</para>
+            /// <para>The catalog of the table. For a datasource table, specify the name of the database or schema to which the table belongs. For a Dataphin physical table, specify the English name of the project. For a Dataphin logical table, specify the English name of the business unit.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -111,7 +102,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string TableCatalog { get; set; }
 
             /// <summary>
-            /// <para>The table name.</para>
+            /// <para>The name of the table.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -135,6 +126,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

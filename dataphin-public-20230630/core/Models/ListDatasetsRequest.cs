@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? TenantId { get; set; }
 
             /// <summary>
-            /// <para>The dataset types. If this parameter is left empty, all types are queried.</para>
+            /// <para>The dataset type. If this parameter is left empty, all types are queried.</para>
             /// </summary>
             [NameInMap("TypeList")]
             [Validation(Required=false)]
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
-        /// <para>The operator ID.</para>
+        /// <para>The operator user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30001011</para>

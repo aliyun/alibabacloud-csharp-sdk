@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ApiId { get; set; }
 
             /// <summary>
-            /// <para>The application name.</para>
+            /// <para>The name of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The column used for sorting. Valid values: CALL_COUNT: the number of calls. ERROR_COUNT: the number of errors. ERROR_RATE: the error rate. Default value: CALL_COUNT.</para>
+            /// <para>The column by which to sort the results. Valid values: CALL_COUNT (number of calls), ERROR_COUNT (number of exceptions), and ERROR_RATE (error rate). Default value: CALL_COUNT.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CALL_COUNT</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string OrderColumn { get; set; }
 
             /// <summary>
-            /// <para>The sort order. Valid values: 1: ascending order. 2: descending order. Default value: 1.</para>
+            /// <para>The sort order. Valid values: 1 (ascending order) and 2 (descending order). Default value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageNo { get; set; }
 
             /// <summary>
-            /// <para>The number of records per page. Default value: 20.</para>
+            /// <para>The number of entries per page. Default value: 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -114,6 +114,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -122,7 +124,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data service project.</para>
+        /// <para>The ID of the Data Service project.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

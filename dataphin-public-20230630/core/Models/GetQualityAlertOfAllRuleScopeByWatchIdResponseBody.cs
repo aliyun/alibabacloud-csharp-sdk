@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend exception.</para>
+        /// <para>The backend exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -40,28 +40,28 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The alert settings details.</para>
+        /// <para>The alert configuration details.</para>
         /// </summary>
         [NameInMap("QualityAlertInfo")]
         [Validation(Required=false)]
         public GetQualityAlertOfAllRuleScopeByWatchIdResponseBodyQualityAlertInfo QualityAlertInfo { get; set; }
         public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBodyQualityAlertInfo : TeaModel {
             /// <summary>
-            /// <para>The duty roster alert channels.</para>
+            /// <para>The on-call schedule alert channels.</para>
             /// </summary>
             [NameInMap("AlertDutyChannelList")]
             [Validation(Required=false)]
             public List<string> AlertDutyChannelList { get; set; }
 
             /// <summary>
-            /// <para>The duty roster alert list.</para>
+            /// <para>The on-call schedule alert list.</para>
             /// </summary>
             [NameInMap("AlertDutyList")]
             [Validation(Required=false)]
             public List<GetQualityAlertOfAllRuleScopeByWatchIdResponseBodyQualityAlertInfoAlertDutyList> AlertDutyList { get; set; }
             public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBodyQualityAlertInfoAlertDutyList : TeaModel {
                 /// <summary>
-                /// <para>The alert duty roster ID.</para>
+                /// <para>The on-call schedule ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The alert duty roster name.</para>
+                /// <para>The on-call schedule name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether alerting is enabled for the quality owner.</para>
+            /// <para>Indicates whether alerting for quality owners is enabled.</para>
             /// </summary>
             [NameInMap("EnableAlertQualityOwner")]
             [Validation(Required=false)]
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

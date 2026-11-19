@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public GetBizEntityInfoByVersionResponseBodyBizEntityInfoBizObject BizObject { get; set; }
             public class GetBizEntityInfoByVersionResponseBodyBizEntityInfoBizObject : TeaModel {
                 /// <summary>
-                /// <para>The approval flow ID.</para>
+                /// <para>The ID of the approval process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>221323121212</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ApprovalId { get; set; }
 
                 /// <summary>
-                /// <para>The approval status. For more information, refer to the query business entity details operation.</para>
+                /// <para>The approval status. For more information, see the operation for querying business entity details.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>APPROVING</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ApprovalStatus { get; set; }
 
                 /// <summary>
-                /// <para>The list of child business objects of the business object.</para>
+                /// <para>The list of IDs of child business objects.</para>
                 /// </summary>
                 [NameInMap("ChildBizEntityIdList")]
                 [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string DisplayName { get; set; }
 
                 /// <summary>
-                /// <para>The creation time.</para>
+                /// <para>The time when the business object was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-10-10 10:00:00</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The update time.</para>
+                /// <para>The time when the business object was last updated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-10-10 10:00:00</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The business object ID.</para>
+                /// <para>The ID of the business object.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1011</para>
@@ -114,14 +114,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The name of the user who last modified the business object.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>张三</para>
+                /// <para>Zhang San</para>
                 /// </summary>
                 [NameInMap("LastModifierName")]
                 [Validation(Required=false)]
                 public string LastModifierName { get; set; }
 
                 /// <summary>
-                /// <para>The code name of the business object.</para>
+                /// <para>The code of the business object.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>create_object_code_name</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The online status. For more information, refer to the query business entity details operation.</para>
+                /// <para>The online status. For more information, see the operation for querying business entity details.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -141,17 +141,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string OnlineStatus { get; set; }
 
                 /// <summary>
-                /// <para>The owner of the business object.</para>
+                /// <para>The ID of the owner of the business object.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>张三</para>
+                /// <para>Zhang San</para>
                 /// </summary>
                 [NameInMap("OwnerName")]
                 [Validation(Required=false)]
                 public string OwnerName { get; set; }
 
                 /// <summary>
-                /// <para>The owner of the business object.</para>
+                /// <para>The ID of the owner of the business object.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30010010</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string OwnerUserId { get; set; }
 
                 /// <summary>
-                /// <para>The parent entity that the business object inherits from. Only common business objects support inheritance, and the parent entity must be online.</para>
+                /// <para>The ID of the parent entity inherited by the business object. Only common business objects can be configured to inherit entities, and they can only inherit online business objects.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>116306</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? ParentId { get; set; }
 
                 /// <summary>
-                /// <para>The list of associated online business entity IDs.</para>
+                /// <para>The list of IDs of associated online business entities.</para>
                 /// </summary>
                 [NameInMap("RefBizEntityIdList")]
                 [Validation(Required=false)]
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? RefDimTableCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of associated aggregate tables.</para>
+                /// <para>The number of associated logical aggregate tables.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? RefSummaryTableCount { get; set; }
 
                 /// <summary>
-                /// <para>The status. For more information, refer to the query business entity details operation.</para>
+                /// <para>The status. For more information, see the operation for querying business entity details.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The object type of the business object. For more information, refer to the query business entity details operation.</para>
+                /// <para>The object type of the business object. For more information, see the operation for querying business entity details.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>NORMAL</para>
@@ -220,14 +220,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The business process.</para>
+            /// <para>The business activity.</para>
             /// </summary>
             [NameInMap("BizProcess")]
             [Validation(Required=false)]
             public GetBizEntityInfoByVersionResponseBodyBizEntityInfoBizProcess BizProcess { get; set; }
             public class GetBizEntityInfoByVersionResponseBodyBizEntityInfoBizProcess : TeaModel {
                 /// <summary>
-                /// <para>The approval flow ID.</para>
+                /// <para>The ID of the approval process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>221323121212</para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ApprovalId { get; set; }
 
                 /// <summary>
-                /// <para>The approval status. For more information, refer to the query business entity details operation.</para>
+                /// <para>The approval status. For more information, see the operation for querying business entity details.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>APPROVING</para>
@@ -247,14 +247,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ApprovalStatus { get; set; }
 
                 /// <summary>
-                /// <para>The list of business event activity IDs contained in the business flow activity. This parameter is valid only when the type is a business flow activity.</para>
+                /// <para>The list of business event activity IDs included in the business process activity. This field is valid only when the entity is a business process activity.</para>
                 /// </summary>
                 [NameInMap("BizEventEntityIdList")]
                 [Validation(Required=false)]
                 public List<long?> BizEventEntityIdList { get; set; }
 
                 /// <summary>
-                /// <para>The description of the business process.</para>
+                /// <para>The description of the business activity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -264,17 +264,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The display name of the business process.</para>
+                /// <para>The display name of the business activity.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>业务活动测试</para>
+                /// <para>Business activity test</para>
                 /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
                 public string DisplayName { get; set; }
 
                 /// <summary>
-                /// <para>The creation time.</para>
+                /// <para>The time when the business object was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-10-10 10:00:00</para>
@@ -284,7 +284,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The update time.</para>
+                /// <para>The time when the business object was last updated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-10-10 10:00:00</para>
@@ -294,14 +294,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the business process is depended on by other entities.</para>
+                /// <para>Indicates whether the business process activity has dependents.</para>
                 /// </summary>
                 [NameInMap("HasDependent")]
                 [Validation(Required=false)]
                 public bool? HasDependent { get; set; }
 
                 /// <summary>
-                /// <para>The business process ID.</para>
+                /// <para>The ID of the business activity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1011</para>
@@ -324,14 +324,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The name of the user who last modified the business object.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>张三</para>
+                /// <para>Zhang San</para>
                 /// </summary>
                 [NameInMap("LastModifierName")]
                 [Validation(Required=false)]
                 public string LastModifierName { get; set; }
 
                 /// <summary>
-                /// <para>The name of the business process.</para>
+                /// <para>The name of the business activity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>create_process_code_name</para>
@@ -341,7 +341,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The online status. For more information, refer to the query business entity details operation.</para>
+                /// <para>The online status. For more information, see the operation for querying business entity details.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -351,17 +351,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string OnlineStatus { get; set; }
 
                 /// <summary>
-                /// <para>The owner of the business object.</para>
+                /// <para>The ID of the owner of the business object.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>张三</para>
+                /// <para>Zhang San</para>
                 /// </summary>
                 [NameInMap("OwnerName")]
                 [Validation(Required=false)]
                 public string OwnerName { get; set; }
 
                 /// <summary>
-                /// <para>The owner of the business object.</para>
+                /// <para>The ID of the owner of the business object.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30010010</para>
@@ -371,21 +371,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string OwnerUserId { get; set; }
 
                 /// <summary>
-                /// <para>The preceding business flow activities of the business flow activity.</para>
+                /// <para>The preceding business process activities of the current business process activity.</para>
                 /// </summary>
                 [NameInMap("PreBizProcessIdList")]
                 [Validation(Required=false)]
                 public List<long?> PreBizProcessIdList { get; set; }
 
                 /// <summary>
-                /// <para>The list of associated online business entity IDs.</para>
+                /// <para>The list of IDs of associated online business entities.</para>
                 /// </summary>
                 [NameInMap("RefBizEntityIdList")]
                 [Validation(Required=false)]
                 public List<long?> RefBizEntityIdList { get; set; }
 
                 /// <summary>
-                /// <para>The number of associated fact tables.</para>
+                /// <para>The number of associated logical fact tables.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -395,7 +395,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? RefFactTableCount { get; set; }
 
                 /// <summary>
-                /// <para>The status. For more information, refer to the query business entity details operation.</para>
+                /// <para>The status. For more information, see the operation for querying business entity details.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -405,7 +405,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The type of the business process. For more information, refer to the query business entity details operation.</para>
+                /// <para>The type of the business activity. For more information, see the operation for querying business entity details.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>BIZ_EVENT</para>
@@ -417,7 +417,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The business unit ID of the business object.</para>
+            /// <para>The ID of the business unit to which the business object belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6798087749072704</para>
@@ -427,7 +427,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? BizUnitId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the subject domain to which the entity belongs.</para>
+            /// <para>The ID of the data domain to which the entity belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20101011</para>
@@ -437,7 +437,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? DataDomainId { get; set; }
 
             /// <summary>
-            /// <para>The type of the business entity. For more information, refer to the query business entity details operation.</para>
+            /// <para>The business entity type. For more information, see the Query business entity details API operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>BIZ_OBJECT</para>
@@ -449,7 +449,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// <para>The error code. A value of OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -489,7 +489,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

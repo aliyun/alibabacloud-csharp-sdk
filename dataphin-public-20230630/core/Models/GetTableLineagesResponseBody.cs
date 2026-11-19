@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetTableLineagesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The backend response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The details of the backend exception.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? InputProjectId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the input table has been deleted.</para>
+            /// <para>Indicates whether the input table is deleted.</para>
             /// </summary>
             [NameInMap("InputTableDeleted")]
             [Validation(Required=false)]
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string InputTableEnv { get; set; }
 
             /// <summary>
-            /// <para>The GUID of the input table. Each asset has a unique identifier.</para>
+            /// <para>The GUID of the input table, which is the unique identifier of each asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123211</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string InputTableName { get; set; }
 
             /// <summary>
-            /// <para>The environment to which the task belongs. Valid values: dev and prod.</para>
+            /// <para>The environment to which the node belongs. Valid values: dev and prod.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string NodeEnv { get; set; }
 
             /// <summary>
-            /// <para>The task ID associated with the lineage.</para>
+            /// <para>The ID of the node corresponding to the lineage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>110021</para>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? OutputProjectId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the output table has been deleted.</para>
+            /// <para>Indicates whether the output table is deleted.</para>
             /// </summary>
             [NameInMap("OutputTableDeleted")]
             [Validation(Required=false)]
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string OutputTableEnv { get; set; }
 
             /// <summary>
-            /// <para>The GUID of the output table. Each asset has a unique identifier.</para>
+            /// <para>The GUID of the output table, which is the unique identifier of each asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2231</para>

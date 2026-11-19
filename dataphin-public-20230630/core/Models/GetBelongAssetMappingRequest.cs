@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetBelongAssetMappingRequestAssetMappingQuery AssetMappingQuery { get; set; }
         public class GetBelongAssetMappingRequestAssetMappingQuery : TeaModel {
             /// <summary>
-            /// <para>The GUID of the owning asset.</para>
+            /// <para>The GUID of the parent asset.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string BelongGuid { get; set; }
 
             /// <summary>
-            /// <para>The type of the mapping relationship. Valid values: VALID (mapped) and INVALID (invalid mapping).</para>
+            /// <para>The mapping relationship type. Valid values: VALID for mapped, INVALID for invalid mapping.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VALID</para>

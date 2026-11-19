@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The result of creating relationship records in batches.</para>
+        /// <para>The result of creating relation records in batches.</para>
         /// </summary>
         [NameInMap("CreateResult")]
         [Validation(Required=false)]
         public BatchCreateKgRelationResponseBodyCreateResult CreateResult { get; set; }
         public class BatchCreateKgRelationResponseBodyCreateResult : TeaModel {
             /// <summary>
-            /// <para>The number of failed records.</para>
+            /// <para>The number of failed creations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? FailCount { get; set; }
 
             /// <summary>
-            /// <para>The number of successfully created records.</para>
+            /// <para>The number of successful creations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? SuccessCount { get; set; }
 
             /// <summary>
-            /// <para>The list of successfully created entity records.</para>
+            /// <para>The list of successfully created relation records.</para>
             /// </summary>
             [NameInMap("SuccessRelationList")]
             [Validation(Required=false)]
             public List<BatchCreateKgRelationResponseBodyCreateResultSuccessRelationList> SuccessRelationList { get; set; }
             public class BatchCreateKgRelationResponseBodyCreateResultSuccessRelationList : TeaModel {
                 /// <summary>
-                /// <para>The relationship record ID.</para>
+                /// <para>The relation record ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abc-xxx</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string RelationId { get; set; }
 
                 /// <summary>
-                /// <para>The relationship type code.</para>
+                /// <para>The relation type code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>BELONG_TO</para>
@@ -72,6 +72,26 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 [NameInMap("RelationType")]
                 [Validation(Required=false)]
                 public string RelationType { get; set; }
+
+                /// <summary>
+                /// <para>The source entity ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>e1d4559a4db044158305e2d89bccf81f</para>
+                /// </summary>
+                [NameInMap("SourceEntityId")]
+                [Validation(Required=false)]
+                public string SourceEntityId { get; set; }
+
+                /// <summary>
+                /// <para>The target entity ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>e1d4559a4db044158305e2d89bccf82f</para>
+                /// </summary>
+                [NameInMap("TargetEntityId")]
+                [Validation(Required=false)]
+                public string TargetEntityId { get; set; }
 
             }
 

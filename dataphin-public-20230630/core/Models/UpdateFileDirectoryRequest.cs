@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class UpdateFileDirectoryRequest : TeaModel {
         /// <summary>
-        /// <para>The updated file folder after the move.</para>
+        /// <para>The new directory of the file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>/xx测试/目录new</para>
+        /// <para>/xxTest/directoryNew</para>
         /// </summary>
         [NameInMap("Directory")]
         [Validation(Required=false)]
@@ -43,6 +43,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

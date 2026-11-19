@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend response exception.</para>
+        /// <para>The backend exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The data classification level details.</para>
+        /// <para>The details of the data classification level.</para>
         /// </summary>
         [NameInMap("SecurityLevelInfo")]
         [Validation(Required=false)]
         public GetSecurityLevelResponseBodySecurityLevelInfo SecurityLevelInfo { get; set; }
         public class GetSecurityLevelResponseBodySecurityLevelInfo : TeaModel {
             /// <summary>
-            /// <para>The abbreviated name of the data classification level.</para>
+            /// <para>The abbreviation of the data classification level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The sensitivity level of the data classification.</para>
+            /// <para>The sensitivity of the data classification level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The list of data categorization IDs associated with the current data classification level.</para>
+            /// <para>The list of data category IDs associated with the current data classification level.</para>
             /// </summary>
             [NameInMap("RelatedClassifyIdList")]
             [Validation(Required=false)]
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

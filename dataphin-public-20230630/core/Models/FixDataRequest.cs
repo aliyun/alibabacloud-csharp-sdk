@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         /// <summary>
         /// <para>The environment identifier. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DEV: development environment. </description></item>
-        /// <item><description>PROD (default): production environment.</description></item>
+        /// <item><description>DEV: development environment </description></item>
+        /// <item><description>PROD: production environment (default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Env { get; set; }
 
         /// <summary>
-        /// <para>The command to rerun downstream nodes to fix data link issues. You can choose to force a rerun.</para>
+        /// <para>Reruns downstream nodes to repair pipeline data and allows you to force the rerun.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("FixDataCommand")]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public FixDataRequestFixDataCommand FixDataCommand { get; set; }
         public class FixDataRequestFixDataCommand : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to rerun the root instance. If you do not specify this parameter, the default value is true.</para>
+            /// <para>Specifies whether to rerun the root instance. Default value: true.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? ContainRootInstance { get; set; }
 
             /// <summary>
-            /// <para>The downstream instances. If you have specified a downstream range, you do not need to specify this parameter. Otherwise, you must specify the list of downstream instances.</para>
+            /// <para>The downstream instances. If a downstream range is selected, you do not need to specify this parameter. Otherwise, you must provide a list of downstream instances.</para>
             /// </summary>
             [NameInMap("DownStreamInstanceIdList")]
             [Validation(Required=false)]
@@ -70,10 +70,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The downstream range. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ALL_FAILED_INSTANCE: all failed instances.</description></item>
-            /// <item><description>ALL_INSTANCE: all instances.</description></item>
-            /// <item><description>ALL_FINAL_INSTANCE: all desired state instances.</description></item>
-            /// <item><description>If you do not specify this parameter, the rerun is performed based on the specified downstream instances.</description></item>
+            /// <item><description>ALL_FAILED_INSTANCE: all failed instances</description></item>
+            /// <item><description>ALL_INSTANCE: all instances</description></item>
+            /// <item><description>ALL_FINAL_INSTANCE: all instances in the desired state
+            /// If you do not specify this parameter, the rerun is performed based on the specified downstream instances.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DownstreamRange { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to force a rerun.</para>
+            /// <para>Specifies whether to force the rerun.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public FixDataRequestFixDataCommandRootInstanceId RootInstanceId { get; set; }
             public class FixDataRequestFixDataCommandRootInstanceId : TeaModel {
                 /// <summary>
-                /// <para>The field IDs. This parameter is available when the node is a logical table instance ID. If you do not specify this parameter, the full table is used by default.</para>
+                /// <para>The field instance IDs. This parameter is applicable when the node is a logical table instance. If you do not specify this parameter, the entire table is used by default.</para>
                 /// </summary>
                 [NameInMap("FieldInstanceIdList")]
                 [Validation(Required=false)]
@@ -146,6 +146,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

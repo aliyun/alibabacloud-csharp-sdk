@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? NeedUpstream { get; set; }
 
             /// <summary>
-            /// <para>The environment of the nodes to query. Valid values: dev and prod.</para>
+            /// <para>The environment of the node to query. Valid values: dev and prod.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string NodeEnv { get; set; }
 
             /// <summary>
-            /// <para>The list of node IDs to filter.</para>
+            /// <para>The list of node IDs to query.</para>
             /// </summary>
             [NameInMap("NodeIdList")]
             [Validation(Required=false)]
@@ -68,6 +68,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -76,7 +78,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>The GUID of the table, which is the unique identifier of the asset.</para>
+        /// <para>The GUID of the table, which uniquely identifies the asset.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

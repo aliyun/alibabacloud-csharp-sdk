@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -37,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpdateKgRelationRequestUpdateCommand UpdateCommand { get; set; }
         public class UpdateKgRelationRequestUpdateCommand : TeaModel {
             /// <summary>
-            /// <para>The list of relationship record properties.</para>
+            /// <para>The relationship record property list.</para>
             /// </summary>
             [NameInMap("PropertyList")]
             [Validation(Required=false)]
