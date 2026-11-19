@@ -10227,6 +10227,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["ExternalDomainId"] = request.ExternalDomainId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Platforms))
+            {
+                query["Platforms"] = request.Platforms;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProfileRoaming))
             {
                 query["ProfileRoaming"] = request.ProfileRoaming;
@@ -10304,6 +10308,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalDomainId))
             {
                 query["ExternalDomainId"] = request.ExternalDomainId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Platforms))
+            {
+                query["Platforms"] = request.Platforms;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProfileRoaming))
             {
@@ -15970,7 +15978,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a drive.</para>
+        /// <para>Deletes a cloud drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15987,9 +15995,21 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainId))
+            {
+                query["DomainId"] = request.DomainId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DriveId))
             {
                 query["DriveId"] = request.DriveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -16016,7 +16036,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a drive.</para>
+        /// <para>Deletes a cloud drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16033,9 +16053,21 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainId))
+            {
+                query["DomainId"] = request.DomainId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DriveId))
             {
                 query["DriveId"] = request.DriveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -16062,7 +16094,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a drive.</para>
+        /// <para>Deletes a cloud drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16080,7 +16112,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a drive.</para>
+        /// <para>Deletes a cloud drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28002,7 +28034,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all attributes of an office network, including the ID, name, status, and creation time.</para>
+        /// <para>Queries all properties of an office network, including the ID, name, status, and creation time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28076,7 +28108,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all attributes of an office network, including the ID, name, status, and creation time.</para>
+        /// <para>Queries all properties of an office network, including the ID, name, status, and creation time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28150,7 +28182,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all attributes of an office network, including the ID, name, status, and creation time.</para>
+        /// <para>Queries all properties of an office network, including the ID, name, status, and creation time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28168,7 +28200,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all attributes of an office network, including the ID, name, status, and creation time.</para>
+        /// <para>Queries all properties of an office network, including the ID, name, status, and creation time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37166,6 +37198,166 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await HibernateDesktopsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports a UPM user VHD.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImportDriveRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportDriveResponse
+        /// </returns>
+        public ImportDriveResponse ImportDriveWithOptions(ImportDriveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainId))
+            {
+                query["DomainId"] = request.DomainId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceUpdate))
+            {
+                query["ForceUpdate"] = request.ForceUpdate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MountUrl))
+            {
+                query["MountUrl"] = request.MountUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Platform))
+            {
+                query["Platform"] = request.Platform;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportDrive",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportDriveResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports a UPM user VHD.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImportDriveRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportDriveResponse
+        /// </returns>
+        public async Task<ImportDriveResponse> ImportDriveWithOptionsAsync(ImportDriveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainId))
+            {
+                query["DomainId"] = request.DomainId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceUpdate))
+            {
+                query["ForceUpdate"] = request.ForceUpdate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MountUrl))
+            {
+                query["MountUrl"] = request.MountUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Platform))
+            {
+                query["Platform"] = request.Platform;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportDrive",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportDriveResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports a UPM user VHD.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImportDriveRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportDriveResponse
+        /// </returns>
+        public ImportDriveResponse ImportDrive(ImportDriveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ImportDriveWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports a UPM user VHD.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImportDriveRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportDriveResponse
+        /// </returns>
+        public async Task<ImportDriveResponse> ImportDriveAsync(ImportDriveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ImportDriveWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -46170,7 +46362,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic attributes of an office network (formerly workspace), such as the office network name and whether to grant local administrator permissions to cloud computer users.</para>
+        /// <para>Modifies the basic properties of an office network (formerly workspace), such as the office network name and whether to grant local administrator permissions to users of cloud desktops.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46210,6 +46402,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAdminAccess))
             {
                 query["EnableAdminAccess"] = request.EnableAdminAccess;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableUpm))
+            {
+                query["EnableUpm"] = request.EnableUpm;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedVerifyLoginRisk))
             {
@@ -46260,7 +46456,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic attributes of an office network (formerly workspace), such as the office network name and whether to grant local administrator permissions to cloud computer users.</para>
+        /// <para>Modifies the basic properties of an office network (formerly workspace), such as the office network name and whether to grant local administrator permissions to users of cloud desktops.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46300,6 +46496,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAdminAccess))
             {
                 query["EnableAdminAccess"] = request.EnableAdminAccess;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableUpm))
+            {
+                query["EnableUpm"] = request.EnableUpm;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedVerifyLoginRisk))
             {
@@ -46350,7 +46550,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic attributes of an office network (formerly workspace), such as the office network name and whether to grant local administrator permissions to cloud computer users.</para>
+        /// <para>Modifies the basic properties of an office network (formerly workspace), such as the office network name and whether to grant local administrator permissions to users of cloud desktops.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46368,7 +46568,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic attributes of an office network (formerly workspace), such as the office network name and whether to grant local administrator permissions to cloud computer users.</para>
+        /// <para>Modifies the basic properties of an office network (formerly workspace), such as the office network name and whether to grant local administrator permissions to users of cloud desktops.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56602,7 +56802,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from cloud desktops. After a tag is removed, if the tag is not added to any cloud desktop, the tag is automatically deleted.</para>
+        /// <para>Removes tags from cloud computers. If a removed tag is not added to any cloud computer, the tag is automatically deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56660,7 +56860,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from cloud desktops. After a tag is removed, if the tag is not added to any cloud desktop, the tag is automatically deleted.</para>
+        /// <para>Removes tags from cloud computers. If a removed tag is not added to any cloud computer, the tag is automatically deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56718,7 +56918,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from cloud desktops. After a tag is removed, if the tag is not added to any cloud desktop, the tag is automatically deleted.</para>
+        /// <para>Removes tags from cloud computers. If a removed tag is not added to any cloud computer, the tag is automatically deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56736,7 +56936,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from cloud desktops. After a tag is removed, if the tag is not added to any cloud desktop, the tag is automatically deleted.</para>
+        /// <para>Removes tags from cloud computers. If a removed tag is not added to any cloud computer, the tag is automatically deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">

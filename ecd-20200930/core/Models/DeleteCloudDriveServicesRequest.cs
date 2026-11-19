@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DeleteCloudDriveServicesRequest : TeaModel {
         /// <summary>
-        /// <para>The list of Wuying cloud disk IDs.</para>
+        /// <para>The IDs of the Wuying cloud disks.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CdsId")]

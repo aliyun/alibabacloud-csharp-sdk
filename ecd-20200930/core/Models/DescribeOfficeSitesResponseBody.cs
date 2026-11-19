@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeOfficeSitesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token for the next query. If NextToken is empty, no more results exist.</para>
+        /// <para>The token used to start the next query. An empty NextToken indicates that no further results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The collection of office network information.</para>
+        /// <para>The office network information.</para>
         /// </summary>
         [NameInMap("OfficeSites")]
         [Validation(Required=false)]
         public List<DescribeOfficeSitesResponseBodyOfficeSites> OfficeSites { get; set; }
         public class DescribeOfficeSitesResponseBodyOfficeSites : TeaModel {
             /// <summary>
-            /// <para>The collection of AD Connector information.</para>
+            /// <para>The AD connector information.</para>
             /// </summary>
             [NameInMap("ADConnectors")]
             [Validation(Required=false)]
             public List<DescribeOfficeSitesResponseBodyOfficeSitesADConnectors> ADConnectors { get; set; }
             public class DescribeOfficeSitesResponseBodyOfficeSitesADConnectors : TeaModel {
                 /// <summary>
-                /// <para>The connection address of the AD Connector.</para>
+                /// <para>The endpoint of the AD connector.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>172.24.<em>.</em></para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string ADConnectorAddress { get; set; }
 
                 /// <summary>
-                /// <para>The status of the AD Connector.</para>
+                /// <para>The status of the AD connector.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>RUNNING</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string ConnectorStatus { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the elastic network interface (ENI) attached to the AD Connector.</para>
+                /// <para>The ID of the network interface attached to the AD connector.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eni-bp1i4wx78lgosrj6****</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string NetworkInterfaceId { get; set; }
 
                 /// <summary>
-                /// <para>The specification of the AD Connector.</para>
+                /// <para>The specifications of the AD connector.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string Specification { get; set; }
 
                 /// <summary>
-                /// <para>The trust password specified when configuring the AD trust relationship.</para>
+                /// <para>The trust password configured for the AD trust relationship.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>password123***</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string TrustKey { get; set; }
 
                 /// <summary>
-                /// <para>The vSwitch ID of the network where the AD Connector resides.</para>
+                /// <para>The ID of the vSwitch to which the AD connector is connected.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vsw-bp19ocz3erfx15uon****</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The ID of the Global Accelerator (GA) instance.</para>
+            /// <para>The instance ID of the Alibaba Cloud Global Accelerator (GA).</para>
             /// 
             /// <b>Example:</b>
             /// <para>ga-bp1astu3yrplkzoo2****</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string AcceleratorId { get; set; }
 
             /// <summary>
-            /// <para>The access attribute of the office network (workspace).</para>
+            /// <para>The access attributes of the office network (workspace).</para>
             /// 
             /// <b>Example:</b>
             /// <para>Private</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string AdHostname { get; set; }
 
             /// <summary>
-            /// <para>The authority URL of the identity authentication service.</para>
+            /// <para>The authority address of the identity authentication service.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://login.microsoftonline.com">https://login.microsoftonline.com</a></para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string BackupDns { get; set; }
 
             /// <summary>
-            /// <para>The peak public bandwidth. Valid values: 0 to 1000 Mbps.<br>If the value is empty or 0, Internet access is not enabled.</para>
+            /// <para>The peak Internet bandwidth. Valid values: 0 to 1000 Mbps. If this parameter is empty or set to 0, Internet access is not enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CenId { get; set; }
 
             /// <summary>
-            /// <para>The IPv4 CIDR block of the office network VPC.</para>
+            /// <para>The IPv4 CIDR block of the VPC for the office network.</para>
             /// 
             /// <b>Example:</b>
             /// <para>47.100.XX.XX</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The client ID registered with the identity provider application.</para>
+            /// <para>The client ID registered for the identity provider application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a2c8f7e4-1b3d-4c5e-9f0a-6d7b8c9e****</para>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ClientId { get; set; }
 
             /// <summary>
-            /// <para>The client secret registered with the identity provider application.</para>
+            /// <para>The client secret registered for the identity provider application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sct-9f3e2d1c****</para>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ClientSecret { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the office network is a CloudBox office network.</para>
+            /// <para>Specifies whether the office network is a CloudBox office network.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? CloudBoxOfficeSite { get; set; }
 
             /// <summary>
-            /// <para>The time when the office network was created. The time is in the ISO 8601 standard format (UTC).</para>
+            /// <para>The time when the office network was created. The time is displayed in UTC and follows the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-05-06T05:58Z</para>
@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public List<string> CustomDnsAddress { get; set; }
 
             /// <summary>
-            /// <para>The security group ID.</para>
+            /// <para>The ID of the security group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-bp1ce64o4g9mdf5u****</para>
@@ -283,9 +283,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CustomSecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The access method allowed for connecting to cloud computers.</para>
+            /// <para>The allowed connection methods for cloud desktops.</para>
             /// <remarks>
-            /// <para>The VPC connection method depends on the Alibaba Cloud PrivateLink service, which is free of charge. When this parameter is set to <c>VPC</c> or <c>Any</c>, the system automatically activates the PrivateLink service for you.</para>
+            /// <para>The VPC connection method relies on Alibaba Cloud PrivateLink, which is provided free of charge. If you set this parameter to <c>VPC</c> or <c>Any</c>, the system automatically activates PrivateLink.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -296,7 +296,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopAccessType { get; set; }
 
             /// <summary>
-            /// <para>The number of cloud computers that have been created.</para>
+            /// <para>The number of cloud computers created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -306,7 +306,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? DesktopCount { get; set; }
 
             /// <summary>
-            /// <para>The endpoint used for VPC connections to cloud computers.</para>
+            /// <para>The endpoint used to connect to cloud desktops from a VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://ep-bp1s2vmbj55r5rzc****.epsrv-bp1pcfhpwvlpny01****.cn-hangzhou.privatelink.aliyuncs.com">http://ep-bp1s2vmbj55r5rzc****.epsrv-bp1pcfhpwvlpny01****.cn-hangzhou.privatelink.aliyuncs.com</a></para>
@@ -316,7 +316,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopVpcEndpoint { get; set; }
 
             /// <summary>
-            /// <para>The array of DNS addresses corresponding to the AD domain.</para>
+            /// <para>The array of DNS addresses for the AD domain.</para>
             /// </summary>
             [NameInMap("DnsAddress")]
             [Validation(Required=false)]
@@ -373,7 +373,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Eid { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether local administrator permissions are granted to users of cloud computers.</para>
+            /// <para>Specifies whether to grant local administrator permissions to users of cloud desktops.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -383,7 +383,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? EnableAdminAccess { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether cross-cloud-computer access within the office network is enabled. After this feature is enabled, cloud computers within the same office network can access each other over the network.</para>
+            /// <para>Specifies whether to enable network connectivity between cloud desktops in the office network. After you enable this feature, cloud desktops in the same office network can access each other.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -393,7 +393,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? EnableCrossDesktopAccess { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether public network access is enabled.</para>
+            /// <para>Specifies whether the public network access feature is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -403,7 +403,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? EnableInternetAccess { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether cloud service route access control is enabled.</para>
+            /// <para>Specifies whether access control for cloud service routing is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -413,7 +413,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? EnableServiceRoute { get; set; }
 
             /// <summary>
-            /// <para>The environment type. This parameter is not publicly available.</para>
+            /// <para>The environment type. This field is not publicly available.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Private</para>
@@ -423,21 +423,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EnvType { get; set; }
 
             /// <summary>
-            /// <para>The array of NAS file system IDs.</para>
+            /// <para>The NAS file system IDs.</para>
             /// </summary>
             [NameInMap("FileSystemIds")]
             [Validation(Required=false)]
             public List<string> FileSystemIds { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the directory is an LDAP directory.</para>
+            /// <para>Specifies whether the directory is an LDAP directory.</para>
             /// </summary>
             [NameInMap("IsLdap")]
             [Validation(Required=false)]
             public bool? IsLdap { get; set; }
 
             /// <summary>
-            /// <para>The access URL of the LDAP service.</para>
+            /// <para>The access address of the LDAP service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ldap://192.168.0.10:389</para>
@@ -464,7 +464,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string Level { get; set; }
 
                 /// <summary>
-                /// <para>The detailed log information.</para>
+                /// <para>The detailed log message.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>code:success | message:Create Connector complete</para>
@@ -484,7 +484,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string Step { get; set; }
 
                 /// <summary>
-                /// <para>The time when the log was generated. The time is in the ISO 8601 standard format (UTC).</para>
+                /// <para>The time when the log was generated. The time is displayed in UTC and follows the ISO 8601 standard.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-05-12T09:42Z</para>
@@ -496,7 +496,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether multi-factor authentication (MFA) is enabled.</para>
+            /// <para>Specifies whether to enable multi-factor authentication (MFA).</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -506,17 +506,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? MfaEnabled { get; set; }
 
             /// <summary>
-            /// <para>The name of the office network. The name is unique within a region.</para>
+            /// <para>The name of the office network. The name must be unique within a region.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>R&amp;D_Office_Network</para>
+            /// <para>R&amp;D Department Office Network</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Applicable only to convenience account office networks. Indicates whether secondary verification is required during logon. If logon secondary verification is enabled, the system checks whether the logon account has security risks when a convenience user logs on to the client. If a risk is detected, the system sends a verification code to the email address associated with the account. The convenience user can log on to the client only after passing the verification code check.</para>
+            /// <para>Specifies whether secondary authentication is required during logon. This parameter applies only to convenience account office networks. If secondary authentication is enabled, the system checks for security risks when a convenience user logs on to the client. If a risk is detected, the system sends a verification code to the mailbox associated with the account. The user must authenticate with the verification code to log on to the client.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -526,7 +526,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? NeedVerifyLoginRisk { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether trusted device verification is enabled.</para>
+            /// <para>Specifies whether trusted device verification is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -536,7 +536,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? NeedVerifyZeroDevice { get; set; }
 
             /// <summary>
-            /// <para>The Internet access package ID.</para>
+            /// <para>The ID of the Internet access package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>np-amtp8e8q1o9e4****</para>
@@ -546,7 +546,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string NetworkPackageId { get; set; }
 
             /// <summary>
-            /// <para>The network version. The new version supports products such as Wuying Cloud Application.</para>
+            /// <para>The network version. The new version supports products such as WUYING Cloud Application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NM</para>
@@ -556,7 +556,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string NmVersion { get; set; }
 
             /// <summary>
-            /// <para>The office network ID.</para>
+            /// <para>The ID of the office network.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou+dir-363353****</para>
@@ -606,7 +606,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RdsLicenseAddress { get; set; }
 
             /// <summary>
-            /// <para>The domain name where the RDS license resides.</para>
+            /// <para>The domain name where the RDS license is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -626,14 +626,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RdsLicenseStatus { get; set; }
 
             /// <summary>
-            /// <para>The list of resource quantities.</para>
+            /// <para>The list of resource counts.</para>
             /// </summary>
             [NameInMap("ResourceAmounts")]
             [Validation(Required=false)]
             public List<DescribeOfficeSitesResponseBodyOfficeSitesResourceAmounts> ResourceAmounts { get; set; }
             public class DescribeOfficeSitesResponseBodyOfficeSitesResourceAmounts : TeaModel {
                 /// <summary>
-                /// <para>The number of resources.</para>
+                /// <para>The resource count.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -665,7 +665,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string SecurityProtection { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether Single Sign-On (SSO) is enabled.</para>
+            /// <para>Specifies whether to enable single sign-on (SSO).</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -685,7 +685,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string SsoType { get; set; }
 
             /// <summary>
-            /// <para>The office network status.</para>
+            /// <para>The status of the office network.</para>
             /// 
             /// <b>Example:</b>
             /// <para>REGISTERED</para>
@@ -702,7 +702,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public List<string> SubDnsAddress { get; set; }
 
             /// <summary>
-            /// <para>The username of the AD subdomain DNS.</para>
+            /// <para>The username for the DNS of the AD subdomain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testSubDnsUserName</para>
@@ -732,7 +732,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string TenantId { get; set; }
 
             /// <summary>
-            /// <para>The number of cloud computers.</para>
+            /// <para>The total number of cloud computers.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -742,7 +742,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? TotalEdsCount { get; set; }
 
             /// <summary>
-            /// <para>The number of cloud computers in shared cloud computer pools.</para>
+            /// <para>The number of cloud computers in a shared cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -752,7 +752,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? TotalEdsCountForGroup { get; set; }
 
             /// <summary>
-            /// <para>The total number of network interface controllers (NICs).</para>
+            /// <para>The total number of network interfaces.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -763,7 +763,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is not yet available.</para>
+            /// <para>This parameter is not available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -774,7 +774,27 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string TrustPassword { get; set; }
 
             /// <summary>
-            /// <para>The array of vSwitch IDs.</para>
+            /// <para>The logical UPM domain ID bound to the workspace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>dom-abc****</para>
+            /// </summary>
+            [NameInMap("UpmDomainId")]
+            [Validation(Required=false)]
+            public string UpmDomainId { get; set; }
+
+            /// <summary>
+            /// <para>The UPM status of the workspace. Valid values: UNBOUND, BINDING, BOUND, UNBINDING, and FAILED.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>BUND</para>
+            /// </summary>
+            [NameInMap("UpmStatus")]
+            [Validation(Required=false)]
+            public string UpmStatus { get; set; }
+
+            /// <summary>
+            /// <para>The vSwitch IDs.</para>
             /// </summary>
             [NameInMap("VSwitchIds")]
             [Validation(Required=false)]

@@ -66,6 +66,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ExternalDomainId { get; set; }
 
         /// <summary>
+        /// <para>The list of image platforms for which to initialize VHDs, such as WINDOWS_SERVER_2025. This parameter applies to UPM binding scenarios such as workspaces, desktop pools, and cloud application delivery groups. If you specify this parameter, the VHDs are initialized based on the specified platforms. If you do not specify this parameter, the original platform derivation rules for each scenario are used.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;WINDOWS_11&quot;,&quot;WINDOWS_SERVER_2025&quot;]</para>
+        /// </summary>
+        [NameInMap("Platforms")]
+        [Validation(Required=false)]
+        public List<string> Platforms { get; set; }
+
+        /// <summary>
         /// <remarks>
         /// <para><b>[Deprecated]</b></para>
         /// </remarks>

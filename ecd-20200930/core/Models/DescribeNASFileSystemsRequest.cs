@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeNASFileSystemsRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the NAS file systems.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>04f314****</para>
+        /// <para>The list of NAS file system IDs.</para>
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
@@ -30,9 +27,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? MatchCompatibleProfile { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page in a paging query.    </para>
+        /// <para>The number of entries to return on each page in a paging query.</para>
         /// <list type="bullet">
-        /// <item><description>Maximum value: 100.    </description></item>
+        /// <item><description>Maximum value: 100.</description></item>
         /// <item><description>Default value: 10.</description></item>
         /// </list>
         /// 
@@ -44,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set the value to the NextToken value returned from the last API call.</para>
+        /// <para>The query token. The value is the NextToken parameter value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -54,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the office network.</para>
+        /// <para>The office network ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+dir-363353****</para>
@@ -64,7 +61,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions supported by WUYING Workspace.</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported by WUYING Workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

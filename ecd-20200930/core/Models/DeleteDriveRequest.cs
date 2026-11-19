@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DeleteDriveRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dom-aaaa****</para>
+        /// </summary>
+        [NameInMap("DomainId")]
+        [Validation(Required=false)]
+        public string DomainId { get; set; }
+
+        /// <summary>
         /// <para>The ID of the user-level storage resource.</para>
         /// 
         /// <b>Example:</b>
@@ -18,6 +28,26 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("DriveId")]
         [Validation(Required=false)]
         public string DriveId { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the end user. This parameter is used when locating the UPM drive by using DomainId or OfficeSiteId.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>abc****</para>
+        /// </summary>
+        [NameInMap("EndUserId")]
+        [Validation(Required=false)]
+        public string EndUserId { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the workspace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou+dir-467671****</para>
+        /// </summary>
+        [NameInMap("OfficeSiteId")]
+        [Validation(Required=false)]
+        public string OfficeSiteId { get; set; }
 
         /// <summary>
         /// <para>The region ID.</para>
