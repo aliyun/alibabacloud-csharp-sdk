@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateKnowledgeSpaceRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to automatically activate MCP. The specifications are fixed to polar.app.g2.medium with 2 nodes and the pay-as-you-go billing method. If you set this parameter to true, you must also explicitly set EnforceAcl to true.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("AutoCreateMcpInstance")]
+        [Validation(Required=false)]
+        public bool? AutoCreateMcpInstance { get; set; }
+
+        /// <summary>
         /// <para>The type of the database engine.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +38,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to only validate the creation request without placing an order or creating resources.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
 
         /// <summary>
         /// <para>The vector dimensions.</para>
@@ -52,7 +72,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EmbeddingModel { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enforce access control list (ACL) authentication for the knowledge space.</para>
+        /// <para>Specifies whether to enforce ACL authentication for the knowledge space.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -127,7 +147,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the rerank model.</para>
+        /// <para>The name of the reranking model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qwen3-rerank</para>
@@ -148,7 +168,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The shard size, in tokens.</para>
+        /// <para>The shard size in tokens.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -161,8 +181,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The sharding strategy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>hierarchical: hierarchical sharding. This is the default value.</description></item>
-        /// <item><description>hybrid: hybrid sharding.</description></item>
+        /// <item><description>hierarchical: The default value.</description></item>
+        /// <item><description>hybrid.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -174,7 +194,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ShardingStrategy { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch for automatic creation of the database.</para>
+        /// <para>The ID of the vSwitch for the automatic creation of the database.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -185,7 +205,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The VPC for automatic creation of the database.</para>
+        /// <para>The ID of the VPC for the automatic creation of the database.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -196,7 +216,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The active zone for automatic creation of the database.</para>
+        /// <para>The active zone for the automatic creation of the database.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -15577,7 +15577,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Prerequisites: Before you call this operation, you must activate the PrivateLink service in your current account. If the service is not activated, the API returns the PrivateLinkService.NotOpen (400) error. You can check the activation status of the service in the PrivateLink console. Before creating a knowledge space, you must also prepare the VpcId, VSwitchId, SecurityGroupId, and OSSBucket parameters. You can query VPCs and vSwitches by calling the DescribeVpcs and DescribeVSwitches operations of VPC, query security groups by calling the DescribeSecurityGroups operation of ECS, and query buckets by calling the ListBuckets operation of OSS. If the resources do not exist, create them in the corresponding services first.</para>
+        /// <para>Prerequisites: You must activate the PrivateLink service in your current account before calling this operation. If the service is not activated, the operation returns the PrivateLinkService.NotOpen (400) error. You can check the service activation status in the PrivateLink console. Before creating a knowledge space, you must also prepare a VpcId, VSwitchId, SecurityGroupId, and OSSBucket. You can query VPCs and vSwitches by calling the VPC DescribeVpcs and DescribeVSwitches operations, query security groups by calling the ECS DescribeSecurityGroups operation, and query buckets by calling the OSS ListBuckets operation. If the resources do not exist, create them in the corresponding services first.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15594,6 +15594,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoCreateMcpInstance))
+            {
+                query["AutoCreateMcpInstance"] = request.AutoCreateMcpInstance;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBType))
             {
                 query["DBType"] = request.DBType;
@@ -15601,6 +15605,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmbeddingDimension))
             {
@@ -15692,7 +15700,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Prerequisites: Before you call this operation, you must activate the PrivateLink service in your current account. If the service is not activated, the API returns the PrivateLinkService.NotOpen (400) error. You can check the activation status of the service in the PrivateLink console. Before creating a knowledge space, you must also prepare the VpcId, VSwitchId, SecurityGroupId, and OSSBucket parameters. You can query VPCs and vSwitches by calling the DescribeVpcs and DescribeVSwitches operations of VPC, query security groups by calling the DescribeSecurityGroups operation of ECS, and query buckets by calling the ListBuckets operation of OSS. If the resources do not exist, create them in the corresponding services first.</para>
+        /// <para>Prerequisites: You must activate the PrivateLink service in your current account before calling this operation. If the service is not activated, the operation returns the PrivateLinkService.NotOpen (400) error. You can check the service activation status in the PrivateLink console. Before creating a knowledge space, you must also prepare a VpcId, VSwitchId, SecurityGroupId, and OSSBucket. You can query VPCs and vSwitches by calling the VPC DescribeVpcs and DescribeVSwitches operations, query security groups by calling the ECS DescribeSecurityGroups operation, and query buckets by calling the OSS ListBuckets operation. If the resources do not exist, create them in the corresponding services first.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15709,6 +15717,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoCreateMcpInstance))
+            {
+                query["AutoCreateMcpInstance"] = request.AutoCreateMcpInstance;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBType))
             {
                 query["DBType"] = request.DBType;
@@ -15716,6 +15728,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmbeddingDimension))
             {
@@ -15807,7 +15823,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Prerequisites: Before you call this operation, you must activate the PrivateLink service in your current account. If the service is not activated, the API returns the PrivateLinkService.NotOpen (400) error. You can check the activation status of the service in the PrivateLink console. Before creating a knowledge space, you must also prepare the VpcId, VSwitchId, SecurityGroupId, and OSSBucket parameters. You can query VPCs and vSwitches by calling the DescribeVpcs and DescribeVSwitches operations of VPC, query security groups by calling the DescribeSecurityGroups operation of ECS, and query buckets by calling the ListBuckets operation of OSS. If the resources do not exist, create them in the corresponding services first.</para>
+        /// <para>Prerequisites: You must activate the PrivateLink service in your current account before calling this operation. If the service is not activated, the operation returns the PrivateLinkService.NotOpen (400) error. You can check the service activation status in the PrivateLink console. Before creating a knowledge space, you must also prepare a VpcId, VSwitchId, SecurityGroupId, and OSSBucket. You can query VPCs and vSwitches by calling the VPC DescribeVpcs and DescribeVSwitches operations, query security groups by calling the ECS DescribeSecurityGroups operation, and query buckets by calling the OSS ListBuckets operation. If the resources do not exist, create them in the corresponding services first.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15830,7 +15846,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Prerequisites: Before you call this operation, you must activate the PrivateLink service in your current account. If the service is not activated, the API returns the PrivateLinkService.NotOpen (400) error. You can check the activation status of the service in the PrivateLink console. Before creating a knowledge space, you must also prepare the VpcId, VSwitchId, SecurityGroupId, and OSSBucket parameters. You can query VPCs and vSwitches by calling the DescribeVpcs and DescribeVSwitches operations of VPC, query security groups by calling the DescribeSecurityGroups operation of ECS, and query buckets by calling the ListBuckets operation of OSS. If the resources do not exist, create them in the corresponding services first.</para>
+        /// <para>Prerequisites: You must activate the PrivateLink service in your current account before calling this operation. If the service is not activated, the operation returns the PrivateLinkService.NotOpen (400) error. You can check the service activation status in the PrivateLink console. Before creating a knowledge space, you must also prepare a VpcId, VSwitchId, SecurityGroupId, and OSSBucket. You can query VPCs and vSwitches by calling the VPC DescribeVpcs and DescribeVSwitches operations, query security groups by calling the ECS DescribeSecurityGroups operation, and query buckets by calling the OSS ListBuckets operation. If the resources do not exist, create them in the corresponding services first.</para>
         /// </description>
         /// 
         /// <param name="request">

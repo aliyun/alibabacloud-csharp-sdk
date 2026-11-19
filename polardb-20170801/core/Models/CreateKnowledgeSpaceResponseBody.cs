@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateKnowledgeSpaceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The PolarDB instance ID for automatic creation.</para>
+        /// <para>The ID of the PolarDB instance for automatic creation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-**************</para>
