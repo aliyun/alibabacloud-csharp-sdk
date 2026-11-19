@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ValueType { get; set; }
 
         /// <summary>
-        /// <para>The property value list.</para>
+        /// <para>The list of property values.</para>
         /// </summary>
         [NameInMap("Values")]
         [Validation(Required=false)]

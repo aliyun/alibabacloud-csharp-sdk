@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// <para>The ID of the account association. You must specify either the RelationId parameter, or the ParentUserId, ChildUserId, and RelationType parameters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>RelationId</para>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("RelationId")]
         [Validation(Required=false)]

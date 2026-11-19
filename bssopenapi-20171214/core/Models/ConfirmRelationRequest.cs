@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class ConfirmRelationRequest : TeaModel {
         /// <summary>
-        /// <para>The Alibaba Cloud UID of the linked account.</para>
+        /// <para>The Alibaba Cloud UID of the secondary account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1512996702208737</para>
@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// <summary>
         /// <para>The confirmation action. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>child_agree: The linked account agrees.</description></item>
-        /// <item><description>child_disagree: The linked account rejects.</description></item>
-        /// <item><description>主账号取消确认: The main account cancels the confirmation.</description></item>
+        /// <item><description>child_agree: The secondary account agrees.</description></item>
+        /// <item><description>child_disagree: The secondary account rejects.</description></item>
+        /// <item><description>parent_cancel: The primary account cancels the confirmation.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ConfirmCode { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud UID of the main account.</para>
+        /// <para>The Alibaba Cloud UID of the primary account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1738376485192612</para>
@@ -46,13 +46,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? ParentUserId { get; set; }
 
         /// <summary>
-        /// <para>The permissions granted to the linked account. Valid values:</para>
+        /// <para>The permissions granted to the secondary account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SYNCHRONIZE_FINANCE_IDENTITY: Allows synchronizing the credit-based payment identity to the linked account.</description></item>
-        /// <item><description>SYNCHRONIZE_FINANCE_DISCOUNT_POLICY_TO_TARGET: Allows synchronizing discounts to the linked account.</description></item>
-        /// <item><description>FORBID_WITHDRAW_CASH: Prohibits the linked account from withdrawing cash from the balance.</description></item>
+        /// <item><description>SYNCHRONIZE_FINANCE_IDENTITY: Allows synchronization of the credit control identity to the linked account.</description></item>
+        /// <item><description>SYNCHRONIZE_FINANCE_DISCOUNT_POLICY_TO_TARGET: Allows synchronization of discounts to the linked account.</description></item>
+        /// <item><description>FORBID_WITHDRAW_CASH: Prohibits the linked account from withdrawing the balance.</description></item>
         /// <item><description>FORBID_MANAGE_INVOICE: Prohibits the linked account from managing invoices.</description></item>
-        /// <item><description>CHECK_FINANCE_INFO: Allows requesting to view the account linking information.</description></item>
+        /// <item><description>CHECK_FINANCE_INFO: Allows requesting to view account linking information.</description></item>
         /// <item><description>MANAGE_TARGET_INVOICE: Allows managing invoices of the target account.</description></item>
         /// <item><description>CHECK_TARGET_CONSUMPTION: Allows viewing the consumption information of the linked account.</description></item>
         /// </list>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? RelationId { get; set; }
 
         /// <summary>
-        /// <para>The relationship type. Valid values: enterprise_group.</para>
+        /// <para>The relationship type. Valid value: enterprise_group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>enterprise_group</para>

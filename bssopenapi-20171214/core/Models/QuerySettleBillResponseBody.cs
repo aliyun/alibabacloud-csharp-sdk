@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string AccountName { get; set; }
 
             /// <summary>
-            /// <para>The billing cycle, in the format of YYYY-MM.</para>
+            /// <para>The billing cycle. Format: YYYY-MM.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-02</para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             }
 
             /// <summary>
-            /// <para>The maximum number of records returned in this request.</para>
+            /// <para>The maximum number of records returned in the current request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The token that indicates the position where the current call reads to. An empty value indicates that all data has been read.</para>
+            /// <para>The token that indicates the position where the current read operation ends. If this parameter is empty, all data has been read.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CAESEgoQCg4KCmdtdF9jcmVhdGUQARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</para>
@@ -261,7 +261,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

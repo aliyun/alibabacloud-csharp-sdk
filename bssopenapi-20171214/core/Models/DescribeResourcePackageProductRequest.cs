@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class DescribeResourcePackageProductRequest : TeaModel {
         /// <summary>
-        /// <para>The code of the service.</para>
+        /// <para>The product type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

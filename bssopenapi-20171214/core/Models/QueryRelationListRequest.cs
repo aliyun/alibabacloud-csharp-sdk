@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryRelationListRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. The default value is 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. The default value is 20.</para>
+        /// <para>The number of entries per page. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>A list of relationship statuses. The value is an enumeration of RelationshipStatusEnum. If you do not specify this parameter, only relationships that are in effect are queried.</para>
+        /// <para>The list of relationship statuses. The statuses are enumerated values of RelationshipStatusEnum. If you do not specify this parameter, the current effective statuses are queried by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RELATED</para>

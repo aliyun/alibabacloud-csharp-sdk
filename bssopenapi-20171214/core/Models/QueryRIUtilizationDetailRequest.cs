@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string DeductedInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The end time. Format: YYYY-MM-DD HH:mm:ss.</para>
+        /// <para>The end time. Specify the time in the YYYY-MM-DD HH:mm:ss format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The instance type corresponding to the reserved instance.</para>
+        /// <para>The instance type of the reserved instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Instancetyp</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>ecsRi: ECS reserved instances. This is the default value.</description></item>
-        /// <item><description>scu_bag: Storage capacity unit (SCU) plans.</description></item>
+        /// <item><description>scu_bag: storage capacity units (SCUs).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RIInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The start time. Format: YYYY-MM-DD HH:mm:ss.</para>
+        /// <para>The start time. Specify the time in the YYYY-MM-DD HH:mm:ss format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

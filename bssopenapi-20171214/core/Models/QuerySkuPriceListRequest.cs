@@ -64,6 +64,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// <para>The collection of pricing factor conditions. You can call the <b>QueryPriceEntityList</b> operation to query pricing factor codes and pricing factor values.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;vm_region_no&quot;:[&quot;cn-shiwei-shenshu&quot;]}</para>
         /// </summary>
         [NameInMap("PriceFactorConditionMap")]
         [Validation(Required=false)]

@@ -10,34 +10,28 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class DescribeInstanceAmortizedCostByConsumePeriodRequest : TeaModel {
         /// <summary>
-        /// <para>The filter for the amortization month.
-        /// Maximum number of elements: 10.</para>
+        /// <para>The filter for the amortization month. Maximum number of elements: 10.</para>
         /// </summary>
         [NameInMap("AmortizationPeriodFilter")]
         [Validation(Required=false)]
         public List<string> AmortizationPeriodFilter { get; set; }
 
         /// <summary>
-        /// <para>The filter for the ID of the resource owner.
-        /// The resource owner is the account that actually uses the resource.
-        /// Maximum number of elements: 10.</para>
+        /// <para>The filter for the resource ownership account. The resource ownership account ID. The resource ownership account is the account that actually uses the resources. Maximum number of elements: 10.</para>
         /// </summary>
         [NameInMap("BillOwnerIdList")]
         [Validation(Required=false)]
         public List<string> BillOwnerIdList { get; set; }
 
         /// <summary>
-        /// <para>The filter for the ID of the bill payer.
-        /// This is the ID of a RAM user. If you specify this parameter, you can view the bills of the RAM user. If you leave this parameter empty, the bills of the current account and all its RAM users are returned.
-        /// Maximum number of elements: 10.</para>
+        /// <para>The filter for the bill purchaser ID, which is the RAM user ID. Specify this parameter to view the bills of RAM users. If you leave this parameter empty, the bills of the current account and all its RAM users are queried by default. Maximum number of elements: 10.</para>
         /// </summary>
         [NameInMap("BillUserIdList")]
         [Validation(Required=false)]
         public List<string> BillUserIdList { get; set; }
 
         /// <summary>
-        /// <para>The billing cycle.
-        /// Format: YYYY-MM.</para>
+        /// <para>The billing cycle. Format: YYYY-MM.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +42,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string BillingCycle { get; set; }
 
         /// <summary>
-        /// <para>The code of the cost center.</para>
+        /// <para>The code of the cost unit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123#</para>
@@ -58,16 +52,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string CostUnitCode { get; set; }
 
         /// <summary>
-        /// <para>The filter for the instance ID.
-        /// You can query multiple instances. If you leave this parameter empty, all instances are queried.
-        /// Maximum number of elements: 10.</para>
+        /// <para>The filter for the instance ID. You can query multiple instances. If you do not specify this parameter, all instances are queried by default. Maximum number of elements: 10.</para>
         /// </summary>
         [NameInMap("InstanceIdList")]
         [Validation(Required=false)]
         public List<string> InstanceIdList { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of data records to return in this call. Default value: 20. Maximum value: 300.</para>
+        /// <para>The maximum number of data records to read in the current call. Default value: 20. Maximum value: 300.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -77,7 +69,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to retrieve the next page of results. You do not need to specify this parameter for the first request. You must set the value to the token that is returned in the previous call. If you leave this parameter empty, the query starts from the beginning.</para>
+        /// <para>The token that specifies the position where the current call starts to read. The value must be empty or set to the NextToken value returned in the previous response. Otherwise, an error occurs. An empty value indicates that the read starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CAESEgoQCg4KCmdtdF9jcmVhdGUEARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</para>
@@ -87,8 +79,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The product code.
-        /// To obtain the value of this parameter, call QueryProductList to query product information, or call DescribeResourcePackageProduct to query information about a specific resource plan.</para>
+        /// <para>The product code. You can obtain the value from the following operations:</para>
+        /// <list type="bullet">
+        /// <item><description>QueryProductList: queries product information.</description></item>
+        /// <item><description>DescribeResourcePackageProduct: queries information about a specific resource plan product.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>rds</para>
@@ -98,7 +93,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the product.</para>
+        /// <para>The product detail.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds</para>
@@ -110,10 +105,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// <summary>
         /// <para>The subscription type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Subscription: subscription.</para>
-        /// </description></item>
-        /// <item><description><para>PayAsYouGo: pay-as-you-go.</para>
-        /// </description></item>
+        /// <item><description>Subscription: subscription.</description></item>
+        /// <item><description>PayAsYouGo: pay-as-you-go.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryDPUtilizationDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The commodity code, such as ecsRi and scu_bag. If this parameter is specified, the ProdCode parameter does not take effect.</para>
+        /// <para>The commodity code, such as ecsRi or scu_bag. If this parameter is specified, the ProdCode parameter does not take effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecsRi</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include the resource plan usage of member accounts in finance trusteeship. Valid values:</para>
+        /// <para>Specifies whether to include the resource plan usage of linked accounts in finance trusteeship. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: Included.</description></item>
         /// <item><description>false: Not included.</description></item>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string InstanceSpec { get; set; }
 
         /// <summary>
-        /// <para>The token that specifies the start position of the query. Set this parameter to null for the first query. For subsequent queries, use the NextToken value returned in the previous response.</para>
+        /// <para>The token that specifies the start of the query. Set this parameter to null for the first query. For subsequent queries, use the NextToken value returned in the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CAESF***zNTAw</para>

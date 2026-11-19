@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Set the value to instance for savings plan instances.</para>
+        /// <para>The resource type. Valid value: instance: savings plan instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of tags. You can add 1 to 20 tags at a time.</para>
+        /// <para>The list of tags.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. An empty string is allowed.</para>
+            /// <para>The tag key. You can specify 1 to 20 tag keys at a time. Empty strings are allowed.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The tag value. You can specify 1 to 20 tag values at a time.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

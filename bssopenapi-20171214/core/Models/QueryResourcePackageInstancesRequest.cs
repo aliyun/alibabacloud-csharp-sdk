@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryResourcePackageInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The expiration end time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The end time of the expiration period. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-02-02T13:00:00Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ExpiryTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The expiration start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The start time of the expiration period. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-02-02T12:00:00Z</para>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryResellerAvailableQuotaRequest : TeaModel {
         /// <summary>
-        /// <para>You do not need to specify this parameter.</para>
+        /// <para>This parameter is not required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("ItemCodes")]
         [Validation(Required=false)]

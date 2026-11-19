@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public List<DescribeSavingsPlansCoverageDetailResponseBodyDataItems> Items { get; set; }
             public class DescribeSavingsPlansCoverageDetailResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The coverage percentage.</para>
+                /// <para>The coverage rate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.9</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string InstanceSpec { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the owner of the deducted commodity.</para>
+                /// <para>The ID of the owner of the deducted product.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1906589291020438</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string StartPeriod { get; set; }
 
                 /// <summary>
-                /// <para>The total expenditure.</para>
+                /// <para>The total amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>6.11</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public long? UserId { get; set; }
 
                 /// <summary>
-                /// <para>The username.</para>
+                /// <para>The account username.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="mailto:xxx@test.aliyunid.com">xxx@test.aliyunid.com</a></para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries.</para>
+            /// <para>The total number of data entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The message returned for the API call.</para>
+        /// <para>The API call message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful!</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call was successful.</para>
+        /// <para>Indicates whether the API call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

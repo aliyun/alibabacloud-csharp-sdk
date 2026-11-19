@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryBillRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the resource ownership account. The resource ownership account is the account that actually uses the resource.</para>
+        /// <para>The ID of the account with resource ownership. The account with resource ownership is the account that actually uses the resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? BillOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The billing cycle, in the YYYY-MM format.</para>
+        /// <para>The billing cycle. Format: YYYY-MM.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,10 +35,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public bool? IsDisplayLocalCurrency { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to filter out bills with a original price (PretaxGrossAmount) of 0. Default value: false (compatible with existing logic). Valid values:</para>
+        /// <para>Specifies whether to filter out bills whose original price (PretaxGrossAmount) is 0. Default value: false (for compatibility with existing logic). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: filters out zero-charge bills.</description></item>
-        /// <item><description>false: does not filter out zero-charge bills.</description></item>
+        /// <item><description>true: Yes.</description></item>
+        /// <item><description>false: No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class SetRenewalRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance. You can enable auto-renewal for up to 100 subscription instances at a time. Separate multiple instance IDs with commas (,).</para>
+        /// <para>The instance IDs. You can specify up to 100 subscription instances at a time. Separate multiple instance IDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The code of the service.</para>
+        /// <para>The product code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The type of the service.</para>
+        /// <para>The product type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The auto-renewal period. Valid values:</para>
+        /// <para>The auto-renewal period of the instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>1</description></item>
         /// <item><description>2</description></item>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// <item><description>12</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is required if the RenewalStatus parameter is set to AutoRenewal.</para>
+        /// <para>This parameter is required when RenewalStatus is set to AutoRenewal.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -66,13 +66,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? RenewalPeriod { get; set; }
 
         /// <summary>
-        /// <para>The unit of the auto-renewal period. Valid values:</para>
+        /// <para>The unit of the auto-renewal cycle. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>M: months</description></item>
-        /// <item><description>Y: years</description></item>
+        /// <item><description>M: month.</description></item>
+        /// <item><description>Y: year.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is required if the RenewalStatus parameter is set to AutoRenewal.</para>
+        /// <para>This parameter is required when RenewalStatus is set to AutoRenewal.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -83,11 +83,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RenewalPeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The status of renewal. Valid values:</para>
+        /// <para>The renewal status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AutoRenewal: The instance is automatically renewed.</description></item>
-        /// <item><description>ManualRenewal: The instance is manually renewed.</description></item>
-        /// <item><description>NotRenewal: The instance is not renewed.</description></item>
+        /// <item><description>AutoRenewal: auto-renewal.</description></item>
+        /// <item><description>ManualRenewal: manual renewal.</description></item>
+        /// <item><description>NotRenewal: no renewal.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -99,10 +99,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RenewalStatus { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Valid values:</para>
+        /// <para>The subscription type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Subscription: subscription</description></item>
-        /// <item><description>PayAsYouGo: pay-as-you-go</description></item>
+        /// <item><description>Subscription: subscription.</description></item>
+        /// <item><description>PayAsYouGo: pay-as-you-go.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

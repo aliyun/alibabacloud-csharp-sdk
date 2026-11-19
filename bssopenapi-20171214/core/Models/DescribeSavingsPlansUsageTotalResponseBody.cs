@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public List<DescribeSavingsPlansUsageTotalResponseBodyDataPeriodCoverage> PeriodCoverage { get; set; }
             public class DescribeSavingsPlansUsageTotalResponseBodyDataPeriodCoverage : TeaModel {
                 /// <summary>
-                /// <para>The usage percentage.</para>
+                /// <para>The usage rate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public float? Percentage { get; set; }
 
                 /// <summary>
-                /// <para>The time period to which the data belongs. Format: yyyyMMddHH.</para>
+                /// <para>The time period to which the data belongs, in the yyyyMMddHH format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021041500</para>
@@ -56,14 +56,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             }
 
             /// <summary>
-            /// <para>The total usage overview.</para>
+            /// <para>The overview of the total usage rate.</para>
             /// </summary>
             [NameInMap("TotalUsage")]
             [Validation(Required=false)]
             public DescribeSavingsPlansUsageTotalResponseBodyDataTotalUsage TotalUsage { get; set; }
             public class DescribeSavingsPlansUsageTotalResponseBodyDataTotalUsage : TeaModel {
                 /// <summary>
-                /// <para>The total amount of savings plans.</para>
+                /// <para>The total amount of the savings plan.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public float? SavedCost { get; set; }
 
                 /// <summary>
-                /// <para>The total usage percentage.</para>
+                /// <para>The total usage rate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The message returned for the API call.</para>
+        /// <para>The API call message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful!</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call was successful.</para>
+        /// <para>Indicates whether the API call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

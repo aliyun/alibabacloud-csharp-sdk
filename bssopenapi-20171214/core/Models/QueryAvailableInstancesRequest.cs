@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string CreateTimeStart { get; set; }
 
         /// <summary>
-        /// <para>The end time of the expiration time range. Specify the time in the ISO 8601 standard in the UTC format. Example: 2016-05-23T12:00:00Z.</para>
+        /// <para>The end time of the end time range. Specify the time in the ISO 8601 standard in the UTC format. Example: 2016-05-23T12:00:00Z.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2016-05-23T12:00:00Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string EndTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The start time of the expiration time range. Specify the time in the ISO 8601 standard in the UTC format. Example: 2016-05-23T12:00:00Z.</para>
+        /// <para>The start time of the end time range. Specify the time in the ISO 8601 standard in the UTC format. Example: 2016-05-23T12:00:00Z.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2016-05-23T12:00:00Z</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string EndTimeStart { get; set; }
 
         /// <summary>
-        /// <para>The instance IDs. Separate multiple IDs with commas. You can specify up to 100 IDs.</para>
+        /// <para>The instance IDs. Separate multiple IDs with commas. Maximum number of IDs: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-xxxxxxxxxxxx</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// <summary>
         /// <para>The product code. You can call the <b>QueryProductList</b> operation to query product codes.</para>
         /// <remarks>
-        /// <para>If the region is specified, this parameter cannot be empty.</para>
+        /// <para>This parameter cannot be empty when the region is specified.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RenewStatus { get; set; }
 
         /// <summary>
-        /// <para>The subscription type.</para>
+        /// <para>The subscription type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Subscription: subscription.</description></item>
         /// <item><description>PayAsYouGo: pay-as-you-go.</description></item>

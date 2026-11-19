@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             }
 
             /// <summary>
-            /// <para>The token that specifies the start position of the next query. Pass this value to the LastToken parameter in the next request. If this parameter is returned as null, the query is complete.</para>
+            /// <para>The token that specifies the start of the next query. Pass this value to the LastToken parameter in the next request. If this parameter is returned as null, it indicates that the query is complete.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CAESF***zNTAw</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public QueryAccountBalanceResponseBodyData Data { get; set; }
         public class QueryAccountBalanceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The available credit.</para>
+            /// <para>The available amount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000.00</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string AvailableAmount { get; set; }
 
             /// <summary>
-            /// <para>The available cash balance.</para>
+            /// <para>The cash balance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000.00</para>
@@ -59,12 +59,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             /// <summary>
             /// <para>The currency. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>CNY: Chinese Yuan</para>
-            /// </description></item>
-            /// <item><description><para>USD: US Dollar</para>
-            /// </description></item>
-            /// <item><description><para>JPY: Japanese Yen</para>
-            /// </description></item>
+            /// <item><description>CNY: Chinese yuan</description></item>
+            /// <item><description>USD: US dollar</description></item>
+            /// <item><description>JPY: Japanese yen</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,7 +72,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string Currency { get; set; }
 
             /// <summary>
-            /// <para>The credit limit granted by MYbank.</para>
+            /// <para>The MYbank credit limit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.00</para>
@@ -117,7 +114,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

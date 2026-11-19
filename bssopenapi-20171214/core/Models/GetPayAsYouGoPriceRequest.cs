@@ -18,9 +18,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public List<GetPayAsYouGoPriceRequestModuleList> ModuleList { get; set; }
         public class GetPayAsYouGoPriceRequestModuleList : TeaModel {
             /// <summary>
-            /// <para>The configuration of the Nth pricing module. The value of N ranges from 1 to 50. Format: &quot;AA:aa,BB:bb&quot;, where AA and BB are the property codes of the pricing module, and aa and bb are the corresponding property values.</para>
+            /// <para>The configuration of the Nth pricing module. Valid values of N: 1 to 50. Format: AA:aa,BB:bb, where AA and BB are the identifiers of the pricing module attributes, and aa and bb are the attribute values of the pricing module attributes.</para>
             /// <remarks>
-            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a> operation to obtain the Module parameter.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a> operation to retrieve the Module parameter.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string Config { get; set; }
 
             /// <summary>
-            /// <para>The module code of the Nth pricing module.</para>
+            /// <para>The identifier of the Nth pricing module.</para>
             /// <remarks>
-            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a> operation to obtain the Module parameter.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a> operation to retrieve the Module parameter.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -49,12 +49,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             /// <para>The price type of the Nth pricing module. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Hour: hourly price.</description></item>
-            /// <item><description>Usage: usage-based price.</description></item>
+            /// <item><description>Usage: usage.</description></item>
             /// <item><description>Month: monthly price.</description></item>
             /// <item><description>Year: yearly price.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a> operation to obtain the Module parameter.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a> operation to retrieve the Module parameter.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>The region ID of the instance. If DescribePricingModule returns a region ID, this parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The subscription type. Valid values: PayAsYouGo.</para>
+        /// <para>The subscription type. Valid values: PayAsYouGo (pay-as-you-go).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

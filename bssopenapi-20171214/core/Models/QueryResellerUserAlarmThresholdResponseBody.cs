@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryResellerUserAlarmThresholdResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code of the request. If the call fails, an error code is returned.</para>
+        /// <para>The code returned by the call. Typically, this is an error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<QueryResellerUserAlarmThresholdResponseBodyData> Data { get; set; }
         public class QueryResellerUserAlarmThresholdResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The denominator of the alert percentage. This parameter is valid only when ThresholdType is set to 1.</para>
+            /// <para>The denominator of the alert percentage. This parameter is valid when the alert type is 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public int? Denominator { get; set; }
 
             /// <summary>
-            /// <para>The numerator of the alert percentage. This parameter is valid only when ThresholdType is set to 1.</para>
+            /// <para>The numerator of the alert percentage. This parameter is valid when the alert type is 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public int? Numerator { get; set; }
 
             /// <summary>
-            /// <para>The alert threshold in amount. This parameter is valid only when ThresholdType is set to 0.</para>
+            /// <para>The alert threshold amount. This parameter is valid when the alert type is 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string ThresholdAmount { get; set; }
 
             /// <summary>
-            /// <para>The type of the alert threshold. Valid values: 0 (amount) and 1 (percentage).</para>
+            /// <para>The alert type. Valid values: 0: Numerical value. 1: Percentage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The message returned. If the call fails, an error message is returned.</para>
+        /// <para>The message returned by the call. Typically, this is an error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EAE08A27-386C-579E-966D-8853EC3C5D0E</para>

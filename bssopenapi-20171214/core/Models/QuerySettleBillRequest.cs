@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? BillOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The billing cycle, in the format of YYYY-MM.</para>
+        /// <para>The billing cycle. Format: YYYY-MM.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,10 +35,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public bool? IsDisplayLocalCurrency { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to filter based on whether the original price (PretaxGrossAmount) is 0. Default value: false (compatible with existing logic). Valid values:</para>
+        /// <para>Specifies whether to filter out records whose original price (PretaxGrossAmount) is 0. Default value: false (for compatibility with existing logic). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Yes.</description></item>
-        /// <item><description>false: No.</description></item>
+        /// <item><description>true: yes</description></item>
+        /// <item><description>false: no</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public bool? IsHideZeroCharge { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of data records to read in this request. Default value: 20. Maximum value: 300.</para>
+        /// <para>The maximum number of data records to return in the current request. Default value: 20. Maximum value: 300.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that marks the position from which the next query starts. Leave this parameter empty to start from the beginning.</para>
+        /// <para>The token that specifies the position from which to start reading. If this parameter is left empty, the reading starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CAESEgoQCg4KCmdtdF9jcmVhdGUEARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// <list type="bullet">
         /// <item><description>Subscription: subscription</description></item>
         /// <item><description>PayAsYouGo: pay-as-you-go<remarks>
-        /// <para> This parameter must be used together with the ProductCode parameter.</para>
+        /// <para>This parameter must be used together with the ProductCode parameter.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// <summary>
         /// <para>The type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SubscriptionOrder: prepaid order</description></item>
+        /// <item><description>SubscriptionOrder: subscription order</description></item>
         /// <item><description>PayAsYouGoBill: pay-as-you-go bill</description></item>
         /// <item><description>Refund: refund bill</description></item>
         /// <item><description>Adjustment: adjustment bill</description></item>

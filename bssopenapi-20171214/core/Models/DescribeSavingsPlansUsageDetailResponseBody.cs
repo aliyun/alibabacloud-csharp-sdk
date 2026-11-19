@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string Currency { get; set; }
 
                 /// <summary>
-                /// <para>The amount spent from the savings plan, which is the used commitment.</para>
+                /// <para>The deducted amount of the savings plan, which represents the used commitment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3.94</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public float? PostpaidCost { get; set; }
 
                 /// <summary>
-                /// <para>The net savings amount.</para>
+                /// <para>The net savings.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.08</para>
@@ -116,8 +116,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 /// <summary>
                 /// <para>The current status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>-1: overdue payment.</description></item>
-                /// <item><description>1: active.</description></item>
+                /// <item><description>-1: overdue payment</description></item>
+                /// <item><description>1: active</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -128,7 +128,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The type of the savings plan, such as general-purpose or ECS compute.</para>
+                /// <para>The type of the savings plan. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>general-purpose</description></item>
+                /// <item><description>ECS compute</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>General-purpose</para>
@@ -138,7 +142,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The usage percentage.</para>
+                /// <para>The usage rate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.9</para>
@@ -212,7 +216,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

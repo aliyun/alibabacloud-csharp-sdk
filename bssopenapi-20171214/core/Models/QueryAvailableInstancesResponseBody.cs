@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public List<QueryAvailableInstancesResponseBodyDataInstanceList> InstanceList { get; set; }
             public class QueryAvailableInstancesResponseBodyDataInstanceList : TeaModel {
                 /// <summary>
-                /// <para>The creation time. The time is in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</para>
+                /// <para>The creation time in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2019-09-08T16:00:00Z</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The end time. The time is in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</para>
+                /// <para>The end time in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2019-09-08T16:00:00Z</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The expected release time. The time is in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</para>
+                /// <para>The expected release time in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2019-09-08T16:00:00Z</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string Region { get; set; }
 
                 /// <summary>
-                /// <para>The release time. The time is in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</para>
+                /// <para>The release time in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2019-09-08T16:00:00Z</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string RenewStatus { get; set; }
 
                 /// <summary>
-                /// <para>The number of auto-renewal epochs.</para>
+                /// <para>The number of units for the auto-renewal cycle.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public int? RenewalDuration { get; set; }
 
                 /// <summary>
-                /// <para>The unit of the auto-renewal epoch. Valid values:</para>
+                /// <para>The unit of the auto-renewal cycle. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>M: month.</description></item>
                 /// <item><description>Y: year.</description></item>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The stop time. The time is in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</para>
+                /// <para>The stop time in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2019-09-08T16:00:00Z</para>
@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11</para>

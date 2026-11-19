@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class CreateResellerUserQuotaRequest : TeaModel {
         /// <summary>
-        /// <para>The amount in CNY. This parameter is required to activate a quota.</para>
+        /// <para>The amount. Unit: CNY or USD. This parameter is required for opening a quota account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +21,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Amount { get; set; }
 
         /// <summary>
-        /// <para>The currency.</para>
+        /// <para>The currency name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CNY：人民币。USD：美元。JPY：日元。</para>
+        /// <para>CNY: Chinese yuan. USD: US dollar. JPY: Japanese yen</para>
         /// </summary>
         [NameInMap("Currency")]
         [Validation(Required=false)]

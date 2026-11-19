@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class CreateAgAccountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The level 2 relationship between the master account (MPK) and the member account (PK).</para>
+        /// <para>The secondary relationship between the MPK and the PK.</para>
         /// </summary>
         [NameInMap("AgRelationDto")]
         [Validation(Required=false)]
         public CreateAgAccountResponseBodyAgRelationDto AgRelationDto { get; set; }
         public class CreateAgAccountResponseBodyAgRelationDto : TeaModel {
             /// <summary>
-            /// <para>The UID of the master account (MPK).</para>
+            /// <para>The MPK (UID).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1785287436011964</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string Mpk { get; set; }
 
             /// <summary>
-            /// <para>The UID of the member account (PK) that is managed by the master account (MPK).</para>
+            /// <para>The PK (UID) under the MPK.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1728240534507590</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string RamAdminRoleName { get; set; }
 
             /// <summary>
-            /// <para>The type of the account linking relationship.</para>
+            /// <para>The type of the association.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FINACE_CLOUD</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

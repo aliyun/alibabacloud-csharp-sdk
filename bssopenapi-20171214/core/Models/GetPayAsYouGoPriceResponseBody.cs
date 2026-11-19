@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             /// <summary>
             /// <para>The currency. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CNY: Chinese Yuan.</description></item>
-            /// <item><description>USD: US Dollar.</description></item>
-            /// <item><description>JPY: Japanese Yen.</description></item>
+            /// <item><description>CNY: Chinese yuan.</description></item>
+            /// <item><description>USD: US dollar.</description></item>
+            /// <item><description>JPY: Japanese yen.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

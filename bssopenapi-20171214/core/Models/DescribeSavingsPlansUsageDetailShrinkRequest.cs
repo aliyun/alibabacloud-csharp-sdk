@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class DescribeSavingsPlansUsageDetailShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the account. If this parameter is left empty, data of the current account and its trusteeship linked accounts is queried. You can specify a trusteeship linked account ID to query data of that account.</para>
+        /// <para>The ID of the account whose data you want to query. If this parameter is left empty, the data of the current account and its trusteeship linked accounts is queried. You can specify the ID of a trusteeship linked account to query only the data of that account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123745698925000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? BillOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The end time. Format: yyyy-MM-dd HH:mm:ss. The query excludes data at this time. If this parameter is left empty, the query covers data up to the current time.</para>
+        /// <para>The end time of the query. Format: yyyy-MM-dd HH:mm:ss. The specified time is excluded from the query. If this parameter is left empty, the current time is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-02 00:00:00</para>
@@ -29,12 +29,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string EndPeriod { get; set; }
 
+        /// <summary>
+        /// <para>The filter parameters.</para>
+        /// </summary>
         [NameInMap("FilterParam")]
         [Validation(Required=false)]
         public string FilterParamShrink { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of data records to return. Default value: 20. Maximum value: 300.</para>
+        /// <para>The maximum number of data records to return in the current request. Default value: 20. Maximum value: 300.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -44,11 +47,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The time granularity for querying usage details. Valid values:</para>
+        /// <para>The time granularity for querying the usage summary. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MONTH: monthly granularity.</description></item>
-        /// <item><description>DAY: daily granularity.</description></item>
-        /// <item><description>HOUR: hourly granularity.</description></item>
+        /// <item><description>MONTH: monthly</description></item>
+        /// <item><description>DAY: daily</description></item>
+        /// <item><description>HOUR: hourly</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -60,7 +63,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string PeriodType { get; set; }
 
         /// <summary>
-        /// <para>The start time. Format: yyyy-MM-dd HH:mm:ss. The query includes data at this time.</para>
+        /// <para>The start time of the query. Format: yyyy-MM-dd HH:mm:ss. The specified time is included in the query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,7 +74,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string StartPeriod { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Leave this parameter empty for the first page. The query result returns the token for the next page. If the returned token is empty, all data has been retrieved.</para>
+        /// <para>The pagination token. Leave this parameter empty when you query the first page. The token for the next page is returned in the response. If the returned token is empty, all results are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJwYWdlTnVtIjoyLCJwYWdlU2l6ZSI6MTB9</para>

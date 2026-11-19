@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class SelectedComponentConfigDTO : TeaModel {
         /// <summary>
-        /// <para>The property configuration list.</para>
+        /// <para>The list of property configurations.</para>
         /// </summary>
         [NameInMap("AttributeConfigs")]
         [Validation(Required=false)]
         public List<SelectedComponentConfigDTOAttributeConfigs> AttributeConfigs { get; set; }
         public class SelectedComponentConfigDTOAttributeConfigs : TeaModel {
             /// <summary>
-            /// <para>The upper and lower bound values, used for bounded properties.</para>
+            /// <para>The upper and lower bounds, used for bounded properties.</para>
             /// </summary>
             [NameInMap("BoundedValue")]
             [Validation(Required=false)]

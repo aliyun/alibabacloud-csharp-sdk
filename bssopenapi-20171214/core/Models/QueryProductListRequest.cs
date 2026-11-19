@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page. Maximum value: 300. Default value: 20.</para>
+        /// <para>The number of entries per page. Maximum value: 300. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

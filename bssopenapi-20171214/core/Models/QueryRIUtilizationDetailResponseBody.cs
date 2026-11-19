@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryRIUtilizationDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>

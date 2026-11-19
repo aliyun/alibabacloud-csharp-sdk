@@ -190,6 +190,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
                     /// <summary>
                     /// <para>The collection of factor values. Different commodities have their own factors under pricing entities. For example, the instance_type pricing entity of the ECS commodity has factors such as <c>vm_region_no, iooptimized, vm_os_kind, instance_type</c>.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>{&quot;vm_region_no&quot;:&quot;cn-zhangjiakou-na62-a01&quot;,&quot;iooptimized&quot;:&quot;optimized&quot;,&quot;vm_os_kind&quot;:&quot;windows&quot;,&quot;instance_type&quot;:&quot;ecs.i1.xlarge&quot;}</para>
                     /// </summary>
                     [NameInMap("SkuFactorMap")]
                     [Validation(Required=false)]

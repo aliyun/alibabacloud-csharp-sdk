@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeProductAmortizedCostByAmortizationPeriodResponseBodyData Data { get; set; }
         public class DescribeProductAmortizedCostByAmortizationPeriodResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the account.</para>
+            /// <para>The account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>185766xxxx</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string AccountID { get; set; }
 
             /// <summary>
-            /// <para>The name of the account.</para>
+            /// <para>The user account.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public List<DescribeProductAmortizedCostByAmortizationPeriodResponseBodyDataItems> Items { get; set; }
             public class DescribeProductAmortizedCostByAmortizationPeriodResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The amount after a discount is applied.</para>
+                /// <para>The amount after discount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -64,8 +64,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? AfterDiscountAmount { get; set; }
 
                 /// <summary>
-                /// <para>The amortization month.
-                /// Format: YYYYMM.</para>
+                /// <para>The amortization month. Format: YYYYMM.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>202210</para>
@@ -77,10 +76,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 /// <summary>
                 /// <para>The amortization status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>amortized: The cost is amortized.</para>
-                /// </description></item>
-                /// <item><description><para>unAmortized: The cost is not amortized.</para>
-                /// </description></item>
+                /// <item><description>amortized: amortized.</description></item>
+                /// <item><description>unAmortized: unamortized.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -111,7 +108,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string BillAccountName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the resource owner.</para>
+                /// <para>The resource ownership account ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>185xxxxx489</para>
@@ -121,7 +118,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public long? BillOwnerID { get; set; }
 
                 /// <summary>
-                /// <para>The name of the resource owner.</para>
+                /// <para>The name of the account to which the resources belong.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></para>
@@ -141,8 +138,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string BizType { get; set; }
 
                 /// <summary>
-                /// <para>The billing cycle.
-                /// Format: YYYYMM.</para>
+                /// <para>The billing cycle. Format: YYYYMM.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>202210</para>
@@ -152,7 +148,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string ConsumePeriod { get; set; }
 
                 /// <summary>
-                /// <para>The amount that is amortized in the current period, after a discount is applied.</para>
+                /// <para>The current amortization amount after discount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -162,7 +158,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? CurrentAmortizationAfterDiscountAmount { get; set; }
 
                 /// <summary>
-                /// <para>The amount deducted by cash coupons that is amortized in the current period.</para>
+                /// <para>The current amortization amount deducted by vouchers.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -172,7 +168,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? CurrentAmortizationDeductedByCashCoupons { get; set; }
 
                 /// <summary>
-                /// <para>The amount deducted by coupons that is amortized in the current period.</para>
+                /// <para>The current amortization amount deducted by coupons.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -182,7 +178,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? CurrentAmortizationDeductedByCoupons { get; set; }
 
                 /// <summary>
-                /// <para>The amount paid by prepaid card that is amortized in the current period.</para>
+                /// <para>The current amortization amount paid by prepaid cards.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -192,7 +188,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? CurrentAmortizationDeductedByPrepaidCard { get; set; }
 
                 /// <summary>
-                /// <para>The expenditure amount that is amortized in the current period. This amount can be invoiced.</para>
+                /// <para>The current amortization expenditure amount (invoiceable).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -202,7 +198,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? CurrentAmortizationExpenditureAmount { get; set; }
 
                 /// <summary>
-                /// <para>The discount that is amortized in the current period.</para>
+                /// <para>The current amortization invoice discount amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -212,7 +208,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? CurrentAmortizationInvoiceDiscount { get; set; }
 
                 /// <summary>
-                /// <para>The pretax amount that is amortized in the current period.</para>
+                /// <para>The current amortization pretax amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -222,7 +218,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? CurrentAmortizationPretaxAmount { get; set; }
 
                 /// <summary>
-                /// <para>The pretax gross amount that is amortized in the current period.</para>
+                /// <para>The current amortization pretax gross amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -232,7 +228,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? CurrentAmortizationPretaxGrossAmount { get; set; }
 
                 /// <summary>
-                /// <para>The amount rounded down that is amortized in the current period.</para>
+                /// <para>The current amortization round-down discount amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -242,7 +238,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? CurrentAmortizationRoundDownDiscount { get; set; }
 
                 /// <summary>
-                /// <para>The amount deducted by cash coupons.</para>
+                /// <para>The amount deducted by vouchers.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -262,7 +258,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? DeductedByCoupons { get; set; }
 
                 /// <summary>
-                /// <para>The amount paid by prepaid card.</para>
+                /// <para>The amount paid by prepaid cards.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -272,7 +268,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? DeductedByPrepaidCard { get; set; }
 
                 /// <summary>
-                /// <para>The expenditure amount. This amount can be invoiced.</para>
+                /// <para>The expenditure amount (invoiceable).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -282,7 +278,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? ExpenditureAmount { get; set; }
 
                 /// <summary>
-                /// <para>The discount.</para>
+                /// <para>The invoice discount amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -312,7 +308,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? PretaxGrossAmount { get; set; }
 
                 /// <summary>
-                /// <para>The amount that was amortized before the beginning of the period, after a discount is applied.</para>
+                /// <para>The previously amortized amount after discount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -322,7 +318,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? PreviouslyAmortizedAfterDiscountAmount { get; set; }
 
                 /// <summary>
-                /// <para>The amount deducted by cash coupons that was amortized before the beginning of the period.</para>
+                /// <para>The previously amortized amount deducted by vouchers.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -332,7 +328,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? PreviouslyAmortizedDeductedByCashCoupons { get; set; }
 
                 /// <summary>
-                /// <para>The amount deducted by coupons that was amortized before the beginning of the period.</para>
+                /// <para>The previously amortized amount deducted by coupons.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -342,7 +338,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? PreviouslyAmortizedDeductedByCoupons { get; set; }
 
                 /// <summary>
-                /// <para>The amount paid by prepaid card that was amortized before the beginning of the period.</para>
+                /// <para>The previously amortized amount paid by prepaid cards.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -352,7 +348,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? PreviouslyAmortizedDeductedByPrepaidCard { get; set; }
 
                 /// <summary>
-                /// <para>The expenditure amount that was amortized before the beginning of the period. This amount can be invoiced.</para>
+                /// <para>The previously amortized expenditure amount (invoiceable).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -362,7 +358,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? PreviouslyAmortizedExpenditureAmount { get; set; }
 
                 /// <summary>
-                /// <para>The discount that was amortized before the beginning of the period.</para>
+                /// <para>The previously amortized invoice discount amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -372,7 +368,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? PreviouslyAmortizedInvoiceDiscount { get; set; }
 
                 /// <summary>
-                /// <para>The pretax amount that was amortized before the beginning of the period.</para>
+                /// <para>The previously amortized pretax amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -382,7 +378,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? PreviouslyAmortizedPretaxAmount { get; set; }
 
                 /// <summary>
-                /// <para>The pretax gross amount that was amortized before the beginning of the period.</para>
+                /// <para>The previously amortized pretax gross amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -392,7 +388,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? PreviouslyAmortizedPretaxGrossAmount { get; set; }
 
                 /// <summary>
-                /// <para>The amount rounded down that was amortized before the beginning of the period.</para>
+                /// <para>The previously amortized round-down discount amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -412,17 +408,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string ProductCode { get; set; }
 
                 /// <summary>
-                /// <para>The details of the product.</para>
+                /// <para>The product detail.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>云数据库RDS</para>
+                /// <para>ApsaraDB RDS</para>
                 /// </summary>
                 [NameInMap("ProductDetail")]
                 [Validation(Required=false)]
                 public string ProductDetail { get; set; }
 
                 /// <summary>
-                /// <para>The code of the product details.</para>
+                /// <para>The product detail code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rds</para>
@@ -435,14 +431,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 /// <para>The product name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>云数据库RDS</para>
+                /// <para>ApsaraDB RDS</para>
                 /// </summary>
                 [NameInMap("ProductName")]
                 [Validation(Required=false)]
                 public string ProductName { get; set; }
 
                 /// <summary>
-                /// <para>The unamortized amount at the end of the period, after a discount is applied.</para>
+                /// <para>The remaining amortization amount after discount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -452,7 +448,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? RemainingAmortizationAfterDiscountAmount { get; set; }
 
                 /// <summary>
-                /// <para>The unamortized amount deducted by cash coupons at the end of the period.</para>
+                /// <para>The remaining amortization amount deducted by vouchers.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -462,7 +458,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? RemainingAmortizationDeductedByCashCoupons { get; set; }
 
                 /// <summary>
-                /// <para>The unamortized amount deducted by coupons at the end of the period.</para>
+                /// <para>The remaining amortization amount deducted by coupons.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -472,7 +468,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? RemainingAmortizationDeductedByCoupons { get; set; }
 
                 /// <summary>
-                /// <para>The unamortized amount paid by prepaid card at the end of the period.</para>
+                /// <para>The remaining amortization amount paid by prepaid cards.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -482,7 +478,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? RemainingAmortizationDeductedByPrepaidCard { get; set; }
 
                 /// <summary>
-                /// <para>The unamortized expenditure amount at the end of the period. This amount can be invoiced.</para>
+                /// <para>The remaining amortization expenditure amount (invoiceable).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -492,7 +488,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? RemainingAmortizationExpenditureAmount { get; set; }
 
                 /// <summary>
-                /// <para>The unamortized discount at the end of the period.</para>
+                /// <para>The remaining amortization invoice discount amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -502,7 +498,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? RemainingAmortizationInvoiceDiscount { get; set; }
 
                 /// <summary>
-                /// <para>The unamortized pretax amount at the end of the period.</para>
+                /// <para>The remaining amortization pretax amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -512,7 +508,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? RemainingAmortizationPretaxAmount { get; set; }
 
                 /// <summary>
-                /// <para>The unamortized pretax gross amount at the end of the period.</para>
+                /// <para>The remaining amortization pretax gross amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -522,7 +518,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? RemainingAmortizationPretaxGrossAmount { get; set; }
 
                 /// <summary>
-                /// <para>The unamortized amount rounded down at the end of the period.</para>
+                /// <para>The remaining amortization round-down discount amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -532,7 +528,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public double? RemainingAmortizationRoundDownDiscount { get; set; }
 
                 /// <summary>
-                /// <para>The amount rounded down.</para>
+                /// <para>The round-down discount amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -544,10 +540,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 /// <summary>
                 /// <para>The subscription type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Subscription: subscription.</para>
-                /// </description></item>
-                /// <item><description><para>PayAsYouGo: pay-as-you-go.</para>
-                /// </description></item>
+                /// <item><description>Subscription: subscription.</description></item>
+                /// <item><description>PayAsYouGo: pay-as-you-go.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -560,7 +554,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             }
 
             /// <summary>
-            /// <para>The maximum number of entries returned.</para>
+            /// <para>The maximum number of records returned for the current request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -570,7 +564,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The token that is used to query the next page of results.</para>
+            /// <para>The token that specifies the position from which the current call starts reading. The value must be empty or set to the NextToken value returned in the previous response. Otherwise, an error is reported. An empty value indicates that the reading starts from the beginning.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CAESEgoQCg4KCmdtdF9jcmVhdGUEARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</para>
@@ -580,7 +574,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -592,7 +586,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The message description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful！</para>
@@ -602,7 +596,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</para>
@@ -612,7 +606,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

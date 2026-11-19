@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 /// <para>The permission name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>主账号 子账号共享主账号信控身份</para>
+                /// <para>主帐号允许子帐号共享主帐号信控身份</para>
                 /// </summary>
                 [NameInMap("PermissionName")]
                 [Validation(Required=false)]

@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string AccountID { get; set; }
 
             /// <summary>
-            /// <para>The account name.</para>
+            /// <para>The account.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string AccountName { get; set; }
 
             /// <summary>
-            /// <para>The billing cycle, in the YYYY-MM format.</para>
+            /// <para>The billing cycle. Format: YYYY-MM.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-02</para>
@@ -249,7 +249,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

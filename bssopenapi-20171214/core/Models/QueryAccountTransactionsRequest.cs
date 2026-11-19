@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryAccountTransactionsRequest : TeaModel {
         /// <summary>
-        /// <para>The end time of the creation time range. If not specified, the default value is the current time. Example: 2018-01-01T00:00:00Z.</para>
+        /// <para>The end time of the creation time range. If you do not specify this parameter, the default value is the current time. Example: 2018-01-01T00:00:00Z.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-03-06T01:55:00Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string CreateTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The start time of the creation time range. If not specified, the default value is one month before the current time. Example: 2018-01-01T00:00:00Z.</para>
+        /// <para>The start time of the creation time range. If you do not specify this parameter, the default value is one month before the current time. Example: 2018-01-01T00:00:00Z.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-03-05T01:46:09Z</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RecordID { get; set; }
 
         /// <summary>
-        /// <para>The transaction channel. If you specify a transaction channel, the query returns results of the corresponding type. If no results exist, an empty result is returned. If you do not specify this parameter, all types are returned by default. Valid values:</para>
+        /// <para>The transaction channel. If you specify a transaction channel, the query returns results of the specified channel. If no results exist, an empty result is returned. If you do not specify this parameter, all channels are returned by default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AccountBalance: Account balance.</description></item>
+        /// <item><description>AccountBalance: User balance.</description></item>
         /// <item><description>BankTransfer: Bank transfer.</description></item>
         /// <item><description>Alipay: Alipay.</description></item>
         /// <item><description>AntCreditPay: Ant Credit Pay.</description></item>
         /// <item><description>OfflineRemittance: Offline remittance.</description></item>
-        /// <item><description>RegularBankCreditRefund: Credit-based payment refund.</description></item>
+        /// <item><description>RegularBankCreditRefund: Credit limit refund.</description></item>
         /// <item><description>CreditCard: Credit card.</description></item>
         /// <item><description>MyBankCredit: MYbank Credit.</description></item>
         /// <item><description>HuaxiaBankCInstallment: Huaxia Bank installment.</description></item>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string TransactionChannelSN { get; set; }
 
         /// <summary>
-        /// <para>The income and expense type. If you specify an income and expense type, the query returns results of the corresponding type. If no results exist, an empty result is returned. If you do not specify this parameter, all types are returned by default. Valid values:</para>
+        /// <para>The income and expense type. If you specify an income and expense type, the query returns results of the specified type. If no results exist, an empty result is returned. If you do not specify this parameter, all types are returned by default. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Income: Income.</description></item>
         /// <item><description>Expense: Expense.</description></item>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string TransactionNumber { get; set; }
 
         /// <summary>
-        /// <para>The transaction type. If you specify a transaction type, the query returns results of the corresponding type. If no results exist, an empty result is returned. If you do not specify this parameter, all types are returned by default. Valid values:</para>
+        /// <para>The transaction type. If you specify a transaction type, the query returns results of the specified type. If no results exist, an empty result is returned. If you do not specify this parameter, all types are returned by default. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Payment: Top-up.</description></item>
         /// <item><description>Withdraw: Withdrawal.</description></item>

@@ -10,24 +10,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class DescribeProductAmortizedCostByAmortizationPeriodRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of resource owners. The resource owner is the account that uses the resources.
-        /// You can specify a maximum of 10 IDs.</para>
+        /// <para>The filter condition for the resource ownership account. The ID of the resource ownership account. The resource ownership account is the account that actually uses the resources. Maximum number of elements: 10.</para>
         /// </summary>
         [NameInMap("BillOwnerIdList")]
         [Validation(Required=false)]
         public List<string> BillOwnerIdList { get; set; }
 
         /// <summary>
-        /// <para>The IDs of billable accounts. This parameter is used to filter bills by the RAM user who pays for the resources. If you specify this parameter, you can query the bills of the specified RAM user. If you leave this parameter empty, the bills of the current account and all its RAM users are queried.
-        /// You can specify a maximum of 10 IDs.</para>
+        /// <para>The filter condition for the bill purchaser ID. The ID of the RAM user. Specify this parameter to view the bills of RAM users in Finance Cloud. If you do not specify this parameter, the bills of the current caller account and all its RAM users are viewed by default. Maximum number of elements: 10.</para>
         /// </summary>
         [NameInMap("BillUserIdList")]
         [Validation(Required=false)]
         public List<string> BillUserIdList { get; set; }
 
         /// <summary>
-        /// <para>The amortization month.
-        /// Format: YYYY-MM.</para>
+        /// <para>The amortization month. Format: YYYY-MM.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,15 +35,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string BillingCycle { get; set; }
 
         /// <summary>
-        /// <para>The filter for billing cycle months.
-        /// You can specify a maximum of 10 elements.</para>
+        /// <para>The filter condition for the billing month. Maximum number of elements: 10.</para>
         /// </summary>
         [NameInMap("ConsumePeriodFilter")]
         [Validation(Required=false)]
         public List<string> ConsumePeriodFilter { get; set; }
 
         /// <summary>
-        /// <para>The code of the cost center.</para>
+        /// <para>The code of the financial unit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123#</para>
@@ -56,7 +52,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string CostUnitCode { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return. Default value: 20. Maximum value: 300.</para>
+        /// <para>The maximum number of data records to return in the current call. Default value: 20. Maximum value: 300.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -66,7 +62,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that marks the position to start the query. If you leave this parameter empty, the query starts from the beginning. Set this parameter to the value of NextToken that is returned in the last response to query the next page of results.</para>
+        /// <para>The token that specifies the position from which the current call starts reading. The value must be empty or set to the NextToken value returned in the previous response. Otherwise, an error is reported. An empty value indicates that the reading starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CAESEgoQCg4KCmdtdF9jcmVhdGUEARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</para>
@@ -76,8 +72,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The product code.
-        /// For more information about how to obtain this parameter, see QueryProductList and DescribeResourcePackageProduct.</para>
+        /// <para>The product code. Reference value sources: Call QueryProductList to query product information, or call DescribeResourcePackageProduct to query the information about a specific resource plan product.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds</para>
@@ -87,7 +82,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the product.</para>
+        /// <para>The product detail.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds</para>
@@ -99,10 +94,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// <summary>
         /// <para>The subscription type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Subscription: subscription.</para>
-        /// </description></item>
-        /// <item><description><para>PayAsYouGo: pay-as-you-go.</para>
-        /// </description></item>
+        /// <item><description>Subscription: subscription.</description></item>
+        /// <item><description>PayAsYouGo: pay-as-you-go.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

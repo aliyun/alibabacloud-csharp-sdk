@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryProductListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response status code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public int? PageNum { get; set; }
 
             /// <summary>
-            /// <para>The number of records displayed per page.</para>
+            /// <para>The number of entries displayed per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This API is not applicable for caller.</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

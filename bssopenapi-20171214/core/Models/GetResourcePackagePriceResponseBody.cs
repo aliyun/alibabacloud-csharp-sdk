@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetResourcePackagePriceResponseBodyData Data { get; set; }
         public class GetResourcePackagePriceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The type of the currency.</para>
+            /// <para>The currency.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CNY</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string Currency { get; set; }
 
             /// <summary>
-            /// <para>The discounted amount. Unit: CNY.</para>
+            /// <para>The discount price. Unit: CNY.</para>
             /// 
             /// <b>Example:</b>
             /// <para>215040</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             }
 
             /// <summary>
-            /// <para>The price at which the transaction is made. Unit: CNY.</para>
+            /// <para>The transaction price. Unit: CNY.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1075200</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful!</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BBEF51A3-E933-4F40-A534-C673CBDB9C80</para>

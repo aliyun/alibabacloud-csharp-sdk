@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public RenewResourcePackageResponseBodyData Data { get; set; }
         public class RenewResourcePackageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OSSBAG-cn-0xl0n****003</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the order.</para>
+            /// <para>The order ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>204322560333</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order.</para>
+        /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>204322301110333</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6000EE23-274B-4E07-A697-FF2E999520A4</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

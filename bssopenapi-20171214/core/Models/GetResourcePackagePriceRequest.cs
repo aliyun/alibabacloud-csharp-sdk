@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class GetResourcePackagePriceRequest : TeaModel {
         /// <summary>
-        /// <para>The validity period of the resource plan. The value must be the same as the duration of the resource plan specified in the specifications.</para>
+        /// <para>The validity period of the resource plan. The value must match the available validity period of the specification size.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? Duration { get; set; }
 
         /// <summary>
-        /// <para>The time when the resource plan takes effect. If you do not specify this parameter, the resource plan immediately takes effect by default.
-        /// When the <b>OrderType</b> is <b>BUY</b>, resource packs with the <b>EffectiveDate longer than the current time of 6 months</b> are not supported.
-        /// If the <b>OrderType</b> is <b>UPGRADE</b>, the <b>EffectiveDate</b> <b>must be less than or equal to</b> the actual expiration time of the upgraded instance.
-        /// Specify the time in the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The effective period of the resource plan. If you do not specify this parameter, the default is immediate.
+        /// When the order type is <b>BUY</b>, you cannot query the price of a resource plan whose effective period is more than six months later than the current time.
+        /// When the order type is <b>UPGRADE</b>, the effective period must be earlier than or equal to the actual expiration time of the resource plan to be upgraded.
+        /// Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-02-10T12:00:00Z</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string EffectiveDate { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance. <b>This parameter is required when the order type is renewal or upgrade.</b></para>
+        /// <para>The instance ID. <b>This parameter is required when the order type is renewal or upgrade.</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>OSSBAG-cn-0xl0002</para>
@@ -44,14 +44,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the order. Valid values:</para>
+        /// <para>The order type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>BUY: You place the order to purchase an instance.</para>
-        /// </description></item>
-        /// <item><description><para>UPGRADE: You place the order to upgrade an instance.</para>
-        /// </description></item>
-        /// <item><description><para>RENEW: You place the order to renew an instance.</para>
-        /// </description></item>
+        /// <item><description>BUY: new purchase.</description></item>
+        /// <item><description>UPGRADE: upgrade.</description></item>
+        /// <item><description>RENEW: renewal.</description></item>
         /// </list>
         /// <para>Default value: BUY.</para>
         /// 
@@ -67,7 +64,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource plan. The value must be the same as the value of the <b>ProductCode</b> parameter that is returned when you call the <b>DescribeResourcePackageProduct</b> operation.</para>
+        /// <para>The resource plan type. The value must be the same as the Code value of <b>ResourcePackage</b> returned by the operation that describes resource plans.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,12 +75,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string PackageType { get; set; }
 
         /// <summary>
-        /// <para>The unit of validity period of the resource plan. Valid values:</para>
+        /// <para>The unit of the validity period for the resource plan. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Month</para>
-        /// </description></item>
-        /// <item><description><para>Year</para>
-        /// </description></item>
+        /// <item><description>Month: months.</description></item>
+        /// <item><description>Year: years.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,7 +89,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string PricingCycle { get; set; }
 
         /// <summary>
-        /// <para>The code of service. You can query the service code by calling the <b>QueryProductList</b> operation or viewing <b>Codes of Alibaba Cloud Services</b>.</para>
+        /// <para>The product code. You can obtain the product code by calling the <b>QueryProductList</b> operation or referring to the <b>Alibaba Cloud product code quick reference guide</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -105,7 +100,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The specifications of the resource plan.</para>
+        /// <para>The specification size of the resource plan.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class CreateAgAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The properties of the new account. In the console, click Account Properties in the top menu bar to go to the <b>Security Settings</b> page and view the properties.</para>
+        /// <para>The attributes of the new account. To view the attributes, click Account Attributes in the top menu bar of the console to go to the <b>Security Settings</b> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -23,27 +23,27 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// <para>The name of the city in English.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>北京</para>
+        /// <para>Beijing</para>
         /// </summary>
         [NameInMap("CityName")]
         [Validation(Required=false)]
         public string CityName { get; set; }
 
         /// <summary>
-        /// <para>The name of the enterprise. This is the enterprise name that corresponds to the Unified Social Credit Code.</para>
+        /// <para>The name of the enterprise. The name must be the same as the enterprise name associated with the unified social credit code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>阿里云测试有限公司</para>
+        /// <para>Alibaba Cloud Test Co., Ltd</para>
         /// </summary>
         [NameInMap("EnterpriseName")]
         [Validation(Required=false)]
         public string EnterpriseName { get; set; }
 
         /// <summary>
-        /// <para>The first name of the user under the level 1 category.</para>
+        /// <para>The name of the first-level category.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>志成</para>
+        /// <para>Zhicheng</para>
         /// </summary>
         [NameInMap("FirstName")]
         [Validation(Required=false)]
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// <para>Maximum length: 64 characters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>吴</para>
+        /// <para>Wu</para>
         /// </summary>
         [NameInMap("LastName")]
         [Validation(Required=false)]
         public string LastName { get; set; }
 
         /// <summary>
-        /// <para>The logon email address of the member account.</para>
+        /// <para>The logon email address.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// <para>The name of the province. This parameter is optional.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>北京</para>
+        /// <para>Beijing</para>
         /// </summary>
         [NameInMap("ProvinceName")]
         [Validation(Required=false)]
