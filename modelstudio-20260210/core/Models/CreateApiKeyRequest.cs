@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             /// <para>The IP address whitelist.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>If you select custom permissions and do not specify an IP address whitelist, the server defaults to IPv4 (0.0.0.0/0) and IPv6 (::/0), which allows all IP addresses.</description></item>
+            /// <item><description>When you customize the permission scope and do not specify the IP address whitelist, the server sets the default values to IPv4 (0.0.0.0/0) and IPv6 (::/0), which allows access from all IP addresses.</description></item>
             /// </list>
             /// </remarks>
             /// </summary>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public List<string> AccessIps { get; set; }
 
             /// <summary>
-            /// <para>The model access scope. If you configure this parameter, you can only call the selected models. If you do not configure this parameter, you can access all models that have been granted inference permissions in the specified workspace by default.</para>
+            /// <para>The model access scope.</para>
             /// </summary>
             [NameInMap("modelAccessScope")]
             [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 /// <summary>
                 /// <para>The list of accessible models.</para>
                 /// <remarks>
-                /// <para>Notice: This parameter takes effect only when allowAllModels is set to false.</para>
+                /// <para>Notice: The specified values take effect only when allowAllModels is set to false.</para>
                 /// </remarks>
                 /// </summary>
                 [NameInMap("accessibleModels")]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 public List<string> AccessibleModels { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to allow access to all models that have been granted inference permissions in the workspace. Valid values:</para>
+                /// <para>Specifies whether to allow access to all models granted inference permissions in the workspace. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>true</description></item>
                 /// <item><description>false</description></item>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             }
 
             /// <summary>
-            /// <para>The permission type. Valid values: All: all permissions. Custom: custom permissions.</para>
+            /// <para>The permission type. All indicates all permissions. Custom indicates custom permissions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Custom</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         /// <para>The workspace ID.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If you do not specify this parameter, the created API key is automatically assigned to the default workspace.</description></item>
+        /// <item><description>If you do not specify this parameter, the created API key automatically belongs to the default workspace.</description></item>
         /// </list>
         /// </remarks>
         /// 

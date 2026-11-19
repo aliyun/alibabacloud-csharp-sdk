@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
     public class GetBillingTrendShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The dimension filter condition.</para>
+        /// <para>The dimension filter conditions.</para>
         /// </summary>
         [NameInMap("filter")]
         [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The time range to query, including the start time and end time. This parameter is required.</para>
+        /// <para>The time range for the query, which includes the start time and end time. This parameter is required.</para>
         /// </summary>
         [NameInMap("timePeriod")]
         [Validation(Required=false)]

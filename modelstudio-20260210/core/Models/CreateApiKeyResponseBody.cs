@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             /// <summary>
             /// <para>The value of the API key.</para>
             /// <remarks>
-            /// <para>Notice: Copy your API key immediately. Keep it secure. Anyone who obtains this key can initiate service requests and incur charges on your behalf. If the key is lost, you can reset it or create a new one.</para>
+            /// <para>Notice: Copy your API key immediately and keep it secure. Anyone who obtains this key can initiate service requests and incur charges on your behalf. If the key is lost, you can reset it or create a new one.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// <list type="bullet">
         /// <item><description>true: The request is successful.</description></item>
         /// <item><description>false: The request fails.</description></item>

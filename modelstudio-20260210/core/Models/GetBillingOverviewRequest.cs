@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public List<GetBillingOverviewRequestFilterDimensions> Dimensions { get; set; }
             public class GetBillingOverviewRequestFilterDimensions : TeaModel {
                 /// <summary>
-                /// <para>The filter field. For more information, see the &quot;Additional notes&quot; section below.</para>
+                /// <para>The filter field. For more information, see the supplementary notes below.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CHARGE_TYPE</para>
@@ -75,14 +75,14 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string Granularity { get; set; }
 
         /// <summary>
-        /// <para>The list of grouping conditions. Currently, you must specify exactly one grouping dimension.</para>
+        /// <para>The list of grouping conditions. Currently, exactly one grouping dimension must be specified.</para>
         /// </summary>
         [NameInMap("groupBy")]
         [Validation(Required=false)]
         public List<GetBillingOverviewRequestGroupBy> GroupBy { get; set; }
         public class GetBillingOverviewRequestGroupBy : TeaModel {
             /// <summary>
-            /// <para>The code of the grouping dimension. For more information, see the &quot;Additional notes&quot; section below.</para>
+            /// <para>The code of the grouping dimension. For more information, see the supplementary notes below.</para>
             /// 
             /// <b>Example:</b>
             /// <para>BASE_MODEL</para>
@@ -114,14 +114,14 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The query time range, which includes the start and end times. Both the start and end times are included in the query range. The time format must be consistent with the granularity, and the start time cannot be later than the end time.</para>
+        /// <para>The query time range, which includes start and end. Both the start time and end time are included in the query range. The time format must be consistent with granularity, and start cannot be later than end.</para>
         /// </summary>
         [NameInMap("timePeriod")]
         [Validation(Required=false)]
         public GetBillingOverviewRequestTimePeriod TimePeriod { get; set; }
         public class GetBillingOverviewRequestTimePeriod : TeaModel {
             /// <summary>
-            /// <para>The end time of the query. This time point is included in the query range. The format is determined by granularity.</para>
+            /// <para>The end time of the query. This time point is included. The format is determined by <c>granularity</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>202609</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string End { get; set; }
 
             /// <summary>
-            /// <para>The start time of the query. This time point is included in the query range. The format is determined by granularity.</para>
+            /// <para>The start time of the query. This time point is included. The format is determined by <c>granularity</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>202609</para>

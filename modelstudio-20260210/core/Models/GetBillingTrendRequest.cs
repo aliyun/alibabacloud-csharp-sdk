@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
     public class GetBillingTrendRequest : TeaModel {
         /// <summary>
-        /// <para>The dimension filter condition.</para>
+        /// <para>The dimension filter conditions.</para>
         /// </summary>
         [NameInMap("filter")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public List<GetBillingTrendRequestFilterDimensions> Dimensions { get; set; }
             public class GetBillingTrendRequestFilterDimensions : TeaModel {
                 /// <summary>
-                /// <para>The filter dimension code. For more information, see the &quot;Additional notes&quot; section below.</para>
+                /// <para>The code of the filter dimension. For more information, see the &quot;Additional notes&quot; section below.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CHARGE_TYPE</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public List<GetBillingTrendRequestGroupBy> GroupBy { get; set; }
         public class GetBillingTrendRequestGroupBy : TeaModel {
             /// <summary>
-            /// <para>The grouping dimension code. For more information, see the &quot;Additional notes&quot; section below.</para>
+            /// <para>The code of the grouping dimension. For more information, see the &quot;Additional notes&quot; section below.</para>
             /// 
             /// <b>Example:</b>
             /// <para>BASE_MODEL</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The time range to query, including the start time and end time. This parameter is required.</para>
+        /// <para>The time range for the query, which includes the start time and end time. This parameter is required.</para>
         /// </summary>
         [NameInMap("timePeriod")]
         [Validation(Required=false)]

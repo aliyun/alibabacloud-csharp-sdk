@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
     public class ListModelsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This field is empty when the call is successful.</para>
+        /// <para>The error code. This field is empty if the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error message. This field is empty when the call is successful.</para>
+        /// <para>The error message. This field is empty if the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The specified parameter is invalid</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 public List<ListModelsResponseBodyModelsPricesPrices> Prices { get; set; }
                 public class ListModelsResponseBodyModelsPricesPrices : TeaModel {
                     /// <summary>
-                    /// <para>The price. The currency unit depends on the account type: ￥ for accounts in the Chinese mainland and $ for international accounts.</para>
+                    /// <para>The price. The currency depends on the account type: CNY (￥) for accounts in the Chinese mainland and USD ($) for international accounts.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>12</para>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                     public string PriceName { get; set; }
 
                     /// <summary>
-                    /// <para>The billing method.</para>
+                    /// <para>The pricing unit.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Per 1M tokens</para>
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                     /// <list type="bullet">
                     /// <item><description>peak: Peak hours.</description></item>
                     /// <item><description>offpeak: Off-peak hours.</description></item>
-                    /// <item><description>standard: No time-based tiering.</description></item>
+                    /// <item><description>standard: No time band distinction.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 }
 
                 /// <summary>
-                /// <para>The tier name. If tiered pricing is not used, the value is Default.</para>
+                /// <para>The name of the pricing tier. If tiered pricing is not used, the value is Default.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Default</para>

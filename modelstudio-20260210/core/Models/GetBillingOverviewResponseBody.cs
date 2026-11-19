@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 public List<string> ArticleCodes { get; set; }
 
                 /// <summary>
-                /// <para>The value of the grouping dimension. If the value is null, DIMENSION_FILTER_NULL_VALUE is returned.</para>
+                /// <para>The value of the grouping dimension. If the value is empty, DIMENSION_FILTER_NULL_VALUE is returned.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>inference</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The display name of the group, which is affected by the locale parameter. If the value is null, a hyphen (-) is displayed.</para>
+                /// <para>The display name of the group, which is affected by the locale parameter. If the value is empty, a hyphen (-) is displayed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Model invocation</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         }
 
         /// <summary>
-        /// <para>The description of the request result.</para>
+        /// <para>The result message of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>

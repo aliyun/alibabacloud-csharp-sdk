@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
     public class GetBillingTrendResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request result code.</para>
+        /// <para>The result code of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public GetBillingTrendResponseBodyData Data { get; set; }
         public class GetBillingTrendResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The total costs within the entire query time range, including the top N items and Other.</para>
+            /// <para>The total cost within the entire query time range, including the top N groups and Others.</para>
             /// </summary>
             [NameInMap("costTotals")]
             [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             }
 
             /// <summary>
-            /// <para>The total costs of the top N groups and the optional Other group within the period.</para>
+            /// <para>The total cost of the top N groups and the optional Others group within the period.</para>
             /// </summary>
             [NameInMap("groupByTotal")]
             [Validation(Required=false)]
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public GetBillingTrendResponseBodyDataHistoryPeriod HistoryPeriod { get; set; }
             public class GetBillingTrendResponseBodyDataHistoryPeriod : TeaModel {
                 /// <summary>
-                /// <para>The total costs within the historical range, including the top N items and Other.</para>
+                /// <para>The total cost within the historical range, including the top N groups and Others.</para>
                 /// </summary>
                 [NameInMap("costTotals")]
                 [Validation(Required=false)]
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 }
 
                 /// <summary>
-                /// <para>The total costs of the top N groups and the optional Other group within the historical period.</para>
+                /// <para>The total cost of the top N groups and the optional Others group within the historical period.</para>
                 /// </summary>
                 [NameInMap("groupByTotal")]
                 [Validation(Required=false)]
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                     public string Amount { get; set; }
 
                     /// <summary>
-                    /// <para>The dimension value of the group. If the value is null, DIMENSION_FILTER_NULL_VALUE is returned.</para>
+                    /// <para>The dimension value of the group. A null value returns DIMENSION_FILTER_NULL_VALUE.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>qwen-plus</para>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>The display name of the group, which is affected by the locale parameter. If the value is null, a hyphen (-) is displayed.</para>
+                    /// <para>The display name of the group, which is affected by the locale parameter. A null value is displayed as a hyphen (-).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>qwen-plus</para>
@@ -284,7 +284,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                         public string Amount { get; set; }
 
                         /// <summary>
-                        /// <para>The dimension value of the group. If the value is null, DIMENSION_FILTER_NULL_VALUE is returned.</para>
+                        /// <para>The dimension value of the group. A null value returns DIMENSION_FILTER_NULL_VALUE.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>qwen-plus</para>
@@ -294,7 +294,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// <para>The display name of the group, which is affected by the locale parameter. If the value is null, a hyphen (-) is displayed.</para>
+                        /// <para>The display name of the group, which is affected by the locale parameter. A null value is displayed as a hyphen (-).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>qwen-plus</para>
@@ -304,7 +304,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                         public string Name { get; set; }
 
                         /// <summary>
-                        /// <para>The percentage of the group amount.</para>
+                        /// <para>The proportion of the group amount.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0.5</para>
@@ -336,7 +336,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                     }
 
                     /// <summary>
-                    /// <para>The total costs of the current period.</para>
+                    /// <para>The total cost of the current period.</para>
                     /// </summary>
                     [NameInMap("total")]
                     [Validation(Required=false)]
@@ -413,7 +413,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 public List<GetBillingTrendResponseBodyDataResultByTimePeriodDetails> PeriodDetails { get; set; }
                 public class GetBillingTrendResponseBodyDataResultByTimePeriodDetails : TeaModel {
                     /// <summary>
-                    /// <para>The amount of the group in the current period.</para>
+                    /// <para>The amount of the group within the current period.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>20</para>
@@ -423,7 +423,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                     public string Amount { get; set; }
 
                     /// <summary>
-                    /// <para>The dimension value of the group. For data other than the top N items, DIMENSION_GROUP_OTHERS_VALUE is used.</para>
+                    /// <para>The dimension value of the group. Data other than the top N uses DIMENSION_GROUP_OTHERS_VALUE.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>qwen-plus</para>
@@ -443,7 +443,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The ratio of the current group amount to the total amount of the current period.</para>
+                    /// <para>The proportion of the current group amount to the total amount of the current period.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.6667</para>
@@ -453,7 +453,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                     public string Percentage { get; set; }
 
                     /// <summary>
-                    /// <para>The pretax amount of the group in the current period.</para>
+                    /// <para>The pretax amount of the group within the current period.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>18.87</para>
@@ -463,7 +463,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                     public string PretaxAmount { get; set; }
 
                     /// <summary>
-                    /// <para>The tax amount of the group in the current period.</para>
+                    /// <para>The tax amount of the group within the current period.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1.13</para>
@@ -475,7 +475,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 }
 
                 /// <summary>
-                /// <para>The total costs of the current period.</para>
+                /// <para>The total cost of the current period.</para>
                 /// </summary>
                 [NameInMap("total")]
                 [Validation(Required=false)]
@@ -492,7 +492,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                     public string Amount { get; set; }
 
                     /// <summary>
-                    /// <para>The currency of the amount in the current period.</para>
+                    /// <para>The currency of the amount for the current period.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>CNY</para>
@@ -528,7 +528,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         }
 
         /// <summary>
-        /// <para>The description of the request result.</para>
+        /// <para>The result message of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>

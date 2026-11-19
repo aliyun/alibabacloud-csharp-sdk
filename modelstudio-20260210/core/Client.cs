@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "ModelStudio";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("modelstudio", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -481,7 +484,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an API key as an authentication credential before using large models or applications in Alibaba Cloud Model Studio.</para>
+        /// <para>Creates an API key as an authentication credential before you use large models or applications in Alibaba Cloud Model Studio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -537,7 +540,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an API key as an authentication credential before using large models or applications in Alibaba Cloud Model Studio.</para>
+        /// <para>Creates an API key as an authentication credential before you use large models or applications in Alibaba Cloud Model Studio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -593,7 +596,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an API key as an authentication credential before using large models or applications in Alibaba Cloud Model Studio.</para>
+        /// <para>Creates an API key as an authentication credential before you use large models or applications in Alibaba Cloud Model Studio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -612,7 +615,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an API key as an authentication credential before using large models or applications in Alibaba Cloud Model Studio.</para>
+        /// <para>Creates an API key as an authentication credential before you use large models or applications in Alibaba Cloud Model Studio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1957,7 +1960,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the billing trends.</para>
+        /// <para>Queries billing trends.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2049,7 +2052,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the billing trends.</para>
+        /// <para>Queries billing trends.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2141,7 +2144,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the billing trends.</para>
+        /// <para>Queries billing trends.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2160,7 +2163,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the billing trends.</para>
+        /// <para>Queries billing trends.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2435,7 +2438,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query on seat details.</para>
+        /// <para>Performs a paged query on seat details with paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2455,6 +2458,10 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceCode))
+            {
+                query["InstanceCode"] = request.InstanceCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
                 query["PageNo"] = request.PageNo;
@@ -2501,7 +2508,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query on seat details.</para>
+        /// <para>Performs a paged query on seat details with paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2521,6 +2528,10 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceCode))
+            {
+                query["InstanceCode"] = request.InstanceCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
                 query["PageNo"] = request.PageNo;
@@ -2567,7 +2578,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query on seat details.</para>
+        /// <para>Performs a paged query on seat details with paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2586,7 +2597,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query on seat details.</para>
+        /// <para>Performs a paged query on seat details with paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3311,7 +3322,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries model throttling for a workspace.</para>
+        /// <para>Queries the model throttling configurations for a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3373,7 +3384,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries model throttling for a workspace.</para>
+        /// <para>Queries the model throttling configurations for a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3435,7 +3446,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries model throttling for a workspace.</para>
+        /// <para>Queries the model throttling configurations for a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3454,7 +3465,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries model throttling for a workspace.</para>
+        /// <para>Queries the model throttling configurations for a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4522,7 +4533,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only the API key value changes. The API key ID remains unchanged.</para>
+        /// <para>Only the API key changes. The API key ID remains unchanged.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4567,7 +4578,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only the API key value changes. The API key ID remains unchanged.</para>
+        /// <para>Only the API key changes. The API key ID remains unchanged.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4612,7 +4623,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only the API key value changes. The API key ID remains unchanged.</para>
+        /// <para>Only the API key changes. The API key ID remains unchanged.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4636,7 +4647,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only the API key value changes. The API key ID remains unchanged.</para>
+        /// <para>Only the API key changes. The API key ID remains unchanged.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4773,7 +4784,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets a UAC API key.</para>
+        /// <para>Resets the UAC API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4824,7 +4835,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets a UAC API key.</para>
+        /// <para>Resets the UAC API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4875,7 +4886,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets a UAC API key.</para>
+        /// <para>Resets the UAC API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4899,7 +4910,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets a UAC API key.</para>
+        /// <para>Resets the UAC API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

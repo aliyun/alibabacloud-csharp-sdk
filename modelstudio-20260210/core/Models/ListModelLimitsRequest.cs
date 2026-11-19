@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
     public class ListModelLimitsRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of results. Valid values: 0 to 200.</para>
+        /// <para>The maximum number of results to return. Valid values: 0 to 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The single model for exact match.</para>
+        /// <para>The model for exact match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qwen-plus</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The page token.</para>
+        /// <para>The next token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lwytFRtLdNk=</para>

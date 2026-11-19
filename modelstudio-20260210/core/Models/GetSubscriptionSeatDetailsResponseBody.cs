@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 public string AccountEmail { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the attached member accounts.</para>
+                /// <para>The ID of the member accounts to attach.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>acc_123456789</para>
@@ -66,8 +66,8 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 /// <summary>
                 /// <para>The assignment status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ASSIGNED</description></item>
-                /// <item><description>UNASSIGNED</description></item>
+                /// <item><description>ASSIGNED: Assigned.</description></item>
+                /// <item><description>UNASSIGNED: Unassigned.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 public long? EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The active entitlement instances. For the TokenPlan product, this list contains only one active entitlement instance.</para>
+                /// <para>The currently active entitlement instances. For the TokenPlan product, this list contains only one active entitlement instance.</para>
                 /// </summary>
                 [NameInMap("EquityList")]
                 [Validation(Required=false)]
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                     public long? CycleEndTime { get; set; }
 
                     /// <summary>
-                    /// <para>The entitlement code (subscription code). Consumption is not required in the credits scenario.</para>
+                    /// <para>The entitlement code. This is the subscription code and is not required for consumption in the credits scenario.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>123456</para>
@@ -189,9 +189,9 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 /// <summary>
                 /// <para>The seat type. Valid values: </para>
                 /// <list type="bullet">
-                /// <item><description>standard: standard seat</description></item>
-                /// <item><description>pro: advanced seat</description></item>
-                /// <item><description>max: premium seat</description></item>
+                /// <item><description>standard: Standard seat.</description></item>
+                /// <item><description>pro: Pro seat.</description></item>
+                /// <item><description>max: Premium seat.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -214,12 +214,12 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 /// <summary>
                 /// <para>The seat status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>CREATING: creating</description></item>
-                /// <item><description>NORMAL: valid</description></item>
-                /// <item><description>LIMIT: restricted due to overdue payment</description></item>
-                /// <item><description>RELEASE: released upon expiration</description></item>
-                /// <item><description>STOP: stopped upon expiration</description></item>
-                /// <item><description>REFUNDED: refunded</description></item>
+                /// <item><description>CREATING: Creating.</description></item>
+                /// <item><description>NORMAL: Valid.</description></item>
+                /// <item><description>LIMIT: Restricted due to overdue payment.</description></item>
+                /// <item><description>RELEASE: Released upon expiration.</description></item>
+                /// <item><description>STOP: Stopped upon expiration.</description></item>
+                /// <item><description>REFUNDED: Refunded.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -274,10 +274,10 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <para>Indicates whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: successful</description></item>
-        /// <item><description>false: failed</description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
     public class GetSubscriptionSeatDetailsRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. Default value: 1. Valid values: positive integers.</para>
+        /// <para>The instance code of the seat.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>subs_xxxxx</para>
+        /// </summary>
+        [NameInMap("InstanceCode")]
+        [Validation(Required=false)]
+        public string InstanceCode { get; set; }
+
+        /// <summary>
+        /// <para>The page number. Default value: 1. Valid values: a positive integer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,11 +40,11 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The filter for the seat assignment status. Valid values:</para>
+        /// <para>Specifies whether to filter by seat assignment status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: assigned</description></item>
-        /// <item><description>false: unassigned</description></item>
-        /// <item><description>null: all</description></item>
+        /// <item><description>true: Assigned.</description></item>
+        /// <item><description>false: Unassigned.</description></item>
+        /// <item><description>null: All.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,11 +65,11 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string SeatId { get; set; }
 
         /// <summary>
-        /// <para>The seat type (specType). Valid values:</para>
+        /// <para>The seat type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>standard: standard seat</description></item>
-        /// <item><description>pro: advanced seat</description></item>
-        /// <item><description>max: premium seat</description></item>
+        /// <item><description>standard: Standard seat.</description></item>
+        /// <item><description>pro: Pro seat.</description></item>
+        /// <item><description>max: Premium seat.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
