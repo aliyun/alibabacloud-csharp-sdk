@@ -10,10 +10,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListOperationTicketsRequest : TeaModel {
         /// <summary>
-        /// <para>The approval status. Valid values:</para>
+        /// <para>The status of the O&amp;M ticket. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: Pending approval.</description></item>
-        /// <item><description>2: Processed.</description></item>
+        /// <item><description><para><b>1</b>: Pending approval.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: Approved.</para>
+        /// <remarks>
+        /// <para>If this parameter is not specified, the default value is 1, and only tickets pending approval are queried.</para>
+        /// </remarks>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,9 +39,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string AssetAddress { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the Bastionhost instance.</para>
+        /// <para>The instance ID of the Bastionhost.</para>
         /// <remarks>
-        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the parameter value.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -58,7 +63,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string OperationTicketId { get; set; }
 
         /// <summary>
-        /// <para>The page number for a paged query. Default value: <b>1</b>.</para>
+        /// <para>The page number of the page to return in a paged query. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -68,9 +73,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page in a paged query.<br>The maximum value of the PageSize parameter is 1000. Default value: 20. If the PageSize parameter is left empty, 20 entries are returned by default.</para>
+        /// <para>The maximum number of entries to return on each page in a paged query.<br>Maximum value of PageSize: 1000. Default value: 20. If PageSize is left empty, 20 entries are returned by default.</para>
         /// <remarks>
-        /// <para>We recommend that you specify a value for the PageSize parameter.</para>
+        /// <para>Specify a value for PageSize.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

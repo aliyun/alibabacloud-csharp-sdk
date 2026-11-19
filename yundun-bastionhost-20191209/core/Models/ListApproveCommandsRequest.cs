@@ -10,10 +10,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListApproveCommandsRequest : TeaModel {
         /// <summary>
-        /// <para>The approval status. Valid values:</para>
+        /// <para>The status of the approval request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: Pending.</description></item>
-        /// <item><description>2: Processed.</description></item>
+        /// <item><description><para><b>1</b>: Pending approval.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: Approved.</para>
+        /// <remarks>
+        /// <para>If this parameter is not specified, the default value is 1, and only approval requests in the pending approval status are queried.</para>
+        /// </remarks>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +29,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public int? ApprovalStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the command approval.</para>
+        /// <para>The ID of the command approval request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,9 +39,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string ApproveCommandId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the Bastionhost.</para>
+        /// <para>The ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the parameter value.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -48,7 +53,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page for a paged query. Default value: <b>1</b>.</para>
+        /// <para>The page number of the current page in a paging query. Default value: <b>1</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,9 +64,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page for a paged query.<br>The maximum value of the PageSize parameter is 1000. The default number of entries per page is 20. If the PageSize parameter is left empty, 20 entries are returned by default.</para>
+        /// <para>The maximum number of entries to return on each page in a paging query.<br>The maximum value of the PageSize parameter is 1000. The default value is 20. If this parameter is left empty, 20 entries are returned by default.</para>
         /// <remarks>
-        /// <para>Specify a value for the PageSize parameter.</para>
+        /// <para>Do not leave the PageSize parameter empty.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -85,7 +90,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The region ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

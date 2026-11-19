@@ -17,10 +17,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public List<ListApproveCommandsResponseBodyApproveCommands> ApproveCommands { get; set; }
         public class ListApproveCommandsResponseBodyApproveCommands : TeaModel {
             /// <summary>
-            /// <para>The approval status. Valid values:</para>
+            /// <para>The status of the approval request. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: Pending.</description></item>
-            /// <item><description>2: Processed.</description></item>
+            /// <item><description><para><b>1</b>: Pending approval.</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: Approved.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +43,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string ApproveCommandId { get; set; }
 
             /// <summary>
-            /// <para>The name of the asset account used for O&amp;M.</para>
+            /// <para>The name of the O&amp;M asset account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>root</para>
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string AssetAccountName { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the asset for O&amp;M.</para>
+            /// <para>The IP address of the O&amp;M asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.167.XX.XX</para>
@@ -61,7 +63,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string AssetIp { get; set; }
 
             /// <summary>
-            /// <para>The name of the asset for O&amp;M.</para>
+            /// <para>The name of the O&amp;M asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>poros-test</para>
@@ -71,7 +73,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string AssetName { get; set; }
 
             /// <summary>
-            /// <para>The source IP address from which the application is submitted.</para>
+            /// <para>The source IP address from which the request was submitted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.18.XX.XX</para>
@@ -81,7 +83,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string ClientIp { get; set; }
 
             /// <summary>
-            /// <para>The Bastionhost user who submitted the application.</para>
+            /// <para>The Bastionhost user who submitted the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -101,7 +103,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Command { get; set; }
 
             /// <summary>
-            /// <para>The time when the application was submitted. Unit: seconds. The value is a UNIX timestamp.</para>
+            /// <para>The time when the request was submitted. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1679393152</para>
@@ -111,7 +113,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the protocol used for O&amp;M.</para>
+            /// <para>The name of the O&amp;M protocol.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SSH</para>
@@ -131,9 +133,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string SessionId { get; set; }
 
             /// <summary>
-            /// <para>The approval status. Valid values:</para>
+            /// <para>The approval status. Valid value:</para>
             /// <list type="bullet">
-            /// <item><description><b>Wait</b>: Pending.</description></item>
+            /// <item><description><b>Wait</b>: Pending approval.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
