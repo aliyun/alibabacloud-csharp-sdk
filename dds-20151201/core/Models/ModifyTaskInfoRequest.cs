@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyTaskInfoRequest : TeaModel {
         /// <summary>
-        /// <para>A action-related parameter. This parameter can be extended based on your business requirements. This parameter value varies with the value of the TaskAction parameter.</para>
+        /// <para>The parameters related to the action. These parameters can be extended based on business requirements. Different values must be passed for different taskAction names.</para>
+        /// <remarks>
+        /// <para>When TaskAction is set to modifySwitchTime, this parameter is required. It must be a JSON string that contains the recoverMode key. Valid values for recoverMode: immediate, maintainTime, and timePoint.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;recoverMode\&quot;:\&quot;immediate\&quot;}</para>
@@ -20,7 +23,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ActionParams { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,7 +42,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the step visible to the user.</para>
+        /// <para>The name of the step visible to the current user.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +53,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string StepName { get; set; }
 
         /// <summary>
-        /// <para>The action name that corresponds to the state described in the actionInfo parameter of the <a href="https://help.aliyun.com/document_detail/2639186.html">DescribeHistoryTasks</a> operation.</para>
+        /// <para>The name of the operation. The value is the action name corresponding to the status in the actionInfo obtained from the <a href="https://help.aliyun.com/document_detail/2639186.html">DescribeHistoryTasks</a> operation.</para>
+        /// <remarks>
+        /// <para>Valid values: retry, cancel, and modifySwitchTime.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +67,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string TaskAction { get; set; }
 
         /// <summary>
-        /// <para>The task ID. Separate multiple IDs with commas (,). You can specify up to 10 task IDs.</para>
+        /// <para>The task ID. Separate multiple IDs with commas (,). You can specify up to 10 IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyTaskInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code for the failed task. It is the same as that of the ModifyTaskInfo operation.</para>
+        /// <para>The error code for the failure. This is the same as the API error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the failed task. The operation returns results after a task fails.</para>
+        /// <para>The ID of the failed task. The ID is returned when a failure occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of successful tasks.</para>
+        /// <para>The number of successful records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

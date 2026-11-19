@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <item><description>It must be 8 to 32 characters in length.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>For more information about how to troubleshoot connection failures caused by special characters in database connection string, see <a href="https://help.aliyun.com/document_detail/471568.html">What do I do if database connection to an ApsaraDB for MongoDB instance fails because the username or password in database connection string contains special characters?</a>.</para>
+        /// <para>For more information about how to troubleshoot connection failures caused by special characters in database connection string, see <a href="https://help.aliyun.com/document_detail/471568.html">What do I do if a connection failure occurs because the username or password in database connection string contains special characters?</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -30,11 +30,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Enables auto-renewal.</description></item>
-        /// <item><description><b>false</b>: Disables auto-renewal. You must manually renew the instance. This is the default value.</description></item>
+        /// <item><description><b>true</b>: enables auto-renewal.</description></item>
+        /// <item><description><b>false</b>: disables auto-renewal. In this case, you must manually renew the instance. This is the default value.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is available and optional only when the <b>ChargeType</b> parameter is set to <b>PrePaid</b>.</para>
+        /// <para>This parameter is valid and optional only when the <b>ChargeType</b> parameter is set to <b>PrePaid</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster backup.</para>
+        /// <para>The cluster backup ID.</para>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This parameter is required only when RestoreType is set to 2 or 3.</description></item>
@@ -62,8 +62,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PostPaid</b>: Pay-as-you-go. This is the default value.</description></item>
-        /// <item><description><b>PrePaid</b>: Subscription.</description></item>
+        /// <item><description><b>PostPaid</b>: pay-as-you-go. This is the default value.</description></item>
+        /// <item><description><b>PrePaid</b>: subscription.</description></item>
         /// </list>
         /// <remarks>
         /// <para>If you set this parameter to <b>PrePaid</b>, you must also specify the <b>Period</b> parameter.</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the token, but you must ensure that the token is unique among different requests. The token can contain a maximum of 64 ASCII characters and cannot contain non-ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The information about the ConfigServer nodes.</para>
+        /// <para>The information about the Configserver node.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ConfigServer")]
@@ -95,10 +95,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public List<CreateShardingDBInstanceRequestConfigServer> ConfigServer { get; set; }
         public class CreateShardingDBInstanceRequestConfigServer : TeaModel {
             /// <summary>
-            /// <para>The specifications of the ConfigServer node. Valid values:</para>
+            /// <para>The specifications of the Configserver node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>mdb.shard.2x.xlarge.d</b>: 4 cores, 8 GB (dedicated). This specification is supported only for instances of version 4.4 and later.</description></item>
-            /// <item><description><b>dds.cs.mid</b>: 1 core, 2 GB (general-purpose). This specification is supported only for instances of version 4.2 and earlier.</description></item>
+            /// <item><description><b>mdb.shard.2x.xlarge.d</b>: 4 cores, 8 GB (dedicated). This specification is supported only by instances of version 4.4 or later.</description></item>
+            /// <item><description><b>dds.cs.mid</b>: 1 core, 2 GB (general-purpose). This specification is supported only by instances of version 4.2 or earlier.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string Class { get; set; }
 
             /// <summary>
-            /// <para>The storage capacity of the ConfigServer node. Unit: GB.</para>
+            /// <para>The storage capacity of the Configserver node. Unit: GB.</para>
             /// <remarks>
             /// <para>The valid values are subject to the instance specifications. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</para>
             /// </remarks>
@@ -126,10 +126,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// <para>The name of the instance. The name must meet the following requirements:</para>
+        /// <para>The instance name. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>It must start with a letter or a Chinese character.</description></item>
-        /// <item><description>It can contain digits, letters, Chinese characters, underscores (_), periods (.), and hyphens (-).</description></item>
+        /// <item><description>It must start with a letter.</description></item>
+        /// <item><description>It can contain digits, letters, underscores (_), periods (.), and hyphens (-).</description></item>
         /// <item><description>It must be 2 to 256 characters in length.</description></item>
         /// </list>
         /// 
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceDescription { get; set; }
 
         /// <summary>
-        /// <para>The region where the cross-region backup is stored.</para>
+        /// <para>The region of the geo-redundant backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -149,6 +149,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("DestRegion")]
         [Validation(Required=false)]
         public string DestRegion { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to perform a dry run on the request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: performs a dry run without executing the actual request. The system checks the request parameters, request format, service limits, and available resources. If the request fails the dry run, the system returns an error. If the request passes the dry run, the system returns the DryRunOperation error code.</description></item>
+        /// <item><description>false: sends a normal request and executes the operation after the request passes the dry run. This is the default value.</description></item>
+        /// </list>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
 
         /// <summary>
         /// <para>Specifies whether to enable cloud disk encryption.</para>
@@ -161,7 +172,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public bool? Encrypted { get; set; }
 
         /// <summary>
-        /// <para>The ID of the custom key.</para>
+        /// <para>The custom key ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2axxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</para>
@@ -182,7 +193,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The database version number. Valid values:</para>
+        /// <para>The database version. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>8.0</b></description></item>
         /// <item><description><b>7.0</b></description></item>
@@ -208,7 +219,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The global IP address whitelist templates of the instance. Separate multiple templates with commas (,). Duplicate templates are not supported.</para>
+        /// <para>The global IP address whitelist templates of the instance. Separate multiple templates with commas (,). Each template must be unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>g-qxieqf40xjst1ngpr3jz</para>
@@ -241,7 +252,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is available only when the instance uses cloud disks.</description></item>
+        /// <item><description>This parameter is valid only when the instance uses cloud disks.</description></item>
         /// <item><description>The value of this parameter cannot be the same as the value of <b>ZoneId</b> or <b>SecondaryZoneId</b>.</description></item>
         /// <item><description>For more information about the multi-zone deployment policy for sharded cluster instances, see <a href="https://help.aliyun.com/document_detail/117865.html">Create a multi-zone sharded cluster instance</a>.</description></item>
         /// </list>
@@ -255,6 +266,26 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string HiddenZoneId { get; set; }
 
         /// <summary>
+        /// <para>The maintenance end time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>22:00Z</para>
+        /// </summary>
+        [NameInMap("MaintainEndTime")]
+        [Validation(Required=false)]
+        public string MaintainEndTime { get; set; }
+
+        /// <summary>
+        /// <para>The maintenance start time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>18:00Z</para>
+        /// </summary>
+        [NameInMap("MaintainStartTime")]
+        [Validation(Required=false)]
+        public string MaintainStartTime { get; set; }
+
+        /// <summary>
         /// <para>The information about the mongos nodes.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -266,7 +297,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <para>The specifications of the mongos node. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description><b>N</b> in the parameter name specifies the sequence number of the mongos node. For example, <b>Mongos.2.Class</b> specifies the specifications of the second mongos node.</description></item>
+            /// <item><description><b>N</b> in the parameter name specifies the Nth mongos node. For example, <b>Mongos.2.Class</b> specifies the specifications of the second mongos node.</description></item>
             /// <item><description>Valid values of <b>N</b>: <b>2</b> to <b>32</b>.</description></item>
             /// </list>
             /// </remarks>
@@ -283,9 +314,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// <para>The network type of the instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>VPC</b>: VPC.</description></item>
-        /// </list>
+        /// <para><b>VPC</b>: VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VPC</para>
@@ -306,7 +335,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <para>The subscription duration of the instance. Unit: months.</para>
         /// <para>Valid values: <b>1</b> to <b>9</b>, <b>12</b>, <b>24</b>, <b>36</b>, and <b>60</b>.</para>
         /// <remarks>
-        /// <para>This parameter is required and takes effect only when the <b>ChargeType</b> parameter is set to <b>PrePaid</b>.</para>
+        /// <para>This parameter is required and valid only when the <b>ChargeType</b> parameter is set to <b>PrePaid</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -317,7 +346,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The type of the access protocol. Valid values:</para>
+        /// <para>The access protocol type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>mongodb</b>: MongoDB protocol.</description></item>
         /// <item><description><b>dynamodb</b>: DynamoDB protocol.</description></item>
@@ -363,7 +392,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <para>The specifications of the shard node. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description><b>N</b> in the parameter name specifies the sequence number of the shard node. For example, <b>ReplicaSet.2.Class</b> specifies the specifications of the second shard node.</description></item>
+            /// <item><description><b>N</b> in the parameter name specifies the Nth shard node. For example, <b>ReplicaSet.2.Class</b> specifies the specifications of the second shard node.</description></item>
             /// <item><description>Valid values of <b>N</b>: <b>2</b> to <b>32</b>.</description></item>
             /// </list>
             /// </remarks>
@@ -380,7 +409,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <para>The number of read-only nodes in the shard node.</para>
             /// <para>Valid values: <b>0</b> to <b>5</b>. Default value: <b>0</b>.</para>
             /// <remarks>
-            /// <para><b>N</b> in the parameter name specifies the sequence number of the shard node. For example, <b>ReplicaSet.2.ReadonlyReplicas</b> specifies the number of read-only nodes in the second shard node.</para>
+            /// <para><b>N</b> in the parameter name specifies the Nth shard node. For example, <b>ReplicaSet.2.ReadonlyReplicas</b> specifies the number of read-only nodes in the second shard node.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -395,7 +424,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <remarks>
             /// <list type="bullet">
             /// <item><description>The valid values are subject to the instance specifications. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</description></item>
-            /// <item><description><b>N</b> in the parameter name specifies the sequence number of the shard node. For example, <b>ReplicaSet.2.Storage</b> specifies the storage capacity of the second shard node.</description></item>
+            /// <item><description><b>N</b> in the parameter name specifies the Nth shard node. For example, <b>ReplicaSet.2.Storage</b> specifies the storage capacity of the second shard node.</description></item>
             /// </list>
             /// </remarks>
             /// <para>This parameter is required.</para>
@@ -424,7 +453,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The point in time to which you want to restore the instance. You can specify any point in time within the last seven days. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para>This parameter is required only when you call this operation to clone an instance. You must also specify the <b>SrcDBInstanceId</b> parameter.</para>
+        /// <para>You must specify this parameter only when you call this operation to clone an instance. You must also specify the <b>SrcDBInstanceId</b> parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -437,9 +466,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The backup restoration type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: Restore the instance to a specified point in time.</description></item>
-        /// <item><description>2: Restore a released instance to a specified backup set.</description></item>
-        /// <item><description>3: Restore the instance to a specified cross-region backup set.</description></item>
+        /// <item><description>1: restore the instance to a specified point in time.</description></item>
+        /// <item><description>2: restore a released instance to a specified backup set.</description></item>
+        /// <item><description>3: restore the instance to a specified geo-redundant backup set.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -471,7 +500,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <item><description><b>eu-central-1b</b>: Frankfurt Zone B.</description></item>
         /// <item><description><b>eu-central-1c</b>: Frankfurt Zone C.<remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is available only when the instance uses cloud disks.</description></item>
+        /// <item><description>This parameter is valid only when the instance uses cloud disks.</description></item>
         /// <item><description>The value of this parameter cannot be the same as the value of <b>ZoneId</b> or <b>HiddenZoneId</b>.</description></item>
         /// <item><description>For more information about the multi-zone deployment policy for sharded cluster instances, see <a href="https://help.aliyun.com/document_detail/117865.html">Create a multi-zone sharded cluster instance</a>.</description></item>
         /// </list>
@@ -487,7 +516,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string SecondaryZoneId { get; set; }
 
         /// <summary>
-        /// <para>The IP address whitelist of the instance. Separate multiple IP addresses with commas (,). Duplicate IP addresses are not supported. The following formats are supported:</para>
+        /// <para>The IP address whitelist of the instance. Separate multiple IP addresses with commas (,). Each IP address must be unique. The following formats are supported:</para>
         /// <list type="bullet">
         /// <item><description>0.0.0.0/0</description></item>
         /// <item><description>IP addresses, such as 10.23.12.24.</description></item>
@@ -495,8 +524,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can add up to 1,000 IP addresses or CIDR blocks to the whitelist of an instance. The total number of IP addresses or CIDR blocks in all whitelist groups cannot exceed 1,000.</description></item>
-        /// <item><description>0.0.0.0/0 indicates that all IP addresses can access the instance. This is a high-risk setting. Configure this parameter with caution.</description></item>
+        /// <item><description>You can add up to 1,000 IP addresses or CIDR blocks to the whitelist of an instance. The total number of IP addresses and CIDR blocks in all whitelist groups cannot exceed 1,000.</description></item>
+        /// <item><description>0.0.0.0/0 indicates that all IP addresses can access the databases of the instance. This is a high-risk setting. Configure this setting with caution.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -508,9 +537,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string SecurityIPList { get; set; }
 
         /// <summary>
-        /// <para>The source instance ID.</para>
+        /// <para>The ID of the source instance.</para>
         /// <remarks>
-        /// <para>This parameter is required only when you call this operation to clone an instance. You must also specify the <b>RestoreTime</b> parameter.</para>
+        /// <para>You must specify this parameter only when you call this operation to clone an instance. You must also specify the <b>RestoreTime</b> parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -521,11 +550,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string SrcDBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region where the source instance is located.</para>
+        /// <para>The region of the source instance.</para>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This parameter is required when the backup restoration type is rebuilding a deleted instance.</description></item>
-        /// <item><description>This parameter is required when the backup restoration type is cross-region backup cloning.</description></item>
+        /// <item><description>This parameter is required when the backup restoration type is cloning from a geo-redundant backup.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -558,12 +587,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <item><description><b>cloud_essd1</b>: PL1 ESSD.</description></item>
         /// <item><description><b>cloud_essd2</b>: PL2 ESSD.</description></item>
         /// <item><description><b>cloud_essd3</b>: PL3 ESSD.</description></item>
-        /// <item><description><b>local_ssd</b>: local SSD.</description></item>
+        /// <item><description><b>local_ssd</b>: Local SSD.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Instances of version 4.4 and later support only cloud disks. If you do not specify this parameter, <b>cloud_essd1</b> is selected by default.</description></item>
-        /// <item><description>Instances of version 4.2 and earlier support only local disks. If you do not specify this parameter, <b>local_ssd</b> is selected by default.</description></item>
+        /// <item><description>Instances of version 4.4 or later support only cloud disks. If you do not specify this parameter, <b>cloud_essd1</b> is selected by default.</description></item>
+        /// <item><description>Instances of version 4.2 or earlier support only local disks. If you do not specify this parameter, <b>local_ssd</b> is selected by default.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -575,6 +604,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string StorageType { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable TTL index cleanup for the restored instance. A value of true or an empty value indicates that cleanup is enabled.</para>
+        /// </summary>
+        [NameInMap("TTLEnabled")]
+        [Validation(Required=false)]
+        public bool? TTLEnabled { get; set; }
+
+        /// <summary>
         /// <para>The custom tags.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -582,11 +618,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public List<CreateShardingDBInstanceRequestTag> Tag { get; set; }
         public class CreateShardingDBInstanceRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The tag key.</para>
             /// <remarks>
-            /// <list type="bullet">
-            /// <item><description><b>N</b> in the parameter name specifies the sequence number of the tag. For example, <b>Tag.1.Key</b> specifies the key of the first tag, and <b>Tag.2.Key</b> specifies the key of the second tag.</description></item>
-            /// </list>
+            /// <para><b>N</b> in the parameter name specifies the Nth tag. For example, <b>Tag.1.Key</b> specifies the key of the first tag, and <b>Tag.2.Key</b> specifies the key of the second tag.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -597,9 +631,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value.</para>
             /// <remarks>
-            /// <para><b>N</b> in the parameter name specifies the sequence number of the tag. For example, <b>Tag.1.Value</b> specifies the value of the first tag, and <b>Tag.2.Value</b> specifies the value of the second tag.</para>
+            /// <para><b>N</b> in the parameter name specifies the Nth tag. For example, <b>Tag.1.Value</b> specifies the value of the first tag, and <b>Tag.2.Value</b> specifies the value of the second tag.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

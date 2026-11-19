@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeAvailabilityZonesRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the returned <b>RegionName</b> and <b>ZoneName</b> parameter values. Valid values:</para>
+        /// <para>The language of the <b>RegionName</b> and <b>ZoneName</b> response parameters. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English</para>
-        /// </description></item>
+        /// <item><description><b>zh</b>: Chinese. Default value.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The instance type of the instance.</para>
+        /// <para>The instance type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dds.mongo.standard</para>
@@ -36,12 +34,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The architecture of the instance. Valid values:</para>
+        /// <para>The database type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>normal</b>: replica set instance</para>
-        /// </description></item>
-        /// <item><description><para><b>sharding</b>: sharded cluster instance</para>
-        /// </description></item>
+        /// <item><description><b>normal</b>: replica set instance.</description></item>
+        /// <item><description><b>sharding</b>: sharded cluster instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +48,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DbType { get; set; }
 
         /// <summary>
-        /// <para>The database engine version of the instance.</para>
+        /// <para>The database engine version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5.0</para>
@@ -62,7 +58,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The secondary zone ID that is excluded from the query results. You can configure the ExcludeZoneId and ExcludeSecondaryZoneId parameters to specify the IDs of multiple zones that are excluded from the query results.</para>
+        /// <para>The secondary zone ID to be excluded from the query results in the current region. This parameter is used together with ExcludeZoneId to filter multiple zones.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai-b</para>
@@ -72,7 +68,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ExcludeSecondaryZoneId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID that is excluded from the query results.</para>
+        /// <para>The zone ID to be excluded from the query results in the current region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai-g</para>
@@ -82,12 +78,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ExcludeZoneId { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the product. Valid values:</para>
+        /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>PrePaid</b>: subscription</para>
-        /// </description></item>
-        /// <item><description><para><b>PostPaid:</b> pay-as-you-go</para>
-        /// </description></item>
+        /// <item><description><b>PrePaid</b>: subscription. Default value.</description></item>
+        /// <item><description><b>PostPaid</b>: pay-as-you-go.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,12 +92,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// <para>The architecture of the instance. Valid values:</para>
+        /// <para>The instance type. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para><b>sharding</b>: sharded cluster instance</para>
-        /// </description></item>
-        /// <item><description><para><b>replicate</b>: replica set or standalone instance</para>
-        /// </description></item>
+        /// <item><description><b>sharding</b>: sharded cluster instance.</description></item>
+        /// <item><description><b>replicate</b>: replica set instance or standalone instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -114,7 +106,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The edition of the instance. High-Available Edition and Preview Edition (dbfs) are supported.</para>
+        /// <para>The MongoDB edition, such as the high-availability edition or the test edition (dbfs).</para>
         /// 
         /// <b>Example:</b>
         /// <para>dbfs</para>
@@ -132,7 +124,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the latest available regions.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -143,21 +135,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The number of nodes in the instance.</para>
+        /// <para>The number of nodes.</para>
         /// <remarks>
-        /// <para>This parameter is available only for replica set instances.</para>
+        /// <para>This parameter is supported only for replica set instances.</para>
         /// </remarks>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>1</para>
-        /// </description></item>
-        /// <item><description><para>3</para>
-        /// </description></item>
-        /// <item><description><para>5</para>
-        /// </description></item>
-        /// <item><description><para>7</para>
-        /// </description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -167,7 +148,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ReplicationFactor { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</para>
+        /// <para>The resource group ID. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmx2m4rqu7pry</para>
@@ -187,12 +168,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The storage type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cloud</b>: displays only zones available for instances that use cloud disks.</para>
-        /// </description></item>
-        /// <item><description><para><b>local</b>: only displays zones available for instances that use local disks instances.</para>
-        /// </description></item>
-        /// <item><description><para><b>default</b> or unspecified: displays zones available for instances that use cloud disks and those that use local disks.</para>
-        /// </description></item>
+        /// <item><description><b>cloud</b>: displays only the zones that support cloud disk instances.</description></item>
+        /// <item><description><b>local</b>: displays only the zones that support local disk instances.</description></item>
+        /// <item><description><b>default</b> or empty: displays the zones that support both local disk and cloud disk instances.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -203,23 +181,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string StorageSupport { get; set; }
 
         /// <summary>
-        /// <para>The storage type. Valid values:</para>
+        /// <para>The storage type. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para><b>cloud_essd1</b>: PL1 Enterprise SSDs (ESSDs)</para>
-        /// </description></item>
-        /// <item><description><para><b>cloud_essd2</b>: PL2 ESSDs</para>
-        /// </description></item>
-        /// <item><description><para><b>cloud_essd3</b>: PL3 ESSDs</para>
-        /// </description></item>
-        /// <item><description><para><b>local_ssd</b>: local SSDs</para>
-        /// </description></item>
+        /// <item><description><b>cloud_essd1</b>: PL1 ESSD.</description></item>
+        /// <item><description><b>cloud_essd2</b>: PL2 ESSD.</description></item>
+        /// <item><description><b>cloud_essd3</b>: PL3 ESSD.</description></item>
+        /// <item><description><b>local_ssd</b>: local SSD.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Instances that run MongoDB 4.4 or later only use cloud disks to store data. If you do not specify this parameter, the value <b>cloud_essd1</b> is used by default.</para>
-        /// </description></item>
-        /// <item><description><para>Instances that run MongoDB 4.2 and earlier only use local disks to store data. If you do not specify this parameter, the value <b>local_ssd</b> is used by default.</para>
-        /// </description></item>
+        /// <item><description>Instances of version 4.4 and later support only cloud disks. If you do not specify this parameter, <b>cloud_essd1</b> is selected by default.</description></item>
+        /// <item><description>Instances of version 4.2 and earlier support only local disks. If you do not specify this parameter, <b>local_ssd</b> is selected by default.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -231,7 +203,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string StorageType { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query available zones.</para>
+        /// <para>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-b</para>

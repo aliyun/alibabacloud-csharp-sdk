@@ -33,12 +33,22 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to forcibly modify the suffix of the connection string. If a suffix conflict occurs:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Forcibly modifies the suffix.</description></item>
+        /// <item><description>false or not specified: Uses the default validation logic.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("ForceModifySuffix")]
         [Validation(Required=false)]
         public bool? ForceModifySuffix { get; set; }
 
         /// <summary>
-        /// <para>The network type of the connection string when only the port number is modified.</para>
+        /// <para>The network type of the connection string when only port numbers are modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc</para>
@@ -56,7 +66,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <item><description>It must be 8 to 63 characters in length.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Specify only the prefix of the endpoint. The remaining part cannot be modified.</para>
+        /// <para>You only need to specify the prefix of the endpoint. The suffix cannot be modified.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -67,7 +77,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string NewConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The new port. Valid values: 1000 to 65535.</para>
+        /// <para>The new port number. Valid values: 1000 to 65535.</para>
         /// <remarks>
         /// <para>This parameter is active only when the <b>DBInstanceId</b> parameter is set to a cloud disk instance ID.</para>
         /// </remarks>
@@ -101,7 +111,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to modify only port numbers. If you modify only port numbers, batch modification is supported.</para>
+        /// <para>Specifies whether to modify only port numbers. Batch modification is supported when only port numbers are modified.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("PortModifyOnly")]
         [Validation(Required=false)]

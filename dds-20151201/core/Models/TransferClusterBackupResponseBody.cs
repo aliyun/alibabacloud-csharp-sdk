@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class TransferClusterBackupResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the instance is switched to the cluster backup mode. If the value of this parameter is <b>1</b>, the instance is switched to the cluster backup mode.</para>
+        /// <para>Indicates whether the instance has been switched to cluster backup mode. <b>1</b> indicates that the switch is complete.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

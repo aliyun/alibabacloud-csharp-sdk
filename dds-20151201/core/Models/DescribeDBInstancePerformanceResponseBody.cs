@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeDBInstancePerformanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</para>
+        /// <para>The end time of the query. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-06-13T11:58Z</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</para>
+        /// <para>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-06-13T10:58Z</para>

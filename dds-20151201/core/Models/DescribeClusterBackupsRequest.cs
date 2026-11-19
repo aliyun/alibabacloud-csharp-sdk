@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeClusterBackupsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster backup.</para>
+        /// <para>The cluster backup ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5664****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string BackupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the backup job.</para>
+        /// <para>The backup job ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>775051</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string BackupJobId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,9 +41,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region where the geo-redundant backup resides.</para>
+        /// <para>The region where the cross-region backup resides.</para>
         /// <remarks>
-        /// <para>This parameter is required when you query geo-redundant backups.</para>
+        /// <para>This parameter is required when you query cross-region backups.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -54,9 +54,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DestRegion { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The end time must be later than the start time. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</para>
+        /// <para>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para>This parameter is invalid if you specify the BackupId parameter.</para>
+        /// <para>This parameter does not take effect when BackupId is specified.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -67,12 +67,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query the information about the child nodes in the cluster backup. Valid values:</para>
+        /// <para>Specifies whether to query the information about child nodes in the cluster backup. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Returns only the basic information about the cluster backup, not the backup information about all child nodes.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b> (Default): Returns the backup information about all child nodes.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: returns only the basic information about the cluster backup and does not return the backup information about all child nodes.</description></item>
+        /// <item><description><b>false</b> (default): returns the backup information about all child nodes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -91,7 +89,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. The value must be a positive integer. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>. Valid values: positive integers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -101,14 +99,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values:</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>30</b> (Default)</para>
-        /// </description></item>
-        /// <item><description><para><b>50</b></para>
-        /// </description></item>
-        /// <item><description><para><b>100</b></para>
-        /// </description></item>
+        /// <item><description><b>30</b> (default)</description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -119,7 +114,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-xxxx</para>
@@ -140,10 +135,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <para>The region where the instance resides.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter is required when you query the backup sets of a released instance.</para>
-        /// </description></item>
-        /// <item><description><para>This parameter is required when you query geo-redundant backups.</para>
-        /// </description></item>
+        /// <item><description>This parameter is required when you query the backup sets of a released instance.</description></item>
+        /// <item><description>This parameter is required when you query cross-region backups.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -155,9 +148,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string SrcRegion { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in Coordinated Universal Time (UTC).</para>
+        /// <para>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para>This parameter is invalid if you specify the BackupId parameter.</para>
+        /// <para>This parameter does not take effect when BackupId is specified.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

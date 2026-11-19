@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class CreateNodeBatchRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the account. Valid values:</para>
+        /// <para>The username of the account. The name must meet the following requirements:</para>
         /// <list type="bullet">
         /// <item><description>The name must start with a lowercase letter.</description></item>
         /// <item><description>The name can contain lowercase letters, digits, and underscores (_).</description></item>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The password of the account. Valid values:</para>
+        /// <para>The password of the account. The password must meet the following requirements:</para>
         /// <list type="bullet">
         /// <item><description>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</description></item>
         /// <item><description>Special characters include !@#$%^&amp;*()_+-=.</description></item>
@@ -52,8 +52,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: (Default) Automatic payment is enabled. Make sure that your account has sufficient balance.</description></item>
-        /// <item><description><b>false</b>: Manual payment is enabled. For more information, see <a href="https://help.aliyun.com/document_detail/85052.html">Manually renew a subscription instance</a>.</description></item>
+        /// <item><description><b>true</b>: Enables automatic payment. Make sure that your account has sufficient balance. This is the default value.</description></item>
+        /// <item><description><b>false</b>: Disables automatic payment. You must manually pay the order. For more information, see <a href="https://help.aliyun.com/document_detail/85052.html">Manually renew a subscription instance</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can be up to 64 ASCII characters in length. The value cannot contain non-ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value on the client side. The value must be unique across different requests and can be up to 64 ASCII characters in length. It cannot contain non-ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -86,8 +86,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>Specifies whether to use a coupon. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>default</b> or <b>null</b>: (Default) A coupon is used.</description></item>
-        /// <item><description><b>youhuiquan_promotion_option_id_for_blank</b>: No coupon is used.</description></item>
+        /// <item><description><b>default</b> or <b>null</b>: Uses a coupon. This is the default value.</description></item>
+        /// <item><description><b>youhuiquan_promotion_option_id_for_blank</b>: Does not use a coupon.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -109,10 +109,21 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to perform a dry run on the request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Performs a dry run without calling the operation. The system checks items such as request parameters, request format, service limits, and inventory. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.</description></item>
+        /// <item><description>false: Sends the request. If the check succeeds, the operation is performed. This is the default value.</description></item>
+        /// </list>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
         /// <para>The source of the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>OpenApi</b>: OpenAPI.</description></item>
-        /// <item><description><b>mongo_buy</b>: The console.</description></item>
+        /// <item><description><b>OpenApi</b>: The request is sent from OpenAPI Explorer.</description></item>
+        /// <item><description><b>mongo_buy</b>: The request is sent from the console.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -156,7 +167,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <para>Specifies whether to apply for a direct connection endpoint for the shard node. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Applies for a direct connection endpoint for the shard node.</description></item>
-        /// <item><description><b>false</b>: (Default) Does not apply for a direct connection endpoint for the shard node.</description></item>
+        /// <item><description><b>false</b>: Does not apply for a direct connection endpoint for the shard node. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

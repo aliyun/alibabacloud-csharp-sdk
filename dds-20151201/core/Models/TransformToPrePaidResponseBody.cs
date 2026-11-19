@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class TransformToPrePaidResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the order.</para>
+        /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21022019252****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2F42BB4E-461F-5B55-A37C-53B1141C****</para>

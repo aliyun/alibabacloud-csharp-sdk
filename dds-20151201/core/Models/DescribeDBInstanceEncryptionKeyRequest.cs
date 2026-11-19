@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The custom encryption key of the instance. You can call <a href="https://help.aliyun.com/document_detail/151729.html">DescribeUserEncryptionKeyList</a> to query the custom keys of the instance.</para>
+        /// <para>The custom key of the instance. You can call <a href="https://help.aliyun.com/document_detail/151729.html">DescribeUserEncryptionKeyList</a> to query the custom keys of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2axxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</para>

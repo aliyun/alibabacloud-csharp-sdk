@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class CreateNodeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the node.</para>
+        /// <para>The node ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-bp1b234bf7a4****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order.</para>
+        /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20951063702****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7D48FB19-20CA-4725-A870-3D8F5CE6****</para>

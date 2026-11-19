@@ -10,23 +10,19 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeBackupTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the backup jobs.</para>
+        /// <para>The backup job details.</para>
         /// </summary>
         [NameInMap("BackupJobs")]
         [Validation(Required=false)]
         public List<DescribeBackupTasksResponseBodyBackupJobs> BackupJobs { get; set; }
         public class DescribeBackupTasksResponseBodyBackupJobs : TeaModel {
             /// <summary>
-            /// <para>The status of the backup job.</para>
+            /// <para>The backup job status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Scheduled</b>: The backup job is scheduled. This includes regular backup jobs that have not started.</para>
-            /// </description></item>
-            /// <item><description><para><b>Checking</b>: The instance is being checked before the backup.</para>
-            /// </description></item>
-            /// <item><description><para><b>Backuping</b>: The backup is in progress.</para>
-            /// </description></item>
-            /// <item><description><para><b>Finished</b>: The backup is complete.</para>
-            /// </description></item>
+            /// <item><description><b>Scheduled</b>: The backup task is scheduled, including routine backup tasks that have not started.</description></item>
+            /// <item><description><b>Checking</b>: The instance is being checked before the backup.</description></item>
+            /// <item><description><b>Backuping</b>: The backup is in progress.</description></item>
+            /// <item><description><b>Finished</b>: The backup is completed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -37,7 +33,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string BackupSetStatus { get; set; }
 
             /// <summary>
-            /// <para>The start time of the backup.</para>
+            /// <para>The backup start time in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-16T11:04:56Z</para>
@@ -57,12 +53,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string BackupjobId { get; set; }
 
             /// <summary>
-            /// <para>The backup mode. Valid values:</para>
+            /// <para>The backup pattern. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Automated</b>: automatic backup.</para>
-            /// </description></item>
-            /// <item><description><para><b>Manual</b>: manual backup.</para>
-            /// </description></item>
+            /// <item><description><b>Automated</b>: Automatic backup.</description></item>
+            /// <item><description><b>Manual</b>: Manual backup.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -73,7 +67,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string JobMode { get; set; }
 
             /// <summary>
-            /// <para>The backup progress in percentage. The progress is displayed only for running backup jobs.</para>
+            /// <para>The backup progress in percentage. The progress is displayed only for running backups.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18%</para>

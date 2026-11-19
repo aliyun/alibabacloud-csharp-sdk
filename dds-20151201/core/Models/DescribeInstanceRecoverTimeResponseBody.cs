@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of restorable time ranges. This list contains all time ranges available for point-in-time restoration.</para>
+        /// <para>The list of restorable time ranges. This list includes all time ranges available for point-in-time recovery.</para>
         /// </summary>
         [NameInMap("RestoreRanges")]
         [Validation(Required=false)]
         public List<DescribeInstanceRecoverTimeResponseBodyRestoreRanges> RestoreRanges { get; set; }
         public class DescribeInstanceRecoverTimeResponseBodyRestoreRanges : TeaModel {
             /// <summary>
-            /// <para>The beginning of the restorable time range.</para>
+            /// <para>The start time of the restorable time range. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC time).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-10-16T19:33:20Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string RestoreBeginTime { get; set; }
 
             /// <summary>
-            /// <para>The end of the restorable time range.</para>
+            /// <para>The end time of the restorable time range. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC time).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-10-16T19:43:20Z</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <summary>
             /// <para>The restoration method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PointInTime (default): point-in-time restoration.</description></item>
+            /// <item><description>PointInTime: point-in-time recovery. This is the default value.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

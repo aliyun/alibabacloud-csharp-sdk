@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of cluster backup sets. A cluster backup contains the backup set of each node.</para>
+        /// <para>The list of cluster backup sets. A cluster backup contains the backup sets of each node.</para>
         /// </summary>
         [NameInMap("RestoreRanges")]
         [Validation(Required=false)]
         public List<DescribeClusterRecoverTimeResponseBodyRestoreRanges> RestoreRanges { get; set; }
         public class DescribeClusterRecoverTimeResponseBodyRestoreRanges : TeaModel {
             /// <summary>
-            /// <para>The beginning of the restorable time range.</para>
+            /// <para>The start time of the restorable time range. The time is in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-10-16T19:33:20Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string RestoreBeginTime { get; set; }
 
             /// <summary>
-            /// <para>The end of the restorable time range.</para>
+            /// <para>The end time of the restorable time range. The time is in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-10-16T19:43:20Z</para>

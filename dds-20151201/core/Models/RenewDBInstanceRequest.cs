@@ -12,10 +12,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: enables automatic payment. Make sure that you have sufficient balance within your account.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: disables automatic payment. You must perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner, click <b>Expenses</b> and select <b>User Center</b> from the drop-down list. The User Center page appears. In the left-side navigation pane, choose <b>Order Management</b> &gt; Renew. On the Renewal tab, find the bill that you want to pay and then click Renew in the Actions column.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: enables automatic payment. Make sure that your account has sufficient balance.
+        /// &lt;props=&quot;china&quot;&gt;- <b>false</b>: disables automatic payment. You can log on to the ApsaraDB for MongoDB console, choose <b>Billing</b> &gt; <b>Expenses and Costs</b> in the upper-right corner, choose <b>Orders</b> &gt; <b>My Orders</b> in the left-side navigation pane, and then find the target order on the <b>Orders</b> tab to complete the payment.
+        /// &lt;props=&quot;intl&quot;&gt;- <b>false</b>: disables automatic payment. You can log on to the ApsaraDB for MongoDB console, choose <b>Billing</b> &gt; <b>Expenses and Costs</b> in the upper-right corner, click <b>Order Management</b> in the left-side navigation pane, and then find the target order on the <b>Orders</b> page to complete the payment.</description></item>
         /// </list>
         /// <para>Default value: <b>true</b>.</para>
         /// 
@@ -29,10 +28,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b></para>
-        /// </description></item>
-        /// <item><description><para><b>false</b></para>
-        /// </description></item>
+        /// <item><description><b>true</b>: enables auto-renewal.</description></item>
+        /// <item><description><b>false</b>: disables auto-renewal.</description></item>
         /// </list>
         /// <para>Default value: <b>false</b>.</para>
         /// 
@@ -54,7 +51,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCzxxxxxxxxxx</para>
@@ -64,12 +61,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use coupons. Default value: null. Valid values:</para>
+        /// <para>Specifies whether to use a coupon. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>default</b> or <b>null</b>: uses coupons.</para>
-        /// </description></item>
-        /// <item><description><para><b>youhuiquan_promotion_option_id_for_blank</b>: does not use coupons.</para>
-        /// </description></item>
+        /// <item><description><b>default</b> or <b>null</b> (default): uses a coupon.</description></item>
+        /// <item><description><b>youhuiquan_promotion_option_id_for_blank</b>: does not use a coupon.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -90,6 +85,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to perform a dry run on the request. Valid values:
+        /// true: performs a dry run without calling the operation. The system checks the request parameters, request format, service limits, and available resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.
+        /// false (default): sends the request. If the request passes the dry run, the operation is performed.</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -99,7 +103,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The subscription period of the instance. Unit: month. Valid values: <b>1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, and 36</b>.</para>
+        /// <para>The renewal duration of the instance. Unit: months. Valid values: <b>1 to 9, 12, 24, and 36</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

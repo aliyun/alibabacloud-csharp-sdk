@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>Specifies whether the instance is deleted. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><b>false</b>: The instance is running. Queries the information of a running instance.</description></item>
-        /// <item><description><b>true</b>: The instance is deleted. Queries the information of a deleted instance.</description></item>
+        /// <item><description><b>false</b>: The instance is running. Queries the information of running instances.</description></item>
+        /// <item><description><b>true</b>: The instance is deleted. Queries the information of deleted instances.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,9 +53,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</para>
+        /// <para>The resource group ID. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</para>
         /// <remarks>
-        /// <para>This parameter is supported only on the China site.</para>
+        /// <para>This parameter is supported only on the Alibaba Cloud China site.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

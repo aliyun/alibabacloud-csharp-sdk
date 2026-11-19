@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-mm-dd</em>T<em>hh:mm</em>Z format. The time must be in UTC. The end time must be later than the start time.</para>
+        /// <para>The end time of the query. The end time must be later than the start time. The time is in the <i>yyyy-mm-dd</i>T<i>hh:mm</i>Z format (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-05-28T02:00Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. The value must be an integer that is greater than 0 and less than or equal to the maximum value supported by the integer data type. Default value: <b>1</b>.</para>
+        /// <para>The page number. Valid values: an integer greater than 0 and less than or equal to the maximum value of the INTEGER data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>30, 50, and 100</b>. Default value: <b>30</b>.</para>
+        /// <para>The number of entries per page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>. Default value: <b>30</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-mm-dd</em>T<em>hh:mm</em>Z format. The time must be in UTC.</para>
+        /// <para>The start time of the query. The time is in the <i>yyyy-mm-dd</i>T<i>hh:mm</i>Z format (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-05-27T02:46Z</para>

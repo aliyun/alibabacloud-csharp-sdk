@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyDBInstanceSpecResponseBody : TeaModel {
         /// <summary>
-        /// <para>The order ID.</para>
+        /// <para>The ID of the order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21012408824****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1E9F1104-19E7-59F0-AB7F-F4EBFDEA****</para>

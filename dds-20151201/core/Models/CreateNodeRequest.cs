@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>ApsaraDB for MongoDB does not support using keywords as usernames.</description></item>
+        /// <item><description>ApsaraDB for MongoDB does not support keywords as usernames.</description></item>
         /// <item><description>The permissions of the account are fixed to read-only.</description></item>
         /// <item><description>When you apply for a direct connection endpoint for the shard node for the first time, you must set the username and password. You do not need to set them again for subsequent applications.</description></item>
         /// </list>
@@ -32,14 +32,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The password of the account. Valid values:</para>
+        /// <para>The password. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</description></item>
         /// <item><description>Special characters include !@#$%^&amp;*()_+-=.</description></item>
         /// <item><description>The password must be 8 to 32 characters in length.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>ApsaraDB for MongoDB does not support resetting the password of the account for the shard node.</para>
+        /// <para>ApsaraDB for MongoDB does not support resetting the password for the shard node account.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables automatic payment. This is the default value. Make sure that your account has sufficient balance.
+        /// <item><description><b>true</b> (default): enables automatic payment. Make sure that your account has sufficient balance.
         /// &lt;props=&quot;china&quot;&gt;- <b>false</b>: disables automatic payment. You can log on to the ApsaraDB for MongoDB console, choose <b>Expenses</b> &gt; <b>Expenses and Costs</b> in the upper-right corner, choose <b>Subscription Orders</b> &gt; <b>My Orders</b> in the left-side navigation pane, and then pay for the order on the <b>Orders</b> tab.
         /// &lt;props=&quot;intl&quot;&gt;- <b>false</b>: disables automatic payment. You can log on to the ApsaraDB for MongoDB console, choose <b>Expenses</b> &gt; <b>Expenses and Costs</b> in the upper-right corner, click <b>Order Management</b> in the left-side navigation pane, and then pay for the order on the <b>Orders</b> page.</description></item>
         /// </list>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>The additional parameter that contains business information.</para>
+        /// <para>The additional parameter for business information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{“ActivityId&quot;:&quot;000000000&quot;}</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The value can contain a maximum of 64 ASCII characters and cannot contain non-ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>Specifies whether to use a coupon. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>default</b> or <b>null</b>: uses a coupon. This is the default value.</description></item>
+        /// <item><description><b>default</b> or <b>null</b> (default): uses a coupon.</description></item>
         /// <item><description><b>youhuiquan_promotion_option_id_for_blank</b>: does not use a coupon.</description></item>
         /// </list>
         /// 
@@ -113,7 +113,18 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance type of the shard node or mongos node. For more information about instance types, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</para>
+        /// <para>Specifies whether to perform a dry run on the request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: performs a dry run without calling the operation. The system checks the request parameters, request format, service limits, and available resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</description></item>
+        /// <item><description>false (default): sends the request. If the request passes the dry run, the operation is performed.</description></item>
+        /// </list>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
+        /// <para>The instance type of the shard or mongos node. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -127,7 +138,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <para>The disk space of the node. Unit: GB.</para>
         /// <para>The valid values vary based on the storage type. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</para>
         /// <remarks>
-        /// <para>This parameter is required when the node type is <b>Shard</b>.</para>
+        /// <para>This parameter is required when the node type is <b>shard</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -164,7 +175,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <para>The number of read-only nodes in the shard node.</para>
         /// <para>Valid values: <b>0</b> to <b>5</b>. Default value: <b>0</b>.</para>
         /// <remarks>
-        /// <para>This parameter is supported only on the Alibaba Cloud China site.</para>
+        /// <para>This parameter is supported only on the China site.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -182,14 +193,32 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The instance type of the search node to be added.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mdb.shard.4x.large.d</para>
+        /// </summary>
         [NameInMap("SearchDBInstanceClass")]
         [Validation(Required=false)]
         public string SearchDBInstanceClass { get; set; }
 
+        /// <summary>
+        /// <para>The number of search nodes to be added.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("SearchNodeCount")]
         [Validation(Required=false)]
         public int? SearchNodeCount { get; set; }
 
+        /// <summary>
+        /// <para>The storage capacity of the search node to be added.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
         [NameInMap("SearchStorage")]
         [Validation(Required=false)]
         public int? SearchStorage { get; set; }
@@ -198,7 +227,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <para>Specifies whether to apply for a direct connection endpoint for the shard node. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: applies for a direct connection endpoint for the shard node.</description></item>
-        /// <item><description><b>false</b>: does not apply for a direct connection endpoint for the shard node. This is the default value.</description></item>
+        /// <item><description><b>false</b> (default): does not apply for a direct connection endpoint for the shard node.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

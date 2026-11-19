@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DeleteBackupRequest : TeaModel {
         /// <summary>
-        /// <para>The backup ID.</para>
+        /// <para>The backup ID. You must specify a backup set ID, which can be obtained by calling the DescribeBackups operation. Do not use the BackupId returned by the CreateBackup operation because it is a backup task ID. If you specify a backup task ID, the BackupSetNotFound error is returned.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

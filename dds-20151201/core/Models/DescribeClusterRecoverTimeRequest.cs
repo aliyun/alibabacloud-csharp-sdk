@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region where the geo-redundancy backup set resides.</para>
+        /// <para>The region where the geo-redundancy backup set is stored.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is required when you query a geo-redundancy backup.</description></item>
+        /// <item><description>This parameter is required when you query geo-redundancy backups.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -35,6 +35,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string DestRegion { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to query only the restorable time ranges that support database and table restoration. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: returns only the restorable time ranges that support database and table restoration.</description></item>
+        /// <item><description><b>false</b> (default): returns all restorable time ranges.</description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("OnlyDbTableRecovery")]
         [Validation(Required=false)]
         public bool? OnlyDbTableRecovery { get; set; }
@@ -66,10 +73,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region where the source instance of the geo-redundancy backup resides.</para>
+        /// <para>The region of the source instance for geo-redundancy backups.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is required when you query a geo-redundancy backup.</description></item>
+        /// <item><description>This parameter is required when you query geo-redundancy backups.</description></item>
         /// </list>
         /// </remarks>
         /// 

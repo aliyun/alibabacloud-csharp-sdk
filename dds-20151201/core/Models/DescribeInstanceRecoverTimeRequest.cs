@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region where the geo-redundancy backup set is stored.</para>
+        /// <para>The region where the geo-redundancy backup set is located.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is required when you query geo-redundancy backups.</description></item>
+        /// <item><description>Required when you query geo-redundancy.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -35,6 +35,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string DestRegion { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to query only the restorable time ranges that support database and table restoration. Default value: false.</para>
+        /// </summary>
         [NameInMap("OnlyDbTableRecovery")]
         [Validation(Required=false)]
         public bool? OnlyDbTableRecovery { get; set; }
@@ -70,10 +73,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The area where the source instance of the geo-redundancy backup resides.</para>
+        /// <para>The area where the source instance of the geo-redundancy backup is located.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is required when you query geo-redundancy backups.</description></item>
+        /// <item><description>Required when you query geo-redundancy.</description></item>
         /// </list>
         /// </remarks>
         /// 

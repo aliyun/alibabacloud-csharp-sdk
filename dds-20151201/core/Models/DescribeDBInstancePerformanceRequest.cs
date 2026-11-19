@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para><b>NodeId</b> is required when specifying a sharded cluster instance ID</para>
+        /// <para>If you specify the ID of a sharded cluster instance for this parameter, you must also specify the <b>NodeId</b> parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The end time must be later than the start time. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</para>
+        /// <para>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The data granularity of the performance metrics in seconds. Valid values: 5, 30, 60, 600, 1800, 3600, and 86400.</para>
+        /// <para>The data granularity. Valid values: 5, 30, 60, 600, 1800, 3600, and 86400.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string Interval { get; set; }
 
         /// <summary>
-        /// <para>The performance metrics. For more information, see <a href="https://help.aliyun.com/document_detail/216973.html">Metrics</a>.</para>
+        /// <para>The performance metrics. For more information, see <a href="https://help.aliyun.com/document_detail/216973.html">Monitoring metrics</a>.</para>
         /// <remarks>
         /// <para>To specify multiple metrics, separate them with commas (,).</para>
         /// </remarks>
@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The ID of a mongos or shard node in the sharded cluster instance. This parameter lets you query the performance of a single node.</para>
+        /// <para>Instance ID of the mongos or shard node in a sharded cluster instance. You can use this parameter to query the performance of a single node.</para>
         /// <remarks>
-        /// <para>Available only when <b>DBInstanceId</b> is set to the ID of a sharded cluster instance.</para>
+        /// <para>This parameter is available only when you specify instance ID of a sharded cluster instance for the <b>DBInstanceId</b> parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -80,19 +80,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The role of a node in a standalone or replica set instance. Valid values:</para>
+        /// <para>The role of the node in a standalone instance or replica set instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Primary</b>: The primary node.</para>
-        /// </description></item>
-        /// <item><description><para><b>Secondary</b>: A secondary node.</para>
-        /// </description></item>
+        /// <item><description><b>Primary</b>: The primary node.</description></item>
+        /// <item><description><b>Secondary</b>: The secondary node.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Available only when <b>DBInstanceId</b> is set to the ID of a standalone or replica set instance.</para>
-        /// </description></item>
-        /// <item><description><para>If <b>DBInstanceId</b> is set to the ID of a standalone instance, this parameter only supports the value <b>Primary</b>.</para>
-        /// </description></item>
+        /// <item><description>This parameter is available only when you specify instance ID of a standalone instance or replica set instance for the <b>DBInstanceId</b> parameter.</description></item>
+        /// <item><description>When you specify instance ID of a standalone instance for the <b>DBInstanceId</b> parameter, you can set this parameter only to <b>Primary</b>.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -112,9 +108,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The role ID of a node in a standalone or replica set instance. To query the role ID, call the <a href="https://help.aliyun.com/document_detail/62134.html">DescribeReplicaSetRole</a> operation.</para>
+        /// <para>The instance ID of the node in a standalone instance or replica set instance. You can call the <a href="https://help.aliyun.com/document_detail/62134.html">DescribeReplicaSetRole</a> operation to query the instance ID.</para>
         /// <remarks>
-        /// <para>Available only when <b>DBInstanceId</b> is set to the ID of a standalone or replica set instance.</para>
+        /// <para>This parameter is available only when you specify the ID of a standalone instance or replica set instance for the <b>DBInstanceId</b> parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -125,9 +121,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RoleId { get; set; }
 
         /// <summary>
-        /// <para>The Search node ID.</para>
+        /// <para>The ID of the search node.</para>
         /// <remarks>
-        /// <para>Available only after the Search feature is enabled for the instance.</para>
+        /// <list type="bullet">
+        /// <item><description>This parameter is available only when the search feature is enabled for the instance.</description></item>
+        /// </list>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -138,7 +136,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string SearchId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</para>
+        /// <para>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

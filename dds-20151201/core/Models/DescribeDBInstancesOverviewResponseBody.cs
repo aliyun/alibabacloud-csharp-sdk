@@ -10,20 +10,18 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeDBInstancesOverviewResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of instance details.</para>
+        /// <para>The list of instances.</para>
         /// </summary>
         [NameInMap("DBInstances")]
         [Validation(Required=false)]
         public List<DescribeDBInstancesOverviewResponseBodyDBInstances> DBInstances { get; set; }
         public class DescribeDBInstancesOverviewResponseBodyDBInstances : TeaModel {
             /// <summary>
-            /// <para>The read/write throughput of the instance.</para>
+            /// <para>The read and write throughput consumed by the instance.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description><para>This parameter is returned only for Serverless instances.</para>
-            /// </description></item>
-            /// <item><description><para>Serverless instances are available only on the China site (aliyun.com).</para>
-            /// </description></item>
+            /// <item><description>This parameter is returned only if the instance is a serverless instance.</description></item>
+            /// <item><description>Serverless instances are supported only on the Alibaba Cloud China site.</description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -37,10 +35,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <summary>
             /// <para>The billing method of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>PrePaid</b>: subscription</para>
-            /// </description></item>
-            /// <item><description><para><b>PostPaid</b>: pay-as-you-go</para>
-            /// </description></item>
+            /// <item><description><b>PrePaid</b>: subscription.</description></item>
+            /// <item><description><b>PostPaid</b>: pay-as-you-go.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -51,7 +47,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was created. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is in UTC.</para>
+            /// <para>The time when the instance was created. The time is displayed in UTC in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-01-05T03:18:53Z</para>
@@ -61,18 +57,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The instance type. For more information about the instance types available for different instance architectures, see:</para>
+            /// <para>The instance type. For more information about the instance types of different architectures, see the following topics:</para>
             /// <list type="bullet">
-            /// <item><description><para><a href="https://help.aliyun.com/document_detail/311407.html">Standalone instance types</a></para>
-            /// </description></item>
-            /// <item><description><para><a href="https://help.aliyun.com/document_detail/311410.html">Replica set instance types</a></para>
-            /// </description></item>
-            /// <item><description><para><a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a></para>
-            /// </description></item>
+            /// <item><description><a href="https://help.aliyun.com/document_detail/311407.html">Standalone instance types</a></description></item>
+            /// <item><description><a href="https://help.aliyun.com/document_detail/311410.html">Replica set instance types</a></description></item>
+            /// <item><description><a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a></description></item>
             /// </list>
             /// <para>&lt;props=&quot;china&quot;&gt;</para>
             /// <remarks>
-            /// <para>This parameter is not required for Serverless instances.</para>
+            /// <para>You do not need to specify this parameter for serverless instances.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -103,7 +96,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string DBInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/63870.html">Instance states</a>.</para>
+            /// <para>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/63870.html">Instance statuses</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -113,7 +106,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string DBInstanceStatus { get; set; }
 
             /// <summary>
-            /// <para>The storage capacity of the instance, in GB.</para>
+            /// <para>The storage capacity of the instance. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -123,16 +116,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public int? DBInstanceStorage { get; set; }
 
             /// <summary>
-            /// <para>The instance architecture. Valid values:</para>
+            /// <para>The architecture of the instance. Valid values: </para>
             /// <list type="bullet">
-            /// <item><description><para><b>sharding</b>: sharded cluster instance</para>
-            /// </description></item>
-            /// <item><description><para><b>replicate</b>: replica set or standalone instance</para>
-            /// </description></item>
-            /// </list>
-            /// <para>&lt;props=&quot;china&quot;&gt;</para>
-            /// <list type="bullet">
-            /// <item><description><b>serverless</b>: Serverless instance</description></item>
+            /// <item><description><b>sharding</b>: sharded cluster instance.</description></item>
+            /// <item><description><b>replicate</b>: replica set or standalone instance.
+            /// &lt;props=&quot;china&quot;&gt;</description></item>
+            /// <item><description><b>serverless</b>: serverless instance.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -143,7 +132,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string DBInstanceType { get; set; }
 
             /// <summary>
-            /// <para>The time when the data of the instance was destroyed. The time is in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.</para>
+            /// <para>The data destruction time of the instance. The time is displayed in UTC in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-10T16:00:00Z</para>
@@ -173,7 +162,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string EngineVersion { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the subscription instance. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is in UTC.</para>
+            /// <para>The time when the instance expires. The time is displayed in UTC in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-02-05T16:00Z</para>
@@ -183,16 +172,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The instance edition. Valid values:</para>
+            /// <para>The type of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: physical server</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: ECS</para>
-            /// </description></item>
-            /// <item><description><para><b>2</b>: DOCKER</para>
-            /// </description></item>
-            /// <item><description><para><b>18</b>: instance on the new Kubernetes-based architecture</para>
-            /// </description></item>
+            /// <item><description><b>0</b>: physical machine</description></item>
+            /// <item><description><b>1</b>: ECS</description></item>
+            /// <item><description><b>2</b>: Docker</description></item>
+            /// <item><description><b>18</b>: new Kubernetes architecture instance</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -203,7 +188,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string KindCode { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was last downgraded.</para>
+            /// <para>The time when the instance was last downgraded. The date is in the YYYY-MM-DD format, such as 2021-05-08.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-05-08</para>
@@ -213,20 +198,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string LastDowngradeTime { get; set; }
 
             /// <summary>
-            /// <para>The lock mode of the instance.</para>
+            /// <para>The lock status of the instance.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Unlock</b>: The instance is not locked.</para>
-            /// </description></item>
-            /// <item><description><para><b>ManualLock</b>: The instance is manually locked.</para>
-            /// </description></item>
-            /// <item><description><para><b>LockByExpiration</b>: The instance is automatically locked after it expires.</para>
-            /// </description></item>
-            /// <item><description><para><b>LockByRestoration</b>: The instance is automatically locked before a rollback.</para>
-            /// </description></item>
-            /// <item><description><para><b>LockByDiskQuota</b>: The instance is automatically locked after its storage space is exhausted.</para>
-            /// </description></item>
-            /// <item><description><para><b>Released</b>: The instance is released. You cannot unlock a released instance. You can only restore the data of the instance to a new instance. The restoration may take a long time.</para>
-            /// </description></item>
+            /// <item><description><b>Unlock</b>: The instance is not locked.</description></item>
+            /// <item><description><b>ManualLock</b>: The instance is manually locked.</description></item>
+            /// <item><description><b>LockByExpiration</b>: The instance is automatically locked after it expires.</description></item>
+            /// <item><description><b>LockByRestoration</b>: The instance is automatically locked before a rollback.</description></item>
+            /// <item><description><b>LockByDiskQuota</b>: The instance is automatically locked because its storage capacity is exhausted.</description></item>
+            /// <item><description><b>Released</b>: The instance is released. In this case, you cannot unlock the instance. You can only use backup data to create a new instance. The recreation process may take a long time.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -237,9 +216,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string LockMode { get; set; }
 
             /// <summary>
-            /// <para>The details of the mongos nodes.</para>
+            /// <para>The list of mongos nodes.</para>
             /// <remarks>
-            /// <para>This parameter is returned only for sharded cluster instances.</para>
+            /// <para>This parameter is returned only if the instance is a sharded cluster instance.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("MongosList")]
@@ -247,7 +226,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribeDBInstancesOverviewResponseBodyDBInstancesMongosList> MongosList { get; set; }
             public class DescribeDBInstancesOverviewResponseBodyDBInstancesMongosList : TeaModel {
                 /// <summary>
-                /// <para>The instance type of the mongos node.</para>
+                /// <para>The node specifications of the mongos node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dds.mongos.standard</para>
@@ -281,10 +260,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <summary>
             /// <para>The network type of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Classic</b>: classic network</para>
-            /// </description></item>
-            /// <item><description><para><b>VPC</b>: virtual private cloud (VPC)</para>
-            /// </description></item>
+            /// <item><description><b>Classic</b>: classic network.</description></item>
+            /// <item><description><b>VPC</b>: VPC.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -307,7 +284,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <summary>
             /// <para>The number of nodes in the instance.</para>
             /// <remarks>
-            /// <para>This parameter is returned only for replica set instances.</para>
+            /// <para>This parameter is returned only if the instance is a replica set instance.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -328,9 +305,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The details of the shard nodes.</para>
+            /// <para>The list of shard nodes.</para>
             /// <remarks>
-            /// <para>This parameter is returned only for sharded cluster instances.</para>
+            /// <para>This parameter is returned only if the instance is a sharded cluster instance.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("ShardList")]
@@ -368,7 +345,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string NodeId { get; set; }
 
                 /// <summary>
-                /// <para>The storage capacity of the shard node, in GB.</para>
+                /// <para>The storage capacity of the shard node. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -378,7 +355,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public int? NodeStorage { get; set; }
 
                 /// <summary>
-                /// <para>The number of read-only nodes in the shard. Valid values: <b>0</b> to <b>5</b>.</para>
+                /// <para>The number of read-only nodes in the shard node. Valid values: <b>0</b> to <b>5</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -397,14 +374,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public List<DescribeDBInstancesOverviewResponseBodyDBInstancesTags> Tags { get; set; }
             public class DescribeDBInstancesOverviewResponseBodyDBInstancesTags : TeaModel {
                 /// <summary>
-                /// <para>The tag key.</para>
+                /// <para>The tag key of the instance. Valid values of N: <b>1</b> to <b>20</b>.</para>
                 /// <list type="bullet">
-                /// <item><description><para>The key cannot start with <c>aliyun</c>, <c>acs:</c>, <c>http://</c>, or <c>https://</c>.</para>
-                /// </description></item>
-                /// <item><description><para>The key can be up to 64 characters in length.</para>
-                /// </description></item>
-                /// <item><description><para>The key cannot be an empty string.</para>
-                /// </description></item>
+                /// <item><description>The tag key cannot start with <c>aliyun</c>, <c>acs:</c>, <c>http://</c>, or <c>https://</c>.</description></item>
+                /// <item><description>The tag key can be up to 64 characters in length.</description></item>
+                /// <item><description>The tag key cannot be an empty string.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -415,14 +389,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The tag value.</para>
+                /// <para>The tag value of the instance. Valid values of N: <b>1</b> to <b>20</b>.</para>
                 /// <list type="bullet">
-                /// <item><description><para>The value cannot start with <c>aliyun</c>, <c>acs</c>:, <c>http://</c>, or <c>https://</c>.</para>
-                /// </description></item>
-                /// <item><description><para>The value can be up to 128 characters in length.</para>
-                /// </description></item>
-                /// <item><description><para>The value can be an empty string.</para>
-                /// </description></item>
+                /// <item><description>The tag value cannot start with <c>aliyun</c>, <c>acs:</c>, <c>http://</c>, or <c>https://</c>.</description></item>
+                /// <item><description>The tag value can be up to 128 characters in length.</description></item>
+                /// <item><description>The tag value can be an empty string.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -435,12 +406,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether password-free access over a VPC is enabled. Valid values:</para>
+            /// <para>Indicates whether password-free access within a VPC is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Open</b>: enabled</para>
-            /// </description></item>
-            /// <item><description><para><b>Close</b>: disabled</para>
-            /// </description></item>
+            /// <item><description><b>Open</b>: enabled.</description></item>
+            /// <item><description><b>Close</b>: disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -451,7 +420,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string VpcAuthMode { get; set; }
 
             /// <summary>
-            /// <para>The zone of the instance.</para>
+            /// <para>The zone ID of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-i</para>
@@ -463,7 +432,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>52820D2B-B2DD-59F0-BDF2-83EC19C6F1CA</para>
@@ -473,7 +442,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of instances returned.</para>
+        /// <para>The total number of instances returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

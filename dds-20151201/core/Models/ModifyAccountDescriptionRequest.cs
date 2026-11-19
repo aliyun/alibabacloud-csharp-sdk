@@ -12,10 +12,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The description of the account.</para>
         /// <list type="bullet">
-        /// <item><description><para>The description must start with a letter and cannot start with http\:// or https\://.</para>
-        /// </description></item>
-        /// <item><description><para>The description must be 2 to 256 characters in length, and can contain letters, digits, underscores (_), and hyphens (-).</para>
-        /// </description></item>
+        /// <item><description>It cannot start with http:// or https://.</description></item>
+        /// <item><description>It must start with a letter or a Chinese character.</description></item>
+        /// <item><description>It can contain letters, Chinese characters, underscores (_), hyphens (-), and digits, and must be 2 to 256 characters in length.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -27,7 +26,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string AccountDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the account whose description is to be modified.</para>
+        /// <para>The name of the account whose description you want to modify.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,18 +37,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The type of the account whose description you can modify. Valid values:</para>
+        /// <para>The type of the account whose description you want to modify. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>db</b>: shard account</para>
-        /// </description></item>
-        /// <item><description><para><b>cs</b>: ConfigServer account</para>
-        /// </description></item>
-        /// <item><description><para><b>normal</b> (default): replica set account (available)</para>
-        /// </description></item>
+        /// <item><description><b>db</b>: shard account</description></item>
+        /// <item><description><b>cs</b>: config server account</description></item>
+        /// <item><description><b>normal</b>: replica set account (default)</description></item>
         /// </list>
-        /// <remarks>
-        /// <para>You can set this parameter only to <b>normal</b>.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>normal</para>
@@ -70,6 +63,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The database to which the account belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>admin</para>
         /// </summary>

@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifySrvNetworkAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the SRV connection address to modify. Valid values:</para>
+        /// <para>The type of the SRV endpoint to be modified. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>VPC</b>: virtual private cloud (VPC)</para>
-        /// </description></item>
-        /// <item><description><para><b>Public</b>: Internet connection</para>
-        /// </description></item>
+        /// <item><description><b>VPC</b>: VPC</description></item>
+        /// <item><description><b>Public</b>: public network connection</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,19 +36,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The new connection address. The address must meet the following requirements:</para>
+        /// <para>The new endpoint. The endpoint must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description><para>Starts with a lowercase letter.</para>
-        /// </description></item>
-        /// <item><description><para>Ends with a lowercase letter or a digit.</para>
-        /// </description></item>
-        /// <item><description><para>Contains only lowercase letters, digits, and hyphens (-).</para>
-        /// </description></item>
-        /// <item><description><para>Is 8 to 63 characters in length.</para>
-        /// </description></item>
+        /// <item><description>Start with a lowercase letter.</description></item>
+        /// <item><description>End with a lowercase letter or a digit.</description></item>
+        /// <item><description>Contain only lowercase letters, digits, and hyphens (-).</description></item>
+        /// <item><description>Be 8 to 63 characters in length.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You only need to specify the prefix of the connection address. The rest of the address cannot be modified.</para>
+        /// <para>Specify only the prefix of the endpoint. The remaining part cannot be modified.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

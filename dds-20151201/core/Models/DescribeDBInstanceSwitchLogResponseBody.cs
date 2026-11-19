@@ -20,37 +20,32 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The primary/secondary switchover logs.</para>
+        /// <para>The list of primary/secondary switchover logs.</para>
         /// </summary>
         [NameInMap("LogItems")]
         [Validation(Required=false)]
         public List<DescribeDBInstanceSwitchLogResponseBodyLogItems> LogItems { get; set; }
         public class DescribeDBInstanceSwitchLogResponseBodyLogItems : TeaModel {
             /// <summary>
-            /// <para>The ID of the replica set instance or the ID of the node on which a primary/secondary switchover is performed.</para>
+            /// <para>Instance ID of the instance if the instance is a replica set instance, or instance ID of the switched node if the instance is a sharded cluster instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>NodeId-example-id-****</para>
+            /// <para>If the instance is a replica set instance: dds-uf68f1b5a57exxxx.
+            /// If the instance is a sharded cluster instance: d-uf652b73f554xxxx</para>
             /// </summary>
             [NameInMap("NodeId")]
             [Validation(Required=false)]
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>The code that indicates the reason of a primary/secondary switchover. Valid values:</para>
+            /// <para>The cause code of the switchover. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>USER_CONSOLE_OPERATION: The switchover is manually performed.</para>
-            /// </description></item>
-            /// <item><description><para>OPERATION_AND_MAINTENANCE: Potential risks exist.</para>
-            /// </description></item>
-            /// <item><description><para>MACHINE_DOWNTIME: The host is offline.</para>
-            /// </description></item>
-            /// <item><description><para>PRIMARY_UNHEALTHY: An exception occurs on the primary node of the instance.</para>
-            /// </description></item>
-            /// <item><description><para>SECONDARY_UNHEALTHY: An exception occurs on the secondary node of the instance.</para>
-            /// </description></item>
-            /// <item><description><para>MULTIPLE_NODE_FAILURES: An exception occurs on multiple nodes of the instance.</para>
-            /// </description></item>
+            /// <item><description>USER_CONSOLE_OPERATION: manual operation</description></item>
+            /// <item><description>OPERATION_AND_MAINTENANCE: potential risk</description></item>
+            /// <item><description>MACHINE_DOWNTIME: host offline</description></item>
+            /// <item><description>PRIMARY_UNHEALTHY: instance failures</description></item>
+            /// <item><description>SECONDARY_UNHEALTHY: instance failures</description></item>
+            /// <item><description>MULTIPLE_NODE_FAILURES: instance failures</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,7 +56,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string SwitchCode { get; set; }
 
             /// <summary>
-            /// <para>The switchover status. Valid values: <b>1</b> and <b>0</b>. The value 1 indicates a successful primary/secondary switchover and the value 0 indicates a failed primary/secondary switchover.</para>
+            /// <para>The switchover status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>1</b>: The switchover is successful.</description></item>
+            /// <item><description><b>0</b>: The switchover failed.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -71,7 +70,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string SwitchStatus { get; set; }
 
             /// <summary>
-            /// <para>The point in time when a primary/secondary switchover was performed. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The switchover time. The time is in the <i>yyyy-mm-dd</i>T<i>hh:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-02-07T18:00:00Z</para>
@@ -83,7 +82,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// <para>The page number returned.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -93,7 +92,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -103,7 +102,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ECBCA991-XXXX-XXXX-834C-B3E8007F33AA</para>
@@ -113,7 +112,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of primary/secondary switching entries.</para>
+        /// <para>The total number of primary/secondary switchover records returned in the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

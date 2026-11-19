@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyDBInstanceConnectionStringResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The modified endpoint of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>demo-instance-pub.mongodb.rds.aliyuncs.com</para>
+        /// </summary>
         [NameInMap("ModifiedConnectionString")]
         [Validation(Required=false)]
         public string ModifiedConnectionString { get; set; }

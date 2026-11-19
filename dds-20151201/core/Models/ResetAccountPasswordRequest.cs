@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ResetAccountPasswordRequest : TeaModel {
         /// <summary>
-        /// <para>The account whose password needs to be reset. Set the value to <b>root</b>.</para>
+        /// <para>The name of the account whose password you want to reset. Set the value to <b>root</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,11 +23,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The new password.</para>
         /// <list type="bullet">
-        /// <item><description><para>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <c>! # $ % ^ &amp; * ( ) _ + - =</c></para>
-        /// </description></item>
-        /// <item><description><para>The password must be 8 to 32 characters in length.</para>
-        /// </description></item>
+        /// <item><description>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <c>!@#$%^&amp;*()_+-=</c>.</description></item>
+        /// <item><description>The password must be 8 to 32 characters in length.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para>For more information about how to handle special characters, see <a href="https://help.aliyun.com/document_detail/471568.html">What do I do if the connection fails because the username or password in the connection string contains special characters?</a></para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,12 +39,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string AccountPassword { get; set; }
 
         /// <summary>
-        /// <para>The role of the instance.</para>
+        /// <para>The role type of the instance.</para>
         /// <list type="bullet">
-        /// <item><description><para>If the instance is a sharded cluster instance, this parameter is required. Valid values: db and cs.</para>
-        /// </description></item>
-        /// <item><description><para>If the instance is a replica set instance, you can leave this parameter empty or set the parameter to normal.</para>
-        /// </description></item>
+        /// <item><description>If the instance is a sharded cluster instance, this parameter is required. Valid values: db and cs.</description></item>
+        /// <item><description>If the instance is a replica set instance, this parameter can be left empty or set to normal.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,7 +64,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>账号所在库（账号建在/操作于哪个库），缺省 admin；规则：长度1~63，禁 /、\、.、空格、&quot;、$，禁 local</para>
+        /// <para>The database to which the account belongs.</para>
+        /// <list type="bullet">
+        /// <item><description>The name cannot contain the following characters: \0, /, \, ., space, &quot;, and $.</description></item>
+        /// <item><description>The name cannot be local.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>admin</para>
