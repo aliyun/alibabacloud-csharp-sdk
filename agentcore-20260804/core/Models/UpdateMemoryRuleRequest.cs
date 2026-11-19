@@ -45,14 +45,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The extraction strategy. Omitted fields retain their original values during a partial merge.</para>
+            /// <para>The extraction strategy. Uses partial merging, where omitted fields retain their original values.</para>
             /// </summary>
             [NameInMap("strategy")]
             [Validation(Required=false)]
             public UpdateMemoryRuleRequestBodyStrategy Strategy { get; set; }
             public class UpdateMemoryRuleRequestBodyStrategy : TeaModel {
                 /// <summary>
-                /// <para>The custom extraction requirements. Omitted fields retain their original values, and an empty string clears the field.</para>
+                /// <para>The custom extraction instruction. If omitted, the original value is retained. An empty string clears the value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Retain only long-term preferences explicitly expressed by the user</para>

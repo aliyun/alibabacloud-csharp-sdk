@@ -1,3 +1,7 @@
+2026-11-19 Version: 3.5.1
+- Update API CreateWorkspace: add request parameters body.scanPolicy.
+
+
 2026-11-17 Version: 3.5.0
 - Generated csharp 2026-08-04 for AgentCore.
 

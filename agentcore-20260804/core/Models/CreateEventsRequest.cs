@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public CreateEventsRequestBodyEventsData Data { get; set; }
                 public class CreateEventsRequestBodyEventsData : TeaModel {
                     /// <summary>
-                    /// <para>The call ID, which is required for tool_call, tool_result, or message events with role=tool. It associates the call intent, actual execution, and feedback.</para>
+                    /// <para>The call ID. This field is required for tool_call and tool_result events, or message events with the role set to tool. It associates the call intent, actual execution, and feedback.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>call-001</para>
@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string CallId { get; set; }
 
                     /// <summary>
-                    /// <para>The ordered content blocks, which are required for message and tool_result events. Use a text block for plain text. This can be an empty array when the tool has no output.</para>
+                    /// <para>The ordered content blocks. This field is required for message and tool_result events. Use a text block for plain text. This can be an empty array if the tool has no output.</para>
                     /// </summary>
                     [NameInMap("content")]
                     [Validation(Required=false)]
                     public List<CreateEventsRequestBodyEventsDataContent> Content { get; set; }
                     public class CreateEventsRequestBodyEventsDataContent : TeaModel {
                         /// <summary>
-                        /// <para>The JSON parameter values, which are required for tool_call blocks. Unparsed raw strings can be retained.</para>
+                        /// <para>The JSON parameter values. This field is required for tool_call blocks. Unparsed raw strings can be retained.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>{&quot;city&quot;:&quot;Hangzhou&quot;}</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public object Arguments { get; set; }
 
                         /// <summary>
-                        /// <para>The logical call ID, which is required for tool_call blocks.</para>
+                        /// <para>The logical call ID. This field is required for tool_call blocks.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>call-001</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public string CallId { get; set; }
 
                         /// <summary>
-                        /// <para>The access format identifier, which is required for opaque blocks. Saving the format does not mean its content can be interpreted or used across platforms.</para>
+                        /// <para>The access format identifier. This field is required for opaque blocks. Saving the format does not mean that its content can be interpreted or used across platforms.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>application/json</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public string Format { get; set; }
 
                         /// <summary>
-                        /// <para>The tool name, which is required for tool_call blocks. This content block only expresses the call intent.</para>
+                        /// <para>The tool name. This field is required for tool_call blocks. This content block only expresses the call intent.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>get_weather</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public string Name { get; set; }
 
                         /// <summary>
-                        /// <para>The actual text, which is required for text and reasoning blocks.</para>
+                        /// <para>The actual text. This field is required for text and reasoning blocks.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The user likes hiking</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public string Text { get; set; }
 
                         /// <summary>
-                        /// <para>The content block type, which determines the required fields.</para>
+                        /// <para>The content block type. This field determines the required fields.</para>
                         /// <para>This parameter is required.</para>
                         /// 
                         /// <b>Example:</b>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public string Type { get; set; }
 
                         /// <summary>
-                        /// <para>The JSON value, which is required for json and opaque blocks. The data field is not used for opaque blocks.</para>
+                        /// <para>The JSON value. This field is required for json and opaque blocks. The data field is not used for opaque blocks.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>{&quot;preference&quot;:&quot;hiking&quot;}</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public List<string> EventIds { get; set; }
 
                     /// <summary>
-                    /// <para>The anchor event ID of the parent session, which is required for session_fork events. The child session continues from the valid context at this anchor and does not inherit interactions after the anchor.</para>
+                    /// <para>The anchor event ID of the parent session. This field is required for session_fork events. The child session continues from the valid context at this anchor and does not inherit interactions after the anchor.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>evt-2f5f9c5a8d0e4c3b</para>
@@ -141,14 +141,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string ParentEventId { get; set; }
 
                     /// <summary>
-                    /// <para>The business scope of the parent session, which is required for session_fork events. The event is written to the child session, and the requested scope is the child session.</para>
+                    /// <para>The business scope of the parent session. This field is required for session_fork events. The event is written to the child session, and the requested scope is the child session.</para>
                     /// </summary>
                     [NameInMap("parentScope")]
                     [Validation(Required=false)]
                     public CreateEventsRequestBodyEventsDataParentScope ParentScope { get; set; }
                     public class CreateEventsRequestBodyEventsDataParentScope : TeaModel {
                         /// <summary>
-                        /// <para>The ID of the business agent.</para>
+                        /// <para>The business agent ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>agent-001</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public string SessionId { get; set; }
 
                         /// <summary>
-                        /// <para>The ID of the business team.</para>
+                        /// <para>The business team ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>team-001</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public string TeamId { get; set; }
 
                         /// <summary>
-                        /// <para>The ID of the business user. This is not the platform tenant identity.</para>
+                        /// <para>The business user ID. This is not the platform tenant identity.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>user-001</para>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     }
 
                     /// <summary>
-                    /// <para>The message role, which is required for message events.</para>
+                    /// <para>The message role. This field is required for message events.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>user</para>
@@ -201,10 +201,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Role { get; set; }
 
                     /// <summary>
-                    /// <para>The human-readable summary, which is optional for context_update events.</para>
+                    /// <para>The human-readable summary. This field is optional for context_update events.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>The user plans a hiking trip for the weekend</para>
+                    /// <para>The user plans to go hiking on the weekend</para>
                     /// </summary>
                     [NameInMap("summary")]
                     [Validation(Required=false)]
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>The actual occurrence time provided by the client, as a Unix millisecond integer. This is the sole source for business sorting. Identical values do not indicate a known sequence, and the array position does not imply business order.</para>
+                /// <para>The actual occurrence time provided by the client as a Unix timestamp in milliseconds. This is the only source for business sorting. Identical values do not indicate a known sequence, and the array position does not imply a business order.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public long? Timestamp { get; set; }
 
                 /// <summary>
-                /// <para>The event type, which determines the applicable fields and conditional requirements for data.</para>
+                /// <para>The event type. This determines the applicable fields and conditional requirements for the data.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public CreateEventsRequestBodyScope Scope { get; set; }
             public class CreateEventsRequestBodyScope : TeaModel {
                 /// <summary>
-                /// <para>The ID of the business agent.</para>
+                /// <para>The business agent ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>agent-001</para>
@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string SessionId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the business team.</para>
+                /// <para>The business team ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>team-001</para>
@@ -276,7 +276,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string TeamId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the business user. This is not the platform tenant identity.</para>
+                /// <para>The business user ID. This is not the platform tenant identity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user-001</para>
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The description saved when the first owned event is successfully written, which is not overwritten thereafter.</para>
+            /// <para>The information saved when the first event is successfully written. It is not overwritten by subsequent writes.</para>
             /// </summary>
             [NameInMap("session")]
             [Validation(Required=false)]
@@ -305,7 +305,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public Dictionary<string, string> Metadata { get; set; }
 
                 /// <summary>
-                /// <para>The session title, which can be up to 256 characters in length.</para>
+                /// <para>The session title. It can be up to 256 characters in length.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Travel plan</para>

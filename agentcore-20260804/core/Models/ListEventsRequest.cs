@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListEventsRequest : TeaModel {
         /// <summary>
-        /// <para>The exact agent ID used for filtering.</para>
+        /// <para>The exact filter for the business agent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>agent-001</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token used to retrieve the next page of results for the same query.</para>
+        /// <para>The pagination token used to continue reading the same query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJvZmZzZXQiOjIwMH0=</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>The exact business team ID used for filtering.</para>
+        /// <para>The exact filter for the business team.</para>
         /// 
         /// <b>Example:</b>
         /// <para>team-001</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string TeamId { get; set; }
 
         /// <summary>
-        /// <para>The exact business user ID used for filtering. This is not the platform tenant identity.</para>
+        /// <para>The exact filter for the business user. This is not the platform tenant identity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user-001</para>

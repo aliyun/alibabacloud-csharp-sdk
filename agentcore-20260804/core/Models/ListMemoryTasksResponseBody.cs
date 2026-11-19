@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The format of the event content is incorrect</para>
+                /// <para>The event content format is incorrect</para>
                 /// </summary>
                 [NameInMap("message")]
                 [Validation(Required=false)]

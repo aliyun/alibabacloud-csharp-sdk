@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListMemoryRulesRequest : TeaModel {
         /// <summary>
-        /// <para>Filters rules by enabled status.</para>
+        /// <para>Filters by the enabled status.</para>
         /// </summary>
         [NameInMap("enabled")]
         [Validation(Required=false)]
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The maximum number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

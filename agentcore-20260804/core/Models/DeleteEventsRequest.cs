@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<string> EventIds { get; set; }
 
             /// <summary>
-            /// <para>The scope for precise session targeting.</para>
+            /// <para>The scope for precise session location.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("scope")]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AgentId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the precisely targeted session.</para>
+                /// <para>The ID of the precisely located session.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>

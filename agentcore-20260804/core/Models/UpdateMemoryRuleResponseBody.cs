@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public UpdateMemoryRuleResponseBodyDataStrategy Strategy { get; set; }
             public class UpdateMemoryRuleResponseBodyDataStrategy : TeaModel {
                 /// <summary>
-                /// <para>The strategy-level instruction. It takes effect together with the store-level instruction, and this field takes precedence in case of conflicts.</para>
+                /// <para>The strategy-level instruction. It takes effect together with the store-level instruction. In case of a conflict, this field takes precedence.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Retain only long-term preferences explicitly expressed by the user</para>

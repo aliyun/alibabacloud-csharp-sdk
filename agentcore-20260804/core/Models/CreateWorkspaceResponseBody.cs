@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CmsWorkspaceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the workspace was created. The time follows the ISO-8601 standard.</para>
+            /// <para>The time when the workspace was created. The time is displayed in the ISO 8601 format.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The workspace name.</para>
+            /// <para>The name of the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>production-agents</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public CreateWorkspaceResponseBodyDataNetworkConfiguration NetworkConfiguration { get; set; }
             public class CreateWorkspaceResponseBodyDataNetworkConfiguration : TeaModel {
                 /// <summary>
-                /// <para>Returns the target configuration value. Updating indicates that the modification is still in progress, and UpdateFailed indicates that the current modification failed. This setting only controls whether the latest versions of managed and custom agents use the public network egress of the platform. It does not control fixed historical versions, model or MCP proxy egresses, or the public network egress of the user VPC.</para>
+                /// <para>Returns the target configuration value. Updating indicates that the change is still being executed, and UpdateFailed indicates that the current change failed. This parameter only controls the use of the platform public egress for the latest versions of managed and custom agents. It does not control fixed historical versions, model or MCP proxy egress, or the public egress of the user VPC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? PublicEgressEnabled { get; set; }
 
                 /// <summary>
-                /// <para>Returns the target configuration value. Updating indicates that the modification is in progress, and UpdateFailed indicates that the modification failed. After this setting is disabled, the public network ingress for all agent endpoints in the workspace is closed, and the original public network ingress is restored after it is re-enabled. INNER_DIRECT and user VPC ingress are not affected. Collaboration and Element Web ingress are not controlled by this setting.</para>
+                /// <para>Returns the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. When disabled, the public ingress for all agent endpoints in the workspace is closed, and the original public ingress is restored when re-enabled. INNER_DIRECT and user VPC ingress are not affected. Collaboration and Element Web ingress are not controlled by this parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public bool? Enabled { get; set; }
 
                     /// <summary>
-                    /// <para>The list of vSwitch IDs.</para>
+                    /// <para>The vSwitch IDs.</para>
                     /// </summary>
                     [NameInMap("vSwitchIds")]
                     [Validation(Required=false)]
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The ID of the tenant.</para>
+            /// <para>The tenant ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tenant-123456</para>

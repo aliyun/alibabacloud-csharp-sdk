@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public CreateEventsResponseBodyData Data { get; set; }
         public class CreateEventsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The write results for each item. A successful outer response does not indicate that every item was written successfully.</para>
+            /// <para>The write result for each item. A successful top-level response does not indicate that every item was successful.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("results")]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<CreateEventsResponseBodyDataResults> Results { get; set; }
             public class CreateEventsResponseBodyDataResults : TeaModel {
                 /// <summary>
-                /// <para>The error information for the failed item.</para>
+                /// <para>The error for the failed item.</para>
                 /// </summary>
                 [NameInMap("error")]
                 [Validation(Required=false)]
@@ -53,11 +53,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Code { get; set; }
 
                     /// <summary>
-                    /// <para>The error message.</para>
+                    /// <para>The error description.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>The format of the event content is incorrect</para>
+                    /// <para>The event content format is incorrect</para>
                     /// </summary>
                     [NameInMap("message")]
                     [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string EventId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the event reached the server after being successfully saved. The value is a Unix timestamp in milliseconds.</para>
+                /// <para>The time when the event reached the server after being successfully saved, in Unix milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1758614401000</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public long? ReceivedAt { get; set; }
 
                 /// <summary>
-                /// <para>STORED or FAILED.</para>
+                /// <para>The status. Valid values: STORED and FAILED.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message about the request processing.</para>
+        /// <para>The request processing description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is used for troubleshooting.</para>
+        /// <para>The request ID used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>01A00000-0000-0000-0000-000000000001</para>

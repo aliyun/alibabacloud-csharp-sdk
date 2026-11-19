@@ -34,11 +34,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<UpdateServiceEndpointResponseBodyDataAccessUrls> AccessUrls { get; set; }
             public class UpdateServiceEndpointResponseBodyDataAccessUrls : TeaModel {
                 /// <summary>
-                /// <para>The access URL type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>INTERNET</description></item>
-                /// <item><description>VPC</description></item>
-                /// </list>
+                /// <para>The access URL type. Valid values: INTERNET and VPC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>INTERNET</para>
@@ -48,12 +44,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AccessType { get; set; }
 
                 /// <summary>
-                /// <para>The access URL status. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>CREATING</description></item>
-                /// <item><description>READY</description></item>
-                /// <item><description>DEGRADED</description></item>
-                /// </list>
+                /// <para>The access URL status. Valid values: CREATING, READY, and DEGRADED.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>READY</para>
@@ -63,7 +54,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The reason for the access URL status. This parameter is returned with the specific cause when the status is abnormal.</para>
+                /// <para>The reason for the access URL status. The specific reason is returned when the status is abnormal.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ServiceEndpoint.Provider.Unavailable: no provider for the target type</para>
@@ -118,7 +109,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The read-only current number of instances. The Get operation queries RM sandboxPhaseCounts.RUNNING by endpoint runtimeKey. The Create and Update operations return null. The value is a non-negative integer, and null is returned when the statistics are unavailable. The value is not replaced by the base upper and lower limits, target quantity, or READY status. Unavailable statistics do not block submission.</para>
+            /// <para>Read-only. The Get operation queries RM sandboxPhaseCounts.RUNNING by endpoint runtimeKey. The Create and Update operations return null. The value is a non-negative integer. If the statistics are unavailable, null is returned. The value is not replaced by the base upper and lower limits, target quantity, or READY status. Unavailable statistics do not block submission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -131,14 +122,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public int? CurrentInstances { get; set; }
 
             /// <summary>
-            /// <para>The result of combining publicAccessEnabled with the workspace-level public inbound access limit. The value is true only when both settings allow public inbound access. This field only indicates the policy target and does not mean that the public endpoint has been fully provisioned. To determine the actual status, refer to accessUrls and status.</para>
+            /// <para>The effective public access setting derived from combining publicAccessEnabled with the workspace-level public access limit. This parameter returns true only when both settings allow public access. This value only indicates the policy target and does not mean that the public endpoint has been fully published. For the actual status, refer to accessUrls and status.</para>
             /// </summary>
             [NameInMap("effectivePublicAccessEnabled")]
             [Validation(Required=false)]
             public bool? EffectivePublicAccessEnabled { get; set; }
 
             /// <summary>
-            /// <para>The complete elasticity configuration saved for the service endpoint, which is used for edit backfill and is not the current effective upper and lower limits or the actual number of instances. The Get operation preferentially returns the saved configuration. If no configuration is saved, an endpoint that supports elasticity backfills the base values from the expected runtime frozen configuration or the bound version configuration when the runtime is not yet established, without requiring a successful publication. The value is null when the source is temporarily unavailable or no applicable configuration exists, but the status and statusReason are still returned. The Create and Update operations return only the saved configuration, and the value is null if no configuration is saved. The historical base capacity may exceed 100, and the read value is not truncated.</para>
+            /// <para>The elasticity configuration used for edit backfill, which is not the current effective upper and lower limits or the actual number of instances. The Get operation preferentially returns the saved configuration. If no configuration is saved, an endpoint that supports elasticity backfills the base values from the expected runtime frozen configuration or the bound version configuration when the runtime is not established. Successful publication is not required. If the source is temporarily unavailable or no applicable configuration exists, the value is null, but the status and statusReason are still returned. The Create and Update operations return only the saved configuration. If no configuration is saved, the value is null. The historical base capacity can exceed 100 and is not truncated when read.</para>
             /// 
             /// <b>if can be null:</b>
             /// <c>true</c>
@@ -148,14 +139,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public UpdateServiceEndpointResponseBodyDataElasticityPolicy ElasticityPolicy { get; set; }
             public class UpdateServiceEndpointResponseBodyDataElasticityPolicy : TeaModel {
                 /// <summary>
-                /// <para>The saved dynamic configuration. If the base configuration before the requirement goes online lacks the dynamicPolicy parameter, it is supplemented with enabled=false and policies=[].</para>
+                /// <para>The saved dynamic configuration. If the base configuration before the requirement is published lacks the dynamicPolicy parameter, it is supplemented with enabled=false and policies=[].</para>
                 /// </summary>
                 [NameInMap("dynamicPolicy")]
                 [Validation(Required=false)]
                 public UpdateServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicy DynamicPolicy { get; set; }
                 public class UpdateServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicy : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to enable the dynamic policy. This field is required during creation. If omitted during an update, the original value is retained. Disabling it retains existing policies and restores the basic upper and lower limits. Re-enabling it triggers immediate calculation. When finally enabled, policies cannot be empty.</para>
+                    /// <para>Specifies whether to enable dynamic policies. This parameter is required during creation. If omitted during an update, the original value is retained. Disabling it retains existing policies and restores the basic upper and lower limits. Re-enabling it triggers immediate calculation. When it is finally enabled, policies cannot be empty.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -165,14 +156,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public bool? Enabled { get; set; }
 
                     /// <summary>
-                    /// <para>The complete list of dynamic policies. This field is required during creation. If omitted during an update, the original list is retained. If provided, it replaces the entire list and is not merged by ID. To clear the list, you must ensure that the final enabled is set to false. Each item must be complete. Conditional requirements and cross-field constraints are validated by the server. The display order does not indicate priority.</para>
+                    /// <para>The complete list of dynamic policies. This parameter is required during creation. If omitted during an update, the original list is retained. If provided, it replaces the entire list and is not merged by ID. To clear the list, you must ensure that the final enabled is set to false. Each item must be complete. Conditional requirements and cross-field constraints are verified by the server. The display order does not indicate priority.</para>
                     /// </summary>
                     [NameInMap("policies")]
                     [Validation(Required=false)]
                     public List<UpdateServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPolicies> Policies { get; set; }
                     public class UpdateServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPolicies : TeaModel {
                         /// <summary>
-                        /// <para>The end time of the validity period. This field is required only when validity is set to range. The format is the same as startTime, and the seconds are fixed at 00. It must be later than startTime. The interval does not include the end time. If validity is set to forever, the start and end times must be omitted. Valid dates and cross-field constraints are validated by the console.</para>
+                        /// <para>The end time of the validity period. This parameter is required only when validity is set to range. The format is the same as startTime, and the seconds are fixed at 00. It must be later than startTime. The interval does not include the end time. If validity is set to forever, the start and end times must be omitted. Valid dates and cross-field constraints are verified by the console.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2026-12-01T00:00:00</para>
@@ -182,7 +173,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public string EndTime { get; set; }
 
                         /// <summary>
-                        /// <para>The policy identifier. This field is required and must be unique and stable within the endpoint. It is generated by the frontend when added, and retained during editing and retries.</para>
+                        /// <para>The policy identifier. This parameter is required and must be unique and stable within the endpoint. It is generated by the frontend when added, and retained during editing and retries.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>policy-weekday</para>
@@ -192,7 +183,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public string Id { get; set; }
 
                         /// <summary>
-                        /// <para>The policy priority. This field is required. Valid values: 5: Regular. 10: High. New policies default to regular. You must explicitly provide this field upon submission, as the API does not set a default value. When the final dynamicPolicy.enabled is set to true, the validity periods of high-priority policies cannot overlap, except for end-to-end connections. Long-term high-priority policies can overlap with other high-priority policies. When disabled, overlapping drafts can be saved, and the final configuration is validated upon re-enabling. The validity of other fields and trigger conflicts within the policy are always validated. You must explicitly provide priority.</para>
+                        /// <para>The policy priority. This parameter is required. Valid values: 5 (regular) and 10 (high priority). The default selection for a new policy is regular. You must explicitly provide this parameter upon submission, and no default value is set for the API. When the final dynamicPolicy.enabled is set to true, the validity periods of high-priority policies cannot overlap, but end-to-end connection is allowed. Long-term high-priority policies can overlap with other high-priority policies. When disabled, overlapping drafts can be saved, and the final configuration is verified when re-enabled. The validity of other fields and trigger conflicts within the policy are always verified. You must explicitly provide priority.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>5</para>
@@ -202,7 +193,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public int? Priority { get; set; }
 
                         /// <summary>
-                        /// <para>The repeat cycle. This field is required. Valid values: daily: Every day. weekly: Every week. monthly: Every month. Only submit the fields corresponding to the cycle.</para>
+                        /// <para>The repeat period. This parameter is required. Valid values: daily (every day), weekly (every week), and monthly (every month). Only submit the fields corresponding to the specified period.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>weekly</para>
@@ -212,7 +203,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public string Repeat { get; set; }
 
                         /// <summary>
-                        /// <para>The start time of the validity period. This field is required only when validity is set to range. Format: YYYY-MM-DDTHH:mm:ss in the policy time zone, without a time zone offset. The seconds are fixed at 00. The interval includes the start time. Editing retains the existing past start time and does not reject updates or retries because it is earlier than the current time.</para>
+                        /// <para>The start time of the validity period. This parameter is required only when validity is set to range. Format: YYYY-MM-DDTHH:mm:ss in the policy time zone, without a time zone offset. The seconds are fixed at 00. The interval includes the start time. When editing, existing past start times are retained, and updates or retries are not rejected because the start time is earlier than the current time.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2026-11-01T00:00:00</para>
@@ -222,14 +213,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public string StartTime { get; set; }
 
                         /// <summary>
-                        /// <para>The periodic trigger time points. This field is required and cannot be empty. Each item must be complete. The day of the week or day of the month is configured independently for each item. Within the same policy, daily policies conflict if the time is the same. weekly and monthly policies conflict only when the time is the same and the date sets intersect. This is validated by the console.</para>
+                        /// <para>The periodic trigger time points. This parameter is required and cannot be empty. Each item must be complete. The day of the week or day of the month is configured independently for each item. Within the same policy, daily policies conflict if the time is the same. weekly and monthly policies conflict only when the time is the same and the date sets intersect. This is verified by the console.</para>
                         /// </summary>
                         [NameInMap("timePoints")]
                         [Validation(Required=false)]
                         public List<UpdateServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPoliciesTimePoints> TimePoints { get; set; }
                         public class UpdateServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPoliciesTimePoints : TeaModel {
                             /// <summary>
-                            /// <para>The target maximum number of instances. This field is required. Valid values: 1 to 100.</para>
+                            /// <para>The target maximum number of instances. This parameter is required. Valid values: 1 to 100.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>5</para>
@@ -239,7 +230,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                             public int? MaxInstances { get; set; }
 
                             /// <summary>
-                            /// <para>The target minimum number of instances. This field is required. Valid values: 0 to 100. The value cannot be greater than maxInstances in the same item.</para>
+                            /// <para>The target minimum number of instances. This parameter is required. Valid values: 0 to 100. The value cannot be greater than maxInstances in the same item.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>1</para>
@@ -249,14 +240,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                             public int? MinInstances { get; set; }
 
                             /// <summary>
-                            /// <para>The list of days in a month. This field is required for each trigger point of monthly policies. It cannot be empty and must be deduplicated. Valid values: integers from 1 to 31. Each row is selected independently. If a date does not exist in a month, the policy is not triggered and is not postponed to the end of the month. This field must be omitted for other cycles.</para>
+                            /// <para>The days of the month. This parameter is required only for each trigger point of monthly policies. It cannot be empty and must be deduplicated. Valid values are integers from 1 to 31. Each row is selected independently. If a date does not exist in a specific month, the policy is not triggered and is not postponed to the end of the month. This parameter must be omitted for other periods.</para>
                             /// </summary>
                             [NameInMap("monthDays")]
                             [Validation(Required=false)]
                             public List<int?> MonthDays { get; set; }
 
                             /// <summary>
-                            /// <para>The trigger time. This field is required. Format: HH:mm:ss. It is interpreted in the time zone of the policy, accurate to the minute, and the seconds are fixed at 00.</para>
+                            /// <para>The trigger time. This parameter is required. Format: HH:mm:ss. It is interpreted in the time zone of the associated policy, accurate to the minute, and the seconds are fixed at 00.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>09:00:00</para>
@@ -266,7 +257,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                             public string Time { get; set; }
 
                             /// <summary>
-                            /// <para>The list of weekdays. This field is required for each trigger point of weekly policies. It cannot be empty and must be deduplicated. Valid values: integers from 1 to 7. 1 indicates Monday, and 7 indicates Sunday. Each row is selected independently. This field must be omitted for other cycles.</para>
+                            /// <para>The days of the week. This parameter is required only for each trigger point of weekly policies. It cannot be empty and must be deduplicated. Valid values are integers from 1 to 7, where 1 represents Monday and 7 represents Sunday. Each row is selected independently. This parameter must be omitted for other periods.</para>
                             /// </summary>
                             [NameInMap("weekdays")]
                             [Validation(Required=false)]
@@ -275,7 +266,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         }
 
                         /// <summary>
-                        /// <para>The policy time zone. This field is required and must be a valid IANA time zone. All dates and times in this policy are interpreted in this time zone.</para>
+                        /// <para>The policy time zone. This parameter is required and must be a valid IANA time zone. All dates and times in this policy are interpreted in this time zone.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Asia/Shanghai</para>
@@ -285,7 +276,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public string TimeZone { get; set; }
 
                         /// <summary>
-                        /// <para>The policy validity period type. This field is required. Valid values: forever: Long-term validity. range: Short-term validity. After expiration, the policy and its trigger results exit the current calculation, and the remaining policies are recalculated. If no candidates exist, the basic values are restored. The saved configuration is not automatically deleted.</para>
+                        /// <para>The policy validity period type. This parameter is required. Valid values: forever (long-term validity) and range (short-term validity). After expiration, the policy and its trigger results exit the current calculation, and the remaining policies are recalculated. If no candidates are available, the basic values are restored. The saved configuration is not automatically deleted.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>range</para>
@@ -299,7 +290,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>Specifies whether to enable the global auto-elasticity mode. This field is independent of dynamicPolicy.enabled. If omitted during an update, the original value is retained.</para>
+                /// <para>Specifies whether to enable the overall automatic elasticity mode. This parameter is independent of dynamicPolicy.enabled. If omitted during an update, the original value is retained.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -309,7 +300,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? Enabled { get; set; }
 
                 /// <summary>
-                /// <para>The saved or backfilled base maximum number of instances, which is not less than minSandboxCount. The historical value may exceed 100, and the read value is not truncated. The base value is used when dynamic scaling is disabled or no candidates are available.</para>
+                /// <para>The saved or backfilled base maximum number of instances, which is not less than minSandboxCount. The historical value can exceed 100 and is not truncated when read. The base value is used when dynamic scaling is disabled or no candidates are available.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -319,7 +310,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public int? MaxSandboxCount { get; set; }
 
                 /// <summary>
-                /// <para>The saved or backfilled base minimum number of instances, which is a non-negative integer and not greater than maxSandboxCount. The historical value may exceed 100, and the read value is not truncated. A newly written complete configuration must still meet the 0 to 100 range.</para>
+                /// <para>The saved or backfilled base minimum number of instances, which is a non-negative integer and not greater than maxSandboxCount. The historical value can exceed 100 and is not truncated when read. A newly written complete configuration must still meet the 0 to 100 range.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -355,7 +346,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The expected public inbound access setting configured on the service endpoint. For legacy service endpoints that have not been configured, true is returned. This field only indicates the configuration expectation. To determine the actual availability of the public endpoint, refer to accessUrls and status.</para>
+            /// <para>The expected public access setting configured by the user for the service endpoint. For historical service endpoints that have not been configured, this parameter returns true. This value only indicates the configuration expectation. For the actual availability of the public endpoint, refer to accessUrls and status.</para>
             /// </summary>
             [NameInMap("publicAccessEnabled")]
             [Validation(Required=false)]
@@ -382,15 +373,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ServiceEndpointId { get; set; }
 
             /// <summary>
-            /// <para>The service endpoint status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>CREATING</description></item>
-            /// <item><description>READY</description></item>
-            /// <item><description>UPDATING</description></item>
-            /// <item><description>DEGRADED</description></item>
-            /// <item><description>DISABLED</description></item>
-            /// <item><description>DELETING</description></item>
-            /// </list>
+            /// <para>The service endpoint status. Valid values: CREATING, READY, UPDATING, DEGRADED, DISABLED, and DELETING.</para>
             /// 
             /// <b>Example:</b>
             /// <para>READY</para>
@@ -400,7 +383,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The reason for the service endpoint status. This parameter is returned with the specific cause when the status is abnormal.</para>
+            /// <para>The reason for the service endpoint status. The specific reason is returned when the status is abnormal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ServiceEndpoint.Provider.Unavailable: no provider for the target type</para>
@@ -457,11 +440,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string ResourceBindingId { get; set; }
 
                 /// <summary>
-                /// <para>The target type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>AGENT_VERSION</description></item>
-                /// <item><description>TEAM_COLLABORATION</description></item>
-                /// </list>
+                /// <para>The target type. Valid values: AGENT_VERSION and TEAM_COLLABORATION.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AGENT_VERSION</para>
@@ -473,7 +452,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The last update time in UTC format compliant with RFC 3339.</para>
+            /// <para>The time of the last modification in UTC format compliant with RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>

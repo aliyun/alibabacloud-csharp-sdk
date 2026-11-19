@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>description</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Extracts long-term preferences explicitly expressed by users</para>
+            /// <para>Extract long-term preferences explicitly expressed by the user</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -107,10 +107,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public ListMemoryRulesResponseBodyItemsStrategy Strategy { get; set; }
             public class ListMemoryRulesResponseBodyItemsStrategy : TeaModel {
                 /// <summary>
-                /// <para>The strategy-level instruction. This instruction takes effect together with the store-level instruction. If a conflict occurs, this field takes precedence.</para>
+                /// <para>The strategy-level instruction. It takes effect together with the store-level instruction. This field takes precedence in case of conflicts.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Retains only long-term preferences explicitly expressed by users</para>
+                /// <para>Retain only long-term preferences explicitly expressed by the user</para>
                 /// </summary>
                 [NameInMap("instruction")]
                 [Validation(Required=false)]

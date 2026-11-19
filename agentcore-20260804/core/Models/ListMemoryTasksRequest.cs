@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListMemoryTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The maximum number of results per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

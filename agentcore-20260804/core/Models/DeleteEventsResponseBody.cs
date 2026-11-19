@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The operation results.</para>
+        /// <para>The operation result.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<DeleteEventsResponseBodyDataResults> Results { get; set; }
             public class DeleteEventsResponseBodyDataResults : TeaModel {
                 /// <summary>
-                /// <para>The error details for failed items.</para>
+                /// <para>The error for the failed item.</para>
                 /// </summary>
                 [NameInMap("error")]
                 [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string EventId { get; set; }
 
                 /// <summary>
-                /// <para>Valid values: DELETED, NOT_FOUND, and FAILED.</para>
+                /// <para>The status. Valid values: DELETED, NOT_FOUND, and FAILED.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. For batch API operations, you must still check the results of individual items.</para>
+        /// <para>Indicates whether the request is successful. For batch operations, you must still check the result of each item.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
