@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class GetMetricDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. A value of 200 indicates success. If the request fails, the corresponding error code is returned.</para>
+        /// <para>The response code. A value of 200 indicates success. If the request fails, the corresponding error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The message returned for the request.</para>
+        /// <para>The description of the request result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

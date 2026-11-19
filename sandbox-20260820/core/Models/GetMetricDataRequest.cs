@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class GetMetricDataRequest : TeaModel {
         /// <summary>
-        /// <para>The end time of the time series query. This time is excluded from the query range. Specify the UTC time accurate to seconds. The end time must be later than the start time. You can query metrics for a maximum of 7 days at a time. The time range must include at least one time point aligned with the period, and these time points cannot be later than the current time.</para>
+        /// <para>The end time of the time series query. This time is exclusive. Specify a UTC time accurate to seconds. The end time must be later than the start time. You can query metrics for a maximum of 7 days at a time. The time range must include at least one time point aligned with the period, and these time points cannot be later than the current time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-11-05T00:02:00Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public List<string> GroupBy { get; set; }
 
         /// <summary>
-        /// <para>The names of the metrics to query. You can query 1 to 16 different metrics at a time. For available metrics and query scopes, see the metric catalog.</para>
+        /// <para>The names of the metrics to query. You can query 1 to 16 different metrics at a time. For available metrics and query scopes, refer to the metric catalog.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public List<string> MetricNames { get; set; }
 
         /// <summary>
-        /// <para>The time interval for time series queries, in seconds. Valid values: 60, 300, 900, 1800, 3600, and 86400. A value of 60 corresponds to full minutes, and 86400 corresponds to midnight UTC every day. The calculation duration of some statistical metrics varies with the interval.</para>
+        /// <para>The time interval for time series queries, in seconds. Valid values: 60, 300, 900, 1800, 3600, and 86400. A value of 60 corresponds to exact minutes, and 86400 corresponds to 00:00:00 UTC every day. The calculation duration of some statistical metrics varies with the interval.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string SandboxID { get; set; }
 
         /// <summary>
-        /// <para>Queries the number of sandboxes by sandbox plan. This parameter applies only to sandboxCount. Valid values: eco, std, pro, and ent.</para>
+        /// <para>Queries the number of sandboxes by sandbox plan. This parameter applies only to the sandboxCount metric. Valid values: eco, std, pro, and ent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pro</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string SandboxPlan { get; set; }
 
         /// <summary>
-        /// <para>The start time of the time series query. This time is included in the query range. Specify the UTC time accurate to seconds and also specify endTime.</para>
+        /// <para>The start time of the time series query. This time is inclusive. Specify a UTC time accurate to seconds, and also specify the endTime parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-11-05T00:00:00Z</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string TemplateID { get; set; }
 
         /// <summary>
-        /// <para>The specific point in time to query. If you query metrics at a specific point in time, specify only this parameter. Specify the current or past UTC time accurate to seconds. If you omit all time parameters, the metrics at the current time are queried.</para>
+        /// <para>The specific point in time to query. If you query metrics at a specific point in time, specify only this parameter. Specify a current or past UTC time accurate to seconds. If you omit all time parameters, the metrics at the current time are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-11-05T00:01:00Z</para>

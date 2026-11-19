@@ -2513,7 +2513,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Views monitoring metrics at a specific point in time or queries trends over a period of time. Supports querying by account, team, template, or sandbox.</para>
+        /// <para>Retrieves monitoring metrics at a specific point in time or queries metric trends over a period of time. You can filter queries by account, team, template, or sandbox.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2610,7 +2610,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Views monitoring metrics at a specific point in time or queries trends over a period of time. Supports querying by account, team, template, or sandbox.</para>
+        /// <para>Retrieves monitoring metrics at a specific point in time or queries metric trends over a period of time. You can filter queries by account, team, template, or sandbox.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2707,7 +2707,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Views monitoring metrics at a specific point in time or queries trends over a period of time. Supports querying by account, team, template, or sandbox.</para>
+        /// <para>Retrieves monitoring metrics at a specific point in time or queries metric trends over a period of time. You can filter queries by account, team, template, or sandbox.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2731,7 +2731,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Views monitoring metrics at a specific point in time or queries trends over a period of time. Supports querying by account, team, template, or sandbox.</para>
+        /// <para>Retrieves monitoring metrics at a specific point in time or queries metric trends over a period of time. You can filter queries by account, team, template, or sandbox.</para>
         /// </description>
         /// 
         /// <param name="request">

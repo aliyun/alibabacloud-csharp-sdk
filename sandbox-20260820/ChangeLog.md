@@ -1,3 +1,6 @@
+2026-11-19 Version: 1.5.2
+- Generated csharp 2026-08-20 for Sandbox.
+
 2026-11-18 Version: 1.5.1
 - Generated csharp 2026-08-20 for Sandbox.
 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class GetResourceUsageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. A value of 200 indicates success. Other values indicate specific error codes.</para>
+        /// <para>The response code. The value is 200 if the request is successful. If the request fails, the value is the corresponding error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The usage results for the query interval and each group.</para>
+        /// <para>The usage results for the query period and each group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;startTime&quot;:&quot;2026-11-05T00:00:00Z&quot;,&quot;endTime&quot;:&quot;2026-11-05T02:00:00Z&quot;,&quot;granularity&quot;:&quot;Hour&quot;,&quot;groupBy&quot;:[&quot;teamID&quot;],&quot;groups&quot;:[{&quot;dimensions&quot;:{&quot;teamID&quot;:&quot;70d1c834-0333-58d8-97ac-5336eb9179eb&quot;},&quot;items&quot;:[{&quot;usageName&quot;:&quot;cpuActive&quot;,&quot;unit&quot;:&quot;CoreSecond&quot;,&quot;total&quot;:5400,&quot;buckets&quot;:[{&quot;startTime&quot;:&quot;2026-11-05T00:00:00Z&quot;,&quot;endTime&quot;:&quot;2026-11-05T01:00:00Z&quot;,&quot;quantity&quot;:3600},{&quot;startTime&quot;:&quot;2026-11-05T01:00:00Z&quot;,&quot;endTime&quot;:&quot;2026-11-05T02:00:00Z&quot;,&quot;quantity&quot;:1800}]}]}]}</para>

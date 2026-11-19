@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class QuotaUsage : TeaModel {
         /// <summary>
-        /// <para>The consumed CPU quota in vCPUs, not the CPU utilization.</para>
+        /// <para>The consumed CPU quota in vCPUs, which does not represent CPU utilization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public long? InstanceCount { get; set; }
 
         /// <summary>
-        /// <para>The consumed memory quota in GB, not the actual memory used by processes.</para>
+        /// <para>The consumed memory quota in GB, which does not represent the actual memory used by processes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.5</para>
@@ -38,6 +38,16 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [NameInMap("memoryGB")]
         [Validation(Required=false)]
         public double? MemoryGB { get; set; }
+
+        /// <summary>
+        /// <para>The number of cores consumed from the team\&quot;s exclusive CPU creation quota that have not yet been naturally replenished. This is not the cumulative creation volume over the last minute. This field is omitted when no valid exclusive bucket snapshot is available, and actual zeros and decimals are retained.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>19.875</para>
+        /// </summary>
+        [NameInMap("scalingCpuCoresPerMinute")]
+        [Validation(Required=false)]
+        public double? ScalingCpuCoresPerMinute { get; set; }
 
     }
 
