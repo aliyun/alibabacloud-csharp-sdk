@@ -34,6 +34,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// <para>The property code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cpu</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -41,6 +44,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// <para>The default value.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("DefaultValue")]
         [Validation(Required=false)]
@@ -48,6 +54,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// <para>The description (translated).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>实例 CPU 核数</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -62,6 +71,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// <para>The unique identifier.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("IdentifyKey")]
         [Validation(Required=false)]
@@ -69,6 +81,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// <para>The maximum value.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>16</para>
         /// </summary>
         [NameInMap("Max")]
         [Validation(Required=false)]
@@ -76,6 +91,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// <para>The minimum value.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Min")]
         [Validation(Required=false)]
@@ -90,6 +108,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// <para>The step size.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Step")]
         [Validation(Required=false)]
@@ -104,6 +125,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// <para>The enum value.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]
@@ -111,6 +135,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// <para>The value name (translated).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2 核</para>
         /// </summary>
         [NameInMap("ValueName")]
         [Validation(Required=false)]

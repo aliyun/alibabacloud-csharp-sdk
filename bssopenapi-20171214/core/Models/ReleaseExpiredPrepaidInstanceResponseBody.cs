@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class ReleaseExpiredPrepaidInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para><b>[Deprecated]</b> The field is deprecated.</para>
+        /// <para><b>[Deprecated]</b> The host ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>deprecated</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public ReleaseExpiredPrepaidInstanceResponseBodyData Data { get; set; }
         public class ReleaseExpiredPrepaidInstanceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para><b>[Deprecated]</b> The field is deprecated.</para>
+            /// <para><b>[Deprecated]</b> The host ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>deprecated</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the operation is successful.</para>
+                /// <para>Indicates whether the operation was successful.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the release operation is successful.</para>
+            /// <para>Indicates whether the release operation was successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is successful.</para>
+        /// <para>Indicates whether the operation was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

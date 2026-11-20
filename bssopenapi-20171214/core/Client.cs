@@ -14472,7 +14472,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Releases <b>upfront</b> instances that have <b>expired and stopped</b>. After an instance expires and stops, you can use this operation to release it in advance instead of waiting for the automatic release by the system after the retention period. <b>The release operation is irreversible. Before you invoke this operation, confirm that you no longer need the instance data or underlying resources.</b></para>
+        /// <para>Releases <b>expired and stopped</b> <b>upfront</b> instances. After an instance expires and stops, you can use this operation to release it in advance instead of waiting for the automatic release after the retention period. <b>Release operations are irrevocable. Confirm that the instance data and underlying resources are no longer needed before you invoke this operation.</b></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14527,7 +14527,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Releases <b>upfront</b> instances that have <b>expired and stopped</b>. After an instance expires and stops, you can use this operation to release it in advance instead of waiting for the automatic release by the system after the retention period. <b>The release operation is irreversible. Before you invoke this operation, confirm that you no longer need the instance data or underlying resources.</b></para>
+        /// <para>Releases <b>expired and stopped</b> <b>upfront</b> instances. After an instance expires and stops, you can use this operation to release it in advance instead of waiting for the automatic release after the retention period. <b>Release operations are irrevocable. Confirm that the instance data and underlying resources are no longer needed before you invoke this operation.</b></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14582,7 +14582,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Releases <b>upfront</b> instances that have <b>expired and stopped</b>. After an instance expires and stops, you can use this operation to release it in advance instead of waiting for the automatic release by the system after the retention period. <b>The release operation is irreversible. Before you invoke this operation, confirm that you no longer need the instance data or underlying resources.</b></para>
+        /// <para>Releases <b>expired and stopped</b> <b>upfront</b> instances. After an instance expires and stops, you can use this operation to release it in advance instead of waiting for the automatic release after the retention period. <b>Release operations are irrevocable. Confirm that the instance data and underlying resources are no longer needed before you invoke this operation.</b></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14605,7 +14605,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Releases <b>upfront</b> instances that have <b>expired and stopped</b>. After an instance expires and stops, you can use this operation to release it in advance instead of waiting for the automatic release by the system after the retention period. <b>The release operation is irreversible. Before you invoke this operation, confirm that you no longer need the instance data or underlying resources.</b></para>
+        /// <para>Releases <b>expired and stopped</b> <b>upfront</b> instances. After an instance expires and stops, you can use this operation to release it in advance instead of waiting for the automatic release after the retention period. <b>Release operations are irrevocable. Confirm that the instance data and underlying resources are no longer needed before you invoke this operation.</b></para>
         /// </description>
         /// 
         /// <param name="request">

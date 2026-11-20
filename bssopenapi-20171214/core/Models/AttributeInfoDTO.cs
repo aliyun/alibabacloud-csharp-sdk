@@ -32,6 +32,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// <para>The attribute code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cpu</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -46,6 +49,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// <para>The attribute description (translated).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>实例 CPU 核数</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -60,6 +66,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// <para>The attribute name (translated).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CPU 核数</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -88,6 +97,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         /// <summary>
         /// <para>The unit.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>核</para>
         /// </summary>
         [NameInMap("Unit")]
         [Validation(Required=false)]
