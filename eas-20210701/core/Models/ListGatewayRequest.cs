@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the private gateway. For information about how to obtain the ID of a private gateway, see the private_gateway_id field in the response of the ListResources operation.</para>
+        /// <para>The ID of the private gateway. To obtain the private gateway ID, see the private_gateway_id field in the response of the ListResources operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-1uhcqmsc7x22******</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string GatewayType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether Internet access is enabled.</para>
+        /// <para>Specifies whether public network access is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? InternetEnabled { get; set; }
 
         /// <summary>
-        /// <para>The label used to filter gateways.</para>
+        /// <para>Filters the results by label.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:null}</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The paging Settings for the number of entries to return per page in a paged query. Default value: 100.</para>
+        /// <para>The paging settings for the number of entries to return on each page in a paged query. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. For information about how to obtain the ID of a resource group, see the ResourceId field in the response of the <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a> operation.</para>
+        /// <para>The ID of the resource group. To obtain the resource group ID, see the ResourceId field in the response of the <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eas-r-4gt8twzwllfo******</para>
@@ -128,6 +128,16 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the workspace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456</para>
+        /// </summary>
+        [NameInMap("WorkspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
 
     }
 

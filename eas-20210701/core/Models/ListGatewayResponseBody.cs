@@ -186,10 +186,20 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             [Validation(Required=false)]
             public string UpdateTime { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the workspace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123456</para>
+            /// </summary>
+            [NameInMap("WorkspaceId")]
+            [Validation(Required=false)]
+            public string WorkspaceId { get; set; }
+
         }
 
         /// <summary>
-        /// <para>The page number of the returned gateway list.</para>
+        /// <para>The page number of the returned page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -199,7 +209,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of gateways returned on each page.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

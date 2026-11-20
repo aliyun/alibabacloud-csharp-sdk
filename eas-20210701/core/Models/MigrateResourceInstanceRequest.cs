@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string DestResourceId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the instances.</para>
+        /// <para>The instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to migrate the instances to a general computing resource group. If set to true, specify the ID of the general computing resource group.</para>
+        /// <para>Specifies whether to migrate the instances to a general compute resource group. If this parameter is set to true, you must specify the ID of the general compute resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

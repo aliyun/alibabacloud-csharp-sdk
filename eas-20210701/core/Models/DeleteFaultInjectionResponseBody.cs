@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DeleteFaultInjectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>A message that indicates the result of the operation.</para>
+        /// <para>The operation result message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successfully delete acl policy for gateway</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>40325405-579C-4D82****</para>

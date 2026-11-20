@@ -86,14 +86,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? Replicas { get; set; }
 
         /// <summary>
-        /// <para>The list of vSwitches. This parameter applies only to dedicated gateways for applications.</para>
+        /// <para>The list of vSwitches. This parameter is only applicable to application dedicated gateways.</para>
         /// </summary>
         [NameInMap("VSwitchIds")]
         [Validation(Required=false)]
         public List<string> VSwitchIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC to which the gateway belongs. This parameter applies only to dedicated gateways for applications.</para>
+        /// <para>The ID of the VPC to which the gateway belongs. This parameter is only applicable to application dedicated gateways.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1jkde2******3mew</para>
@@ -101,6 +101,16 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
+
+        /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456</para>
+        /// </summary>
+        [NameInMap("WorkspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
 
     }
 

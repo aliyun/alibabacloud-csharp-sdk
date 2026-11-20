@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CreateServiceRolloutRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration for automatic batching.</para>
+        /// <para>The automatic batching configuration.</para>
         /// </summary>
         [NameInMap("Batch")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         }
 
         /// <summary>
-        /// <para>The configuration for manual batching.</para>
+        /// <para>The manual batching configuration.</para>
         /// </summary>
         [NameInMap("Partition")]
         [Validation(Required=false)]

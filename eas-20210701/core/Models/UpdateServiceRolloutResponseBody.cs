@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class UpdateServiceRolloutResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned message. Describes the request processing result. Valid values:</para>
+        /// <para>The response message. Describes the request processing result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>&quot;Rollout updated successfully&quot;: The rollout policy is updated.</description></item>
-        /// <item><description>&quot;Rollout paused successfully&quot;: The rollout is paused.</description></item>
-        /// <item><description>&quot;Rollout resumed successfully&quot;: The rollout is resumed.</description></item>
+        /// <item><description>&quot;Rollout updated successfully&quot;: The policy is updated successfully.</description></item>
+        /// <item><description>&quot;Rollout paused successfully&quot;: The rollout is paused successfully.</description></item>
+        /// <item><description>&quot;Rollout resumed successfully&quot;: The rollout is resumed successfully.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

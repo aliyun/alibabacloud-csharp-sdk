@@ -18,6 +18,13 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public class ListTenantAddonsResponseBodyAddons : TeaModel {
             /// <summary>
             /// <para>The plugin attributes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{
+            ///  &quot;AccessToken&quot;:&quot;ld***.eY***.&quot;,
+            ///  &quot;InternetEndpoint&quot;: &quot;<b><b>.com/prometheus&quot;,
+            ///  &quot;IntranetEndpoint&quot;: &quot;</b></b>.vpc.com/prometheus&quot;
+            /// }</para>
             /// </summary>
             [NameInMap("Attributes")]
             [Validation(Required=false)]

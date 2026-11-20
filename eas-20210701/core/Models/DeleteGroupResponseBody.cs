@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DeleteGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message returned in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Delete service group foo successfully</para>

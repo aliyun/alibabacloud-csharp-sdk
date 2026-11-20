@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run on the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs a dry run and does not create the instance. The system checks whether the required parameters are specified, the request format is valid, the service limits are met, and the ECS inventory is sufficient. If the request fails the check, an error is returned. If the request passes the check, the DryRunOperation error code is returned.</description></item>
-        /// <item><description>false (default): performs a normal request and creates the instance if the request passes the check.</description></item>
+        /// <item><description>true: performs a dry run without performing the actual operation. If the request fails the dry run, an error is returned. If the request passes the dry run, the DryRunOperation error code is returned.</description></item>
+        /// <item><description>false (default): sends a normal request.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

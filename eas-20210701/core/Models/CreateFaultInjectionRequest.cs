@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public object FaultArgs { get; set; }
 
         /// <summary>
-        /// <para>The fault type. Device faults: 1. CPU full-load fault. 2. Memory load fault. 3. Network fault. 4. Disk read/write hang fault. 5. Disk fill fault.</para>
+        /// <para>The fault type. Device faults include CPU full load, memory load, network fault, disk read/write hang, and disk fill.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CpuFullloadTask</para>

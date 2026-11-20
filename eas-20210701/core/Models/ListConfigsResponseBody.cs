@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public List<ListConfigsResponseBodyConfigs> Configs { get; set; }
         public class ListConfigsResponseBodyConfigs : TeaModel {
             /// <summary>
-            /// <para>The time when the dynamic parameter was created, in UTC in RFC 3339 format.</para>
+            /// <para>The creation time of the dynamic parameter, in UTC and RFC 3339 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-01T10:00:00Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The time when the dynamic parameter was last updated, in UTC in RFC 3339 format.</para>
+            /// <para>The update time of the dynamic parameter, in UTC and RFC 3339 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-01T10:00:00Z</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether more data exists.</para>
+        /// <para>Indicates whether more data is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

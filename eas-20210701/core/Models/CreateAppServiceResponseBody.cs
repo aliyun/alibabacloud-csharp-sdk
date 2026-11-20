@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string IntranetEndpoint { get; set; }
 
         /// <summary>
-        /// <para>The region where the service is located.</para>
+        /// <para>The region where the service is deployed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>

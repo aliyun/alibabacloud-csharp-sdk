@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CreateConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The creation time in UTC, in RFC 3339 format.</para>
+        /// <para>The creation time in UTC format that complies with RFC 3339.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-01T00:00:00Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The dynamic parameter name.</para>
+        /// <para>The name of the dynamic parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>model-config</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The update time in UTC, in RFC 3339 format.</para>
+        /// <para>The update time in UTC format that complies with RFC 3339.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-01T00:00:00Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string UpdatedAt { get; set; }
 
         /// <summary>
-        /// <para>The dynamic parameter value.</para>
+        /// <para>The value of the dynamic parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;model&quot;: &quot;gpt-4&quot;}</para>

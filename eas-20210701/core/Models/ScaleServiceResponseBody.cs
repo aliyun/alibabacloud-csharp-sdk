@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ScaleServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>A message indicating the result of the operation.</para>
+        /// <para>The operation result message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Service [foo] in region [cn-shanghai] is scaling</para>

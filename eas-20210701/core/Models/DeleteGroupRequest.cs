@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DeleteGroupRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to perform a cascade delete. If enabled, deleting the service group automatically deletes all services within the service group. This feature is disabled by default.</para>
+        /// <para>Specifies whether cascade delete is enabled. If enabled, deleting the service group automatically deletes all services in the service group. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

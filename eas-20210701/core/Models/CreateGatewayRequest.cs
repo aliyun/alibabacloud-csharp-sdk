@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CreateGatewayRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the resource group. For more information, see the ResourceName field where ResourceType is SelfManaged in the response of the <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a> operation.</para>
+        /// <para>The name of the resource group. For more information, see the ResourceName field returned by the <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a> operation when ResourceType is set to SelfManaged.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eas-r-4gt8twzwllfo******</para>
@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false: disables auto-renewal. This is the default value.</description></item>
-        /// <item><description>true: enables auto-renewal.</description></item>
+        /// <item><description>false: Disables auto-renewal. This is the default value.</description></item>
+        /// <item><description>true: Enables auto-renewal.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("AutoRenewal")]
@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <summary>
         /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PrePaid: subscription.</description></item>
-        /// <item><description>PostPaid: pay-as-you-go.</description></item>
+        /// <item><description>PrePaid: Subscription.</description></item>
+        /// <item><description>PostPaid: Pay-as-you-go.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? EnableIntranet { get; set; }
 
         /// <summary>
-        /// <para>The type of the private gateway. ALB indicates an application-layer dedicated gateway, and FullyManaged indicates a fully managed dedicated gateway.</para>
+        /// <para>The type of the private gateway. A value of ALB indicates an application-type dedicated gateway. A value of FullyManaged indicates a fully managed dedicated gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ALB</para>
@@ -109,6 +109,16 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [NameInMap("Replicas")]
         [Validation(Required=false)]
         public int? Replicas { get; set; }
+
+        /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456</para>
+        /// </summary>
+        [NameInMap("WorkspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
 
     }
 

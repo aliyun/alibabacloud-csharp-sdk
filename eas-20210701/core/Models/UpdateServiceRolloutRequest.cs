@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public UpdateServiceRolloutRequestBatch Batch { get; set; }
         public class UpdateServiceRolloutRequestBatch : TeaModel {
             /// <summary>
-            /// <para>The batch size. The number of replicas to update in each batch. Integer or percentage formats are supported. Default value: <c>&quot;25%&quot;</c>.</para>
+            /// <para>The batch size. The number of replicas updated per batch. Integer or percentage formats are supported. Default value: &quot;25%&quot;.</para>
             /// 
             /// <b>Example:</b>
             /// <para>25%</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string BatchSize { get; set; }
 
             /// <summary>
-            /// <para>The batch interval. The wait time between two rollouts. Supported units: <c>s</c> (seconds), <c>m</c> (minutes), and <c>h</c> (hours).</para>
+            /// <para>The batch interval. The wait time between two rollouts. Supported units: s (seconds), m (minutes), and h (hours).</para>
             /// 
             /// <b>Example:</b>
             /// <para>60s</para>
@@ -61,9 +61,9 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             /// <item><description>Type: string</description></item>
             /// <item><description>Required: yes</description></item>
             /// <item><description>Description: The partition value. Two formats are supported:<ol>
-            /// <item><description>Integer format: such as &quot;5&quot;, which indicates that 5 old replicas are retained.</description></item>
-            /// <item><description>Percentage format: such as &quot;50%&quot;, which indicates that 50% of the old replicas are retained.
-            /// Adjustment strategies:</description></item>
+            /// <item><description>Integer format: such as &quot;5&quot;, which means retaining 5 old replicas.</description></item>
+            /// <item><description>Percentage format: such as &quot;50%&quot;, which means retaining 50% of the old replicas.
+            /// Adjustment policy:</description></item>
             /// </ol>
             /// <list type="bullet">
             /// <item><description>Increase the value: Roll back to the old version and increase the proportion of old replicas.</description></item>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to pause the rollout. A value of <c>true</c> indicates that the rollout is paused. A value of <c>false</c> indicates that the rollout is resumed.</para>
+        /// <para>Specifies whether to pause the rollout. A value of true indicates that the rollout is paused. A value of false indicates that the rollout is resumed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

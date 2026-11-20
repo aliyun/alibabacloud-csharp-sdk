@@ -1,3 +1,11 @@
+2026-11-20 Version: 7.11.1
+- Update API CreateGateway: add request parameters body.WorkspaceId.
+- Update API DescribeGateway: add response parameters Body.WorkspaceId.
+- Update API ListGateway: add request parameters WorkspaceId.
+- Update API ListGateway: add response parameters Body.Gateways.$.WorkspaceId.
+- Update API UpdateGateway: add request parameters body.WorkspaceId.
+
+
 2026-11-12 Version: 7.11.0
 - Support API UpdateServiceVersionRemark.
 - Update API CreateAppService: add request parameters ClientToken.

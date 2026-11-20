@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class UpdateConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The dynamic parameter value (required).</para>
+        /// <para>The value of the dynamic parameter. This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DescribeGatewayResponseBody : TeaModel {
         /// <summary>
-        /// <para>The billing method. Valid values:</para>
+        /// <para>The billing method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PrePaid</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The time when the dedicated gateway was created. The time is in UTC.</para>
+        /// <para>The time when the private gateway was created. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-05-19T14:19:42Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The self-managed cluster ID.</para>
+        /// <para>The ID of the self-managed cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c935eadf284c14c2da57a2a13ad6******</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ExternalClusterId { get; set; }
 
         /// <summary>
-        /// <para>The dedicated gateway ID.</para>
+        /// <para>The ID of the private gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-1uhcqmsc7x22******</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The alias of the dedicated gateway.</para>
+        /// <para>The alias of the private gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mygateway1</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string GatewayName { get; set; }
 
         /// <summary>
-        /// <para>The instance type used by the dedicated gateway.</para>
+        /// <para>The instance type used by the private gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2c4g</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The public network access domain name.</para>
+        /// <para>The domain name for public network access.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-1uhcqmsc7x22******-1801786532******.cn-wulanchabu.pai-eas.aliyuncs.com</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? InternetEnabled { get; set; }
 
         /// <summary>
-        /// <para>The status of public network access. Valid values:</para>
+        /// <para>The status of public network access.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string InternetStatus { get; set; }
 
         /// <summary>
-        /// <para>The internal access domain name.</para>
+        /// <para>The domain name for internal network access.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-1uhcqmsc7x22******-1801786532******-vpc.cn-wulanchabu.pai-eas.aliyuncs.com</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string IntranetDomain { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether internal network access is enabled. A value of true indicates that internal network access is enabled. A value of false indicates that internal network access is not enabled.</para>
+        /// <para>Indicates whether internal network access is enabled. A value of true indicates that internal network access is enabled. A value of false indicates that internal network access is disabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? IntranetEnabled { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the dedicated gateway is the default gateway.</para>
+        /// <para>Indicates whether the private gateway is the default private gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public List<DescribeGatewayResponseBodyLabels> Labels { get; set; }
         public class DescribeGatewayResponseBodyLabels : TeaModel {
             /// <summary>
-            /// <para>The gateway label key.</para>
+            /// <para>The key of the gateway label.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key1</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string LabelKey { get; set; }
 
             /// <summary>
-            /// <para>The gateway label value.</para>
+            /// <para>The value of the gateway label.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value1</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         }
 
         /// <summary>
-        /// <para>The number of nodes in the dedicated gateway.</para>
+        /// <para>The number of nodes in the private gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether HTTP-to-HTTPS redirection is enabled.</para>
+        /// <para>Indicates whether HTTP redirection to HTTPS is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? SSLRedirectionEnabled { get; set; }
 
         /// <summary>
-        /// <para>The status of the dedicated gateway. Valid values:</para>
+        /// <para>The status of the private gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The time when the dedicated gateway was last updated. The time is in UTC.</para>
+        /// <para>The time when the private gateway was updated. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-02-24T11:52:17Z</para>
@@ -207,6 +207,16 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [NameInMap("UpdateTime")]
         [Validation(Required=false)]
         public string UpdateTime { get; set; }
+
+        /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456</para>
+        /// </summary>
+        [NameInMap("WorkspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
 
     }
 

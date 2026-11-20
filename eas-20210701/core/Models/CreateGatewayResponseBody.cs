@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CreateGatewayResponseBody : TeaModel {
         /// <summary>
-        /// <para>The region where the private gateway resides.</para>
+        /// <para>The region where the private gateway is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-wulanchabu</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the private gateway.</para>
+        /// <para>The private gateway ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-1uhcqmsc7x22******</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class UpdateGatewayResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the private gateway.</para>
+        /// <para>The private gateway ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-1uhcqmsc7x22******</para>

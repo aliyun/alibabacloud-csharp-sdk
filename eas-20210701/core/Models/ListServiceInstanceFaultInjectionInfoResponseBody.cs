@@ -10,35 +10,30 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListServiceInstanceFaultInjectionInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of injected faults.</para>
+        /// <para>The list of injected faults.</para>
         /// </summary>
         [NameInMap("FaultInfoList")]
         [Validation(Required=false)]
         public List<ListServiceInstanceFaultInjectionInfoResponseBodyFaultInfoList> FaultInfoList { get; set; }
         public class ListServiceInstanceFaultInjectionInfoResponseBodyFaultInfoList : TeaModel {
             /// <summary>
-            /// <para>The parameters for each fault type.</para>
+            /// <para>Detailed parameters for each fault type:</para>
             /// <ol>
-            /// <item><description><para>CpuFullloadTask (CPU full load fault)
-            /// <c>{ &quot;FaultType&quot;: &quot;CpuFullloadTask&quot;, &quot;FaultArgs&quot;: { &quot;FaultAction&quot;: &quot;fullload&quot;, &quot;CpuPercent&quot;: 50 } }</c></para>
-            /// </description></item>
-            /// <item><description><para>MemLoadTask (Memory load fault)
-            /// <c>{ &quot;FaultType&quot;: &quot;MemLoadTask&quot;, &quot;FaultArgs&quot;: { &quot;FaultAction&quot;: &quot;load&quot;, &quot;MemPercent&quot;: 80 } }</c></para>
-            /// </description></item>
-            /// <item><description><para>NetworkTask (Network fault)
-            /// 3.a. NetworkDelayAction (Network delay)
-            /// <c>{ &quot;FaultType&quot;: &quot;NetworkTask&quot;, &quot;FaultArgs&quot;: { &quot;FaultAction&quot;: &quot;delay&quot;, &quot;Time&quot;: 3000, &quot;Offset&quot;: 100 } }</c>
-            /// 3.b. NetworkCorruptAction (Network packet corruption)
-            /// <c>{ &quot;FaultType&quot;: &quot;NetworkTask&quot;, &quot;FaultArgs&quot;: { &quot;FaultAction&quot;: &quot;corrupt&quot;, &quot;Percent&quot;: 50 } }</c>
-            /// 3.c. NetworkLossAction (Network packet loss)
-            /// <c>{ &quot;FaultType&quot;: &quot;NetworkTask&quot;, &quot;FaultArgs&quot;: { &quot;FaultAction&quot;: &quot;loss&quot;, &quot;Percent&quot;: 30 } }</c></para>
-            /// </description></item>
-            /// <item><description><para>DiskBurnTask (Disk read/write fault)
-            /// <c>{ &quot;FaultType&quot;: &quot;DiskBurnTask&quot;, &quot;FaultArgs&quot;: { &quot;FaultAction&quot;: &quot;burn&quot;, &quot;Read&quot;: true, &quot;Write&quot;: true, &quot;Size&quot;: 100 } }</c></para>
-            /// </description></item>
-            /// <item><description><para>DiskFillTask (Disk fill fault)
-            /// <c>{ &quot;FaultType&quot;: &quot;DiskFillTask&quot;, &quot;FaultArgs&quot;: { &quot;FaultAction&quot;: &quot;fill&quot;, &quot;Percent&quot;: 80 } }</c></para>
-            /// </description></item>
+            /// <item><description>CpuFullloadTask (CPU full load fault)
+            /// <c>{   &quot;FaultType&quot;: &quot;CpuFullloadTask&quot;,   &quot;FaultArgs&quot;: {  &quot;FaultAction&quot;: &quot;fullload&quot;,  &quot;CpuPercent&quot;: 50   } }</c></description></item>
+            /// <item><description>MemLoadTask (memory load fault)
+            /// <c>{   &quot;FaultType&quot;: &quot;MemLoadTask&quot;,   &quot;FaultArgs&quot;: {  &quot;FaultAction&quot;: &quot;load&quot;,  &quot;MemPercent&quot;: 80   } }</c></description></item>
+            /// <item><description>NetworkTask (network fault)
+            /// 3.a. NetworkDelayAction (network delay)
+            /// <c>{   &quot;FaultType&quot;: &quot;NetworkTask&quot;,   &quot;FaultArgs&quot;: {  &quot;FaultAction&quot;: &quot;delay&quot;,  &quot;Time&quot;: 3000,  &quot;Offset&quot;: 100   } }</c>
+            /// 3.b. NetworkCorruptAction (network packet corruption)
+            /// <c>{   &quot;FaultType&quot;: &quot;NetworkTask&quot;,   &quot;FaultArgs&quot;: {  &quot;FaultAction&quot;: &quot;corrupt&quot;,  &quot;Percent&quot;: 50   } }</c>
+            /// 3.c. NetworkLossAction (network packet loss)
+            /// <c>{   &quot;FaultType&quot;: &quot;NetworkTask&quot;,   &quot;FaultArgs&quot;: {  &quot;FaultAction&quot;: &quot;loss&quot;,  &quot;Percent&quot;: 30   } }</c></description></item>
+            /// <item><description>DiskBurnTask (disk read/write fault)
+            /// <c>{   &quot;FaultType&quot;: &quot;DiskBurnTask&quot;,   &quot;FaultArgs&quot;: {  &quot;FaultAction&quot;: &quot;burn&quot;,  &quot;Read&quot;: true,  &quot;Write&quot;: true,  &quot;Size&quot;: 100   } }</c></description></item>
+            /// <item><description>DiskFillTask (disk fill fault)
+            /// <c>{   &quot;FaultType&quot;: &quot;DiskFillTask&quot;,   &quot;FaultArgs&quot;: {  &quot;FaultAction&quot;: &quot;fill&quot;,  &quot;Percent&quot;: 80   } }</c></description></item>
             /// </ol>
             /// 
             /// <b>Example:</b>
@@ -64,15 +59,12 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public ListServiceInstanceFaultInjectionInfoResponseBodyFaultInfoListFaultStatus FaultStatus { get; set; }
             public class ListServiceInstanceFaultInjectionInfoResponseBodyFaultInfoListFaultStatus : TeaModel {
                 /// <summary>
-                /// <para>The status of the fault. Valid values:</para>
-                /// <ol>
-                /// <item><description><para>FaultNotInjected: The task was created, but the fault was not successfully injected.</para>
-                /// </description></item>
-                /// <item><description><para>FaultInjectedSuccess: The fault was successfully injected.</para>
-                /// </description></item>
-                /// <item><description><para>FaultInjectedFailure: The fault injection failed. The failure may be caused by parameter errors or system issues.</para>
-                /// </description></item>
-                /// </ol>
+                /// <para>The fault status. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>FaultNotInjected: The task is created but the fault is not injected.</description></item>
+                /// <item><description>FaultInjectedSuccess: The fault is successfully injected.</description></item>
+                /// <item><description>FaultInjectedFailure: The fault injection failed, which may be caused by parameter errors or system issues.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FaultInjectedSuccess</para>
@@ -94,7 +86,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             }
 
             /// <summary>
-            /// <para>The fault type. Valid values:CpuFullloadTask: a CPU full load fault.MemLoadTask: a memory load fault.NetworkTask: a network fault.DiskBurnTask: a disk read/write fault.DiskFillTask: a disk fill fault.</para>
+            /// <para>The fault type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>CpuFullloadTask: CPU full load fault.</description></item>
+            /// <item><description>MemLoadTask: memory load fault.</description></item>
+            /// <item><description>NetworkTask: network fault.</description></item>
+            /// <item><description>DiskBurnTask: disk read/write fault.</description></item>
+            /// <item><description>DiskFillTask: disk fill fault.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>DiskFillTask</para>
@@ -106,7 +105,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>40325405-579C-4D82****</para>
