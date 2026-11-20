@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
     public class SendMessageRequest : TeaModel {
         /// <summary>
         /// <para>The list of attachments.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>[]</para>
         /// </summary>
         [NameInMap("attachments")]
         [Validation(Required=false)]
@@ -43,7 +40,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             /// <para>The original name of the file.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>file.xlsx</para>
+            /// <para>File.xlsx</para>
             /// </summary>
             [NameInMap("sourceName")]
             [Validation(Required=false)]
@@ -62,6 +59,54 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
         }
 
         /// <summary>
+        /// <para>The MESSAGE commands. A skill command must include <c>payload.skillId</c>. A compact command must be sent separately without a body or attachments.</para>
+        /// </summary>
+        [NameInMap("commands")]
+        [Validation(Required=false)]
+        public List<SendMessageRequestCommands> Commands { get; set; }
+        public class SendMessageRequestCommands : TeaModel {
+            /// <summary>
+            /// <para>The parameter object corresponding to the command type. For a skill command, you must specify the skill to be executed by using <c>skillId</c>. The <c>name</c> parameter is optional and is used only to save a snapshot of the display name. It is not used for execution or authorization checks. For a compact command, omit this object.</para>
+            /// </summary>
+            [NameInMap("payload")]
+            [Validation(Required=false)]
+            public SendMessageRequestCommandsPayload Payload { get; set; }
+            public class SendMessageRequestCommandsPayload : TeaModel {
+                /// <summary>
+                /// <para>The skill name snapshot.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Intelligent analysis</para>
+                /// </summary>
+                [NameInMap("name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                /// <summary>
+                /// <para>The skill ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>agentcore_example</para>
+                /// </summary>
+                [NameInMap("skillId")]
+                [Validation(Required=false)]
+                public string SkillId { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The command type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>skill</para>
+            /// </summary>
+            [NameInMap("type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+        }
+
+        /// <summary>
         /// <para>The message text in MESSAGE mode. This parameter cannot be empty. The type parameter can be omitted in this mode.</para>
         /// 
         /// <b>Example:</b>
@@ -72,14 +117,14 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>The list of interrupt replies. This parameter is required when type is set to RESUME. You must reply to all pending interrupts at once. Each interruptId can appear only once.</para>
+        /// <para>The list of interrupt replies. This parameter is required when <c>type</c> is set to <c>RESUME</c>. You must reply to all pending interrupts at once. Each <c>interruptId</c> can appear only once.</para>
         /// </summary>
         [NameInMap("resume")]
         [Validation(Required=false)]
         public List<SendMessageRequestResume> Resume { get; set; }
         public class SendMessageRequestResume : TeaModel {
             /// <summary>
-            /// <para>The ID of the interrupt to be replied to. Obtain this value from data.outcome.interrupts[].id in the SSE RUN_FINISHED event or the GetRun response.</para>
+            /// <para>The ID of the interrupt to be replied to. Obtain this value from <c>data.outcome.interrupts[].id</c> in the SSE <c>RUN_FINISHED</c> event or <c>data.outcome.interrupts[].id</c> in the <c>GetRun</c> response.</para>
             /// 
             /// <b>Example:</b>
             /// <para>interrupt_example_001</para>
@@ -89,7 +134,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public string InterruptId { get; set; }
 
             /// <summary>
-            /// <para>The interrupt handling result. This parameter is required when status is set to resolved and must conform to the responseSchema of the corresponding interrupt. Do not pass this parameter when status is set to cancelled.</para>
+            /// <para>The interrupt processing result. This parameter is required when <c>status</c> is set to <c>resolved</c> and must conform to the <c>responseSchema</c> of the corresponding interrupt. Do not provide this parameter when <c>status</c> is set to <c>cancelled</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;region&quot;:&quot;cn-hangzhou&quot;}</para>
@@ -99,7 +144,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public object Payload { get; set; }
 
             /// <summary>
-            /// <para>The reply method for the interrupt. Valid values: resolved (submits the answer, confirmation, or tool result required by the interrupt, and must include payload) and cancelled (cancels the interrupt without passing payload).</para>
+            /// <para>The reply method for the current interrupt. A value of <c>resolved</c> indicates that the answer, confirmation, or tool result required by the interrupt is submitted, and <c>payload</c> must be provided. A value of <c>cancelled</c> indicates that the interrupt is canceled, and <c>payload</c> is not provided.</para>
             /// 
             /// <b>Example:</b>
             /// <para>resolved</para>
@@ -121,7 +166,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
         public string RunId { get; set; }
 
         /// <summary>
-        /// <para>The request type. Valid values: MESSAGE (sends a message), RESUME (resumes a run), and RECONNECT (reconnects to a run). Default value: MESSAGE.</para>
+        /// <para>The request type. Valid values: <c>MESSAGE</c> (sends a message), <c>RESUME</c> (resumes a run), and <c>RECONNECT</c> (reconnects to a run). Default value: <c>MESSAGE</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MESSAGE</para>

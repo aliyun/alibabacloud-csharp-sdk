@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
                 public string LastRunId { get; set; }
 
                 /// <summary>
-                /// <para>The status of the most recent run. Valid values: <c>PENDING</c> (pending), <c>RUNNING</c> (running), <c>WAITING_USER</c> (waiting for interruption handling), <c>COMPLETED</c> (completed), <c>FAILED</c> (failed), <c>CANCELLED</c> (cancelled), and <c>REJECTED</c> (rejected).</para>
+                /// <para>The status of the most recent run. Valid values: <c>PENDING</c> (pending), <c>RUNNING</c> (running), <c>WAITING_USER</c> (waiting for user intervention), <c>COMPLETED</c> (completed), <c>FAILED</c> (failed), <c>CANCELLED</c> (cancelled), and <c>REJECTED</c> (rejected).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>COMPLETED</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
                 public string SessionId { get; set; }
 
                 /// <summary>
-                /// <para>The session status. Valid values: <c>IDLE</c> (idle), <c>ACTIVE</c> (running), <c>WAITING_USER_INPUT</c> (waiting for user input), <c>WAITING_APPROVAL</c> (waiting for user confirmation), <c>WAITING_OUT_OF_BAND_APPROVAL</c> (waiting for out-of-band approval), and <c>CLOSED</c> (closed).</para>
+                /// <para>The session status. Valid values: <c>IDLE</c> (idle), <c>ACTIVE</c> (running), <c>WAITING_USER_INPUT</c> (waiting for user input), <c>WAITING_APPROVAL</c> (waiting for user approval), <c>WAITING_OUT_OF_BAND_APPROVAL</c> (waiting for out-of-band approval), and <c>CLOSED</c> (closed).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>IDLE</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. A value of true indicates success.</para>
+        /// <para>Indicates whether the request was successful. true indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

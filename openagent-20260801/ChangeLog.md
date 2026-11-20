@@ -1,3 +1,7 @@
+2026-11-20 Version: 1.0.2
+- Update API SendMessage: add request parameters body.commands.
+
+
 2026-11-12 Version: 1.0.1
 - Update API SendMessage: add request parameters body.attachments.
 

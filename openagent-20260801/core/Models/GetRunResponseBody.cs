@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
         public GetRunResponseBodyData Data { get; set; }
         public class GetRunResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The run creation time in ISO 8601 format.</para>
+            /// <para>The creation time of the run, in ISO 8601 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-01T00:00:00Z</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public GetRunResponseBodyDataOutcome Outcome { get; set; }
             public class GetRunResponseBodyDataOutcome : TeaModel {
                 /// <summary>
-                /// <para>The interrupt list.</para>
+                /// <para>The list of interrupts.</para>
                 /// </summary>
                 [NameInMap("interrupts")]
                 [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
                             /// <para>The operation description.</para>
                             /// 
                             /// <b>Example:</b>
-                            /// <para>Perform changes on the sample resource</para>
+                            /// <para>Apply changes to the sample resource</para>
                             /// </summary>
                             [NameInMap("description")]
                             [Validation(Required=false)]
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
                     }
 
                     /// <summary>
-                    /// <para>The interrupt expiration time in ISO 8601 format.</para>
+                    /// <para>The expiration time of the interrupt, in ISO 8601 format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2026-01-02T00:00:00Z</para>
@@ -171,10 +171,10 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
                     /// <summary>
                     /// <para>The interrupt reason. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><c>tool_call</c>: tool invocation requires handling</description></item>
-                    /// <item><description><c>input_required</c>: user input is required</description></item>
-                    /// <item><description><c>confirmation</c>: confirmation is required</description></item>
-                    /// <item><description><c>out_of_band_approval</c>: waiting for out-of-band approval</description></item>
+                    /// <item><description><c>tool_call</c>: Tool invocation requires handling.</description></item>
+                    /// <item><description><c>input_required</c>: User input is required.</description></item>
+                    /// <item><description><c>confirmation</c>: Confirmation is required.</description></item>
+                    /// <item><description><c>out_of_band_approval</c>: Waiting for out-of-band approval.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
                     public string Reason { get; set; }
 
                     /// <summary>
-                    /// <para>The JSON schema that the payload must comply with when resuming this interrupt.</para>
+                    /// <para>The JSON schema that the payload must conform to when resuming this interrupt.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;region&quot;:{&quot;type&quot;:&quot;string&quot;}},&quot;required&quot;:[&quot;region&quot;]}</para>
@@ -207,10 +207,10 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
                 }
 
                 /// <summary>
-                /// <para>The result type. Valid values:</para>
+                /// <para>The outcome type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>success</c>: successfully completed</description></item>
-                /// <item><description><c>interrupt</c>: waiting for interrupt handling</description></item>
+                /// <item><description><c>success</c>: Successfully completed.</description></item>
+                /// <item><description><c>interrupt</c>: Waiting for interrupt handling.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -245,13 +245,13 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             /// <summary>
             /// <para>The run status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>PENDING</c>: pending execution</description></item>
-            /// <item><description><c>RUNNING</c>: running</description></item>
-            /// <item><description><c>WAITING_USER</c>: waiting for interrupt handling</description></item>
-            /// <item><description><c>COMPLETED</c>: completed</description></item>
-            /// <item><description><c>FAILED</c>: failed</description></item>
-            /// <item><description><c>CANCELLED</c>: canceled</description></item>
-            /// <item><description><c>REJECTED</c>: rejected</description></item>
+            /// <item><description><c>PENDING</c>: Pending execution.</description></item>
+            /// <item><description><c>RUNNING</c>: Running.</description></item>
+            /// <item><description><c>WAITING_USER</c>: Waiting for interrupt handling.</description></item>
+            /// <item><description><c>COMPLETED</c>: Completed.</description></item>
+            /// <item><description><c>FAILED</c>: Failed.</description></item>
+            /// <item><description><c>CANCELLED</c>: Canceled.</description></item>
+            /// <item><description><c>REJECTED</c>: Rejected.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The last update time of the run in ISO 8601 format.</para>
+            /// <para>The last update time of the run, in ISO 8601 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-01T00:01:00Z</para>

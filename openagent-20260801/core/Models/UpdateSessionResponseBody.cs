@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
         public UpdateSessionResponseBodyData Data { get; set; }
         public class UpdateSessionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the session was created. The time is in RFC 3339 format.</para>
+            /// <para>The time when the session was created, in RFC 3339 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-01T00:00:00Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The ID of the last run.</para>
+            /// <para>The ID of the most recent run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>run_example_001</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public string LastRunId { get; set; }
 
             /// <summary>
-            /// <para>The status of the last run. Valid values:</para>
+            /// <para>The status of the most recent run. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>PENDING</c>: pending</description></item>
             /// <item><description><c>RUNNING</c>: running</description></item>
             /// <item><description><c>WAITING_USER</c>: waiting for interrupt handling</description></item>
             /// <item><description><c>COMPLETED</c>: completed</description></item>
             /// <item><description><c>FAILED</c>: failed</description></item>
-            /// <item><description><c>CANCELLED</c>: cancelled</description></item>
+            /// <item><description><c>CANCELLED</c>: canceled</description></item>
             /// <item><description><c>REJECTED</c>: rejected</description></item>
             /// </list>
             /// 
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public bool? Pinned { get; set; }
 
             /// <summary>
-            /// <para>The ID of the session.</para>
+            /// <para>The session ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>session_example_001</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public string SessionId { get; set; }
 
             /// <summary>
-            /// <para>The status of the session. Valid values:</para>
+            /// <para>The session status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>IDLE</c>: idle</description></item>
             /// <item><description><c>ACTIVE</c>: running</description></item>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>The time when the session was last updated. The time is in RFC 3339 format.</para>
+            /// <para>The time when the session was last updated, in RFC 3339 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-01T00:01:00Z</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request. You can use the ID to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is used to locate and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00000000-0000-4000-8000-000000000001</para>

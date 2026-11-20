@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
         public UpdateReadonlyModeResponseBodyData Data { get; set; }
         public class UpdateReadonlyModeResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The configuration name. The value is fixed to readonly.</para>
+            /// <para>The configuration name. The value is fixed as readonly.</para>
             /// 
             /// <b>Example:</b>
             /// <para>readonly</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public string Value { get; set; }
 
             /// <summary>
-            /// <para>The type of the configuration value. The value is BOOL for this operation.</para>
+            /// <para>The type of the configuration value. For this operation, the value is BOOL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>BOOL</para>

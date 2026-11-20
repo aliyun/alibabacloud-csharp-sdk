@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The ID of the last run.</para>
+            /// <para>The ID of the latest run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>run_example_001</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public string LastRunId { get; set; }
 
             /// <summary>
-            /// <para>The status of the last run. Valid values: <c>PENDING</c> (pending), <c>RUNNING</c> (running), <c>WAITING_USER</c> (waiting for interrupt handling), <c>COMPLETED</c> (completed), <c>FAILED</c> (failed), <c>CANCELLED</c> (cancelled), <c>REJECTED</c> (rejected).</para>
+            /// <para>The status of the latest run. Valid values: <c>PENDING</c> (Pending), <c>RUNNING</c> (Running), <c>WAITING_USER</c> (Waiting for interrupt handling), <c>COMPLETED</c> (Completed), <c>FAILED</c> (Failed), <c>CANCELLED</c> (Cancelled), and <c>REJECTED</c> (Rejected).</para>
             /// 
             /// <b>Example:</b>
             /// <para>COMPLETED</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public bool? Pinned { get; set; }
 
             /// <summary>
-            /// <para>The session ID.</para>
+            /// <para>The ID of the session.</para>
             /// 
             /// <b>Example:</b>
             /// <para>session_example_001</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public string SessionId { get; set; }
 
             /// <summary>
-            /// <para>The session status. Valid values: <c>IDLE</c> (idle), <c>ACTIVE</c> (running), <c>WAITING_USER_INPUT</c> (waiting for user input), <c>WAITING_APPROVAL</c> (waiting for user confirmation), <c>WAITING_OUT_OF_BAND_APPROVAL</c> (waiting for out-of-band approval), <c>CLOSED</c> (closed).</para>
+            /// <para>The status of the session. Valid values: <c>IDLE</c> (Idle), <c>ACTIVE</c> (Running), <c>WAITING_USER_INPUT</c> (Waiting for user input), <c>WAITING_APPROVAL</c> (Waiting for user confirmation), <c>WAITING_OUT_OF_BAND_APPROVAL</c> (Waiting for out-of-band approval), and <c>CLOSED</c> (Closed).</para>
             /// 
             /// <b>Example:</b>
             /// <para>IDLE</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The session title.</para>
+            /// <para>The title of the session.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Cloud resource inspection example</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00000000-0000-4000-8000-000000000001</para>
