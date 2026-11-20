@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class ChangeResourceGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>Indicates whether the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

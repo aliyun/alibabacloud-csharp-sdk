@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class GetInstanceModelResponseBody : TeaModel {
         /// <summary>
-        /// <para>The AI node instance ID.</para>
+        /// <para>The ID of the AI node instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hologram_aicombo_public_cn-77xxx</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string AiInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether auto-renewal is enabled for the resource.</para>
+        /// <para>Specifies whether auto-renewal is enabled for the resource. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: Auto-renewal is enabled. The resource is automatically renewed upon expiration.</description></item>
-        /// <item><description>false: Auto-renewal is not enabled. The resource stops being available upon expiration.</description></item>
+        /// <item><description>false: Auto-renewal is disabled. The resource is stopped upon expiration.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// <para>The total CPU of the node. This parameter applies only to Hologres AI nodes.</para>
+        /// <para>The total CPU of the node. This parameter is applicable only to Hologres AI nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>32</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? Cpu { get; set; }
 
         /// <summary>
-        /// <para>The total CPU used by the node. This parameter applies only to Hologres AI nodes.</para>
+        /// <para>The total CPU used by the node. This parameter is applicable only to Hologres AI nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>32</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? CpuUsed { get; set; }
 
         /// <summary>
-        /// <para>The expiration time (UTC).</para>
+        /// <para>The expiration time in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-01-28T07:44:27.535Z</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ExpirationTime { get; set; }
 
         /// <summary>
-        /// <para>The total GPU of the node. This parameter applies only to Hologres AI nodes.</para>
+        /// <para>The total GPU of the node. This parameter is applicable only to Hologres AI nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? Gpu { get; set; }
 
         /// <summary>
-        /// <para>The total GPU memory of the node. This parameter applies only to Hologres AI nodes.</para>
+        /// <para>The total GPU memory of the node. This parameter is applicable only to Hologres AI nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>128</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? GpuMemory { get; set; }
 
         /// <summary>
-        /// <para>The total GPU memory used by the node. This parameter applies only to Hologres AI nodes.</para>
+        /// <para>The total GPU memory used by the node. This parameter is applicable only to Hologres AI nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>64</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? GpuMemoryUsed { get; set; }
 
         /// <summary>
-        /// <para>The total GPU used by the node. This parameter applies only to Hologres AI nodes.</para>
+        /// <para>The total GPU used by the node. This parameter is applicable only to Hologres AI nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? GpuUsed { get; set; }
 
         /// <summary>
-        /// <para>The total memory of the node. This parameter applies only to Hologres AI nodes.</para>
+        /// <para>The total memory of the node. This parameter is applicable only to Hologres AI nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>128</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? Memory { get; set; }
 
         /// <summary>
-        /// <para>The total memory used by the node. This parameter applies only to Hologres AI nodes.</para>
+        /// <para>The total memory used by the node. This parameter is applicable only to Hologres AI nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>64</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public List<GetInstanceModelResponseBodyModelServiceList> ModelServiceList { get; set; }
         public class GetInstanceModelResponseBodyModelServiceList : TeaModel {
             /// <summary>
-            /// <para>The Bailian API key (display only, cannot be used directly).</para>
+            /// <para>The Model Studio API key. This key is for display purposes only and cannot be used directly.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sk-42f6c8xxxxxb</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string ApiKey { get; set; }
 
             /// <summary>
-            /// <para>The CPU consumed by this model service. This parameter applies only to Hologres AI nodes.</para>
+            /// <para>The CPU occupied by this model service. This parameter is applicable only to Hologres AI nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? Cpu { get; set; }
 
             /// <summary>
-            /// <para>The GPU consumed by this model service. This parameter applies only to Hologres AI nodes.</para>
+            /// <para>The GPU occupied by this model service. This parameter is applicable only to Hologres AI nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? Gpu { get; set; }
 
             /// <summary>
-            /// <para>The GPU memory consumed by this model service. This parameter applies only to Hologres AI nodes.</para>
+            /// <para>The GPU memory occupied by this model service. This parameter is applicable only to Hologres AI nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? GpuMemory { get; set; }
 
             /// <summary>
-            /// <para>The region where the AI node is deployed.</para>
+            /// <para>The deployment region of the AI node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string InstanceRegion { get; set; }
 
             /// <summary>
-            /// <para>The memory consumed by this model service. This parameter applies only to Hologres AI nodes.</para>
+            /// <para>The memory occupied by this model service. This parameter is applicable only to Hologres AI nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string ModelName { get; set; }
 
             /// <summary>
-            /// <para>The model parameters. This parameter applies only to Bailian models.</para>
+            /// <para>The model parameters. This parameter is applicable only to Model Studio models.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;timeout&quot;:600,&quot;max_retries&quot;:10,&quot;max_retry_delay&quot;:8,&quot;initial_retry_delay&quot;:0.5}</para>
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string Provider { get; set; }
 
             /// <summary>
-            /// <para>The number of service replicas. This parameter applies only to Hologres AI nodes.</para>
+            /// <para>The number of service replicas. This parameter is applicable only to Hologres AI nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -294,6 +294,12 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether the model service supports access through an API key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("supportApiKeyAccess")]
             [Validation(Required=false)]
             public bool? SupportApiKeyAccess { get; set; }

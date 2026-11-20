@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class DeleteHoloWarehouseRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the virtual warehouse.</para>
+        /// <para>The name of the compute group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

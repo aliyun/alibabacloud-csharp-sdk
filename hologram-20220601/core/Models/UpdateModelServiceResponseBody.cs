@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class UpdateModelServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para><c>true</c> if the operation was successful; <c>false</c> otherwise.</para>
+        /// <para>Indicates whether the operation is successful. Valid values: true: Successful. false: Failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>819A7F0F-2951-540F-BD94-6A41ECF0281F</para>

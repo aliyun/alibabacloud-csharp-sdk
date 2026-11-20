@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class GetUpgradeStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetUpgradeStatusResponseBodyData> Data { get; set; }
         public class GetUpgradeStatusResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Details about the upgrade process, formatted as a JSON string.</para>
+            /// <para>The details.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;UpgradePhase&quot;:&quot;Upgrade&quot;,&quot;StatusCode&quot;:&quot;LeaderRestartFailed&quot;,&quot;FlightingReport&quot;:{&quot;SQLResultStat&quot;:{&quot;TotalExecuted&quot;:9000&quot;Exceptions&quot;:0,&quot;Incorrect&quot;:1,&quot;Slow&quot;:1,&quot;DQLSpeedup&quot;:2}&quot;SegmentFormatStat&quot;:[{&quot;Database&quot;:&quot;test_db&quot;,&quot;TableUsingSegmentCount&quot;:5},{&quot;Database&quot;:&quot;user_order&quot;,&quot;TableUsingSegmentCount&quot;:7}],&quot;EstimatedUpgradeTime&quot;:{&quot;StopInstance&quot;:30,&quot;BackupData&quot;:120,&quot;UpgradeInstance&quot;:600},&quot;ReadPermissionCheckStat&quot;:[{&quot;db&quot;:&quot;tst0&quot;,&quot;user&quot;:&quot;v4_300433463265624129&quot;,&quot;schema&quot;:&quot;dim_db&quot;,&quot;table&quot;:&quot;it_rpt_org_tree_info_partition_all&quot;},{&quot;db&quot;:&quot;tst1&quot;,&quot;user&quot;:&quot;v4_300433463265624129&quot;,&quot;schema&quot;:&quot;dim_db&quot;,&quot;table&quot;:&quot;it_rpt_org_tree_info_partition_all_2&quot;},]},&quot;UpgradingSteps&quot;:{&quot;Stop&quot;:{&quot;Status&quot;:&quot;Success&quot;,&quot;StartTime&quot;:&quot;2023-05-09T06:48:28.843Z&quot;,&quot;StopTime&quot;:&quot;2023-05-09T06:48:28.843Z&quot;},&quot;Backup&quot;:{&quot;Status&quot;:&quot;Success&quot;,&quot;StartTime&quot;:&quot;2023-05-09T06:48:28.843Z&quot;,&quot;StopTime&quot;:&quot;2023-05-09T06:48:28.843Z&quot;},&quot;DoUpgrade&quot;:{&quot;Status&quot;:&quot;Success&quot;,&quot;StartTime&quot;:&quot;2023-05-09T06:48:28.843Z&quot;,&quot;StopTime&quot;:&quot;2023-05-09T06:48:28.843Z&quot;},&quot;Rollback&quot;:{&quot;Status&quot;:&quot;Success&quot;,&quot;StartTime&quot;:&quot;2023-05-09T06:48:28.843Z&quot;,&quot;StopTime&quot;:&quot;2023-05-09T06:48:28.843Z&quot;}},&quot;Instances&quot;:{&quot;LeaderInstanceId&quot;:&quot;hgxxx&quot;,&quot;LeaderInstanceName&quot;:&quot;ERP instance&quot;,&quot;LeaderInstanceStatus&quot;:&quot;Running&quot;,&quot;FollowerInstances&quot;:[{&quot;InstanceId&quot;:&quot;hgxxx&quot;,&quot;InstanceName&quot;:&quot;TMSinstance&quot;,&quot;Status&quot;:&quot;Running&quot;},{&quot;InstanceId&quot;:&quot;hxxx&quot;&quot;InstanceName&quot;:&quot;WMS readonly&quot;,&quot;Status&quot;:&quot;Unavailable&quot;}]}}</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string Details { get; set; }
 
             /// <summary>
-            /// <para>The version of the instance before the upgrade.</para>
+            /// <para>The current version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.3.23</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string FromVersion { get; set; }
 
             /// <summary>
-            /// <para>The completion time of the preparation phase, in ISO 8601 format: <c>YYYY-MM-DDThh:mm:ssZ</c>.</para>
+            /// <para>The time when the preparation is completed. The time is in UTC and formatted in accordance with ISO 8601.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-05-09T06:48:28.843Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string PrepareFinishTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the Airflow directed acyclic graph (DAG) used for the instance upgrade.</para>
+            /// <para>The status of the Airflow DAG used for the instance upgrade.</para>
             /// 
             /// <b>Example:</b>
             /// <para>archived</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The target version of the upgrade.</para>
+            /// <para>The target version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.3.24</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         }
 
         /// <summary>
-        /// <para>The error code returned if the API call fails.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>404</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the API call fails.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Internal server error.</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>D73E42D0-AA72-5880-B96F-548B43C84736</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call was successful. This parameter does not reflect the status of the upgrade.</para>
+        /// <para>Indicates whether the request was successful. This parameter is unrelated to the business logic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

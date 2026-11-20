@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class GrantTablePermissionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result of the operation. A value of <c>true</c> indicates the operation was successful, and <c>false</c> indicates it failed.</para>
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -60,7 +64,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful. This parameter indicates whether an exception occurred during the request and is unrelated to the business logic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

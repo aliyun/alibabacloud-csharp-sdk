@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class UpdateBackupDataDescResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result of the operation. A value of \&quot;true\&quot; indicates that the backup description was updated successfully.</para>
+        /// <para>The returned data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>87060182-4B69-5C3D-B3A1-A944D20138A7</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>The request result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

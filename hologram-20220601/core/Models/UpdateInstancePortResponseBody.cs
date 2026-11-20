@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>D1303CD4-AA70-5998-8025-F55B22C50840</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. This parameter is independent of the result of the operation.</para>
+        /// <para>Indicates whether an exception occurred during the request, which is independent of the business result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string Success { get; set; }
 
         /// <summary>
-        /// <para>The result of the operation. A value of <c>true</c> indicates that the operation is successful. A value of <c>false</c> indicates that the operation fails.</para>
+        /// <para>Indicates whether the operation is successful. Valid values: true: Successful. false: Failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

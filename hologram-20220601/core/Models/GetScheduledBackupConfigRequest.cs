@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The backup type. By default, the operation returns periodical and manual backup configurations. To retrieve the remote backup configuration, set this parameter to \&quot;remote\&quot;.</para>
+        /// <para>The backup type. By default, periodic and manual backup configurations are returned. To return the remote backup configuration, set this parameter to remote.</para>
         /// 
         /// <b>Example:</b>
         /// <para>remote</para>

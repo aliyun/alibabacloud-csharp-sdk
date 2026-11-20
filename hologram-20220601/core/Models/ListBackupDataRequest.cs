@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class ListBackupDataRequest : TeaModel {
         /// <summary>
-        /// <para>The backup type, used to filter snapshots. If you leave this parameter empty, all snapshots are returned.</para>
+        /// <para>The backup type. Filters specific backup data by type. If this parameter is left empty, all backup data is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>redundant</para>

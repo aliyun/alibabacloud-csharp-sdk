@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class StopInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>The returned result, which indicates whether the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>2A8DEF6E-067E-5DB0-BAE1-2894266E6C6A</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. This parameter is not related to the result of the business operation.</para>
+        /// <para>The request result, which indicates whether an exception occurred during the request, independent of the business logic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

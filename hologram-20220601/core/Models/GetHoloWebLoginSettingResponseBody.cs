@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class GetHoloWebLoginSettingResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>true: Success. false: Failure.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetHoloWebLoginSettingResponseBodyData Data { get; set; }
         public class GetHoloWebLoginSettingResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether external accounts are allowed to log in.</para>
+            /// <para>Indicates whether external accounts are allowed to log on.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>2A8DEF6E-067E-5DB0-BAE1-2894266E6C6A</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. This is independent of the operation\&quot;s result.</para>
+        /// <para>The request result. Indicates whether an exception occurred during the request. This parameter is unrelated to the business logic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

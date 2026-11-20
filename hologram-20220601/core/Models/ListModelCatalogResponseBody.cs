@@ -67,17 +67,17 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             ///             &quot;domains&quot;: &quot;The sentence is from Ali Cloud IT domain. &quot;, 
             ///             &quot;terms&quot;: [
             ///                 {
-            ///                     &quot;source&quot;: &quot;生物传感器&quot;,
+            ///                     &quot;source&quot;: &quot;Biosensor&quot;,
             ///                     &quot;target&quot;: &quot;biological sensor&quot;
             ///                 },
             ///                 {
-            ///                     &quot;source&quot;: &quot;身体健康状况&quot;,
+            ///                     &quot;source&quot;: &quot;Physical health status&quot;,
             ///                     &quot;target&quot;: &quot;health status of the body&quot;
             ///                 }
             ///             ],
             ///             &quot;tm_list&quot;: [
             ///                 {
-            ///                     &quot;source&quot;: &quot;您可以通过如下方式查看集群的内核版本信息:&quot;,
+            ///                     &quot;source&quot;: &quot;You can use one of the following methods to view the kernel version information of a cluster:&quot;,
             ///                     &quot;target&quot;: &quot;You can use one of the following methods to query the engine version of a cluster:&quot;
             ///                 }
             ///             ]
@@ -109,6 +109,12 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             [Validation(Required=false)]
             public string ServiceDeployRegion { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether the model service can be accessed by using an API key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("supportApiKeyAccess")]
             [Validation(Required=false)]
             public bool? SupportApiKeyAccess { get; set; }
@@ -126,7 +132,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the value of NextToken that is returned from the previous API call.</para>
+        /// <para>The pagination token. Set this parameter to the value of NextToken returned from the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class ExecuteStatementResponseBody : TeaModel {
         /// <summary>
-        /// <para>The execution result of the SQL statement.</para>
+        /// <para>Specifies whether OpenAPI SQL execution is allowed. Valid values: true: Allowed. false: Not allowed.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ExecuteStatementResponseBodyData Data { get; set; }
         public class ExecuteStatementResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The error code for the SQL statement execution. This parameter is returned only if the execution fails.</para>
+            /// <para>The error code. This field is empty if the request is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>InvalidParameterValue</para>
@@ -27,31 +27,31 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The error message for the SQL statement execution. This parameter is returned only if the execution fails.</para>
+            /// <para>The error message. This field is empty if the request is successful.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>参数值不合法（如 SQL 为空、超长等）</para>
+            /// <para>Invalid parameter value, such as an empty or excessively long SQL statement</para>
             /// </summary>
             [NameInMap("errorMessage")]
             [Validation(Required=false)]
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>A list of execution results. This list always contains exactly one result object. If you execute multiple SELECT statements, only the result of the last one is returned.</para>
+            /// <para>The list of execution results. The length is currently fixed to 1. If multiple SELECT queries are executed, only the result of the last SELECT query is returned.</para>
             /// </summary>
             [NameInMap("results")]
             [Validation(Required=false)]
             public List<ExecuteStatementResponseBodyDataResults> Results { get; set; }
             public class ExecuteStatementResponseBodyDataResults : TeaModel {
                 /// <summary>
-                /// <para>The metadata of columns in the result set.</para>
+                /// <para>The <b>column metadata</b>.</para>
                 /// </summary>
                 [NameInMap("columnMetadata")]
                 [Validation(Required=false)]
                 public List<ExecuteStatementResponseBodyDataResultsColumnMetadata> ColumnMetadata { get; set; }
                 public class ExecuteStatementResponseBodyDataResultsColumnMetadata : TeaModel {
                     /// <summary>
-                    /// <para>The name of the column.</para>
+                    /// <para>The <b>column name</b>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>id</para>
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the column can be null.</para>
+                    /// <para>Indicates whether the column is nullable.</para>
                     /// </summary>
                     [NameInMap("nullable")]
                     [Validation(Required=false)]
                     public bool? Nullable { get; set; }
 
                     /// <summary>
-                    /// <para>The data type of the column, such as <c>int4</c>, <c>text</c>, or <c>bool</c>.</para>
+                    /// <para>The data type, such as int4, text, or bool.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>int4</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 }
 
                 /// <summary>
-                /// <para>The number of rows returned by a SELECT statement.</para>
+                /// <para>The number of rows returned.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>25</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the query.</para>
+                /// <para><b>Query ID</b></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>E3F4B2A7-1234-5678-9ABC-DEF012345678</para>
@@ -120,14 +120,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public string QueryId { get; set; }
 
                 /// <summary>
-                /// <para>The set of records that are returned by the query. Each row is an array of strings, and all values are serialized as strings. A NULL value is represented as &quot;\N&quot;.</para>
+                /// <para>The set of query result rows. Each row is an array of strings. All values are serialized as strings, and NULL values are represented as \N.</para>
                 /// </summary>
                 [NameInMap("records")]
                 [Validation(Required=false)]
                 public List<List<string>> Records { get; set; }
 
                 /// <summary>
-                /// <para>The executed SQL statement.</para>
+                /// <para>The SQL statement that is actually executed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>select * from test_table limit 10;</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public string Sql { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the SQL statement was executed successfully.</para>
+                /// <para>Indicates whether the request is successful.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
@@ -147,14 +147,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public bool? Success { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the result set was truncated. The value is <c>true</c> if the number of returned rows exceeds the value of <c>MaxResults</c>.</para>
+                /// <para>Indicates whether the result is truncated. The value is true if the result exceeds MaxResults.</para>
                 /// </summary>
                 [NameInMap("truncated")]
                 [Validation(Required=false)]
                 public bool? Truncated { get; set; }
 
                 /// <summary>
-                /// <para>The number of rows affected by an INSERT, UPDATE, or DELETE statement. This parameter is not returned for SELECT statements.</para>
+                /// <para>The number of rows affected by the INSERT, UPDATE, or DELETE statement.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the SQL statement was executed successfully.</para>
+            /// <para>Indicates whether the request is successful.</para>
             /// </summary>
             [NameInMap("success")]
             [Validation(Required=false)]
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         }
 
         /// <summary>
-        /// <para>The error code. This parameter is returned only if the request fails.</para>
+        /// <para>The error code. This field is empty if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidParameterValue</para>
@@ -185,10 +185,10 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message. This parameter is returned only if the request fails.</para>
+        /// <para>The error message. This field is empty if the request is successful.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>参数值不合法（如 SQL 为空、超长等）</para>
+        /// <para>Invalid parameter value, such as an empty or excessively long SQL statement</para>
         /// </summary>
         [NameInMap("errorMessage")]
         [Validation(Required=false)]
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>819A7F0F-2951-540F-BD94-6A41ECF0281F</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

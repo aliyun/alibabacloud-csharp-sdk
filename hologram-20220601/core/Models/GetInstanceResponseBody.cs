@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The instance details.</para>
+        /// <para>The instance information.</para>
         /// </summary>
         [NameInMap("Instance")]
         [Validation(Required=false)]
@@ -57,7 +57,9 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string AutoRenewal { get; set; }
 
             /// <summary>
-            /// <para>The cold storage capacity. Unit: GB. SSD is hot storage, which is also standard storage. HDD is cold storage.</para>
+            /// <para>The cold storage capacity.
+            /// Unit: GB.
+            /// SSD is equivalent to hot storage, which is also standard storage. HDD is equivalent to cold storage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>800</para>
@@ -77,7 +79,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string CommodityCode { get; set; }
 
             /// <summary>
-            /// <para>The number of compute nodes. A node has 16 vCPUs and 32 GB of memory.</para>
+            /// <para>The number of compute nodes.
+            /// A typical configuration for a node is 16 vCPUs and 32 GB of memory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -87,7 +90,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? ComputeNodeCount { get; set; }
 
             /// <summary>
-            /// <para>The number of vCPUs.</para>
+            /// <para>The number of CPU cores.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>
@@ -97,7 +100,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? Cpu { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The time is displayed in UTC and formatted in accordance with the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-02-03T13:06:06Z</para>
@@ -107,7 +110,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The size of the standard storage. Unit: GB.</para>
+            /// <para>The standard storage size.
+            /// Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>500</para>
@@ -137,6 +141,13 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public bool? EnableSSL { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the instance sandbox feature is enabled.</para>
+            /// </summary>
+            [NameInMap("EnableSandbox")]
+            [Validation(Required=false)]
+            public bool? EnableSandbox { get; set; }
+
+            /// <summary>
             /// <para>Indicates whether Serverless Computing is enabled.</para>
             /// 
             /// <b>Example:</b>
@@ -154,7 +165,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public List<GetInstanceResponseBodyInstanceEndpoints> Endpoints { get; set; }
             public class GetInstanceResponseBodyInstanceEndpoints : TeaModel {
                 /// <summary>
-                /// <para>Some earlier instances have both AnyTunnel and SingleTunnel enabled. When you switch from AnyTunnel to SingleTunnel, the endpoints for both are retained. This field is used to store the extra endpoint.</para>
+                /// <para>Some legacy instances have both AnyTunnel and SingleTunnel enabled. When switching from AnyTunnel to SingleTunnel, the endpoints for both are retained. Therefore, an additional field is required to store the endpoints.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hgprecn-cn-uqm362o1b001-cn-hangzhou-internal.hologres.aliyuncs.com:80</para>
@@ -174,7 +185,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public bool? Enabled { get; set; }
 
                 /// <summary>
-                /// <para>The domain name of the endpoint.</para>
+                /// <para>The endpoint.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hgprecn-cn-uqm362o1b001-cn-hangzhou-internal.hologres.aliyuncs.com:80</para>
@@ -226,7 +237,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             }
 
             /// <summary>
-            /// <para>The expiration time. Pay-as-you-go instances do not expire.</para>
+            /// <para>The expiration time. The time is displayed in UTC and formatted in accordance with the ISO 8601 standard.
+            /// Pay-as-you-go instances do not have an expiration time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-02-03T13:06:06Z</para>
@@ -246,7 +258,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? GatewayCount { get; set; }
 
             /// <summary>
-            /// <para>The vCPU resources of the gateway. Unit: cores.</para>
+            /// <para>The CPU resources of the gateway.
+            /// Unit: Cores.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -256,7 +269,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? GatewayCpu { get; set; }
 
             /// <summary>
-            /// <para>The memory resources of the gateway. Unit: GB.</para>
+            /// <para>The memory resources of the gateway.
+            /// Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16</para>
@@ -286,7 +300,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the instance. The name must be 2 to 64 characters in length. Each letter or Chinese character is counted as a single character.</para>
+            /// <para>The instance name.
+            /// The name must be 2 to 64 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -326,7 +341,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the primary instance.</para>
+            /// <para>The primary instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hgpostcn-cn-i7m2ncd6w002</para>
@@ -336,7 +351,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string LeaderInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The memory size. Unit: GB.</para>
+            /// <para>The memory size.
+            /// Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>128</para>
@@ -356,7 +372,10 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The role of instance in disaster recovery. Active: the primary instance. Passive: the secondary instance. PreActive: a primary instance that has not reached the desired state.</para>
+            /// <para>The role of the disaster recovery instance.
+            /// Active: The primary disaster recovery instance.
+            /// Passive: The secondary disaster recovery instance. 
+            /// PreActive: The primary disaster recovery instance that has not reached the desired state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>
@@ -366,7 +385,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string ReplicaRole { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-aekzuq7hpybze2i</para>
@@ -376,12 +395,10 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The storage class:</para>
+            /// <para>The storage type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>redundant: Zone-redundant storage</para>
-            /// </description></item>
-            /// <item><description><para>local: Locally redundant storage</para>
-            /// </description></item>
+            /// <item><description>redundant: 3AZ.</description></item>
+            /// <item><description>local: 1AZ.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -392,7 +409,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string StorageType { get; set; }
 
             /// <summary>
-            /// <para>The reason why the instance was stopped.</para>
+            /// <para>The reason for suspension.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Manual</para>
@@ -402,7 +419,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string SuspendReason { get; set; }
 
             /// <summary>
-            /// <para>The tags of the instance.</para>
+            /// <para>The instance tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -463,7 +480,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result of the request, which indicates whether an exception occurred. This parameter is not related to the business logic.</para>
+        /// <para>The request result. This parameter indicates whether an exception occurred during the request and is independent of the business logic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

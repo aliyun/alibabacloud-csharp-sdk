@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class ListModelCatalogRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page.
+        /// <para>The maximum number of entries per page.
         /// Default value:
         ///     20
         /// Maximum value:
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the value of NextToken that is returned from the previous API call.</para>
+        /// <para>The pagination token. Set this parameter to the value of NextToken returned from the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>uat-assembly-cut-3d-bbig</para>
@@ -34,6 +34,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The model provider.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>holo_bailian</para>
         /// </summary>

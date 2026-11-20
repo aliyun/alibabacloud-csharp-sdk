@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of warehouse schedule tasks.</para>
+        /// <para>The list of time-based elastic plans.</para>
         /// </summary>
         [NameInMap("ScheduleTaskList")]
         [Validation(Required=false)]
         public List<ListWarehouseScheduleTaskResponseBodyScheduleTaskList> ScheduleTaskList { get; set; }
         public class ListWarehouseScheduleTaskResponseBodyScheduleTaskList : TeaModel {
             /// <summary>
-            /// <para>The scaling type.</para>
+            /// <para>The elastic type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>timed</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string ElasticType { get; set; }
 
             /// <summary>
-            /// <para>The scaling plans for the warehouse.</para>
+            /// <para>The list of elastic plans for a single compute group.</para>
             /// </summary>
             [NameInMap("Plans")]
             [Validation(Required=false)]
             public List<ListWarehouseScheduleTaskResponseBodyScheduleTaskListPlans> Plans { get; set; }
             public class ListWarehouseScheduleTaskResponseBodyScheduleTaskListPlans : TeaModel {
                 /// <summary>
-                /// <para>The description of the scaling plan.</para>
+                /// <para>The description of the elastic plan.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bill stat</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The number of elastic resources. The value must be a multiple of 16, with a minimum value of 16, and cannot exceed the warehouse specification.</para>
+                /// <para>The elastic resources. The value must be a multiple of 16, greater than or equal to 16, and less than or equal to the compute group specifications.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>32</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public long? ElasticCu { get; set; }
 
                 /// <summary>
-                /// <para>The end time of the plan. The time must be on the hour or half-hour and in the HHmm format.</para>
+                /// <para>The end time. Only full hours and half hours are supported. The format is HHmm (four digits, 24-hour clock).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0400</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the scaling plan.</para>
+                /// <para>The elastic plan ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1802985780260052993</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the plan. The time must be on the hour or half-hour and in the HHmm format. For example, 0100 represents 01:00.</para>
+                /// <para>The start time. Only full hours and half hours are supported, such as 0100 for 1:00 AM. The format is HHmm (four digits, 24-hour clock).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0100</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             }
 
             /// <summary>
-            /// <para>The number of reserved resources for the warehouse.</para>
+            /// <para>The reserved resources of the compute group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? ReservedCpu { get; set; }
 
             /// <summary>
-            /// <para>The status of the warehouse.</para>
+            /// <para>The status of the compute group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>kRunning</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the warehouse.</para>
+            /// <para>The compute group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string WarehouseId { get; set; }
 
             /// <summary>
-            /// <para>The name of the warehouse.</para>
+            /// <para>The compute group name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>init_warehouse</para>

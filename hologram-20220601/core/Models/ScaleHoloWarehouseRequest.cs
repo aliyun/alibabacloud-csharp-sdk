@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? ClusterCount { get; set; }
 
         /// <summary>
-        /// <para>The number of vCPUs for the virtual warehouse. The value must be a multiple of 16.</para>
+        /// <para>The specifications of the compute group. The value must be a multiple of 16.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? Cpu { get; set; }
 
         /// <summary>
-        /// <para>The name of the virtual warehouse.</para>
+        /// <para>The name of the compute group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

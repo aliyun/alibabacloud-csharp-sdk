@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class UpdateOperationEventScheduleTimeResponseBody : TeaModel {
         /// <summary>
-        /// <para>Returns <c>true</c> if the scheduled time is successfully updated, or <c>false</c> otherwise.</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +24,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier for the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>11F64C4C-EC50-5472-BC5D-7FD9F51499F6</para>

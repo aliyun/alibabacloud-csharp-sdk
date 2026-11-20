@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The configuration settings.</para>
+        /// <para>The configuration information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string Cpu { get; set; }
 
         /// <summary>
-        /// <para>The warehouse name.</para>
+        /// <para>The name of the warehouse.</para>
         /// 
         /// <b>Example:</b>
         /// <para>warehouse-test</para>

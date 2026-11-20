@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class ListWarehousesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of virtual warehouses.</para>
+        /// <para>The list of compute groups.</para>
         /// </summary>
         [NameInMap("WarehouseList")]
         [Validation(Required=false)]
         public List<ListWarehousesResponseBodyWarehouseList> WarehouseList { get; set; }
         public class ListWarehousesResponseBodyWarehouseList : TeaModel {
             /// <summary>
-            /// <para>The number of CPU cores.</para>
+            /// <para>cpu</para>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? Cpu { get; set; }
 
             /// <summary>
-            /// <para>The ID.</para>
+            /// <para>id</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The memory size.</para>
+            /// <para>The memory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>128</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? Mem { get; set; }
 
             /// <summary>
-            /// <para>The name of the virtual warehouse.</para>
+            /// <para>The name of the compute group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MyWarehouse</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>819A7F0F-2951-540F-BD94-6A41ECF0281F</para>

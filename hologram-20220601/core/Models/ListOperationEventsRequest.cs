@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class ListOperationEventsRequest : TeaModel {
         /// <summary>
-        /// <para>Filters events by name.</para>
+        /// <para>The event name filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>COLD_UPGRADE</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string EventName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to sort events by event name in descending order.</para>
+        /// <para>Specifies whether to sort the results in descending order of event name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public bool? EventNameDesc { get; set; }
 
         /// <summary>
-        /// <para>Filters events by type.</para>
+        /// <para>The event type filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_MAINTENANCE</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size. Default value: 50. Maximum value: 100.</para>
+        /// <para>The number of entries per page. Default value: 50. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to sort events by schedule time in descending order.</para>
+        /// <para>Specifies whether to sort the results in descending order of scheduled time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public bool? ScheduleTimeDesc { get; set; }
 
         /// <summary>
-        /// <para>Filters events by state.</para>
+        /// <para>The state filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

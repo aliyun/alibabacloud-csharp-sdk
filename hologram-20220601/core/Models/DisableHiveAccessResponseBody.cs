@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class DisableHiveAccessResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result.</para>
+        /// <para>The returned result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>82B7A554-4D00-50DF-95D9-B59E7B4D5489</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result of the request.</para>
+        /// <para>The request result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class ResumeInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>The returned result, which indicates whether the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. This parameter is not related to the business logic.</para>
+        /// <para>The request result, which indicates whether an exception occurred during the request and is independent of the business logic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

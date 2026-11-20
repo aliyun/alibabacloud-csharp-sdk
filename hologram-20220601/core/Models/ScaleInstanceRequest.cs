@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class ScaleInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The cold storage space of the instance. Unit: GB.</para>
+        /// <para>The infrequent access storage space of the instance. Unit: GB.</para>
         /// <remarks>
         /// <para>This parameter is ignored for pay-as-you-go instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>1000G</para>
+        /// <para>1000</para>
         /// </summary>
         [NameInMap("coldStorageSize")]
         [Validation(Required=false)]
@@ -25,27 +25,18 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// <summary>
         /// <para>The instance specifications. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>16</c>: 16 vCPUs and 64 GB of memory (1 compute node)</para>
-        /// </description></item>
-        /// <item><description><para><c>32</c>: 32 vCPUs and 128 GB of memory (2 compute nodes)</para>
-        /// </description></item>
-        /// <item><description><para><c>64</c>: 64 vCPUs and 256 GB of memory (4 compute nodes)</para>
-        /// </description></item>
-        /// <item><description><para><c>96</c>: 96 vCPUs and 384 GB memory (6 compute nodes)</para>
-        /// </description></item>
-        /// <item><description><para><c>128</c>: 128 vCPUs and 512 GB memory (8 compute nodes)</para>
-        /// </description></item>
-        /// <item><description><para>and so on.</para>
-        /// </description></item>
+        /// <item><description>16 cores, 64 GB (Number of compute nodes: 1)</description></item>
+        /// <item><description>32 cores, 128 GB (Number of compute nodes: 2)</description></item>
+        /// <item><description>64 cores, 256 GB (Number of compute nodes: 4)</description></item>
+        /// <item><description>96 cores, 384 GB (Number of compute nodes: 6)</description></item>
+        /// <item><description>128 cores, 512 GB (Number of compute nodes: 8)</description></item>
+        /// <item><description>More</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Specify the number of vCPUs.</para>
-        /// </description></item>
-        /// <item><description><para>To purchase an instance type with more than 1024 vCPUs, submit a ticket.</para>
-        /// </description></item>
-        /// <item><description><para>Skip this parameter for shared instances.</para>
-        /// </description></item>
+        /// <item><description>Specify only the number of cores.</description></item>
+        /// <item><description>To purchase specifications with more than 1,024 cores, submit a ticket.</description></item>
+        /// <item><description>You do not need to specify the specifications for shared instances.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -57,7 +48,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? Cpu { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable Serverless Computing.</para>
+        /// <para>Specifies whether to enable serverless computing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -67,9 +58,9 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public bool? EnableServerlessComputing { get; set; }
 
         /// <summary>
-        /// <para>The number of gateways. Valid values: [2, 50].</para>
+        /// <para>The number of gateways. Valid values: 2 to 50.</para>
         /// <remarks>
-        /// <para>This parameter applies only to virtual warehouse instances.</para>
+        /// <para>This parameter is required only for the Warehouse type.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -80,21 +71,17 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? GatewayCount { get; set; }
 
         /// <summary>
-        /// <para>The scaling type.</para>
+        /// <para>The type of the specification change. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>UPGRADE: Upgrades the instance.</para>
-        /// </description></item>
-        /// <item><description><para>DOWNGRADE: Downgrades the instance.</para>
-        /// </description></item>
-        /// </list>
-        /// <remarks>
+        /// <item><description>UPGRADE: upgrades the specifications.</description></item>
+        /// <item><description>DOWNGRADE: downgrades the specifications.<remarks>
         /// <list type="bullet">
-        /// <item><description><para><b>Upgrade an instance:</b> New specifications must be equal to or greater than original specifications. Leaving a parameter empty retains its original specification. At least one specification must be increased.</para>
-        /// </description></item>
-        /// <item><description><para><b>Downgrade an instance:</b> New specifications must be equal to or less than original specifications. Leaving a parameter empty retains its original specification. At least one specification must be decreased.</para>
-        /// </description></item>
+        /// <item><description>When you upgrade the specifications, the new specifications cannot be lower than the original specifications. An empty field indicates that the original specifications remain unchanged. At least one specification must be higher than the original specification.</description></item>
+        /// <item><description>When you downgrade the specifications, the new specifications cannot be higher than the original specifications. An empty field indicates that the original specifications remain unchanged. At least one specification must be lower than the original specification.</description></item>
         /// </list>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -111,7 +98,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>1000G</para>
+        /// <para>1000</para>
         /// </summary>
         [NameInMap("storageSize")]
         [Validation(Required=false)]

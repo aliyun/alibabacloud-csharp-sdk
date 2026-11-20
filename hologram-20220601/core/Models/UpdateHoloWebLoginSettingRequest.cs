@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Set to <c>true</c> to allow logins from external accounts, or <c>false</c> to deny these logins.</para>
+        /// <para>Specifies whether external accounts are allowed to log on. Valid values: true (allowed) and false (not allowed).</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

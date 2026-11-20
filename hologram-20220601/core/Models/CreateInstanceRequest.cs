@@ -10,16 +10,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class CreateInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable automatic payment. Valid values:</para>
+        /// <para>Specifies whether to enable automatic payment. Default value: true. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true (default): Automatic payment is enabled.</para>
-        /// </description></item>
-        /// <item><description><para>false: An order is generated, but no payment is made.</para>
+        /// <item><description>true: Automatic payment is enabled.</description></item>
+        /// <item><description>false: Only an order is generated, and no payment is made.<remarks>
+        /// <para>Default value: true. If your payment method has insufficient balance, you can set the AutoPay parameter to false. In this case, an unpaid order is generated, and you can log on to the Expenses and Costs console to complete the payment.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>If your account balance is insufficient, set the <c>autoPay</c> parameter to <c>false</c>. When an unpaid order is generated, log on to the Expenses and Costs console to pay for the order.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -29,12 +27,10 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
+        /// <para>Specifies whether to enable monthly auto-renewal. Default value: false. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Auto-renewal is enabled.</para>
-        /// </description></item>
-        /// <item><description><para>false (default): Auto-renewal is disabled.</para>
-        /// </description></item>
+        /// <item><description>true: Enabled.</description></item>
+        /// <item><description>false: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,14 +43,12 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// <summary>
         /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>PrePaid: Subscription.</para>
-        /// </description></item>
-        /// <item><description><para>PostPaid: Pay-as-you-go.</para>
+        /// <item><description>PrePaid: Subscription.</description></item>
+        /// <item><description>PostPaid: Pay-as-you-go.<remarks>
+        /// <para>This parameter is ignored for Shared instances. Shared is a defined specifications type, and its billing method defaults to PostPaid.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>This parameter is ignored for shared instances. Shared instances use defined specifications and the default billing method is pay-as-you-go..</para>
-        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,9 +59,9 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The cold storage capacity of the instance. Unit: GB.</para>
+        /// <para>The low-frequency storage capacity of the instance. Unit: GB.</para>
         /// <remarks>
-        /// <para>This parameter is ignored for pay-as-you-go (PostPaid) instances.</para>
+        /// <para>This parameter is ignored for pay-as-you-go instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -78,27 +72,19 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? ColdStorageSize { get; set; }
 
         /// <summary>
-        /// <para>The instance type. Valid values:</para>
+        /// <para>The instance specifications. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>32 vCPUs and 128 GB of memory (2 compute nodes)</para>
-        /// </description></item>
-        /// <item><description><para>64 vCPUs and 256 GB of memory (4 compute nodes)</para>
-        /// </description></item>
-        /// <item><description><para>96 vCPUs and 384 GB of memory (6 compute nodes)</para>
-        /// </description></item>
-        /// <item><description><para>128 vCPUs and 512 GB of memory (8 compute nodes)</para>
-        /// </description></item>
-        /// <item><description><para>and so on.</para>
-        /// </description></item>
+        /// <item><description>32 cores, 128 GB (Number of compute nodes: 2)</description></item>
+        /// <item><description>64 cores, 256 GB (Number of compute nodes: 4)</description></item>
+        /// <item><description>96 cores, 384 GB (Number of compute nodes: 6)</description></item>
+        /// <item><description>128 cores, 512 GB (Number of compute nodes: 8)</description></item>
+        /// <item><description>Other specifications</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Specify the number of vCPUs.</para>
-        /// </description></item>
-        /// <item><description><para>To purchase an instance with more than 1,024 vCPUs, submit a ticket.</para>
-        /// </description></item>
-        /// <item><description><para>You do not need to specify the instance type for a shared instance.</para>
-        /// </description></item>
+        /// <item><description>Specify the number of cores.</description></item>
+        /// <item><description>To purchase an instance with more than 1,024 cores, submit a ticket.</description></item>
+        /// <item><description>You do not need to specify the specifications for a Shared instance.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -110,9 +96,9 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? Cpu { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration, such as two months.</para>
+        /// <para>The subscription duration. For example, set this parameter to 2 for a two-month subscription.</para>
         /// <remarks>
-        /// <para>Specify this parameter only for subscription instances.</para>
+        /// <para>This parameter is not required if the billing method is PostPaid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -133,9 +119,9 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public bool? EnableServerlessComputing { get; set; }
 
         /// <summary>
-        /// <para>The number of gateways. Valid values: [2, 50].</para>
+        /// <para>The number of gateways. Valid values: 2 to 50.</para>
         /// <remarks>
-        /// <para>You must specify this parameter only for virtual warehouse instances.</para>
+        /// <para>This parameter is required only for Warehouse instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -146,7 +132,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? GatewayCount { get; set; }
 
         /// <summary>
-        /// <para>The initial database.</para>
+        /// <para>The initial databases.</para>
         /// 
         /// <b>Example:</b>
         /// <para>chatbot</para>
@@ -156,7 +142,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string InitialDatabases { get; set; }
 
         /// <summary>
-        /// <para>The instance name. The name must be 2 to 64 characters in length. A letter is counted as one character.</para>
+        /// <para>The name of the instance. The name must be 2 to 64 characters in length. Each Chinese character or letter counts as one character.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -169,16 +155,11 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// <summary>
         /// <para>The instance type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Standard: General-purpose instance.</para>
-        /// </description></item>
-        /// <item><description><para>Follower: Read-only secondary instance.</para>
-        /// </description></item>
-        /// <item><description><para>Warehouse: Virtual warehouse instance.</para>
-        /// </description></item>
-        /// <item><description><para>Shared: Shared instance.</para>
-        /// </description></item>
-        /// <item><description><para>Serverless: Serverless instance.</para>
-        /// </description></item>
+        /// <item><description>Standard: General-purpose.</description></item>
+        /// <item><description>Follower: Read-only secondary instance.</description></item>
+        /// <item><description>Warehouse: Compute group.</description></item>
+        /// <item><description>Shared: Shared.</description></item>
+        /// <item><description>Severless: Serverless.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -190,20 +171,15 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the primary instance. This parameter is required for secondary instances.</para>
+        /// <para>The ID of the primary instance. This parameter is required for Follower instances.</para>
         /// <remarks>
         /// <para>The primary and secondary instances must meet the following conditions:</para>
         /// <list type="bullet">
-        /// <item><description><para>The primary instance is in the Running state.</para>
-        /// </description></item>
-        /// <item><description><para>The primary and secondary instances are in the same region and zone.</para>
-        /// </description></item>
-        /// <item><description><para>They are in the same zone.</para>
-        /// </description></item>
-        /// <item><description><para>The primary instance has less than 10 secondary instances.</para>
-        /// </description></item>
-        /// <item><description><para>The primary and secondary instances belong to the same Alibaba Cloud account.</para>
-        /// </description></item>
+        /// <item><description>The primary instance is in the Running state.</description></item>
+        /// <item><description>The primary and secondary instances are in the same region.</description></item>
+        /// <item><description>The primary and secondary instances are in the same zone.</description></item>
+        /// <item><description>The primary instance is associated with fewer than 10 secondary instances.</description></item>
+        /// <item><description>The primary and secondary instances belong to the same Alibaba Cloud account.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -217,21 +193,16 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// <summary>
         /// <para>The billing cycle. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Month: The instance is billed on a monthly basis.</para>
-        /// </description></item>
-        /// <item><description><para>Hour: The instance is billed on an hourly basis.</para>
-        /// </description></item>
-        /// </list>
-        /// <remarks>
+        /// <item><description>Month: Monthly billing.</description></item>
+        /// <item><description>Hour: Hourly billing.<remarks>
         /// <list type="bullet">
-        /// <item><description><para>Subscription instances support only <c>Month</c>.</para>
-        /// </description></item>
-        /// <item><description><para>Pay-as-you-go instances support only <c>Hour</c>.</para>
-        /// </description></item>
-        /// <item><description><para>For shared instances, the value is automatically set to <c>Hour</c>.</para>
-        /// </description></item>
+        /// <item><description>PrePaid supports only Month.</description></item>
+        /// <item><description>PostPaid supports only Hour.</description></item>
+        /// <item><description>For Shared instances, this parameter is automatically set to Hour and does not need to be specified.</description></item>
         /// </list>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -241,7 +212,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string PricingCycle { get; set; }
 
         /// <summary>
-        /// <para>The region ID. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/hologres/developer-reference/api-hologram-2022-06-01-endpoint">Endpoints</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/hologres/developer-reference/api-hologram-2022-06-01-endpoint">Endpoints</a>.</para>
+        /// <para>The region ID. You can go to &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/hologres/developer-reference/api-hologram-2022-06-01-endpoint">service registration endpoints</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/hologres/developer-reference/api-hologram-2022-06-01-endpoint">service registration endpoints</a> to view the supported regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -252,7 +224,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group. If you leave this parameter empty, the default resource group for your account is used.</para>
+        /// <para>The ID of the resource group. If this parameter is left empty, the default resource group of the account is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -264,7 +236,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// <summary>
         /// <para>The standard storage capacity of the instance. Unit: GB.</para>
         /// <remarks>
-        /// <para>This parameter is ignored for pay-as-you-go (PostPaid) instances.</para>
+        /// <para>This parameter is ignored for pay-as-you-go instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -275,7 +247,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? StorageSize { get; set; }
 
         /// <summary>
-        /// <para>The storage class.</para>
+        /// <para>The storage type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>redundant</para>
@@ -285,7 +257,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string StorageType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch. The vSwitch must be in the same zone as the instance.</para>
+        /// <para>The ID of the vSwitch. The zone ID of the vSwitch must be the same as that of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -296,7 +268,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC). The VPC must be in the same region as the instance.</para>
+        /// <para>The ID of the virtual private cloud (VPC). The region ID of the VPC must be the same as that of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -307,7 +279,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID.</para>
+        /// <para>The zone ID. Refer to the usage notes.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

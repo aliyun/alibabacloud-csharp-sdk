@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string MaxClusterCount { get; set; }
 
         /// <summary>
-        /// <para>The name of the warehouse.</para>
+        /// <para>The name of the compute group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_warehouse</para>

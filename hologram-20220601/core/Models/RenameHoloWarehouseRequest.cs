@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class RenameHoloWarehouseRequest : TeaModel {
         /// <summary>
-        /// <para>The original name of the virtual warehouse.</para>
+        /// <para>The original name of the compute group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The new name of the virtual warehouse.</para>
+        /// <para>The new name of the compute group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

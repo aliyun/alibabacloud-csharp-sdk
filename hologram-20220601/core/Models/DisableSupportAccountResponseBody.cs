@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class DisableSupportAccountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result of the operation, returned as a string. Valid values are <c>true</c> and <c>false</c>.</para>
+        /// <para>Indicates whether the request is successful. Valid values: true (success) and false (failure).</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>2A8DEF6E-067E-5DB0-BAE1-2894266E6C6A</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>The request result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

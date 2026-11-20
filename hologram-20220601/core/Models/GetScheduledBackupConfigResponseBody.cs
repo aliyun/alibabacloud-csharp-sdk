@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public GetScheduledBackupConfigResponseBodyData Data { get; set; }
         public class GetScheduledBackupConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the backup configuration is enabled. Valid values: <b>1</b> (enabled) and <b>0</b> (disabled).</para>
+            /// <para>Indicates whether the configuration is effective. Valid values: - <b>true</b>: Effective. - <b>false</b>: Not effective.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>623EF0B6-A6C1-5764-82CC-0BC176654CB9</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

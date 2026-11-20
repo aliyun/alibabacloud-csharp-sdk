@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>36291497-CDB0-53DC-8CD7-762E054F57A6</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether an exception occurred during the request. This parameter is not related to the business outcome.</para>
+        /// <para>The request result. Indicates whether an exception occurred during the request, which is independent of the business logic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

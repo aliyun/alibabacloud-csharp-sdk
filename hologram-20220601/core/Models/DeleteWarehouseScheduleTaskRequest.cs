@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class DeleteWarehouseScheduleTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the time-sharing elastic scaling plan.</para>
+        /// <para>The ID of the time-based elastic plan.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The ID of the warehouse.</para>
+        /// <para>The compute group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

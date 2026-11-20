@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class RenewInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The error details.</para>
+            /// <para>The detailed error message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Invalid charge type</para>
@@ -47,12 +47,10 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string OrderId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the renewal is successful.</para>
+            /// <para>Indicates whether the renewal was successful. Valid values:  </para>
             /// <list type="bullet">
-            /// <item><description><para>true: The renewal is successful.</para>
-            /// </description></item>
-            /// <item><description><para>false: The renewal failed.</para>
-            /// </description></item>
+            /// <item><description>true: The renewal was successful.</description></item>
+            /// <item><description>false: The renewal failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -95,7 +93,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>D3AE84AB-0873-5FC7-A4C4-8CF869D2FA70</para>
@@ -105,7 +103,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. This parameter is not related to the business result.</para>
+        /// <para>Indicates whether the request was successful. This parameter indicates whether an exception occurred during the request and is unrelated to the business logic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

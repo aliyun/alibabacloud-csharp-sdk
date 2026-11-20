@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>An array of instance IDs.</para>
+        /// <para>The instance IDs.</para>
         /// </summary>
         [NameInMap("resourceIds")]
         [Validation(Required=false)]
@@ -47,7 +47,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>An array of tag keys. To remove tags, you only need to provide the corresponding tag keys.</para>
+        /// <para>The tag keys.
+        /// To delete tags, provide the corresponding tag keys.</para>
         /// </summary>
         [NameInMap("tagKeys")]
         [Validation(Required=false)]

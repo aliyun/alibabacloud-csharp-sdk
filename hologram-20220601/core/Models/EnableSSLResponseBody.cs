@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class EnableSSLResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result of the operation.</para>
+        /// <para>Valid values: true: success; false: failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>Indicates whether the operation is successful. Valid values: true: successful; false: failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

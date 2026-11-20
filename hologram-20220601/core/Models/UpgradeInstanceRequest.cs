@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The upgrade time.</para>
+        /// <para>The upgrade time. The format is YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-02-11 10:00:01</para>

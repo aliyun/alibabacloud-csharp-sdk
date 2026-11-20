@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class CreateWarehouseResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result of the creation operation. <c>true</c> indicates success, and <c>false</c> indicates failure.</para>
+        /// <para>The returned result. A value of true indicates that the warehouse was created successfully. A value of false indicates that the creation failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The error message for a failed request.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>2A8DEF6E-067E-5DB0-BAE1-2894266E6C6A</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call was successful. This does not reflect the outcome of the business operation.</para>
+        /// <para>The request result, which is independent of the business logic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

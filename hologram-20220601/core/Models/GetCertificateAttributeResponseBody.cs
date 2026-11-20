@@ -17,7 +17,11 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public GetCertificateAttributeResponseBodyCertificateAttributeDto CertificateAttributeDto { get; set; }
         public class GetCertificateAttributeResponseBodyCertificateAttributeDto : TeaModel {
             /// <summary>
-            /// <para>Specifies whether SSL is enabled.</para>
+            /// <para>Specifies whether SSL is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: Enabled.</description></item>
+            /// <item><description>false: Disabled.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -27,7 +31,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public bool? EnableSSL { get; set; }
 
             /// <summary>
-            /// <para>The UNIX timestamp when the certificate expires.</para>
+            /// <para>The expiration timestamp of the certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1790583135000</para>
@@ -37,7 +41,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? ExpirationTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the certificate.</para>
+            /// <para>The certificate status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>effective</para>
@@ -79,7 +83,11 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -89,7 +97,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>819A7F0F-2951-540F-BD94-6A41ECF0281F</para>

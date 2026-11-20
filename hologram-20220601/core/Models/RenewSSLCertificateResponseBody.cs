@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class RenewSSLCertificateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result of the operation.</para>
+        /// <para>true: Success. false: Failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the operation is successful. Valid values: true: Success. false: Failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

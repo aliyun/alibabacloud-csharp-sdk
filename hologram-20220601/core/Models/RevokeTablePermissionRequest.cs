@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class RevokeTablePermissionRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether this operation applies to all tables in the schema. If true, permissions are revoked from all tables. If false or not specified, permissions are revoked only from the table specified by tableName.</para>
+        /// <para>Specifies whether the operation takes effect on all tables. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Yes.</description></item>
+        /// <item><description>false or null: No.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +24,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public bool? AllTable { get; set; }
 
         /// <summary>
-        /// <para>The columns from which you want to revoke permissions. This is required only for column-level permissions.</para>
+        /// <para>The list of column names for which permissions are to be revoked.</para>
         /// </summary>
         [NameInMap("columnNames")]
         [Validation(Required=false)]
@@ -37,7 +41,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// <para>The permissions to revoke.</para>
+        /// <para>The list of permissions.</para>
         /// </summary>
         [NameInMap("privileges")]
         [Validation(Required=false)]

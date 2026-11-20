@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class ListWarehouseScheduleEventResponseBody : TeaModel {
         /// <summary>
-        /// <para>The event list.</para>
+        /// <para>The list of events.</para>
         /// </summary>
         [NameInMap("EventList")]
         [Validation(Required=false)]
         public List<ListWarehouseScheduleEventResponseBodyEventList> EventList { get; set; }
         public class ListWarehouseScheduleEventResponseBodyEventList : TeaModel {
             /// <summary>
-            /// <para>The cluster count.</para>
+            /// <para>The number of clusters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? ClusterCount { get; set; }
 
             /// <summary>
-            /// <para>The cluster specification, measured in CPU cores.</para>
+            /// <para>The cluster specifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? ClusterCpu { get; set; }
 
             /// <summary>
-            /// <para>The number of elastic CPU cores.</para>
+            /// <para>The number of elastic CPUs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>48</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? ElasticCpu { get; set; }
 
             /// <summary>
-            /// <para>The elastic type.</para>
+            /// <para>The elastic scaling type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ScaleUp</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string EventName { get; set; }
 
             /// <summary>
-            /// <para>The event time (UTC).</para>
+            /// <para>The time when the event occurred (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-07-22T09:43:02.638Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string EventTime { get; set; }
 
             /// <summary>
-            /// <para>The failure reason. This parameter is returned only if the value of <c>Result</c> is <c>failed</c>.</para>
+            /// <para>The reason for the failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>insufficient resource</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string FailedReason { get; set; }
 
             /// <summary>
-            /// <para>The number of reserved clusters (non-elastic).</para>
+            /// <para>The number of reserved clusters, which refers to non-elastic clusters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? InitClusterCount { get; set; }
 
             /// <summary>
-            /// <para>This field is deprecated.</para>
+            /// <para><b>[Deprecated]</b> This field is deprecated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? OriginalElasticCpu { get; set; }
 
             /// <summary>
-            /// <para>The number of reserved CPU cores (non-elastic).</para>
+            /// <para>The number of reserved CPUs, which refers to non-elastic CPUs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>64</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? ReservedCpu { get; set; }
 
             /// <summary>
-            /// <para>The result of the event.</para>
+            /// <para>The result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string Result { get; set; }
 
             /// <summary>
-            /// <para>The warehouse name.</para>
+            /// <para>The name of the compute group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>init_warehouse</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 30. Maximum value: 100.</para>
+        /// <para>The number of entries per page. Default value: 30. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>RequestId</para>
         /// 
         /// <b>Example:</b>
         /// <para>E16D32D4-DF86-1180-8220-0D39770A5AF9</para>

@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public List<ListInstancesResponseBodyInstanceList> InstanceList { get; set; }
         public class ListInstancesResponseBodyInstanceList : TeaModel {
             /// <summary>
-            /// <para>The commodity code. This code is the same as the product detail code in the User Center.</para>
+            /// <para>The commodity code, which is consistent with the product detail code in the User Center.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hologram_postpay_public_cn</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string CommodityCode { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was created.</para>
+            /// <para>The creation time. The time is displayed in UTC and formatted according to ISO 8601.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-12-16T02:24:05Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether lakehouse acceleration is enabled.</para>
+            /// <para>Specifies whether data lakehouse acceleration is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string EnableHiveAccess { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether SSL encryption is enabled.</para>
+            /// <para>Specifies whether SSL is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public List<ListInstancesResponseBodyInstanceListEndpoints> Endpoints { get; set; }
             public class ListInstancesResponseBodyInstanceListEndpoints : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the endpoint is enabled.</para>
+                /// <para>Specifies whether the endpoint is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public bool? Enabled { get; set; }
 
                 /// <summary>
-                /// <para>Domain name.</para>
+                /// <para>The endpoint.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hgpostcn-cn-aaab9ad2d8fb-cn-hangzhou-internal.hologres.aliyuncs.com:80</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the virtual switch.</para>
+                /// <para>The vSwitch ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vsw-wz9oap28raidjevhuszg4</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// <para>The VPC instance ID.</para>
+                /// <para>The ID of the VPC-connected instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hgpostcn-cn-wwo3665tx004-frontend-st</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             }
 
             /// <summary>
-            /// <para>The time when the instance expires.</para>
+            /// <para>The expiration time. The time is displayed in UTC and formatted according to ISO 8601.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-05-04T16:00:00.000Z</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the primary instance.</para>
+            /// <para>The leader instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hgprecn-cn-2r42sqvxm006</para>
@@ -246,12 +246,10 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The storage class:</para>
+            /// <para>The storage type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>redundant: Zone-redundant storage (three zones)</para>
-            /// </description></item>
-            /// <item><description><para>local: Locally redundant storage (one zone)</para>
-            /// </description></item>
+            /// <item><description>redundant: 3AZ</description></item>
+            /// <item><description>local: 1AZ</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -262,7 +260,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string StorageType { get; set; }
 
             /// <summary>
-            /// <para>The reason why the instance was suspended.</para>
+            /// <para>The reason for suspension.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Manual</para>
@@ -333,7 +331,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the API call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

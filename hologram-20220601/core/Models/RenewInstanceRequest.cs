@@ -10,15 +10,13 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class RenewInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable monthly auto-renewal. Valid values:</para>
+        /// <para>Specifies whether to enable monthly auto-renewal. By default, monthly auto-renewal is disabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Enabled.</para>
-        /// </description></item>
-        /// <item><description><para>false (default): Disabled.</para>
-        /// </description></item>
+        /// <item><description>true: enables monthly auto-renewal.</description></item>
+        /// <item><description>false: does not enable monthly auto-renewal.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Enabling auto-renewal on an instance where it is already enabled causes an error.</para>
+        /// <para>If you enable auto-renewal for an instance that already has auto-renewal enabled, an error is reported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -29,7 +27,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The renewal period, in months.</para>
+        /// <para>The renewal period. Unit: months.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

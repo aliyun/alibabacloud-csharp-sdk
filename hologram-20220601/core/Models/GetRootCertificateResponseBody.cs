@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class GetRootCertificateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result of the request. The value is a JSON string that contains the certificate in the PEM format.</para>
+        /// <para>The returned result. The value is a JSON string, and the final certificate format is PEM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{ &quot;rootCertificate&quot;: &quot;BEGIN xxxx&quot;}</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>Indicates whether the operation is successful. Valid values: true: Successful. false: Failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>819A7F0F-2951-540F-BD94-6A41ECF0281F</para>

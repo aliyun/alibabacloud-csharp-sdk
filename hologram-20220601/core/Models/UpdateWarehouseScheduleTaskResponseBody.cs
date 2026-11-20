@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class UpdateWarehouseScheduleTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the operation succeeded. A value of <c>true</c> indicates success, and <c>false</c> indicates failure.</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +24,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>2A8DEF6E-067E-5DB0-BAE1-2894266E6C6A</para>

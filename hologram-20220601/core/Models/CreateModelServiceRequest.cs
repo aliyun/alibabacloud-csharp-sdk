@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class CreateModelServiceRequest : TeaModel {
         /// <summary>
-        /// <para>The API key for Alibaba Cloud Model Studio. This parameter is required only for Model Studio models. You can obtain this key from the Model Studio console or by calling an API.</para>
+        /// <para>The API key for Alibaba Cloud Model Studio. Log on to the Model Studio console or use the API to obtain the key. This parameter is required only for Alibaba Cloud Model Studio models.</para>
         /// 
         /// <b>Example:</b>
         /// <para>api-key-xxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ApiKey { get; set; }
 
         /// <summary>
-        /// <para>The number of vCPUs. This parameter is required only for a Hologres AI node.</para>
+        /// <para>The CPU specifications. This parameter is required only for Hologres AI nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? Cpu { get; set; }
 
         /// <summary>
-        /// <para>The number of GPUs. This parameter is required only for a Hologres AI node.</para>
+        /// <para>The GPU specifications. This parameter is required only for Hologres AI nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? Gpu { get; set; }
 
         /// <summary>
-        /// <para>The GPU memory size in GB. This parameter is required only for a Hologres AI node.</para>
+        /// <para>The GPU memory specifications. This parameter is required only for Hologres AI nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>64</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? GpuMemory { get; set; }
 
         /// <summary>
-        /// <para>The memory size in GB. This parameter is required only for a Hologres AI node.</para>
+        /// <para>The memory specifications. This parameter is required only for Hologres AI nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>64</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? Memory { get; set; }
 
         /// <summary>
-        /// <para>The model parameters, required only for Model Studio models. You can provide the default parameters returned by the <c>ListModelCatalog</c> operation or a modified version of them.</para>
+        /// <para>The model parameters. Refer to the default parameters returned by ListModelCatalog. You can pass the parameters directly or modify them as needed before passing. This parameter is required only for Alibaba Cloud Model Studio models.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;timeout&quot;:600,&quot;max_retries&quot;:10,&quot;max_retry_delay&quot;:8,&quot;initial_retry_delay&quot;:0.5}</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ModelParams { get; set; }
 
         /// <summary>
-        /// <para>A custom name for the model service.</para>
+        /// <para>The custom service name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ModelServiceName { get; set; }
 
         /// <summary>
-        /// <para>The name of the model. To find the name, call <c>ListModelCatalog</c> for a model from Alibaba Cloud Model Studio, or <c>GetAvailableModelsResource</c> for a model on a Hologres AI node.</para>
+        /// <para>The model name. To query Alibaba Cloud Model Studio models, call ListModelCatalog. To query Hologres AI nodes, call GetAvailableModelsResource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ModelType { get; set; }
 
         /// <summary>
-        /// <para>The provider of the underlying model.</para>
+        /// <para>The underlying model provider.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bailian</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string Provider { get; set; }
 
         /// <summary>
-        /// <para>The number of replicas. This parameter is required only for a Hologres AI node.</para>
+        /// <para>The number of service replicas. This parameter is required only for Hologres AI nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? ServiceCount { get; set; }
 
         /// <summary>
-        /// <para>The type of task the model performs, such as <c>chat/completions</c> or <c>embedding</c>. To find the supported task types, see the output of the <c>ListModelCatalog</c> operation.</para>
+        /// <para>The model type, such as chat/completions or embedding. Refer to the types returned by ListModelCatalog and create the model as needed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>embedding</para>

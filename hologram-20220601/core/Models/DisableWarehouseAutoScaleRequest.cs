@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class DisableWarehouseAutoScaleRequest : TeaModel {
         /// <summary>
-        /// <para>The compute group name.</para>
+        /// <para>The name of the compute group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_warehouse</para>

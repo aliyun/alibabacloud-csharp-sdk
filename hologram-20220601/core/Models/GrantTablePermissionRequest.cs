@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class GrantTablePermissionRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to grant the permissions on all tables in the schema.</para>
+        /// <para>Specifies whether to grant permissions on all existing tables.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -19,12 +19,15 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         [Validation(Required=false)]
         public bool? AllTable { get; set; }
 
+        /// <summary>
+        /// <para>The list of column names to grant permissions on.</para>
+        /// </summary>
         [NameInMap("columnNames")]
         [Validation(Required=false)]
         public List<string> ColumnNames { get; set; }
 
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_db</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// <para>The permissions to grant.</para>
+        /// <para>The list of permissions.</para>
         /// </summary>
         [NameInMap("privileges")]
         [Validation(Required=false)]

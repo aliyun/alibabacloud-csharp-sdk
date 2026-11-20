@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? Memory { get; set; }
 
         /// <summary>
-        /// <para>A custom name for the model service.</para>
+        /// <para>The custom service name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

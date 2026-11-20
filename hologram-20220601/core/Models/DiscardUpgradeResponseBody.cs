@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class DiscardUpgradeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DiscardUpgradeResponseBodyData> Data { get; set; }
         public class DiscardUpgradeResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The reason the upgrade failed.</para>
+            /// <para>The reason for the upgrade failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string ReasonKey { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the operation was successful.</para>
+            /// <para>Indicates whether the operation is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>A47D57BE-59D1-51A6-9CC3-080C07852C4E</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API request itself was successful. This does not reflect the outcome of the operation. For the operation\&quot;s result, see the Success field in the Data array.</para>
+        /// <para>Indicates whether the request is successful. This parameter indicates whether an exception occurred during the request and is independent of the business logic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

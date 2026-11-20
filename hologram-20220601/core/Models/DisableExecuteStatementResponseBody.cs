@@ -10,18 +10,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class DisableExecuteStatementResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the operation is successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The operation is successful.</description></item>
-        /// <item><description>false: The operation failed.</description></item>
-        /// </list>
+        /// <para>Valid values: true: Successful. false: Failed.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The error code. This parameter is empty if the operation is successful.</para>
+        /// <para><b>The error code. This parameter is empty if the request is successful.</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidParameterValue</para>
@@ -31,7 +27,10 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message. This parameter is empty if the operation is successful.</para>
+        /// <para>The error message. This parameter is empty if the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Invalid parameter value.</para>
         /// </summary>
         [NameInMap("errorMessage")]
         [Validation(Required=false)]
@@ -48,7 +47,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para><b>The request ID.</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>E3F4B2A7-1234-5678-9ABC-DEF012345678</para>
@@ -58,7 +57,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is successful.</para>
+        /// <para><b>Indicates whether the request is successful.</b></para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

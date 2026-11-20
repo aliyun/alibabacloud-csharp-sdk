@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class UpdateInstanceNetworkTypeRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to change the network type from AnyTunnel to SingleTunnel. This parameter is not applicable to new instances. Keep the default value of null.</para>
+        /// <para>Specifies whether to convert AnyTunnel to SingleTunnel. This parameter is invalid for new instances. Set it to null by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string AnyTunnelToSingleTunnel { get; set; }
 
         /// <summary>
-        /// <para>The network types to enable. The order of the network types does not matter. For example, if an instance has the Internet, Intranet, and VPCSingleTunnel network types enabled, disable the Internet network type by specifying \<c>Intranet,VPCSingleTunnel\\</c>.</para>
+        /// <para>The list of network types to enable. Specify a combination of existing network types. The order does not matter. For example, if the Internet, internal network, and VPCSingleTunnel network types are enabled and you want to disable the Internet network type, remove the Internet type and pass &quot;Intranet, VPCSingleTunnel&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Internet,VPCSingleTunnel</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string NetworkTypes { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch.</para>
+        /// <para>The vSwitch ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-2vccsiymtqr9aavew0vo3</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC.</para>
+        /// <para>The VPC ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-t4netc3y5etlondfb5ra7</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account that owns the VPC.</para>
+        /// <para>The owner ID of the VPC, which is the Alibaba Cloud account ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1999365732646672</para>

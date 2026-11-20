@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public GetLastUpgradeRecordResponseBodyData Data { get; set; }
         public class GetLastUpgradeRecordResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The source version.</para>
+            /// <para>The initial version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>r3.2.11</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string FromVersion { get; set; }
 
             /// <summary>
-            /// <para>The read-only start time.</para>
+            /// <para>The start time of the read-only state. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-09-24 17:29:57</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string StartReadonlyTime { get; set; }
 
             /// <summary>
-            /// <para>The read-only end time.</para>
+            /// <para>The end time of the read-only state. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-09-24 18:23:22</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string StopReadonlyTime { get; set; }
 
             /// <summary>
-            /// <para>The destination version.</para>
+            /// <para>The target version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>r4.0.2</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>819A7F0F-2951-540F-BD94-6A41ECF0281F</para>

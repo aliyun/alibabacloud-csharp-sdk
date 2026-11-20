@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public List<ListFollowerInstancesResponseBodyInstanceList> InstanceList { get; set; }
         public class ListFollowerInstancesResponseBodyInstanceList : TeaModel {
             /// <summary>
-            /// <para>The billing type.</para>
+            /// <para>The billing method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PostPaid</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The commodity code, which is consistent with the product detail code in User Center.</para>
+            /// <para>The commodity code, which is consistent with the product detail code in the User Center.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hologram_postpay_public_cn</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string CommodityCode { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The time is in UTC and follows the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-12-16T02:24:05Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The expiration time.</para>
+            /// <para>The expiration time. The time is in UTC and follows the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-05-04T16:00:00.000Z</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. This parameter is not related to business logic.</para>
+        /// <para>Indicates whether the request is successful. This parameter is unrelated to business logic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

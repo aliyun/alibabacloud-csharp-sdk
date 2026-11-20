@@ -17,20 +17,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public List<ListBackupDataResponseBodyBackupDataList> BackupDataList { get; set; }
         public class ListBackupDataResponseBodyBackupDataList : TeaModel {
             /// <summary>
-            /// <para>The backup type.</para>
+            /// <para>The backup type. Backup types are generally divided into two categories: 1) Local backup, where the snapshot and the instance belong to the same region. 2) Remote backup, where the snapshot and the instance belong to different regions. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>redundant: Stores instance snapshots across zones within the same region.</para>
-            /// </description></item>
-            /// <item><description><para>redundant_remote: Stores instance snapshots across zones in a different region.</para>
-            /// </description></item>
-            /// <item><description><para>full: Stores an instance snapshot locally.</para>
-            /// </description></item>
-            /// <item><description><para>full_remote: Stores an instance snapshot remotely.</para>
-            /// </description></item>
-            /// <item><description><para>local: It is a filter for local snapshots, not a backup type.</para>
-            /// </description></item>
-            /// <item><description><para>remote: It is a filter for remote snapshots, not a backup type.</para>
-            /// </description></item>
+            /// <item><description>redundant: Local backup with cross-zone multi-copy storage in the same region.</description></item>
+            /// <item><description>redundant_remote: Remote backup with cross-zone multi-copy storage in the same region, which is a cross-region copy of the redundant type.</description></item>
+            /// <item><description>full: Local backup with single-copy storage.</description></item>
+            /// <item><description>full_remote: Remote backup with single-copy storage, which is a cross-region copy of the full type.</description></item>
+            /// <item><description>local: Does not represent a specific backup type and is only used to filter local backup data.</description></item>
+            /// <item><description>remote: Does not represent a specific backup type and is only used to filter remote backup data.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +35,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string BackupType { get; set; }
 
             /// <summary>
-            /// <para>The size of the cold data, in bytes.</para>
+            /// <para>The size of the cold storage data. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32413521</para>
@@ -51,7 +45,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? ColdDataSize { get; set; }
 
             /// <summary>
-            /// <para>The description of the snapshot. It can be updated.</para>
+            /// <para>The description of the backup data. This field can be updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>demo</para>
@@ -71,7 +65,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string DataGran { get; set; }
 
             /// <summary>
-            /// <para>The size of the snapshot, in bytes.</para>
+            /// <para>The size of the backup data. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>76085723136</para>
@@ -81,7 +75,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? DataSize { get; set; }
 
             /// <summary>
-            /// <para>The time when the data snapshot was created. For the format, see StartTime.</para>
+            /// <para>The data snapshot time. For the format, refer to StartTime.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-28T12:23:37.000+00:00</para>
@@ -91,7 +85,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string DataTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the backup was completed. For the format, see StartTime.</para>
+            /// <para>The end time of the backup. For the format, refer to StartTime.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-28T12:27:34.000+00:00</para>
@@ -101,7 +95,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The unique snapshot ID.</para>
+            /// <para>The unique ID of the backup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1780805690994479105</para>
@@ -161,7 +155,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string InstanceZoneId { get; set; }
 
             /// <summary>
-            /// <para>The region where the snapshot is stored.</para>
+            /// <para>The region where the backup data resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -171,7 +165,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string SnapshotRegion { get; set; }
 
             /// <summary>
-            /// <para>The zone where backup snapshot(s). If you use zone-redundant storage, the data is stored across multiple zones. This parameter returns one of those zones.</para>
+            /// <para>The zone where the backup data resides. For zone-redundant storage, the data is stored across multiple zones, and this field indicates one of the zones.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-j</para>
@@ -181,7 +175,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string SnapshotZoneId { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the backup began. Format: <c>YYYY-MM-DDTHH:mm:ss.SSSTZ</c> (UTC+8). This format is used for all time-related parameters.</para>
+            /// <para>The start time of the backup. The time is in the UTC+8 time zone and follows the YYYY-MM-DDTHH:mm:ss.SSSTZ format. The same applies to other time fields.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-28T11:19:56.000+00:00</para>
@@ -201,7 +195,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The backup trigger type.</para>
+            /// <para>The trigger type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>scheduled</para>

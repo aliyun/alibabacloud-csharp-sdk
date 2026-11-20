@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class UpdateAutoUpgradeResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the operation was successful. Valid values: <c>true</c> and <c>false</c>.</para>
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +54,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>2A8DEF6E-067E-5DB0-BAE1-2894266E6C6A</para>
@@ -60,7 +64,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. This parameter is independent of the business data returned.</para>
+        /// <para>Indicates whether the request is successful. This parameter indicates whether an exception occurred during the request and is unrelated to the business logic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

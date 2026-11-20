@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public List<ListUpgradeReleaseVersionsResponseBodyData> Data { get; set; }
         public class ListUpgradeReleaseVersionsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The URL of the version release notes.</para>
+            /// <para>The URL of the release notes.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://www.alibabacloud.com/help/en/hologres/product-overview/release-notes">https://www.alibabacloud.com/help/en/hologres/product-overview/release-notes</a></para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The request result, which indicates whether an exception occurred. This is not related to business logic.</para>
+        /// <para>Indicates whether the request succeeded. This parameter is unrelated to the business logic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

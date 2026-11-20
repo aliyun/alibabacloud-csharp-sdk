@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class UpdateInstanceNameRequest : TeaModel {
         /// <summary>
-        /// <para>The new name of the instance. The name must be 2 to 64 characters in length. A letter is counted as one character.</para>
+        /// <para>The new instance name. The name must be 2 to 64 characters in length. Each Chinese character or letter counts as one character.</para>
         /// 
         /// <b>Example:</b>
         /// <para>new_name</para>

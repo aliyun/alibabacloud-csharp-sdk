@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class ExecuteStatementRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_db</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string DbName { get; set; }
 
         /// <summary>
-        /// <para>The maximum size of the response, in bytes. Default: 10,485,760 (10 MB). If the response size exceeds this limit, it is truncated, as indicated by the Truncated field in the response.</para>
+        /// <para>The maximum amount of data to return in a single request, in bytes. Default value: 10485760 (10 MB). Excess data is truncated and indicated by setting truncated to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1024</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? MaxBytes { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of rows to return. Default: 200. Maximum: 1,000. If the result set exceeds this limit, it is truncated, as indicated by the <c>Truncated</c> field in the response.</para>
+        /// <para>The maximum number of rows to return. Default value: 200. Maximum value: 1000. Excess rows are truncated and indicated by the Truncated field in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? MaxRows { get; set; }
 
         /// <summary>
-        /// <para>An array of bound parameters for a parameterized query. These parameters map sequentially to placeholders (e.g., <c>$1</c>, <c>$2</c>) in the SQL statement. Supported types include <c>String</c>, <c>Long</c>, <c>Double</c>, <c>Boolean</c>, and <c>null</c> (for SQL <c>NULL</c>). Using parameterized queries helps prevent SQL injection and improves the cache reuse rate for prepared statements. These parameters apply to all SQL statements in the sql field.</para>
+        /// <para>The list of parameters to attach to the SQL parameterized query, which correspond in sequence to placeholders such as $1 and $2 in the SQL statement. Supported value types include String, Long, Double, Boolean, and null, which represents NULL. Using a parameterized query effectively prevents SQL injection and improves the cache reuse rate of precompiled statements. The parameter list applies to each SQL statement in Statements.</para>
         /// </summary>
         [NameInMap("parameters")]
         [Validation(Required=false)]
         public List<object> Parameters { get; set; }
 
         /// <summary>
-        /// <para>The query timeout, in seconds. Default: 30. Maximum: 30. Minimum: 1. If a query exceeds this time limit, the server cancels it.</para>
+        /// <para>The timeout period for SQL execution, in seconds. Default value: 30. Maximum value: 30. Minimum value: 1. If a timeout occurs, the server actively cancels the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? QueryTimeout { get; set; }
 
         /// <summary>
-        /// <para>The SQL statement to execute. The maximum length is 16,384 characters. You can specify multiple SQL statements separated by semicolons. If multiple statements are provided, the API returns the result of the last statement.</para>
+        /// <para>The SQL statement to be executed. The maximum length is 16,384 characters. Multiple SQL statements separated by semicolons are supported. If multiple statements are specified, the result of the last statement is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>select * from test_table limit 10;</para>

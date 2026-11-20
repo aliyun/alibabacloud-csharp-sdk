@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class CreateInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned results.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The details of the error.</para>
+            /// <para>The detailed error message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>InvalidVpcOrVSwitch.NotAvailable</para>
@@ -57,12 +57,10 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string OrderId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the instance was created.</para>
+            /// <para>Indicates whether the instance was created. Valid values:  </para>
             /// <list type="bullet">
-            /// <item><description><para>true: The instance was created.</para>
-            /// </description></item>
-            /// <item><description><para>false: The instance failed to be created.</para>
-            /// </description></item>
+            /// <item><description>true: The instance was created.</description></item>
+            /// <item><description>false: The instance failed to be created.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class GetWarehouseDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>D3AE84AB-0873-5FC7-A4C4-8CF869D2FA70</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public GetWarehouseDetailResponseBodyWarehouseDetail WarehouseDetail { get; set; }
         public class GetWarehouseDetailResponseBodyWarehouseDetail : TeaModel {
             /// <summary>
-            /// <para>The total current auto elastic computing resources of the virtual warehouse.</para>
+            /// <para>The total auto-scaling elastic compute resources of the compute group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string AutoElasticCpu { get; set; }
 
             /// <summary>
-            /// <para>The unallocated computing resources in the instance.</para>
+            /// <para>The unallocated compute resources. The remaining unallocated compute resources for compute groups in the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string RemainingCpu { get; set; }
 
             /// <summary>
-            /// <para>The reserved computing resources. The total computing resources of all running virtual warehouses in the instance cannot exceed this value.</para>
+            /// <para>The reserved compute resources. The total compute resources of all running compute groups in the instance cannot exceed the reserved compute resources of the compute group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>64</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string ReservedCpu { get; set; }
 
             /// <summary>
-            /// <para>The total current scheduled elastic computing resources of the virtual warehouse.</para>
+            /// <para>The total time-based elastic compute resources of the compute group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>64</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string TimedElasticCpu { get; set; }
 
             /// <summary>
-            /// <para>The warehouses.</para>
+            /// <para>The warehouse list.</para>
             /// </summary>
             [NameInMap("WarehouseList")]
             [Validation(Required=false)]
             public List<GetWarehouseDetailResponseBodyWarehouseDetailWarehouseList> WarehouseList { get; set; }
             public class GetWarehouseDetailResponseBodyWarehouseDetailWarehouseList : TeaModel {
                 /// <summary>
-                /// <para>The auto scaling type.</para>
+                /// <para>The auto-scaling type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Standard</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public string ClusterCpu { get; set; }
 
                 /// <summary>
-                /// <para>The number of CPU cores.</para>
+                /// <para>cpu</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>32</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public long? Cpu { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether this is the default virtual warehouse.</para>
+                /// <para>Indicates whether the compute group is the default compute group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public bool? DefaultWarehouse { get; set; }
 
                 /// <summary>
-                /// <para>The elastic computing resources.</para>
+                /// <para>The elastic compute resources.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>32</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public long? ElasticCpu { get; set; }
 
                 /// <summary>
-                /// <para>The type of elasticity.</para>
+                /// <para>The elastic type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>auto</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public string ElasticType { get; set; }
 
                 /// <summary>
-                /// <para>The ID.</para>
+                /// <para>id</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public string MaxClusterCount { get; set; }
 
                 /// <summary>
-                /// <para>The memory size.</para>
+                /// <para>The memory.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>128</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public long? Mem { get; set; }
 
                 /// <summary>
-                /// <para>The name of the virtual warehouse.</para>
+                /// <para>The name of the compute group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MyWarehouse</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public long? NodeCount { get; set; }
 
                 /// <summary>
-                /// <para>The rebalancing status of the virtual warehouse.</para>
+                /// <para>The rebalance status of the compute group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DONE</para>

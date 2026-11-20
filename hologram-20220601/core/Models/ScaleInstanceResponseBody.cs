@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class ScaleInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned results.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The details of the error.</para>
+            /// <para>The detailed error message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Invalid scale type</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The order ID.</para>
+            /// <para>The ID of the order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>219183853450000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string OrderId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the scaling was successful.</para>
+            /// <para>Indicates whether the specification change was successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

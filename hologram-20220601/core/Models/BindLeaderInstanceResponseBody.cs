@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class BindLeaderInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the operation succeeded.</para>
+        /// <para>Indicates whether the association is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The error code for a failed request.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>404</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message for a failed request.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Internal server error.</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>6FF2EDFD-3154-5C3E-8CFA-8F7E366BCF9D</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API request succeeded. This parameter is independent of the binding operation result.</para>
+        /// <para>Indicates whether the request is successful. This parameter is independent of the business result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

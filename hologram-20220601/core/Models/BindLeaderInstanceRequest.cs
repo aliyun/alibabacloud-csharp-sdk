@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class BindLeaderInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the leader instance. The follower and leader instances must be in the same region and zone, and have the same version. Obtain this ID by calling the <c>ListFollowerInstances</c> operation.</para>
+        /// <para>The leader instance ID. The region ID, zone ID, and version of the follower instance must be the same as those of the leader instance. Select the leader instance ID from the list of instances returned by the ListFollowerInstances operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hgpostcn-cn-uqm3316l1004</para>

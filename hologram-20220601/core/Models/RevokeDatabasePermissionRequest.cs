@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class RevokeDatabasePermissionRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_db</para>

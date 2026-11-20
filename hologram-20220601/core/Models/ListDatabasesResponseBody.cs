@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public List<ListDatabasesResponseBodyDatabaseList> DatabaseList { get; set; }
         public class ListDatabasesResponseBodyDatabaseList : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the table is a foreign table. \<c>true\\</c>: The table is a foreign table. \<c>false\\</c>: The table is not a foreign table.</para>
+            /// <para>Indicates whether the table is a foreign table. Valid values: true: yes, false: no.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string PermissionModel { get; set; }
 
             /// <summary>
-            /// <para>The permission.</para>
+            /// <para>The permissions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>developer</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>0C4935F5-6217-569A-902F-931B2F3E28BA</para>

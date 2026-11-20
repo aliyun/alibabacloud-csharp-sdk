@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public List<ListLeaderInstancesResponseBodyInstanceList> InstanceList { get; set; }
         public class ListLeaderInstancesResponseBodyInstanceList : TeaModel {
             /// <summary>
-            /// <para>Indicates the compatibility between the leader instance and the follower instance. A value of <c>0</c> indicates a perfect match. Any other value indicates a mismatch.</para>
+            /// <para>The match level between the primary and secondary instances. A value of 0 indicates a perfect match, and other values indicate a mismatch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string CommodityCode { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time in UTC formatted according to ISO 8601.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-07-25T02:15:35Z</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The expiration time. This parameter is not returned for pay-as-you-go instances.</para>
+            /// <para>The expiration time. Pay-as-you-go instances do not have an expiration time. The time is displayed in UTC and formatted in accordance with ISO 8601.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-07-25T02:15:35Z</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public List<ListLeaderInstancesResponseBodyInstanceListTags> Tags { get; set; }
             public class ListLeaderInstancesResponseBodyInstanceListTags : TeaModel {
                 /// <summary>
-                /// <para>The key of the tag.</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tagKey</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of the tag.</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>value</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>5600196E-78E2-50F2-B2A1-C44D3B665438</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successfully processed. This does not reflect the business outcome of the operation.</para>
+        /// <para>Indicates whether the request was successful. This parameter is unrelated to the business logic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

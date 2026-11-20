@@ -10,42 +10,60 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class CreateDatabaseResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the database was created.</para>
+        /// <para>The database creation result. A value of true indicates that the database was created successfully, and a value of false indicates that the creation failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The error code returned if the request fails.</para>
+        /// <para>The error code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request fails.</para>
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned for the request.</para>
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>92F00FA1-CE4E-55A1-8BA9-F2C61534B518</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values: true and false.</para>
+        /// <para>Indicates whether the operation is successful. Valid values: true: The operation is successful. false: The operation fails.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>True</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

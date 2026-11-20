@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class CreateUserResponseBody : TeaModel {
         /// <summary>
-        /// <para>Returns true on success and false on failure.</para>
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The operation is successful.</description></item>
+        /// <item><description>false: The operation fails.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +54,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>D3AE84AB-0873-5FC7-A4C4-8CF869D2FA70</para>
@@ -60,7 +64,11 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation succeeded. A value of &quot;true&quot; indicates success, and &quot;false&quot; indicates failure.</para>
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The operation is successful.</description></item>
+        /// <item><description>false: The operation fails.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

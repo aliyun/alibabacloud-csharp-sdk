@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class UntagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>The operation success indicator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>CE1C813B-3445-57EC-9504-342E45D1C7EA</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successfully processed. This parameter does not indicate the outcome of the untagging operation.</para>
+        /// <para>Indicates whether the request is successful, independent of the business result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

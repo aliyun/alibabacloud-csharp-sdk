@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class GetUpgradeableResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetUpgradeableResponseBodyData> Data { get; set; }
         public class GetUpgradeableResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The reason why the upgrade failed.</para>
+            /// <para>The reason for the upgrade failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             /// <para>Indicates whether the instance can be upgraded. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: The instance can be upgraded.</description></item>
-            /// <item><description>false: The instance cannot be upgraded because it is already the latest version.</description></item>
+            /// <item><description>false: The instance cannot be upgraded because it is already running the latest version.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. This parameter is not related to business logic.</para>
+        /// <para>Indicates whether the request was successful. This parameter indicates whether an exception occurred during the request and is independent of the business logic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

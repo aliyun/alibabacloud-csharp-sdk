@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class ListInstanceModelResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of AI node resources.</para>
+        /// <para>The list of AI resources.</para>
         /// </summary>
         [NameInMap("instanceModelList")]
         [Validation(Required=false)]
         public List<ListInstanceModelResponseBodyInstanceModelList> InstanceModelList { get; set; }
         public class ListInstanceModelResponseBodyInstanceModelList : TeaModel {
             /// <summary>
-            /// <para>The AI node instance ID.</para>
+            /// <para>The ID of the AI node instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hologram_aicombo_public_cn-77xxx</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string AiInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The AI specifications.</para>
+            /// <para>The <b>AI specifications</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>small-8core-30G-24G</para>
@@ -37,14 +37,18 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string AiSpec { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether auto-renewal is enabled.</para>
+            /// <para>Specifies whether <b>auto-renewal</b> is enabled.</para>
             /// </summary>
             [NameInMap("autoRenewal")]
             [Validation(Required=false)]
             public bool? AutoRenewal { get; set; }
 
             /// <summary>
-            /// <para>The region ID.</para>
+            /// <para>The billing method. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PrePaid: subscription.</description></item>
+            /// <item><description>PostPaid: pay-as-you-go.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>PostPaid</para>
@@ -54,7 +58,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The region ID.</para>
+            /// <para>The commodity code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hologram_aipostpay_public_cn</para>
@@ -74,7 +78,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? Cpu { get; set; }
 
             /// <summary>
-            /// <para>The total CPU used by the node. This parameter applies only to Hologres AI nodes.</para>
+            /// <para>The total CPU usage of the node. This parameter applies only to Hologres AI nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -84,7 +88,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? CpuUsed { get; set; }
 
             /// <summary>
-            /// <para>The expiration time in UTC.</para>
+            /// <para>The expiration time (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-28T07:44:27.535Z</para>
@@ -94,7 +98,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string ExpirationTime { get; set; }
 
             /// <summary>
-            /// <para>The number of GPU cards. This parameter applies only to Hologres AI nodes.</para>
+            /// <para>The number of GPUs. This parameter applies only to Hologres AI nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -114,7 +118,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? GpuMemory { get; set; }
 
             /// <summary>
-            /// <para>The total GPU memory used by the node. This parameter applies only to Hologres AI nodes.</para>
+            /// <para>The total GPU memory usage of the node. This parameter applies only to Hologres AI nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>
@@ -124,7 +128,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? GpuMemoryUsed { get; set; }
 
             /// <summary>
-            /// <para>The total GPU used by the node. This parameter applies only to Hologres AI nodes.</para>
+            /// <para>The total GPU usage of the node. This parameter applies only to Hologres AI nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>
@@ -134,7 +138,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? GpuUsed { get; set; }
 
             /// <summary>
-            /// <para>The Hologres instance ID.</para>
+            /// <para>The <b>Hologres instance ID</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hgpostcn-cn-yi34hlzdx003</para>
@@ -144,7 +148,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string HoloInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The Hologres instance name.</para>
+            /// <para>The <b>Hologres instance name</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>myInstance</para>
@@ -164,7 +168,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? Memory { get; set; }
 
             /// <summary>
-            /// <para>The total memory used by the node. This parameter applies only to Hologres AI nodes.</para>
+            /// <para>The total memory usage of the node. This parameter applies only to Hologres AI nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>
@@ -194,7 +198,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The region ID.</para>
+            /// <para>The resource type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>small</para>
@@ -204,7 +208,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The status.</para>
+            /// <para>The <b>status</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ResourceReady</para>

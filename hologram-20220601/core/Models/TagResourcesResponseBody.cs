@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class TagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the tagging operation succeeded.</para>
+        /// <para>The operation success indicator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>15CEB459-CEE0-5528-87F5-B5A9B9F9B184</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates if the API call was accepted. This is separate from whether the tagging operation itself succeeded.</para>
+        /// <para>Indicates whether the request is successful, independent of the business result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

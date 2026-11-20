@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated.</para>
+        /// <para><b>[Deprecated]</b> The deprecated parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>The expiration time.</para>
+        /// <para>The expiration time. Format: YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-03-24 11:19:05</para>

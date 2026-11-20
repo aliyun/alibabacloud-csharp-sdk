@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class ListOperationEventsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The event list.</para>
+        /// <para>The list of events.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListOperationEventsResponseBodyData> Data { get; set; }
         public class ListOperationEventsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Specifies whether the event can be canceled.</para>
+            /// <para>Indicates whether the event can be canceled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public bool? Cancelable { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the scheduled time for the event can be changed.</para>
+            /// <para>Indicates whether the event schedule can be modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string Detail { get; set; }
 
             /// <summary>
-            /// <para>The event name.</para>
+            /// <para>The event name filter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HOT_UPGRADE</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string EventName { get; set; }
 
             /// <summary>
-            /// <para>The event type.</para>
+            /// <para>The event type filter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>UPGRADE_ON_CUSTOMERS_BEHALF</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string EventType { get; set; }
 
             /// <summary>
-            /// <para>The follower instance list.</para>
+            /// <para>The list of follower instances.</para>
             /// </summary>
             [NameInMap("FollowerInstances")]
             [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             }
 
             /// <summary>
-            /// <para>The event ID.</para>
+            /// <para>Id</para>
             /// 
             /// <b>Example:</b>
             /// <para>1826503661244379138</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The maintenance window.</para>
+            /// <para>The maintenance time window.</para>
             /// 
             /// <b>Example:</b>
             /// <para>21:00-22:00</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The scheduled time of the event.</para>
+            /// <para>ScheduleTime</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-08-22 15:49:28</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string ScheduleTime { get; set; }
 
             /// <summary>
-            /// <para>The state of the event.</para>
+            /// <para>State</para>
             /// 
             /// <b>Example:</b>
             /// <para>queued</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         }
 
         /// <summary>
-        /// <para>The page number to return. Default value: 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 50. Maximum value: 100.</para>
+        /// <para>The number of entries per page. Default value: 50. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>D3AE84AB-0873-5FC7-A4C4-8CF869D2FA70</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries that match the query.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>120</para>

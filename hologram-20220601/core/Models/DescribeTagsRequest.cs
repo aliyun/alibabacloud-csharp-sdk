@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return tags.</para>
+        /// <para>Specifies whether to display tags.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

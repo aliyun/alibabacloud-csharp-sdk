@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The instance type. Set the value to <c>instance</c>.</para>
+        /// <para>The instance type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Instance</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public List<string> ResourceIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the account that owns the tag.</para>
+        /// <para>The account ID of the tag owner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1062017779051424</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? TagOwnerUid { get; set; }
 
         /// <summary>
-        /// <para>A collection of tags to add.</para>
+        /// <para>The new tags to add.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]

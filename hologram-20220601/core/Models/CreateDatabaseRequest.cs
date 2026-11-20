@@ -11,13 +11,19 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
     public class CreateDatabaseRequest : TeaModel {
         /// <summary>
         /// <para>The name of the database.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>my_db</para>
         /// </summary>
         [NameInMap("databaseName")]
         [Validation(Required=false)]
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// <para>The permission model of the database.</para>
+        /// <para>The permission model. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/security-and-compliance/hologres-permission-model/">Hologres permission model</a>. Default value: Standard.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SPM</para>
         /// </summary>
         [NameInMap("permissionModel")]
         [Validation(Required=false)]

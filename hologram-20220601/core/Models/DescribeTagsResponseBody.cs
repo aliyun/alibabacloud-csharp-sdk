@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>14E2358E-0499-509E-8E22-CA30EC474A9A</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded. This parameter is independent of the business logic.</para>
+        /// <para>Indicates whether the request is successful, regardless of the business result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The list of resources.</para>
+        /// <para>The resource collection.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>A list of values for the corresponding tag key.</para>
+            /// <para>The collection of all tag values under the same tag key.</para>
             /// </summary>
             [NameInMap("TagValue")]
             [Validation(Required=false)]

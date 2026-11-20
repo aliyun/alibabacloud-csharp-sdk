@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class UpdateMaintenanceWindowResponseBody : TeaModel {
         /// <summary>
-        /// <para>A value of <c>true</c> indicates that the maintenance window was successfully updated.</para>
+        /// <para>Indicates whether the operation is successful. Valid values: true: Success. false: Failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>D3AE84AB-0873-5FC7-A4C4-8CF869D2FA70</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. A value of <c>false</c> indicates that a server-side error occurred.</para>
+        /// <para>The request result. Indicates whether an exception occurred during the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

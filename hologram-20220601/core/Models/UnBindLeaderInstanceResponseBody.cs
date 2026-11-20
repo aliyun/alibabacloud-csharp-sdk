@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class UnBindLeaderInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Whether the instance was successfully detached.</para>
+        /// <para>Indicates whether the dissociation was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>288D934D-3F25-5BA6-9B50-7ABB3017A134</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call was successful. This does not indicate the outcome of the detach operation.</para>
+        /// <para>Indicates whether the request is successful. This is independent of the business result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
