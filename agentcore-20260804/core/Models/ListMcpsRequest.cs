@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListMcpsRequest : TeaModel {
         /// <summary>
-        /// <para>The custom tag used for filtering. An exact match is required.</para>
+        /// <para>The custom tags used to filter results. An exact match is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Knowledge base</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string CustomTag { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per page. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The maximum number of entries to return per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The official usage tag used for filtering.</para>
+        /// <para>The official usage tags used to filter results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>KNOWLEDGE_BASE</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string OfficialTag { get; set; }
 
         /// <summary>
-        /// <para>The name match type. This parameter takes effect only when Name is specified. Valid values: accurate (exact match) and blur (fuzzy match). Default value: blur.</para>
+        /// <para>The name matching mode. This parameter takes effect only when Name is specified. Valid values: accurate (exact match) and blur (fuzzy match). Default value: blur.</para>
         /// 
         /// <b>Example:</b>
         /// <para>blur</para>

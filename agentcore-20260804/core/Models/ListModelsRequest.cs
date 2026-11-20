@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string ModelName { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Specify the token returned from the previous query. An empty response indicates that no more pages are available.</para>
+        /// <para>The pagination token. Pass the token returned by the previous query in the request. An empty value in the response indicates that no more pages are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bW9kZWwtbWFuYWdlbWVudC1vZmZzZXQ6bW9kZWw6MTA</para>

@@ -44,21 +44,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<string> Addresses { get; set; }
 
             /// <summary>
-            /// <para>The backend authentication configuration. The enabled field indicates whether the configuration is enabled. The directProxy field specifies the custom authentication header for the direct proxy. The httpToMcp field specifies the list of OpenAPI credentials for HTTP_TO_MCP.</para>
+            /// <para>The backend authentication configuration. enabled specifies whether the configuration is enabled. directProxy specifies the custom authentication header for the direct proxy. httpToMcp specifies the list of OpenAPI credentials for HTTP_TO_MCP.</para>
             /// </summary>
             [NameInMap("auth")]
             [Validation(Required=false)]
             public ListMcpsResponseBodyItemsAuth Auth { get; set; }
             public class ListMcpsResponseBodyItemsAuth : TeaModel {
                 /// <summary>
-                /// <para>The caller API Key authentication configuration for the code deployment MCP.</para>
+                /// <para>The caller API key authentication configuration for the code deployment MCP.</para>
                 /// </summary>
                 [NameInMap("codePackage")]
                 [Validation(Required=false)]
                 public ListMcpsResponseBodyItemsAuthCodePackage CodePackage { get; set; }
                 public class ListMcpsResponseBodyItemsAuthCodePackage : TeaModel {
                     /// <summary>
-                    /// <para>The API Key used to verify the MCP caller.</para>
+                    /// <para>The API key used to verify the MCP caller.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>example-api-key</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string ApiKey { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the request header that carries the API Key.</para>
+                    /// <para>The name of the request header that carries the API key.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>X-API-Key</para>
@@ -177,6 +177,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
+            /// <para>The saved legacy or modern backend policy, which is separate from the transport indicated by protocol and does not indicate verification. This field is not saved for newly created CODE_PACKAGE. For historical CODE_PACKAGE, the existing value does not control Function Compute session affinity or gateway protocol. For the actual protocol, refer to OriginProbe.LastResult.ActualConfiguration.BackendMcpProtocol. This field is returned as empty for historical unspecified values and HTTP_TO_MCP.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>modern</para>
+            /// </summary>
+            [NameInMap("backendMcpProtocol")]
+            [Validation(Required=false)]
+            public string BackendMcpProtocol { get; set; }
+
+            /// <summary>
             /// <para>The time when the MCP was created, in ISO 8601 UTC format.</para>
             /// 
             /// <b>Example:</b>
@@ -194,7 +204,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<string> CustomTags { get; set; }
 
             /// <summary>
-            /// <para>The deployment configuration for the code deployment MCP.</para>
+            /// <para>The deployment configuration for code-deployed MCP.</para>
             /// </summary>
             [NameInMap("deploymentConfig")]
             [Validation(Required=false)]
@@ -208,7 +218,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public ListMcpsResponseBodyItemsDeploymentConfigAccessControl AccessControl { get; set; }
                 public class ListMcpsResponseBodyItemsDeploymentConfigAccessControl : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the AgentCore credential referenced when the mode is set to CREDENTIAL.</para>
+                    /// <para>The ID of the access credential. This parameter references an AgentCore credential when the mode is set to CREDENTIAL.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>credential-id</para>
@@ -218,14 +228,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string CredentialId { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether to enable entry access control.</para>
+                    /// <para>Specifies whether entry access control is enabled.</para>
                     /// </summary>
                     [NameInMap("enabled")]
                     [Validation(Required=false)]
                     public bool? Enabled { get; set; }
 
                     /// <summary>
-                    /// <para>The access control mode. ANONYMOUS indicates anonymous access, and CREDENTIAL indicates access by using AgentCore credentials.</para>
+                    /// <para>The access control mode. A value of ANONYMOUS indicates anonymous access. A value of CREDENTIAL indicates that AgentCore access credentials are used.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>CREDENTIAL</para>
@@ -237,14 +247,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>The agent identity configuration.</para>
+                /// <para>The Agent identity configuration.</para>
                 /// </summary>
                 [NameInMap("agentIdentityConfiguration")]
                 [Validation(Required=false)]
                 public ListMcpsResponseBodyItemsDeploymentConfigAgentIdentityConfiguration AgentIdentityConfiguration { get; set; }
                 public class ListMcpsResponseBodyItemsDeploymentConfigAgentIdentityConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether authorization is enabled.</para>
+                    /// <para>Indicates whether authorization is enabled.</para>
                     /// </summary>
                     [NameInMap("authorizationEnabled")]
                     [Validation(Required=false)]
@@ -271,7 +281,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string CredentialProviderType { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether agent identity is enabled.</para>
+                    /// <para>Specifies whether Agent identity is enabled.</para>
                     /// </summary>
                     [NameInMap("enabled")]
                     [Validation(Required=false)]
@@ -280,7 +290,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>The artifact type. Code indicates a ZIP code package, and Container indicates a custom container.</para>
+                /// <para>The artifact type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Code: ZIP code package.</description></item>
+                /// <item><description>Container: Custom container.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Code</para>
@@ -297,7 +311,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public ListMcpsResponseBodyItemsDeploymentConfigCodeConfiguration CodeConfiguration { get; set; }
                 public class ListMcpsResponseBodyItemsDeploymentConfigCodeConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>The temporary code package token returned by GetMcpCodePackageUploadUrl. It is used to create or update a code deployment after a presigned upload is completed.</para>
+                    /// <para>The temporary code package token returned by GetMcpCodePackageUploadUrl. It is used to create or update a code deployment after the presigned upload is completed.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>upload-token</para>
@@ -314,7 +328,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public List<string> Command { get; set; }
 
                     /// <summary>
-                    /// <para>The code package runtime. Valid values: python3.13, nodejs22, or java17.</para>
+                    /// <para>The code package runtime. Valid values: python3.13, nodejs22, and java17.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>python3.13</para>
@@ -377,7 +391,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string ImageRegistryType { get; set; }
 
                     /// <summary>
-                    /// <para>The MCP runtime mode. Custom containers currently must expose the standard MCP themselves. The value is SELF_HOSTED.</para>
+                    /// <para>Custom containers must currently expose the standard MCP themselves. Valid value: SELF_HOSTED.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>SELF_HOSTED</para>
@@ -387,7 +401,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string McpRuntimeMode { get; set; }
 
                     /// <summary>
-                    /// <para>The container source type. Currently fixed to CONTAINER_IMAGE.</para>
+                    /// <para>Currently fixed to CONTAINER_IMAGE.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>CONTAINER_IMAGE</para>
@@ -406,7 +420,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public ListMcpsResponseBodyItemsDeploymentConfigHookConfiguration HookConfiguration { get; set; }
                 public class ListMcpsResponseBodyItemsDeploymentConfigHookConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>Executes the PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in the order of the array.</para>
+                    /// <para>The ordered list of hooks. The PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks are executed in the order of the array.</para>
                     /// </summary>
                     [NameInMap("hooks")]
                     [Validation(Required=false)]
@@ -426,14 +440,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         /// <para>The description of the hook.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>Record MCP tool invoke</para>
+                        /// <para>Record MCP tool invocation</para>
                         /// </summary>
                         [NameInMap("description")]
                         [Validation(Required=false)]
                         public string Description { get; set; }
 
                         /// <summary>
-                        /// <para>Specifies whether to enable the hook.</para>
+                        /// <para>Specifies whether the hook is enabled.</para>
                         /// </summary>
                         [NameInMap("enabled")]
                         [Validation(Required=false)]
@@ -450,7 +464,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public string Event { get; set; }
 
                         /// <summary>
-                        /// <para>The hook request headers.</para>
+                        /// <para>The request headers of the hook.</para>
                         /// </summary>
                         [NameInMap("headers")]
                         [Validation(Required=false)]
@@ -488,7 +502,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public ListMcpsResponseBodyItemsDeploymentConfigLogConfiguration LogConfiguration { get; set; }
                 public class ListMcpsResponseBodyItemsDeploymentConfigLogConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to collect instance metrics.</para>
+                    /// <para>Specifies whether instance metrics are collected.</para>
                     /// </summary>
                     [NameInMap("enableInstanceMetrics")]
                     [Validation(Required=false)]
@@ -502,7 +516,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public bool? EnableRequestMetrics { get; set; }
 
                     /// <summary>
-                    /// <para>The start rule for Function Compute log splitting.</para>
+                    /// <para>The start rule for splitting Function Compute logs.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>DefaultRegex</para>
@@ -551,7 +565,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string EndpointPath { get; set; }
 
                     /// <summary>
-                    /// <para>The session concurrency per instance. Currently fixed to 1.</para>
+                    /// <para>Currently fixed to 1.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -580,6 +594,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     [Validation(Required=false)]
                     public int? SessionMaxLifetimeSeconds { get; set; }
 
+                    /// <summary>
+                    /// <para>Applicable only to StreamableHTTP. Default value for creation: STATEFUL. If omitted during an update, the original value is retained. STATELESS disables Function Compute session affinity, and the stdio gateway does not enable stateful mode. Native HTTP services must support stateless MCP themselves.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>STATEFUL</para>
+                    /// </summary>
+                    [NameInMap("sessionMode")]
+                    [Validation(Required=false)]
+                    public string SessionMode { get; set; }
+
                 }
 
                 /// <summary>
@@ -590,7 +614,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public ListMcpsResponseBodyItemsDeploymentConfigNasConfiguration NasConfiguration { get; set; }
                 public class ListMcpsResponseBodyItemsDeploymentConfigNasConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>The user group ID.</para>
+                    /// <para>The runtime user group ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1000</para>
@@ -607,7 +631,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public List<ListMcpsResponseBodyItemsDeploymentConfigNasConfigurationMountPoints> MountPoints { get; set; }
                     public class ListMcpsResponseBodyItemsDeploymentConfigNasConfigurationMountPoints : TeaModel {
                         /// <summary>
-                        /// <para>Specifies whether to enable TLS.</para>
+                        /// <para>Specifies whether TLS is enabled.</para>
                         /// </summary>
                         [NameInMap("enableTls")]
                         [Validation(Required=false)]
@@ -624,7 +648,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public string MountDir { get; set; }
 
                         /// <summary>
-                        /// <para>The NAS server address.</para>
+                        /// <para>The NAS service address.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>example.cn-hangzhou.nas.aliyuncs.com</para>
@@ -636,7 +660,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     }
 
                     /// <summary>
-                    /// <para>The user ID.</para>
+                    /// <para>The runtime user ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1000</para>
@@ -718,7 +742,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public string BucketName { get; set; }
 
                         /// <summary>
-                        /// <para>The path in the OSS bucket.</para>
+                        /// <para>The path of the OSS bucket.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>/data</para>
@@ -728,7 +752,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public string BucketPath { get; set; }
 
                         /// <summary>
-                        /// <para>The endpoint of the OSS service.</para>
+                        /// <para>The OSS service endpoint.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para><a href="https://oss-cn-hangzhou.aliyuncs.com">https://oss-cn-hangzhou.aliyuncs.com</a></para>
@@ -773,7 +797,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public bool? Enabled { get; set; }
 
                     /// <summary>
-                    /// <para>The reserved reference to the parameter transformation and result enhancement rule set.</para>
+                    /// <para>The reference to the reserved parameter transformation and result enhancement rule set.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>rules-1</para>
@@ -783,7 +807,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string RuleSetId { get; set; }
 
                     /// <summary>
-                    /// <para>The transformation rule version.</para>
+                    /// <para>The version of the transformation rule.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1.0</para>
@@ -802,7 +826,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public ListMcpsResponseBodyItemsDeploymentConfigProxyConfiguration ProxyConfiguration { get; set; }
                 public class ListMcpsResponseBodyItemsDeploymentConfigProxyConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to enable the MCP proxy.</para>
+                    /// <para>Specifies whether the MCP proxy is enabled.</para>
                     /// </summary>
                     [NameInMap("enabled")]
                     [Validation(Required=false)]
@@ -818,7 +842,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public ListMcpsResponseBodyItemsDeploymentConfigRuntimeConfiguration RuntimeConfiguration { get; set; }
                 public class ListMcpsResponseBodyItemsDeploymentConfigRuntimeConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>The CPU specifications in cores. Default value: 0.25.</para>
+                    /// <para>The CPU size in cores. Default value: 0.25.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.25</para>
@@ -828,7 +852,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public double? Cpu { get; set; }
 
                     /// <summary>
-                    /// <para>The temporary disk size in MB. Valid values: 512 or 10240.</para>
+                    /// <para>The ephemeral disk size in MB. Valid values: 512 and 10240.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>512</para>
@@ -845,7 +869,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public Dictionary<string, string> EnvironmentVariables { get; set; }
 
                     /// <summary>
-                    /// <para>The ARN of the RAM role used when user code accesses downstream Alibaba Cloud resources.</para>
+                    /// <para>The ARN of the RAM role used by user code to access downstream Alibaba Cloud resources.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>acs:ram::1234567890123456:role/agentcore-mcp-execution</para>
@@ -855,7 +879,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string ExecutionRoleArn { get; set; }
 
                     /// <summary>
-                    /// <para>The request concurrency per instance. Default value: 200.</para>
+                    /// <para>Default value: 200.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>200</para>
@@ -865,7 +889,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public int? InstanceConcurrency { get; set; }
 
                     /// <summary>
-                    /// <para>The memory specifications in MB. Default value: 512.</para>
+                    /// <para>The memory size in MB. Default value: 512.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>512</para>
@@ -875,7 +899,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public int? Memory { get; set; }
 
                     /// <summary>
-                    /// <para>The service port. Default value: 9000.</para>
+                    /// <para>Default value: 9000.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>9000</para>
@@ -902,14 +926,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Sample description to illustrate the purpose of the resource</para>
+            /// <para>A sample description that illustrates the purpose of the resource</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The MCP endpoint that can be called by users or agents. This field is empty before deployment is complete.</para>
+            /// <para>The MCP endpoint that can be called by users or agents. This field is empty before the deployment is completed.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/mcp">https://example.com/mcp</a></para>
@@ -919,7 +943,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// <para>The Function Compute function name corresponding to the CODE_PACKAGE MCP. This field is empty before deployment is complete and for other types.</para>
+            /// <para>The Function Compute function name for the CODE_PACKAGE MCP. This field is empty before deployment is complete and for other types.</para>
             /// 
             /// <b>Example:</b>
             /// <para>agentcore-mcp-example</para>
@@ -978,7 +1002,293 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string OfficialTag { get; set; }
 
             /// <summary>
-            /// <para>PUBLIC indicates public access. CONTROLLED indicates that access is controlled based on permission rules.</para>
+            /// <para>The read-only progress of the reused existing publish task. This field does not change the primary status of the resource and is empty if no historical operation information is available.</para>
+            /// </summary>
+            [NameInMap("operation")]
+            [Validation(Required=false)]
+            public ListMcpsResponseBodyItemsOperation Operation { get; set; }
+            public class ListMcpsResponseBodyItemsOperation : TeaModel {
+                /// <summary>
+                /// <para>The desensitized error of the current publish operation. Gateway or formal link failures after the origin server passes the probe are represented by this field.</para>
+                /// </summary>
+                [NameInMap("error")]
+                [Validation(Required=false)]
+                public ListMcpsResponseBodyItemsOperationError Error { get; set; }
+                public class ListMcpsResponseBodyItemsOperationError : TeaModel {
+                    /// <summary>
+                    /// <para>The diagnostic error code. Only bounded diagnostic codes are returned. The original error body from the origin server is not returned.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>PROBE_TIMEOUT</para>
+                    /// </summary>
+                    [NameInMap("code")]
+                    [Validation(Required=false)]
+                    public string Code { get; set; }
+
+                    /// <summary>
+                    /// <para>The necessary diagnostics after trimming and desensitization. Credentials and original responses are not included.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>The probe deadline was exceeded.</para>
+                    /// </summary>
+                    [NameInMap("message")]
+                    [Validation(Required=false)]
+                    public string Message { get; set; }
+
+                    /// <summary>
+                    /// <para>Specifies whether the operation is suitable for retry based on a restricted policy. This field does not trigger automatic retries.</para>
+                    /// </summary>
+                    [NameInMap("retryable")]
+                    [Validation(Required=false)]
+                    public bool? Retryable { get; set; }
+
+                    /// <summary>
+                    /// <para>The error source. Valid values: MAGIC, ROUTER, NETWORK, ORIGIN, and UNKNOWN. The value is determined only based on actual evidence.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>UNKNOWN</para>
+                    /// </summary>
+                    [NameInMap("source")]
+                    [Validation(Required=false)]
+                    public string Source { get; set; }
+
+                    /// <summary>
+                    /// <para>The detection or publish stage where the error occurred.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>INITIALIZE</para>
+                    /// </summary>
+                    [NameInMap("stage")]
+                    [Validation(Required=false)]
+                    public string Stage { get; set; }
+
+                }
+
+                /// <summary>
+                /// <para>The identifier of the current or most recent publish operation.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3541f1af-87cc-45d1-a28e-94ec5633b931</para>
+                /// </summary>
+                [NameInMap("operationId")]
+                [Validation(Required=false)]
+                public string OperationId { get; set; }
+
+                /// <summary>
+                /// <para>The publish stage. Valid values: compute deployment, origin probe, summary save, gateway publish, entry credential synchronization, formal link verification, and deployment submission. Legacy tasks retain their original stage semantics.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>VALIDATE_ORIGIN</para>
+                /// </summary>
+                [NameInMap("stage")]
+                [Validation(Required=false)]
+                public string Stage { get; set; }
+
+                /// <summary>
+                /// <para>The operation status. Valid values: PENDING, RUNNING, SUCCEEDED, and FAILED.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>RUNNING</para>
+                /// </summary>
+                [NameInMap("status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                /// <summary>
+                /// <para>The operation type. Valid value: PUBLISH.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>PUBLISH</para>
+                /// </summary>
+                [NameInMap("type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+                /// <summary>
+                /// <para>The time when the operation was updated, in ISO 8601 UTC format.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2026-11-19T08:30:00Z</para>
+                /// </summary>
+                [NameInMap("updatedAt")]
+                [Validation(Required=false)]
+                public string UpdatedAt { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>Only code deployment returns the minimal origin verification summary of the most recent task. This field is empty for direct proxy and HTTP to MCP, and queries do not trigger probing.</para>
+            /// </summary>
+            [NameInMap("originProbe")]
+            [Validation(Required=false)]
+            public ListMcpsResponseBodyItemsOriginProbe OriginProbe { get; set; }
+            public class ListMcpsResponseBodyItemsOriginProbe : TeaModel {
+                /// <summary>
+                /// <para>Returned only for CODE_PACKAGE. This field is cleared when a new task starts and is empty if no verification has been performed or if the old task did not perform verification. If a subsequent release fails, the current summary is retained, which does not indicate real-time health or the active version status.</para>
+                /// </summary>
+                [NameInMap("lastResult")]
+                [Validation(Required=false)]
+                public ListMcpsResponseBodyItemsOriginProbeLastResult LastResult { get; set; }
+                public class ListMcpsResponseBodyItemsOriginProbeLastResult : TeaModel {
+                    /// <summary>
+                    /// <para>The actual configuration confirmed by evidence in this probe. This field is empty if no confirmed information is available and is not inferred from the expected configuration.</para>
+                    /// </summary>
+                    [NameInMap("actualConfiguration")]
+                    [Validation(Required=false)]
+                    public ListMcpsResponseBodyItemsOriginProbeLastResultActualConfiguration ActualConfiguration { get; set; }
+                    public class ListMcpsResponseBodyItemsOriginProbeLastResultActualConfiguration : TeaModel {
+                        /// <summary>
+                        /// <para>The verified backend MCP protocol policy. Valid values: legacy and modern. This field is empty if the policy is not confirmed.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>modern</para>
+                        /// </summary>
+                        [NameInMap("backendMcpProtocol")]
+                        [Validation(Required=false)]
+                        public string BackendMcpProtocol { get; set; }
+
+                        /// <summary>
+                        /// <para>The verified MCP transport. Valid values: SSE and StreamableHTTP. This field is empty if the transport is not confirmed.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>StreamableHTTP</para>
+                        /// </summary>
+                        [NameInMap("protocol")]
+                        [Validation(Required=false)]
+                        public string Protocol { get; set; }
+
+                        /// <summary>
+                        /// <para>The actual negotiated or selected and verified date version of the MCP protocol. This field is empty if the version is not confirmed.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>2025-03-26</para>
+                        /// </summary>
+                        [NameInMap("protocolVersion")]
+                        [Validation(Required=false)]
+                        public string ProtocolVersion { get; set; }
+
+                        /// <summary>
+                        /// <para>The actual session mode. Valid values: STATEFUL, STATELESS, and NOT_APPLICABLE. This field is empty if the mode is not confirmed.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>STATELESS</para>
+                        /// </summary>
+                        [NameInMap("sessionMode")]
+                        [Validation(Required=false)]
+                        public string SessionMode { get; set; }
+
+                    }
+
+                    /// <summary>
+                    /// <para>The probe error. This field is empty if the probe is successful. It only stores desensitized diagnostics required for this probe.</para>
+                    /// </summary>
+                    [NameInMap("error")]
+                    [Validation(Required=false)]
+                    public ListMcpsResponseBodyItemsOriginProbeLastResultError Error { get; set; }
+                    public class ListMcpsResponseBodyItemsOriginProbeLastResultError : TeaModel {
+                        /// <summary>
+                        /// <para>The diagnostic error code. Only bounded diagnostic codes are returned. The original error body from the origin server is not returned.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>PROBE_TIMEOUT</para>
+                        /// </summary>
+                        [NameInMap("code")]
+                        [Validation(Required=false)]
+                        public string Code { get; set; }
+
+                        /// <summary>
+                        /// <para>The necessary diagnostics after trimming and desensitization. Credentials and original responses are not included.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>The probe deadline was exceeded.</para>
+                        /// </summary>
+                        [NameInMap("message")]
+                        [Validation(Required=false)]
+                        public string Message { get; set; }
+
+                        /// <summary>
+                        /// <para>Specifies whether the operation is suitable for retry based on a restricted policy. This field does not trigger automatic retries.</para>
+                        /// </summary>
+                        [NameInMap("retryable")]
+                        [Validation(Required=false)]
+                        public bool? Retryable { get; set; }
+
+                        /// <summary>
+                        /// <para>The error source. Valid values: MAGIC, ROUTER, NETWORK, ORIGIN, and UNKNOWN. The value is determined only based on actual evidence.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>UNKNOWN</para>
+                        /// </summary>
+                        [NameInMap("source")]
+                        [Validation(Required=false)]
+                        public string Source { get; set; }
+
+                        /// <summary>
+                        /// <para>The detection or publish stage where the error occurred.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>INITIALIZE</para>
+                        /// </summary>
+                        [NameInMap("stage")]
+                        [Validation(Required=false)]
+                        public string Stage { get; set; }
+
+                    }
+
+                    /// <summary>
+                    /// <para>The time when the origin server was probed, in ISO 8601 UTC format.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>2026-11-19T08:30:00Z</para>
+                    /// </summary>
+                    [NameInMap("probedAt")]
+                    [Validation(Required=false)]
+                    public string ProbedAt { get; set; }
+
+                    /// <summary>
+                    /// <para>The probe stage. Valid values: CONNECT, DISCOVER, INITIALIZE, SESSION_CHECK, CLEANUP, and COMPLETE.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>COMPLETE</para>
+                    /// </summary>
+                    [NameInMap("stage")]
+                    [Validation(Required=false)]
+                    public string Stage { get; set; }
+
+                    /// <summary>
+                    /// <para>The probe result. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>SUCCESS: The protocol and applicable session checks passed. Undeclared capabilities do not affect the result.</description></item>
+                    /// <item><description>FAILED: The checks failed.</description></item>
+                    /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>SUCCESS</para>
+                    /// </summary>
+                    [NameInMap("status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                }
+
+            }
+
+            /// <summary>
+            /// <para>The optional saved origin MCP protocol date display metadata, in YYYY-MM-DD format. You can specify this field during creation and modify it during updates. If omitted during an update, the current value is retained. This field only saves and displays information. It is not a software version, does not restrict the external gateway protocol, does not control backend requests, and does not indicate that real-time verification has passed. This field returns null and has no default value if it is omitted during creation and not updated, missing historically, or used for HTTP_TO_MCP.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2025-03-26</para>
+            /// </summary>
+            [NameInMap("originProtocolVersion")]
+            [Validation(Required=false)]
+            public string OriginProtocolVersion { get; set; }
+
+            /// <summary>
+            /// <para>The access permission mode. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PUBLIC: Public access.</description></item>
+            /// <item><description>CONTROLLED: Access controlled based on permission rules.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>CONTROLLED</para>
@@ -1048,7 +1358,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string UpdatedAt { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the MCP is still subject to the usage constraints of the official template.</para>
+            /// <para>Indicates whether the MCP is still subject to the usage constraints of the official template.</para>
             /// </summary>
             [NameInMap("usageActive")]
             [Validation(Required=false)]
@@ -1057,7 +1367,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per page. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The maximum number of entries to return per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -1070,7 +1380,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Request processed successfully</para>
+        /// <para>The request is processed successfully</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]

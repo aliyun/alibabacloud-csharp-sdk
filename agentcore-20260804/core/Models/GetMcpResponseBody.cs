@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The position of the credential.</para>
+                    /// <para>The location of the credential.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>header</para>
@@ -167,6 +167,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
+            /// <para>The saved legacy or modern backend policy, which is separate from the transport indicated by the protocol and does not indicate verification. This field is not saved for new CODE_PACKAGE deployments. For historical CODE_PACKAGE deployments, the saved value does not control Function Compute session affinity or the gateway protocol. For the actual protocol, refer to OriginProbe.LastResult.ActualConfiguration.BackendMcpProtocol. Returns null for historical deployments with unspecified values and HTTP_TO_MCP deployments.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>modern</para>
+            /// </summary>
+            [NameInMap("backendMcpProtocol")]
+            [Validation(Required=false)]
+            public string BackendMcpProtocol { get; set; }
+
+            /// <summary>
             /// <para>The time when the MCP was created, in ISO 8601 UTC format.</para>
             /// 
             /// <b>Example:</b>
@@ -184,7 +194,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<string> CustomTags { get; set; }
 
             /// <summary>
-            /// <para>The deployment configuration for the code-deployed MCP.</para>
+            /// <para>The deployment configuration for code-deployed MCP.</para>
             /// </summary>
             [NameInMap("deploymentConfig")]
             [Validation(Required=false)]
@@ -215,7 +225,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public bool? Enabled { get; set; }
 
                     /// <summary>
-                    /// <para>The access control mode. ANONYMOUS indicates anonymous access. CREDENTIAL indicates access by using AgentCore credentials.</para>
+                    /// <para>The access control mode. Valid values: ANONYMOUS indicates anonymous access. CREDENTIAL indicates that AgentCore access credentials are used.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>CREDENTIAL</para>
@@ -270,7 +280,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>The artifact type. Code indicates a ZIP code package, and Container indicates a custom container.</para>
+                /// <para>The artifact type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Code: ZIP code package.</description></item>
+                /// <item><description>Container: Custom container.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Code</para>
@@ -287,7 +301,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public GetMcpResponseBodyDataDeploymentConfigCodeConfiguration CodeConfiguration { get; set; }
                 public class GetMcpResponseBodyDataDeploymentConfigCodeConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>The temporary code package token returned by GetMcpCodePackageUploadUrl. It is used to create or update a code deployment after the presigned upload is completed.</para>
+                    /// <para>The temporary code package token returned by GetMcpCodePackageUploadUrl. It is used to create or update a code deployment after a presigned upload is completed.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>upload-token</para>
@@ -304,7 +318,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public List<string> Command { get; set; }
 
                     /// <summary>
-                    /// <para>The code package runtime, such as python3.13, nodejs22, or java17.</para>
+                    /// <para>The runtime of the code package. Valid values: python3.13, nodejs22, and java17.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>python3.13</para>
@@ -357,7 +371,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Image { get; set; }
 
                     /// <summary>
-                    /// <para>The image repository type.</para>
+                    /// <para>The image registry type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ACR</para>
@@ -367,7 +381,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string ImageRegistryType { get; set; }
 
                     /// <summary>
-                    /// <para>The MCP runtime mode. Custom containers currently need to expose the standard MCP themselves. The value is SELF_HOSTED.</para>
+                    /// <para>The MCP runtime mode. Custom containers must expose the standard MCP themselves. The value is SELF_HOSTED.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>SELF_HOSTED</para>
@@ -377,7 +391,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string McpRuntimeMode { get; set; }
 
                     /// <summary>
-                    /// <para>The container source type. Currently, this value is fixed as CONTAINER_IMAGE.</para>
+                    /// <para>The container source type. This value is currently fixed to CONTAINER_IMAGE.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>CONTAINER_IMAGE</para>
@@ -396,14 +410,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public GetMcpResponseBodyDataDeploymentConfigHookConfiguration HookConfiguration { get; set; }
                 public class GetMcpResponseBodyDataDeploymentConfigHookConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>Executes the PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in the order of the array.</para>
+                    /// <para>The ordered list of hooks. The PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks are executed in the order of the array.</para>
                     /// </summary>
                     [NameInMap("hooks")]
                     [Validation(Required=false)]
                     public List<GetMcpResponseBodyDataDeploymentConfigHookConfigurationHooks> Hooks { get; set; }
                     public class GetMcpResponseBodyDataDeploymentConfigHookConfigurationHooks : TeaModel {
                         /// <summary>
-                        /// <para>The hook API version.</para>
+                        /// <para>The API version of the hook.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1.0</para>
@@ -423,7 +437,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public string Description { get; set; }
 
                         /// <summary>
-                        /// <para>Specifies whether the hook is enabled.</para>
+                        /// <para>Specifies whether to enable the hook.</para>
                         /// </summary>
                         [NameInMap("enabled")]
                         [Validation(Required=false)]
@@ -440,14 +454,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public string Event { get; set; }
 
                         /// <summary>
-                        /// <para>The hook request headers.</para>
+                        /// <para>The request headers of the hook.</para>
                         /// </summary>
                         [NameInMap("headers")]
                         [Validation(Required=false)]
                         public Dictionary<string, string> Headers { get; set; }
 
                         /// <summary>
-                        /// <para>The timeout period in milliseconds.</para>
+                        /// <para>The timeout period of the hook, in milliseconds.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>3000</para>
@@ -492,7 +506,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public bool? EnableRequestMetrics { get; set; }
 
                     /// <summary>
-                    /// <para>The start rule for log splitting.</para>
+                    /// <para>The start rule for splitting Function Compute logs.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>DefaultRegex</para>
@@ -541,7 +555,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string EndpointPath { get; set; }
 
                     /// <summary>
-                    /// <para>The session concurrency per instance. Currently, this value is fixed as 1.</para>
+                    /// <para>The session concurrency per instance. This value is currently fixed to 1.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -551,7 +565,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public int? SessionConcurrencyPerInstance { get; set; }
 
                     /// <summary>
-                    /// <para>The session idle timeout period in seconds. Default value: 1800.</para>
+                    /// <para>The session idle timeout period. Unit: seconds. Default value: 1800.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1800</para>
@@ -561,7 +575,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public int? SessionIdleTimeoutSeconds { get; set; }
 
                     /// <summary>
-                    /// <para>The unit is seconds. Default value: 21600.</para>
+                    /// <para>The maximum session lifetime. Unit: seconds. Default value: 21600.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>21600</para>
@@ -569,6 +583,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     [NameInMap("sessionMaxLifetimeSeconds")]
                     [Validation(Required=false)]
                     public int? SessionMaxLifetimeSeconds { get; set; }
+
+                    /// <summary>
+                    /// <para>The session mode. This parameter applies only to StreamableHTTP. Default value for creation: STATEFUL. If omitted during an update, the original value is retained. STATELESS disables Function Compute session affinity, and the stdio gateway does not enable stateful mode. Native HTTP services must support stateless MCP themselves.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>STATEFUL</para>
+                    /// </summary>
+                    [NameInMap("sessionMode")]
+                    [Validation(Required=false)]
+                    public string SessionMode { get; set; }
 
                 }
 
@@ -580,7 +604,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public GetMcpResponseBodyDataDeploymentConfigNasConfiguration NasConfiguration { get; set; }
                 public class GetMcpResponseBodyDataDeploymentConfigNasConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>The group ID.</para>
+                    /// <para>The user group ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1000</para>
@@ -590,7 +614,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public int? GroupId { get; set; }
 
                     /// <summary>
-                    /// <para>The list of NAS mount targets.</para>
+                    /// <para>The list of NAS mount points.</para>
                     /// </summary>
                     [NameInMap("mountPoints")]
                     [Validation(Required=false)]
@@ -614,7 +638,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public string MountDir { get; set; }
 
                         /// <summary>
-                        /// <para>The NAS server address.</para>
+                        /// <para>The NAS service address.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>example.cn-hangzhou.nas.aliyuncs.com</para>
@@ -691,7 +715,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public GetMcpResponseBodyDataDeploymentConfigOssMountConfiguration OssMountConfiguration { get; set; }
                 public class GetMcpResponseBodyDataDeploymentConfigOssMountConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>The list of OSS mount targets.</para>
+                    /// <para>The list of OSS mount points.</para>
                     /// </summary>
                     [NameInMap("mountPoints")]
                     [Validation(Required=false)]
@@ -708,7 +732,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public string BucketName { get; set; }
 
                         /// <summary>
-                        /// <para>The path in the OSS bucket.</para>
+                        /// <para>The path of the OSS bucket.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>/data</para>
@@ -718,7 +742,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public string BucketPath { get; set; }
 
                         /// <summary>
-                        /// <para>The OSS endpoint.</para>
+                        /// <para>The OSS service endpoint.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para><a href="https://oss-cn-hangzhou.aliyuncs.com">https://oss-cn-hangzhou.aliyuncs.com</a></para>
@@ -738,7 +762,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public string MountDir { get; set; }
 
                         /// <summary>
-                        /// <para>Specifies whether the mount target is read-only.</para>
+                        /// <para>Specifies whether the mount point is read-only.</para>
                         /// </summary>
                         [NameInMap("readOnly")]
                         [Validation(Required=false)]
@@ -808,7 +832,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public GetMcpResponseBodyDataDeploymentConfigRuntimeConfiguration RuntimeConfiguration { get; set; }
                 public class GetMcpResponseBodyDataDeploymentConfigRuntimeConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>The CPU specifications in cores. Default value: 0.25.</para>
+                    /// <para>The CPU specifications. Unit: cores. Default value: 0.25.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.25</para>
@@ -818,7 +842,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public double? Cpu { get; set; }
 
                     /// <summary>
-                    /// <para>The temporary disk size in MB. Valid values: 512 and 10240.</para>
+                    /// <para>The ephemeral disk size. Unit: MB. Valid values: 512 and 10240.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>512</para>
@@ -855,7 +879,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public int? InstanceConcurrency { get; set; }
 
                     /// <summary>
-                    /// <para>The memory specifications in MB. Default value: 512.</para>
+                    /// <para>The memory specifications. Unit: MB. Default value: 512.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>512</para>
@@ -875,7 +899,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public int? Port { get; set; }
 
                     /// <summary>
-                    /// <para>The function timeout period in seconds. Default value: 300.</para>
+                    /// <para>The function timeout period. Unit: seconds. Default value: 300.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>300</para>
@@ -899,7 +923,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The MCP endpoint available for users or agents to call. This field is empty before the deployment is completed.</para>
+            /// <para>The MCP endpoint that can be called by users or agents. This field is empty before the deployment is completed.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/mcp">https://example.com/mcp</a></para>
@@ -909,7 +933,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// <para>The name of the Function Compute function corresponding to the CODE_PACKAGE MCP. This field is empty before deployment is complete and is empty for other types.</para>
+            /// <para>The Function Compute function name for the CODE_PACKAGE MCP. This field is empty before deployment is complete and for other types.</para>
             /// 
             /// <b>Example:</b>
             /// <para>agentcore-mcp-example</para>
@@ -978,7 +1002,289 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string OfficialTag { get; set; }
 
             /// <summary>
-            /// <para>The access permission mode. PUBLIC indicates public access, and CONTROLLED indicates access controlled by permission rules.</para>
+            /// <para>The read-only progress that reuses existing release tasks. It does not change the primary status of the resource. This field is empty if no historical operation information is available.</para>
+            /// </summary>
+            [NameInMap("operation")]
+            [Validation(Required=false)]
+            public GetMcpResponseBodyDataOperation Operation { get; set; }
+            public class GetMcpResponseBodyDataOperation : TeaModel {
+                /// <summary>
+                /// <para>The desensitized error of the current release operation. Gateway or formal link failures after the origin server passes verification are represented by this field.</para>
+                /// </summary>
+                [NameInMap("error")]
+                [Validation(Required=false)]
+                public GetMcpResponseBodyDataOperationError Error { get; set; }
+                public class GetMcpResponseBodyDataOperationError : TeaModel {
+                    /// <summary>
+                    /// <para>Returns only bounded diagnostic codes and does not return the original error body from the origin server.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>PROBE_TIMEOUT</para>
+                    /// </summary>
+                    [NameInMap("code")]
+                    [Validation(Required=false)]
+                    public string Code { get; set; }
+
+                    /// <summary>
+                    /// <para>The necessary diagnostics that are trimmed and desensitized. It does not contain credentials or original responses.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>The probe deadline was exceeded.</para>
+                    /// </summary>
+                    [NameInMap("message")]
+                    [Validation(Required=false)]
+                    public string Message { get; set; }
+
+                    /// <summary>
+                    /// <para>Indicates whether the operation is suitable for retry based on a restricted policy. This field does not trigger automatic retries.</para>
+                    /// </summary>
+                    [NameInMap("retryable")]
+                    [Validation(Required=false)]
+                    public bool? Retryable { get; set; }
+
+                    /// <summary>
+                    /// <para>The source of the error. Valid values: MAGIC, ROUTER, NETWORK, ORIGIN, and UNKNOWN. The value is determined only based on actual evidence.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>UNKNOWN</para>
+                    /// </summary>
+                    [NameInMap("source")]
+                    [Validation(Required=false)]
+                    public string Source { get; set; }
+
+                    /// <summary>
+                    /// <para>The detection or release stage where the error occurred.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>INITIALIZE</para>
+                    /// </summary>
+                    [NameInMap("stage")]
+                    [Validation(Required=false)]
+                    public string Stage { get; set; }
+
+                }
+
+                /// <summary>
+                /// <para>The identifier of the current or most recent release operation.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3541f1af-87cc-45d1-a28e-94ec5633b931</para>
+                /// </summary>
+                [NameInMap("operationId")]
+                [Validation(Required=false)]
+                public string OperationId { get; set; }
+
+                /// <summary>
+                /// <para>The release stage, such as compute deployment, origin verification, summary saving, gateway release, entry credential synchronization, formal link verification, or deployment submission. Old tasks retain their original stage semantics.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>VALIDATE_ORIGIN</para>
+                /// </summary>
+                [NameInMap("stage")]
+                [Validation(Required=false)]
+                public string Stage { get; set; }
+
+                /// <summary>
+                /// <para>The operation status. Valid values: PENDING, RUNNING, SUCCEEDED, and FAILED.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>RUNNING</para>
+                /// </summary>
+                [NameInMap("status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                /// <summary>
+                /// <para>The operation type. Valid value: PUBLISH.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>PUBLISH</para>
+                /// </summary>
+                [NameInMap("type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+                /// <summary>
+                /// <para>The time when the operation was updated, in ISO 8601 UTC format.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2026-11-19T08:30:00Z</para>
+                /// </summary>
+                [NameInMap("updatedAt")]
+                [Validation(Required=false)]
+                public string UpdatedAt { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>Returns the minimal origin verification summary of the most recent task only for code deployments. This field is empty for direct connection and HTTP-to-MCP deployments. Querying this field does not trigger probing.</para>
+            /// </summary>
+            [NameInMap("originProbe")]
+            [Validation(Required=false)]
+            public GetMcpResponseBodyDataOriginProbe OriginProbe { get; set; }
+            public class GetMcpResponseBodyDataOriginProbe : TeaModel {
+                /// <summary>
+                /// <para>Returned only for CODE_PACKAGE deployments. This field is cleared when a new task starts and is empty if no verification has been performed or if an old task did not perform verification. If a subsequent release fails, the current summary is retained, which does not indicate real-time health or the active version status.</para>
+                /// </summary>
+                [NameInMap("lastResult")]
+                [Validation(Required=false)]
+                public GetMcpResponseBodyDataOriginProbeLastResult LastResult { get; set; }
+                public class GetMcpResponseBodyDataOriginProbeLastResult : TeaModel {
+                    /// <summary>
+                    /// <para>The actual configuration confirmed by evidence in the current verification. This field is empty if no confirmed information is available and is not inferred from the expected configuration.</para>
+                    /// </summary>
+                    [NameInMap("actualConfiguration")]
+                    [Validation(Required=false)]
+                    public GetMcpResponseBodyDataOriginProbeLastResultActualConfiguration ActualConfiguration { get; set; }
+                    public class GetMcpResponseBodyDataOriginProbeLastResultActualConfiguration : TeaModel {
+                        /// <summary>
+                        /// <para>The verified legacy or modern policy. This field is empty if the policy is not confirmed.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>modern</para>
+                        /// </summary>
+                        [NameInMap("backendMcpProtocol")]
+                        [Validation(Required=false)]
+                        public string BackendMcpProtocol { get; set; }
+
+                        /// <summary>
+                        /// <para>The verified SSE or StreamableHTTP transport. This field is empty if the transport is not confirmed.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>StreamableHTTP</para>
+                        /// </summary>
+                        [NameInMap("protocol")]
+                        [Validation(Required=false)]
+                        public string Protocol { get; set; }
+
+                        /// <summary>
+                        /// <para>The actual negotiated or selected and verified date version. This field is empty if the version is not confirmed.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>2025-03-26</para>
+                        /// </summary>
+                        [NameInMap("protocolVersion")]
+                        [Validation(Required=false)]
+                        public string ProtocolVersion { get; set; }
+
+                        /// <summary>
+                        /// <para>The actual session mode. Valid values: STATEFUL, STATELESS, and NOT_APPLICABLE. This field is empty if the mode is not confirmed.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>STATELESS</para>
+                        /// </summary>
+                        [NameInMap("sessionMode")]
+                        [Validation(Required=false)]
+                        public string SessionMode { get; set; }
+
+                    }
+
+                    /// <summary>
+                    /// <para>The verification error. This field is empty if the verification is successful. It saves only the desensitized diagnostics required for the current verification.</para>
+                    /// </summary>
+                    [NameInMap("error")]
+                    [Validation(Required=false)]
+                    public GetMcpResponseBodyDataOriginProbeLastResultError Error { get; set; }
+                    public class GetMcpResponseBodyDataOriginProbeLastResultError : TeaModel {
+                        /// <summary>
+                        /// <para>Returns only bounded diagnostic codes and does not return the original error body from the origin server.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>PROBE_TIMEOUT</para>
+                        /// </summary>
+                        [NameInMap("code")]
+                        [Validation(Required=false)]
+                        public string Code { get; set; }
+
+                        /// <summary>
+                        /// <para>The necessary diagnostics that are trimmed and desensitized. It does not contain credentials or original responses.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>The probe deadline was exceeded.</para>
+                        /// </summary>
+                        [NameInMap("message")]
+                        [Validation(Required=false)]
+                        public string Message { get; set; }
+
+                        /// <summary>
+                        /// <para>Indicates whether the operation is suitable for retry based on a restricted policy. This field does not trigger automatic retries.</para>
+                        /// </summary>
+                        [NameInMap("retryable")]
+                        [Validation(Required=false)]
+                        public bool? Retryable { get; set; }
+
+                        /// <summary>
+                        /// <para>The source of the error. Valid values: MAGIC, ROUTER, NETWORK, ORIGIN, and UNKNOWN. The value is determined only based on actual evidence.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>UNKNOWN</para>
+                        /// </summary>
+                        [NameInMap("source")]
+                        [Validation(Required=false)]
+                        public string Source { get; set; }
+
+                        /// <summary>
+                        /// <para>The detection or release stage where the error occurred.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>INITIALIZE</para>
+                        /// </summary>
+                        [NameInMap("stage")]
+                        [Validation(Required=false)]
+                        public string Stage { get; set; }
+
+                    }
+
+                    /// <summary>
+                    /// <para>The time of the current origin verification, in ISO 8601 UTC format.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>2026-11-19T08:30:00Z</para>
+                    /// </summary>
+                    [NameInMap("probedAt")]
+                    [Validation(Required=false)]
+                    public string ProbedAt { get; set; }
+
+                    /// <summary>
+                    /// <para>The verification stage. Valid values: CONNECT, DISCOVER, INITIALIZE, SESSION_CHECK, CLEANUP, and COMPLETE.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>COMPLETE</para>
+                    /// </summary>
+                    [NameInMap("stage")]
+                    [Validation(Required=false)]
+                    public string Stage { get; set; }
+
+                    /// <summary>
+                    /// <para>The verification result. Valid values: SUCCESS and FAILED. The result is SUCCESS if the protocol and applicable session checks pass. Not declaring any capabilities does not affect the passing status.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>SUCCESS</para>
+                    /// </summary>
+                    [NameInMap("status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                }
+
+            }
+
+            /// <summary>
+            /// <para>The optional saved metadata for the origin MCP protocol date display, in YYYY-MM-DD format. You can specify this field during creation and modify it during updates. If omitted during an update, the current value is retained. This field is used only for saving and displaying information. It is not a software version, does not restrict the external gateway protocol, does not control backend requests, and does not indicate that real-time verification has passed. Returns null if omitted during creation and not updated, missing in historical data, or used in HTTP_TO_MCP deployments. No default value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2025-03-26</para>
+            /// </summary>
+            [NameInMap("originProtocolVersion")]
+            [Validation(Required=false)]
+            public string OriginProtocolVersion { get; set; }
+
+            /// <summary>
+            /// <para>The access permission mode. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PUBLIC: Public access.</description></item>
+            /// <item><description>CONTROLLED: Access controlled based on permission rules.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>CONTROLLED</para>
@@ -1028,7 +1334,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string SwaggerConfig { get; set; }
 
             /// <summary>
-            /// <para>The template schema for the version bound to the usage MCP. This is not returned for standard MCPs.</para>
+            /// <para>The template schema for the usage-bound MCP version. This field is not returned for regular MCPs.</para>
             /// </summary>
             [NameInMap("template")]
             [Validation(Required=false)]
@@ -1153,7 +1459,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

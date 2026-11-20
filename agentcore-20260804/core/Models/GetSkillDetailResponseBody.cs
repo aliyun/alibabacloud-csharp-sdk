@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Sample description used to illustrate the purpose of the resource</para>
+            /// <para>Sample description to illustrate the resource purpose</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? DownloadCount { get; set; }
 
             /// <summary>
-            /// <para>The draft pattern. A value of HEAD indicates that the skill has a persistent draft. A value of VERSIONED indicates that each edit creates a draft with a version number. This pattern is determined by the server, and the client uses it for routing What to do next when they invoke the API.</para>
+            /// <para>The draft pattern. HEAD indicates that the skill has a persistent draft, and VERSIONED indicates that a draft with a version number is created for each edit. This is determined by the server, and clients invoke What to do next by routing based on this value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HEAD</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? Editable { get; set; }
 
             /// <summary>
-            /// <para>The version being edited.</para>
+            /// <para>The version being edited. The value is HEAD in HEAD draft mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>
@@ -91,7 +91,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string From { get; set; }
 
             /// <summary>
-            /// <para>The tag mapping.</para>
+            /// <para>The label descriptions under the root data.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;stable&quot;:&quot;1.0.0&quot;}</para>
+            /// </summary>
+            [NameInMap("labelDescriptions")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> LabelDescriptions { get; set; }
+
+            /// <summary>
+            /// <para>The label mapping.</para>
             /// </summary>
             [NameInMap("labels")]
             [Validation(Required=false)]
@@ -128,7 +138,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>The version under review.</para>
+            /// <para>The version under review. The value is HEAD in HEAD draft mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>
@@ -148,7 +158,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Scope { get; set; }
 
             /// <summary>
-            /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The update time. It is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1787671022000</para>
@@ -165,7 +175,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<GetSkillDetailResponseBodyDataVersions> Versions { get; set; }
             public class GetSkillDetailResponseBodyDataVersions : TeaModel {
                 /// <summary>
-                /// <para>The author of the version.</para>
+                /// <para>The version author.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>alice</para>
@@ -195,7 +205,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string ContentMd5 { get; set; }
 
                 /// <summary>
-                /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
+                /// <para>The creation time. It is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1787671022000</para>
@@ -208,7 +218,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Sample description used to illustrate the purpose of the resource</para>
+                /// <para>Sample description to illustrate the resource purpose</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
@@ -225,7 +235,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public long? DownloadCount { get; set; }
 
                 /// <summary>
-                /// <para>The release pipeline information.</para>
+                /// <para>The publish pipeline information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;status&quot;:&quot;SUCCESS&quot;}</para>
@@ -245,7 +255,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
+                /// <para>The update time. It is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1787671022000</para>
@@ -255,7 +265,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public long? UpdateTime { get; set; }
 
                 /// <summary>
-                /// <para>The version number.</para>
+                /// <para>The version number. A value of HEAD indicates a persistent draft, which should be displayed as a draft in the user interface.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.0.0</para>

@@ -560,13 +560,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts an MCP service to free edit mode.</para>
+        /// <para>Converts an MCP service to free-edit mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Converts an MCP service installed from a marketplace template to free edit mode to allow direct modification of the service configuration.
-        /// After the conversion, the original source and tag information are retained, and the template editing restrictions are removed. The service no longer appears on the usage page associated with the template.</para>
+        /// <para>Converts an MCP service installed from a marketplace template to free-edit mode, allowing you to directly modify the service configuration. After the conversion, the original source and tag information are retained, and the editing restrictions of the template are removed. The service will no longer appear on the use case page corresponding to the template.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -612,13 +611,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts an MCP service to free edit mode.</para>
+        /// <para>Converts an MCP service to free-edit mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Converts an MCP service installed from a marketplace template to free edit mode to allow direct modification of the service configuration.
-        /// After the conversion, the original source and tag information are retained, and the template editing restrictions are removed. The service no longer appears on the usage page associated with the template.</para>
+        /// <para>Converts an MCP service installed from a marketplace template to free-edit mode, allowing you to directly modify the service configuration. After the conversion, the original source and tag information are retained, and the editing restrictions of the template are removed. The service will no longer appear on the use case page corresponding to the template.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -664,13 +662,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts an MCP service to free edit mode.</para>
+        /// <para>Converts an MCP service to free-edit mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Converts an MCP service installed from a marketplace template to free edit mode to allow direct modification of the service configuration.
-        /// After the conversion, the original source and tag information are retained, and the template editing restrictions are removed. The service no longer appears on the usage page associated with the template.</para>
+        /// <para>Converts an MCP service installed from a marketplace template to free-edit mode, allowing you to directly modify the service configuration. After the conversion, the original source and tag information are retained, and the editing restrictions of the template are removed. The service will no longer appear on the use case page corresponding to the template.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -689,13 +686,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts an MCP service to free edit mode.</para>
+        /// <para>Converts an MCP service to free-edit mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Converts an MCP service installed from a marketplace template to free edit mode to allow direct modification of the service configuration.
-        /// After the conversion, the original source and tag information are retained, and the template editing restrictions are removed. The service no longer appears on the usage page associated with the template.</para>
+        /// <para>Converts an MCP service installed from a marketplace template to free-edit mode, allowing you to directly modify the service configuration. After the conversion, the original source and tag information are retained, and the editing restrictions of the template are removed. The service will no longer appear on the use case page corresponding to the template.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4526,15 +4522,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an MCP service in a specified workspace. The creation process is asynchronous. You can check the returned status or call a query operation to verify whether the service is ready.</para>
+        /// <para>Creates an MCP service in a specified workspace. The creation process is asynchronous. You can check the returned status or call the query operation to confirm whether the service is ready.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Creates an MCP service in a workspace for agents to use the tools provided by the service.
-        /// The creation process is asynchronous. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to check whether the service is ready.
-        /// To deploy using a local code package, first call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcpCodePackageUploadUrl">GetMcpCodePackageUploadUrl</a> to obtain the upload URL and upload the file. Then, fill the returned code package token into the deployment configuration.
-        /// The <c>clientToken</c> parameter does not currently provide idempotency guarantees. If the request result is not confirmed, query existing services before deciding whether to recreate.</para>
+        /// The creation process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to query whether the service is ready.
+        /// When deploying with a local code package, first call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcpCodePackageUploadUrl">GetMcpCodePackageUploadUrl</a> to obtain the URL and upload the file, and then fill the returned code package token into the deployment configuration.
+        /// <c>clientToken</c> currently does not provide idempotency guarantees. If the request result is not confirmed, query existing services before deciding whether to recreate.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4592,15 +4588,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an MCP service in a specified workspace. The creation process is asynchronous. You can check the returned status or call a query operation to verify whether the service is ready.</para>
+        /// <para>Creates an MCP service in a specified workspace. The creation process is asynchronous. You can check the returned status or call the query operation to confirm whether the service is ready.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Creates an MCP service in a workspace for agents to use the tools provided by the service.
-        /// The creation process is asynchronous. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to check whether the service is ready.
-        /// To deploy using a local code package, first call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcpCodePackageUploadUrl">GetMcpCodePackageUploadUrl</a> to obtain the upload URL and upload the file. Then, fill the returned code package token into the deployment configuration.
-        /// The <c>clientToken</c> parameter does not currently provide idempotency guarantees. If the request result is not confirmed, query existing services before deciding whether to recreate.</para>
+        /// The creation process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to query whether the service is ready.
+        /// When deploying with a local code package, first call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcpCodePackageUploadUrl">GetMcpCodePackageUploadUrl</a> to obtain the URL and upload the file, and then fill the returned code package token into the deployment configuration.
+        /// <c>clientToken</c> currently does not provide idempotency guarantees. If the request result is not confirmed, query existing services before deciding whether to recreate.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4658,15 +4654,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an MCP service in a specified workspace. The creation process is asynchronous. You can check the returned status or call a query operation to verify whether the service is ready.</para>
+        /// <para>Creates an MCP service in a specified workspace. The creation process is asynchronous. You can check the returned status or call the query operation to confirm whether the service is ready.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Creates an MCP service in a workspace for agents to use the tools provided by the service.
-        /// The creation process is asynchronous. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to check whether the service is ready.
-        /// To deploy using a local code package, first call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcpCodePackageUploadUrl">GetMcpCodePackageUploadUrl</a> to obtain the upload URL and upload the file. Then, fill the returned code package token into the deployment configuration.
-        /// The <c>clientToken</c> parameter does not currently provide idempotency guarantees. If the request result is not confirmed, query existing services before deciding whether to recreate.</para>
+        /// The creation process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to query whether the service is ready.
+        /// When deploying with a local code package, first call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcpCodePackageUploadUrl">GetMcpCodePackageUploadUrl</a> to obtain the URL and upload the file, and then fill the returned code package token into the deployment configuration.
+        /// <c>clientToken</c> currently does not provide idempotency guarantees. If the request result is not confirmed, query existing services before deciding whether to recreate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4685,15 +4681,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an MCP service in a specified workspace. The creation process is asynchronous. You can check the returned status or call a query operation to verify whether the service is ready.</para>
+        /// <para>Creates an MCP service in a specified workspace. The creation process is asynchronous. You can check the returned status or call the query operation to confirm whether the service is ready.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Creates an MCP service in a workspace for agents to use the tools provided by the service.
-        /// The creation process is asynchronous. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to check whether the service is ready.
-        /// To deploy using a local code package, first call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcpCodePackageUploadUrl">GetMcpCodePackageUploadUrl</a> to obtain the upload URL and upload the file. Then, fill the returned code package token into the deployment configuration.
-        /// The <c>clientToken</c> parameter does not currently provide idempotency guarantees. If the request result is not confirmed, query existing services before deciding whether to recreate.</para>
+        /// The creation process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to query whether the service is ready.
+        /// When deploying with a local code package, first call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcpCodePackageUploadUrl">GetMcpCodePackageUploadUrl</a> to obtain the URL and upload the file, and then fill the returned code package token into the deployment configuration.
+        /// <c>clientToken</c> currently does not provide idempotency guarantees. If the request result is not confirmed, query existing services before deciding whether to recreate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23276,12 +23272,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query for the MCP services and their configurations and statuses in a specified workspace.</para>
+        /// <para>Performs a paged query to retrieve the MCP services, configurations, and statuses in a specified workspace by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for the MCP services and their configurations and statuses in a specified workspace.</para>
+        /// <para>Performs a paged query to retrieve the MCP services, configurations, and statuses in a specified workspace by using paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23351,12 +23347,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query for the MCP services and their configurations and statuses in a specified workspace.</para>
+        /// <para>Performs a paged query to retrieve the MCP services, configurations, and statuses in a specified workspace by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for the MCP services and their configurations and statuses in a specified workspace.</para>
+        /// <para>Performs a paged query to retrieve the MCP services, configurations, and statuses in a specified workspace by using paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23426,12 +23422,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query for the MCP services and their configurations and statuses in a specified workspace.</para>
+        /// <para>Performs a paged query to retrieve the MCP services, configurations, and statuses in a specified workspace by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for the MCP services and their configurations and statuses in a specified workspace.</para>
+        /// <para>Performs a paged query to retrieve the MCP services, configurations, and statuses in a specified workspace by using paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23450,12 +23446,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query for the MCP services and their configurations and statuses in a specified workspace.</para>
+        /// <para>Performs a paged query to retrieve the MCP services, configurations, and statuses in a specified workspace by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for the MCP services and their configurations and statuses in a specified workspace.</para>
+        /// <para>Performs a paged query to retrieve the MCP services, configurations, and statuses in a specified workspace by using paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24792,12 +24788,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query for models in a specified workspace and supports filtering by model connection and model name.</para>
+        /// <para>Performs a paged query for models in a specified workspace and supports filtering by model connection and model name during paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for models in a specified workspace and supports filtering by model connection and model name.</para>
+        /// <para>Performs a paged query for models in a specified workspace and supports filtering by model connection and model name during paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24855,12 +24851,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query for models in a specified workspace and supports filtering by model connection and model name.</para>
+        /// <para>Performs a paged query for models in a specified workspace and supports filtering by model connection and model name during paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for models in a specified workspace and supports filtering by model connection and model name.</para>
+        /// <para>Performs a paged query for models in a specified workspace and supports filtering by model connection and model name during paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24918,12 +24914,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query for models in a specified workspace and supports filtering by model connection and model name.</para>
+        /// <para>Performs a paged query for models in a specified workspace and supports filtering by model connection and model name during paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for models in a specified workspace and supports filtering by model connection and model name.</para>
+        /// <para>Performs a paged query for models in a specified workspace and supports filtering by model connection and model name during paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24942,12 +24938,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query for models in a specified workspace and supports filtering by model connection and model name.</para>
+        /// <para>Performs a paged query for models in a specified workspace and supports filtering by model connection and model name during paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for models in a specified workspace and supports filtering by model connection and model name.</para>
+        /// <para>Performs a paged query for models in a specified workspace and supports filtering by model connection and model name during paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27756,6 +27752,168 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await PrepareIdentityProviderSCIMWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Validates an MCP origin server.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Validates a single direct MCP or HTTP origin server before creating an MCP. This operation does not require an MCP resource ID, create resources, or persist probe results. For direct connections, the protocol, transport method, and version are not passed. The server discovers them automatically, prioritizing the validation of the modern protocol and falling back to the legacy protocol only if the modern one is confirmed to be unsupported. The returned backend protocol and transport method can be used for creation configurations and do not limit the external protocol conversion compatibility of the gateway. A direct connection protocol check is still considered SUCCESS even if no capabilities are declared. For HTTP, the operation validates the complete OpenAPI definition and origin server authentication configuration, and sends a HEAD request without business parameters or origin server credentials to the configured address to check connectivity. It does not select or execute business interfaces defined in the specification, nor does it verify whether the credentials are accepted by the origin server. It only accepts origin server configurations supported by the creation interface, does not accept detection-specific headers, and does not execute tools/call. A success response from the interface only indicates that the validation request has been processed. The origin server result is indicated by data.status.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ProbeMcpOriginRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ProbeMcpOriginResponse
+        /// </returns>
+        public ProbeMcpOriginResponse ProbeMcpOriginWithOptions(string workspaceId, ProbeMcpOriginRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ProbeMcpOriginShrinkRequest request = new ProbeMcpOriginShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ProbeMcpOrigin",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-origin-probes",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ProbeMcpOriginResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Validates an MCP origin server.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Validates a single direct MCP or HTTP origin server before creating an MCP. This operation does not require an MCP resource ID, create resources, or persist probe results. For direct connections, the protocol, transport method, and version are not passed. The server discovers them automatically, prioritizing the validation of the modern protocol and falling back to the legacy protocol only if the modern one is confirmed to be unsupported. The returned backend protocol and transport method can be used for creation configurations and do not limit the external protocol conversion compatibility of the gateway. A direct connection protocol check is still considered SUCCESS even if no capabilities are declared. For HTTP, the operation validates the complete OpenAPI definition and origin server authentication configuration, and sends a HEAD request without business parameters or origin server credentials to the configured address to check connectivity. It does not select or execute business interfaces defined in the specification, nor does it verify whether the credentials are accepted by the origin server. It only accepts origin server configurations supported by the creation interface, does not accept detection-specific headers, and does not execute tools/call. A success response from the interface only indicates that the validation request has been processed. The origin server result is indicated by data.status.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ProbeMcpOriginRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ProbeMcpOriginResponse
+        /// </returns>
+        public async Task<ProbeMcpOriginResponse> ProbeMcpOriginWithOptionsAsync(string workspaceId, ProbeMcpOriginRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ProbeMcpOriginShrinkRequest request = new ProbeMcpOriginShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ProbeMcpOrigin",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-origin-probes",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ProbeMcpOriginResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Validates an MCP origin server.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Validates a single direct MCP or HTTP origin server before creating an MCP. This operation does not require an MCP resource ID, create resources, or persist probe results. For direct connections, the protocol, transport method, and version are not passed. The server discovers them automatically, prioritizing the validation of the modern protocol and falling back to the legacy protocol only if the modern one is confirmed to be unsupported. The returned backend protocol and transport method can be used for creation configurations and do not limit the external protocol conversion compatibility of the gateway. A direct connection protocol check is still considered SUCCESS even if no capabilities are declared. For HTTP, the operation validates the complete OpenAPI definition and origin server authentication configuration, and sends a HEAD request without business parameters or origin server credentials to the configured address to check connectivity. It does not select or execute business interfaces defined in the specification, nor does it verify whether the credentials are accepted by the origin server. It only accepts origin server configurations supported by the creation interface, does not accept detection-specific headers, and does not execute tools/call. A success response from the interface only indicates that the validation request has been processed. The origin server result is indicated by data.status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ProbeMcpOriginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ProbeMcpOriginResponse
+        /// </returns>
+        public ProbeMcpOriginResponse ProbeMcpOrigin(string workspaceId, ProbeMcpOriginRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ProbeMcpOriginWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Validates an MCP origin server.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Validates a single direct MCP or HTTP origin server before creating an MCP. This operation does not require an MCP resource ID, create resources, or persist probe results. For direct connections, the protocol, transport method, and version are not passed. The server discovers them automatically, prioritizing the validation of the modern protocol and falling back to the legacy protocol only if the modern one is confirmed to be unsupported. The returned backend protocol and transport method can be used for creation configurations and do not limit the external protocol conversion compatibility of the gateway. A direct connection protocol check is still considered SUCCESS even if no capabilities are declared. For HTTP, the operation validates the complete OpenAPI definition and origin server authentication configuration, and sends a HEAD request without business parameters or origin server credentials to the configured address to check connectivity. It does not select or execute business interfaces defined in the specification, nor does it verify whether the credentials are accepted by the origin server. It only accepts origin server configurations supported by the creation interface, does not accept detection-specific headers, and does not execute tools/call. A success response from the interface only indicates that the validation request has been processed. The origin server result is indicated by data.status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ProbeMcpOriginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ProbeMcpOriginResponse
+        /// </returns>
+        public async Task<ProbeMcpOriginResponse> ProbeMcpOriginAsync(string workspaceId, ProbeMcpOriginRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ProbeMcpOriginWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -32996,7 +33154,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Updates the address, description, authentication, or Swagger configuration of an MCP service. The service type and protocol cannot be modified after creation.
-        /// The update process is executed asynchronously. After submission, you can call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> operation to query the processing result. The <c>clientToken</c> parameter does not currently provide idempotency guarantees. If the request result is not confirmed, query the current configuration and status first.</para>
+        /// The update process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to query the processing result. The clientToken parameter does not currently provide idempotency guarantees. If the request result is not confirmed, query the current configuration and status first.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -33060,7 +33218,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Updates the address, description, authentication, or Swagger configuration of an MCP service. The service type and protocol cannot be modified after creation.
-        /// The update process is executed asynchronously. After submission, you can call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> operation to query the processing result. The <c>clientToken</c> parameter does not currently provide idempotency guarantees. If the request result is not confirmed, query the current configuration and status first.</para>
+        /// The update process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to query the processing result. The clientToken parameter does not currently provide idempotency guarantees. If the request result is not confirmed, query the current configuration and status first.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -33124,7 +33282,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Updates the address, description, authentication, or Swagger configuration of an MCP service. The service type and protocol cannot be modified after creation.
-        /// The update process is executed asynchronously. After submission, you can call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> operation to query the processing result. The <c>clientToken</c> parameter does not currently provide idempotency guarantees. If the request result is not confirmed, query the current configuration and status first.</para>
+        /// The update process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to query the processing result. The clientToken parameter does not currently provide idempotency guarantees. If the request result is not confirmed, query the current configuration and status first.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33149,7 +33307,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Updates the address, description, authentication, or Swagger configuration of an MCP service. The service type and protocol cannot be modified after creation.
-        /// The update process is executed asynchronously. After submission, you can call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> operation to query the processing result. The <c>clientToken</c> parameter does not currently provide idempotency guarantees. If the request result is not confirmed, query the current configuration and status first.</para>
+        /// The update process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to query the processing result. The clientToken parameter does not currently provide idempotency guarantees. If the request result is not confirmed, query the current configuration and status first.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33168,12 +33326,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the parameters of an MCP service based on a template.</para>
+        /// <para>Updates the MCP parameters based on a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates parameters based on the marketplace template bound to the MCP service to adjust the configuration of the templated service. This operation uses the same template version that was bound when the MCP service was created to update the parameters exposed by the schema, without upgrading the template version.</para>
+        /// <para>Updates parameters based on the marketplace template bound to the MCP service to adjust the configuration of the templated service.
+        /// Updates the parameters exposed by the schema using the same template version bound during MCP creation, without upgrading the template version.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -33235,12 +33394,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the parameters of an MCP service based on a template.</para>
+        /// <para>Updates the MCP parameters based on a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates parameters based on the marketplace template bound to the MCP service to adjust the configuration of the templated service. This operation uses the same template version that was bound when the MCP service was created to update the parameters exposed by the schema, without upgrading the template version.</para>
+        /// <para>Updates parameters based on the marketplace template bound to the MCP service to adjust the configuration of the templated service.
+        /// Updates the parameters exposed by the schema using the same template version bound during MCP creation, without upgrading the template version.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -33302,12 +33462,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the parameters of an MCP service based on a template.</para>
+        /// <para>Updates the MCP parameters based on a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates parameters based on the marketplace template bound to the MCP service to adjust the configuration of the templated service. This operation uses the same template version that was bound when the MCP service was created to update the parameters exposed by the schema, without upgrading the template version.</para>
+        /// <para>Updates parameters based on the marketplace template bound to the MCP service to adjust the configuration of the templated service.
+        /// Updates the parameters exposed by the schema using the same template version bound during MCP creation, without upgrading the template version.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33326,12 +33487,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the parameters of an MCP service based on a template.</para>
+        /// <para>Updates the MCP parameters based on a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates parameters based on the marketplace template bound to the MCP service to adjust the configuration of the templated service. This operation uses the same template version that was bound when the MCP service was created to update the parameters exposed by the schema, without upgrading the template version.</para>
+        /// <para>Updates parameters based on the marketplace template bound to the MCP service to adjust the configuration of the templated service.
+        /// Updates the parameters exposed by the schema using the same template version bound during MCP creation, without upgrading the template version.</para>
         /// </description>
         /// 
         /// <param name="request">

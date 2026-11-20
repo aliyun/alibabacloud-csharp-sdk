@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class UpdateMcpTemplateConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The MCP configuration updated based on the specified template version. The configuration must comply with the input schema of the template.</para>
+        /// <para>The MCP configuration updated based on the specified template version, which must comply with the input schema of the template.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<string> Addresses { get; set; }
 
             /// <summary>
-            /// <para>The authentication configuration for the MCP service.</para>
+            /// <para>The MCP authentication configuration.</para>
             /// </summary>
             [NameInMap("auth")]
             [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>Specifies whether to enable the configuration.</para>
+                /// <para>Specifies whether to enable this configuration.</para>
                 /// </summary>
                 [NameInMap("enabled")]
                 [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public List<UpdateMcpTemplateConfigRequestBodyAuthHttpToMcp> HttpToMcp { get; set; }
                 public class UpdateMcpTemplateConfigRequestBodyAuthHttpToMcp : TeaModel {
                     /// <summary>
-                    /// <para>The credential for backend authentication.</para>
+                    /// <para>The credential for the backend authentication.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>example-api-key</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Id { get; set; }
 
                     /// <summary>
-                    /// <para>The parameter name of the API key.</para>
+                    /// <para>The name of the API key parameter.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>X-API-Key</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The location where the API key is passed.</para>
+                    /// <para>The position where the API key is passed.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>header</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Position { get; set; }
 
                     /// <summary>
-                    /// <para>The type of backend authentication.</para>
+                    /// <para>The type of the backend authentication.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>apiKey</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The deployment configuration for code-deployed MCP.</para>
+            /// <para>The deployment configuration for a code-deployed MCP.</para>
             /// </summary>
             [NameInMap("deploymentConfig")]
             [Validation(Required=false)]
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public UpdateMcpTemplateConfigRequestBodyDeploymentConfigAccessControl AccessControl { get; set; }
                 public class UpdateMcpTemplateConfigRequestBodyDeploymentConfigAccessControl : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the AgentCore credential referenced when the mode is set to CREDENTIAL.</para>
+                    /// <para>The AgentCore credential ID referenced when the mode is set to CREDENTIAL.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>credential-id</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public bool? Enabled { get; set; }
 
                     /// <summary>
-                    /// <para>The access control mode. ANONYMOUS indicates anonymous access, and CREDENTIAL indicates authentication by using AgentCore credentials.</para>
+                    /// <para>The access control mode. ANONYMOUS indicates anonymous access, and CREDENTIAL indicates authentication using AgentCore access credentials.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>CREDENTIAL</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>The artifact type. A value of Code indicates a ZIP code package, and a value of Container indicates a custom container.</para>
+                /// <para>The artifact type. Code indicates a ZIP code package, and Container indicates a custom container.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Code</para>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public List<string> Command { get; set; }
 
                     /// <summary>
-                    /// <para>The code package runtime. Valid values: python3.13, nodejs22, and java17.</para>
+                    /// <para>The runtime environment for the code package. Valid values: python3.13, nodejs22, and java17.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>python3.13</para>
@@ -301,7 +301,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Image { get; set; }
 
                     /// <summary>
-                    /// <para>The image repository type.</para>
+                    /// <para>The image registry type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ACR</para>
@@ -311,7 +311,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string ImageRegistryType { get; set; }
 
                     /// <summary>
-                    /// <para>The MCP runtime mode. Custom containers must currently expose standard MCP by themselves. Set this parameter to SELF_HOSTED.</para>
+                    /// <para>The MCP runtime mode. Custom containers must currently expose the standard MCP themselves. Set this value to SELF_HOSTED.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>SELF_HOSTED</para>
@@ -321,7 +321,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string McpRuntimeMode { get; set; }
 
                     /// <summary>
-                    /// <para>The container source type. Currently, this parameter is fixed to CONTAINER_IMAGE.</para>
+                    /// <para>The container source type. Currently, this value is fixed to CONTAINER_IMAGE.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>CONTAINER_IMAGE</para>
@@ -340,7 +340,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public UpdateMcpTemplateConfigRequestBodyDeploymentConfigHookConfiguration HookConfiguration { get; set; }
                 public class UpdateMcpTemplateConfigRequestBodyDeploymentConfigHookConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>The list of hooks executed in array order, including PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks.</para>
+                    /// <para>The ordered list of hooks. Executes the PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in array order.</para>
                     /// </summary>
                     [NameInMap("hooks")]
                     [Validation(Required=false)]
@@ -360,7 +360,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         /// <para>The description of the hook.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>Log MCP tool invocations</para>
+                        /// <para>Record MCP tool calls</para>
                         /// </summary>
                         [NameInMap("description")]
                         [Validation(Required=false)]
@@ -436,7 +436,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public bool? EnableRequestMetrics { get; set; }
 
                     /// <summary>
-                    /// <para>The start rule for splitting Function Compute logs.</para>
+                    /// <para>The start rule for FC log splitting.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>DefaultRegex</para>
@@ -446,7 +446,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string LogBeginRule { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the Logstore.</para>
+                    /// <para>The Logstore name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>mcp-logs</para>
@@ -456,7 +456,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Logstore { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the Simple Log Service project.</para>
+                    /// <para>The Simple Log Service project name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>agentcore-mcp-logs</para>
@@ -485,7 +485,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string EndpointPath { get; set; }
 
                     /// <summary>
-                    /// <para>The number of concurrent sessions per instance. Currently, this parameter is fixed to 1.</para>
+                    /// <para>The number of concurrent sessions per instance. Currently, this value is fixed to 1.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -495,7 +495,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public int? SessionConcurrencyPerInstance { get; set; }
 
                     /// <summary>
-                    /// <para>The session idle timeout period. Unit: seconds. Default value: 1800.</para>
+                    /// <para>The session idle timeout period in seconds. Default value: 1800.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1800</para>
@@ -505,7 +505,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public int? SessionIdleTimeoutSeconds { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum session lifetime. Unit: seconds. Default value: 21600.</para>
+                    /// <para>The maximum session lifetime in seconds. Default value: 21600.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>21600</para>
@@ -513,6 +513,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     [NameInMap("sessionMaxLifetimeSeconds")]
                     [Validation(Required=false)]
                     public int? SessionMaxLifetimeSeconds { get; set; }
+
+                    /// <summary>
+                    /// <para>The session mode. This parameter applies only to StreamableHTTP. Default value for creation: STATEFUL. If omitted during an update, the original value is retained. STATELESS disables Function Compute session affinity, and the stdio gateway does not enable stateful mode. Native HTTP services must support stateless MCP themselves.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>STATEFUL</para>
+                    /// </summary>
+                    [NameInMap("sessionMode")]
+                    [Validation(Required=false)]
+                    public string SessionMode { get; set; }
 
                 }
 
@@ -524,7 +534,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public UpdateMcpTemplateConfigRequestBodyDeploymentConfigNasConfiguration NasConfiguration { get; set; }
                 public class UpdateMcpTemplateConfigRequestBodyDeploymentConfigNasConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>The user group ID.</para>
+                    /// <para>The runtime user group ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1000</para>
@@ -558,7 +568,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public string MountDir { get; set; }
 
                         /// <summary>
-                        /// <para>The NAS server address.</para>
+                        /// <para>The NAS service address.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>example.cn-hangzhou.nas.aliyuncs.com</para>
@@ -570,7 +580,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     }
 
                     /// <summary>
-                    /// <para>The user ID.</para>
+                    /// <para>The runtime user ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1000</para>
@@ -652,7 +662,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public string BucketName { get; set; }
 
                         /// <summary>
-                        /// <para>The path in the OSS bucket.</para>
+                        /// <para>The path of the OSS bucket.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>/data</para>
@@ -662,7 +672,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public string BucketPath { get; set; }
 
                         /// <summary>
-                        /// <para>The OSS endpoint.</para>
+                        /// <para>The OSS service endpoint.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para><a href="https://oss-cn-hangzhou.aliyuncs.com">https://oss-cn-hangzhou.aliyuncs.com</a></para>
@@ -707,7 +717,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public bool? Enabled { get; set; }
 
                     /// <summary>
-                    /// <para>The reserved reference to the parameter transformation and result enhancement rule set.</para>
+                    /// <para>The reserved parameter transformation and result enhancement rule set reference.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>rules-1</para>
@@ -752,7 +762,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public UpdateMcpTemplateConfigRequestBodyDeploymentConfigRuntimeConfiguration RuntimeConfiguration { get; set; }
                 public class UpdateMcpTemplateConfigRequestBodyDeploymentConfigRuntimeConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>The CPU specification. Unit: cores. Default value: 0.25.</para>
+                    /// <para>The CPU specification in cores. Default value: 0.25.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.25</para>
@@ -762,7 +772,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public double? Cpu { get; set; }
 
                     /// <summary>
-                    /// <para>The ephemeral disk size. Unit: MB. Valid values: 512 and 10240.</para>
+                    /// <para>The temporary disk size in MB. Valid values: 512 and 10240.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>512</para>
@@ -789,7 +799,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string ExecutionRoleArn { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of concurrent requests per instance. Default value: 200.</para>
+                    /// <para>The number of concurrent requests per instance. Default value: 200.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>200</para>
@@ -799,7 +809,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public int? InstanceConcurrency { get; set; }
 
                     /// <summary>
-                    /// <para>The memory specification. Unit: MB. Default value: 512.</para>
+                    /// <para>The memory specification in MB. Default value: 512.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>512</para>
@@ -819,7 +829,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public int? Port { get; set; }
 
                     /// <summary>
-                    /// <para>The function timeout period. Unit: seconds. Default value: 300.</para>
+                    /// <para>The function timeout period in seconds. Default value: 300.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>300</para>
@@ -855,7 +865,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The reserved query request identifier. The console backend does not read this parameter and does not provide idempotency guarantees such as deduplication or returning the original processing result based on this identifier.</para>
+        /// <para>The reserved query request identifier. The console backend does not read this parameter and does not provide idempotency guarantees such as deduplication or restoring the original processing result based on this identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
