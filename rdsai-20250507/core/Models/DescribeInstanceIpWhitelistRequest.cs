@@ -9,12 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeInstanceIpWhitelistRequest : TeaModel {
+        /// <summary>
+        /// <para>The name of the branch to be operated on. If this parameter is not specified, the operation is performed on the original instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ra-branch-123456789012abcd</para>
+        /// </summary>
         [NameInMap("BranchName")]
         [Validation(Required=false)]
         public string BranchName { get; set; }
 
         /// <summary>
-        /// <para>The group name.</para>
+        /// <para>The name of the group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -34,7 +40,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The region.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>

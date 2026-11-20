@@ -9,10 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class StopInstanceRequest : TeaModel {
+        /// <summary>
+        /// <para>The name of the branch to operate on. If this parameter is not specified, the operation is performed on the original instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ra-branch-123456789012abcd</para>
+        /// </summary>
         [NameInMap("BranchName")]
         [Validation(Required=false)]
         public string BranchName { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to forcibly stop the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Forcibly stops the instance.</description></item>
+        /// <item><description>false: Normally stops the instance.</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("Force")]
         [Validation(Required=false)]
         public bool? Force { get; set; }

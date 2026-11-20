@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ModifyInstancesSSLRequest : TeaModel {
         /// <summary>
-        /// <para>The certificate type. Currently, only <b>custom</b> is supported, which indicates a custom certificate.</para>
+        /// <para>The certificate type. Only <b>custom</b> is supported, which indicates that a custom certificate is used.</para>
         /// <remarks>
         /// <para>This parameter is required when <b>SSLEnabled</b> is set to <b>1</b>.</para>
         /// </remarks>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string CAType { get; set; }
 
         /// <summary>
-        /// <para>The list of instance IDs of AI applications. A maximum of 10 instance IDs can be specified.</para>
+        /// <para>The IDs of the ApsaraDB RDS AI application instances. You can specify up to 10 instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable or disable SSL. Valid values:</para>
+        /// <para>Specifies whether to enable SSL. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: Enable.</description></item>
-        /// <item><description><b>0</b>: Disable.</description></item>
+        /// <item><description><b>1</b>: Enabled.</description></item>
+        /// <item><description><b>0</b>: Disabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public int? SSLEnabled { get; set; }
 
         /// <summary>
-        /// <para>The custom certificate content.</para>
+        /// <para>The content of the custom certificate.</para>
         /// <remarks>
         /// <para>This parameter is required when <b>CAType</b> is set to <b>custom</b>.</para>
         /// </remarks>

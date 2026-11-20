@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The name of the custom agent.</para>
+        /// <para>The name of the dedicated agent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Instance List Query Agent</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public List<CreateCustomAgentResponseBodySkills> Skills { get; set; }
         public class CreateCustomAgentResponseBodySkills : TeaModel {
             /// <summary>
-            /// <para>The skill description.</para>
+            /// <para>The description of the skill.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SQL query optimization skill</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>The system prompt.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>I am your custom agent for querying the instance list</para>
+        /// <para>I am your dedicated agent for querying instance lists</para>
         /// </summary>
         [NameInMap("SystemPrompt")]
         [Validation(Required=false)]

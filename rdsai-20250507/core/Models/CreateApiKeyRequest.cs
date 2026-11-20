@@ -52,9 +52,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <summary>
         /// <para>The quota limit type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ratio: Percentage-based.</description></item>
-        /// <item><description>fixed: Fixed value.</description></item>
-        /// <item><description>auto: Automatic allocation.</description></item>
+        /// <item><description>ratio: percentage.</description></item>
+        /// <item><description>fixed: fixed value.</description></item>
+        /// <item><description>auto: automatic allocation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,10 +74,22 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public int? Quantity { get; set; }
 
+        /// <summary>
+        /// <para>The ARN of the RAM role bound to the API key. The account to which the role belongs must be the same as the caller account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs:ram::1234567890123456:role/example-role</para>
+        /// </summary>
         [NameInMap("RoleArn")]
         [Validation(Required=false)]
         public string RoleArn { get; set; }
 
+        /// <summary>
+        /// <para>The name of the RAM role bound to the API key.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example-role</para>
+        /// </summary>
         [NameInMap("RoleName")]
         [Validation(Required=false)]
         public string RoleName { get; set; }

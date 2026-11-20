@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Tc { get; set; }
 
             /// <summary>
-            /// <para>The read/write type of the tool.</para>
+            /// <para>The tool read/write type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>get</para>

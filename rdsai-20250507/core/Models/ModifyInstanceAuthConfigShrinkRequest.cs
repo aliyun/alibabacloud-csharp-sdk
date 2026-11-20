@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ModifyInstanceAuthConfigShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The reserved parameter.</para>
+        /// <para>A reserved parameter.</para>
         /// </summary>
         [NameInMap("BranchName")]
         [Validation(Required=false)]

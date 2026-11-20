@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ModifyInstancesSSLResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of instance IDs of AI applications that were successfully modified.</para>
+        /// <para>The list of instance IDs of the AI applications that were successfully modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[
@@ -32,6 +32,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The expiration time of the custom SSL certificate. The time is in the yyyy-MM-dd HH:mm:ss format and in the UTC+8 time zone.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2027-12-31 23:59:59</para>
+        /// </summary>
         [NameInMap("SSLExpiredTime")]
         [Validation(Required=false)]
         public string SSLExpiredTime { get; set; }

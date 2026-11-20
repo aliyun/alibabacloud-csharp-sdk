@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public List<ListContextDatabaseMembersResponseBodyMembers> Members { get; set; }
         public class ListContextDatabaseMembersResponseBodyMembers : TeaModel {
             /// <summary>
-            /// <para>The time when the member was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-05-28T17:59:55Z</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public List<ListContextDatabaseMembersResponseBodyMembersKeys> Keys { get; set; }
             public class ListContextDatabaseMembersResponseBodyMembersKeys : TeaModel {
                 /// <summary>
-                /// <para>The time when the member was created.</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-05-28T17:59:55Z</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string ExpiresAt { get; set; }
 
                 /// <summary>
-                /// <para>The suffix of the API key.</para>
+                /// <para>The display suffix of the API key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>33631c</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string KeyPrefix { get; set; }
 
                 /// <summary>
-                /// <para>The time when the key was last used. This field is populated after the key has been authenticated and used. This field is empty for keys that have not been used.</para>
+                /// <para>The time when the key was last used. This field is populated after the key is used for authentication and is empty for unused keys.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-07-15T08:30:00Z</para>

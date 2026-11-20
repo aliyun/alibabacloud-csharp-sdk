@@ -17,14 +17,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public List<ListSkillResponseBodyData> Data { get; set; }
         public class ListSkillResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The currently active skill version information.</para>
+            /// <para>The information about the currently active skill version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;id&quot;:&quot;12345678-1234-4234-8234-123456789012&quot;,&quot;skill_id&quot;:&quot;23456789-1234-4234-8234-123456789012&quot;,&quot;version&quot;:&quot;1.0.0&quot;,&quot;status&quot;:&quot;ACTIVE&quot;,&quot;package_size&quot;:1024,&quot;credential_required&quot;:false}</para>
             /// </summary>
             [NameInMap("ActiveVersion")]
             [Validation(Required=false)]
             public Dictionary<string, object> ActiveVersion { get; set; }
 
             /// <summary>
-            /// <para>The currently active version ID.</para>
+            /// <para>The ID of the currently active version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>version-example</para>
@@ -74,14 +77,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>SQL Review Expert: Comprehensively reviews SQL for security, performance, and compliance, identifies risks, and provides optimization suggestions. Activated immediately when a user submits SQL or asks about &quot;SQL review&quot;, &quot;SQL Review&quot;, &quot;any risks&quot;, or &quot;how to optimize&quot;</para>
+            /// <para>SQL Review Expert: Comprehensively reviews SQL statements for security, performance, and compliance, identifies risks, and provides optimization recommendations. Activated immediately when a user submits SQL or asks questions such as &quot;SQL review&quot;, &quot;SQL Review&quot;, &quot;Are there any risks?&quot;, or &quot;How to optimize?&quot;.</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The skill display name.</para>
+            /// <para>The display name of the skill.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Example Skill</para>
@@ -91,7 +94,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The public HTTPS URL of the current icon. Empty if not configured.</para>
+            /// <para>The public HTTPS URL of the current icon. This parameter is empty if no icon is configured.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/skill-icon.png">https://example.com/skill-icon.png</a></para>
@@ -131,7 +134,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The skill visibility scope.</para>
+            /// <para>The visibility scope of the skill.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PRIVATE</para>
@@ -151,7 +154,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string SkillType { get; set; }
 
             /// <summary>
-            /// <para>The skill stable identifier.</para>
+            /// <para>The stable identifier of the skill.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example-skill</para>
@@ -171,7 +174,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string UpdatedAt { get; set; }
 
             /// <summary>
-            /// <para>The skill visibility for the current user.</para>
+            /// <para>The visibility of the skill to the current user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PRIVATE</para>
@@ -203,7 +206,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique identifier of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FE9C65D7-930F-57A5-A207-8C396329****</para>

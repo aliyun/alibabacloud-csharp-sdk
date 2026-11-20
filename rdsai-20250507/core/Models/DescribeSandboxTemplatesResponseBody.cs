@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The position from which the current read operation starts. An empty value indicates that the read operation starts from the beginning.</para>
+        /// <para>The position from which the read operation starts. An empty value indicates that the read operation starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAc3HCuYhJi/wvpk4xOr0VLYz/NvD85HpgBeRBCusEIeVQ0dHZH9jr+NP3X9Jx0iSoql55b9nd4PIDm252/a0f+U=</para>
@@ -66,6 +66,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public List<DescribeSandboxTemplatesResponseBodySandboxTemplates> SandboxTemplates { get; set; }
         public class DescribeSandboxTemplatesResponseBodySandboxTemplates : TeaModel {
+            /// <summary>
+            /// <para>The source that created the sandbox template. Valid values: user (created by a user) and system (created by the system).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>user</para>
+            /// </summary>
             [NameInMap("CreatedBy")]
             [Validation(Required=false)]
             public string CreatedBy { get; set; }
@@ -101,7 +107,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the sandbox created by using this template can access resources in the VPC where Supabase is deployed.</para>
+            /// <para>Indicates whether the sandbox created by using this template can access resources in the VPC where Supabase resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -110,6 +116,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string EnableVpcAccess { get; set; }
 
+            /// <summary>
+            /// <para>The container image used by the sandbox template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>registry.example.com/example/sandbox:1.0</para>
+            /// </summary>
             [NameInMap("Image")]
             [Validation(Required=false)]
             public string Image { get; set; }
@@ -124,16 +136,25 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>The number of replicas for the sandbox template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("Replicas")]
             [Validation(Required=false)]
             public long? Replicas { get; set; }
 
+            /// <summary>
+            /// <para>The custom tags of the sandbox template. A key represents a tag name, and a value represents a tag value.</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public Dictionary<string, string> Tags { get; set; }
 
             /// <summary>
-            /// <para>The ID of the sandbox template. Specify this ID when you use the template to create a sandbox.</para>
+            /// <para>The ID of the sandbox template. Specify this ID when creating a sandbox by using this template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>code-interpreter-asdxxxx</para>
@@ -145,7 +166,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The total number of data entries that meet the current request conditions.</para>
+        /// <para>The total number of entries that meet the request conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

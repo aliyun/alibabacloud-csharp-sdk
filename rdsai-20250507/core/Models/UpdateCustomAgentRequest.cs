@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>The name of the custom agent.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Query instance list agent</para>
+        /// <para>Instance list query agent</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

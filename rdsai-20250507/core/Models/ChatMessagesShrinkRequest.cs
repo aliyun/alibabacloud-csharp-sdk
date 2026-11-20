@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>The event output type. Valid values: inline and separate. Default value: inline. When set to inline, tool invocation events, sub-node events, and document events are included in the answer field of the event = message response. When set to separate, tool invocation events, sub-node events, and document events each have their own event.</para>
+        /// <para>The event output type. Valid values: inline and separate. Default value: inline. When set to inline, tool calling invoke events, child node events, and document events are unified into the answer field of the event = message. When set to separate, tool calling invoke events, child node events, and document events have their own respective events.</para>
         /// 
         /// <b>Example:</b>
         /// <para>inline</para>
@@ -29,12 +29,15 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string EventMode { get; set; }
 
+        /// <summary>
+        /// <para>The list of attachments included in the current conversation round. References uploaded files by using UploadFileId.</para>
+        /// </summary>
         [NameInMap("Files")]
         [Validation(Required=false)]
         public string FilesShrink { get; set; }
 
         /// <summary>
-        /// <para>The task inputs.</para>
+        /// <para>The task input.</para>
         /// </summary>
         [NameInMap("Inputs")]
         [Validation(Required=false)]
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>The query content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Check the disk usage of instance rm-bp14as9914vd3**** and whether storage expansion is needed</para>
+        /// <para>Instance rm-bp14as9914vd3**** disk usage, and whether capacity expansion is required</para>
         /// </summary>
         [NameInMap("Query")]
         [Validation(Required=false)]

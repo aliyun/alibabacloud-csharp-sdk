@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class StopInstanceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The name of the branch specified for this operation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ra-branch-123456789012abcd</para>
+        /// </summary>
         [NameInMap("BranchName")]
         [Validation(Required=false)]
         public string BranchName { get; set; }

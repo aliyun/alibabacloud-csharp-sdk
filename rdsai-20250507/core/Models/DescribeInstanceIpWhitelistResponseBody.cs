@@ -9,18 +9,39 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeInstanceIpWhitelistResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The name of the branch specified for this operation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ra-branch-123456789012abcd</para>
+        /// </summary>
         [NameInMap("BranchName")]
         [Validation(Required=false)]
         public string BranchName { get; set; }
 
+        /// <summary>
+        /// <para>The list of IP address whitelist groups for the PostgreSQL database instance associated with the branch.</para>
+        /// </summary>
         [NameInMap("DbIpWhiteListGroups")]
         [Validation(Required=false)]
         public List<DescribeInstanceIpWhitelistResponseBodyDbIpWhiteListGroups> DbIpWhiteListGroups { get; set; }
         public class DescribeInstanceIpWhitelistResponseBodyDbIpWhiteListGroups : TeaModel {
+            /// <summary>
+            /// <para>The name of the IP address whitelist group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>default</para>
+            /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
             public string GroupName { get; set; }
 
+            /// <summary>
+            /// <para>The list of addresses in the IP address whitelist.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.0.2.0/24</para>
+            /// </summary>
             [NameInMap("IpWhitelist")]
             [Validation(Required=false)]
             public string IpWhitelist { get; set; }
@@ -38,14 +59,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The IP whitelist groups.</para>
+        /// <para>The list of IP address whitelist groups.</para>
         /// </summary>
         [NameInMap("IpWhiteListGroups")]
         [Validation(Required=false)]
         public List<DescribeInstanceIpWhitelistResponseBodyIpWhiteListGroups> IpWhiteListGroups { get; set; }
         public class DescribeInstanceIpWhitelistResponseBodyIpWhiteListGroups : TeaModel {
             /// <summary>
-            /// <para>The group name.</para>
+            /// <para>The name of the group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class CreateSandboxTemplateShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The number of CPUs for sandboxes created from this template. Valid values: 1 to 4.</para>
+        /// <para>The number of CPUs for sandboxes created by using this template. Valid values: 1 to 4.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string DefaultCpu { get; set; }
 
         /// <summary>
-        /// <para>The memory size for sandboxes created from this template. Unit: Gi. Valid values: 1Gi to 8Gi.</para>
+        /// <para>The memory size of sandboxes created by using this template. Unit: GiB. Valid values: 1 to 8.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1Gi</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string DefaultMemory { get; set; }
 
         /// <summary>
-        /// <para>The description of the sandbox template. The description must be unique within the VPC.</para>
+        /// <para>The description of the sandbox template. It must be unique within the VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>code-interpreter</para>
@@ -39,6 +39,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>The container image used for the sandbox template. Format: <c>[registry/]&lt;repo&gt;[:tag][@sha256:digest]</c>. This parameter is required when you use a non-generic template name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>registry.example.com/example/sandbox:1.0</para>
+        /// </summary>
         [NameInMap("Image")]
         [Validation(Required=false)]
         public string Image { get; set; }
@@ -65,7 +71,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The number of prewarmed sandboxes. Valid values: 1 to 1000.</para>
+        /// <para>The number of pre-warmed sandboxes. Valid values: 1 to 1000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -74,6 +80,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public long? Replicas { get; set; }
 
+        /// <summary>
+        /// <para>The custom tags of the sandbox template. The key is the tag name and the value is the tag value. You cannot use the system-reserved tag createdBy. You cannot use the system-reserved tag hidden.</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string TagsShrink { get; set; }

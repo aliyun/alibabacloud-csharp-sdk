@@ -1,3 +1,7 @@
+2026-11-20 Version: 3.10.3
+- Update API ChatMessages: add request parameters Files.$.Url.
+
+
 2026-11-11 Version: 3.10.2
 - Update API ModifyAppInstance: add request parameters MigrationMode.
 - Update API ModifyAppInstance: add response parameters Body.TargetInstanceName.

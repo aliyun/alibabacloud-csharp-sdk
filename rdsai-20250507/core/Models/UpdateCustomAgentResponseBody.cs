@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>The name of the custom agent.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Query instance list agent</para>
+        /// <para>Instance list query agent</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public List<UpdateCustomAgentResponseBodySkills> Skills { get; set; }
         public class UpdateCustomAgentResponseBodySkills : TeaModel {
             /// <summary>
-            /// <para>The skill description.</para>
+            /// <para>The description of the skill.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SQL query optimization skill</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The skill name.</para>
+            /// <para>The name of the skill.</para>
             /// 
             /// <b>Example:</b>
             /// <para>query-optimization</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The skill type.</para>
+            /// <para>The type of the skill.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user</para>

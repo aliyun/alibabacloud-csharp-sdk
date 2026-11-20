@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ApiKey { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The instance name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds_copilot***_public_cn-*********6</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The API key name.</para>
+        /// <para>The name of the API key.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,10 +41,22 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string KeyName { get; set; }
 
+        /// <summary>
+        /// <para>The ARN of the RAM role associated with the API key. The account to which the role belongs must be the same as the account of the caller.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs:ram::1234567890123456:role/example-role</para>
+        /// </summary>
         [NameInMap("RoleArn")]
         [Validation(Required=false)]
         public string RoleArn { get; set; }
 
+        /// <summary>
+        /// <para>The name of the RAM role associated with the API key.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example-role</para>
+        /// </summary>
         [NameInMap("RoleName")]
         [Validation(Required=false)]
         public string RoleName { get; set; }

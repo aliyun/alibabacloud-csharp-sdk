@@ -838,7 +838,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
+        /// <h3>Supported engines</h3>
         /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
@@ -918,7 +918,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
+        /// <h3>Supported engines</h3>
         /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
@@ -998,7 +998,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
+        /// <h3>Supported engines</h3>
         /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
@@ -1022,7 +1022,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
+        /// <h3>Supported engines</h3>
         /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
@@ -2453,7 +2453,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom agent.</para>
+        /// <para>Creates a dedicated agent.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2521,7 +2521,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom agent.</para>
+        /// <para>Creates a dedicated agent.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2589,7 +2589,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom agent.</para>
+        /// <para>Creates a dedicated agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2607,7 +2607,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom agent.</para>
+        /// <para>Creates a dedicated agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2998,7 +2998,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Supported engines</h3>
         /// <para>RDS Supabase</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -3086,7 +3086,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Supported engines</h3>
         /// <para>RDS Supabase</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -3174,7 +3174,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Supported engines</h3>
         /// <para>RDS Supabase</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -3200,7 +3200,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Supported engines</h3>
         /// <para>RDS Supabase</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -5480,7 +5480,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <description>
         /// <h3>Supported engines</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>Related documentation</h3>
+        /// <h3>Related feature documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -5546,7 +5546,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <description>
         /// <h3>Supported engines</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>Related documentation</h3>
+        /// <h3>Related feature documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -5612,7 +5612,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <description>
         /// <h3>Supported engines</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>Related documentation</h3>
+        /// <h3>Related feature documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -5638,7 +5638,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <description>
         /// <h3>Supported engines</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>Related documentation</h3>
+        /// <h3>Related feature documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -6321,12 +6321,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP whitelist of an RDS AI application instance.</para>
+        /// <para>Queries the IP address whitelist of an ApsaraDB RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engine</h3>
+        /// <h3>Supported engines</h3>
         /// <para>RDS PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -6383,12 +6383,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP whitelist of an RDS AI application instance.</para>
+        /// <para>Queries the IP address whitelist of an ApsaraDB RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engine</h3>
+        /// <h3>Supported engines</h3>
         /// <para>RDS PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -6445,12 +6445,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP whitelist of an RDS AI application instance.</para>
+        /// <para>Queries the IP address whitelist of an ApsaraDB RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engine</h3>
+        /// <h3>Supported engines</h3>
         /// <para>RDS PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -6471,12 +6471,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP whitelist of an RDS AI application instance.</para>
+        /// <para>Queries the IP address whitelist of an ApsaraDB RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engine</h3>
+        /// <h3>Supported engines</h3>
         /// <para>RDS PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -6640,8 +6640,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <description>
         /// <h3>Supported engines</h3>
         /// <para>ApsaraDB RDS for PostgreSQL</para>
-        /// <h3>Related documentation</h3>
-        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// <h3>Related feature documentation</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">ApsaraDB RDS Supabase</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6698,8 +6698,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <description>
         /// <h3>Supported engines</h3>
         /// <para>ApsaraDB RDS for PostgreSQL</para>
-        /// <h3>Related documentation</h3>
-        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// <h3>Related feature documentation</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">ApsaraDB RDS Supabase</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6756,8 +6756,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <description>
         /// <h3>Supported engines</h3>
         /// <para>ApsaraDB RDS for PostgreSQL</para>
-        /// <h3>Related documentation</h3>
-        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// <h3>Related feature documentation</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">ApsaraDB RDS Supabase</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6782,8 +6782,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <description>
         /// <h3>Supported engines</h3>
         /// <para>ApsaraDB RDS for PostgreSQL</para>
-        /// <h3>Related documentation</h3>
-        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// <h3>Related feature documentation</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">ApsaraDB RDS Supabase</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7881,14 +7881,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of sandbox templates for creating Supabase sandboxes.</para>
+        /// <para>Queries a list of sandbox templates used to create Supabase sandboxes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Applicable engines</h3>
         /// <para>RDS Supabase</para>
-        /// <h3>Related documentation</h3>
+        /// <h3>Related feature documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -7959,14 +7959,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of sandbox templates for creating Supabase sandboxes.</para>
+        /// <para>Queries a list of sandbox templates used to create Supabase sandboxes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Applicable engines</h3>
         /// <para>RDS Supabase</para>
-        /// <h3>Related documentation</h3>
+        /// <h3>Related feature documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -8037,14 +8037,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of sandbox templates for creating Supabase sandboxes.</para>
+        /// <para>Queries a list of sandbox templates used to create Supabase sandboxes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Applicable engines</h3>
         /// <para>RDS Supabase</para>
-        /// <h3>Related documentation</h3>
+        /// <h3>Related feature documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -8063,14 +8063,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of sandbox templates for creating Supabase sandboxes.</para>
+        /// <para>Queries a list of sandbox templates used to create Supabase sandboxes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Applicable engines</h3>
         /// <para>RDS Supabase</para>
-        /// <h3>Related documentation</h3>
+        /// <h3>Related feature documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -11497,12 +11497,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries custom API keys.</para>
+        /// <para>Retrieves custom API keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Applicable engines</h3>
         /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
@@ -11553,12 +11553,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries custom API keys.</para>
+        /// <para>Retrieves custom API keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Applicable engines</h3>
         /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
@@ -11609,12 +11609,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries custom API keys.</para>
+        /// <para>Retrieves custom API keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Applicable engines</h3>
         /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
@@ -11633,12 +11633,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries custom API keys.</para>
+        /// <para>Retrieves custom API keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Applicable engines</h3>
         /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
@@ -11821,12 +11821,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists context database members.</para>
+        /// <para>Lists ContextDB members.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists all members in a specified workspace. Each member includes a list of API keys (plaintext values are not returned).</para>
+        /// <para>Lists all members in a specified workspace, along with a list of API keys for each member. Plaintext keys are not returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11876,12 +11876,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists context database members.</para>
+        /// <para>Lists ContextDB members.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists all members in a specified workspace. Each member includes a list of API keys (plaintext values are not returned).</para>
+        /// <para>Lists all members in a specified workspace, along with a list of API keys for each member. Plaintext keys are not returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11931,12 +11931,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists context database members.</para>
+        /// <para>Lists ContextDB members.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists all members in a specified workspace. Each member includes a list of API keys (plaintext values are not returned).</para>
+        /// <para>Lists all members in a specified workspace, along with a list of API keys for each member. Plaintext keys are not returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11954,12 +11954,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists context database members.</para>
+        /// <para>Lists ContextDB members.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists all members in a specified workspace. Each member includes a list of API keys (plaintext values are not returned).</para>
+        /// <para>Lists all members in a specified workspace, along with a list of API keys for each member. Plaintext keys are not returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13873,7 +13873,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Agent tools for a user.</para>
+        /// <para>Queries the list of user agent tools.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -13903,7 +13903,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Agent tools for a user.</para>
+        /// <para>Queries the list of user agent tools.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -13933,7 +13933,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Agent tools for a user.</para>
+        /// <para>Queries the list of user agent tools.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -13947,7 +13947,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Agent tools for a user.</para>
+        /// <para>Queries the list of user agent tools.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -14674,10 +14674,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>ApsaraDB RDS for PostgreSQL</para>
         /// <h3>Related documentation</h3>
-        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">ApsaraDB RDS for Supabase</a></para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -14742,10 +14742,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>ApsaraDB RDS for PostgreSQL</para>
         /// <h3>Related documentation</h3>
-        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">ApsaraDB RDS for Supabase</a></para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -14810,10 +14810,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>ApsaraDB RDS for PostgreSQL</para>
         /// <h3>Related documentation</h3>
-        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">ApsaraDB RDS for Supabase</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14836,10 +14836,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>ApsaraDB RDS for PostgreSQL</para>
         /// <h3>Related documentation</h3>
-        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">ApsaraDB RDS for Supabase</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15394,7 +15394,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Supported engine</h3>
         /// <para>RDS PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -15468,7 +15468,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Supported engine</h3>
         /// <para>RDS PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -15542,7 +15542,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Supported engine</h3>
         /// <para>RDS PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -15568,7 +15568,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Supported engine</h3>
         /// <para>RDS PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -15589,17 +15589,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the storage configuration of an RDS AI application instance.</para>
+        /// <para>Modifies the storage configuration of an ApsaraDB RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Supported engines</h3>
-        /// <para>RDS PostgreSQL</para>
+        /// <para>ApsaraDB RDS for PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// <remarks>
-        /// <para>Currently, only Object Storage Service (OSS) is supported.</para>
+        /// <para>Only Object Storage Service (OSS) is supported.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -15664,17 +15664,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the storage configuration of an RDS AI application instance.</para>
+        /// <para>Modifies the storage configuration of an ApsaraDB RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Supported engines</h3>
-        /// <para>RDS PostgreSQL</para>
+        /// <para>ApsaraDB RDS for PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// <remarks>
-        /// <para>Currently, only Object Storage Service (OSS) is supported.</para>
+        /// <para>Only Object Storage Service (OSS) is supported.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -15739,17 +15739,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the storage configuration of an RDS AI application instance.</para>
+        /// <para>Modifies the storage configuration of an ApsaraDB RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Supported engines</h3>
-        /// <para>RDS PostgreSQL</para>
+        /// <para>ApsaraDB RDS for PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// <remarks>
-        /// <para>Currently, only Object Storage Service (OSS) is supported.</para>
+        /// <para>Only Object Storage Service (OSS) is supported.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -15768,17 +15768,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the storage configuration of an RDS AI application instance.</para>
+        /// <para>Modifies the storage configuration of an ApsaraDB RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Supported engines</h3>
-        /// <para>RDS PostgreSQL</para>
+        /// <para>ApsaraDB RDS for PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// <remarks>
-        /// <para>Currently, only Object Storage Service (OSS) is supported.</para>
+        /// <para>Only Object Storage Service (OSS) is supported.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -15797,13 +15797,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch modifies the SSL configurations of RDS AI application instances.</para>
+        /// <para>Modifies the SSL configurations of multiple ApsaraDB RDS AI application instances in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
-        /// <para>RDS PostgreSQL</para>
+        /// <h3>Supported engines</h3>
+        /// <para>ApsaraDB RDS for PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
@@ -15873,13 +15873,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch modifies the SSL configurations of RDS AI application instances.</para>
+        /// <para>Modifies the SSL configurations of multiple ApsaraDB RDS AI application instances in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
-        /// <para>RDS PostgreSQL</para>
+        /// <h3>Supported engines</h3>
+        /// <para>ApsaraDB RDS for PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
@@ -15949,13 +15949,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch modifies the SSL configurations of RDS AI application instances.</para>
+        /// <para>Modifies the SSL configurations of multiple ApsaraDB RDS AI application instances in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
-        /// <para>RDS PostgreSQL</para>
+        /// <h3>Supported engines</h3>
+        /// <para>ApsaraDB RDS for PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
@@ -15975,13 +15975,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch modifies the SSL configurations of RDS AI application instances.</para>
+        /// <para>Modifies the SSL configurations of multiple ApsaraDB RDS AI application instances in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
-        /// <para>RDS PostgreSQL</para>
+        /// <h3>Supported engines</h3>
+        /// <para>ApsaraDB RDS for PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
@@ -16150,7 +16150,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Supported engines</h3>
         /// <para>RDS Supabase</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -16234,7 +16234,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Supported engines</h3>
         /// <para>RDS Supabase</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -16318,7 +16318,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Supported engines</h3>
         /// <para>RDS Supabase</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -16344,7 +16344,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Supported engines</h3>
         /// <para>RDS Supabase</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -16878,7 +16878,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Applicable engines</h3>
         /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
@@ -16942,7 +16942,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Applicable engines</h3>
         /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
@@ -17006,7 +17006,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Applicable engines</h3>
         /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
@@ -17030,7 +17030,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Applicable engines</h3>
         /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
@@ -18525,14 +18525,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pauses an RDS AI application instance that is in the Running state.</para>
+        /// <para>Pauses an ApsaraDB RDS AI application instance that is in the Running state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
-        /// <para>RDS PostgreSQL</para>
-        /// <h3>Related feature documentation</h3>
+        /// <h3>Supported engines</h3>
+        /// <para>ApsaraDB RDS for PostgreSQL</para>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -18587,14 +18587,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pauses an RDS AI application instance that is in the Running state.</para>
+        /// <para>Pauses an ApsaraDB RDS AI application instance that is in the Running state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
-        /// <para>RDS PostgreSQL</para>
-        /// <h3>Related feature documentation</h3>
+        /// <h3>Supported engines</h3>
+        /// <para>ApsaraDB RDS for PostgreSQL</para>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -18649,14 +18649,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pauses an RDS AI application instance that is in the Running state.</para>
+        /// <para>Pauses an ApsaraDB RDS AI application instance that is in the Running state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
-        /// <para>RDS PostgreSQL</para>
-        /// <h3>Related feature documentation</h3>
+        /// <h3>Supported engines</h3>
+        /// <para>ApsaraDB RDS for PostgreSQL</para>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -18675,14 +18675,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pauses an RDS AI application instance that is in the Running state.</para>
+        /// <para>Pauses an ApsaraDB RDS AI application instance that is in the Running state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
-        /// <para>RDS PostgreSQL</para>
-        /// <h3>Related feature documentation</h3>
+        /// <h3>Supported engines</h3>
+        /// <para>ApsaraDB RDS for PostgreSQL</para>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 

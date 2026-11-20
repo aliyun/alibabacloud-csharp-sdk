@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The search parameter for skill name or description. This filter is not currently enabled in the ContextDB management console.</para>
+        /// <para>The search parameter for the skill name or description. This filter is currently disabled in the ContextDB management portal.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The sort parameter for skills. This sorting is not currently enabled in the ContextDB management console.</para>
+        /// <para>The sort parameter for skills. This sorting option is currently disabled in the ContextDB management portal.</para>
         /// 
         /// <b>Example:</b>
         /// <para>updated_at_desc</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Sort { get; set; }
 
         /// <summary>
-        /// <para>The filter parameter for skill source. This filter is not currently enabled in the ContextDB management console.</para>
+        /// <para>The filter parameter for the skill source. This filter is currently disabled in the ContextDB management portal.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class RenameApiKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The request result.</para>
+        /// <para>The result of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

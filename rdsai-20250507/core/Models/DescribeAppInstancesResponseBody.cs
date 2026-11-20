@@ -45,6 +45,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public class DescribeAppInstancesResponseBodyInstancesComponents : TeaModel {
                 /// <summary>
                 /// <para>The component status.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>enable</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -52,6 +55,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
                 /// <summary>
                 /// <para>The component type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>supabase</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -140,7 +146,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The internal endpoint of the AI application.</para>
+            /// <para>The internal network connection endpoint of the AI application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.16.XXX.XXX:8000</para>
@@ -152,7 +158,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>A reserved parameter. You can ignore it.</para>
+        /// <para>A reserved parameter. You can ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -192,7 +198,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

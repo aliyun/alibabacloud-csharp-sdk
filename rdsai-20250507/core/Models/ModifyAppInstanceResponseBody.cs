@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ModifyAppInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The reserved parameter.</para>
+        /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Reserved parameter</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The reserved parameter.</para>
+        /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Reserved parameter</para>

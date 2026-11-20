@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ModifyAppInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The reserved parameter.</para>
+        /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Reserved parameter</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string BranchName { get; set; }
 
         /// <summary>
-        /// <para>The idempotency parameter.</para>
+        /// <para>The client token used to ensure idempotence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The instance type. Only <b>rdsai.supabase.basic</b> is supported.</para>
+        /// <para>The instance type. Currently, only <b>rdsai.supabase.basic</b> is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rdsai.supabase.basic</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The reserved parameter.</para>
+        /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Reserved parameter</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetSkillRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to obtain a temporary download URL for the specified version. Default value: false.</para>
+        /// <para>Specifies whether to obtain the temporary download URL of the specified version. Default value: false.</para>
         /// </summary>
         [NameInMap("Download")]
         [Validation(Required=false)]
         public bool? Download { get; set; }
 
         /// <summary>
-        /// <para>The supported language. Valid values:</para>
+        /// <para>The supported languages. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>zh-CN: Simplified Chinese</description></item>
         /// <item><description>zh-TW: Traditional Chinese</description></item>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The file path within the package, such as SKILL.md. The body is in File.text, and the full Markdown is in SkillMarkdown.</para>
+        /// <para>The file path in the package, such as SKILL.md. For the body text, see File.text. For the complete Markdown content, see SkillMarkdown.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SKILL.md</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string SkillId { get; set; }
 
         /// <summary>
-        /// <para>The version UUID (Versions[].Id), not a version number such as 1.0.0. If omitted, the currently active version is read.</para>
+        /// <para>The version UUID (Versions[].Id), which is not a version number such as 1.0.0. If this parameter is omitted, the current active version is read.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00000000-0000-4000-8000-000000000002</para>

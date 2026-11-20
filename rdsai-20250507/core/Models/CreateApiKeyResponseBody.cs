@@ -76,11 +76,11 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 /// <summary>
                 /// <para>The quota limit type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>fixed</b>: Fixed value.</para>
+                /// <item><description><para><b>fixed</b>: fixed value.</para>
                 /// </description></item>
-                /// <item><description><para><b>ratio</b>: Percentage-based.</para>
+                /// <item><description><para><b>ratio</b>: percentage.</para>
                 /// </description></item>
-                /// <item><description><para><b>auto</b>: Automatic allocation.</para>
+                /// <item><description><para><b>auto</b>: automatic allocation.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -91,6 +91,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 [Validation(Required=false)]
                 public string LimitType { get; set; }
 
+                /// <summary>
+                /// <para>The ARN of the RAM role bound to the custom API key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>acs:ram::1234567890123456:role/example-role</para>
+                /// </summary>
                 [NameInMap("RoleArn")]
                 [Validation(Required=false)]
                 public string RoleArn { get; set; }
@@ -140,7 +146,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The request result.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
