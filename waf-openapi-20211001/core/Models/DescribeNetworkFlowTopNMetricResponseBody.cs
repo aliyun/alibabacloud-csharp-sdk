@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeNetworkFlowTopNMetricResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array of the top N statistics.</para>
+        /// <para>The array of returned top statistics.</para>
         /// </summary>
         [NameInMap("NetworkFlowTopNValues")]
         [Validation(Required=false)]
         public List<DescribeNetworkFlowTopNMetricResponseBodyNetworkFlowTopNValues> NetworkFlowTopNValues { get; set; }
         public class DescribeNetworkFlowTopNMetricResponseBodyNetworkFlowTopNValues : TeaModel {
             /// <summary>
-            /// <para>The additional attribute associated with the entry. For example, when the Metric is set to real_client_ip, this parameter indicates the country or region to which the IP address belongs.</para>
+            /// <para>The additional information returned, such as the country, province, and city to which an IP address belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CN</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Attribute { get; set; }
 
             /// <summary>
-            /// <para>The dimension value that corresponds to the specified Metric request parameter. For example, if the Metric is set to real_client_ip, this parameter indicates the source IP address.</para>
+            /// <para>The value of a field. The meaning varies depending on the queried metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>127.0.0.1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The total number of requests or the QPS value, depending on the specified Metric. This value is used for top N ranking.</para>
+            /// <para>The statistical count used for top sorting.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1123</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D827FCFE-90A7-4330-9326-******4C7726</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public DescribeNetworkFlowTopNMetricResponseBodyTopNMetaDataDateRange DateRange { get; set; }
             public class DescribeNetworkFlowTopNMetricResponseBodyTopNMetaDataDateRange : TeaModel {
                 /// <summary>
-                /// <para>The end of the time range. This value is a UNIX timestamp. Unit: seconds.</para>
+                /// <para>The end time used for the data query. The end time is represented by a UNIX timestamp in seconds. This value is the same as the EndDate request parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1713888600</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public long? EndDate { get; set; }
 
                 /// <summary>
-                /// <para>The beginning of the time range. This value is a UNIX timestamp. Unit: seconds.</para>
+                /// <para>The start time used for the data query. The start time is represented by a UNIX timestamp in seconds. This value is the same as the StartDate request parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1713888000</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             }
 
             /// <summary>
-            /// <para>The unit of the returned statistical data.</para>
+            /// <para>The unit of the returned statistics.</para>
             /// 
             /// <b>Example:</b>
             /// <para>requests</para>

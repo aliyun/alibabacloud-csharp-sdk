@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeAiEngineEvidenceRequestsRequest : TeaModel {
         /// <summary>
-        /// <para>The event ID. The value can be up to 64 ASCII characters in length.</para>
+        /// <para>The event ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string EventId { get; set; }
 
         /// <summary>
-        /// <para>The filter conditions. Exact match is used, and multiple conditions are connected by the AND operator. The value is a JSON object. Property names use camelCase, and property values are strings.</para>
+        /// <para>The filter conditions. Exact match is used, and multiple conditions are connected by the AND logical operator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;suspectedBypass&quot;:&quot;1&quot;,&quot;httpStatus&quot;:&quot;500&quot;}</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public DescribeAiEngineEvidenceRequestsRequestFilter Filter { get; set; }
         public class DescribeAiEngineEvidenceRequestsRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The HTTP status code. The value is a numeric string ranging from 100 to 599, or unknown. A value of unknown indicates that the status code is not collected.</para>
+            /// <para>The HTTP status code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>500</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string HttpStatus { get; set; }
 
             /// <summary>
-            /// <para>The evidence impact tag. Valid values: block, monitor, bypass, attempt, and challenge. Exact match is supported.</para>
+            /// <para>The evidence impact tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bypass</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ImpactType { get; set; }
 
             /// <summary>
-            /// <para>The HTTP request method. Exact match is supported.</para>
+            /// <para>The HTTP request method. Exact match is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>POST</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Method { get; set; }
 
             /// <summary>
-            /// <para>The node ID. Exact match is supported. The value can be up to 64 ASCII characters in length.</para>
+            /// <para>The node ID. Exact match is used. The value can be up to 64 ASCII characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>n109-04</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response.</para>
+        /// <para>The response language.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per page in a paging query. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries to return per page. Valid values: 1 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. The value is the <b>NextToken</b> parameter value returned by the previous API call. You do not need to specify this parameter for the first query.</para>
+        /// <para>The pagination token for the next page. The value is the <b>NextToken</b> parameter value returned by the previous API call. You do not need to specify this parameter for the first query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAGBgV9tolsLfijC4wam2htS*****D/46H3X2wIS</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string SeachValue { get; set; }
 
         /// <summary>
-        /// <para>The search key. This parameter is used together with SeachValue. Valid values: traceId, requestPath, sourceIp, sourceAccount, sourceFingerprint, and auto.</para>
+        /// <para>The search key. This parameter is used together with SeachValue.</para>
         /// 
         /// <b>Example:</b>
         /// <para>traceId</para>

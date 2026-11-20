@@ -10,23 +10,19 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeAlarmBannerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status information of the alert banner.</para>
+        /// <para>The alert banner status information.</para>
         /// </summary>
         [NameInMap("BannerStatus")]
         [Validation(Required=false)]
         public DescribeAlarmBannerResponseBodyBannerStatus BannerStatus { get; set; }
         public class DescribeAlarmBannerResponseBodyBannerStatus : TeaModel {
             /// <summary>
-            /// <para>The cause of the alert. If <b>Type</b> is set to <b>sandbox</b>, valid values:</para>
+            /// <para>The cause of the alerting. If the Alarm Metric is sandbox (<b>Type</b> is set to <b>sandbox</b>), valid values are:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>fivefold</b>: The queries per second (QPS) of your service exceeds five times the upper limit of your plan.</para>
-            /// </description></item>
-            /// <item><description><para><b>4count</b>: The QPS of your service has exceeded the upper limit of your plan for four or more days.</para>
-            /// </description></item>
-            /// <item><description><para><b>exceed10w</b>: The peak QPS of your service exceeds 100,000.</para>
-            /// </description></item>
-            /// <item><description><para><b>costProtection</b>: Billing protection is triggered.</para>
-            /// </description></item>
+            /// <item><description><b>fivefold</b>: The clean queries per second (QPS) exceeds the current specifications.</description></item>
+            /// <item><description><b>4count</b>: The accumulated actual clean QPS exceeds the current specifications.</description></item>
+            /// <item><description><b>exceed10w</b>: The actual peak clean QPS exceeds 100,000.</description></item>
+            /// <item><description><b>costProtection</b>: Billing protection is triggered.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -37,9 +33,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Cause { get; set; }
 
             /// <summary>
-            /// <para>The count associated with the alert at the time it was triggered.</para>
+            /// <para>The usage when alerting is triggered.</para>
             /// <list type="bullet">
-            /// <item><description>If <b>Type</b> is set to <b>sandbox</b>, this parameter indicates the number of days that the QPS has exceeded the upper limit of your plan.</description></item>
+            /// <item><description>If the Alarm Metric is sandbox (<b>Type</b> is set to <b>sandbox</b>), this parameter indicates the number of days the quota is exceeded.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -50,12 +46,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether an alert is triggered. Valid values:</para>
+            /// <para>The alerting status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: An alert is triggered. If <b>Type</b> is set to <b>sandbox</b>, the instance is in the sandbox.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: No alert is triggered. If <b>Type</b> is set to <b>sandbox</b>, the instance is not in the sandbox.</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: Alerting is triggered. If the Alarm Metric is sandbox (<b>Type</b> is set to <b>sandbox</b>), the instance is in the sandbox.</description></item>
+            /// <item><description><b>false</b>: No alerting is triggered. If the Alarm Metric is sandbox (<b>Type</b> is set to <b>sandbox</b>), the instance is not in the sandbox.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -66,9 +60,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? Status { get; set; }
 
             /// <summary>
-            /// <para>The alert type. Valid value:</para>
+            /// <para>The Alarm Metric. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>sandbox</b>: a sandbox alert.</description></item>
+            /// <item><description><b>sandbox</b>: sandbox alerting.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,7 +75,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5555DC36-0CF2-5AA3-B1C7-D6BD8****</para>

@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public string Attribute { get; set; }
 
                 /// <summary>
-                /// <para>The source value, such as an IP address.</para>
+                /// <para>The value of the source, such as an IP address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.1.1.1</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? HttpStatus { get; set; }
 
         /// <summary>
-        /// <para>The evidence impact tag. Valid values:</para>
+        /// <para>The impact tag of the evidence. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>block</b>: The request is blocked.</para>
         /// </description></item>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The de-identified request path.</para>
+        /// <para>The masked request path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/api/orders/query</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestPath { get; set; }
 
         /// <summary>
-        /// <para>The time when the original request was made. The time is a Unix timestamp in milliseconds.</para>
+        /// <para>The time when the original request was made. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1792973400000</para>
@@ -200,9 +200,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Response { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the request is a suspected bypass. Valid values:</para>
+        /// <para>Specifies whether the request is suspected to be a bypass. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: The request is a suspected bypass.</description></item>
+        /// <item><description><b>1</b>: The request is suspected to be a bypass.</description></item>
         /// <item><description><b>0</b>: The request is not a bypass.</description></item>
         /// </list>
         /// 
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? SuspectedBypass { get; set; }
 
         /// <summary>
-        /// <para>The trace ID of the original request. The ID can be up to 128 ASCII characters in length.</para>
+        /// <para>The trace ID of the original request, which can be up to 128 ASCII characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>trace-20241025-109-04</para>

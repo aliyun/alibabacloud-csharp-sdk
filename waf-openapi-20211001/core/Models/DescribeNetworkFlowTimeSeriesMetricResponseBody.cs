@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeNetworkFlowTimeSeriesMetricResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned time series data. Time series data of multiple values can be returned.</para>
+        /// <para>The returned time sequence data. Time sequence data of multiple values can be returned.</para>
         /// </summary>
         [NameInMap("NetworkFlowTimeSeries")]
         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public DescribeNetworkFlowTimeSeriesMetricResponseBodyTimeSeriesMetaData TimeSeriesMetaData { get; set; }
         public class DescribeNetworkFlowTimeSeriesMetricResponseBodyTimeSeriesMetaData : TeaModel {
             /// <summary>
-            /// <para>The statistical time granularity of each data point in the returned time series data. For example, &quot;15m&quot; indicates that each returned data point is the statistical data for every 15 minutes. For more information about the time granularity of the returned data, see <b>Description of the time granularity of time series data points</b>.</para>
+            /// <para>The statistical time granularity of each data point in the returned time sequence data. For example, &quot;15m&quot; indicates that each returned data point is the statistical data for every 15 minutes. For the time granularity of the returned data, see <b>Description of the time granularity of time sequence data points</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1m</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public DescribeNetworkFlowTimeSeriesMetricResponseBodyTimeSeriesMetaDataDateRange DateRange { get; set; }
             public class DescribeNetworkFlowTimeSeriesMetricResponseBodyTimeSeriesMetaDataDateRange : TeaModel {
                 /// <summary>
-                /// <para>The end time used for querying data. The value is a UNIX timestamp in seconds. This value is the same as the EndDate parameter in the request parameters.</para>
+                /// <para>The end time used for the query, represented as a UNIX timestamp in seconds. This value is the same as the EndDate parameter in the request.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1713888600</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public long? EndDate { get; set; }
 
                 /// <summary>
-                /// <para>The start time used for querying data. The value is a UNIX timestamp in seconds. This value is the same as the StartDate parameter in the request parameters.</para>
+                /// <para>The start time used for the query, represented as a UNIX timestamp in seconds. This value is the same as the StartDate parameter in the request.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1713888000</para>

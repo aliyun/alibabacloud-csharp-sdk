@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeFreeUserEventsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of security events detected by basic detection.</para>
+        /// <para>The list of security events for basic detection.</para>
         /// </summary>
         [NameInMap("Event")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string AttackIP { get; set; }
 
             /// <summary>
-            /// <para>The attack time. The value is a UNIX timestamp (UTC). Unit: seconds.</para>
+            /// <para>The attack time, in the UNIX timestamp format (UTC). Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1683703260</para>
@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The event level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>high</b>: high risk.</description></item>
-            /// <item><description><b>medium</b>: medium risk.</description></item>
-            /// <item><description><b>low</b>: low risk.</description></item>
+            /// <item><description><b>high</b>: high-risk.</description></item>
+            /// <item><description><b>medium</b>: medium-risk.</description></item>
+            /// <item><description><b>low</b>: low-risk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8A2DF88D-90C2-56E9-B8D5-36BB9646791C</para>

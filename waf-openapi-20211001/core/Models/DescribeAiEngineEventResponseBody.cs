@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeAiEngineEventResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of attack source groups for the event.</para>
+        /// <para>The grouped list of attack sources for the event.</para>
         /// </summary>
         [NameInMap("AttackSources")]
         [Validation(Required=false)]
         public List<DescribeAiEngineEventResponseBodyAttackSources> AttackSources { get; set; }
         public class DescribeAiEngineEventResponseBodyAttackSources : TeaModel {
             /// <summary>
-            /// <para>The list of attack sources of this type.</para>
+            /// <para>The list of sources of this type.</para>
             /// </summary>
             [NameInMap("Sources")]
             [Validation(Required=false)]
             public List<DescribeAiEngineEventResponseBodyAttackSourcesSources> Sources { get; set; }
             public class DescribeAiEngineEventResponseBodyAttackSourcesSources : TeaModel {
                 /// <summary>
-                /// <para>The display attribute of the attack source, such as the region code.</para>
+                /// <para>The display attribute of the source, such as the region code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CN-510100</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public string Attribute { get; set; }
 
                 /// <summary>
-                /// <para>The value of the attack source. If the attack source type is IP address (<b>Type</b> is <b>ip</b>), the value is an IP address.</para>
+                /// <para>The value of the attack source. If the attack source type is IP address (<b>Type</b> is set to <b>ip</b>), this parameter indicates the IP address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>203.0.113.109</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The type of the attack source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ip</b>: IP-based attack source.</description></item>
+            /// <item><description><b>ip</b>: IP address.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? BypassRequestCount { get; set; }
 
         /// <summary>
-        /// <para>The list of domain names involved in the event.</para>
+        /// <para>The domain names involved in the event.</para>
         /// </summary>
         [NameInMap("Domains")]
         [Validation(Required=false)]
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RelatedEventIds { get; set; }
 
         /// <summary>
-        /// <para>The event analysis report in the specified language, in Markdown format.</para>
+        /// <para>The event analysis report in Markdown format in the specified language.</para>
         /// 
         /// <b>Example:</b>
         /// <h1>Event analysis report</h1>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of IDs of the protected objects involved in the event.</para>
+        /// <para>The IDs of the protected objects involved in the event.</para>
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
@@ -206,13 +206,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The current risk level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>critical</b>: Urgent.</para>
+        /// <item><description><para><b>critical</b>: Critical.</para>
         /// </description></item>
-        /// <item><description><para><b>high</b>: High-risk.</para>
+        /// <item><description><para><b>high</b>: High.</para>
         /// </description></item>
-        /// <item><description><para><b>medium</b>: Medium-risk.</para>
+        /// <item><description><para><b>medium</b>: Medium.</para>
         /// </description></item>
-        /// <item><description><para><b>low</b>: Low-risk.</para>
+        /// <item><description><para><b>low</b>: Low.</para>
         /// </description></item>
         /// </list>
         /// 

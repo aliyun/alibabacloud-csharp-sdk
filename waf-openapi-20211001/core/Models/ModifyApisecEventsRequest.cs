@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyApisecEventsRequest : TeaModel {
         /// <summary>
-        /// <para>The hybrid cloud cluster ID.</para>
+        /// <para>The ID of the hybrid cloud cluster.</para>
         /// <remarks>
-        /// <para>This parameter applies only to hybrid cloud scenarios. You can call <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> to obtain hybrid cloud cluster information.</para>
+        /// <para>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query hybrid cloud cluster information.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The list of API security event IDs.</para>
+        /// <para>The IDs of the API security events.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("EventIds")]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to obtain the ID of the current WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The remarks.</para>
+        /// <para>The note.</para>
         /// 
         /// <b>Example:</b>
         /// <para>already confirmed.</para>
@@ -65,11 +65,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Note { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland</para>
         /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland</para>
         /// </description></item>
         /// </list>
         /// 
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud resource group ID.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -91,11 +91,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The event status. Valid values:</para>
+        /// <para>The status of the event. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>toBeConfirmed</b>: To be confirmed.</description></item>
-        /// <item><description><b>confirmed</b>: Confirmed.</description></item>
-        /// <item><description><b>ignored</b>: Ignored.</description></item>
+        /// <item><description><b>toBeConfirmed</b>: to be confirmed</description></item>
+        /// <item><description><b>confirmed</b>: confirmed</description></item>
+        /// <item><description><b>ignored</b>: ignored</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

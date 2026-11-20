@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeSecurityEventLogsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D827FCFE-90A7-4330-9326-******4C7726</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of detailed attack logs.</para>
+        /// <para>The list of returned attack log details.</para>
         /// </summary>
         [NameInMap("SecurityEventLogs")]
         [Validation(Required=false)]
         public List<object> SecurityEventLogs { get; set; }
 
         /// <summary>
-        /// <para>The total number of attack logs found.</para>
+        /// <para>The total number of queried attack log entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public DescribeSecurityEventLogsResponseBodySecurityEventMetaDataDateRange DateRange { get; set; }
             public class DescribeSecurityEventLogsResponseBodySecurityEventMetaDataDateRange : TeaModel {
                 /// <summary>
-                /// <para>The end of the time range used for the query. The value is a UNIX timestamp. Unit: seconds. This value is the same as the \<c>EndDate\\</c> request parameter.</para>
+                /// <para>The end time used for the data query. The end time is represented by a UNIX timestamp in seconds. This value is the same as the EndDate request parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1713888600</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public long? EndDate { get; set; }
 
                 /// <summary>
-                /// <para>The start of the time range used for the query. The value is a UNIX timestamp. Unit: seconds. This value is the same as the \<c>StartDate\\</c> request parameter.</para>
+                /// <para>The start time used for the data query. The start time is represented by a UNIX timestamp in seconds. This value is the same as the StartDate request parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1713888000</para>

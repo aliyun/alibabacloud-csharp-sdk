@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public List<DescribeNetworkFlowTimeSeriesMetricRequestFilterConditions> Conditions { get; set; }
             public class DescribeNetworkFlowTimeSeriesMetricRequestFilterConditions : TeaModel {
                 /// <summary>
-                /// <para>The name of the field on which the filter operation is performed. The Key parameter of this operation supports only the following two fields:</para>
+                /// <para>The name of the field on which the filter operation is performed. The Key parameter of the current operation supports only the following two fields:</para>
                 /// <list type="bullet">
                 /// <item><description>matched_host: the protected object.</description></item>
                 /// <item><description>cluster: the protection cluster.</description></item>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public DescribeNetworkFlowTimeSeriesMetricRequestFilterDateRange DateRange { get; set; }
             public class DescribeNetworkFlowTimeSeriesMetricRequestFilterDateRange : TeaModel {
                 /// <summary>
-                /// <para>The end time of the query. The value is a UNIX timestamp in seconds.</para>
+                /// <para>The end time of the query. The time is represented as a UNIX timestamp in seconds.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -80,9 +80,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public long? EndDate { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the query. The time range for the query cannot exceed the past 30 days. The value is a UNIX timestamp in seconds.</para>
+                /// <para>The start time of the query. The data range cannot exceed the past 30 days. The time is represented as a UNIX timestamp in seconds.</para>
                 /// <remarks>
-                /// <h2>The start time must be later than 30 days before the current time.</h2>
+                /// <h2>The start time must be later than the current time minus 30 days.</h2>
                 /// </remarks>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -112,12 +112,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The metric used to distinguish the returned data content. Different metrics correspond to different data content. This operation supports the following metrics:</para>
+        /// <para>The metric used to distinguish the returned data content. Different metrics correspond to different data content. The metrics supported by this operation are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>qps: returns the number of requests processed by WAF per second. The peak calculation method is used. A QPS value is calculated every 10 seconds, and the maximum peak value among multiple values is used as the QPS value within the current statistical time granularity.</description></item>
+        /// <item><description>qps: returns the number of requests processed by WAF per second. The peak calculation method is used. A QPS value is calculated every 10 seconds, and the Peak Volume among multiple values is used as the QPS value within the current statistical time granularity.</description></item>
         /// <item><description>total_requests: returns the total number of requests processed by WAF.</description></item>
-        /// <item><description>top5_status: returns the top 5 response codes returned by WAF to the client and the corresponding time series statistics.</description></item>
-        /// <item><description>top 5_upstream_status: returns the top 5 response codes returned by the origin server to the client and the corresponding time series statistics.</description></item>
+        /// <item><description>top5_status: returns the top 5 response codes returned by WAF to the client and the corresponding time sequence statistics.</description></item>
+        /// <item><description>top 5_upstream_status: returns the top 5 back-to-origin response codes returned by the origin server to the client and the corresponding time sequence statistics.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

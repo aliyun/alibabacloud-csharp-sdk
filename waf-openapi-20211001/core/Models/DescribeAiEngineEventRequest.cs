@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response.</para>
+        /// <para>The response language.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>

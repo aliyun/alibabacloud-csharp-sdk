@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeFreeUserEventCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The security event information of basic detection.</para>
+        /// <para>The information about security events detected by basic API security detection.</para>
         /// </summary>
         [NameInMap("Event")]
         [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0D9FB3BC-0DE9-58A8-9663-ACE56F24F405</para>

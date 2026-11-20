@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public List<DescribeApiExportsResponseBodyApiExports> ApiExports { get; set; }
         public class DescribeApiExportsResponseBodyApiExports : TeaModel {
             /// <summary>
-            /// <para>The time when the export task was created. The value is a UNIX timestamp (UTC). Unit: seconds.</para>
+            /// <para>The time when the export task was created. The value is a UNIX timestamp in UTC. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1725604852</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The file name.</para>
+            /// <para>The name of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>file_16109541456445334c0f01d9a7444e0e908***.csv</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// </description></item>
             /// <item><description><para><b>exporting</b>: The export is in progress.</para>
             /// </description></item>
-            /// <item><description><para><b>completed</b>: The export is complete.</para>
+            /// <item><description><para><b>completed</b>: The export succeeded.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -77,11 +77,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The type of the export task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>apisec_api</b>: API asset task.</para>
+            /// <item><description><para><b>apisec_api</b>: API asset task</para>
             /// </description></item>
-            /// <item><description><para><b>apisec_abnormal</b>: API risk task.</para>
+            /// <item><description><para><b>apisec_abnormal</b>: API risk task</para>
             /// </description></item>
-            /// <item><description><para><b>apisec_event</b>: API security event task.</para>
+            /// <item><description><para><b>apisec_event</b>: API security event task</para>
             /// </description></item>
             /// </list>
             /// 
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D9532525-E885-54E7-A178-D5554D563AFB</para>

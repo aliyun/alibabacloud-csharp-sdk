@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             }
 
             /// <summary>
-            /// <para>The evidence ID. The value can contain up to 64 ASCII characters.</para>
+            /// <para>The evidence ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>EVD-20241025-001</para>
@@ -97,15 +97,15 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The evidence impact tag. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>block</b>: The request is blocked.</para>
+            /// <item><description><para><b>block</b>: Indicates that the request is blocked.</para>
             /// </description></item>
-            /// <item><description><para><b>challenge</b>: The request is challenged.</para>
+            /// <item><description><para><b>challenge</b>: Indicates that the request is challenged.</para>
             /// </description></item>
-            /// <item><description><para><b>monitor</b>: The request is monitored.</para>
+            /// <item><description><para><b>monitor</b>: Indicates that the request is monitored.</para>
             /// </description></item>
-            /// <item><description><para><b>bypass</b>: The request is suspected to be a bypass.</para>
+            /// <item><description><para><b>bypass</b>: Indicates a suspected bypass.</para>
             /// </description></item>
-            /// <item><description><para><b>attempt</b>: The request is a reconnaissance probe.</para>
+            /// <item><description><para><b>attempt</b>: Indicates reconnaissance or probing.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Method { get; set; }
 
             /// <summary>
-            /// <para>The ID of the associated node. This ID corresponds to the NodeId in the node list.</para>
+            /// <para>The ID of the associated node. This corresponds to the NodeId in the node list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>node-109-04</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>The masked request path.</para>
+            /// <para>The masked path of the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/api/orders/query</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? RequestTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the protected object to which the request belongs.</para>
+            /// <para>The protected object to which the request belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.example.com">www.example.com</a></para>
@@ -167,10 +167,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Resource { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the request is suspected to be a bypass. Valid values:</para>
+            /// <para>Specifies whether the request is a suspected bypass. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: The request is suspected to be a bypass.</description></item>
-            /// <item><description><b>0</b>: The request is not a bypass.</description></item>
+            /// <item><description><b>1</b>: Indicates a suspected bypass.</description></item>
+            /// <item><description><b>0</b>: Indicates that the request is not a bypass.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? SuspectedBypass { get; set; }
 
             /// <summary>
-            /// <para>The trace ID of the original request. The value can contain up to 128 ASCII characters.</para>
+            /// <para>The trace ID of the original request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>trace-20241025-109-04</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The pagination token for the next page. If a next page exists, this field returns a value.</para>
         /// <remarks>
-        /// <para>If this parameter returns a value, it indicates that a next page exists. You can use the returned <b>NextToken</b> as a request parameter to obtain the data of the next page until no value is returned, which indicates that all data is obtained.</para>
+        /// <para>If this parameter returns a value, a next page exists. You can use the returned <b>NextToken</b> as a request parameter to retrieve the next page. Repeat this process until no value is returned, which indicates that all data has been retrieved.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of evidence requests that meet the query conditions.</para>
+        /// <para>The total number of evidence requests that meet the specified conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

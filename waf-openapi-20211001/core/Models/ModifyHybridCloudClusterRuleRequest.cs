@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The resource ID of the cluster rule.</para>
+        /// <para>The ID of the cluster rule resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hdbc-clusterrule-*******ym0w</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
@@ -73,17 +73,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The traffic redirection rule configuration.</para>
+        /// <para>The traffic redirection rule configuration:</para>
         /// <para><notice>The mode cannot be modified.</notice></para>
         /// <list type="bullet">
         /// <item><description><b>check_mode</b>: the mode. Valid values:<list type="bullet">
-        /// <item><description><b>all</b>: full traffic redirection.</description></item>
-        /// <item><description><b>part</b>: partial traffic redirection.</description></item>
+        /// <item><description><b>all</b>: full traffic redirection</description></item>
+        /// <item><description><b>part</b>: partial traffic redirection</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>type</b>: the rule matching type. Valid values:<list type="bullet">
-        /// <item><description><b>exact</b>: exact match.</description></item>
-        /// <item><description><b>regex</b>: regular expression.</description></item>
+        /// <item><description><b>type</b>: the rule match type. Valid values:<list type="bullet">
+        /// <item><description><b>exact</b>: exact match</description></item>
+        /// <item><description><b>regex</b>: regular expression</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><b>substance</b>: the rule value.</description></item>
@@ -97,10 +97,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RuleConfig { get; set; }
 
         /// <summary>
-        /// <para>The rule status. Valid values:</para>
+        /// <para>The status of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: enabled.</description></item>
-        /// <item><description><b>off</b>: disabled.</description></item>
+        /// <item><description><b>on</b>: enabled</description></item>
+        /// <item><description><b>off</b>: disabled</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para><b>[Deprecated]</b> The rule type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>pullin</b>: traffic redirection configuration.</description></item>
+        /// <item><description><b>pullin</b>: traffic redirection configuration</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

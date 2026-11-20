@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Address { get; set; }
 
             /// <summary>
-            /// <para>The most recent modification time of the address. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The time when the address was last modified. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1760408233000</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The address book ID.</para>
+            /// <para>The ID of the address book.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12345678</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page for paging. Valid values: 1 to 500. Default value: 20.</para>
+        /// <para>The number of entries to return per page in a paging query. Valid values: 1 to 500. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. If a next page exists, this field contains a value.</para>
+        /// <para>The pagination token for the next page. This field is returned only when a next page exists.</para>
         /// <remarks>
-        /// <para>If this parameter has a return value, a next page exists. You can pass the returned <b>NextToken</b> as a request parameter to retrieve the next page of data. Repeat this process until no value is returned, which indicates that all data has been retrieved.</para>
+        /// <para>If this parameter returns a value, a next page exists. You can use the returned <b>NextToken</b> value as a request parameter to obtain the data on the next page until no value is returned, which indicates that all data is obtained.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8D8EBFB7-E1EB-5236-952A-092EDC72***</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of returned entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

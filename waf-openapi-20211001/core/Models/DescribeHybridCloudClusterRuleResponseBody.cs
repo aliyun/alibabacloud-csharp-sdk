@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public DescribeHybridCloudClusterRuleResponseBodyClusterRule ClusterRule { get; set; }
         public class DescribeHybridCloudClusterRuleResponseBodyClusterRule : TeaModel {
             /// <summary>
-            /// <para>The cluster rule resource ID.</para>
+            /// <para>The ID of the cluster rule resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hdbc-clusterrule-2m*****m0w</para>
@@ -27,19 +27,19 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ClusterRuleResourceId { get; set; }
 
             /// <summary>
-            /// <para>The traffic redirection rule configuration:</para>
+            /// <para>The traffic diversion rule configuration:</para>
             /// <list type="bullet">
-            /// <item><description><b>check_mode</b>: the mode selection. Valid values:<list type="bullet">
-            /// <item><description><b>all</b>: full traffic redirection</description></item>
-            /// <item><description><b>part</b>: partial traffic redirection</description></item>
+            /// <item><description><b>check_mode</b>: The mode selection. Valid values:<list type="bullet">
+            /// <item><description><b>all</b>: full traffic diversion</description></item>
+            /// <item><description><b>part</b>: specified partial traffic diversion</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><b>type</b>: the rule matching type. Valid values:<list type="bullet">
+            /// <item><description><b>type</b>: The rule match type. Valid values:<list type="bullet">
             /// <item><description><b>exact</b>: exact match</description></item>
             /// <item><description><b>regex</b>: regular expression</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><b>substance</b>: the rule value</description></item>
+            /// <item><description><b>substance</b>: The rule value.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -52,9 +52,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The rule status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>on</b>: enabled.</para>
+            /// <item><description><para><b>on</b>: Enabled.</para>
             /// </description></item>
-            /// <item><description><para><b>off</b>: disabled.</para>
+            /// <item><description><para><b>off</b>: Disabled.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The rule type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>pullin: traffic redirection rule</description></item>
+            /// <item><description>pullin: traffic diversion rule</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyAccessConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the configuration item to be modified. Valid values:</para>
+        /// <para>The key of the configuration item to be modified. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>auto_access</b>: specifies whether to enable the automatic access feature.</description></item>
+        /// <item><description><b>auto_access</b>: specifies whether to enable the automatic provisioning feature.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ConfigKey { get; set; }
 
         /// <summary>
-        /// <para>The value of the configuration item. The value is a JSON string. For more information about the fields, see the following descriptions.</para>
+        /// <para>The value of the configuration item. The value is a JSON string. For more information about the fields, see the following section.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

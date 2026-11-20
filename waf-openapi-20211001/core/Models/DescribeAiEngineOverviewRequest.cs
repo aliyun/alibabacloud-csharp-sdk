@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeAiEngineOverviewRequest : TeaModel {
         /// <summary>
-        /// <para>The end time. The value is a UNIX timestamp in UTC. Unit: seconds. Events are filtered based on the latest discovery time. The end time must be later than the start time.</para>
+        /// <para>The end time. The time is a UNIX timestamp in UTC. Unit: seconds. Data is filtered based on the time when the event was last detected. The end time must be later than the start time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the WAF instance.</para>
+        /// <para>The region where the WAF instance resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The start time. The value is a UNIX timestamp in UTC. Unit: seconds. Events are filtered based on the latest discovery time. You can query data generated within the last 30 days.</para>
+        /// <para>The start time. The time is a UNIX timestamp in UTC. Unit: seconds. Data is filtered based on the time when the event was last detected. You can query data within the last 30 days.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

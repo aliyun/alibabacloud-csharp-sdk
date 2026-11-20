@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ApiId { get; set; }
 
             /// <summary>
-            /// <para>The business purpose of the API.</para>
+            /// <para>The API business purpose.</para>
             /// <remarks>
             /// <para>You can call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported business purposes.</para>
             /// </remarks>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The attack count information, which is a string converted from a JSON object. The key is a timestamp in seconds, and the value is the number of attacks.</para>
+            /// <para>The attack count information, converted to a string in JSON format constructed by a series of parameters. The key is a timestamp in seconds, and the value is the number of attacks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -89,10 +89,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The attack IP address.</para>
-            /// <remarks>
-            /// <para>Notice: This parameter is deprecated. Use the AttackIps parameter instead.</notice></para>
-            /// </remarks>
+            /// <para>The attack IP address.<notice>This parameter is deprecated. Use the AttackIps parameter instead.</notice></para>
             /// 
             /// <b>Example:</b>
             /// <para>104.234.140.**</para>
@@ -105,12 +102,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The attack IP information, which is a string converted from a JSON object constructed with the following parameters:</para>
+            /// <para>The attack IP address information, converted to a string in JSON format constructed by a series of parameters. Includes:</para>
             /// <list type="bullet">
-            /// <item><description><b>ip</b>: the IP address.</description></item>
-            /// <item><description><b>country_id</b>: the country to which the IP address belongs.</description></item>
-            /// <item><description><b>region_id</b>: the region to which the IP address belongs.</description></item>
-            /// <item><description><b>cnt</b>: the number of attacks.</description></item>
+            /// <item><description><b>ip</b>: The IP address.</description></item>
+            /// <item><description><b>country_id</b>: The country.</description></item>
+            /// <item><description><b>region_id</b>: The region.</description></item>
+            /// <item><description><b>cnt</b>: The number of attacks.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -139,14 +136,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public List<string> AttackIps { get; set; }
 
             /// <summary>
-            /// <para>The Attacker list associated with the event.</para>
+            /// <para>The attacker list corresponding to the event.</para>
             /// </summary>
             [NameInMap("AttackerList")]
             [Validation(Required=false)]
             public List<string> AttackerList { get; set; }
 
             /// <summary>
-            /// <para>The end time of the query, in UNIX timestamp (UTC) format. Unit: seconds.</para>
+            /// <para>The end time of the query. The value is a UNIX timestamp in UTC. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1683703260</para>
@@ -168,11 +165,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The event details, which is a string converted from a JSON object constructed with the following parameters:</para>
+            /// <para>The detailed event information, converted to a string in JSON format constructed by a series of parameters. Includes:</para>
             /// <list type="bullet">
-            /// <item><description><b>ip_info</b>: the attack IP information. Refer to the response parameter <b>AttackIpInfo</b> of this operation.</description></item>
-            /// <item><description><b>rule_id</b>: the rule ID associated with the event.</description></item>
-            /// <item><description><b>rule_tag</b>: the rule information associated with the event.</description></item>
+            /// <item><description><b>ip_info</b>: The attack IP address information. You can refer to the <b>AttackIpInfo</b> response parameter of this operation.</description></item>
+            /// <item><description><b>rule_id</b>: The ID of the rule corresponding to the event.</description></item>
+            /// <item><description><b>rule_tag</b>: The rule information corresponding to the event.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -195,11 +192,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string EventInfo { get; set; }
 
             /// <summary>
-            /// <para>The event level. Valid values:</para>
+            /// <para>The severity level of the event. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>high</b>: High-risk.</description></item>
-            /// <item><description><b>medium</b>: Medium-risk.</description></item>
-            /// <item><description><b>low</b>: Low-risk.</description></item>
+            /// <item><description><b>high</b>: high risk.</description></item>
+            /// <item><description><b>medium</b>: medium risk.</description></item>
+            /// <item><description><b>low</b>: low risk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -223,7 +220,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string EventTag { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the event is followed. Valid values:</para>
+            /// <para>Specifies whether the event is followed. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>1</b>: Followed.</description></item>
             /// <item><description><b>0</b>: Not followed.</description></item>
@@ -247,7 +244,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string MatchedHost { get; set; }
 
             /// <summary>
-            /// <para>The remarks.</para>
+            /// <para>The note.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Notify</para>
@@ -257,10 +254,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Note { get; set; }
 
             /// <summary>
-            /// <para>The source of the event type. Valid values:</para>
+            /// <para>The origin of the event type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>custom</b>: Custom.</description></item>
-            /// <item><description><b>default</b>: Built-in.</description></item>
+            /// <item><description><b>custom</b>: custom.</description></item>
+            /// <item><description><b>default</b>: built-in.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -293,7 +290,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>A sample API request data, which is a string converted from a JSON object constructed with a series of parameters.</para>
+            /// <para>The API request data instance, converted to a string in JSON format constructed by a series of parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -306,7 +303,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>A sample API response data, which is a string converted from a JSON object constructed with a series of parameters.</para>
+            /// <para>The API response data example, converted to a string in JSON format constructed by a series of parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -317,7 +314,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ResponseData { get; set; }
 
             /// <summary>
-            /// <para>The start time of the query, in UNIX timestamp (UTC) format. Unit: seconds.</para>
+            /// <para>The start time of the query. The value is a UNIX timestamp in UTC. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1683648000</para>
@@ -327,12 +324,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? StartTs { get; set; }
 
             /// <summary>
-            /// <para>The event status. Valid values:</para>
+            /// <para>The status of the event. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>toBeConfirmed</b>: To be confirmed.</description></item>
-            /// <item><description><b>confirmed</b>: Confirmed.</description></item>
-            /// <item><description><b>actioned</b>: Handled.</description></item>
-            /// <item><description><b>ignored</b>: Ignored.</description></item>
+            /// <item><description><b>toBeConfirmed</b>: pending confirmation.</description></item>
+            /// <item><description><b>confirmed</b>: confirmed.</description></item>
+            /// <item><description><b>actioned</b>: handled.</description></item>
+            /// <item><description><b>ignored</b>: ignored.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -355,7 +352,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of returned results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

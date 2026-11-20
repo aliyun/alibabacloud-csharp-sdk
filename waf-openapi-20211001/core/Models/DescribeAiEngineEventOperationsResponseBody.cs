@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string FromStatus { get; set; }
 
             /// <summary>
-            /// <para>The time of the event operation. The time is in the UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The event operation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1792973400000</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for querying the next page. If a next page exists, this field returns a value.</para>
+        /// <para>The pagination token. If a next page exists, this field returns a value.</para>
         /// <remarks>
         /// <para>If this parameter returns a value, it indicates that a next page exists. You can use the returned <b>NextToken</b> as a request parameter to obtain the data on the next page until no value is returned, which indicates that all data is obtained.</para>
         /// </remarks>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the hybrid cloud cluster.</para>
         /// <remarks>
-        /// <para>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain the hybrid cloud cluster information.</para>
+        /// <para>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain hybrid cloud cluster information.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string MatchedHost { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return in a paged query. Default value: <b>1</b>, which indicates the first page of the paging result.</para>
+        /// <para>The number of the page to return for a paged query. Default value: <b>1</b>, which indicates the first page of paging results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page in a paged query. Default value: <b>10</b>, which indicates that 10 entries are returned on each page during paging.</para>
+        /// <para>The number of entries to return on each page for a paged query. Default value: <b>10</b>, which indicates 10 entries per page of paging results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -69,9 +69,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland</para>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland</para>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -95,9 +95,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The detection type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>api</b>: the list of domain names for API assets</description></item>
-        /// <item><description><b>abnormal</b>: the list of domain names with risks</description></item>
-        /// <item><description><b>event</b>: the list of domain names for security events</description></item>
+        /// <item><description><b>api</b>: the domain names of API assets.</description></item>
+        /// <item><description><b>abnormal</b>: the domain names associated with risks.</description></item>
+        /// <item><description><b>event</b>: the domain names associated with security events.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

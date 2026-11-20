@@ -5493,7 +5493,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unblocks an IP address that is blocked by the scan protection module.</para>
+        /// <para>Unblocks IP addresses blocked by scan protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5551,7 +5551,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unblocks an IP address that is blocked by the scan protection module.</para>
+        /// <para>Unblocks IP addresses blocked by scan protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5609,7 +5609,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unblocks an IP address that is blocked by the scan protection module.</para>
+        /// <para>Unblocks IP addresses blocked by scan protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5627,7 +5627,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unblocks an IP address that is blocked by the scan protection module.</para>
+        /// <para>Unblocks IP addresses blocked by scan protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5954,7 +5954,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If it is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before calling this operation, ensure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud response parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6013,7 +6013,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If it is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before calling this operation, ensure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud response parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6072,7 +6072,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If it is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before calling this operation, ensure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud response parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6095,7 +6095,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If it is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before calling this operation, ensure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud response parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6113,7 +6113,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a group.</para>
+        /// <para>Deletes group information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6171,7 +6171,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a group.</para>
+        /// <para>Deletes group information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6229,7 +6229,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a group.</para>
+        /// <para>Deletes group information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6247,7 +6247,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a group.</para>
+        /// <para>Deletes group information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6265,12 +6265,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a hybrid cloud log forwarding delivery configuration.</para>
+        /// <para>Deletes the outbound log delivery configuration for Hybrid Cloud.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the WAF instance has purchased hybrid cloud extension nodes. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloudNodeExtend is greater than 0, hybrid cloud extension nodes have been purchased. If not, log on to the WAF console and purchase hybrid cloud extension nodes by upgrading the instance.</para>
+        /// <para>Before calling this operation, ensure that you have purchased hybrid cloud extension nodes for your WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.HybridCloudNodeExtend parameter is greater than 0, hybrid cloud extension nodes are purchased. If not, log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6324,12 +6324,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a hybrid cloud log forwarding delivery configuration.</para>
+        /// <para>Deletes the outbound log delivery configuration for Hybrid Cloud.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the WAF instance has purchased hybrid cloud extension nodes. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloudNodeExtend is greater than 0, hybrid cloud extension nodes have been purchased. If not, log on to the WAF console and purchase hybrid cloud extension nodes by upgrading the instance.</para>
+        /// <para>Before calling this operation, ensure that you have purchased hybrid cloud extension nodes for your WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.HybridCloudNodeExtend parameter is greater than 0, hybrid cloud extension nodes are purchased. If not, log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6383,12 +6383,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a hybrid cloud log forwarding delivery configuration.</para>
+        /// <para>Deletes the outbound log delivery configuration for Hybrid Cloud.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the WAF instance has purchased hybrid cloud extension nodes. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloudNodeExtend is greater than 0, hybrid cloud extension nodes have been purchased. If not, log on to the WAF console and purchase hybrid cloud extension nodes by upgrading the instance.</para>
+        /// <para>Before calling this operation, ensure that you have purchased hybrid cloud extension nodes for your WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.HybridCloudNodeExtend parameter is greater than 0, hybrid cloud extension nodes are purchased. If not, log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6406,12 +6406,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a hybrid cloud log forwarding delivery configuration.</para>
+        /// <para>Deletes the outbound log delivery configuration for Hybrid Cloud.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the WAF instance has purchased hybrid cloud extension nodes. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloudNodeExtend is greater than 0, hybrid cloud extension nodes have been purchased. If not, log on to the WAF console and purchase hybrid cloud extension nodes by upgrading the instance.</para>
+        /// <para>Before calling this operation, ensure that you have purchased hybrid cloud extension nodes for your WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.HybridCloudNodeExtend parameter is greater than 0, hybrid cloud extension nodes are purchased. If not, log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6781,7 +6781,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries abnormal cloud native mode resources.</para>
+        /// <para>Queries abnormal resources in cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6831,7 +6831,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries abnormal cloud native mode resources.</para>
+        /// <para>Queries abnormal resources in cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6881,7 +6881,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries abnormal cloud native mode resources.</para>
+        /// <para>Queries abnormal resources in cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6899,7 +6899,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries abnormal cloud native mode resources.</para>
+        /// <para>Queries abnormal resources in cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6917,7 +6917,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the user access configuration.</para>
+        /// <para>Queries the access configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6971,7 +6971,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the user access configuration.</para>
+        /// <para>Queries the access configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7025,7 +7025,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the user access configuration.</para>
+        /// <para>Queries the access configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7043,7 +7043,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the user access configuration.</para>
+        /// <para>Queries the access configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7197,7 +7197,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries addresses in an address book by paging.</para>
+        /// <para>Queries the addresses in an address book by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7263,7 +7263,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries addresses in an address book by paging.</para>
+        /// <para>Queries the addresses in an address book by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7329,7 +7329,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries addresses in an address book by paging.</para>
+        /// <para>Queries the addresses in an address book by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7347,7 +7347,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries addresses in an address book by paging.</para>
+        /// <para>Queries the addresses in an address book by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7370,7 +7370,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. If the edition is not supported, upgrade the instance to the Agentic WAF edition.</para>
+        /// <para>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. If it is not supported, upgrade the instance to the Agentic WAF edition.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7433,7 +7433,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. If the edition is not supported, upgrade the instance to the Agentic WAF edition.</para>
+        /// <para>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. If it is not supported, upgrade the instance to the Agentic WAF edition.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7496,7 +7496,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. If the edition is not supported, upgrade the instance to the Agentic WAF edition.</para>
+        /// <para>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. If it is not supported, upgrade the instance to the Agentic WAF edition.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7519,7 +7519,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. If the edition is not supported, upgrade the instance to the Agentic WAF edition.</para>
+        /// <para>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. If it is not supported, upgrade the instance to the Agentic WAF edition.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7921,12 +7921,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the event trends of AI Engine.</para>
+        /// <para>Queries the AI Engine event trends.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is set to true, the instance is of the Agentic WAF edition. If the edition is not supported, upgrade the instance to the Agentic WAF edition.</para>
+        /// <para>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. If not, upgrade the instance to the Agentic WAF edition.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7984,12 +7984,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the event trends of AI Engine.</para>
+        /// <para>Queries the AI Engine event trends.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is set to true, the instance is of the Agentic WAF edition. If the edition is not supported, upgrade the instance to the Agentic WAF edition.</para>
+        /// <para>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. If not, upgrade the instance to the Agentic WAF edition.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8047,12 +8047,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the event trends of AI Engine.</para>
+        /// <para>Queries the AI Engine event trends.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is set to true, the instance is of the Agentic WAF edition. If the edition is not supported, upgrade the instance to the Agentic WAF edition.</para>
+        /// <para>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. If not, upgrade the instance to the Agentic WAF edition.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8070,12 +8070,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the event trends of AI Engine.</para>
+        /// <para>Queries the AI Engine event trends.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is set to true, the instance is of the Agentic WAF edition. If the edition is not supported, upgrade the instance to the Agentic WAF edition.</para>
+        /// <para>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. If not, upgrade the instance to the Agentic WAF edition.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8093,12 +8093,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AI Engine events.</para>
+        /// <para>Queries the list of AI Engine events.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. If not, upgrade the instance to the Agentic WAF edition.</para>
+        /// <para>Before calling this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.AgenticWaf parameter is set to true, the instance is of the Agentic WAF edition. If the instance does not support this edition, upgrade the instance to the Agentic WAF edition.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -8194,12 +8194,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AI Engine events.</para>
+        /// <para>Queries the list of AI Engine events.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. If not, upgrade the instance to the Agentic WAF edition.</para>
+        /// <para>Before calling this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.AgenticWaf parameter is set to true, the instance is of the Agentic WAF edition. If the instance does not support this edition, upgrade the instance to the Agentic WAF edition.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -8295,12 +8295,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AI Engine events.</para>
+        /// <para>Queries the list of AI Engine events.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. If not, upgrade the instance to the Agentic WAF edition.</para>
+        /// <para>Before calling this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.AgenticWaf parameter is set to true, the instance is of the Agentic WAF edition. If the instance does not support this edition, upgrade the instance to the Agentic WAF edition.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8318,12 +8318,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AI Engine events.</para>
+        /// <para>Queries the list of AI Engine events.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. If not, upgrade the instance to the Agentic WAF edition.</para>
+        /// <para>Before calling this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.AgenticWaf parameter is set to true, the instance is of the Agentic WAF edition. If the instance does not support this edition, upgrade the instance to the Agentic WAF edition.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8346,7 +8346,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.AgenticWaf response parameter is set to true, the instance is of the Agentic WAF edition. If the instance is not of this edition, upgrade the instance to the Agentic WAF edition.</para>
+        /// <para>Before calling this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.AgenticWaf parameter is set to true, the instance is of the Agentic WAF edition. If the instance is not of this edition, upgrade the instance to the Agentic WAF edition.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8413,7 +8413,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.AgenticWaf response parameter is set to true, the instance is of the Agentic WAF edition. If the instance is not of this edition, upgrade the instance to the Agentic WAF edition.</para>
+        /// <para>Before calling this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.AgenticWaf parameter is set to true, the instance is of the Agentic WAF edition. If the instance is not of this edition, upgrade the instance to the Agentic WAF edition.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8480,7 +8480,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.AgenticWaf response parameter is set to true, the instance is of the Agentic WAF edition. If the instance is not of this edition, upgrade the instance to the Agentic WAF edition.</para>
+        /// <para>Before calling this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.AgenticWaf parameter is set to true, the instance is of the Agentic WAF edition. If the instance is not of this edition, upgrade the instance to the Agentic WAF edition.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8503,7 +8503,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.AgenticWaf response parameter is set to true, the instance is of the Agentic WAF edition. If the instance is not of this edition, upgrade the instance to the Agentic WAF edition.</para>
+        /// <para>Before calling this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.AgenticWaf parameter is set to true, the instance is of the Agentic WAF edition. If the instance is not of this edition, upgrade the instance to the Agentic WAF edition.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8766,7 +8766,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.AgenticWaf parameter is set to true, the instance is of the Agentic WAF edition. If the instance does not support this edition, you can upgrade the instance to the Agentic WAF edition.</para>
+        /// <para>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. Otherwise, you can upgrade the instance to the Agentic WAF edition.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8829,7 +8829,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.AgenticWaf parameter is set to true, the instance is of the Agentic WAF edition. If the instance does not support this edition, you can upgrade the instance to the Agentic WAF edition.</para>
+        /// <para>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. Otherwise, you can upgrade the instance to the Agentic WAF edition.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8892,7 +8892,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.AgenticWaf parameter is set to true, the instance is of the Agentic WAF edition. If the instance does not support this edition, you can upgrade the instance to the Agentic WAF edition.</para>
+        /// <para>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. Otherwise, you can upgrade the instance to the Agentic WAF edition.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8915,7 +8915,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.AgenticWaf parameter is set to true, the instance is of the Agentic WAF edition. If the instance does not support this edition, you can upgrade the instance to the Agentic WAF edition.</para>
+        /// <para>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. Otherwise, you can upgrade the instance to the Agentic WAF edition.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8933,7 +8933,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert banner information of a Web Application Firewall (WAF) instance.</para>
+        /// <para>Queries alert banner information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8983,7 +8983,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert banner information of a Web Application Firewall (WAF) instance.</para>
+        /// <para>Queries alert banner information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9033,7 +9033,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert banner information of a Web Application Firewall (WAF) instance.</para>
+        /// <para>Queries alert banner information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9051,7 +9051,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert banner information of a Web Application Firewall (WAF) instance.</para>
+        /// <para>Queries alert banner information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9069,7 +9069,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of alerts.</para>
+        /// <para>Queries the alert list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9119,7 +9119,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of alerts.</para>
+        /// <para>Queries the alert list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9169,7 +9169,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of alerts.</para>
+        /// <para>Queries the alert list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9187,7 +9187,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of alerts.</para>
+        /// <para>Queries the alert list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9813,7 +9813,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of API security assets.</para>
+        /// <para>Queries API security assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9947,7 +9947,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of API security assets.</para>
+        /// <para>Queries API security assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10081,7 +10081,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of API security assets.</para>
+        /// <para>Queries API security assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10099,7 +10099,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of API security assets.</para>
+        /// <para>Queries API security assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10629,7 +10629,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of API security events.</para>
+        /// <para>Queries API security events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10755,7 +10755,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of API security events.</para>
+        /// <para>Queries API security events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10881,7 +10881,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of API security events.</para>
+        /// <para>Queries API security events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10899,7 +10899,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of API security events.</para>
+        /// <para>Queries API security events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12629,7 +12629,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries protection suggestions for API assets.</para>
+        /// <para>Queries the protection suggestions for API assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12687,7 +12687,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries protection suggestions for API assets.</para>
+        /// <para>Queries the protection suggestions for API assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12745,7 +12745,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries protection suggestions for API assets.</para>
+        /// <para>Queries the protection suggestions for API assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12763,7 +12763,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries protection suggestions for API assets.</para>
+        /// <para>Queries the protection suggestions for API assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12941,7 +12941,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the change records of rule group rules by paging.</para>
+        /// <para>Queries the change records of rules in a rule library by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13003,7 +13003,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the change records of rule group rules by paging.</para>
+        /// <para>Queries the change records of rules in a rule library by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13065,7 +13065,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the change records of rule group rules by paging.</para>
+        /// <para>Queries the change records of rules in a rule library by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13083,7 +13083,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the change records of rule group rules by paging.</para>
+        /// <para>Queries the change records of rules in a rule library by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13101,7 +13101,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the system rules of Web core protection.</para>
+        /// <para>Queries the system rules for web core protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13195,7 +13195,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the system rules of Web core protection.</para>
+        /// <para>Queries the system rules for web core protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13289,7 +13289,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the system rules of Web core protection.</para>
+        /// <para>Queries the system rules for web core protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13307,7 +13307,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the system rules of Web core protection.</para>
+        /// <para>Queries the system rules for web core protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13469,7 +13469,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the bot management rule label information.</para>
+        /// <para>Queries the information about bot management rule labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13535,7 +13535,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the bot management rule label information.</para>
+        /// <para>Queries the information about bot management rule labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13601,7 +13601,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the bot management rule label information.</para>
+        /// <para>Queries the information about bot management rule labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13619,7 +13619,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the bot management rule label information.</para>
+        /// <para>Queries the information about bot management rule labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13949,7 +13949,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the pricing module information of WAF.</para>
+        /// <para>Queries the billing module information of WAF.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14003,7 +14003,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the pricing module information of WAF.</para>
+        /// <para>Queries the billing module information of WAF.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14057,7 +14057,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the pricing module information of WAF.</para>
+        /// <para>Queries the billing module information of WAF.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14075,7 +14075,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the pricing module information of WAF.</para>
+        /// <para>Queries the billing module information of WAF.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14093,7 +14093,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the billing results of WAF billing modules.</para>
+        /// <para>Queries the pricing results of WAF billing modules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14155,7 +14155,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the billing results of WAF billing modules.</para>
+        /// <para>Queries the pricing results of WAF billing modules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14217,7 +14217,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the billing results of WAF billing modules.</para>
+        /// <para>Queries the pricing results of WAF billing modules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14235,7 +14235,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the billing results of WAF billing modules.</para>
+        /// <para>Queries the pricing results of WAF billing modules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14437,7 +14437,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the ports of cloud service instances that are added to WAF. Only ECS and CLB are supported.</para>
+        /// <para>Queries the ports of cloud service instances that are added to WAF. Only ECS and CLB instances are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14491,7 +14491,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the ports of cloud service instances that are added to WAF. Only ECS and CLB are supported.</para>
+        /// <para>Queries the ports of cloud service instances that are added to WAF. Only ECS and CLB instances are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14545,7 +14545,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the ports of cloud service instances that are added to WAF. Only ECS and CLB are supported.</para>
+        /// <para>Queries the ports of cloud service instances that are added to WAF. Only ECS and CLB instances are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14563,7 +14563,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the ports of cloud service instances that are added to WAF. Only ECS and CLB are supported.</para>
+        /// <para>Queries the ports of cloud service instances that are added to WAF. Only ECS and CLB instances are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14581,7 +14581,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of resources connected to WAF in cloud native mode.</para>
+        /// <para>Queries the list of resources onboarded to WAF in cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14663,7 +14663,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of resources connected to WAF in cloud native mode.</para>
+        /// <para>Queries the list of resources onboarded to WAF in cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14745,7 +14745,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of resources connected to WAF in cloud native mode.</para>
+        /// <para>Queries the list of resources onboarded to WAF in cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14763,7 +14763,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of resources connected to WAF in cloud native mode.</para>
+        /// <para>Queries the list of resources onboarded to WAF in cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15721,7 +15721,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of protected objects that can be associated with a defense group.</para>
+        /// <para>Queries the protection objects to associate with a protection group by using a paged query with paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15787,7 +15787,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of protected objects that can be associated with a defense group.</para>
+        /// <para>Queries the protection objects to associate with a protection group by using a paged query with paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15853,7 +15853,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of protected objects that can be associated with a defense group.</para>
+        /// <para>Queries the protection objects to associate with a protection group by using a paged query with paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15871,7 +15871,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of protected objects that can be associated with a defense group.</para>
+        /// <para>Queries the protection objects to associate with a protection group by using a paged query with paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15889,7 +15889,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query a single protected object.</para>
+        /// <para>Queries a single protected object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15943,7 +15943,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query a single protected object.</para>
+        /// <para>Queries a single protected object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15997,7 +15997,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query a single protected object.</para>
+        /// <para>Queries a single protected object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16015,7 +16015,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query a single protected object.</para>
+        /// <para>Queries a single protected object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17013,7 +17013,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries protected objects by paging.</para>
+        /// <para>Performs a paged query of protected objects by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17079,7 +17079,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries protected objects by paging.</para>
+        /// <para>Performs a paged query of protected objects by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17145,7 +17145,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries protected objects by paging.</para>
+        /// <para>Performs a paged query of protected objects by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17163,7 +17163,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries protected objects by paging.</para>
+        /// <para>Performs a paged query of protected objects by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17349,12 +17349,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics of rules under a specified WAF protection module.</para>
+        /// <para>Queries the statistics of rules in a specified Web Application Firewall (WAF) protection module.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports querying rule statistics for protection templates under the new Bot Management (bot_manager) and new Web Core Protection (waf_base) scenarios.</para>
+        /// <para>This operation queries the statistics of rules in protection templates for the new Bot Management (bot_manager) and new Web Core Protection (waf_base) scenarios.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17424,12 +17424,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics of rules under a specified WAF protection module.</para>
+        /// <para>Queries the statistics of rules in a specified Web Application Firewall (WAF) protection module.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports querying rule statistics for protection templates under the new Bot Management (bot_manager) and new Web Core Protection (waf_base) scenarios.</para>
+        /// <para>This operation queries the statistics of rules in protection templates for the new Bot Management (bot_manager) and new Web Core Protection (waf_base) scenarios.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17499,12 +17499,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics of rules under a specified WAF protection module.</para>
+        /// <para>Queries the statistics of rules in a specified Web Application Firewall (WAF) protection module.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports querying rule statistics for protection templates under the new Bot Management (bot_manager) and new Web Core Protection (waf_base) scenarios.</para>
+        /// <para>This operation queries the statistics of rules in protection templates for the new Bot Management (bot_manager) and new Web Core Protection (waf_base) scenarios.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17522,12 +17522,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics of rules under a specified WAF protection module.</para>
+        /// <para>Queries the statistics of rules in a specified Web Application Firewall (WAF) protection module.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports querying rule statistics for protection templates under the new Bot Management (bot_manager) and new Web Core Protection (waf_base) scenarios.</para>
+        /// <para>This operation queries the statistics of rules in protection templates for the new Bot Management (bot_manager) and new Web Core Protection (waf_base) scenarios.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18193,7 +18193,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of protected objects that are valid for a specified protection template.</para>
+        /// <para>Queries the list of protected objects pending to take effect for a protection template by using paging in a paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18263,7 +18263,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of protected objects that are valid for a specified protection template.</para>
+        /// <para>Queries the list of protected objects pending to take effect for a protection template by using paging in a paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18333,7 +18333,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of protected objects that are valid for a specified protection template.</para>
+        /// <para>Queries the list of protected objects pending to take effect for a protection template by using paging in a paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18351,7 +18351,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of protected objects that are valid for a specified protection template.</para>
+        /// <para>Queries the list of protected objects pending to take effect for a protection template by using paging in a paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18873,7 +18873,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all ports used by domain names of the current user. Only domain names with CNAME access and hybrid cloud CNAME domain names with public network disaster recovery enabled are included.</para>
+        /// <para>Queries the ports used by all domain names of a user, including only CNAME-accessed domain names and hybrid cloud CNAME domain names with public network disaster recovery enabled.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18919,7 +18919,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all ports used by domain names of the current user. Only domain names with CNAME access and hybrid cloud CNAME domain names with public network disaster recovery enabled are included.</para>
+        /// <para>Queries the ports used by all domain names of a user, including only CNAME-accessed domain names and hybrid cloud CNAME domain names with public network disaster recovery enabled.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18965,7 +18965,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all ports used by domain names of the current user. Only domain names with CNAME access and hybrid cloud CNAME domain names with public network disaster recovery enabled are included.</para>
+        /// <para>Queries the ports used by all domain names of a user, including only CNAME-accessed domain names and hybrid cloud CNAME domain names with public network disaster recovery enabled.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18983,7 +18983,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all ports used by domain names of the current user. Only domain names with CNAME access and hybrid cloud CNAME domain names with public network disaster recovery enabled are included.</para>
+        /// <para>Queries the ports used by all domain names of a user, including only CNAME-accessed domain names and hybrid cloud CNAME domain names with public network disaster recovery enabled.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19185,7 +19185,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the daily bills of a pay-as-you-go WAF instance for the last 7 days.</para>
+        /// <para>Queries the daily bills of a pay-as-you-go Web Application Firewall (WAF) instance over the last seven days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19243,7 +19243,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the daily bills of a pay-as-you-go WAF instance for the last 7 days.</para>
+        /// <para>Queries the daily bills of a pay-as-you-go Web Application Firewall (WAF) instance over the last seven days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19301,7 +19301,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the daily bills of a pay-as-you-go WAF instance for the last 7 days.</para>
+        /// <para>Queries the daily bills of a pay-as-you-go Web Application Firewall (WAF) instance over the last seven days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19319,7 +19319,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the daily bills of a pay-as-you-go WAF instance for the last 7 days.</para>
+        /// <para>Queries the daily bills of a pay-as-you-go Web Application Firewall (WAF) instance over the last seven days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19817,7 +19817,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the asset statistics information for basic API security detection.</para>
+        /// <para>Queries the asset statistics information for API security basic detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19867,7 +19867,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the asset statistics information for basic API security detection.</para>
+        /// <para>Queries the asset statistics information for API security basic detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19917,7 +19917,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the asset statistics information for basic API security detection.</para>
+        /// <para>Queries the asset statistics information for API security basic detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19935,7 +19935,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the asset statistics information for basic API security detection.</para>
+        /// <para>Queries the asset statistics information for API security basic detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19953,7 +19953,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the security event statistics of API security basic detection.</para>
+        /// <para>Queries the statistics of security events for basic API security detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20003,7 +20003,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the security event statistics of API security basic detection.</para>
+        /// <para>Queries the statistics of security events for basic API security detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20053,7 +20053,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the security event statistics of API security basic detection.</para>
+        /// <para>Queries the statistics of security events for basic API security detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20071,7 +20071,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the security event statistics of API security basic detection.</para>
+        /// <para>Queries the statistics of security events for basic API security detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20089,7 +20089,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the security event types for basic API security detection.</para>
+        /// <para>Queries the security event types for API security basic detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20139,7 +20139,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the security event types for basic API security detection.</para>
+        /// <para>Queries the security event types for API security basic detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20189,7 +20189,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the security event types for basic API security detection.</para>
+        /// <para>Queries the security event types for API security basic detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20207,7 +20207,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the security event types for basic API security detection.</para>
+        /// <para>Queries the security event types for API security basic detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20225,7 +20225,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of security events detected by API security basic detection.</para>
+        /// <para>Queries the list of security events for API security basic detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20275,7 +20275,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of security events detected by API security basic detection.</para>
+        /// <para>Queries the list of security events for API security basic detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20325,7 +20325,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of security events detected by API security basic detection.</para>
+        /// <para>Queries the list of security events for API security basic detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20343,7 +20343,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of security events detected by API security basic detection.</para>
+        /// <para>Queries the list of security events for API security basic detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20361,12 +20361,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the system status of hybrid cloud cluster nodes.</para>
+        /// <para>Queries the system status of nodes in a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for your WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud response parameter is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.HybridCloud parameter in the response is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20420,12 +20420,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the system status of hybrid cloud cluster nodes.</para>
+        /// <para>Queries the system status of nodes in a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for your WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud response parameter is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.HybridCloud parameter in the response is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20479,12 +20479,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the system status of hybrid cloud cluster nodes.</para>
+        /// <para>Queries the system status of nodes in a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for your WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud response parameter is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.HybridCloud parameter in the response is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20502,12 +20502,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the system status of hybrid cloud cluster nodes.</para>
+        /// <para>Queries the system status of nodes in a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for your WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud response parameter is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.HybridCloud parameter in the response is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20525,12 +20525,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the rule information of a hybrid cloud cluster.</para>
+        /// <para>Retrieves the hybrid cloud cluster rule information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If it is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.HybridCloud parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20568,12 +20568,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the rule information of a hybrid cloud cluster.</para>
+        /// <para>Retrieves the hybrid cloud cluster rule information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If it is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.HybridCloud parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20611,12 +20611,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the rule information of a hybrid cloud cluster.</para>
+        /// <para>Retrieves the hybrid cloud cluster rule information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If it is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.HybridCloud parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20634,12 +20634,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the rule information of a hybrid cloud cluster.</para>
+        /// <para>Retrieves the hybrid cloud cluster rule information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If it is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.HybridCloud parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22305,12 +22305,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the dictionary of region information supported by hybrid cloud, including ISPs, continents, and cities.</para>
+        /// <para>Queries the region information dictionary for ISPs, continents, and cities supported by Hybrid Cloud.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If it is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before calling this operation, ensure that the Hybrid Cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.HybridCloud parameter is true, the Hybrid Cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the Hybrid Cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22368,12 +22368,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the dictionary of region information supported by hybrid cloud, including ISPs, continents, and cities.</para>
+        /// <para>Queries the region information dictionary for ISPs, continents, and cities supported by Hybrid Cloud.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If it is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before calling this operation, ensure that the Hybrid Cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.HybridCloud parameter is true, the Hybrid Cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the Hybrid Cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22431,12 +22431,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the dictionary of region information supported by hybrid cloud, including ISPs, continents, and cities.</para>
+        /// <para>Queries the region information dictionary for ISPs, continents, and cities supported by Hybrid Cloud.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If it is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before calling this operation, ensure that the Hybrid Cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.HybridCloud parameter is true, the Hybrid Cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the Hybrid Cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22454,12 +22454,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the dictionary of region information supported by hybrid cloud, including ISPs, continents, and cities.</para>
+        /// <para>Queries the region information dictionary for ISPs, continents, and cities supported by Hybrid Cloud.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If it is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before calling this operation, ensure that the Hybrid Cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.HybridCloud parameter is true, the Hybrid Cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the Hybrid Cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22482,7 +22482,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.HybridCloud response parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22537,7 +22537,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.HybridCloud response parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22592,7 +22592,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.HybridCloud response parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22615,7 +22615,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.HybridCloud response parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22638,7 +22638,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.HybridCloud parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22713,7 +22713,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.HybridCloud parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22788,7 +22788,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.HybridCloud parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22811,7 +22811,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.HybridCloud parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22829,7 +22829,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of unsupported ports for a hybrid cloud.</para>
+        /// <para>Queries the list of unavailable ports for hybrid cloud.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22879,7 +22879,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of unsupported ports for a hybrid cloud.</para>
+        /// <para>Queries the list of unavailable ports for hybrid cloud.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22929,7 +22929,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of unsupported ports for a hybrid cloud.</para>
+        /// <para>Queries the list of unavailable ports for hybrid cloud.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22947,7 +22947,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of unsupported ports for a hybrid cloud.</para>
+        /// <para>Queries the list of unavailable ports for hybrid cloud.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23249,7 +23249,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the countries and areas outside China supported by the Location Blacklist.</para>
+        /// <para>Queries the countries and areas outside China supported by IP Location Blacklist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23319,7 +23319,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the countries and areas outside China supported by the Location Blacklist.</para>
+        /// <para>Queries the countries and areas outside China supported by IP Location Blacklist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23389,7 +23389,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the countries and areas outside China supported by the Location Blacklist.</para>
+        /// <para>Queries the countries and areas outside China supported by IP Location Blacklist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23407,7 +23407,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the countries and areas outside China supported by the Location Blacklist.</para>
+        /// <para>Queries the countries and areas outside China supported by IP Location Blacklist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23425,7 +23425,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a single log delivery configuration for a hybrid cloud.</para>
+        /// <para>Queries a single hybrid cloud log delivery configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23479,7 +23479,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a single log delivery configuration for a hybrid cloud.</para>
+        /// <para>Queries a single hybrid cloud log delivery configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23533,7 +23533,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a single log delivery configuration for a hybrid cloud.</para>
+        /// <para>Queries a single hybrid cloud log delivery configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23551,7 +23551,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a single log delivery configuration for a hybrid cloud.</para>
+        /// <para>Queries a single hybrid cloud log delivery configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23569,7 +23569,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all log delivery configurations of a Web Application Firewall (WAF) instance for hybrid cloud.</para>
+        /// <para>Queries all hybrid cloud log delivery configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23635,7 +23635,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all log delivery configurations of a Web Application Firewall (WAF) instance for hybrid cloud.</para>
+        /// <para>Queries all hybrid cloud log delivery configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23701,7 +23701,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all log delivery configurations of a Web Application Firewall (WAF) instance for hybrid cloud.</para>
+        /// <para>Queries all hybrid cloud log delivery configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23719,7 +23719,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all log delivery configurations of a Web Application Firewall (WAF) instance for hybrid cloud.</para>
+        /// <para>Queries all hybrid cloud log delivery configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24113,7 +24113,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time series statistics of all traffic, including malicious requests and normal service requests.</para>
+        /// <para>Queries the time-series statistics of all traffic, including malicious requests and normal service requests.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24177,7 +24177,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time series statistics of all traffic, including malicious requests and normal service requests.</para>
+        /// <para>Queries the time-series statistics of all traffic, including malicious requests and normal service requests.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24241,7 +24241,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time series statistics of all traffic, including malicious requests and normal service requests.</para>
+        /// <para>Queries the time-series statistics of all traffic, including malicious requests and normal service requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24259,7 +24259,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time series statistics of all traffic, including malicious requests and normal service requests.</para>
+        /// <para>Queries the time-series statistics of all traffic, including malicious requests and normal service requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24277,7 +24277,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top N statistics for all traffic that passes through Web Application Firewall (WAF), including malicious and normal service requests. The results are aggregated by different dimensions and sorted in descending order.</para>
+        /// <para>Queries the top statistics of all traffic aggregated and sorted by various dimensions, including malicious requests and normal service traffic.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24345,7 +24345,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top N statistics for all traffic that passes through Web Application Firewall (WAF), including malicious and normal service requests. The results are aggregated by different dimensions and sorted in descending order.</para>
+        /// <para>Queries the top statistics of all traffic aggregated and sorted by various dimensions, including malicious requests and normal service traffic.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24413,7 +24413,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top N statistics for all traffic that passes through Web Application Firewall (WAF), including malicious and normal service requests. The results are aggregated by different dimensions and sorted in descending order.</para>
+        /// <para>Queries the top statistics of all traffic aggregated and sorted by various dimensions, including malicious requests and normal service traffic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24431,7 +24431,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top N statistics for all traffic that passes through Web Application Firewall (WAF), including malicious and normal service requests. The results are aggregated by different dimensions and sorted in descending order.</para>
+        /// <para>Queries the top statistics of all traffic aggregated and sorted by various dimensions, including malicious requests and normal service traffic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24753,7 +24753,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the enabled proof of concept (POC) feature trials.</para>
+        /// <para>Queries the details of enabled POC feature trials.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24803,7 +24803,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the enabled proof of concept (POC) feature trials.</para>
+        /// <para>Queries the details of enabled POC feature trials.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24853,7 +24853,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the enabled proof of concept (POC) feature trials.</para>
+        /// <para>Queries the details of enabled POC feature trials.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24871,7 +24871,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the enabled proof of concept (POC) feature trials.</para>
+        /// <para>Queries the details of enabled POC feature trials.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25942,7 +25942,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the WAF instance has hybrid cloud extension nodes purchased. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloudNodeExtend is greater than 0, hybrid cloud extension nodes have been purchased. If not, log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</para>
+        /// <para>Before calling this operation, ensure that you have purchased hybrid cloud extension nodes for your Web Application Firewall (WAF) instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned value of the Details.HybridCloudNodeExtend parameter is greater than 0, hybrid cloud extension nodes have been purchased. Otherwise, log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26001,7 +26001,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the WAF instance has hybrid cloud extension nodes purchased. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloudNodeExtend is greater than 0, hybrid cloud extension nodes have been purchased. If not, log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</para>
+        /// <para>Before calling this operation, ensure that you have purchased hybrid cloud extension nodes for your Web Application Firewall (WAF) instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned value of the Details.HybridCloudNodeExtend parameter is greater than 0, hybrid cloud extension nodes have been purchased. Otherwise, log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26060,7 +26060,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the WAF instance has hybrid cloud extension nodes purchased. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloudNodeExtend is greater than 0, hybrid cloud extension nodes have been purchased. If not, log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</para>
+        /// <para>Before calling this operation, ensure that you have purchased hybrid cloud extension nodes for your Web Application Firewall (WAF) instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned value of the Details.HybridCloudNodeExtend parameter is greater than 0, hybrid cloud extension nodes have been purchased. Otherwise, log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26083,7 +26083,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the WAF instance has hybrid cloud extension nodes purchased. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloudNodeExtend is greater than 0, hybrid cloud extension nodes have been purchased. If not, log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</para>
+        /// <para>Before calling this operation, ensure that you have purchased hybrid cloud extension nodes for your Web Application Firewall (WAF) instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned value of the Details.HybridCloudNodeExtend parameter is greater than 0, hybrid cloud extension nodes have been purchased. Otherwise, log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26101,7 +26101,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log field configuration for a protected object.</para>
+        /// <para>Queries the log field configuration of a protected object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26159,7 +26159,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log field configuration for a protected object.</para>
+        /// <para>Queries the log field configuration of a protected object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26217,7 +26217,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log field configuration for a protected object.</para>
+        /// <para>Queries the log field configuration of a protected object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26235,7 +26235,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log field configuration for a protected object.</para>
+        /// <para>Queries the log field configuration of a protected object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28285,16 +28285,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed logs of attack traffic. Each log entry contains the details of a request that matched a protection rule.</para>
+        /// <para>Queries the detailed logs of attack traffic. Each log entry contains detailed information about a matched request.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Attack traffic refers to requests that hit a rule and are identified as threats. The following three types of requests are not included:</para>
+        /// <para>Attack traffic refers to requests with rule hits that are identified as risky. The following three types of data are not included:</para>
         /// <list type="bullet">
-        /// <item><description>Requests that hit a whitelist rule.</description></item>
-        /// <item><description>Requests that hit a bot rule whose action is set to Mark for Origin Fetch.</description></item>
-        /// <item><description>Requests that hit a rule whose action is set to Dynamic Token, Slider, Strict Slider, or JS Challenge, but are allowed because the user passed the verification.</description></item>
+        /// <item><description>Requests with rule hits on whitelist rules.</description></item>
+        /// <item><description>Requests that match bot rules but the rule action is set to back-to-origin mark.</description></item>
+        /// <item><description>Requests with rule hits where the rule action is set to dynamic token, slider, strict slider, or JavaScript authenticate, but users authenticate successfully and are allowed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28363,16 +28363,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed logs of attack traffic. Each log entry contains the details of a request that matched a protection rule.</para>
+        /// <para>Queries the detailed logs of attack traffic. Each log entry contains detailed information about a matched request.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Attack traffic refers to requests that hit a rule and are identified as threats. The following three types of requests are not included:</para>
+        /// <para>Attack traffic refers to requests with rule hits that are identified as risky. The following three types of data are not included:</para>
         /// <list type="bullet">
-        /// <item><description>Requests that hit a whitelist rule.</description></item>
-        /// <item><description>Requests that hit a bot rule whose action is set to Mark for Origin Fetch.</description></item>
-        /// <item><description>Requests that hit a rule whose action is set to Dynamic Token, Slider, Strict Slider, or JS Challenge, but are allowed because the user passed the verification.</description></item>
+        /// <item><description>Requests with rule hits on whitelist rules.</description></item>
+        /// <item><description>Requests that match bot rules but the rule action is set to back-to-origin mark.</description></item>
+        /// <item><description>Requests with rule hits where the rule action is set to dynamic token, slider, strict slider, or JavaScript authenticate, but users authenticate successfully and are allowed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28441,16 +28441,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed logs of attack traffic. Each log entry contains the details of a request that matched a protection rule.</para>
+        /// <para>Queries the detailed logs of attack traffic. Each log entry contains detailed information about a matched request.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Attack traffic refers to requests that hit a rule and are identified as threats. The following three types of requests are not included:</para>
+        /// <para>Attack traffic refers to requests with rule hits that are identified as risky. The following three types of data are not included:</para>
         /// <list type="bullet">
-        /// <item><description>Requests that hit a whitelist rule.</description></item>
-        /// <item><description>Requests that hit a bot rule whose action is set to Mark for Origin Fetch.</description></item>
-        /// <item><description>Requests that hit a rule whose action is set to Dynamic Token, Slider, Strict Slider, or JS Challenge, but are allowed because the user passed the verification.</description></item>
+        /// <item><description>Requests with rule hits on whitelist rules.</description></item>
+        /// <item><description>Requests that match bot rules but the rule action is set to back-to-origin mark.</description></item>
+        /// <item><description>Requests with rule hits where the rule action is set to dynamic token, slider, strict slider, or JavaScript authenticate, but users authenticate successfully and are allowed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28469,16 +28469,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed logs of attack traffic. Each log entry contains the details of a request that matched a protection rule.</para>
+        /// <para>Queries the detailed logs of attack traffic. Each log entry contains detailed information about a matched request.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Attack traffic refers to requests that hit a rule and are identified as threats. The following three types of requests are not included:</para>
+        /// <para>Attack traffic refers to requests with rule hits that are identified as risky. The following three types of data are not included:</para>
         /// <list type="bullet">
-        /// <item><description>Requests that hit a whitelist rule.</description></item>
-        /// <item><description>Requests that hit a bot rule whose action is set to Mark for Origin Fetch.</description></item>
-        /// <item><description>Requests that hit a rule whose action is set to Dynamic Token, Slider, Strict Slider, or JS Challenge, but are allowed because the user passed the verification.</description></item>
+        /// <item><description>Requests with rule hits on whitelist rules.</description></item>
+        /// <item><description>Requests that match bot rules but the rule action is set to back-to-origin mark.</description></item>
+        /// <item><description>Requests with rule hits where the rule action is set to dynamic token, slider, strict slider, or JavaScript authenticate, but users authenticate successfully and are allowed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29265,7 +29265,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the distribution of cross-border traffic that contains personal information.</para>
+        /// <para>Queries the distribution of outbound traffic containing personal information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29327,7 +29327,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the distribution of cross-border traffic that contains personal information.</para>
+        /// <para>Queries the distribution of outbound traffic containing personal information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29389,7 +29389,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the distribution of cross-border traffic that contains personal information.</para>
+        /// <para>Queries the distribution of outbound traffic containing personal information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29407,7 +29407,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the distribution of cross-border traffic that contains personal information.</para>
+        /// <para>Queries the distribution of outbound traffic containing personal information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29425,7 +29425,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics about outbound transfers of personal information.</para>
+        /// <para>Queries the statistics on the types of outbound personal information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29519,7 +29519,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics about outbound transfers of personal information.</para>
+        /// <para>Queries the statistics on the types of outbound personal information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29613,7 +29613,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics about outbound transfers of personal information.</para>
+        /// <para>Queries the statistics on the types of outbound personal information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29631,7 +29631,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics about outbound transfers of personal information.</para>
+        /// <para>Queries the statistics on the types of outbound personal information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29649,7 +29649,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of cross-border transfer of personal information data.</para>
+        /// <para>Queries the trend of outbound personal information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29711,7 +29711,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of cross-border transfer of personal information data.</para>
+        /// <para>Queries the trend of outbound personal information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29773,7 +29773,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of cross-border transfer of personal information data.</para>
+        /// <para>Queries the trend of outbound personal information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29791,7 +29791,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of cross-border transfer of personal information data.</para>
+        /// <para>Queries the trend of outbound personal information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30033,7 +30033,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the results of sensitive data tracing.</para>
+        /// <para>Queries sensitive data tracing results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30111,7 +30111,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the results of sensitive data tracing.</para>
+        /// <para>Queries sensitive data tracing results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30189,7 +30189,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the results of sensitive data tracing.</para>
+        /// <para>Queries sensitive data tracing results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30207,7 +30207,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the results of sensitive data tracing.</para>
+        /// <para>Queries sensitive data tracing results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30225,7 +30225,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the sensitive data statistics of tracing watermark audits.</para>
+        /// <para>Queries the sensitive data statistics for tracing audit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30299,7 +30299,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the sensitive data statistics of tracing watermark audits.</para>
+        /// <para>Queries the sensitive data statistics for tracing audit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30373,7 +30373,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the sensitive data statistics of tracing watermark audits.</para>
+        /// <para>Queries the sensitive data statistics for tracing audit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30391,7 +30391,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the sensitive data statistics of tracing watermark audits.</para>
+        /// <para>Queries the sensitive data statistics for tracing audit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31145,7 +31145,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of notable security events.</para>
+        /// <para>Queries the list of noteworthy security events by paging in a paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31215,7 +31215,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of notable security events.</para>
+        /// <para>Queries the list of noteworthy security events by paging in a paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31285,7 +31285,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of notable security events.</para>
+        /// <para>Queries the list of noteworthy security events by paging in a paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31303,7 +31303,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of notable security events.</para>
+        /// <para>Queries the list of noteworthy security events by paging in a paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31321,7 +31321,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a security event that requires attention.</para>
+        /// <para>Retrieves the details of noteworthy security events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31375,7 +31375,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a security event that requires attention.</para>
+        /// <para>Retrieves the details of noteworthy security events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31429,7 +31429,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a security event that requires attention.</para>
+        /// <para>Retrieves the details of noteworthy security events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31447,7 +31447,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a security event that requires attention.</para>
+        /// <para>Retrieves the details of noteworthy security events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31465,7 +31465,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 5 statistics of security events aggregated by different statistical objects and sorted in descending order.</para>
+        /// <para>Queries the top 5 statistics for security events, aggregated and sorted in descending order based on different metrics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31523,7 +31523,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 5 statistics of security events aggregated by different statistical objects and sorted in descending order.</para>
+        /// <para>Queries the top 5 statistics for security events, aggregated and sorted in descending order based on different metrics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31581,7 +31581,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 5 statistics of security events aggregated by different statistical objects and sorted in descending order.</para>
+        /// <para>Queries the top 5 statistics for security events, aggregated and sorted in descending order based on different metrics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31599,7 +31599,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 5 statistics of security events aggregated by different statistical objects and sorted in descending order.</para>
+        /// <para>Queries the top 5 statistics for security events, aggregated and sorted in descending order based on different metrics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32265,7 +32265,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attack trend of API security.</para>
+        /// <para>Queries the trend of API security attacks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32323,7 +32323,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attack trend of API security.</para>
+        /// <para>Queries the trend of API security attacks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32381,7 +32381,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attack trend of API security.</para>
+        /// <para>Queries the trend of API security attacks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32399,7 +32399,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attack trend of API security.</para>
+        /// <para>Queries the trend of API security attacks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33197,7 +33197,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the domain ownership verification content of a Web Application Firewall (WAF) instance.</para>
+        /// <para>Queries the ownership verification content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33247,7 +33247,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the domain ownership verification content of a Web Application Firewall (WAF) instance.</para>
+        /// <para>Queries the ownership verification content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33297,7 +33297,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the domain ownership verification content of a Web Application Firewall (WAF) instance.</para>
+        /// <para>Queries the ownership verification content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33315,7 +33315,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the domain ownership verification content of a Web Application Firewall (WAF) instance.</para>
+        /// <para>Queries the ownership verification content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33789,7 +33789,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes a service-linked role for WAF.</para>
+        /// <para>Creates a service-linked role for WAF.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33839,7 +33839,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes a service-linked role for WAF.</para>
+        /// <para>Creates a service-linked role for WAF.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33889,7 +33889,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes a service-linked role for WAF.</para>
+        /// <para>Creates a service-linked role for WAF.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33907,7 +33907,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes a service-linked role for WAF.</para>
+        /// <para>Creates a service-linked role for WAF.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34069,7 +34069,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are attached to a resource.</para>
+        /// <para>Queries the tags bound to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34127,7 +34127,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are attached to a resource.</para>
+        /// <para>Queries the tags bound to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34185,7 +34185,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are attached to a resource.</para>
+        /// <para>Queries the tags bound to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34203,7 +34203,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are attached to a resource.</para>
+        /// <para>Queries the tags bound to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34381,7 +34381,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the user access configuration.</para>
+        /// <para>Modifies the user provisioning configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34439,7 +34439,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the user access configuration.</para>
+        /// <para>Modifies the user provisioning configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34497,7 +34497,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the user access configuration.</para>
+        /// <para>Modifies the user provisioning configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34515,7 +34515,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the user access configuration.</para>
+        /// <para>Modifies the user provisioning configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34538,7 +34538,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. Otherwise, upgrade the instance to the Agentic WAF edition.</para>
+        /// <para>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. If not, upgrade the instance to the Agentic WAF edition.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34605,7 +34605,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. Otherwise, upgrade the instance to the Agentic WAF edition.</para>
+        /// <para>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. If not, upgrade the instance to the Agentic WAF edition.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34672,7 +34672,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. Otherwise, upgrade the instance to the Agentic WAF edition.</para>
+        /// <para>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. If not, upgrade the instance to the Agentic WAF edition.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34695,7 +34695,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. Otherwise, upgrade the instance to the Agentic WAF edition.</para>
+        /// <para>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. If not, upgrade the instance to the Agentic WAF edition.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35049,7 +35049,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the statuses of multiple API security events in a batch.</para>
+        /// <para>Updates the status of multiple API security events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35119,7 +35119,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the statuses of multiple API security events in a batch.</para>
+        /// <para>Updates the status of multiple API security events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35189,7 +35189,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the statuses of multiple API security events in a batch.</para>
+        /// <para>Updates the status of multiple API security events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35207,7 +35207,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the statuses of multiple API security events in a batch.</para>
+        /// <para>Updates the status of multiple API security events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35442,12 +35442,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you invoke this operation, make sure that you have created an API security log delivery configuration by invoking the <a href="https://help.aliyun.com/document_detail/2932937.html">ModifyApisecLogDelivery</a> operation. If you have not created a delivery configuration, complete the following prerequisites:</para>
+        /// <para>Before invoking this operation, ensure that you have created an API security log delivery configuration by invoking the <a href="https://help.aliyun.com/document_detail/2932937.html">ModifyApisecLogDelivery</a> operation. If you have not created a delivery configuration, complete the following prerequisites:</para>
         /// <ol>
-        /// <item><description>Confirm that the API security feature is enabled. Invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.AgenticApisec or Details.Apisec parameter in the response is true, the API security feature is enabled.</description></item>
-        /// <item><description>Confirm that WAF is authorized to access cloud resources. Invoke the <a href="https://help.aliyun.com/document_detail/2990717.html">DescribeRoleAuthStatus</a> operation to query the authorization status. If WAF is not authorized, invoke the <a href="https://help.aliyun.com/document_detail/2990727.html">InitializeWafOperationRole</a> operation to grant the authorization.</description></item>
-        /// <item><description>Invoke the <a href="https://help.aliyun.com/document_detail/2932936.html">DescribeApisecSlsProjects</a> and <a href="https://help.aliyun.com/document_detail/2932935.html">DescribeApisecSlsLogStores</a> operations to query active SLS projects and Logstores, and then invoke the <a href="https://help.aliyun.com/document_detail/2932937.html">ModifyApisecLogDelivery</a> operation to create a delivery configuration.
-        /// After you complete the preceding steps, invoke this operation to enable or disable the delivery status of API security logs.</description></item>
+        /// <item><description>Confirm that the API security feature is enabled. You can invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details and check the relevant status. If the Details.AgenticApisec or Details.Apisec response parameter is set to true, the API security feature is enabled.</description></item>
+        /// <item><description>Confirm that WAF is authorized to access cloud resources. You can invoke the <a href="https://help.aliyun.com/document_detail/2990717.html">DescribeRoleAuthStatus</a> operation to query the authorization status. If WAF is not authorized, invoke the <a href="https://help.aliyun.com/document_detail/2990727.html">InitializeWafOperationRole</a> operation to grant the required permissions.</description></item>
+        /// <item><description>Invoke the <a href="https://help.aliyun.com/document_detail/2932936.html">DescribeApisecSlsProjects</a> and <a href="https://help.aliyun.com/document_detail/2932935.html">DescribeApisecSlsLogStores</a> operations to query active Simple Log Service projects and Logstores, and then invoke the <a href="https://help.aliyun.com/document_detail/2932937.html">ModifyApisecLogDelivery</a> operation to create a delivery configuration.
+        /// After completing these steps, invoke this operation to enable or disable the API security log delivery status.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -35511,12 +35511,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you invoke this operation, make sure that you have created an API security log delivery configuration by invoking the <a href="https://help.aliyun.com/document_detail/2932937.html">ModifyApisecLogDelivery</a> operation. If you have not created a delivery configuration, complete the following prerequisites:</para>
+        /// <para>Before invoking this operation, ensure that you have created an API security log delivery configuration by invoking the <a href="https://help.aliyun.com/document_detail/2932937.html">ModifyApisecLogDelivery</a> operation. If you have not created a delivery configuration, complete the following prerequisites:</para>
         /// <ol>
-        /// <item><description>Confirm that the API security feature is enabled. Invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.AgenticApisec or Details.Apisec parameter in the response is true, the API security feature is enabled.</description></item>
-        /// <item><description>Confirm that WAF is authorized to access cloud resources. Invoke the <a href="https://help.aliyun.com/document_detail/2990717.html">DescribeRoleAuthStatus</a> operation to query the authorization status. If WAF is not authorized, invoke the <a href="https://help.aliyun.com/document_detail/2990727.html">InitializeWafOperationRole</a> operation to grant the authorization.</description></item>
-        /// <item><description>Invoke the <a href="https://help.aliyun.com/document_detail/2932936.html">DescribeApisecSlsProjects</a> and <a href="https://help.aliyun.com/document_detail/2932935.html">DescribeApisecSlsLogStores</a> operations to query active SLS projects and Logstores, and then invoke the <a href="https://help.aliyun.com/document_detail/2932937.html">ModifyApisecLogDelivery</a> operation to create a delivery configuration.
-        /// After you complete the preceding steps, invoke this operation to enable or disable the delivery status of API security logs.</description></item>
+        /// <item><description>Confirm that the API security feature is enabled. You can invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details and check the relevant status. If the Details.AgenticApisec or Details.Apisec response parameter is set to true, the API security feature is enabled.</description></item>
+        /// <item><description>Confirm that WAF is authorized to access cloud resources. You can invoke the <a href="https://help.aliyun.com/document_detail/2990717.html">DescribeRoleAuthStatus</a> operation to query the authorization status. If WAF is not authorized, invoke the <a href="https://help.aliyun.com/document_detail/2990727.html">InitializeWafOperationRole</a> operation to grant the required permissions.</description></item>
+        /// <item><description>Invoke the <a href="https://help.aliyun.com/document_detail/2932936.html">DescribeApisecSlsProjects</a> and <a href="https://help.aliyun.com/document_detail/2932935.html">DescribeApisecSlsLogStores</a> operations to query active Simple Log Service projects and Logstores, and then invoke the <a href="https://help.aliyun.com/document_detail/2932937.html">ModifyApisecLogDelivery</a> operation to create a delivery configuration.
+        /// After completing these steps, invoke this operation to enable or disable the API security log delivery status.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -35580,12 +35580,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you invoke this operation, make sure that you have created an API security log delivery configuration by invoking the <a href="https://help.aliyun.com/document_detail/2932937.html">ModifyApisecLogDelivery</a> operation. If you have not created a delivery configuration, complete the following prerequisites:</para>
+        /// <para>Before invoking this operation, ensure that you have created an API security log delivery configuration by invoking the <a href="https://help.aliyun.com/document_detail/2932937.html">ModifyApisecLogDelivery</a> operation. If you have not created a delivery configuration, complete the following prerequisites:</para>
         /// <ol>
-        /// <item><description>Confirm that the API security feature is enabled. Invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.AgenticApisec or Details.Apisec parameter in the response is true, the API security feature is enabled.</description></item>
-        /// <item><description>Confirm that WAF is authorized to access cloud resources. Invoke the <a href="https://help.aliyun.com/document_detail/2990717.html">DescribeRoleAuthStatus</a> operation to query the authorization status. If WAF is not authorized, invoke the <a href="https://help.aliyun.com/document_detail/2990727.html">InitializeWafOperationRole</a> operation to grant the authorization.</description></item>
-        /// <item><description>Invoke the <a href="https://help.aliyun.com/document_detail/2932936.html">DescribeApisecSlsProjects</a> and <a href="https://help.aliyun.com/document_detail/2932935.html">DescribeApisecSlsLogStores</a> operations to query active SLS projects and Logstores, and then invoke the <a href="https://help.aliyun.com/document_detail/2932937.html">ModifyApisecLogDelivery</a> operation to create a delivery configuration.
-        /// After you complete the preceding steps, invoke this operation to enable or disable the delivery status of API security logs.</description></item>
+        /// <item><description>Confirm that the API security feature is enabled. You can invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details and check the relevant status. If the Details.AgenticApisec or Details.Apisec response parameter is set to true, the API security feature is enabled.</description></item>
+        /// <item><description>Confirm that WAF is authorized to access cloud resources. You can invoke the <a href="https://help.aliyun.com/document_detail/2990717.html">DescribeRoleAuthStatus</a> operation to query the authorization status. If WAF is not authorized, invoke the <a href="https://help.aliyun.com/document_detail/2990727.html">InitializeWafOperationRole</a> operation to grant the required permissions.</description></item>
+        /// <item><description>Invoke the <a href="https://help.aliyun.com/document_detail/2932936.html">DescribeApisecSlsProjects</a> and <a href="https://help.aliyun.com/document_detail/2932935.html">DescribeApisecSlsLogStores</a> operations to query active Simple Log Service projects and Logstores, and then invoke the <a href="https://help.aliyun.com/document_detail/2932937.html">ModifyApisecLogDelivery</a> operation to create a delivery configuration.
+        /// After completing these steps, invoke this operation to enable or disable the API security log delivery status.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -35609,12 +35609,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you invoke this operation, make sure that you have created an API security log delivery configuration by invoking the <a href="https://help.aliyun.com/document_detail/2932937.html">ModifyApisecLogDelivery</a> operation. If you have not created a delivery configuration, complete the following prerequisites:</para>
+        /// <para>Before invoking this operation, ensure that you have created an API security log delivery configuration by invoking the <a href="https://help.aliyun.com/document_detail/2932937.html">ModifyApisecLogDelivery</a> operation. If you have not created a delivery configuration, complete the following prerequisites:</para>
         /// <ol>
-        /// <item><description>Confirm that the API security feature is enabled. Invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.AgenticApisec or Details.Apisec parameter in the response is true, the API security feature is enabled.</description></item>
-        /// <item><description>Confirm that WAF is authorized to access cloud resources. Invoke the <a href="https://help.aliyun.com/document_detail/2990717.html">DescribeRoleAuthStatus</a> operation to query the authorization status. If WAF is not authorized, invoke the <a href="https://help.aliyun.com/document_detail/2990727.html">InitializeWafOperationRole</a> operation to grant the authorization.</description></item>
-        /// <item><description>Invoke the <a href="https://help.aliyun.com/document_detail/2932936.html">DescribeApisecSlsProjects</a> and <a href="https://help.aliyun.com/document_detail/2932935.html">DescribeApisecSlsLogStores</a> operations to query active SLS projects and Logstores, and then invoke the <a href="https://help.aliyun.com/document_detail/2932937.html">ModifyApisecLogDelivery</a> operation to create a delivery configuration.
-        /// After you complete the preceding steps, invoke this operation to enable or disable the delivery status of API security logs.</description></item>
+        /// <item><description>Confirm that the API security feature is enabled. You can invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details and check the relevant status. If the Details.AgenticApisec or Details.Apisec response parameter is set to true, the API security feature is enabled.</description></item>
+        /// <item><description>Confirm that WAF is authorized to access cloud resources. You can invoke the <a href="https://help.aliyun.com/document_detail/2990717.html">DescribeRoleAuthStatus</a> operation to query the authorization status. If WAF is not authorized, invoke the <a href="https://help.aliyun.com/document_detail/2990727.html">InitializeWafOperationRole</a> operation to grant the required permissions.</description></item>
+        /// <item><description>Invoke the <a href="https://help.aliyun.com/document_detail/2932936.html">DescribeApisecSlsProjects</a> and <a href="https://help.aliyun.com/document_detail/2932935.html">DescribeApisecSlsLogStores</a> operations to query active Simple Log Service projects and Logstores, and then invoke the <a href="https://help.aliyun.com/document_detail/2932937.html">ModifyApisecLogDelivery</a> operation to create a delivery configuration.
+        /// After completing these steps, invoke this operation to enable or disable the API security log delivery status.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -35638,7 +35638,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that protected objects or protected object groups already exist. For protected objects that have been added to WAF, call the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query their names. For created protected object groups, call the <a href="https://help.aliyun.com/document_detail/2773860.html">DescribeDefenseResourceGroups</a> operation to query them. If no protected object group has been created, call the <a href="https://help.aliyun.com/document_detail/461739.html">CreateDefenseResourceGroup</a> operation to create one first.</para>
+        /// <para>Before calling this operation, ensure that protected objects or protected object groups exist. For protected objects added to WAF, you can call the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query their names. For existing protected object groups, you can call the <a href="https://help.aliyun.com/document_detail/2773860.html">DescribeDefenseResourceGroups</a> operation to query them. If no protected object group exists, you must first call the <a href="https://help.aliyun.com/document_detail/461739.html">CreateDefenseResourceGroup</a> operation to create one.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35709,7 +35709,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that protected objects or protected object groups already exist. For protected objects that have been added to WAF, call the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query their names. For created protected object groups, call the <a href="https://help.aliyun.com/document_detail/2773860.html">DescribeDefenseResourceGroups</a> operation to query them. If no protected object group has been created, call the <a href="https://help.aliyun.com/document_detail/461739.html">CreateDefenseResourceGroup</a> operation to create one first.</para>
+        /// <para>Before calling this operation, ensure that protected objects or protected object groups exist. For protected objects added to WAF, you can call the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query their names. For existing protected object groups, you can call the <a href="https://help.aliyun.com/document_detail/2773860.html">DescribeDefenseResourceGroups</a> operation to query them. If no protected object group exists, you must first call the <a href="https://help.aliyun.com/document_detail/461739.html">CreateDefenseResourceGroup</a> operation to create one.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35780,7 +35780,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that protected objects or protected object groups already exist. For protected objects that have been added to WAF, call the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query their names. For created protected object groups, call the <a href="https://help.aliyun.com/document_detail/2773860.html">DescribeDefenseResourceGroups</a> operation to query them. If no protected object group has been created, call the <a href="https://help.aliyun.com/document_detail/461739.html">CreateDefenseResourceGroup</a> operation to create one first.</para>
+        /// <para>Before calling this operation, ensure that protected objects or protected object groups exist. For protected objects added to WAF, you can call the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query their names. For existing protected object groups, you can call the <a href="https://help.aliyun.com/document_detail/2773860.html">DescribeDefenseResourceGroups</a> operation to query them. If no protected object group exists, you must first call the <a href="https://help.aliyun.com/document_detail/461739.html">CreateDefenseResourceGroup</a> operation to create one.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35803,7 +35803,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that protected objects or protected object groups already exist. For protected objects that have been added to WAF, call the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query their names. For created protected object groups, call the <a href="https://help.aliyun.com/document_detail/2773860.html">DescribeDefenseResourceGroups</a> operation to query them. If no protected object group has been created, call the <a href="https://help.aliyun.com/document_detail/461739.html">CreateDefenseResourceGroup</a> operation to create one first.</para>
+        /// <para>Before calling this operation, ensure that protected objects or protected object groups exist. For protected objects added to WAF, you can call the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query their names. For existing protected object groups, you can call the <a href="https://help.aliyun.com/document_detail/2773860.html">DescribeDefenseResourceGroups</a> operation to query them. If no protected object group exists, you must first call the <a href="https://help.aliyun.com/document_detail/461739.html">CreateDefenseResourceGroup</a> operation to create one.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35821,7 +35821,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the status of protected objects or protected object groups for API security.</para>
+        /// <para>Modifies the status of API security protected objects or protected object groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35883,7 +35883,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the status of protected objects or protected object groups for API security.</para>
+        /// <para>Modifies the status of API security protected objects or protected object groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35945,7 +35945,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the status of protected objects or protected object groups for API security.</para>
+        /// <para>Modifies the status of API security protected objects or protected object groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35963,7 +35963,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the status of protected objects or protected object groups for API security.</para>
+        /// <para>Modifies the status of API security protected objects or protected object groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36825,15 +36825,15 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the client IP and cookie settings of a protected object.</para>
+        /// <para>Modifies the client IP address and cookie settings of a protected object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you invoke this operation, make sure that a protected object has been added to WAF. You can invoke the <a href="https://help.aliyun.com/document_detail/461413.html">CreateDomain</a> operation to create a CNAME-based resource, invoke the <a href="https://help.aliyun.com/document_detail/2839876.html">CreateCloudResource</a> operation to create a cloud native mode resource, or invoke the <a href="https://help.aliyun.com/document_detail/2930080.html">CreateDefenseResource</a> operation to create a custom protected object. You can invoke the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query the protected objects that have been added to WAF.</para>
+        /// <para>Before invoking this operation, make sure that a protected object is added to WAF. You can invoke the <a href="https://help.aliyun.com/document_detail/461413.html">CreateDomain</a> operation to create a CNAME access resource, invoke the <a href="https://help.aliyun.com/document_detail/2839876.html">CreateCloudResource</a> operation to create a cloud native mode resource, or invoke the <a href="https://help.aliyun.com/document_detail/2930080.html">CreateDefenseResource</a> operation to create a custom protected object. You can invoke the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query the protected objects added to WAF.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ModifyDefenseResourceXffRequest
         /// </param>
         /// <param name="runtime">
@@ -36843,9 +36843,15 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// <returns>
         /// ModifyDefenseResourceXffResponse
         /// </returns>
-        public ModifyDefenseResourceXffResponse ModifyDefenseResourceXffWithOptions(ModifyDefenseResourceXffRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ModifyDefenseResourceXffResponse ModifyDefenseResourceXffWithOptions(ModifyDefenseResourceXffRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyDefenseResourceXffShrinkRequest request = new ModifyDefenseResourceXffShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CookieConfig))
+            {
+                request.CookieConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CookieConfig, "CookieConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcwCookieStatus))
             {
@@ -36858,6 +36864,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcwV3SecureStatus))
             {
                 query["AcwV3SecureStatus"] = request.AcwV3SecureStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CookieConfigShrink))
+            {
+                query["CookieConfig"] = request.CookieConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomHeaders))
             {
@@ -36908,15 +36918,15 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the client IP and cookie settings of a protected object.</para>
+        /// <para>Modifies the client IP address and cookie settings of a protected object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you invoke this operation, make sure that a protected object has been added to WAF. You can invoke the <a href="https://help.aliyun.com/document_detail/461413.html">CreateDomain</a> operation to create a CNAME-based resource, invoke the <a href="https://help.aliyun.com/document_detail/2839876.html">CreateCloudResource</a> operation to create a cloud native mode resource, or invoke the <a href="https://help.aliyun.com/document_detail/2930080.html">CreateDefenseResource</a> operation to create a custom protected object. You can invoke the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query the protected objects that have been added to WAF.</para>
+        /// <para>Before invoking this operation, make sure that a protected object is added to WAF. You can invoke the <a href="https://help.aliyun.com/document_detail/461413.html">CreateDomain</a> operation to create a CNAME access resource, invoke the <a href="https://help.aliyun.com/document_detail/2839876.html">CreateCloudResource</a> operation to create a cloud native mode resource, or invoke the <a href="https://help.aliyun.com/document_detail/2930080.html">CreateDefenseResource</a> operation to create a custom protected object. You can invoke the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query the protected objects added to WAF.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ModifyDefenseResourceXffRequest
         /// </param>
         /// <param name="runtime">
@@ -36926,9 +36936,15 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// <returns>
         /// ModifyDefenseResourceXffResponse
         /// </returns>
-        public async Task<ModifyDefenseResourceXffResponse> ModifyDefenseResourceXffWithOptionsAsync(ModifyDefenseResourceXffRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ModifyDefenseResourceXffResponse> ModifyDefenseResourceXffWithOptionsAsync(ModifyDefenseResourceXffRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyDefenseResourceXffShrinkRequest request = new ModifyDefenseResourceXffShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CookieConfig))
+            {
+                request.CookieConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CookieConfig, "CookieConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcwCookieStatus))
             {
@@ -36941,6 +36957,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcwV3SecureStatus))
             {
                 query["AcwV3SecureStatus"] = request.AcwV3SecureStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CookieConfigShrink))
+            {
+                query["CookieConfig"] = request.CookieConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomHeaders))
             {
@@ -36991,12 +37011,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the client IP and cookie settings of a protected object.</para>
+        /// <para>Modifies the client IP address and cookie settings of a protected object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you invoke this operation, make sure that a protected object has been added to WAF. You can invoke the <a href="https://help.aliyun.com/document_detail/461413.html">CreateDomain</a> operation to create a CNAME-based resource, invoke the <a href="https://help.aliyun.com/document_detail/2839876.html">CreateCloudResource</a> operation to create a cloud native mode resource, or invoke the <a href="https://help.aliyun.com/document_detail/2930080.html">CreateDefenseResource</a> operation to create a custom protected object. You can invoke the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query the protected objects that have been added to WAF.</para>
+        /// <para>Before invoking this operation, make sure that a protected object is added to WAF. You can invoke the <a href="https://help.aliyun.com/document_detail/461413.html">CreateDomain</a> operation to create a CNAME access resource, invoke the <a href="https://help.aliyun.com/document_detail/2839876.html">CreateCloudResource</a> operation to create a cloud native mode resource, or invoke the <a href="https://help.aliyun.com/document_detail/2930080.html">CreateDefenseResource</a> operation to create a custom protected object. You can invoke the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query the protected objects added to WAF.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37014,12 +37034,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the client IP and cookie settings of a protected object.</para>
+        /// <para>Modifies the client IP address and cookie settings of a protected object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you invoke this operation, make sure that a protected object has been added to WAF. You can invoke the <a href="https://help.aliyun.com/document_detail/461413.html">CreateDomain</a> operation to create a CNAME-based resource, invoke the <a href="https://help.aliyun.com/document_detail/2839876.html">CreateCloudResource</a> operation to create a cloud native mode resource, or invoke the <a href="https://help.aliyun.com/document_detail/2930080.html">CreateDefenseResource</a> operation to create a custom protected object. You can invoke the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query the protected objects that have been added to WAF.</para>
+        /// <para>Before invoking this operation, make sure that a protected object is added to WAF. You can invoke the <a href="https://help.aliyun.com/document_detail/461413.html">CreateDomain</a> operation to create a CNAME access resource, invoke the <a href="https://help.aliyun.com/document_detail/2839876.html">CreateCloudResource</a> operation to create a cloud native mode resource, or invoke the <a href="https://help.aliyun.com/document_detail/2930080.html">CreateDefenseResource</a> operation to create a custom protected object. You can invoke the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query the protected objects added to WAF.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38626,7 +38646,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the Web Application Firewall (WAF) instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before calling this operation, ensure that the Hybrid Cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud response parameter is true, the Hybrid Cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38737,7 +38757,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the Web Application Firewall (WAF) instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before calling this operation, ensure that the Hybrid Cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud response parameter is true, the Hybrid Cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38848,7 +38868,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the Web Application Firewall (WAF) instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before calling this operation, ensure that the Hybrid Cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud response parameter is true, the Hybrid Cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38871,7 +38891,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the Web Application Firewall (WAF) instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before calling this operation, ensure that the Hybrid Cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud response parameter is true, the Hybrid Cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39061,12 +39081,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the rule information of a hybrid cloud cluster.</para>
+        /// <para>Modifies the information about a hybrid cloud cluster rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.HybridCloud parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39136,12 +39156,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the rule information of a hybrid cloud cluster.</para>
+        /// <para>Modifies the information about a hybrid cloud cluster rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.HybridCloud parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39211,12 +39231,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the rule information of a hybrid cloud cluster.</para>
+        /// <para>Modifies the information about a hybrid cloud cluster rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.HybridCloud parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39234,12 +39254,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the rule information of a hybrid cloud cluster.</para>
+        /// <para>Modifies the information about a hybrid cloud cluster rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.HybridCloud parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39445,7 +39465,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a node to a node group in a hybrid cloud cluster of a Web Application Firewall (WAF) instance.</para>
+        /// <para>Adds nodes to a cluster group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39507,7 +39527,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a node to a node group in a hybrid cloud cluster of a Web Application Firewall (WAF) instance.</para>
+        /// <para>Adds nodes to a cluster group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39569,7 +39589,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a node to a node group in a hybrid cloud cluster of a Web Application Firewall (WAF) instance.</para>
+        /// <para>Adds nodes to a cluster group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39587,7 +39607,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a node to a node group in a hybrid cloud cluster of a Web Application Firewall (WAF) instance.</para>
+        /// <para>Adds nodes to a cluster group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41941,7 +41961,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Re-onboards a cloud service to WAF. This operation is used only when the protection status of the cloud service in cloud native mode is abnormal.</para>
+        /// <para>Reconnects a cloud service to WAF. This operation is applicable only when the protection status of the cloud service in cloud native mode is abnormal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42007,7 +42027,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Re-onboards a cloud service to WAF. This operation is used only when the protection status of the cloud service in cloud native mode is abnormal.</para>
+        /// <para>Reconnects a cloud service to WAF. This operation is applicable only when the protection status of the cloud service in cloud native mode is abnormal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42073,7 +42093,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Re-onboards a cloud service to WAF. This operation is used only when the protection status of the cloud service in cloud native mode is abnormal.</para>
+        /// <para>Reconnects a cloud service to WAF. This operation is applicable only when the protection status of the cloud service in cloud native mode is abnormal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42091,7 +42111,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Re-onboards a cloud service to WAF. This operation is used only when the protection status of the cloud service in cloud native mode is abnormal.</para>
+        /// <para>Reconnects a cloud service to WAF. This operation is applicable only when the protection status of the cloud service in cloud native mode is abnormal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42109,7 +42129,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a Web Application Firewall (WAF) 3.0 instance.</para>
+        /// <para>Releases a WAF 3.0 instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42159,7 +42179,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a Web Application Firewall (WAF) 3.0 instance.</para>
+        /// <para>Releases a WAF 3.0 instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42209,7 +42229,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a Web Application Firewall (WAF) 3.0 instance.</para>
+        /// <para>Releases a WAF 3.0 instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42227,7 +42247,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a Web Application Firewall (WAF) 3.0 instance.</para>
+        /// <para>Releases a WAF 3.0 instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42697,7 +42717,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies that you own the specified domain name. Domain ownership must be verified before you can add a domain name to Web Application Firewall (WAF) by using CNAME access.</para>
+        /// <para>Verifies the ownership of a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42751,7 +42771,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies that you own the specified domain name. Domain ownership must be verified before you can add a domain name to Web Application Firewall (WAF) by using CNAME access.</para>
+        /// <para>Verifies the ownership of a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42805,7 +42825,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies that you own the specified domain name. Domain ownership must be verified before you can add a domain name to Web Application Firewall (WAF) by using CNAME access.</para>
+        /// <para>Verifies the ownership of a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42823,7 +42843,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies that you own the specified domain name. Domain ownership must be verified before you can add a domain name to Web Application Firewall (WAF) by using CNAME access.</para>
+        /// <para>Verifies the ownership of a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -12,11 +12,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The aggregation interval, which is automatically selected based on the query time range. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1m</b>: 1 minute.</description></item>
-        /// <item><description><b>5m</b>: 5 minutes.</description></item>
-        /// <item><description><b>15m</b>: 15 minutes.</description></item>
-        /// <item><description><b>1h</b>: 1 hour.</description></item>
-        /// <item><description><b>1d</b>: 1 day.</description></item>
+        /// <item><description><b>1m</b>: 1 minute</description></item>
+        /// <item><description><b>5m</b>: 5 minutes</description></item>
+        /// <item><description><b>15m</b>: 15 minutes</description></item>
+        /// <item><description><b>1h</b>: 1 hour</description></item>
+        /// <item><description><b>1d</b>: 1 day</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string AggregateInterval { get; set; }
 
         /// <summary>
-        /// <para>The time series data of events counted by the first discovery time, sorted in ascending order of time.</para>
+        /// <para>The time series data of events aggregated by first discovery time, sorted in ascending order of time.</para>
         /// </summary>
         [NameInMap("Points")]
         [Validation(Required=false)]
         public List<DescribeAiEngineEventTrendsResponseBodyPoints> Points { get; set; }
         public class DescribeAiEngineEventTrendsResponseBodyPoints : TeaModel {
             /// <summary>
-            /// <para>The number of events first discovered in the time period.</para>
+            /// <para>The number of events first discovered within the time period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? EventCount { get; set; }
 
             /// <summary>
-            /// <para>The number of events counted by risk level in the time period.</para>
+            /// <para>The number of events within the time period, aggregated by risk level.</para>
             /// </summary>
             [NameInMap("RiskCounts")]
             [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             }
 
             /// <summary>
-            /// <para>The start time of the statistical period. The time is in the UNIX timestamp format and accurate to milliseconds.</para>
+            /// <para>The start time of the statistical period in the UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1792973400000</para>

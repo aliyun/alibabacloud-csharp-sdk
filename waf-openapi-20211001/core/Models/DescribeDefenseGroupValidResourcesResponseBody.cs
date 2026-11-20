@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The names of the protected objects.</para>
+        /// <para>The names of the protection objects.</para>
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
         public List<string> Resources { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of returned results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeIpAbroadCountryInfosResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of overseas country information.</para>
+        /// <para>The list of countries outside China.</para>
         /// </summary>
         [NameInMap("AbroadInfos")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string CountryName { get; set; }
 
             /// <summary>
-            /// <para>The list of overseas region information.</para>
+            /// <para>The list of regions outside China.</para>
             /// </summary>
             [NameInMap("Regions")]
             [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The number of entries to return on each page for a paging query. Valid values: 1 to 500. Default value: 20.</para>
+        /// <para>The number of entries to return on each page in a paging query. Valid values: 1 to 500. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

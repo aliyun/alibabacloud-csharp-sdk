@@ -65,12 +65,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <item><description><b>lfilei</b>: local file inclusion (LFI).</description></item>
             /// <item><description><b>protocol_violation</b>: protocol violation.</description></item>
             /// <item><description><b>scanner_behavior</b>: scanner behavior.</description></item>
-            /// <item><description><b>logic_flaw</b>: business logic bug.</description></item>
-            /// <item><description><b>arbitrary_file_reading</b>: arbitrary file read.</description></item>
+            /// <item><description><b>logic_flaw</b>: business logic flaw.</description></item>
+            /// <item><description><b>arbitrary_file_reading</b>: arbitrary file reading.</description></item>
             /// <item><description><b>arbitrary_file_download</b>: arbitrary file download.</description></item>
-            /// <item><description><b>xxe</b>: XML external entity injection.</description></item>
-            /// <item><description><b>csrf</b>: cross-site request forgery.</description></item>
-            /// <item><description><b>crlf</b>: CRLF injection.</description></item>
+            /// <item><description><b>xxe</b>: external entity injection.</description></item>
+            /// <item><description><b>csrf</b>: cross-site request forgery (CSRF).</description></item>
+            /// <item><description><b>crlf</b>: CRLF.</description></item>
             /// <item><description><b>other</b>: other.</description></item>
             /// </list>
             /// 
@@ -84,13 +84,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The risk level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>super_strict</b>: super strict.</para>
+            /// <item><description><para><b>super_strict</b>: Super strict.</para>
             /// </description></item>
-            /// <item><description><para><b>strict</b>: strict.</para>
+            /// <item><description><para><b>strict</b>: Strict.</para>
             /// </description></item>
-            /// <item><description><para><b>medium</b>: medium.</para>
+            /// <item><description><para><b>medium</b>: Medium.</para>
             /// </description></item>
-            /// <item><description><para><b>loose</b>: loose.</para>
+            /// <item><description><para><b>loose</b>: Loose.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>The rule action. Valid values:</para>
+            /// <para>The action of the rule. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>block</b>: Block.</para>
             /// </description></item>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string RuleAction { get; set; }
 
             /// <summary>
-            /// <para>The rule ID.</para>
+            /// <para>The ID of the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>113089</para>
@@ -138,10 +138,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The rule status. Valid values:</para>
+            /// <para>The status of the rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: disabled.</description></item>
-            /// <item><description><b>0</b>: enabled.</description></item>
+            /// <item><description><b>1</b>: Disabled.</description></item>
+            /// <item><description><b>0</b>: Enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? RuleStatus { get; set; }
 
             /// <summary>
-            /// <para>The time when the rule was last updated. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The update time of the rule. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1665460629000</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of returned entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeBotRuleLabelsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries to return per paging in a paged query. Valid values: 1 to 200. Default value: 20.</para>
+        /// <para>The number of entries to return per page in a paged query. This parameter is used for paging. Valid values: 1 to 200. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. This parameter is returned only if a next page exists.</para>
+        /// <para>The pagination token for the next page. This parameter is returned only when a next page exists.</para>
         /// <remarks>
-        /// <para>If this parameter is returned, it indicates that there is a next page. You can use the returned <b>NextToken</b> as a request parameter to obtain the data of the next page until no value is returned, which indicates that all data is obtained.</para>
+        /// <para>If this parameter is returned, a next page exists. You can use the returned <b>NextToken</b> as a request parameter to obtain the next page of data. Repeat this process until no value is returned, which indicates that all data is retrieved.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public List<DescribeBotRuleLabelsResponseBodyRuleLabels> RuleLabels { get; set; }
         public class DescribeBotRuleLabelsResponseBodyRuleLabels : TeaModel {
             /// <summary>
-            /// <para>The bot behavior corresponding to the rule label.</para>
+            /// <para>The bot behavior corresponding to the rule label. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>malicious</b>: malicious bots.</description></item>
             /// <item><description><b>suspicious</b>: suspicious bots.</description></item>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string BotBehavior { get; set; }
 
             /// <summary>
-            /// <para>The default action.</para>
+            /// <para>The default action. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>block</b>: block.</description></item>
             /// <item><description><b>monitor</b>: monitor.</description></item>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string DefaultConfig { get; set; }
 
             /// <summary>
-            /// <para>The default status of the label rule.</para>
+            /// <para>The default status of the label rule. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>1</b>: The rule is enabled.</description></item>
             /// <item><description><b>0</b>: The rule is disabled.</description></item>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string LabelKey { get; set; }
 
             /// <summary>
-            /// <para>The status of the label.</para>
+            /// <para>The status of the label. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>online</b>: online.</description></item>
             /// <item><description><b>wait_offline</b>: pending offline.</description></item>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The bot management protection scenarios to which the rule belongs. Multiple scenarios are separated by commas (,). Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>web</b>: the web protection scenario.</description></item>
+            /// <item><description><b>web</b>: the Web protection scenario.</description></item>
             /// <item><description><b>app</b>: the app protection scenario.</description></item>
             /// <item><description><b>agentic_web</b>: the Agentic Web protection scenario.</description></item>
             /// <item><description><b>agentic_app</b>: the Agentic App protection scenario.</description></item>

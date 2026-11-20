@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public double? Credit { get; set; }
 
             /// <summary>
-            /// <para>The billing module code.</para>
+            /// <para>The identifier of the billing module.</para>
             /// 
             /// <b>Example:</b>
             /// <para>domainCount</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D7861F61-5B61-46CE-A47C-6B19160D5EB0</para>

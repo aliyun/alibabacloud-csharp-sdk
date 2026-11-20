@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeIpAbroadCountryInfosRequest : TeaModel {
         /// <summary>
-        /// <para>The overseas region to query. You can perform a fuzzy match by using the region ID or the region name in Chinese or English.</para>
+        /// <para>The region outside China to query. Fuzzy match is supported by region ID or region name in Chinese or English.</para>
         /// 
         /// <b>Example:</b>
         /// <para>US-CA</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string AbroadRegion { get; set; }
 
         /// <summary>
-        /// <para>The overseas country to query. You can perform a fuzzy match by using the country ID or the country name in Chinese or English.</para>
+        /// <para>The country outside China to query. Fuzzy match is supported by country ID or country name in Chinese or English.</para>
         /// 
         /// <b>Example:</b>
         /// <para>US</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page for a paging query. Valid values: 1 to 500. Default value: 20.</para>
+        /// <para>The number of entries to return on each page in a paging query. Valid values: 1 to 500. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The paging token that is used to query the next page. Set the value to the <b>NextToken</b> value returned from the previous API call. You do not need to specify this parameter for the first call.</para>
+        /// <para>The pagination token for the next query. Set the value to the <b>NextToken</b> value returned from the previous API invoke. You do not need to specify this parameter for the first query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0*****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeAiEngineEventsRequest : TeaModel {
         /// <summary>
-        /// <para>The end time. The time is in the UNIX timestamp format (UTC time) and accurate to seconds. Events are filtered based on the most recent discovery time. The end time must be later than the start time.</para>
+        /// <para>The end time. The time is a UNIX timestamp in UTC. Unit: seconds. The data is filtered based on the time when the event was last detected. The end time must be later than the start time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The response language.</para>
+        /// <para>The language of the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per page during paging in a paged query. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries to return on each page in a paging query. Valid values: 1 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. The value is the <b>NextToken</b> parameter value returned by the previous API call. You do not need to specify this parameter for the first query.</para>
+        /// <para>The pagination token. The value is the <b>NextToken</b> parameter value returned by the previous API call. You do not need to specify this parameter for the first query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAGBgV9tolsLfijC4wam2htS*****D/46H3X2wIS</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides.</para>
+        /// <para>The region ID of the WAF instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The search value, used in conjunction with SearchKey. Maximum length: 256 characters.</para>
+        /// <para>The search value. This parameter is used together with SearchKey. Maximum length: 256 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testKey</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string SeachValue { get; set; }
 
         /// <summary>
-        /// <para>The search field, used in conjunction with SeachValue.</para>
+        /// <para>The search field. This parameter is used together with SeachValue.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eventName</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string SearchKey { get; set; }
 
         /// <summary>
-        /// <para>The sort field.</para>
+        /// <para>The field by which to sort the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>last_seen</para>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string SortOrder { get; set; }
 
         /// <summary>
-        /// <para>The start time. The time is in the UNIX timestamp format (UTC time) and accurate to seconds. Events are filtered based on the most recent discovery time. You can query data from the last 30 days.</para>
+        /// <para>The start time. The time is a UNIX timestamp in UTC. Unit: seconds. The data is filtered based on the time when the event was last detected. You can query data within the last 30 days.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

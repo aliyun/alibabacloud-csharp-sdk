@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string EventId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
+        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
         /// <remarks>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,13 +35,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The statistical metric. Different values of Metric correspond to different statistical objects. Valid values:</para>
+        /// <para>The metric used for statistics. Different metrics correspond to different statistical dimensions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>time</b>: aggregates statistics by attack time, sorts them in descending order, and returns the top 5 records.</description></item>
-        /// <item><description><b>src</b>: aggregates statistics by source IP address of attack requests, sorts them in descending order, and returns the top 5 records.</description></item>
-        /// <item><description><b>target</b>: aggregates statistics by URL of attack requests (excluding query strings), sorts them in descending order, and returns the top 5 records.</description></item>
-        /// <item><description><b>type</b>: aggregates statistics by attack type, sorts them in descending order, and returns the top 5 records.</description></item>
-        /// <item><description><b>tools</b>: aggregates statistics by attack tool, sorts them in descending order, and returns the top 5 records.</description></item>
+        /// <item><description><b>time</b>: aggregates statistics by attack time, sorts the results in descending order, and returns the top 5 entries.</description></item>
+        /// <item><description><b>src</b>: aggregates statistics by the source IP address of attack requests, sorts the results in descending order, and returns the top 5 entries.</description></item>
+        /// <item><description><b>target</b>: aggregates statistics by the URL of attack requests (excluding the query string), sorts the results in descending order, and returns the top 5 entries.</description></item>
+        /// <item><description><b>type</b>: aggregates statistics by attack type, sorts the results in descending order, and returns the top 5 entries.</description></item>
+        /// <item><description><b>tools</b>: aggregates statistics by attack tool, sorts the results in descending order, and returns the top 5 entries.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Metric { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>

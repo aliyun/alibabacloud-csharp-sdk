@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeLogDeliveryConfigsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the log delivery configuration that you want to query. Fuzzy match is supported.</para>
+        /// <para>The name of the delivery configuration to query. You can set this parameter to perform a fuzzy match on a delivery configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string DeliveryNameLike { get; set; }
 
         /// <summary>
-        /// <para>The type of the log delivery configuration that you want to query. Valid values:</para>
+        /// <para>The type of the delivery configuration to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>syslog</b>: Log delivery to a syslog server.</para>
-        /// </description></item>
-        /// <item><description><para><b>kafka</b>: Log delivery to a Kafka cluster.</para>
-        /// </description></item>
+        /// <item><description><b>syslog</b>: Delivers logs to a Syslog service.</description></item>
+        /// <item><description><b>kafka</b>: Delivers logs to a Kafka service.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +36,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -50,7 +48,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page. Valid values: 1 to 50. Default value: 20.</para>
+        /// <para>The number of entries to return per page during paging in a paged query. Valid values: 1 to 50. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -60,7 +58,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Set this parameter to the value of <b>NextToken</b> returned in the previous call. You do not need to specify this parameter for the first request.</para>
+        /// <para>The pagination token for querying the next page. Set the value to the <b>NextToken</b> value returned from the previous API call. This parameter is not required for the first query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAINZ+8pH1oQnusEu1tGAc8is</para>
@@ -72,9 +70,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland</para>
         /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland</para>
         /// </description></item>
         /// </list>
         /// 
@@ -86,7 +84,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud resource group to which the WAF instance belongs.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>

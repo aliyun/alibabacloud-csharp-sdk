@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public List<DescribeAiEngineEventsResponseBodyItemsAttackSources> AttackSources { get; set; }
             public class DescribeAiEngineEventsResponseBodyItemsAttackSources : TeaModel {
                 /// <summary>
-                /// <para>The list of attack sources of this type.</para>
+                /// <para>The list of attack sources of the specified type.</para>
                 /// </summary>
                 [NameInMap("Sources")]
                 [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                     public string Attribute { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the attack source. If the attack source type is IP address (<b>Type</b> is set to <b>ip</b>), the value is an IP address.</para>
+                    /// <para>The value of the attack source. If the attack source type is IP address (the <b>Type</b> parameter is set to <b>ip</b>), the value is an IP address.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>203.0.113.109</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             }
 
             /// <summary>
-            /// <para>The number of deduplicated evidence requests that are suspected to have bypassed protection in the event.</para>
+            /// <para>The statistics of suspected bypass evidence requests for the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? EventNodeCount { get; set; }
 
             /// <summary>
-            /// <para>The number of deduplicated evidence requests for the event.</para>
+            /// <para>The statistics of evidence requests for the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <list type="bullet">
             /// <item><description><para><b>unhandled</b>: Unhandled.</para>
             /// </description></item>
-            /// <item><description><para><b>handling</b>: Handling.</para>
+            /// <item><description><para><b>handling</b>: In progress.</para>
             /// </description></item>
             /// <item><description><para><b>handled</b>: Handled.</para>
             /// </description></item>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? LastSeenAt { get; set; }
 
             /// <summary>
-            /// <para>The IDs of related events. Multiple IDs are separated by commas (,).</para>
+            /// <para>The IDs of the related events. Multiple IDs are separated by commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>EVT-0bda6<b><b>6b5c174,EVT-0bda6</b></b>6b5c175</para>
@@ -212,9 +212,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for querying the next page. If a next page exists, this field returns a value.</para>
+        /// <para>The token for the next page. If a next page exists, this field returns a value.</para>
         /// <remarks>
-        /// <para>If this parameter returns a value, a next page exists. You can use the returned <b>NextToken</b> as a request parameter to obtain the data on the next page. Repeat this operation until no value is returned, which indicates that all data is obtained.</para>
+        /// <para>If this parameter returns a value, a next page exists. You can use the returned <b>NextToken</b> as a request parameter to retrieve the next page until no value is returned, which indicates that all data has been retrieved.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The statistics time in UNIX timestamp format (UTC). Unit: seconds.</para>
+            /// <para><b>[Deprecated]</b> The statistical time. The time is a UNIX timestamp in UTC. Unit: seconds. Use the Timestamp parameter instead.</para>
             /// <remarks>
             /// <para>Notice: This parameter is deprecated. Use the Timestamp parameter instead.</para>
             /// </remarks>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? TimeStamp { get; set; }
 
             /// <summary>
-            /// <para>The statistics time in UNIX timestamp format (UTC). Unit: seconds.</para>
+            /// <para>The statistical time. The time is a UNIX timestamp in UTC. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1723435200</para>

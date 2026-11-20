@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeThreatEventResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>98106632-6865-5600-A834-3D909***</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of notable security events.</para>
+        /// <para>The list of noteworthy security events.</para>
         /// </summary>
         [NameInMap("ThreatEvents")]
         [Validation(Required=false)]
         public List<DescribeThreatEventResponseBodyThreatEvents> ThreatEvents { get; set; }
         public class DescribeThreatEventResponseBodyThreatEvents : TeaModel {
             /// <summary>
-            /// <para>The percentage of attack requests that were blocked by WAF.</para>
+            /// <para>The percentage of blocked requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100%</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string BlockRate { get; set; }
 
             /// <summary>
-            /// <para>The time when the last attack occurred. This value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The most recent Attack Time. The format is a UNIX timestamp in UTC. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1768406400000</para>
@@ -57,16 +57,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string EventId { get; set; }
 
             /// <summary>
-            /// <para>The severity level of the security event. Valid values:</para>
+            /// <para>The severity level of the event. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>critical</b></para>
-            /// </description></item>
-            /// <item><description><para><b>high</b></para>
-            /// </description></item>
-            /// <item><description><para><b>medium</b></para>
-            /// </description></item>
-            /// <item><description><para><b>low</b></para>
-            /// </description></item>
+            /// <item><description><b>critical</b>: critical.</description></item>
+            /// <item><description><b>high</b>: high.</description></item>
+            /// <item><description><b>medium</b>: medium.</description></item>
+            /// <item><description><b>low</b>: low.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -77,9 +73,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string EventLevel { get; set; }
 
             /// <summary>
-            /// <para>The source IP address of the attack.</para>
+            /// <para>The Attack Source IP Addresses.</para>
             /// <remarks>
-            /// <para>A security event may have multiple source IP addresses. This operation returns only one of them.</para>
+            /// <para>A security event may involve multiple source IP addresses. This operation returns only one source IP address.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -90,30 +86,19 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string EventSrc { get; set; }
 
             /// <summary>
-            /// <para>The type of the security event. Valid values:</para>
+            /// <para>The name of the event. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>MultipleDomainDirscan</b>: a directory and file scan against multiple domain names.</para>
-            /// </description></item>
-            /// <item><description><para><b>SingleDomainDirscan</b>: a directory and file scan against a single domain name.</para>
-            /// </description></item>
-            /// <item><description><para><b>MultipleDomainWebscan</b>: a web vulnerability scan against multiple domain names.</para>
-            /// </description></item>
-            /// <item><description><para><b>SingleDomainWebscan</b>: a web vulnerability scan against a single domain name.</para>
-            /// </description></item>
-            /// <item><description><para><b>MultipleDomainWebattack</b>: a web vulnerability attack against multiple domain names.</para>
-            /// </description></item>
-            /// <item><description><para><b>SingleDomainWebattack</b>: a web vulnerability attack against a single domain name.</para>
-            /// </description></item>
-            /// <item><description><para><b>SingleURLWebattack</b>: a web vulnerability attack against a specific URL.</para>
-            /// </description></item>
-            /// <item><description><para><b>SingleURLSqlattack</b>: an SQL injection attack against a specific URL.</para>
-            /// </description></item>
-            /// <item><description><para><b>SingleURLXssattack</b>: an XSS attack against a specific URL.</para>
-            /// </description></item>
-            /// <item><description><para><b>WebshellUpload</b>: an attack that attempts to upload backdoor trojans.</para>
-            /// </description></item>
-            /// <item><description><para><b>RandomVulnTest</b>: a random web vulnerability probe.</para>
-            /// </description></item>
+            /// <item><description><b>MultipleDomainDirscan</b>: folder and file scanning targeting multiple domain names.</description></item>
+            /// <item><description><b>SingleDomainDirscan</b>: folder and file scanning targeting a single domain name.</description></item>
+            /// <item><description><b>MultipleDomainWebscan</b>: web vulnerability scanning targeting multiple domain names.</description></item>
+            /// <item><description><b>SingleDomainWebscan</b>: web vulnerability scanning targeting a single domain name.</description></item>
+            /// <item><description><b>MultipleDomainWebattack</b>: web vulnerability attacks targeting multiple domain names.</description></item>
+            /// <item><description><b>SingleDomainWebattack</b>: web vulnerability attacks targeting a single domain name.</description></item>
+            /// <item><description><b>SingleURLWebattack</b>: web vulnerability attacks targeting a specific URL.</description></item>
+            /// <item><description><b>SingleURLSqlattack</b>: SQL injection attacks targeting a specific URL.</description></item>
+            /// <item><description><b>SingleURLXssattack</b>: XSS attacks targeting a specific URL.</description></item>
+            /// <item><description><b>WebshellUpload</b>: attempts to upload backdoor trojans.</description></item>
+            /// <item><description><b>RandomVulnTest</b>: random web vulnerability probing.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -124,9 +109,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string EventTag { get; set; }
 
             /// <summary>
-            /// <para>The protected object that is the target of the attack.</para>
+            /// <para>The protected object of the Attack Target.</para>
             /// <remarks>
-            /// <para>A security event may have multiple protected objects as targets. This operation returns only one of them.</para>
+            /// <para>A security event may involve multiple protected objects targeted by the attack. This operation returns only one protected object.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -139,7 +124,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The total number of security events that match the query conditions.</para>
+        /// <para>The total number of queried events.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

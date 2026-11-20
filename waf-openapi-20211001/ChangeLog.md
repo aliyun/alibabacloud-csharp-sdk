@@ -1,3 +1,9 @@
+2026-11-20 Version: 7.10.1
+- Update API DescribeDefenseResource: add response parameters Body.Resource.CookieConfig.
+- Update API DescribeDefenseResources: add response parameters Body.Resources.$.CookieConfig.
+- Update API ModifyDefenseResourceXff: add request parameters CookieConfig.
+
+
 2026-11-17 Version: 7.10.0
 - Generated csharp 2021-10-01 for waf-openapi.
 

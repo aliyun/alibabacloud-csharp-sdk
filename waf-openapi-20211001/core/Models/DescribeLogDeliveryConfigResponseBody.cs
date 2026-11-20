@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public DescribeLogDeliveryConfigResponseBodyDeliveryConfig DeliveryConfig { get; set; }
         public class DescribeLogDeliveryConfigResponseBodyDeliveryConfig : TeaModel {
             /// <summary>
-            /// <para>The details of the log delivery configuration, in JSON format.</para>
+            /// <para>The details of the log delivery configuration, which are formatted as a JSON string constructed from a series of parameters.</para>
             /// <remarks>
-            /// <para>This parameter is the same as the <b>DeliveryDetail</b> parameter of the <b>CreateLogDeliveryConfig</b> operation. For more information, see <a href="~~CreateLogDeliveryConfig~~">CreateLogDeliveryConfig</a>.</para>
+            /// <para>This parameter is the same as the <b>DeliveryDetail</b> parameter of the <a href="~~CreateLogDeliveryConfig~~">CreateLogDeliveryConfig</a> operation. For more information, see the description of the log delivery configuration parameters in the <a href="~~CreateLogDeliveryConfig~~">CreateLogDeliveryConfig</a> operation.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -51,10 +51,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The type of the log delivery configuration. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>syslog</b>: The logs are delivered to a syslog service.</para>
-            /// </description></item>
-            /// <item><description><para><b>kafka</b>: The logs are delivered to a Kafka service.</para>
-            /// </description></item>
+            /// <item><description><b>syslog</b>: delivers logs to a Syslog service.</description></item>
+            /// <item><description><b>kafka</b>: delivers logs to a Kafka service.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

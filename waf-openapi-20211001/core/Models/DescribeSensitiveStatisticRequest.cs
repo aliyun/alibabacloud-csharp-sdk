@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeSensitiveStatisticRequest : TeaModel {
         /// <summary>
-        /// <para>The hybrid cloud cluster ID.</para>
+        /// <para>The ID of the hybrid cloud cluster.</para>
         /// <remarks>
-        /// <para>This parameter applies only to hybrid cloud scenarios. You can call <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> to obtain hybrid cloud cluster information.</para>
+        /// <para>This parameter applies only to hybrid cloud scenarios. You can call <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> to query the information about hybrid cloud clusters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,10 +23,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query, in UNIX timestamp (UTC) format. Unit: seconds.</para>
+        /// <para>The end time of the query. The value is a UNIX timestamp in UTC. Unit: seconds.</para>
         /// <remarks>
-        /// <para>Only data within the last month can be queried. <b>StartTime</b> cannot be earlier than one month before the current time. The query fails if the value is out of the supported range.
-        /// This parameter is optional. Default value: the current time.</para>
+        /// <para>You can query only the data generated within the last month. The value of <b>StartTime</b> cannot be earlier than one month before the current time. If the value exceeds the supported range, the query fails.
+        /// This parameter is not required. Default value: the current time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number to return in a paged query. Default value: <b>1</b>, which indicates the first page.</para>
+        /// <para>The page number of the page to return in a paged query. Default value: <b>1</b>, which indicates the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Default value: <b>10</b>, which indicates 10 entries per page.</para>
+        /// <para>The number of entries to return on each page in a paged query. Default value: <b>10</b>, which indicates 10 entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud resource group ID.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -97,10 +97,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query, in UNIX timestamp (UTC) format. Unit: seconds.</para>
+        /// <para>The start time of the query. The value is a UNIX timestamp in UTC. Unit: seconds.</para>
         /// <remarks>
-        /// <para>Only data within the last month can be queried. <b>StartTime</b> cannot be earlier than one month before the current time. The query fails if the value is out of the supported range.
-        /// This parameter is optional. Default value: one month before the current time.</para>
+        /// <para>You can query only the data generated within the last month. The value of <b>StartTime</b> cannot be earlier than one month before the current time. If the value exceeds the supported range, the query fails.
+        /// This parameter is not required. Default value: one month before the current time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The type of data statistics. Valid values:</para>
+        /// <para>The data statistics type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>ip</b>: IP address statistics.</description></item>
         /// <item><description><b>host</b>: domain name statistics.</description></item>

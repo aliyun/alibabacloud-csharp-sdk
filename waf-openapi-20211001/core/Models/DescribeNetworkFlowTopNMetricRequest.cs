@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeNetworkFlowTopNMetricRequest : TeaModel {
         /// <summary>
-        /// <para>The filter conditions for the query. If you specify multiple filter conditions, all conditions must be met (logical AND).</para>
+        /// <para>The query filter conditions. Multiple filter conditions are connected by the logical AND operator.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Filter")]
@@ -18,19 +18,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public DescribeNetworkFlowTopNMetricRequestFilter Filter { get; set; }
         public class DescribeNetworkFlowTopNMetricRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The list of filter conditions.</para>
+            /// <para>The list of filter conditions. Each node describes a filter condition.</para>
             /// </summary>
             [NameInMap("Conditions")]
             [Validation(Required=false)]
             public List<DescribeNetworkFlowTopNMetricRequestFilterConditions> Conditions { get; set; }
             public class DescribeNetworkFlowTopNMetricRequestFilterConditions : TeaModel {
                 /// <summary>
-                /// <para>The field name to use for filtering. Valid values:</para>
+                /// <para>The name of the field on which the filter operation is performed. The Key parameter of the current operation supports only the following two fields:</para>
                 /// <list type="bullet">
-                /// <item><description><para>matched_host</para>
-                /// </description></item>
-                /// <item><description><para>cluster</para>
-                /// </description></item>
+                /// <item><description>matched_host</description></item>
+                /// <item><description>cluster</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -41,7 +39,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The operator that is used for the filter condition. For more information about supported operators, see the <b>Additional information about request parameters</b> section.</para>
+                /// <para>The operator.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eq</para>
@@ -51,7 +49,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public string OpValue { get; set; }
 
                 /// <summary>
-                /// <para>The value to use for the filter condition. The value format depends on the Key and OpValue that you specify.</para>
+                /// <para>The filter values.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test.waf-top</para>
@@ -63,7 +61,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             }
 
             /// <summary>
-            /// <para>The time range to query.</para>
+            /// <para>The query time range.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("DateRange")]
@@ -71,7 +69,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public DescribeNetworkFlowTopNMetricRequestFilterDateRange DateRange { get; set; }
             public class DescribeNetworkFlowTopNMetricRequestFilterDateRange : TeaModel {
                 /// <summary>
-                /// <para>The end of the time range to query. This value is a UNIX timestamp. Unit: seconds.</para>
+                /// <para>The end time of the query. The end time is represented by a UNIX timestamp in seconds.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -82,9 +80,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public long? EndDate { get; set; }
 
                 /// <summary>
-                /// <para>The beginning of the time range to query. This value is a UNIX timestamp. Unit: seconds. The time range cannot exceed the last 30 days.</para>
+                /// <para>The start time of the query. The data query range cannot exceed the past 30 days. The start time is represented by a UNIX timestamp in seconds.</para>
                 /// <remarks>
-                /// <para>The start time must be later than 30 days before the current time.</para>
+                /// <para>The start time must be later than the current time minus 30 days.</para>
                 /// </remarks>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -100,9 +98,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
+        /// <para>The WAF instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -114,7 +112,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return. Results are sorted in descending order. Maximum value: 10.</para>
+        /// <para>The number of data entries to return after the statistics are sorted in descending order. Maximum value: 10.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -125,22 +123,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? Limit { get; set; }
 
         /// <summary>
-        /// <para>The metric by which to query and rank data. Valid values:</para>
+        /// <para>The metric used to distinguish the returned data content. Different metrics correspond to different data content. The metrics supported by this operation are as follows:</para>
         /// <list type="bullet">
-        /// <item><description><para>real_client_ip: Returns the top N source IP addresses of requests that are sent to WAF. The data is aggregated by source IP address and sorted in descending order.</para>
-        /// </description></item>
-        /// <item><description><para>http_user_agent: Returns the top N user agents of requests that are sent to WAF. The data is aggregated by user agent and sorted in descending order.</para>
-        /// </description></item>
-        /// <item><description><para>request_path: Returns the top N request URLs. The data is aggregated by URL and sorted in descending order.</para>
-        /// </description></item>
-        /// <item><description><para>matched_host_by_total_requests: Returns the top N protected objects by total number of requests received.</para>
-        /// </description></item>
-        /// <item><description><para>matched_host_by_qps: Returns the top N protected objects by queries per second (QPS).</para>
-        /// </description></item>
-        /// <item><description><para>matched_host_by_status: Returns the top N protected objects based on a specific WAF-returned HTTP status code. The data is aggregated by protected object and sorted in descending order. If you set Metric to this value, you must specify the status field in the Conditions parameter of Filter. The format is as follows:<br> {&quot;Key&quot;:&quot;status&quot;,&quot;OpValue&quot;:&quot;eq&quot;,&quot;Values&quot;:&quot;200&quot;}<br></para>
-        /// </description></item>
-        /// <item><description><para>matched_host_by_upstream_status: Returns the top N protected objects based on a specific origin server-returned HTTP status code. The data is aggregated by protected object and sorted in descending order. If you set Metric to this value, you must specify the upstream_status field in the Conditions parameter of Filter. The format is as follows:<br> {&quot;Key&quot;:&quot;upstream_status&quot;,&quot;OpValue&quot;:&quot;eq&quot;,&quot;Values&quot;:&quot;200&quot;}<br></para>
-        /// </description></item>
+        /// <item><description>real_client_ip: aggregates and sorts all requests of the current user that pass through WAF by the source IP address of the request in descending order, and returns the top N data entries.</description></item>
+        /// <item><description>http_user_agent: aggregates and sorts all requests of the current user that pass through WAF by the User-Agent of the request in descending order, and returns the top N data entries.</description></item>
+        /// <item><description>request_path: aggregates and sorts all requests of the current user that pass through WAF by the URL of the request in descending order, and returns the top N data entries.</description></item>
+        /// <item><description>matched_host_by_total_requests: returns the top N protected objects with the largest number of requests for the current user and the corresponding number of requests.</description></item>
+        /// <item><description>matched_host_by_qps: returns the top N protected objects with the highest QPS for the current user and the corresponding QPS data.</description></item>
+        /// <item><description>matched_host_by_status: when this metric is used, you must specify status in the Conditions field of Filter. WAF aggregates and sorts the data whose HTTP response code returned by WAF is equal to the status specified in Conditions by protected object, and returns the top N data entries. The format for specifying status is as follows:<br>
+        /// {&quot;Key&quot;:&quot;status&quot;,&quot;OpValue&quot;:&quot;eq&quot;,&quot;Values&quot;:&quot;200&quot;}</description></item>
+        /// <item><description>matched_host_by_upstream_status: when this metric is used, you must specify upstream_status in the Conditions field of Filter. WAF aggregates and sorts the data whose HTTP response code returned by the origin server is equal to the upstream_status specified in Conditions by protected object, and returns the top N data entries. The format for specifying upstream_status is as follows:<br>
+        /// {&quot;Key&quot;:&quot;upstream_status&quot;,&quot;OpValue&quot;:&quot;eq&quot;,&quot;Values&quot;:&quot;200&quot;}</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -152,12 +145,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Metric { get; set; }
 
         /// <summary>
-        /// <para>The region in which the WAF instance resides. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou</b>: the Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? EventCount { get; set; }
 
         /// <summary>
-        /// <para>The number of events categorized by handling status within the specified time range.</para>
+        /// <para>The number of events within the specified time range, categorized by handling status.</para>
         /// </summary>
         [NameInMap("HandleStatusCounts")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Handled { get; set; }
 
             /// <summary>
-            /// <para>The number of events that are being handled.</para>
+            /// <para>The number of events being handled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? ProtectedGroupCount { get; set; }
 
         /// <summary>
-        /// <para>The number of protected resources for which AI Engine is enabled. This number does not include protected resources in protection groups.</para>
+        /// <para>The number of protected objects for which AI Engine is enabled. This count does not include protected objects that belong to a protection group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of events categorized by risk level within the specified time range.</para>
+        /// <para>The number of events within the specified time range, categorized by risk level.</para>
         /// </summary>
         [NameInMap("RiskCounts")]
         [Validation(Required=false)]

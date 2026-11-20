@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeAlarmListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The alerts.</para>
+        /// <para>The alert list.</para>
         /// </summary>
         [NameInMap("Alarms")]
         [Validation(Required=false)]
@@ -19,14 +19,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The cause of the alert. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>fivefold</b>: The QPS exceeds the limit of the current WAF instance specifications.</para>
-            /// </description></item>
-            /// <item><description><para><b>4count</b>: The actual QPS has cumulatively exceeded the limit of the current WAF instance specifications.</para>
-            /// </description></item>
-            /// <item><description><para><b>exceed10w</b>: The peak QPS exceeds 100,000.</para>
-            /// </description></item>
-            /// <item><description><para><b>costProtection</b>: Billing protection is triggered.</para>
-            /// </description></item>
+            /// <item><description><b>fivefold</b>: The service QPS exceeds the current specifications.</description></item>
+            /// <item><description><b>4count</b>: The cumulative actual service QPS exceeds the current specifications.</description></item>
+            /// <item><description><b>exceed10w</b>: The actual peak service QPS exceeds 100,000.</description></item>
+            /// <item><description><b>costProtection</b>: Billing protection is triggered.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -37,7 +33,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Cause { get; set; }
 
             /// <summary>
-            /// <para>The end time of the alert. This is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The end time of the alert. The value is a UNIX timestamp in UTC. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1605600798</para>
@@ -47,7 +43,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The peak QPS during the alert period.</para>
+            /// <para>The peak QPS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12000</para>
@@ -57,7 +53,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? MaxQps { get; set; }
 
             /// <summary>
-            /// <para>The QPS limit of the current WAF instance specifications.</para>
+            /// <para>The current specifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
@@ -67,7 +63,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Spec { get; set; }
 
             /// <summary>
-            /// <para>The start time of the alert. This is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The start time of the alert. The value is a UNIX timestamp in UTC. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1605600767</para>
@@ -79,14 +75,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The current status of the alert. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>: The queries per second (QPS) limit is exceeded.</para>
-            /// </description></item>
-            /// <item><description><para><b>2</b>: The WAF instance enters the sandbox.</para>
-            /// </description></item>
-            /// <item><description><para><b>3</b>: The WAF instance is removed from the sandbox.</para>
-            /// </description></item>
-            /// <item><description><para><b>4</b>: The QPS no longer exceeds the limit.</para>
-            /// </description></item>
+            /// <item><description><b>1</b>: The QPS limit is exceeded.</description></item>
+            /// <item><description><b>2</b>: The instance is added to the sandbox.</description></item>
+            /// <item><description><b>3</b>: The instance is removed from the sandbox.</description></item>
+            /// <item><description><b>4</b>: The QPS limit is no longer exceeded.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -97,9 +89,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The type of the alert. Valid value:</para>
+            /// <para>The Alarm Metric for alerting. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>qps</b>: a QPS alert.</description></item>
+            /// <item><description><b>qps</b>: The QPS alerts for the service.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -112,7 +104,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8D8EBFB7-E1EB-5236-952A-092EDC72***</para>

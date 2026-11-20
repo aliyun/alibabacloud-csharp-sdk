@@ -47,11 +47,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string SuggestId { get; set; }
 
             /// <summary>
-            /// <para>The content of the protection suggestion rule, which is a string converted from a JSON object constructed with a series of parameters. The parameters include:</para>
+            /// <para>The content of the protection suggestion rule. The content is a JSON character string that consists of the following parameters:</para>
             /// <list type="bullet">
             /// <item><description><b>event_tags</b>: the event type.</description></item>
             /// <item><description><b>black_iplist</b>: the IP blacklist.</description></item>
-            /// <item><description><b>ip_baseline</b>: the IP list.</description></item>
+            /// <item><description><b>ip_baseline</b>: the IP address list.</description></item>
             /// <item><description><b>freq_baseline</b>: the throttling frequency information.</description></item>
             /// <item><description><b>client_id_baseline</b>: the client information.</description></item>
             /// <item><description><b>country_baseline</b>: the country information.</description></item>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <item><description><b>WhiteIPRule</b>: IP whitelist rule.</description></item>
             /// <item><description><b>RateLimitRule</b>: throttling rule.</description></item>
             /// <item><description><b>ClientRule</b>: client rule.</description></item>
-            /// <item><description><b>GeoRule</b>: geo-blocking rule.</description></item>
+            /// <item><description><b>GeoRule</b>: region rule.</description></item>
             /// <item><description><b>SensitiveRule</b>: sensitive information rule.</description></item>
             /// <item><description><b>UnauthRule</b>: authentication rule.</description></item>
             /// </list>

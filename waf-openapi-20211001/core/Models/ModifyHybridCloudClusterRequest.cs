@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The network access mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>internet</b>: public network access.</description></item>
-        /// <item><description><b>vpc</b>: Express Connect private network access.</description></item>
+        /// <item><description><b>internet</b>: Internet access.</description></item>
+        /// <item><description><b>vpc</b>: Private network access over Express Connect.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The list of available ports for the HTTP protocol. The value is a string. If multiple ports are specified, they are returned in the format of <b>port1,port2,port3</b>.</para>
+        /// <para>The list of available ports for the HTTP protocol. The value is a string. For multiple ports, use the <b>port1,port2,port3</b> format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string HttpPorts { get; set; }
 
         /// <summary>
-        /// <para>The list of available ports for the HTTPS protocol. The value is a string. If multiple ports are specified, they are returned in the format of <b>port1,port2,port3</b>.</para>
+        /// <para>The list of available ports for the HTTPS protocol. The value is a string. For multiple ports, use the <b>port1,port2,port3</b> format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The log fields to be returned.</para>
+        /// <para>The log fields that are not returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>log_example</para>
@@ -121,8 +121,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The proxy gateway mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: enabled.</description></item>
-        /// <item><description>off: disabled.</description></item>
+        /// <item><description><b>on</b>: Enabled.</description></item>
+        /// <item><description><b>off</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -135,8 +135,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The cluster type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cname</b>: reverse proxy cluster.</description></item>
-        /// <item><description><b>service</b>: service-based cluster.</description></item>
+        /// <item><description><b>cname</b>: Reverse proxy cluster.</description></item>
+        /// <item><description><b>service</b>: Service cluster.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -149,9 +149,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
+        /// <item><description><para><b>cn-hangzhou</b>: The Chinese mainland.</para>
         /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
+        /// <item><description><para><b>ap-southeast-1</b>: Outside the Chinese mainland.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The remarks.</para>
+        /// <para>The remark.</para>
         /// 
         /// <b>Example:</b>
         /// <para>remarkExample</para>
@@ -207,8 +207,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The rule status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: enabled.</description></item>
-        /// <item><description><b>off</b>: disabled.</description></item>
+        /// <item><description><b>on</b>: Enabled.</description></item>
+        /// <item><description><b>off</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         /// <summary>
         /// <para>The rule type. Valid values:</para>
-        /// <para>bypass: bypasses security checks and directly allows the request.</para>
+        /// <para>bypass: Skips security checks and directly allows traffic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bypass</para>

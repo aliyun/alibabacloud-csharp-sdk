@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeVerifyContentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The DNS-based verification content, including the TXT record details.</para>
+        /// <para>The DNS verification content.</para>
         /// </summary>
         [NameInMap("DnsContent")]
         [Validation(Required=false)]
         public DescribeVerifyContentResponseBodyDnsContent DnsContent { get; set; }
         public class DescribeVerifyContentResponseBodyDnsContent : TeaModel {
             /// <summary>
-            /// <para>The host record of the DNS TXT record used for domain ownership verification.</para>
+            /// <para>The host record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>verification</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string RR { get; set; }
 
             /// <summary>
-            /// <para>The type of the DNS record used for verification.</para>
+            /// <para>The TXT record type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TXT</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The value of the DNS TXT record used for verification.</para>
+            /// <para>The TXT record value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>verify_0a246ca99d504ba087472d***</para>
@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The file-based verification content, including the file name, path, and download URL.</para>
+        /// <para>The file verification content.</para>
         /// </summary>
         [NameInMap("FileContent")]
         [Validation(Required=false)]
         public DescribeVerifyContentResponseBodyFileContent FileContent { get; set; }
         public class DescribeVerifyContentResponseBodyFileContent : TeaModel {
             /// <summary>
-            /// <para>The download URL of the verification file.</para>
+            /// <para>The file download path.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://oss.xxx.com//xxx.html">http://oss.xxx.com//xxx.html</a></para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string DownloadUrl { get; set; }
 
             /// <summary>
-            /// <para>The name of the verification file.</para>
+            /// <para>The file name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx.html</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>The root domain of the domain name to be verified.</para>
+            /// <para>The primary domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aliyundemo.com</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string TopDomain { get; set; }
 
             /// <summary>
-            /// <para>The content of the verification file.</para>
+            /// <para>The file content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>verify_0a246ca99d504ba08***</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Value { get; set; }
 
             /// <summary>
-            /// <para>The URL that is used to access the verification file.</para>
+            /// <para>The access path for file verification.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxx.xxx.com//xxx.html">http://xxx.xxx.com//xxx.html</a></para>
@@ -118,7 +118,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the domain ownership verification is successful.</para>
+        /// <para>The verification result. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: Verification passed.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Verification failed.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

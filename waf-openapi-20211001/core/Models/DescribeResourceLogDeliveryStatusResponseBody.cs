@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeResourceLogDeliveryStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of log delivery configurations for protected objects.</para>
+        /// <para>The log forwarding configurations for the protected objects.</para>
         /// </summary>
         [NameInMap("LogConfigs")]
         [Validation(Required=false)]
         public List<DescribeResourceLogDeliveryStatusResponseBodyLogConfigs> LogConfigs { get; set; }
         public class DescribeResourceLogDeliveryStatusResponseBodyLogConfigs : TeaModel {
             /// <summary>
-            /// <para>The name of the delivery configuration.</para>
+            /// <para>The name of the log forwarding configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>export-kafka</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string DeliveryName { get; set; }
 
             /// <summary>
-            /// <para>The delivery type of the protected object. Valid values:</para>
+            /// <para>The log forwarding type for the protected object. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>syslog</b>: delivered to a syslog service.</description></item>
-            /// <item><description><b>kafka</b>: delivered to a Kafka service.</description></item>
+            /// <item><description><b>syslog</b>: syslog service.</description></item>
+            /// <item><description><b>kafka</b>: Kafka service.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -53,9 +53,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The log delivery status of the protected object. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: enabled.</para>
+            /// <item><description><para><b>true</b>: Enabled.</para>
             /// </description></item>
-            /// <item><description><para><b>false</b>: disabled.</para>
+            /// <item><description><para><b>false</b>: shutdown.</para>
             /// </description></item>
             /// </list>
             /// 

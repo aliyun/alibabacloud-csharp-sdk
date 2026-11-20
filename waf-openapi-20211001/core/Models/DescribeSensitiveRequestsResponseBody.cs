@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ClientIP { get; set; }
 
             /// <summary>
-            /// <para>The assessment result. Valid values:</para>
+            /// <para>The evaluation result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>leak</b>: a leak risk exists.</description></item>
-            /// <item><description><b>none</b>: no leak risk exists.</description></item>
+            /// <item><description><b>leak</b>: A leakage risk exists.</description></item>
+            /// <item><description><b>none</b>: No leakage risk exists.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of returned entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of your WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to view instance ID of your WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string LabelType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per paging in a paged query. Valid values: 1 to 200. Default value: 20.</para>
+        /// <para>The number of entries to return per page in a paged query. This parameter is used for paging. Valid values: 1 to 200. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. This parameter is returned only if a next page exists.</para>
+        /// <para>The pagination token for the next page. This parameter is returned only when a next page exists.</para>
         /// <remarks>
-        /// <para>If this parameter is returned, it indicates that there is a next page. You can use the returned <b>NextToken</b> as a request parameter to obtain the data of the next page until no value is returned, which indicates that all data is obtained.</para>
+        /// <para>If this parameter is returned, a next page exists. You can use the returned <b>NextToken</b> as a request parameter to obtain the next page of data. Repeat this process until no value is returned, which indicates that all data is retrieved.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

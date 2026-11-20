@@ -27,11 +27,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public List<DescribeDefenseResourcesResponseBodyResources> Resources { get; set; }
         public class DescribeDefenseResourcesResponseBodyResources : TeaModel {
             /// <summary>
-            /// <para>The status of the tracking cookie.</para>
+            /// <para>The status of the tracking cookie. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: Disabled.</para>
+            /// <item><description><para><b>0</b>: disabled.</para>
             /// </description></item>
-            /// <item><description><para><b>1</b>: Enabled.</para>
+            /// <item><description><para><b>1</b>: enabled.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -43,11 +43,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? AcwCookieStatus { get; set; }
 
             /// <summary>
-            /// <para>The status of the secure attribute for the tracking cookie.</para>
+            /// <para>The status of the Secure attribute for the tracking cookie. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: Disabled.</para>
+            /// <item><description><para><b>0</b>: disabled.</para>
             /// </description></item>
-            /// <item><description><para><b>1</b>: Enabled.</para>
+            /// <item><description><para><b>1</b>: enabled.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -59,11 +59,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? AcwSecureStatus { get; set; }
 
             /// <summary>
-            /// <para>The status of the secure attribute for the slider cookie.</para>
+            /// <para>The status of the Secure attribute for the slider cookie. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: Disabled.</para>
+            /// <item><description><para><b>0</b>: disabled.</para>
             /// </description></item>
-            /// <item><description><para><b>1</b>: Enabled.</para>
+            /// <item><description><para><b>1</b>: enabled.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -75,7 +75,52 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? AcwV3SecureStatus { get; set; }
 
             /// <summary>
-            /// <para>The custom XFF headers used to obtain the originating IP address of the client. If XFF is set to 1 and this field is empty, the first IP address in the XFF header is used as the originating IP address of the client.</para>
+            /// <para>The cookie attribute aggregation configuration.</para>
+            /// </summary>
+            [NameInMap("CookieConfig")]
+            [Validation(Required=false)]
+            public DescribeDefenseResourcesResponseBodyResourcesCookieConfig CookieConfig { get; set; }
+            public class DescribeDefenseResourcesResponseBodyResourcesCookieConfig : TeaModel {
+                /// <summary>
+                /// <para>The SameSite policy of the slider cookie. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>None</b>: None.</description></item>
+                /// <item><description><b>Lax</b>: Lax.</description></item>
+                /// <item><description><b>Strict</b>: Strict.<remarks>
+                /// <para>An empty string indicates that the SameSite attribute is not configured.</para>
+                /// </remarks>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Lax</para>
+                /// </summary>
+                [NameInMap("AcwScV3SameSite")]
+                [Validation(Required=false)]
+                public string AcwScV3SameSite { get; set; }
+
+                /// <summary>
+                /// <para>The SameSite policy of the tracking cookie. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>None</b>: None.</description></item>
+                /// <item><description><b>Lax</b>: Lax.</description></item>
+                /// <item><description><b>Strict</b>: Strict.<remarks>
+                /// <para>An empty string indicates that the SameSite attribute is not configured.</para>
+                /// </remarks>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>None</para>
+                /// </summary>
+                [NameInMap("AcwTcSameSite")]
+                [Validation(Required=false)]
+                public string AcwTcSameSite { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The custom X-Forwarded-For (XFF) header used to obtain the actual originating IP address of the client. If XFF is set to 1 and this field is empty, the first IP address in the XFF header is used as the originating IP address of the client.</para>
             /// </summary>
             [NameInMap("CustomHeaders")]
             [Validation(Required=false)]
@@ -112,7 +157,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The time when the protected object was last modified. Unit: milliseconds.</para>
+            /// <para>The time when the protected object was modified. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1665633032000</para>
@@ -132,7 +177,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud account to which the protected object asset belongs in a multi-account management feature scenario.</para>
+            /// <para>The account to which the protected object Asset belongs when the multi-account management feature is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>135*********46</para>
@@ -192,7 +237,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ResourceManagerResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The origin of the protected object.</para>
+            /// <para>The source of the protected object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>custom</para>
@@ -204,11 +249,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The status of the protected object. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>initializing</b>: Default protection is being initialized.</para>
+            /// <item><description><para><b>initializing</b>: The default protection is being initialized.</para>
             /// </description></item>
-            /// <item><description><para><b>active</b>: Running normally.</para>
+            /// <item><description><para><b>active</b>: The protected object is running normally.</para>
             /// </description></item>
-            /// <item><description><para><b>init_failed</b>: Default protection initialization failed.</para>
+            /// <item><description><para><b>init_failed</b>: The default protection initialization failed.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -227,7 +272,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public List<DescribeDefenseResourcesResponseBodyResourcesResponseHeaders> ResponseHeaders { get; set; }
             public class DescribeDefenseResourcesResponseBodyResourcesResponseHeaders : TeaModel {
                 /// <summary>
-                /// <para>The key of the custom response header.</para>
+                /// <para>The key of the specified custom response header.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Header-Key</para>
@@ -237,7 +282,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of the custom response header.</para>
+                /// <para>The value of the specified custom response header.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Header-Value</para>
@@ -249,7 +294,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether XFF proxy is enabled for the protected object.</para>
+            /// <para>Indicates whether the X-Forwarded-For (XFF) proxy feature is enabled for the protected object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -261,7 +306,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of returned entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>73</para>

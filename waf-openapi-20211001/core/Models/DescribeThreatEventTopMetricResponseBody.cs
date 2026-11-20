@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeThreatEventTopMetricResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12EF3845-CCEB-4B84-AE60-2B49B*****EE5</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of statistics.</para>
+        /// <para>The list of statistical data.</para>
         /// </summary>
         [NameInMap("TopMetrics")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The country to which the source IP address of the attack belongs.</para>
             /// <remarks>
-            /// <para>This field returns a meaningful value only when the statistical object (<b>Metric</b>) is set to source IP address (<b>src</b>).</para>
+            /// <para>This field is valid only when <b>Metric</b> is set to <b>src</b> (source IP address of the attack).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The region to which the source IP address of the attack belongs.</para>
             /// <remarks>
-            /// <para>This field returns a meaningful value only when the statistical object (<b>Metric</b>) is set to source IP address (<b>src</b>).</para>
+            /// <para>This field is valid only when <b>Metric</b> is set to <b>src</b> (source IP address of the attack).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -63,12 +63,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The attack value. The meaning of this field varies depending on the value of <b>Metric</b>.</para>
+            /// <para>The attack value. The meaning of this field varies based on the value of <b>Metric</b>.</para>
             /// <list type="bullet">
             /// <item><description>If <b>Metric</b> is set to <b>time</b>, this field indicates the attack time.</description></item>
             /// <item><description>If <b>Metric</b> is set to <b>src</b>, this field indicates the source IP address of the attack.</description></item>
             /// <item><description>If <b>Metric</b> is set to <b>target</b>, this field indicates the URL of the attack request.</description></item>
-            /// <item><description>If <b>Metric</b> is set to <b>type</b>, this field indicates the attack type. <b>dirscan</b> indicates directory scanning, <b>webscan</b> indicates web scanning, and other attack types are described in the <b>detectType</b> (detection type) parameter of the <b>custom regular rule</b> (<b>regular_custom</b>) in the <a href="https://help.aliyun.com/document_detail/461421.html"><b>CreateDefenseRule</b></a> operation.</description></item>
+            /// <item><description>If <b>Metric</b> is set to <b>type</b>, this field indicates the attack type. <b>dirscan</b> indicates directory scanning, and <b>webscan</b> indicates web scanning. For other attack types, see the description of <b>detectType</b> in <b>regular_custom</b> (custom regular rules) in the <a href="https://help.aliyun.com/document_detail/461421.html"><b>CreateDefenseRule</b></a> operation.</description></item>
             /// <item><description>If <b>Metric</b> is set to <b>tools</b>, this field indicates the attack tool.</description></item>
             /// </list>
             /// 

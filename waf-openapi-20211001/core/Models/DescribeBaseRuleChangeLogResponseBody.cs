@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of rule group changes.</para>
+        /// <para>The list of rule library change records.</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
@@ -39,8 +39,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The operation type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>add: added.</description></item>
-            /// <item><description>modify: modified.</description></item>
+            /// <item><description>add: add.</description></item>
+            /// <item><description>modify: modify.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The time when the rule was updated. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The update time of the rule. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1665460629000</para>

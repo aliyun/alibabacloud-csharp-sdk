@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The statistics results.</para>
+        /// <para>The statistics.</para>
         /// </summary>
         [NameInMap("StatisticsInfos")]
         [Validation(Required=false)]
         public List<DescribeDefenseRuleStatisticsResponseBodyStatisticsInfos> StatisticsInfos { get; set; }
         public class DescribeDefenseRuleStatisticsResponseBodyStatisticsInfos : TeaModel {
             /// <summary>
-            /// <para>The number of rules that meet all query conditions.</para>
+            /// <para>The number of rules that meet all the query conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>27</para>

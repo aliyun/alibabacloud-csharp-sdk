@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the protected object.</para>
+        /// <para>The protected object information.</para>
         /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
         public DescribeDefenseResourceResponseBodyResource Resource { get; set; }
         public class DescribeDefenseResourceResponseBodyResource : TeaModel {
             /// <summary>
-            /// <para>The status of the tracking cookie. Valid values:</para>
+            /// <para>The enabling status of the tracking cookie.</para>
             /// <list type="bullet">
             /// <item><description><para><b>0</b>: disabled.</para>
             /// </description></item>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? AcwCookieStatus { get; set; }
 
             /// <summary>
-            /// <para>The status of the secure attribute of the tracking cookie. Valid values:</para>
+            /// <para>The status of the Secure attribute for the tracking cookie.</para>
             /// <list type="bullet">
             /// <item><description><para><b>0</b>: disabled.</para>
             /// </description></item>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? AcwSecureStatus { get; set; }
 
             /// <summary>
-            /// <para>The status of the secure attribute of the slider cookie. Valid values:</para>
+            /// <para>The status of the Secure attribute for the slider cookie.</para>
             /// <list type="bullet">
             /// <item><description><para><b>0</b>: disabled.</para>
             /// </description></item>
@@ -75,9 +75,54 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? AcwV3SecureStatus { get; set; }
 
             /// <summary>
+            /// <para>The cookie attribute aggregation configuration.</para>
+            /// </summary>
+            [NameInMap("CookieConfig")]
+            [Validation(Required=false)]
+            public DescribeDefenseResourceResponseBodyResourceCookieConfig CookieConfig { get; set; }
+            public class DescribeDefenseResourceResponseBodyResourceCookieConfig : TeaModel {
+                /// <summary>
+                /// <para>The SameSite policy for the slider cookie. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>None</b>: None.</description></item>
+                /// <item><description><b>Lax</b>: Lax.</description></item>
+                /// <item><description><b>Strict</b>: Strict.<remarks>
+                /// <para>An empty string indicates that the SameSite attribute is not set.</para>
+                /// </remarks>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Lax</para>
+                /// </summary>
+                [NameInMap("AcwScV3SameSite")]
+                [Validation(Required=false)]
+                public string AcwScV3SameSite { get; set; }
+
+                /// <summary>
+                /// <para>The SameSite policy for the tracking cookie. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>None</b>: None.</description></item>
+                /// <item><description><b>Lax</b>: Lax.</description></item>
+                /// <item><description><b>Strict</b>: Strict.<remarks>
+                /// <para>An empty string indicates that the SameSite attribute is not set.</para>
+                /// </remarks>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>None</para>
+                /// </summary>
+                [NameInMap("AcwTcSameSite")]
+                [Validation(Required=false)]
+                public string AcwTcSameSite { get; set; }
+
+            }
+
+            /// <summary>
             /// <para>The list of specified header fields.</para>
             /// <remarks>
-            /// <para>When XffStatus is set to 1, the first IP address in the specified header field is used as the client source IP address to prevent XFF forgery. If multiple header fields are specified, they are tried in order to obtain the source IP address. If the source IP address cannot be obtained from the first header field, the second header field is tried, and so on. If the source IP address cannot be obtained from any of the specified header fields, the first IP address in X-Forwarded-For is used. When XffStatus is set to 1, it indicates that the source IP address is obtained from the first header field.</para>
+            /// <para>When XffStatus is set to 1, the first IP address in the specified header field is used as the originating IP address of the client to prevent XFF spoofing. If multiple headers are specified, the system attempts to obtain the originating IP address in sequence. If the first header does not contain an IP address, the system checks the second header, and so on. If no IP address is found in any of the specified headers, the first IP address in the X-Forwarded-For header is used. When XffStatus is set to 1, the first IP address is extracted.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("CustomHeaders")]
@@ -95,7 +140,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The detailed description of the protected object. Different key-value pairs in the Map represent different attributes of the protected object.</para>
+            /// <para>The detailed description of the protected object. Different key-value pairs in the map represent different attributes of the protected object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -128,7 +173,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The ID of the WAF instance.</para>
+            /// <para>The WAF instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>waf_v2_public_cn-wwo****</para>
@@ -138,7 +183,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The UID of the owner of the protected object.</para>
+            /// <para>The owner UID of the protected object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>170457******9107</para>
@@ -148,7 +193,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string OwnerUserId { get; set; }
 
             /// <summary>
-            /// <para>The protection form of the protected object.</para>
+            /// <para>The protection mode of the protected object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>domain</para>
@@ -198,9 +243,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ResourceManagerResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The origin of the protected object. Valid values:</para>
+            /// <para>The source of the protected object. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>custom</b>: the protected object created from Access Management.</para>
+            /// <item><description><para><b>custom</b>: the protected object created from the Provisioning page.</para>
             /// </description></item>
             /// <item><description><para><b>access</b>: the protected object created by the user.</para>
             /// </description></item>
@@ -261,9 +306,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether a Layer 7 proxy (Anti-DDoS/CDN, etc.) is deployed in front of WAF. Valid values:</para>
+            /// <para>Specifies whether a Layer 7 proxy, such as Anti-DDoS or CDN, is enabled before WAF. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: not enabled.</para>
+            /// <item><description><para><b>0</b>: disabled.</para>
             /// </description></item>
             /// <item><description><para><b>1</b>: enabled.</para>
             /// </description></item>
