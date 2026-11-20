@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the deletion is successfully triggered.</para>
+            /// <para>Indicates whether the deletion was successfully triggered.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

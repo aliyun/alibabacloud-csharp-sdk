@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class DescribeWuyingServerEipInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The Internet service operation provider. Valid values:</para>
+        /// <para>The Internet service operation provider. Valid values: </para>
         /// <list type="bullet">
         /// <item><description>ChinaMobile: shift.</description></item>
         /// <item><description>ChinaTelecom: China Telecom.</description></item>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Isp { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workstation. You can obtain the ID from the WuyingServerIdList parameter returned after you call the CreateWuyingServer operation to create a workstation, or call the ListWuyingServer operation to query the IDs of existing workstations.</para>
+        /// <para>The workstation ID. You can obtain the ID from the WuyingServerIdList returned after you call the CreateWuyingServer operation to create a workstation, or call the ListWuyingServer operation to query the IDs of existing workstations.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

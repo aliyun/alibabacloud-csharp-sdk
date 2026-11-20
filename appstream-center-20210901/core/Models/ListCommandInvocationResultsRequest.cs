@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListCommandInvocationResultsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the delivery group. Queries the command execution results under this delivery group. This parameter must be specified when AppInstanceGroupIds is not specified. If both are specified, AppInstanceGroupIds takes precedence and this parameter does not take effect.</para>
+        /// <para>The delivery group ID. Queries the command execution results under this delivery group. This parameter is required when AppInstanceGroupIds is not specified. If both are specified, AppInstanceGroupIds takes precedence and this parameter does not take effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ws-0bxls9m9arax6****</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The list of delivery group IDs. A maximum of 200 IDs can be specified, and all delivery groups must be in the same region. When specified, it takes precedence over AppInstanceGroupId and queries the command execution results of all persistent sessions under these delivery groups. The list cannot contain null values.</para>
+        /// <para>The list of delivery group IDs. You can specify up to 200 IDs, and all delivery groups must be in the same region. When specified, this parameter takes precedence over AppInstanceGroupId and queries the command execution results of all persistent sessions under these delivery groups. The list cannot contain null values.</para>
         /// </summary>
         [NameInMap("AppInstanceGroupIds")]
         [Validation(Required=false)]
         public List<string> AppInstanceGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The list of persistent session IDs. A maximum of 100 IDs can be specified. It is used to query only the command execution results of the specified persistent sessions. When AppInstanceGroupIds is specified, only persistent sessions belonging to these delivery groups are retained. If no matching persistent sessions are found, an empty list is returned.</para>
+        /// <para>The list of persistent session IDs. You can specify up to 100 IDs to query the command execution results of only the specified persistent sessions. When AppInstanceGroupIds is specified, only persistent sessions that belong to these delivery groups are retained. If no matching persistent sessions are found, an empty list is returned.</para>
         /// </summary>
         [NameInMap("AppInstancePersistentIds")]
         [Validation(Required=false)]
         public List<string> AppInstancePersistentIds { get; set; }
 
         /// <summary>
-        /// <para>The command execution ID, which is the InvocationId returned when you call RunAppInstanceCommand to deliver a command.</para>
+        /// <para>The command execution ID, which is the InvocationId returned when RunAppInstanceCommand is called to deliver a command.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number of the query results to display. It is used together with PageSize for paging in a paged query. If not specified, the default value is 0, which indicates the first page.</para>
+        /// <para>The page number of the query results to return. This parameter is used together with PageSize for paging. If this parameter is not passed, the default value is 0, which indicates the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of query results per page. Default value: 200.</para>
+        /// <para>The number of entries to return on each page. Default value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The product type. Currently, only WuyingServer is supported. If you specify other values, a parameter error is returned.</para>
+        /// <para>The product type. Currently, only WuyingServer is supported. If you pass other values, a parameter error is returned.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

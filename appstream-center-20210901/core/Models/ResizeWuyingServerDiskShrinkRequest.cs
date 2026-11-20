@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The new size of the system cloud disk, in GB.</para>
+        /// <para>The new capacity of the system cloud disk, in GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>220</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? SystemDiskNewSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WUYING Workspace.</para>
+        /// <para>The workstation ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ws-0bw2f11****dial</para>

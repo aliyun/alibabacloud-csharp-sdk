@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ModifyWuyingServerSpecRequest : TeaModel {
         /// <summary>
-        /// <para>The status after the specification change is complete.</para>
+        /// <para>The status of the workstation after the specification change is complete.</para>
         /// <list type="bullet">
         /// <item><description><c>stopped</c>: Shuts down the workstation after the specification change is complete.</description></item>
         /// </list>
-        /// <para>This option applies to Enterprise Edition or container workstations that support this setting.</para>
+        /// <para>This option is applicable to Enterprise Edition or container workstations that support this setting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>stopped</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AfterStatus { get; set; }
 
         /// <summary>
-        /// <para>The product type of the target workstation. It must match the actual type of the resource. For Enterprise Edition workstations, use <c>WuyingServer</c>. If this parameter is omitted, <c>WuyingServer</c> is used by default.</para>
+        /// <para>The product type of the target workstation, which must be consistent with the actual type of the resource. For Enterprise Edition workstations, use <c>WuyingServer</c>. If this parameter is omitted, <c>WuyingServer</c> is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WuyingServer</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the promotion. It is used to identify a promotional event or coupon.</para>
+        /// <para>The ID of the promotion, which is used to identify a promotional event or coupon.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17440009****</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ServerInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workstation whose specifications you want to change. This parameter is required.</para>
+        /// <para>The ID of the workstation whose specifications you want to modify. This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ws-0bw2f11****dial</para>

@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The agent provider.</para>
         /// <list type="bullet">
-        /// <item><description>JVS Computer: Enter OpenClaw.</description></item>
-        /// <item><description>OpenClaw: Enter OpenClaw.</description></item>
-        /// <item><description>Hermes Agent: Enter HermesAgent.</description></item>
+        /// <item><description>JVS Computer: Specify OpenClaw.</description></item>
+        /// <item><description>OpenClaw: Specify OpenClaw.</description></item>
+        /// <item><description>Hermes Agent: Specify HermesAgent.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AgentProvider { get; set; }
 
         /// <summary>
-        /// <para>The list of channel configurations. A maximum of 200 configurations are supported. Each configuration item specifies an agent runtime and the third-party channel to be configured for it. Different channel configurations can be delivered to different runtimes. Multiple configuration items for the same runtime are processed sequentially.</para>
+        /// <para>The list of channel configurations. A maximum of 200 items are supported. Each configuration item specifies an agent runtime and the third-party channel to be configured for it. Different channel configurations can be delivered to different runtimes. Multiple configuration items for the same runtime are processed sequentially.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ChannelConfigs")]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<BatchConfigRuntimeChannelRequestChannelConfigs> ChannelConfigs { get; set; }
         public class BatchConfigRuntimeChannelRequestChannelConfigs : TeaModel {
             /// <summary>
-            /// <para>The third-party channel code, such as dingtalk-connector (DingTalk), feishu (Lark), and wecom (WeCom). System channel codes are not case-sensitive. Configuring wechat and jvsclaw is not supported. If these values are passed, the entire request fails and the error code ChannelConfig.NotSupported is returned.</para>
+            /// <para>The third-party channel code, such as dingtalk-connector (DingTalk), feishu (Lark), and wecom (WeCom). System channel codes are case-insensitive. Configuring wechat and jvsclaw is not supported. If these values are passed, the entire request fails and the error code ChannelConfig.NotSupported is returned.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The JSON string for the channel configuration.</para>
+            /// <para>The JSON string for channel configuration.</para>
             /// <list type="bullet">
             /// <item><description>Simple mode: only appKey and appSecret are allowed.</description></item>
             /// <item><description>Custom mode: all configuration items required for the channel under the current agent provider must be included.</description></item>
@@ -74,8 +74,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <summary>
             /// <para>The configuration mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Simple: the simple configuration mode.</description></item>
-            /// <item><description>Custom: the custom configuration mode.</description></item>
+            /// <item><description>Simple: simple configuration mode.</description></item>
+            /// <item><description>Custom: custom configuration mode.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The agent runtime type, such as CloudDesktop (cloud desktop).</para>
+        /// <para>The agent runtime type, such as CloudDesktop (Cloud Desktop).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

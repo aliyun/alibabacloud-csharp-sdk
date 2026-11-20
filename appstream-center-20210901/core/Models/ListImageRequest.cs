@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListImageRequest : TeaModel {
         /// <summary>
-        /// <para>The list of supported regions. WUYING images are centralized. Use this parameter to query the regions where the image is deployed.</para>
+        /// <para>The list of supported regions. WUYING images are centralized. You can use this parameter to query the regions where the image is deployed.</para>
         /// </summary>
         [NameInMap("BizRegionIdList")]
         [Validation(Required=false)]
         public List<string> BizRegionIdList { get; set; }
 
         /// <summary>
-        /// <para>The business type. This parameter is not publicly available.</para>
+        /// <para>The business type. This parameter is not exposed for external use.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? BizType { get; set; }
 
         /// <summary>
-        /// <para>The list of all business types. This parameter is not publicly available.</para>
+        /// <para>The list of all business types. This parameter is not exposed for external use.</para>
         /// </summary>
         [NameInMap("BizTypeList")]
         [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The image name. Fuzzy match is supported.</para>
+        /// <para>The image name. Fuzzy search is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DemoImage</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging queries. Maximum value: 100. Default value: 10.</para>
+        /// <para>The number of entries per page for a paging query. Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string PlatformName { get; set; }
 
         /// <summary>
-        /// <para>The list of supported platform types. For valid values, refer to PlatformName above.</para>
+        /// <para>The list of supported platform types. For valid values, refer to PlatformName.</para>
         /// </summary>
         [NameInMap("PlatformNameList")]
         [Validation(Required=false)]
@@ -162,14 +162,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The list of products supported when the image supports multiple products.</para>
+        /// <para>The list of supported products when the image supports multiple products.</para>
         /// </summary>
         [NameInMap("ProductTypeList")]
         [Validation(Required=false)]
         public List<string> ProductTypeList { get; set; }
 
         /// <summary>
-        /// <para>The protocol type of the image.</para>
+        /// <para>The image protocol type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ASP</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProtocolType { get; set; }
 
         /// <summary>
-        /// <para>Queries images of specific defined specifications.</para>
+        /// <para>Queries images with specific defined specifications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eds.enterprise_office.2c4g</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ResourceInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The image status. Specifies the status of images to query. By default, all images that are not deleted are queried.</para>
+        /// <para>The image status. Specifies the status of the images to query. By default, all images that are not deleted are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>INIT</para>
@@ -199,14 +199,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tags for query.</para>
+        /// <para>The tags used for querying.</para>
         /// </summary>
         [NameInMap("TagList")]
         [Validation(Required=false)]
         public List<ListImageRequestTagList> TagList { get; set; }
         public class ListImageRequestTagList : TeaModel {
             /// <summary>
-            /// <para>The user-defined tag key.</para>
+            /// <para>The custom tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>env</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The user-defined tag value.</para>
+            /// <para>The custom tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>

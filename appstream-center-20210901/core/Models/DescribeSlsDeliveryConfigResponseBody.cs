@@ -45,8 +45,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                     /// <list type="bullet">
                     /// <item><description><c>Stopped</c>: Delivery is stopped.</description></item>
                     /// <item><description><c>Enabled</c>: Delivery is enabled.</description></item>
-                    /// <item><description><c>AbnormalLogstoreDeleted</c>: The destination Logstore is deleted, and delivery is abnormal.</description></item>
-                    /// <item><description><c>AbnormalProjectDeleted</c>: The destination project is deleted, and delivery is abnormal.</description></item>
+                    /// <item><description><c>AbnormalLogstoreDeleted</c>: Delivery is abnormal because the destination Logstore is deleted.</description></item>
+                    /// <item><description><c>AbnormalProjectDeleted</c>: Delivery is abnormal because the destination project is deleted.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The request ID used to locate the current call.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>

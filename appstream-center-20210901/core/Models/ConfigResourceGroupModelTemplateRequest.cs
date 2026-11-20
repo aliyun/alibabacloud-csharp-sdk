@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ModelTemplateId { get; set; }
 
         /// <summary>
-        /// <para>The WUYING resource group ID, which starts with rg-. This resource group is managed by the WUYING Enterprise Edition control plane, and automatic creation is performed by the system after the deployment of agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent. You can obtain the ID from the ResourceGroup[].ResourceGroupId field in the response of the DescribeResourceGroups operation of WUYING Cloud Desktop eds-user (API version 2021-03-08), or from the Data.ResourceGroupId field in the response of the GetRuntimeModelConfig operation of this service.</para>
+        /// <para>The WUYING resource group ID, which starts with rg-. This resource group is managed by the WUYING Enterprise Edition control service, and automatic creation by the system occurs after the deployment of agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent. You can obtain it from the ResourceGroup[].ResourceGroupId field in the response of the DescribeResourceGroups operation of WUYING Cloud Desktop eds-user (API version 2021-03-08), or from the Data.ResourceGroupId field in the response of the GetRuntimeModelConfig operation of this service.</para>
         /// <remarks>
-        /// <para>Other IDs such as the account-level resource group ID and node pool ID in Alibaba Cloud Resource Manager cannot be passed as this parameter. Only WUYING resource group IDs are valid.</para>
+        /// <para>Other IDs such as the account-level resource group ID in Alibaba Cloud Resource Manager and node pool IDs cannot be passed as this parameter. Only WUYING resource group IDs are valid.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

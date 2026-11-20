@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<DescribeSlsDeliveryConfigRequestDeliveryScopes> DeliveryScopes { get; set; }
         public class DescribeSlsDeliveryConfigRequestDeliveryScopes : TeaModel {
             /// <summary>
-            /// <para>The query condition for the product type to which the logs belong. If you specify this parameter, delivery scopes are filtered by the specified product type. The value must be consistent with the existing delivery configurations. For example, <c>WuyingServer</c> indicates Enterprise Edition workstations.</para>
+            /// <para>The query condition for the product type to which the logs belong. If you specify this parameter, the results are filtered by the specified product type, which must be consistent with the existing delivery configurations. For example, <c>WuyingServer</c> indicates Enterprise Edition workstations.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The name of the SLS Logstore. Exact match is used. If this parameter is omitted, delivery scopes are not filtered by Logstore name.</para>
+        /// <para>The name of the SLS Logstore. Exact match is used. If this parameter is omitted, the results are not filtered by Logstore name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>wuying-session-audit</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string LogStoreName { get; set; }
 
         /// <summary>
-        /// <para>The name of the SLS project. Exact match is used. If this parameter is omitted, delivery scopes are not filtered by project name.</para>
+        /// <para>The name of the SLS project. Exact match is used. If this parameter is omitted, the results are not filtered by project name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>wuying-audit-cn-hangzhou</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the SLS project is located. Exact match is used. If this parameter is omitted, delivery scopes are not filtered by region.</para>
+        /// <para>The ID of the region where the SLS project is located. Exact match is used. If this parameter is omitted, the results are not filtered by region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

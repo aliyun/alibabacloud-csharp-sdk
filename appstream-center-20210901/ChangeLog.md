@@ -1,3 +1,8 @@
+2026-11-20 Version: 5.17.0
+- Support API QueryModelUsageInfo.
+- Support API QueryModelUsageList.
+
+
 2026-11-17 Version: 5.16.0
 - Support API BatchConfigRuntimeChannel.
 - Support API DescribeSlsDeliveryConfig.

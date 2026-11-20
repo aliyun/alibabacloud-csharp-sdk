@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string Currency { get; set; }
 
                 /// <summary>
-                /// <para>The discount amount. The actual price equals the original price minus the discount amount.</para>
+                /// <para>The discount amount. The actual price is the original price minus the discount amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string OriginalPrice { get; set; }
 
                 /// <summary>
-                /// <para>The coupon descriptions.</para>
+                /// <para>The coupon description.</para>
                 /// </summary>
                 [NameInMap("Promotions")]
                 [Validation(Required=false)]
                 public List<GetResourceRenewPriceResponseBodyDataPricePromotions> Promotions { get; set; }
                 public class GetResourceRenewPriceResponseBodyDataPricePromotions : TeaModel {
                     /// <summary>
-                    /// <para>The coupon code.</para>
+                    /// <para>The coupon option code.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>coupon****</para>
@@ -71,10 +71,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                     public string OptionCode { get; set; }
 
                     /// <summary>
-                    /// <para>The coupon descriptions.</para>
+                    /// <para>The coupon description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>**活动</para>
+                    /// <para>**Promotion</para>
                     /// </summary>
                     [NameInMap("PromotionDesc")]
                     [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                     /// <para>The coupon name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>**活动</para>
+                    /// <para>**Promotion</para>
                     /// </summary>
                     [NameInMap("PromotionName")]
                     [Validation(Required=false)]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 }
 
                 /// <summary>
-                /// <para>The actual price. The actual price equals the original price minus the discount amount.</para>
+                /// <para>The transaction price. The actual price is the original price minus the discount amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -125,24 +125,24 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The pricing rules.</para>
+            /// <para>The price calculation rules.</para>
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
             public List<GetResourceRenewPriceResponseBodyDataRules> Rules { get; set; }
             public class GetResourceRenewPriceResponseBodyDataRules : TeaModel {
                 /// <summary>
-                /// <para>The pricing rule description.</para>
+                /// <para>The description of the price calculation rule.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>**活动</para>
+                /// <para>**Promotion</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The pricing rule ID.</para>
+                /// <para>The ID of the price calculation rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20002****</para>

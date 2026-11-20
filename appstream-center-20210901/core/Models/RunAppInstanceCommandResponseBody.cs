@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public RunAppInstanceCommandResponseBodyCommandResultModel CommandResultModel { get; set; }
         public class RunAppInstanceCommandResponseBodyCommandResultModel : TeaModel {
             /// <summary>
-            /// <para>The command execution ID. When commands are issued in batches to multiple delivery groups, only one execution ID is returned. You can use this ID to call the ListCommandInvocationResults operation to query the command execution results on each session.</para>
+            /// <para>The command execution ID. Only one execution ID is returned even when commands are issued in batches to multiple delivery groups. You can use this ID to call ListCommandInvocationResults to query the command execution results on each session.</para>
             /// 
             /// <b>Example:</b>
             /// <para>t-hz0jdfwd9f****</para>

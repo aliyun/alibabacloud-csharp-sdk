@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class DescribeEventsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of events on the current page, returned in descending order of the event log time.</para>
+        /// <para>The list of events on the current page. The events are returned in descending order of the event log time.</para>
         /// </summary>
         [NameInMap("EventList")]
         [Validation(Required=false)]
         public List<DescribeEventsResponseBodyEventList> EventList { get; set; }
         public class DescribeEventsResponseBodyEventList : TeaModel {
             /// <summary>
-            /// <para>The delivery group ID associated with the event. This field may be empty if the event is not associated with a delivery group.</para>
+            /// <para>The ID of the delivery group associated with the event. This field may be empty if the event is not associated with a delivery group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aig-9ciijz60n4xsv****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstanceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The delivery group name associated with the event. This field may be empty if the event is not associated with a delivery group.</para>
+            /// <para>The name of the delivery group associated with the event. This field may be empty if the event is not associated with a delivery group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>R&amp;D workstation group</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstanceGroupName { get; set; }
 
             /// <summary>
-            /// <para>The event detail text. The content varies with <c>EventType</c> and may be empty. For example, a session release event may return a JSON text that describes the release cause.</para>
+            /// <para>The event detail text. The content varies based on the <c>EventType</c> and may be empty. For example, a session release event may return a JSON text that describes the release cause.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;Reason&quot;:&quot;ByUser&quot;}</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string EventId { get; set; }
 
             /// <summary>
-            /// <para>The event type identifier. Different products may return different values. You can use this value for subsequent exact filtering.</para>
+            /// <para>The event type identifier. Different products may return different values. You can use this value for subsequent precise filtering.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SessionDisconnected</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string OccurredTime { get; set; }
 
             /// <summary>
-            /// <para>The office network ID associated with the event. This field may be empty if it is not applicable.</para>
+            /// <para>The ID of the office network associated with the event. This field may be empty if it is not applicable.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai+dir-123456****</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string OfficeSiteId { get; set; }
 
             /// <summary>
-            /// <para>The product type to which the event belongs. This field is an open string and may be extended as supported event sources increase. The caller should not restrict the values to the products currently listed in the <c>ProductType</c> request parameter.</para>
+            /// <para>The product type to which the event belongs. This field is an open string and may be extended as supported event sources expand. Callers should not restrict the value to the products currently listed in the <c>ProductType</c> request parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CloudApp</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ProductType { get; set; }
 
             /// <summary>
-            /// <para>The end user ID that generated the event. This field may be empty if the event is not associated with an end user.</para>
+            /// <para>The ID of the end user who generated the event. This field may be empty if the event is not associated with an end user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user01</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The compatibility field. The current version does not set this field. Do not rely on its value.</para>
+        /// <para>A compatibility field. The current version does not set this field. Do not rely on its value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The compatibility field. The current version does not generate a next page token. Do not use this field for pagination.</para>
+        /// <para>A compatibility field. The current version does not generate a next page token. Do not use this field for pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>unused</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number corresponding to the current response.</para>
+        /// <para>The page number corresponding to this response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of events per page used in the current response.</para>
+        /// <para>The number of events per page used in this response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the request, which can be used to troubleshoot the request.</para>
+        /// <para>The unique identifier of the request. You can use this ID to troubleshoot request issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of events that meet all filter conditions within the retrievable window of the last 30 days. Unit: events.</para>
+        /// <para>The total number of events that meet all filter conditions within the 30-day retrievable window. Unit: entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36</para>

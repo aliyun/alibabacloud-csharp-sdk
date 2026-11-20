@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string IpAddress { get; set; }
 
             /// <summary>
-            /// <para>The ID of the network interface.</para>
+            /// <para>The ID of the network interface controller (NIC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>eni-bp174p2xxxxxbyh02ix</para>

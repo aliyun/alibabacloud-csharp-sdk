@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListWuyingServerWorkloadTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The compatibility field. The current version does not use this field to indicate the number of returned entries.</para>
+        /// <para>A compatibility field. The current version does not use this field to indicate the number of returned entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The compatibility field. The current version does not generate a next page token.</para>
+        /// <para>A compatibility field. The current version does not generate a next page token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>unused</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the request. You can use this ID to troubleshoot request issues.</para>
+        /// <para>The unique identifier of the request, which can be used to troubleshoot request issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of workload templates. The templates are returned in the order of their configuration, with a maximum of 100 entries.</para>
+        /// <para>The list of workload templates. A maximum of 100 templates are returned, sorted by template configuration order.</para>
         /// </summary>
         [NameInMap("WorkloadTemplates")]
         [Validation(Required=false)]
         public List<ListWuyingServerWorkloadTemplateResponseBodyWorkloadTemplates> WorkloadTemplates { get; set; }
         public class ListWuyingServerWorkloadTemplateResponseBodyWorkloadTemplates : TeaModel {
             /// <summary>
-            /// <para>The rendered template content. The original text is Base64-encoded after being encoded in UTF-8. You must decode the Base64 string before use.</para>
+            /// <para>The rendered template content. The original text is Base64-encoded after UTF-8 encoding. You must perform Base64 decoding before use.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IyB3b3JrbG9hZCB0ZW1wbGF0ZQo=</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The description of the workload template.</para>
+            /// <para>The purpose description of the workload template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Used to submit general-purpose computing workloads</para>

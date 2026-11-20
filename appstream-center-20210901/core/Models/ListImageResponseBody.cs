@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 /// <para>The application name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>应用名称</para>
+                /// <para>Application name</para>
                 /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? BizType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the compatibility mode is enabled.</para>
+            /// <para>Indicates whether compatibility mode is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public bool? CompatibleMode { get; set; }
 
             /// <summary>
-            /// <para>The data cloud disk size. Unit: GiB.</para>
+            /// <para>The size of the data cloud disk. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <para>The image description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>描述</para>
+            /// <para>Description</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -139,20 +139,22 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <para>The distribution name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Ubuntu 22.04 64位</para>
+            /// <para>Ubuntu 22.04 64-bit</para>
             /// </summary>
             [NameInMap("Distro")]
             [Validation(Required=false)]
             public string Distro { get; set; }
 
             /// <summary>
-            /// <para>The list of driver information.</para>
+            /// <para>The driver information list.</para>
             /// </summary>
             [NameInMap("DriverList")]
             [Validation(Required=false)]
             public List<string> DriverList { get; set; }
 
             /// <summary>
+            /// <para>The ID of the environment where the image is used.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>env-164c321f405ca84143e4b730dbe4</para>
             /// </summary>
@@ -169,11 +171,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is not publicly available.</para>
+            /// <para>This parameter is not available for public use.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>镜像支持的fota渠道，暂未启用</para>
+            /// <para>FOTA channel supported by the image, currently disabled</para>
             /// </summary>
             [NameInMap("FotaChannel")]
             [Validation(Required=false)]
@@ -210,7 +212,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The image creation type.</para>
+            /// <para>The image creation mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>BUILDER_MANUAL</para>
@@ -219,12 +221,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string ImageCreateMode { get; set; }
 
+            /// <summary>
+            /// <para>The URL of the image icon.</para>
+            /// </summary>
             [NameInMap("ImageIconUrl")]
             [Validation(Required=false)]
             public string ImageIconUrl { get; set; }
 
             /// <summary>
-            /// <para>The image ID. System image IDs are meaningful, while custom image IDs are auto-generated.</para>
+            /// <para>The image ID. System image IDs have specific meanings, while custom image IDs are automatically generated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>imgc-xxxx</para>
@@ -244,14 +249,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ImageName { get; set; }
 
             /// <summary>
-            /// <para>The overlay effective region information.</para>
+            /// <para>The effective region information.</para>
             /// </summary>
             [NameInMap("ImageRegionDistributeList")]
             [Validation(Required=false)]
             public List<ListImageResponseBodyDataImageRegionDistributeList> ImageRegionDistributeList { get; set; }
             public class ListImageResponseBodyDataImageRegionDistributeList : TeaModel {
                 /// <summary>
-                /// <para>The image ID. System image IDs are meaningful, while custom image IDs are auto-generated.</para>
+                /// <para>The image ID. System image IDs have specific meanings, while custom image IDs are automatically generated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>imgc-xxx</para>
@@ -303,7 +308,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The regions.</para>
+            /// <para>The region.</para>
             /// </summary>
             [NameInMap("ImageRegionList")]
             [Validation(Required=false)]
@@ -320,7 +325,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ImageType { get; set; }
 
             /// <summary>
-            /// <para>The image language. If the package type is VHD/Container, this property is inherited from the ECS package type image in the image combination.</para>
+            /// <para>The image language. If the package type is VHD or Container, this property is inherited from the image with the ECS package type in the same image combination.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zh-CN</para>
@@ -350,7 +355,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public bool? OnlineVersion { get; set; }
 
             /// <summary>
-            /// <para>The sub-version from which the current image reads the main image information. An image consists of multiple sub-versions.</para>
+            /// <para>The online version ID of the current image. The main image information is read from this sub-version. An image consists of multiple sub-versions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>iv-xxxx</para>
@@ -380,7 +385,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string PackageType { get; set; }
 
             /// <summary>
-            /// <para>The parent image ID. This only indicates the inheritance relationship. System images have no parent image.</para>
+            /// <para>The parent image ID. This ID only indicates an inheritance relationship. System images do not have parent images.</para>
             /// 
             /// <b>Example:</b>
             /// <para>imgc-xxx</para>
@@ -400,9 +405,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ParentImageVersion { get; set; }
 
             /// <summary>
-            /// <para>The image operating system platform.</para>
+            /// <para>The operating system platform of the image.</para>
             /// <remarks>
-            /// <para>If the package type is VHD/Container, this property is inherited from the ECS package type image in the image combination.</para>
+            /// <para>If the package type is VHD or Container, this property is inherited from the image with the ECS package type in the same image combination.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -443,6 +448,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ProtocolType { get; set; }
 
             /// <summary>
+            /// <para>The rating of the image, with a maximum score of 100.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>95</para>
             /// </summary>
@@ -451,7 +458,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? Rating { get; set; }
 
             /// <summary>
-            /// <para>The resource type supported by the image.</para>
+            /// <para>The supported resource type for the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;eds.cpu.category&quot;]</para>
@@ -461,6 +468,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ResourceInstanceCategory { get; set; }
 
             /// <summary>
+            /// <para>The usage scenario of the image.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>AIGC</para>
             /// </summary>
@@ -523,16 +532,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The list of supported languages.</para>
+            /// <para>The supported language list.</para>
             /// </summary>
             [NameInMap("SupportedLanguageList")]
             [Validation(Required=false)]
             public List<string> SupportedLanguageList { get; set; }
 
             /// <summary>
-            /// <para>The system cloud disk size. Unit: GiB.</para>
+            /// <para>The size of the system cloud disk. Unit: GiB.</para>
             /// <remarks>
-            /// <para>The system cloud disk size cannot be smaller than the image file.</para>
+            /// <para>The size of the system cloud disk cannot be smaller than the image file.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -542,11 +551,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public int? SystemDiskSize { get; set; }
 
+            /// <summary>
+            /// <para>The tag list.</para>
+            /// </summary>
             [NameInMap("TagList")]
             [Validation(Required=false)]
             public List<ListImageResponseBodyDataTagList> TagList { get; set; }
             public class ListImageResponseBodyDataTagList : TeaModel {
                 /// <summary>
+                /// <para>The tag key.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1630348213973321</para>
                 /// </summary>
@@ -555,6 +569,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string Key { get; set; }
 
                 /// <summary>
+                /// <para>The tag value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>inner</para>
                 /// </summary>
@@ -607,7 +623,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The message returned for the API request.</para>
+        /// <para>The message returned by the API request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -627,7 +643,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of items returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -647,7 +663,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

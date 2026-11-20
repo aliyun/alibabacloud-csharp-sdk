@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The error description returned when the configuration fails. This parameter is returned only when Success is false.</para>
+            /// <para>The error message returned when the configuration fails. This parameter is returned only when Success is false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The runtime is not found.</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string RuntimeId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the channel configuration item is configured successfully. Valid values:</para>
+            /// <para>Specifies whether the channel configuration item is configured successfully. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: The configuration is successful.</description></item>
-            /// <item><description>false: The configuration fails. For the cause of the failure, see ErrorCode and Message.</description></item>
+            /// <item><description>false: The configuration failed. For the cause of the failure, see ErrorCode and Message.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("Success")]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of configuration results, which is the same as the number of configuration items in ChannelConfigs.</para>
+        /// <para>The total number of configuration results, which is the same as the number of configuration items in ChannelConfigs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

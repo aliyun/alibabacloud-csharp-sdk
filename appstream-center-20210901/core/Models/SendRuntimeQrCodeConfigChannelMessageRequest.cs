@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the runtime resources, such as cloud desktop IDs. You can specify 1 to 200 IDs.</para>
+        /// <para>The list of runtime resource IDs, such as cloud desktop IDs. You can specify 1 to 200 IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RuntimeIds")]

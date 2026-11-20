@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ApproveOtaTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The delivery group ID. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the ID.</para>
+        /// <para>The ID of the delivery group. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the delivery group. You can call <a href="~~ListRegions~~">ListRegions</a> to query the list of regions supported by Wuying Cloud Application.</para>
+        /// <para>The ID of the region to which the delivery group belongs. You can call the <a href="~~ListRegions~~">ListRegions</a> operation to query the regions supported by Wuying Cloud Application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>The OTA upgrade task type.</para>
+        /// <para>The type of the OTA upgrade task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string OtaType { get; set; }
 
         /// <summary>
-        /// <para>The start time of the OTA upgrade task. Specify the time in ISO 8601 format.</para>
+        /// <para>The start time of the OTA upgrade task. Specify the time in the ISO 8601 format.</para>
         /// <para>This parameter is required.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
@@ -55,9 +55,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The OTA upgrade task ID. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the ID.</para>
+        /// <para>The ID of the OTA upgrade task. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the ID.</para>
         /// <remarks>
-        /// <para>Each successful call to <c>ApproveOtaTask</c> causes the <c>TaskId</c> to change. Therefore, before calling this operation again, call <c>ListAppInstanceGroup</c> again to obtain the latest <c>TaskId</c>.</para>
+        /// <para>After you successfully call <c>ApproveOtaTask</c>, the <c>TaskId</c> changes. Therefore, before you call this operation again, call <c>ListAppInstanceGroup</c> to obtain the latest <c>TaskId</c>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

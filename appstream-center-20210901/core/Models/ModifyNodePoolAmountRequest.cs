@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The parameters for node pool specification changes.</para>
+        /// <para>The parameters for changing the specifications of the node pool.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NodePool")]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <para>The total number of subscription nodes after the upgrade.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>This value must be greater than the current number of purchased nodes (Amount) in the delivery group. Otherwise, the API returns InvalidAmount.UnIncrease.</description></item>
+            /// <item><description>The value must be greater than the number of purchased nodes (Amount) in the current delivery group. Otherwise, the API returns InvalidAmount.UnIncrease.</description></item>
             /// </list>
             /// </remarks>
             /// <para>This parameter is required.</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string PrePaidNodeAmountModifyMode { get; set; }
 
             /// <summary>
-            /// <para>The list of nodes whose billing type is to be modified.</para>
+            /// <para>The list of nodes whose billing method is to be changed.</para>
             /// </summary>
             [NameInMap("PrePaidNodeAmountModifyNodeIds")]
             [Validation(Required=false)]

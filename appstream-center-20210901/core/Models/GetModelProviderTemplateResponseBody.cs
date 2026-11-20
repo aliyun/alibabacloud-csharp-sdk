@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Wuying security gateway proxy is enabled.</para>
+            /// <para>Specifies whether the Wuying secure gateway proxy is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

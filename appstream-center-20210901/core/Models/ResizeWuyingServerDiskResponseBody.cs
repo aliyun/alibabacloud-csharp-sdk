@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public ResizeWuyingServerDiskResponseBodyData Data { get; set; }
         public class ResizeWuyingServerDiskResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the order.</para>
+            /// <para>The order ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>23429322113****</para>

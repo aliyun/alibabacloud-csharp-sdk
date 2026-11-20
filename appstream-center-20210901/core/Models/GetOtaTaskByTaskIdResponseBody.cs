@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class GetOtaTaskByTaskIdResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code returned when an error occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OtaTask.Running</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request failed.</para>
+        /// <para>The error message returned when an error occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The task is running and cannot be sumitted.</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string OtaVersion { get; set; }
 
         /// <summary>
-        /// <para>The release note that describes the content of the over-the-air update.</para>
+        /// <para>The release notes that describe the content of the over-the-air update.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试升级</para>
+        /// <para>Test upgrade</para>
         /// </summary>
         [NameInMap("ReleaseNote")]
         [Validation(Required=false)]

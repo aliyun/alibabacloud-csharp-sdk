@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<SendRuntimeQrCodeConfigChannelMessageResponseBodyData> Data { get; set; }
         public class SendRuntimeQrCodeConfigChannelMessageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The error code when the sending fails, such as Runtime.NotFound (the runtime does not exist) or Runtime.UserNotSupported (the runtime has no authorized user or has multiple authorized users). This parameter is not returned when the sending is successful.</para>
+            /// <para>The error code when the sending fails, such as Runtime.NotFound (the runtime does not exist) or Runtime.UserNotSupported (the runtime has no authorized users or has multiple authorized users). This parameter is not returned when the sending is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Runtime.UserNotSupported</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is a unique identifier for the request.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>

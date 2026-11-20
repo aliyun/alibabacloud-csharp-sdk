@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<BatchCreateLlmTemplatesRequestLlmTemplateItems> LlmTemplateItems { get; set; }
         public class BatchCreateLlmTemplatesRequestLlmTemplateItems : TeaModel {
             /// <summary>
-            /// <para>The model configuration JSON object.</para>
+            /// <para>The JSON object for model configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ModelTemplateId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the model provider template.</para>
+        /// <para>The ID of the associated model provider template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

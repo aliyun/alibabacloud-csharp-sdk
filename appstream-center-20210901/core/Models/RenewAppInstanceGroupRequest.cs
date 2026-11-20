@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class RenewAppInstanceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The delivery group ID.</para>
+        /// <para>The ID of the delivery group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable automatic payment. If RenewMode is set to RENEW_SPECIFIED_NODE_COUNT or RENEW_SPECIFIED_NODE_IDS, this parameter must be set to false.</para>
+        /// <para>Specifies whether to enable automatic payment. When the RenewMode parameter is set to RENEW_SPECIFIED_NODE_COUNT or RENEW_SPECIFIED_NODE_IDS, this parameter must be set to false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>The numeric part of the resource purchase duration. Use this parameter together with <c>PeriodUnit</c> to specify the full purchase duration.</para>
+        /// <para>The numeric part of the subscription duration. This parameter is used together with the PeriodUnit parameter to specify the complete subscription duration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,19 +42,19 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit part of the resource purchase duration. Use this parameter together with <c>Period</c> to specify the full purchase duration. The valid combinations of <c>Period</c> and <c>PeriodUnit</c> are as follows:</para>
+        /// <para>The unit of the subscription duration. This parameter is used together with the Period parameter to specify the complete subscription duration. Valid combinations of Period and PeriodUnit are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>1 Week (1 week)</description></item>
-        /// <item><description>1 Month (1 month)</description></item>
-        /// <item><description>2 Month (2 months)</description></item>
-        /// <item><description>3 Month (3 months)</description></item>
-        /// <item><description>6 Month (6 months)</description></item>
-        /// <item><description>1 Year (1 year)</description></item>
-        /// <item><description>2 Year (2 years)</description></item>
-        /// <item><description>3 Year (3 years)</description></item>
+        /// <item><description>1 Week</description></item>
+        /// <item><description>1 Month</description></item>
+        /// <item><description>2 Month</description></item>
+        /// <item><description>3 Month</description></item>
+        /// <item><description>6 Month</description></item>
+        /// <item><description>1 Year</description></item>
+        /// <item><description>2 Year</description></item>
+        /// <item><description>3 Year</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is case-sensitive. For example, <c>Week</c> is valid, but <c>week</c> is not. If the request parameters do not match the combinations listed above, such as <c>2 Week</c>, the operation call succeeds but an error occurs during order placement.</para>
+        /// <para>This parameter is case-sensitive. For example, Week is valid, but week is invalid. If the request parameters do not match the preceding valid combinations, such as 2 Week, the API call may succeed, but an error will occur during the order placement stage.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The promotion ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/428503.html">GetResourcePrice</a> operation.</para>
+        /// <para>The promotion ID. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/428503.html">GetResourcePrice</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17440009****</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RenewMode { get; set; }
 
         /// <summary>
-        /// <para>The list of node IDs to renew.</para>
+        /// <para>The IDs of the nodes to renew.</para>
         /// </summary>
         [NameInMap("RenewNodes")]
         [Validation(Required=false)]

@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class QueryUserUsageReportResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. A value of <c>200</c> indicates that the request was successful. Other values indicate that the request failed.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>200</para>
+        /// <para>The business processing status code. <b>A successful response may not contain this field. Do not use <c>Code=200</c> as a necessary condition for success.</b> This field is not equivalent to the HTTP status code. If the request fails, handle it based on the HTTP status code, error code, and error message.</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -30,10 +27,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The description of the request processing result. Typically, <c>success</c> is returned when the request is successful.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>The description of the business processing result. <b>A successful response may not contain this field. Do not rely on the fixed <c>success</c> text.</b> If the request fails, read the specific error message based on the error code.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -50,7 +44,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page used in the current response.</para>
+        /// <para>The number of records per page in the request. If this parameter is not specified, the default value <c>200</c> is returned. If the requested value exceeds <c>1500</c>, this field still returns the echo request value, but the actual query uses a maximum of <c>1500</c>. Refer to the length of the data list for the actual number of returned records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -113,7 +107,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ConnectionStatus { get; set; }
 
             /// <summary>
-            /// <para>The last connection time. Format: <c>yyyy-MM-dd HH:mm:ss</c>. If no current or historical connection record exists, <c>-</c> is returned. The string itself does not carry a time zone and is interpreted in the Asia/Shanghai (UTC+8) time zone.</para>
+            /// <para>The last connection time. Format: <c>yyyy-MM-dd HH:mm:ss</c>. If a current session binding record exists, the connection time of this record is used. Otherwise, the historical connection record is used. If no available connection time exists, <c>-</c> is returned. This time is not limited by the statistical date range in the request.</para>
+            /// <para>The time is in Beijing time (UTC+8). The returned string does not carry <c>Z</c> or a time zone offset. For example, <c>2026-09-01 10:00:00</c> indicates 10:00:00 on September 1, 2026, Beijing time. Do not parse it as UTC time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-09-01 10:00:00</para>
@@ -133,7 +128,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The cumulative session persistence duration within the query range, which refers to the time a user occupies a session from attach to release. If multiple sessions exist under the same app instance group, their durations are accumulated. Unit: hours.</para>
+            /// <para>The cumulative session persistence duration within the query range, which is the duration that the user occupies the session from attach to session release. Multiple sessions under the same app instance group are accumulated. Unit: hours.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3.5</para>

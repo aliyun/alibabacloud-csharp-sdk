@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class DescribeEventsRequest : TeaModel {
         /// <summary>
-        /// <para>The app instance group ID. This parameter is used to filter app instance group events. If this parameter is not specified, events are not filtered by app instance group. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the ID.</para>
+        /// <para>The delivery group ID. This parameter is used to filter events of a specific delivery group. If you do not specify this parameter, events are not filtered by delivery group. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aig-9ciijz60n4xsv****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application instance. This parameter is used to filter events associated with the instance. If this parameter is not specified, events are not filtered by application instance. To obtain this value, call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the app instance group ID, and then specify the ID as <c>AppInstanceGroupId</c> when calling <a href="~~ListAppInstances~~">ListAppInstances</a>.</para>
+        /// <para>The application instance ID. This parameter is used to filter events associated with a specific instance. If you do not specify this parameter, events are not filtered by application instance. To obtain this value, first call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the delivery group ID, and then use the ID as <c>AppInstanceGroupId</c> to call the <a href="~~ListAppInstances~~">ListAppInstances</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ai-azn3kmwruh1vl****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The business region ID of the event, which is used for exact filtering. If you do not specify this parameter, events are not filtered by business region. You can call the <a href="~~ListRegions~~">ListRegions</a> operation to obtain the ID.</para>
+        /// <para>The business region ID of the event. This parameter is used to filter events precisely. If you do not specify this parameter, events are not filtered by business region. You can call the <a href="~~ListRegions~~">ListRegions</a> operation to obtain the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. <b>Required</b>. The format is the same as <c>StartTime</c>. We recommend that you always include the time zone offset. The query includes this time, and the end time cannot be earlier than <c>StartTime</c>. A time range later than the call time does not generate future events.</para>
+        /// <para>The end time of the query. <b>Required</b>. The format is the same as that of <c>StartTime</c>. We recommend that you always include the time zone offset. The query includes this exact time, and the end time cannot be earlier than the <c>StartTime</c>. A time range later than the call time does not generate future events.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The optional list of user IDs. If you specify multiple user IDs, events are filtered by using the OR logic. If you specify both <c>EndUserIds</c> and <c>UserId</c>, the intersection is used. If you do not specify this parameter, the original query is retained. If you specify an empty list or a list that contains only blank user IDs, an empty result is returned. The caller must convert usernames or display names to user IDs before calling this operation.</para>
+        /// <para>The list of user IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;user-1&quot;,&quot;user-2&quot;]</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> EndUserIds { get; set; }
 
         /// <summary>
-        /// <para>The event ID, which is used to query a single event. If you do not specify this parameter, events are not filtered by event ID.</para>
+        /// <para>The event ID. This parameter is used to query a specific event. If you do not specify this parameter, events are not filtered by event ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>evt-9ciijz60n4xsv****</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string EventId { get; set; }
 
         /// <summary>
-        /// <para>The event type identifier, which is used to filter events. Different products may generate different event types. This operation does not restrict the values to a fixed enumeration. You should use the <c>EventList.EventType</c> values obtained from previous queries as filter values.</para>
+        /// <para>The event type identifier. This parameter is used to filter events precisely. Different products may generate different event types, and this operation does not restrict the value to a fixed enumeration. You should use the <c>EventList.EventType</c> values obtained from previous queries as the filter value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SessionDisconnected</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string EventType { get; set; }
 
         /// <summary>
-        /// <para>The compatibility field. The current version does not read this parameter. Use <c>PageSize</c> to control the number of records on each page.</para>
+        /// <para>A compatibility field. The current version does not read this parameter. Use <c>PageSize</c> to control the number of records on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The private IP address of the member elastic network interface (ENI) of the cloud resource, which is used to filter related events. If you do not specify this parameter, events are not filtered by IP address.</para>
+        /// <para>The private IP address of the member elastic network interface (ENI) of the cloud resource. This parameter is used to filter related events precisely. If you do not specify this parameter, events are not filtered by IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.1.10</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string MemberEniIp { get; set; }
 
         /// <summary>
-        /// <para>The compatibility field. The current version does not read this parameter and does not support token-based pagination. Use <c>PageNumber</c>.</para>
+        /// <para>A compatibility field. The current version does not read this parameter and does not support token-based pagination. Use <c>PageNumber</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>unused</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The office network ID, which is used to filter events generated within the office network. If you do not specify this parameter, events are not filtered by office network.</para>
+        /// <para>The office network ID. This parameter is used to filter events generated within a specific office network. If you do not specify this parameter, events are not filtered by office network.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai+dir-123456****</para>
@@ -151,14 +151,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The product type. Values are not case-sensitive. If you specify an unsupported value, the request fails. If you do not specify this parameter, events are not filtered by product type. Valid values:</para>
+        /// <para>The product type. The value is case-insensitive. The request fails if an unsupported value is specified. If this parameter is not specified, results are not filtered by product type. Only the following public product values are supported:</para>
         /// <list type="bullet">
-        /// <item><description><c>CloudApp</c>: Wuying Cloud App.</description></item>
+        /// <item><description><c>CloudApp</c>: WUYING Cloud App.</description></item>
         /// <item><description><c>CloudBrowser</c>: Cloud Browser.</description></item>
         /// <item><description><c>WuyingServer</c>: Enterprise Edition workstation.</description></item>
         /// <item><description><c>WuyingWorkstation</c>: Personal Edition Linggou container workstation.</description></item>
-        /// <item><description><c>WuyingWorkstationTeam</c>: Linggou Team Edition container workstation.</description></item>
-        /// <item><description><c>WuyingWorkstationBusiness</c>: Linggou Dedicated Edition container workstation.</description></item>
+        /// <item><description><c>WuyingWorkstationTeam</c>: Team Edition Linggou container workstation.</description></item>
+        /// <item><description><c>WuyingWorkstationBusiness</c>: Dedicated Edition Linggou container workstation.</description></item>
         /// <item><description><c>AndroidCloud</c>: Cloud Phone.</description></item>
         /// <item><description><c>AIAgent</c>: AgentBay (AI agent).</description></item>
         /// </list>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. <b>Required</b>. Specify the time in the ISO 8601 format: <c>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss</c>. You can include three-digit milliseconds and use <c>Z</c> or <c>±HH:mm</c> to specify the time zone. We recommend that you always include the time zone offset. The query includes this time, and the start time must be earlier than or equal to <c>EndTime</c>. The service only retains and retrieves events that occurred within 30 days before the call time.</para>
+        /// <para>The start time of the query. <b>Required</b>. Specify the time in the ISO 8601 standard: <c>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss</c>. You can include three digits for milliseconds and use <c>Z</c> or <c>±HH:mm</c> to specify the time zone. We recommend that you always include the time zone offset. The query includes this exact time, and the start time must be earlier than or equal to the <c>EndTime</c>. The service retains and retrieves only events that occurred within 30 days before the call time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The end user ID, which is used to filter events generated by the user. If you do not specify this parameter, events are not filtered by user.</para>
+        /// <para>The end user ID. This parameter is used to filter events generated by a specific user. If you do not specify this parameter, events are not filtered by user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user01</para>

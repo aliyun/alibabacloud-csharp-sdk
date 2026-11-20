@@ -110,9 +110,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public long? TenantId { get; set; }
 
         /// <summary>
-        /// <para>The credential for connecting to the cloud application.</para>
+        /// <para>The credentials used to connect to the cloud application.</para>
         /// <remarks>
-        /// <para>This parameter is returned only for non-initial calls.</para>
+        /// <para>This parameter is returned for non-initial calls.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

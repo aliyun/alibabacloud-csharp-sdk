@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public List<BatchCreateLlmTemplatesResponseBodyDataSkippedItems> SkippedItems { get; set; }
             public class BatchCreateLlmTemplatesResponseBodyDataSkippedItems : TeaModel {
                 /// <summary>
-                /// <para>The code of the skipped model.</para>
+                /// <para>The skipped model code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qwen3.5-plus</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string LlmCode { get; set; }
 
                 /// <summary>
-                /// <para>The reason why the item is skipped.</para>
+                /// <para>The reason for skipping.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>LLM template already exists with same providerTemplateId and llmCode.</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The number of successfully created items.</para>
+            /// <para>The number of successfully created models.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? SuccessCount { get; set; }
 
             /// <summary>
-            /// <para>The total number of requested items.</para>
+            /// <para>The total number of requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>
