@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class QuerySecretNoDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description>The value OK indicates that the request was successful.</description></item>
-        /// <item><description>Other status codes indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</description></item>
+        /// <item><description>OK indicates that the request was successful.</description></item>
+        /// <item><description>For other error codes, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -44,17 +44,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The attributes of the phone number.</para>
+        /// <para>The number properties.</para>
         /// </summary>
         [NameInMap("SecretNoInfoDTO")]
         [Validation(Required=false)]
         public QuerySecretNoDetailResponseBodySecretNoInfoDTO SecretNoInfoDTO { get; set; }
         public class QuerySecretNoDetailResponseBodySecretNoInfoDTO : TeaModel {
             /// <summary>
-            /// <para>The verification status of the phone number. Valid values:</para>
+            /// <para>The number verification status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: The phone number is not verified.</description></item>
-            /// <item><description><b>1</b>: The phone number is verified.</description></item>
+            /// <item><description><b>0</b>: Unverified.</description></item>
+            /// <item><description><b>1</b>: Verified.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             /// <para>The city.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>chengdu</para>
+            /// <para>Xi\&quot;an</para>
             /// </summary>
             [NameInMap("City")]
             [Validation(Required=false)]
@@ -78,14 +78,14 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             /// <para>The province.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>sichuan</para>
+            /// <para>Shaanxi</para>
             /// </summary>
             [NameInMap("Province")]
             [Validation(Required=false)]
             public string Province { get; set; }
 
             /// <summary>
-            /// <para>The time when the phone number was purchased.</para>
+            /// <para>The purchase time of the number, in the format of YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-03 15:19:27</para>
@@ -95,12 +95,12 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public string PurchaseTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the phone number. Valid values:</para>
+            /// <para>The number status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: The phone number is not bound to other phone numbers.</description></item>
-            /// <item><description><b>1</b>: The phone number is bound to other phone numbers.</description></item>
-            /// <item><description><b>2</b>: The phone number is locked.</description></item>
-            /// <item><description><b>3</b>: The phone number is frozen.</description></item>
+            /// <item><description><b>0</b>: Unbound.</description></item>
+            /// <item><description><b>1</b>: Bound.</description></item>
+            /// <item><description><b>2</b>: Locked.</description></item>
+            /// <item><description><b>3</b>: Frozen.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public long? SecretStatus { get; set; }
 
             /// <summary>
-            /// <para>The carrier to which the phone number belongs. Valid values:</para>
+            /// <para>The carrier. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>1</b>: China Mobile</description></item>
             /// <item><description><b>2</b>: China Unicom</description></item>

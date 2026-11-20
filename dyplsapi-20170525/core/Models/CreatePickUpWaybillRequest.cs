@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class CreatePickUpWaybillRequest : TeaModel {
         /// <summary>
-        /// <para>The end time of the door-to-door pickup in the appointment. The value of <b>AppointGotEndTime</b> is the value of <b>EndTime</b> of <b>AppointTimes</b> in <b>CpTimeSelectList</b> returned by the <a href="~~CreatePickUpWaybillPreQuery~~#resultMapping">CreatePickUpWaybillPreQuery</a> operation.</para>
+        /// <para>The end time of the scheduled door-to-door pickup, in the YYYY-MM-DD HH:mm:ss format. To obtain the value of <b>AppointGotEndTime</b>, obtain the <b>EndTime</b> value from <b>AppointTimes</b> in the <b>CpTimeSelectList</b> response parameter of the <a href="https://api.aliyun.com/document/Dyplsapi/2017-05-25/CreatePickUpWaybillPreQuery">CreatePickUpWaybillPreQuery</a> operation.</para>
         /// <remarks>
-        /// <para> This parameter is required when <b>BizType</b> is set to <b>1</b>.</para>
+        /// <para>Required when <b>bizType</b> is set to <b>1</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string AppointGotEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the door-to-door pickup in the appointment. The value of <b>AppointGotStartTime</b> is the value of <b>StartTime</b> of <b>AppointTimes</b> in <b>CpTimeSelectList</b> returned by the <a href="~~CreatePickUpWaybillPreQuery~~#resultMapping">CreatePickUpWaybillPreQuery</a> operation.</para>
+        /// <para>The start time of the scheduled door-to-door pickup, in the YYYY-MM-DD HH:mm:ss format. To obtain the value of <b>AppointGotStartTime</b>, obtain the <b>StartTime</b> value from <b>AppointTimes</b> in the <b>CpTimeSelectList</b> response parameter of the <a href="https://api.aliyun.com/document/Dyplsapi/2017-05-25/CreatePickUpWaybillPreQuery">CreatePickUpWaybillPreQuery</a> operation.</para>
         /// <remarks>
-        /// <para> This parameter is required when <b>BizType</b> is set to <b>1</b>.</para>
+        /// <para>Required when <b>bizType</b> is set to <b>1</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,10 +36,10 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string AppointGotStartTime { get; set; }
 
         /// <summary>
-        /// <para>The pickup mode. Valid values:</para>
+        /// <para>The delivery mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b> (default): real-time order.</description></item>
-        /// <item><description><b>1</b>: appointment order.</description></item>
+        /// <item><description><b>0</b>: real-time order (default)</description></item>
+        /// <item><description><b>1</b>: scheduled order</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public int? BizType { get; set; }
 
         /// <summary>
-        /// <para>The address of the consignee.</para>
+        /// <para>The address of the recipient.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ConsigneeAddress")]
@@ -58,51 +58,51 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public CreatePickUpWaybillRequestConsigneeAddress ConsigneeAddress { get; set; }
         public class CreatePickUpWaybillRequestConsigneeAddress : TeaModel {
             /// <summary>
-            /// <para>The detailed address of the consignee.</para>
+            /// <para>The detailed address.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>XX community</para>
+            /// <para>No. XX, XX Community</para>
             /// </summary>
             [NameInMap("AddressDetail")]
             [Validation(Required=false)]
             public string AddressDetail { get; set; }
 
             /// <summary>
-            /// <para>The district where the consignee is located.</para>
+            /// <para>The district.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xihu</para>
+            /// <para>Xihu District</para>
             /// </summary>
             [NameInMap("AreaName")]
             [Validation(Required=false)]
             public string AreaName { get; set; }
 
             /// <summary>
-            /// <para>The city where the consignee is located.</para>
+            /// <para>The city.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>hangzhou</para>
+            /// <para>Hangzhou</para>
             /// </summary>
             [NameInMap("CityName")]
             [Validation(Required=false)]
             public string CityName { get; set; }
 
             /// <summary>
-            /// <para>The province where the consignee is located.</para>
+            /// <para>The province.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>zhejiang</para>
+            /// <para>Zhejiang</para>
             /// </summary>
             [NameInMap("ProvinceName")]
             [Validation(Required=false)]
             public string ProvinceName { get; set; }
 
             /// <summary>
-            /// <para>The street where the consignee is located.</para>
+            /// <para>The street.</para>
             /// 
             /// <b>Example:</b>
             /// <para>XX Street</para>
@@ -114,9 +114,9 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         }
 
         /// <summary>
-        /// <para>The mobile phone number of the consignee.</para>
+        /// <para>The mobile phone number of the recipient.</para>
         /// <remarks>
-        /// <para> Either ConsigneeMobile or ConsigneePhone must be set.</para>
+        /// <para>You must specify either ConsigneeMobile or ConsigneePhone.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -127,20 +127,20 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string ConsigneeMobile { get; set; }
 
         /// <summary>
-        /// <para>The name of the consignee.</para>
+        /// <para>The name of the recipient.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Li</para>
+        /// <para>Zhang XX</para>
         /// </summary>
         [NameInMap("ConsigneeName")]
         [Validation(Required=false)]
         public string ConsigneeName { get; set; }
 
         /// <summary>
-        /// <para>The landline phone number of the consignee.</para>
+        /// <para>The landline phone number of the recipient.</para>
         /// <remarks>
-        /// <para> Either ConsigneeMobile or ConsigneePhone must be set.</para>
+        /// <para>You must specify either ConsigneeMobile or ConsigneePhone.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string ConsigneePhone { get; set; }
 
         /// <summary>
-        /// <para>The code of the courier company.</para>
+        /// <para>The express delivery company code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>YTO</para>
@@ -161,24 +161,24 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string CpCode { get; set; }
 
         /// <summary>
-        /// <para>The items.</para>
+        /// <para>The list of goods.</para>
         /// </summary>
         [NameInMap("GoodsInfos")]
         [Validation(Required=false)]
         public List<CreatePickUpWaybillRequestGoodsInfos> GoodsInfos { get; set; }
         public class CreatePickUpWaybillRequestGoodsInfos : TeaModel {
             /// <summary>
-            /// <para>The item name.</para>
+            /// <para>The name of the item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>zhang</para>
+            /// <para>Shoes</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The item quantity.</para>
+            /// <para>The quantity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public string Quantity { get; set; }
 
             /// <summary>
-            /// <para>The item weight. Unit: gram.</para>
+            /// <para>The weight. Unit: grams.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         }
 
         /// <summary>
-        /// <para>The external channel sources.</para>
+        /// <para>The external channel source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string OrderChannels { get; set; }
 
         /// <summary>
-        /// <para>The ID of the external order.</para>
+        /// <para>The external order ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -222,10 +222,10 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string OuterOrderCode { get; set; }
 
         /// <summary>
-        /// <para>The additional information about the order. The additional information will be printed on the order.</para>
+        /// <para>The remark. The remark content printed on the waybill.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>fragile</para>
+        /// <para>Fragile items</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
@@ -240,51 +240,51 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public CreatePickUpWaybillRequestSendAddress SendAddress { get; set; }
         public class CreatePickUpWaybillRequestSendAddress : TeaModel {
             /// <summary>
-            /// <para>The detailed address of the sender.</para>
+            /// <para>The detailed address.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>XX community</para>
+            /// <para>No. XX, XX Community</para>
             /// </summary>
             [NameInMap("AddressDetail")]
             [Validation(Required=false)]
             public string AddressDetail { get; set; }
 
             /// <summary>
-            /// <para>The district where the sender is located.</para>
+            /// <para>The district.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>wenjiang</para>
+            /// <para>Weiyang District</para>
             /// </summary>
             [NameInMap("AreaName")]
             [Validation(Required=false)]
             public string AreaName { get; set; }
 
             /// <summary>
-            /// <para>The city where the sender is located.</para>
+            /// <para>The city.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>chengdu</para>
+            /// <para>Xi\&quot;an</para>
             /// </summary>
             [NameInMap("CityName")]
             [Validation(Required=false)]
             public string CityName { get; set; }
 
             /// <summary>
-            /// <para>The province where the sender is located.</para>
+            /// <para>The province.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Sichuan</para>
+            /// <para>Shaanxi Province</para>
             /// </summary>
             [NameInMap("ProvinceName")]
             [Validation(Required=false)]
             public string ProvinceName { get; set; }
 
             /// <summary>
-            /// <para>The street where the sender is located.</para>
+            /// <para>The street.</para>
             /// 
             /// <b>Example:</b>
             /// <para>XX Street</para>
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// <summary>
         /// <para>The mobile phone number of the sender.</para>
         /// <remarks>
-        /// <para> Either SendMobile or SendPhone must be set.</para>
+        /// <para>You must specify either SendMobile or SendPhone.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -313,7 +313,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Wang</para>
+        /// <para>Wang XX</para>
         /// </summary>
         [NameInMap("SendName")]
         [Validation(Required=false)]
@@ -322,7 +322,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// <summary>
         /// <para>The landline phone number of the sender.</para>
         /// <remarks>
-        /// <para> Either SendMobile or SendPhone must be set.</para>
+        /// <para>You must specify either SendMobile or SendPhone.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

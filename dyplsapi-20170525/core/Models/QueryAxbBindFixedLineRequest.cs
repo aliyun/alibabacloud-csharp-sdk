@@ -10,22 +10,22 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class QueryAxbBindFixedLineRequest : TeaModel {
         /// <summary>
-        /// <para>号池ID。</para>
+        /// <para>The number pool ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ALPT_1234</para>
+        /// <para>FC10000016848****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>消息请求唯一标识。</para>
+        /// <para>The unique identifier of the message request.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3ererrrdrrrr</para>
+        /// <para>123*******</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
@@ -36,17 +36,23 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>A/B号码，queryType=1时，必传</para>
+        /// <para>The A/B number. Required when QueryType is set to 1.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>138****6534</para>
         /// </summary>
         [NameInMap("Phone")]
         [Validation(Required=false)]
         public string Phone { get; set; }
 
         /// <summary>
-        /// <para>查询类型 0：根据绑定id查询 1：根据X和A/B号码查询</para>
+        /// <para>The query type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>0: Query by binding ID.</para>
+        /// </description></item>
+        /// <item><description><para>1: Query by X and A/B numbers.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,31 +71,31 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>绑定id， queryType=0时，必传</para>
+        /// <para>The binding ID. Required when QueryType is set to 0.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>A20304o0200303004j</para>
+        /// <para>A203**************</para>
         /// </summary>
         [NameInMap("SubId")]
         [Validation(Required=false)]
         public string SubId { get; set; }
 
         /// <summary>
-        /// <para>x号码，queryType=1时，必传</para>
+        /// <para>The X number. Required when QueryType is set to 1.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>0571******23</para>
         /// </summary>
         [NameInMap("TelX")]
         [Validation(Required=false)]
         public string TelX { get; set; }
 
         /// <summary>
-        /// <para>格式yyyyMMddHHmmssSSS，时间采用北京时间，24小时制，精确至毫秒</para>
+        /// <para>The business timestamp. Format: yyyyMMddHHmmssSSS. The time is in UTC+8, in 24-hour format, accurate to milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20161114143116001</para>
+        /// <para>20161114143116123</para>
         /// </summary>
         [NameInMap("Ts")]
         [Validation(Required=false)]

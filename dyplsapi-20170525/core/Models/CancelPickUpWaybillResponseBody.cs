@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             /// <para>The error code.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>none</para>
+            /// <para>无</para>
             /// </summary>
             [NameInMap("ErrorCode")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             /// <para>The error message.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>none</para>
+            /// <para>无</para>
             /// </summary>
             [NameInMap("ErrorMsg")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             /// <para>The cancellation result.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>OK</para>
+            /// <para>取消成功</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>OK</para>
+        /// <para>请求成功</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

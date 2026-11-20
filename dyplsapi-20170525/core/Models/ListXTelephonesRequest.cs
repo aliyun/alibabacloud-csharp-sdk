@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class ListXTelephonesRequest : TeaModel {
         /// <summary>
-        /// <para>客户uid</para>
+        /// <para>The customer UID. This parameter is automatically obtained by the system and does not need to be specified.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? CallerParentId { get; set; }
 
         /// <summary>
-        /// <para>号码池key</para>
+        /// <para>The number pool key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FC5**********************a1a</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>页码从1开始</para>
+        /// <para>The page number for the paged query. Paging starts from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>每页条数</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>请求去重ID, reqId最大长度为20位,接入方需要保持原子性</para>
+        /// <para>The request deduplication ID. The maximum length is 20 characters. Ensure the atomicity of the request ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

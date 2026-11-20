@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class DeleteSecretBlacklistRequest : TeaModel {
         /// <summary>
-        /// <para>The phone numbers in the blacklist. A point-to-point blacklist has a pair of numbers separated by a colon (&quot;:&quot;). A number pool blacklist or a platform blacklist has only one single number.</para>
+        /// <para>The blacklisted number. The value type is determined by the <b>BlackType</b> parameter:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Point-to-point blacklist</b>: a pair of numbers separated by a colon (:)</description></item>
+        /// <item><description><b>Number pool blacklist</b>: a single number</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>18252<em><b>383:18252</b></em>483</para>
+        /// <para>1825<b><b>383:1825</b></b>483</para>
         /// </summary>
         [NameInMap("BlackNo")]
         [Validation(Required=false)]
         public string BlackNo { get; set; }
 
         /// <summary>
-        /// <para>The blacklist type. Valid values:</para>
+        /// <para>The type of the blacklist. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>POINT_TO_POINT_BLACK</b>: point-to-point blacklist</description></item>
         /// <item><description><b>PARTNER_GLOBAL_NUMBER_BLACK</b>: number pool blacklist</description></item>
@@ -36,7 +40,8 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string BlackType { get; set; }
 
         /// <summary>
-        /// <para>The key of the phone number pool. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <b>Number Pool Management</b> page.</para>
+        /// <para>The key of the number pool.</para>
+        /// <para>You can obtain the <b>number pool key</b> on the <a href="https://dyplsnext.console.aliyun.com/number-pool">Number Pool Management</a> page in the Phone Number Privacy Protection console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,27 +52,24 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string PoolKey { get; set; }
 
         /// <summary>
-        /// <para>The remarks for the blacklist.</para>
+        /// <para>The remark for the blacklist.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>fragile</para>
+        /// <para>Blacklist remark</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The control on the call direction.</para>
+        /// <para>The call direction control. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PHONEA_REJECT</b>: The first phone number in the blacklist can be used to call the second phone number, but the second phone number in the blacklist cannot be used to call the first phone number.</description></item>
-        /// <item><description><b>PHONEB_REJECT</b>: The first phone number in the blacklist cannot be used to call the second phone number, but the second phone number in the blacklist can be used to call the first phone number.</description></item>
-        /// <item><description>If this parameter is not specified, the two phone numbers in the blacklist cannot be used to call each other.</description></item>
-        /// </list>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>DUPLEX_REJECT</description></item>
-        /// <item><description>PHONEA_REJECT</description></item>
-        /// <item><description>PHONEB_REJECT</description></item>
+        /// <item><description><para><b>PHONEA_REJECT</b>: The first number in BlackNo can call the second number, but the second number cannot call the first number.</para>
+        /// </description></item>
+        /// <item><description><para><b>PHONEB_REJECT</b>: The first number in BlackNo cannot call the second number, but the second number can call the first number.</para>
+        /// </description></item>
+        /// <item><description><para><b>Leave empty</b>: The two numbers in BlackNo cannot call each other.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

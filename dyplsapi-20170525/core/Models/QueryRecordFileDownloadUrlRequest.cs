@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>abcedf1234</para>
+        /// <para>416*********bd50</para>
         /// </summary>
         [NameInMap("CallId")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>FC123456</para>
+        /// <para>FC10000012345****</para>
         /// </summary>
         [NameInMap("PoolKey")]
         [Validation(Required=false)]

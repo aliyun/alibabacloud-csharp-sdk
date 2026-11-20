@@ -10,9 +10,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class AddSecretBlacklistRequest : TeaModel {
         /// <summary>
-        /// <para>The numbers in the blacklist. A point-to-point blacklist has a pair of numbers separated by a colon (:). A number pool blacklist has only one single number.</para>
+        /// <para>The blacklisted phone number. The value type depends on the <b>BlackType</b> parameter:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Point-to-point blacklist</b>: A pair of numbers (A and B numbers) separated by a colon (:).</description></item>
+        /// <item><description><b>Number pool blacklist</b>: A single number.</description></item>
+        /// </list>
         /// <remarks>
-        /// <para> The asterisks (\*) in the sample value are not wildcards.</para>
+        /// <para>(\*) is not a wildcard.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,8 +43,8 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string BlackType { get; set; }
 
         /// <summary>
-        /// <para>The key of the phone number pool.</para>
-        /// <para>Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the Number Pool Management page.</para>
+        /// <para>The key of the number pool.</para>
+        /// <para>You can obtain the <b>number pool key</b> on the <a href="https://dyplsnext.console.aliyun.com/number-pool">Number Pool Management</a> page in the privacy protection console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,31 +55,25 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string PoolKey { get; set; }
 
         /// <summary>
-        /// <para>The blacklist remarks.</para>
+        /// <para>The remarks for the blacklist entry.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Customer service feedback</para>
+        /// <para>Blacklist remarks</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The control on the call direction.</para>
+        /// <para>The call direction control. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PHONEA_REJECT</b>: The first number in the blacklist can be used to call the second number, but the second number cannot be used to call the first number.</description></item>
-        /// <item><description><b>PHONEB_REJECT</b>: The first number in the blacklist cannot be used to call the second number, but the second number can be used to call the first number.</description></item>
-        /// <item><description>If this parameter is left empty, the two numbers in the blacklist cannot be used to call each other.</description></item>
+        /// <item><description><b>PHONEA_REJECT</b>: The first number in BlackNo can call the second number, but the second number cannot call the first number.</description></item>
+        /// <item><description><b>PHONEB_REJECT</b>: The first number in BlackNo cannot call the second number, but the second number can call the first number.</description></item>
+        /// <item><description><b>Not specified</b>: The two numbers in BlackNo cannot call each other.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is available only for a point-to-point blacklist.</para>
+        /// <para>This parameter takes effect only for point-to-point blacklists.</para>
         /// </remarks>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>DUPLEX_REJECT</description></item>
-        /// <item><description>PHONEA_REJECT</description></item>
-        /// <item><description>PHONEB_REJECT</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>PHONEA_REJECT</para>

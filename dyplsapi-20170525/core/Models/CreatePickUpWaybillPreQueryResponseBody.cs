@@ -27,21 +27,21 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The information about whether the courier company can accept the order.</para>
+            /// <para>The list of information about whether courier companies are available for placing orders.</para>
             /// </summary>
             [NameInMap("CpTimeSelectList")]
             [Validation(Required=false)]
             public List<CreatePickUpWaybillPreQueryResponseBodyDataCpTimeSelectList> CpTimeSelectList { get; set; }
             public class CreatePickUpWaybillPreQueryResponseBodyDataCpTimeSelectList : TeaModel {
                 /// <summary>
-                /// <para>The available time for the scheduled pickup. If the current courier company cannot accept the scheduled pickup, this field is left empty.</para>
+                /// <para>The available time options for scheduled orders. If the courier company does not support scheduled orders, this field is empty.</para>
                 /// </summary>
                 [NameInMap("AppointTimes")]
                 [Validation(Required=false)]
                 public List<CreatePickUpWaybillPreQueryResponseBodyDataCpTimeSelectListAppointTimes> AppointTimes { get; set; }
                 public class CreatePickUpWaybillPreQueryResponseBodyDataCpTimeSelectListAppointTimes : TeaModel {
                     /// <summary>
-                    /// <para>The date in the YYYY-MM-DD format.</para>
+                    /// <para>The date string in YYYY-MM-DD format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2022-04-28</para>
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
                     public bool? DateSelectable { get; set; }
 
                     /// <summary>
-                    /// <para>The time range for the scheduled pickup for this date.</para>
+                    /// <para>The list of available time slots for the day.</para>
                     /// </summary>
                     [NameInMap("TimeList")]
                     [Validation(Required=false)]
                     public List<CreatePickUpWaybillPreQueryResponseBodyDataCpTimeSelectListAppointTimesTimeList> TimeList { get; set; }
                     public class CreatePickUpWaybillPreQueryResponseBodyDataCpTimeSelectListAppointTimesTimeList : TeaModel {
                         /// <summary>
-                        /// <para>The end of the time range.</para>
+                        /// <para>The end time of the time slot, in HH:mm:ss format.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>12:00:00</para>
@@ -78,17 +78,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
                         public string EndTime { get; set; }
 
                         /// <summary>
-                        /// <para>The tip displayed when the scheduled pickup is not available.</para>
+                        /// <para>The tip message displayed when the option is not selectable.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>Appointment Full</para>
+                        /// <para>Fully booked</para>
                         /// </summary>
                         [NameInMap("SelectDisableTip")]
                         [Validation(Required=false)]
                         public string SelectDisableTip { get; set; }
 
                         /// <summary>
-                        /// <para>Indicates whether the time range can be selected for the scheduled pickup.</para>
+                        /// <para>Indicates whether the scheduled time slot is selectable.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
                         public bool? Selectable { get; set; }
 
                         /// <summary>
-                        /// <para>The beginning of the time range.</para>
+                        /// <para>The start time of the time slot, in HH:mm:ss format.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>10:00:00</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
                 }
 
                 /// <summary>
-                /// <para>The estimated price. Unit: CNY. The value is accurate to two decimal places. The value of this parameter is displayed if an estimated weight is specified.</para>
+                /// <para>The estimated price, in CNY, rounded to two decimal places. This field has a value only when the estimated weight is specified in the request parameters.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12.50</para>
@@ -122,34 +122,34 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
                 public string PrePrice { get; set; }
 
                 /// <summary>
-                /// <para>The information about whether the real-time order can be selected.</para>
+                /// <para>The available options for real-time orders.</para>
                 /// </summary>
                 [NameInMap("RealTime")]
                 [Validation(Required=false)]
                 public CreatePickUpWaybillPreQueryResponseBodyDataCpTimeSelectListRealTime RealTime { get; set; }
                 public class CreatePickUpWaybillPreQueryResponseBodyDataCpTimeSelectListRealTime : TeaModel {
                     /// <summary>
-                    /// <para>The name of the real-time order type.</para>
+                    /// <para>The service type name for real-time orders.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Aliyun</para>
+                    /// <para>2-hour pickup</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The tip displayed when the real-time order cannot be placed.</para>
+                    /// <para>The tip message displayed when the option is not selectable.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Exceeding the real-time ordering time range.</para>
+                    /// <para>The real-time order placement time range has been exceeded</para>
                     /// </summary>
                     [NameInMap("SelectDisableTip")]
                     [Validation(Required=false)]
                     public string SelectDisableTip { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the real-time order can be placed after the deadline for placing a real-time order is reached.</para>
+                    /// <para>Indicates whether a real-time order can still be placed after the real-time order placement time has passed.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             /// <para>The error code.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Success</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("ErrorCode")]
             [Validation(Required=false)]
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             /// <para>The error message.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>none</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("ErrorMsg")]
             [Validation(Required=false)]
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the request was successful.</para>
+            /// <para>Indicates whether the operation is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>

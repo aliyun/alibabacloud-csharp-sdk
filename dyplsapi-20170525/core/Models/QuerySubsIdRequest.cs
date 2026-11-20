@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1390000****</para>
+        /// <para>139****1111</para>
         /// </summary>
         [NameInMap("PhoneNoX")]
         [Validation(Required=false)]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// <para>Log on to the <a href="https://dyplsnext.console.aliyun.com/overview">Phone Number Protection console</a> and view the key of the phone number pool on the Number Pool Management page.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>FC123456</para>
+        /// <para>FC10000012345****</para>
         /// </summary>
         [NameInMap("PoolKey")]
         [Validation(Required=false)]

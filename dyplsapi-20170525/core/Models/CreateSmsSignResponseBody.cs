@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class CreateSmsSignResponseBody : TeaModel {
         /// <summary>
+        /// <para>The details about the access denial.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -18,7 +20,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>返回状态码 0000表示成功 其他表示失败</para>
+        /// <para>The returned status code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>0000: The request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>Other values: The request failed.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0000</para>
@@ -27,12 +35,18 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The text message signature creation result.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;CalledNoSign&quot;:&quot;sign23343466&quot;}</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateSmsSignResponseBodyData Data { get; set; }
         public class CreateSmsSignResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>短信接收者号码签名串(加到短信内容中供解析真实被叫号码)</para>
+            /// <para>The signature string of the recipient number. Append this string to the text message content to parse the actual called number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sign23343466</para>
@@ -44,17 +58,23 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         }
 
         /// <summary>
-        /// <para>返回信息</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>成功</para>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>返回是否成功 true  表示成功 false表示失败</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: The request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

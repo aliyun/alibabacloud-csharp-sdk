@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class GetXDefaultConfigResponseBody : TeaModel {
         /// <summary>
+        /// <para>The details about the access denial.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -18,7 +20,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>返回状态码 0000表示成功 其他表示失败</para>
+        /// <para>The response status code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>0000: Success.</para>
+        /// </description></item>
+        /// <item><description><para>Other values: Failure.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0000</para>
@@ -27,12 +35,18 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The default configurations of the work number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;CallAbility&quot;:&quot;0&quot;,&quot;GNFlag&quot;:&quot;00&quot;,&quot;SmsAbility&quot;:&quot;0&quot;,&quot;SmsSignMode&quot;:&quot;0&quot;}</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetXDefaultConfigResponseBodyData Data { get; set; }
         public class GetXDefaultConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>开/关呼叫能力状态： ‘0’：禁用； ‘1’：开启；</para>
+            /// <para>The status of the call capability. Valid values: 0: disabled. 1: enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -42,7 +56,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public string CallAbility { get; set; }
 
             /// <summary>
-            /// <para>是否透传来显为真实主叫： 00-非透传：互相拨打时都显示工作号; 10-透传：A客户为主叫时,B员工的来显为客户A号码;B员工为主叫时,A客户的来显为工作号; 默认为 00</para>
+            /// <para>Specifies whether to pass through the caller ID to display the real caller. Valid values: 00: non-passthrough. The work number is displayed when calls are made to each other. 10: passthrough. When Customer A is the caller, the caller ID displayed to Employee B is the number of Customer A. When Employee B is the caller, the caller ID displayed to Customer A is the work number. Default value: 00.</para>
             /// 
             /// <b>Example:</b>
             /// <para>00</para>
@@ -52,14 +66,14 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public string GNFlag { get; set; }
 
             /// <summary>
-            /// <para>企业名片规则控制参数</para>
+            /// <para>The enterprise business card rule control parameters.</para>
             /// </summary>
             [NameInMap("ReachJson")]
             [Validation(Required=false)]
             public List<GetXDefaultConfigResponseBodyDataReachJson> ReachJson { get; set; }
             public class GetXDefaultConfigResponseBodyDataReachJson : TeaModel {
                 /// <summary>
-                /// <para>呼叫方向 1:员工B呼叫客户A 2:客户A呼叫员工B</para>
+                /// <para>The call direction. Valid values: 1: Employee B calls Customer A. 2: Customer A calls Employee B.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -69,7 +83,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
                 public string CallDir { get; set; }
 
                 /// <summary>
-                /// <para>通话状态 1:通话振铃 2:接通前 3:接通后 4:通话结束 5:已接通6:未接通</para>
+                /// <para>The call status. Valid values: 1: ringing. 2: before connection. 3: after connection. 4: call ended. 5: connected. 6: not connected.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -79,7 +93,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
                 public string CallStatus { get; set; }
 
                 /// <summary>
-                /// <para>接收方向 1:主叫 2:被叫</para>
+                /// <para>The receive direction. Valid values: 1: caller. 2: callee.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -89,7 +103,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
                 public string ReceiveDir { get; set; }
 
                 /// <summary>
-                /// <para>规则ID</para>
+                /// <para>The rule ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>345</para>
@@ -99,17 +113,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
                 public string RuleId { get; set; }
 
                 /// <summary>
-                /// <para>规则名称</para>
+                /// <para>The rule name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>企业名片-短信规则</para>
+                /// <para>Enterprise business card - SMS rule</para>
                 /// </summary>
                 [NameInMap("RuleName")]
                 [Validation(Required=false)]
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>规则类型： 1：企业名片-短信 2：企业名片-闪信 3：企业名片-视频 4：企业名片-音频</para>
+                /// <para>The rule type. Valid values: 1: enterprise business card - SMS. 2: enterprise business card - flash SMS. 3: enterprise business card - video. 4: enterprise business card - audio.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -119,7 +133,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
                 public string RuleType { get; set; }
 
                 /// <summary>
-                /// <para>模板ID</para>
+                /// <para>The template ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12345</para>
@@ -131,37 +145,37 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             }
 
             /// <summary>
-            /// <para>顺振控制参数</para>
+            /// <para>The sequential ringing control parameters.</para>
             /// </summary>
             [NameInMap("SequenceCall")]
             [Validation(Required=false)]
             public List<GetXDefaultConfigResponseBodyDataSequenceCall> SequenceCall { get; set; }
             public class GetXDefaultConfigResponseBodyDataSequenceCall : TeaModel {
                 /// <summary>
-                /// <para>顺振提示音放音编号，格式如callNoPlayCode</para>
+                /// <para>The play code for the sequential ringing prompt tone. The format is the same as callNoPlayCode.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>示例值</para>
+                /// <para>Sample value</para>
                 /// </summary>
                 [NameInMap("SequenceCallNoPlayCode")]
                 [Validation(Required=false)]
                 public string SequenceCallNoPlayCode { get; set; }
 
                 /// <summary>
-                /// <para>顺振被叫号码</para>
+                /// <para>The callee number for sequential ringing.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>示例值示例值示例值</para>
+                /// <para>Sample value sample value sample value</para>
                 /// </summary>
                 [NameInMap("SequenceCalledNo")]
                 [Validation(Required=false)]
                 public string SequenceCalledNo { get; set; }
 
                 /// <summary>
-                /// <para>接通后主被叫放音编号，格式如calledPlayCode</para>
+                /// <para>The play code for the caller and callee after the call is connected. The format is the same as calledPlayCode.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>示例值示例值示例值</para>
+                /// <para>Sample value sample value sample value</para>
                 /// </summary>
                 [NameInMap("SequenceCalledPlayCode")]
                 [Validation(Required=false)]
@@ -170,7 +184,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             }
 
             /// <summary>
-            /// <para>顺振结束时间 格式：HH:mm:ss 18:00:00</para>
+            /// <para>The end time of sequential ringing. Format: HH:mm:ss, such as 18:00:00.</para>
             /// 
             /// <b>Example:</b>
             /// <para>09:00:00</para>
@@ -180,7 +194,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public string SequenceEndTime { get; set; }
 
             /// <summary>
-            /// <para>顺振开启时间 格式：HH:mm:ss 09:00:00</para>
+            /// <para>The start time of sequential ringing. Format: HH:mm:ss, such as 09:00:00.</para>
             /// 
             /// <b>Example:</b>
             /// <para>09:00:00</para>
@@ -190,7 +204,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public string SequenceStartTime { get; set; }
 
             /// <summary>
-            /// <para>开/关短信功能状态： ‘0’：禁用； ‘1’：开启；</para>
+            /// <para>The status of the SMS feature. Valid values: 0: disabled. 1: enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -200,7 +214,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public string SmsAbility { get; set; }
 
             /// <summary>
-            /// <para>是否透传来显为真实主叫： 00-非透传：互相拨打时都显示工作号; 10-透传：A客户为主叫时,B员工的来显为客户A号码;B员工为主叫时,A客户的来显为工作号; 默认为 00</para>
+            /// <para>Specifies whether to pass through the caller ID to display the real caller. Valid values: 00: non-passthrough. The work number is displayed when calls are made to each other. 10: passthrough. When Customer A is the caller, the caller ID displayed to Employee B is the number of Customer A. When Employee B is the caller, the caller ID displayed to Customer A is the work number. Default value: 00.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -212,17 +226,23 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         }
 
         /// <summary>
-        /// <para>返回信息</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>成功</para>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>返回是否成功 true  表示成功 false表示失败</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: The request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request fails.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

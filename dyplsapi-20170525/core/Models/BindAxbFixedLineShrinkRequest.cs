@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class BindAxbFixedLineShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>主叫侧放音编码，AXB业务时必须设置。  放音编码必须包含3个场景的编码。按照“B-&gt;X,A-&gt;X,其他号码-&gt;X”的顺序填写编码，编码之间以逗号分隔。  比如：“1,2,3”表示B-&gt;X放音编号为1，A-&gt;X放音编号为2， 其他号码-&gt;X放音编号为3</para>
+        /// <para>The caller-side announcement code. This parameter is required for the fixed-line AXB privacy number service. The code must include announcements for three scenarios. Specify the codes in the order of &quot;B-&gt;X, A-&gt;X, other numbers-&gt;X&quot;, separated by commas.</para>
+        /// <remarks>
+        /// <para>For example, &quot;1,2,3&quot; indicates that the announcement code for B-&gt;X is 1, the announcement code for A-&gt;X is 2, and the announcement code for other numbers-&gt;X is 3.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,71 +24,86 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string Anucode { get; set; }
 
         /// <summary>
-        /// <para>接通后被叫侧放音编码,接通后被叫侧放音编码  被叫放音编码必须包含2个场景的编码。按照“A被叫,B被叫”的顺序填写编码，编码之间以逗号分隔。  比如：“1,2”表示A号码为被叫侧接听时的放音编号为1，B号码为被叫侧接听时的放音编号为2。</para>
+        /// <para>The callee-side announcement code after the call is connected. The code must include announcements for two scenarios. Specify the codes in the order of &quot;A as callee, B as callee&quot;, separated by commas.</para>
+        /// <remarks>
+        /// <para>For example, &quot;1,2&quot; indicates that the announcement code when Number A answers as the callee is 1, and the announcement code when Number B answers as the callee is 2.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>1,2</para>
         /// </summary>
         [NameInMap("Anucodecalled")]
         [Validation(Required=false)]
         public string Anucodecalled { get; set; }
 
         /// <summary>
-        /// <para>号池ID。</para>
+        /// <para>The ID of the number pool.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ALPT_1234</para>
+        /// <para>FC10000016848****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>区号,去掉“0” 例如：北京（10）；在平台分配X号码模式中，平台从号码池中分配该地区的X号码，避免产生呼叫长途费。</para>
+        /// <para>The area code. You can specify the location of Number X (specified city -&gt; provincial capital -&gt; national routing). If you do not specify a location, a number is randomly assigned nationwide.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>0571</para>
         /// </summary>
         [NameInMap("Areacode")]
         [Validation(Required=false)]
         public string Areacode { get; set; }
 
         /// <summary>
-        /// <para>绑定类型，值如下： mode101：客户携带X号码 mode102：平台分配X号码</para>
+        /// <para>The binding type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>mode101: The customer specifies Number X.</para>
+        /// </description></item>
+        /// <item><description><para>mode102: The platform allocates Number X.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>mode101</para>
         /// </summary>
         [NameInMap("BindType")]
         [Validation(Required=false)]
         public string BindType { get; set; }
 
         /// <summary>
-        /// <para>过期时间,单位：秒，必须为数字 0：不会自动解绑 非0：自动解绑周期</para>
+        /// <para>The expiration time. Unit: seconds. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>0: The binding never expires.</para>
+        /// </description></item>
+        /// <item><description><para>Other values: If you specify another value, such as 60, the binding is valid for 60 seconds after Number X is successfully allocated. After 60 seconds, the binding is automatically unbound.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>60</para>
         /// </summary>
         [NameInMap("Expiration")]
         [Validation(Required=false)]
         public string Expiration { get; set; }
 
         /// <summary>
-        /// <para>扩展参数</para>
+        /// <para>The extended parameters.</para>
         /// </summary>
         [NameInMap("Extra")]
         [Validation(Required=false)]
         public string ExtraShrink { get; set; }
 
         /// <summary>
-        /// <para>消息请求唯一标识。</para>
+        /// <para>The unique identifier of the message request.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>15433678436</para>
+        /// <para>123*******</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
@@ -96,10 +114,10 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>接入商自有字段，最大250字符长度</para>
+        /// <para>The external business extension field. This parameter is returned in the call record receipt message. The value cannot exceed 100 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>remark</para>
+        /// <para>19394</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
@@ -114,7 +132,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>绑定时间，格式为yyyyMMddHHmmss。时间采用北京时间，24小时制。</para>
+        /// <para>The binding time. The format is yyyyMMddHHmmss. The time is in UTC+8 and uses the 24-hour clock.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -125,53 +143,73 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string Subts { get; set; }
 
         /// <summary>
-        /// <para>接通后主叫侧的放音编码,接通后主叫侧放音编码  接通后主叫侧放音编码必须包含2个场景的编码。按照“A被叫,B被叫”的顺序填写编码，编码之间以逗号分隔。  比如：“1,2”表示A号码为被叫时主叫侧的放音编号为1，B号码为被叫时主叫侧的放音编号为2。</para>
+        /// <para>The caller-side announcement code after the call is connected. The code must include announcements for two scenarios. Specify the codes in the order of &quot;A as callee, B as callee&quot;, separated by commas.</para>
+        /// <remarks>
+        /// <para>For example, &quot;1,2&quot; indicates that the caller-side announcement code when Number A is the callee is 1, and the caller-side announcement code when Number B is the callee is 2.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>1,2</para>
         /// </summary>
         [NameInMap("TAnucodeConnect")]
         [Validation(Required=false)]
         public string TAnucodeConnect { get; set; }
 
         /// <summary>
-        /// <para>真实号码</para>
+        /// <para>Number A of the fixed-line AXB privacy number.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Number A can be a mobile phone number or a fixed-line number. For a fixed-line number, add the area code. No hyphen is required between the area code and the fixed-line number. </description></item>
+        /// <item><description>If your business requires modifying a bound number, you can call the <a href="https://api.aliyun.com/document/Dyplsapi/2017-05-25/UpdateAxbBindFixedLine">UpdateAxbBindFixedLine</a> operation.</description></item>
+        /// </list>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>18456713271</para>
+        /// <para>Mobile phone number: 182<b><b>2371
+        /// Fixed-line number: 0571</b></b>**36</para>
         /// </summary>
         [NameInMap("TelA")]
         [Validation(Required=false)]
         public string TelA { get; set; }
 
         /// <summary>
-        /// <para>对端号码</para>
+        /// <para>Number B of the fixed-line AXB privacy number.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Number B can be a mobile phone number or a fixed-line number. For a fixed-line number, add the area code. No hyphen is required between the area code and the fixed-line number.</description></item>
+        /// <item><description>If your business requires modifying a bound number, you can call the <a href="https://api.aliyun.com/document/Dyplsapi/2017-05-25/UpdateAxbBindFixedLine">UpdateAxbBindFixedLine</a> operation.</description></item>
+        /// </list>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>18971362645</para>
+        /// <para>Mobile phone number: 182<b><b>2371
+        /// Fixed-line number: 0571</b></b>**36</para>
         /// </summary>
         [NameInMap("TelB")]
         [Validation(Required=false)]
         public string TelB { get; set; }
 
         /// <summary>
-        /// <para>X号码； 平台分配号码模式下，该参数可不带，系统忽略该参数  格式为yyyyMMddHHmmss。时间采用北京时间，24小时制。</para>
+        /// <para>Number X of the fixed-line AXB privacy number. Number X is a privacy number that you have <a href="https://dyplsnext.console.aliyun.com/numberbuy">purchased</a> in the console.</para>
+        /// <remarks>
+        /// <para>This parameter is required when the customer specifies Number X (that is, the BindType parameter is set to mode101).</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>19767562345</para>
+        /// <para>0571******23</para>
         /// </summary>
         [NameInMap("TelX")]
         [Validation(Required=false)]
         public string TelX { get; set; }
 
         /// <summary>
-        /// <para>业务时间戳，格式yyyyMMddHHmmssSSS，时间采用北京时间，24小时制，精确至毫秒</para>
+        /// <para>The business timestamp. The format is yyyyMMddHHmmssSSS. The time is in UTC+8 and uses the 24-hour clock, accurate to milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20161114143116001</para>
+        /// <para>20161114143116123</para>
         /// </summary>
         [NameInMap("Ts")]
         [Validation(Required=false)]

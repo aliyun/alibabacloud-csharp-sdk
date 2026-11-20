@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>OK</para>
+        /// <para>请求成功</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class BindAxnResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The status code of the request.</para>
         /// <list type="bullet">
-        /// <item><description>The value OK indicates that the request was successful.</description></item>
-        /// <item><description>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</description></item>
+        /// <item><description>A value of OK indicates that the request is successful.</description></item>
+        /// <item><description>For other error codes, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -44,16 +44,16 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information returned after the phone numbers were bound.</para>
+        /// <para>The struct returned after the number is successfully bound.</para>
         /// </summary>
         [NameInMap("SecretBindDTO")]
         [Validation(Required=false)]
         public BindAxnResponseBodySecretBindDTO SecretBindDTO { get; set; }
         public class BindAxnResponseBodySecretBindDTO : TeaModel {
             /// <summary>
-            /// <para>The extension of the phone number.</para>
+            /// <para>The extension number.</para>
             /// <remarks>
-            /// <para> The BindAxn operation does not involve an extension. Ignore this parameter.</para>
+            /// <para>The BindAxn operation does not involve extension numbers. Ignore this parameter.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -64,17 +64,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public string Extension { get; set; }
 
             /// <summary>
-            /// <para>The private number, that is, phone number X.</para>
+            /// <para>The privacy number, which is Number X.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>139****0000</para>
+            /// <para>139****1111</para>
             /// </summary>
             [NameInMap("SecretNo")]
             [Validation(Required=false)]
             public string SecretNo { get; set; }
 
             /// <summary>
-            /// <para>The binding ID.</para>
+            /// <para>The ID of the binding relationship.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1***************3</para>

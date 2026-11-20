@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class CreatePickUpWaybillShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The end time of the door-to-door pickup in the appointment. The value of <b>AppointGotEndTime</b> is the value of <b>EndTime</b> of <b>AppointTimes</b> in <b>CpTimeSelectList</b> returned by the <a href="~~CreatePickUpWaybillPreQuery~~#resultMapping">CreatePickUpWaybillPreQuery</a> operation.</para>
+        /// <para>The end time of the scheduled door-to-door pickup, in the YYYY-MM-DD HH:mm:ss format. To obtain the value of <b>AppointGotEndTime</b>, obtain the <b>EndTime</b> value from <b>AppointTimes</b> in the <b>CpTimeSelectList</b> response parameter of the <a href="https://api.aliyun.com/document/Dyplsapi/2017-05-25/CreatePickUpWaybillPreQuery">CreatePickUpWaybillPreQuery</a> operation.</para>
         /// <remarks>
-        /// <para> This parameter is required when <b>BizType</b> is set to <b>1</b>.</para>
+        /// <para>Required when <b>bizType</b> is set to <b>1</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string AppointGotEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the door-to-door pickup in the appointment. The value of <b>AppointGotStartTime</b> is the value of <b>StartTime</b> of <b>AppointTimes</b> in <b>CpTimeSelectList</b> returned by the <a href="~~CreatePickUpWaybillPreQuery~~#resultMapping">CreatePickUpWaybillPreQuery</a> operation.</para>
+        /// <para>The start time of the scheduled door-to-door pickup, in the YYYY-MM-DD HH:mm:ss format. To obtain the value of <b>AppointGotStartTime</b>, obtain the <b>StartTime</b> value from <b>AppointTimes</b> in the <b>CpTimeSelectList</b> response parameter of the <a href="https://api.aliyun.com/document/Dyplsapi/2017-05-25/CreatePickUpWaybillPreQuery">CreatePickUpWaybillPreQuery</a> operation.</para>
         /// <remarks>
-        /// <para> This parameter is required when <b>BizType</b> is set to <b>1</b>.</para>
+        /// <para>Required when <b>bizType</b> is set to <b>1</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,10 +36,10 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string AppointGotStartTime { get; set; }
 
         /// <summary>
-        /// <para>The pickup mode. Valid values:</para>
+        /// <para>The delivery mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b> (default): real-time order.</description></item>
-        /// <item><description><b>1</b>: appointment order.</description></item>
+        /// <item><description><b>0</b>: real-time order (default)</description></item>
+        /// <item><description><b>1</b>: scheduled order</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public int? BizType { get; set; }
 
         /// <summary>
-        /// <para>The address of the consignee.</para>
+        /// <para>The address of the recipient.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ConsigneeAddress")]
@@ -58,9 +58,9 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string ConsigneeAddressShrink { get; set; }
 
         /// <summary>
-        /// <para>The mobile phone number of the consignee.</para>
+        /// <para>The mobile phone number of the recipient.</para>
         /// <remarks>
-        /// <para> Either ConsigneeMobile or ConsigneePhone must be set.</para>
+        /// <para>You must specify either ConsigneeMobile or ConsigneePhone.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -71,20 +71,20 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string ConsigneeMobile { get; set; }
 
         /// <summary>
-        /// <para>The name of the consignee.</para>
+        /// <para>The name of the recipient.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Li</para>
+        /// <para>Zhang XX</para>
         /// </summary>
         [NameInMap("ConsigneeName")]
         [Validation(Required=false)]
         public string ConsigneeName { get; set; }
 
         /// <summary>
-        /// <para>The landline phone number of the consignee.</para>
+        /// <para>The landline phone number of the recipient.</para>
         /// <remarks>
-        /// <para> Either ConsigneeMobile or ConsigneePhone must be set.</para>
+        /// <para>You must specify either ConsigneeMobile or ConsigneePhone.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string ConsigneePhone { get; set; }
 
         /// <summary>
-        /// <para>The code of the courier company.</para>
+        /// <para>The express delivery company code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>YTO</para>
@@ -105,14 +105,14 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string CpCode { get; set; }
 
         /// <summary>
-        /// <para>The items.</para>
+        /// <para>The list of goods.</para>
         /// </summary>
         [NameInMap("GoodsInfos")]
         [Validation(Required=false)]
         public string GoodsInfosShrink { get; set; }
 
         /// <summary>
-        /// <para>The external channel sources.</para>
+        /// <para>The external channel source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string OrderChannels { get; set; }
 
         /// <summary>
-        /// <para>The ID of the external order.</para>
+        /// <para>The external order ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -134,10 +134,10 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string OuterOrderCode { get; set; }
 
         /// <summary>
-        /// <para>The additional information about the order. The additional information will be printed on the order.</para>
+        /// <para>The remark. The remark content printed on the waybill.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>fragile</para>
+        /// <para>Fragile items</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// <summary>
         /// <para>The mobile phone number of the sender.</para>
         /// <remarks>
-        /// <para> Either SendMobile or SendPhone must be set.</para>
+        /// <para>You must specify either SendMobile or SendPhone.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Wang</para>
+        /// <para>Wang XX</para>
         /// </summary>
         [NameInMap("SendName")]
         [Validation(Required=false)]
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// <summary>
         /// <para>The landline phone number of the sender.</para>
         /// <remarks>
-        /// <para> Either SendMobile or SendPhone must be set.</para>
+        /// <para>You must specify either SendMobile or SendPhone.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

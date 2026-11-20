@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// <para>The ID of the ASR model.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>980abddb908f48e8b987cb2cd303****</para>
+        /// <para>9b4afe3d224e4fa3bf963697113e2f77</para>
         /// </summary>
         [NameInMap("ASRModelId")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>False</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("ASRStatus")]
         [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>hangzhou</para>
+        /// <para>北京</para>
         /// </summary>
         [NameInMap("ExpectCity")]
         [Validation(Required=false)]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1234</para>
+        /// <para>200001234****</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// <para>Phone number B can be set to a mobile phone number or a landline phone number. The landline phone number must be added with an area code, and no hyphen is required between the area code and the landline phone number.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>139****0000</para>
+        /// <para>138****0000</para>
         /// </summary>
         [NameInMap("PhoneNoB")]
         [Validation(Required=false)]
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>139****0000</para>
+        /// <para>139****1111</para>
         /// </summary>
         [NameInMap("PhoneNoX")]
         [Validation(Required=false)]
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// <para>The key of the phone number pool. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <b>Number Pool Management</b> page.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>FC123456</para>
+        /// <para>FC10000012345****</para>
         /// </summary>
         [NameInMap("PoolKey")]
         [Validation(Required=false)]
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;AXGRing_AB&quot;:&quot;100000001&quot;,&quot;AXGRing_A&quot;:&quot;100000002&quot;,&quot;AXGRing_G&quot;:&quot;100000003&quot;}</para>
+        /// <para>{&quot;AXGRing_AB&quot;:&quot;1000<b><b>1&quot;,&quot;AXGRing_A&quot;:&quot;1000</b></b>2&quot;,&quot;AXGRing_G&quot;:&quot;1000****3&quot;}</para>
         /// </summary>
         [NameInMap("RingConfig")]
         [Validation(Required=false)]

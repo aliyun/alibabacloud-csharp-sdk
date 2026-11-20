@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class QuerySecretAPhoneNoToCustResponseBody : TeaModel {
         /// <summary>
+        /// <para>Details of the denied access.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>请求状态码</para>
+        /// <para>Request status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -28,14 +30,14 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>A号码报备状态查询结构体</para>
+        /// <para>The struct for querying the A number reporting status.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QuerySecretAPhoneNoToCustResponseBodyData Data { get; set; }
         public class QuerySecretAPhoneNoToCustResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>所属a号码组id</para>
+            /// <para>The ID of the A number group to which the number belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>19</para>
@@ -45,7 +47,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public string ANoWhiteGroupId { get; set; }
 
             /// <summary>
-            /// <para>固话报备的经办人/法人电话</para>
+            /// <para>The contact phone number of the handler or legal representative for landline reporting.</para>
             /// 
             /// <b>Example:</b>
             /// <para>130*****8888</para>
@@ -55,7 +57,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public string CustPhoneNo { get; set; }
 
             /// <summary>
-            /// <para>号码类型</para>
+            /// <para>The number type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Mobile: Mobile phone number.</para>
+            /// </description></item>
+            /// <item><description><para>Fixed: Landline number.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Mobile</para>
@@ -65,7 +73,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public string NoType { get; set; }
 
             /// <summary>
-            /// <para>A号码</para>
+            /// <para>A number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>130*****1234</para>
@@ -75,7 +83,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public string PhoneNoA { get; set; }
 
             /// <summary>
-            /// <para>备注（客户自己的业务备注，可编辑）</para>
+            /// <para>Remarks (user\&quot;s own business notes).</para>
             /// 
             /// <b>Example:</b>
             /// <para>***报备</para>
@@ -85,7 +93,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public string Remark { get; set; }
 
             /// <summary>
-            /// <para>报备失败原因</para>
+            /// <para>The reason for review failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;系统判断为不同人&quot;]</para>
@@ -95,7 +103,15 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public string ReportResult { get; set; }
 
             /// <summary>
-            /// <para>报备结果</para>
+            /// <para>The reporting result. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>REVIEWING: Under review.</para>
+            /// </description></item>
+            /// <item><description><para>PASS: Review passed.</para>
+            /// </description></item>
+            /// <item><description><para>FAIL: Review failed.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>REVIEWING</para>
@@ -107,7 +123,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         }
 
         /// <summary>
-        /// <para>失败错误提示</para>
+        /// <para>Error message for a failed operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>号码组不存在</para>
@@ -117,7 +133,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>返回id</para>
+        /// <para>The returned ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1D73E648-0978-18A5-B089-3BB2</para>
@@ -127,7 +143,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>请求是否成功</para>
+        /// <para>Indicates whether the request succeeded. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: Succeeded.</para>
+        /// </description></item>
+        /// <item><description><para>false: Failed.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,22 +10,22 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class DeleteAxbBindFixedLineRequest : TeaModel {
         /// <summary>
-        /// <para>号池ID。</para>
+        /// <para>Number pool ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ALPT_1234</para>
+        /// <para>FC10000016848****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>消息请求唯一标识。</para>
+        /// <para>Unique identifier of the message request.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>123*******</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
@@ -44,22 +44,22 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>绑定id</para>
+        /// <para>Binding ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>A93IOELD93</para>
+        /// <para>A93I******</para>
         /// </summary>
         [NameInMap("SubId")]
         [Validation(Required=false)]
         public string SubId { get; set; }
 
         /// <summary>
-        /// <para>业务时间戳，格式yyyyMMddHHmmssSSS，时间采用北京时间，24小时制，精确至毫秒</para>
+        /// <para>Business timestamp. Format: yyyyMMddHHmmssSSS. The time uses Beijing time in 24-hour clock format, accurate to milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20161114143116001</para>
+        /// <para>20161114143116123</para>
         /// </summary>
         [NameInMap("Ts")]
         [Validation(Required=false)]

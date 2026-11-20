@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class DeleteAxnExtensionBindFixedLineRequest : TeaModel {
         /// <summary>
-        /// <para>号池ID</para>
+        /// <para>The business ID identifier assigned by Alibaba Cloud to the customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>消息请求唯一标识</para>
+        /// <para>The unique identifier of the message request.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>绑定id</para>
+        /// <para>The binding ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string SubId { get; set; }
 
         /// <summary>
-        /// <para>格式yyyyMMddHHmmssSSS，时间采用北京时间，24小时制，精确至毫秒</para>
+        /// <para>Format: yyyyMMddHHmmssSSS. The time uses Beijing time in 24-hour format, accurate to milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

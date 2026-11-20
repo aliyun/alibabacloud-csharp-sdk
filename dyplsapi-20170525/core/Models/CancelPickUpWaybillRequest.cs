@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;action\&quot;:\&quot;UPDATE_DESC\&quot;,\&quot;value\&quot;:\&quot;The courier is unable to pick up the package.\&quot;}</para>
+        /// <para>不想退货了</para>
         /// </summary>
         [NameInMap("CancelDesc")]
         [Validation(Required=false)]

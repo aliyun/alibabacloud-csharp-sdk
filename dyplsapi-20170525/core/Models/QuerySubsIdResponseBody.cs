@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// <para>The binding ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>11111111****</para>
+        /// <para>1000******,1000******,1000******</para>
         /// </summary>
         [NameInMap("SubsId")]
         [Validation(Required=false)]

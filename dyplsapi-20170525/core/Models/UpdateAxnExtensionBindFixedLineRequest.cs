@@ -10,38 +10,50 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class UpdateAxnExtensionBindFixedLineRequest : TeaModel {
         /// <summary>
-        /// <para>放音编码必须包含3个场景的编码。按照“B-&gt;X,A-&gt;X,其他号码-&gt;X”的顺序填写编码，编码之间以逗号分隔。  AXN分机号业务的放音编码,B-&gt;X和其他号码-&gt;X的编码一致  比如：“1,2,3”表示B-&gt;X放音编号为1，A-&gt;X放音编号为2， 其他号码-&gt;X放音编号为3</para>
+        /// <para>The announcement code for the caller side. This parameter is required for the AXB service. It must contain codes for three scenarios. Specify the codes in the order of &quot;B-&gt;X, A-&gt;X, and other numbers-&gt;X&quot;, separated by commas.</para>
+        /// <remarks>
+        /// <para>&quot;1,2,3&quot; indicates that the announcement code for B-&gt;X is 1, the announcement code for A-&gt;X is 2, and the announcement code for other numbers-&gt;X is 3.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>10001,10002,10003</para>
+        /// <para>1,2,3</para>
         /// </summary>
         [NameInMap("Anucode")]
         [Validation(Required=false)]
         public string Anucode { get; set; }
 
         /// <summary>
-        /// <para>被叫侧放音编码  被叫放音编码必须包含2个场景的编码。按照“A被叫,其他号码被叫”的顺序填写编码，编码之间以逗号分隔。  比如：“1,2”表示A号码为被叫侧接听时的放音编号为1，其他号码为被叫侧接听时的放音编号为2</para>
+        /// <para>The announcement code for the callee side after the call is connected. It must contain codes for two scenarios. Specify the codes in the order of &quot;A as callee and B as callee&quot;, separated by commas.</para>
+        /// <remarks>
+        /// <para>&quot;1,2&quot; indicates that the announcement code when number A answers as the callee is 1, and the announcement code when number B answers as the callee is 2.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>10001,10002</para>
+        /// <para>1,2</para>
         /// </summary>
         [NameInMap("Anucodecalled")]
         [Validation(Required=false)]
         public string Anucodecalled { get; set; }
 
         /// <summary>
-        /// <para>号池ID</para>
+        /// <para>The ID of the number pool.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>alitest</para>
+        /// <para>FC10000016848****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>单位：秒，必须为数字 0：不会自动解绑 非0：自动解绑周期</para>
+        /// <para>The expiration time. Unit: seconds. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>0: Never expires.</para>
+        /// </description></item>
+        /// <item><description><para>Other values: If you specify another value, such as 60, the binding is valid for 60 seconds after number X is allocated. After 60 seconds, the binding is automatically unbound.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -51,14 +63,22 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string Expiration { get; set; }
 
         /// <summary>
-        /// <para>AXx的扩展参数项</para>
+        /// <para>The extension parameters.</para>
         /// </summary>
         [NameInMap("Extraaxx")]
         [Validation(Required=false)]
         public UpdateAxnExtensionBindFixedLineRequestExtraaxx Extraaxx { get; set; }
         public class UpdateAxnExtensionBindFixedLineRequestExtraaxx : TeaModel {
             /// <summary>
-            /// <para>可选。 A通过X呼叫，即A主叫X，仅下列值有效。默认是0。 0：不能外呼 1：接续最近的B号码</para>
+            /// <para>The callback control. Number A calls through number X, which means number A is the caller and number X is the callee. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>0 (default): Outbound calls are not allowed.</para>
+            /// </description></item>
+            /// <item><description><para>1: Connects to the most recent number N.</para>
+            /// </description></item>
+            /// <item><description><para>2: Calls back the fixed number TelB.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -68,7 +88,16 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public string Callback { get; set; }
 
             /// <summary>
-            /// <para>录音控制，仅下列值有效。默认是0（不开通录音功能）。 0：不录音 1：录音</para>
+            /// <para>The call recording control. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>0 (default): Does not record calls.</para>
+            /// </description></item>
+            /// <item><description><para>1: Records calls.</para>
+            /// </description></item>
+            /// </list>
+            /// <remarks>
+            /// <para>After the call recording feature is enabled, you can play and download voice files in the call records. Recording files are billed at CNY 0.010 per minute based on the call duration.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -80,11 +109,11 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         }
 
         /// <summary>
-        /// <para>消息请求唯一标识。</para>
+        /// <para>The unique identifier of the message request.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>12345dkwkd99d</para>
+        /// <para>123*******</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
@@ -95,10 +124,10 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>接入商自有字段，最大250字符长度</para>
+        /// <para>The external business extension field. This parameter is returned in the call record receipt message. The value cannot exceed 100 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1233</para>
+        /// <para>19394</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
@@ -113,54 +142,61 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>绑定id</para>
+        /// <para>The binding ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>可参考绑定响应</para>
+        /// <para>GHX0*************************</para>
         /// </summary>
         [NameInMap("SubId")]
         [Validation(Required=false)]
         public string SubId { get; set; }
 
         /// <summary>
-        /// <para>格式为yyyyMMddHHmmss。时间采用北京时间，24小时制。</para>
+        /// <para>The binding time. Format: yyyyMMddHHmmss. The time is in UTC+8 and uses the 24-hour format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20250421141723098</para>
+        /// <para>20161114143116</para>
         /// </summary>
         [NameInMap("Subts")]
         [Validation(Required=false)]
         public string Subts { get; set; }
 
         /// <summary>
-        /// <para>接通后主叫侧放音编码  接通后主叫侧放音编码必须包含2个场景的编码。按照“A被叫,其他号码被叫”的顺序填写编码，编码之间以逗号分隔。  比如：“1,2”表示A号码为被叫时主叫侧的放音编号为1，其他号码为被叫时主叫侧的放音编号为2</para>
+        /// <para>The announcement code for the caller side after the call is connected. It must contain codes for two scenarios. Specify the codes in the order of &quot;A as callee and B as callee&quot;, separated by commas.</para>
+        /// <remarks>
+        /// <para>&quot;1,2&quot; indicates that the announcement code for the caller side when number A is the callee is 1, and the announcement code for the caller side when number B is the callee is 2.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>10001,10002</para>
+        /// <para>1,2</para>
         /// </summary>
         [NameInMap("TAnucodeConnect")]
         [Validation(Required=false)]
         public string TAnucodeConnect { get; set; }
 
         /// <summary>
-        /// <para>A号码</para>
+        /// <para>The number A of the landline AXN extension.</para>
+        /// <remarks>
+        /// <para>Number A can be set to a mobile phone number or a landline number. For a landline number, the area code must be included, and no hyphen is required between the area code and the number.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>15500001111</para>
+        /// <para>Mobile phone number: 182<b><b>2371
+        /// Landline number: 0571</b></b>**36</para>
         /// </summary>
         [NameInMap("TelA")]
         [Validation(Required=false)]
         public string TelA { get; set; }
 
         /// <summary>
-        /// <para>格式yyyyMMddHHmmssSSS，时间采用北京时间，24小时制，精确至毫秒</para>
+        /// <para>The business timestamp. Format: yyyyMMddHHmmssSSS. The time is in UTC+8 and uses the 24-hour format, accurate to milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20250421141723098</para>
+        /// <para>20161114143116123</para>
         /// </summary>
         [NameInMap("Ts")]
         [Validation(Required=false)]

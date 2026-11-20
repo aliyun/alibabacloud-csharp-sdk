@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>hangzhou</para>
+        /// <para>杭州</para>
         /// </summary>
         [NameInMap("City")]
         [Validation(Required=false)]

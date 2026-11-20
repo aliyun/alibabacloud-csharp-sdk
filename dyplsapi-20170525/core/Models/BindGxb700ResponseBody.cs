@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class BindGxb700ResponseBody : TeaModel {
         /// <summary>
+        /// <para>The access denied details.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -18,6 +20,10 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
+        /// <para>The response code. Valid values:
+        /// OK: The request was successful.
+        /// Other values indicate failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -25,11 +31,16 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public BindGxb700ResponseBodyData Data { get; set; }
         public class BindGxb700ResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The purchased 700 private number, which is the X number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>700********0001</para>
             /// </summary>
@@ -38,6 +49,8 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public string SecretNo { get; set; }
 
             /// <summary>
+            /// <para>The number binding ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123*******</para>
             /// </summary>
@@ -48,6 +61,8 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         }
 
         /// <summary>
+        /// <para>The description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -56,6 +71,8 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9297B722-A016-43FB-B51A-E54050******</para>
         /// </summary>
@@ -64,6 +81,10 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation was successful. Valid values:
+        /// true: Successful.
+        /// false: Failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

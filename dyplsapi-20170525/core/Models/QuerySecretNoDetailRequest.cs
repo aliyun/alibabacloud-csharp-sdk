@@ -14,8 +14,8 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The key of the phone number pool.</para>
-        /// <para>Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <b>Number Pool Management</b> page.</para>
+        /// <para>The key of the number pool.</para>
+        /// <para>Log on to the Phone Number Protection console and obtain the <b>Number Pool Key</b> on the <a href="https://dyplsnext.console.aliyun.com/number-pool">Number Pool Management</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,8 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The private number.</para>
+        /// <para>The privacy number, which is the X number.</para>
+        /// <para>Log on to the Phone Number Protection console and obtain the X number on the <a href="https://dyplsnext.console.aliyun.com/number/list">Number Management</a> page. Alternatively, view the <b>SecretNo</b> parameter in the response when you call a number binding operation such as <a href="https://www.alibabacloud.com/help/en/pnp/developer-reference/api-dyplsapi-2017-05-25-bindaxb">BindAxb</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

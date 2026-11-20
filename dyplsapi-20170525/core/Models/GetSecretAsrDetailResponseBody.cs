@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 
         /// <summary>
         /// <para>The ASR details.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;bizDuration&quot;:10944,&quot;businessId&quot;:&quot;435ee78c7a019650@!FC100000074672458@!20200615225802&quot;,&quot;businessKey&quot;:&quot;JCGTncltuNaolegJ&quot;,&quot;code&quot;:&quot;21050000&quot;,&quot;msg&quot;:&quot;SUCCESS&quot;,&quot;requestId&quot;:&quot;8d2329d407a83447a83be441681f4872ac74nE&quot;,&quot;sentences&quot;:[{&quot;beginTime&quot;:1020,&quot;channelId&quot;:0,&quot;emotionValue&quot;:&quot;5.7&quot;,&quot;endTime&quot;:1770,&quot;silenceDuration&quot;:&quot;0&quot;,&quot;speechRate&quot;:&quot;80&quot;,&quot;text&quot;:&quot;喂&quot;}],&quot;success&quot;:true,&quot;type&quot;:&quot;asrResult&quot;}</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -40,7 +43,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             /// <para>The ID of the business process.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>435ee78c7a019650@!FC100000074672458@!2020061522****</para>
+            /// <para>435ee78c7a******@!FC100000074******@!2020061522****</para>
             /// </summary>
             [NameInMap("BusinessId")]
             [Validation(Required=false)]
@@ -157,7 +160,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
                 /// <para>The recognition result of the sentence.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Hello</para>
+                /// <para>您好</para>
                 /// </summary>
                 [NameInMap("Text")]
                 [Validation(Required=false)]

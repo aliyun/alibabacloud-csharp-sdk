@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class GetDyplsOSSInfoForUploadFileRequest : TeaModel {
         /// <summary>
+        /// <para>The business type. Default Value: phone_card.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

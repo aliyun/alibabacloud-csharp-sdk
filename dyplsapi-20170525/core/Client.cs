@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "Dyplsapi";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "central";
             CheckConfig(config);
             this._endpoint = GetEndpoint("dyplsapi", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -231,13 +234,19 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a blacklist.</para>
+        /// <para>Adds a phone number to the blacklist of a China number pool. Only AXN privacy number, AXN extension number, and 95AXN privacy number pool types support blacklist settings.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is not a batch operation. You can add only one pair of <b>point-to-point blacklist</b> numbers or one <b>number pool blacklist</b> number at a time.</description></item>
+        /// <item><description>To delete a blacklist entry, call the <a href="https://www.alibabacloud.com/help/en/pnp/developer-reference/api-dyplsapi-2017-05-25-deletesecretblacklist">DeleteSecretBlacklist</a> operation.</description></item>
+        /// </list>
+        /// <h3>Quantity limit</h3>
+        /// <para>The maximum number of blacklist entries per number pool is 2,000,000. If this limit is exceeded, API calls to add blacklist numbers will fail, which may affect your business. If you have special requirements, contact your Alibaba Cloud account manager.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this operation is 100 calls per second. If this limit is exceeded, API calls will be throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -295,13 +304,19 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a blacklist.</para>
+        /// <para>Adds a phone number to the blacklist of a China number pool. Only AXN privacy number, AXN extension number, and 95AXN privacy number pool types support blacklist settings.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is not a batch operation. You can add only one pair of <b>point-to-point blacklist</b> numbers or one <b>number pool blacklist</b> number at a time.</description></item>
+        /// <item><description>To delete a blacklist entry, call the <a href="https://www.alibabacloud.com/help/en/pnp/developer-reference/api-dyplsapi-2017-05-25-deletesecretblacklist">DeleteSecretBlacklist</a> operation.</description></item>
+        /// </list>
+        /// <h3>Quantity limit</h3>
+        /// <para>The maximum number of blacklist entries per number pool is 2,000,000. If this limit is exceeded, API calls to add blacklist numbers will fail, which may affect your business. If you have special requirements, contact your Alibaba Cloud account manager.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this operation is 100 calls per second. If this limit is exceeded, API calls will be throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -359,13 +374,19 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a blacklist.</para>
+        /// <para>Adds a phone number to the blacklist of a China number pool. Only AXN privacy number, AXN extension number, and 95AXN privacy number pool types support blacklist settings.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is not a batch operation. You can add only one pair of <b>point-to-point blacklist</b> numbers or one <b>number pool blacklist</b> number at a time.</description></item>
+        /// <item><description>To delete a blacklist entry, call the <a href="https://www.alibabacloud.com/help/en/pnp/developer-reference/api-dyplsapi-2017-05-25-deletesecretblacklist">DeleteSecretBlacklist</a> operation.</description></item>
+        /// </list>
+        /// <h3>Quantity limit</h3>
+        /// <para>The maximum number of blacklist entries per number pool is 2,000,000. If this limit is exceeded, API calls to add blacklist numbers will fail, which may affect your business. If you have special requirements, contact your Alibaba Cloud account manager.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this operation is 100 calls per second. If this limit is exceeded, API calls will be throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -383,13 +404,19 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a blacklist.</para>
+        /// <para>Adds a phone number to the blacklist of a China number pool. Only AXN privacy number, AXN extension number, and 95AXN privacy number pool types support blacklist settings.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is not a batch operation. You can add only one pair of <b>point-to-point blacklist</b> numbers or one <b>number pool blacklist</b> number at a time.</description></item>
+        /// <item><description>To delete a blacklist entry, call the <a href="https://www.alibabacloud.com/help/en/pnp/developer-reference/api-dyplsapi-2017-05-25-deletesecretblacklist">DeleteSecretBlacklist</a> operation.</description></item>
+        /// </list>
+        /// <h3>Quantity limit</h3>
+        /// <para>The maximum number of blacklist entries per number pool is 2,000,000. If this limit is exceeded, API calls to add blacklist numbers will fail, which may affect your business. If you have special requirements, contact your Alibaba Cloud account manager.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this operation is 100 calls per second. If this limit is exceeded, API calls will be throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -407,7 +434,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用本接口向工作号平台请求为员工B的工作号X建立呼叫绑定（B，X，A），允许B通过X呼叫客户A</para>
+        /// <para>Establishes a call binding relationship (B, X, A) for work number X of employee B on the work number platform to allow employee B to call customer A through work number X.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -485,7 +512,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用本接口向工作号平台请求为员工B的工作号X建立呼叫绑定（B，X，A），允许B通过X呼叫客户A</para>
+        /// <para>Establishes a call binding relationship (B, X, A) for work number X of employee B on the work number platform to allow employee B to call customer A through work number X.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -563,7 +590,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用本接口向工作号平台请求为员工B的工作号X建立呼叫绑定（B，X，A），允许B通过X呼叫客户A</para>
+        /// <para>Establishes a call binding relationship (B, X, A) for work number X of employee B on the work number platform to allow employee B to call customer A through work number X.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -581,7 +608,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用本接口向工作号平台请求为员工B的工作号X建立呼叫绑定（B，X，A），允许B通过X呼叫客户A</para>
+        /// <para>Establishes a call binding relationship (B, X, A) for work number X of employee B on the work number platform to allow employee B to call customer A through work number X.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -891,8 +918,18 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建700绑定关系</para>
+        /// <para>Binds phone numbers for a 700AXB private number. A 700AXB private number restricts the calling relationship to a one-to-one relationship. User A can contact User B through the intermediate number X that starts with 700, and User B can also contact User A through the same intermediate number X.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before invoking this operation, make sure that you have purchased a private number in the console.
+        /// You can use this operation to attach numbers for a 700AXB private number, or attach A and B numbers for a 700AXB private number on the Number Management page in the console.
+        /// Before attaching numbers for a 700AXB private number, determine the A role and B role in your business scenario. For example, in a ride-hailing scenario, A is the passenger and B is the driver.
+        /// The 700AXB private number is mainly used for privacy protection in one-to-one scenarios. You attach number A and number B through the Phone Number Protection service. When A calls X, the call is forwarded to B. When B calls X, the call is forwarded to A. A single X number can be reused by up to 200 binding pairs, such as A1XB1, A2XB2, A3XB3, and so on. As long as the phone numbers of A and B users are unique, a single X number can be bound to 200 groups of phone numbers simultaneously, and calls can also be made simultaneously.
+        /// QPS limit
+        /// The single-user QPS limit for this operation is 5,000 calls per second. Exceeding this limit will cause throttling, which may affect your business. Invoke this operation appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BindAxb700Request
@@ -1009,8 +1046,18 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建700绑定关系</para>
+        /// <para>Binds phone numbers for a 700AXB private number. A 700AXB private number restricts the calling relationship to a one-to-one relationship. User A can contact User B through the intermediate number X that starts with 700, and User B can also contact User A through the same intermediate number X.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before invoking this operation, make sure that you have purchased a private number in the console.
+        /// You can use this operation to attach numbers for a 700AXB private number, or attach A and B numbers for a 700AXB private number on the Number Management page in the console.
+        /// Before attaching numbers for a 700AXB private number, determine the A role and B role in your business scenario. For example, in a ride-hailing scenario, A is the passenger and B is the driver.
+        /// The 700AXB private number is mainly used for privacy protection in one-to-one scenarios. You attach number A and number B through the Phone Number Protection service. When A calls X, the call is forwarded to B. When B calls X, the call is forwarded to A. A single X number can be reused by up to 200 binding pairs, such as A1XB1, A2XB2, A3XB3, and so on. As long as the phone numbers of A and B users are unique, a single X number can be bound to 200 groups of phone numbers simultaneously, and calls can also be made simultaneously.
+        /// QPS limit
+        /// The single-user QPS limit for this operation is 5,000 calls per second. Exceeding this limit will cause throttling, which may affect your business. Invoke this operation appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BindAxb700Request
@@ -1127,8 +1174,18 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建700绑定关系</para>
+        /// <para>Binds phone numbers for a 700AXB private number. A 700AXB private number restricts the calling relationship to a one-to-one relationship. User A can contact User B through the intermediate number X that starts with 700, and User B can also contact User A through the same intermediate number X.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before invoking this operation, make sure that you have purchased a private number in the console.
+        /// You can use this operation to attach numbers for a 700AXB private number, or attach A and B numbers for a 700AXB private number on the Number Management page in the console.
+        /// Before attaching numbers for a 700AXB private number, determine the A role and B role in your business scenario. For example, in a ride-hailing scenario, A is the passenger and B is the driver.
+        /// The 700AXB private number is mainly used for privacy protection in one-to-one scenarios. You attach number A and number B through the Phone Number Protection service. When A calls X, the call is forwarded to B. When B calls X, the call is forwarded to A. A single X number can be reused by up to 200 binding pairs, such as A1XB1, A2XB2, A3XB3, and so on. As long as the phone numbers of A and B users are unique, a single X number can be bound to 200 groups of phone numbers simultaneously, and calls can also be made simultaneously.
+        /// QPS limit
+        /// The single-user QPS limit for this operation is 5,000 calls per second. Exceeding this limit will cause throttling, which may affect your business. Invoke this operation appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BindAxb700Request
@@ -1145,8 +1202,18 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建700绑定关系</para>
+        /// <para>Binds phone numbers for a 700AXB private number. A 700AXB private number restricts the calling relationship to a one-to-one relationship. User A can contact User B through the intermediate number X that starts with 700, and User B can also contact User A through the same intermediate number X.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before invoking this operation, make sure that you have purchased a private number in the console.
+        /// You can use this operation to attach numbers for a 700AXB private number, or attach A and B numbers for a 700AXB private number on the Number Management page in the console.
+        /// Before attaching numbers for a 700AXB private number, determine the A role and B role in your business scenario. For example, in a ride-hailing scenario, A is the passenger and B is the driver.
+        /// The 700AXB private number is mainly used for privacy protection in one-to-one scenarios. You attach number A and number B through the Phone Number Protection service. When A calls X, the call is forwarded to B. When B calls X, the call is forwarded to A. A single X number can be reused by up to 200 binding pairs, such as A1XB1, A2XB2, A3XB3, and so on. As long as the phone numbers of A and B users are unique, a single X number can be bound to 200 groups of phone numbers simultaneously, and calls can also be made simultaneously.
+        /// QPS limit
+        /// The single-user QPS limit for this operation is 5,000 calls per second. Exceeding this limit will cause throttling, which may affect your business. Invoke this operation appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BindAxb700Request
@@ -1163,8 +1230,18 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>固话AxB绑定</para>
+        /// <para>Attaches an AXB privacy number to a fixed line to restrict the calling relationship to a one-to-one relationship, allowing User A to contact User B through the fixed-line intermediate number X, and User B to contact User A through the same intermediate number X. Fixed-line privacy numbers are currently available by invitation only. Contact your technical support to activate the service and obtain integration support.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you invoke this operation, make sure that you have purchased a privacy number in the console. You can use this operation to bind numbers to a fixed-line AXB intermediate number. Currently, you cannot bind Number A and Number B to a fixed-line AXB intermediate number on the Number Management page in the console.</description></item>
+        /// <item><description>Before binding numbers, we recommend that you clarify the roles of User A and User B in your business scenario. For example, in common scenarios such as ride-hailing, User A is the passenger and User B is the driver.</description></item>
+        /// <item><description>Fixed-line AXB intermediate numbers are mainly used for privacy protection in one-to-one scenarios. Number A and Number B are bound through the Phone Number Protection service. When User A calls Number X, the call is forwarded to User B. When User B calls Number X, the call is forwarded to User A. A single fixed-line Number X can be reused for N binding relationships, such as A1-X-B1, A2-X-B2, and A3-X-B3. As long as the mobile phone numbers of Users A and B are not duplicated, a single fixed-line Number X can be bound to N pairs of mobile phone numbers simultaneously, and calls can be made concurrently.</description></item>
+        /// <item><description>The number of times a number can be reused varies based on the number you purchased. You can confirm the specific reuse limit with your technical support when purchasing the number.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// BindAxbFixedLineRequest
@@ -1279,8 +1356,18 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>固话AxB绑定</para>
+        /// <para>Attaches an AXB privacy number to a fixed line to restrict the calling relationship to a one-to-one relationship, allowing User A to contact User B through the fixed-line intermediate number X, and User B to contact User A through the same intermediate number X. Fixed-line privacy numbers are currently available by invitation only. Contact your technical support to activate the service and obtain integration support.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you invoke this operation, make sure that you have purchased a privacy number in the console. You can use this operation to bind numbers to a fixed-line AXB intermediate number. Currently, you cannot bind Number A and Number B to a fixed-line AXB intermediate number on the Number Management page in the console.</description></item>
+        /// <item><description>Before binding numbers, we recommend that you clarify the roles of User A and User B in your business scenario. For example, in common scenarios such as ride-hailing, User A is the passenger and User B is the driver.</description></item>
+        /// <item><description>Fixed-line AXB intermediate numbers are mainly used for privacy protection in one-to-one scenarios. Number A and Number B are bound through the Phone Number Protection service. When User A calls Number X, the call is forwarded to User B. When User B calls Number X, the call is forwarded to User A. A single fixed-line Number X can be reused for N binding relationships, such as A1-X-B1, A2-X-B2, and A3-X-B3. As long as the mobile phone numbers of Users A and B are not duplicated, a single fixed-line Number X can be bound to N pairs of mobile phone numbers simultaneously, and calls can be made concurrently.</description></item>
+        /// <item><description>The number of times a number can be reused varies based on the number you purchased. You can confirm the specific reuse limit with your technical support when purchasing the number.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// BindAxbFixedLineRequest
@@ -1395,8 +1482,18 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>固话AxB绑定</para>
+        /// <para>Attaches an AXB privacy number to a fixed line to restrict the calling relationship to a one-to-one relationship, allowing User A to contact User B through the fixed-line intermediate number X, and User B to contact User A through the same intermediate number X. Fixed-line privacy numbers are currently available by invitation only. Contact your technical support to activate the service and obtain integration support.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you invoke this operation, make sure that you have purchased a privacy number in the console. You can use this operation to bind numbers to a fixed-line AXB intermediate number. Currently, you cannot bind Number A and Number B to a fixed-line AXB intermediate number on the Number Management page in the console.</description></item>
+        /// <item><description>Before binding numbers, we recommend that you clarify the roles of User A and User B in your business scenario. For example, in common scenarios such as ride-hailing, User A is the passenger and User B is the driver.</description></item>
+        /// <item><description>Fixed-line AXB intermediate numbers are mainly used for privacy protection in one-to-one scenarios. Number A and Number B are bound through the Phone Number Protection service. When User A calls Number X, the call is forwarded to User B. When User B calls Number X, the call is forwarded to User A. A single fixed-line Number X can be reused for N binding relationships, such as A1-X-B1, A2-X-B2, and A3-X-B3. As long as the mobile phone numbers of Users A and B are not duplicated, a single fixed-line Number X can be bound to N pairs of mobile phone numbers simultaneously, and calls can be made concurrently.</description></item>
+        /// <item><description>The number of times a number can be reused varies based on the number you purchased. You can confirm the specific reuse limit with your technical support when purchasing the number.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// BindAxbFixedLineRequest
@@ -1413,8 +1510,18 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>固话AxB绑定</para>
+        /// <para>Attaches an AXB privacy number to a fixed line to restrict the calling relationship to a one-to-one relationship, allowing User A to contact User B through the fixed-line intermediate number X, and User B to contact User A through the same intermediate number X. Fixed-line privacy numbers are currently available by invitation only. Contact your technical support to activate the service and obtain integration support.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you invoke this operation, make sure that you have purchased a privacy number in the console. You can use this operation to bind numbers to a fixed-line AXB intermediate number. Currently, you cannot bind Number A and Number B to a fixed-line AXB intermediate number on the Number Management page in the console.</description></item>
+        /// <item><description>Before binding numbers, we recommend that you clarify the roles of User A and User B in your business scenario. For example, in common scenarios such as ride-hailing, User A is the passenger and User B is the driver.</description></item>
+        /// <item><description>Fixed-line AXB intermediate numbers are mainly used for privacy protection in one-to-one scenarios. Number A and Number B are bound through the Phone Number Protection service. When User A calls Number X, the call is forwarded to User B. When User B calls Number X, the call is forwarded to User A. A single fixed-line Number X can be reused for N binding relationships, such as A1-X-B1, A2-X-B2, and A3-X-B3. As long as the mobile phone numbers of Users A and B are not duplicated, a single fixed-line Number X can be bound to N pairs of mobile phone numbers simultaneously, and calls can be made concurrently.</description></item>
+        /// <item><description>The number of times a number can be reused varies based on the number you purchased. You can confirm the specific reuse limit with your technical support when purchasing the number.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// BindAxbFixedLineRequest
@@ -1715,14 +1822,18 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an AXN binding.</para>
+        /// <para>Adds a binding relationship for an AXN privacy number. An AXN privacy number assigns an exclusive privacy number to User A, allowing any Number N to reach User A by dialing Number X.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para> An AXN private number is a dedicated private number assigned to phone number A. When an N-side number is used to call phone number X, the call is forwarded to phone number A.</para>
-        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, make sure that you have <a href="https://dyplsnext.console.aliyun.com/numberbuy">purchased a privacy number</a> in the console.</description></item>
+        /// <item><description>You can use this operation to bind numbers to an AXN privacy number, or bind Number A and Number B to an AXN privacy number on the <a href="https://dyplsnext.console.aliyun.com/number/list?spm=a2c4g.11186623.0.0.64e649bbTzmb6j&resType=1&billId=FC100000165392498">Number Management</a> page in the console.</description></item>
+        /// <item><description>Before binding numbers to an AXN privacy number, clarify the role of User A in your business scenario. For example, in a used car information publishing scenario, User A represents the contact information of the landlord or agent.</description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 5,000 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1840,14 +1951,18 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an AXN binding.</para>
+        /// <para>Adds a binding relationship for an AXN privacy number. An AXN privacy number assigns an exclusive privacy number to User A, allowing any Number N to reach User A by dialing Number X.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para> An AXN private number is a dedicated private number assigned to phone number A. When an N-side number is used to call phone number X, the call is forwarded to phone number A.</para>
-        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, make sure that you have <a href="https://dyplsnext.console.aliyun.com/numberbuy">purchased a privacy number</a> in the console.</description></item>
+        /// <item><description>You can use this operation to bind numbers to an AXN privacy number, or bind Number A and Number B to an AXN privacy number on the <a href="https://dyplsnext.console.aliyun.com/number/list?spm=a2c4g.11186623.0.0.64e649bbTzmb6j&resType=1&billId=FC100000165392498">Number Management</a> page in the console.</description></item>
+        /// <item><description>Before binding numbers to an AXN privacy number, clarify the role of User A in your business scenario. For example, in a used car information publishing scenario, User A represents the contact information of the landlord or agent.</description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 5,000 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1965,14 +2080,18 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an AXN binding.</para>
+        /// <para>Adds a binding relationship for an AXN privacy number. An AXN privacy number assigns an exclusive privacy number to User A, allowing any Number N to reach User A by dialing Number X.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para> An AXN private number is a dedicated private number assigned to phone number A. When an N-side number is used to call phone number X, the call is forwarded to phone number A.</para>
-        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, make sure that you have <a href="https://dyplsnext.console.aliyun.com/numberbuy">purchased a privacy number</a> in the console.</description></item>
+        /// <item><description>You can use this operation to bind numbers to an AXN privacy number, or bind Number A and Number B to an AXN privacy number on the <a href="https://dyplsnext.console.aliyun.com/number/list?spm=a2c4g.11186623.0.0.64e649bbTzmb6j&resType=1&billId=FC100000165392498">Number Management</a> page in the console.</description></item>
+        /// <item><description>Before binding numbers to an AXN privacy number, clarify the role of User A in your business scenario. For example, in a used car information publishing scenario, User A represents the contact information of the landlord or agent.</description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 5,000 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1990,14 +2109,18 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an AXN binding.</para>
+        /// <para>Adds a binding relationship for an AXN privacy number. An AXN privacy number assigns an exclusive privacy number to User A, allowing any Number N to reach User A by dialing Number X.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para> An AXN private number is a dedicated private number assigned to phone number A. When an N-side number is used to call phone number X, the call is forwarded to phone number A.</para>
-        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, make sure that you have <a href="https://dyplsnext.console.aliyun.com/numberbuy">purchased a privacy number</a> in the console.</description></item>
+        /// <item><description>You can use this operation to bind numbers to an AXN privacy number, or bind Number A and Number B to an AXN privacy number on the <a href="https://dyplsnext.console.aliyun.com/number/list?spm=a2c4g.11186623.0.0.64e649bbTzmb6j&resType=1&billId=FC100000165392498">Number Management</a> page in the console.</description></item>
+        /// <item><description>Before binding numbers to an AXN privacy number, clarify the role of User A in your business scenario. For example, in a used car information publishing scenario, User A represents the contact information of the landlord or agent.</description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 5,000 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2015,14 +2138,18 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an AXN extension binding.</para>
+        /// <para>Adds a binding relationship for an AXN extension number. The AXN extension number feature is similar to the AXN privacy number feature but introduces extension numbers to reduce the usage of X numbers. When making a call, the caller dials the X number first and then enters the corresponding extension number after hearing the prompt tone to connect to number A.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you add an AXN extension binding, confirm phone number A and phone number N in the business scenario. Phone number A belongs to a customer, and phone number X is the private number assigned to the customer. When any other phone number is used to call phone number X and the extension, the call is transferred to phone number A. When phone number A is used to call phone number X, the call is transferred to the default phone number B that is specified during the phone number binding.</para>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 5,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, make sure that you have <a href="https://dyplsnext.console.aliyun.com/numberbuy">purchased privacy numbers</a> in the console.</description></item>
+        /// <item><description>You can use this operation to bind numbers to an AXN extension number. You can also bind numbers A and B to an AXN extension number on the <a href="https://dyplsnext.console.aliyun.com/number/list?spm=a2c4g.11186623.0.0.64e649bbTzmb6j&resType=1&billId=FC100000165392498">Number Management</a> page in the console.</description></item>
+        /// <item><description>Before binding numbers for an AXN extension number, we recommend that you clarify the roles of A and N in your business scenario. For example, if number A is a customer, number X is the privacy number assigned to the customer. Calls from any other number to number X plus the extension number are forwarded to number A. When A calls X, the call is forwarded to the default number B specified during binding.</description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 5,000 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2136,14 +2263,18 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an AXN extension binding.</para>
+        /// <para>Adds a binding relationship for an AXN extension number. The AXN extension number feature is similar to the AXN privacy number feature but introduces extension numbers to reduce the usage of X numbers. When making a call, the caller dials the X number first and then enters the corresponding extension number after hearing the prompt tone to connect to number A.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you add an AXN extension binding, confirm phone number A and phone number N in the business scenario. Phone number A belongs to a customer, and phone number X is the private number assigned to the customer. When any other phone number is used to call phone number X and the extension, the call is transferred to phone number A. When phone number A is used to call phone number X, the call is transferred to the default phone number B that is specified during the phone number binding.</para>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 5,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, make sure that you have <a href="https://dyplsnext.console.aliyun.com/numberbuy">purchased privacy numbers</a> in the console.</description></item>
+        /// <item><description>You can use this operation to bind numbers to an AXN extension number. You can also bind numbers A and B to an AXN extension number on the <a href="https://dyplsnext.console.aliyun.com/number/list?spm=a2c4g.11186623.0.0.64e649bbTzmb6j&resType=1&billId=FC100000165392498">Number Management</a> page in the console.</description></item>
+        /// <item><description>Before binding numbers for an AXN extension number, we recommend that you clarify the roles of A and N in your business scenario. For example, if number A is a customer, number X is the privacy number assigned to the customer. Calls from any other number to number X plus the extension number are forwarded to number A. When A calls X, the call is forwarded to the default number B specified during binding.</description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 5,000 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2257,14 +2388,18 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an AXN extension binding.</para>
+        /// <para>Adds a binding relationship for an AXN extension number. The AXN extension number feature is similar to the AXN privacy number feature but introduces extension numbers to reduce the usage of X numbers. When making a call, the caller dials the X number first and then enters the corresponding extension number after hearing the prompt tone to connect to number A.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you add an AXN extension binding, confirm phone number A and phone number N in the business scenario. Phone number A belongs to a customer, and phone number X is the private number assigned to the customer. When any other phone number is used to call phone number X and the extension, the call is transferred to phone number A. When phone number A is used to call phone number X, the call is transferred to the default phone number B that is specified during the phone number binding.</para>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 5,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, make sure that you have <a href="https://dyplsnext.console.aliyun.com/numberbuy">purchased privacy numbers</a> in the console.</description></item>
+        /// <item><description>You can use this operation to bind numbers to an AXN extension number. You can also bind numbers A and B to an AXN extension number on the <a href="https://dyplsnext.console.aliyun.com/number/list?spm=a2c4g.11186623.0.0.64e649bbTzmb6j&resType=1&billId=FC100000165392498">Number Management</a> page in the console.</description></item>
+        /// <item><description>Before binding numbers for an AXN extension number, we recommend that you clarify the roles of A and N in your business scenario. For example, if number A is a customer, number X is the privacy number assigned to the customer. Calls from any other number to number X plus the extension number are forwarded to number A. When A calls X, the call is forwarded to the default number B specified during binding.</description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 5,000 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2282,14 +2417,18 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an AXN extension binding.</para>
+        /// <para>Adds a binding relationship for an AXN extension number. The AXN extension number feature is similar to the AXN privacy number feature but introduces extension numbers to reduce the usage of X numbers. When making a call, the caller dials the X number first and then enters the corresponding extension number after hearing the prompt tone to connect to number A.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you add an AXN extension binding, confirm phone number A and phone number N in the business scenario. Phone number A belongs to a customer, and phone number X is the private number assigned to the customer. When any other phone number is used to call phone number X and the extension, the call is transferred to phone number A. When phone number A is used to call phone number X, the call is transferred to the default phone number B that is specified during the phone number binding.</para>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 5,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, make sure that you have <a href="https://dyplsnext.console.aliyun.com/numberbuy">purchased privacy numbers</a> in the console.</description></item>
+        /// <item><description>You can use this operation to bind numbers to an AXN extension number. You can also bind numbers A and B to an AXN extension number on the <a href="https://dyplsnext.console.aliyun.com/number/list?spm=a2c4g.11186623.0.0.64e649bbTzmb6j&resType=1&billId=FC100000165392498">Number Management</a> page in the console.</description></item>
+        /// <item><description>Before binding numbers for an AXN extension number, we recommend that you clarify the roles of A and N in your business scenario. For example, if number A is a customer, number X is the privacy number assigned to the customer. Calls from any other number to number X plus the extension number are forwarded to number A. When A calls X, the call is forwarded to the default number B specified during binding.</description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 5,000 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2307,8 +2446,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AXN分机号-号码绑定</para>
+        /// <para>The fixed-line AXN extension number introduces extension numbers on top of the fixed-line AXN privacy number, thereby reducing the usage of X numbers. When making a call, first dial the X number, and then enter the corresponding extension number after hearing the prompt tone to be connected to A. The fixed-line AXN extension number service is currently invitation-only. Contact your technical support to activate the service and obtain integration support.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before calling this API, make sure that you have <a href="https://dyplsnext.console.aliyun.com/numberbuy">purchased privacy numbers</a> in the console.</description></item>
+        /// <item><description>You can use this API to bind numbers for the fixed-line AXN extension number. Binding numbers for the fixed-line AXN extension number through the console is not supported.</description></item>
+        /// <item><description>Before binding numbers, we recommend that you first clarify the A role and N role in your business scenario. For example, if the A number represents the customer, the X number is the privacy number assigned to the customer. Any other number calling the X number plus the extension number will be forwarded to the A number. When A calls X, the call will be forwarded to the default B number specified during binding.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// BindAxnExtensionFixedLineRequest
@@ -2423,8 +2571,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AXN分机号-号码绑定</para>
+        /// <para>The fixed-line AXN extension number introduces extension numbers on top of the fixed-line AXN privacy number, thereby reducing the usage of X numbers. When making a call, first dial the X number, and then enter the corresponding extension number after hearing the prompt tone to be connected to A. The fixed-line AXN extension number service is currently invitation-only. Contact your technical support to activate the service and obtain integration support.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before calling this API, make sure that you have <a href="https://dyplsnext.console.aliyun.com/numberbuy">purchased privacy numbers</a> in the console.</description></item>
+        /// <item><description>You can use this API to bind numbers for the fixed-line AXN extension number. Binding numbers for the fixed-line AXN extension number through the console is not supported.</description></item>
+        /// <item><description>Before binding numbers, we recommend that you first clarify the A role and N role in your business scenario. For example, if the A number represents the customer, the X number is the privacy number assigned to the customer. Any other number calling the X number plus the extension number will be forwarded to the A number. When A calls X, the call will be forwarded to the default B number specified during binding.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// BindAxnExtensionFixedLineRequest
@@ -2539,8 +2696,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AXN分机号-号码绑定</para>
+        /// <para>The fixed-line AXN extension number introduces extension numbers on top of the fixed-line AXN privacy number, thereby reducing the usage of X numbers. When making a call, first dial the X number, and then enter the corresponding extension number after hearing the prompt tone to be connected to A. The fixed-line AXN extension number service is currently invitation-only. Contact your technical support to activate the service and obtain integration support.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before calling this API, make sure that you have <a href="https://dyplsnext.console.aliyun.com/numberbuy">purchased privacy numbers</a> in the console.</description></item>
+        /// <item><description>You can use this API to bind numbers for the fixed-line AXN extension number. Binding numbers for the fixed-line AXN extension number through the console is not supported.</description></item>
+        /// <item><description>Before binding numbers, we recommend that you first clarify the A role and N role in your business scenario. For example, if the A number represents the customer, the X number is the privacy number assigned to the customer. Any other number calling the X number plus the extension number will be forwarded to the A number. When A calls X, the call will be forwarded to the default B number specified during binding.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// BindAxnExtensionFixedLineRequest
@@ -2557,8 +2723,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AXN分机号-号码绑定</para>
+        /// <para>The fixed-line AXN extension number introduces extension numbers on top of the fixed-line AXN privacy number, thereby reducing the usage of X numbers. When making a call, first dial the X number, and then enter the corresponding extension number after hearing the prompt tone to be connected to A. The fixed-line AXN extension number service is currently invitation-only. Contact your technical support to activate the service and obtain integration support.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before calling this API, make sure that you have <a href="https://dyplsnext.console.aliyun.com/numberbuy">purchased privacy numbers</a> in the console.</description></item>
+        /// <item><description>You can use this API to bind numbers for the fixed-line AXN extension number. Binding numbers for the fixed-line AXN extension number through the console is not supported.</description></item>
+        /// <item><description>Before binding numbers, we recommend that you first clarify the A role and N role in your business scenario. For example, if the A number represents the customer, the X number is the privacy number assigned to the customer. Any other number calling the X number plus the extension number will be forwarded to the A number. When A calls X, the call will be forwarded to the default B number specified during binding.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// BindAxnExtensionFixedLineRequest
@@ -2575,8 +2750,16 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AXN模式绑定，分配X号码</para>
+        /// <para>Binds a fixed-line AXN privacy number to assign a dedicated privacy number to User A, which allows any number N to be forwarded to User A by dialing number X. Fixed-line privacy numbers are currently available by invitation only. Contact your technical support to activate the service and obtain integration assistance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have purchased a privacy number in the console. You can use this operation to bind a number to a fixed-line AXN privacy number. The console does not support binding for fixed-line AXN privacy numbers.</description></item>
+        /// <item><description>Before binding a number, we recommend that you clarify the role of User A in your business scenario. For example, in a used car listing scenario, User A represents the contact information of the property owner or broker.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// BindAxnFixedLineRequest
@@ -2691,8 +2874,16 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AXN模式绑定，分配X号码</para>
+        /// <para>Binds a fixed-line AXN privacy number to assign a dedicated privacy number to User A, which allows any number N to be forwarded to User A by dialing number X. Fixed-line privacy numbers are currently available by invitation only. Contact your technical support to activate the service and obtain integration assistance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have purchased a privacy number in the console. You can use this operation to bind a number to a fixed-line AXN privacy number. The console does not support binding for fixed-line AXN privacy numbers.</description></item>
+        /// <item><description>Before binding a number, we recommend that you clarify the role of User A in your business scenario. For example, in a used car listing scenario, User A represents the contact information of the property owner or broker.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// BindAxnFixedLineRequest
@@ -2807,8 +2998,16 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AXN模式绑定，分配X号码</para>
+        /// <para>Binds a fixed-line AXN privacy number to assign a dedicated privacy number to User A, which allows any number N to be forwarded to User A by dialing number X. Fixed-line privacy numbers are currently available by invitation only. Contact your technical support to activate the service and obtain integration assistance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have purchased a privacy number in the console. You can use this operation to bind a number to a fixed-line AXN privacy number. The console does not support binding for fixed-line AXN privacy numbers.</description></item>
+        /// <item><description>Before binding a number, we recommend that you clarify the role of User A in your business scenario. For example, in a used car listing scenario, User A represents the contact information of the property owner or broker.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// BindAxnFixedLineRequest
@@ -2825,8 +3024,16 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AXN模式绑定，分配X号码</para>
+        /// <para>Binds a fixed-line AXN privacy number to assign a dedicated privacy number to User A, which allows any number N to be forwarded to User A by dialing number X. Fixed-line privacy numbers are currently available by invitation only. Contact your technical support to activate the service and obtain integration assistance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have purchased a privacy number in the console. You can use this operation to bind a number to a fixed-line AXN privacy number. The console does not support binding for fixed-line AXN privacy numbers.</description></item>
+        /// <item><description>Before binding a number, we recommend that you clarify the role of User A in your business scenario. For example, in a used car listing scenario, User A represents the contact information of the property owner or broker.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// BindAxnFixedLineRequest
@@ -2841,6 +3048,22 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
             return await BindAxnFixedLineWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds AXG bindings in batches. The AXG model is a Phone Number Protection Solution for scenarios requiring User Tiering, Call Scope Restriction, or Order Grabbing Restriction. In this model, G represents a Number Group, to which you can add phone numbers.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you bind AXG Numbers, you must purchase X Numbers, create a G Number Group, and add Numbers to the group. To create a G Number Group, see <a href="https://help.aliyun.com/zh/pnp/user-guide/manage-phone-number-pools#section-9bb-xrg-c78">Set up G Number Group</a> or call the <a href="https://help.aliyun.com/zh/pnp/developer-reference/api-dyplsapi-2017-05-25-createaxggroup">CreateAxgGroup</a> API.</description></item>
+        /// <item><description>Before binding AXG Numbers, define Role A and Role G for your business scenario. For example, on a recruitment platform, Role A can represent job applicants and Role G can represent the hiring team.</description></item>
+        /// <item><description>When you call this API for Batch Binding of AXG Numbers, a single failed request does not affect others in the batch. The API returns a status code for each binding request.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for this API is 5,000 per user. Exceeding this limit results in throttling. Plan your API calls accordingly to avoid impacting your business.</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// BindBatchAxgRequest
         /// </param>
@@ -2900,6 +3123,22 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
             return TeaModel.ToObject<BindBatchAxgResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds AXG bindings in batches. The AXG model is a Phone Number Protection Solution for scenarios requiring User Tiering, Call Scope Restriction, or Order Grabbing Restriction. In this model, G represents a Number Group, to which you can add phone numbers.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you bind AXG Numbers, you must purchase X Numbers, create a G Number Group, and add Numbers to the group. To create a G Number Group, see <a href="https://help.aliyun.com/zh/pnp/user-guide/manage-phone-number-pools#section-9bb-xrg-c78">Set up G Number Group</a> or call the <a href="https://help.aliyun.com/zh/pnp/developer-reference/api-dyplsapi-2017-05-25-createaxggroup">CreateAxgGroup</a> API.</description></item>
+        /// <item><description>Before binding AXG Numbers, define Role A and Role G for your business scenario. For example, on a recruitment platform, Role A can represent job applicants and Role G can represent the hiring team.</description></item>
+        /// <item><description>When you call this API for Batch Binding of AXG Numbers, a single failed request does not affect others in the batch. The API returns a status code for each binding request.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for this API is 5,000 per user. Exceeding this limit results in throttling. Plan your API calls accordingly to avoid impacting your business.</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// BindBatchAxgRequest
         /// </param>
@@ -2959,6 +3198,22 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
             return TeaModel.ToObject<BindBatchAxgResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds AXG bindings in batches. The AXG model is a Phone Number Protection Solution for scenarios requiring User Tiering, Call Scope Restriction, or Order Grabbing Restriction. In this model, G represents a Number Group, to which you can add phone numbers.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you bind AXG Numbers, you must purchase X Numbers, create a G Number Group, and add Numbers to the group. To create a G Number Group, see <a href="https://help.aliyun.com/zh/pnp/user-guide/manage-phone-number-pools#section-9bb-xrg-c78">Set up G Number Group</a> or call the <a href="https://help.aliyun.com/zh/pnp/developer-reference/api-dyplsapi-2017-05-25-createaxggroup">CreateAxgGroup</a> API.</description></item>
+        /// <item><description>Before binding AXG Numbers, define Role A and Role G for your business scenario. For example, on a recruitment platform, Role A can represent job applicants and Role G can represent the hiring team.</description></item>
+        /// <item><description>When you call this API for Batch Binding of AXG Numbers, a single failed request does not affect others in the batch. The API returns a status code for each binding request.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for this API is 5,000 per user. Exceeding this limit results in throttling. Plan your API calls accordingly to avoid impacting your business.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// BindBatchAxgRequest
         /// </param>
@@ -2972,6 +3227,22 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
             return BindBatchAxgWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds AXG bindings in batches. The AXG model is a Phone Number Protection Solution for scenarios requiring User Tiering, Call Scope Restriction, or Order Grabbing Restriction. In this model, G represents a Number Group, to which you can add phone numbers.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you bind AXG Numbers, you must purchase X Numbers, create a G Number Group, and add Numbers to the group. To create a G Number Group, see <a href="https://help.aliyun.com/zh/pnp/user-guide/manage-phone-number-pools#section-9bb-xrg-c78">Set up G Number Group</a> or call the <a href="https://help.aliyun.com/zh/pnp/developer-reference/api-dyplsapi-2017-05-25-createaxggroup">CreateAxgGroup</a> API.</description></item>
+        /// <item><description>Before binding AXG Numbers, define Role A and Role G for your business scenario. For example, on a recruitment platform, Role A can represent job applicants and Role G can represent the hiring team.</description></item>
+        /// <item><description>When you call this API for Batch Binding of AXG Numbers, a single failed request does not affect others in the batch. The API returns a status code for each binding request.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for this API is 5,000 per user. Exceeding this limit results in throttling. Plan your API calls accordingly to avoid impacting your business.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// BindBatchAxgRequest
         /// </param>
@@ -2987,8 +3258,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建700Gxb绑定关系</para>
+        /// <para>Adds a binding relationship for a 700GXB private number. The 700GXB product is a privacy protection solutions designed for scenarios that require user-level classification, call scope restrictions, and order-grabbing restrictions. In this product, G represents a number group, and you can add numbers to the group as needed.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that you have purchased a private number in the console.
+        /// You can use this operation to bind numbers to a 700GXB private number, or bind numbers on the Number Management page in the console.
+        /// Before binding numbers for a 700GXB private number, clarify the G role and B role in your business scenario. For example, on a recruitment platform, B is the job applicant and G is the recruitment team.
+        /// QPS limit
+        /// The single-user QPS limit for this operation is 5,000 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BindGxb700Request
@@ -3109,8 +3389,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建700Gxb绑定关系</para>
+        /// <para>Adds a binding relationship for a 700GXB private number. The 700GXB product is a privacy protection solutions designed for scenarios that require user-level classification, call scope restrictions, and order-grabbing restrictions. In this product, G represents a number group, and you can add numbers to the group as needed.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that you have purchased a private number in the console.
+        /// You can use this operation to bind numbers to a 700GXB private number, or bind numbers on the Number Management page in the console.
+        /// Before binding numbers for a 700GXB private number, clarify the G role and B role in your business scenario. For example, on a recruitment platform, B is the job applicant and G is the recruitment team.
+        /// QPS limit
+        /// The single-user QPS limit for this operation is 5,000 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BindGxb700Request
@@ -3231,8 +3520,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建700Gxb绑定关系</para>
+        /// <para>Adds a binding relationship for a 700GXB private number. The 700GXB product is a privacy protection solutions designed for scenarios that require user-level classification, call scope restrictions, and order-grabbing restrictions. In this product, G represents a number group, and you can add numbers to the group as needed.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that you have purchased a private number in the console.
+        /// You can use this operation to bind numbers to a 700GXB private number, or bind numbers on the Number Management page in the console.
+        /// Before binding numbers for a 700GXB private number, clarify the G role and B role in your business scenario. For example, on a recruitment platform, B is the job applicant and G is the recruitment team.
+        /// QPS limit
+        /// The single-user QPS limit for this operation is 5,000 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BindGxb700Request
@@ -3249,8 +3547,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建700Gxb绑定关系</para>
+        /// <para>Adds a binding relationship for a 700GXB private number. The 700GXB product is a privacy protection solutions designed for scenarios that require user-level classification, call scope restrictions, and order-grabbing restrictions. In this product, G represents a number group, and you can add numbers to the group as needed.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that you have purchased a private number in the console.
+        /// You can use this operation to bind numbers to a 700GXB private number, or bind numbers on the Number Management page in the console.
+        /// Before binding numbers for a 700GXB private number, clarify the G role and B role in your business scenario. For example, on a recruitment platform, B is the job applicant and G is the recruitment team.
+        /// QPS limit
+        /// The single-user QPS limit for this operation is 5,000 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BindGxb700Request
@@ -3267,7 +3574,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>平台指定工作号X 和员工号B建立关联，完成X 实名认证，绑定生效后，所有X 的呼叫都会转接到B</para>
+        /// <para>Establishes a binding relationship between a specified work number X and an employee number B on the work number platform. The binding takes effect only after the employee completes real-name verification for the work number. After the binding succeeds, all calls to the work number are forwarded to the employee number. The platform pushes the binding result to the caller through the asynchronous notification API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3341,7 +3648,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>平台指定工作号X 和员工号B建立关联，完成X 实名认证，绑定生效后，所有X 的呼叫都会转接到B</para>
+        /// <para>Establishes a binding relationship between a specified work number X and an employee number B on the work number platform. The binding takes effect only after the employee completes real-name verification for the work number. After the binding succeeds, all calls to the work number are forwarded to the employee number. The platform pushes the binding result to the caller through the asynchronous notification API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3415,7 +3722,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>平台指定工作号X 和员工号B建立关联，完成X 实名认证，绑定生效后，所有X 的呼叫都会转接到B</para>
+        /// <para>Establishes a binding relationship between a specified work number X and an employee number B on the work number platform. The binding takes effect only after the employee completes real-name verification for the work number. After the binding succeeds, all calls to the work number are forwarded to the employee number. The platform pushes the binding result to the caller through the asynchronous notification API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3433,7 +3740,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>平台指定工作号X 和员工号B建立关联，完成X 实名认证，绑定生效后，所有X 的呼叫都会转接到B</para>
+        /// <para>Establishes a binding relationship between a specified work number X and an employee number B on the work number platform. The binding takes effect only after the employee completes real-name verification for the work number. After the binding succeeds, all calls to the work number are forwarded to the employee number. The platform pushes the binding result to the caller through the asynchronous notification API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3843,7 +4150,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置X号码，单独对工作号的话音呼叫、企业名片等通信功能进行配置操作</para>
+        /// <para>Configures an X number to independently manage communication features such as voice calls and enterprise business cards for a work number.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3939,7 +4246,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置X号码，单独对工作号的话音呼叫、企业名片等通信功能进行配置操作</para>
+        /// <para>Configures an X number to independently manage communication features such as voice calls and enterprise business cards for a work number.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4035,7 +4342,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置X号码，单独对工作号的话音呼叫、企业名片等通信功能进行配置操作</para>
+        /// <para>Configures an X number to independently manage communication features such as voice calls and enterprise business cards for a work number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4053,7 +4360,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置X号码，单独对工作号的话音呼叫、企业名片等通信功能进行配置操作</para>
+        /// <para>Configures an X number to independently manage communication features such as voice calls and enterprise business cards for a work number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4271,8 +4578,15 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过API收集小号a号码固话</para>
+        /// <para>Submit Individual Information of a landline number A through an API.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before invoking this API, you need to first call <a href="https://help.aliyun.com/document_detail/2880885.html">GetDyplsOSSInfoForUploadFile</a> to upload the individual\&quot;s photo information to OSS. For the detailed operation flow, see <a href="https://help.aliyun.com/document_detail/2880077.html">Submit Individual Real-name Information for Number A via API</a>.</para>
+        /// <h3>queries per second (QPS) limit</h3>
+        /// <para>The QPS limit for this API is 50 queries per second per user. If this limit is exceeded, Rate Limiting will be applied to your API Call, which may Impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateFixedNoAReportRequest
@@ -4369,8 +4683,15 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过API收集小号a号码固话</para>
+        /// <para>Submit Individual Information of a landline number A through an API.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before invoking this API, you need to first call <a href="https://help.aliyun.com/document_detail/2880885.html">GetDyplsOSSInfoForUploadFile</a> to upload the individual\&quot;s photo information to OSS. For the detailed operation flow, see <a href="https://help.aliyun.com/document_detail/2880077.html">Submit Individual Real-name Information for Number A via API</a>.</para>
+        /// <h3>queries per second (QPS) limit</h3>
+        /// <para>The QPS limit for this API is 50 queries per second per user. If this limit is exceeded, Rate Limiting will be applied to your API Call, which may Impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateFixedNoAReportRequest
@@ -4467,8 +4788,15 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过API收集小号a号码固话</para>
+        /// <para>Submit Individual Information of a landline number A through an API.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before invoking this API, you need to first call <a href="https://help.aliyun.com/document_detail/2880885.html">GetDyplsOSSInfoForUploadFile</a> to upload the individual\&quot;s photo information to OSS. For the detailed operation flow, see <a href="https://help.aliyun.com/document_detail/2880077.html">Submit Individual Real-name Information for Number A via API</a>.</para>
+        /// <h3>queries per second (QPS) limit</h3>
+        /// <para>The QPS limit for this API is 50 queries per second per user. If this limit is exceeded, Rate Limiting will be applied to your API Call, which may Impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateFixedNoAReportRequest
@@ -4485,8 +4813,15 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过API收集小号a号码固话</para>
+        /// <para>Submit Individual Information of a landline number A through an API.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before invoking this API, you need to first call <a href="https://help.aliyun.com/document_detail/2880885.html">GetDyplsOSSInfoForUploadFile</a> to upload the individual\&quot;s photo information to OSS. For the detailed operation flow, see <a href="https://help.aliyun.com/document_detail/2880077.html">Submit Individual Real-name Information for Number A via API</a>.</para>
+        /// <h3>queries per second (QPS) limit</h3>
+        /// <para>The QPS limit for this API is 50 queries per second per user. If this limit is exceeded, Rate Limiting will be applied to your API Call, which may Impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateFixedNoAReportRequest
@@ -4503,8 +4838,15 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过API收集小号a号码手机号</para>
+        /// <para>Submit Individual Information of an A-number mobile phone number through an API.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before invoking this API, you must first call <a href="https://help.aliyun.com/document_detail/2880885.html">GetDyplsOSSInfoForUploadFile</a> to upload the individual\&quot;s photo information to OSS. For the detailed operation flow, see <a href="https://help.aliyun.com/document_detail/2880077.html">Submit Individual Real-name Information of an A-number Mobile Phone Number via API</a>.</para>
+        /// <h3>QPS Limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 50 requests per second per user. If this limit is exceeded, API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreatePhoneNoAReportRequest
@@ -4589,8 +4931,15 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过API收集小号a号码手机号</para>
+        /// <para>Submit Individual Information of an A-number mobile phone number through an API.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before invoking this API, you must first call <a href="https://help.aliyun.com/document_detail/2880885.html">GetDyplsOSSInfoForUploadFile</a> to upload the individual\&quot;s photo information to OSS. For the detailed operation flow, see <a href="https://help.aliyun.com/document_detail/2880077.html">Submit Individual Real-name Information of an A-number Mobile Phone Number via API</a>.</para>
+        /// <h3>QPS Limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 50 requests per second per user. If this limit is exceeded, API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreatePhoneNoAReportRequest
@@ -4675,8 +5024,15 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过API收集小号a号码手机号</para>
+        /// <para>Submit Individual Information of an A-number mobile phone number through an API.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before invoking this API, you must first call <a href="https://help.aliyun.com/document_detail/2880885.html">GetDyplsOSSInfoForUploadFile</a> to upload the individual\&quot;s photo information to OSS. For the detailed operation flow, see <a href="https://help.aliyun.com/document_detail/2880077.html">Submit Individual Real-name Information of an A-number Mobile Phone Number via API</a>.</para>
+        /// <h3>QPS Limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 50 requests per second per user. If this limit is exceeded, API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreatePhoneNoAReportRequest
@@ -4693,8 +5049,15 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过API收集小号a号码手机号</para>
+        /// <para>Submit Individual Information of an A-number mobile phone number through an API.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before invoking this API, you must first call <a href="https://help.aliyun.com/document_detail/2880885.html">GetDyplsOSSInfoForUploadFile</a> to upload the individual\&quot;s photo information to OSS. For the detailed operation flow, see <a href="https://help.aliyun.com/document_detail/2880077.html">Submit Individual Real-name Information of an A-number Mobile Phone Number via API</a>.</para>
+        /// <h3>QPS Limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 50 requests per second per user. If this limit is exceeded, API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreatePhoneNoAReportRequest
@@ -4711,13 +5074,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a door-to-door delivery order.</para>
+        /// <para>Creates a door-to-door pickup order.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 200 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4833,13 +5196,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a door-to-door delivery order.</para>
+        /// <para>Creates a door-to-door pickup order.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 200 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4955,13 +5318,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a door-to-door delivery order.</para>
+        /// <para>Creates a door-to-door pickup order.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 200 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4979,13 +5342,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a door-to-door delivery order.</para>
+        /// <para>Creates a door-to-door pickup order.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 200 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5003,13 +5366,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a pickup order.</para>
+        /// <para>Pre-queries shipping order information before placing an order.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this operation is 100 calls per second. Exceeding this limit will trigger throttling, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5081,13 +5444,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a pickup order.</para>
+        /// <para>Pre-queries shipping order information before placing an order.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this operation is 100 calls per second. Exceeding this limit will trigger throttling, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5159,13 +5522,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a pickup order.</para>
+        /// <para>Pre-queries shipping order information before placing an order.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this operation is 100 calls per second. Exceeding this limit will trigger throttling, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5183,13 +5546,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a pickup order.</para>
+        /// <para>Pre-queries shipping order information before placing an order.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this operation is 100 calls per second. Exceeding this limit will trigger throttling, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5207,7 +5570,143 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>B向A 发短信，客户端获取“短信标签”，尾部添加“标签”。通过“标签”解析被叫A，发短信到A。</para>
+        /// <para>对客提交号码迁移任务，两侧号池须为同一资质、同一场景且均为开启状态。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSecretTransferRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSecretTransferRecordResponse
+        /// </returns>
+        public CreateSecretTransferRecordResponse CreateSecretTransferRecordWithOptions(CreateSecretTransferRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LastPartnerKey))
+            {
+                query["LastPartnerKey"] = request.LastPartnerKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NumberList))
+            {
+                query["NumberList"] = request.NumberList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginPartnerKey))
+            {
+                query["OriginPartnerKey"] = request.OriginPartnerKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSecretTransferRecord",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSecretTransferRecordResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>对客提交号码迁移任务，两侧号池须为同一资质、同一场景且均为开启状态。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSecretTransferRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSecretTransferRecordResponse
+        /// </returns>
+        public async Task<CreateSecretTransferRecordResponse> CreateSecretTransferRecordWithOptionsAsync(CreateSecretTransferRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LastPartnerKey))
+            {
+                query["LastPartnerKey"] = request.LastPartnerKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NumberList))
+            {
+                query["NumberList"] = request.NumberList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginPartnerKey))
+            {
+                query["OriginPartnerKey"] = request.OriginPartnerKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSecretTransferRecord",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSecretTransferRecordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>对客提交号码迁移任务，两侧号池须为同一资质、同一场景且均为开启状态。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSecretTransferRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSecretTransferRecordResponse
+        /// </returns>
+        public CreateSecretTransferRecordResponse CreateSecretTransferRecord(CreateSecretTransferRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateSecretTransferRecordWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>对客提交号码迁移任务，两侧号池须为同一资质、同一场景且均为开启状态。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSecretTransferRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSecretTransferRecordResponse
+        /// </returns>
+        public async Task<CreateSecretTransferRecordResponse> CreateSecretTransferRecordAsync(CreateSecretTransferRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateSecretTransferRecordWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates a text message delivery tag for scenarios where an employee sends a text message to a customer by using a work number. The client calls this operation to obtain the tag and appends it to the end of the message content. The work number platform then parses the actual called number from the tag and delivers the message to the customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5277,7 +5776,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>B向A 发短信，客户端获取“短信标签”，尾部添加“标签”。通过“标签”解析被叫A，发短信到A。</para>
+        /// <para>Generates a text message delivery tag for scenarios where an employee sends a text message to a customer by using a work number. The client calls this operation to obtain the tag and appends it to the end of the message content. The work number platform then parses the actual called number from the tag and delivers the message to the customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5347,7 +5846,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>B向A 发短信，客户端获取“短信标签”，尾部添加“标签”。通过“标签”解析被叫A，发短信到A。</para>
+        /// <para>Generates a text message delivery tag for scenarios where an employee sends a text message to a customer by using a work number. The client calls this operation to obtain the tag and appends it to the end of the message content. The work number platform then parses the actual called number from the tag and delivers the message to the customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5365,7 +5864,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>B向A 发短信，客户端获取“短信标签”，尾部添加“标签”。通过“标签”解析被叫A，发短信到A。</para>
+        /// <para>Generates a text message delivery tag for scenarios where an employee sends a text message to a customer by using a work number. The client calls this operation to obtain the tag and appends it to the end of the message content. The work number platform then parses the actual called number from the tag and delivers the message to the customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5383,8 +5882,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>固话AxB解绑</para>
+        /// <para>Unbind a fixed-line AXB privacy number.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After unbinding a fixed-line AXB privacy number from an existing binding, your business continuity may be affected. Proceed with caution.</description></item>
+        /// <item><description>Before releasing a number, you must unbind the number first.</description></item>
+        /// <item><description>Unbinding a fixed-line AXB privacy number is supported only through this API. Unbinding through the console is currently not supported.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAxbBindFixedLineRequest
@@ -5449,8 +5957,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>固话AxB解绑</para>
+        /// <para>Unbind a fixed-line AXB privacy number.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After unbinding a fixed-line AXB privacy number from an existing binding, your business continuity may be affected. Proceed with caution.</description></item>
+        /// <item><description>Before releasing a number, you must unbind the number first.</description></item>
+        /// <item><description>Unbinding a fixed-line AXB privacy number is supported only through this API. Unbinding through the console is currently not supported.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAxbBindFixedLineRequest
@@ -5515,8 +6032,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>固话AxB解绑</para>
+        /// <para>Unbind a fixed-line AXB privacy number.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After unbinding a fixed-line AXB privacy number from an existing binding, your business continuity may be affected. Proceed with caution.</description></item>
+        /// <item><description>Before releasing a number, you must unbind the number first.</description></item>
+        /// <item><description>Unbinding a fixed-line AXB privacy number is supported only through this API. Unbinding through the console is currently not supported.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAxbBindFixedLineRequest
@@ -5533,8 +6059,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>固话AxB解绑</para>
+        /// <para>Unbind a fixed-line AXB privacy number.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After unbinding a fixed-line AXB privacy number from an existing binding, your business continuity may be affected. Proceed with caution.</description></item>
+        /// <item><description>Before releasing a number, you must unbind the number first.</description></item>
+        /// <item><description>Unbinding a fixed-line AXB privacy number is supported only through this API. Unbinding through the console is currently not supported.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAxbBindFixedLineRequest
@@ -5549,6 +6084,23 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
             return await DeleteAxbBindFixedLineWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a G group. G groups are supported only in Number Pools designated for the AXG privacy number type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Deleted G groups cannot be recovered. Proceed with caution.</description></item>
+        /// <item><description>Before calling this operation, verify the G group to be deleted and the Number Pool it belongs to.</description></item>
+        /// <item><description>You cannot delete a G group that has active bindings. Before you delete the group, you must unbind the associated AXG privacy number. To do this, log on to the Phone Number Privacy Protection <a href="https://dyplsnext.console.aliyun.com/number/list">Console</a>, go to the <b>Number Management</b> page, filter by <b>AXG privacy number</b>, and click <b>Details</b> &gt; Unbind. Alternatively, you can call the <a href="https://help.aliyun.com/zh/pnp/developer-reference/api-dyplsapi-2017-05-25-unbindsubscription">UnbindSubscription</a> API to unbind the number.</description></item>
+        /// <item><description>When you delete a G group, all phone numbers in the group are also deleted.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this API is 5,000 requests per second. API calls that exceed this limit are subject to throttling. Plan your API calls accordingly to prevent disruptions to your business.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteAxgGroupRequest
         /// </param>
@@ -5602,6 +6154,23 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
             return TeaModel.ToObject<DeleteAxgGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a G group. G groups are supported only in Number Pools designated for the AXG privacy number type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Deleted G groups cannot be recovered. Proceed with caution.</description></item>
+        /// <item><description>Before calling this operation, verify the G group to be deleted and the Number Pool it belongs to.</description></item>
+        /// <item><description>You cannot delete a G group that has active bindings. Before you delete the group, you must unbind the associated AXG privacy number. To do this, log on to the Phone Number Privacy Protection <a href="https://dyplsnext.console.aliyun.com/number/list">Console</a>, go to the <b>Number Management</b> page, filter by <b>AXG privacy number</b>, and click <b>Details</b> &gt; Unbind. Alternatively, you can call the <a href="https://help.aliyun.com/zh/pnp/developer-reference/api-dyplsapi-2017-05-25-unbindsubscription">UnbindSubscription</a> API to unbind the number.</description></item>
+        /// <item><description>When you delete a G group, all phone numbers in the group are also deleted.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this API is 5,000 requests per second. API calls that exceed this limit are subject to throttling. Plan your API calls accordingly to prevent disruptions to your business.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteAxgGroupRequest
         /// </param>
@@ -5655,6 +6224,23 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
             return TeaModel.ToObject<DeleteAxgGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a G group. G groups are supported only in Number Pools designated for the AXG privacy number type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Deleted G groups cannot be recovered. Proceed with caution.</description></item>
+        /// <item><description>Before calling this operation, verify the G group to be deleted and the Number Pool it belongs to.</description></item>
+        /// <item><description>You cannot delete a G group that has active bindings. Before you delete the group, you must unbind the associated AXG privacy number. To do this, log on to the Phone Number Privacy Protection <a href="https://dyplsnext.console.aliyun.com/number/list">Console</a>, go to the <b>Number Management</b> page, filter by <b>AXG privacy number</b>, and click <b>Details</b> &gt; Unbind. Alternatively, you can call the <a href="https://help.aliyun.com/zh/pnp/developer-reference/api-dyplsapi-2017-05-25-unbindsubscription">UnbindSubscription</a> API to unbind the number.</description></item>
+        /// <item><description>When you delete a G group, all phone numbers in the group are also deleted.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this API is 5,000 requests per second. API calls that exceed this limit are subject to throttling. Plan your API calls accordingly to prevent disruptions to your business.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteAxgGroupRequest
         /// </param>
@@ -5668,6 +6254,23 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
             return DeleteAxgGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a G group. G groups are supported only in Number Pools designated for the AXG privacy number type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Deleted G groups cannot be recovered. Proceed with caution.</description></item>
+        /// <item><description>Before calling this operation, verify the G group to be deleted and the Number Pool it belongs to.</description></item>
+        /// <item><description>You cannot delete a G group that has active bindings. Before you delete the group, you must unbind the associated AXG privacy number. To do this, log on to the Phone Number Privacy Protection <a href="https://dyplsnext.console.aliyun.com/number/list">Console</a>, go to the <b>Number Management</b> page, filter by <b>AXG privacy number</b>, and click <b>Details</b> &gt; Unbind. Alternatively, you can call the <a href="https://help.aliyun.com/zh/pnp/developer-reference/api-dyplsapi-2017-05-25-unbindsubscription">UnbindSubscription</a> API to unbind the number.</description></item>
+        /// <item><description>When you delete a G group, all phone numbers in the group are also deleted.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this API is 5,000 requests per second. API calls that exceed this limit are subject to throttling. Plan your API calls accordingly to prevent disruptions to your business.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteAxgGroupRequest
         /// </param>
@@ -5683,8 +6286,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑已有Axn绑定</para>
+        /// <para>Unbinds a fixed-line AXN private number binding relationship.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After you unbind an existing fixed-line AXN private number binding relationship, your service continuity may be affected. Proceed with caution.</description></item>
+        /// <item><description>Before releasing a number, unbind the number binding relationship.</description></item>
+        /// <item><description>Unbinding a fixed-line AXN private number binding relationship is supported only through this API operation. The console does not support this operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAxnBindFixedLineRequest
@@ -5749,8 +6361,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑已有Axn绑定</para>
+        /// <para>Unbinds a fixed-line AXN private number binding relationship.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After you unbind an existing fixed-line AXN private number binding relationship, your service continuity may be affected. Proceed with caution.</description></item>
+        /// <item><description>Before releasing a number, unbind the number binding relationship.</description></item>
+        /// <item><description>Unbinding a fixed-line AXN private number binding relationship is supported only through this API operation. The console does not support this operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAxnBindFixedLineRequest
@@ -5815,8 +6436,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑已有Axn绑定</para>
+        /// <para>Unbinds a fixed-line AXN private number binding relationship.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After you unbind an existing fixed-line AXN private number binding relationship, your service continuity may be affected. Proceed with caution.</description></item>
+        /// <item><description>Before releasing a number, unbind the number binding relationship.</description></item>
+        /// <item><description>Unbinding a fixed-line AXN private number binding relationship is supported only through this API operation. The console does not support this operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAxnBindFixedLineRequest
@@ -5833,8 +6463,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑已有Axn绑定</para>
+        /// <para>Unbinds a fixed-line AXN private number binding relationship.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After you unbind an existing fixed-line AXN private number binding relationship, your service continuity may be affected. Proceed with caution.</description></item>
+        /// <item><description>Before releasing a number, unbind the number binding relationship.</description></item>
+        /// <item><description>Unbinding a fixed-line AXN private number binding relationship is supported only through this API operation. The console does not support this operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAxnBindFixedLineRequest
@@ -5851,7 +6490,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑已有AXN分机号绑定</para>
+        /// <para>Unbind a fixed-line AXN extension number binding.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5917,7 +6556,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑已有AXN分机号绑定</para>
+        /// <para>Unbind a fixed-line AXN extension number binding.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5983,7 +6622,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑已有AXN分机号绑定</para>
+        /// <para>Unbind a fixed-line AXN extension number binding.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6001,7 +6640,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑已有AXN分机号绑定</para>
+        /// <para>Unbind a fixed-line AXN extension number binding.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6019,8 +6658,16 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A号码报备数据删除</para>
+        /// <para>Delete A-number filing data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API can only delete A-number filing records whose filing status is either &quot;Reviewed and Passed&quot; or &quot;Review Failed.&quot; It does not support deleting A-number filing records with a filing status of &quot;Under Review.&quot;</description></item>
+        /// <item><description>After deleting an A-number filing record, the carrier will immediately impose call restrictions or deactivate the number, which may impact your business continuity. Proceed with caution.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteSecretAPhoneNoToCustRequest
@@ -6077,8 +6724,16 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A号码报备数据删除</para>
+        /// <para>Delete A-number filing data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API can only delete A-number filing records whose filing status is either &quot;Reviewed and Passed&quot; or &quot;Review Failed.&quot; It does not support deleting A-number filing records with a filing status of &quot;Under Review.&quot;</description></item>
+        /// <item><description>After deleting an A-number filing record, the carrier will immediately impose call restrictions or deactivate the number, which may impact your business continuity. Proceed with caution.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteSecretAPhoneNoToCustRequest
@@ -6135,8 +6790,16 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A号码报备数据删除</para>
+        /// <para>Delete A-number filing data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API can only delete A-number filing records whose filing status is either &quot;Reviewed and Passed&quot; or &quot;Review Failed.&quot; It does not support deleting A-number filing records with a filing status of &quot;Under Review.&quot;</description></item>
+        /// <item><description>After deleting an A-number filing record, the carrier will immediately impose call restrictions or deactivate the number, which may impact your business continuity. Proceed with caution.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteSecretAPhoneNoToCustRequest
@@ -6153,8 +6816,16 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A号码报备数据删除</para>
+        /// <para>Delete A-number filing data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API can only delete A-number filing records whose filing status is either &quot;Reviewed and Passed&quot; or &quot;Review Failed.&quot; It does not support deleting A-number filing records with a filing status of &quot;Under Review.&quot;</description></item>
+        /// <item><description>After deleting an A-number filing record, the carrier will immediately impose call restrictions or deactivate the number, which may impact your business continuity. Proceed with caution.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteSecretAPhoneNoToCustRequest
@@ -6171,13 +6842,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a blacklist.</para>
+        /// <para>Deletes the blacklist of a number pool. Only number pools of the AXN privacy number, AXN extension number, and 95AXN privacy number types support blacklists.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is not a batch operation. It supports deleting only one pair of point-to-point blacklist numbers or one number pool blacklist number at a time.</description></item>
+        /// <item><description>To add a blacklist, call the <a href="https://www.alibabacloud.com/help/en/pnp/developer-reference/api-dyplsapi-2017-05-25-addsecretblacklist">AddSecretBlacklist</a> operation.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6235,13 +6910,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a blacklist.</para>
+        /// <para>Deletes the blacklist of a number pool. Only number pools of the AXN privacy number, AXN extension number, and 95AXN privacy number types support blacklists.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is not a batch operation. It supports deleting only one pair of point-to-point blacklist numbers or one number pool blacklist number at a time.</description></item>
+        /// <item><description>To add a blacklist, call the <a href="https://www.alibabacloud.com/help/en/pnp/developer-reference/api-dyplsapi-2017-05-25-addsecretblacklist">AddSecretBlacklist</a> operation.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6299,13 +6978,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a blacklist.</para>
+        /// <para>Deletes the blacklist of a number pool. Only number pools of the AXN privacy number, AXN extension number, and 95AXN privacy number types support blacklists.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is not a batch operation. It supports deleting only one pair of point-to-point blacklist numbers or one number pool blacklist number at a time.</description></item>
+        /// <item><description>To add a blacklist, call the <a href="https://www.alibabacloud.com/help/en/pnp/developer-reference/api-dyplsapi-2017-05-25-addsecretblacklist">AddSecretBlacklist</a> operation.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6323,13 +7006,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a blacklist.</para>
+        /// <para>Deletes the blacklist of a number pool. Only number pools of the AXN privacy number, AXN extension number, and 95AXN privacy number types support blacklists.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is not a batch operation. It supports deleting only one pair of point-to-point blacklist numbers or one number pool blacklist number at a time.</description></item>
+        /// <item><description>To add a blacklist, call the <a href="https://www.alibabacloud.com/help/en/pnp/developer-reference/api-dyplsapi-2017-05-25-addsecretblacklist">AddSecretBlacklist</a> operation.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6347,8 +7034,16 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>隐私号上传文件，获取 OSS 信息</para>
+        /// <para>Obtain OSS resource configuration information. This configuration information will be used for subsequent OSS image upload operations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>When uploading personal filing photos for an A-number mobile phone number, you must upload a clear frontal portrait photo with the face unobscured, and optionally select to upload photos of both sides of your ID card. Uploading these photos helps reviewers understand your personal identity information. Supported formats are PNG, JPG, and JPEG. The image size must not exceed 2 MB.</description></item>
+        /// <item><description>For the specific operation flow when submitting personal real-name filing for an A-number mobile phone number through the API, see <a href="https://help.aliyun.com/document_detail/2880077.html">Submit Personal Real-Name Information for an A-Number Mobile Phone Number via API</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDyplsOSSInfoForUploadFileRequest
@@ -6401,8 +7096,16 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>隐私号上传文件，获取 OSS 信息</para>
+        /// <para>Obtain OSS resource configuration information. This configuration information will be used for subsequent OSS image upload operations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>When uploading personal filing photos for an A-number mobile phone number, you must upload a clear frontal portrait photo with the face unobscured, and optionally select to upload photos of both sides of your ID card. Uploading these photos helps reviewers understand your personal identity information. Supported formats are PNG, JPG, and JPEG. The image size must not exceed 2 MB.</description></item>
+        /// <item><description>For the specific operation flow when submitting personal real-name filing for an A-number mobile phone number through the API, see <a href="https://help.aliyun.com/document_detail/2880077.html">Submit Personal Real-Name Information for an A-Number Mobile Phone Number via API</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDyplsOSSInfoForUploadFileRequest
@@ -6455,8 +7158,16 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>隐私号上传文件，获取 OSS 信息</para>
+        /// <para>Obtain OSS resource configuration information. This configuration information will be used for subsequent OSS image upload operations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>When uploading personal filing photos for an A-number mobile phone number, you must upload a clear frontal portrait photo with the face unobscured, and optionally select to upload photos of both sides of your ID card. Uploading these photos helps reviewers understand your personal identity information. Supported formats are PNG, JPG, and JPEG. The image size must not exceed 2 MB.</description></item>
+        /// <item><description>For the specific operation flow when submitting personal real-name filing for an A-number mobile phone number through the API, see <a href="https://help.aliyun.com/document_detail/2880077.html">Submit Personal Real-Name Information for an A-Number Mobile Phone Number via API</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDyplsOSSInfoForUploadFileRequest
@@ -6473,8 +7184,16 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>隐私号上传文件，获取 OSS 信息</para>
+        /// <para>Obtain OSS resource configuration information. This configuration information will be used for subsequent OSS image upload operations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>When uploading personal filing photos for an A-number mobile phone number, you must upload a clear frontal portrait photo with the face unobscured, and optionally select to upload photos of both sides of your ID card. Uploading these photos helps reviewers understand your personal identity information. Supported formats are PNG, JPG, and JPEG. The image size must not exceed 2 MB.</description></item>
+        /// <item><description>For the specific operation flow when submitting personal real-name filing for an A-number mobile phone number through the API, see <a href="https://help.aliyun.com/document_detail/2880077.html">Submit Personal Real-Name Information for an A-Number Mobile Phone Number via API</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDyplsOSSInfoForUploadFileRequest
@@ -6847,7 +7566,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取X号码配置信息</para>
+        /// <para>Retrieves the configuration information of the X number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6913,7 +7632,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取X号码配置信息</para>
+        /// <para>Retrieves the configuration information of the X number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6979,7 +7698,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取X号码配置信息</para>
+        /// <para>Retrieves the configuration information of the X number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6997,7 +7716,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取X号码配置信息</para>
+        /// <para>Retrieves the configuration information of the X number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7015,7 +7734,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取X号码默认配置信息</para>
+        /// <para>Retrieves the default configurations of an X number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7081,7 +7800,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取X号码默认配置信息</para>
+        /// <para>Retrieves the default configurations of an X number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7147,7 +7866,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取X号码默认配置信息</para>
+        /// <para>Retrieves the default configurations of an X number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7165,7 +7884,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取X号码默认配置信息</para>
+        /// <para>Retrieves the default configurations of an X number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7183,7 +7902,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询客户名下X号码列表</para>
+        /// <para>Queries the list of X numbers under a customer account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7253,7 +7972,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询客户名下X号码列表</para>
+        /// <para>Queries the list of X numbers under a customer account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7323,7 +8042,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询客户名下X号码列表</para>
+        /// <para>Queries the list of X numbers under a customer account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7341,7 +8060,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询客户名下X号码列表</para>
+        /// <para>Queries the list of X numbers under a customer account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7931,7 +8650,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>固话AxB查询</para>
+        /// <para>Queries the binding information of an AXB landline privacy number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8009,7 +8728,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>固话AxB查询</para>
+        /// <para>Queries the binding information of an AXB landline privacy number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8087,7 +8806,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>固话AxB查询</para>
+        /// <para>Queries the binding information of an AXB landline privacy number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8105,7 +8824,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>固话AxB查询</para>
+        /// <para>Queries the binding information of an AXB landline privacy number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8123,7 +8842,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Axn绑定关系</para>
+        /// <para>Queries the binding information of an AXN landline privacy number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8201,7 +8920,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Axn绑定关系</para>
+        /// <para>Queries the binding information of an AXN landline privacy number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8279,7 +8998,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Axn绑定关系</para>
+        /// <para>Queries the binding information of an AXN landline privacy number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8297,7 +9016,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Axn绑定关系</para>
+        /// <para>Queries the binding information of an AXN landline privacy number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8315,7 +9034,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询AXN分机号绑定关系</para>
+        /// <para>Queries the binding information of a landline AXN extension number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8389,7 +9108,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询AXN分机号绑定关系</para>
+        /// <para>Queries the binding information of a landline AXN extension number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8463,7 +9182,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询AXN分机号绑定关系</para>
+        /// <para>Queries the binding information of a landline AXN extension number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8481,7 +9200,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询AXN分机号绑定关系</para>
+        /// <para>Queries the binding information of a landline AXN extension number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8931,8 +9650,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A号码报备状态查询</para>
+        /// <para>Query the reporting status of an A number.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you invoke this API to query the reporting status of an A number, you must first submit the real-name information for the mobile or landline A number by calling the <a href="https://help.aliyun.com/document_detail/2880908.html">CreatePhoneNoAReport</a> or <a href="https://help.aliyun.com/document_detail/2881429.html">CreateFixedNoAReport</a> API. For detailed instructions, see <a href="https://help.aliyun.com/document_detail/2880077.html">Submit real-name information for an A number via API</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QuerySecretAPhoneNoToCustRequest
@@ -8989,8 +9713,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A号码报备状态查询</para>
+        /// <para>Query the reporting status of an A number.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you invoke this API to query the reporting status of an A number, you must first submit the real-name information for the mobile or landline A number by calling the <a href="https://help.aliyun.com/document_detail/2880908.html">CreatePhoneNoAReport</a> or <a href="https://help.aliyun.com/document_detail/2881429.html">CreateFixedNoAReport</a> API. For detailed instructions, see <a href="https://help.aliyun.com/document_detail/2880077.html">Submit real-name information for an A number via API</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QuerySecretAPhoneNoToCustRequest
@@ -9047,8 +9776,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A号码报备状态查询</para>
+        /// <para>Query the reporting status of an A number.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you invoke this API to query the reporting status of an A number, you must first submit the real-name information for the mobile or landline A number by calling the <a href="https://help.aliyun.com/document_detail/2880908.html">CreatePhoneNoAReport</a> or <a href="https://help.aliyun.com/document_detail/2881429.html">CreateFixedNoAReport</a> API. For detailed instructions, see <a href="https://help.aliyun.com/document_detail/2880077.html">Submit real-name information for an A number via API</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QuerySecretAPhoneNoToCustRequest
@@ -9065,8 +9799,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A号码报备状态查询</para>
+        /// <para>Query the reporting status of an A number.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you invoke this API to query the reporting status of an A number, you must first submit the real-name information for the mobile or landline A number by calling the <a href="https://help.aliyun.com/document_detail/2880908.html">CreatePhoneNoAReport</a> or <a href="https://help.aliyun.com/document_detail/2881429.html">CreateFixedNoAReport</a> API. For detailed instructions, see <a href="https://help.aliyun.com/document_detail/2880077.html">Submit real-name information for an A number via API</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QuerySecretAPhoneNoToCustRequest
@@ -9083,13 +9822,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of a private number.</para>
+        /// <para>Queries the property information of a private number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can query information about a private number (X number), including the purchase time, carrier, province, city, and status.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have the private number (X number) that you want to query.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this operation is 1,000 calls per second. If the limit is exceeded, the API call is throttled. Call this operation properly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9147,13 +9890,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of a private number.</para>
+        /// <para>Queries the property information of a private number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can query information about a private number (X number), including the purchase time, carrier, province, city, and status.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have the private number (X number) that you want to query.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this operation is 1,000 calls per second. If the limit is exceeded, the API call is throttled. Call this operation properly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9211,13 +9958,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of a private number.</para>
+        /// <para>Queries the property information of a private number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can query information about a private number (X number), including the purchase time, carrier, province, city, and status.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have the private number (X number) that you want to query.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this operation is 1,000 calls per second. If the limit is exceeded, the API call is throttled. Call this operation properly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9235,13 +9986,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of a private number.</para>
+        /// <para>Queries the property information of a private number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can query information about a private number (X number), including the purchase time, carrier, province, city, and status.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have the private number (X number) that you want to query.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this operation is 1,000 calls per second. If the limit is exceeded, the API call is throttled. Call this operation properly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9439,7 +10194,143 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询通话录音链接</para>
+        /// <para>对客分页查询指定迁移记录的明细，记录的来源与目标号池须均归属 aliUid。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySecretTransferDetailsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySecretTransferDetailsResponse
+        /// </returns>
+        public QuerySecretTransferDetailsResponse QuerySecretTransferDetailsWithOptions(QuerySecretTransferDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordId))
+            {
+                query["RecordId"] = request.RecordId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QuerySecretTransferDetails",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QuerySecretTransferDetailsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>对客分页查询指定迁移记录的明细，记录的来源与目标号池须均归属 aliUid。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySecretTransferDetailsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySecretTransferDetailsResponse
+        /// </returns>
+        public async Task<QuerySecretTransferDetailsResponse> QuerySecretTransferDetailsWithOptionsAsync(QuerySecretTransferDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordId))
+            {
+                query["RecordId"] = request.RecordId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QuerySecretTransferDetails",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QuerySecretTransferDetailsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>对客分页查询指定迁移记录的明细，记录的来源与目标号池须均归属 aliUid。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySecretTransferDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySecretTransferDetailsResponse
+        /// </returns>
+        public QuerySecretTransferDetailsResponse QuerySecretTransferDetails(QuerySecretTransferDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QuerySecretTransferDetailsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>对客分页查询指定迁移记录的明细，记录的来源与目标号池须均归属 aliUid。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySecretTransferDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySecretTransferDetailsResponse
+        /// </returns>
+        public async Task<QuerySecretTransferDetailsResponse> QuerySecretTransferDetailsAsync(QuerySecretTransferDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QuerySecretTransferDetailsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the downloadable URL of a call recording by call ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9505,7 +10396,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询通话录音链接</para>
+        /// <para>Queries the downloadable URL of a call recording by call ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9571,7 +10462,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询通话录音链接</para>
+        /// <para>Queries the downloadable URL of a call recording by call ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9589,7 +10480,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询通话录音链接</para>
+        /// <para>Queries the downloadable URL of a call recording by call ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9779,15 +10670,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a phone number binding.</para>
+        /// <para>Queries the binding details of a phone number. Retrieves information such as the binding relationship status, extension number, recording status, and ASR status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 5,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// <h3><a href="#poolkeyproducttype"></a>Limits on PoolKey and ProductType</h3>
-        /// <para>You must specify either PoolKey or ProductType. If both parameters are not specified, an error is reported when you call the QuerySubscriptionDetail operation. We recommend that you specify the ProductType parameter for the original key accounts of Alibaba Cloud and the PoolKey parameter for Alibaba Cloud users.</para>
+        /// <para>Before you call this operation, make sure that you have the private number (X number) to query and that the number has a binding relationship.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 1,000. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
+        /// <h3>PoolKey and ProductType limit</h3>
+        /// <para>Specify at least one of the PoolKey and ProductType parameters. If neither parameter is specified, an error is returned.
+        /// Former Alibaba Dayu users should specify the ProductType parameter, and Alibaba Cloud users should specify the PoolKey parameter.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9853,15 +10746,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a phone number binding.</para>
+        /// <para>Queries the binding details of a phone number. Retrieves information such as the binding relationship status, extension number, recording status, and ASR status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 5,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// <h3><a href="#poolkeyproducttype"></a>Limits on PoolKey and ProductType</h3>
-        /// <para>You must specify either PoolKey or ProductType. If both parameters are not specified, an error is reported when you call the QuerySubscriptionDetail operation. We recommend that you specify the ProductType parameter for the original key accounts of Alibaba Cloud and the PoolKey parameter for Alibaba Cloud users.</para>
+        /// <para>Before you call this operation, make sure that you have the private number (X number) to query and that the number has a binding relationship.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 1,000. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
+        /// <h3>PoolKey and ProductType limit</h3>
+        /// <para>Specify at least one of the PoolKey and ProductType parameters. If neither parameter is specified, an error is returned.
+        /// Former Alibaba Dayu users should specify the ProductType parameter, and Alibaba Cloud users should specify the PoolKey parameter.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9927,15 +10822,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a phone number binding.</para>
+        /// <para>Queries the binding details of a phone number. Retrieves information such as the binding relationship status, extension number, recording status, and ASR status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 5,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// <h3><a href="#poolkeyproducttype"></a>Limits on PoolKey and ProductType</h3>
-        /// <para>You must specify either PoolKey or ProductType. If both parameters are not specified, an error is reported when you call the QuerySubscriptionDetail operation. We recommend that you specify the ProductType parameter for the original key accounts of Alibaba Cloud and the PoolKey parameter for Alibaba Cloud users.</para>
+        /// <para>Before you call this operation, make sure that you have the private number (X number) to query and that the number has a binding relationship.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 1,000. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
+        /// <h3>PoolKey and ProductType limit</h3>
+        /// <para>Specify at least one of the PoolKey and ProductType parameters. If neither parameter is specified, an error is returned.
+        /// Former Alibaba Dayu users should specify the ProductType parameter, and Alibaba Cloud users should specify the PoolKey parameter.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9953,15 +10850,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a phone number binding.</para>
+        /// <para>Queries the binding details of a phone number. Retrieves information such as the binding relationship status, extension number, recording status, and ASR status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 5,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// <h3><a href="#poolkeyproducttype"></a>Limits on PoolKey and ProductType</h3>
-        /// <para>You must specify either PoolKey or ProductType. If both parameters are not specified, an error is reported when you call the QuerySubscriptionDetail operation. We recommend that you specify the ProductType parameter for the original key accounts of Alibaba Cloud and the PoolKey parameter for Alibaba Cloud users.</para>
+        /// <para>Before you call this operation, make sure that you have the private number (X number) to query and that the number has a binding relationship.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 1,000. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
+        /// <h3>PoolKey and ProductType limit</h3>
+        /// <para>Specify at least one of the PoolKey and ProductType parameters. If neither parameter is specified, an error is returned.
+        /// Former Alibaba Dayu users should specify the ProductType parameter, and Alibaba Cloud users should specify the PoolKey parameter.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10163,7 +11062,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解除指定的呼叫绑定关系（A，X，B），解决呼叫绑定关系后，员工B不能通过工作号X呼叫到客户A。</para>
+        /// <para>Dissociates a specified call binding relationship (A, X, and B). After the call binding relationship is dissociated, Employee B cannot call Customer A through Work Number X.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10229,7 +11128,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解除指定的呼叫绑定关系（A，X，B），解决呼叫绑定关系后，员工B不能通过工作号X呼叫到客户A。</para>
+        /// <para>Dissociates a specified call binding relationship (A, X, and B). After the call binding relationship is dissociated, Employee B cannot call Customer A through Work Number X.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10295,7 +11194,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解除指定的呼叫绑定关系（A，X，B），解决呼叫绑定关系后，员工B不能通过工作号X呼叫到客户A。</para>
+        /// <para>Dissociates a specified call binding relationship (A, X, and B). After the call binding relationship is dissociated, Employee B cannot call Customer A through Work Number X.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10313,7 +11212,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解除指定的呼叫绑定关系（A，X，B），解决呼叫绑定关系后，员工B不能通过工作号X呼叫到客户A。</para>
+        /// <para>Dissociates a specified call binding relationship (A, X, and B). After the call binding relationship is dissociated, Employee B cannot call Customer A through Work Number X.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10331,7 +11230,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用本接口可取消工作号X与员工号码B的绑定。绑定解除后，对X的呼叫都不会转接给B。</para>
+        /// <para>Cancels the binding between work number X and employee number B. After the binding is canceled, calls to X are no longer forwarded to B.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10401,7 +11300,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用本接口可取消工作号X与员工号码B的绑定。绑定解除后，对X的呼叫都不会转接给B。</para>
+        /// <para>Cancels the binding between work number X and employee number B. After the binding is canceled, calls to X are no longer forwarded to B.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10471,7 +11370,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用本接口可取消工作号X与员工号码B的绑定。绑定解除后，对X的呼叫都不会转接给B。</para>
+        /// <para>Cancels the binding between work number X and employee number B. After the binding is canceled, calls to X are no longer forwarded to B.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10489,7 +11388,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用本接口可取消工作号X与员工号码B的绑定。绑定解除后，对X的呼叫都不会转接给B。</para>
+        /// <para>Cancels the binding between work number X and employee number B. After the binding is canceled, calls to X are no longer forwarded to B.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10507,7 +11406,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解除700绑定关系</para>
+        /// <para>Unbinds a 700 number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10577,7 +11476,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解除700绑定关系</para>
+        /// <para>Unbinds a 700 number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10647,7 +11546,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解除700绑定关系</para>
+        /// <para>Unbinds a 700 number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10665,7 +11564,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解除700绑定关系</para>
+        /// <para>Unbinds a 700 number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11051,8 +11950,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>固话AxB绑定更新</para>
+        /// <para>Updates the binding information of an AXB privacy number for landlines.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you update an AXB privacy number for landlines, you cannot modify Number A and Number B at the same time. For example, if the original binding relationship is A1 and B1, you can change it to A1 and B2, or A2 and B1.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateAxbBindFixedLineRequest
@@ -11159,8 +12063,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>固话AxB绑定更新</para>
+        /// <para>Updates the binding information of an AXB privacy number for landlines.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you update an AXB privacy number for landlines, you cannot modify Number A and Number B at the same time. For example, if the original binding relationship is A1 and B1, you can change it to A1 and B2, or A2 and B1.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateAxbBindFixedLineRequest
@@ -11267,8 +12176,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>固话AxB绑定更新</para>
+        /// <para>Updates the binding information of an AXB privacy number for landlines.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you update an AXB privacy number for landlines, you cannot modify Number A and Number B at the same time. For example, if the original binding relationship is A1 and B1, you can change it to A1 and B2, or A2 and B1.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateAxbBindFixedLineRequest
@@ -11285,8 +12199,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>固话AxB绑定更新</para>
+        /// <para>Updates the binding information of an AXB privacy number for landlines.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you update an AXB privacy number for landlines, you cannot modify Number A and Number B at the same time. For example, if the original binding relationship is A1 and B1, you can change it to A1 and B2, or A2 and B1.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateAxbBindFixedLineRequest
@@ -11303,7 +12222,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Axn绑定关系</para>
+        /// <para>Updates the binding information of a landline AXN privacy number.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11411,7 +12330,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Axn绑定关系</para>
+        /// <para>Updates the binding information of a landline AXN privacy number.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11519,7 +12438,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Axn绑定关系</para>
+        /// <para>Updates the binding information of a landline AXN privacy number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11537,7 +12456,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Axn绑定关系</para>
+        /// <para>Updates the binding information of a landline AXN privacy number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11555,7 +12474,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新AXN分机号绑定关系</para>
+        /// <para>Updates the binding relationship of a landline AXN extension number.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11659,7 +12578,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新AXN分机号绑定关系</para>
+        /// <para>Updates the binding relationship of a landline AXN extension number.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11763,7 +12682,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新AXN分机号绑定关系</para>
+        /// <para>Updates the binding relationship of a landline AXN extension number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11781,7 +12700,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新AXN分机号绑定关系</para>
+        /// <para>Updates the binding relationship of a landline AXN extension number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11799,7 +12718,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新700绑定关系</para>
+        /// <para>Modifies the binding relationship of a 700 number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11917,7 +12836,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新700绑定关系</para>
+        /// <para>Modifies the binding relationship of a 700 number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12035,7 +12954,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新700绑定关系</para>
+        /// <para>Modifies the binding relationship of a 700 number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12053,7 +12972,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新700绑定关系</para>
+        /// <para>Modifies the binding relationship of a 700 number.</para>
         /// </summary>
         /// 
         /// <param name="request">

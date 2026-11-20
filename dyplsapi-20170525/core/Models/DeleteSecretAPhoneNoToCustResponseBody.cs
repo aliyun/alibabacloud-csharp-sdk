@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class DeleteSecretAPhoneNoToCustResponseBody : TeaModel {
         /// <summary>
+        /// <para>Details of denied access.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>请求状态码</para>
+        /// <para>The request status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -28,7 +30,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>删除是否成功</para>
+        /// <para>Indicates whether the deletion succeeded. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: Succeeded.</para>
+        /// </description></item>
+        /// <item><description><para>false: Failed.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -38,7 +46,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>失败错误提示</para>
+        /// <para>Error message for failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>号码组不存在</para>
@@ -48,7 +56,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>返回id</para>
+        /// <para>The returned ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1D73E648-0978-18A5-B089-3BB2</para>
@@ -58,7 +66,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>请求是否成功</para>
+        /// <para>Indicates whether the request succeeded. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: Succeeded.</para>
+        /// </description></item>
+        /// <item><description><para>false: Failed.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

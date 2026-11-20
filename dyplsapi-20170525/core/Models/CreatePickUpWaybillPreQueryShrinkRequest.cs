@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class CreatePickUpWaybillPreQueryShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The consignee information.</para>
+        /// <para>The recipient information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ConsigneeInfo")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string ConsigneeInfoShrink { get; set; }
 
         /// <summary>
-        /// <para>The code of the courier company. If no courier company is specified, the system allocates a courier company.</para>
+        /// <para>The courier company code. If not specified, the system automatically assigns a courier company.</para>
         /// 
         /// <b>Example:</b>
         /// <para>YTO</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string CpCode { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the external channel source. It cannot contain underscores.</para>
+        /// <para>The external channel source identifier. The value cannot contain underscores. The value is agreed upon with the system during integration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string OrderChannels { get; set; }
 
         /// <summary>
-        /// <para>The order number of the access system.</para>
+        /// <para>The order number in the caller\&quot;s system.</para>
         /// 
         /// <b>Example:</b>
         /// <para>787DFHHDS989****</para>
@@ -49,9 +49,9 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string OuterOrderCode { get; set; }
 
         /// <summary>
-        /// <para>The estimated weight. Unit: gram.</para>
+        /// <para>The estimated weight, in grams.</para>
         /// <remarks>
-        /// <para> If you need to query the estimated price, this parameter is required.</para>
+        /// <para>If you want to query the estimated price, this parameter is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

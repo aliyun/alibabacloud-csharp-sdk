@@ -10,15 +10,18 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class QueryAxnBindFixedLineResponseBody : TeaModel {
         /// <summary>
+        /// <para>The details of the permission verification failure.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>{}</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>响应码</para>
+        /// <para>The API request status code. Valid values:
+        /// 0: success. For other error codes, see <a href="https://help.aliyun.com/document_detail/59892.html">API error codes</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -28,24 +31,27 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>绑定对象</para>
+        /// <para>The list of binding objects.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<QueryAxnBindFixedLineResponseBodyData> Data { get; set; }
         public class QueryAxnBindFixedLineResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>接通前放音啊编码</para>
+            /// <para>The pre-connection ringback tone codes. The value must contain codes for three scenarios, specified in the order of &quot;B-&gt;X, A-&gt;X, other numbers-&gt;X&quot; and separated by commas. </para>
+            /// <remarks>
+            /// <para>&quot;1,2,3&quot; indicates that the ringback tone code for B-&gt;X is 1, the code for A-&gt;X is 2, and the code for other numbers-&gt;X is 3.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>10001,10002,10003</para>
+            /// <para>1,2,3</para>
             /// </summary>
             [NameInMap("Anucode")]
             [Validation(Required=false)]
             public string Anucode { get; set; }
 
             /// <summary>
-            /// <para>被叫侧放音编码</para>
+            /// <para>The ringback tone code for the called party.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10001,10002</para>
@@ -55,17 +61,23 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public string Anucodecalled { get; set; }
 
             /// <summary>
-            /// <para>隐私号码区号</para>
+            /// <para>The area code of the privacy number.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>010</para>
+            /// <para>0571</para>
             /// </summary>
             [NameInMap("Areacode")]
             [Validation(Required=false)]
             public string Areacode { get; set; }
 
             /// <summary>
-            /// <para>过期时间</para>
+            /// <para>The expiration time, in seconds. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>0: never expires.</para>
+            /// </description></item>
+            /// <item><description><para>Other values: the binding remains valid for the specified number of seconds after the X phone number is assigned. For example, if the value is 60, the binding expires and is automatically released after 60 seconds.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -75,14 +87,22 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public string Expiration { get; set; }
 
             /// <summary>
-            /// <para>额外字段</para>
+            /// <para>The extended parameters.</para>
             /// </summary>
             [NameInMap("Extra")]
             [Validation(Required=false)]
             public QueryAxnBindFixedLineResponseBodyDataExtra Extra { get; set; }
             public class QueryAxnBindFixedLineResponseBodyDataExtra : TeaModel {
                 /// <summary>
-                /// <para>A通过X呼叫，即A主叫X，仅下列值有效。默认是0。 0：不能外呼 1：接续最近的N号码 2：回拨固定号码：telB</para>
+                /// <para>The callback control. A calls X, meaning A is the caller and X is the callee. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>0 (default): outbound calls are not allowed.</para>
+                /// </description></item>
+                /// <item><description><para>1: the call is connected to the most recent N phone number.</para>
+                /// </description></item>
+                /// <item><description><para>2: the call is connected to the fixed phone number TelB.</para>
+                /// </description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -92,7 +112,16 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
                 public string Callback { get; set; }
 
                 /// <summary>
-                /// <para>录音控制，仅下列值有效。默认是0（不开通录音功能）。 0：不录音 1：录音</para>
+                /// <para>The call recording control. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>0 (default): recording is disabled.</para>
+                /// </description></item>
+                /// <item><description><para>1: recording is enabled.</para>
+                /// </description></item>
+                /// </list>
+                /// <remarks>
+                /// <para>After the call recording feature is enabled, you can play and download voice files in the call records. Recording files are billed at 0.010 CNY per minute.</para>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -104,70 +133,73 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             }
 
             /// <summary>
-            /// <para>接入商自有字段，最大250字符长度</para>
+            /// <para>The external business extension field. This parameter is returned in the call record receipt message. The value cannot exceed 100 characters.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>12444</para>
+            /// <para>19394</para>
             /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]
             public string Remark { get; set; }
 
             /// <summary>
-            /// <para>绑定id</para>
+            /// <para>The binding ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>GHX0534X202504221531579290029-2-1-aliaxn</para>
+            /// <para>GHX**************************</para>
             /// </summary>
             [NameInMap("Subid")]
             [Validation(Required=false)]
             public string Subid { get; set; }
 
             /// <summary>
-            /// <para>格式为yyyyMMddHHmmss。时间采用北京时间，24小时制。</para>
+            /// <para>The binding time. Format: yyyyMMddHHmmss. The time is in UTC+8, in 24-hour format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>20250421141723</para>
+            /// <para>20161114143116</para>
             /// </summary>
             [NameInMap("Subts")]
             [Validation(Required=false)]
             public string Subts { get; set; }
 
             /// <summary>
-            /// <para>接通后主叫侧放音编码</para>
+            /// <para>The post-connection ringback tone codes for the caller. The value must contain codes for two scenarios, specified in the order of &quot;A as callee, B as callee&quot; and separated by commas.</para>
+            /// <remarks>
+            /// <para>&quot;1,2&quot; indicates that the ringback tone code for the caller when A is the callee is 1, and the code for the caller when B is the callee is 2.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>10001,10002</para>
+            /// <para>1,2</para>
             /// </summary>
             [NameInMap("TAnucodeConnect")]
             [Validation(Required=false)]
             public string TAnucodeConnect { get; set; }
 
             /// <summary>
-            /// <para>A号码</para>
+            /// <para>The A phone number.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>15500001111</para>
+            /// <para>155****1111</para>
             /// </summary>
             [NameInMap("TelA")]
             [Validation(Required=false)]
             public string TelA { get; set; }
 
             /// <summary>
-            /// <para>N号码</para>
+            /// <para>The N phone number.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>15500002222</para>
+            /// <para>155****2222</para>
             /// </summary>
             [NameInMap("TelB")]
             [Validation(Required=false)]
             public string TelB { get; set; }
 
             /// <summary>
-            /// <para>隐私号码</para>
+            /// <para>The privacy number.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>057112345678</para>
+            /// <para>0571******23</para>
             /// </summary>
             [NameInMap("TelX")]
             [Validation(Required=false)]
@@ -176,7 +208,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         }
 
         /// <summary>
-        /// <para>描述信息</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -186,6 +218,8 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID. It is a unique identifier generated by Alibaba Cloud for the request and can be used for troubleshooting.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E8B9C3ED-D9BD-5E27-9588-6D84D3070160</para>
         /// </summary>
@@ -194,6 +228,14 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the API call was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: The call was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The call failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>

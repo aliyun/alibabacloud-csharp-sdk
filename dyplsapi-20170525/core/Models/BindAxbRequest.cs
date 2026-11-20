@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// <para>The maximum ringing duration for each number in sequential ringing. Unit: seconds. The value ranges from 5 to 20.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>10秒</para>
         /// </summary>
         [NameInMap("CallTimeout")]
         [Validation(Required=false)]
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>hangzhou</para>
+        /// <para>北京</para>
         /// </summary>
         [NameInMap("ExpectCity")]
         [Validation(Required=false)]
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("IsRecordingEnabled")]
         [Validation(Required=false)]
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>139****0000</para>
+        /// <para>136****0000</para>
         /// </summary>
         [NameInMap("PhoneNoB")]
         [Validation(Required=false)]
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// <para>If you do not specify this parameter, a random phone number is selected from the phone number pool based on the value of the ExpectCity parameter and is used as phone number X.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>139****0000</para>
+        /// <para>171****1893</para>
         /// </summary>
         [NameInMap("PhoneNoX")]
         [Validation(Required=false)]
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// <para>Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <b>Number Pool Management</b> page.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>FC5526*****</para>
+        /// <para>FC10000016848****</para>
         /// </summary>
         [NameInMap("PoolKey")]
         [Validation(Required=false)]
@@ -231,7 +231,10 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;AXBRing_B&quot;:&quot;1000<b><b>1&quot;,&quot;AXBRing_A&quot;:&quot;1000</b></b>1&quot;}</para>
+        /// <para>{
+        ///       &quot;AXBRing_B&quot;: &quot;1000<b><b>1&quot;,
+        ///       &quot;AXBRing_A&quot;: &quot;1000</b></b>1&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("RingConfig")]
         [Validation(Required=false)]

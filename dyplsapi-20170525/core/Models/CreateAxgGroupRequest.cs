@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>Aliyun</para>
+        /// <para>测试分组</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>FC123456</para>
+        /// <para>FC10000012345****</para>
         /// </summary>
         [NameInMap("PoolKey")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// <para>The remarks of number group G. The value must be 0 to 256 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>测试用分组</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]

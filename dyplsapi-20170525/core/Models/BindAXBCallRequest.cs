@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class BindAXBCallRequest : TeaModel {
         /// <summary>
-        /// <para>authId绑定关系BX唯一id</para>
+        /// <para>The unique ID of the BX binding relationship.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string AuthId { get; set; }
 
         /// <summary>
-        /// <para>客户uid</para>
+        /// <para>The customer UID. This parameter is automatically obtained by the system and does not need to be specified.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? CallerParentId { get; set; }
 
         /// <summary>
-        /// <para>号码池key</para>
+        /// <para>The key of the number pool.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string CustomerPoolKey { get; set; }
 
         /// <summary>
-        /// <para>绑定关系过期失效时间： 取值必须大于0； 单位：秒，ct_time + expiration = 自动解绑时间</para>
+        /// <para>The expiration time of the binding relationship. The value must be greater than 0. Unit: seconds. The automatic unbinding time is calculated by adding the binding time and the expiration time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>请求去重ID, reqId最大长度为20位,接入方需要保持原子性</para>
+        /// <para>The request deduplication ID. The maximum length is 20 characters. Ensure the atomicity of the request ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>客户A号码</para>
+        /// <para>The phone number of customer A.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string TelA { get; set; }
 
         /// <summary>
-        /// <para>客户自定义参数回调带回</para>
+        /// <para>The custom callback parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>000</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// <para>The download URL of the recording file. The download URL is valid for 2 hours.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="http://secret-axb-reco****cn-shanghai.aliyuncs.com/1000000820257625_66647243838006067251551752068865.mp3?Expires=155175****&OSSAccessKeyId=LTAIP00vvvv****v&Signature=tK6Yq9KusU4n%2BZ****7lg4/WmEA%3D">http://secret-axb-reco****cn-shanghai.aliyuncs.com/1000000820257625_66647243838006067251551752068865.mp3?Expires=155175****&amp;OSSAccessKeyId=LTAIP00vvvv****v&amp;Signature=tK6Yq9KusU4n%2BZ****7lg4/WmEA%3D</a></para>
+        /// <para><a href="http://secret-axb-reco****cn-shanghai.aliyuncs.com/1000000820******_66647243838006067251************.mp3?Expires=1551******&OSSAccessKeyId=yourAccessKeyID&Signature=tK6Yq9KusU4n********7lg4/WmEA%3D">http://secret-axb-reco****cn-shanghai.aliyuncs.com/1000000820******_66647243838006067251************.mp3?Expires=1551******&amp;OSSAccessKeyId=yourAccessKeyID&amp;Signature=tK6Yq9KusU4n********7lg4/WmEA%3D</a></para>
         /// </summary>
         [NameInMap("DownloadUrl")]
         [Validation(Required=false)]

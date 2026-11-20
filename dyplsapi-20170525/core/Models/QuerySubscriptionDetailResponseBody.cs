@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class QuerySubscriptionDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description>The value OK indicates that the request was successful.</description></item>
-        /// <item><description>Other status codes indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</description></item>
+        /// <item><description>OK indicates that the request was successful.</description></item>
+        /// <item><description>For other error codes, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -44,27 +44,35 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information returned after the QuerySubscriptionDetail operation was called.</para>
+        /// <para>The data structure returned when the API call is successful.</para>
         /// </summary>
         [NameInMap("SecretBindDetailDTO")]
         [Validation(Required=false)]
         public QuerySubscriptionDetailResponseBodySecretBindDetailDTO SecretBindDetailDTO { get; set; }
         public class QuerySubscriptionDetailResponseBodySecretBindDetailDTO : TeaModel {
             /// <summary>
-            /// <para>The ID of the ASR model.</para>
+            /// <para>The ASR model ID. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>General-Telephone-Mandarin Chinese model ID: 7ee372834d2f4cc7ac0d0ab2d0ae1aac</para>
+            /// </description></item>
+            /// <item><description><para>General-Telephone-Cantonese Chinese model ID: 9b4afe3d224e4fa3bf963697113e2f77</para>
+            /// </description></item>
+            /// <item><description><para>General-Telephone-Regional Accent model ID: 3655a6cb94764145a1f9a38a3c3b3b4b</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>123456</para>
+            /// <para>7ee372834d2f4cc7ac0d0ab2d0ae1aac</para>
             /// </summary>
             [NameInMap("ASRModelId")]
             [Validation(Required=false)]
             public string ASRModelId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether automatic speech recognition (ASR) is enabled. Valid values:</para>
+            /// <para>The Automatic Speech Recognition (ASR) status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>false</b>: ASR is disabled.</description></item>
-            /// <item><description><b>true</b>: ASR is enabled.</description></item>
+            /// <item><description><b>false</b>: Disabled.</description></item>
+            /// <item><description><b>true</b>: Enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,10 +83,10 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public bool? ASRStatus { get; set; }
 
             /// <summary>
-            /// <para>The status of one-way call restrictions. No value is returned for this parameter if one-way call restrictions are not set. Valid values:</para>
+            /// <para>The one-way call restriction status. This parameter is not returned if no one-way call restriction is configured. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>CONTROL_AX_DISABLE</b>: Phone number A cannot be used to call phone number X.</description></item>
-            /// <item><description><b>CONTROL_BX_DISABLE</b>: Phone number B cannot be used to call phone number X.</description></item>
+            /// <item><description><b>CONTROL_AX_DISABLE</b>: Phone number A cannot call phone number X.</description></item>
+            /// <item><description><b>CONTROL_BX_DISABLE</b>: Phone number B cannot call phone number X.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -89,7 +97,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public string CallRestrict { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the binding.</para>
+            /// <para>The expiration time of the binding relationship, in the format of YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-09-05 12:00:00</para>
@@ -99,7 +107,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public string ExpireDate { get; set; }
 
             /// <summary>
-            /// <para>The extension in the AXG extension binding.</para>
+            /// <para>The extension number in the AXG extension binding.</para>
             /// 
             /// <b>Example:</b>
             /// <para>130</para>
@@ -109,7 +117,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public string Extension { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the binding.</para>
+            /// <para>The time when the binding relationship was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-03-05 12:00:00</para>
@@ -119,20 +127,20 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The ID of number group G in the binding.</para>
+            /// <para>The ID of the number group G (GID) in the binding relationship.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2000000130001</para>
+            /// <para>200001234****</para>
             /// </summary>
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public long? GroupId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether all calls made by the bound phone numbers are recorded. Valid values:</para>
+            /// <para>Indicates whether all calls generated by this binding relationship are recorded. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>false</b></description></item>
-            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b>: Calls are not recorded.</description></item>
+            /// <item><description><b>true</b>: Calls are recorded.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -143,40 +151,40 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public bool? NeedRecord { get; set; }
 
             /// <summary>
-            /// <para>Phone number A in the binding.</para>
+            /// <para>The phone number A in the binding relationship.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>13900001111</para>
+            /// <para>139****0000</para>
             /// </summary>
             [NameInMap("PhoneNoA")]
             [Validation(Required=false)]
             public string PhoneNoA { get; set; }
 
             /// <summary>
-            /// <para>Phone number B in the binding.</para>
+            /// <para>The phone number B in the binding relationship.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>13900002222</para>
+            /// <para>138****0000</para>
             /// </summary>
             [NameInMap("PhoneNoB")]
             [Validation(Required=false)]
             public string PhoneNoB { get; set; }
 
             /// <summary>
-            /// <para>The private number in the binding, that is, phone number X.</para>
+            /// <para>The private number in the binding relationship, which is the X number.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>13900001234</para>
+            /// <para>139****1111</para>
             /// </summary>
             [NameInMap("PhoneNoX")]
             [Validation(Required=false)]
             public string PhoneNoX { get; set; }
 
             /// <summary>
-            /// <para>The binding status. Valid values:</para>
+            /// <para>The status of the binding relationship. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: The binding expired.</description></item>
-            /// <item><description><b>1</b>: The binding is in effect.</description></item>
+            /// <item><description><b>0</b>: Expired.</description></item>
+            /// <item><description><b>1</b>: Active.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -187,7 +195,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public long? Status { get; set; }
 
             /// <summary>
-            /// <para>The binding ID.</para>
+            /// <para>The binding relationship ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100000076879****</para>

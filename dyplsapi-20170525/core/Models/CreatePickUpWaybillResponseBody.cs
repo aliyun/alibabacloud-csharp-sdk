@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class CreatePickUpWaybillResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreatePickUpWaybillResponseBodyData Data { get; set; }
         public class CreatePickUpWaybillResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The code of the courier company.</para>
+            /// <para>The express delivery company code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>YTO</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             /// <para>The error code.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>200</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("ErrorCode")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             /// <para>The error message.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>none</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("ErrorMsg")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public string GotCode { get; set; }
 
             /// <summary>
-            /// <para>The order ID.</para>
+            /// <para>The waybill number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>77312345629****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public string MailNo { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the request was successful.</para>
+            /// <para>Indicates whether the API call is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>

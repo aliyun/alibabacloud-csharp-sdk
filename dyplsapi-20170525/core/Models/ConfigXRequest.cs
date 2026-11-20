@@ -10,7 +10,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class ConfigXRequest : TeaModel {
         /// <summary>
-        /// <para>开/关呼叫能力状态‘0’：禁用‘1’：开启</para>
+        /// <para>Specifies whether to enable the call capability. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>0: Disable.</para>
+        /// </description></item>
+        /// <item><description><para>1: Enable.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +26,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string CallAbility { get; set; }
 
         /// <summary>
-        /// <para>客户uid</para>
+        /// <para>The customer UID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1898871967585852</para>
@@ -30,7 +36,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? CallerParentId { get; set; }
 
         /// <summary>
-        /// <para>号码池key</para>
+        /// <para>The key of the number pool.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +47,14 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string CustomerPoolKey { get; set; }
 
         /// <summary>
-        /// <para>是否透传来显为真实主叫：00-非透传：互相拨打时都显示工作号;10-透传：A客户为主叫时,B员工的来显为客户A号码;B员工为主叫时,A客户的来显为工作号;默认为 00</para>
+        /// <para>Specifies whether to pass through the caller ID to display the actual caller. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>00: No pass-through. The work number is displayed when either party calls the other.</para>
+        /// </description></item>
+        /// <item><description><para>10: Pass-through. When Customer A is the caller, the caller ID displayed to Employee B is the number of Customer A. When Employee B is the caller, the caller ID displayed to Customer A is the work number.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>Default value: 00.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -55,7 +68,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>请求去重ID, reqId最大长度为20位,接入方需要保持原子性</para>
+        /// <para>The request deduplication ID. The maximum length of reqId is 20 characters. The caller must ensure atomicity.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,14 +87,14 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>顺振控制参数</para>
+        /// <para>The sequential ringing control parameters.</para>
         /// </summary>
         [NameInMap("SequenceCalls")]
         [Validation(Required=false)]
         public List<ConfigXRequestSequenceCalls> SequenceCalls { get; set; }
         public class ConfigXRequestSequenceCalls : TeaModel {
             /// <summary>
-            /// <para>顺振提示音放音编号，格式如callNoPlayCode</para>
+            /// <para>The playback code for the sequential ringing prompt tone. The format is the same as callNoPlayCode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>01</para>
@@ -91,7 +104,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public string SequenceCallNoPlayCode { get; set; }
 
             /// <summary>
-            /// <para>顺振被叫号码</para>
+            /// <para>The callee number for sequential ringing.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18*******33</para>
@@ -101,7 +114,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public string SequenceCalledNo { get; set; }
 
             /// <summary>
-            /// <para>接通后主被叫放音编号，格式如calledPlayCode</para>
+            /// <para>The playback code for the caller and callee after the call is connected. The format is the same as calledPlayCode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>02</para>
@@ -113,7 +126,15 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         }
 
         /// <summary>
-        /// <para>顺振模式：0-不顺振（默认）1-有条件顺振，先接续calledNo指定被叫，如果该被叫未能接通，再顺振sequenceCalls号码列表2-无条件顺振，不接续calledNo指定被叫，直接顺振sequenceCalls号码列表</para>
+        /// <para>The sequential ringing mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>0: No sequential ringing. This is the default value.</para>
+        /// </description></item>
+        /// <item><description><para>1: Conditional sequential ringing. The system first connects to the callee specified by calledNo. If the callee cannot be connected, the system sequentially rings the numbers in the sequenceCalls list.</para>
+        /// </description></item>
+        /// <item><description><para>2: Unconditional sequential ringing. The system does not connect to the callee specified by calledNo and directly sequentially rings the numbers in the sequenceCalls list.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -123,7 +144,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string SequenceMode { get; set; }
 
         /// <summary>
-        /// <para>开/关短信功能状态‘0’：禁用；‘1’：开启；</para>
+        /// <para>Specifies whether to enable the SMS feature. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>0: Disable.</para>
+        /// </description></item>
+        /// <item><description><para>1: Enable.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -133,7 +160,14 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string SmsAbility { get; set; }
 
         /// <summary>
-        /// <para>是否透传来显为真实用户0：不透传; 1：透传默认：0不透传</para>
+        /// <para>Specifies whether to pass through the SMS signature to display the actual user. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>0: No pass-through.</para>
+        /// </description></item>
+        /// <item><description><para>1: Pass-through.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -143,7 +177,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string SmsSignMode { get; set; }
 
         /// <summary>
-        /// <para>X号码</para>
+        /// <para>The X number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

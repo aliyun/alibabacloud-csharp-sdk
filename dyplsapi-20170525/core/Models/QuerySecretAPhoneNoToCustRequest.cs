@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class QuerySecretAPhoneNoToCustRequest : TeaModel {
         /// <summary>
-        /// <para>号码组ID</para>
+        /// <para>Number group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>A号码</para>
+        /// <para>A number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

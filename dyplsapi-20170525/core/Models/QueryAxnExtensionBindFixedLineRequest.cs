@@ -10,22 +10,22 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class QueryAxnExtensionBindFixedLineRequest : TeaModel {
         /// <summary>
-        /// <para>号池ID</para>
+        /// <para>The ID of the number pool.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>alitest</para>
+        /// <para>FC10000016848****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>消息请求唯一标识。</para>
+        /// <para>The unique identifier of the message request.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>12345dkwkd99d</para>
+        /// <para>123*******</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
@@ -36,7 +36,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>查询类型。取值： 0：根据绑定ID查询。1：根据X和A/B号码查询</para>
+        /// <para>The query type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>0: query by binding ID.</para>
+        /// </description></item>
+        /// <item><description><para>1: query by X and A/B numbers.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +61,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>绑定ID。QueryType参数为0时必传。</para>
+        /// <para>The binding ID. This parameter is required when QueryType is set to 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A203**************</para>
@@ -65,21 +71,21 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string SubId { get; set; }
 
         /// <summary>
-        /// <para>A号码。QueryType参数为1时必传。</para>
+        /// <para>The number A. This parameter is required when QueryType is set to 1.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>15500001111</para>
+        /// <para>155****1111</para>
         /// </summary>
         [NameInMap("TelA")]
         [Validation(Required=false)]
         public string TelA { get; set; }
 
         /// <summary>
-        /// <para>格式yyyyMMddHHmmssSSS，时间采用北京时间，24小时制，精确至毫秒</para>
+        /// <para>The business timestamp. Format: yyyyMMddHHmmssSSS. The time is in UTC+8, in 24-hour format, accurate to milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20250421141723098</para>
+        /// <para>20161114143116123</para>
         /// </summary>
         [NameInMap("Ts")]
         [Validation(Required=false)]

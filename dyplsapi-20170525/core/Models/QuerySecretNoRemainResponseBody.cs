@@ -64,15 +64,12 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             /// <para>The home location of the phone numbers.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>hangzhou</para>
+            /// <para>杭州</para>
             /// </summary>
             [NameInMap("City")]
             [Validation(Required=false)]
             public string City { get; set; }
 
-            /// <summary>
-            /// <para>The information about remaining phone numbers available for online purchase.</para>
-            /// </summary>
             [NameInMap("RemainDTOList")]
             [Validation(Required=false)]
             public QuerySecretNoRemainResponseBodySecretRemainDTORemainDTOList RemainDTOList { get; set; }
@@ -81,22 +78,10 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
                 [Validation(Required=false)]
                 public List<QuerySecretNoRemainResponseBodySecretRemainDTORemainDTOListRemainDTO> RemainDTO { get; set; }
                 public class QuerySecretNoRemainResponseBodySecretRemainDTORemainDTOListRemainDTO : TeaModel {
-                    /// <summary>
-                    /// <para>The quantity of remaining phone numbers available for online purchase for the city.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>120</para>
-                    /// </summary>
                     [NameInMap("Amount")]
                     [Validation(Required=false)]
                     public long? Amount { get; set; }
 
-                    /// <summary>
-                    /// <para>The home location of the phone numbers.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>Wuhan</para>
-                    /// </summary>
                     [NameInMap("City")]
                     [Validation(Required=false)]
                     public string City { get; set; }

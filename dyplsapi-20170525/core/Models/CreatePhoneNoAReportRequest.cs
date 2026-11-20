@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class CreatePhoneNoAReportRequest : TeaModel {
         /// <summary>
-        /// <para>所属a号码组id</para>
+        /// <para>ID of the A-number group. On the <a href="https://dyplsnext.console.aliyun.com/qualification">Qualification Management</a> page, click View Details in the A-number whitelist section of the relevant qualification.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? ANoWhiteGroupId { get; set; }
 
         /// <summary>
-        /// <para>姓名</para>
+        /// <para>Name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string CustName { get; set; }
 
         /// <summary>
-        /// <para>证件号码</para>
+        /// <para>Certificate number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string DocumentNumber { get; set; }
 
         /// <summary>
-        /// <para>证件类型 填写1表示身份证</para>
+        /// <para>Certificate type. Enter 1 for an ID card.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,18 +54,18 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? DocumentType { get; set; }
 
         /// <summary>
-        /// <para>半身照oss路径地址</para>
+        /// <para>OSS path of the front-facing portrait photo.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>123456/test1719383196033.jpg示例值</para>
+        /// <para>123456/test1719383196033.jpg</para>
         /// </summary>
         [NameInMap("IdCardAlivePhoto")]
         [Validation(Required=false)]
         public string IdCardAlivePhoto { get; set; }
 
         /// <summary>
-        /// <para>身份证反面照片oss路径地址</para>
+        /// <para>OSS path of the photo of the back side (portrait side) of the ID card.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456/test1719383196032.jpg</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string IdCardBackPhoto { get; set; }
 
         /// <summary>
-        /// <para>身份证正面照片oss路径地址</para>
+        /// <para>OSS path of the photo of the front side (national emblem side) of the ID card.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456/test1719383196031.jpg</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>手机号</para>
+        /// <para>Phone number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string PhoneNoA { get; set; }
 
         /// <summary>
-        /// <para>备注（客户自己的业务备注，可编辑）</para>
+        /// <para>Remark (business remark added by the user).</para>
         /// 
         /// <b>Example:</b>
         /// <para>***报备</para>

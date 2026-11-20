@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// <para>The ID of number group G. The value of this parameter is required when the <a href="https://help.aliyun.com/document_detail/110249.html">BindAxg</a> operation is called to add an AXG binding.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2000000000001</para>
+        /// <para>200001234****</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]

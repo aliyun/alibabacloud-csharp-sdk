@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// <para>The ID of the ASR model.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>980abddb908f48e8b987cb2cd303****</para>
+        /// <para>7ee372834d2f4cc7ac0d0ab2d0ae1aac</para>
         /// </summary>
         [NameInMap("ASRModelId")]
         [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>1234</para>
+        /// <para>200001234****</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>1390000****</para>
+        /// <para>139****0000</para>
         /// </summary>
         [NameInMap("PhoneNoA")]
         [Validation(Required=false)]
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>1390000****</para>
+        /// <para>138****0000</para>
         /// </summary>
         [NameInMap("PhoneNoB")]
         [Validation(Required=false)]
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1390000****</para>
+        /// <para>139****1111</para>
         /// </summary>
         [NameInMap("PhoneNoX")]
         [Validation(Required=false)]
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;AXBRing_B&quot;:&quot;100000001&quot;,&quot;AXBRing_A&quot;:&quot;100000001&quot;}</para>
+        /// <para>{&quot;AXBRing_B&quot;:&quot;1000<b><b>1&quot;,&quot;AXBRing_A&quot;:&quot;1000</b></b>1&quot;}</para>
         /// </summary>
         [NameInMap("RingConfig")]
         [Validation(Required=false)]

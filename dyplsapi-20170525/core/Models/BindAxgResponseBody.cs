@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>139****0000</para>
+            /// <para>130</para>
             /// </summary>
             [NameInMap("Extension")]
             [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             /// <para>The private number, that is, phone number X.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>139****0000</para>
+            /// <para>139****1111</para>
             /// </summary>
             [NameInMap("SecretNo")]
             [Validation(Required=false)]

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class UnBindAXBResponseBody : TeaModel {
         /// <summary>
+        /// <para>The details about the access denial.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -18,6 +20,14 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
+        /// <para>The returned status code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>0000: Success.</para>
+        /// </description></item>
+        /// <item><description><para>Other values: Failure.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>0000</para>
         /// </summary>
@@ -25,12 +35,18 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The result of dissociating the AXB call binding.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;Code&quot;:&quot;0000&quot;,&quot;Message&quot;:&quot;Success&quot;,&quot;Success&quot;:true}</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UnBindAXBResponseBodyData Data { get; set; }
         public class UnBindAXBResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>返回状态码 0000表示成功 其他表示失败</para>
+            /// <para>The returned status code. A value of 0000 indicates success. Other values indicate failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0000</para>
@@ -40,17 +56,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>返回信息</para>
+            /// <para>The returned message.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>成功</para>
+            /// <para>Success</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>返回是否成功 true  表示成功 false表示失败</para>
+            /// <para>Indicates whether the request is successful. A value of true indicates success, and a value of false indicates failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -61,15 +77,35 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 
         }
 
+        /// <summary>
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Success</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4A2568E1-7D83-5491-8DEF-600D8AFF97E7</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: Success.</para>
+        /// </description></item>
+        /// <item><description><para>false: Failure.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>9297B722-A016-43FB-B51A-E54050D9369D</para>
+        /// <para>9297B722-A016-43FB-B51A-E54050******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             /// <para>The private number, that is, phone number X.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>139****0000</para>
+            /// <para>171****1893</para>
             /// </summary>
             [NameInMap("SecretNo")]
             [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             /// <para>The binding ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1**************3</para>
+            /// <para>100017838816****</para>
             /// </summary>
             [NameInMap("SubsId")]
             [Validation(Required=false)]

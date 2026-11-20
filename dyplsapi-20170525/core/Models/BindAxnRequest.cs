@@ -10,7 +10,15 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class BindAxnRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the ASR model. On the <a href="https://dyplsnext.console.aliyun.com/?spm=5176.12818093.categories-n-products.ddypls.22e616d0a0tEFC#/asr">Automatic Speech Recognition (ASR) Model Management</a> page, you can view the ID of the ASR model.</para>
+        /// <para>The ASR model ID. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>7ee372834d2f4cc7ac0d0ab2d0ae1aac: General-Telephone-Mandarin Chinese model.</para>
+        /// </description></item>
+        /// <item><description><para>9b4afe3d224e4fa3bf963697113e2f77: General-Telephone-Cantonese model.</para>
+        /// </description></item>
+        /// <item><description><para>3655a6cb94764145a1f9a38a3c3b3b4b: General-Telephone-Regional accent model.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>7ee372834d2f4cc7ac0d0ab2d0ae1aac</para>
@@ -20,10 +28,10 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string ASRModelId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable automatic speech recognition (ASR). Valid values:</para>
+        /// <para>The ASR status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): disables ASR.</description></item>
-        /// <item><description><b>true</b>: enables ASR.</description></item>
+        /// <item><description><b>false</b>: Disabled. This is the default value.</description></item>
+        /// <item><description><b>true</b>: Enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,9 +42,9 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public bool? ASRStatus { get; set; }
 
         /// <summary>
-        /// <para>Re-sets the phone number display logic in the AXN binding. Fixed value: <b>1</b>, indicating that phone number X is displayed on both the calling phone and the called phone.</para>
+        /// <para>Resets the number display logic in the binding relationship. Set the value to <b>1</b>, which indicates that the intermediate Number X is displayed for both the caller and the callee.</para>
         /// <remarks>
-        /// <para> Due to the regulatory restrictions imposed by carriers, the setting to display real phone numbers during calls does not take effect.</para>
+        /// <para>Due to carrier regulatory restrictions, the setting to display the real number during a call does not take effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -47,10 +55,10 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public int? CallDisplayType { get; set; }
 
         /// <summary>
-        /// <para>The status of one-way call restrictions. Valid values:</para>
+        /// <para>The single-call restriction status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CONTROL_AX_DISABLE</b>: Phone number A cannot be used to call phone number X.</description></item>
-        /// <item><description><b>CONTROL_BX_DISABLE</b>: Phone number B cannot be used to call phone number X.</description></item>
+        /// <item><description><b>CONTROL_AX_DISABLE</b>: Number A cannot call Number X.</description></item>
+        /// <item><description><b>CONTROL_BX_DISABLE</b>: Number B cannot call Number X.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,7 +69,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string CallRestrict { get; set; }
 
         /// <summary>
-        /// <para>The maximum ringing duration for each number in sequential ringing. Unit: seconds.</para>
+        /// <para>The ring duration. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -71,23 +79,25 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public int? CallTimeout { get; set; }
 
         /// <summary>
-        /// <para>Specifies the city to which phone number X to be selected belongs.</para>
+        /// <para>The city specified for selecting Number X.</para>
+        /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If no phone number for the specified city is available in the current phone number pool or this parameter is not specified, a phone number that belongs to another city is randomly selected from the current phone number pool and assigned as phone number X.</description></item>
-        /// <item><description>If <b>Number X Assignment Mode</b> is set to <b>Strict Matching Mode</b> and no phone number meets the requirement, the system displays an allocation error.</description></item>
+        /// <item><description>If no available numbers in the specified city exist in the current number pool, or if this parameter is not specified, a number from another city is randomly assigned from the current number pool as Number X.</description></item>
+        /// <item><description>If the <b>Number X allocation mode</b> is set to <b>strict match mode</b>, the system returns an allocation error when no eligible numbers are available.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>hangzhou</para>
+        /// <para>Shanghai</para>
         /// </summary>
         [NameInMap("ExpectCity")]
         [Validation(Required=false)]
         public string ExpectCity { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the AXN binding. Unit: seconds.</para>
+        /// <para>The expiration time of the binding relationship. Unit: seconds.</para>
         /// <remarks>
-        /// <para> The expiration time must be more than 60 seconds later than the time when you call this API operation.</para>
+        /// <para>The expiration time must be at least 60 seconds later than the current time.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -103,10 +113,10 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string Extend { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to record all calls made by the bound phone numbers. Valid values:</para>
+        /// <para>Specifies whether to record all calls generated for this binding relationship. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><b>true</b>: Records calls.</description></item>
+        /// <item><description><b>false</b>: Does not record calls. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -117,9 +127,9 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public bool? IsRecordingEnabled { get; set; }
 
         /// <summary>
-        /// <para>The type of the phone number.</para>
+        /// <para>The number type.</para>
         /// <remarks>
-        /// <para> This parameter is applicable to the key accounts of Alibaba Cloud. This parameter can be ignored for Alibaba Cloud users.</para>
+        /// <para>This parameter applies to former Alibaba Dayu customers. Alibaba Cloud users can ignore this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -130,7 +140,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string NoType { get; set; }
 
         /// <summary>
-        /// <para>The extension field for the external business. This parameter is returned in a call record receipt.</para>
+        /// <para>The external business extension field. This parameter is returned in the call record receipt message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abcdef</para>
@@ -140,7 +150,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string OutId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the external business.</para>
+        /// <para>The external business ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>34553330****</para>
@@ -154,7 +164,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Phone number A in the AXN binding. Phone number A can be set to a mobile phone number or a landline phone number. The landline phone number must be added with an area code, and no hyphen is required between the area code and the landline phone number.</para>
+        /// <para>Number A of the AXN privacy number. Number A can be a mobile phone number or a landline number. If it is a landline number, the area code must be included, and no hyphen is required between the area code and the phone number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -165,9 +175,15 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string PhoneNoA { get; set; }
 
         /// <summary>
-        /// <para>Phone number B in the AXN binding. If phone number A is used to call phone number X, the call is forwarded to phone number B. Phone number B can be set to a mobile phone number or a landline phone number. The landline phone number must be added with an area code, and no hyphen is required between the area code and the landline phone number.</para>
+        /// <para>Number B of the AXN privacy number.</para>
+        /// <para>Number B can be a mobile phone number or a landline number. If it is a landline number, the area code must be included, and no hyphen is required between the area code and the phone number.</para>
         /// <remarks>
-        /// <para> If phone number B is not specified in the AXN binding, the system automatically generates a nonexistent number. If phone number A is used to call phone number X, the nonexistent number is returned. If you need to update phone number B, call the <a href="https://help.aliyun.com/document_detail/110253.html">UpdateSubscription</a> operation.</para>
+        /// <list type="bullet">
+        /// <item><description>When Number A dials Number X, the call is forwarded to Number B by default. If Number B is not set, the call cannot be connected.</description></item>
+        /// <item><description>When Number A dials Number X, the call is forwarded to Number B only when the <b>callback mode for Number A</b> is set to <b>default mode</b>. Otherwise, the call cannot be connected.</description></item>
+        /// <item><description>To modify the <b>callback mode for Number A</b>, go to <a href="https://dyplsnext.console.aliyun.com/number-pool?resType=1">Number Pool Management</a> &gt; filter <b>AXN privacy number</b> &gt; <b>Number Pool Management</b> &gt; <b>Callback mode for Number A</b> &gt; <b>Adjust Configuration</b>.</description></item>
+        /// <item><description>To update Number B, call the <a href="https://www.alibabacloud.com/help/en/pnp/developer-reference/api-dyplsapi-2017-05-25-updatesubscription">UpdateSubscription</a> operation.</description></item>
+        /// </list>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -178,20 +194,21 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string PhoneNoB { get; set; }
 
         /// <summary>
-        /// <para>Phone number X in the AXN binding. Phone number X is the phone number that you purchased in the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> or by using the <a href="https://help.aliyun.com/document_detail/110266.html">BuySecretNo</a> operation before you bind a phone number. Phone number X is used to forward calls.</para>
+        /// <para>Number X of the AXN privacy number.</para>
+        /// <para>Number X is a privacy number that you have <a href="https://dyplsnext.console.aliyun.com/numberbuy?spm=a2c4g.11186623.0.0.7e6449bbtiHP8m">purchased</a> in the console.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, a random phone number is selected from the phone number pool based on the value of the ExpectCity parameter and is used as phone number X.</para>
+        /// <para>If Number X is not specified, a number is randomly selected from the specified number pool based on the ExpectCity parameter as Number X.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>139****0000</para>
+        /// <para>139****1111</para>
         /// </summary>
         [NameInMap("PhoneNoX")]
         [Validation(Required=false)]
         public string PhoneNoX { get; set; }
 
         /// <summary>
-        /// <para>The key of the phone number pool. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console </a>and view the key of the phone number pool on the <b>Number Pool Management</b> page.</para>
+        /// <para>The key of the number pool. You can obtain the <b>number pool key</b> on the <a href="https://dyplsnext.console.aliyun.com/number-pool?spm=a2c4g.11186623.0.0.7e6449bbtiHP8m">Number Pool Management</a> page in the Privacy Protection console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FC2256****</para>
@@ -209,19 +226,26 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Sets the ringtone code for enterprise Color Ring Back Tone (CRBT) in the AXN extension binding.</para>
+        /// <para>Sets the corporate color ringback tone (CRBT) played during a dial-up to Number X after the AXN privacy number is attached.</para>
+        /// <para>Specify the <b>ringtone field</b> and <b>CRBT encoding</b> for this parameter.</para>
+        /// <para><b>Ringtone field</b> valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Ringtone setting (with a callback number) when phone number A is used to call phone number X in the AXN extension binding: AXNRing_AB</description></item>
-        /// <item><description>Ringtone setting (without a callback number) when phone number A is used to call phone number X in the AXN extension binding: AXNRing_A</description></item>
-        /// <item><description>Ringtone setting when an N-side number is used to call phone number X in the AXN extension binding: AXNRing_N</description></item>
+        /// <item><description>AXNRing_AB: The ringtone Settings before Number A dials Number X and the call is connected (with a callback number) in AXN mode.</description></item>
+        /// <item><description>AXNRing_A: The ringtone Settings before Number A dials Number X and the call is connected (without a callback number) in AXN mode.</description></item>
+        /// <item><description>AXNRing_N: The ringtone Settings before Number N dials Number X and the call is connected in AXN mode.</description></item>
+        /// <item><description>AXNRing_A_PICKUP: The ringtone Settings after Number A dials Number X and the call is connected in AXN mode.</description></item>
+        /// <item><description>AXNRing_N_PICKUP: The ringtone Settings after Number N dials Number X and the call is connected in AXN mode.</description></item>
         /// </list>
-        /// <para>Enterprise CRBT codes: Enterprise CRBT codes can be queried in the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a>. You can choose <b>Number Pool Management &gt; Enterprise CRBT Management</b> to view enterprise CRBT codes. You can also upload, delete, or perform other operations on enterprise CRBT codes.</para>
+        /// <para><b>CRBT encoding</b>:</para>
+        /// <para>You can obtain the corporate CRBT encoding on the <a href="https://dyplsnext.console.aliyun.com/number-pool/ringtone?resType=1">Corporate CRBT Management</a> page in the Privacy Protection console.</para>
+        /// <para><b>Example</b>:</para>
+        /// <para>To set the ringtone played before Number A dials Number X and the call is connected (without a callback number), enter &quot;AXNRing_A&quot;: &quot;1000****1&quot;.</para>
         /// <remarks>
-        /// <para> The bound enterprise CRBTs are preferentially used. If no enterprise CRBT is set or the setting does not take effect, the enterprise CRBTs at the phone number pool level are used.</para>
+        /// <para>The corporate CRBT configured at the attachment level takes precedence. If it is not set or does not take effect, the CRBT configured at the number pool level is used.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;AXNRing_N&quot;:&quot;100000001&quot;,&quot;AXNRing_A&quot;:&quot;100000001&quot;}</para>
+        /// <para>{&quot;AXNRing_N&quot;:&quot;1000<b><b>1&quot;,&quot;AXNRing_A&quot;:&quot;1000</b></b>1&quot;}</para>
         /// </summary>
         [NameInMap("RingConfig")]
         [Validation(Required=false)]

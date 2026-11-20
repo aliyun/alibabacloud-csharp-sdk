@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class BindXBRequest : TeaModel {
         /// <summary>
-        /// <para>客户uid</para>
+        /// <para>The customer UID. This parameter is automatically obtained by the system and is not required.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? CallerParentId { get; set; }
 
         /// <summary>
-        /// <para>号码池key</para>
+        /// <para>The number pool key.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>请求去重ID, reqId最大长度为20位,接入方需要保持原子性</para>
+        /// <para>The request deduplication ID. The maximum length is 20 characters. Ensure the atomicity of the request ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>员工真实号码</para>
+        /// <para>The actual phone number of the employee.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string TelB { get; set; }
 
         /// <summary>
-        /// <para>X号码</para>
+        /// <para>The work number X.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string TelX { get; set; }
 
         /// <summary>
-        /// <para>客户自定义参数回调带回</para>
+        /// <para>The custom data to be returned in the callback.</para>
         /// 
         /// <b>Example:</b>
         /// <para>000</para>

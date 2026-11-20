@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class ListXTelephonesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The details of the access denied error.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -18,7 +20,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>返回状态码 0000表示成功 其他表示失败</para>
+        /// <para>The response status code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>0000: Success.</para>
+        /// </description></item>
+        /// <item><description><para>Other values: Failure.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0000</para>
@@ -27,29 +35,32 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The data collection.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListXTelephonesResponseBodyData Data { get; set; }
         public class ListXTelephonesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>数据集合</para>
+            /// <para>The data list.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<ListXTelephonesResponseBodyDataList> List { get; set; }
             public class ListXTelephonesResponseBodyDataList : TeaModel {
                 /// <summary>
-                /// <para>绑定失败原因</para>
+                /// <para>The reason for binding failure.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>绑定失败用户身份证黑名单</para>
+                /// <para>Binding failed: user ID card blacklisted</para>
                 /// </summary>
                 [NameInMap("AuthMsg")]
                 [Validation(Required=false)]
                 public string AuthMsg { get; set; }
 
                 /// <summary>
-                /// <para>绑定时间</para>
+                /// <para>The binding time. The format is YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-08-29 17:23:58</para>
@@ -59,7 +70,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
                 public string BindTime { get; set; }
 
                 /// <summary>
-                /// <para>购买时间</para>
+                /// <para>The purchase time. The format is YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-08-29 17:23:58</para>
@@ -69,7 +80,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
                 public string BuyTime { get; set; }
 
                 /// <summary>
-                /// <para>客户号码池key</para>
+                /// <para>The customer number pool key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FC533e6eeb81f4400c87ef3745a21a1a</para>
@@ -79,17 +90,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
                 public string CustomerPoolKey { get; set; }
 
                 /// <summary>
-                /// <para>号码池名称</para>
+                /// <para>The number pool name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试号码池</para>
+                /// <para>Test number pool</para>
                 /// </summary>
                 [NameInMap("CustomerPoolName")]
                 [Validation(Required=false)]
                 public string CustomerPoolName { get; set; }
 
                 /// <summary>
-                /// <para>释放时间</para>
+                /// <para>The release time. The format is YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-08-29 17:23:58</para>
@@ -99,7 +110,11 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
                 public string ReleaseTime { get; set; }
 
                 /// <summary>
-                /// <para>短信开通状态：0 未开通 1已开通</para>
+                /// <para>The SMS activation status. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: Not activated.</description></item>
+                /// <item><description>1: Activated.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -109,7 +124,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
                 public string SmsStatus { get; set; }
 
                 /// <summary>
-                /// <para>X号码</para>
+                /// <para>The X number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>17816876546</para>
@@ -119,7 +134,19 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
                 public string Telephone { get; set; }
 
                 /// <summary>
-                /// <para>号码状态：0 空闲中 1 调拨完成待购买 2购买完成待认证  3 实名认证中  4 实名认证成功  5 认证失败  6 解绑中 7 解绑失败 8已释放 99 超时释放</para>
+                /// <para>The number status. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: Idle.</description></item>
+                /// <item><description>1: Allocation completed and pending purchase.</description></item>
+                /// <item><description>2: Purchase completed and pending verification.</description></item>
+                /// <item><description>3: Real-name verification in progress.</description></item>
+                /// <item><description>4: Real-name verification succeeded.</description></item>
+                /// <item><description>5: Verification failed.</description></item>
+                /// <item><description>6: Unbinding in progress.</description></item>
+                /// <item><description>7: Unbinding failed.</description></item>
+                /// <item><description>8: Released.</description></item>
+                /// <item><description>99: Released due to timeout.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -129,7 +156,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
                 public string TelephoneStatus { get; set; }
 
                 /// <summary>
-                /// <para>解绑时间</para>
+                /// <para>The unbinding time. The format is YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-08-29 17:23:58</para>
@@ -141,7 +168,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             }
 
             /// <summary>
-            /// <para>页码</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -151,7 +178,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public long? PageNo { get; set; }
 
             /// <summary>
-            /// <para>每页条数</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -161,7 +188,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>符合查询条件的总数量</para>
+            /// <para>The total number of entries that meet the query conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -173,17 +200,23 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         }
 
         /// <summary>
-        /// <para>返回信息</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>成功</para>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>返回是否成功 true  表示成功 false表示失败</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: Success.</para>
+        /// </description></item>
+        /// <item><description><para>false: Failure.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

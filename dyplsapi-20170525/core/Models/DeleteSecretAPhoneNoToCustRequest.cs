@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class DeleteSecretAPhoneNoToCustRequest : TeaModel {
         /// <summary>
-        /// <para>A号码组ID</para>
+        /// <para>A-number group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>A号码</para>
+        /// <para>A-number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
