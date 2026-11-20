@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelDTO : TeaModel {
         /// <summary>
-        /// <para>A masked preview of the API key.</para>
+        /// <para>The API key preview.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sk-xxx****xxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ApiKeyPreview { get; set; }
 
         /// <summary>
-        /// <para>The base URL for API requests.</para>
+        /// <para>Base URL</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://dashscope.aliyuncs.com">https://dashscope.aliyuncs.com</a></para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string BaseUrl { get; set; }
 
         /// <summary>
-        /// <para>Indicates the model\&quot;s status. A value of 0 means enabled, and a non-zero value means disabled.</para>
+        /// <para>A value of 0 indicates enabled, and a non-zero value indicates disabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         /// <para>The model description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>通义千问大模型</para>
+        /// <para>Qwen large language model</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Extensions { get; set; }
 
         /// <summary>
-        /// <para>The time when the model was created, in ISO 8601 format.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-01T00:00:00Z</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>The time when the model was last updated, in ISO 8601 format.</para>
+        /// <para>The update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-01T00:00:00Z</para>
@@ -74,6 +74,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string GmtModified { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether a billing rule is configured.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -82,7 +84,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public bool? HasBillingRule { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the model.</para>
+        /// <para>ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -126,7 +128,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string MaxOutputLength { get; set; }
 
         /// <summary>
-        /// <para>The model code.</para>
+        /// <para>The model identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qwen-turbo</para>
@@ -149,7 +151,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         /// <para>The model name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>通义千问</para>
+        /// <para>Qwen</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
@@ -166,17 +168,17 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Symbol { get; set; }
 
         /// <summary>
-        /// <para>The display names for the tags, separated by commas.</para>
+        /// <para>The tag display names.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>对话,自然语言处理</para>
+        /// <para>Conversation, natural language processing</para>
         /// </summary>
         [NameInMap("tagNames")]
         [Validation(Required=false)]
         public string TagNames { get; set; }
 
         /// <summary>
-        /// <para>A comma-separated list of model tags.</para>
+        /// <para>The tags, separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>chat,NLP</para>
@@ -186,7 +188,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Tags { get; set; }
 
         /// <summary>
-        /// <para>The version number.</para>
+        /// <para>The version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public List<ModelRouterQueryNacosProvidersResponseBodyDataModels> Models { get; set; }
             public class ModelRouterQueryNacosProvidersResponseBodyDataModels : TeaModel {
                 /// <summary>
-                /// <para>The extension configuration parameters of the model, stored as key-value pairs for additional model behavior configuration.</para>
+                /// <para>The extension configuration parameters of the model, which store additional model behavior configurations as key-value pairs.</para>
                 /// </summary>
                 [NameInMap("extensions")]
                 [Validation(Required=false)]
                 public ModelRouterQueryNacosProvidersResponseBodyDataModelsExtensions Extensions { get; set; }
                 public class ModelRouterQueryNacosProvidersResponseBodyDataModelsExtensions : TeaModel {
                     /// <summary>
-                    /// <para>The asynchronous call identifier.</para>
+                    /// <para>The identifier for asynchronous invocation.</para>
                     /// </summary>
                     [NameInMap("async")]
                     [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 }
 
                 /// <summary>
-                /// <para>The model identifier.</para>
+                /// <para>The identifier of the model.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ca90f359956e94367470c38676</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public string Identifier { get; set; }
 
                 /// <summary>
-                /// <para>The input type and output type.</para>
+                /// <para>The input and output types.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>text</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public string OutputToken { get; set; }
 
                 /// <summary>
-                /// <para>The feature type or capability category of the model.</para>
+                /// <para>The function type or capability category of the model.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Chat</para>
@@ -105,17 +105,17 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             }
 
             /// <summary>
-            /// <para>The provider name.</para>
+            /// <para>The name of the provider.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>通义千问</para>
+            /// <para>Qwen</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The provider identifier.</para>
+            /// <para>The identifier of the provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qwen</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
-        /// <para>The fault message code.</para>
+        /// <para>The fault message encoding.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>

@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ApiKeyDecryptedDTO : TeaModel {
+        /// <summary>
+        /// <para>The associated client information.</para>
+        /// </summary>
         [NameInMap("client")]
         [Validation(Required=false)]
         public ClientDTO Client { get; set; }
 
         /// <summary>
+        /// <para>The client ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ClientId { get; set; }
 
         /// <summary>
+        /// <para>The deletion tag. A value of 0 indicates enabled, and a non-zero value indicates disabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? DeleteTag { get; set; }
 
         /// <summary>
+        /// <para>The creation time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-01-01T00:00:00Z</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string GmtCreate { get; set; }
 
         /// <summary>
+        /// <para>The update time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-01-01T00:00:00Z</para>
         /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string GmtModified { get; set; }
 
         /// <summary>
+        /// <para>ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The full key.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sk-xxxxxxxxxxxxxxxxxxx</para>
         /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Key { get; set; }
 
         /// <summary>
+        /// <para>The key preview.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sk-xxx****xxx</para>
         /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string KeyPreview { get; set; }
 
         /// <summary>
+        /// <para>The key name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MyApiKey</para>
         /// </summary>

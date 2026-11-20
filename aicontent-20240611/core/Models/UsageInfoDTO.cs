@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class UsageInfoDTO : TeaModel {
         /// <summary>
+        /// <para>The output tokens.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>50</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? CompletionTokens { get; set; }
 
         /// <summary>
+        /// <para>The number of images.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? ImageCount { get; set; }
 
         /// <summary>
+        /// <para>The input tokens.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? PromptTokens { get; set; }
 
         /// <summary>
+        /// <para>The total tokens.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>150</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? TotalTokens { get; set; }
 
         /// <summary>
+        /// <para>The number of videos.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? VideoCount { get; set; }
 
         /// <summary>
+        /// <para>The video duration in seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>

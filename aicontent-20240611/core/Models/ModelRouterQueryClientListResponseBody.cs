@@ -10,20 +10,25 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterQueryClientListResponseBody : TeaModel {
         /// <summary>
-        /// <para>A wrapper object for the paged response data.</para>
+        /// <para>The data object.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[]</para>
+        /// <para>{&quot;page&quot;:1,&quot;pageSize&quot;:10}</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ModelRouterQueryClientListResponseBodyData Data { get; set; }
         public class ModelRouterQueryClientListResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The list of items.</para>
+            /// </summary>
             [NameInMap("list")]
             [Validation(Required=false)]
             public List<ClientDTO> List { get; set; }
 
             /// <summary>
+            /// <para>maxResults</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -32,6 +37,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string MaxResults { get; set; }
 
             /// <summary>
+            /// <para>nextToken</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -39,14 +46,32 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             [Validation(Required=false)]
             public string NextToken { get; set; }
 
+            /// <summary>
+            /// <para>The current page number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("page")]
             [Validation(Required=false)]
             public int? Page { get; set; }
 
+            /// <summary>
+            /// <para>The number of records per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
             [NameInMap("pageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
+            /// <summary>
+            /// <para>The total number of records that meet the query conditions.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("total")]
             [Validation(Required=false)]
             public int? Total { get; set; }
@@ -54,7 +79,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The fault message encoding.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
@@ -67,7 +92,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>未知错误</para>
+        /// <para>Unknown error</para>
         /// </summary>
         [NameInMap("errMessage")]
         [Validation(Required=false)]
@@ -94,7 +119,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

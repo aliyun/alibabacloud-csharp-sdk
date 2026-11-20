@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class UserListItemDTO : TeaModel {
         /// <summary>
+        /// <para>The list of departments and roles to which the user belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public List<UserDepartmentDTO> Departments { get; set; }
 
         /// <summary>
+        /// <para>The creation time in the yyyy-MM-dd HH:mm:ss format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-07-01 10:00:00</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string GmtCreate { get; set; }
 
         /// <summary>
+        /// <para>The user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The logon name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zhangsan</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string LoginName { get; set; }
 
         /// <summary>
+        /// <para>The name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Zhang San</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The phone number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>13800000000</para>
         /// </summary>

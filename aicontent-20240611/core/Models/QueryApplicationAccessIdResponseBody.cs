@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public QueryApplicationAccessIdResponseBodyData Data { get; set; }
         public class QueryApplicationAccessIdResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The application access ID (appkey).</para>
+            /// <para>The application access identifier (appkey).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234567890</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string ApplicationAccessId { get; set; }
 
             /// <summary>
-            /// <para>The application access secret. This parameter is returned only for requests from the Alibaba Cloud console.</para>
+            /// <para>The application secret. This parameter is returned only for console requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MyAppSecret</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The fault message encoding.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>未知错误</para>
+        /// <para>Unknown error</para>
         /// </summary>
         [NameInMap("errMessage")]
         [Validation(Required=false)]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

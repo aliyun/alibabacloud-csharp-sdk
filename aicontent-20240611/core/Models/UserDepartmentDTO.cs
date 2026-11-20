@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class UserDepartmentDTO : TeaModel {
         /// <summary>
+        /// <para>The department ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ClientId { get; set; }
 
         /// <summary>
+        /// <para>The department name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>R&amp;D Department</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ClientName { get; set; }
 
         /// <summary>
+        /// <para>The role code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>member</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RoleCode { get; set; }
 
         /// <summary>
+        /// <para>The role name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Member</para>
         /// </summary>

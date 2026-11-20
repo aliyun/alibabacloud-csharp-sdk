@@ -10,14 +10,18 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ConversationUpdateCmd : TeaModel {
         /// <summary>
+        /// <para>The conversation data in JSON format, containing message records for each model.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>{&quot;messages&quot;:[{&quot;role&quot;:&quot;user&quot;,&quot;content&quot;:&quot;你好&quot;}]}</para>
+        /// <para>{&quot;messages&quot;:[{&quot;role&quot;:&quot;user&quot;,&quot;content&quot;:&quot;Hello&quot;}]}</para>
         /// </summary>
         [NameInMap("chatData")]
         [Validation(Required=false)]
         public string ChatData { get; set; }
 
         /// <summary>
+        /// <para>The number of messages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? MessageCount { get; set; }
 
         /// <summary>
+        /// <para>The list of model IDs as a JSON array string.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[1,2,3]</para>
         /// </summary>
@@ -34,8 +40,10 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ModelIds { get; set; }
 
         /// <summary>
+        /// <para>The conversation title.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>我的对话</para>
+        /// <para>My conversation</para>
         /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]

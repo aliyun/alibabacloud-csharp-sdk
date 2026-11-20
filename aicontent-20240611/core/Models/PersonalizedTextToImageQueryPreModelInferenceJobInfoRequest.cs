@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class PersonalizedTextToImageQueryPreModelInferenceJobInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The inference job ID.</para>
+        /// <para>The inference task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

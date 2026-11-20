@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxxxxxxx</para>
+        /// <para>demo_user</para>
         /// </summary>
         [NameInMap("userId")]
         [Validation(Required=false)]

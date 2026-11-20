@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ConversationListQry : TeaModel {
+        /// <summary>
+        /// <para>The search keyword.</para>
+        /// </summary>
         [NameInMap("keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? Page { get; set; }
 
         /// <summary>
+        /// <para>The number of items per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>50</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The status filter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

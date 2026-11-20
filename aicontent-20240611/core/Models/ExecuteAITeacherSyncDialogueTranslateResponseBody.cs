@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         /// <para>The data object.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[]</para>
+        /// <para>{&quot;result&quot;:&quot;That\&quot;s great, thank you for coming, Lily. Do you like eating meat?&quot;}</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             /// <para>The translation result.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>太好了，谢谢你过来，莉莉。你喜欢吃肉吗？</para>
+            /// <para>That\&quot;s great, thank you for coming, Lily. Do you like eating meat?</para>
             /// </summary>
             [NameInMap("result")]
             [Validation(Required=false)]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The fault message encoding.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>未知错误</para>
+        /// <para>Unknown error</para>
         /// </summary>
         [NameInMap("errMessage")]
         [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

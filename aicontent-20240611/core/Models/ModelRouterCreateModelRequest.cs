@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string BaseUrl { get; set; }
 
         /// <summary>
-        /// <para>The model description.</para>
+        /// <para>The description of the model.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>通义千问大模型</para>
+        /// <para>Qwen large language model</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string MaxOutputLength { get; set; }
 
         /// <summary>
-        /// <para>The model ID.</para>
+        /// <para>The ID of the model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qwen-turbo</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ModelId { get; set; }
 
         /// <summary>
-        /// <para>The model type.</para>
+        /// <para>The type of the model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Chat</para>
@@ -100,10 +100,10 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ModelType { get; set; }
 
         /// <summary>
-        /// <para>The model name.</para>
+        /// <para>The name of the model.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>通义千问</para>
+        /// <para>Qwen</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]

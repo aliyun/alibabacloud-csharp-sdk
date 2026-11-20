@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class CreateAccessWarrantResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data object.</para>
+        /// <para>The data object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string AccessToken { get; set; }
 
             /// <summary>
-            /// <para>The access warrant ID.</para>
+            /// <para>The access token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ex2xxxxxxxx</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string AccessWarrantId { get; set; }
 
             /// <summary>
-            /// <para>The merchant\&quot;s application ID.</para>
+            /// <para>The application access ID (AppKey).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234567890</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string ApplicationAccessId { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the access warrant.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1672531200</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the access warrant.</para>
+            /// <para>The expiration time of the token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1672531200</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The merchant\&quot;s user ID.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234567890</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
-        /// <para>The error code returned if the request fails.</para>
+        /// <para>The fault message code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
@@ -92,10 +92,10 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request fails.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>未知错误</para>
+        /// <para>Unknown error</para>
         /// </summary>
         [NameInMap("errMessage")]
         [Validation(Required=false)]
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The unique request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxxx-xxxx-xxxxxxxx</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class Personalizedtxt2imgAddInferenceJobRequest : TeaModel {
         /// <summary>
-        /// <para>The number of images to generate. Note: Due to resource limits in the test environment, you can generate up to 10 images per request. The system automatically sets values greater than 10 to 10.</para>
+        /// <para>The number of images to generate. Note: Due to resource limits in the test environment, a maximum of 10 images can be generated at a time. If this value is greater than 10, it is treated as 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? ImageNumber { get; set; }
 
         /// <summary>
-        /// <para>The model ID to use for the inference job.</para>
+        /// <para>The ID of the model training task. Specifies the model to use for inference.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ModelId { get; set; }
 
         /// <summary>
-        /// <para>An English prompt describing the image to generate. Replace the subject with . For example, change &quot;a man in the snow&quot; to &quot;a in the snow&quot;, and &quot;a photo of a girl&quot; to &quot;a photo of a &quot;.</para>
+        /// <para>The English prompt that describes the image to be generated. Replace the character to be generated with <special-token>. For example, change &quot;a man in the snow&quot; to &quot;a <special-token> in the snow&quot; and &quot;a photo of a girl&quot; to &quot;a photo of a <special-token>&quot;.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Prompt { get; set; }
 
         /// <summary>
-        /// <para>The seed for the random number generator. Using the same seed ensures reproducible results. The value must be between -1 and 2,147,483,647. If the value is outside this range or is not specified, the system automatically generates a suitable seed.</para>
+        /// <para>The random seed. A fixed seed generates the same image and ensures the reproducibility of the results. Note: The input value must be in the range of [-1, 2147483647]. If the input value is out of this range or not provided, a suitable seed is automatically generated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

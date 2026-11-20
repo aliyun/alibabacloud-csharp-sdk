@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class OrgInitResultDTO : TeaModel {
         /// <summary>
+        /// <para>The returned plaintext API key, which is visible only once during initialization.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sk-xxxxxxxxxxxxxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ApiKey { get; set; }
 
         /// <summary>
+        /// <para>The customer ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ClientId { get; set; }
 
         /// <summary>
+        /// <para>The customer unique identifier.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>st-xxxx</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ClientUuid { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether it is newly created. A value of false indicates that it already exists.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public bool? IsNew { get; set; }
 
         /// <summary>
+        /// <para>The enterprise ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? OrgId { get; set; }
 
         /// <summary>
+        /// <para>The user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

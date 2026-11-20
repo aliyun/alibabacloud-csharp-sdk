@@ -11,23 +11,31 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
     public class ModelRouterQueryApiKeyListResponseBody : TeaModel {
         /// <summary>
         /// <para>The data object.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>[]</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ModelRouterQueryApiKeyListResponseBodyData Data { get; set; }
         public class ModelRouterQueryApiKeyListResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The elements.</para>
+            /// </summary>
             [NameInMap("list")]
             [Validation(Required=false)]
             public List<ApiKeyDTO> List { get; set; }
 
+            /// <summary>
+            /// <para>The page size. Default value: 20.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
+            /// </summary>
             [NameInMap("maxResult")]
             [Validation(Required=false)]
             public string MaxResult { get; set; }
 
             /// <summary>
+            /// <para>nextToken</para>
+            /// 
             /// <b>Example:</b>
             /// <para>None</para>
             /// </summary>
@@ -36,6 +44,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string NextToken { get; set; }
 
             /// <summary>
+            /// <para>The page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -44,6 +54,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public int? Page { get; set; }
 
             /// <summary>
+            /// <para>The number of items per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -52,6 +64,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The total number of records.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -62,7 +76,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
-        /// <para>The error message code.</para>
+        /// <para>The fault message encoding.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
@@ -112,7 +126,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

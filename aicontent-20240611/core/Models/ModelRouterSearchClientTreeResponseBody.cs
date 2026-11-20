@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public ModelRouterSearchClientTreeResponseBodyData Data { get; set; }
         public class ModelRouterSearchClientTreeResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The collection of matched department IDs.</para>
+            /// <para>The IDs of the matched departments.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[]</para>

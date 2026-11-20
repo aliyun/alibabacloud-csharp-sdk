@@ -10,14 +10,18 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class BatchFailedItemDTO : TeaModel {
         /// <summary>
+        /// <para>The reason for failure.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>Member node missing</para>
+        /// <para>Missing member node</para>
         /// </summary>
         [NameInMap("reason")]
         [Validation(Required=false)]
         public string Reason { get; set; }
 
         /// <summary>
+        /// <para>The user ID of the failed member.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

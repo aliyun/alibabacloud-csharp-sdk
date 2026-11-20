@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class GetAITeacherSyncDialogueSuggestionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The object that contains the result of the request.</para>
+        /// <para>The data object.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[]</para>
+        /// <para>{&quot;chineseResult&quot;:&quot;谢谢莉莉.你喜欢吃肉吗，莉莉？&quot;,&quot;englishResult&quot;:&quot;Thanks, Lily. Do you like meat, Lily?&quot;}</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetAITeacherSyncDialogueSuggestionResponseBodyData Data { get; set; }
         public class GetAITeacherSyncDialogueSuggestionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The assistant\&quot;s suggestion in Chinese.</para>
+            /// <para>The Chinese prompt from the assistant.</para>
             /// 
             /// <b>Example:</b>
             /// <para>谢谢莉莉.你喜欢吃肉吗，莉莉？</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string ChineseResult { get; set; }
 
             /// <summary>
-            /// <para>The assistant\&quot;s suggestion in English.</para>
+            /// <para>The English prompt from the assistant.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Thanks, Lily. Do you like meat, Lily?</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
-        /// <para>The error code returned when the request fails.</para>
+        /// <para>The fault message encoding.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
@@ -52,10 +52,10 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned when the request fails.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>未知错误</para>
+        /// <para>Unknown error</para>
         /// </summary>
         [NameInMap("errMessage")]
         [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>A unique identifier for the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxxx-xxxx-xxxxxxxx</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

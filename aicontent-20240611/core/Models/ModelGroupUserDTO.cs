@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelGroupUserDTO : TeaModel {
         /// <summary>
+        /// <para>The list of API key summaries for the user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public List<ModelGroupClientKeyItemDTO> ApiKeys { get; set; }
 
         /// <summary>
+        /// <para>The user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? UserId { get; set; }
 
         /// <summary>
+        /// <para>The username.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Zhang San</para>
         /// </summary>

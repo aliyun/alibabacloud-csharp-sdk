@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterQueryModelListRequest : TeaModel {
         /// <summary>
-        /// <para>The field to use for grouping the results.</para>
+        /// <para>The field by which to group the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>resourceId</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string GroupBy { get; set; }
 
         /// <summary>
-        /// <para>The keyword for a fuzzy search on model information.</para>
+        /// <para>The search keyword.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -40,6 +40,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The model type filter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Chat</para>
         /// </summary>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ModelType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include the total count of matching models in the response.</para>
+        /// <para>Specifies whether to include the total count of items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public bool? NeedTotalCount { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for retrieving the next page of results. If this parameter is not specified, the first page is retrieved. To retrieve a subsequent page, set this to the <c>nextToken</c> value from the previous response.</para>
+        /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -68,7 +70,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The field to use for sorting the results.</para>
+        /// <para>The field by which to sort the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>resourceId</para>
@@ -78,7 +80,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values include <c>ASC</c> for ascending order and <c>DESC</c> for descending order.</para>
+        /// <para>The sort direction.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DESC</para>
@@ -88,7 +90,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string OrderDirection { get; set; }
 
         /// <summary>
-        /// <para>The page number to retrieve. Pages are numbered starting from 1.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -98,7 +100,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
-        /// <para>The number of models to return per page.</para>
+        /// <para>The number of items per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -108,7 +110,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The model status to use as a filter.</para>
+        /// <para>The status filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class DeptMemberDTO : TeaModel {
         /// <summary>
+        /// <para>The comma-separated list of authorized model IDs. This field is valid only when include_authorization is specified. An empty value indicates that the models are inherited or all models are authorized.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1,2</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string AllowedModels { get; set; }
 
         /// <summary>
+        /// <para>The authorization configuration. Valid values: inherit: Inherited from the department. custom: Customized. This field is valid only when include_authorization is specified.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>inherit</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string AuthConfig { get; set; }
 
         /// <summary>
+        /// <para>The creation time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-01-01T00:00:00Z</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string GmtCreate { get; set; }
 
         /// <summary>
+        /// <para>The member user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The number of active keys that belong to the member. This field is valid only when include_authorization is specified.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? KeyCount { get; set; }
 
         /// <summary>
+        /// <para>The logon name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zhangsan</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string LoginName { get; set; }
 
         /// <summary>
+        /// <para>The monthly balance. This field is valid only when include_balance is specified. The value is 0 if the feature is not activated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10.00</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public double? MonthlyBalance { get; set; }
 
         /// <summary>
+        /// <para>The name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Zhang San</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The permanent balance. This field is valid only when include_balance is specified. The value is 0 if the feature is not activated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20.00</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public double? PermanentBalance { get; set; }
 
         /// <summary>
+        /// <para>The mobile phone number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>138****0000</para>
         /// </summary>
@@ -90,6 +110,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Phone { get; set; }
 
         /// <summary>
+        /// <para>The role code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>member</para>
         /// </summary>
@@ -98,6 +120,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RoleCode { get; set; }
 
         /// <summary>
+        /// <para>The role name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Member</para>
         /// </summary>

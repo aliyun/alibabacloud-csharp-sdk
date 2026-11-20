@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelGroupClientDTO : TeaModel {
         /// <summary>
+        /// <para>The list of API key summaries for the department.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public List<ModelGroupClientKeyItemDTO> ApiKeys { get; set; }
 
         /// <summary>
+        /// <para>The department ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1001</para>
         /// </summary>
@@ -26,8 +30,10 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ClientId { get; set; }
 
         /// <summary>
+        /// <para>The department name.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>UserA-Professional</para>
+        /// <para>User A-Professional Edition</para>
         /// </summary>
         [NameInMap("clientName")]
         [Validation(Required=false)]

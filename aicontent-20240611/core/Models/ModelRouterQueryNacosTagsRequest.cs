@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterQueryNacosTagsRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies the Nacos configuration type to retrieve.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>providers</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ConfigType { get; set; }
 
         /// <summary>
-        /// <para>The field by which to group the results.</para>
+        /// <para>The grouping field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>resourceId</para>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the total count of results.</para>
+        /// <para>Specifies whether to return the total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public bool? NeedTotalCount { get; set; }
 
         /// <summary>
-        /// <para>The token from a previous response to retrieve the next page of results.</para>
+        /// <para>The pagination token. This parameter is empty if there is no next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the results.</para>
+        /// <para>The sort field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>resourceId</para>
@@ -68,7 +70,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The sort order.</para>
+        /// <para>The sort direction.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DESC</para>
@@ -88,7 +90,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
-        /// <para>The number of results to return per page.</para>
+        /// <para>The number of items per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -86,6 +86,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string MemberUserIds { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>123,456</para>
+        /// </summary>
+        [NameInMap("modelIds")]
+        [Validation(Required=false)]
+        public string ModelIds { get; set; }
+
+        /// <summary>
         /// <para>The model types, separated by commas.</para>
         /// 
         /// <b>Example:</b>

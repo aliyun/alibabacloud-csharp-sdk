@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ExecuteAITeacherExpansionDialogueRequest : TeaModel {
         /// <summary>
-        /// <para>The background of the dialogue.</para>
+        /// <para>The conversation background description.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Background { get; set; }
 
         /// <summary>
-        /// <para>A list of dialogue tasks.</para>
+        /// <para>The collection of conversation task content.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("dialogueTasks")]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public List<ExecuteAITeacherExpansionDialogueRequestDialogueTasks> DialogueTasks { get; set; }
         public class ExecuteAITeacherExpansionDialogueRequestDialogueTasks : TeaModel {
             /// <summary>
-            /// <para>The message content from the assistant.</para>
+            /// <para>The AI conversation content.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -40,17 +40,17 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string Assistant { get; set; }
 
             /// <summary>
-            /// <para>The translated content of the assistant\&quot;s message.</para>
+            /// <para>The translation of the AI conversation content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>为什么有些人认为遛狗是份好差事?</para>
+            /// <para>Why do some people think walking dogs is a good job?</para>
             /// </summary>
             [NameInMap("assistantTranslate")]
             [Validation(Required=false)]
             public string AssistantTranslate { get; set; }
 
             /// <summary>
-            /// <para>The order of the task.</para>
+            /// <para>The sequence number.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public int? Order { get; set; }
 
             /// <summary>
-            /// <para>The user\&quot;s message content.</para>
+            /// <para>The user conversation content.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
-        /// <para>The language code for the conversation.</para>
+        /// <para>The language code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en-gb</para>
@@ -84,14 +84,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string LanguageCode { get; set; }
 
         /// <summary>
-        /// <para>A list of dialogue records.</para>
+        /// <para>The collection of conversation records.</para>
         /// </summary>
         [NameInMap("records")]
         [Validation(Required=false)]
         public List<ExecuteAITeacherExpansionDialogueRequestRecords> Records { get; set; }
         public class ExecuteAITeacherExpansionDialogueRequestRecords : TeaModel {
             /// <summary>
-            /// <para>The message content.</para>
+            /// <para>The conversation content.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -102,27 +102,35 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the user\&quot;s response is off-topic. This parameter controls the dialogue flow. For example, if the user provides two consecutive off-topic responses, set this value to <c>true</c> to advance to the next dialogue task.</para>
+            /// <para>Specifies whether the response is off-topic, which also serves for flow control. This parameter reflects whether the student\&quot;s response complies with the settings of the conversation task. The value of this parameter is derived from the return results of previous conversation turns. In addition, this parameter serves for flow control. If the user goes off-topic more than twice, the value is forcibly set to true to force a task switch. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: Off-topic.</description></item>
+            /// <item><description>false: On-topic.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>跑题：true, 不跑题：false</para>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("isOffTopicControl")]
             [Validation(Required=false)]
             public bool? IsOffTopicControl { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the user\&quot;s response is on topic.</para>
+            /// <para>Specifies whether the response is on-topic. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: On-topic.</description></item>
+            /// <item><description>false: Off-topic.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>扣题：true, 不扣题：false</para>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("isOnTopic")]
             [Validation(Required=false)]
             public bool? IsOnTopic { get; set; }
 
             /// <summary>
-            /// <para>The order of the message in the dialogue.</para>
+            /// <para>The sequence number.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -133,11 +141,11 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public int? Order { get; set; }
 
             /// <summary>
-            /// <para>The role of the message author.</para>
+            /// <para>The role.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>AI：assistant；用户：user</para>
+            /// <para>AI: assistant; User: user</para>
             /// </summary>
             [NameInMap("role")]
             [Validation(Required=false)]
@@ -146,7 +154,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
-        /// <para>Specifies the names of the participants in the dialogue.</para>
+        /// <para>The role settings.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("roleInfo")]
@@ -154,7 +162,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public ExecuteAITeacherExpansionDialogueRequestRoleInfo RoleInfo { get; set; }
         public class ExecuteAITeacherExpansionDialogueRequestRoleInfo : TeaModel {
             /// <summary>
-            /// <para>The name of the AI assistant.</para>
+            /// <para>The name of the AI.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -178,7 +186,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
-        /// <para>The opening sentence of the dialogue.</para>
+        /// <para>The opening remark.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Hello Lily, could you please come to the kitchen for a moment?</para>
@@ -188,7 +196,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string StartSentence { get; set; }
 
         /// <summary>
-        /// <para>The topic of the conversation.</para>
+        /// <para>The topic.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -199,7 +207,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Topic { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier for the user.</para>
+        /// <para>The user ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

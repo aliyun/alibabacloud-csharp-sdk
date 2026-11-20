@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class BillingDetailRowDTO : TeaModel {
         /// <summary>
-        /// <para>The actual payment amount (after discount), rounded to 8 decimal places.</para>
+        /// <para>The actual amount paid after discounts, rounded to eight decimal places.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.00012800</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ApiKeyId { get; set; }
 
         /// <summary>
-        /// <para>The API key name.</para>
+        /// <para>The name of the API key.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Default Key</para>
+        /// <para>Default key</para>
         /// </summary>
         [NameInMap("apiKeyName")]
         [Validation(Required=false)]
         public string ApiKeyName { get; set; }
 
         /// <summary>
-        /// <para>The number of cache creation tokens (explicit cache writes).</para>
+        /// <para>The number of cache creation tokens for explicit cache writes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public double? CacheCreationTokens { get; set; }
 
         /// <summary>
-        /// <para>The number of tokens that hit the cache.</para>
+        /// <para>The number of cache hit tokens.</para>
         /// 
         /// <b>Example:</b>
         /// <para>256</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public double? CachedTokens { get; set; }
 
         /// <summary>
-        /// <para>The department ID. A value of 0 indicates that no department is associated.</para>
+        /// <para>The department ID. A value of 0 indicates that the request does not belong to any department.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ClientName { get; set; }
 
         /// <summary>
-        /// <para>The discount coefficient. A value of 1.0 indicates no discount.</para>
+        /// <para>The discount factor. A value of 1.0 indicates no discount.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.0</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public double? InputTokens { get; set; }
 
         /// <summary>
-        /// <para>The member user ID for a member row. The value is 0 for a department row.</para>
+        /// <para>The user ID of the member. For department rows, the value is 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30001</para>
@@ -110,17 +110,17 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? MemberUserId { get; set; }
 
         /// <summary>
-        /// <para>The member name for a member row. The value is empty for a department row.</para>
+        /// <para>The name of the member. For department rows, the value is empty.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>John</para>
+        /// <para>John Doe</para>
         /// </summary>
         [NameInMap("memberUserName")]
         [Validation(Required=false)]
         public string MemberUserName { get; set; }
 
         /// <summary>
-        /// <para>The JSON of other metering field mapping, such as video duration and image count. Fields with a value of 0 are not included in the output.</para>
+        /// <para>The JSON containing other metering field mappings, such as video duration and number of images. Fields with a value of 0 are not returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ModelName { get; set; }
 
         /// <summary>
-        /// <para>The model symbol (provider identifier).</para>
+        /// <para>The model symbol, which is the vendor identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qwen</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public double? ReasoningTokens { get; set; }
 
         /// <summary>
-        /// <para>The unique request ID.</para>
+        /// <para>The unique identifier of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>chatcmpl-abc123def456</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public double? TotalTokens { get; set; }
 
         /// <summary>
-        /// <para>The raw JSON of the usage details.</para>
+        /// <para>The raw JSON of usage details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;input_tokens&quot;: 1024, &quot;output_tokens&quot;: 512}</para>

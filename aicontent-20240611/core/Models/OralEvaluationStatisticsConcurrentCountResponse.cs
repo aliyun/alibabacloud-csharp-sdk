@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class OralEvaluationStatisticsConcurrentCountResponse : TeaModel {
         /// <summary>
-        /// <para>Statistical data for the project.</para>
+        /// <para>The project statistics data.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("projectData")]
@@ -18,29 +18,32 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public OralEvaluationStatisticsConcurrentCountResponseProjectData ProjectData { get; set; }
         public class OralEvaluationStatisticsConcurrentCountResponseProjectData : TeaModel {
             /// <summary>
-            /// <para>A list of application data.</para>
+            /// <para>The data list.</para>
             /// </summary>
             [NameInMap("ApplicationData")]
             [Validation(Required=false)]
             public List<OralEvaluationStatisticsConcurrentCountResponseProjectDataApplicationData> ApplicationData { get; set; }
             public class OralEvaluationStatisticsConcurrentCountResponseProjectDataApplicationData : TeaModel {
                 /// <summary>
-                /// <para>A list of data nodes.</para>
+                /// <para>The data list.</para>
                 /// </summary>
                 [NameInMap("Data")]
                 [Validation(Required=false)]
                 public List<OralEvaluationStatisticsConcurrentCountResponseProjectDataApplicationDataData> Data { get; set; }
                 public class OralEvaluationStatisticsConcurrentCountResponseProjectDataApplicationDataData : TeaModel {
                     /// <summary>
-                    /// <para>The count of the item.</para>
+                    /// <para>The statistics item count.</para>
                     /// <para>This parameter is required.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>10</para>
                     /// </summary>
                     [NameInMap("count")]
                     [Validation(Required=false)]
                     public int? Count { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the statistical item.</para>
+                    /// <para>The statistics item name.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -53,7 +56,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 }
 
                 /// <summary>
-                /// <para>The app key.</para>
+                /// <para>appkey</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>

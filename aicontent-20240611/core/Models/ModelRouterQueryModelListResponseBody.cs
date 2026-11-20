@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterQueryModelListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Contains the paginated list of models and pagination metadata.</para>
+        /// <para>The data object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public ModelRouterQueryModelListResponseBodyData Data { get; set; }
         public class ModelRouterQueryModelListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>An array of model objects.</para>
+            /// <para>The list of trajectory query records.</para>
             /// </summary>
             [NameInMap("list")]
             [Validation(Required=false)]
             public List<ModelDTO> List { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of results per page.</para>
+            /// <para>maxResults</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The pagination token used to retrieve the next page of results. An empty value indicates that no more results are available.</para>
+            /// <para>nextToken</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The current page number.</para>
+            /// <para>The requested page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public int? Page { get; set; }
 
             /// <summary>
-            /// <para>The number of models per page.</para>
+            /// <para>The number of items per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of models that meet the filter criteria.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
-        /// <para>The error code. Returned only when the request fails.</para>
+        /// <para>The fault message code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
@@ -89,10 +89,10 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message. Returned only when the request fails.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>未知错误</para>
+        /// <para>Unknown error</para>
         /// </summary>
         [NameInMap("errMessage")]
         [Validation(Required=false)]
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results per page.</para>
+        /// <para>maxResults</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier for the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxxx-xxxx-xxxxxxxx</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

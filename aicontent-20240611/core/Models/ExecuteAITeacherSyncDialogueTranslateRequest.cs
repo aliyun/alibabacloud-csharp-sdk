@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ExecuteAITeacherSyncDialogueTranslateRequest : TeaModel {
         /// <summary>
-        /// <para>An array of dialogue task objects.</para>
+        /// <para>The collection of conversation content for dialogue tasks.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("dialogueTasks")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public List<ExecuteAITeacherSyncDialogueTranslateRequestDialogueTasks> DialogueTasks { get; set; }
         public class ExecuteAITeacherSyncDialogueTranslateRequestDialogueTasks : TeaModel {
             /// <summary>
-            /// <para>The content of the assistant\&quot;s message.</para>
+            /// <para>The AI conversation content.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -29,17 +29,17 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string Assistant { get; set; }
 
             /// <summary>
-            /// <para>The translated content of the assistant\&quot;s message.</para>
+            /// <para>The translation of the AI conversation content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>为什么有些人认为遛狗是份好差事?</para>
+            /// <para>Why do some people think walking dogs is a good job?</para>
             /// </summary>
             [NameInMap("assistantTranslate")]
             [Validation(Required=false)]
             public string AssistantTranslate { get; set; }
 
             /// <summary>
-            /// <para>The sequence number of the task.</para>
+            /// <para>The sort order.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public int? Order { get; set; }
 
             /// <summary>
-            /// <para>The content of the user\&quot;s message.</para>
+            /// <para>The user conversation content.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -63,14 +63,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
-        /// <para>An array of dialogue record objects.</para>
+        /// <para>The collection of conversation records.</para>
         /// </summary>
         [NameInMap("records")]
         [Validation(Required=false)]
         public List<ExecuteAITeacherSyncDialogueTranslateRequestRecords> Records { get; set; }
         public class ExecuteAITeacherSyncDialogueTranslateRequestRecords : TeaModel {
             /// <summary>
-            /// <para>The content of the message.</para>
+            /// <para>The conversation content.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -81,27 +81,35 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the message is off-topic. This parameter is used for flow control.</para>
+            /// <para>Specifies whether the content is off topic for flow control purposes. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: Off topic.</description></item>
+            /// <item><description>false: On topic.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>跑题：true, 不跑题：false</para>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("isOffTopicControl")]
             [Validation(Required=false)]
             public bool? IsOffTopicControl { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the message is on-topic.</para>
+            /// <para>Specifies whether the content is on topic. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: On topic.</description></item>
+            /// <item><description>false: Off topic.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>扣题：true, 不扣题：false</para>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("isOnTopic")]
             [Validation(Required=false)]
             public bool? IsOnTopic { get; set; }
 
             /// <summary>
-            /// <para>The sequence number of the message.</para>
+            /// <para>The sort order.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -112,11 +120,11 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public int? Order { get; set; }
 
             /// <summary>
-            /// <para>The message author\&quot;s role.</para>
+            /// <para>The role.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>AI：assistant；用户：user</para>
+            /// <para>AI: assistant; User: user</para>
             /// </summary>
             [NameInMap("role")]
             [Validation(Required=false)]

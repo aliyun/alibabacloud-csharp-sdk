@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterQueryNacosTagsResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array of tags.</para>
+        /// <para>The data object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>
@@ -20,22 +20,38 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public List<ModelRouterQueryNacosTagsResponseBodyData> Data { get; set; }
         public class ModelRouterQueryNacosTagsResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The display name of the model type. This parameter is returned when configType is set to model-types.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>文本生成</para>
+            /// <para>Text generation</para>
             /// </summary>
             [NameInMap("label")]
             [Validation(Required=false)]
             public string Label { get; set; }
 
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TXT_GEN</para>
+            /// </summary>
             [NameInMap("tag")]
             [Validation(Required=false)]
             public string Tag { get; set; }
 
+            /// <summary>
+            /// <para>The tag name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Text generation</para>
+            /// </summary>
             [NameInMap("tagName")]
             [Validation(Required=false)]
             public string TagName { get; set; }
 
             /// <summary>
+            /// <para>The model type value. This parameter is returned when configType is set to model-types.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>NLP</para>
             /// </summary>
@@ -46,7 +62,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The fault message encoding.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
@@ -59,7 +75,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>未知错误</para>
+        /// <para>Unknown error</para>
         /// </summary>
         [NameInMap("errMessage")]
         [Validation(Required=false)]
@@ -86,7 +102,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

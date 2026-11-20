@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ApiKeyCreateCmd : TeaModel {
         /// <summary>
+        /// <para>The customer ID. A value of null indicates the default customer.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

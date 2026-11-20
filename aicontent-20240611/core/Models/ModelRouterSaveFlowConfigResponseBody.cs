@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterSaveFlowConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ModelRouterSaveFlowConfigResponseBodyData Data { get; set; }
         public class ModelRouterSaveFlowConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The creation time of the configuration.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-27T18:28:57.987356+08:00</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The last modification time of the configuration.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-27T18:28:57.987356+08:00</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The ID of the flow control configuration.</para>
+            /// <para>The rate limiting configuration ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public int? ModelId { get; set; }
 
             /// <summary>
-            /// <para>The configured RPM.</para>
+            /// <para>The requests per minute (RPM) limit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public int? Rpm { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether smooth flow control is enabled.</para>
+            /// <para>Specifies whether smooth rate limiting is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public bool? SmoothFlowEnabled { get; set; }
 
             /// <summary>
-            /// <para>The configured TPM.</para>
+            /// <para>The tokens per minute (TPM) limit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
-        /// <para>The error code returned if the request fails.</para>
+        /// <para>The fault message code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
@@ -99,10 +99,10 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request fails.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>未知错误</para>
+        /// <para>Unknown error</para>
         /// </summary>
         [NameInMap("errMessage")]
         [Validation(Required=false)]
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

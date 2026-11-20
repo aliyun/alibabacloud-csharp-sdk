@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ListTextbookAssistantArticleDetailsRequest : TeaModel {
         /// <summary>
-        /// <para>A list of article IDs to retrieve.</para>
+        /// <para>The list of article IDs.</para>
         /// </summary>
         [NameInMap("articleIdList")]
         [Validation(Required=false)]
         public List<string> ArticleIdList { get; set; }
 
         /// <summary>
-        /// <para>The authorization token obtained from the &quot;Get Authorization Token for the English Textbook-Style AI Teacher&quot; API.</para>
+        /// <para>The authorization code for API calls. You can obtain this code by calling the operation that retrieves the authorization code for the English textbook-style AI teacher feature.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

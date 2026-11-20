@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelMetricsDTO : TeaModel {
         /// <summary>
+        /// <para>The average response time (ms).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200.5</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public double? AvgResponseTime { get; set; }
 
         /// <summary>
+        /// <para>The total number of input tokens.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>500000</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? InputTokens { get; set; }
 
         /// <summary>
+        /// <para>The total number of output tokens.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>300000</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? OutputTokens { get; set; }
 
         /// <summary>
+        /// <para>The success rate (%).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>99.5</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public double? SuccessRate { get; set; }
 
         /// <summary>
+        /// <para>The total number of calls.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>

@@ -17,6 +17,12 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public ModelRouterQueryModelGroupsByApiKeyResponseBodyData Data { get; set; }
         public class ModelRouterQueryModelGroupsByApiKeyResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The owner type of the key. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>department: Department key (department-level authorization, all keys in the same department return the same result).</description></item>
+            /// <item><description>user: User (department member) key (user-level authorization).</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>department</para>
             /// </summary>
@@ -25,7 +31,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string BindType { get; set; }
 
             /// <summary>
-            /// <para>The department ID to which the key belongs.</para>
+            /// <para>The ID of the department to which the key belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1001</para>
@@ -57,7 +63,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
-        /// <para>The error message code.</para>
+        /// <para>The fault message code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
@@ -97,7 +103,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

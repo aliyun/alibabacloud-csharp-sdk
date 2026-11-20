@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? ModelId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of requests per minute (RPM).</para>
+        /// <para>The requests per minute (RPM) limit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? Rpm { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable smooth flow control.</para>
+        /// <para>Specifies whether smooth rate limiting is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public bool? SmoothFlowEnabled { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of tokens per minute (TPM).</para>
+        /// <para>The tokens per minute (TPM) limit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

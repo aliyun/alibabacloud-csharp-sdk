@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>通义千问大模型</para>
+        /// <para>Qwen large language model</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>通义千问</para>
+        /// <para>Qwen</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]

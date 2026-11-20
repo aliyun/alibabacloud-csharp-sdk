@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelGroupModelDTO : TeaModel {
         /// <summary>
+        /// <para>The numeric ID of the model.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>101</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The model identifier.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>qwen-max</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ModelCode { get; set; }
 
         /// <summary>
+        /// <para>The model type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Chat</para>
         /// </summary>
@@ -34,14 +40,18 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ModelType { get; set; }
 
         /// <summary>
+        /// <para>The name of the model.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>通义千问-Max</para>
+        /// <para>Qwen-Max</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The platform to which the model belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>qwen</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Platform { get; set; }
 
         /// <summary>
+        /// <para>The model version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>v0</para>
         /// </summary>

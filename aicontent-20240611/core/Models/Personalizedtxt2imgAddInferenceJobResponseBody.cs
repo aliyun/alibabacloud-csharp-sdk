@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public Personalizedtxt2imgAddInferenceJobResponseBodyData Data { get; set; }
         public class Personalizedtxt2imgAddInferenceJobResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The inference job\&quot;s creation time.</para>
+            /// <para>The creation time of the model inference task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-12-25T12:00:00</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The model inference job ID.</para>
+            /// <para>The ID of the model inference task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3220</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The job status.</para>
+            /// <para>The status of the model inference task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FINISHED</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string JobStatus { get; set; }
 
             /// <summary>
-            /// <para>The inference job progress.</para>
+            /// <para>The progress of the model inference task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.5</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string ModelId { get; set; }
 
             /// <summary>
-            /// <para>The prompt ID.</para>
+            /// <para>promptId</para>
             /// 
             /// <b>Example:</b>
             /// <para>promptId-xxxx-xxxx-xxxx</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string PromptId { get; set; }
 
             /// <summary>
-            /// <para>A list of URLs for the generated images.</para>
+            /// <para>The list of results for the model inference task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0000.png</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The fault message encoding.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>未知错误</para>
+        /// <para>Unknown error</para>
         /// </summary>
         [NameInMap("errMessage")]
         [Validation(Required=false)]
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

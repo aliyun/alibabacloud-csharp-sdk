@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelGroupDTO : TeaModel {
         /// <summary>
+        /// <para>The time when the group was created. Format: yyyy-MM-dd HH:mm:ss.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-01-01 00:00:00</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string GmtCreate { get; set; }
 
         /// <summary>
+        /// <para>The time when the group was updated. Format: yyyy-MM-dd HH:mm:ss.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-01-01 00:00:00</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string GmtModified { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the group. It starts with the mg_ prefix and remains unchanged after creation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mg_a1b2c3d4e5f6g7h8i9j0</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string GroupId { get; set; }
 
         /// <summary>
+        /// <para>The number of models currently included in the group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? ModelCount { get; set; }
 
         /// <summary>
+        /// <para>The array of all member model IDs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[101, 102, 103]</para>
         /// </summary>
@@ -50,14 +60,22 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public List<long?> ModelList { get; set; }
 
         /// <summary>
+        /// <para>The name of the group. If a system group is unnamed, the default platform name is returned.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>Professional Plan</para>
+        /// <para>Professional Edition plan</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The type of the group. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>system: The group is automatically created by the system and cannot be edited or deleted.</description></item>
+        /// <item><description>manual: The group is manually created.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>manual</para>
         /// </summary>

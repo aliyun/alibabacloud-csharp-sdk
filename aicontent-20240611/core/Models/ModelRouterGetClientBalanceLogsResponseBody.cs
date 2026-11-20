@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public int? Page { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The number of items per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries.</para>
+            /// <para>The total number of items.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
-        /// <para>The fault code.</para>
+        /// <para>The error message code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return.</para>
+        /// <para>The maximum number of items to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class BatchOpResultDTO : TeaModel {
         /// <summary>
+        /// <para>The list of failed items.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public List<BatchFailedItemDTO> Failed { get; set; }
 
         /// <summary>
+        /// <para>The list of successful member user IDs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>

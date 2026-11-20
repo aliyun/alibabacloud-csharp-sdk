@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         /// <para>The data object.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[]</para>
+        /// <para>{&quot;englishResult&quot;:&quot;Thanks, Lily. Do you like meat, Lily?&quot;,&quot;questionIndex&quot;:2}</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ExecuteAITeacherSyncDialogueResponseBodyData Data { get; set; }
         public class ExecuteAITeacherSyncDialogueResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The English response from the AI teacher.</para>
+            /// <para>The English reply from the AI teacher.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Thanks, Lily. Do you like meat, Lily?</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string EnglishResult { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the dialogue is finished.</para>
+            /// <para>Indicates whether the conversation is completed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public bool? IsFinish { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the user\&quot;s response is on topic.</para>
+            /// <para>Indicates whether the response is on topic.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public bool? IsOnTopic { get; set; }
 
             /// <summary>
-            /// <para>The index of the current question.</para>
+            /// <para>The index of the current question being answered.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The fault error message encoding.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>未知错误</para>
+        /// <para>Unknown error</para>
         /// </summary>
         [NameInMap("errMessage")]
         [Validation(Required=false)]
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

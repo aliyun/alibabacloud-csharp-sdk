@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public List<ListTextbookAssistantSceneDetailsResponseBodyData> Data { get; set; }
         public class ListTextbookAssistantSceneDetailsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>A list of roles in the scene.</para>
+            /// <para>The list of roles.</para>
             /// </summary>
             [NameInMap("roleList")]
             [Validation(Required=false)]
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 /// <para>The translation of the role introduction.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Carl，一个好奇的男孩</para>
+                /// <para>Carl, a curious boy</para>
                 /// </summary>
                 [NameInMap("introductionTranslate")]
                 [Validation(Required=false)]
                 public string IntroductionTranslate { get; set; }
 
                 /// <summary>
-                /// <para>The role guidance text.</para>
+                /// <para>The role prompt text.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Hi Noah, who is that in the photo?</para>
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public string Promoting { get; set; }
 
                 /// <summary>
-                /// <para>The translation of the role guidance text.</para>
+                /// <para>The translation of the role prompt text.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>嗨 Noah，照片里的人是谁？</para>
+                /// <para>Hi Noah, who is the person in the photo?</para>
                 /// </summary>
                 [NameInMap("promotingTranslate")]
                 [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public string RoleNameTranslate { get; set; }
 
                 /// <summary>
-                /// <para>The role type:</para>
+                /// <para>The role type. A value of 0 indicates the AI questioner, and a value of 1 indicates the responder.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -116,14 +116,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string SceneId { get; set; }
 
             /// <summary>
-            /// <para>A list of image URLs related to the current scene.</para>
+            /// <para>The images related to the current scene.</para>
             /// </summary>
             [NameInMap("sceneImageList")]
             [Validation(Required=false)]
             public List<string> SceneImageList { get; set; }
 
             /// <summary>
-            /// <para>The scene task list.</para>
+            /// <para>The list of scene tasks.</para>
             /// </summary>
             [NameInMap("sceneTaskList")]
             [Validation(Required=false)]
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 /// <para>The translation of the scene task description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>说这是你爸爸的兄弟。</para>
+                /// <para>Say this is your father\&quot;s brother</para>
                 /// </summary>
                 [NameInMap("sceneTaskTranslate")]
                 [Validation(Required=false)]
@@ -151,25 +151,22 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
             }
 
-            /// <summary>
-            /// <para>The translation of the scene description.</para>
-            /// </summary>
             [NameInMap("sceneTranslate")]
             [Validation(Required=false)]
             public string SceneTranslate { get; set; }
 
             /// <summary>
-            /// <para>The sentence list.</para>
+            /// <para>The list of sentences.</para>
             /// </summary>
             [NameInMap("sentenceList")]
             [Validation(Required=false)]
             public List<ListTextbookAssistantSceneDetailsResponseBodyDataSentenceList> SentenceList { get; set; }
             public class ListTextbookAssistantSceneDetailsResponseBodyDataSentenceList : TeaModel {
                 /// <summary>
-                /// <para>The sentence analysis.</para>
+                /// <para>The sentence analysis and explanation.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Is + this + your + 家庭成员?</para>
+                /// <para>Is + this + your + family member?</para>
                 /// </summary>
                 [NameInMap("sentenceAnalysis")]
                 [Validation(Required=false)]
@@ -198,7 +195,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             }
 
             /// <summary>
-            /// <para>The practice target.</para>
+            /// <para>The practice objective.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;&quot;</para>
@@ -208,14 +205,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string Target { get; set; }
 
             /// <summary>
-            /// <para>The theme details.</para>
+            /// <para>The theme information.</para>
             /// </summary>
             [NameInMap("theme")]
             [Validation(Required=false)]
             public ListTextbookAssistantSceneDetailsResponseBodyDataTheme Theme { get; set; }
             public class ListTextbookAssistantSceneDetailsResponseBodyDataTheme : TeaModel {
                 /// <summary>
-                /// <para>A list of image URLs related to the theme.</para>
+                /// <para>The images related to the current theme.</para>
                 /// </summary>
                 [NameInMap("themeImageList")]
                 [Validation(Required=false)]
@@ -225,7 +222,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 /// <para>The theme name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>家庭生活</para>
+                /// <para>Family life</para>
                 /// </summary>
                 [NameInMap("themeName")]
                 [Validation(Required=false)]
@@ -244,14 +241,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             }
 
             /// <summary>
-            /// <para>The topic details.</para>
+            /// <para>The topic information.</para>
             /// </summary>
             [NameInMap("topic")]
             [Validation(Required=false)]
             public ListTextbookAssistantSceneDetailsResponseBodyDataTopic Topic { get; set; }
             public class ListTextbookAssistantSceneDetailsResponseBodyDataTopic : TeaModel {
                 /// <summary>
-                /// <para>A list of image URLs related to the topic.</para>
+                /// <para>The images related to the current topic.</para>
                 /// </summary>
                 [NameInMap("topicImageList")]
                 [Validation(Required=false)]
@@ -261,14 +258,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 /// <para>The topic name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>介绍家人</para>
+                /// <para>Introducing family members</para>
                 /// </summary>
                 [NameInMap("topicName")]
                 [Validation(Required=false)]
                 public string TopicName { get; set; }
 
                 /// <summary>
-                /// <para>The translation of the topic name.</para>
+                /// <para>The translation of the topic content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Introducing family members</para>
@@ -280,7 +277,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             }
 
             /// <summary>
-            /// <para>The word list.</para>
+            /// <para>The list of words.</para>
             /// </summary>
             [NameInMap("wordList")]
             [Validation(Required=false)]
@@ -290,7 +287,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 /// <para>The word definition.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>家；家庭</para>
+                /// <para>Home; family</para>
                 /// </summary>
                 [NameInMap("wordAnalysis")]
                 [Validation(Required=false)]
@@ -321,7 +318,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
-        /// <para>The error code returned if the request fails.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
@@ -331,10 +328,10 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request fails.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>未知错误</para>
+        /// <para>Unknown error</para>
         /// </summary>
         [NameInMap("errMessage")]
         [Validation(Required=false)]
@@ -351,7 +348,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxxx-xxxx-xxxxxxxx</para>
@@ -361,11 +358,11 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call succeeded.</para>
+        /// <para>Indicates whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The call succeeded.</para>
+        /// <item><description><para><b>true</b>: Successful.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: The call failed.</para>
+        /// <item><description><para><b>false</b>: Failed.</para>
         /// </description></item>
         /// </list>
         /// 

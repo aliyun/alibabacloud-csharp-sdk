@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class DeptBalanceSummaryDTO : TeaModel {
         /// <summary>
+        /// <para>The monthly balance pool overview.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public BalancePoolSummaryDTO Monthly { get; set; }
 
         /// <summary>
+        /// <para>The permanent balance pool overview.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>

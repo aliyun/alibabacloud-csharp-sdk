@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ListTextbookAssistantArticleDetailsResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array of article detail objects.</para>
+        /// <para>The returned data object.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string ArticleId { get; set; }
 
             /// <summary>
-            /// <para>A list of Q\&amp;A objects.</para>
+            /// <para>The question and answer data.</para>
             /// </summary>
             [NameInMap("questionList")]
             [Validation(Required=false)]
             public List<ListTextbookAssistantArticleDetailsResponseBodyDataQuestionList> QuestionList { get; set; }
             public class ListTextbookAssistantArticleDetailsResponseBodyDataQuestionList : TeaModel {
                 /// <summary>
-                /// <para>The answer.</para>
+                /// <para>The answer to the question.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>I\&quot;m Mike Black</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public string Answer { get; set; }
 
                 /// <summary>
-                /// <para>The question.</para>
+                /// <para>The question content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>From the book, how does Mike Black introduce himself?</para>
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public string Question { get; set; }
 
                 /// <summary>
-                /// <para>The translated question.</para>
+                /// <para>The translation of the question content.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>根据文章，迈克·布莱克是如何介绍自己的？</para>
+                /// <para>According to the article, how does Mike Black introduce himself?</para>
                 /// </summary>
                 [NameInMap("questionTranslate")]
                 [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             }
 
             /// <summary>
-            /// <para>A list of scene objects.</para>
+            /// <para>The scene list.</para>
             /// </summary>
             [NameInMap("sceneList")]
             [Validation(Required=false)]
@@ -93,14 +93,17 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public string SceneId { get; set; }
 
                 /// <summary>
-                /// <para>A list of image URLs for the scene.</para>
+                /// <para>The images related to the current scene.</para>
                 /// </summary>
                 [NameInMap("sceneImageList")]
                 [Validation(Required=false)]
                 public List<string> SceneImageList { get; set; }
 
                 /// <summary>
-                /// <para>The translated scene description.</para>
+                /// <para>The translation of the scene description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>At a cafe, share the story of how you met your friends</para>
                 /// </summary>
                 [NameInMap("sceneTranslate")]
                 [Validation(Required=false)]
@@ -109,17 +112,17 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             }
 
             /// <summary>
-            /// <para>A list of sentence objects.</para>
+            /// <para>The sentence list.</para>
             /// </summary>
             [NameInMap("sentenceList")]
             [Validation(Required=false)]
             public List<ListTextbookAssistantArticleDetailsResponseBodyDataSentenceList> SentenceList { get; set; }
             public class ListTextbookAssistantArticleDetailsResponseBodyDataSentenceList : TeaModel {
                 /// <summary>
-                /// <para>The sentence analysis.</para>
+                /// <para>The sentence analysis and explanation.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>主语 + be动词（am/is/are） + 姓名.</para>
+                /// <para>Subject + be verb (am/is/are) + name</para>
                 /// </summary>
                 [NameInMap("sentenceAnalysis")]
                 [Validation(Required=false)]
@@ -148,24 +151,26 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             }
 
             /// <summary>
-            /// <para>The learning objectives.</para>
+            /// <para>The practice objective.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1.能够在自我介绍时运用句型“What\&quot;s your name? My name is/I‘m...”进行询问及回答。\n2.能够和新朋友运用句型“Nice to meet you(too).”进行问候。</para>
+            /// <ol>
+            /// <item><description>Be able to use the sentence pattern &quot;What\&quot;s your name? My name is/I\&quot;m...&quot; to ask and answer during self-introductions.\n2. Be able to use the sentence pattern &quot;Nice to meet you (too).&quot; to greet new friends</description></item>
+            /// </ol>
             /// </summary>
             [NameInMap("target")]
             [Validation(Required=false)]
             public string Target { get; set; }
 
             /// <summary>
-            /// <para>The theme object.</para>
+            /// <para>The theme information.</para>
             /// </summary>
             [NameInMap("theme")]
             [Validation(Required=false)]
             public ListTextbookAssistantArticleDetailsResponseBodyDataTheme Theme { get; set; }
             public class ListTextbookAssistantArticleDetailsResponseBodyDataTheme : TeaModel {
                 /// <summary>
-                /// <para>A list of image URLs for the theme.</para>
+                /// <para>The images related to the current theme.</para>
                 /// </summary>
                 [NameInMap("themeImageList")]
                 [Validation(Required=false)]
@@ -175,14 +180,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 /// <para>The theme name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>自我认知与提升</para>
+                /// <para>Self-awareness and improvement</para>
                 /// </summary>
                 [NameInMap("themeName")]
                 [Validation(Required=false)]
                 public string ThemeName { get; set; }
 
                 /// <summary>
-                /// <para>The translated theme name.</para>
+                /// <para>The translation of the theme name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Self-awareness, self-management, self-improvement</para>
@@ -194,14 +199,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             }
 
             /// <summary>
-            /// <para>The topic object.</para>
+            /// <para>The topic information.</para>
             /// </summary>
             [NameInMap("topic")]
             [Validation(Required=false)]
             public ListTextbookAssistantArticleDetailsResponseBodyDataTopic Topic { get; set; }
             public class ListTextbookAssistantArticleDetailsResponseBodyDataTopic : TeaModel {
                 /// <summary>
-                /// <para>A list of image URLs for the topic.</para>
+                /// <para>The images related to the current topic.</para>
                 /// </summary>
                 [NameInMap("topicImageList")]
                 [Validation(Required=false)]
@@ -211,14 +216,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 /// <para>The topic name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>打招呼与自我介绍</para>
+                /// <para>Greetings and self-introductions</para>
                 /// </summary>
                 [NameInMap("topicName")]
                 [Validation(Required=false)]
                 public string TopicName { get; set; }
 
                 /// <summary>
-                /// <para>The translated topic name.</para>
+                /// <para>The translation of the topic content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Greetings and self-introduction</para>
@@ -230,17 +235,17 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             }
 
             /// <summary>
-            /// <para>A list of word objects.</para>
+            /// <para>The word list.</para>
             /// </summary>
             [NameInMap("wordList")]
             [Validation(Required=false)]
             public List<ListTextbookAssistantArticleDetailsResponseBodyDataWordList> WordList { get; set; }
             public class ListTextbookAssistantArticleDetailsResponseBodyDataWordList : TeaModel {
                 /// <summary>
-                /// <para>The word analysis.</para>
+                /// <para>The word definition.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>令人愉快的；友好的</para>
+                /// <para>Pleasant; friendly</para>
                 /// </summary>
                 [NameInMap("wordAnalysis")]
                 [Validation(Required=false)]
@@ -284,7 +289,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>未知错误</para>
+        /// <para>Unknown error</para>
         /// </summary>
         [NameInMap("errMessage")]
         [Validation(Required=false)]
@@ -301,7 +306,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxxx-xxxx-xxxxxxxx</para>
@@ -311,11 +316,11 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates if the API call succeeded.</para>
+        /// <para>Indicates whether the API call is successful.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Success</para>
+        /// <item><description><para><b>true</b>: Successful.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: Failure</para>
+        /// <item><description><para><b>false</b>: Failed.</para>
         /// </description></item>
         /// </list>
         /// 

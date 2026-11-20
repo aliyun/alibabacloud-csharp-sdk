@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterQueryNacosProvidersRequest : TeaModel {
         /// <summary>
-        /// <para>The field by which to group the results.</para>
+        /// <para>The field used to group the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>resourceId</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the total count is required.</para>
+        /// <para>Specifies whether to include the total count of items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public bool? NeedTotalCount { get; set; }
 
         /// <summary>
-        /// <para>The pagination token used for paginated queries. Specify this parameter to retrieve the next page.</para>
+        /// <para>The pagination token used to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the results.</para>
+        /// <para>The field used to sort the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>resourceId</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The sort direction.</para>
+        /// <para>The sort order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DESC</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of items per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

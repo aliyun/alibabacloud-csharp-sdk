@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "AiContent";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -1174,7 +1177,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an access warrant.</para>
+        /// <para>Creates authorization credentials in the Alibaba Cloud Management Console.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1240,7 +1243,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an access warrant.</para>
+        /// <para>Creates authorization credentials in the Alibaba Cloud Management Console.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1306,7 +1309,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an access warrant.</para>
+        /// <para>Creates authorization credentials in the Alibaba Cloud Management Console.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1325,7 +1328,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an access warrant.</para>
+        /// <para>Creates authorization credentials in the Alibaba Cloud Management Console.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2040,7 +2043,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Expansion dialogues are for open-ended conversations. In these conversations, the AI poses open-ended questions, but the user must stay on topic. If a user\&quot;s response is off-topic, the AI steers the conversation back on topic. If the user gives two consecutive off-topic responses, the AI moves on to the next topic.</para>
+        /// <para>Conducts extended practice conversations primarily for open-ended communication scenarios. During the practice, although the questions raised by the AI do not have preset answers, the user must still answer within the relevant topic. If the user\&quot;s answer deviates from the topic, the AI will attempt to guide them back to the topic. If the user goes off-topic twice in a row, the AI will guide them to proceed to the next topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2114,7 +2117,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Expansion dialogues are for open-ended conversations. In these conversations, the AI poses open-ended questions, but the user must stay on topic. If a user\&quot;s response is off-topic, the AI steers the conversation back on topic. If the user gives two consecutive off-topic responses, the AI moves on to the next topic.</para>
+        /// <para>Conducts extended practice conversations primarily for open-ended communication scenarios. During the practice, although the questions raised by the AI do not have preset answers, the user must still answer within the relevant topic. If the user\&quot;s answer deviates from the topic, the AI will attempt to guide them back to the topic. If the user goes off-topic twice in a row, the AI will guide them to proceed to the next topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2188,7 +2191,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Expansion dialogues are for open-ended conversations. In these conversations, the AI poses open-ended questions, but the user must stay on topic. If a user\&quot;s response is off-topic, the AI steers the conversation back on topic. If the user gives two consecutive off-topic responses, the AI moves on to the next topic.</para>
+        /// <para>Conducts extended practice conversations primarily for open-ended communication scenarios. During the practice, although the questions raised by the AI do not have preset answers, the user must still answer within the relevant topic. If the user\&quot;s answer deviates from the topic, the AI will attempt to guide them back to the topic. If the user goes off-topic twice in a row, the AI will guide them to proceed to the next topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2207,7 +2210,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Expansion dialogues are for open-ended conversations. In these conversations, the AI poses open-ended questions, but the user must stay on topic. If a user\&quot;s response is off-topic, the AI steers the conversation back on topic. If the user gives two consecutive off-topic responses, the AI moves on to the next topic.</para>
+        /// <para>Conducts extended practice conversations primarily for open-ended communication scenarios. During the practice, although the questions raised by the AI do not have preset answers, the user must still answer within the relevant topic. If the user\&quot;s answer deviates from the topic, the AI will attempt to guide them back to the topic. If the user goes off-topic twice in a row, the AI will guide them to proceed to the next topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2226,7 +2229,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uses context to polish the expanded text.</para>
+        /// <para>Polishes the extension exercise based on the context.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2300,7 +2303,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uses context to polish the expanded text.</para>
+        /// <para>Polishes the extension exercise based on the context.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2374,7 +2377,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uses context to polish the expanded text.</para>
+        /// <para>Polishes the extension exercise based on the context.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2393,7 +2396,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uses context to polish the expanded text.</para>
+        /// <para>Polishes the extension exercise based on the context.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2412,7 +2415,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Further Contextual Translation Practice.</para>
+        /// <para>Translates the context for extended practice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2482,7 +2485,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Further Contextual Translation Practice.</para>
+        /// <para>Translates the context for extended practice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2552,7 +2555,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Further Contextual Translation Practice.</para>
+        /// <para>Translates the context for extended practice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2571,7 +2574,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Further Contextual Translation Practice.</para>
+        /// <para>Translates the context for extended practice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2728,7 +2731,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Practice synchronous dialogue.</para>
+        /// <para>Conducts a synchronous practice conversation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2786,7 +2789,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Practice synchronous dialogue.</para>
+        /// <para>Conducts a synchronous practice conversation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2844,7 +2847,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Practice synchronous dialogue.</para>
+        /// <para>Conducts a synchronous practice conversation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2863,7 +2866,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Practice synchronous dialogue.</para>
+        /// <para>Conducts a synchronous practice conversation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2882,7 +2885,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can practice contextual translation in real-time.</para>
+        /// <para>Translates context for synchronous practice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2936,7 +2939,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can practice contextual translation in real-time.</para>
+        /// <para>Translates context for synchronous practice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2990,7 +2993,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can practice contextual translation in real-time.</para>
+        /// <para>Translates context for synchronous practice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3009,7 +3012,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can practice contextual translation in real-time.</para>
+        /// <para>Translates context for synchronous practice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4414,7 +4417,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Supplemental Practice Assistant</para>
+        /// <para>Retrieves prompts for the extended practice assistant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4488,7 +4491,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Supplemental Practice Assistant</para>
+        /// <para>Retrieves prompts for the extended practice assistant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4562,7 +4565,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Supplemental Practice Assistant</para>
+        /// <para>Retrieves prompts for the extended practice assistant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4581,7 +4584,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Supplemental Practice Assistant</para>
+        /// <para>Retrieves prompts for the extended practice assistant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4600,7 +4603,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sync Practice Assistant</para>
+        /// <para>Retrieves the prompts for the sync practice assistant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4658,7 +4661,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sync Practice Assistant</para>
+        /// <para>Retrieves the prompts for the sync practice assistant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4716,7 +4719,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sync Practice Assistant</para>
+        /// <para>Retrieves the prompts for the sync practice assistant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4735,7 +4738,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sync Practice Assistant</para>
+        /// <para>Retrieves the prompts for the sync practice assistant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4892,7 +4895,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch get article details</para>
+        /// <para>Retrieves the details of multiple articles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4942,7 +4945,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch get article details</para>
+        /// <para>Retrieves the details of multiple articles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4992,7 +4995,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch get article details</para>
+        /// <para>Retrieves the details of multiple articles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5011,7 +5014,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch get article details</para>
+        /// <para>Retrieves the details of multiple articles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5492,7 +5495,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the available grades and volumes for the Textbook Assistant.</para>
+        /// <para>Retrieves the list of grades that have English textbook resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5542,7 +5545,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the available grades and volumes for the Textbook Assistant.</para>
+        /// <para>Retrieves the list of grades that have English textbook resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5592,7 +5595,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the available grades and volumes for the Textbook Assistant.</para>
+        /// <para>Retrieves the list of grades that have English textbook resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5611,7 +5614,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the available grades and volumes for the Textbook Assistant.</para>
+        /// <para>Retrieves the list of grades that have English textbook resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5630,7 +5633,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Article Details</para>
+        /// <para>Retrieves the details of an article.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5680,7 +5683,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Article Details</para>
+        /// <para>Retrieves the details of an article.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5730,7 +5733,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Article Details</para>
+        /// <para>Retrieves the details of an article.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5749,7 +5752,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Article Details</para>
+        /// <para>Retrieves the details of an article.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7020,7 +7023,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables balance-based throttling for a department.</para>
+        /// <para>Enables department balance throttling.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7074,7 +7077,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables balance-based throttling for a department.</para>
+        /// <para>Enables department balance throttling.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7128,7 +7131,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables balance-based throttling for a department.</para>
+        /// <para>Enables department balance throttling.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7147,7 +7150,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables balance-based throttling for a department.</para>
+        /// <para>Enables department balance throttling.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8662,7 +8665,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs model creation.</para>
+        /// <para>Manages model creation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8752,7 +8755,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs model creation.</para>
+        /// <para>Manages model creation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8842,7 +8845,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs model creation.</para>
+        /// <para>Manages model creation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8861,7 +8864,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs model creation.</para>
+        /// <para>Manages model creation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10670,7 +10673,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the balance overview of a department.</para>
+        /// <para>Retrieves the department balance overview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10710,7 +10713,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the balance overview of a department.</para>
+        /// <para>Retrieves the department balance overview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10750,7 +10753,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the balance overview of a department.</para>
+        /// <para>Retrieves the department balance overview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10769,7 +10772,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the balance overview of a department.</para>
+        /// <para>Retrieves the department balance overview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12584,7 +12587,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of API keys.</para>
+        /// <para>Queries a list of API keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12678,7 +12681,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of API keys.</para>
+        /// <para>Queries a list of API keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12772,7 +12775,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of API keys.</para>
+        /// <para>Queries a list of API keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12791,7 +12794,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of API keys.</para>
+        /// <para>Queries a list of API keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13618,7 +13621,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of clients.</para>
+        /// <para>Queries a list of customers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13704,7 +13707,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of clients.</para>
+        /// <para>Queries a list of customers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13790,7 +13793,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of clients.</para>
+        /// <para>Queries a list of customers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13809,7 +13812,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of clients.</para>
+        /// <para>Queries a list of customers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14488,7 +14491,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of models called for billing management.</para>
+        /// <para>Retrieves a list of invoked models for billing management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14536,6 +14539,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             {
                 query["memberUserIds"] = request.MemberUserIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelIds))
+            {
+                query["modelIds"] = request.ModelIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelTypes))
             {
                 query["modelTypes"] = request.ModelTypes;
@@ -14574,7 +14581,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of models called for billing management.</para>
+        /// <para>Retrieves a list of invoked models for billing management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14622,6 +14629,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             {
                 query["memberUserIds"] = request.MemberUserIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelIds))
+            {
+                query["modelIds"] = request.ModelIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelTypes))
             {
                 query["modelTypes"] = request.ModelTypes;
@@ -14660,7 +14671,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of models called for billing management.</para>
+        /// <para>Retrieves a list of invoked models for billing management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14679,7 +14690,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of models called for billing management.</para>
+        /// <para>Retrieves a list of invoked models for billing management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14948,6 +14959,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             {
                 query["memberUserIds"] = request.MemberUserIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelIds))
+            {
+                query["modelIds"] = request.ModelIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelTypes))
             {
                 query["modelTypes"] = request.ModelTypes;
@@ -15029,6 +15044,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberUserIds))
             {
                 query["memberUserIds"] = request.MemberUserIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelIds))
+            {
+                query["modelIds"] = request.ModelIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelTypes))
             {
@@ -16062,12 +16081,12 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the bound groups and models by API key.</para>
+        /// <para>Queries the groups and models bound to an API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the bound groups and models by API key.</para>
+        /// <para>Queries the groups and models bound to an API key.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16107,12 +16126,12 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the bound groups and models by API key.</para>
+        /// <para>Queries the groups and models bound to an API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the bound groups and models by API key.</para>
+        /// <para>Queries the groups and models bound to an API key.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16152,12 +16171,12 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the bound groups and models by API key.</para>
+        /// <para>Queries the groups and models bound to an API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the bound groups and models by API key.</para>
+        /// <para>Queries the groups and models bound to an API key.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16176,12 +16195,12 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the bound groups and models by API key.</para>
+        /// <para>Queries the groups and models bound to an API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the bound groups and models by API key.</para>
+        /// <para>Queries the groups and models bound to an API key.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16200,7 +16219,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Model management/Get model list</para>
+        /// <para>Retrieves a list of models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16286,7 +16305,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Model management/Get model list</para>
+        /// <para>Retrieves a list of models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16372,7 +16391,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Model management/Get model list</para>
+        /// <para>Retrieves a list of models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16391,7 +16410,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Model management/Get model list</para>
+        /// <para>Retrieves a list of models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16410,7 +16429,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Nacos service providers through Nacos configuration.</para>
+        /// <para>Retrieves the Nacos configuration and the list of Nacos service providers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16484,7 +16503,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Nacos service providers through Nacos configuration.</para>
+        /// <para>Retrieves the Nacos configuration and the list of Nacos service providers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16558,7 +16577,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Nacos service providers through Nacos configuration.</para>
+        /// <para>Retrieves the Nacos configuration and the list of Nacos service providers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16577,7 +16596,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Nacos service providers through Nacos configuration.</para>
+        /// <para>Retrieves the Nacos configuration and the list of Nacos service providers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16596,7 +16615,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of tags from Nacos.</para>
+        /// <para>Queries the list of Nacos tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16674,7 +16693,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of tags from Nacos.</para>
+        /// <para>Queries the list of Nacos tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16752,7 +16771,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of tags from Nacos.</para>
+        /// <para>Queries the list of Nacos tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16771,7 +16790,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of tags from Nacos.</para>
+        /// <para>Queries the list of Nacos tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18128,7 +18147,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Flow control management / Save flow control configuration</para>
+        /// <para>Configures write rate limiting.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18186,7 +18205,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Flow control management / Save flow control configuration</para>
+        /// <para>Configures write rate limiting.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18244,7 +18263,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Flow control management / Save flow control configuration</para>
+        /// <para>Configures write rate limiting.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18263,7 +18282,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Flow control management / Save flow control configuration</para>
+        /// <para>Configures write rate limiting.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18700,7 +18719,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/停止成员订阅</para>
+        /// <para>Stops a member subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18746,7 +18765,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/停止成员订阅</para>
+        /// <para>Stops a member subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18792,7 +18811,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/停止成员订阅</para>
+        /// <para>Stops a member subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18811,7 +18830,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/停止成员订阅</para>
+        /// <para>Stops a member subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20596,7 +20615,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a personalized text-to-image inference job.</para>
+        /// <para>Queries the status of a preset model inference task for personalized text-to-image generation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20642,7 +20661,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a personalized text-to-image inference job.</para>
+        /// <para>Queries the status of a preset model inference task for personalized text-to-image generation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20688,7 +20707,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a personalized text-to-image inference job.</para>
+        /// <para>Queries the status of a preset model inference task for personalized text-to-image generation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20707,7 +20726,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a personalized text-to-image inference job.</para>
+        /// <para>Queries the status of a preset model inference task for personalized text-to-image generation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20726,7 +20745,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an inference job to generate images based on a personalized text-to-image model.</para>
+        /// <para>Creates an image inference task based on a specified model for personalized text-to-image generation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20784,7 +20803,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an inference job to generate images based on a personalized text-to-image model.</para>
+        /// <para>Creates an image inference task based on a specified model for personalized text-to-image generation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20842,7 +20861,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an inference job to generate images based on a personalized text-to-image model.</para>
+        /// <para>Creates an image inference task based on a specified model for personalized text-to-image generation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20861,7 +20880,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an inference job to generate images based on a personalized text-to-image model.</para>
+        /// <para>Creates an image inference task based on a specified model for personalized text-to-image generation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21188,7 +21207,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the status and results of a Personalizedtxt2img inference job.</para>
+        /// <para>Queries the status and results of a personalized text-to-image model inference task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21234,7 +21253,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the status and results of a Personalizedtxt2img inference job.</para>
+        /// <para>Queries the status and results of a personalized text-to-image model inference task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21280,7 +21299,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the status and results of a Personalizedtxt2img inference job.</para>
+        /// <para>Queries the status and results of a personalized text-to-image model inference task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21299,7 +21318,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the status and results of a Personalizedtxt2img inference job.</para>
+        /// <para>Queries the status and results of a personalized text-to-image model inference task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21550,7 +21569,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about an application access ID (appkey).</para>
+        /// <para>Retrieves the application access identifier (appkey) information from the Alibaba Cloud Management Console.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21596,7 +21615,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about an application access ID (appkey).</para>
+        /// <para>Retrieves the application access identifier (appkey) information from the Alibaba Cloud Management Console.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21642,7 +21661,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about an application access ID (appkey).</para>
+        /// <para>Retrieves the application access identifier (appkey) information from the Alibaba Cloud Management Console.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21661,7 +21680,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about an application access ID (appkey).</para>
+        /// <para>Retrieves the application access identifier (appkey) information from the Alibaba Cloud Management Console.</para>
         /// </summary>
         /// 
         /// <param name="request">

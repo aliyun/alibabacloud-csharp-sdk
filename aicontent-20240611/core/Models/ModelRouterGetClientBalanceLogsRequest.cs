@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterGetClientBalanceLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The change type filter. Valid values: auto_deduct, deduct, recharge.</para>
+        /// <para>The change type filter. Valid values: auto_deduct, deduct, and recharge.</para>
         /// 
         /// <b>Example:</b>
         /// <para>recharge</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ChangeType { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return.</para>
+        /// <para>The maximum number of items to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next request.</para>
+        /// <para>The pagination cursor for the next request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of items per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
