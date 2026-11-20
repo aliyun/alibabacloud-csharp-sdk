@@ -81,6 +81,9 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 
         /// <summary>
         /// <para>The name of the associated data processing pipeline. This field is empty if no pipeline is associated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dify-log</para>
         /// </summary>
         [NameInMap("pipelineName")]
         [Validation(Required=false)]

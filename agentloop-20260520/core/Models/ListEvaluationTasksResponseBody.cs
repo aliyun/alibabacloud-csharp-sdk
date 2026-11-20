@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public Dictionary<string, string> Config { get; set; }
 
             /// <summary>
-            /// <para>The creation time, in seconds-level UNIX timestamp.</para>
+            /// <para>The creation time, represented as a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1782816000</para>
@@ -50,17 +50,17 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string DataType { get; set; }
 
             /// <summary>
-            /// <para>The description of the evaluation task.</para>
+            /// <para>The evaluation task description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Evaluate the task completion of the online Agent trace</para>
+            /// <para>Evaluate the completion rate of online agent trace tasks</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The evaluator configuration summary, in JSON string format.</para>
+            /// <para>The evaluator configuration summary, as a JSON string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{&quot;evaluatorRef&quot;:&quot;Builtin.agent_task_completion&quot;}]</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string Evaluators { get; set; }
 
             /// <summary>
-            /// <para>The structured run strategy configuration, including the parsed backfill strategy and continuous evaluation strategy.</para>
+            /// <para>The structured configuration of the run strategy, including the parsed backfill strategy and continuous evaluation strategy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;backfill&quot;:{&quot;enabled&quot;:true,&quot;startTime&quot;:1782816000000,&quot;endTime&quot;:1782902400000},&quot;continuous&quot;:{&quot;enabled&quot;:true,&quot;intervalUnit&quot;:&quot;HOUR&quot;,&quot;intervalValue&quot;:1,&quot;dataDelayMinutes&quot;:5}}</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The key-value pairs of task tags. This parameter is empty if no tags are set.</para>
+            /// <para>The key-value pairs of task tags. Empty if not set.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;serviceId&quot;:&quot;checkout-service&quot;,&quot;env&quot;:&quot;prod&quot;}</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string TaskName { get; set; }
 
             /// <summary>
-            /// <para>The last update time, in seconds-level UNIX timestamp.</para>
+            /// <para>The last update time, represented as a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1782816600</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page used in this request.</para>
+        /// <para>The number of entries per page used for this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. An empty value indicates that no more pages are available.</para>
+        /// <para>The pagination token for the next page. An empty value indicates that there is no next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJsYXN0SWQiOjEwMSwib2Zmc2V0IjoyMH0=</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records. The total count is calculated only on the first page. This value may be empty on subsequent pages.</para>
+        /// <para>The total number of records. The backend queries the total count only on the first page, so this field may be empty on subsequent pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>126</para>

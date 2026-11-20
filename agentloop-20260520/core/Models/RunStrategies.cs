@@ -29,6 +29,16 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [Validation(Required=false)]
         public ContinuousStrategy Continuous { get; set; }
 
+        /// <summary>
+        /// <para>The selection of specified objects for evaluation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;startTime&quot;:1794542191,&quot;endTime&quot;:1795146991,&quot;evalIds&quot;:[&quot;2646a9380bba3c86371f55a0226322941794983634&quot;]}</para>
+        /// </summary>
+        [NameInMap("selectedData")]
+        [Validation(Required=false)]
+        public SelectedDataStrategy SelectedData { get; set; }
+
     }
 
 }

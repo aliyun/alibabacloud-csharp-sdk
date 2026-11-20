@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class ListEvaluationTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The AgentSpace name.</para>
+        /// <para>The name of the AgentSpace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>prod-agentspace</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string AgentSpace { get; set; }
 
         /// <summary>
-        /// <para>The filter condition for the task source. If this parameter is not specified, tasks from the default source are queried.</para>
+        /// <para>The filter condition for the task source. If not specified, tasks from the default source are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Channel { get; set; }
 
         /// <summary>
-        /// <para>The data source type of the evaluation object. Set this parameter to <c>trace</c> for trace-based evaluation.</para>
+        /// <para>The data source type of the evaluation object. Use trace for trace evaluation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>trace</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string DataType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20. Maximum value: 100.</para>
+        /// <para>The number of entries to return per page. The default value is 20, and the maximum value is 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The evaluation task mode. If this parameter is not specified, the default value is <c>batch</c>.</para>
+        /// <para>The mode of the evaluation task. If not specified, the backend defaults to batch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>batch</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string TaskMode { get; set; }
 
         /// <summary>
-        /// <para>The fuzzy match condition for the task name.</para>
+        /// <para>The fuzzy search condition for the task name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>trace_task_completion_eval</para>
