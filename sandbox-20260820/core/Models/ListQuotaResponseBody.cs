@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class ListQuotaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. A value of 200 indicates success.</para>
+        /// <para>The response code. The value is 200 if the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per page. This field is returned only if a positive integer is specified for maxResults in the request.</para>
+        /// <para>The value of the maxResults parameter specified in the request. If a positive integer is specified for maxResults in the request, this value is returned. Otherwise, this field is not returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The response message. A value of success indicates success.</para>
+        /// <para>The response message. The value is success if the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page.</para>
+        /// <para>The pagination token used to query the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qxGrXje86XMrYQ51aJMy</para>
