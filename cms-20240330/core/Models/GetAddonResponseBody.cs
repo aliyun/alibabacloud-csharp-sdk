@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetAddonResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data list corresponding to the request header.</para>
+        /// <para>The list of data corresponding to the request.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 }
 
                 /// <summary>
-                /// <para>The additional dependency files.</para>
+                /// <para>The additional dependencies.</para>
                 /// </summary>
                 [NameInMap("dependencies")]
                 [Validation(Required=false)]
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the environment is enabled.</para>
+                /// <para>Indicates whether the environment is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public GetAddonResponseBodyDataEnvironmentsPoliciesMetricCheckRule MetricCheckRule { get; set; }
                     public class GetAddonResponseBodyDataEnvironmentsPoliciesMetricCheckRule : TeaModel {
                         /// <summary>
-                        /// <para>The data check rule after installation.</para>
+                        /// <para>The data check rule applied after installation.</para>
                         /// </summary>
                         [NameInMap("promQL")]
                         [Validation(Required=false)]
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     }
 
                     /// <summary>
-                    /// <para>Specifies whether the pod restart guide is triggered immediately after the add-on is installed during integration.</para>
+                    /// <para>Specifies whether to initiate a pod restart guide immediately after the add-on is installed during integration.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -398,9 +398,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The component version.</para>
             /// 
             /// <b>Example:</b>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>0.1.1</para>
             /// </summary>
             [NameInMap("version")]
             [Validation(Required=false)]

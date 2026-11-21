@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetMemoryHistoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3B311FD9-A60B-55E0-A896-A0C73*********</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return value.</para>
+        /// <para>The results.</para>
         /// </summary>
         [NameInMap("results")]
         [Validation(Required=false)]
         public List<GetMemoryHistoryResponseBodyResults> Results { get; set; }
         public class GetMemoryHistoryResponseBodyResults : TeaModel {
             /// <summary>
-            /// <para>Creation time.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1764556182850</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>Event type.</para>
+            /// <para>The event type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ADD</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Event { get; set; }
 
             /// <summary>
-            /// <para>Memory ID.</para>
+            /// <para>The memory ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>b25d6ad7-306f-4040-9890-4dddd2505a2e</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>Original message.</para>
+            /// <para>The original message.</para>
             /// </summary>
             [NameInMap("input")]
             [Validation(Required=false)]
             public List<GetMemoryHistoryResponseBodyResultsInput> Input { get; set; }
             public class GetMemoryHistoryResponseBodyResultsInput : TeaModel {
                 /// <summary>
-                /// <para>Message content.</para>
+                /// <para>The message content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>My name is Zhang San and I live in Hangzhou.</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Content { get; set; }
 
                 /// <summary>
-                /// <para>Message sender role.</para>
+                /// <para>The role of the message sender.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>Memory ID.</para>
+            /// <para>The memory ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>019cacf6-7b39-7f61-8314-548f07ca449a</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string MemoryId { get; set; }
 
             /// <summary>
-            /// <para>Metadata.</para>
+            /// <para>The metadata.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;sessionId&quot;:&quot;test_session_001&quot;}</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public Dictionary<string, object> Metadata { get; set; }
 
             /// <summary>
-            /// <para>New memory.</para>
+            /// <para>The new memory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>I really like Python.</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string NewMemory { get; set; }
 
             /// <summary>
-            /// <para>Old memory.</para>
+            /// <para>The old memory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>I really don\&quot;t like Python at all.</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string OldMemory { get; set; }
 
             /// <summary>
-            /// <para>Update time.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1771036123785</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string UpdatedAt { get; set; }
 
             /// <summary>
-            /// <para>User ID.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_session_001</para>

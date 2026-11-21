@@ -11,13 +11,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
     public class Evaluator : TeaModel {
         /// <summary>
         /// <para>The evaluator configuration parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;size&quot;:7}</para>
         /// </summary>
         [NameInMap("config")]
         [Validation(Required=false)]
         public Dictionary<string, object> Config { get; set; }
 
         /// <summary>
-        /// <para>The evaluation filter conditions.</para>
+        /// <para>The evaluation filters.</para>
         /// </summary>
         [NameInMap("filters")]
         [Validation(Required=false)]
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResultType { get; set; }
 
         /// <summary>
-        /// <para>The evaluation variable mapping.</para>
+        /// <para>The evaluation variable mappings.</para>
         /// </summary>
         [NameInMap("variableMapping")]
         [Validation(Required=false)]

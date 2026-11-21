@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class DeleteContextsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of deleted contexts.</para>
+        /// <para>The number of successfully deleted contexts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>55</para>

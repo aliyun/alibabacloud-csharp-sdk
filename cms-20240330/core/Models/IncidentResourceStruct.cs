@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Production environment web server.</para>
+        /// <para>Production web server</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The event ID.</para>
+        /// <para>The incident ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>incident-001</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string IncidentId { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the resource in the event.</para>
+        /// <para>The unique ID of the resource in the incident.</para>
         /// 
         /// <b>Example:</b>
         /// <para>res-001</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string IncidentResourceId { get; set; }
 
         /// <summary>
-        /// <para>The details object for the event resource.</para>
+        /// <para>The incident resource details object.</para>
         /// </summary>
         [NameInMap("resource")]
         [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The user ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>user-12345</para>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("userId")]
         [Validation(Required=false)]

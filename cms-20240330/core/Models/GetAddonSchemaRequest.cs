@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetAddonSchemaRequest : TeaModel {
         /// <summary>
-        /// <para>The language environment. Default value: zh. Valid values: zh, en.</para>
+        /// <para>The language. Default value: zh. Valid values: zh, en.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ApiVersion { get; set; }
 
         /// <summary>
-        /// <para>The environment type. Valid values: CS (container), ECS.</para>
+        /// <para>The environment type. Valid values: CS, ECS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CS</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string EnvironmentType { get; set; }
 
         /// <summary>
-        /// <para>The component version.</para>
+        /// <para>The add-on version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.1.1</para>

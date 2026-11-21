@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetServiceRecordRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the linked entry. Currently supported values:
-        /// logCorrelation: indicates application log association.</para>
+        /// <para>The type of the association entry. Valid values:
+        /// logCorrelation: application log association.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

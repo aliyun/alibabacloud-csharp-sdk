@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string BizSource { get; set; }
 
             /// <summary>
-            /// <para>The cumulative number of alert events during the alert duration.</para>
+            /// <para>The cumulative number of alerts (alert events) during the alert duration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public long? Count { get; set; }
 
             /// <summary>
-            /// <para>The end time of the alert, which is the recovery time. This field has a value only when the alert history enters the OK state. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The end time (recovery time) of the alert. This field has a value only when the alert history record enters the OK state. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1740535517000</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public Dictionary<string, string> InstanceDetail { get; set; }
 
             /// <summary>
-            /// <para>The unique key value (instanceKey) that identifies the alert object instance.</para>
+            /// <para>The unique key value used to identify the alert object instance, which is the instanceKey.</para>
             /// 
             /// <b>Example:</b>
             /// <para>entity/apm/apm.service/6dc9e46fda6d012537b48c3250ff806b</para>
@@ -153,14 +153,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The content of the latest alert message.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The number of zombie child processes of the process {{$tags.comm}} running on the instance {{$tags.instanceId}} is greater than 128</para>
+            /// <para>The number of zombie child processes of the process {{$tags.comm}} running on instance {{$tags.instanceId}} is greater than 128</para>
             /// </summary>
             [NameInMap("message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the observed object is in the global scope. This value is copied from the rule when the alert history record is created.</para>
+            /// <para>Indicates whether the observed object is in the global scope. This value is copied from the rule upon creation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? ObserveResourceGlobalScope { get; set; }
 
             /// <summary>
-            /// <para>The serialized string of the observed object list. This value is copied from the rule when the alert history record is created.</para>
+            /// <para>The serialized string of the observed object list. This value is copied from the rule upon creation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{&quot;resourceId&quot;:&quot;i-bp1234567890abcdef&quot;,&quot;resourceType&quot;:&quot;ACS::ECS::Instance&quot;}]</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ObserveResourceList { get; set; }
 
             /// <summary>
-            /// <para>The type of the observed object, such as PROMETHEUS, APM, RUM, or cms_basic. This value is copied from the rule when the alert history record is created.</para>
+            /// <para>The type of the observed object, such as PROMETHEUS, APM, RUM, or cms_basic. This value is copied from the rule upon creation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PROMETHEUS</para>

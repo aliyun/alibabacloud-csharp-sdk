@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateNotifyPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The request body, which contains the complete NotifyPolicyConfig configuration object for the notification policy.</para>
+        /// <para>The request body, which is the complete configuration object NotifyPolicyConfig for the notification policy.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public NotifyPolicyConfig Body { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID, which isolates notification policy resources across different business workspaces.</para>
+        /// <para>The workspace ID, which is used to isolate notification policy resources for different business workspaces.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

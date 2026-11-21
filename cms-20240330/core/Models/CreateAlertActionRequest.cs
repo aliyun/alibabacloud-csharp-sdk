@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AlertActionName { get; set; }
 
         /// <summary>
-        /// <para>The event bus parameters.</para>
+        /// <para>The event bus.</para>
         /// </summary>
         [NameInMap("ebParam")]
         [Validation(Required=false)]
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The integration webhook URL for PagerDuty. Both V1 and V2 are supported.</para>
+            /// <para>The integration webhook for PagerDuty. V1 and V2 are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://events.pagerduty.com/v2/enqueue">https://events.pagerduty.com/v2/enqueue</a></para>
@@ -343,7 +343,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public Dictionary<string, string> Headers { get; set; }
 
             /// <summary>
-            /// <para>The HTTP method for the webhook request.</para>
+            /// <para>The webhook request method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>POST</para>
@@ -353,7 +353,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Method { get; set; }
 
             /// <summary>
-            /// <para>The alert callback URL.</para>
+            /// <para>The URL for the alert callback.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.test.com">http://www.test.com</a></para>

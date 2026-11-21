@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The mobile phone number. Currently, only mobile phone numbers in China are supported.</para>
+        /// <para>The mobile phone number. Currently, only phone numbers in the Chinese mainland are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>13012345678</para>

@@ -20,6 +20,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<NotifyStrategyConfigCustomTemplateEntries> CustomTemplateEntries { get; set; }
         public class NotifyStrategyConfigCustomTemplateEntries : TeaModel {
             /// <summary>
+            /// <para>This parameter is optional. You can configure at most one template for each notification type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SMS</para>
+            /// </summary>
+            [NameInMap("targetType")]
+            [Validation(Required=false)]
+            public string TargetType { get; set; }
+
+            /// <summary>
             /// <para>The UUID of the notification template.</para>
             /// 
             /// <b>Example:</b>
@@ -60,7 +70,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public List<string> GroupingKeys { get; set; }
 
             /// <summary>
-            /// <para>This parameter does not take effect for this API operation and does not need to be set.</para>
+            /// <para>This parameter does not take effect for this API operation and does not need to be configured.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -70,7 +80,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public int? PeriodMin { get; set; }
 
             /// <summary>
-            /// <para>This parameter does not take effect for this API operation and does not need to be set.</para>
+            /// <para>This parameter does not take effect for this API operation and does not need to be configured.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -80,7 +90,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public int? SilenceSec { get; set; }
 
             /// <summary>
-            /// <para>This parameter does not take effect for this API operation and does not need to be set.</para>
+            /// <para>This parameter does not take effect for this API operation and does not need to be configured.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -123,7 +133,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public List<NotifyStrategyConfigRoutesChannels> Channels { get; set; }
             public class NotifyStrategyConfigRoutesChannels : TeaModel {
                 /// <summary>
-                /// <para>The type of the channel. Valid values: DING, WEIXIN, FEISHU, SLACK, TEAMS, WEBHOOK, CONTACT, GROUP, DUTY, and DING_COOL_APP. The values must be in uppercase. Lowercase values are not supported. For email, text messages, and voice calls, use CONTACT with enabledSubChannels.</para>
+                /// <para>The type of the channel. Valid values: DING, WEIXIN, FEISHU, SLACK, TEAMS, WEBHOOK, CONTACT, GROUP, DUTY, and DING_COOL_APP. The values must be in uppercase. Lowercase values are not supported. For email, text message, and voice call, use CONTACT and configure enabledSubChannels.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -134,7 +144,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string ChannelType { get; set; }
 
                 /// <summary>
-                /// <para>Required only for CONTACT, GROUP, and DUTY. Valid values for sub-channels: EMAIL, SMS, VOICE, DING, WEIXIN, FEISHU, and WEBHOOK. The values must be in uppercase.</para>
+                /// <para>This parameter is required only when the channel type is CONTACT, GROUP, or DUTY. Valid values for sub-channels: EMAIL, SMS, VOICE, DING, WEIXIN, FEISHU, and WEBHOOK. The values must be in uppercase.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;EMAIL&quot;,&quot;SMS&quot;]</para>
@@ -144,7 +154,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public List<string> EnabledSubChannels { get; set; }
 
                 /// <summary>
-                /// <para>The list of receiver identifiers. At least one receiver is required. For WEBHOOK, specify the webhook UUID. For a chatbot, specify the chatbot UUID. For CONTACT, specify the contact ID.</para>
+                /// <para>The list of recipient identifiers. At least one identifier is required. For WEBHOOK, specify the webhook UUID. For a chatbot, specify the chatbot UUID. For CONTACT, specify the contact ID.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -216,7 +226,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to enable Root Cause Analysis (RCA).</para>
+            /// <para>Specifies whether to enable root cause analysis (RCA).</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>

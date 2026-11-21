@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The token for the next query.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxxxxxxxx</para>
+        /// <para>11a111111111a1111a1111aaaa1a1aa1aa11aa111aa11a1111a1a111aa1a1111a1a111a1a111111111111111111111aa</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
@@ -42,9 +42,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <summary>
             /// <para>The access type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>readWrite</description></item>
-            /// <item><description>readOnly</description></item>
-            /// <item><description>httpReadOnly</description></item>
+            /// <item><description>readWrite: Read and write.</description></item>
+            /// <item><description>readOnly: Read-only.</description></item>
+            /// <item><description>httpReadOnly: HTTP read-only.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AccessType { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was created. The time is displayed in UTC+0 and formatted as yyyy-MM-ddTHH:mmZ.</para>
+            /// <para>The time when the instance was created. The time is displayed in UTC+0 in the yyyy-MM-ddTHH:mmZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-08-10T02:07:53Z</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Product { get; set; }
 
             /// <summary>
-            /// <para>The instance ID.</para>
+            /// <para>The ID of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rw-63549e054ff596a4149927961dff</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PrometheusInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The instance name.</para>
+            /// <para>The name of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-prom-name</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The resource group ID.</para>
+            /// <para>The ID of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-aek2bhocin5e2na</para>

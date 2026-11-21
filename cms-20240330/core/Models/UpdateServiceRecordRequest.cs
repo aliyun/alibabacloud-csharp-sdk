@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateServiceRecordRequest : TeaModel {
         /// <summary>
-        /// <para>The entry content in JSON string format. The format varies depending on the recordType value.</para>
+        /// <para>The content of the entry. The content is a JSON string and varies based on the recordType.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,8 +27,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RecordContent { get; set; }
 
         /// <summary>
-        /// <para>The type of the linked entry. Currently supported value:
-        /// logCorrelation, which indicates application log association.</para>
+        /// <para>The type of the association entry. Valid values:
+        /// logCorrelation: application log association.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

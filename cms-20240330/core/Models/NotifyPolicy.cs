@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class NotifyPolicy : TeaModel {
         /// <summary>
-        /// <para>The creation time. The value is a UNIX timestamp string in milliseconds.</para>
+        /// <para>The creation time, which is a UNIX timestamp string in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1710000000000</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The policy description.</para>
+        /// <para>The description of the policy.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>生产环境告警通知策略</para>
+        /// <para>Production environment alert notification policy</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the policy is enabled. This is a read-only field controlled by the Enable or Disable operation.</para>
+        /// <para>Indicates whether the policy is enabled. This field is read-only and is controlled by the Enable or Disable API operations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -43,14 +43,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The policy name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>生产环境告警通知策略</para>
+        /// <para>Production environment alert notification policy</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The notification policy sub-entity details.</para>
+        /// <para>The details of the notification policy sub-entity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public NotifyStrategyDetail NotifyStrategy { get; set; }
 
         /// <summary>
-        /// <para>The response plan sub-entity details.</para>
+        /// <para>The details of the response plan sub-entity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public ResponsePlanDetail ResponsePlan { get; set; }
 
         /// <summary>
-        /// <para>The subscription sub-entity details.</para>
+        /// <para>The details of the subscription sub-entity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public SubscriptionDetail Subscription { get; set; }
 
         /// <summary>
-        /// <para>The update time. The value is a UNIX timestamp string in milliseconds.</para>
+        /// <para>The update time, which is a UNIX timestamp string in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1710000000000</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account UID.</para>
+        /// <para>The UID of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890123456</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Uuid { get; set; }
 
         /// <summary>
-        /// <para>The optimistic locking version number.</para>
+        /// <para>The optimistic lock version number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

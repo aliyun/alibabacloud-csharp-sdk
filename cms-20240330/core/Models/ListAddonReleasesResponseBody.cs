@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListAddonReleasesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token for the next page.</para>
+        /// <para>The token used to query the next page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The collection of integrated component information.</para>
+        /// <para>The collection of onboarded component information.</para>
         /// </summary>
         [NameInMap("releases")]
         [Validation(Required=false)]
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ApiVersion { get; set; }
 
             /// <summary>
-            /// <para>The installation phase information.</para>
+            /// <para>The installation phase conditions.</para>
             /// </summary>
             [NameInMap("conditions")]
             [Validation(Required=false)]
@@ -123,7 +126,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Config { get; set; }
 
             /// <summary>
-            /// <para>The integration time.</para>
+            /// <para>The onboarding time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-11-04T16:10:12+08:00</para>
@@ -170,7 +173,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string EnvironmentId { get; set; }
 
             /// <summary>
-            /// <para>The number of plugins.</para>
+            /// <para>The number of plug-ins.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -180,7 +183,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public long? ExporterCount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether configurations exist.</para>
+            /// <para>Indicates whether a configuration exists.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -190,7 +193,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? HaveConfig { get; set; }
 
             /// <summary>
-            /// <para>The ID of the integration user.</para>
+            /// <para>The ID of the onboarding user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>175xxxxxxxxx</para>
@@ -210,7 +213,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the component is a managed component.</para>
+            /// <para>Indicates whether the component is managed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -317,7 +320,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public int? Ready { get; set; }
 
                 /// <summary>
-                /// <para>The number of sub-releases.</para>
+                /// <para>The total number of sub-releases.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -339,7 +342,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the owner user.</para>
+            /// <para>The ID of the associated user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>175xxxxxxxxxxxxx</para>
@@ -381,7 +384,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of components.</para>
+        /// <para>The total number of components.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

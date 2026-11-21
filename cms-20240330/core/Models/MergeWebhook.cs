@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>The last modification time.</para>
+        /// <para>The last modified time.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2025-03-11T08:21:58.789Z</para>
+        /// <para>{&quot;time&quot;: &quot;2025-03-11T08:21:58.789Z&quot;}</para>
         /// </summary>
         [NameInMap("gmtModified")]
         [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Method { get; set; }
 
         /// <summary>
-        /// <para>The name of the webhook.</para>
+        /// <para>The webhook name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>O&amp;M alert notification</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The webhook type, which indicates its target platform.</para>
+        /// <para>The webhook type, which indicates the target platform.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dingtalk</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The webhook address used to send requests.</para>
+        /// <para>The webhook URL used to send requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://oapi.dingtalk.com/robot/send?access_token=abc123">https://oapi.dingtalk.com/robot/send?access_token=abc123</a></para>

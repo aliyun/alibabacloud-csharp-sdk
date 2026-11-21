@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The extraction strategies. Valid values: Episodic, Summary, and Fact.</para>
+        /// <para>The supported extraction strategies: Episodic, Summary, and Fact.</para>
         /// </summary>
         [NameInMap("extractionStrategies")]
         [Validation(Required=false)]
         public List<string> ExtractionStrategies { get; set; }
 
         /// <summary>
-        /// <para>The memory store name.</para>
+        /// <para>The name of the memory store.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-memory-store</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public GetMemoryStoreResponseBodyShortTermStorage ShortTermStorage { get; set; }
         public class GetMemoryStoreResponseBodyShortTermStorage : TeaModel {
             /// <summary>
-            /// <para>The Simple Log Service Logstore name.</para>
+            /// <para>The name of the Simple Log Service Logstore.</para>
             /// 
             /// <b>Example:</b>
             /// <para>memory-store</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Logstore { get; set; }
 
             /// <summary>
-            /// <para>The Simple Log Service project name.</para>
+            /// <para>The name of the Simple Log Service project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>wk_cms_data_warehouse</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The retention period of short-term memory.</para>
+        /// <para>The retention period for short-term memory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -124,14 +124,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The configuration used when sourceType is set to Trace.</para>
+        /// <para>The configuration when the sourceType is Trace.</para>
         /// </summary>
         [NameInMap("traceSourceConfig")]
         [Validation(Required=false)]
         public GetMemoryStoreResponseBodyTraceSourceConfig TraceSourceConfig { get; set; }
         public class GetMemoryStoreResponseBodyTraceSourceConfig : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to include LLM output in memory extraction.</para>
+            /// <para>Specifies whether to include the LLM output in memory extraction.</para>
             /// </summary>
             [NameInMap("includeOutput")]
             [Validation(Required=false)]
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Query { get; set; }
 
             /// <summary>
-            /// <para>The workspace where the trace resides.</para>
+            /// <para>The workspace where the trace is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-workspace</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>The workspace name.</para>
+        /// <para>The name of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default-cms-xxxxxx-cn-beijing</para>

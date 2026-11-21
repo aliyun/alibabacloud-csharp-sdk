@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string MaintainWindowId { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request. You can use this ID for troubleshooting and ticket tracking.</para>
+        /// <para>The unique ID of the request, which is used for troubleshooting and ticket tracking.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0B9377D9-C56B-5C2E-A8A4-A01D6CC3F4B8</para>

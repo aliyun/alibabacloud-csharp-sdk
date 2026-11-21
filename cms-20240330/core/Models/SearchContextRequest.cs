@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class SearchContextRequest : TeaModel {
         /// <summary>
-        /// <para>Filter conditions</para>
+        /// <para>The filter conditions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;metadata.serviceName&quot;:&quot;sls-sop-daily&quot;,&quot;metadata.taskType&quot;:{&quot;in&quot;:[&quot;troubleshooting&quot;,&quot;knowledge_retrieval&quot;]}}</para>
         /// </summary>
         [NameInMap("filter")]
         [Validation(Required=false)]
         public Dictionary<string, object> Filter { get; set; }
 
         /// <summary>
-        /// <para>Whether to format</para>
+        /// <para>Specifies whether to format the output.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -27,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? Formatted { get; set; }
 
         /// <summary>
-        /// <para>Limit the number of items returned</para>
+        /// <para>The maximum number of results to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -37,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>Query content</para>
+        /// <para>The query content.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +51,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>Retrieval option</para>
+        /// <para>The retrieval options.</para>
         /// 
         /// <b>Example:</b>
         /// <para>reranker,llm_rank</para>
@@ -58,7 +61,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RetrievalOption { get; set; }
 
         /// <summary>
-        /// <para>Similarity threshold</para>
+        /// <para>The similarity threshold.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.3</para>

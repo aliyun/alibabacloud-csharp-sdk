@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxxxxxxxx</para>
+        /// <para>A1111AAAA1A1AaaA1Aa1aaAaa1AAaaAAa1AaAaaa1aA1Aa1aaaa1aaa-AAaaa1aa</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total count.</para>
+        /// <para>The total number of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The last modification time.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>

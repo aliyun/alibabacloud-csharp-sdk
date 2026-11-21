@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The return values.</para>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("results")]
         [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The hash value of the memory.</para>
+            /// <para>The memory hash value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d791bf27236c5532056a13279baad3517042bb8d5b1bdb02e7871fa632debffe</para>

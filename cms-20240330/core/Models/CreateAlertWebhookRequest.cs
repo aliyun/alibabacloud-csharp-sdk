@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ContentType { get; set; }
 
         /// <summary>
-        /// <para>The collection of HTTP request headers.</para>
+        /// <para>The HTTP request headers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;X-Total-Count&quot;:&quot;0&quot;}</para>

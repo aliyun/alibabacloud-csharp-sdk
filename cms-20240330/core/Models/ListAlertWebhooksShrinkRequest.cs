@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the webhook.</para>
+        /// <para>The unique identifiers of the webhooks.</para>
         /// </summary>
         [NameInMap("webhookIds")]
         [Validation(Required=false)]
         public string WebhookIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The workspace name.</para>
+        /// <para>The name of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default-cms-0000000000000000-cn-hangzhou</para>

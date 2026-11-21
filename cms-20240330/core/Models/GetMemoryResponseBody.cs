@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The expiration time.</para>
+        /// <para>The expiration date.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1751595283143</para>

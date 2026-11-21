@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetServiceRecordResponseBody : TeaModel {
         /// <summary>
-        /// <para>The record.</para>
+        /// <para>The number of records.</para>
         /// </summary>
         [NameInMap("record")]
         [Validation(Required=false)]
         public GetServiceRecordResponseBodyRecord Record { get; set; }
         public class GetServiceRecordResponseBodyRecord : TeaModel {
             /// <summary>
-            /// <para>The entry content in JSON string format. The returned content varies depending on the recordType.</para>
+            /// <para>The content of the entry in JSON string format. The returned content varies based on the recordType.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;project&quot;:&quot;proj-xtrace-16c988dcfe21fcb73c5e6f234927d998-cn-hangzhou&quot;,&quot;storeName&quot;:&quot;app-biz-log&quot;,&quot;regionId&quot;:&quot;cn-hangzhou&quot;,&quot;bindType&quot;:&quot;logstore&quot;,&quot;traceIdRelateField&quot;:&quot;&quot;}</para>
@@ -27,8 +27,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RecordContent { get; set; }
 
             /// <summary>
-            /// <para>The type of the linked entry. Currently supported values:
-            /// logCorrelation: indicates application log association.</para>
+            /// <para>The type of the association entry. Valid values:
+            /// logCorrelation: application log association.</para>
             /// 
             /// <b>Example:</b>
             /// <para>logCorrelation</para>

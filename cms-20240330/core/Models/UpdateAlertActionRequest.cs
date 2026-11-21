@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateAlertActionRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the action integration.</para>
+        /// <para>The name of the alert action integration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testName</para>
@@ -186,14 +186,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The Simple Message Queue (formerly MNS) parameters.</para>
+        /// <para>The Simple Message Queue (formerly MNS) (MSMQ) parameters.</para>
         /// </summary>
         [NameInMap("mnsParam")]
         [Validation(Required=false)]
         public UpdateAlertActionRequestMnsParam MnsParam { get; set; }
         public class UpdateAlertActionRequestMnsParam : TeaModel {
             /// <summary>
-            /// <para>The Simple Message Queue (formerly MNS) resource type.</para>
+            /// <para>The resource type of Simple Message Queue (formerly MNS) (MSMQ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>queue</para>
@@ -297,7 +297,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The action integration type.</para>
+        /// <para>The alert action integration type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FC</para>
@@ -344,7 +344,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Method { get; set; }
 
             /// <summary>
-            /// <para>The URL for the alert callback.</para>
+            /// <para>The URL of the alert callback.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.test.com">http://www.test.com</a></para>

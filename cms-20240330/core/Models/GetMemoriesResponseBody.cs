@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public Dictionary<string, object> Metadata { get; set; }
 
             /// <summary>
-            /// <para>The role of the message initiator.</para>
+            /// <para>The role that initiated the message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user</para>

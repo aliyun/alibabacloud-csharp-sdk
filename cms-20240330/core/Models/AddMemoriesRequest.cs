@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string CustomInstructions { get; set; }
 
         /// <summary>
-        /// <para>The inference setting.</para>
+        /// <para>Specifies whether to enable inference.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

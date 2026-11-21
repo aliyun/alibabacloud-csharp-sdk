@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListContactGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The contact group IDs.</para>
+        /// <para>The IDs of the contact groups.</para>
         /// </summary>
         [NameInMap("contactGroupIds")]
         [Validation(Required=false)]
         public List<string> ContactGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The contact name.</para>
+        /// <para>The name of the contact.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The workspace name.</para>
+        /// <para>The name of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default-cms-xxxxxx-cn-beijing</para>

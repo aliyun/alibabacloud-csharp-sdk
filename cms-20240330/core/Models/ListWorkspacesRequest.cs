@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxxxxxxxx</para>
+        /// <para>aAaAAAA1aAAA1a1a1AaaAAa1A11aaaa1AA-aAA1Aaaa1aaAaAaaAaAaa1AAAaa1A</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The workspace name. Fuzzy match is supported.</para>
+        /// <para>The name of the workspace. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-test-001</para>

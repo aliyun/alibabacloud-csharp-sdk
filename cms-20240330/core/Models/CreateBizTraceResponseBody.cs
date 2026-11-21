@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateBizTraceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the business trace.</para>
+        /// <para>The ID of the business link.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e339260ed64c95d</para>

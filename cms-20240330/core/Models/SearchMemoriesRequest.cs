@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>The reranking option.</para>
+        /// <para>Specifies whether to rerank.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? Rerank { get; set; }
 
         /// <summary>
-        /// <para>The retrieval option.</para>
+        /// <para>The retrieval options.</para>
         /// 
         /// <b>Example:</b>
         /// <para>reranker,llm_rank</para>

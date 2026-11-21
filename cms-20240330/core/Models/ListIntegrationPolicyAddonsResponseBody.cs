@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public ListIntegrationPolicyAddonsResponseBodyAddonsEnvironmentsDependencies Dependencies { get; set; }
                 public class ListIntegrationPolicyAddonsResponseBodyAddonsEnvironmentsDependencies : TeaModel {
                     /// <summary>
-                    /// <para>The dependencies on cluster types.</para>
+                    /// <para>The cluster type dependencies.</para>
                     /// </summary>
                     [NameInMap("clusterTypes")]
                     [Validation(Required=false)]
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the environment is enabled.</para>
+                /// <para>Specifies whether it is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public bool? Enable { get; set; }
 
                 /// <summary>
-                /// <para>The display name of the environment.</para>
+                /// <para>The environment display name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Cloud</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public ListIntegrationPolicyAddonsResponseBodyAddonsEnvironmentsPolicies Policies { get; set; }
                 public class ListIntegrationPolicyAddonsResponseBodyAddonsEnvironmentsPolicies : TeaModel {
                     /// <summary>
-                    /// <para>The enabled status of the default alert rule policy.</para>
+                    /// <para>The enabling status of the default alert rule policy.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>RUNNING</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public string AlertDefaultStatus { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether the add-on is installed by default.</para>
+                    /// <para>Specifies whether it is installed by default.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     }
 
                     /// <summary>
-                    /// <para>The name of the target add-on.</para>
+                    /// <para>The target add-on name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>mysql</para>

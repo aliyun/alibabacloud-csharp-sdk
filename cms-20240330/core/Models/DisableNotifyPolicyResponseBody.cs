@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class DisableNotifyPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the request. Used for troubleshooting and ticket tracking.</para>
+        /// <para>The unique ID of the request, which is used for troubleshooting and ticket tracking.</para>
         /// 
         /// <b>Example:</b>
         /// <para>70D52620-2609-1802-9788-6BC592C83F03</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>Indicates whether the operation is successful.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The uuid of the notification policy that was operated on.</para>
+        /// <para>The UUID of the notification policy on which the operation was performed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04779a183add4f2ca06ab440f16cc580</para>

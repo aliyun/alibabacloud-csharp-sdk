@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateBizTraceRequest : TeaModel {
         /// <summary>
-        /// <para>The advanced configurations.</para>
+        /// <para>The advanced configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;sample&quot;:{&quot;strategy&quot;:&quot;BY_APP&quot;}}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AdvancedConfig { get; set; }
 
         /// <summary>
-        /// <para>The business trace code. The code can contain only letters, digits, and underscores (_), and must start with a lowercase letter.</para>
+        /// <para>The business link identifier. The identifier can contain only letters, digits, and underscores (_), and must start with a lowercase letter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>label_env</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string BizTraceCode { get; set; }
 
         /// <summary>
-        /// <para>The name of the business trace.</para>
+        /// <para>The name of the business link.</para>
         /// 
         /// <b>Example:</b>
         /// <para>just test</para>

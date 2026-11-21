@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The list of contacts. Multiple contacts are separated by commas.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Zhang San,Li Si</para>
+            /// <para>Zhang San, Li Si</para>
             /// </summary>
             [NameInMap("contacts")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The list of contact groups. Multiple contact groups are separated by commas.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>O&amp;M group,On-call group</para>
+            /// <para>O&amp;M group, On-call group</para>
             /// </summary>
             [NameInMap("groups")]
             [Validation(Required=false)]
@@ -69,8 +69,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <summary>
             /// <para>Indicates whether the notification record has no actual delivery channel. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: the record has no channel, which means the notifyResult is NO_CHANNEL.</description></item>
-            /// <item><description>false: the record has an actual delivery channel.</description></item>
+            /// <item><description>true: The record has no channel, which means the notifyResult is NO_CHANNEL.</description></item>
+            /// <item><description>false: The record has an actual delivery channel.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("noChannel")]
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Receiver { get; set; }
 
             /// <summary>
-            /// <para>The details of the notification delivery result. This is the raw response content returned by the channel, such as the API response from a DingTalk or Lark bot.</para>
+            /// <para>The notification delivery result details. This is the raw response content returned by the channel, such as the API response from a DingTalk or Lark bot.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;errcode&quot;:0,&quot;errmsg&quot;:&quot;ok&quot;}</para>
@@ -140,9 +140,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <summary>
             /// <para>The notification delivery type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SUBSCRIBE: subscription notifications</description></item>
-            /// <item><description>DIRECT: direct event notifications</description></item>
-            /// <item><description>ITSM: ticket or action notifications</description></item>
+            /// <item><description>SUBSCRIBE: Subscription notification.</description></item>
+            /// <item><description>DIRECT: Direct event notification.</description></item>
+            /// <item><description>ITSM: Ticket or action notification.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -155,10 +155,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <summary>
             /// <para>The alert severity. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CRITICAL: critical</description></item>
-            /// <item><description>ERROR: error</description></item>
-            /// <item><description>WARNING: warning</description></item>
-            /// <item><description>INFO: info</description></item>
+            /// <item><description>CRITICAL: Critical.</description></item>
+            /// <item><description>ERROR: Error.</description></item>
+            /// <item><description>WARNING: Warning.</description></item>
+            /// <item><description>INFO: Info.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -171,15 +171,15 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <summary>
             /// <para>The incident status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>TRIGGERED: triggered</description></item>
-            /// <item><description>RESOLVED: resolved</description></item>
-            /// <item><description>ACK: acknowledged</description></item>
-            /// <item><description>ESCALATED: escalated</description></item>
-            /// <item><description>MANUAL_RESOLVED: manually resolved</description></item>
-            /// <item><description>TIMEOUT: automatically resolved due to timeout</description></item>
-            /// <item><description>RETRIGGERED: retriggered</description></item>
-            /// <item><description>PARTIAL_RESOLVED: partially resolved</description></item>
-            /// <item><description>INVALID: invalid</description></item>
+            /// <item><description>TRIGGERED: Triggered.</description></item>
+            /// <item><description>RESOLVED: Resolved.</description></item>
+            /// <item><description>ACK: Acknowledged.</description></item>
+            /// <item><description>ESCALATED: Escalated.</description></item>
+            /// <item><description>MANUAL_RESOLVED: Manually resolved.</description></item>
+            /// <item><description>TIMEOUT: Automatically resolved due to timeout.</description></item>
+            /// <item><description>RETRIGGERED: Retriggered.</description></item>
+            /// <item><description>PARTIAL_RESOLVED: Partially resolved.</description></item>
+            /// <item><description>INVALID: Invalid.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -212,8 +212,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <summary>
             /// <para>Indicates whether the notification was delivered successfully. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: the delivery was successful.</description></item>
-            /// <item><description>false: the delivery failed.</description></item>
+            /// <item><description>true: Delivered successfully.</description></item>
+            /// <item><description>false: Delivery failed.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("success")]
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned for the current request.</para>
+        /// <para>The maximum number of records returned for the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of notification history entries that meet the query conditions.</para>
+        /// <para>The total number of notification history records that meet the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>128</para>

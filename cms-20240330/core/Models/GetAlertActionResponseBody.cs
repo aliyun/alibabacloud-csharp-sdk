@@ -203,14 +203,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The Simple Message Queue (formerly MNS) parameters.</para>
+            /// <para>The Simple Message Queue (formerly MNS) (MSMQ) parameters.</para>
             /// </summary>
             [NameInMap("mnsParam")]
             [Validation(Required=false)]
             public GetAlertActionResponseBodyAlertActionsMnsParam MnsParam { get; set; }
             public class GetAlertActionResponseBodyAlertActionsMnsParam : TeaModel {
                 /// <summary>
-                /// <para>The Simple Message Queue (formerly MNS) resource type.</para>
+                /// <para>The Simple Message Queue (formerly MNS) (MSMQ) resource type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>queue</para>
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public GetAlertActionResponseBodyAlertActionsPagerDutyParam PagerDutyParam { get; set; }
             public class GetAlertActionResponseBodyAlertActionsPagerDutyParam : TeaModel {
                 /// <summary>
-                /// <para>The integration key for PagerDuty.</para>
+                /// <para>The integration key of PagerDuty.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>EWR4WR4T4GREG4ET453T5Y</para>
@@ -263,7 +263,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The PagerDuty integration webhook. Versions 1 and 2 are supported.</para>
+                /// <para>The integration webhook of PagerDuty. Both V1 and V2 are supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://events.pagerduty.com/v2/enqueue">https://events.pagerduty.com/v2/enqueue</a></para>
@@ -361,7 +361,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Method { get; set; }
 
                 /// <summary>
-                /// <para>The URL for the alert callback.</para>
+                /// <para>The URL of the alert callback.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://www.test.com">http://www.test.com</a></para>

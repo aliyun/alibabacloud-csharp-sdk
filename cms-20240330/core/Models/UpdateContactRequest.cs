@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Email { get; set; }
 
         /// <summary>
-        /// <para>The instant messaging (IM) user ID mappings. Multiple IM tools are supported.</para>
+        /// <para>The mapping of instant messaging (IM) user IDs. Multiple IM tools are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;dingtalk&quot;:&quot;abc123&quot;,&quot;wechat&quot;:&quot;def456&quot;}</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The mobile phone number of the contact. Only Chinese mobile phone numbers are supported.</para>
+        /// <para>The mobile phone number of the contact. Currently, only mobile phone numbers in China are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>150123456789</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Phone { get; set; }
 
         /// <summary>
-        /// <para>The country code for the mobile phone number, typically +86 for China.</para>
+        /// <para>The country code of the mobile phone number, which is typically +86 for China.</para>
         /// 
         /// <b>Example:</b>
         /// <para>+86</para>

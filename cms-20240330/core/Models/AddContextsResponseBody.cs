@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The return values.</para>
+        /// <para>The results.</para>
         /// </summary>
         [NameInMap("results")]
         [Validation(Required=false)]

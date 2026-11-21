@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class IncidentMemberStruct : TeaModel {
         /// <summary>
-        /// <para>The structure of the confirmation information.</para>
+        /// <para>The acknowledgment information struct.</para>
         /// </summary>
         [NameInMap("acknowledge")]
         [Validation(Required=false)]
         public IncidentMemberStructAcknowledge Acknowledge { get; set; }
         public class IncidentMemberStructAcknowledge : TeaModel {
             /// <summary>
-            /// <para>The confirmation level.</para>
+            /// <para>The acknowledgment level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The ID of the contact.</para>
+        /// <para>The contact ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user-12345</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ContactId { get; set; }
 
         /// <summary>
-        /// <para>A list of contacts.</para>
+        /// <para>The contact list.</para>
         /// </summary>
         [NameInMap("contacts")]
         [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Channel { get; set; }
 
             /// <summary>
-            /// <para>The masked ID of the contact.</para>
+            /// <para>The contact ID (masked).</para>
             /// 
             /// <b>Example:</b>
             /// <para>user-12345</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Information about the escalation stage.</para>
+        /// <para>The escalation stage information.</para>
         /// </summary>
         [NameInMap("escalation")]
         [Validation(Required=false)]
@@ -88,14 +88,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Notify the operations team.</para>
+            /// <para>Notify the O&amp;M team</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the event escalation.</para>
+            /// <para>The incident escalation ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>escalation-001</para>
@@ -108,14 +108,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Phase one.</para>
+            /// <para>Stage 1</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The index of the escalation stage.</para>
+            /// <para>The escalation stage index.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The title.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Alert escalated to the operations team.</para>
+            /// <para>Alert escalated to the O&amp;M team</para>
             /// </summary>
             [NameInMap("title")]
             [Validation(Required=false)]
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The ID of the event.</para>
+        /// <para>The incident ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>incident-001</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string IncidentId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the event member.</para>
+        /// <para>The incident member ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>member-001</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public IncidentMemberStructScheduleGroup ScheduleGroup { get; set; }
         public class IncidentMemberStructScheduleGroup : TeaModel {
             /// <summary>
-            /// <para>The ID of the contact.</para>
+            /// <para>The contact ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>group-001</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Night shift duty team.</para>
+            /// <para>Night on-call group</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The time.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2025-10-08 10:18:58</para>
+        /// <para>1794984221885</para>
         /// </summary>
         [NameInMap("time")]
         [Validation(Required=false)]

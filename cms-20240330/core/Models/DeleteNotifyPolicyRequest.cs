@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class DeleteNotifyPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The unique identifier of the notification policy, returned by the creation operation.</para>
+        /// <para>The unique identifier of the notification policy, which is returned by the create operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Uuid { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID. Used to isolate notification policy resources across different business spaces.</para>
+        /// <para>The workspace ID, which is used to isolate notification policy resources across different business workspaces.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

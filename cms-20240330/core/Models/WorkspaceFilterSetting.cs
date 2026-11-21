@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class WorkspaceFilterSetting : TeaModel {
         /// <summary>
-        /// <para>The label filter. This parameter is not supported and does not take effect if specified.</para>
+        /// <para>The tag filter. This feature is not yet supported, and passing this parameter has no effect.</para>
         /// </summary>
         [NameInMap("tagSelector")]
         [Validation(Required=false)]

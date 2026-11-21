@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<ListIntegrationPolicyServiceMonitorsResponseBodyServiceMonitors> ServiceMonitors { get; set; }
         public class ListIntegrationPolicyServiceMonitorsResponseBodyServiceMonitors : TeaModel {
             /// <summary>
-            /// <para>The addon name.</para>
+            /// <para>The name of the add-on.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud-acs-ecs</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AddonName { get; set; }
 
             /// <summary>
-            /// <para>The addon release name.</para>
+            /// <para>The name of the add-on release.</para>
             /// 
             /// <b>Example:</b>
             /// <para>release-1234567</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AddonReleaseName { get; set; }
 
             /// <summary>
-            /// <para>The addon version.</para>
+            /// <para>The version of the add-on.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0.1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AddonVersion { get; set; }
 
             /// <summary>
-            /// <para>The configuration YAML.</para>
+            /// <para>The YAML configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>apiVersion: xxxxx</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ConfigYaml { get; set; }
 
             /// <summary>
-            /// <para>The enabling status.</para>
+            /// <para>The enabled status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>run</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The encrypted YAML.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>YXBpVmVyc2lvbjogeHh4eHgK</para>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("encryptYaml")]
             [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public long? MatchedTargetCount { get; set; }
 
                 /// <summary>
-                /// <para>The sampling path.</para>
+                /// <para>The collection path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/metrics</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public long? MatchedServiceCount { get; set; }
 
             /// <summary>
-            /// <para>The ServiceMonitor name.</para>
+            /// <para>The name of the ServiceMonitor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>62a526c5-f6ca-4cfb-b5a4-b76974cffe51</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The namespace.</para>
+            /// <para>The name of the project workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>arms-prom</para>

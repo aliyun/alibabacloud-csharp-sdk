@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public UpdateContextStoreRequestConfigSource Source { get; set; }
             public class UpdateContextStoreRequestConfigSource : TeaModel {
                 /// <summary>
-                /// <para>The name of the Simple Log Service Logstore.</para>
+                /// <para>The name of the Logstore.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sls-test-logstore</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Logstore { get; set; }
 
                 /// <summary>
-                /// <para>The name of the Simple Log Service project.</para>
+                /// <para>The name of the project.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sls-test-project</para>

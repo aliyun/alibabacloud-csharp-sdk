@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ExecuteQueryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The log data array. Each element corresponds to a log entry.</para>
+        /// <para>The log data array, where each element corresponds to a log entry.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public long? ElapsedMillisecond { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the query results are complete.</para>
+            /// <para>Indicates whether the query result is complete.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Complete</para>

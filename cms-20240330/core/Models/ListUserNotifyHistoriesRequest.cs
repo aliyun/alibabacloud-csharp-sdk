@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListUserNotifyHistoriesRequest : TeaModel {
         /// <summary>
-        /// <para>The notification batch ID. Used to filter the notification history for notifications sent in the same batch.</para>
+        /// <para>The notification batch ID. Used to filter the notification history for the same delivery batch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3fa85f64-5717-4562-b3fc-2c963f66afa7</para>
@@ -35,26 +35,26 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <summary>
         /// <para>The notification channel. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ALI_YUNGE_SMS: text message</description></item>
-        /// <item><description>ALI_YUNGE_CALL: phone call</description></item>
-        /// <item><description>ALI_YUNGE_MAIL: email</description></item>
-        /// <item><description>ALI_YUNGE_ALIUID: internal message</description></item>
-        /// <item><description>DING: DingTalk</description></item>
-        /// <item><description>DING_COOL_APP: DingTalk cool app</description></item>
-        /// <item><description>FEISHU: Lark</description></item>
-        /// <item><description>WEIXIN: WeCom</description></item>
-        /// <item><description>SLACK: Slack</description></item>
-        /// <item><description>TEAMS: Teams</description></item>
-        /// <item><description>PAGERDUTY: PagerDuty</description></item>
-        /// <item><description>WEBHOOK: custom webhook</description></item>
-        /// <item><description>ALIYUN_SLS: Simple Log Service</description></item>
-        /// <item><description>ALIYUN_FC: Function Compute</description></item>
-        /// <item><description>ALIYUN_FC3: Function Compute 3.0</description></item>
-        /// <item><description>ALIYUN_MNS: Message Service</description></item>
-        /// <item><description>ALIYUN_OOS: CloudOps Orchestration Service</description></item>
-        /// <item><description>ALIYUN_ESS: elastic scaling</description></item>
-        /// <item><description>ALIYUN_EB: event bus</description></item>
-        /// <item><description>ALIYUN_OPENAPI: OpenAPI</description></item>
+        /// <item><description>ALI_YUNGE_SMS: Text message.</description></item>
+        /// <item><description>ALI_YUNGE_CALL: Voice call.</description></item>
+        /// <item><description>ALI_YUNGE_MAIL: Email.</description></item>
+        /// <item><description>ALI_YUNGE_ALIUID: Internal message.</description></item>
+        /// <item><description>DING: DingTalk.</description></item>
+        /// <item><description>DING_COOL_APP: DingTalk Cool App.</description></item>
+        /// <item><description>FEISHU: Lark.</description></item>
+        /// <item><description>WEIXIN: WeCom.</description></item>
+        /// <item><description>SLACK: Slack.</description></item>
+        /// <item><description>TEAMS: Teams.</description></item>
+        /// <item><description>PAGERDUTY: PagerDuty.</description></item>
+        /// <item><description>WEBHOOK: Custom webhook.</description></item>
+        /// <item><description>ALIYUN_SLS: Simple Log Service.</description></item>
+        /// <item><description>ALIYUN_FC: Function Compute.</description></item>
+        /// <item><description>ALIYUN_FC3: Function Compute 3.0.</description></item>
+        /// <item><description>ALIYUN_MNS: Message Service.</description></item>
+        /// <item><description>ALIYUN_OOS: CloudOps Orchestration Service.</description></item>
+        /// <item><description>ALIYUN_ESS: Elastic scaling.</description></item>
+        /// <item><description>ALIYUN_EB: Event bus.</description></item>
+        /// <item><description>ALIYUN_OPENAPI: OpenAPI.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,8 +67,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <summary>
         /// <para>The channel category. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>WEBHOOK: webhook channels, such as DingTalk, Lark, WeCom, Slack, Teams, and custom webhooks.</description></item>
-        /// <item><description>YUNGE: communication channels, such as text messages, phone calls, and emails.</description></item>
+        /// <item><description>WEBHOOK: Webhook channels, such as DingTalk, Lark, WeCom, Slack, Teams, and custom webhooks.</description></item>
+        /// <item><description>YUNGE: Yunge communication channels, such as text messages, voice calls, and emails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -109,10 +109,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string IncidentId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include notification records that have no actual delivery channel. Valid values:</para>
+        /// <para>Specifies whether to include notification records without an actual delivery channel. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: includes the records.</description></item>
-        /// <item><description>false: excludes the records and returns only records that were actually sent through a channel.
+        /// <item><description>true: Includes the records.</description></item>
+        /// <item><description>false: Excludes the records and returns only records with an actual delivery channel.
         /// Default value: true.</description></item>
         /// </list>
         /// </summary>
@@ -123,8 +123,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <summary>
         /// <para>Specifies whether to sort the results in descending order of time. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: descending order, with the latest records first.</description></item>
-        /// <item><description>false: ascending order.
+        /// <item><description>true: Sorts the results in descending order, with the latest records first.</description></item>
+        /// <item><description>false: Sorts the results in ascending order.
         /// Default value: true.</description></item>
         /// </list>
         /// </summary>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? IsDesc { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per page. Default value: 20.</para>
+        /// <para>The maximum number of records to return per page. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Receiver { get; set; }
 
         /// <summary>
-        /// <para>The alert rule ID. Used to filter the notification history triggered by a specified alert rule. Exact match is used.</para>
+        /// <para>The alert rule ID. Used to filter the notification history triggered by a specified alert rule with exact match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3fa85f64-5717-4562-b3fc-2c963f66afa6</para>
@@ -218,9 +218,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <summary>
         /// <para>The notification delivery type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SUBSCRIBE: subscription notifications</description></item>
-        /// <item><description>DIRECT: direct event notifications</description></item>
-        /// <item><description>ITSM: ticket or action notifications</description></item>
+        /// <item><description>SUBSCRIBE: Subscription notification.</description></item>
+        /// <item><description>DIRECT: Direct event notification.</description></item>
+        /// <item><description>ITSM: Ticket or action notification.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -233,10 +233,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <summary>
         /// <para>The alert severity. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CRITICAL: critical</description></item>
-        /// <item><description>ERROR: error</description></item>
-        /// <item><description>WARNING: warning</description></item>
-        /// <item><description>INFO: info</description></item>
+        /// <item><description>CRITICAL: Critical.</description></item>
+        /// <item><description>ERROR: Error.</description></item>
+        /// <item><description>WARNING: Warning.</description></item>
+        /// <item><description>INFO: Info.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -269,8 +269,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <summary>
         /// <para>Specifies whether to filter by delivery result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: returns only successfully delivered records.</description></item>
-        /// <item><description>false: returns only failed delivery records.
+        /// <item><description>true: Returns only successfully delivered records.</description></item>
+        /// <item><description>false: Returns only failed delivery records.
         /// If you do not specify this parameter, the results are not filtered by delivery result.</description></item>
         /// </list>
         /// </summary>
@@ -289,7 +289,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? To { get; set; }
 
         /// <summary>
-        /// <para>The workspace identifier.</para>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

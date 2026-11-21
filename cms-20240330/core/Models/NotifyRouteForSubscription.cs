@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ChannelType { get; set; }
 
             /// <summary>
-            /// <para>The list of enabled subchannels.</para>
+            /// <para>The list of enabled sub-channels.</para>
             /// </summary>
             [NameInMap("enabledSubChannels")]
             [Validation(Required=false)]
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public NotifyRouteForSubscriptionEffectTimeRange EffectTimeRange { get; set; }
         public class NotifyRouteForSubscriptionEffectTimeRange : TeaModel {
             /// <summary>
-            /// <para>The effective days of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday).</para>
+            /// <para>The valid days of the week. Valid values: 0 to 6, where 0 indicates Sunday and 6 indicates Saturday.</para>
             /// </summary>
             [NameInMap("dayInWeek")]
             [Validation(Required=false)]
             public List<int?> DayInWeek { get; set; }
 
             /// <summary>
-            /// <para>The end time of the day, in minutes from 0:00.</para>
+            /// <para>The end time of the day in minutes, calculated from 00:00.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public int? EndTimeInMinute { get; set; }
 
             /// <summary>
-            /// <para>The start time of the day, in minutes from 0:00.</para>
+            /// <para>The start time of the day in minutes, calculated from 00:00.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

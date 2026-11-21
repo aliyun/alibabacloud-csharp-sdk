@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class Hook : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to enable debug mode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("debug")]
+        [Validation(Required=false)]
+        public bool? Debug { get; set; }
+
+        /// <summary>
         /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
@@ -20,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the Hook is enabled. The Hook is executed only when this parameter is set to true. If not configured, the Hook is disabled.</para>
+        /// <para>Specifies whether the Hook is enabled. It is executed only when this parameter is set to true. If not configured, the Hook is disabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>The event processed by the Hook. Each Hook processes only one event.</para>
+        /// <para>The event. Each Hook processes only one event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ToolStart</para>
@@ -40,14 +50,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Event { get; set; }
 
         /// <summary>
-        /// <para>The execution configuration that specifies the synchronous execution, total timeout, number of retries, and invalid return value handling policy for the Hook.</para>
+        /// <para>The execution configuration. Configures the synchronous execution, total timeout, number of retries, and invalid return value handling policy for the Hook.</para>
         /// </summary>
         [NameInMap("execution")]
         [Validation(Required=false)]
         public HookExecution Execution { get; set; }
         public class HookExecution : TeaModel {
             /// <summary>
-            /// <para>The handling policy for invalid return values. If the handler return value remains invalid after retries, it is processed as allow or reject.</para>
+            /// <para>The invalid return value handling policy. If the handler return value is still invalid after retries, it is processed as allow or reject.</para>
             /// 
             /// <b>Example:</b>
             /// <para>allow</para>
@@ -57,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string FailResult { get; set; }
 
             /// <summary>
-            /// <para>The execution instruction. The prompt type indicates a prompt, the bash type indicates a Bash script, the python3 type indicates a Python 3 script, and the hint type indicates contextual text directly appended. A non-empty UTF-8 text must be provided for all four types.</para>
+            /// <para>The execution instruction. For the prompt type, it is a prompt. For the bash type, it is a Bash script. For the python3 type, it is a Python 3 script. For the hint type, it is contextual text directly appended. Non-empty UTF-8 text must be provided for all four types.</para>
             /// 
             /// <b>Example:</b>
             /// <para>检查当前工具调用是否安全。</para>
@@ -67,7 +77,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Instruction { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of additional attempts after a failure. Valid values: 0 to 3.</para>
+            /// <para>The maximum number of retries. Specifies the number of additional attempts after a failure. Valid values: 0 to 3.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -77,7 +87,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public long? MaxRetry { get; set; }
 
             /// <summary>
-            /// <para>The timeout period in seconds. Valid values: 1 to 30. All attempts and waits for the Hook share this timeout period.</para>
+            /// <para>The timeout period in seconds. Valid values: 1 to 30. All attempts and waits for this Hook share this timeout period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -87,7 +97,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public long? TimeoutSeconds { get; set; }
 
             /// <summary>
-            /// <para>The handler type. Valid values: prompt, bash, python3, and hint.</para>
+            /// <para>The handler type. Only prompt, bash, python3, and hint are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>prompt</para>
@@ -99,7 +109,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The list of tool names. Only ToolStart and ToolEnd events perform exact matching based on the actual tool name. Tool names such as Read, Write, Bash, and Edit are supported, but wildcards are not supported. An empty array does not restrict tools. This field is ignored for other events.</para>
+        /// <para>Specifies whether to hide Hook invocation events. When set to true, Hook invocation events are not sent to the frontend, regardless of whether debug mode is enabled.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("invisible")]
+        [Validation(Required=false)]
+        public bool? Invisible { get; set; }
+
+        /// <summary>
+        /// <para>The list of tool names. Only ToolStart and ToolEnd perform an exact match based on the actual tool name. Tool names such as Read, Write, Bash, and Edit are supported. Wildcards are not supported. An empty array does not restrict tools. This field is ignored for other events.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;Read&quot;,&quot;Write&quot;,&quot;Bash&quot;,&quot;Edit&quot;]</para>
@@ -109,7 +129,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<string> Match { get; set; }
 
         /// <summary>
-        /// <para>The Hook name. Only digits, letters, underscores, and hyphens are allowed. The name cannot be empty. Hooks with the same name are still executed independently in the order of the list.</para>
+        /// <para>The Hook name. Only digits, letters, underscores, and hyphens are allowed, and it cannot be empty. Hooks with the same name are executed independently in the order of the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>command-guard</para>
@@ -129,7 +149,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string SchemaVersion { get; set; }
 
         /// <summary>
-        /// <para>The effective scope. Valid values: all, chat, and mission. A value of all indicates that the scope includes Chat and Mission. A value of chat or mission indicates that the scope applies only to the corresponding scenario.</para>
+        /// <para>The effective scope. A value of all indicates Chat and Mission. A value of chat or mission indicates that the Hook takes effect only in the corresponding scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>all</para>

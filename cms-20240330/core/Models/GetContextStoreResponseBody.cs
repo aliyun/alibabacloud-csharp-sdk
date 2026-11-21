@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetContextStoreResponseBody : TeaModel {
         /// <summary>
-        /// <para>The configuration of the context store.</para>
+        /// <para>The configuration information.</para>
         /// </summary>
         [NameInMap("config")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public GetContextStoreResponseBodyConfigInnerSource InnerSource { get; set; }
             public class GetContextStoreResponseBodyConfigInnerSource : TeaModel {
                 /// <summary>
-                /// <para>The name of the Log Service logstore.</para>
+                /// <para>The name of the Simple Log Service Logstore.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sls-test-logstore</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Logstore { get; set; }
 
                 /// <summary>
-                /// <para>The name of the Log Service project.</para>
+                /// <para>The name of the Simple Log Service project.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sls-test-project</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The metadata fields.</para>
+            /// <para>The metadata field.</para>
             /// </summary>
             [NameInMap("metadataField")]
             [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public GetContextStoreResponseBodyConfigSource Source { get; set; }
             public class GetContextStoreResponseBodyConfigSource : TeaModel {
                 /// <summary>
-                /// <para>The name of the Log Service logstore.</para>
+                /// <para>The name of the Simple Log Service Logstore.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sls-test-logstore</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Logstore { get; set; }
 
                 /// <summary>
-                /// <para>The name of the Log Service project.</para>
+                /// <para>The name of the Simple Log Service project.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sls-test-project</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Project { get; set; }
 
                 /// <summary>
-                /// <para>The time when the configuration takes effect. This value is a Unix timestamp in milliseconds.</para>
+                /// <para>The effective start time.</para>
                 /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
                 /// 
                 /// <b>Example:</b>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The context store name.</para>
+        /// <para>The name of the context store.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-context-store</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ContextStoreName { get; set; }
 
         /// <summary>
-        /// <para>The type of the context store.</para>
+        /// <para>The context type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>memory</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ContextType { get; set; }
 
         /// <summary>
-        /// <para>The creation time of the context store. This value is a Unix timestamp in seconds.</para>
+        /// <para>The creation time.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>Information about the associated dataset.</para>
+        /// <para>The dataset information.</para>
         /// </summary>
         [NameInMap("dataset")]
         [Validation(Required=false)]
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The description of the context store.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the context store.</para>
+        /// <para>The status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>active</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The last update time of the context store. This value is a Unix timestamp in seconds.</para>
+        /// <para>The update time.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>

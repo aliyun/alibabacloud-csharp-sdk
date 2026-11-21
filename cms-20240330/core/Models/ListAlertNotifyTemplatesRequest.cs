@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<string> AlertNotifyTemplateIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the notification template.</para>
+        /// <para>The notification template name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Alert notification template</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

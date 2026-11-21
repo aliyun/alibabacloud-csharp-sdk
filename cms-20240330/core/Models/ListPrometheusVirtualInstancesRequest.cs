@@ -30,7 +30,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The next paging token for a paged query.</para>
+        /// <para>The next token for the paging query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>a1b2c3d4e5f60718293a4b5c6d7e****8f9a0b1c2d3e4f508f9a0b1c2d3e4f508f9a0b1c2d3e4f50</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
@@ -38,6 +41,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The tenant ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1234567890123456</para>
         /// </summary>
         [NameInMap("tenantId")]
         [Validation(Required=false)]

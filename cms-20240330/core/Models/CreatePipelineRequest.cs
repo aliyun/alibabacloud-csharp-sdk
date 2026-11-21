@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PipelineName { get; set; }
 
         /// <summary>
-        /// <para>The sink.</para>
+        /// <para>The destination.</para>
         /// </summary>
         [NameInMap("sink")]
         [Validation(Required=false)]
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The sink type.</para>
+            /// <para>The destination type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dataset</para>
@@ -210,14 +210,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public CreatePipelineRequestSource Source { get; set; }
         public class CreatePipelineRequestSource : TeaModel {
             /// <summary>
-            /// <para>The Simple Log Service Logstore information.</para>
+            /// <para>The Logstore information.</para>
             /// </summary>
             [NameInMap("logstore")]
             [Validation(Required=false)]
             public CreatePipelineRequestSourceLogstore Logstore { get; set; }
             public class CreatePipelineRequestSourceLogstore : TeaModel {
                 /// <summary>
-                /// <para>The name of the Simple Log Service Logstore.</para>
+                /// <para>The name of the Logstore.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test-logstore</para>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Logstore { get; set; }
 
                 /// <summary>
-                /// <para>The name of the Simple Log Service project.</para>
+                /// <para>The name of the project.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test-project</para>

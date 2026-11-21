@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The next token.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxxxxxxxx</para>
+        /// <para>11a111111111a1111a1111aaaa1a1aa1aa11aa111aa11a1111a1a111aa1a111111111a11a1aa1111a111aa11a11aa1a1</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PrometheusInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The instance name. Partial match is supported.</para>
+        /// <para>The name of the instance. Partial match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PrometheusInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aek2bhocin5e2na</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The instance version.</para>
+        /// <para>The version of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>V2</para>

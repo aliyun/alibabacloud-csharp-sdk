@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Op { get; set; }
 
                 /// <summary>
-                /// <para>The target value for the condition.</para>
+                /// <para>The target value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Custom</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The input prompt.</para>
+            /// <para>The placeholder text.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Please enter the metrics collection interval</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 }
 
                 /// <summary>
-                /// <para>The related data collection.</para>
+                /// <para>The related data set.</para>
                 /// </summary>
                 [NameInMap("related")]
                 [Validation(Required=false)]

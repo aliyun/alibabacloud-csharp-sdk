@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AlertNotifyTemplateName { get; set; }
 
         /// <summary>
-        /// <para>The template syntax type. Currently, only Go is supported. Templates in the title and content fields use the Go template syntax.</para>
+        /// <para>The syntax type of the template. Currently, only Go is supported. The templates in the title and content fields use the Go template syntax.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GO</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ProgramLang { get; set; }
 
         /// <summary>
-        /// <para>The multilingual notification templates. The key is the language code: zh for Chinese and en for English. The value is the template configuration object for the specified language. When a notification is sent, the corresponding template is selected based on the recipient\&quot;s language. The content format varies by type: Markdown for DING, WEIXIN, and FEISHU; HTML for EMAIL; plain text for SMS, CALL, and SLACK; and JSON for CUSTOM.</para>
+        /// <para>The multilingual notification templates. The key is the language code: zh for Chinese and en for English. The value is the template configuration object for the specified language. When a notification is sent, the corresponding template is selected based on the recipient\&quot;s language. The content format varies by type. Markdown for DING, WEIXIN, and FEISHU. HTML for EMAIL. Plain text for SMS, CALL, and SLACK. JSON for CUSTOM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;zh&quot;:{&quot;title&quot;:&quot;云监控报警: {{.incident.title}}&quot;,&quot;content&quot;:&quot;<b>报警标题:</b> {{.incident.title}}\n<b>级别:</b> {{.incident.severity}}\n<b>事件数:</b> {{len .events}}&quot;,&quot;incidentLifeCycleNotifyTemplates&quot;:&quot;{\&quot;IncidentCreationNotify\&quot;:{\&quot;title\&quot;:\&quot;云监控报警: {{.incident.title}}\&quot;,\&quot;content\&quot;:\&quot;<b>报警标题:</b> {{.incident.title}}\\n<b>级别:</b> {{.incident.severity}}\&quot;,\&quot;enable\&quot;:true},\&quot;IncidentResolutionNotify\&quot;:{\&quot;title\&quot;:\&quot;云监控报警已解决: {{.incident.title}}\&quot;,\&quot;content\&quot;:\&quot;<b>报警标题:</b> {{.incident.title}}\\n<b>级别:</b> {{.incident.severity}}\&quot;,\&quot;enable\&quot;:true}}&quot;},&quot;en&quot;:{&quot;title&quot;:&quot;CloudMonitor Alert: {{.incident.title}}&quot;,&quot;content&quot;:&quot;<b>Alert Title:</b> {{.incident.title}}\n<b>Severity:</b> {{.incident.severity}}\n<b>Events:</b> {{len .events}}&quot;,&quot;incidentLifeCycleNotifyTemplates&quot;:&quot;{\&quot;IncidentCreationNotify\&quot;:{\&quot;title\&quot;:\&quot;CloudMonitor Alert: {{.incident.title}}\&quot;,\&quot;content\&quot;:\&quot;<b>Alert Title:</b> {{.incident.title}}\\n<b>Severity:</b> {{.incident.severity}}\&quot;,\&quot;enable\&quot;:true},\&quot;IncidentResolutionNotify\&quot;:{\&quot;title\&quot;:\&quot;CloudMonitor Alert Resolved: {{.incident.title}}\&quot;,\&quot;content\&quot;:\&quot;<b>Alert Title:</b> {{.incident.title}}\\n<b>Severity:</b> {{.incident.severity}}\&quot;,\&quot;enable\&quot;:true}}&quot;}}</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public Dictionary<string, Dictionary<string, object>> Templates { get; set; }
 
         /// <summary>
-        /// <para>The notification channel type. Valid values:</para>
+        /// <para>The type of the notification channel. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>DING</description></item>
         /// <item><description>WEIXIN</description></item>

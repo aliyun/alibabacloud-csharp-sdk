@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Mode { get; set; }
 
             /// <summary>
-            /// <para>The configuration for one-time execution.</para>
+            /// <para>The configuration for a single execution.</para>
             /// </summary>
             [NameInMap("runOnce")]
             [Validation(Required=false)]
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The data sink.</para>
+        /// <para>The sink.</para>
         /// </summary>
         [NameInMap("sink")]
         [Validation(Required=false)]
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The data sink type.</para>
+            /// <para>The sink type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dataset</para>

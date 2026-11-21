@@ -17,7 +17,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public GetPrometheusInstanceResponseBodyPrometheusInstance PrometheusInstance { get; set; }
         public class GetPrometheusInstanceResponseBodyPrometheusInstance : TeaModel {
             /// <summary>
-            /// <para>The access type. Valid values: readWrite, readOnly, and httpReadOnly.</para>
+            /// <para>The access type. Valid values:
+            /// readWrite, readOnly, httpReadOnly</para>
             /// 
             /// <b>Example:</b>
             /// <para>readOnly</para>
@@ -27,7 +28,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AccessType { get; set; }
 
             /// <summary>
-            /// <para>The number of days to automatically archive data after the storage expires. A value of 0 indicates that data is not archived. A value of 3650 indicates permanent retention.</para>
+            /// <para>The number of days to automatically archive and retain data after the storage expires. A value of 0 indicates that data is not archived, and a value of 3650 indicates permanent retention.</para>
             /// 
             /// <b>Example:</b>
             /// <para>90</para>
@@ -37,7 +38,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public int? ArchiveDuration { get; set; }
 
             /// <summary>
-            /// <para>The auth-free read policy. IP CIDR blocks and VPC IDs are supported.</para>
+            /// <para>The authentication-free read policy. IP CIDR blocks and VPC IDs are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -56,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AuthFreeReadPolicy { get; set; }
 
             /// <summary>
-            /// <para>The auth-free write policy. IP CIDR blocks and VPC IDs are supported.</para>
+            /// <para>The authentication-free write policy. IP CIDR blocks and VPC IDs are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -75,7 +76,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AuthFreeWritePolicy { get; set; }
 
             /// <summary>
-            /// <para>The auth token.</para>
+            /// <para>The authentication token string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eJwixxxxx</para>
@@ -95,7 +96,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether auth-free read is enabled.</para>
+            /// <para>Specifies whether authentication-free read is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -105,7 +106,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? EnableAuthFreeRead { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether auth-free write is enabled.</para>
+            /// <para>Specifies whether authentication-free write is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -126,13 +127,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
             /// <summary>
             /// <para>The extended information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;key&quot;:&quot;value&quot;}</para>
             /// </summary>
             [NameInMap("extraInfo")]
             [Validation(Required=false)]
             public Dictionary<string, string> ExtraInfo { get; set; }
 
             /// <summary>
-            /// <para>The URL of the dashboard folder.</para>
+            /// <para>The URL of the visualization dashboard directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://gnew.console.aliyun.com/dashboards/f/c49a80d2a551d4a20a8c4b996b0be4e52/xxxxxxx">https://gnew.console.aliyun.com/dashboards/f/c49a80d2a551d4a20a8c4b996b0be4e52/xxxxxxx</a></para>
@@ -155,7 +159,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The name of the bound managed Grafana instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Shared edition</para>
+            /// <para>Shared Edition</para>
             /// </summary>
             [NameInMap("grafanaInstanceName")]
             [Validation(Required=false)]
@@ -202,11 +206,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The billing method. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>POSTPAY: Pay-as-you-go based on the volume of reported metrics.</description></item>
-            /// <item><description>POSTPAY_GB: Pay-as-you-go based on the volume of written metrics.</description></item>
-            /// </list>
+            /// <para>The billing method. Valid values:
+            /// POSTPAY: Pay-as-you-go based on the number of reported metrics.
+            /// POSTPAY_GB: Pay-as-you-go based on the volume of written metrics.</para>
             /// 
             /// <b>Example:</b>
             /// <para>POSTPAY</para>
@@ -216,7 +218,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PaymentType { get; set; }
 
             /// <summary>
-            /// <para>The time when the billing method of the instance was updated (UTC format).</para>
+            /// <para>The time when the billing method of the instance was updated. The time is in UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-08-10T02:07:53Z</para>
@@ -471,7 +473,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The unique identifier of the request.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</para>

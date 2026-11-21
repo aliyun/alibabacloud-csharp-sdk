@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListServiceRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries returned.</para>
+        /// <para>The maximum number of results returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The list of operation records.</para>
+        /// <para>The list of ticket operation records.</para>
         /// </summary>
         [NameInMap("records")]
         [Validation(Required=false)]
         public List<ListServiceRecordsResponseBodyRecords> Records { get; set; }
         public class ListServiceRecordsResponseBodyRecords : TeaModel {
             /// <summary>
-            /// <para>The entry content in JSON string format. The format varies depending on the recordType.</para>
+            /// <para>The content of the entry in JSON string format. The format varies based on the recordType.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -53,8 +53,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RecordContent { get; set; }
 
             /// <summary>
-            /// <para>The type of the linked entry. Currently supported:
-            /// logCorrelation, which indicates application log association.</para>
+            /// <para>The type of the association entry. Valid values: logCorrelation: application log association.</para>
             /// 
             /// <b>Example:</b>
             /// <para>logCorrelation</para>

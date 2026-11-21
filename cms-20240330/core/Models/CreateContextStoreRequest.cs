@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The name of the context store.</para>
+        /// <para>The name of the context library.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

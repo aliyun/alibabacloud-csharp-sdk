@@ -23,14 +23,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The CPU utilization of the user-service instance i-abc123 reached 95%, triggering an alert</para>
+        /// <para>The CPU usage of the user-service instance i-abc123 reached 95%, triggering an alert</para>
         /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>The statistical count.</para>
+        /// <para>The count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? RecoverTime { get; set; }
 
         /// <summary>
-        /// <para>The information about the resources associated with the event.</para>
+        /// <para>The resource information associated with the event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;resourceId&quot;:&quot;i-example001&quot;}</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The status.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Running</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The title.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>High CPU utilization of the user service</para>
+        /// <para>High CPU usage in the user service</para>
         /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]

@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public List<string> GroupList { get; set; }
 
             /// <summary>
-            /// <para>The mapping of IM user IDs. Multiple instant messaging tools are supported.</para>
+            /// <para>The mapping of instant messaging (IM) user IDs. Multiple IM tools are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;dingtalk&quot;:&quot;abc123&quot;,&quot;wechat&quot;:&quot;def456&quot;}</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>56</para>

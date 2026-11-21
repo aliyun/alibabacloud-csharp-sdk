@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class IncidentEscalationStruct : TeaModel {
         /// <summary>
-        /// <para>The time when the event escalation was created.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2025-03-11T08:21:58Z</para>
+        /// <para>1794984055029</para>
         /// </summary>
         [NameInMap("createTime")]
         [Validation(Required=false)]
@@ -23,14 +23,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>When an alert is not acknowledged, notify the operations team, on-duty manager, and CTO sequentially.</para>
+        /// <para>Notify the O&amp;M team, on-call manager, and CTO sequentially when an alert is not responded to</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the event escalation.</para>
+        /// <para>The incident escalation ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>52631388567</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string IncidentEscalationId { get; set; }
 
         /// <summary>
-        /// <para>The time when the event escalation was last modified.</para>
+        /// <para>The modification time.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2025-03-11T08:21:58Z</para>
+        /// <para>1794984055029</para>
         /// </summary>
         [NameInMap("modifyTime")]
         [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Production Environment Alert Escalation Policy.</para>
+        /// <para>Production environment alert escalation policy</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The stages.</para>
+        /// <para>The stage.</para>
         /// </summary>
         [NameInMap("stage")]
         [Validation(Required=false)]

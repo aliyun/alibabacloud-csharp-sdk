@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListSubscriptionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of records returned for the current request.</para>
+        /// <para>The maximum number of records returned in the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

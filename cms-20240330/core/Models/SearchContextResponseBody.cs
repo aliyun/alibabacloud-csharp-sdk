@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class SearchContextResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123-0F43-23423-AC43-34234</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return value</para>
+        /// <para>The results.</para>
         /// </summary>
         [NameInMap("results")]
         [Validation(Required=false)]

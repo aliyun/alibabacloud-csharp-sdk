@@ -31,6 +31,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The next token for pagination.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]

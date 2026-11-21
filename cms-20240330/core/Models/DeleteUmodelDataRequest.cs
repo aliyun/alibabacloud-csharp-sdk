@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class DeleteUmodelDataRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the Umodel data to delete. Omit this parameter to delete all Umodel data.</para>
+        /// <para>The name of the specific Umodel data. If you do not specify this parameter, all Umodel data is included.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apm</para>
@@ -20,7 +20,19 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The kind of the Umodel data. If unspecified, data of all kinds is deleted.</para>
+        /// <para>Specifies whether to perform a dry run of the request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: sends a check request and does not perform actual changes.</description></item>
+        /// <item><description>false: sends a normal request.
+        /// Default value: false.</description></item>
+        /// </list>
+        /// </summary>
+        [NameInMap("dryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
+        /// <para>The kind of the specific Umodel data. If you do not specify this parameter, all kinds are included.</para>
         /// 
         /// <b>Example:</b>
         /// <para>metric_set</para>
@@ -30,7 +42,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Kind { get; set; }
 
         /// <summary>
-        /// <para>The name of the Umodel data. If unspecified, data with any name is deleted.</para>
+        /// <para>The name of the specific Umodel data. If you do not specify this parameter, all Umodel data is included.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

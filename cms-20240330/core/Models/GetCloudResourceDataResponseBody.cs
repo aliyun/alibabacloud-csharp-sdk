@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetCloudResourceDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The total number of returned data records.</para>
+        /// <para>The total count of returned data items.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public GetCloudResourceDataResponseBodyResponseStatus ResponseStatus { get; set; }
         public class GetCloudResourceDataResponseBodyResponseStatus : TeaModel {
             /// <summary>
-            /// <para>The information during the execution process.</para>
+            /// <para>The information generated during execution.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>

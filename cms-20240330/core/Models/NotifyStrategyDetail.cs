@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public NotifyStrategyDetailGroupingSetting GroupingSetting { get; set; }
         public class NotifyStrategyDetailGroupingSetting : TeaModel {
             /// <summary>
-            /// <para>The event fields used for grouping and merging. Events in the same group are merged into a single notification. An empty array indicates that no grouping is applied.</para>
+            /// <para>The event fields used for grouping and merging. Events with the same values for these fields are merged into a single notification. An empty array indicates that no grouping is applied.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;alertname&quot;]</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public int? PeriodMin { get; set; }
 
             /// <summary>
-            /// <para>The mute period in seconds.</para>
+            /// <para>The silence period in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to ignore notifications for recovery events. A value of true indicates that recovery notifications are not sent.</para>
+        /// <para>Specifies whether to ignore notifications for recovery events. If set to true, recovery notifications are not sent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public List<NotifyStrategyDetailRoutesChannels> Channels { get; set; }
             public class NotifyStrategyDetailRoutesChannels : TeaModel {
                 /// <summary>
-                /// <para>The type of the channel. Valid values: DING, WEIXIN, FEISHU, SLACK, TEAMS, WEBHOOK, CONTACT, GROUP, DUTY, and DING_COOL_APP.</para>
+                /// <para>The channel type. Valid values: DING, WEIXIN, FEISHU, SLACK, TEAMS, WEBHOOK, CONTACT, GROUP, DUTY, and DING_COOL_APP.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DING</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public NotifyStrategyDetailRoutesEffectTimeRange EffectTimeRange { get; set; }
             public class NotifyStrategyDetailRoutesEffectTimeRange : TeaModel {
                 /// <summary>
-                /// <para>The days of the week when the policy takes effect. Valid values: 0 to 6. 0 indicates Sunday, and 6 indicates Saturday. The value 7 is not supported.</para>
+                /// <para>The effective days of the week. Valid values: 0 to 6. A value of 0 indicates Sunday, and 6 indicates Saturday. The value 7 is not supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[0,1,2,3,4,5,6]</para>

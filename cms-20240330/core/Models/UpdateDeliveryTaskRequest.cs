@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateDeliveryTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The data source ID, which is the Prometheus instance ID.</para>
+        /// <para>The data source ID (Prometheus instance ID).</para>
         /// 
         /// <b>Example:</b>
         /// <para>rw-5f2b4sc7es4d66</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string DataSourceId { get; set; }
 
         /// <summary>
-        /// <para>The additional labels appended to all shipped metrics. The key is the label name, and the value is the label value.</para>
+        /// <para>The additional labels appended to all delivered metrics. The key is the label name, and the value is the label value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;region&quot;:&quot;cn-hangzhou&quot;}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public Dictionary<string, string> ExternalLabels { get; set; }
 
         /// <summary>
-        /// <para>The metric filtering conditions. The existing conditions are entirely replaced rather than incrementally merged.</para>
+        /// <para>The metric filtering conditions. The existing conditions are entirely replaced without incremental merging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;<b>name</b>&quot;:&quot;up&quot;}</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The list of shipping destinations.</para>
+        /// <para>The list of delivery destinations.</para>
         /// </summary>
         [NameInMap("sinkList")]
         [Validation(Required=false)]
         public List<UpdateDeliveryTaskRequestSinkList> SinkList { get; set; }
         public class UpdateDeliveryTaskRequestSinkList : TeaModel {
             /// <summary>
-            /// <para>The detailed configuration of the shipping destination. The meanings of keys and values vary based on the sink type.</para>
+            /// <para>The detailed configuration of the delivery destination. The meanings of keys and values vary based on the sinkType.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;Url&quot;:&quot;<a href="https://example.com/api/v1/write%22,%22Network%22:%22PublicNetwork%22,%22AuthType%22:%22None%22%7D">https://example.com/api/v1/write&quot;,&quot;Network&quot;:&quot;PublicNetwork&quot;,&quot;AuthType&quot;:&quot;None&quot;}</a></para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public Dictionary<string, string> SinkConfigs { get; set; }
 
             /// <summary>
-            /// <para>The type of the shipping destination.</para>
+            /// <para>The type of the delivery destination.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Prometheus</para>

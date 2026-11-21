@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The site. Valid values: cn_hangzhou (China site) and ap_southeast_1 (International site). Default value: cn_hangzhou.</para>
+        /// <para>The site. Valid values: cn_hangzhou (Alibaba Cloud China Website) and ap_southeast_1 (Alibaba Cloud International Website). Default value: cn_hangzhou.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn_hangzhou</para>

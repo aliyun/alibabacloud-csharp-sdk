@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string OncallScheduleName { get; set; }
 
         /// <summary>
-        /// <para>The list of rotations.</para>
+        /// <para>The list of shifts.</para>
         /// </summary>
         [NameInMap("rotations")]
         [Validation(Required=false)]
         public List<CreateOncallScheduleRequestRotations> Rotations { get; set; }
         public class CreateOncallScheduleRequestRotations : TeaModel {
             /// <summary>
-            /// <para>The days of the week when the rotation takes effect.</para>
+            /// <para>The days of the week when the shift is active.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("activeDays")]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public List<string> Contacts { get; set; }
 
             /// <summary>
-            /// <para>The end time of the rotation. Format: HH:mm.</para>
+            /// <para>The end time of the shift. Format: HH:mm.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RotationEndTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the rotation.</para>
+            /// <para>The name of the shift.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RotationName { get; set; }
 
             /// <summary>
-            /// <para>The start time of the rotation. Format: HH:mm.</para>
+            /// <para>The start time of the shift. Format: HH:mm.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RotationStartTime { get; set; }
 
             /// <summary>
-            /// <para>The length of the shift recurrence cycle. Used in conjunction with shiftRecurrenceFrequency. For example, rotate to the next on-call person every 3 days.</para>
+            /// <para>The length of the shift rotation cycle. Used in conjunction with shiftRecurrenceFrequency. For example, rotate to the next on-call person every 3 days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public int? ShiftLength { get; set; }
 
             /// <summary>
-            /// <para>The unit of the shift recurrence cycle. Used in conjunction with shiftRecurrenceFrequency. For example, rotate to the next on-call person every 1 week.</para>
+            /// <para>The unit of the shift rotation cycle. Used in conjunction with shiftLength. For example, rotate to the next on-call person every week.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ShiftRecurrenceFrequency { get; set; }
 
             /// <summary>
-            /// <para>The start date of the rotation. Format: yyyy-MM-dd.</para>
+            /// <para>The start date of the shift. Format: yyyy-MM-dd.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string StartDate { get; set; }
 
             /// <summary>
-            /// <para>The time zone name. Uses the <b>IANA Time Zone Database</b> standard. Example: <c>Asia/Shanghai</c>.</para>
+            /// <para>The name of the time zone. The <b>IANA Time Zone Database</b> standard is used. Example: <c>Asia/Shanghai</c>.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The ID of the shift reminder bot.</para>
+        /// <para>The ID of the shift reminder chatbot.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testRobotId</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<CreateOncallScheduleRequestSubstitudes> Substitudes { get; set; }
         public class CreateOncallScheduleRequestSubstitudes : TeaModel {
             /// <summary>
-            /// <para>The contact ID of the substitute.</para>
+            /// <para>The ID of the contact who acts as the substitute.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testId</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The contact ID of the replaced contact.</para>
+            /// <para>The ID of the contact who is being replaced.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testId</para>

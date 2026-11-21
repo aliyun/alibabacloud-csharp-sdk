@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateContactGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the request, which is used for log tracing and troubleshooting.</para>
+        /// <para>The unique ID of the request, used for log tracing and troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>

@@ -10,10 +10,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UntagResourcesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to unbind all labels from the specified resource. Valid values:</para>
+        /// <para>Specifies whether to unbind all tags from the specified resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false (default): No.</description></item>
-        /// <item><description>true: Yes.</description></item>
+        /// <item><description>true: Unbinds all tags.</description></item>
+        /// <item><description>false: Does not unbind all tags.
+        /// Default value: false.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,8 +44,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The label key.</para>
-        /// <para>You can unbind up to 20 label keys at a time.</para>
+        /// <para>The tag keys. You can unbind up to 20 tag keys.</para>
         /// </summary>
         [NameInMap("tagKey")]
         [Validation(Required=false)]

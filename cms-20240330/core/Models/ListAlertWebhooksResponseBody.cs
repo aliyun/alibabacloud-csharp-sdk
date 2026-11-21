@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The collection of HTTP request headers.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>key</para>
+            /// <para>{&quot;X-Total-Count&quot;:&quot;0&quot;}</para>
             /// </summary>
             [NameInMap("headers")]
             [Validation(Required=false)]
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The URL of the alert callback.</para>
+            /// <para>The alert callback URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://aliyun.com/test">http://aliyun.com/test</a></para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Url { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the webhook.</para>
+            /// <para>The unique identifiers of the webhooks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string WebhookId { get; set; }
 
             /// <summary>
-            /// <para>The workspace name.</para>
+            /// <para>The name of the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default-cms-0000000000000000-cn-hangzhou</para>

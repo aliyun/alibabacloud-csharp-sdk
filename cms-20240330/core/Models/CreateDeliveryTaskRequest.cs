@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string DataSourceId { get; set; }
 
         /// <summary>
-        /// <para>The additional labels attached to all delivered metrics. The key is the label name, and the value is the label value.</para>
+        /// <para>The additional labels attached to all delivered metrics. The key is the label name and the value is the label value.</para>
         /// </summary>
         [NameInMap("externalLabels")]
         [Validation(Required=false)]
         public Dictionary<string, string> ExternalLabels { get; set; }
 
         /// <summary>
-        /// <para>The metric filtering conditions. This parameter is used together with labelFiltersType. The key is the metric label name, and the value is the match value.</para>
+        /// <para>The metric filtering conditions used in conjunction with labelFiltersType. The key is the metric label name and the value is the match value.</para>
         /// </summary>
         [NameInMap("labelFilters")]
         [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The tags of the resource.</para>
+        /// <para>The resource tags.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]

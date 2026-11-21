@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? ShortTermTtl { get; set; }
 
         /// <summary>
-        /// <para>The source of the memory.</para>
+        /// <para>The memory source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None/Trace</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The configuration when the sourceType is Trace.</para>
+        /// <para>The configuration when the sourceType is set to Trace.</para>
         /// </summary>
         [NameInMap("traceSourceConfig")]
         [Validation(Required=false)]

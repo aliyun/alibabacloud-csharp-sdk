@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2000</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The configuration information of the metrics in the resource.</para>
+        /// <para>The configuration information of the metrics for the resource.</para>
         /// </summary>
         [NameInMap("resources")]
         [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public Dictionary<string, string> Labels { get; set; }
 
             /// <summary>
-            /// <para>The metadata source. CMS indicates CloudMonitor Basic monitoring metrics, and PROM_BASIC indicates Prometheus CloudMonitor basic monitoring metrics.</para>
+            /// <para>The source of metadata. Valid values: CMS for CloudMonitor Basic monitoring metrics, and PROM_BASIC for basic monitoring metrics of Managed Service for Prometheus.</para>
             /// <para>Example value:
             /// CMS
             /// Valid values:
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string MetaFormat { get; set; }
 
             /// <summary>
-            /// <para>The metric name.</para>
+            /// <para>The name of the metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CPUUtilization</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Periods { get; set; }
 
             /// <summary>
-            /// <para>The statistical method of the metric. Example values:</para>
+            /// <para>The statistical method of the metric. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Maximum: the maximum value.</description></item>
             /// <item><description>Minimum: the minimum value.</description></item>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Statistics { get; set; }
 
             /// <summary>
-            /// <para>The metric type.</para>
+            /// <para>The type of the metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Gauge</para>

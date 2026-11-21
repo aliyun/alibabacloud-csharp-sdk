@@ -20,7 +20,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>PROM_NOT_OPEN: Prometheus is not activated.SLS_NOT_OPEN: Simple Log Service (SLS), a dependency of Prometheus, is not activated.CMS_SLR_NOT_EXIST: The service-linked role (SLR) for CloudMonitor does not exist.SLS_SLR_NOT_EXIST: The SLR for SLS does not exist.</para>
+        /// <para>PROM_NOT_OPEN: Prometheus is not activated.
+        /// SLS_NOT_OPEN: Simple Log Service, which Prometheus depends on, is not activated.
+        /// CMS_SLR_NOT_EXIST: The CloudMonitor service-linked role is not created.
+        /// SLS_SLR_NOT_EXIST: The Simple Log Service service-linked role is not created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PROM_NOT_OPEN</para>
@@ -30,7 +33,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>

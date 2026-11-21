@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<FilterSettingConditions> Conditions { get; set; }
         public class FilterSettingConditions : TeaModel {
             /// <summary>
-            /// <para>The JSON path of the event field. Dot-notation nesting is supported.</para>
+            /// <para>The JSON path of the event field, which supports dot notation for nested fields.</para>
             /// 
             /// <b>Example:</b>
             /// <para>labels.alertname</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Op { get; set; }
 
             /// <summary>
-            /// <para>The matching value. Separate multiple values with commas when using IN or NOT_IN.</para>
+            /// <para>The matching value. Separate multiple values with commas when the operator is IN or NOT_IN.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CRITICAL</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Use either expression or relation. If expression is not empty, it takes precedence and relation is ignored. If expression is empty or not specified, relation (AND or OR) is used to perform a simple AND/OR operation on all conditions. Condition numbers correspond to the indexes of the conditions array (starting from 1). Each condition evaluates whether a single event field matches by using field (the event field path, which supports dot-notation nesting such as resource.tags.pod), op (the operator, such as CONTAIN, EQ, or IN), and value (the matching value).</para>
+        /// <para>The expression. Specify either expression or relation. If expression is not empty, it takes precedence and relation is ignored. If expression is empty or not specified, relation (AND or OR) is used to perform a simple logical AND or OR operation on all conditions. The condition number corresponds to the index of the conditions array, starting from 1. Each condition evaluates whether a single event field matches based on field (the event field path, which supports dot notation for nested fields such as resource.tags.pod), op (the operator, such as CONTAIN, EQ, or IN), and value (the matching value).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1 and 2 or 3</para>

@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<ListIntegrationPolicyStorageRequirementsResponseBodyStorageRequirements> StorageRequirements { get; set; }
         public class ListIntegrationPolicyStorageRequirementsResponseBodyStorageRequirements : TeaModel {
             /// <summary>
-            /// <para>The collection of add-on releases.</para>
+            /// <para>The collection of AddonReleases.</para>
             /// </summary>
             [NameInMap("addonReleaseNames")]
             [Validation(Required=false)]
             public List<string> AddonReleaseNames { get; set; }
 
             /// <summary>
-            /// <para>The API version.</para>
+            /// <para>The version number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v1</para>
@@ -103,14 +103,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The resource specification.</para>
+            /// <para>The specification of the resource.</para>
             /// </summary>
             [NameInMap("spec")]
             [Validation(Required=false)]
             public ListIntegrationPolicyStorageRequirementsResponseBodyStorageRequirementsSpec Spec { get; set; }
             public class ListIntegrationPolicyStorageRequirementsResponseBodyStorageRequirementsSpec : TeaModel {
                 /// <summary>
-                /// <para>The instance ID. Specify this parameter to narrow down the scope to the instance level. This depends on the data in EntityStore.</para>
+                /// <para>The instance ID. Specify this parameter to narrow the scope to the instance level. This parameter depends on the data in the EntityStore.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>es-xxxxx</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string StorageType { get; set; }
 
                 /// <summary>
-                /// <para>The tags to be added to the destination storage. These tags are injected as system tags.</para>
+                /// <para>The tags to be added to the target storage, injected as system tags.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;system-key&quot;:&quot;value&quot;}</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public Dictionary<string, string> SystemTags { get; set; }
 
                 /// <summary>
-                /// <para>The tags to be added to the destination storage. These tags are injected as regular tags.</para>
+                /// <para>The tags to be added to the target storage, injected as regular tags.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;environment&quot;:&quot;production&quot;}</para>
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 /// <para>The Prometheus metric center.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxxx</para>
+                /// <para>aliyun-prom-ca9d365990bf</para>
                 /// </summary>
                 [NameInMap("promMetricStore")]
                 [Validation(Required=false)]

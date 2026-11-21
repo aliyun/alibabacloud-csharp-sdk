@@ -10,7 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class PutWorkspaceRequest : TeaModel {
         /// <summary>
-        /// <para>The workspace description.</para>
+        /// <para>Specifies whether to perform a dry run of the request. Valid values: true: sends a check request without making actual changes. false (default): sends a normal request.</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
+        /// <para>The description of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace test</para>
@@ -30,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-ae******ey</para>
@@ -40,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The Simple Log Service project name.</para>
+        /// <para>The name of the Simple Log Service project.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

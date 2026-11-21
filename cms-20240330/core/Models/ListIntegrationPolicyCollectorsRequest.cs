@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AddonReleaseName { get; set; }
 
         /// <summary>
-        /// <para>The collector type.</para>
+        /// <para>The type of the collector.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ExpirationDate { get; set; }
 
             /// <summary>
-            /// <para>The mutability.</para>
+            /// <para>The immutable attribute.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

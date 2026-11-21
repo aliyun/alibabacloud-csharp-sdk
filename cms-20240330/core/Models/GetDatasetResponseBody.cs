@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetDatasetResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time the dataset was created, as a Unix timestamp.</para>
+        /// <para>The creation time.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the dataset.</para>
+        /// <para>The dataset name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_dataset</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// <para>The description of the dataset.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the dataset is located.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-heyuan</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier for the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The data schema of the dataset.</para>
+        /// <para>The table schema.</para>
         /// </summary>
         [NameInMap("schema")]
         [Validation(Required=false)]
         public Dictionary<string, IndexKey> Schema { get; set; }
 
         /// <summary>
-        /// <para>The time the dataset was last updated, as a Unix timestamp.</para>
+        /// <para>The update time.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>The workspace name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-test</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListSubscriptionsRequest : TeaModel {
         /// <summary>
-        /// <para>The UUID of the AI agent. This parameter is used to filter subscriptions for a specified AI agent.</para>
+        /// <para>The UUID of the AI agent. This parameter is used to filter subscriptions of a specific AI agent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>agent-rca-001</para>
@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <summary>
         /// <para>The sort order of the returned versions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>asc: Ascending order. </description></item>
-        /// <item><description>desc: Descending order.</description></item>
+        /// <item><description>asc: ascending order </description></item>
+        /// <item><description>desc: descending order</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the notification policy. This parameter is used to filter subscriptions that are bound to a specified notification policy. The value is a 32-character string.</para>
+        /// <para>The UUID of the notification policy. This parameter is used to filter subscriptions that are bound to a specific notification policy. The value is a 32-character string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d</para>
@@ -104,7 +104,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string SubscriptionName { get; set; }
 
         /// <summary>
-        /// <para>The type of the subscription. Valid values: NORMAL (standard subscription) and AI_AGENT (AI agent subscription).</para>
+        /// <para>The type of the subscription. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>NORMAL: standard subscription</description></item>
+        /// <item><description>AI_AGENT: AI agent subscription</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>NORMAL</para>
@@ -116,7 +120,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para><b>[Deprecated]</b> This is an internal reserved parameter. Do not use it.</para>
+        /// <para><b>[Deprecated]</b> This is an internal reserved parameter. Do not use this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

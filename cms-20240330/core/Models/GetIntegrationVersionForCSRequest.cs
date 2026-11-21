@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetIntegrationVersionForCSRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The type of the cluster. Valid values: acs.ack.cluster and acs.asi.cluster.</para>
+        /// <para>The cluster type. Valid values: acs.ack.cluster and acs.asi.cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

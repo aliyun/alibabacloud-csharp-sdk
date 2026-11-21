@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public FilterSetting FilterSetting { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the notification strategy.</para>
+        /// <para>The notification policy UUID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123123</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public SubscriptionForModifyPushingSetting PushingSetting { get; set; }
         public class SubscriptionForModifyPushingSetting : TeaModel {
             /// <summary>
-            /// <para>The list of action plan IDs for alert push.</para>
+            /// <para>The list of alert push action plan IDs.</para>
             /// </summary>
             [NameInMap("alertActionIds")]
             [Validation(Required=false)]
@@ -87,14 +87,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResponsePlanId { get; set; }
 
             /// <summary>
-            /// <para>The list of action integration plan IDs for recovery push.</para>
+            /// <para>The list of action integration plan IDs.</para>
             /// </summary>
             [NameInMap("restoreActionIds")]
             [Validation(Required=false)]
             public List<string> RestoreActionIds { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the template.</para>
+            /// <para>The template UUID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123123123</para>
@@ -106,7 +106,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to subscribe to legacy product events (CMS 1.0, ARMS, or SLS events where workspace is null). Valid values: true: Subscribe. false or null: Do not subscribe.</para>
+        /// <para>Specifies whether to subscribe to legacy product events (CloudMonitor 1.0, ARMS, or SLS events where workspace is null). Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Subscribes to the events.</description></item>
+        /// <item><description>false or null: Does not subscribe to the events.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -120,7 +124,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>TestSubscription</para>
+        /// <para>测试订阅</para>
         /// </summary>
         [NameInMap("subscriptionName")]
         [Validation(Required=false)]

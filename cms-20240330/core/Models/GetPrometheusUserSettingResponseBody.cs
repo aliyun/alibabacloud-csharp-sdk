@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetPrometheusUserSettingResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the Prometheus user settings.</para>
+        /// <para>The details of the Prometheus user configurations.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;key&quot;:&quot;value1&quot;}</para>
         /// </summary>
         [NameInMap("prometheusUserSetting")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListServiceRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries to return. Maximum value: 200.</para>
+        /// <para>The maximum number of results to return. Maximum value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -23,15 +23,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxxx</para>
+        /// <para>2-ba4d-4b9f-aa24-dcb067a30f1c</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The type of the linked entry. Currently supported:
-        /// logCorrelation, which indicates application log association.</para>
+        /// <para>The type of the association entry. Valid values: logCorrelation: application log association.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +41,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RecordType { get; set; }
 
         /// <summary>
-        /// <para>The filter information for service-linked entries.</para>
+        /// <para>The filter information for service association entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{

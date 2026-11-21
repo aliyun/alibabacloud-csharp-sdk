@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ContextType { get; set; }
 
             /// <summary>
-            /// <para>The creation time in UTC format based on the ISO 8601 standard. Example: 2026-08-10T05:00:00Z.</para>
+            /// <para>The creation time. The time is in UTC and follows the ISO 8601 standard, for example, 2026-08-10T05:00:00Z.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The update time in UTC format based on the ISO 8601 standard. Example: 2026-08-10T05:10:00Z.</para>
+            /// <para>The update time. The time is in UTC and follows the ISO 8601 standard, for example, 2026-08-10T05:10:00Z.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>

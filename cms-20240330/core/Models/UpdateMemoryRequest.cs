@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateMemoryRequest : TeaModel {
         /// <summary>
-        /// <para>The metadata of the Memory.</para>
+        /// <para>The metadata.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;sessionId&quot;:&quot;test_session_001&quot;}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public Dictionary<string, object> Metadata { get; set; }
 
         /// <summary>
-        /// <para>The new text for the Memory.</para>
+        /// <para>The updated text content of the memory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Likes to play tennis on weekends</para>

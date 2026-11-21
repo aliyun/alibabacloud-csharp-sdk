@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AliyunLang { get; set; }
 
         /// <summary>
-        /// <para>The directory.</para>
+        /// <para>The category.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Keywords { get; set; }
 
         /// <summary>
-        /// <para>Filters resources by label. The existing labels are described as follows:</para>
+        /// <para>Filters resources by label. Existing labels are described as follows:</para>
         /// <list type="bullet">
         /// <item><description>metricCategory: the category description of the metric.</description></item>
         /// <item><description>alertEnable: specifies whether alerting is required.</description></item>
         /// <item><description>alertUnit: the recommended alert unit.</description></item>
         /// <item><description>unitFactor: the unit conversion factor.</description></item>
         /// <item><description>minAlertPeriod: the minimum alert period.</description></item>
-        /// <item><description>productCategory: the product category.</description></item>
+        /// <item><description>productCategory: the cloud service category.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("labels")]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string LabelsShrink { get; set; }
 
         /// <summary>
-        /// <para>The metadata source. Valid values: CMS for CloudMonitor Basic monitoring metrics, and PROM_BASIC for Prometheus CloudMonitor basic monitoring metrics.</para>
+        /// <para>The source of metadata. Valid values: CMS for CloudMonitor Basic monitoring metrics, and PROM_BASIC for basic monitoring metrics of Managed Service for Prometheus.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CMS</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string MetaFormat { get; set; }
 
         /// <summary>
-        /// <para>The metric name.</para>
+        /// <para>The name of the metric.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CPUUtilization</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>The namespace used to distinguish products.</para>
+        /// <para>The namespace used to distinguish cloud services.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs_ecs_dashboard</para>

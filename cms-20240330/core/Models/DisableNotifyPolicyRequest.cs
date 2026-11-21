@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class DisableNotifyPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The workspace ID. Used to isolate notification policy resources across different business spaces.</para>
+        /// <para>The workspace ID, which is used to isolate notification policy resources across different business workspaces.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

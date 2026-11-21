@@ -10,7 +10,12 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class EnsureSharedPrometheusInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the returned information. zh indicates Chinese, and en indicates English. Default value: zh.</para>
+        /// <para>The language of the returned information. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.
+        /// Default value: zh.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>

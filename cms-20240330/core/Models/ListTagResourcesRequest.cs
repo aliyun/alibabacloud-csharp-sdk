@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query.</para>
+        /// <para>The token that is used to start the next query.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxxxxxxxx</para>
+        /// <para>2-ba4d-4b9f-aa24-dcb067a30f1c</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
@@ -48,8 +48,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The labels. Used as filter conditions for the query.</para>
-        /// <para>You can specify up to 20 labels.</para>
+        /// <para>The tags. The filter conditions for the query.</para>
+        /// <para>You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("tag")]
         [Validation(Required=false)]

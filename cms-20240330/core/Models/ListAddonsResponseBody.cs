@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public string AlertDefaultStatus { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether to install the component by default.</para>
+                    /// <para>Specifies whether the add-on is installed by default.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     }
 
                     /// <summary>
-                    /// <para>Specifies whether to trigger a pod restart guide immediately after the plug-in installation is completed during integration.</para>
+                    /// <para>Specifies whether to trigger the pod restart process immediately after the plug-in is installed during integration.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public List<ListAddonsResponseBodyAddonsEnvironmentsPoliciesProtocols> Protocols { get; set; }
                     public class ListAddonsResponseBodyAddonsEnvironmentsPoliciesProtocols : TeaModel {
                         /// <summary>
-                        /// <para>The description of the protocol.</para>
+                        /// <para>The protocol description.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Support OpenTelemetry Protocal</para>
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string Label { get; set; }
 
                         /// <summary>
-                        /// <para>The name of the protocol.</para>
+                        /// <para>The protocol name.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>openTelemetry</para>
@@ -316,7 +316,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 }
 
                 /// <summary>
-                /// <para>The policy type of the integration center.</para>
+                /// <para>The Integration Center policy type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CS</para>
@@ -355,7 +355,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// <para>The time when the latest version was created. The time follows the ISO 8601 standard and includes a UTC identifier or time zone offset.</para>
+            /// <para>The time of the latest release. The time follows the ISO 8601 standard and includes a UTC identifier or time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-09-03T03:15:56Z</para>
@@ -375,7 +375,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the component can be installed only once.</para>
+            /// <para>Specifies whether the add-on can be installed only once.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -385,7 +385,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? Once { get; set; }
 
             /// <summary>
-            /// <para>The scenario of the component.</para>
+            /// <para>The component scenario.</para>
             /// 
             /// <b>Example:</b>
             /// <para>middleware</para>
@@ -395,12 +395,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Scene { get; set; }
 
             /// <summary>
-            /// <para>The version of the component.</para>
+            /// <para>The component version.</para>
             /// 
             /// <b>Example:</b>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>1.2.32</para>
             /// </summary>
             [NameInMap("version")]
             [Validation(Required=false)]

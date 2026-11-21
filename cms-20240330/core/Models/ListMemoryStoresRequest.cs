@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxxxxxxx</para>
+        /// <para>H8low6kptuLKf7Sttrso6EOE0-JV__****Low6kpt0lk3XsTt_SOYeoE0c7Vb-le</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]

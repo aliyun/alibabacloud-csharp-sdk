@@ -17,8 +17,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public GetDeliveryTaskResponseBodyDeliveryTask DeliveryTask { get; set; }
         public class GetDeliveryTaskResponseBodyDeliveryTask : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
-            /// <para>The time is in the ISO 8601 standard format (YYYY-MM-DDThh:mm:ssZ) in UTC.</para>
+            /// <para>The creation time. The time follows the ISO 8601 standard format (YYYY-MM-DDThh:mm:ssZ) and is in UTC.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -39,7 +38,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string DataSourceId { get; set; }
 
             /// <summary>
-            /// <para>The additional labels attached to all delivered metrics. The key is the label name and the value is the label value.</para>
+            /// <para>The additional labels attached to all delivered metrics, where the key is the label name and the value is the label value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;region&quot;:&quot;cn-hangzhou&quot;}</para>
@@ -65,7 +64,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The metric filter conditions used in conjunction with labelFiltersType. The key is the metric label name and the value is the match value.</para>
+            /// <para>The metric filtering conditions used with labelFiltersType, where the key is the metric label name and the value is the matched value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;<b>name</b>&quot;:&quot;up&quot;}</para>
@@ -75,7 +74,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public Dictionary<string, string> LabelFilters { get; set; }
 
             /// <summary>
-            /// <para>The metric filter mode.</para>
+            /// <para>The metric filtering mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Allow</para>
@@ -193,8 +192,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string TaskName { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
-            /// <para>The time is in the ISO 8601 standard format (YYYY-MM-DDThh:mm:ssZ) in UTC.</para>
+            /// <para>The update time. The time follows the ISO 8601 standard format (YYYY-MM-DDThh:mm:ssZ) and is in UTC.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListAddonsRequest : TeaModel {
         /// <summary>
-        /// <para>The language environment. Valid values: zh and en. Default value: zh.</para>
+        /// <para>The locale. Valid values: zh and en. Default value: zh.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>

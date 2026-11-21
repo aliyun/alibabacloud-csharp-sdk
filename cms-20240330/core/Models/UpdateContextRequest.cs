@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateContextRequest : TeaModel {
         /// <summary>
-        /// <para>The updated long-term memory text.</para>
+        /// <para>The long-term memory text to update.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Users prefer to first view the SLS error logs, index configuration, and the most recent Agent execution trace.</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public Dictionary<string, object> Metadata { get; set; }
 
         /// <summary>
-        /// <para>The updated payload.</para>
+        /// <para>The payload to update.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public Dictionary<string, object> Payload { get; set; }
 
         /// <summary>
-        /// <para>The trigger condition.</para>
+        /// <para>The cause.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Identify and troubleshoot SLs issues</para>
