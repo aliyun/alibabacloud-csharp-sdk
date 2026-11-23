@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 {
     public class CheckAddRegionToExpressConnectRouterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Authentication is failed for ****</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the ECR is used to establish connections between regions in the Chinese mainland and regions outside China. Valid values:</para>
+        /// <para>Indicates whether the Express Connect Router (ECR) instance has cross-border connections between the Chinese mainland and regions outside the Chinese mainland. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: Yes.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: No.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,10 +36,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public bool? AnyCrossBorderLink { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the ECR is used to establish connections between regions in the Chinese mainland. Valid values:</para>
+        /// <para>Indicates whether the Express Connect Router (ECR) instance has cross-region connections in the Chinese mainland. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: Yes.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: No.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +52,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public bool? AnyInterRegionLink { get; set; }
 
         /// <summary>
-        /// <para>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</para>
+        /// <para>Indicates whether the call was successful. A return value of 200 indicates that the request was successful. Any other value indicates that the request failed. For more information about the causes of failure, see Error codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -68,9 +72,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic part in the error message. This parameter is used to replace the <c>%s</c> variable in <b>ErrMessage</b>.</para>
+        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the <b>ErrMessage</b> error message.</para>
         /// <remarks>
-        /// <para> For example, if the value of <b>ErrMessage</b> is <b>The Value of Input Parameter %s is not valid</b> and the value of <b>DynamicMessage</b> is <b>DtsInstanceId</b>, the request parameter <b>DtsInstanceId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsInstanceId</b>, it indicates that the <b>DtsInstanceId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -91,10 +95,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the cross-border CDT service is activated for the account to which the ECR belongs. Valid values:</para>
+        /// <para>Indicates whether the cross-border Cloud Data Transfer (CDT) service is enabled for the account to which the Express Connect Router (ECR) instance belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: Yes.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: No.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -105,10 +111,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public bool? IsCdtCrossBorderEnabled { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the CDT service is activated for the account to which the ECR belongs. Valid values:</para>
+        /// <para>Indicates whether the Cloud Data Transfer (CDT) service is enabled for the account to which the Express Connect Router (ECR) instance belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: Yes.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: No.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -119,10 +127,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public bool? IsCdtInterRegionEnabled { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the account to which the ECR belongs can create cross-border connections. Valid values:</para>
+        /// <para>Indicates whether the account to which the Express Connect Router (ECR) instance belongs is allowed to create cross-border connections. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: Yes.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: No.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -133,7 +143,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public bool? IsUserAllowedToCreateCrossBorderLink { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned for the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -143,7 +153,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6FABF516-FED3-5697-BDA2-B18C5D9A****</para>
@@ -153,10 +163,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>True</b>: The call was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>False</b>: The call failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

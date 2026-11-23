@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</para>
+        /// <para>The response code. A value of 200 indicates success. Other values indicate failure. For more information, see error codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
-        /// <item><description>If a value of <b>NextToken</b> is returned, the value indicates the token that is used for the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no next query exists.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,10 +64,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>True</b>: The call was successful.</description></item>
+        /// <item><description><b>False</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
@@ -95,7 +95,13 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The resource type. The value is <b>EXPRESSCONNECTROUTER</b>.</para>
+            /// <para>The resource type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>EXPRESSCONNECTROUTER</b>: Express Connect Router (ECR) instance.</description></item>
+            /// <item><description><b>EXPRESSCONNECTROUTERVPCASSOCIATION</b>: association between an ECR and a VPC.</description></item>
+            /// <item><description><b>EXPRESSCONNECTROUTERTRASSOCIATION</b>: association between an ECR and a transit router.</description></item>
+            /// <item><description><b>ECRFLOWLOG</b>: ECR flow log.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>EXPRESSCONNECTROUTER</para>
@@ -105,7 +111,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The tag key of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -115,7 +121,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The label value of the Express Connect Router (ECR).</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
@@ -127,7 +133,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         }
 
         /// <summary>
-        /// <para>The total number of records that meet the query conditions.</para>
+        /// <para>The total number of records that match the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

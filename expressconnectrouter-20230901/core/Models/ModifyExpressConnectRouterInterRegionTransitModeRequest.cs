@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
     public class ModifyExpressConnectRouterInterRegionTransitModeRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>Generate a unique value from your client for this parameter. ClientToken supports only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> is different for each request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request.</description></item>
+        /// <item><description><para><b>true</b>: Sends a check request without modifying the service resource.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): Sends a normal request.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ECR ID.</para>
+        /// <para>The ID of the Express Connect Router (ECR) instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,17 +51,19 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string EcrId { get; set; }
 
         /// <summary>
-        /// <para>The cross-region forwarding modes.</para>
+        /// <para>The list of inter-region forwarding modes.</para>
         /// </summary>
         [NameInMap("TransitModeList")]
         [Validation(Required=false)]
         public List<ModifyExpressConnectRouterInterRegionTransitModeRequestTransitModeList> TransitModeList { get; set; }
         public class ModifyExpressConnectRouterInterRegionTransitModeRequestTransitModeList : TeaModel {
             /// <summary>
-            /// <para>The cross-domain forwarding mode of the ECR. Valid values:</para>
+            /// <para>The inter-region forwarding mode of the ECR. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ECMP</b>: the load balancing mode.</description></item>
-            /// <item><description><b>NearBy</b>: the nearby forwarding mode.</description></item>
+            /// <item><description><para><b>ECMP</b>: The load balancing mode.</para>
+            /// </description></item>
+            /// <item><description><para><b>NearBy</b>: The nearby forwarding mode.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -70,7 +74,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string Mode { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the ECR.</para>
+            /// <para>The region where the ECR instance is deployed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>

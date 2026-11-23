@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 {
     public class DescribeExpressConnectRouterRouteEntriesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Authentication is failed for ****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</para>
+        /// <para>The status code that indicates whether the call is successful. A value of 200 indicates success. Other values indicate failure. For more information about the cause of failure, see Error codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic part in the error message. This parameter is used to replace the <c>%s</c> variable in <b>ErrMessage</b>.</para>
+        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the <b>ErrMessage</b> error message.</para>
         /// <remarks>
-        /// <para> For example, if the value of <b>ErrMessage</b> is <b>The Value of Input Parameter %s is not valid</b> and the value of <b>DynamicMessage</b> is <b>DtsJobId</b>, the request parameter <b>DtsJobId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,17 +63,17 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned. Valid values: 1 to 2147483647. Default value: 10</para>
+        /// <para>The maximum number of entries returned. Valid values: 1 to 2147483647. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>6</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned for the instance operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -83,10 +83,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
-        /// <item><description>If a value of <b>NextToken</b> is returned, the value indicates the token that is used for the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no subsequent query is required.</description></item>
+        /// <item><description>If <b>NextToken</b> has a return value, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -107,14 +107,14 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The routes.</para>
+        /// <para>The list of route entries.</para>
         /// </summary>
         [NameInMap("RouteEntriesList")]
         [Validation(Required=false)]
         public List<DescribeExpressConnectRouterRouteEntriesResponseBodyRouteEntriesList> RouteEntriesList { get; set; }
         public class DescribeExpressConnectRouterRouteEntriesResponseBodyRouteEntriesList : TeaModel {
             /// <summary>
-            /// <para>The AS path of the route.</para>
+            /// <para>The AS path traversed by the route entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[64993,64512]</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string AsPath { get; set; }
 
             /// <summary>
-            /// <para>The community value that is carried in the BGP route.</para>
+            /// <para>The community value carried by the BGP route entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9001:9263</para>
@@ -134,21 +134,18 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string Community { get; set; }
 
             /// <summary>
-            /// <para>The destination CIDR block of the route.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>192.168.0.0/16</para>
+            /// <para>The destination CIDR block of the route entry.</para>
             /// </summary>
             [NameInMap("DestinationCidrBlock")]
             [Validation(Required=false)]
             public string DestinationCidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The MED value of the BGP route, which is used between the ECR and the transit router.</para>
+            /// <para>The MED value carried by the BGP route entry, which takes effect for routing between the Express Connect Router (ECR) and the TR. </para>
             /// <list type="bullet">
-            /// <item><description>You can set the MED value to 2000. In this case, the transit router and the ECR are used as default paths.</description></item>
-            /// <item><description>If a non-default path is used, the MED value is empty.</description></item>
-            /// <item><description>You can set the MED value to 2000 only for one object associated with a transit router of a CEN instance.</description></item>
+            /// <item><description>The MED value can be set to 2000. After the configuration, the TR and the Express Connect Router (ECR) serve as the default path. </description></item>
+            /// <item><description>For a non-default path, the MED value is empty. </description></item>
+            /// <item><description>For TRs in the same Cloud Enterprise Network (CEN), only one associated object can have the MED value set to 2000.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -159,17 +156,17 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public long? Med { get; set; }
 
             /// <summary>
-            /// <para>The ID of the next-hop instance.</para>
+            /// <para>The next hop instance ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>br-hp3u4u5f03tfuljis****</para>
+            /// <para>vbr-hp3u4u5f03tfuljis****</para>
             /// </summary>
             [NameInMap("NexthopInstanceId")]
             [Validation(Required=false)]
             public string NexthopInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the next-hop instance.</para>
+            /// <para>The region where the next hop instance resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -179,7 +176,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string NexthopInstanceRegionId { get; set; }
 
             /// <summary>
-            /// <para>The state of the ECR.</para>
+            /// <para>The status of the Express Connect Router (ECR) instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ACTIVE</para>
@@ -191,10 +188,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>True</b>: The call was successful.</description></item>
+        /// <item><description><b>False</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -205,7 +202,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of route entries.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</para>
+        /// <para>Indicates whether the call is successful. A value of 200 indicates success, and other values indicate failure. For the cause of failure, see error codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic part in the error message. This parameter is used to replace the <c>%s</c> variable in <b>ErrMessage</b>.</para>
+        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the error message of the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para> For example, if the value of <b>ErrMessage</b> is <b>The Value of Input Parameter %s is not valid</b> and the value of <b>DynamicMessage</b> is <b>DtsJobId</b>, the request parameter <b>DtsJobId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The region in which the ECR feature is activated.</para>
+        /// <para>The list of regions where sub-resources are located.</para>
         /// </summary>
         [NameInMap("RegionIdList")]
         [Validation(Required=false)]
@@ -90,10 +90,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>True</b>: The call is successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>False</b>: The call failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

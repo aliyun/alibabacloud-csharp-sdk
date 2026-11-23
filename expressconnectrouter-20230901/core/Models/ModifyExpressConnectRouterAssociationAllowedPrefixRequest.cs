@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 {
     public class ModifyExpressConnectRouterAssociationAllowedPrefixRequest : TeaModel {
         /// <summary>
-        /// <para>The allowed route prefixes.</para>
+        /// <para>The list of allowed route prefixes.</para>
         /// </summary>
         [NameInMap("AllowedPrefixes")]
         [Validation(Required=false)]
         public List<string> AllowedPrefixes { get; set; }
 
         /// <summary>
-        /// <para>The route prefix mode.</para>
+        /// <para>The prefix routing pattern. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MatchMode: After you distribute new route CIDR blocks to data centers, original specific routes that are distributed are withdrawn.</description></item>
-        /// <item><description>IncrementalMode: After you distribute new route CIDR blocks to data centers, the original specific routes that fall in the CIDR blocks that you configure are withdrawn, and the original specific routes that do not fall in the CIDR blocks are still distributed.</description></item>
+        /// <item><description>MatchMode: Publishes only the configured route prefixes to your data center. Existing specific routes are withdrawn.</description></item>
+        /// <item><description>IncrementalMode: Publishes the configured route prefixes to your data center. Withdraw previously published more specific routes that are covered by the configured prefixes. More specific routes that are not covered by the configured prefixes remain published.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,10 +42,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string AssociationId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>A client token used to ensure the idempotence of the request.</para>
+        /// <para>Generate a parameter value from your client to make sure that the value is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -56,10 +56,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request.</description></item>
+        /// <item><description><b>true</b>: Performs a dry run.</description></item>
+        /// <item><description><b>false</b> (default): Sends a normal request.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ECR ID.</para>
+        /// <para>The ID of ECR.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

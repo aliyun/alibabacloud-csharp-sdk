@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
     public class TagResourcesRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request.</description></item>
+        /// <item><description><b>true</b>: performs a dry run without modifying EPS resources.</description></item>
+        /// <item><description><b>false</b> (default): sends a normal request.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,8 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ECR IDs.</para>
+        /// <para>The list of resource instance IDs.</para>
+        /// <para>You can specify up to 20 resources.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -46,7 +47,13 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Set the value to <b>EXPRESSCONNECTROUTER</b>.</para>
+        /// <para>The resource type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>EXPRESSCONNECTROUTER</b>: an Express Connect Router (ECR) instance.</description></item>
+        /// <item><description><b>EXPRESSCONNECTROUTERVPCASSOCIATION</b>: an associate relationship between an ECR and a VPC.</description></item>
+        /// <item><description><b>EXPRESSCONNECTROUTERTRASSOCIATION</b>: an associate relationship between an ECR and a transit router.</description></item>
+        /// <item><description><b>ECRFLOWLOG</b>: an ECR flow log.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +64,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags to be added.</para>
+        /// <para>The list of tags to bind.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -65,9 +72,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
-            /// <para>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
-            /// <para>You can specify up to 20 tag keys in each call.</para>
+            /// <para>The tag key of the resource.</para>
+            /// <para>This parameter cannot be an empty string once specified. The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can specify up to 20 tag keys in a single call.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -77,8 +84,8 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>acs:</c> or <c>aliyun</c>. The tag value can be an empty string.</para>
-            /// <para>You can add up to 20 tag values in each call.</para>
+            /// <para>The tag value. The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>. Once specified, the value can be an empty string.</para>
+            /// <para>You can specify up to 20 tag values in a single call.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

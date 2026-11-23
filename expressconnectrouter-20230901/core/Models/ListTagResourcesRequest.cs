@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries to return for a single request. Default value: 20.</para>
+        /// <para>The maximum number of entries to return in a single request. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>You do not need to specify this parameter for the first request.</description></item>
-        /// <item><description>You must specify the token that is obtained from the previous query as the value of NextToken.</description></item>
+        /// <item><description>If NextToken is empty, no next query exists.</description></item>
+        /// <item><description>If NextToken is returned, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,14 +34,24 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ECR IDs.</para>
+        /// <para>The list of resource instance IDs.</para>
+        /// <para>You can specify up to 20 resource instance IDs. If you exceed this limit, the IllegalParamSize.ResourceIds error is returned.</para>
+        /// <remarks>
+        /// <para>You must specify at least one of ResourceId and Tag. Otherwise, the MissingParam.TagsAndResourceIds error is returned.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Set the value to EXPRESSCONNECTROUTER.</para>
+        /// <para>The resource type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>EXPRESSCONNECTROUTER</b>: Express Connect Router (ECR) instance.</description></item>
+        /// <item><description><b>EXPRESSCONNECTROUTERVPCASSOCIATION</b>: association between an ECR and a VPC.</description></item>
+        /// <item><description><b>EXPRESSCONNECTROUTERTRASSOCIATION</b>: association between an ECR and a transit router.</description></item>
+        /// <item><description><b>ECRFLOWLOG</b>: ECR flow log.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,17 +62,17 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tag.</para>
-        /// <para>You can specify at most 20 tags.</para>
+        /// <para>The tags.</para>
+        /// <para>You can bind up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
-            /// <para>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
-            /// <para>You can specify up to 20 tag keys in each call.</para>
+            /// <para>The tag key of the resource.</para>
+            /// <para>The tag key cannot be an empty string. It can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can specify up to 20 tag keys at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -72,8 +82,8 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>acs:</c> or <c>aliyun</c>. The tag value can be an empty string.</para>
-            /// <para>You can specify up to 20 tag values in each call.</para>
+            /// <para>The tag value. It can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>. It can be an empty string.</para>
+            /// <para>You can specify up to 20 tag values at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

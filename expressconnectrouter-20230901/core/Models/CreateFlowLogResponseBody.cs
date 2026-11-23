@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 {
     public class CreateFlowLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried information about the request denial.</para>
+        /// <para>The details about the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Authentication is failed for ****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</para>
+        /// <para>The status code that indicates whether the call was successful. A value of 200 indicates that the request was successful. Other values indicate that the request failed. For more information about the causes of failure, see the error codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message. This parameter is used to replace the % <b>s</b> in the <b>ErrMessage</b> error message of the response parameter.</para>
+        /// <para>The dynamic error message, which is used to replace the <b>%s</b> placeholder in the <b>ErrMessage</b> error message.</para>
         /// <remarks>
-        /// <para>For example, if the value of <b>ErrMessage</b> is <b>The Value of Input Parameter</b> %<b>s is not valid</b> and the value of <b>DynamicMessage</b> is <b>DtsJobId</b>, the request parameter <b>DtsJobId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the specified <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,10 +53,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the flow log.</para>
+        /// <para>The ID of the flow log instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>flowlog-m5evbtbpt****</para>
+        /// <para>ecr-flog-m5evbtbpt****</para>
         /// </summary>
         [NameInMap("FlowLogId")]
         [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned by the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -93,10 +93,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>True</b></description></item>
-        /// <item><description><b>False</b></description></item>
+        /// <item><description><b>True</b>: The call was successful.</description></item>
+        /// <item><description><b>False</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 {
     public class DescribeExpressConnectRouterAllowedPrefixHistoryRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the association between the ECR and the virtual private cloud (VPC) or transit router (TR).</para>
+        /// <para>The instance ID of the VPC or transit router (TR) associated with the Express Connect Router (ECR) for forward routing.</para>
         /// <remarks>
-        /// <para> You must specify either <b>InstanceId</b> or <b>AssociationId</b>.</para>
+        /// <para>You must specify either the <b>InstanceId</b> parameter or the <b>AssociationId</b> parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can generate the value from your client to ensure that the value is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,10 +37,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether it is only a dry run for this request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request.</description></item>
+        /// <item><description><para><b>true</b>: Performs a dry run for the request without modifying EPS resources.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): Sends a normal request.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ECR ID.</para>
+        /// <para>The instance ID of the Express Connect Router (ECR).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,9 +64,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string EcrId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network instance that is associated with the ECR.</para>
+        /// <para>The instance ID to load into the Express Connect Router (ECR).</para>
         /// <remarks>
-        /// <para> You must specify either <b>InstanceId</b> or <b>AssociationId</b>.</para>
+        /// <para>You must specify either the <b>InstanceId</b> parameter or the <b>AssociationId</b> parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -77,8 +79,8 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         /// <summary>
         /// <para>The type of the network instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b></description></item>
-        /// <item><description><b>TR</b></description></item>
+        /// <item><description><b>VPC</b>: VPC instance.</description></item>
+        /// <item><description><b>TR</b>: Transit router instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

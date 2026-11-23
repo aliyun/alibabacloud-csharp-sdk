@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 {
     public class ListExpressConnectRouterSupportedRegionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</para>
+        /// <para>The status code. A value of 200 indicates that the call was successful. For more information about other values, see the error codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -50,10 +50,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>True</description></item>
-        /// <item><description>False</description></item>
+        /// <item><description><para>True: The call was successful.</para>
+        /// </description></item>
+        /// <item><description><para>False: The call failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The regions in which the ECR feature is activated.</para>
+        /// <para>The list of supported regions.</para>
         /// </summary>
         [NameInMap("SupportedRegionIdList")]
         [Validation(Required=false)]

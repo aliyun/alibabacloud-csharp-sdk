@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
     public class ModifyFlowLogAttributeRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can generate the token on your client. Make sure that the token is unique across different requests. The client token supports only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,8 +24,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the flow log.
-        /// The description can be empty or 0 to 256 characters in length.</para>
+        /// <para>The description of the flow log. The description can be empty or 0 to 256 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myFlowlog</para>
@@ -35,10 +34,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run on the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request.</description></item>
+        /// <item><description><para><b>true</b>: sends a dry run request. No EPS resource is modified.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: sends a normal request. This is the default value.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +50,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ECR ID.</para>
+        /// <para>The instance ID of the Express Connect Router (ECR).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,11 +61,11 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string EcrId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the flow log.</para>
+        /// <para>The instance ID of the flow log instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>flowlog-m5evbtbpt****</para>
+        /// <para>ecr-flog-m5evbtbpt****</para>
         /// </summary>
         [NameInMap("FlowLogId")]
         [Validation(Required=false)]
@@ -81,9 +82,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string FlowLogName { get; set; }
 
         /// <summary>
-        /// <para>The time window for collecting log data. Unit: seconds. Valid values:</para>
+        /// <para>The duration of the capture window for the flow log to capture traffic. Unit: seconds. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>60</b></description></item>
+        /// <item><description><b>60</b> </description></item>
         /// <item><description><b>600</b></description></item>
         /// </list>
         /// <para>Default value: <b>600</b>.</para>
@@ -96,7 +97,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public int? Interval { get; set; }
 
         /// <summary>
-        /// <para>The sampling proportion. Valid values:</para>
+        /// <para>The sampling rate. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1:4096</b></description></item>
         /// <item><description><b>1:2048</b></description></item>

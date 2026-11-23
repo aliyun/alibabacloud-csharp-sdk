@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 {
     public class DescribeExpressConnectRouterChildInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Authentication is failed for ****</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The VBRs.</para>
+        /// <para>The list of child instances.</para>
         /// </summary>
         [NameInMap("ChildInstanceList")]
         [Validation(Required=false)]
         public List<DescribeExpressConnectRouterChildInstanceResponseBodyChildInstanceList> ChildInstanceList { get; set; }
         public class DescribeExpressConnectRouterChildInstanceResponseBodyChildInstanceList : TeaModel {
             /// <summary>
-            /// <para>The ID of the association between the ECR and the VPC or TR.</para>
+            /// <para>The ID used to associate the Express Connect Router (ECR) with the VBR.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecr-assoc-9p2qxx5phpca2m****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string AssociationId { get; set; }
 
             /// <summary>
-            /// <para>The VBR ID.</para>
+            /// <para>The instance ID of the border router for routing.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vbr-gw8vjq2zjux3ifsc9****</para>
@@ -46,12 +46,18 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             [Validation(Required=false)]
             public string ChildInstanceId { get; set; }
 
+            /// <summary>
+            /// <para>The name of the child instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("ChildInstanceName")]
             [Validation(Required=false)]
             public string ChildInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that owns the VBR.</para>
+            /// <para>The Alibaba Cloud account ID to which the child instance belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>112101171212****</para>
@@ -61,7 +67,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public long? ChildInstanceOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the VBR.</para>
+            /// <para>The region where the child instance resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -71,7 +77,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string ChildInstanceRegionId { get; set; }
 
             /// <summary>
-            /// <para>The type of the VBR. The value is <b>VBR</b>.</para>
+            /// <para>The type of the child instance. Valid values: <b>VBR</b>: virtual border router.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VBR</para>
@@ -81,7 +87,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string ChildInstanceType { get; set; }
 
             /// <summary>
-            /// <para>The description of the ECR.</para>
+            /// <para>The description of the child instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -91,7 +97,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ECR ID.</para>
+            /// <para>The instance ID of the Express Connect Router (ECR).</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecr-mezk2idmsd0vx2****</para>
@@ -101,7 +107,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string EcrId { get; set; }
 
             /// <summary>
-            /// <para>The time when the association was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the association was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-09T12:18:23Z</para>
@@ -111,7 +117,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The time when the association was modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the association was modified. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-09T12:18:23Z</para>
@@ -121,7 +127,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that owns the VBR.</para>
+            /// <para>The Alibaba Cloud account ID to which the border router for routing belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>167509154715****</para>
@@ -131,7 +137,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public long? OwnerId { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the VBR.</para>
+            /// <para>The region where the VBR resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -141,14 +147,20 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The deployment state of the associated resource. Valid values:</para>
+            /// <para>The deployment status of the associated resource. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>CREATING</b>: The resource is being created.</description></item>
-            /// <item><description><b>ACTIVE</b>: The resource is created.</description></item>
-            /// <item><description><b>ASSOCIATING</b>: The resource is being associated.</description></item>
-            /// <item><description><b>DISSOCIATING</b>: The resource is being disassociated.</description></item>
-            /// <item><description><b>UPDATING</b>: The resource is being modified.</description></item>
-            /// <item><description><b>DELETING</b>: The resource is being deleted.</description></item>
+            /// <item><description><para><b>CREATING</b>: creating.</para>
+            /// </description></item>
+            /// <item><description><para><b>ACTIVE</b>: created.</para>
+            /// </description></item>
+            /// <item><description><para><b>ASSOCIATING</b>: associating.</para>
+            /// </description></item>
+            /// <item><description><para><b>DISSOCIATING</b>: dissociating.</para>
+            /// </description></item>
+            /// <item><description><para><b>UPDATING</b>: updating.</para>
+            /// </description></item>
+            /// <item><description><para><b>DELETING</b>: deleting.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -161,7 +173,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         }
 
         /// <summary>
-        /// <para>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</para>
+        /// <para>The status code that indicates whether the call was successful. A value of 200 indicates that the attachment was successful. Other values indicate that the attachment failed. For more information about the causes of failures, see the error codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -181,9 +193,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic part in the error message. This parameter is used to replace the <c>%s</c> variable in <b>ErrMessage</b>.</para>
+        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the <b>ErrMessage</b> error message.</para>
         /// <remarks>
-        /// <para> For example, if the value of <b>ErrMessage</b> is <b>The Value of Input Parameter %s is not valid</b> and the value of <b>DynamicMessage</b> is <b>DtsJobId</b>, the request parameter <b>DtsJobId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -204,7 +216,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned. Valid values: 1 to 2147483647. Default value: 20.</para>
+        /// <para>The maximum number of entries returned. Valid values: 1 to 2147483647. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -214,7 +226,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned by the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -224,10 +236,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
-        /// <item><description>If a value of <b>NextToken</b> is returned, the value indicates the token that is used for the next query.</description></item>
+        /// <item><description>If NextToken is empty, no next query is required.</description></item>
+        /// <item><description>If NextToken is returned, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -238,7 +250,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>05130E79-588D-5C40-A718-C4863A59****</para>
@@ -248,10 +260,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>True</b>: successful.</description></item>
+        /// <item><description><b>False</b>: failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

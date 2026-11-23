@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</para>
+        /// <para>Indicates whether the call was successful. A return value of 200 indicates success, and any other value indicates failure. For the cause of failure, see error codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic part in the error message. This parameter is used to replace the <c>%s</c> variable in <b>ErrMessage</b>.</para>
+        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para> For example, if the value of <b>ErrMessage</b> is <b>The Value of Input Parameter %s is not valid</b> and the value of <b>DynamicMessage</b> is <b>DtsJobId</b>, the request parameter <b>DtsJobId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The cross-region forwarding modes.</para>
+        /// <para>The list of cross-region forwarding modes.</para>
         /// </summary>
         [NameInMap("InterRegionTransitModeList")]
         [Validation(Required=false)]
@@ -72,8 +72,8 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             /// <summary>
             /// <para>The cross-region forwarding mode of the ECR. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ECMP</b>: the load balancing mode.</description></item>
-            /// <item><description><b>NearBy</b>: the nearby forwarding mode.</description></item>
+            /// <item><description><b>ECMP</b>: load balancing mode.</description></item>
+            /// <item><description><b>NearBy</b>: nearest forwarding mode.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string Mode { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the ECR.</para>
+            /// <para>The ID of the region to which the Express Connect Router (ECR) belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned for the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6FABF516-FED3-5697-BDA2-B18C5D9A****</para>
@@ -116,10 +116,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>True</b>: The call was successful.</description></item>
+        /// <item><description><b>False</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

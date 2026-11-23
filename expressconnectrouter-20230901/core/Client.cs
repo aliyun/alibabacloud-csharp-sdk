@@ -18,7 +18,44 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "ExpressConnectRouter";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-hongkong", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"cn-zhangjiakou", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"cn-zhengzhou-jva", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"cn-shenzhen", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"cn-beijing", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"cn-wulanchabu", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"cn-nanjing", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"ap-northeast-2", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"ap-northeast-1", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"cn-fuzhou", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"cn-chengdu", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"cn-qingdao", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"cn-wuhan-lr", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"cn-guangzhou", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"cn-heyuan", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"ap-southeast-1", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"ap-southeast-3", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"cn-huhehaote", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"ap-southeast-5", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"ap-southeast-6", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"ap-southeast-7", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"cn-hangzhou", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"us-west-1", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"us-east-1", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"eu-central-1", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"eu-west-1", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"me-central-1", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"cn-shenzhen-finance-1", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"cn-heyuan-acdr-1", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+                {"cn-beijing-finance-1", "expressconnectrouter.cn-shanghai.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("expressconnectrouter", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +76,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables log delivery for flow logs.</para>
+        /// <para>Enables log delivery for a flow log.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -99,7 +136,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables log delivery for flow logs.</para>
+        /// <para>Enables log delivery for a flow log.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -159,7 +196,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables log delivery for flow logs.</para>
+        /// <para>Enables log delivery for a flow log.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -177,7 +214,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables log delivery for flow logs.</para>
+        /// <para>Enables log delivery for a flow log.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -195,12 +232,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a virtual border router (VBR) with an Express Connect router (ECR).</para>
+        /// <para>Attaches a child instance (VBR) to an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call the <b>AttachExpressConnectRouterChildInstance</b> operation to associate a VBR with an ECR, make sure that the ECR is in the <b>Active</b> state.</para>
+        /// <para>Before you invoke the <b>AttachExpressConnectRouterChildInstance</b> operation to load a child instance (VBR) to an Express Connect Router (ECR), make sure that the Express Connect Router (ECR) is in the <b>Active</b> state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -276,12 +313,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a virtual border router (VBR) with an Express Connect router (ECR).</para>
+        /// <para>Attaches a child instance (VBR) to an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call the <b>AttachExpressConnectRouterChildInstance</b> operation to associate a VBR with an ECR, make sure that the ECR is in the <b>Active</b> state.</para>
+        /// <para>Before you invoke the <b>AttachExpressConnectRouterChildInstance</b> operation to load a child instance (VBR) to an Express Connect Router (ECR), make sure that the Express Connect Router (ECR) is in the <b>Active</b> state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -357,12 +394,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a virtual border router (VBR) with an Express Connect router (ECR).</para>
+        /// <para>Attaches a child instance (VBR) to an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call the <b>AttachExpressConnectRouterChildInstance</b> operation to associate a VBR with an ECR, make sure that the ECR is in the <b>Active</b> state.</para>
+        /// <para>Before you invoke the <b>AttachExpressConnectRouterChildInstance</b> operation to load a child instance (VBR) to an Express Connect Router (ECR), make sure that the Express Connect Router (ECR) is in the <b>Active</b> state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -380,12 +417,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a virtual border router (VBR) with an Express Connect router (ECR).</para>
+        /// <para>Attaches a child instance (VBR) to an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call the <b>AttachExpressConnectRouterChildInstance</b> operation to associate a VBR with an ECR, make sure that the ECR is in the <b>Active</b> state.</para>
+        /// <para>Before you invoke the <b>AttachExpressConnectRouterChildInstance</b> operation to load a child instance (VBR) to an Express Connect Router (ECR), make sure that the Express Connect Router (ECR) is in the <b>Active</b> state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -403,7 +440,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the Cloud Data Transfer (CDT) service required to add a region to an Express Connect router (ECR).</para>
+        /// <para>Checks the Cloud Data Transfer (CDT) service required to add a specified region to an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -463,7 +500,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the Cloud Data Transfer (CDT) service required to add a region to an Express Connect router (ECR).</para>
+        /// <para>Checks the Cloud Data Transfer (CDT) service required to add a specified region to an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -523,7 +560,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the Cloud Data Transfer (CDT) service required to add a region to an Express Connect router (ECR).</para>
+        /// <para>Checks the Cloud Data Transfer (CDT) service required to add a specified region to an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -541,7 +578,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the Cloud Data Transfer (CDT) service required to add a region to an Express Connect router (ECR).</para>
+        /// <para>Checks the Cloud Data Transfer (CDT) service required to add a specified region to an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -564,7 +601,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create an ECR, it enters the <b>Active</b> state.</para>
+        /// <para>After you create an Express Connect Router (ECR) instance, the instance status is <b>Active</b>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -641,7 +678,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create an ECR, it enters the <b>Active</b> state.</para>
+        /// <para>After you create an Express Connect Router (ECR) instance, the instance status is <b>Active</b>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -718,7 +755,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create an ECR, it enters the <b>Active</b> state.</para>
+        /// <para>After you create an Express Connect Router (ECR) instance, the instance status is <b>Active</b>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -741,7 +778,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create an ECR, it enters the <b>Active</b> state.</para>
+        /// <para>After you create an Express Connect Router (ECR) instance, the instance status is <b>Active</b>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -759,7 +796,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a virtual private cloud (VPC) or a transit router (TR) with an Express Connect router (ECR).</para>
+        /// <para>Associates an Express Connect Router (ECR) with a virtual private cloud (VPC) or a transit router (TR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -859,7 +896,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a virtual private cloud (VPC) or a transit router (TR) with an Express Connect router (ECR).</para>
+        /// <para>Associates an Express Connect Router (ECR) with a virtual private cloud (VPC) or a transit router (TR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -959,7 +996,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a virtual private cloud (VPC) or a transit router (TR) with an Express Connect router (ECR).</para>
+        /// <para>Associates an Express Connect Router (ECR) with a virtual private cloud (VPC) or a transit router (TR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -977,7 +1014,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a virtual private cloud (VPC) or a transit router (TR) with an Express Connect router (ECR).</para>
+        /// <para>Associates an Express Connect Router (ECR) with a virtual private cloud (VPC) or a transit router (TR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -995,7 +1032,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a flow log and enables log delivery.</para>
+        /// <para>Creates a flow log and enables log delivery by default.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1095,7 +1132,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a flow log and enables log delivery.</para>
+        /// <para>Creates a flow log and enables log delivery by default.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1195,7 +1232,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a flow log and enables log delivery.</para>
+        /// <para>Creates a flow log and enables log delivery by default.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1213,7 +1250,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a flow log and enables log delivery.</para>
+        /// <para>Creates a flow log and enables log delivery by default.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1231,7 +1268,171 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables log delivery.</para>
+        /// <para>Creates an association between an Express Connect Router (ECR) and a route map.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRouteMapAssociationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRouteMapAssociationResponse
+        /// </returns>
+        public CreateRouteMapAssociationResponse CreateRouteMapAssociationWithOptions(CreateRouteMapAssociationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionIdList))
+            {
+                query["RegionIdList"] = request.RegionIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteMapId))
+            {
+                query["RouteMapId"] = request.RouteMapId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["Version"] = request.Version;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcrId))
+            {
+                body["EcrId"] = request.EcrId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRouteMapAssociation",
+                Version = "2023-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRouteMapAssociationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an association between an Express Connect Router (ECR) and a route map.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRouteMapAssociationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRouteMapAssociationResponse
+        /// </returns>
+        public async Task<CreateRouteMapAssociationResponse> CreateRouteMapAssociationWithOptionsAsync(CreateRouteMapAssociationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionIdList))
+            {
+                query["RegionIdList"] = request.RegionIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteMapId))
+            {
+                query["RouteMapId"] = request.RouteMapId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["Version"] = request.Version;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcrId))
+            {
+                body["EcrId"] = request.EcrId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRouteMapAssociation",
+                Version = "2023-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRouteMapAssociationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an association between an Express Connect Router (ECR) and a route map.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRouteMapAssociationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRouteMapAssociationResponse
+        /// </returns>
+        public CreateRouteMapAssociationResponse CreateRouteMapAssociation(CreateRouteMapAssociationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateRouteMapAssociationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an association between an Express Connect Router (ECR) and a route map.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRouteMapAssociationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRouteMapAssociationResponse
+        /// </returns>
+        public async Task<CreateRouteMapAssociationResponse> CreateRouteMapAssociationAsync(CreateRouteMapAssociationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateRouteMapAssociationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops log delivery for a flow log.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1291,7 +1492,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables log delivery.</para>
+        /// <para>Stops log delivery for a flow log.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1351,7 +1552,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables log delivery.</para>
+        /// <para>Stops log delivery for a flow log.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1369,7 +1570,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables log delivery.</para>
+        /// <para>Stops log delivery for a flow log.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1387,15 +1588,15 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Express Connect router (ECR).</para>
+        /// <para>Deletes an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Take note of the following items:</para>
+        /// <para>Before you invoke the DeleteExpressConnectRouter operation to delete an Express Connect Router (ECR) instance, note the following:</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that all resources are disassociated from the ECR.</description></item>
-        /// <item><description>You can delete only ECRs that are in the <b>Active</b> state.</description></item>
+        /// <item><description>Before you delete an Express Connect Router (ECR) instance, you must delete the resources associated with the Express Connect Router (ECR) instance.</description></item>
+        /// <item><description>You can delete only Express Connect Router (ECR) instances that are in the <b>Active</b> state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1452,15 +1653,15 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Express Connect router (ECR).</para>
+        /// <para>Deletes an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Take note of the following items:</para>
+        /// <para>Before you invoke the DeleteExpressConnectRouter operation to delete an Express Connect Router (ECR) instance, note the following:</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that all resources are disassociated from the ECR.</description></item>
-        /// <item><description>You can delete only ECRs that are in the <b>Active</b> state.</description></item>
+        /// <item><description>Before you delete an Express Connect Router (ECR) instance, you must delete the resources associated with the Express Connect Router (ECR) instance.</description></item>
+        /// <item><description>You can delete only Express Connect Router (ECR) instances that are in the <b>Active</b> state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1517,15 +1718,15 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Express Connect router (ECR).</para>
+        /// <para>Deletes an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Take note of the following items:</para>
+        /// <para>Before you invoke the DeleteExpressConnectRouter operation to delete an Express Connect Router (ECR) instance, note the following:</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that all resources are disassociated from the ECR.</description></item>
-        /// <item><description>You can delete only ECRs that are in the <b>Active</b> state.</description></item>
+        /// <item><description>Before you delete an Express Connect Router (ECR) instance, you must delete the resources associated with the Express Connect Router (ECR) instance.</description></item>
+        /// <item><description>You can delete only Express Connect Router (ECR) instances that are in the <b>Active</b> state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1544,15 +1745,15 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Express Connect router (ECR).</para>
+        /// <para>Deletes an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Take note of the following items:</para>
+        /// <para>Before you invoke the DeleteExpressConnectRouter operation to delete an Express Connect Router (ECR) instance, note the following:</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that all resources are disassociated from the ECR.</description></item>
-        /// <item><description>You can delete only ECRs that are in the <b>Active</b> state.</description></item>
+        /// <item><description>Before you delete an Express Connect Router (ECR) instance, you must delete the resources associated with the Express Connect Router (ECR) instance.</description></item>
+        /// <item><description>You can delete only Express Connect Router (ECR) instances that are in the <b>Active</b> state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1571,7 +1772,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates an Express Connect router (ECR) from a virtual private cloud (VPC) or a transit router (TR).</para>
+        /// <para>Disassociates an Express Connect Router (ECR) from a virtual private cloud (VPC) or a transit router.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1635,7 +1836,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates an Express Connect router (ECR) from a virtual private cloud (VPC) or a transit router (TR).</para>
+        /// <para>Disassociates an Express Connect Router (ECR) from a virtual private cloud (VPC) or a transit router.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1699,7 +1900,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates an Express Connect router (ECR) from a virtual private cloud (VPC) or a transit router (TR).</para>
+        /// <para>Disassociates an Express Connect Router (ECR) from a virtual private cloud (VPC) or a transit router.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1717,7 +1918,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates an Express Connect router (ECR) from a virtual private cloud (VPC) or a transit router (TR).</para>
+        /// <para>Disassociates an Express Connect Router (ECR) from a virtual private cloud (VPC) or a transit router.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1891,7 +2092,163 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the route entries that are disabled on an Express Connect router (ECR).</para>
+        /// <para>Deletes the association between an Express Connect Router (ECR) and a route policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRouteMapAssociationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRouteMapAssociationResponse
+        /// </returns>
+        public DeleteRouteMapAssociationResponse DeleteRouteMapAssociationWithOptions(DeleteRouteMapAssociationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssociationId))
+            {
+                query["AssociationId"] = request.AssociationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["Version"] = request.Version;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcrId))
+            {
+                body["EcrId"] = request.EcrId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRouteMapAssociation",
+                Version = "2023-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteRouteMapAssociationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the association between an Express Connect Router (ECR) and a route policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRouteMapAssociationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRouteMapAssociationResponse
+        /// </returns>
+        public async Task<DeleteRouteMapAssociationResponse> DeleteRouteMapAssociationWithOptionsAsync(DeleteRouteMapAssociationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssociationId))
+            {
+                query["AssociationId"] = request.AssociationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["Version"] = request.Version;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcrId))
+            {
+                body["EcrId"] = request.EcrId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRouteMapAssociation",
+                Version = "2023-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteRouteMapAssociationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the association between an Express Connect Router (ECR) and a route policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRouteMapAssociationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRouteMapAssociationResponse
+        /// </returns>
+        public DeleteRouteMapAssociationResponse DeleteRouteMapAssociation(DeleteRouteMapAssociationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteRouteMapAssociationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the association between an Express Connect Router (ECR) and a route policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRouteMapAssociationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRouteMapAssociationResponse
+        /// </returns>
+        public async Task<DeleteRouteMapAssociationResponse> DeleteRouteMapAssociationAsync(DeleteRouteMapAssociationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteRouteMapAssociationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the disabled route entry of an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1955,7 +2312,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the route entries that are disabled on an Express Connect router (ECR).</para>
+        /// <para>Queries the disabled route entry of an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2019,7 +2376,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the route entries that are disabled on an Express Connect router (ECR).</para>
+        /// <para>Queries the disabled route entry of an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2037,7 +2394,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the route entries that are disabled on an Express Connect router (ECR).</para>
+        /// <para>Queries the disabled route entry of an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2055,7 +2412,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of Express Connect routers (ECRs).</para>
+        /// <para>Queries a list of Express Connect Router (ECR) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2131,7 +2488,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of Express Connect routers (ECRs).</para>
+        /// <para>Queries a list of Express Connect Router (ECR) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2207,7 +2564,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of Express Connect routers (ECRs).</para>
+        /// <para>Queries a list of Express Connect Router (ECR) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2225,7 +2582,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of Express Connect routers (ECRs).</para>
+        /// <para>Queries a list of Express Connect Router (ECR) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2243,7 +2600,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical route prefixes of an Express Connect router (ECR).</para>
+        /// <para>Queries the history of prefix routes for an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2311,7 +2668,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical route prefixes of an Express Connect router (ECR).</para>
+        /// <para>Queries the history of prefix routes for an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2379,7 +2736,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical route prefixes of an Express Connect router (ECR).</para>
+        /// <para>Queries the history of prefix routes for an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2397,7 +2754,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical route prefixes of an Express Connect router (ECR).</para>
+        /// <para>Queries the history of prefix routes for an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2415,7 +2772,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the virtual private clouds (VPCs) and transit routers (TRs) associated with an Express Connect router (ECR).</para>
+        /// <para>Queries the virtual private clouds (VPCs) and transit routers (TRs) associated with an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2507,7 +2864,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the virtual private clouds (VPCs) and transit routers (TRs) associated with an Express Connect router (ECR).</para>
+        /// <para>Queries the virtual private clouds (VPCs) and transit routers (TRs) associated with an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2599,7 +2956,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the virtual private clouds (VPCs) and transit routers (TRs) associated with an Express Connect router (ECR).</para>
+        /// <para>Queries the virtual private clouds (VPCs) and transit routers (TRs) associated with an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2617,7 +2974,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the virtual private clouds (VPCs) and transit routers (TRs) associated with an Express Connect router (ECR).</para>
+        /// <para>Queries the virtual private clouds (VPCs) and transit routers (TRs) associated with an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2635,7 +2992,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the virtual border routers (VBRs) that are associated with an Express Connect router (ECR).</para>
+        /// <para>Queries the virtual border routers (VBRs) associated with an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2715,7 +3072,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the virtual border routers (VBRs) that are associated with an Express Connect router (ECR).</para>
+        /// <para>Queries the virtual border routers (VBRs) associated with an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2795,7 +3152,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the virtual border routers (VBRs) that are associated with an Express Connect router (ECR).</para>
+        /// <para>Queries the virtual border routers (VBRs) associated with an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2813,7 +3170,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the virtual border routers (VBRs) that are associated with an Express Connect router (ECR).</para>
+        /// <para>Queries the virtual border routers (VBRs) associated with an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2831,7 +3188,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the cross-region forwarding modes of an Express Connect router (ECR).</para>
+        /// <para>Queries the cross-region forwarding mode of an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2887,7 +3244,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the cross-region forwarding modes of an Express Connect router (ECR).</para>
+        /// <para>Queries the cross-region forwarding mode of an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2943,7 +3300,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the cross-region forwarding modes of an Express Connect router (ECR).</para>
+        /// <para>Queries the cross-region forwarding mode of an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2961,7 +3318,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the cross-region forwarding modes of an Express Connect router (ECR).</para>
+        /// <para>Queries the cross-region forwarding mode of an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2979,7 +3336,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of regions in which resources related to an Express Connect router (ECR) are deployed.</para>
+        /// <para>Queries the regions where Express Connect Router (ECR) resources are located.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3035,7 +3392,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of regions in which resources related to an Express Connect router (ECR) are deployed.</para>
+        /// <para>Queries the regions where Express Connect Router (ECR) resources are located.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3091,7 +3448,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of regions in which resources related to an Express Connect router (ECR) are deployed.</para>
+        /// <para>Queries the regions where Express Connect Router (ECR) resources are located.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3109,7 +3466,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of regions in which resources related to an Express Connect router (ECR) are deployed.</para>
+        /// <para>Queries the regions where Express Connect Router (ECR) resources are located.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3127,7 +3484,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the route entries of an Express Connect router (ECR).</para>
+        /// <para>Queries the route entries of an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3211,7 +3568,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the route entries of an Express Connect router (ECR).</para>
+        /// <para>Queries the route entries of an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3295,7 +3652,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the route entries of an Express Connect router (ECR).</para>
+        /// <para>Queries the route entries of an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3313,7 +3670,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the route entries of an Express Connect router (ECR).</para>
+        /// <para>Queries the route entries of an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3551,7 +3908,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network instances whose permissions are granted to an Express Connect router (ECR).</para>
+        /// <para>Queries the network instances authorized to an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3643,7 +4000,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network instances whose permissions are granted to an Express Connect router (ECR).</para>
+        /// <para>Queries the network instances authorized to an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3735,7 +4092,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network instances whose permissions are granted to an Express Connect router (ECR).</para>
+        /// <para>Queries the network instances authorized to an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3753,7 +4110,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network instances whose permissions are granted to an Express Connect router (ECR).</para>
+        /// <para>Queries the network instances authorized to an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3771,12 +4128,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a virtual border router (VBR) from an Express Connect router (ECR).</para>
+        /// <para>Detaches a virtual border router (VBR) from an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call the <b>DetachExpressConnectRouterChildInstance</b> operation to uninstall a VBR from an ECR, make sure that the ECR is in the <b>Active</b> state.</para>
+        /// <para>Before you call the <b>DetachExpressConnectRouterChildInstance</b> operation to detach a VBR instance from an Express Connect Router (ECR), ensure that the ECR is in the <b>Active</b> state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3840,12 +4197,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a virtual border router (VBR) from an Express Connect router (ECR).</para>
+        /// <para>Detaches a virtual border router (VBR) from an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call the <b>DetachExpressConnectRouterChildInstance</b> operation to uninstall a VBR from an ECR, make sure that the ECR is in the <b>Active</b> state.</para>
+        /// <para>Before you call the <b>DetachExpressConnectRouterChildInstance</b> operation to detach a VBR instance from an Express Connect Router (ECR), ensure that the ECR is in the <b>Active</b> state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3909,12 +4266,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a virtual border router (VBR) from an Express Connect router (ECR).</para>
+        /// <para>Detaches a virtual border router (VBR) from an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call the <b>DetachExpressConnectRouterChildInstance</b> operation to uninstall a VBR from an ECR, make sure that the ECR is in the <b>Active</b> state.</para>
+        /// <para>Before you call the <b>DetachExpressConnectRouterChildInstance</b> operation to detach a VBR instance from an Express Connect Router (ECR), ensure that the ECR is in the <b>Active</b> state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3932,12 +4289,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a virtual border router (VBR) from an Express Connect router (ECR).</para>
+        /// <para>Detaches a virtual border router (VBR) from an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call the <b>DetachExpressConnectRouterChildInstance</b> operation to uninstall a VBR from an ECR, make sure that the ECR is in the <b>Active</b> state.</para>
+        /// <para>Before you call the <b>DetachExpressConnectRouterChildInstance</b> operation to detach a VBR instance from an Express Connect Router (ECR), ensure that the ECR is in the <b>Active</b> state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3955,7 +4312,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables route entries of an Express Connect router (ECR).</para>
+        /// <para>Disables a route entry of an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4019,7 +4376,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables route entries of an Express Connect router (ECR).</para>
+        /// <para>Disables a route entry of an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4083,7 +4440,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables route entries of an Express Connect router (ECR).</para>
+        /// <para>Disables a route entry of an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4101,7 +4458,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables route entries of an Express Connect router (ECR).</para>
+        /// <para>Disables a route entry of an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4119,7 +4476,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables route entries of an Express Connect router (ECR).</para>
+        /// <para>Enables route entries for an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4183,7 +4540,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables route entries of an Express Connect router (ECR).</para>
+        /// <para>Enables route entries for an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4247,7 +4604,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables route entries of an Express Connect router (ECR).</para>
+        /// <para>Enables route entries for an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4265,7 +4622,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables route entries of an Express Connect router (ECR).</para>
+        /// <para>Enables route entries for an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4283,14 +4640,14 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Express Connect router (ECR) and disassociates the virtual private cloud (VPC), transit router (TR), and virtual border router (VBR) associated with the ECR.</para>
+        /// <para>Force deletes an Express Connect Router (ECR) and detaches its associated virtual private clouds (VPCs), Transit Routers (TRs), and virtual border routers (VBRs).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If you forcefully delete an ECR, all the resources associated with the ECR are disassociated at a time. Make sure that the disassociation does not affect the stability of your business.</para>
         /// <list type="bullet">
-        /// <item><description>You can delete only ECRs that are in the <b>Active</b> state.</description></item>
+        /// <item><description>Force deleting an Express Connect Router (ECR) instance detaches all associated resources. Before you proceed, confirm that this operation does not disrupt your services.</description></item>
+        /// <item><description>You can delete only ECR instances that are in the <b>Active</b> state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4347,14 +4704,14 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Express Connect router (ECR) and disassociates the virtual private cloud (VPC), transit router (TR), and virtual border router (VBR) associated with the ECR.</para>
+        /// <para>Force deletes an Express Connect Router (ECR) and detaches its associated virtual private clouds (VPCs), Transit Routers (TRs), and virtual border routers (VBRs).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If you forcefully delete an ECR, all the resources associated with the ECR are disassociated at a time. Make sure that the disassociation does not affect the stability of your business.</para>
         /// <list type="bullet">
-        /// <item><description>You can delete only ECRs that are in the <b>Active</b> state.</description></item>
+        /// <item><description>Force deleting an Express Connect Router (ECR) instance detaches all associated resources. Before you proceed, confirm that this operation does not disrupt your services.</description></item>
+        /// <item><description>You can delete only ECR instances that are in the <b>Active</b> state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4411,14 +4768,14 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Express Connect router (ECR) and disassociates the virtual private cloud (VPC), transit router (TR), and virtual border router (VBR) associated with the ECR.</para>
+        /// <para>Force deletes an Express Connect Router (ECR) and detaches its associated virtual private clouds (VPCs), Transit Routers (TRs), and virtual border routers (VBRs).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If you forcefully delete an ECR, all the resources associated with the ECR are disassociated at a time. Make sure that the disassociation does not affect the stability of your business.</para>
         /// <list type="bullet">
-        /// <item><description>You can delete only ECRs that are in the <b>Active</b> state.</description></item>
+        /// <item><description>Force deleting an Express Connect Router (ECR) instance detaches all associated resources. Before you proceed, confirm that this operation does not disrupt your services.</description></item>
+        /// <item><description>You can delete only ECR instances that are in the <b>Active</b> state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4437,14 +4794,14 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Express Connect router (ECR) and disassociates the virtual private cloud (VPC), transit router (TR), and virtual border router (VBR) associated with the ECR.</para>
+        /// <para>Force deletes an Express Connect Router (ECR) and detaches its associated virtual private clouds (VPCs), Transit Routers (TRs), and virtual border routers (VBRs).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If you forcefully delete an ECR, all the resources associated with the ECR are disassociated at a time. Make sure that the disassociation does not affect the stability of your business.</para>
         /// <list type="bullet">
-        /// <item><description>You can delete only ECRs that are in the <b>Active</b> state.</description></item>
+        /// <item><description>Force deleting an Express Connect Router (ECR) instance detaches all associated resources. Before you proceed, confirm that this operation does not disrupt your services.</description></item>
+        /// <item><description>You can delete only ECR instances that are in the <b>Active</b> state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4463,12 +4820,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions on a virtual private cloud (VPC) or a virtual border router (VBR) to an Express Connect router (ECR) of another account.</para>
+        /// <para>Grants a virtual private cloud (VPC) or virtual border router (VBR) authorization to a cross-account Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you associate a network instance of another account with an ECR, you must grant permissions on the network instance to the ECR.</para>
+        /// <para>To associate a cross-account network instance with an Express Connect Router (ECR) instance, you must grant the network instance authorization to the Express Connect Router (ECR) instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4540,12 +4897,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions on a virtual private cloud (VPC) or a virtual border router (VBR) to an Express Connect router (ECR) of another account.</para>
+        /// <para>Grants a virtual private cloud (VPC) or virtual border router (VBR) authorization to a cross-account Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you associate a network instance of another account with an ECR, you must grant permissions on the network instance to the ECR.</para>
+        /// <para>To associate a cross-account network instance with an Express Connect Router (ECR) instance, you must grant the network instance authorization to the Express Connect Router (ECR) instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4617,12 +4974,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions on a virtual private cloud (VPC) or a virtual border router (VBR) to an Express Connect router (ECR) of another account.</para>
+        /// <para>Grants a virtual private cloud (VPC) or virtual border router (VBR) authorization to a cross-account Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you associate a network instance of another account with an ECR, you must grant permissions on the network instance to the ECR.</para>
+        /// <para>To associate a cross-account network instance with an Express Connect Router (ECR) instance, you must grant the network instance authorization to the Express Connect Router (ECR) instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4640,12 +4997,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions on a virtual private cloud (VPC) or a virtual border router (VBR) to an Express Connect router (ECR) of another account.</para>
+        /// <para>Grants a virtual private cloud (VPC) or virtual border router (VBR) authorization to a cross-account Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you associate a network instance of another account with an ECR, you must grant permissions on the network instance to the ECR.</para>
+        /// <para>To associate a cross-account network instance with an Express Connect Router (ECR) instance, you must grant the network instance authorization to the Express Connect Router (ECR) instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4663,7 +5020,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of regions in which the Express Connect router (ECR) feature is activated.</para>
+        /// <para>Queries the regions that support Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4715,7 +5072,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of regions in which the Express Connect router (ECR) feature is activated.</para>
+        /// <para>Queries the regions that support Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4767,7 +5124,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of regions in which the Express Connect router (ECR) feature is activated.</para>
+        /// <para>Queries the regions that support Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4785,7 +5142,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of regions in which the Express Connect router (ECR) feature is activated.</para>
+        /// <para>Queries the regions that support Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4803,7 +5160,187 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tags that are added to an Express Connect router (ECR).</para>
+        /// <para>Queries the association between an Express Connect Router (ECR) and a route map.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRouteMapAssociationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRouteMapAssociationsResponse
+        /// </returns>
+        public ListRouteMapAssociationsResponse ListRouteMapAssociationsWithOptions(ListRouteMapAssociationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssociationId))
+            {
+                query["AssociationId"] = request.AssociationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteMapId))
+            {
+                query["RouteMapId"] = request.RouteMapId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["Version"] = request.Version;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcrId))
+            {
+                body["EcrId"] = request.EcrId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRouteMapAssociations",
+                Version = "2023-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRouteMapAssociationsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the association between an Express Connect Router (ECR) and a route map.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRouteMapAssociationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRouteMapAssociationsResponse
+        /// </returns>
+        public async Task<ListRouteMapAssociationsResponse> ListRouteMapAssociationsWithOptionsAsync(ListRouteMapAssociationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssociationId))
+            {
+                query["AssociationId"] = request.AssociationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteMapId))
+            {
+                query["RouteMapId"] = request.RouteMapId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["Version"] = request.Version;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcrId))
+            {
+                body["EcrId"] = request.EcrId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRouteMapAssociations",
+                Version = "2023-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRouteMapAssociationsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the association between an Express Connect Router (ECR) and a route map.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRouteMapAssociationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRouteMapAssociationsResponse
+        /// </returns>
+        public ListRouteMapAssociationsResponse ListRouteMapAssociations(ListRouteMapAssociationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListRouteMapAssociationsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the association between an Express Connect Router (ECR) and a route map.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRouteMapAssociationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRouteMapAssociationsResponse
+        /// </returns>
+        public async Task<ListRouteMapAssociationsResponse> ListRouteMapAssociationsAsync(ListRouteMapAssociationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListRouteMapAssociationsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of tags bound to an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4867,7 +5404,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tags that are added to an Express Connect router (ECR).</para>
+        /// <para>Queries the list of tags bound to an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4931,7 +5468,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tags that are added to an Express Connect router (ECR).</para>
+        /// <para>Queries the list of tags bound to an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4949,7 +5486,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tags that are added to an Express Connect router (ECR).</para>
+        /// <para>Queries the list of tags bound to an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4967,12 +5504,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the properties such as the name of an Express Connect router (ECR).</para>
+        /// <para>Modifies the properties of an Express Connect Router (ECR), such as its name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify only properties of ECRs in the <b>Active</b> state.</para>
+        /// <para>You can modify an Express Connect Router (ECR) instance only when it is in the <b>Active</b> state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5036,12 +5573,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the properties such as the name of an Express Connect router (ECR).</para>
+        /// <para>Modifies the properties of an Express Connect Router (ECR), such as its name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify only properties of ECRs in the <b>Active</b> state.</para>
+        /// <para>You can modify an Express Connect Router (ECR) instance only when it is in the <b>Active</b> state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5105,12 +5642,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the properties such as the name of an Express Connect router (ECR).</para>
+        /// <para>Modifies the properties of an Express Connect Router (ECR), such as its name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify only properties of ECRs in the <b>Active</b> state.</para>
+        /// <para>You can modify an Express Connect Router (ECR) instance only when it is in the <b>Active</b> state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5128,12 +5665,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the properties such as the name of an Express Connect router (ECR).</para>
+        /// <para>Modifies the properties of an Express Connect Router (ECR), such as its name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify only properties of ECRs in the <b>Active</b> state.</para>
+        /// <para>You can modify an Express Connect Router (ECR) instance only when it is in the <b>Active</b> state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5151,7 +5688,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改专线网关关联的属性</para>
+        /// <para>Modifies the attributes of a child instance associated with an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5215,7 +5752,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改专线网关关联的属性</para>
+        /// <para>Modifies the attributes of a child instance associated with an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5279,7 +5816,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改专线网关关联的属性</para>
+        /// <para>Modifies the attributes of a child instance associated with an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5297,7 +5834,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改专线网关关联的属性</para>
+        /// <para>Modifies the attributes of a child instance associated with an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5315,7 +5852,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the route prefixes of a virtual private cloud (VPC) or a transit router (TR) that is associated with an Express Connect router (ECR).</para>
+        /// <para>Modifies the prefixes for a virtual private cloud (VPC) or a transit router that is attached to an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5387,7 +5924,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the route prefixes of a virtual private cloud (VPC) or a transit router (TR) that is associated with an Express Connect router (ECR).</para>
+        /// <para>Modifies the prefixes for a virtual private cloud (VPC) or a transit router that is attached to an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5459,7 +5996,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the route prefixes of a virtual private cloud (VPC) or a transit router (TR) that is associated with an Express Connect router (ECR).</para>
+        /// <para>Modifies the prefixes for a virtual private cloud (VPC) or a transit router that is attached to an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5477,7 +6014,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the route prefixes of a virtual private cloud (VPC) or a transit router (TR) that is associated with an Express Connect router (ECR).</para>
+        /// <para>Modifies the prefixes for a virtual private cloud (VPC) or a transit router that is attached to an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5495,7 +6032,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改专线网关子实例的属性</para>
+        /// <para>Modifies the attributes of a child instance (VBR) associated with an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5563,7 +6100,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改专线网关子实例的属性</para>
+        /// <para>Modifies the attributes of a child instance (VBR) associated with an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5631,7 +6168,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改专线网关子实例的属性</para>
+        /// <para>Modifies the attributes of a child instance (VBR) associated with an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5649,7 +6186,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改专线网关子实例的属性</para>
+        /// <para>Modifies the attributes of a child instance (VBR) associated with an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5667,7 +6204,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the cross-region forwarding mode of an Express Connect router (ECR).</para>
+        /// <para>Modifies the inter-region forwarding mode of an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5727,7 +6264,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the cross-region forwarding mode of an Express Connect router (ECR).</para>
+        /// <para>Modifies the inter-region forwarding mode of an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5787,7 +6324,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the cross-region forwarding mode of an Express Connect router (ECR).</para>
+        /// <para>Modifies the inter-region forwarding mode of an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5805,7 +6342,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the cross-region forwarding mode of an Express Connect router (ECR).</para>
+        /// <para>Modifies the inter-region forwarding mode of an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5823,7 +6360,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name, description, sampling rate, and sampling interval.</para>
+        /// <para>Modifies the name, description, sampling rate, and sampling interval of a flow log.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5899,7 +6436,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name, description, sampling rate, and sampling interval.</para>
+        /// <para>Modifies the name, description, sampling rate, and sampling interval of a flow log.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5975,7 +6512,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name, description, sampling rate, and sampling interval.</para>
+        /// <para>Modifies the name, description, sampling rate, and sampling interval of a flow log.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5993,7 +6530,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name, description, sampling rate, and sampling interval.</para>
+        /// <para>Modifies the name, description, sampling rate, and sampling interval of a flow log.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6011,7 +6548,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the resource group to which an Express Connect router (ECR) belongs.</para>
+        /// <para>Modifies the resource group to which an Express Connect Router (ECR) belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6075,7 +6612,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the resource group to which an Express Connect router (ECR) belongs.</para>
+        /// <para>Modifies the resource group to which an Express Connect Router (ECR) belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6139,7 +6676,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the resource group to which an Express Connect router (ECR) belongs.</para>
+        /// <para>Modifies the resource group to which an Express Connect Router (ECR) belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6157,7 +6694,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the resource group to which an Express Connect router (ECR) belongs.</para>
+        /// <para>Modifies the resource group to which an Express Connect Router (ECR) belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6175,7 +6712,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes permissions on a virtual private cloud (VPC) or a virtual border router (VBR) from an Express Connect router (ECR) owned by another account.</para>
+        /// <para>Revokes the authorization of a virtual private cloud (VPC) or virtual border router (VBR) on a cross-account Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6247,7 +6784,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes permissions on a virtual private cloud (VPC) or a virtual border router (VBR) from an Express Connect router (ECR) owned by another account.</para>
+        /// <para>Revokes the authorization of a virtual private cloud (VPC) or virtual border router (VBR) on a cross-account Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6319,7 +6856,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes permissions on a virtual private cloud (VPC) or a virtual border router (VBR) from an Express Connect router (ECR) owned by another account.</para>
+        /// <para>Revokes the authorization of a virtual private cloud (VPC) or virtual border router (VBR) on a cross-account Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6337,7 +6874,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes permissions on a virtual private cloud (VPC) or a virtual border router (VBR) from an Express Connect router (ECR) owned by another account.</para>
+        /// <para>Revokes the authorization of a virtual private cloud (VPC) or virtual border router (VBR) on a cross-account Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6355,12 +6892,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronizes the forwarding bandwidth limit between regions for an Express Connect router (ECR).</para>
+        /// <para>Synchronizes the inter-region bandwidth limits for an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates are allowed only when the ECR is in the <b>Active</b> state.</para>
+        /// <para>You can update an ECR instance only when it is in the <b>Active</b> state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6416,12 +6953,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronizes the forwarding bandwidth limit between regions for an Express Connect router (ECR).</para>
+        /// <para>Synchronizes the inter-region bandwidth limits for an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates are allowed only when the ECR is in the <b>Active</b> state.</para>
+        /// <para>You can update an ECR instance only when it is in the <b>Active</b> state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6477,12 +7014,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronizes the forwarding bandwidth limit between regions for an Express Connect router (ECR).</para>
+        /// <para>Synchronizes the inter-region bandwidth limits for an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates are allowed only when the ECR is in the <b>Active</b> state.</para>
+        /// <para>You can update an ECR instance only when it is in the <b>Active</b> state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6500,12 +7037,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronizes the forwarding bandwidth limit between regions for an Express Connect router (ECR).</para>
+        /// <para>Synchronizes the inter-region bandwidth limits for an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates are allowed only when the ECR is in the <b>Active</b> state.</para>
+        /// <para>You can update an ECR instance only when it is in the <b>Active</b> state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6523,7 +7060,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to an Express Connect router (ECR). You can add tags to only one ECR each time you call this operation. You can add multiple tags at a time.</para>
+        /// <para>Binds tags to an Express Connect Router (ECR). Each call to this operation binds tags to a single ECR instance, but you can bind multiple tags at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6587,7 +7124,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to an Express Connect router (ECR). You can add tags to only one ECR each time you call this operation. You can add multiple tags at a time.</para>
+        /// <para>Binds tags to an Express Connect Router (ECR). Each call to this operation binds tags to a single ECR instance, but you can bind multiple tags at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6651,7 +7188,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to an Express Connect router (ECR). You can add tags to only one ECR each time you call this operation. You can add multiple tags at a time.</para>
+        /// <para>Binds tags to an Express Connect Router (ECR). Each call to this operation binds tags to a single ECR instance, but you can bind multiple tags at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6669,7 +7206,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to an Express Connect router (ECR). You can add tags to only one ECR each time you call this operation. You can add multiple tags at a time.</para>
+        /// <para>Binds tags to an Express Connect Router (ECR). Each call to this operation binds tags to a single ECR instance, but you can bind multiple tags at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6687,7 +7224,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from an Express Connect router (ECR).</para>
+        /// <para>Unbinds tags from an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6755,7 +7292,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from an Express Connect router (ECR).</para>
+        /// <para>Unbinds tags from an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6823,7 +7360,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from an Express Connect router (ECR).</para>
+        /// <para>Unbinds tags from an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6841,7 +7378,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from an Express Connect router (ECR).</para>
+        /// <para>Unbinds tags from an Express Connect Router (ECR).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6855,6 +7392,170 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UntagResourcesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the association between an Express Connect Router (ECR) and a routing policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateRouteMapAssociationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRouteMapAssociationResponse
+        /// </returns>
+        public UpdateRouteMapAssociationResponse UpdateRouteMapAssociationWithOptions(UpdateRouteMapAssociationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssociationId))
+            {
+                query["AssociationId"] = request.AssociationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionIdList))
+            {
+                query["RegionIdList"] = request.RegionIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["Version"] = request.Version;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcrId))
+            {
+                body["EcrId"] = request.EcrId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRouteMapAssociation",
+                Version = "2023-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateRouteMapAssociationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the association between an Express Connect Router (ECR) and a routing policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateRouteMapAssociationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRouteMapAssociationResponse
+        /// </returns>
+        public async Task<UpdateRouteMapAssociationResponse> UpdateRouteMapAssociationWithOptionsAsync(UpdateRouteMapAssociationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssociationId))
+            {
+                query["AssociationId"] = request.AssociationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionIdList))
+            {
+                query["RegionIdList"] = request.RegionIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["Version"] = request.Version;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcrId))
+            {
+                body["EcrId"] = request.EcrId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRouteMapAssociation",
+                Version = "2023-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateRouteMapAssociationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the association between an Express Connect Router (ECR) and a routing policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateRouteMapAssociationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRouteMapAssociationResponse
+        /// </returns>
+        public UpdateRouteMapAssociationResponse UpdateRouteMapAssociation(UpdateRouteMapAssociationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateRouteMapAssociationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the association between an Express Connect Router (ECR) and a routing policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateRouteMapAssociationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRouteMapAssociationResponse
+        /// </returns>
+        public async Task<UpdateRouteMapAssociationResponse> UpdateRouteMapAssociationAsync(UpdateRouteMapAssociationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateRouteMapAssociationWithOptionsAsync(request, runtime);
         }
 
     }

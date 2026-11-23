@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to remove all tags. This parameter is valid only when the <b>TagKey</b> parameter is not specified. Valid values:</para>
+        /// <para>Specifies whether to unbind all tags. This parameter is valid only when <b>TagKey</b> is empty. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><b>true</b>: Unbinds all tags from the Express Connect Router (ECR) instance.</description></item>
+        /// <item><description><b>false</b> (default): Does not unbind all tags from the Express Connect Router (ECR) instance.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You must specify one of <b>TagKey</b> and <b>All</b>.</para>
+        /// <para>You must specify either <b>TagKey</b> or <b>All</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -28,9 +28,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -41,10 +41,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request.</description></item>
+        /// <item><description><para><b>true</b>: Performs a dry run without modifying EPS resources.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): Sends the request normally.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ECR IDs.</para>
+        /// <para>The list of resource instance IDs. You can unbind tags from up to 50 resource instances at a time.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -63,7 +65,13 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Set the value to <b>EXPRESSCONNECTROUTER</b>.</para>
+        /// <para>The resource type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>EXPRESSCONNECTROUTER</b>: Express Connect Router (ECR) instance.</description></item>
+        /// <item><description><b>EXPRESSCONNECTROUTERVPCASSOCIATION</b>: the associate relationship between an ECR and a VPC.</description></item>
+        /// <item><description><b>EXPRESSCONNECTROUTERTRASSOCIATION</b>: the associate relationship between an ECR and a transit router.</description></item>
+        /// <item><description><b>ECRFLOWLOG</b>: ECR flow log.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,7 +82,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The keys of the tags that you want to remove from the ECRs.</para>
+        /// <para>The tag keys of the Express Connect Router (ECR) instance to unbind.</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

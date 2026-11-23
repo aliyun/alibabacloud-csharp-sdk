@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 {
     public class AttachExpressConnectRouterChildInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The VBR ID.</para>
+        /// <para>The ID of the VBR instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,20 +21,20 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string ChildInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account to which the VBR belongs.</para>
+        /// <para>The Alibaba Cloud account ID of the account to which the VBR instance belongs.</para>
         /// <remarks>
-        /// <para> If you want to connect to a network instance that belongs to a different account, this parameter is required.</para>
+        /// <para>If you want to load a network instance that belongs to a different Alibaba Cloud account, this parameter is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>190550144868****</para>
+        /// <para>1905501448682345</para>
         /// </summary>
         [NameInMap("ChildInstanceOwnerId")]
         [Validation(Required=false)]
         public long? ChildInstanceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the VBR.</para>
+        /// <para>The region ID of the VBR instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string ChildInstanceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of the network instance. Set the value to <b>VBR</b>.</para>
+        /// <para>The type of the network instance. Valid value: <b>VBR</b> (Virtual Border Router).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,9 +57,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the sub-instance. It must be 0 to 128 characters in length.</para>
+        /// <para>The description of the child instance. The description must be 0 to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -80,10 +80,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether it is only a dry run for this request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request.</description></item>
+        /// <item><description><b>true</b>: performs a dry run for the request without modifying EPS resources.</description></item>
+        /// <item><description><b>false</b> (default): sends a normal request.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ECR ID.</para>
+        /// <para>The instance ID of the Express Connect Router (ECR).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

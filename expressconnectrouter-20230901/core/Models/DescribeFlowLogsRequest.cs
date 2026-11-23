@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
     public class DescribeFlowLogsRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can generate a parameter value on your client to ensure that the value is unique across different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to only perform a dry run for this request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request.</description></item>
+        /// <item><description><para><b>true</b>: send a check request and do not modify service resources.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): send a normal request.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ECR ID.</para>
+        /// <para>The instance ID of the Express Connect Router (ECR).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,17 +51,17 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string EcrId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the flow log.</para>
+        /// <para>The instance ID of the flow log instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>flowlog-jqnr0veifo5d****</para>
+        /// <para>ecr-flog-jqnr0veifo5d****</para>
         /// </summary>
         [NameInMap("FlowLogId")]
         [Validation(Required=false)]
         public string FlowLogId { get; set; }
 
         /// <summary>
-        /// <para>The flow log name. The name must be 0 to 128 characters in length.</para>
+        /// <para>The name of the flow log. The name must be 0 to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>same-flowlog</para>
@@ -69,7 +71,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string FlowLogName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VBR associated with the ECR.</para>
+        /// <para>The instance ID of the VBR instance loaded on the Express Connect Router (ECR).</para>
         /// 
         /// <b>Example:</b>
         /// <para>vbr-j6cwxhgg0s5nuephp****</para>
@@ -79,14 +81,20 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The Logstore that stores the captured traffic data.</para>
+        /// <para>The Simple Log Service Logstore used to capture traffic.</para>
         /// <list type="bullet">
-        /// <item><description>If a Logstore is already created in the selected region, enter the name of the Logstore.</description></item>
-        /// <item><description>If no Logstores are created in the selected region, enter a name and the system automatically creates a Logstore. The name of the Logstore. The name must meet the following requirements:</description></item>
-        /// <item><description>The name must be unique in a project.</description></item>
-        /// <item><description>It can contain only lowercase letters, digits, hyphens (-), and underscores (_).</description></item>
-        /// <item><description>The name must start and end with a lowercase letter or a digit.</description></item>
-        /// <item><description>The name must be 3 to 63 characters in length.</description></item>
+        /// <item><description><para>If you have created a Logstore in the current region, you can enter the name of the existing Logstore.</para>
+        /// </description></item>
+        /// <item><description><para>If you have not created a Logstore in the current region, you can specify a custom name for the Logstore, and the system automatically creates the Logstore. The naming rules are as follows:</para>
+        /// </description></item>
+        /// <item><description><para>The Logstore name must be unique within the same project.</para>
+        /// </description></item>
+        /// <item><description><para>It can contain only lowercase letters, digits, hyphens (-), and underscores (_).</para>
+        /// </description></item>
+        /// <item><description><para>It must start and end with a lowercase letter or a digit.</para>
+        /// </description></item>
+        /// <item><description><para>It must be 3 to 63 characters in length.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -107,10 +115,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>You do not need to specify this parameter for the first request.</description></item>
-        /// <item><description>You must specify the token that is obtained from the previous query as the value of NextToken.</description></item>
+        /// <item><description>If NextToken is empty, no next query is available.</description></item>
+        /// <item><description>If NextToken has a return value, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -121,18 +129,18 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The project that stores the captured traffic data.</para>
+        /// <para>The Simple Log Service project used to capture traffic.</para>
         /// <list type="bullet">
-        /// <item><description>If a project is already created in the selected region, enter the name of the project.</description></item>
-        /// <item><description>If no projects are created in the selected region, enter a name and the system automatically creates a project.</description></item>
+        /// <item><description>If you have created a project in the current region, you can enter the name of the existing project.</description></item>
+        /// <item><description>If you have not created a project in the current region, you can specify a custom name for the project, and the system automatically creates the project.</description></item>
         /// </list>
-        /// <para>The project name must be unique in a region. You cannot change the name after the project is created. The name must meet the following requirements:</para>
+        /// <para>The project name must be globally unique within an Alibaba Cloud region and cannot be modified after creation. The naming rules are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>The name must be globally unique.</description></item>
-        /// <item><description>The name can contain only lowercase letters,</description></item>
-        /// <item><description>digits, and hyphens (-).</description></item>
-        /// <item><description>The name must start and end with a lowercase letter or a digit.</description></item>
-        /// <item><description>The name must be 3 to 63 characters in length.</description></item>
+        /// <item><description>The project name must be globally unique.</description></item>
+        /// <item><description>It can contain only lowercase</description></item>
+        /// <item><description>letters, digits, and hyphens (-).</description></item>
+        /// <item><description>It must start and end with a lowercase letter or a digit.</description></item>
+        /// <item><description>It must be 3 to 63 characters in length.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -142,18 +150,40 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the resource group to which the flow log instance belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-aek2aq7f4va****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The tags.</para>
+        /// <para>You can add up to 20 tags.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeFlowLogsRequestTag> Tag { get; set; }
         public class DescribeFlowLogsRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The tag key of the resource. If you specify this parameter, it cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value. Valid values of N: 1 to 20. If you specify this parameter, it can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestValue</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

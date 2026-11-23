@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 {
     public class CreateExpressConnectRouterRequest : TeaModel {
         /// <summary>
-        /// <para>The autonomous system number (ASN) of the ECR. Valid values: 45104, 64512 to 65534, and 4200000000 to 4294967294. Default value: 45104. The value 65025 is reserved by Alibaba Cloud.</para>
+        /// <para>The Autonomous System Number (ASN) of the Express Connect Router (ECR) instance. Valid values: 45104 (default), 64512 to 65534, and 4200000000 to 4294967294. The value 65025 is reserved by Alibaba Cloud.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can generate the token from your client to ensure that the token is unique across different requests. The ClientToken parameter supports only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,9 +35,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the ECR.</para>
+        /// <para>The description of the Express Connect Router (ECR) instance.</para>
         /// <remarks>
-        /// <para> The description can be empty or 0 to 256 characters in length and cannot start with http:// or https://.</para>
+        /// <para>The description can be empty or 0 to 256 characters in length, and cannot start with http:// or https://.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -48,10 +48,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether it is only a dry run for this request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request.</description></item>
+        /// <item><description><para><b>true</b>: Sends a check request without modifying service resources.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): Sends a normal request.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,9 +64,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The name of the ECR.</para>
+        /// <para>The name of the Express Connect Router (ECR) instance.</para>
         /// <remarks>
-        /// <para> The name must be 0 to 128 characters in length, and cannot start with http:// or https://.</para>
+        /// <para>The name can be empty or 0 to 128 characters in length, and cannot start with http:// or https://.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -75,7 +77,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the ECR belongs.</para>
+        /// <para>The ID of the resource group to which the Express Connect Router (ECR) instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmvvajg5q****</para>
@@ -85,16 +87,15 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The information about the tags.</para>
-        /// <para>You can specify at most 20 tags in each call.</para>
+        /// <para>The tags.</para>
+        /// <para>You can add up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateExpressConnectRouterRequestTag> Tag { get; set; }
         public class CreateExpressConnectRouterRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>The tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the resource. If you specify this parameter, it cannot be an empty string. The tag key can be up to 128 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>, or contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -104,8 +105,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the listener. Valid values of N: <b>1</b> to <b>20</b>. If specified, the value can be an empty string. The value can be up to 128 characters in length. It cannot start with <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

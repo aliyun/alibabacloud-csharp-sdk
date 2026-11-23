@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 {
     public class DescribeExpressConnectRouterChildInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the association between the ECR and the virtual private cloud (VPC) or transit router (TR).</para>
+        /// <para>The ID used to associate the Express Connect Router (ECR) with the VBR.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecr-assoc-9p2qxx5phpca2m****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string AssociationId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network instance to be queried.</para>
+        /// <para>The instance ID of the network instance to be queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vbr-j6cwxhgg0s5nuephp****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string ChildInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the network instance.</para>
+        /// <para>The region where the network instance resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string ChildInstanceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of network instance. Set the value to VBR.</para>
+        /// <para>The type of the network instance. Valid values: <b>VBR</b>: virtual border router.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VBR</para>
@@ -51,9 +51,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can generate the value from your client and ensure that the value is unique across different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -64,10 +64,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether this request is only a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request.</description></item>
+        /// <item><description><b>true</b>: sends a check request without modifying the EPS resource.</description></item>
+        /// <item><description><b>false</b> (default): sends a normal request.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,7 +78,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ECR ID.</para>
+        /// <para>Instance ID of the Express Connect Router (ECR) instance.</para>
+        /// <remarks>
+        /// <para>You can call the DescribeExpressConnectRouter API operation to obtain instance ID.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,20 +92,20 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string EcrId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to read. Valid values: 1 to 2147483647. Default value: 20.</para>
+        /// <para>The maximum number of entries to return. Valid values: 1 to 2147483647. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If NextToken is empty, no next page exists.</description></item>
-        /// <item><description>If a value of NextToken is returned, the value indicates the token that is used for the next query.</description></item>
+        /// <item><description>If this is the first query or no next query is required, leave this parameter empty.</description></item>
+        /// <item><description>If a next query is required, set the value to the NextToken value returned from the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

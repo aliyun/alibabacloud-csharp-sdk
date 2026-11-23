@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 {
     public class DescribeInstanceGrantedToExpressConnectRouterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Authentication is failed for ****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</para>
+        /// <para>The status code. A value of 200 indicates that the call was successful. Other values indicate that the call failed. For more information about the failure causes, see the error codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic part in the error message. This parameter is used to replace the <c>%s</c> variable in <b>ErrMessage</b>.</para>
+        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the <b>ErrMessage</b> error message.</para>
         /// <remarks>
-        /// <para> For example, if the value of <b>ErrMessage</b> is <b>The Value of Input Parameter %s is not valid</b> and the value of <b>DynamicMessage</b> is <b>DtsJobId</b>, the request parameter <b>DtsJobId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,14 +53,14 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The network instances whose permissions are granted to the ECR.</para>
+        /// <para>The list of instances authorized to the ECR.</para>
         /// </summary>
         [NameInMap("EcrGrantedInstanceList")]
         [Validation(Required=false)]
         public List<DescribeInstanceGrantedToExpressConnectRouterResponseBodyEcrGrantedInstanceList> EcrGrantedInstanceList { get; set; }
         public class DescribeInstanceGrantedToExpressConnectRouterResponseBodyEcrGrantedInstanceList : TeaModel {
             /// <summary>
-            /// <para>The ECR ID.</para>
+            /// <para>The instance ID of the Express Connect Router (ECR).</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecr-mezk2idmsd0vx2****</para>
@@ -70,17 +70,17 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string EcrId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that owns the ECR to which you want to grant permissions.</para>
+            /// <para>The ID of the Alibaba Cloud account to which the Express Connect Router (ECR) instance that receives the authorization belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1456408190545060</para>
+            /// <para>229845258050****</para>
             /// </summary>
             [NameInMap("EcrOwnerAliUid")]
             [Validation(Required=false)]
             public string EcrOwnerAliUid { get; set; }
 
             /// <summary>
-            /// <para>The time when the network instance was created.</para>
+            /// <para>The time when the instance was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1669023139000</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The time when the network instance was modified.</para>
+            /// <para>The time when the instance was modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1669023139000</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The authorization ID.</para>
+            /// <para>The ID of the authorization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gr-8gdelo13mi99g1****</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string GrantId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the network instance.</para>
+            /// <para>The instance ID of the authorization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vbr-j6cwxhgg0s5nuephp****</para>
@@ -120,17 +120,17 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud enterprise account that owns the network instance.</para>
+            /// <para>The ID of the Alibaba Cloud enterprise account to which the instance belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>26842</para>
+            /// <para>26842****</para>
             /// </summary>
             [NameInMap("NodeOwnerBid")]
             [Validation(Required=false)]
             public string NodeOwnerBid { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that owns the network instance.</para>
+            /// <para>The ID of the Alibaba Cloud account to which the instance belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>129845258050****</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public long? NodeOwnerUid { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the network instance.</para>
+            /// <para>The ID of the region to which the authorized instance belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -152,8 +152,8 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             /// <summary>
             /// <para>The type of the network instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>VBR</b></description></item>
-            /// <item><description><b>VPC</b></description></item>
+            /// <item><description><b>VBR</b>: VBR instance.</description></item>
+            /// <item><description><b>VPC</b>: VPC instance.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string NodeType { get; set; }
 
             /// <summary>
-            /// <para>The state of the network instance.</para>
+            /// <para>The status of the authorized network instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>
@@ -186,17 +186,17 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned. Valid values: 1 to 2147483647. Default value: 20.</para>
+        /// <para>The maximum number of entries returned. Valid values: 1 to 2147483647. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>6</para>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned by the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -206,10 +206,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
-        /// <item><description>If a value of <b>NextToken</b> is returned, the value indicates the token that is used for the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no next query is available.</description></item>
+        /// <item><description>If <b>NextToken</b> returns a value, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6FABF516-FED3-5697-BDA2-B18C5D9A****</para>
@@ -230,10 +230,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>True</b>: The call was successful.</description></item>
+        /// <item><description><b>False</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of network instances whose permissions are granted to the ECR.</para>
+        /// <para>The total number of network instances for which authorization is granted to the Express Connect Router (ECR).</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

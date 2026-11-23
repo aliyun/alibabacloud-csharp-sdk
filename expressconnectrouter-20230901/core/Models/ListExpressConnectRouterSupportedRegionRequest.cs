@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 {
     public class ListExpressConnectRouterSupportedRegionRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>A client token to ensure the idempotence of the request.</para>
+        /// <para>Generate a value that is unique across different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> as the <b>ClientToken</b>. Each request has a unique <b>RequestId</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,11 +24,14 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The type of the network instance. Valid values:</para>
+        /// <para>The type of network instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>TR</b></description></item>
-        /// <item><description><b>VBR</b></description></item>
-        /// <item><description><b>VPC</b></description></item>
+        /// <item><description><para><b>TR</b>: transit router instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>VBR</b>: virtual border router instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>VPC</b>: virtual private cloud instance.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
