@@ -2398,6 +2398,136 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Issues a local debug token for a running high-code agent in a specified workspace. The latest configuration of the agent must take effect. The workspace must enable inbound access for the selected network and complete debug routing preparations. The token is valid for 1 hour from the time of issuance. You can call this operation again to obtain a new token after the token expires.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCustomAgentDebugTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCustomAgentDebugTokenResponse
+        /// </returns>
+        public CreateCustomAgentDebugTokenResponse CreateCustomAgentDebugTokenWithOptions(string workspaceId, string agentId, CreateCustomAgentDebugTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
+            {
+                query["networkType"] = request.NetworkType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCustomAgentDebugToken",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/custom-agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId) + "/debug/token",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCustomAgentDebugTokenResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Issues a local debug token for a running high-code agent in a specified workspace. The latest configuration of the agent must take effect. The workspace must enable inbound access for the selected network and complete debug routing preparations. The token is valid for 1 hour from the time of issuance. You can call this operation again to obtain a new token after the token expires.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCustomAgentDebugTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCustomAgentDebugTokenResponse
+        /// </returns>
+        public async Task<CreateCustomAgentDebugTokenResponse> CreateCustomAgentDebugTokenWithOptionsAsync(string workspaceId, string agentId, CreateCustomAgentDebugTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
+            {
+                query["networkType"] = request.NetworkType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCustomAgentDebugToken",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/custom-agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId) + "/debug/token",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCustomAgentDebugTokenResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Issues a local debug token for a running high-code agent in a specified workspace. The latest configuration of the agent must take effect. The workspace must enable inbound access for the selected network and complete debug routing preparations. The token is valid for 1 hour from the time of issuance. You can call this operation again to obtain a new token after the token expires.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCustomAgentDebugTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCustomAgentDebugTokenResponse
+        /// </returns>
+        public CreateCustomAgentDebugTokenResponse CreateCustomAgentDebugToken(string workspaceId, string agentId, CreateCustomAgentDebugTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateCustomAgentDebugTokenWithOptions(workspaceId, agentId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Issues a local debug token for a running high-code agent in a specified workspace. The latest configuration of the agent must take effect. The workspace must enable inbound access for the selected network and complete debug routing preparations. The token is valid for 1 hour from the time of issuance. You can call this operation again to obtain a new token after the token expires.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCustomAgentDebugTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCustomAgentDebugTokenResponse
+        /// </returns>
+        public async Task<CreateCustomAgentDebugTokenResponse> CreateCustomAgentDebugTokenAsync(string workspaceId, string agentId, CreateCustomAgentDebugTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateCustomAgentDebugTokenWithOptionsAsync(workspaceId, agentId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Writes messages, summaries, or session fork events in batches. Each batch supports 1 to 100 events and returns the write result for each event in the same order as the request. A successful request does not indicate that every event is written successfully or that memory extraction is complete. The session title and metadata are set only when the session is created for the first time. Subsequent writes do not update existing session information.</para>
         /// </summary>
         /// 
